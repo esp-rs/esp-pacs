@@ -10,6 +10,7 @@ on:
 env:
   CARGO_TERM_COLOR: always
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MSRV: "1.65.0"
 
 # Cancel any currently running workflows from the same PR, branch, or
 # tag when a new workflow is triggered.
@@ -21,116 +22,125 @@ concurrency:
 
 jobs:
   # --------------------------------------------------------------------------
-  # Check
+  # ESP32
 
-  check-riscv:
+  esp32:
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        chip:
-          [
-            esp32c2,
-            esp32c3,
-            esp32c6,
-            esp32h2,
-            esp32c6-lp,
-            esp32s2-ulp,
-            esp32s3-ulp,
-          ]
-
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@nightly
+      - uses: ./.github/actions/check
         with:
-          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
-          components: rust-src
-      - uses: Swatinem/rust-cache@v2
-
-      - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo check --all-targets
-
-  check-xtensa:
-    runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        chip: [esp32, esp32s2, esp32s3]
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: esp-rs/xtensa-toolchain@v1.5
-        with:
-          ldproxy: false
-          buildtargets: ${{ matrix.chip }}
-          override: false
-      - uses: Swatinem/rust-cache@v2
-
-      - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo check --all-targets
+          msrv: ${{ env.MSRV }}
+          package: "esp32"
+          target: "xtensa-esp32-none-elf"
+          toolchain: "esp"
 
   # --------------------------------------------------------------------------
-  # MSRV
+  # ESP32-C2 / ESP8684
 
-  msrv-riscv:
+  esp32c2:
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        chip:
-          [
-            esp32c2,
-            esp32c3,
-            esp32c6,
-            esp32h2,
-            esp32c6-lp,
-            esp32s2-ulp,
-            esp32s3-ulp,
-          ]
-
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@nightly
+      - uses: ./.github/actions/check
         with:
-          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
-          components: rust-src
-      - uses: dtolnay/rust-toolchain@1.65.0
-        with:
-          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
-          components: rust-src
-      - uses: Swatinem/rust-cache@v2
+          msrv: ${{ env.MSRV }}
+          package: "esp32c2"
+          target: "riscv32imc-unknown-none-elf"
 
-      - name: generate pac
-        run: cargo +nightly run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo +1.65.0 check --all-targets
+  # --------------------------------------------------------------------------
+  # ESP32-C3 / ESP8685
 
-  msrv-xtensa:
+  esp32c3:
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        chip: [esp32, esp32s2, esp32s3]
-
     steps:
       - uses: actions/checkout@v3
-      - uses: esp-rs/xtensa-toolchain@v1.5
+      - uses: ./.github/actions/check
         with:
-          ldproxy: false
-          buildtargets: ${{ matrix.chip }}
-          version: "1.65.0"
-          override: false
-      - uses: Swatinem/rust-cache@v2
+          msrv: ${{ env.MSRV }}
+          package: "esp32c3"
+          target: "riscv32imc-unknown-none-elf"
 
-      - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo check --all-targets
+  # --------------------------------------------------------------------------
+  # ESP32-C6
+
+  esp32c6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/check
+        with:
+          msrv: ${{ env.MSRV }}
+          package: "esp32c6"
+          target: "riscv32imac-unknown-none-elf"
+
+  esp32c6-lp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/check
+        with:
+          msrv: ${{ env.MSRV }}
+          package: "esp32c6-lp"
+          target: "riscv32imac-unknown-none-elf"
+
+  # --------------------------------------------------------------------------
+  # ESP32-H2
+
+  esp32h2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/check
+        with:
+          msrv: ${{ env.MSRV }}
+          package: "esp32h2"
+          target: "riscv32imac-unknown-none-elf"
+
+  # --------------------------------------------------------------------------
+  # ESP32-S2
+
+  esp32s2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/check
+        with:
+          msrv: ${{ env.MSRV }}
+          package: "esp32s2"
+          target: "xtensa-esp32s2-none-elf"
+          toolchain: "esp"
+
+  esp32s2-ulp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/check
+        with:
+          msrv: ${{ env.MSRV }}
+          package: "esp32s2-ulp"
+          target: "riscv32imc-unknown-none-elf"
+
+  # --------------------------------------------------------------------------
+  # ESP32-S3
+
+  esp32s3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/check
+        with:
+          msrv: ${{ env.MSRV }}
+          package: "esp32s3"
+          target: "xtensa-esp32s3-none-elf"
+          toolchain: "esp"
+
+  esp32s3-ulp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/check
+        with:
+          msrv: ${{ env.MSRV }}
+          package: "esp32s3-ulp"
+          target: "riscv32imc-unknown-none-elf"
