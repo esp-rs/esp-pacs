@@ -13,10 +13,6 @@ inputs:
     description: Target to use when checking the specified package
     type: string
     required: true
-  toolchain:
-    description: Toolchain to use when checking the specified package
-    default: nightly
-    required: false
 
 runs:
   using: composite
@@ -26,19 +22,19 @@ runs:
     # prior to invoking the 'xtensa-toolchain' action:
 
     - uses: dtolnay/rust-toolchain@nightly
-      if: inputs.toolchain == 'esp'
+      if: startsWith(inputs.target, 'xtensa')
 
     # Install the newest available version of the specified toolchain,
     # required for building the PAC:
 
     - uses: dtolnay/rust-toolchain@nightly
-      if: inputs.toolchain != 'esp'
+      if: startsWith(inputs.target, 'riscv')
       with:
         target: ${{ inputs.target }}
         components: rust-src
 
     - uses: esp-rs/xtensa-toolchain@v1.5
-      if: inputs.toolchain == 'esp'
+      if: startsWith(inputs.target, 'xtensa')
       with:
         ldproxy: false
         buildtargets: ${{ inputs.package }}
@@ -54,15 +50,16 @@ runs:
     # Install the MSRV of the specified toolchain:
 
     - uses: dtolnay/rust-toolchain@master
-      if: inputs.toolchain != 'esp'
+      if: startsWith(inputs.target, 'riscv')
       with:
         toolchain: ${{ inputs.msrv }}
         target: ${{ inputs.target }}
         components: rust-src
 
     - uses: esp-rs/xtensa-toolchain@v1.5
-      if: inputs.toolchain == 'esp'
+      if: startsWith(inputs.target, 'xtensa')
       with:
+        default: true
         ldproxy: false
         buildtargets: ${{ inputs.package }}
         override: false
@@ -71,5 +68,11 @@ runs:
     # Verify that the PAC builds using the MSRV of the specified toolchain:
 
     - name: Check MSRV
+      if: startsWith(inputs.target, 'riscv')
+      shell: bash
+      run: cd ${{ inputs.package }} && cargo +${{ inputs.msrv }} check --all-targets
+
+    - name: Check MSRV
+      if: startsWith(inputs.target, 'xtensa')
       shell: bash
       run: cd ${{ inputs.package }} && cargo check --all-targets

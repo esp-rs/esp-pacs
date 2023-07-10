@@ -22,125 +22,35 @@ concurrency:
 
 jobs:
   # --------------------------------------------------------------------------
-  # ESP32
 
-  esp32:
+  check:
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        build: [
+            # Xtensa:
+            { package: "esp32", target: "xtensa-esp32-none-elf" },
+            { package: "esp32s2", target: "xtensa-esp32s2-none-elf" },
+            { package: "esp32s3", target: "xtensa-esp32s3-none-elf" },
+  
+            # RISC-V:
+            { package: "esp32c2", target: "riscv32imc-unknown-none-elf" },
+            { package: "esp32c3", target: "riscv32imc-unknown-none-elf" },
+            { package: "esp32c6", target: "riscv32imac-unknown-none-elf" },
+            { package: "esp32h2", target: "riscv32imac-unknown-none-elf" },
+
+            # RISC-V (Ultra) Low-Power:
+            { package: "esp32c6-lp", target: "riscv32imac-unknown-none-elf" },
+            { package: "esp32s2-ulp", target: "riscv32imc-unknown-none-elf" },
+            { package: "esp32s3-ulp", target: "riscv32imc-unknown-none-elf" },
+          ]
+
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/check
         with:
           msrv: ${{ env.MSRV }}
-          package: "esp32"
-          target: "xtensa-esp32-none-elf"
-          toolchain: "esp"
-
-  # --------------------------------------------------------------------------
-  # ESP32-C2 / ESP8684
-
-  esp32c2:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32c2"
-          target: "riscv32imc-unknown-none-elf"
-
-  # --------------------------------------------------------------------------
-  # ESP32-C3 / ESP8685
-
-  esp32c3:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32c3"
-          target: "riscv32imc-unknown-none-elf"
-
-  # --------------------------------------------------------------------------
-  # ESP32-C6
-
-  esp32c6:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32c6"
-          target: "riscv32imac-unknown-none-elf"
-
-  esp32c6-lp:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32c6-lp"
-          target: "riscv32imac-unknown-none-elf"
-
-  # --------------------------------------------------------------------------
-  # ESP32-H2
-
-  esp32h2:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32h2"
-          target: "riscv32imac-unknown-none-elf"
-
-  # --------------------------------------------------------------------------
-  # ESP32-S2
-
-  esp32s2:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32s2"
-          target: "xtensa-esp32s2-none-elf"
-          toolchain: "esp"
-
-  esp32s2-ulp:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32s2-ulp"
-          target: "riscv32imc-unknown-none-elf"
-
-  # --------------------------------------------------------------------------
-  # ESP32-S3
-
-  esp32s3:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32s3"
-          target: "xtensa-esp32s3-none-elf"
-          toolchain: "esp"
-
-  esp32s3-ulp:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/check
-        with:
-          msrv: ${{ env.MSRV }}
-          package: "esp32s3-ulp"
-          target: "riscv32imc-unknown-none-elf"
+          package: ${{ matrix.build.package }}
+          target: ${{ matrix.build.target }}
