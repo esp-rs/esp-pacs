@@ -1,0 +1,78 @@
+name: Check Package
+
+inputs:
+  msrv:
+    description: Minimum Supported Rust Version
+    type: string
+    required: true
+  package:
+    description: Name of the package to check
+    type: string
+    required: true
+  target:
+    description: Target to use when checking the specified package
+    type: string
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    # If using the 'esp' toolchain, we also need to have 'nightly' installed
+    # prior to invoking the 'xtensa-toolchain' action:
+
+    - uses: dtolnay/rust-toolchain@nightly
+      if: startsWith(inputs.target, 'xtensa')
+
+    # Install the newest available version of the specified toolchain,
+    # required for building the PAC:
+
+    - uses: dtolnay/rust-toolchain@nightly
+      if: startsWith(inputs.target, 'riscv')
+      with:
+        target: ${{ inputs.target }}
+        components: rust-src
+
+    - uses: esp-rs/xtensa-toolchain@v1.5
+      if: startsWith(inputs.target, 'xtensa')
+      with:
+        ldproxy: false
+        buildtargets: ${{ inputs.package }}
+        override: false
+
+    # Build the PAC using the newest available version of the specified
+    # toolchain:
+
+    - name: Build PAC
+      shell: bash
+      run: cd ${{ inputs.package }} && cargo check --all-targets
+
+    # Install the MSRV of the specified toolchain:
+
+    - uses: dtolnay/rust-toolchain@master
+      if: startsWith(inputs.target, 'riscv')
+      with:
+        toolchain: ${{ inputs.msrv }}
+        target: ${{ inputs.target }}
+        components: rust-src
+
+    - uses: esp-rs/xtensa-toolchain@v1.5
+      if: startsWith(inputs.target, 'xtensa')
+      with:
+        default: true
+        ldproxy: false
+        buildtargets: ${{ inputs.package }}
+        override: false
+        version: ${{ inputs.msrv }}
+
+    # Verify that the PAC builds using the MSRV of the specified toolchain:
+
+    - name: Check MSRV
+      if: startsWith(inputs.target, 'riscv')
+      shell: bash
+      run: cd ${{ inputs.package }} && cargo +${{ inputs.msrv }} check --all-targets
+
+    - name: Check MSRV
+      if: startsWith(inputs.target, 'xtensa')
+      shell: bash
+      run: cd ${{ inputs.package }} && cargo check --all-targets

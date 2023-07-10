@@ -10,6 +10,7 @@ on:
 env:
   CARGO_TERM_COLOR: always
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MSRV: "1.65.0"
 
 # Cancel any currently running workflows from the same PR, branch, or
 # tag when a new workflow is triggered.
@@ -21,116 +22,35 @@ concurrency:
 
 jobs:
   # --------------------------------------------------------------------------
-  # Check
 
-  check-riscv:
+  check:
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       matrix:
-        chip:
-          [
-            esp32c2,
-            esp32c3,
-            esp32c6,
-            esp32h2,
-            esp32c6-lp,
-            esp32s2-ulp,
-            esp32s3-ulp,
+        build: [
+            # Xtensa:
+            { package: "esp32", target: "xtensa-esp32-none-elf" },
+            { package: "esp32s2", target: "xtensa-esp32s2-none-elf" },
+            { package: "esp32s3", target: "xtensa-esp32s3-none-elf" },
+  
+            # RISC-V:
+            { package: "esp32c2", target: "riscv32imc-unknown-none-elf" },
+            { package: "esp32c3", target: "riscv32imc-unknown-none-elf" },
+            { package: "esp32c6", target: "riscv32imac-unknown-none-elf" },
+            { package: "esp32h2", target: "riscv32imac-unknown-none-elf" },
+
+            # RISC-V (Ultra) Low-Power:
+            { package: "esp32c6-lp", target: "riscv32imac-unknown-none-elf" },
+            { package: "esp32s2-ulp", target: "riscv32imc-unknown-none-elf" },
+            { package: "esp32s3-ulp", target: "riscv32imc-unknown-none-elf" },
           ]
 
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@nightly
+      - uses: ./.github/actions/check
         with:
-          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
-          components: rust-src
-      - uses: Swatinem/rust-cache@v2
-
-      - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo check --all-targets
-
-  check-xtensa:
-    runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        chip: [esp32, esp32s2, esp32s3]
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: esp-rs/xtensa-toolchain@v1.5
-        with:
-          ldproxy: false
-          buildtargets: ${{ matrix.chip }}
-          override: false
-      - uses: Swatinem/rust-cache@v2
-
-      - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo check --all-targets
-
-  # --------------------------------------------------------------------------
-  # MSRV
-
-  msrv-riscv:
-    runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        chip:
-          [
-            esp32c2,
-            esp32c3,
-            esp32c6,
-            esp32h2,
-            esp32c6-lp,
-            esp32s2-ulp,
-            esp32s3-ulp,
-          ]
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@nightly
-        with:
-          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
-          components: rust-src
-      - uses: dtolnay/rust-toolchain@1.65.0
-        with:
-          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
-          components: rust-src
-      - uses: Swatinem/rust-cache@v2
-
-      - name: generate pac
-        run: cargo +nightly run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo +1.65.0 check --all-targets
-
-  msrv-xtensa:
-    runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        chip: [esp32, esp32s2, esp32s3]
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: esp-rs/xtensa-toolchain@v1.5
-        with:
-          ldproxy: false
-          buildtargets: ${{ matrix.chip }}
-          version: "1.65.0"
-          override: false
-      - uses: Swatinem/rust-cache@v2
-
-      - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
-      - name: build pac
-        run: cd ${{ matrix.chip }} && cargo check --all-targets
+          msrv: ${{ env.MSRV }}
+          package: ${{ matrix.build.package }}
+          target: ${{ matrix.build.target }}
