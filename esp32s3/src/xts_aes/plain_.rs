@@ -34,22 +34,22 @@ impl From<crate::W<PLAIN__SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PLAIN_0` reader - Stores the nth 32-bit piece of plaintext."]
-pub type PLAIN_0_R = crate::FieldReader<u32>;
-#[doc = "Field `PLAIN_0` writer - Stores the nth 32-bit piece of plaintext."]
-pub type PLAIN_0_W<'a, const O: u8> = crate::FieldWriter<'a, PLAIN__SPEC, 32, O, u32>;
+#[doc = "Field `PLAIN` reader - Stores the nth 32-bit piece of plaintext."]
+pub type PLAIN_R = crate::FieldReader<u32>;
+#[doc = "Field `PLAIN` writer - Stores the nth 32-bit piece of plaintext."]
+pub type PLAIN_W<'a, const O: u8> = crate::FieldWriter<'a, PLAIN__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the nth 32-bit piece of plaintext."]
     #[inline(always)]
-    pub fn plain_0(&self) -> PLAIN_0_R {
-        PLAIN_0_R::new(self.bits)
+    pub fn plain(&self) -> PLAIN_R {
+        PLAIN_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLAIN_")
-            .field("plain_0", &format_args!("{}", self.plain_0().bits()))
+            .field("plain", &format_args!("{}", self.plain().bits()))
             .finish()
     }
 }
@@ -63,8 +63,8 @@ impl W {
     #[doc = "Bits 0:31 - Stores the nth 32-bit piece of plaintext."]
     #[inline(always)]
     #[must_use]
-    pub fn plain_0(&mut self) -> PLAIN_0_W<0> {
-        PLAIN_0_W::new(self)
+    pub fn plain(&mut self) -> PLAIN_W<0> {
+        PLAIN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

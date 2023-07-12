@@ -13,20 +13,20 @@ impl From<crate::R<RD_KEY2_DATA_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `KEY2_DATA0` reader - Stores the %sth 32 bits of KEY2."]
-pub type KEY2_DATA0_R = crate::FieldReader<u32>;
+#[doc = "Field `KEY2_DATA` reader - Stores the %sth 32 bits of KEY2."]
+pub type KEY2_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the %sth 32 bits of KEY2."]
     #[inline(always)]
-    pub fn key2_data0(&self) -> KEY2_DATA0_R {
-        KEY2_DATA0_R::new(self.bits)
+    pub fn key2_data(&self) -> KEY2_DATA_R {
+        KEY2_DATA_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_KEY2_DATA")
-            .field("key2_data0", &format_args!("{}", self.key2_data0().bits()))
+            .field("key2_data", &format_args!("{}", self.key2_data().bits()))
             .finish()
     }
 }

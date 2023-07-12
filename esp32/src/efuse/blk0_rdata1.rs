@@ -13,23 +13,20 @@ impl From<crate::R<BLK0_RDATA1_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RD_WIFI_MAC_CRC_LOW` reader - read for low 32bit WIFI_MAC_Address"]
-pub type RD_WIFI_MAC_CRC_LOW_R = crate::FieldReader<u32>;
+#[doc = "Field `RD_MAC` reader - "]
+pub type RD_MAC_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - read for low 32bit WIFI_MAC_Address"]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn rd_wifi_mac_crc_low(&self) -> RD_WIFI_MAC_CRC_LOW_R {
-        RD_WIFI_MAC_CRC_LOW_R::new(self.bits)
+    pub fn rd_mac(&self) -> RD_MAC_R {
+        RD_MAC_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA1")
-            .field(
-                "rd_wifi_mac_crc_low",
-                &format_args!("{}", self.rd_wifi_mac_crc_low().bits()),
-            )
+            .field("rd_mac", &format_args!("{}", self.rd_mac().bits()))
             .finish()
     }
 }

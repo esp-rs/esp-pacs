@@ -13,20 +13,20 @@ impl From<crate::R<RD_USR_DATA_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `USR_DATA0` reader - Stores the %sth 32 bits of BLOCK3 (user)."]
-pub type USR_DATA0_R = crate::FieldReader<u32>;
+#[doc = "Field `USR_DATA` reader - Stores the %sth 32 bits of BLOCK3 (user)."]
+pub type USR_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the %sth 32 bits of BLOCK3 (user)."]
     #[inline(always)]
-    pub fn usr_data0(&self) -> USR_DATA0_R {
-        USR_DATA0_R::new(self.bits)
+    pub fn usr_data(&self) -> USR_DATA_R {
+        USR_DATA_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_USR_DATA")
-            .field("usr_data0", &format_args!("{}", self.usr_data0().bits()))
+            .field("usr_data", &format_args!("{}", self.usr_data().bits()))
             .finish()
     }
 }

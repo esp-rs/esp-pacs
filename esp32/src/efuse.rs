@@ -158,7 +158,7 @@ pub mod blk0_rdata0;
 pub type BLK0_RDATA1 = crate::Reg<blk0_rdata1::BLK0_RDATA1_SPEC>;
 #[doc = ""]
 pub mod blk0_rdata1;
-#[doc = "BLK0_RDATA2 (r) register accessor: an alias for `Reg<BLK0_RDATA2_SPEC>`"]
+#[doc = "BLK0_RDATA2 (rw) register accessor: an alias for `Reg<BLK0_RDATA2_SPEC>`"]
 pub type BLK0_RDATA2 = crate::Reg<blk0_rdata2::BLK0_RDATA2_SPEC>;
 #[doc = ""]
 pub mod blk0_rdata2;
@@ -170,11 +170,11 @@ pub mod blk0_rdata3;
 pub type BLK0_RDATA4 = crate::Reg<blk0_rdata4::BLK0_RDATA4_SPEC>;
 #[doc = ""]
 pub mod blk0_rdata4;
-#[doc = "BLK0_RDATA5 (r) register accessor: an alias for `Reg<BLK0_RDATA5_SPEC>`"]
+#[doc = "BLK0_RDATA5 (rw) register accessor: an alias for `Reg<BLK0_RDATA5_SPEC>`"]
 pub type BLK0_RDATA5 = crate::Reg<blk0_rdata5::BLK0_RDATA5_SPEC>;
 #[doc = ""]
 pub mod blk0_rdata5;
-#[doc = "BLK0_RDATA6 (r) register accessor: an alias for `Reg<BLK0_RDATA6_SPEC>`"]
+#[doc = "BLK0_RDATA6 (rw) register accessor: an alias for `Reg<BLK0_RDATA6_SPEC>`"]
 pub type BLK0_RDATA6 = crate::Reg<blk0_rdata6::BLK0_RDATA6_SPEC>;
 #[doc = ""]
 pub mod blk0_rdata6;
@@ -286,7 +286,7 @@ pub mod blk3_rdata2;
 pub type BLK3_RDATA3 = crate::Reg<blk3_rdata3::BLK3_RDATA3_SPEC>;
 #[doc = ""]
 pub mod blk3_rdata3;
-#[doc = "BLK3_RDATA4 (rw) register accessor: an alias for `Reg<BLK3_RDATA4_SPEC>`"]
+#[doc = "BLK3_RDATA4 (r) register accessor: an alias for `Reg<BLK3_RDATA4_SPEC>`"]
 pub type BLK3_RDATA4 = crate::Reg<blk3_rdata4::BLK3_RDATA4_SPEC>;
 #[doc = ""]
 pub mod blk3_rdata4;
@@ -382,7 +382,7 @@ pub mod blk3_wdata2;
 pub type BLK3_WDATA3 = crate::Reg<blk3_wdata3::BLK3_WDATA3_SPEC>;
 #[doc = ""]
 pub mod blk3_wdata3;
-#[doc = "BLK3_WDATA4 (rw) register accessor: an alias for `Reg<BLK3_WDATA4_SPEC>`"]
+#[doc = "BLK3_WDATA4 (r) register accessor: an alias for `Reg<BLK3_WDATA4_SPEC>`"]
 pub type BLK3_WDATA4 = crate::Reg<blk3_wdata4::BLK3_WDATA4_SPEC>;
 #[doc = ""]
 pub mod blk3_wdata4;

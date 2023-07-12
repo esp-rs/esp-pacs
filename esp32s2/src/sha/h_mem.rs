@@ -34,22 +34,22 @@ impl From<crate::W<H_MEM_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `H_0` reader - Stores the %sth 32-bit piece of the Hash value."]
-pub type H_0_R = crate::FieldReader<u32>;
-#[doc = "Field `H_0` writer - Stores the %sth 32-bit piece of the Hash value."]
-pub type H_0_W<'a, const O: u8> = crate::FieldWriter<'a, H_MEM_SPEC, 32, O, u32>;
+#[doc = "Field `H` reader - Stores the %sth 32-bit piece of the Hash value."]
+pub type H_R = crate::FieldReader<u32>;
+#[doc = "Field `H` writer - Stores the %sth 32-bit piece of the Hash value."]
+pub type H_W<'a, const O: u8> = crate::FieldWriter<'a, H_MEM_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the %sth 32-bit piece of the Hash value."]
     #[inline(always)]
-    pub fn h_0(&self) -> H_0_R {
-        H_0_R::new(self.bits)
+    pub fn h(&self) -> H_R {
+        H_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("H_MEM")
-            .field("h_0", &format_args!("{}", self.h_0().bits()))
+            .field("h", &format_args!("{}", self.h().bits()))
             .finish()
     }
 }
@@ -63,8 +63,8 @@ impl W {
     #[doc = "Bits 0:31 - Stores the %sth 32-bit piece of the Hash value."]
     #[inline(always)]
     #[must_use]
-    pub fn h_0(&mut self) -> H_0_W<0> {
-        H_0_W::new(self)
+    pub fn h(&mut self) -> H_W<0> {
+        H_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

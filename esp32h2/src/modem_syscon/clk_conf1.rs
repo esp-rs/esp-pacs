@@ -34,66 +34,66 @@ impl From<crate::W<CLK_CONF1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CLK_FE_16M_EN` reader - ."]
+#[doc = "Field `CLK_FE_16M_EN` reader - "]
 pub type CLK_FE_16M_EN_R = crate::BitReader;
-#[doc = "Field `CLK_FE_16M_EN` writer - ."]
+#[doc = "Field `CLK_FE_16M_EN` writer - "]
 pub type CLK_FE_16M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
-#[doc = "Field `CLK_FE_32M_EN` reader - ."]
+#[doc = "Field `CLK_FE_32M_EN` reader - "]
 pub type CLK_FE_32M_EN_R = crate::BitReader;
-#[doc = "Field `CLK_FE_32M_EN` writer - ."]
+#[doc = "Field `CLK_FE_32M_EN` writer - "]
 pub type CLK_FE_32M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
-#[doc = "Field `CLK_FE_SDM_EN` reader - ."]
+#[doc = "Field `CLK_FE_SDM_EN` reader - "]
 pub type CLK_FE_SDM_EN_R = crate::BitReader;
-#[doc = "Field `CLK_FE_SDM_EN` writer - ."]
+#[doc = "Field `CLK_FE_SDM_EN` writer - "]
 pub type CLK_FE_SDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
-#[doc = "Field `CLK_FE_ADC_EN` reader - ."]
+#[doc = "Field `CLK_FE_ADC_EN` reader - "]
 pub type CLK_FE_ADC_EN_R = crate::BitReader;
-#[doc = "Field `CLK_FE_ADC_EN` writer - ."]
+#[doc = "Field `CLK_FE_ADC_EN` writer - "]
 pub type CLK_FE_ADC_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
-#[doc = "Field `CLK_FE_APB_EN` reader - ."]
+#[doc = "Field `CLK_FE_APB_EN` reader - "]
 pub type CLK_FE_APB_EN_R = crate::BitReader;
-#[doc = "Field `CLK_FE_APB_EN` writer - ."]
+#[doc = "Field `CLK_FE_APB_EN` writer - "]
 pub type CLK_FE_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
-#[doc = "Field `CLK_BT_APB_EN` reader - ."]
+#[doc = "Field `CLK_BT_APB_EN` reader - "]
 pub type CLK_BT_APB_EN_R = crate::BitReader;
-#[doc = "Field `CLK_BT_APB_EN` writer - ."]
+#[doc = "Field `CLK_BT_APB_EN` writer - "]
 pub type CLK_BT_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
-#[doc = "Field `CLK_BT_EN` reader - ."]
+#[doc = "Field `CLK_BT_EN` reader - "]
 pub type CLK_BT_EN_R = crate::BitReader;
-#[doc = "Field `CLK_BT_EN` writer - ."]
+#[doc = "Field `CLK_BT_EN` writer - "]
 pub type CLK_BT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 impl R {
-    #[doc = "Bit 12 - ."]
+    #[doc = "Bit 12"]
     #[inline(always)]
     pub fn clk_fe_16m_en(&self) -> CLK_FE_16M_EN_R {
         CLK_FE_16M_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 13 - ."]
+    #[doc = "Bit 13"]
     #[inline(always)]
     pub fn clk_fe_32m_en(&self) -> CLK_FE_32M_EN_R {
         CLK_FE_32M_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - ."]
+    #[doc = "Bit 14"]
     #[inline(always)]
     pub fn clk_fe_sdm_en(&self) -> CLK_FE_SDM_EN_R {
         CLK_FE_SDM_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 15 - ."]
+    #[doc = "Bit 15"]
     #[inline(always)]
     pub fn clk_fe_adc_en(&self) -> CLK_FE_ADC_EN_R {
         CLK_FE_ADC_EN_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 16 - ."]
+    #[doc = "Bit 16"]
     #[inline(always)]
     pub fn clk_fe_apb_en(&self) -> CLK_FE_APB_EN_R {
         CLK_FE_APB_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 17 - ."]
+    #[doc = "Bit 17"]
     #[inline(always)]
     pub fn clk_bt_apb_en(&self) -> CLK_BT_APB_EN_R {
         CLK_BT_APB_EN_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 18 - ."]
+    #[doc = "Bit 18"]
     #[inline(always)]
     pub fn clk_bt_en(&self) -> CLK_BT_EN_R {
         CLK_BT_EN_R::new(((self.bits >> 18) & 1) != 0)
@@ -138,43 +138,43 @@ impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 12 - ."]
+    #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
     pub fn clk_fe_16m_en(&mut self) -> CLK_FE_16M_EN_W<12> {
         CLK_FE_16M_EN_W::new(self)
     }
-    #[doc = "Bit 13 - ."]
+    #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
     pub fn clk_fe_32m_en(&mut self) -> CLK_FE_32M_EN_W<13> {
         CLK_FE_32M_EN_W::new(self)
     }
-    #[doc = "Bit 14 - ."]
+    #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
     pub fn clk_fe_sdm_en(&mut self) -> CLK_FE_SDM_EN_W<14> {
         CLK_FE_SDM_EN_W::new(self)
     }
-    #[doc = "Bit 15 - ."]
+    #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
     pub fn clk_fe_adc_en(&mut self) -> CLK_FE_ADC_EN_W<15> {
         CLK_FE_ADC_EN_W::new(self)
     }
-    #[doc = "Bit 16 - ."]
+    #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
     pub fn clk_fe_apb_en(&mut self) -> CLK_FE_APB_EN_W<16> {
         CLK_FE_APB_EN_W::new(self)
     }
-    #[doc = "Bit 17 - ."]
+    #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
     pub fn clk_bt_apb_en(&mut self) -> CLK_BT_APB_EN_W<17> {
         CLK_BT_APB_EN_W::new(self)
     }
-    #[doc = "Bit 18 - ."]
+    #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
     pub fn clk_bt_en(&mut self) -> CLK_BT_EN_W<18> {

@@ -13,20 +13,20 @@ impl From<crate::R<T0__SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `T0_0` reader - This register stores the %sth 32-bit piece of 128-bit T0"]
-pub type T0_0_R = crate::FieldReader<u32>;
+#[doc = "Field `T0` reader - This register stores the %sth 32-bit piece of 128-bit T0"]
+pub type T0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit T0"]
     #[inline(always)]
-    pub fn t0_0(&self) -> T0_0_R {
-        T0_0_R::new(self.bits)
+    pub fn t0(&self) -> T0_R {
+        T0_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("T0_")
-            .field("t0_0", &format_args!("{}", self.t0_0().bits()))
+            .field("t0", &format_args!("{}", self.t0().bits()))
             .finish()
     }
 }

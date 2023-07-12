@@ -36,6 +36,10 @@ impl From<crate::W<RESET_EN_SPEC>> for W {
 }
 #[doc = "Field `BUS_RESET_EN` writer - need_des"]
 pub type BUS_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+#[doc = "Field `LP_TOUCH_RESET_EN` reader - need_des"]
+pub type LP_TOUCH_RESET_EN_R = crate::BitReader;
+#[doc = "Field `LP_TOUCH_RESET_EN` writer - need_des"]
+pub type LP_TOUCH_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `OTP_DBG_RESET_EN` reader - need_des"]
 pub type OTP_DBG_RESET_EN_R = crate::BitReader;
 #[doc = "Field `OTP_DBG_RESET_EN` writer - need_des"]
@@ -63,6 +67,11 @@ pub type EFUSE_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC,
 #[doc = "Field `LP_CPU_RESET_EN` writer - need_des"]
 pub type LP_CPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 impl R {
+    #[doc = "Bit 24 - need_des"]
+    #[inline(always)]
+    pub fn lp_touch_reset_en(&self) -> LP_TOUCH_RESET_EN_R {
+        LP_TOUCH_RESET_EN_R::new(((self.bits >> 24) & 1) != 0)
+    }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     pub fn otp_dbg_reset_en(&self) -> OTP_DBG_RESET_EN_R {
@@ -98,6 +107,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_EN")
+            .field(
+                "lp_touch_reset_en",
+                &format_args!("{}", self.lp_touch_reset_en().bit()),
+            )
             .field(
                 "otp_dbg_reset_en",
                 &format_args!("{}", self.otp_dbg_reset_en().bit()),
@@ -137,6 +150,12 @@ impl W {
     #[must_use]
     pub fn bus_reset_en(&mut self) -> BUS_RESET_EN_W<23> {
         BUS_RESET_EN_W::new(self)
+    }
+    #[doc = "Bit 24 - need_des"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lp_touch_reset_en(&mut self) -> LP_TOUCH_RESET_EN_W<24> {
+        LP_TOUCH_RESET_EN_W::new(self)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]

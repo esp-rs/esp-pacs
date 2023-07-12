@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S3</name>
   <series>ESP32 S-Series</series>
-  <version>16</version>
+  <version>17</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -55,7 +55,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY_0</name>
+              <name>KEY</name>
               <description>Stores AES keys.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -72,7 +72,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TEXT_IN_0</name>
+              <name>TEXT_IN</name>
               <description>Stores the source data when the AES accelerator operates in the Typical AES working mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -89,7 +89,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TEXT_OUT_0</name>
+              <name>TEXT_OUT</name>
               <description>Stores the result data when the AES accelerator operates in the Typical AES working mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2376,7 +2376,7 @@
       </interrupt>
       <registers>
         <register>
-          <name>CORE_0_INTERRUPT_ENA</name>
+          <name>CORE_0_MONTR_ENA</name>
           <description>core0 monitor enable configuration register</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
@@ -2468,7 +2468,7 @@
           </fields>
         </register>
         <register>
-          <name>CORE_0_INTERRUPT_RAW</name>
+          <name>CORE_0_INTR_RAW</name>
           <description>core0 monitor interrupt status register</description>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
@@ -2560,90 +2560,90 @@
           </fields>
         </register>
         <register>
-          <name>CORE_0_INTERRUPT_RLS</name>
+          <name>CORE_0_INTR_ENA</name>
           <description>core0 monitor interrupt enable register</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_RD_RLS</name>
+              <name>CORE_0_AREA_DRAM0_0_RD_INTR_ENA</name>
               <description>Core0 dram0 area0 read monitor interrupt enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_WR_RLS</name>
+              <name>CORE_0_AREA_DRAM0_0_WR_INTR_ENA</name>
               <description>Core0 dram0 area0 write monitor interrupt enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_1_RD_RLS</name>
+              <name>CORE_0_AREA_DRAM0_1_RD_INTR_ENA</name>
               <description>Core0 dram0 area1 read monitor interrupt enable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_1_WR_RLS</name>
+              <name>CORE_0_AREA_DRAM0_1_WR_INTR_ENA</name>
               <description>Core0 dram0 area1 write monitor interrupt enable</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_0_RD_RLS</name>
+              <name>CORE_0_AREA_PIF_0_RD_INTR_ENA</name>
               <description>Core0 PIF area0 read monitor interrupt enable</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_0_WR_RLS</name>
+              <name>CORE_0_AREA_PIF_0_WR_INTR_ENA</name>
               <description>Core0 PIF area0 write monitor interrupt enable</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_1_RD_RLS</name>
+              <name>CORE_0_AREA_PIF_1_RD_INTR_ENA</name>
               <description>Core0 PIF area1 read monitor interrupt enable</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_1_WR_RLS</name>
+              <name>CORE_0_AREA_PIF_1_WR_INTR_ENA</name>
               <description>Core0 PIF area1 write monitor interrupt enable</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_SP_SPILL_MIN_RLS</name>
+              <name>CORE_0_SP_SPILL_MIN_INTR_ENA</name>
               <description>Core0 stackpoint overflow monitor interrupt enable</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_SP_SPILL_MAX_RLS</name>
+              <name>CORE_0_SP_SPILL_MAX_INTR_ENA</name>
               <description>Core0 stackpoint underflow monitor interrupt enable</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_IRAM0_EXCEPTION_MONITOR_RLS</name>
+              <name>CORE_0_IRAM0_EXCEPTION_MONITOR_INTR_ENA</name>
               <description>IBUS busy monitor interrupt enable</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_DRAM0_EXCEPTION_MONITOR_RLS</name>
+              <name>CORE_0_DRAM0_EXCEPTION_MONITOR_INTR_ENA</name>
               <description>DBUS busy monitor interrupt enbale</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2652,7 +2652,7 @@
           </fields>
         </register>
         <register>
-          <name>CORE_0_INTERRUPT_CLR</name>
+          <name>CORE_0_INTR_CLR</name>
           <description>core0 monitor interrupt clr register</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
@@ -3275,7 +3275,7 @@
           </fields>
         </register>
         <register>
-          <name>CORE_1_INTERRUPT_ENA</name>
+          <name>CORE_1_MONTR_ENA</name>
           <description>Core1 monitor enable configuration register</description>
           <addressOffset>0x90</addressOffset>
           <size>0x20</size>
@@ -3367,7 +3367,7 @@
           </fields>
         </register>
         <register>
-          <name>CORE_1_INTERRUPT_RAW</name>
+          <name>CORE_1_INTR_RAW</name>
           <description>Core1 monitor interrupt status register</description>
           <addressOffset>0x94</addressOffset>
           <size>0x20</size>
@@ -3459,90 +3459,90 @@
           </fields>
         </register>
         <register>
-          <name>CORE_1_INTERRUPT_RLS</name>
+          <name>CORE_1_INTR_ENA</name>
           <description>Core1 monitor interrupt enable register</description>
           <addressOffset>0x98</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>CORE_1_AREA_DRAM0_0_RD_RLS</name>
+              <name>CORE_1_AREA_DRAM0_0_RD_INTR_ENA</name>
               <description>Core1 dram0 area0 read monitor interrupt enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_AREA_DRAM0_0_WR_RLS</name>
+              <name>CORE_1_AREA_DRAM0_0_WR_INTR_ENA</name>
               <description>Core1 dram0 area0 write monitor interrupt enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_AREA_DRAM0_1_RD_RLS</name>
+              <name>CORE_1_AREA_DRAM0_1_RD_INTR_ENA</name>
               <description>Core1 dram0 area1 read monitor interrupt enable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_AREA_DRAM0_1_WR_RLS</name>
+              <name>CORE_1_AREA_DRAM0_1_WR_INTR_ENA</name>
               <description>Core1 dram0 area1 write monitor interrupt enable</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_AREA_PIF_0_RD_RLS</name>
+              <name>CORE_1_AREA_PIF_0_RD_INTR_ENA</name>
               <description>Core1 PIF area0 read monitor interrupt enable</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_AREA_PIF_0_WR_RLS</name>
+              <name>CORE_1_AREA_PIF_0_WR_INTR_ENA</name>
               <description>Core1 PIF area0 write monitor interrupt enable</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_AREA_PIF_1_RD_RLS</name>
+              <name>CORE_1_AREA_PIF_1_RD_INTR_ENA</name>
               <description>Core1 PIF area1 read monitor interrupt enable</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_AREA_PIF_1_WR_RLS</name>
+              <name>CORE_1_AREA_PIF_1_WR_INTR_ENA</name>
               <description>Core1 PIF area1 write monitor interrupt enable</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_SP_SPILL_MIN_RLS</name>
+              <name>CORE_1_SP_SPILL_MIN_INTR_ENA</name>
               <description>Core1 stackpoint overflow monitor interrupt enable</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_SP_SPILL_MAX_RLS</name>
+              <name>CORE_1_SP_SPILL_MAX_INTR_ENA</name>
               <description>Core1 stackpoint underflow monitor interrupt enable</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_IRAM0_EXCEPTION_MONITOR_RLS</name>
+              <name>CORE_1_IRAM0_EXCEPTION_MONITOR_INTR_ENA</name>
               <description>IBUS busy monitor interrupt enable</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_1_DRAM0_EXCEPTION_MONITOR_RLS</name>
+              <name>CORE_1_DRAM0_EXCEPTION_MONITOR_INTR_ENA</name>
               <description>DBUS busy monitor interrupt enbale</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3551,7 +3551,7 @@
           </fields>
         </register>
         <register>
-          <name>CORE_1_INTERRUPT_CLR</name>
+          <name>CORE_1_INTR_CLR</name>
           <description>Core1 monitor interrupt clr register</description>
           <addressOffset>0x9C</addressOffset>
           <size>0x20</size>
@@ -6189,7 +6189,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IV_0</name>
+              <name>IV</name>
               <description>Stores IV block data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -18196,7 +18196,7 @@ level.</description>
       <name>INTERRUPT_CORE1</name>
       <description>Interrupt Controller (Core 1)</description>
       <groupName>INTERRUPT_CORE1</groupName>
-      <baseAddress>0x600C2800</baseAddress>
+      <baseAddress>0x600C2000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
         <size>0x1A4</size>
@@ -26797,42 +26797,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>4</dim>
           <dimIncrement>0x8</dimIncrement>
-          <name>CH%s_RX_CONF0</name>
+          <name>RX_CH%sCONF0</name>
           <description>Channel %s configure register 0</description>
           <addressOffset>0x30</addressOffset>
           <size>0x20</size>
           <resetValue>0x317FFF02</resetValue>
           <fields>
             <field>
-              <name>DIV_CNT</name>
+              <name>DIV_CNT_CH4</name>
               <description>This register is used to configure the divider for clock of CHANNEL%s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IDLE_THRES</name>
+              <name>IDLE_THRES_CH4</name>
               <description>When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>15</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_SIZE</name>
+              <name>MEM_SIZE_CH4</name>
               <description>This register is used to configure the maximum size of memory allocated to CHANNEL%s.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_EN</name>
+              <name>CARRIER_EN_CH4</name>
               <description>This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_OUT_LV</name>
+              <name>CARRIER_OUT_LV_CH4</name>
               <description>This bit is used to configure the position of carrier wave for CHANNEL%s.
 
 1'h0: add carrier wave on low level.
@@ -26847,35 +26847,35 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>4</dim>
           <dimIncrement>0x8</dimIncrement>
-          <name>CH%s_RX_CONF1</name>
+          <name>RX_CH%sCONF1</name>
           <description>Channel %s configure register 1</description>
           <addressOffset>0x34</addressOffset>
           <size>0x20</size>
           <resetValue>0x000001E8</resetValue>
           <fields>
             <field>
-              <name>RX_EN</name>
+              <name>RX_EN_CH4</name>
               <description>Set this bit to enable receiver to receive data on CHANNEL%s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_WR_RST</name>
+              <name>MEM_WR_RST_CH4</name>
               <description>Set this bit to reset write ram address for CHANNEL%s by accessing receiver.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>APB_MEM_RST</name>
+              <name>APB_MEM_RST_CH4</name>
               <description>Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>MEM_OWNER</name>
+              <name>MEM_OWNER_CH4</name>
               <description>This register marks the ownership of CHANNEL%s's ram block.
 
 1'h1: Receiver is using the ram. 
@@ -26886,35 +26886,35 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>RX_FILTER_EN</name>
+              <name>RX_FILTER_EN_CH4</name>
               <description>This is the receive filter's enable bit for CHANNEL%s.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RX_FILTER_THRES</name>
+              <name>RX_FILTER_THRES_CH4</name>
               <description>Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode).</description>
               <bitOffset>5</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_RX_WRAP_EN</name>
+              <name>MEM_RX_WRAP_EN_CH4</name>
               <description>This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>AFIFO_RST</name>
+              <name>AFIFO_RST_CH4</name>
               <description>Reserved</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CONF_UPDATE</name>
+              <name>CONF_UPDATE_CH4</name>
               <description>synchronization bit for CHANNEL%s</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
@@ -26977,42 +26977,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x000600C0</resetValue>
           <fields>
             <field>
-              <name>MEM_WADDR_EX</name>
+              <name>MEM_WADDR_EX_CH4</name>
               <description>This register records the memory address offset when receiver of CHANNEL%s is using the RAM.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_RADDR</name>
+              <name>APB_MEM_RADDR_CH4</name>
               <description>This register records the memory address offset when reads RAM over APB bus.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>STATE</name>
+              <name>STATE_CH4</name>
               <description>This register records the FSM status of CHANNEL%s.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>MEM_OWNER_ERR</name>
+              <name>MEM_OWNER_ERR_CH4</name>
               <description>This status bit will be set when the ownership of memory block is wrong.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>MEM_FULL</name>
+              <name>MEM_FULL_CH4</name>
               <description>This status bit will be set if the receiver receives more data than the memory size.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_RD_ERR</name>
+              <name>APB_MEM_RD_ERR_CH4</name>
               <description>This status bit will be set if the offset address out of memory size when reads via APB bus.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -27565,7 +27565,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00000080</resetValue>
           <fields>
             <field>
-              <name>RX_LIM</name>
+              <name>RX_LIM_CH4</name>
               <description>This register is used to configure the maximum entries that CHANNEL%s can receive.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
@@ -27702,12 +27702,19 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <dim>8</dim>
-              <dimIncrement>0x1</dimIncrement>
-              <dimIndex>TX_REF_CNT_RST_CH0,TX_REF_CNT_RST_CH1,TX_REF_CNT_RST_CH2,TX_REF_CNT_RST_CH3,RX_REF_CNT_RST_CH4,RX_REF_CNT_RST_CH5,RX_REF_CNT_RST_CH6,RX_REF_CNT_RST_CH7</dimIndex>
-              <name>CH%s</name>
+              <name>TX_REF_CNT_RST</name>
               <description>This register is used to reset the clock divider of CHANNEL0.</description>
               <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <dim>7</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>TX_REF_CNT_RST_CH1,TX_REF_CNT_RST_CH2,TX_REF_CNT_RST_CH3,RX_REF_CNT_RST_CH4,RX_REF_CNT_RST_CH5,RX_REF_CNT_RST_CH6,RX_REF_CNT_RST_CH7</dimIndex>
+              <name>CH%s</name>
+              <description>This register is used to reset the clock divider of CHANNEL1.</description>
+              <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
@@ -32811,7 +32818,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RTC_I2C</name>
-      <description>RTC_I2C Peripheral</description>
+      <description>Low-power I2C (Inter-Integrated Circuit) Controller</description>
       <groupName>RTC_I2C</groupName>
       <baseAddress>0x60008C00</baseAddress>
       <addressBlock>
@@ -33786,7 +33793,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RTC_IO</name>
-      <description>RTC_IO Peripheral</description>
+      <description>Low-power Input/Output</description>
       <groupName>RTC_IO</groupName>
       <baseAddress>0x60008400</baseAddress>
       <addressBlock>
@@ -53084,8 +53091,7 @@ counter.</description>
           <fields>
             <field>
               <name>LOAD</name>
-              <description>
-Write any value to trigger a timer %s time-base counter reload.</description>
+              <description>Write any value to trigger a timer %s time-base counter reload.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>write-only</access>
@@ -53138,32 +53144,28 @@ Write any value to trigger a timer %s time-base counter reload.</description>
             </field>
             <field>
               <name>WDT_STG3</name>
-              <description>Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG2</name>
-              <description>Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG1</name>
-              <description>Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG0</name>
-              <description>Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -60848,6 +60850,12 @@ protection is enabled.</description>
               <access>read-write</access>
             </field>
             <field>
+              <name>ENA32KHZSUSP</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>DEVADDR</name>
               <bitOffset>4</bitOffset>
               <bitWidth>7</bitWidth>
@@ -67602,7 +67610,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>PLAIN_0</name>
+              <name>PLAIN</name>
               <description>Stores the nth 32-bit piece of plaintext.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>

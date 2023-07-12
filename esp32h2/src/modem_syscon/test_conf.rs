@@ -34,12 +34,12 @@ impl From<crate::W<TEST_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CLK_EN` reader - ."]
+#[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
-#[doc = "Field `CLK_EN` writer - ."]
+#[doc = "Field `CLK_EN` writer - "]
 pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TEST_CONF_SPEC, O>;
 impl R {
-    #[doc = "Bit 0 - ."]
+    #[doc = "Bit 0"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new((self.bits & 1) != 0)
@@ -60,7 +60,7 @@ impl core::fmt::Debug for crate::generic::Reg<TEST_CONF_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - ."]
+    #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<0> {

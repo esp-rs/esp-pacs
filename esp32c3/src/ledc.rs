@@ -2,7 +2,7 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    #[doc = "0x00 - LEDC_LSCH%s_CONF%s."]
+    #[doc = "0x00 - LEDC_LSCH%s_CONF0."]
     pub ch0_conf0: CH_CONF0,
     #[doc = "0x04 - LEDC_LSCH%s_HPOINT."]
     pub ch0_hpoint: CH_HPOINT,
@@ -12,7 +12,7 @@ pub struct RegisterBlock {
     pub ch0_conf1: CH_CONF1,
     #[doc = "0x10 - LEDC_LSCH%s_DUTY_R."]
     pub ch0_duty_r: CH_DUTY_R,
-    #[doc = "0x14 - LEDC_LSCH%s_CONF%s."]
+    #[doc = "0x14 - LEDC_LSCH%s_CONF0."]
     pub ch1_conf0: CH_CONF0,
     #[doc = "0x18 - LEDC_LSCH%s_HPOINT."]
     pub ch1_hpoint: CH_HPOINT,
@@ -22,7 +22,7 @@ pub struct RegisterBlock {
     pub ch1_conf1: CH_CONF1,
     #[doc = "0x24 - LEDC_LSCH%s_DUTY_R."]
     pub ch1_duty_r: CH_DUTY_R,
-    #[doc = "0x28 - LEDC_LSCH%s_CONF%s."]
+    #[doc = "0x28 - LEDC_LSCH%s_CONF0."]
     pub ch2_conf0: CH_CONF0,
     #[doc = "0x2c - LEDC_LSCH%s_HPOINT."]
     pub ch2_hpoint: CH_HPOINT,
@@ -32,7 +32,7 @@ pub struct RegisterBlock {
     pub ch2_conf1: CH_CONF1,
     #[doc = "0x38 - LEDC_LSCH%s_DUTY_R."]
     pub ch2_duty_r: CH_DUTY_R,
-    #[doc = "0x3c - LEDC_LSCH%s_CONF%s."]
+    #[doc = "0x3c - LEDC_LSCH%s_CONF0."]
     pub ch3_conf0: CH_CONF0,
     #[doc = "0x40 - LEDC_LSCH%s_HPOINT."]
     pub ch3_hpoint: CH_HPOINT,
@@ -42,7 +42,7 @@ pub struct RegisterBlock {
     pub ch3_conf1: CH_CONF1,
     #[doc = "0x4c - LEDC_LSCH%s_DUTY_R."]
     pub ch3_duty_r: CH_DUTY_R,
-    #[doc = "0x50 - LEDC_LSCH%s_CONF%s."]
+    #[doc = "0x50 - LEDC_LSCH%s_CONF0."]
     pub ch4_conf0: CH_CONF0,
     #[doc = "0x54 - LEDC_LSCH%s_HPOINT."]
     pub ch4_hpoint: CH_HPOINT,
@@ -52,7 +52,7 @@ pub struct RegisterBlock {
     pub ch4_conf1: CH_CONF1,
     #[doc = "0x60 - LEDC_LSCH%s_DUTY_R."]
     pub ch4_duty_r: CH_DUTY_R,
-    #[doc = "0x64 - LEDC_LSCH%s_CONF%s."]
+    #[doc = "0x64 - LEDC_LSCH%s_CONF0."]
     pub ch5_conf0: CH_CONF0,
     #[doc = "0x68 - LEDC_LSCH%s_HPOINT."]
     pub ch5_hpoint: CH_HPOINT,
@@ -95,7 +95,7 @@ pub struct RegisterBlock {
 }
 #[doc = "CH_CONF0 (rw) register accessor: an alias for `Reg<CH_CONF0_SPEC>`"]
 pub type CH_CONF0 = crate::Reg<ch_conf0::CH_CONF0_SPEC>;
-#[doc = "LEDC_LSCH%s_CONF%s."]
+#[doc = "LEDC_LSCH%s_CONF0."]
 pub mod ch_conf0;
 #[doc = "CH_HPOINT (rw) register accessor: an alias for `Reg<CH_HPOINT_SPEC>`"]
 pub type CH_HPOINT = crate::Reg<ch_hpoint::CH_HPOINT_SPEC>;

@@ -13,53 +13,22 @@ impl From<crate::R<BLK3_RDATA4_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Register `BLK3_RDATA4` writer"]
-pub struct W(crate::W<BLK3_RDATA4_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BLK3_RDATA4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BLK3_RDATA4_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BLK3_RDATA4_SPEC>) -> Self {
-        W(writer)
-    }
-}
-#[doc = "Field `BLK3_DOUT4` reader - read for BLOCK3"]
-pub type BLK3_DOUT4_R = crate::FieldReader<u32>;
-#[doc = "Field `RD_CAL_RESERVED` reader - Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE"]
-pub type RD_CAL_RESERVED_R = crate::FieldReader<u16>;
-#[doc = "Field `RD_CAL_RESERVED` writer - Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE"]
-pub type RD_CAL_RESERVED_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_RDATA4_SPEC, 16, O, u16>;
+#[doc = "Field `RD_SECURE_VERSION` reader - "]
+pub type RD_SECURE_VERSION_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - read for BLOCK3"]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn blk3_dout4(&self) -> BLK3_DOUT4_R {
-        BLK3_DOUT4_R::new(self.bits)
-    }
-    #[doc = "Bits 0:15 - Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE"]
-    #[inline(always)]
-    pub fn rd_cal_reserved(&self) -> RD_CAL_RESERVED_R {
-        RD_CAL_RESERVED_R::new((self.bits & 0xffff) as u16)
+    pub fn rd_secure_version(&self) -> RD_SECURE_VERSION_R {
+        RD_SECURE_VERSION_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_RDATA4")
-            .field("blk3_dout4", &format_args!("{}", self.blk3_dout4().bits()))
             .field(
-                "rd_cal_reserved",
-                &format_args!("{}", self.rd_cal_reserved().bits()),
+                "rd_secure_version",
+                &format_args!("{}", self.rd_secure_version().bits()),
             )
             .finish()
     }
@@ -70,21 +39,7 @@ impl core::fmt::Debug for crate::generic::Reg<BLK3_RDATA4_SPEC> {
         self.read().fmt(f)
     }
 }
-impl W {
-    #[doc = "Bits 0:15 - Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE"]
-    #[inline(always)]
-    #[must_use]
-    pub fn rd_cal_reserved(&mut self) -> RD_CAL_RESERVED_W<0> {
-        RD_CAL_RESERVED_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
-    }
-}
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk3_rdata4](index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk3_rdata4](index.html) module"]
 pub struct BLK3_RDATA4_SPEC;
 impl crate::RegisterSpec for BLK3_RDATA4_SPEC {
     type Ux = u32;
@@ -92,12 +47,6 @@ impl crate::RegisterSpec for BLK3_RDATA4_SPEC {
 #[doc = "`read()` method returns [blk3_rdata4::R](R) reader structure"]
 impl crate::Readable for BLK3_RDATA4_SPEC {
     type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [blk3_rdata4::W](W) writer structure"]
-impl crate::Writable for BLK3_RDATA4_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK3_RDATA4 to value 0"]
 impl crate::Resettable for BLK3_RDATA4_SPEC {

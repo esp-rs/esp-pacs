@@ -34,22 +34,22 @@ impl From<crate::W<CH_RX_LIM_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RX_LIM` reader - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub type RX_LIM_R = crate::FieldReader<u16>;
-#[doc = "Field `RX_LIM` writer - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub type RX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16>;
+#[doc = "Field `RX_LIM_CH4` reader - This register is used to configure the maximum entries that CHANNEL%s can receive."]
+pub type RX_LIM_CH4_R = crate::FieldReader<u16>;
+#[doc = "Field `RX_LIM_CH4` writer - This register is used to configure the maximum entries that CHANNEL%s can receive."]
+pub type RX_LIM_CH4_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]
-    pub fn rx_lim(&self) -> RX_LIM_R {
-        RX_LIM_R::new((self.bits & 0x01ff) as u16)
+    pub fn rx_lim_ch4(&self) -> RX_LIM_CH4_R {
+        RX_LIM_CH4_R::new((self.bits & 0x01ff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_RX_LIM")
-            .field("rx_lim", &format_args!("{}", self.rx_lim().bits()))
+            .field("rx_lim_ch4", &format_args!("{}", self.rx_lim_ch4().bits()))
             .finish()
     }
 }
@@ -63,8 +63,8 @@ impl W {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_lim(&mut self) -> RX_LIM_W<0> {
-        RX_LIM_W::new(self)
+    pub fn rx_lim_ch4(&mut self) -> RX_LIM_CH4_W<0> {
+        RX_LIM_CH4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

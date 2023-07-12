@@ -19,8 +19,8 @@ impl From<crate::W<IV__SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IV_0` writer - IV block data."]
-pub type IV_0_W<'a, const O: u8> = crate::FieldWriter<'a, IV__SPEC, 32, O, u32>;
+#[doc = "Field `IV` writer - IV block data."]
+pub type IV_W<'a, const O: u8> = crate::FieldWriter<'a, IV__SPEC, 32, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IV__SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:31 - IV block data."]
     #[inline(always)]
     #[must_use]
-    pub fn iv_0(&mut self) -> IV_0_W<0> {
-        IV_0_W::new(self)
+    pub fn iv(&mut self) -> IV_W<0> {
+        IV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

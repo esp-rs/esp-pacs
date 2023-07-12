@@ -34,24 +34,26 @@ impl From<crate::W<CHCARRIER_DUTY_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CARRIER_LOW` reader - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
-pub type CARRIER_LOW_R = crate::FieldReader<u16>;
-#[doc = "Field `CARRIER_LOW` writer - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
-pub type CARRIER_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16>;
-#[doc = "Field `CARRIER_HIGH` reader - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
-pub type CARRIER_HIGH_R = crate::FieldReader<u16>;
-#[doc = "Field `CARRIER_HIGH` writer - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
-pub type CARRIER_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16>;
+#[doc = "Field `CARRIER_LOW_CH` reader - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
+pub type CARRIER_LOW_CH_R = crate::FieldReader<u16>;
+#[doc = "Field `CARRIER_LOW_CH` writer - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
+pub type CARRIER_LOW_CH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16>;
+#[doc = "Field `CARRIER_HIGH_CH` reader - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
+pub type CARRIER_HIGH_CH_R = crate::FieldReader<u16>;
+#[doc = "Field `CARRIER_HIGH_CH` writer - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
+pub type CARRIER_HIGH_CH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
     #[inline(always)]
-    pub fn carrier_low(&self) -> CARRIER_LOW_R {
-        CARRIER_LOW_R::new((self.bits & 0xffff) as u16)
+    pub fn carrier_low_ch(&self) -> CARRIER_LOW_CH_R {
+        CARRIER_LOW_CH_R::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 16:31 - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
     #[inline(always)]
-    pub fn carrier_high(&self) -> CARRIER_HIGH_R {
-        CARRIER_HIGH_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn carrier_high_ch(&self) -> CARRIER_HIGH_CH_R {
+        CARRIER_HIGH_CH_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -59,12 +61,12 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHCARRIER_DUTY")
             .field(
-                "carrier_low",
-                &format_args!("{}", self.carrier_low().bits()),
+                "carrier_low_ch",
+                &format_args!("{}", self.carrier_low_ch().bits()),
             )
             .field(
-                "carrier_high",
-                &format_args!("{}", self.carrier_high().bits()),
+                "carrier_high_ch",
+                &format_args!("{}", self.carrier_high_ch().bits()),
             )
             .finish()
     }
@@ -79,14 +81,14 @@ impl W {
     #[doc = "Bits 0:15 - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_low(&mut self) -> CARRIER_LOW_W<0> {
-        CARRIER_LOW_W::new(self)
+    pub fn carrier_low_ch(&mut self) -> CARRIER_LOW_CH_W<0> {
+        CARRIER_LOW_CH_W::new(self)
     }
     #[doc = "Bits 16:31 - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_high(&mut self) -> CARRIER_HIGH_W<16> {
-        CARRIER_HIGH_W::new(self)
+    pub fn carrier_high_ch(&mut self) -> CARRIER_HIGH_CH_W<16> {
+        CARRIER_HIGH_CH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

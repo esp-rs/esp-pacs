@@ -22,7 +22,7 @@
     limitations under the License.
 </licenseText>
   <cpu>
-    <name>RV32IMC</name>
+    <name>RV32IMAC</name>
     <revision>r0p0</revision>
     <endian>little</endian>
     <mpuPresent>false</mpuPresent>

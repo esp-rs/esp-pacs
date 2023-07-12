@@ -940,7 +940,7 @@ impl core::fmt::Debug for LP_AON {
 }
 #[doc = "LP_AON Peripheral"]
 pub mod lp_aon;
-#[doc = "LP_APM Peripheral"]
+#[doc = "Low-power Access Permission Management Controller"]
 pub struct LP_APM {
     _marker: PhantomData<*const ()>,
 }
@@ -966,7 +966,7 @@ impl core::fmt::Debug for LP_APM {
         f.debug_struct("LP_APM").finish()
     }
 }
-#[doc = "LP_APM Peripheral"]
+#[doc = "Low-power Access Permission Management Controller"]
 pub mod lp_apm;
 #[doc = "LP_APM0 Peripheral"]
 pub struct LP_APM0 {
@@ -1024,7 +1024,7 @@ impl core::fmt::Debug for LP_CLKRST {
 }
 #[doc = "LP_CLKRST Peripheral"]
 pub mod lp_clkrst;
-#[doc = "LP_I2C0 Peripheral"]
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
 pub struct LP_I2C0 {
     _marker: PhantomData<*const ()>,
 }
@@ -1050,7 +1050,7 @@ impl core::fmt::Debug for LP_I2C0 {
         f.debug_struct("LP_I2C0").finish()
     }
 }
-#[doc = "LP_I2C0 Peripheral"]
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
 pub mod lp_i2c0;
 #[doc = "LP_I2C_ANA_MST Peripheral"]
 pub struct LP_I2C_ANA_MST {
@@ -1108,7 +1108,7 @@ impl core::fmt::Debug for LP_IO {
 }
 #[doc = "LP_IO Peripheral"]
 pub mod lp_io;
-#[doc = "LP_TEE Peripheral"]
+#[doc = "Low-power Trusted Execution Environment"]
 pub struct LP_TEE {
     _marker: PhantomData<*const ()>,
 }
@@ -1134,9 +1134,9 @@ impl core::fmt::Debug for LP_TEE {
         f.debug_struct("LP_TEE").finish()
     }
 }
-#[doc = "LP_TEE Peripheral"]
+#[doc = "Low-power Trusted Execution Environment"]
 pub mod lp_tee;
-#[doc = "LP_TIMER Peripheral"]
+#[doc = "Low-power Timer"]
 pub struct LP_TIMER {
     _marker: PhantomData<*const ()>,
 }
@@ -1162,9 +1162,9 @@ impl core::fmt::Debug for LP_TIMER {
         f.debug_struct("LP_TIMER").finish()
     }
 }
-#[doc = "LP_TIMER Peripheral"]
+#[doc = "Low-power Timer"]
 pub mod lp_timer;
-#[doc = "LP_UART Peripheral"]
+#[doc = "Low-power UART (Universal Asynchronous Receiver-Transmitter) Controller"]
 pub struct LP_UART {
     _marker: PhantomData<*const ()>,
 }
@@ -1190,9 +1190,9 @@ impl core::fmt::Debug for LP_UART {
         f.debug_struct("LP_UART").finish()
     }
 }
-#[doc = "LP_UART Peripheral"]
+#[doc = "Low-power UART (Universal Asynchronous Receiver-Transmitter) Controller"]
 pub mod lp_uart;
-#[doc = "LP_WDT Peripheral"]
+#[doc = "Low-power Watchdog Timer"]
 pub struct LP_WDT {
     _marker: PhantomData<*const ()>,
 }
@@ -1218,7 +1218,7 @@ impl core::fmt::Debug for LP_WDT {
         f.debug_struct("LP_WDT").finish()
     }
 }
-#[doc = "LP_WDT Peripheral"]
+#[doc = "Low-power Watchdog Timer"]
 pub mod lp_wdt;
 #[doc = "Motor Control Pulse-Width Modulation 0"]
 pub struct MCPWM0 {

@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32 S-Series</series>
-  <version>15</version>
+  <version>16</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -59,7 +59,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY_0</name>
+              <name>KEY</name>
               <description>Stores AES keys.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -76,7 +76,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TEXT_IN_0</name>
+              <name>TEXT_IN</name>
               <description>Stores the source data when the AES Accelerator operates in the Typical AES working mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -93,7 +93,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TEXT_OUT_0</name>
+              <name>TEXT_OUT</name>
               <description>Stores the result data when the AES Accelerator operates in the Typical AES working mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -185,7 +185,7 @@ For DMA-AES; 0 = idle; 1 = busy; 2 = calculation_done.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>IV_0</name>
+              <name>IV</name>
               <description>This register stores the %sth 32-bit piece of 128-bit initialization vector</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -202,7 +202,7 @@ For DMA-AES; 0 = idle; 1 = busy; 2 = calculation_done.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>H_0</name>
+              <name>H</name>
               <description>GCM hash subkey</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -219,7 +219,7 @@ For DMA-AES; 0 = idle; 1 = busy; 2 = calculation_done.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>J0_0</name>
+              <name>J0</name>
               <description>This register stores the %sth 32-bit piece of 128-bit J0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -236,7 +236,7 @@ For DMA-AES; 0 = idle; 1 = busy; 2 = calculation_done.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_0</name>
+              <name>T0</name>
               <description>This register stores the %sth 32-bit piece of 128-bit T0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2007,7 +2007,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>IV_0</name>
+              <name>IV</name>
               <description>IV block data.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2170,7 +2170,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>PGM_DATA_0</name>
+              <name>PGM_DATA</name>
               <description>The content of the %sth 32-bit data to be programmed.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2187,7 +2187,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>PGM_RS_DATA_0</name>
+              <name>PGM_RS_DATA</name>
               <description>The content of the %sth 32-bit RS code to be programmed.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2790,7 +2790,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>SYS_DATA_PART1_0</name>
+              <name>SYS_DATA_PART1</name>
               <description>Stores the %sth 32 bits of the first part of system data.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2807,7 +2807,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>USR_DATA0</name>
+              <name>USR_DATA</name>
               <description>Stores the %sth 32 bits of BLOCK3 (user).</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2824,7 +2824,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY0_DATA0</name>
+              <name>KEY0_DATA</name>
               <description>Stores the %sth 32 bits of KEY0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2841,7 +2841,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY1_DATA0</name>
+              <name>KEY1_DATA</name>
               <description>Stores the %sth 32 bits of KEY1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2858,7 +2858,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY2_DATA0</name>
+              <name>KEY2_DATA</name>
               <description>Stores the %sth 32 bits of KEY2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2875,7 +2875,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY3_DATA0</name>
+              <name>KEY3_DATA</name>
               <description>Stores the %sth 32 bits of KEY3.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2892,7 +2892,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY4_DATA0</name>
+              <name>KEY4_DATA</name>
               <description>Stores the %sth 32 bits of KEY4.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2909,7 +2909,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>KEY5_DATA0</name>
+              <name>KEY5_DATA</name>
               <description>Stores the %sth 32 bits of KEY5.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -2926,7 +2926,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>SYS_DATA_PART2_0</name>
+              <name>SYS_DATA_PART2</name>
               <description>Stores the %sth 32 bits of the 2nd part of system data.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6915,14 +6915,14 @@ alternate-channel scan mode.</description>
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>SD0_IN</name>
+              <name>SD_IN</name>
               <description>This field is used to configure the duty cycle of sigma delta modulation output.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SD0_PRESCALE</name>
+              <name>SD_PRESCALE</name>
               <description>This field is used to set a divider value to divide APB clock.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
@@ -7158,9 +7158,7 @@ alternate-channel scan mode.</description>
 
 0: hmac key and purpose match.
 
-1: error.
-
-</description>
+1: error.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -7179,9 +7177,7 @@ alternate-channel scan mode.</description>
 
 1'b0: idle.
 
-1'b1: busy.
-
-</description>
+1'b1: busy.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -20183,7 +20179,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RTC_IO</name>
-      <description>RTC_IO Peripheral</description>
+      <description>Low-power Input/Output</description>
       <groupName>RTCIO</groupName>
       <baseAddress>0x3F408400</baseAddress>
       <addressBlock>
@@ -20358,14 +20354,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_PIN0_INT_TYPE</name>
+              <name>GPIO_PIN_INT_TYPE</name>
               <description>GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_PIN0_WAKEUP_ENABLE</name>
+              <name>GPIO_PIN_WAKEUP_ENABLE</name>
               <description>GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20427,91 +20423,91 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x52000000</resetValue>
           <fields>
             <field>
-              <name>TOUCH_PAD0_FUN_IE</name>
+              <name>FUN_IE</name>
               <description>Input enable in normal execution.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_SLP_OE</name>
+              <name>SLP_OE</name>
               <description>Output enable in sleep mode.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_SLP_IE</name>
+              <name>SLP_IE</name>
               <description>Input enable in sleep mode.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_SLP_SEL</name>
+              <name>SLP_SEL</name>
               <description>0: no sleep mode. 1: enable sleep mode.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_FUN_SEL</name>
+              <name>FUN_SEL</name>
               <description>Function selection.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_MUX_SEL</name>
+              <name>MUX_SEL</name>
               <description>Connect the RTC pad input to digital pad input.  0 is available.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_XPD</name>
+              <name>XPD</name>
               <description>Touch sensor power on.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_TIE_OPT</name>
+              <name>TIE_OPT</name>
               <description>The tie option of touch sensor. 0: tie low. 1: tie high.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_START</name>
+              <name>START</name>
               <description>Start touch sensor.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_DAC</name>
+              <name>DAC</name>
               <description>Touch sensor slope control. 3-bit for each touch pad, defaults to 0x4.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_RUE</name>
+              <name>RUE</name>
               <description>Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_RDE</name>
+              <name>RDE</name>
               <description>Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TOUCH_PAD0_DRV</name>
+              <name>DRV</name>
               <description>Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>2</bitWidth>
@@ -25376,7 +25372,7 @@ proximity mode. Range: 0 – 255.</description>
     </peripheral>
     <peripheral>
       <name>RTC_I2C</name>
-      <description>RTC_I2C Peripheral</description>
+      <description>Low-power I2C (Inter-Integrated Circuit) Controller</description>
       <groupName>RTC_I2C</groupName>
       <baseAddress>0x3F408C00</baseAddress>
       <addressBlock>
@@ -28307,7 +28303,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>H_0</name>
+              <name>H</name>
               <description>Stores the %sth 32-bit piece of the Hash value.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -28324,7 +28320,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>M_0</name>
+              <name>M</name>
               <description>Stores the %sth 32-bit piece of the message.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -33822,8 +33818,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <fields>
             <field>
               <name>ALARM_HI</name>
-              <description>
-Timer %s alarm trigger time-base counter value, high 32 bits.</description>
+              <description>Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -42458,6 +42453,12 @@ If this bit is set to 0, UHCI decoder stops receiving payload data  upon receivi
               <access>read-write</access>
             </field>
             <field>
+              <name>ENA32KHZSUSP</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>DEVADDR</name>
               <bitOffset>4</bitOffset>
               <bitWidth>7</bitWidth>
@@ -46521,7 +46522,7 @@ If this bit is set to 0, UHCI decoder stops receiving payload data  upon receivi
           <size>0x20</size>
           <fields>
             <field>
-              <name>PLAIN_0</name>
+              <name>PLAIN</name>
               <description>This register stores %sth 32-bit piece of plaintext.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>

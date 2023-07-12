@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32 C-Series</series>
-  <version>14</version>
+  <version>15</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -2352,7 +2352,7 @@
       </interrupt>
       <registers>
         <register>
-          <name>C0RE_0_MONTR_ENA</name>
+          <name>CORE_0_MONTR_ENA</name>
           <description>ASSIST_DEBUG_C0RE_0_MONTR_ENA_REG</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
@@ -16200,7 +16200,7 @@
           <dimIncrement>0x14</dimIncrement>
           <dimIndex>0-5</dimIndex>
           <name>CH%s_CONF0</name>
-          <description>LEDC_LSCH%s_CONF%s.</description>
+          <description>LEDC_LSCH%s_CONF0.</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
@@ -17188,7 +17188,7 @@
           </fields>
         </register>
         <register>
-          <name>CH2CONF1</name>
+          <name>RX_CH0CONF1</name>
           <description>RMT_CH2CONF1_REG.</description>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
@@ -17260,7 +17260,7 @@
           </fields>
         </register>
         <register>
-          <name>CH3CONF1</name>
+          <name>RX_CH1CONF1</name>
           <description>RMT_CH3CONF1_REG.</description>
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
@@ -17874,8 +17874,11 @@
           </fields>
         </register>
         <register>
-          <name>CH0CARRIER_DUTY</name>
-          <description>RMT_CH0CARRIER_DUTY_REG.</description>
+          <dim>2</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-1</dimIndex>
+          <name>CH%sCARRIER_DUTY</name>
+          <description>RMT_CH%sCARRIER_DUTY_REG.</description>
           <addressOffset>0x48</addressOffset>
           <size>0x20</size>
           <resetValue>0x00400040</resetValue>
@@ -17897,30 +17900,10 @@
           </fields>
         </register>
         <register>
-          <name>CH1CARRIER_DUTY</name>
-          <description>RMT_CH1CARRIER_DUTY_REG.</description>
-          <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>reg_carrier_low_ch1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>reg_carrier_high_ch1.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH2_RX_CARRIER_RM</name>
+          <dim>2</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-1</dimIndex>
+          <name>CH%s_RX_CARRIER_RM</name>
           <description>RMT_CH2_RX_CARRIER_RM_REG.</description>
           <addressOffset>0x50</addressOffset>
           <size>0x20</size>
@@ -17935,28 +17918,6 @@
             <field>
               <name>CARRIER_HIGH_THRES</name>
               <description>reg_carrier_high_thres_ch2.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH3_RX_CARRIER_RM</name>
-          <description>RMT_CH3_RX_CARRIER_RM_REG.</description>
-          <addressOffset>0x54</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>CARRIER_LOW_THRES</name>
-              <description>reg_carrier_low_thres_ch3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH_THRES</name>
-              <description>reg_carrier_high_thres_ch3.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>

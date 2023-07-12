@@ -34,22 +34,22 @@ impl From<crate::W<IV__SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IV_0` reader - Stores IV block data"]
-pub type IV_0_R = crate::FieldReader<u32>;
-#[doc = "Field `IV_0` writer - Stores IV block data"]
-pub type IV_0_W<'a, const O: u8> = crate::FieldWriter<'a, IV__SPEC, 32, O, u32>;
+#[doc = "Field `IV` reader - Stores IV block data"]
+pub type IV_R = crate::FieldReader<u32>;
+#[doc = "Field `IV` writer - Stores IV block data"]
+pub type IV_W<'a, const O: u8> = crate::FieldWriter<'a, IV__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores IV block data"]
     #[inline(always)]
-    pub fn iv_0(&self) -> IV_0_R {
-        IV_0_R::new(self.bits)
+    pub fn iv(&self) -> IV_R {
+        IV_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IV_")
-            .field("iv_0", &format_args!("{}", self.iv_0().bits()))
+            .field("iv", &format_args!("{}", self.iv().bits()))
             .finish()
     }
 }
@@ -63,8 +63,8 @@ impl W {
     #[doc = "Bits 0:31 - Stores IV block data"]
     #[inline(always)]
     #[must_use]
-    pub fn iv_0(&mut self) -> IV_0_W<0> {
-        IV_0_W::new(self)
+    pub fn iv(&mut self) -> IV_W<0> {
+        IV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

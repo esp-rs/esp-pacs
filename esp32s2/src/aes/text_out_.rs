@@ -34,22 +34,22 @@ impl From<crate::W<TEXT_OUT__SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TEXT_OUT_0` reader - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
-pub type TEXT_OUT_0_R = crate::FieldReader<u32>;
-#[doc = "Field `TEXT_OUT_0` writer - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
-pub type TEXT_OUT_0_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_OUT__SPEC, 32, O, u32>;
+#[doc = "Field `TEXT_OUT` reader - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
+pub type TEXT_OUT_R = crate::FieldReader<u32>;
+#[doc = "Field `TEXT_OUT` writer - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
+pub type TEXT_OUT_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_OUT__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
     #[inline(always)]
-    pub fn text_out_0(&self) -> TEXT_OUT_0_R {
-        TEXT_OUT_0_R::new(self.bits)
+    pub fn text_out(&self) -> TEXT_OUT_R {
+        TEXT_OUT_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TEXT_OUT_")
-            .field("text_out_0", &format_args!("{}", self.text_out_0().bits()))
+            .field("text_out", &format_args!("{}", self.text_out().bits()))
             .finish()
     }
 }
@@ -63,8 +63,8 @@ impl W {
     #[doc = "Bits 0:31 - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
     #[inline(always)]
     #[must_use]
-    pub fn text_out_0(&mut self) -> TEXT_OUT_0_W<0> {
-        TEXT_OUT_0_W::new(self)
+    pub fn text_out(&mut self) -> TEXT_OUT_W<0> {
+        TEXT_OUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

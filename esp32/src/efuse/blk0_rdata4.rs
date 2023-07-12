@@ -34,64 +34,61 @@ impl From<crate::W<BLK0_RDATA4_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RD_CK8M_FREQ` reader - "]
-pub type RD_CK8M_FREQ_R = crate::FieldReader;
-#[doc = "Field `RD_ADC_VREF` reader - True ADC reference voltage"]
+#[doc = "Field `RD_CLK8M_FREQ` reader - "]
+pub type RD_CLK8M_FREQ_R = crate::FieldReader;
+#[doc = "Field `RD_ADC_VREF` reader - "]
 pub type RD_ADC_VREF_R = crate::FieldReader;
-#[doc = "Field `RD_ADC_VREF` writer - True ADC reference voltage"]
+#[doc = "Field `RD_ADC_VREF` writer - "]
 pub type RD_ADC_VREF_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_RDATA4_SPEC, 5, O>;
-#[doc = "Field `RD_SDIO_DREFH` reader - "]
-pub type RD_SDIO_DREFH_R = crate::FieldReader;
-#[doc = "Field `RD_SDIO_DREFM` reader - "]
-pub type RD_SDIO_DREFM_R = crate::FieldReader;
-#[doc = "Field `RD_SDIO_DREFL` reader - "]
-pub type RD_SDIO_DREFL_R = crate::FieldReader;
-#[doc = "Field `RD_XPD_SDIO` reader - read for XPD_SDIO_REG"]
+#[doc = "Field `RD_RESERVE_0_141` reader - "]
+pub type RD_RESERVE_0_141_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_141` writer - "]
+pub type RD_RESERVE_0_141_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_RDATA4_SPEC, O>;
+#[doc = "Field `RD_XPD_SDIO` reader - "]
 pub type RD_XPD_SDIO_R = crate::BitReader;
-#[doc = "Field `RD_SDIO_TIEH` reader - read for SDIO_TIEH"]
-pub type RD_SDIO_TIEH_R = crate::BitReader;
-#[doc = "Field `RD_SDIO_FORCE` reader - read for sdio_force"]
-pub type RD_SDIO_FORCE_R = crate::BitReader;
+#[doc = "Field `RD_XPD_SDIO_TIEH` reader - "]
+pub type RD_XPD_SDIO_TIEH_R = crate::BitReader;
+#[doc = "Field `RD_XPD_SDIO_FORCE` reader - "]
+pub type RD_XPD_SDIO_FORCE_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_145` reader - "]
+pub type RD_RESERVE_0_145_R = crate::FieldReader<u16>;
+#[doc = "Field `RD_RESERVE_0_145` writer - "]
+pub type RD_RESERVE_0_145_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_RDATA4_SPEC, 15, O, u16>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn rd_ck8m_freq(&self) -> RD_CK8M_FREQ_R {
-        RD_CK8M_FREQ_R::new((self.bits & 0xff) as u8)
+    pub fn rd_clk8m_freq(&self) -> RD_CLK8M_FREQ_R {
+        RD_CLK8M_FREQ_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:12 - True ADC reference voltage"]
+    #[doc = "Bits 8:12"]
     #[inline(always)]
     pub fn rd_adc_vref(&self) -> RD_ADC_VREF_R {
         RD_ADC_VREF_R::new(((self.bits >> 8) & 0x1f) as u8)
     }
-    #[doc = "Bits 8:9"]
+    #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn rd_sdio_drefh(&self) -> RD_SDIO_DREFH_R {
-        RD_SDIO_DREFH_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn rd_reserve_0_141(&self) -> RD_RESERVE_0_141_R {
+        RD_RESERVE_0_141_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bits 10:11"]
-    #[inline(always)]
-    pub fn rd_sdio_drefm(&self) -> RD_SDIO_DREFM_R {
-        RD_SDIO_DREFM_R::new(((self.bits >> 10) & 3) as u8)
-    }
-    #[doc = "Bits 12:13"]
-    #[inline(always)]
-    pub fn rd_sdio_drefl(&self) -> RD_SDIO_DREFL_R {
-        RD_SDIO_DREFL_R::new(((self.bits >> 12) & 3) as u8)
-    }
-    #[doc = "Bit 14 - read for XPD_SDIO_REG"]
+    #[doc = "Bit 14"]
     #[inline(always)]
     pub fn rd_xpd_sdio(&self) -> RD_XPD_SDIO_R {
         RD_XPD_SDIO_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 15 - read for SDIO_TIEH"]
+    #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn rd_sdio_tieh(&self) -> RD_SDIO_TIEH_R {
-        RD_SDIO_TIEH_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn rd_xpd_sdio_tieh(&self) -> RD_XPD_SDIO_TIEH_R {
+        RD_XPD_SDIO_TIEH_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 16 - read for sdio_force"]
+    #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn rd_sdio_force(&self) -> RD_SDIO_FORCE_R {
-        RD_SDIO_FORCE_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn rd_xpd_sdio_force(&self) -> RD_XPD_SDIO_FORCE_R {
+        RD_XPD_SDIO_FORCE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bits 17:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_145(&self) -> RD_RESERVE_0_145_R {
+        RD_RESERVE_0_145_R::new(((self.bits >> 17) & 0x7fff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -99,33 +96,29 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA4")
             .field(
-                "rd_ck8m_freq",
-                &format_args!("{}", self.rd_ck8m_freq().bits()),
+                "rd_clk8m_freq",
+                &format_args!("{}", self.rd_clk8m_freq().bits()),
             )
             .field(
                 "rd_adc_vref",
                 &format_args!("{}", self.rd_adc_vref().bits()),
             )
             .field(
-                "rd_sdio_drefh",
-                &format_args!("{}", self.rd_sdio_drefh().bits()),
-            )
-            .field(
-                "rd_sdio_drefm",
-                &format_args!("{}", self.rd_sdio_drefm().bits()),
-            )
-            .field(
-                "rd_sdio_drefl",
-                &format_args!("{}", self.rd_sdio_drefl().bits()),
+                "rd_reserve_0_141",
+                &format_args!("{}", self.rd_reserve_0_141().bit()),
             )
             .field("rd_xpd_sdio", &format_args!("{}", self.rd_xpd_sdio().bit()))
             .field(
-                "rd_sdio_tieh",
-                &format_args!("{}", self.rd_sdio_tieh().bit()),
+                "rd_xpd_sdio_tieh",
+                &format_args!("{}", self.rd_xpd_sdio_tieh().bit()),
             )
             .field(
-                "rd_sdio_force",
-                &format_args!("{}", self.rd_sdio_force().bit()),
+                "rd_xpd_sdio_force",
+                &format_args!("{}", self.rd_xpd_sdio_force().bit()),
+            )
+            .field(
+                "rd_reserve_0_145",
+                &format_args!("{}", self.rd_reserve_0_145().bits()),
             )
             .finish()
     }
@@ -137,11 +130,23 @@ impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA4_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 8:12 - True ADC reference voltage"]
+    #[doc = "Bits 8:12"]
     #[inline(always)]
     #[must_use]
     pub fn rd_adc_vref(&mut self) -> RD_ADC_VREF_W<8> {
         RD_ADC_VREF_W::new(self)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rd_reserve_0_141(&mut self) -> RD_RESERVE_0_141_W<13> {
+        RD_RESERVE_0_141_W::new(self)
+    }
+    #[doc = "Bits 17:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rd_reserve_0_145(&mut self) -> RD_RESERVE_0_145_W<17> {
+        RD_RESERVE_0_145_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

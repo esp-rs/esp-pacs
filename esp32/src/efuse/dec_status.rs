@@ -13,10 +13,10 @@ impl From<crate::R<DEC_STATUS_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `DEC_WARNINGS` reader - the decode result of 3/4 coding scheme has warning"]
+#[doc = "Field `DEC_WARNINGS` reader - "]
 pub type DEC_WARNINGS_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:11 - the decode result of 3/4 coding scheme has warning"]
+    #[doc = "Bits 0:11"]
     #[inline(always)]
     pub fn dec_warnings(&self) -> DEC_WARNINGS_R {
         DEC_WARNINGS_R::new((self.bits & 0x0fff) as u16)

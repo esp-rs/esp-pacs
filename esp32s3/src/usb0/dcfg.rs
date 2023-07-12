@@ -38,6 +38,10 @@ impl From<crate::W<DCFG_SPEC>> for W {
 pub type NZSTSOUTHSHK_R = crate::BitReader;
 #[doc = "Field `NZSTSOUTHSHK` writer - "]
 pub type NZSTSOUTHSHK_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
+#[doc = "Field `ENA32KHZSUSP` reader - "]
+pub type ENA32KHZSUSP_R = crate::BitReader;
+#[doc = "Field `ENA32KHZSUSP` writer - "]
+pub type ENA32KHZSUSP_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
 #[doc = "Field `DEVADDR` reader - "]
 pub type DEVADDR_R = crate::FieldReader;
 #[doc = "Field `DEVADDR` writer - "]
@@ -79,6 +83,11 @@ impl R {
     #[inline(always)]
     pub fn nzstsouthshk(&self) -> NZSTSOUTHSHK_R {
         NZSTSOUTHSHK_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn ena32khzsusp(&self) -> ENA32KHZSUSP_R {
+        ENA32KHZSUSP_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:10"]
     #[inline(always)]
@@ -134,6 +143,10 @@ impl core::fmt::Debug for R {
                 "nzstsouthshk",
                 &format_args!("{}", self.nzstsouthshk().bit()),
             )
+            .field(
+                "ena32khzsusp",
+                &format_args!("{}", self.ena32khzsusp().bit()),
+            )
             .field("devaddr", &format_args!("{}", self.devaddr().bits()))
             .field("perfrlint", &format_args!("{}", self.perfrlint().bits()))
             .field("endevoutnak", &format_args!("{}", self.endevoutnak().bit()))
@@ -164,6 +177,12 @@ impl W {
     #[must_use]
     pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<2> {
         NZSTSOUTHSHK_W::new(self)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ena32khzsusp(&mut self) -> ENA32KHZSUSP_W<3> {
+        ENA32KHZSUSP_W::new(self)
     }
     #[doc = "Bits 4:10"]
     #[inline(always)]

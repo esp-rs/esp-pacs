@@ -34,13 +34,13 @@ impl From<crate::W<BLK0_WDATA2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WIFI_MAC_CRC_HIGH` reader - program for high 24bit WIFI_MAC_Address"]
+#[doc = "Field `WIFI_MAC_CRC_HIGH` reader - "]
 pub type WIFI_MAC_CRC_HIGH_R = crate::FieldReader<u32>;
-#[doc = "Field `WIFI_MAC_CRC_HIGH` writer - program for high 24bit WIFI_MAC_Address"]
+#[doc = "Field `WIFI_MAC_CRC_HIGH` writer - "]
 pub type WIFI_MAC_CRC_HIGH_W<'a, const O: u8> =
     crate::FieldWriter<'a, BLK0_WDATA2_SPEC, 24, O, u32>;
 impl R {
-    #[doc = "Bits 0:23 - program for high 24bit WIFI_MAC_Address"]
+    #[doc = "Bits 0:23"]
     #[inline(always)]
     pub fn wifi_mac_crc_high(&self) -> WIFI_MAC_CRC_HIGH_R {
         WIFI_MAC_CRC_HIGH_R::new(self.bits & 0x00ff_ffff)
@@ -64,7 +64,7 @@ impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA2_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:23 - program for high 24bit WIFI_MAC_Address"]
+    #[doc = "Bits 0:23"]
     #[inline(always)]
     #[must_use]
     pub fn wifi_mac_crc_high(&mut self) -> WIFI_MAC_CRC_HIGH_W<0> {
