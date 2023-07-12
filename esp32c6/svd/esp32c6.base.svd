@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C6</name>
   <series>ESP32 C-Series</series>
-  <version>5</version>
+  <version>6</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi 6 &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -1555,7 +1555,7 @@
       </interrupt>
       <registers>
         <register>
-          <name>C0RE_0_INTR_ENA</name>
+          <name>CORE_0_MONTR_ENA</name>
           <description>core0 monitor enable configuration register</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
@@ -1739,90 +1739,90 @@
           </fields>
         </register>
         <register>
-          <name>CORE_0_INTR_RLS</name>
+          <name>CORE_0_INTR_ENA</name>
           <description>core0 monitor interrupt enable register</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_RD_RLS</name>
+              <name>CORE_0_AREA_DRAM0_0_RD_INTR_ENA</name>
               <description>Core0 dram0 area0 read monitor interrupt enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_WR_RLS</name>
+              <name>CORE_0_AREA_DRAM0_0_WR_INTR_ENA</name>
               <description>Core0 dram0 area0 write monitor interrupt enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_1_RD_RLS</name>
+              <name>CORE_0_AREA_DRAM0_1_RD_INTR_ENA</name>
               <description>Core0 dram0 area1 read monitor interrupt enable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_1_WR_RLS</name>
+              <name>CORE_0_AREA_DRAM0_1_WR_INTR_ENA</name>
               <description>Core0 dram0 area1 write monitor interrupt enable</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_0_RD_RLS</name>
+              <name>CORE_0_AREA_PIF_0_RD_INTR_ENA</name>
               <description>Core0 PIF area0 read monitor interrupt enable</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_0_WR_RLS</name>
+              <name>CORE_0_AREA_PIF_0_WR_INTR_ENA</name>
               <description>Core0 PIF area0 write monitor interrupt enable</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_1_RD_RLS</name>
+              <name>CORE_0_AREA_PIF_1_RD_INTR_ENA</name>
               <description>Core0 PIF area1 read monitor interrupt enable</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_PIF_1_WR_RLS</name>
+              <name>CORE_0_AREA_PIF_1_WR_INTR_ENA</name>
               <description>Core0 PIF area1 write monitor interrupt enable</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_SP_SPILL_MIN_RLS</name>
+              <name>CORE_0_SP_SPILL_MIN_INTR_ENA</name>
               <description>Core0 stackpoint underflow monitor interrupt enable</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_SP_SPILL_MAX_RLS</name>
+              <name>CORE_0_SP_SPILL_MAX_INTR_ENA</name>
               <description>Core0 stackpoint overflow monitor interrupt enable</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_IRAM0_EXCEPTION_MONITOR_RLS</name>
+              <name>CORE_0_IRAM0_EXCEPTION_MONITOR_INTR_ENA</name>
               <description>IBUS busy monitor interrupt enable</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_DRAM0_EXCEPTION_MONITOR_RLS</name>
+              <name>CORE_0_DRAM0_EXCEPTION_MONITOR_INTR_ENA</name>
               <description>DBUS busy monitor interrupt enbale</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21047,7 +21047,7 @@ level.</description>
       <baseAddress>0x60010000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0x148</size>
+        <size>0x14C</size>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
@@ -21454,9 +21454,24 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>CPU_INTR_FROM_CPU_0_MAP</name>
+          <name>LP_TOUCH_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>LP_TOUCH_INTR_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_0_MAP</name>
+          <description>register description</description>
+          <addressOffset>0x5C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21471,7 +21486,7 @@ level.</description>
         <register>
           <name>CPU_INTR_FROM_CPU_1_MAP</name>
           <description>register description</description>
-          <addressOffset>0x5C</addressOffset>
+          <addressOffset>0x60</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21486,7 +21501,7 @@ level.</description>
         <register>
           <name>CPU_INTR_FROM_CPU_2_MAP</name>
           <description>register description</description>
-          <addressOffset>0x60</addressOffset>
+          <addressOffset>0x64</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21501,7 +21516,7 @@ level.</description>
         <register>
           <name>CPU_INTR_FROM_CPU_3_MAP</name>
           <description>register description</description>
-          <addressOffset>0x64</addressOffset>
+          <addressOffset>0x68</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21516,7 +21531,7 @@ level.</description>
         <register>
           <name>ASSIST_DEBUG_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x68</addressOffset>
+          <addressOffset>0x6C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21531,7 +21546,7 @@ level.</description>
         <register>
           <name>TRACE_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x6C</addressOffset>
+          <addressOffset>0x70</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21546,7 +21561,7 @@ level.</description>
         <register>
           <name>CACHE_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x70</addressOffset>
+          <addressOffset>0x74</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21561,7 +21576,7 @@ level.</description>
         <register>
           <name>CPU_PERI_TIMEOUT_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x74</addressOffset>
+          <addressOffset>0x78</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21576,7 +21591,7 @@ level.</description>
         <register>
           <name>GPIO_INTERRUPT_PRO_MAP</name>
           <description>register description</description>
-          <addressOffset>0x78</addressOffset>
+          <addressOffset>0x7C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21591,7 +21606,7 @@ level.</description>
         <register>
           <name>GPIO_INTERRUPT_PRO_NMI_MAP</name>
           <description>register description</description>
-          <addressOffset>0x7C</addressOffset>
+          <addressOffset>0x80</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21606,7 +21621,7 @@ level.</description>
         <register>
           <name>PAU_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x80</addressOffset>
+          <addressOffset>0x84</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21621,7 +21636,7 @@ level.</description>
         <register>
           <name>HP_PERI_TIMEOUT_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x84</addressOffset>
+          <addressOffset>0x88</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21636,7 +21651,7 @@ level.</description>
         <register>
           <name>MODEM_PERI_TIMEOUT_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x88</addressOffset>
+          <addressOffset>0x8C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21651,7 +21666,7 @@ level.</description>
         <register>
           <name>HP_APM_M0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x8C</addressOffset>
+          <addressOffset>0x90</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21666,7 +21681,7 @@ level.</description>
         <register>
           <name>HP_APM_M1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x90</addressOffset>
+          <addressOffset>0x94</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21681,7 +21696,7 @@ level.</description>
         <register>
           <name>HP_APM_M2_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x94</addressOffset>
+          <addressOffset>0x98</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21696,7 +21711,7 @@ level.</description>
         <register>
           <name>HP_APM_M3_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x98</addressOffset>
+          <addressOffset>0x9C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21711,7 +21726,7 @@ level.</description>
         <register>
           <name>LP_APM0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x9C</addressOffset>
+          <addressOffset>0xA0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21726,7 +21741,7 @@ level.</description>
         <register>
           <name>MSPI_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xA0</addressOffset>
+          <addressOffset>0xA4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21741,7 +21756,7 @@ level.</description>
         <register>
           <name>I2S1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xA4</addressOffset>
+          <addressOffset>0xA8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21756,7 +21771,7 @@ level.</description>
         <register>
           <name>UHCI0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xA8</addressOffset>
+          <addressOffset>0xAC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21771,7 +21786,7 @@ level.</description>
         <register>
           <name>UART0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xAC</addressOffset>
+          <addressOffset>0xB0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21786,7 +21801,7 @@ level.</description>
         <register>
           <name>UART1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xB0</addressOffset>
+          <addressOffset>0xB4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21801,7 +21816,7 @@ level.</description>
         <register>
           <name>LEDC_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xB4</addressOffset>
+          <addressOffset>0xB8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21816,7 +21831,7 @@ level.</description>
         <register>
           <name>CAN0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xB8</addressOffset>
+          <addressOffset>0xBC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21831,7 +21846,7 @@ level.</description>
         <register>
           <name>CAN1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xBC</addressOffset>
+          <addressOffset>0xC0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21846,7 +21861,7 @@ level.</description>
         <register>
           <name>USB_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xC0</addressOffset>
+          <addressOffset>0xC4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21861,7 +21876,7 @@ level.</description>
         <register>
           <name>RMT_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xC4</addressOffset>
+          <addressOffset>0xC8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21876,7 +21891,7 @@ level.</description>
         <register>
           <name>I2C_EXT0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xC8</addressOffset>
+          <addressOffset>0xCC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21891,7 +21906,7 @@ level.</description>
         <register>
           <name>TG0_T0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xCC</addressOffset>
+          <addressOffset>0xD0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21906,7 +21921,7 @@ level.</description>
         <register>
           <name>TG0_T1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xD0</addressOffset>
+          <addressOffset>0xD4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21921,7 +21936,7 @@ level.</description>
         <register>
           <name>TG0_WDT_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xD4</addressOffset>
+          <addressOffset>0xD8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21936,7 +21951,7 @@ level.</description>
         <register>
           <name>TG1_T0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xD8</addressOffset>
+          <addressOffset>0xDC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21951,7 +21966,7 @@ level.</description>
         <register>
           <name>TG1_T1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xDC</addressOffset>
+          <addressOffset>0xE0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21966,7 +21981,7 @@ level.</description>
         <register>
           <name>TG1_WDT_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xE0</addressOffset>
+          <addressOffset>0xE4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21981,7 +21996,7 @@ level.</description>
         <register>
           <name>SYSTIMER_TARGET0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xE4</addressOffset>
+          <addressOffset>0xE8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -21996,7 +22011,7 @@ level.</description>
         <register>
           <name>SYSTIMER_TARGET1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xE8</addressOffset>
+          <addressOffset>0xEC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22011,7 +22026,7 @@ level.</description>
         <register>
           <name>SYSTIMER_TARGET2_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xEC</addressOffset>
+          <addressOffset>0xF0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22026,7 +22041,7 @@ level.</description>
         <register>
           <name>APB_ADC_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xF0</addressOffset>
+          <addressOffset>0xF4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22041,7 +22056,7 @@ level.</description>
         <register>
           <name>PWM_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xF4</addressOffset>
+          <addressOffset>0xF8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22056,7 +22071,7 @@ level.</description>
         <register>
           <name>PCNT_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xF8</addressOffset>
+          <addressOffset>0xFC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22071,7 +22086,7 @@ level.</description>
         <register>
           <name>PARL_IO_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0xFC</addressOffset>
+          <addressOffset>0x100</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22086,7 +22101,7 @@ level.</description>
         <register>
           <name>SLC0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x100</addressOffset>
+          <addressOffset>0x104</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22101,7 +22116,7 @@ level.</description>
         <register>
           <name>SLC1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x104</addressOffset>
+          <addressOffset>0x108</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22116,7 +22131,7 @@ level.</description>
         <register>
           <name>DMA_IN_CH0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x108</addressOffset>
+          <addressOffset>0x10C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22131,7 +22146,7 @@ level.</description>
         <register>
           <name>DMA_IN_CH1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x10C</addressOffset>
+          <addressOffset>0x110</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22146,7 +22161,7 @@ level.</description>
         <register>
           <name>DMA_IN_CH2_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x110</addressOffset>
+          <addressOffset>0x114</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22161,7 +22176,7 @@ level.</description>
         <register>
           <name>DMA_OUT_CH0_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x114</addressOffset>
+          <addressOffset>0x118</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22176,7 +22191,7 @@ level.</description>
         <register>
           <name>DMA_OUT_CH1_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x118</addressOffset>
+          <addressOffset>0x11C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22191,7 +22206,7 @@ level.</description>
         <register>
           <name>DMA_OUT_CH2_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x11C</addressOffset>
+          <addressOffset>0x120</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22206,7 +22221,7 @@ level.</description>
         <register>
           <name>GPSPI2_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x120</addressOffset>
+          <addressOffset>0x124</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22221,7 +22236,7 @@ level.</description>
         <register>
           <name>AES_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x124</addressOffset>
+          <addressOffset>0x128</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22236,7 +22251,7 @@ level.</description>
         <register>
           <name>SHA_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x128</addressOffset>
+          <addressOffset>0x12C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22251,7 +22266,7 @@ level.</description>
         <register>
           <name>RSA_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x12C</addressOffset>
+          <addressOffset>0x130</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22266,7 +22281,7 @@ level.</description>
         <register>
           <name>ECC_INTR_MAP</name>
           <description>register description</description>
-          <addressOffset>0x130</addressOffset>
+          <addressOffset>0x134</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22281,7 +22296,7 @@ level.</description>
         <register>
           <name>INTR_STATUS_REG_0</name>
           <description>register description</description>
-          <addressOffset>0x134</addressOffset>
+          <addressOffset>0x138</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22296,7 +22311,7 @@ level.</description>
         <register>
           <name>INTR_STATUS_REG_1</name>
           <description>register description</description>
-          <addressOffset>0x138</addressOffset>
+          <addressOffset>0x13C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22311,7 +22326,7 @@ level.</description>
         <register>
           <name>INT_STATUS_REG_2</name>
           <description>register description</description>
-          <addressOffset>0x13C</addressOffset>
+          <addressOffset>0x140</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22326,7 +22341,7 @@ level.</description>
         <register>
           <name>CLOCK_GATE</name>
           <description>register description</description>
-          <addressOffset>0x140</addressOffset>
+          <addressOffset>0x144</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000001</resetValue>
           <fields>
@@ -22344,7 +22359,7 @@ level.</description>
           <description>register description</description>
           <addressOffset>0x7FC</addressOffset>
           <size>0x20</size>
-          <resetValue>0x02203110</resetValue>
+          <resetValue>0x02302220</resetValue>
           <fields>
             <field>
               <name>INTERRUPT_REG_DATE</name>
@@ -24743,8 +24758,15 @@ The least significant eight bits represent the fractional part.</description>
           <description>need_des</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
-          <resetValue>0x7F000000</resetValue>
+          <resetValue>0x7F800000</resetValue>
           <fields>
+            <field>
+              <name>LP_TOUCH_CK_EN</name>
+              <description>need_des</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
             <field>
               <name>RNG_CK_EN</name>
               <description>need_des</description>
@@ -24815,6 +24837,13 @@ The least significant eight bits represent the fractional part.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
+            </field>
+            <field>
+              <name>LP_TOUCH_RESET_EN</name>
+              <description>need_des</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
             </field>
             <field>
               <name>OTP_DBG_RESET_EN</name>
@@ -25799,7 +25828,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_APM</name>
-      <description>LP_APM Peripheral</description>
+      <description>Low-power Access Permission Management Controller</description>
       <groupName>LP_APM</groupName>
       <baseAddress>0x600B3800</baseAddress>
       <addressBlock>
@@ -27474,7 +27503,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_I2C0</name>
-      <description>LP_I2C0 Peripheral</description>
+      <description>Low-power I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>LP_I2C0</groupName>
       <baseAddress>0x600B1800</baseAddress>
       <addressBlock>
@@ -30310,7 +30339,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_TEE</name>
-      <description>LP_TEE Peripheral</description>
+      <description>Low-power Trusted Execution Environment</description>
       <groupName>LP_TEE</groupName>
       <baseAddress>0x600B3400</baseAddress>
       <addressBlock>
@@ -30386,7 +30415,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_TIMER</name>
-      <description>LP_TIMER Peripheral</description>
+      <description>Low-power Timer</description>
       <groupName>LP_TIMER</groupName>
       <baseAddress>0x600B0C00</baseAddress>
       <addressBlock>
@@ -30787,7 +30816,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_UART</name>
-      <description>LP_UART Peripheral</description>
+      <description>Low-power UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
       <groupName>LP_UART</groupName>
       <baseAddress>0x600B1400</baseAddress>
       <addressBlock>
@@ -32244,7 +32273,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_WDT</name>
-      <description>LP_WDT Peripheral</description>
+      <description>Low-power Watchdog Timer</description>
       <groupName>LP_WDT</groupName>
       <baseAddress>0x600B1C00</baseAddress>
       <addressBlock>
@@ -41709,21 +41738,21 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           </fields>
         </register>
         <register>
-          <name>I2C_CONF</name>
+          <name>I2C0_CONF</name>
           <description>I2C configuration register</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000001</resetValue>
           <fields>
             <field>
-              <name>I2C_CLK_EN</name>
+              <name>I2C0_CLK_EN</name>
               <description>Set 1 to enable i2c apb clock</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2C_RST_EN</name>
+              <name>I2C0_RST_EN</name>
               <description>Set 0 to reset i2c module</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -47690,35 +47719,35 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x30FFFF02</resetValue>
           <fields>
             <field>
-              <name>DIV_CNT_CH2</name>
+              <name>DIV_CNT</name>
               <description>This register is used to configure the divider for clock of CHANNEL%s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IDLE_THRES_CH2</name>
+              <name>IDLE_THRES</name>
               <description>When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>15</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_SIZE_CH2</name>
+              <name>MEM_SIZE</name>
               <description>This register is used to configure the maximum size of memory allocated to CHANNEL%s.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_EN_CH2</name>
+              <name>CARRIER_EN</name>
               <description>This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_OUT_LV_CH2</name>
+              <name>CARRIER_OUT_LV</name>
               <description>This bit is used to configure the position of carrier wave for CHANNEL%s.
 
 1'h0: add carrier wave on low level.
@@ -47740,28 +47769,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x000001E8</resetValue>
           <fields>
             <field>
-              <name>RX_EN_CH2</name>
+              <name>RX_EN</name>
               <description>Set this bit to enable receiver to receive data on CHANNEL%s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_WR_RST_CH2</name>
+              <name>MEM_WR_RST</name>
               <description>Set this bit to reset write ram address for CHANNEL%s by accessing receiver.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>APB_MEM_RST_CH2</name>
+              <name>APB_MEM_RST</name>
               <description>Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>MEM_OWNER_CH2</name>
+              <name>MEM_OWNER</name>
               <description>This register marks the ownership of CHANNEL%s's ram block.
 
 1'h1: Receiver is using the ram. 
@@ -47772,35 +47801,35 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>RX_FILTER_EN_CH2</name>
+              <name>RX_FILTER_EN</name>
               <description>This is the receive filter's enable bit for CHANNEL%s.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RX_FILTER_THRES_CH2</name>
+              <name>RX_FILTER_THRES</name>
               <description>Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode).</description>
               <bitOffset>5</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_RX_WRAP_EN_CH2</name>
+              <name>MEM_RX_WRAP_EN</name>
               <description>This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>AFIFO_RST_CH2</name>
+              <name>AFIFO_RST</name>
               <description>Reserved</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CONF_UPDATE_CH2</name>
+              <name>CONF_UPDATE</name>
               <description>synchronization bit for CHANNEL%s</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
@@ -47982,6 +48011,18 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <name>CH%s_TX_LOOP_INT_RAW</name>
               <description>The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value.</description>
               <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CH2_RX_ERR_INT_RAW</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CH3_RX_ERR_INT_RAW</name>
+              <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -48240,14 +48281,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>write-only</access>
             </field>
             <field>
-              <name>CH0_RX_ERR_INT_CLR</name>
+              <name>CH2_RX_ERR_INT_CLR</name>
               <description>Set this bit to clear theCH6_ERR_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CH1_RX_ERR_INT_CLR</name>
+              <name>CH3_RX_ERR_INT_CLR</name>
               <description>Set this bit to clear theCH7_ERR_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -48299,14 +48340,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00400040</resetValue>
           <fields>
             <field>
-              <name>CARRIER_LOW_CH0</name>
+              <name>CARRIER_LOW_CH</name>
               <description>This register is used to configure carrier wave 's low level clock period for CHANNEL%s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_HIGH_CH0</name>
+              <name>CARRIER_HIGH_CH</name>
               <description>This register is used to configure carrier wave 's high level clock period for CHANNEL%s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -48323,14 +48364,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CARRIER_LOW_THRES_CH2</name>
+              <name>CARRIER_LOW_THRES_CH</name>
               <description>The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_HIGH_THRES_CH2</name>
+              <name>CARRIER_HIGH_THRES_CH</name>
               <description>The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -63553,8 +63594,7 @@ counter.</description>
           <fields>
             <field>
               <name>LOAD</name>
-              <description>
-Write any value to trigger a timer %s time-base counter reload.</description>
+              <description>Write any value to trigger a timer %s time-base counter reload.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>write-only</access>
@@ -63621,32 +63661,28 @@ Write any value to trigger a timer %s time-base counter reload.</description>
             </field>
             <field>
               <name>WDT_STG3</name>
-              <description>Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG2</name>
-              <description>Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG1</name>
-              <description>Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG0</name>
-              <description>Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>

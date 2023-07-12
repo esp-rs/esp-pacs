@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C2</name>
   <series>ESP32 C-Series</series>
-  <version>8</version>
+  <version>9</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -1863,25 +1863,26 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>ETS_ASSIST_DEBUG</name>
+        <name>ASSIST_DEBUG</name>
+        <description>Assist debug interrupt</description>
         <value>40</value>
       </interrupt>
       <registers>
         <register>
-          <name>CORE_0_INTR_ENA</name>
+          <name>CORE_0_MONTR_ENA</name>
           <description>core0 monitor enable configuration register</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_RD_ENA</name>
+              <name>CORE_0_SP_SPILL_MIN_ENA</name>
               <description>enbale sp underlow monitor</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_WR_ENA</name>
+              <name>CORE_0_SP_SPILL_MAX_ENA</name>
               <description>enbale sp overflow monitor</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -1896,14 +1897,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_RD_RAW</name>
+              <name>CORE_0_SP_SPILL_MIN_RAW</name>
               <description>sp underlow monitor interrupt status register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_WR_RAW</name>
+              <name>CORE_0_SP_SPILL_MAX_RAW</name>
               <description>sp overflow monitor interupt status register</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -1912,20 +1913,20 @@
           </fields>
         </register>
         <register>
-          <name>CORE_0_INTR_RLS</name>
+          <name>CORE_0_INTR_ENA</name>
           <description>core0 monitor interrupt enable register</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_RD_RLS</name>
+              <name>CORE_0_SP_SPILL_MIN_INTR_ENA</name>
               <description>enbale sp underlow monitor interrupt</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_WR_RLS</name>
+              <name>CORE_0_SP_SPILL_MAX_INTR_ENA</name>
               <description>enbale sp overflow monitor interrupt</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -1940,14 +1941,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_RD_CLR</name>
+              <name>CORE_0_SP_SPILL_MIN_CLR</name>
               <description>clr sp underlow monitor interrupt</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CORE_0_AREA_DRAM0_0_WR_CLR</name>
+              <name>CORE_0_SP_SPILL_MAX_CLR</name>
               <description>clr sp overflow monitor interrupt</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3449,6 +3450,30 @@
               <access>read-write</access>
             </field>
           </fields>
+        </register>
+        <register>
+          <dim>32</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>K_MEM[%s]</name>
+          <description>The memory that stores k.</description>
+          <addressOffset>0x100</addressOffset>
+          <size>0x8</size>
+        </register>
+        <register>
+          <dim>32</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>PX_MEM[%s]</name>
+          <description>The memory that stores Px.</description>
+          <addressOffset>0x120</addressOffset>
+          <size>0x8</size>
+        </register>
+        <register>
+          <dim>32</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>PY_MEM[%s]</name>
+          <description>The memory that stores Py.</description>
+          <addressOffset>0x140</addressOffset>
+          <size>0x8</size>
         </register>
       </registers>
     </peripheral>
@@ -18749,14 +18774,14 @@ of timer %s can be read here.</description>
         </register>
         <register>
           <name>T0HI</name>
-          <description>Timer $x current value, high 22 bits</description>
+          <description>Timer %s current value, high 22 bits</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>T0_HI</name>
-              <description>After writing to TIMG_T0UPDATE_REG, the high 22 bits of the time-base counter
-of timer 0 can be read here.</description>
+              <description>After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter
+of timer %s can be read here.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
               <access>read-only</access>
@@ -18765,13 +18790,13 @@ of timer 0 can be read here.</description>
         </register>
         <register>
           <name>T0UPDATE</name>
-          <description>Write to copy current timer value to TIMGn_T$x_(LO/HI)_REG</description>
+          <description>Write to copy current timer value to TIMGn_T%s_(LO/HI)_REG</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>T0_UPDATE</name>
-              <description>After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched.</description>
+              <description>After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -18780,13 +18805,13 @@ of timer 0 can be read here.</description>
         </register>
         <register>
           <name>T0ALARMLO</name>
-          <description>Timer $x alarm value, low 32 bits</description>
+          <description>Timer %s alarm value, low 32 bits</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>ALARM_LO</name>
-              <description>Timer 0 alarm trigger time-base counter value, low 32 bits.</description>
+              <description>Timer %s alarm trigger time-base counter value, low 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -18795,13 +18820,13 @@ of timer 0 can be read here.</description>
         </register>
         <register>
           <name>T0ALARMHI</name>
-          <description>Timer $x alarm value, high bits</description>
+          <description>Timer %s alarm value, high bits</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>ALARM_HI</name>
-              <description>Timer 0 alarm trigger time-base counter value, high 22 bits.</description>
+              <description>Timer %s alarm trigger time-base counter value, high 22 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
               <access>read-write</access>
@@ -18810,13 +18835,13 @@ of timer 0 can be read here.</description>
         </register>
         <register>
           <name>T0LOADLO</name>
-          <description>Timer $x reload value, low 32 bits</description>
+          <description>Timer %s reload value, low 32 bits</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>LOAD_LO</name>
-              <description>Low 32 bits of the value that a reload will load onto timer 0 time-base
+              <description>Low 32 bits of the value that a reload will load onto timer %s time-base
 Counter.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -18826,13 +18851,13 @@ Counter.</description>
         </register>
         <register>
           <name>T0LOADHI</name>
-          <description>Timer $x reload value, high 22 bits</description>
+          <description>Timer %s reload value, high 22 bits</description>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>LOAD_HI</name>
-              <description>High 22 bits of the value that a reload will load onto timer 0 time-base
+              <description>High 22 bits of the value that a reload will load onto timer %s time-base
 counter.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
@@ -18842,14 +18867,13 @@ counter.</description>
         </register>
         <register>
           <name>T0LOAD</name>
-          <description>Write to reload timer from TIMG_T$x_(LOADLOLOADHI)_REG</description>
+          <description>Write to reload timer from TIMG_T%s_(LOADLOLOADHI)_REG</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>LOAD</name>
-              <description>
-Write any value to trigger a timer 0 time-base counter reload.</description>
+              <description>Write any value to trigger a timer %s time-base counter reload.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>write-only</access>
@@ -18916,32 +18940,28 @@ Write any value to trigger a timer 0 time-base counter reload.</description>
             </field>
             <field>
               <name>WDT_STG3</name>
-              <description>Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG2</name>
-              <description>Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG1</name>
-              <description>Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG0</name>
-              <description>Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.
-</description>
+              <description>Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>

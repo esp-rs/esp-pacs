@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32 Series</series>
-  <version>11</version>
+  <version>12</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -7306,23 +7306,32 @@
           <fields>
             <field>
               <name>RD_EFUSE_WR_DIS</name>
-              <description>read for efuse_wr_disable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_EFUSE_RD_DIS</name>
-              <description>read for efuse_rd_disable</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_FLASH_CRYPT_CNT</name>
-              <description>read for flash_crypt_cnt</description>
               <bitOffset>20</bitOffset>
               <bitWidth>7</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RD_UART_DOWNLOAD_DIS</name>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RESERVED_0_28</name>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
               <access>read-only</access>
             </field>
           </fields>
@@ -7333,8 +7342,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RD_WIFI_MAC_CRC_LOW</name>
-              <description>read for low 32bit WIFI_MAC_Address</description>
+              <name>RD_MAC</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -7347,11 +7355,22 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RD_WIFI_MAC_CRC_HIGH</name>
-              <description>read for high 24bit WIFI_MAC_Address</description>
+              <name>RD_MAC_1</name>
               <bitOffset>0</bitOffset>
-              <bitWidth>24</bitWidth>
+              <bitWidth>16</bitWidth>
               <access>read-only</access>
+            </field>
+            <field>
+              <name>RD_MAC_CRC</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RD_RESERVE_0_88</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -7361,70 +7380,69 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RD_CHIP_VER_DIS_APP_CPU</name>
+              <name>RD_DISABLE_APP_CPU</name>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_CHIP_VER_DIS_BT</name>
+              <name>RD_DISABLE_BT</name>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_CHIP_VER_PKG_4BIT</name>
-              <description>most significant bit of chip package </description>
+              <name>RD_CHIP_PACKAGE_4BIT</name>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_CHIP_VER_DIS_CACHE</name>
+              <name>RD_DIS_CACHE</name>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_SPI_PAD_CONFIG_HD</name>
-              <description>read for SPI_pad_config_hd</description>
               <bitOffset>4</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_CHIP_VER_PKG</name>
-              <description>least significant bits of chip package </description>
+              <name>RD_CHIP_PACKAGE</name>
               <bitOffset>9</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_CHIP_CPU_FREQ_LOW</name>
-              <description>If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_CHIP_CPU_FREQ_RATED</name>
-              <description>If set, the ESP32's maximum CPU frequency has been rated</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_BLK3_PART_RESERVE</name>
-              <description>If set, this bit indicates that BLOCK3[143:96] is reserved for internal use</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_CHIP_VER_REV1</name>
-              <description>bit is set to 1 for rev1 silicon</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RD_RESERVE_0_112</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -7435,56 +7453,46 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RD_CK8M_FREQ</name>
+              <name>RD_CLK8M_FREQ</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_ADC_VREF</name>
-              <description>True ADC reference voltage </description>
               <bitOffset>8</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RD_SDIO_DREFH</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RD_SDIO_DREFM</name>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RD_SDIO_DREFL</name>
-              <bitOffset>12</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
+              <name>RD_RESERVE_0_141</name>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
             </field>
             <field>
               <name>RD_XPD_SDIO</name>
-              <description>read for XPD_SDIO_REG</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_SDIO_TIEH</name>
-              <description>read for SDIO_TIEH</description>
+              <name>RD_XPD_SDIO_TIEH</name>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_SDIO_FORCE</name>
-              <description>read for sdio_force</description>
+              <name>RD_XPD_SDIO_FORCE</name>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
+            </field>
+            <field>
+              <name>RD_RESERVE_0_145</name>
+              <bitOffset>17</bitOffset>
+              <bitWidth>15</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -7495,28 +7503,24 @@
           <fields>
             <field>
               <name>RD_SPI_PAD_CONFIG_CLK</name>
-              <description>read for SPI_pad_config_clk</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_SPI_PAD_CONFIG_Q</name>
-              <description>read for SPI_pad_config_q</description>
               <bitOffset>5</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_SPI_PAD_CONFIG_D</name>
-              <description>read for SPI_pad_config_d</description>
               <bitOffset>10</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_SPI_PAD_CONFIG_CS0</name>
-              <description>read for SPI_pad_config_cs0</description>
               <bitOffset>15</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-only</access>
@@ -7528,8 +7532,13 @@
               <access>read-only</access>
             </field>
             <field>
+              <name>RD_RESERVE_0_181</name>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>RD_VOL_LEVEL_HP_INV</name>
-              <description>This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (RO)</description>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
@@ -7541,8 +7550,13 @@
               <access>read-only</access>
             </field>
             <field>
+              <name>RD_RESERVE_0_186</name>
+              <bitOffset>26</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>RD_FLASH_CRYPT_CONFIG</name>
-              <description>read for flash_crypt_config</description>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-only</access>
@@ -7556,14 +7570,12 @@
           <fields>
             <field>
               <name>RD_CODING_SCHEME</name>
-              <description>read for coding_scheme</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_CONSOLE_DEBUG_DISABLE</name>
-              <description>read for console_debug_disable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -7576,52 +7588,51 @@
             </field>
             <field>
               <name>RD_ABS_DONE_0</name>
-              <description>read for abstract_done_0</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_ABS_DONE_1</name>
-              <description>read for abstract_done_1</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_DISABLE_JTAG</name>
-              <description>read for JTAG_disable</description>
+              <name>RD_JTAG_DISABLE</name>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_DISABLE_DL_ENCRYPT</name>
-              <description>read for download_dis_encrypt</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_DISABLE_DL_DECRYPT</name>
-              <description>read for download_dis_decrypt</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_DISABLE_DL_CACHE</name>
-              <description>read for download_dis_cache</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>RD_KEY_STATUS</name>
-              <description>read for key_status</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
+            </field>
+            <field>
+              <name>RD_RESERVE_0_203</name>
+              <bitOffset>11</bitOffset>
+              <bitWidth>21</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -7632,21 +7643,18 @@
           <fields>
             <field>
               <name>WR_DIS</name>
-              <description>program for efuse_wr_disable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_DIS</name>
-              <description>program for efuse_rd_disable</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>FLASH_CRYPT_CNT</name>
-              <description>program for flash_crypt_cnt</description>
               <bitOffset>20</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -7660,7 +7668,6 @@
           <fields>
             <field>
               <name>WIFI_MAC_CRC_LOW</name>
-              <description>program for low 32bit WIFI_MAC_Address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -7674,7 +7681,6 @@
           <fields>
             <field>
               <name>WIFI_MAC_CRC_HIGH</name>
-              <description>program for high 24bit WIFI_MAC_Address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>24</bitWidth>
               <access>read-write</access>
@@ -7687,61 +7693,55 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>CHIP_VER_DIS_APP_CPU</name>
+              <name>DISABLE_APP_CPU</name>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
-              <name>CHIP_VER_DIS_BT</name>
+              <name>DISABLE_BT</name>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
-              <name>CHIP_VER_PKG_4BIT</name>
-              <description>most significant bit of chip package </description>
+              <name>CHIP_PACKAGE_4BIT</name>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CHIP_VER_DIS_CACHE</name>
+              <name>DIS_CACHE</name>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>SPI_PAD_CONFIG_HD</name>
-              <description>program for SPI_pad_config_hd</description>
               <bitOffset>4</bitOffset>
               <bitWidth>5</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
-              <name>CHIP_VER_PKG</name>
-              <description>least significant bits of chip package </description>
+              <name>CHIP_PACKAGE</name>
               <bitOffset>9</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CHIP_CPU_FREQ_LOW</name>
-              <description>If set alongside EFUSE_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CHIP_CPU_FREQ_RATED</name>
-              <description>If set, the ESP32's maximum CPU frequency has been rated</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>BLK3_PART_RESERVE</name>
-              <description>If set, this bit indicates that BLOCK3[143:96] is reserved for internal use</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -7752,6 +7752,12 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>RESERVE_0_112</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
           </fields>
         </register>
         <register>
@@ -7760,55 +7766,45 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>CK8M_FREQ</name>
+              <name>CLK8M_FREQ</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>ADC_VREF</name>
-              <description>True ADC reference voltage </description>
               <bitOffset>8</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SDIO_DREFH</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SDIO_DREFM</name>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SDIO_DREFL</name>
-              <bitOffset>12</bitOffset>
-              <bitWidth>2</bitWidth>
+              <name>RESERVE_0_141</name>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XPD_SDIO</name>
-              <description>program for XPD_SDIO_REG</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
-              <name>SDIO_TIEH</name>
-              <description>program for SDIO_TIEH</description>
+              <name>XPD_SDIO_TIEH</name>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
-              <name>SDIO_FORCE</name>
-              <description>program for sdio_force</description>
+              <name>XPD_SDIO_FORCE</name>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RESERVE_0_145</name>
+              <bitOffset>17</bitOffset>
+              <bitWidth>15</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -7820,57 +7816,63 @@
           <fields>
             <field>
               <name>SPI_PAD_CONFIG_CLK</name>
-              <description>program for SPI_pad_config_clk</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>SPI_PAD_CONFIG_Q</name>
-              <description>program for SPI_pad_config_q</description>
               <bitOffset>5</bitOffset>
               <bitWidth>5</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>SPI_PAD_CONFIG_D</name>
-              <description>program for SPI_pad_config_d</description>
               <bitOffset>10</bitOffset>
               <bitWidth>5</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>SPI_PAD_CONFIG_CS0</name>
-              <description>program for SPI_pad_config_cs0</description>
               <bitOffset>15</bitOffset>
               <bitWidth>5</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
-              <name>INST_CONFIG</name>
+              <name>CHIP_VER_REV2</name>
               <bitOffset>20</bitOffset>
-              <bitWidth>8</bitWidth>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RESERVE_0_181</name>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>VOL_LEVEL_HP_INV</name>
-              <description>This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (R/W)</description>
               <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WAFER_VERSION_MINOR</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RESERVE_0_186</name>
+              <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DIG_VOL_L6</name>
-              <bitOffset>24</bitOffset>
-              <bitWidth>4</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>FLASH_CRYPT_CONFIG</name>
-              <description>program for flash_crypt_config</description>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -7881,14 +7883,12 @@
           <fields>
             <field>
               <name>CODING_SCHEME</name>
-              <description>program for coding_scheme</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CONSOLE_DEBUG_DISABLE</name>
-              <description>program for console_debug_disable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -7901,49 +7901,42 @@
             </field>
             <field>
               <name>ABS_DONE_0</name>
-              <description>program for abstract_done_0</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ABS_DONE_1</name>
-              <description>program for abstract_done_1</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DISABLE_JTAG</name>
-              <description>program for JTAG_disable</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DISABLE_DL_ENCRYPT</name>
-              <description>program for download_dis_encrypt</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DISABLE_DL_DECRYPT</name>
-              <description>program for download_dis_decrypt</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DISABLE_DL_CACHE</name>
-              <description>program for download_dis_cache</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>KEY_STATUS</name>
-              <description>program for key_status</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -7956,8 +7949,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT0</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -7970,8 +7962,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT1</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1_1</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -7984,8 +7975,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT2</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1_2</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -7998,8 +7988,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT3</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1_3</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8012,8 +8001,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT4</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1_4</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8026,8 +8014,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT5</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1_5</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8040,8 +8027,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT6</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1_6</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8054,8 +8040,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK1_DOUT7</name>
-              <description>read for BLOCK1</description>
+              <name>RD_BLOCK1_7</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8068,8 +8053,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT0</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8082,8 +8066,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT1</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2_1</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8096,8 +8079,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT2</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2_2</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8110,8 +8092,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT3</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2_3</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8124,8 +8105,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT4</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2_4</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8138,8 +8118,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT5</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2_5</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8152,8 +8131,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT6</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2_6</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8166,8 +8144,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK2_DOUT7</name>
-              <description>read for BLOCK2</description>
+              <name>RD_BLOCK2_7</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8180,10 +8157,15 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT0</name>
-              <description>read for BLOCK3</description>
+              <name>RD_CUSTOM_MAC_CRC</name>
               <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RD_CUSTOM_MAC</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>24</bitWidth>
               <access>read-only</access>
             </field>
           </fields>
@@ -8194,10 +8176,15 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT1</name>
-              <description>read for BLOCK3</description>
+              <name>RD_CUSTOM_MAC_1</name>
               <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
+              <bitWidth>24</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RESERVED_3_56</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
               <access>read-only</access>
             </field>
           </fields>
@@ -8208,8 +8195,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT2</name>
-              <description>read for BLOCK3</description>
+              <name>RD_BLK3_RESERVED_2</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8222,36 +8208,25 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT3</name>
-              <description>read for BLOCK3</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>RD_ADC1_TP_LOW</name>
-              <description>ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_ADC1_TP_HIGH</name>
-              <description>ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>7</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_ADC2_TP_LOW</name>
-              <description>ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>16</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RD_ADC2_TP_HIGH</name>
-              <description>ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>23</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -8264,18 +8239,10 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT4</name>
-              <description>read for BLOCK3</description>
+              <name>RD_SECURE_VERSION</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
-            </field>
-            <field>
-              <name>RD_CAL_RESERVED</name>
-              <description>Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE </description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -8285,10 +8252,15 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT5</name>
-              <description>read for BLOCK3</description>
+              <name>RESERVED_3_160</name>
               <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
+              <bitWidth>24</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RD_MAC_VERSION</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
               <access>read-only</access>
             </field>
           </fields>
@@ -8299,8 +8271,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT6</name>
-              <description>read for BLOCK3</description>
+              <name>RD_BLK3_RESERVED_6</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8313,8 +8284,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DOUT7</name>
-              <description>read for BLOCK3</description>
+              <name>RD_BLK3_RESERVED_7</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -8328,7 +8298,6 @@
           <fields>
             <field>
               <name>BLK1_DIN0</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8342,7 +8311,6 @@
           <fields>
             <field>
               <name>BLK1_DIN1</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8356,7 +8324,6 @@
           <fields>
             <field>
               <name>BLK1_DIN2</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8370,7 +8337,6 @@
           <fields>
             <field>
               <name>BLK1_DIN3</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8384,7 +8350,6 @@
           <fields>
             <field>
               <name>BLK1_DIN4</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8398,7 +8363,6 @@
           <fields>
             <field>
               <name>BLK1_DIN5</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8412,7 +8376,6 @@
           <fields>
             <field>
               <name>BLK1_DIN6</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8426,7 +8389,6 @@
           <fields>
             <field>
               <name>BLK1_DIN7</name>
-              <description>program for BLOCK1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8440,7 +8402,6 @@
           <fields>
             <field>
               <name>BLK2_DIN0</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8454,7 +8415,6 @@
           <fields>
             <field>
               <name>BLK2_DIN1</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8468,7 +8428,6 @@
           <fields>
             <field>
               <name>BLK2_DIN2</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8482,7 +8441,6 @@
           <fields>
             <field>
               <name>BLK2_DIN3</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8496,7 +8454,6 @@
           <fields>
             <field>
               <name>BLK2_DIN4</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8510,7 +8467,6 @@
           <fields>
             <field>
               <name>BLK2_DIN5</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8524,7 +8480,6 @@
           <fields>
             <field>
               <name>BLK2_DIN6</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8538,7 +8493,6 @@
           <fields>
             <field>
               <name>BLK2_DIN7</name>
-              <description>program for BLOCK2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8552,7 +8506,6 @@
           <fields>
             <field>
               <name>BLK3_DIN0</name>
-              <description>program for BLOCK3</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8566,7 +8519,6 @@
           <fields>
             <field>
               <name>BLK3_DIN1</name>
-              <description>program for BLOCK3</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8580,7 +8532,6 @@
           <fields>
             <field>
               <name>BLK3_DIN2</name>
-              <description>program for BLOCK3</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8593,36 +8544,25 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DIN3</name>
-              <description>program for BLOCK3</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>ADC1_TP_LOW</name>
-              <description>ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ADC1_TP_HIGH</name>
-              <description>ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>7</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ADC2_TP_LOW</name>
-              <description>ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>16</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ADC2_TP_HIGH</name>
-              <description>ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE </description>
               <bitOffset>23</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -8635,18 +8575,10 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>BLK3_DIN4</name>
-              <description>program for BLOCK3</description>
+              <name>SECURE_VERSION</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAL_RESERVED</name>
-              <description>Reserved for future calibration use. Indicated by EFUSE_BLK3_PART_RESERVE </description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -8657,7 +8589,6 @@
           <fields>
             <field>
               <name>BLK3_DIN5</name>
-              <description>program for BLOCK3</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8671,7 +8602,6 @@
           <fields>
             <field>
               <name>BLK3_DIN6</name>
-              <description>program for BLOCK3</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8685,7 +8615,6 @@
           <fields>
             <field>
               <name>BLK3_DIN7</name>
-              <description>program for BLOCK3</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -8700,14 +8629,12 @@
           <fields>
             <field>
               <name>SEL0</name>
-              <description>efuse timing configure</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SEL1</name>
-              <description>efuse timing configure</description>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -8728,7 +8655,6 @@
           <fields>
             <field>
               <name>OP_CODE</name>
-              <description>efuse operation code</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
@@ -8761,14 +8687,12 @@
           <fields>
             <field>
               <name>READ_CMD</name>
-              <description>command for read</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PGM_CMD</name>
-              <description>command for program</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -8782,14 +8706,12 @@
           <fields>
             <field>
               <name>READ_DONE_INT_RAW</name>
-              <description>read done interrupt raw status</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>PGM_DONE_INT_RAW</name>
-              <description>program done interrupt raw status</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -8803,14 +8725,12 @@
           <fields>
             <field>
               <name>READ_DONE_INT_ST</name>
-              <description>read done interrupt status</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>PGM_DONE_INT_ST</name>
-              <description>program done interrupt status</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -8824,14 +8744,12 @@
           <fields>
             <field>
               <name>READ_DONE_INT_ENA</name>
-              <description>read done interrupt enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PGM_DONE_INT_ENA</name>
-              <description>program done interrupt enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -8845,14 +8763,12 @@
           <fields>
             <field>
               <name>READ_DONE_INT_CLR</name>
-              <description>read done interrupt clear</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
               <name>PGM_DONE_INT_CLR</name>
-              <description>program done interrupt clear</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
@@ -8867,7 +8783,6 @@
           <fields>
             <field>
               <name>DAC_CLK_DIV</name>
-              <description>efuse timing configure</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -8887,7 +8802,6 @@
           <fields>
             <field>
               <name>DEC_WARNINGS</name>
-              <description>the decode result of 3/4 coding scheme has warning</description>
               <bitOffset>0</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-only</access>
@@ -22264,7 +22178,10 @@
           </fields>
         </register>
         <register>
-          <name>CH0CARRIER_DUTY</name>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>CH%sCARRIER_DUTY</name>
           <addressOffset>0xB0</addressOffset>
           <size>0x20</size>
           <resetValue>0x00400040</resetValue>
@@ -22279,160 +22196,6 @@
             <field>
               <name>CARRIER_HIGH</name>
               <description>This register is used to configure carrier wave's high level value for channel0.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH1CARRIER_DUTY</name>
-          <addressOffset>0xB4</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>This register is used to configure carrier wave's low level value for channel1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>This register is used to configure carrier wave's high level value for channel1.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH2CARRIER_DUTY</name>
-          <addressOffset>0xB8</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>This register is used to configure carrier wave's low level value for channel2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>This register is used to configure carrier wave's high level value for channel2.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH3CARRIER_DUTY</name>
-          <addressOffset>0xBC</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>This register is used to configure carrier wave's low level value for channel3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>This register is used to configure carrier wave's high level value for channel3.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH4CARRIER_DUTY</name>
-          <addressOffset>0xC0</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>This register is used to configure carrier wave's low level value for channel4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>This register is used to configure carrier wave's high level value for channel4.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH5CARRIER_DUTY</name>
-          <addressOffset>0xC4</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>This register is used to configure carrier wave's low level value for channel5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>This register is used to configure carrier wave's high level value for channel5.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH6CARRIER_DUTY</name>
-          <addressOffset>0xC8</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>This register is used to configure carrier wave's low level value for channel6.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>This register is used to configure carrier wave's high level value for channel6.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH7CARRIER_DUTY</name>
-          <addressOffset>0xCC</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00400040</resetValue>
-          <fields>
-            <field>
-              <name>CARRIER_LOW</name>
-              <description>This register is used to configure carrier wave's low level value for channel7.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CARRIER_HIGH</name>
-              <description>This register is used to configure carrier wave's high level value for channel7.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
@@ -25299,7 +25062,7 @@
     </peripheral>
     <peripheral>
       <name>RTC_IO</name>
-      <description>RTC_IO Peripheral</description>
+      <description>Low-power Input/Output</description>
       <groupName>RTC_GPIO</groupName>
       <baseAddress>0x3FF48400</baseAddress>
       <addressBlock>
@@ -27303,7 +27066,7 @@
     </peripheral>
     <peripheral>
       <name>RTC_I2C</name>
-      <description>RTC_I2C Peripheral</description>
+      <description>Low-power I2C (Inter-Integrated Circuit) Controller</description>
       <groupName>RTC_I2C</groupName>
       <baseAddress>0x3FF48C00</baseAddress>
       <addressBlock>
