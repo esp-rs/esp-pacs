@@ -46,6 +46,14 @@ pub type CH_RX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPE
 pub type CH_TX_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_ERR_INT_RAW[0-3]` writer - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
 pub type CH_TX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+#[doc = "Field `CH2_RX_ERR_INT_RAW` reader - "]
+pub type CH2_RX_ERR_INT_RAW_R = crate::BitReader;
+#[doc = "Field `CH2_RX_ERR_INT_RAW` writer - "]
+pub type CH2_RX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+#[doc = "Field `CH3_RX_ERR_INT_RAW` reader - "]
+pub type CH3_RX_ERR_INT_RAW_R = crate::BitReader;
+#[doc = "Field `CH3_RX_ERR_INT_RAW` writer - "]
+pub type CH3_RX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-1]` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value."]
 pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-1]` writer - The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value."]
@@ -113,6 +121,16 @@ impl R {
     #[inline(always)]
     pub fn ch3_tx_err_int_raw(&self) -> CH_TX_ERR_INT_RAW_R {
         CH_TX_ERR_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn ch2_rx_err_int_raw(&self) -> CH2_RX_ERR_INT_RAW_R {
+        CH2_RX_ERR_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn ch3_rx_err_int_raw(&self) -> CH3_RX_ERR_INT_RAW_R {
+        CH3_RX_ERR_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "The interrupt raw bit for CHANNEL[0-1]. Triggered when transmitter sent more data than configured value."]
     #[inline(always)]
@@ -220,6 +238,14 @@ impl core::fmt::Debug for R {
                 "ch1_tx_loop_int_raw",
                 &format_args!("{}", self.ch1_tx_loop_int_raw().bit()),
             )
+            .field(
+                "ch2_rx_err_int_raw",
+                &format_args!("{}", self.ch2_rx_err_int_raw().bit()),
+            )
+            .field(
+                "ch3_rx_err_int_raw",
+                &format_args!("{}", self.ch3_rx_err_int_raw().bit()),
+            )
             .finish()
     }
 }
@@ -295,6 +321,18 @@ impl W {
     #[must_use]
     pub fn ch3_tx_err_int_raw(&mut self) -> CH_TX_ERR_INT_RAW_W<7> {
         CH_TX_ERR_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch2_rx_err_int_raw(&mut self) -> CH2_RX_ERR_INT_RAW_W<6> {
+        CH2_RX_ERR_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch3_rx_err_int_raw(&mut self) -> CH3_RX_ERR_INT_RAW_W<7> {
+        CH3_RX_ERR_INT_RAW_W::new(self)
     }
     #[doc = "The interrupt raw bit for CHANNEL[0-1]. Triggered when transmitter sent more data than configured value."]
     #[inline(always)]

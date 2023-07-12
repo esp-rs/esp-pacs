@@ -9,21 +9,21 @@ pub struct RegisterBlock {
     #[doc = "0x20..0x30 - Channel %s configure register 0"]
     pub ch_tx_conf0: [CH_TX_CONF0; 4],
     #[doc = "0x30 - Channel %s configure register 0"]
-    pub ch0_rx_conf0: CH_RX_CONF0,
+    pub rx_ch0conf0: RX_CHCONF0,
     #[doc = "0x34 - Channel %s configure register 1"]
-    pub ch0_rx_conf1: CH_RX_CONF1,
+    pub rx_ch0conf1: RX_CHCONF1,
     #[doc = "0x38 - Channel %s configure register 0"]
-    pub ch1_rx_conf0: CH_RX_CONF0,
+    pub rx_ch1conf0: RX_CHCONF0,
     #[doc = "0x3c - Channel %s configure register 1"]
-    pub ch1_rx_conf1: CH_RX_CONF1,
+    pub rx_ch1conf1: RX_CHCONF1,
     #[doc = "0x40 - Channel %s configure register 0"]
-    pub ch2_rx_conf0: CH_RX_CONF0,
+    pub rx_ch2conf0: RX_CHCONF0,
     #[doc = "0x44 - Channel %s configure register 1"]
-    pub ch2_rx_conf1: CH_RX_CONF1,
+    pub rx_ch2conf1: RX_CHCONF1,
     #[doc = "0x48 - Channel %s configure register 0"]
-    pub ch3_rx_conf0: CH_RX_CONF0,
+    pub rx_ch3conf0: RX_CHCONF0,
     #[doc = "0x4c - Channel %s configure register 1"]
-    pub ch3_rx_conf1: CH_RX_CONF1,
+    pub rx_ch3conf1: RX_CHCONF1,
     #[doc = "0x50..0x60 - Channel %s status register"]
     pub ch_tx_status: [CH_TX_STATUS; 4],
     #[doc = "0x60..0x70 - Channel %s status register"]
@@ -65,14 +65,14 @@ pub mod rx_chdata;
 pub type CH_TX_CONF0 = crate::Reg<ch_tx_conf0::CH_TX_CONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
 pub mod ch_tx_conf0;
-#[doc = "CH_RX_CONF0 (rw) register accessor: an alias for `Reg<CH_RX_CONF0_SPEC>`"]
-pub type CH_RX_CONF0 = crate::Reg<ch_rx_conf0::CH_RX_CONF0_SPEC>;
+#[doc = "RX_CHCONF0 (rw) register accessor: an alias for `Reg<RX_CHCONF0_SPEC>`"]
+pub type RX_CHCONF0 = crate::Reg<rx_chconf0::RX_CHCONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
-pub mod ch_rx_conf0;
-#[doc = "CH_RX_CONF1 (rw) register accessor: an alias for `Reg<CH_RX_CONF1_SPEC>`"]
-pub type CH_RX_CONF1 = crate::Reg<ch_rx_conf1::CH_RX_CONF1_SPEC>;
+pub mod rx_chconf0;
+#[doc = "RX_CHCONF1 (rw) register accessor: an alias for `Reg<RX_CHCONF1_SPEC>`"]
+pub type RX_CHCONF1 = crate::Reg<rx_chconf1::RX_CHCONF1_SPEC>;
 #[doc = "Channel %s configure register 1"]
-pub mod ch_rx_conf1;
+pub mod rx_chconf1;
 #[doc = "CH_TX_STATUS (r) register accessor: an alias for `Reg<CH_TX_STATUS_SPEC>`"]
 pub type CH_TX_STATUS = crate::Reg<ch_tx_status::CH_TX_STATUS_SPEC>;
 #[doc = "Channel %s status register"]

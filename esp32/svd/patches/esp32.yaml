@@ -1,1 +1,6 @@
 _svd: ../esp32.base.svd
+
+RMT:
+  _array:
+    CH*CARRIER_DUTY:
+      name: CH%sCARRIER_DUTY
