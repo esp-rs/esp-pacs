@@ -43,3 +43,35 @@ PCR:
         name: I2C0_CLK_EN
       I2C_RST_EN:
         name: I2C0_RST_EN
+
+RMT:
+  INT_CLR:
+    _modify:
+      CH0_RX_ERR_INT_CLR:
+        name: CH2_RX_ERR_INT_CLR
+      CH1_RX_ERR_INT_CLR:
+        name: CH3_RX_ERR_INT_CLR
+  INT_RAW:
+    _add:   
+      CH2_RX_ERR_INT_RAW:
+        bitOffset: 6
+        bitWidth: 1
+        access: "read-write"
+      CH3_RX_ERR_INT_RAW:
+        bitOffset: 7
+        bitWidth: 1
+        access: "read-write"        
+  "CH%sCARRIER_DUTY":
+    _strip_end:
+      - "_CH0"
+  "CH%s_RX_CARRIER_RM":
+    _strip_end:
+      - "_CH2"
+  "RX_CH%sCONF0":
+    _strip_end:
+      - "_CH2"    
+  "RX_CH%sCONF1":
+    _strip_end:
+      - "_CH2"
+
+  

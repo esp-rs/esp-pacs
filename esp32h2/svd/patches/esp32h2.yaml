@@ -226,9 +226,9 @@ RMT:
       TX_CH1_ERR_INT_RAW:
         name: CH1_TX_ERR_INT_RAW
       TX_CH2_ERR_INT_RAW:
-        name: CH2_TX_ERR_INT_RAW
+        name: CH2_RX_ERR_INT_RAW
       TX_CH3_ERR_INT_RAW:
-        name: CH3_TX_ERR_INT_RAW
+        name: CH3_RX_ERR_INT_RAW
   INT_CLR:
     _modify:
       RX_CH0_ERR_INT_CLR:
@@ -236,9 +236,24 @@ RMT:
       RX_CH1_ERR_INT_CLR:
         name: CH1_TX_ERR_INT_CLR
       RX_CH2_ERR_INT_CLR:
-        name: CH0_RX_ERR_INT_CLR
+        name: CH2_RX_ERR_INT_CLR
       RX_CH3_ERR_INT_CLR:
-        name: CH1_RX_ERR_INT_CLR
+        name: CH3_RX_ERR_INT_CLR
+  "CH%sCARRIER_DUTY":
+    _strip_end:
+      - "_CH0"
+  "CH%s_RX_CARRIER_RM":
+    _strip_end:
+      - "_CH2"
+  "RX_CH%sCONF0":
+    _strip_end:
+      - "_CH2"    
+  "RX_CH%sCONF1":
+    _strip_end:
+      - "_CH2"
+  "CH%s_TX_LIM":
+    _strip_end:
+      - "_CH0"
 
 RNG:
   _modify:

@@ -13,13 +13,13 @@ pub struct RegisterBlock {
     #[doc = "0x10..0x18 - RMT_CH%sCONF%s_REG."]
     pub ch_tx_conf0: [CH_TX_CONF0; 2],
     #[doc = "0x18 - RMT_CH2CONF0_REG."]
-    pub ch2_rx_conf0: CH_RX_CONF0,
+    pub rx_ch0conf0: RX_CHCONF0,
     #[doc = "0x1c - RMT_CH2CONF1_REG."]
-    pub ch2conf1: CH2CONF1,
+    pub rx_ch0conf1: RX_CH0CONF1,
     #[doc = "0x20 - RMT_CH2CONF0_REG."]
-    pub ch3_rx_conf0: CH_RX_CONF0,
+    pub rx_ch1conf0: RX_CHCONF0,
     #[doc = "0x24 - RMT_CH3CONF1_REG."]
-    pub ch3conf1: CH3CONF1,
+    pub rx_ch1conf1: RX_CH1CONF1,
     #[doc = "0x28 - RMT_CH0STATUS_REG."]
     pub ch0status: CH0STATUS,
     #[doc = "0x2c - RMT_CH1STATUS_REG."]
@@ -36,14 +36,10 @@ pub struct RegisterBlock {
     pub int_ena: INT_ENA,
     #[doc = "0x44 - RMT_INT_CLR_REG."]
     pub int_clr: INT_CLR,
-    #[doc = "0x48 - RMT_CH0CARRIER_DUTY_REG."]
-    pub ch0carrier_duty: CH0CARRIER_DUTY,
-    #[doc = "0x4c - RMT_CH1CARRIER_DUTY_REG."]
-    pub ch1carrier_duty: CH1CARRIER_DUTY,
-    #[doc = "0x50 - RMT_CH2_RX_CARRIER_RM_REG."]
-    pub ch2_rx_carrier_rm: CH2_RX_CARRIER_RM,
-    #[doc = "0x54 - RMT_CH3_RX_CARRIER_RM_REG."]
-    pub ch3_rx_carrier_rm: CH3_RX_CARRIER_RM,
+    #[doc = "0x48..0x50 - RMT_CH%sCARRIER_DUTY_REG."]
+    pub chcarrier_duty: [CHCARRIER_DUTY; 2],
+    #[doc = "0x50..0x58 - RMT_CH2_RX_CARRIER_RM_REG."]
+    pub ch_rx_carrier_rm: [CH_RX_CARRIER_RM; 2],
     #[doc = "0x58..0x60 - RMT_CH%s_TX_LIM_REG."]
     pub ch_tx_lim: [CH_TX_LIM; 2],
     #[doc = "0x60..0x68 - RMT_CH2_RX_LIM_REG."]
@@ -54,7 +50,7 @@ pub struct RegisterBlock {
     pub tx_sim: TX_SIM,
     #[doc = "0x70 - RMT_REF_CNT_RST_REG."]
     pub ref_cnt_rst: REF_CNT_RST,
-    _reserved26: [u8; 0x58],
+    _reserved24: [u8; 0x58],
     #[doc = "0xcc - RMT_DATE_REG."]
     pub date: DATE,
 }
@@ -90,18 +86,18 @@ pub mod ch3data;
 pub type CH_TX_CONF0 = crate::Reg<ch_tx_conf0::CH_TX_CONF0_SPEC>;
 #[doc = "RMT_CH%sCONF%s_REG."]
 pub mod ch_tx_conf0;
-#[doc = "CH_RX_CONF0 (rw) register accessor: an alias for `Reg<CH_RX_CONF0_SPEC>`"]
-pub type CH_RX_CONF0 = crate::Reg<ch_rx_conf0::CH_RX_CONF0_SPEC>;
+#[doc = "RX_CHCONF0 (rw) register accessor: an alias for `Reg<RX_CHCONF0_SPEC>`"]
+pub type RX_CHCONF0 = crate::Reg<rx_chconf0::RX_CHCONF0_SPEC>;
 #[doc = "RMT_CH2CONF0_REG."]
-pub mod ch_rx_conf0;
-#[doc = "CH2CONF1 (rw) register accessor: an alias for `Reg<CH2CONF1_SPEC>`"]
-pub type CH2CONF1 = crate::Reg<ch2conf1::CH2CONF1_SPEC>;
+pub mod rx_chconf0;
+#[doc = "RX_CH0CONF1 (rw) register accessor: an alias for `Reg<RX_CH0CONF1_SPEC>`"]
+pub type RX_CH0CONF1 = crate::Reg<rx_ch0conf1::RX_CH0CONF1_SPEC>;
 #[doc = "RMT_CH2CONF1_REG."]
-pub mod ch2conf1;
-#[doc = "CH3CONF1 (rw) register accessor: an alias for `Reg<CH3CONF1_SPEC>`"]
-pub type CH3CONF1 = crate::Reg<ch3conf1::CH3CONF1_SPEC>;
+pub mod rx_ch0conf1;
+#[doc = "RX_CH1CONF1 (rw) register accessor: an alias for `Reg<RX_CH1CONF1_SPEC>`"]
+pub type RX_CH1CONF1 = crate::Reg<rx_ch1conf1::RX_CH1CONF1_SPEC>;
 #[doc = "RMT_CH3CONF1_REG."]
-pub mod ch3conf1;
+pub mod rx_ch1conf1;
 #[doc = "CH0STATUS (r) register accessor: an alias for `Reg<CH0STATUS_SPEC>`"]
 pub type CH0STATUS = crate::Reg<ch0status::CH0STATUS_SPEC>;
 #[doc = "RMT_CH0STATUS_REG."]
@@ -134,22 +130,14 @@ pub mod int_ena;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "RMT_INT_CLR_REG."]
 pub mod int_clr;
-#[doc = "CH0CARRIER_DUTY (rw) register accessor: an alias for `Reg<CH0CARRIER_DUTY_SPEC>`"]
-pub type CH0CARRIER_DUTY = crate::Reg<ch0carrier_duty::CH0CARRIER_DUTY_SPEC>;
-#[doc = "RMT_CH0CARRIER_DUTY_REG."]
-pub mod ch0carrier_duty;
-#[doc = "CH1CARRIER_DUTY (rw) register accessor: an alias for `Reg<CH1CARRIER_DUTY_SPEC>`"]
-pub type CH1CARRIER_DUTY = crate::Reg<ch1carrier_duty::CH1CARRIER_DUTY_SPEC>;
-#[doc = "RMT_CH1CARRIER_DUTY_REG."]
-pub mod ch1carrier_duty;
-#[doc = "CH2_RX_CARRIER_RM (rw) register accessor: an alias for `Reg<CH2_RX_CARRIER_RM_SPEC>`"]
-pub type CH2_RX_CARRIER_RM = crate::Reg<ch2_rx_carrier_rm::CH2_RX_CARRIER_RM_SPEC>;
+#[doc = "CHCARRIER_DUTY (rw) register accessor: an alias for `Reg<CHCARRIER_DUTY_SPEC>`"]
+pub type CHCARRIER_DUTY = crate::Reg<chcarrier_duty::CHCARRIER_DUTY_SPEC>;
+#[doc = "RMT_CH%sCARRIER_DUTY_REG."]
+pub mod chcarrier_duty;
+#[doc = "CH_RX_CARRIER_RM (rw) register accessor: an alias for `Reg<CH_RX_CARRIER_RM_SPEC>`"]
+pub type CH_RX_CARRIER_RM = crate::Reg<ch_rx_carrier_rm::CH_RX_CARRIER_RM_SPEC>;
 #[doc = "RMT_CH2_RX_CARRIER_RM_REG."]
-pub mod ch2_rx_carrier_rm;
-#[doc = "CH3_RX_CARRIER_RM (rw) register accessor: an alias for `Reg<CH3_RX_CARRIER_RM_SPEC>`"]
-pub type CH3_RX_CARRIER_RM = crate::Reg<ch3_rx_carrier_rm::CH3_RX_CARRIER_RM_SPEC>;
-#[doc = "RMT_CH3_RX_CARRIER_RM_REG."]
-pub mod ch3_rx_carrier_rm;
+pub mod ch_rx_carrier_rm;
 #[doc = "CH_TX_LIM (rw) register accessor: an alias for `Reg<CH_TX_LIM_SPEC>`"]
 pub type CH_TX_LIM = crate::Reg<ch_tx_lim::CH_TX_LIM_SPEC>;
 #[doc = "RMT_CH%s_TX_LIM_REG."]

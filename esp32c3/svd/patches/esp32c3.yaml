@@ -4,3 +4,22 @@ ASSIST_DEBUG:
   _modify:
     C0RE_0_MONTR_ENA:
       name: CORE_0_MONTR_ENA
+
+RMT:
+  _modify:
+    CH2_RX_CARRIER_RM:
+      name: CH0_RX_CARRIER_RM
+    CH3_RX_CARRIER_RM:
+      name: CH1_RX_CARRIER_RM
+    CH%s_RX_CONF0:
+      dimIndex: 0-1
+      name: RX_CH%sCONF0
+    CH2CONF1:
+      name: RX_CH0CONF1
+    CH3CONF1:
+      name: RX_CH1CONF1
+  _array:
+    CH*CARRIER_DUTY:
+      name: CH%sCARRIER_DUTY
+    CH*_RX_CARRIER_RM:
+      name: CH%s_RX_CARRIER_RM

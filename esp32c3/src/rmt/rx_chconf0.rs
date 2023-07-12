@@ -1,22 +1,22 @@
-#[doc = "Register `CH%s_RX_CONF0` reader"]
-pub struct R(crate::R<CH_RX_CONF0_SPEC>);
+#[doc = "Register `RX_CH%sCONF0` reader"]
+pub struct R(crate::R<RX_CHCONF0_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CH_RX_CONF0_SPEC>;
+    type Target = crate::R<RX_CHCONF0_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CH_RX_CONF0_SPEC>> for R {
+impl From<crate::R<RX_CHCONF0_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CH_RX_CONF0_SPEC>) -> Self {
+    fn from(reader: crate::R<RX_CHCONF0_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CH%s_RX_CONF0` writer"]
-pub struct W(crate::W<CH_RX_CONF0_SPEC>);
+#[doc = "Register `RX_CH%sCONF0` writer"]
+pub struct W(crate::W<RX_CHCONF0_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CH_RX_CONF0_SPEC>;
+    type Target = crate::W<RX_CHCONF0_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,32 +28,32 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CH_RX_CONF0_SPEC>> for W {
+impl From<crate::W<RX_CHCONF0_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CH_RX_CONF0_SPEC>) -> Self {
+    fn from(writer: crate::W<RX_CHCONF0_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `DIV_CNT` reader - reg_div_cnt_ch2."]
 pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - reg_div_cnt_ch2."]
-pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_CONF0_SPEC, 8, O>;
+pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CHCONF0_SPEC, 8, O>;
 #[doc = "Field `IDLE_THRES` reader - reg_idle_thres_ch2."]
 pub type IDLE_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `IDLE_THRES` writer - reg_idle_thres_ch2."]
-pub type IDLE_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_CONF0_SPEC, 15, O, u16>;
+pub type IDLE_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CHCONF0_SPEC, 15, O, u16>;
 #[doc = "Field `MEM_SIZE` reader - reg_mem_size_ch2."]
 pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - reg_mem_size_ch2."]
-pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_CONF0_SPEC, 3, O>;
+pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CHCONF0_SPEC, 3, O>;
 #[doc = "Field `CARRIER_EN` reader - reg_carrier_en_ch2."]
 pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - reg_carrier_en_ch2."]
-pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_RX_CONF0_SPEC, O>;
+pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF0_SPEC, O>;
 #[doc = "Field `CARRIER_OUT_LV` reader - reg_carrier_out_lv_ch2."]
 pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - reg_carrier_out_lv_ch2."]
-pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CH_RX_CONF0_SPEC, O>;
+pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - reg_div_cnt_ch2."]
     #[inline(always)]
@@ -84,7 +84,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CH_RX_CONF0")
+        f.debug_struct("RX_CHCONF0")
             .field("div_cnt", &format_args!("{}", self.div_cnt().bits()))
             .field("idle_thres", &format_args!("{}", self.idle_thres().bits()))
             .field("mem_size", &format_args!("{}", self.mem_size().bits()))
@@ -97,7 +97,7 @@ impl core::fmt::Debug for R {
     }
 }
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH_RX_CONF0_SPEC> {
+impl core::fmt::Debug for crate::generic::Reg<RX_CHCONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         self.read().fmt(f)
     }
@@ -140,22 +140,22 @@ impl W {
         self
     }
 }
-#[doc = "RMT_CH2CONF0_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_rx_conf0](index.html) module"]
-pub struct CH_RX_CONF0_SPEC;
-impl crate::RegisterSpec for CH_RX_CONF0_SPEC {
+#[doc = "RMT_CH2CONF0_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_chconf0](index.html) module"]
+pub struct RX_CHCONF0_SPEC;
+impl crate::RegisterSpec for RX_CHCONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch_rx_conf0::R](R) reader structure"]
-impl crate::Readable for CH_RX_CONF0_SPEC {
+#[doc = "`read()` method returns [rx_chconf0::R](R) reader structure"]
+impl crate::Readable for RX_CHCONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ch_rx_conf0::W](W) writer structure"]
-impl crate::Writable for CH_RX_CONF0_SPEC {
+#[doc = "`write(|w| ..)` method takes [rx_chconf0::W](W) writer structure"]
+impl crate::Writable for RX_CHCONF0_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets CH%s_RX_CONF0 to value 0x30ff_ff02"]
-impl crate::Resettable for CH_RX_CONF0_SPEC {
+#[doc = "`reset()` method sets RX_CH%sCONF0 to value 0x30ff_ff02"]
+impl crate::Resettable for RX_CHCONF0_SPEC {
     const RESET_VALUE: Self::Ux = 0x30ff_ff02;
 }

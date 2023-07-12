@@ -74,3 +74,14 @@ ASSIST_DEBUG:
 _modify:
   INTERRUPT_CORE1:
     baseAddress: 0x600C2000
+
+RMT:
+  _modify:
+    CH%s_RX_CONF0:
+      name: RX_CH%sCONF0
+    CH%s_RX_CONF1:
+      name: RX_CH%sCONF1
+  INT_CLR:
+    _modify:
+      CH%s_RX_ERR_INT_CLR:
+        dimIndex: 4-7
