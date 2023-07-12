@@ -13,20 +13,34 @@ impl From<crate::R<BLK3_RDATA1_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `BLK3_DOUT1` reader - read for BLOCK3"]
-pub type BLK3_DOUT1_R = crate::FieldReader<u32>;
+#[doc = "Field `RD_CUSTOM_MAC_1` reader - "]
+pub type RD_CUSTOM_MAC_1_R = crate::FieldReader<u32>;
+#[doc = "Field `RESERVED_3_56` reader - "]
+pub type RESERVED_3_56_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:31 - read for BLOCK3"]
+    #[doc = "Bits 0:23"]
     #[inline(always)]
-    pub fn blk3_dout1(&self) -> BLK3_DOUT1_R {
-        BLK3_DOUT1_R::new(self.bits)
+    pub fn rd_custom_mac_1(&self) -> RD_CUSTOM_MAC_1_R {
+        RD_CUSTOM_MAC_1_R::new(self.bits & 0x00ff_ffff)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    pub fn reserved_3_56(&self) -> RESERVED_3_56_R {
+        RESERVED_3_56_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_RDATA1")
-            .field("blk3_dout1", &format_args!("{}", self.blk3_dout1().bits()))
+            .field(
+                "rd_custom_mac_1",
+                &format_args!("{}", self.rd_custom_mac_1().bits()),
+            )
+            .field(
+                "reserved_3_56",
+                &format_args!("{}", self.reserved_3_56().bits()),
+            )
             .finish()
     }
 }

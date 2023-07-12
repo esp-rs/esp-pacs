@@ -34,26 +34,26 @@ impl From<crate::W<CH_RX_CARRIER_RM_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CARRIER_LOW_THRES` reader - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
-pub type CARRIER_LOW_THRES_R = crate::FieldReader<u16>;
-#[doc = "Field `CARRIER_LOW_THRES` writer - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
-pub type CARRIER_LOW_THRES_W<'a, const O: u8> =
+#[doc = "Field `CARRIER_LOW_THRES_CH` reader - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
+pub type CARRIER_LOW_THRES_CH_R = crate::FieldReader<u16>;
+#[doc = "Field `CARRIER_LOW_THRES_CH` writer - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
+pub type CARRIER_LOW_THRES_CH_W<'a, const O: u8> =
     crate::FieldWriter<'a, CH_RX_CARRIER_RM_SPEC, 16, O, u16>;
-#[doc = "Field `CARRIER_HIGH_THRES` reader - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
-pub type CARRIER_HIGH_THRES_R = crate::FieldReader<u16>;
-#[doc = "Field `CARRIER_HIGH_THRES` writer - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
-pub type CARRIER_HIGH_THRES_W<'a, const O: u8> =
+#[doc = "Field `CARRIER_HIGH_THRES_CH` reader - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
+pub type CARRIER_HIGH_THRES_CH_R = crate::FieldReader<u16>;
+#[doc = "Field `CARRIER_HIGH_THRES_CH` writer - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
+pub type CARRIER_HIGH_THRES_CH_W<'a, const O: u8> =
     crate::FieldWriter<'a, CH_RX_CARRIER_RM_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
     #[inline(always)]
-    pub fn carrier_low_thres(&self) -> CARRIER_LOW_THRES_R {
-        CARRIER_LOW_THRES_R::new((self.bits & 0xffff) as u16)
+    pub fn carrier_low_thres_ch(&self) -> CARRIER_LOW_THRES_CH_R {
+        CARRIER_LOW_THRES_CH_R::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 16:31 - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
     #[inline(always)]
-    pub fn carrier_high_thres(&self) -> CARRIER_HIGH_THRES_R {
-        CARRIER_HIGH_THRES_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn carrier_high_thres_ch(&self) -> CARRIER_HIGH_THRES_CH_R {
+        CARRIER_HIGH_THRES_CH_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -61,12 +61,12 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_RX_CARRIER_RM")
             .field(
-                "carrier_low_thres",
-                &format_args!("{}", self.carrier_low_thres().bits()),
+                "carrier_low_thres_ch",
+                &format_args!("{}", self.carrier_low_thres_ch().bits()),
             )
             .field(
-                "carrier_high_thres",
-                &format_args!("{}", self.carrier_high_thres().bits()),
+                "carrier_high_thres_ch",
+                &format_args!("{}", self.carrier_high_thres_ch().bits()),
             )
             .finish()
     }
@@ -81,14 +81,14 @@ impl W {
     #[doc = "Bits 0:15 - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_low_thres(&mut self) -> CARRIER_LOW_THRES_W<0> {
-        CARRIER_LOW_THRES_W::new(self)
+    pub fn carrier_low_thres_ch(&mut self) -> CARRIER_LOW_THRES_CH_W<0> {
+        CARRIER_LOW_THRES_CH_W::new(self)
     }
     #[doc = "Bits 16:31 - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_high_thres(&mut self) -> CARRIER_HIGH_THRES_W<16> {
-        CARRIER_HIGH_THRES_W::new(self)
+    pub fn carrier_high_thres_ch(&mut self) -> CARRIER_HIGH_THRES_CH_W<16> {
+        CARRIER_HIGH_THRES_CH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

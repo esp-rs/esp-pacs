@@ -34,16 +34,16 @@ impl From<crate::W<CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OP_CODE` reader - efuse operation code"]
+#[doc = "Field `OP_CODE` reader - "]
 pub type OP_CODE_R = crate::FieldReader<u16>;
-#[doc = "Field `OP_CODE` writer - efuse operation code"]
+#[doc = "Field `OP_CODE` writer - "]
 pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 16, O, u16>;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` reader - "]
 pub type FORCE_NO_WR_RD_DIS_R = crate::BitReader;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` writer - "]
 pub type FORCE_NO_WR_RD_DIS_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 impl R {
-    #[doc = "Bits 0:15 - efuse operation code"]
+    #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn op_code(&self) -> OP_CODE_R {
         OP_CODE_R::new((self.bits & 0xffff) as u16)
@@ -73,7 +73,7 @@ impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - efuse operation code"]
+    #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
     pub fn op_code(&mut self) -> OP_CODE_W<0> {

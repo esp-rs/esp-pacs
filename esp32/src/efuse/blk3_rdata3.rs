@@ -34,46 +34,39 @@ impl From<crate::W<BLK3_RDATA3_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `BLK3_DOUT3` reader - read for BLOCK3"]
-pub type BLK3_DOUT3_R = crate::FieldReader<u32>;
-#[doc = "Field `RD_ADC1_TP_LOW` reader - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC1_TP_LOW` reader - "]
 pub type RD_ADC1_TP_LOW_R = crate::FieldReader;
-#[doc = "Field `RD_ADC1_TP_LOW` writer - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC1_TP_LOW` writer - "]
 pub type RD_ADC1_TP_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_RDATA3_SPEC, 7, O>;
-#[doc = "Field `RD_ADC1_TP_HIGH` reader - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC1_TP_HIGH` reader - "]
 pub type RD_ADC1_TP_HIGH_R = crate::FieldReader<u16>;
-#[doc = "Field `RD_ADC1_TP_HIGH` writer - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC1_TP_HIGH` writer - "]
 pub type RD_ADC1_TP_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_RDATA3_SPEC, 9, O, u16>;
-#[doc = "Field `RD_ADC2_TP_LOW` reader - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC2_TP_LOW` reader - "]
 pub type RD_ADC2_TP_LOW_R = crate::FieldReader;
-#[doc = "Field `RD_ADC2_TP_LOW` writer - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC2_TP_LOW` writer - "]
 pub type RD_ADC2_TP_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_RDATA3_SPEC, 7, O>;
-#[doc = "Field `RD_ADC2_TP_HIGH` reader - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC2_TP_HIGH` reader - "]
 pub type RD_ADC2_TP_HIGH_R = crate::FieldReader<u16>;
-#[doc = "Field `RD_ADC2_TP_HIGH` writer - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+#[doc = "Field `RD_ADC2_TP_HIGH` writer - "]
 pub type RD_ADC2_TP_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_RDATA3_SPEC, 9, O, u16>;
 impl R {
-    #[doc = "Bits 0:31 - read for BLOCK3"]
-    #[inline(always)]
-    pub fn blk3_dout3(&self) -> BLK3_DOUT3_R {
-        BLK3_DOUT3_R::new(self.bits)
-    }
-    #[doc = "Bits 0:6 - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 0:6"]
     #[inline(always)]
     pub fn rd_adc1_tp_low(&self) -> RD_ADC1_TP_LOW_R {
         RD_ADC1_TP_LOW_R::new((self.bits & 0x7f) as u8)
     }
-    #[doc = "Bits 7:15 - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 7:15"]
     #[inline(always)]
     pub fn rd_adc1_tp_high(&self) -> RD_ADC1_TP_HIGH_R {
         RD_ADC1_TP_HIGH_R::new(((self.bits >> 7) & 0x01ff) as u16)
     }
-    #[doc = "Bits 16:22 - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 16:22"]
     #[inline(always)]
     pub fn rd_adc2_tp_low(&self) -> RD_ADC2_TP_LOW_R {
         RD_ADC2_TP_LOW_R::new(((self.bits >> 16) & 0x7f) as u8)
     }
-    #[doc = "Bits 23:31 - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 23:31"]
     #[inline(always)]
     pub fn rd_adc2_tp_high(&self) -> RD_ADC2_TP_HIGH_R {
         RD_ADC2_TP_HIGH_R::new(((self.bits >> 23) & 0x01ff) as u16)
@@ -83,7 +76,6 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_RDATA3")
-            .field("blk3_dout3", &format_args!("{}", self.blk3_dout3().bits()))
             .field(
                 "rd_adc1_tp_low",
                 &format_args!("{}", self.rd_adc1_tp_low().bits()),
@@ -110,25 +102,25 @@ impl core::fmt::Debug for crate::generic::Reg<BLK3_RDATA3_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:6 - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 0:6"]
     #[inline(always)]
     #[must_use]
     pub fn rd_adc1_tp_low(&mut self) -> RD_ADC1_TP_LOW_W<0> {
         RD_ADC1_TP_LOW_W::new(self)
     }
-    #[doc = "Bits 7:15 - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 7:15"]
     #[inline(always)]
     #[must_use]
     pub fn rd_adc1_tp_high(&mut self) -> RD_ADC1_TP_HIGH_W<7> {
         RD_ADC1_TP_HIGH_W::new(self)
     }
-    #[doc = "Bits 16:22 - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 16:22"]
     #[inline(always)]
     #[must_use]
     pub fn rd_adc2_tp_low(&mut self) -> RD_ADC2_TP_LOW_W<16> {
         RD_ADC2_TP_LOW_W::new(self)
     }
-    #[doc = "Bits 23:31 - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
+    #[doc = "Bits 23:31"]
     #[inline(always)]
     #[must_use]
     pub fn rd_adc2_tp_high(&mut self) -> RD_ADC2_TP_HIGH_W<23> {

@@ -13,33 +13,58 @@ impl From<crate::R<BLK0_RDATA6_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RD_CODING_SCHEME` reader - read for coding_scheme"]
+#[doc = "Register `BLK0_RDATA6` writer"]
+pub struct W(crate::W<BLK0_RDATA6_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<BLK0_RDATA6_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<BLK0_RDATA6_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<BLK0_RDATA6_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `RD_CODING_SCHEME` reader - "]
 pub type RD_CODING_SCHEME_R = crate::FieldReader;
-#[doc = "Field `RD_CONSOLE_DEBUG_DISABLE` reader - read for console_debug_disable"]
+#[doc = "Field `RD_CONSOLE_DEBUG_DISABLE` reader - "]
 pub type RD_CONSOLE_DEBUG_DISABLE_R = crate::BitReader;
 #[doc = "Field `RD_DISABLE_SDIO_HOST` reader - "]
 pub type RD_DISABLE_SDIO_HOST_R = crate::BitReader;
-#[doc = "Field `RD_ABS_DONE_0` reader - read for abstract_done_0"]
+#[doc = "Field `RD_ABS_DONE_0` reader - "]
 pub type RD_ABS_DONE_0_R = crate::BitReader;
-#[doc = "Field `RD_ABS_DONE_1` reader - read for abstract_done_1"]
+#[doc = "Field `RD_ABS_DONE_1` reader - "]
 pub type RD_ABS_DONE_1_R = crate::BitReader;
-#[doc = "Field `RD_DISABLE_JTAG` reader - read for JTAG_disable"]
-pub type RD_DISABLE_JTAG_R = crate::BitReader;
-#[doc = "Field `RD_DISABLE_DL_ENCRYPT` reader - read for download_dis_encrypt"]
+#[doc = "Field `RD_JTAG_DISABLE` reader - "]
+pub type RD_JTAG_DISABLE_R = crate::BitReader;
+#[doc = "Field `RD_DISABLE_DL_ENCRYPT` reader - "]
 pub type RD_DISABLE_DL_ENCRYPT_R = crate::BitReader;
-#[doc = "Field `RD_DISABLE_DL_DECRYPT` reader - read for download_dis_decrypt"]
+#[doc = "Field `RD_DISABLE_DL_DECRYPT` reader - "]
 pub type RD_DISABLE_DL_DECRYPT_R = crate::BitReader;
-#[doc = "Field `RD_DISABLE_DL_CACHE` reader - read for download_dis_cache"]
+#[doc = "Field `RD_DISABLE_DL_CACHE` reader - "]
 pub type RD_DISABLE_DL_CACHE_R = crate::BitReader;
-#[doc = "Field `RD_KEY_STATUS` reader - read for key_status"]
+#[doc = "Field `RD_KEY_STATUS` reader - "]
 pub type RD_KEY_STATUS_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_203` reader - "]
+pub type RD_RESERVE_0_203_R = crate::FieldReader<u32>;
+#[doc = "Field `RD_RESERVE_0_203` writer - "]
+pub type RD_RESERVE_0_203_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_RDATA6_SPEC, 21, O, u32>;
 impl R {
-    #[doc = "Bits 0:1 - read for coding_scheme"]
+    #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn rd_coding_scheme(&self) -> RD_CODING_SCHEME_R {
         RD_CODING_SCHEME_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Bit 2 - read for console_debug_disable"]
+    #[doc = "Bit 2"]
     #[inline(always)]
     pub fn rd_console_debug_disable(&self) -> RD_CONSOLE_DEBUG_DISABLE_R {
         RD_CONSOLE_DEBUG_DISABLE_R::new(((self.bits >> 2) & 1) != 0)
@@ -49,40 +74,45 @@ impl R {
     pub fn rd_disable_sdio_host(&self) -> RD_DISABLE_SDIO_HOST_R {
         RD_DISABLE_SDIO_HOST_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - read for abstract_done_0"]
+    #[doc = "Bit 4"]
     #[inline(always)]
     pub fn rd_abs_done_0(&self) -> RD_ABS_DONE_0_R {
         RD_ABS_DONE_0_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - read for abstract_done_1"]
+    #[doc = "Bit 5"]
     #[inline(always)]
     pub fn rd_abs_done_1(&self) -> RD_ABS_DONE_1_R {
         RD_ABS_DONE_1_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - read for JTAG_disable"]
+    #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn rd_disable_jtag(&self) -> RD_DISABLE_JTAG_R {
-        RD_DISABLE_JTAG_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn rd_jtag_disable(&self) -> RD_JTAG_DISABLE_R {
+        RD_JTAG_DISABLE_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - read for download_dis_encrypt"]
+    #[doc = "Bit 7"]
     #[inline(always)]
     pub fn rd_disable_dl_encrypt(&self) -> RD_DISABLE_DL_ENCRYPT_R {
         RD_DISABLE_DL_ENCRYPT_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 8 - read for download_dis_decrypt"]
+    #[doc = "Bit 8"]
     #[inline(always)]
     pub fn rd_disable_dl_decrypt(&self) -> RD_DISABLE_DL_DECRYPT_R {
         RD_DISABLE_DL_DECRYPT_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - read for download_dis_cache"]
+    #[doc = "Bit 9"]
     #[inline(always)]
     pub fn rd_disable_dl_cache(&self) -> RD_DISABLE_DL_CACHE_R {
         RD_DISABLE_DL_CACHE_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - read for key_status"]
+    #[doc = "Bit 10"]
     #[inline(always)]
     pub fn rd_key_status(&self) -> RD_KEY_STATUS_R {
         RD_KEY_STATUS_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bits 11:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_203(&self) -> RD_RESERVE_0_203_R {
+        RD_RESERVE_0_203_R::new((self.bits >> 11) & 0x001f_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -110,8 +140,8 @@ impl core::fmt::Debug for R {
                 &format_args!("{}", self.rd_abs_done_1().bit()),
             )
             .field(
-                "rd_disable_jtag",
-                &format_args!("{}", self.rd_disable_jtag().bit()),
+                "rd_jtag_disable",
+                &format_args!("{}", self.rd_jtag_disable().bit()),
             )
             .field(
                 "rd_disable_dl_encrypt",
@@ -129,6 +159,10 @@ impl core::fmt::Debug for R {
                 "rd_key_status",
                 &format_args!("{}", self.rd_key_status().bit()),
             )
+            .field(
+                "rd_reserve_0_203",
+                &format_args!("{}", self.rd_reserve_0_203().bits()),
+            )
             .finish()
     }
 }
@@ -138,7 +172,21 @@ impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA6_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata6](index.html) module"]
+impl W {
+    #[doc = "Bits 11:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rd_reserve_0_203(&mut self) -> RD_RESERVE_0_203_W<11> {
+        RD_RESERVE_0_203_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata6](index.html) module"]
 pub struct BLK0_RDATA6_SPEC;
 impl crate::RegisterSpec for BLK0_RDATA6_SPEC {
     type Ux = u32;
@@ -146,6 +194,12 @@ impl crate::RegisterSpec for BLK0_RDATA6_SPEC {
 #[doc = "`read()` method returns [blk0_rdata6::R](R) reader structure"]
 impl crate::Readable for BLK0_RDATA6_SPEC {
     type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [blk0_rdata6::W](W) writer structure"]
+impl crate::Writable for BLK0_RDATA6_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK0_RDATA6 to value 0"]
 impl crate::Resettable for BLK0_RDATA6_SPEC {

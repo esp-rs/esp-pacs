@@ -34,21 +34,21 @@ impl From<crate::W<CLK_CONF1_FORCE_ON_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CLK_FE_FO` reader - ."]
+#[doc = "Field `CLK_FE_FO` reader - "]
 pub type CLK_FE_FO_R = crate::BitReader;
-#[doc = "Field `CLK_FE_FO` writer - ."]
+#[doc = "Field `CLK_FE_FO` writer - "]
 pub type CLK_FE_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_FORCE_ON_SPEC, O>;
-#[doc = "Field `CLK_BT_FO` reader - ."]
+#[doc = "Field `CLK_BT_FO` reader - "]
 pub type CLK_BT_FO_R = crate::BitReader;
-#[doc = "Field `CLK_BT_FO` writer - ."]
+#[doc = "Field `CLK_BT_FO` writer - "]
 pub type CLK_BT_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_FORCE_ON_SPEC, O>;
 impl R {
-    #[doc = "Bit 16 - ."]
+    #[doc = "Bit 16"]
     #[inline(always)]
     pub fn clk_fe_fo(&self) -> CLK_FE_FO_R {
         CLK_FE_FO_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 18 - ."]
+    #[doc = "Bit 18"]
     #[inline(always)]
     pub fn clk_bt_fo(&self) -> CLK_BT_FO_R {
         CLK_BT_FO_R::new(((self.bits >> 18) & 1) != 0)
@@ -70,13 +70,13 @@ impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_FORCE_ON_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 16 - ."]
+    #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
     pub fn clk_fe_fo(&mut self) -> CLK_FE_FO_W<16> {
         CLK_FE_FO_W::new(self)
     }
-    #[doc = "Bit 18 - ."]
+    #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
     pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<18> {

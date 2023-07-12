@@ -34,12 +34,12 @@ impl From<crate::W<T0LOADHI_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `LOAD_HI` reader - High 22 bits of the value that a reload will load onto timer 0 time-base counter."]
+#[doc = "Field `LOAD_HI` reader - High 22 bits of the value that a reload will load onto timer %s time-base counter."]
 pub type LOAD_HI_R = crate::FieldReader<u32>;
-#[doc = "Field `LOAD_HI` writer - High 22 bits of the value that a reload will load onto timer 0 time-base counter."]
+#[doc = "Field `LOAD_HI` writer - High 22 bits of the value that a reload will load onto timer %s time-base counter."]
 pub type LOAD_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T0LOADHI_SPEC, 22, O, u32>;
 impl R {
-    #[doc = "Bits 0:21 - High 22 bits of the value that a reload will load onto timer 0 time-base counter."]
+    #[doc = "Bits 0:21 - High 22 bits of the value that a reload will load onto timer %s time-base counter."]
     #[inline(always)]
     pub fn load_hi(&self) -> LOAD_HI_R {
         LOAD_HI_R::new(self.bits & 0x003f_ffff)
@@ -60,7 +60,7 @@ impl core::fmt::Debug for crate::generic::Reg<T0LOADHI_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:21 - High 22 bits of the value that a reload will load onto timer 0 time-base counter."]
+    #[doc = "Bits 0:21 - High 22 bits of the value that a reload will load onto timer %s time-base counter."]
     #[inline(always)]
     #[must_use]
     pub fn load_hi(&mut self) -> LOAD_HI_W<0> {
@@ -73,7 +73,7 @@ impl W {
         self
     }
 }
-#[doc = "Timer $x reload value, high 22 bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0loadhi](index.html) module"]
+#[doc = "Timer %s reload value, high 22 bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0loadhi](index.html) module"]
 pub struct T0LOADHI_SPEC;
 impl crate::RegisterSpec for T0LOADHI_SPEC {
     type Ux = u32;

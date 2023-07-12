@@ -13,20 +13,23 @@ impl From<crate::R<BLK3_RDATA6_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `BLK3_DOUT6` reader - read for BLOCK3"]
-pub type BLK3_DOUT6_R = crate::FieldReader<u32>;
+#[doc = "Field `RD_BLK3_RESERVED_6` reader - "]
+pub type RD_BLK3_RESERVED_6_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - read for BLOCK3"]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn blk3_dout6(&self) -> BLK3_DOUT6_R {
-        BLK3_DOUT6_R::new(self.bits)
+    pub fn rd_blk3_reserved_6(&self) -> RD_BLK3_RESERVED_6_R {
+        RD_BLK3_RESERVED_6_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_RDATA6")
-            .field("blk3_dout6", &format_args!("{}", self.blk3_dout6().bits()))
+            .field(
+                "rd_blk3_reserved_6",
+                &format_args!("{}", self.rd_blk3_reserved_6().bits()),
+            )
             .finish()
     }
 }

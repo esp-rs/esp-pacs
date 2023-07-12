@@ -34,16 +34,16 @@ impl From<crate::W<DAC_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DAC_CLK_DIV` reader - efuse timing configure"]
+#[doc = "Field `DAC_CLK_DIV` reader - "]
 pub type DAC_CLK_DIV_R = crate::FieldReader;
-#[doc = "Field `DAC_CLK_DIV` writer - efuse timing configure"]
+#[doc = "Field `DAC_CLK_DIV` writer - "]
 pub type DAC_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, DAC_CONF_SPEC, 8, O>;
 #[doc = "Field `DAC_CLK_PAD_SEL` reader - "]
 pub type DAC_CLK_PAD_SEL_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_PAD_SEL` writer - "]
 pub type DAC_CLK_PAD_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DAC_CONF_SPEC, O>;
 impl R {
-    #[doc = "Bits 0:7 - efuse timing configure"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn dac_clk_div(&self) -> DAC_CLK_DIV_R {
         DAC_CLK_DIV_R::new((self.bits & 0xff) as u8)
@@ -76,7 +76,7 @@ impl core::fmt::Debug for crate::generic::Reg<DAC_CONF_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - efuse timing configure"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
     pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<0> {

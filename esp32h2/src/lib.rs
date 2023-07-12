@@ -320,7 +320,7 @@ impl core::fmt::Debug for ASSIST_DEBUG {
 }
 #[doc = "Debug Assist"]
 pub mod assist_debug;
-#[doc = "GDMA Peripheral"]
+#[doc = "DMA (Direct Memory Access) Controller"]
 pub struct DMA {
     _marker: PhantomData<*const ()>,
 }
@@ -346,7 +346,7 @@ impl core::fmt::Debug for DMA {
         f.debug_struct("DMA").finish()
     }
 }
-#[doc = "GDMA Peripheral"]
+#[doc = "DMA (Direct Memory Access) Controller"]
 pub mod dma;
 #[doc = "Digital Signature"]
 pub struct DS {
@@ -824,7 +824,7 @@ impl core::fmt::Debug for LP_AON {
 }
 #[doc = "LP_AON Peripheral"]
 pub mod lp_aon;
-#[doc = "LP_APM Peripheral"]
+#[doc = "Low-power Access Permission Management Controller"]
 pub struct LP_APM {
     _marker: PhantomData<*const ()>,
 }
@@ -850,7 +850,7 @@ impl core::fmt::Debug for LP_APM {
         f.debug_struct("LP_APM").finish()
     }
 }
-#[doc = "LP_APM Peripheral"]
+#[doc = "Low-power Access Permission Management Controller"]
 pub mod lp_apm;
 #[doc = "LP_CLKRST Peripheral"]
 pub struct LP_CLKRST {
@@ -880,7 +880,7 @@ impl core::fmt::Debug for LP_CLKRST {
 }
 #[doc = "LP_CLKRST Peripheral"]
 pub mod lp_clkrst;
-#[doc = "LP_TIMER Peripheral"]
+#[doc = "Low-power Timer"]
 pub struct LP_TIMER {
     _marker: PhantomData<*const ()>,
 }
@@ -906,9 +906,9 @@ impl core::fmt::Debug for LP_TIMER {
         f.debug_struct("LP_TIMER").finish()
     }
 }
-#[doc = "LP_TIMER Peripheral"]
+#[doc = "Low-power Timer"]
 pub mod lp_timer;
-#[doc = "LP_WDT Peripheral"]
+#[doc = "Low-power Watchdog Timer"]
 pub struct LP_WDT {
     _marker: PhantomData<*const ()>,
 }
@@ -934,7 +934,7 @@ impl core::fmt::Debug for LP_WDT {
         f.debug_struct("LP_WDT").finish()
     }
 }
-#[doc = "LP_WDT Peripheral"]
+#[doc = "Low-power Watchdog Timer"]
 pub mod lp_wdt;
 #[doc = "Motor Control Pulse-Width Modulation 0"]
 pub struct MCPWM0 {

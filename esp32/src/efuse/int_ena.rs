@@ -34,21 +34,21 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `READ_DONE_INT_ENA` reader - read done interrupt enable"]
+#[doc = "Field `READ_DONE_INT_ENA` reader - "]
 pub type READ_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `READ_DONE_INT_ENA` writer - read done interrupt enable"]
+#[doc = "Field `READ_DONE_INT_ENA` writer - "]
 pub type READ_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
-#[doc = "Field `PGM_DONE_INT_ENA` reader - program done interrupt enable"]
+#[doc = "Field `PGM_DONE_INT_ENA` reader - "]
 pub type PGM_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `PGM_DONE_INT_ENA` writer - program done interrupt enable"]
+#[doc = "Field `PGM_DONE_INT_ENA` writer - "]
 pub type PGM_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
-    #[doc = "Bit 0 - read done interrupt enable"]
+    #[doc = "Bit 0"]
     #[inline(always)]
     pub fn read_done_int_ena(&self) -> READ_DONE_INT_ENA_R {
         READ_DONE_INT_ENA_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - program done interrupt enable"]
+    #[doc = "Bit 1"]
     #[inline(always)]
     pub fn pgm_done_int_ena(&self) -> PGM_DONE_INT_ENA_R {
         PGM_DONE_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
@@ -76,13 +76,13 @@ impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - read done interrupt enable"]
+    #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
     pub fn read_done_int_ena(&mut self) -> READ_DONE_INT_ENA_W<0> {
         READ_DONE_INT_ENA_W::new(self)
     }
-    #[doc = "Bit 1 - program done interrupt enable"]
+    #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
     pub fn pgm_done_int_ena(&mut self) -> PGM_DONE_INT_ENA_W<1> {

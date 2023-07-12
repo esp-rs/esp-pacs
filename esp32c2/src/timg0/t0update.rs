@@ -34,12 +34,12 @@ impl From<crate::W<T0UPDATE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `T0_UPDATE` reader - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
+#[doc = "Field `T0_UPDATE` reader - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
 pub type T0_UPDATE_R = crate::BitReader;
-#[doc = "Field `T0_UPDATE` writer - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
+#[doc = "Field `T0_UPDATE` writer - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
 pub type T0_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, T0UPDATE_SPEC, O>;
 impl R {
-    #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
+    #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
     #[inline(always)]
     pub fn t0_update(&self) -> T0_UPDATE_R {
         T0_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
@@ -60,7 +60,7 @@ impl core::fmt::Debug for crate::generic::Reg<T0UPDATE_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
+    #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
     #[inline(always)]
     #[must_use]
     pub fn t0_update(&mut self) -> T0_UPDATE_W<31> {
@@ -73,7 +73,7 @@ impl W {
         self
     }
 }
-#[doc = "Write to copy current timer value to TIMGn_T$x_(LO/HI)_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0update](index.html) module"]
+#[doc = "Write to copy current timer value to TIMGn_T%s_(LO/HI)_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0update](index.html) module"]
 pub struct T0UPDATE_SPEC;
 impl crate::RegisterSpec for T0UPDATE_SPEC {
     type Ux = u32;

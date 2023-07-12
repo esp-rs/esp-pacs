@@ -34,12 +34,12 @@ impl From<crate::W<BLK3_WDATA5_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `BLK3_DIN5` reader - program for BLOCK3"]
+#[doc = "Field `BLK3_DIN5` reader - "]
 pub type BLK3_DIN5_R = crate::FieldReader<u32>;
-#[doc = "Field `BLK3_DIN5` writer - program for BLOCK3"]
+#[doc = "Field `BLK3_DIN5` writer - "]
 pub type BLK3_DIN5_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA5_SPEC, 32, O, u32>;
 impl R {
-    #[doc = "Bits 0:31 - program for BLOCK3"]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn blk3_din5(&self) -> BLK3_DIN5_R {
         BLK3_DIN5_R::new(self.bits)
@@ -60,7 +60,7 @@ impl core::fmt::Debug for crate::generic::Reg<BLK3_WDATA5_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - program for BLOCK3"]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
     pub fn blk3_din5(&mut self) -> BLK3_DIN5_W<0> {

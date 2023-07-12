@@ -34,25 +34,25 @@ impl From<crate::W<CLK_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SEL0` reader - efuse timing configure"]
+#[doc = "Field `SEL0` reader - "]
 pub type SEL0_R = crate::FieldReader;
-#[doc = "Field `SEL0` writer - efuse timing configure"]
+#[doc = "Field `SEL0` writer - "]
 pub type SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_SPEC, 8, O>;
-#[doc = "Field `SEL1` reader - efuse timing configure"]
+#[doc = "Field `SEL1` reader - "]
 pub type SEL1_R = crate::FieldReader;
-#[doc = "Field `SEL1` writer - efuse timing configure"]
+#[doc = "Field `SEL1` writer - "]
 pub type SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_SPEC, 8, O>;
 #[doc = "Field `EN` reader - "]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - "]
 pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
 impl R {
-    #[doc = "Bits 0:7 - efuse timing configure"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn sel0(&self) -> SEL0_R {
         SEL0_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:15 - efuse timing configure"]
+    #[doc = "Bits 8:15"]
     #[inline(always)]
     pub fn sel1(&self) -> SEL1_R {
         SEL1_R::new(((self.bits >> 8) & 0xff) as u8)
@@ -80,13 +80,13 @@ impl core::fmt::Debug for crate::generic::Reg<CLK_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - efuse timing configure"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
     pub fn sel0(&mut self) -> SEL0_W<0> {
         SEL0_W::new(self)
     }
-    #[doc = "Bits 8:15 - efuse timing configure"]
+    #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
     pub fn sel1(&mut self) -> SEL1_W<8> {

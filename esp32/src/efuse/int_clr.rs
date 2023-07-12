@@ -19,9 +19,9 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `READ_DONE_INT_CLR` writer - read done interrupt clear"]
+#[doc = "Field `READ_DONE_INT_CLR` writer - "]
 pub type READ_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
-#[doc = "Field `PGM_DONE_INT_CLR` writer - program done interrupt clear"]
+#[doc = "Field `PGM_DONE_INT_CLR` writer - "]
 pub type PGM_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
@@ -30,13 +30,13 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - read done interrupt clear"]
+    #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
     pub fn read_done_int_clr(&mut self) -> READ_DONE_INT_CLR_W<0> {
         READ_DONE_INT_CLR_W::new(self)
     }
-    #[doc = "Bit 1 - program done interrupt clear"]
+    #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
     pub fn pgm_done_int_clr(&mut self) -> PGM_DONE_INT_CLR_W<1> {

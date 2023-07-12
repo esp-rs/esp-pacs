@@ -13,20 +13,20 @@ impl From<crate::R<H__SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `H_0` reader - GCM hash subkey"]
-pub type H_0_R = crate::FieldReader<u32>;
+#[doc = "Field `H` reader - GCM hash subkey"]
+pub type H_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - GCM hash subkey"]
     #[inline(always)]
-    pub fn h_0(&self) -> H_0_R {
-        H_0_R::new(self.bits)
+    pub fn h(&self) -> H_R {
+        H_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("H_")
-            .field("h_0", &format_args!("{}", self.h_0().bits()))
+            .field("h", &format_args!("{}", self.h().bits()))
             .finish()
     }
 }

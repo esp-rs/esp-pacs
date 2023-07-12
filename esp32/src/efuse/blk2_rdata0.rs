@@ -13,20 +13,20 @@ impl From<crate::R<BLK2_RDATA0_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `BLK2_DOUT0` reader - read for BLOCK2"]
-pub type BLK2_DOUT0_R = crate::FieldReader<u32>;
+#[doc = "Field `RD_BLOCK2` reader - "]
+pub type RD_BLOCK2_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - read for BLOCK2"]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn blk2_dout0(&self) -> BLK2_DOUT0_R {
-        BLK2_DOUT0_R::new(self.bits)
+    pub fn rd_block2(&self) -> RD_BLOCK2_R {
+        RD_BLOCK2_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK2_RDATA0")
-            .field("blk2_dout0", &format_args!("{}", self.blk2_dout0().bits()))
+            .field("rd_block2", &format_args!("{}", self.rd_block2().bits()))
             .finish()
     }
 }

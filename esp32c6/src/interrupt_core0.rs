@@ -47,124 +47,126 @@ pub struct RegisterBlock {
     #[doc = "0x54 - register description"]
     pub lp_apm_m1_intr_map: LP_APM_M1_INTR_MAP,
     #[doc = "0x58 - register description"]
-    pub cpu_intr_from_cpu_0_map: CPU_INTR_FROM_CPU_0_MAP,
+    pub lp_touch_intr_map: LP_TOUCH_INTR_MAP,
     #[doc = "0x5c - register description"]
-    pub cpu_intr_from_cpu_1_map: CPU_INTR_FROM_CPU_1_MAP,
+    pub cpu_intr_from_cpu_0_map: CPU_INTR_FROM_CPU_0_MAP,
     #[doc = "0x60 - register description"]
-    pub cpu_intr_from_cpu_2_map: CPU_INTR_FROM_CPU_2_MAP,
+    pub cpu_intr_from_cpu_1_map: CPU_INTR_FROM_CPU_1_MAP,
     #[doc = "0x64 - register description"]
-    pub cpu_intr_from_cpu_3_map: CPU_INTR_FROM_CPU_3_MAP,
+    pub cpu_intr_from_cpu_2_map: CPU_INTR_FROM_CPU_2_MAP,
     #[doc = "0x68 - register description"]
-    pub assist_debug_intr_map: ASSIST_DEBUG_INTR_MAP,
+    pub cpu_intr_from_cpu_3_map: CPU_INTR_FROM_CPU_3_MAP,
     #[doc = "0x6c - register description"]
-    pub trace_intr_map: TRACE_INTR_MAP,
+    pub assist_debug_intr_map: ASSIST_DEBUG_INTR_MAP,
     #[doc = "0x70 - register description"]
-    pub cache_intr_map: CACHE_INTR_MAP,
+    pub trace_intr_map: TRACE_INTR_MAP,
     #[doc = "0x74 - register description"]
-    pub cpu_peri_timeout_intr_map: CPU_PERI_TIMEOUT_INTR_MAP,
+    pub cache_intr_map: CACHE_INTR_MAP,
     #[doc = "0x78 - register description"]
-    pub gpio_interrupt_pro_map: GPIO_INTERRUPT_PRO_MAP,
+    pub cpu_peri_timeout_intr_map: CPU_PERI_TIMEOUT_INTR_MAP,
     #[doc = "0x7c - register description"]
-    pub gpio_interrupt_pro_nmi_map: GPIO_INTERRUPT_PRO_NMI_MAP,
+    pub gpio_interrupt_pro_map: GPIO_INTERRUPT_PRO_MAP,
     #[doc = "0x80 - register description"]
-    pub pau_intr_map: PAU_INTR_MAP,
+    pub gpio_interrupt_pro_nmi_map: GPIO_INTERRUPT_PRO_NMI_MAP,
     #[doc = "0x84 - register description"]
-    pub hp_peri_timeout_intr_map: HP_PERI_TIMEOUT_INTR_MAP,
+    pub pau_intr_map: PAU_INTR_MAP,
     #[doc = "0x88 - register description"]
-    pub modem_peri_timeout_intr_map: MODEM_PERI_TIMEOUT_INTR_MAP,
+    pub hp_peri_timeout_intr_map: HP_PERI_TIMEOUT_INTR_MAP,
     #[doc = "0x8c - register description"]
-    pub hp_apm_m0_intr_map: HP_APM_M0_INTR_MAP,
+    pub modem_peri_timeout_intr_map: MODEM_PERI_TIMEOUT_INTR_MAP,
     #[doc = "0x90 - register description"]
-    pub hp_apm_m1_intr_map: HP_APM_M1_INTR_MAP,
+    pub hp_apm_m0_intr_map: HP_APM_M0_INTR_MAP,
     #[doc = "0x94 - register description"]
-    pub hp_apm_m2_intr_map: HP_APM_M2_INTR_MAP,
+    pub hp_apm_m1_intr_map: HP_APM_M1_INTR_MAP,
     #[doc = "0x98 - register description"]
-    pub hp_apm_m3_intr_map: HP_APM_M3_INTR_MAP,
+    pub hp_apm_m2_intr_map: HP_APM_M2_INTR_MAP,
     #[doc = "0x9c - register description"]
-    pub lp_apm0_intr_map: LP_APM0_INTR_MAP,
+    pub hp_apm_m3_intr_map: HP_APM_M3_INTR_MAP,
     #[doc = "0xa0 - register description"]
-    pub mspi_intr_map: MSPI_INTR_MAP,
+    pub lp_apm0_intr_map: LP_APM0_INTR_MAP,
     #[doc = "0xa4 - register description"]
-    pub i2s1_intr_map: I2S1_INTR_MAP,
+    pub mspi_intr_map: MSPI_INTR_MAP,
     #[doc = "0xa8 - register description"]
-    pub uhci0_intr_map: UHCI0_INTR_MAP,
+    pub i2s1_intr_map: I2S1_INTR_MAP,
     #[doc = "0xac - register description"]
-    pub uart0_intr_map: UART0_INTR_MAP,
+    pub uhci0_intr_map: UHCI0_INTR_MAP,
     #[doc = "0xb0 - register description"]
-    pub uart1_intr_map: UART1_INTR_MAP,
+    pub uart0_intr_map: UART0_INTR_MAP,
     #[doc = "0xb4 - register description"]
-    pub ledc_intr_map: LEDC_INTR_MAP,
+    pub uart1_intr_map: UART1_INTR_MAP,
     #[doc = "0xb8 - register description"]
-    pub can0_intr_map: CAN0_INTR_MAP,
+    pub ledc_intr_map: LEDC_INTR_MAP,
     #[doc = "0xbc - register description"]
-    pub can1_intr_map: CAN1_INTR_MAP,
+    pub can0_intr_map: CAN0_INTR_MAP,
     #[doc = "0xc0 - register description"]
-    pub usb_intr_map: USB_INTR_MAP,
+    pub can1_intr_map: CAN1_INTR_MAP,
     #[doc = "0xc4 - register description"]
-    pub rmt_intr_map: RMT_INTR_MAP,
+    pub usb_intr_map: USB_INTR_MAP,
     #[doc = "0xc8 - register description"]
-    pub i2c_ext0_intr_map: I2C_EXT0_INTR_MAP,
+    pub rmt_intr_map: RMT_INTR_MAP,
     #[doc = "0xcc - register description"]
-    pub tg0_t0_intr_map: TG0_T0_INTR_MAP,
+    pub i2c_ext0_intr_map: I2C_EXT0_INTR_MAP,
     #[doc = "0xd0 - register description"]
-    pub tg0_t1_intr_map: TG0_T1_INTR_MAP,
+    pub tg0_t0_intr_map: TG0_T0_INTR_MAP,
     #[doc = "0xd4 - register description"]
-    pub tg0_wdt_intr_map: TG0_WDT_INTR_MAP,
+    pub tg0_t1_intr_map: TG0_T1_INTR_MAP,
     #[doc = "0xd8 - register description"]
-    pub tg1_t0_intr_map: TG1_T0_INTR_MAP,
+    pub tg0_wdt_intr_map: TG0_WDT_INTR_MAP,
     #[doc = "0xdc - register description"]
-    pub tg1_t1_intr_map: TG1_T1_INTR_MAP,
+    pub tg1_t0_intr_map: TG1_T0_INTR_MAP,
     #[doc = "0xe0 - register description"]
-    pub tg1_wdt_intr_map: TG1_WDT_INTR_MAP,
+    pub tg1_t1_intr_map: TG1_T1_INTR_MAP,
     #[doc = "0xe4 - register description"]
-    pub systimer_target0_intr_map: SYSTIMER_TARGET0_INTR_MAP,
+    pub tg1_wdt_intr_map: TG1_WDT_INTR_MAP,
     #[doc = "0xe8 - register description"]
-    pub systimer_target1_intr_map: SYSTIMER_TARGET1_INTR_MAP,
+    pub systimer_target0_intr_map: SYSTIMER_TARGET0_INTR_MAP,
     #[doc = "0xec - register description"]
-    pub systimer_target2_intr_map: SYSTIMER_TARGET2_INTR_MAP,
+    pub systimer_target1_intr_map: SYSTIMER_TARGET1_INTR_MAP,
     #[doc = "0xf0 - register description"]
-    pub apb_adc_intr_map: APB_ADC_INTR_MAP,
+    pub systimer_target2_intr_map: SYSTIMER_TARGET2_INTR_MAP,
     #[doc = "0xf4 - register description"]
-    pub pwm_intr_map: PWM_INTR_MAP,
+    pub apb_adc_intr_map: APB_ADC_INTR_MAP,
     #[doc = "0xf8 - register description"]
-    pub pcnt_intr_map: PCNT_INTR_MAP,
+    pub pwm_intr_map: PWM_INTR_MAP,
     #[doc = "0xfc - register description"]
-    pub parl_io_intr_map: PARL_IO_INTR_MAP,
+    pub pcnt_intr_map: PCNT_INTR_MAP,
     #[doc = "0x100 - register description"]
-    pub slc0_intr_map: SLC0_INTR_MAP,
+    pub parl_io_intr_map: PARL_IO_INTR_MAP,
     #[doc = "0x104 - register description"]
-    pub slc1_intr_map: SLC1_INTR_MAP,
+    pub slc0_intr_map: SLC0_INTR_MAP,
     #[doc = "0x108 - register description"]
-    pub dma_in_ch0_intr_map: DMA_IN_CH0_INTR_MAP,
+    pub slc1_intr_map: SLC1_INTR_MAP,
     #[doc = "0x10c - register description"]
-    pub dma_in_ch1_intr_map: DMA_IN_CH1_INTR_MAP,
+    pub dma_in_ch0_intr_map: DMA_IN_CH0_INTR_MAP,
     #[doc = "0x110 - register description"]
-    pub dma_in_ch2_intr_map: DMA_IN_CH2_INTR_MAP,
+    pub dma_in_ch1_intr_map: DMA_IN_CH1_INTR_MAP,
     #[doc = "0x114 - register description"]
-    pub dma_out_ch0_intr_map: DMA_OUT_CH0_INTR_MAP,
+    pub dma_in_ch2_intr_map: DMA_IN_CH2_INTR_MAP,
     #[doc = "0x118 - register description"]
-    pub dma_out_ch1_intr_map: DMA_OUT_CH1_INTR_MAP,
+    pub dma_out_ch0_intr_map: DMA_OUT_CH0_INTR_MAP,
     #[doc = "0x11c - register description"]
-    pub dma_out_ch2_intr_map: DMA_OUT_CH2_INTR_MAP,
+    pub dma_out_ch1_intr_map: DMA_OUT_CH1_INTR_MAP,
     #[doc = "0x120 - register description"]
-    pub gpspi2_intr_map: GPSPI2_INTR_MAP,
+    pub dma_out_ch2_intr_map: DMA_OUT_CH2_INTR_MAP,
     #[doc = "0x124 - register description"]
-    pub aes_intr_map: AES_INTR_MAP,
+    pub gpspi2_intr_map: GPSPI2_INTR_MAP,
     #[doc = "0x128 - register description"]
-    pub sha_intr_map: SHA_INTR_MAP,
+    pub aes_intr_map: AES_INTR_MAP,
     #[doc = "0x12c - register description"]
-    pub rsa_intr_map: RSA_INTR_MAP,
+    pub sha_intr_map: SHA_INTR_MAP,
     #[doc = "0x130 - register description"]
-    pub ecc_intr_map: ECC_INTR_MAP,
+    pub rsa_intr_map: RSA_INTR_MAP,
     #[doc = "0x134 - register description"]
-    pub intr_status_reg_0: INTR_STATUS_REG_0,
+    pub ecc_intr_map: ECC_INTR_MAP,
     #[doc = "0x138 - register description"]
-    pub intr_status_reg_1: INTR_STATUS_REG_1,
+    pub intr_status_reg_0: INTR_STATUS_REG_0,
     #[doc = "0x13c - register description"]
-    pub int_status_reg_2: INT_STATUS_REG_2,
+    pub intr_status_reg_1: INTR_STATUS_REG_1,
     #[doc = "0x140 - register description"]
+    pub int_status_reg_2: INT_STATUS_REG_2,
+    #[doc = "0x144 - register description"]
     pub clock_gate: CLOCK_GATE,
-    _reserved81: [u8; 0x06b8],
+    _reserved82: [u8; 0x06b4],
     #[doc = "0x7fc - register description"]
     pub interrupt_reg_date: INTERRUPT_REG_DATE,
 }
@@ -257,6 +259,10 @@ pub mod lp_apm_m0_intr_map;
 pub type LP_APM_M1_INTR_MAP = crate::Reg<lp_apm_m1_intr_map::LP_APM_M1_INTR_MAP_SPEC>;
 #[doc = "register description"]
 pub mod lp_apm_m1_intr_map;
+#[doc = "LP_TOUCH_INTR_MAP (rw) register accessor: an alias for `Reg<LP_TOUCH_INTR_MAP_SPEC>`"]
+pub type LP_TOUCH_INTR_MAP = crate::Reg<lp_touch_intr_map::LP_TOUCH_INTR_MAP_SPEC>;
+#[doc = "register description"]
+pub mod lp_touch_intr_map;
 #[doc = "CPU_INTR_FROM_CPU_0_MAP (rw) register accessor: an alias for `Reg<CPU_INTR_FROM_CPU_0_MAP_SPEC>`"]
 pub type CPU_INTR_FROM_CPU_0_MAP =
     crate::Reg<cpu_intr_from_cpu_0_map::CPU_INTR_FROM_CPU_0_MAP_SPEC>;

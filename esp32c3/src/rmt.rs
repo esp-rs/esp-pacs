@@ -13,11 +13,11 @@ pub struct RegisterBlock {
     #[doc = "0x10..0x18 - RMT_CH%sCONF%s_REG."]
     pub ch_tx_conf0: [CH_TX_CONF0; 2],
     #[doc = "0x18 - RMT_CH2CONF0_REG."]
-    pub rx_ch0conf0: RX_CHCONF0,
+    pub ch2_rx_conf0: CH_RX_CONF0,
     #[doc = "0x1c - RMT_CH2CONF1_REG."]
     pub rx_ch0conf1: RX_CH0CONF1,
     #[doc = "0x20 - RMT_CH2CONF0_REG."]
-    pub rx_ch1conf0: RX_CHCONF0,
+    pub ch3_rx_conf0: CH_RX_CONF0,
     #[doc = "0x24 - RMT_CH3CONF1_REG."]
     pub rx_ch1conf1: RX_CH1CONF1,
     #[doc = "0x28 - RMT_CH0STATUS_REG."]
@@ -86,10 +86,10 @@ pub mod ch3data;
 pub type CH_TX_CONF0 = crate::Reg<ch_tx_conf0::CH_TX_CONF0_SPEC>;
 #[doc = "RMT_CH%sCONF%s_REG."]
 pub mod ch_tx_conf0;
-#[doc = "RX_CHCONF0 (rw) register accessor: an alias for `Reg<RX_CHCONF0_SPEC>`"]
-pub type RX_CHCONF0 = crate::Reg<rx_chconf0::RX_CHCONF0_SPEC>;
+#[doc = "CH_RX_CONF0 (rw) register accessor: an alias for `Reg<CH_RX_CONF0_SPEC>`"]
+pub type CH_RX_CONF0 = crate::Reg<ch_rx_conf0::CH_RX_CONF0_SPEC>;
 #[doc = "RMT_CH2CONF0_REG."]
-pub mod rx_chconf0;
+pub mod ch_rx_conf0;
 #[doc = "RX_CH0CONF1 (rw) register accessor: an alias for `Reg<RX_CH0CONF1_SPEC>`"]
 pub type RX_CH0CONF1 = crate::Reg<rx_ch0conf1::RX_CH0CONF1_SPEC>;
 #[doc = "RMT_CH2CONF1_REG."]

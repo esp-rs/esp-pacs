@@ -1447,7 +1447,7 @@ impl core::fmt::Debug for RTC_CNTL {
 }
 #[doc = "Real-Time Clock Control"]
 pub mod rtc_cntl;
-#[doc = "RTC_I2C Peripheral"]
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller"]
 pub struct RTC_I2C {
     _marker: PhantomData<*const ()>,
 }
@@ -1473,9 +1473,9 @@ impl core::fmt::Debug for RTC_I2C {
         f.debug_struct("RTC_I2C").finish()
     }
 }
-#[doc = "RTC_I2C Peripheral"]
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller"]
 pub mod rtc_i2c;
-#[doc = "RTC_IO Peripheral"]
+#[doc = "Low-power Input/Output"]
 pub struct RTC_IO {
     _marker: PhantomData<*const ()>,
 }
@@ -1501,7 +1501,7 @@ impl core::fmt::Debug for RTC_IO {
         f.debug_struct("RTC_IO").finish()
     }
 }
-#[doc = "RTC_IO Peripheral"]
+#[doc = "Low-power Input/Output"]
 pub mod rtc_io;
 #[doc = "SENS Peripheral"]
 pub struct SENS {

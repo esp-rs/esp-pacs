@@ -34,22 +34,22 @@ impl From<crate::W<PGM_DATA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PGM_DATA_0` reader - The content of the %sth 32-bit data to be programmed."]
-pub type PGM_DATA_0_R = crate::FieldReader<u32>;
-#[doc = "Field `PGM_DATA_0` writer - The content of the %sth 32-bit data to be programmed."]
-pub type PGM_DATA_0_W<'a, const O: u8> = crate::FieldWriter<'a, PGM_DATA_SPEC, 32, O, u32>;
+#[doc = "Field `PGM_DATA` reader - The content of the %sth 32-bit data to be programmed."]
+pub type PGM_DATA_R = crate::FieldReader<u32>;
+#[doc = "Field `PGM_DATA` writer - The content of the %sth 32-bit data to be programmed."]
+pub type PGM_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, PGM_DATA_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of the %sth 32-bit data to be programmed."]
     #[inline(always)]
-    pub fn pgm_data_0(&self) -> PGM_DATA_0_R {
-        PGM_DATA_0_R::new(self.bits)
+    pub fn pgm_data(&self) -> PGM_DATA_R {
+        PGM_DATA_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PGM_DATA")
-            .field("pgm_data_0", &format_args!("{}", self.pgm_data_0().bits()))
+            .field("pgm_data", &format_args!("{}", self.pgm_data().bits()))
             .finish()
     }
 }
@@ -63,8 +63,8 @@ impl W {
     #[doc = "Bits 0:31 - The content of the %sth 32-bit data to be programmed."]
     #[inline(always)]
     #[must_use]
-    pub fn pgm_data_0(&mut self) -> PGM_DATA_0_W<0> {
-        PGM_DATA_0_W::new(self)
+    pub fn pgm_data(&mut self) -> PGM_DATA_W<0> {
+        PGM_DATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

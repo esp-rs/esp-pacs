@@ -34,34 +34,34 @@ impl From<crate::W<SIGMADELTA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SD0_IN` reader - This field is used to configure the duty cycle of sigma delta modulation output."]
-pub type SD0_IN_R = crate::FieldReader;
-#[doc = "Field `SD0_IN` writer - This field is used to configure the duty cycle of sigma delta modulation output."]
-pub type SD0_IN_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA_SPEC, 8, O>;
-#[doc = "Field `SD0_PRESCALE` reader - This field is used to set a divider value to divide APB clock."]
-pub type SD0_PRESCALE_R = crate::FieldReader;
-#[doc = "Field `SD0_PRESCALE` writer - This field is used to set a divider value to divide APB clock."]
-pub type SD0_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA_SPEC, 8, O>;
+#[doc = "Field `SD_IN` reader - This field is used to configure the duty cycle of sigma delta modulation output."]
+pub type SD_IN_R = crate::FieldReader;
+#[doc = "Field `SD_IN` writer - This field is used to configure the duty cycle of sigma delta modulation output."]
+pub type SD_IN_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA_SPEC, 8, O>;
+#[doc = "Field `SD_PRESCALE` reader - This field is used to set a divider value to divide APB clock."]
+pub type SD_PRESCALE_R = crate::FieldReader;
+#[doc = "Field `SD_PRESCALE` writer - This field is used to set a divider value to divide APB clock."]
+pub type SD_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - This field is used to configure the duty cycle of sigma delta modulation output."]
     #[inline(always)]
-    pub fn sd0_in(&self) -> SD0_IN_R {
-        SD0_IN_R::new((self.bits & 0xff) as u8)
+    pub fn sd_in(&self) -> SD_IN_R {
+        SD_IN_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - This field is used to set a divider value to divide APB clock."]
     #[inline(always)]
-    pub fn sd0_prescale(&self) -> SD0_PRESCALE_R {
-        SD0_PRESCALE_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn sd_prescale(&self) -> SD_PRESCALE_R {
+        SD_PRESCALE_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SIGMADELTA")
-            .field("sd0_in", &format_args!("{}", self.sd0_in().bits()))
+            .field("sd_in", &format_args!("{}", self.sd_in().bits()))
             .field(
-                "sd0_prescale",
-                &format_args!("{}", self.sd0_prescale().bits()),
+                "sd_prescale",
+                &format_args!("{}", self.sd_prescale().bits()),
             )
             .finish()
     }
@@ -76,14 +76,14 @@ impl W {
     #[doc = "Bits 0:7 - This field is used to configure the duty cycle of sigma delta modulation output."]
     #[inline(always)]
     #[must_use]
-    pub fn sd0_in(&mut self) -> SD0_IN_W<0> {
-        SD0_IN_W::new(self)
+    pub fn sd_in(&mut self) -> SD_IN_W<0> {
+        SD_IN_W::new(self)
     }
     #[doc = "Bits 8:15 - This field is used to set a divider value to divide APB clock."]
     #[inline(always)]
     #[must_use]
-    pub fn sd0_prescale(&mut self) -> SD0_PRESCALE_W<8> {
-        SD0_PRESCALE_W::new(self)
+    pub fn sd_prescale(&mut self) -> SD_PRESCALE_W<8> {
+        SD_PRESCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

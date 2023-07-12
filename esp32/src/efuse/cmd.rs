@@ -34,21 +34,21 @@ impl From<crate::W<CMD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `READ_CMD` reader - command for read"]
+#[doc = "Field `READ_CMD` reader - "]
 pub type READ_CMD_R = crate::BitReader;
-#[doc = "Field `READ_CMD` writer - command for read"]
+#[doc = "Field `READ_CMD` writer - "]
 pub type READ_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
-#[doc = "Field `PGM_CMD` reader - command for program"]
+#[doc = "Field `PGM_CMD` reader - "]
 pub type PGM_CMD_R = crate::BitReader;
-#[doc = "Field `PGM_CMD` writer - command for program"]
+#[doc = "Field `PGM_CMD` writer - "]
 pub type PGM_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 impl R {
-    #[doc = "Bit 0 - command for read"]
+    #[doc = "Bit 0"]
     #[inline(always)]
     pub fn read_cmd(&self) -> READ_CMD_R {
         READ_CMD_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - command for program"]
+    #[doc = "Bit 1"]
     #[inline(always)]
     pub fn pgm_cmd(&self) -> PGM_CMD_R {
         PGM_CMD_R::new(((self.bits >> 1) & 1) != 0)
@@ -70,13 +70,13 @@ impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - command for read"]
+    #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
     pub fn read_cmd(&mut self) -> READ_CMD_W<0> {
         READ_CMD_W::new(self)
     }
-    #[doc = "Bit 1 - command for program"]
+    #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
     pub fn pgm_cmd(&mut self) -> PGM_CMD_W<1> {

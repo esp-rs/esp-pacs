@@ -34,48 +34,48 @@ impl From<crate::W<CLK_CONF_FORCE_ON_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CLK_ETM_FO` reader - ."]
+#[doc = "Field `CLK_ETM_FO` reader - "]
 pub type CLK_ETM_FO_R = crate::BitReader;
-#[doc = "Field `CLK_ETM_FO` writer - ."]
+#[doc = "Field `CLK_ETM_FO` writer - "]
 pub type CLK_ETM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
-#[doc = "Field `CLK_ZB_FO` reader - ."]
+#[doc = "Field `CLK_ZB_FO` reader - "]
 pub type CLK_ZB_FO_R = crate::BitReader;
-#[doc = "Field `CLK_ZB_FO` writer - ."]
+#[doc = "Field `CLK_ZB_FO` writer - "]
 pub type CLK_ZB_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
-#[doc = "Field `CLK_MODEM_SEC_FO` reader - ."]
+#[doc = "Field `CLK_MODEM_SEC_FO` reader - "]
 pub type CLK_MODEM_SEC_FO_R = crate::BitReader;
-#[doc = "Field `CLK_MODEM_SEC_FO` writer - ."]
+#[doc = "Field `CLK_MODEM_SEC_FO` writer - "]
 pub type CLK_MODEM_SEC_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
-#[doc = "Field `CLK_BLE_TIMER_FO` reader - ."]
+#[doc = "Field `CLK_BLE_TIMER_FO` reader - "]
 pub type CLK_BLE_TIMER_FO_R = crate::BitReader;
-#[doc = "Field `CLK_BLE_TIMER_FO` writer - ."]
+#[doc = "Field `CLK_BLE_TIMER_FO` writer - "]
 pub type CLK_BLE_TIMER_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
-#[doc = "Field `CLK_DATA_DUMP_FO` reader - ."]
+#[doc = "Field `CLK_DATA_DUMP_FO` reader - "]
 pub type CLK_DATA_DUMP_FO_R = crate::BitReader;
-#[doc = "Field `CLK_DATA_DUMP_FO` writer - ."]
+#[doc = "Field `CLK_DATA_DUMP_FO` writer - "]
 pub type CLK_DATA_DUMP_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 impl R {
-    #[doc = "Bit 22 - ."]
+    #[doc = "Bit 22"]
     #[inline(always)]
     pub fn clk_etm_fo(&self) -> CLK_ETM_FO_R {
         CLK_ETM_FO_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 24 - ."]
+    #[doc = "Bit 24"]
     #[inline(always)]
     pub fn clk_zb_fo(&self) -> CLK_ZB_FO_R {
         CLK_ZB_FO_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 29 - ."]
+    #[doc = "Bit 29"]
     #[inline(always)]
     pub fn clk_modem_sec_fo(&self) -> CLK_MODEM_SEC_FO_R {
         CLK_MODEM_SEC_FO_R::new(((self.bits >> 29) & 1) != 0)
     }
-    #[doc = "Bit 30 - ."]
+    #[doc = "Bit 30"]
     #[inline(always)]
     pub fn clk_ble_timer_fo(&self) -> CLK_BLE_TIMER_FO_R {
         CLK_BLE_TIMER_FO_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 31 - ."]
+    #[doc = "Bit 31"]
     #[inline(always)]
     pub fn clk_data_dump_fo(&self) -> CLK_DATA_DUMP_FO_R {
         CLK_DATA_DUMP_FO_R::new(((self.bits >> 31) & 1) != 0)
@@ -109,31 +109,31 @@ impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_FORCE_ON_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 22 - ."]
+    #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
     pub fn clk_etm_fo(&mut self) -> CLK_ETM_FO_W<22> {
         CLK_ETM_FO_W::new(self)
     }
-    #[doc = "Bit 24 - ."]
+    #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
     pub fn clk_zb_fo(&mut self) -> CLK_ZB_FO_W<24> {
         CLK_ZB_FO_W::new(self)
     }
-    #[doc = "Bit 29 - ."]
+    #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
     pub fn clk_modem_sec_fo(&mut self) -> CLK_MODEM_SEC_FO_W<29> {
         CLK_MODEM_SEC_FO_W::new(self)
     }
-    #[doc = "Bit 30 - ."]
+    #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
     pub fn clk_ble_timer_fo(&mut self) -> CLK_BLE_TIMER_FO_W<30> {
         CLK_BLE_TIMER_FO_W::new(self)
     }
-    #[doc = "Bit 31 - ."]
+    #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
     pub fn clk_data_dump_fo(&mut self) -> CLK_DATA_DUMP_FO_W<31> {

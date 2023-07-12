@@ -34,12 +34,12 @@ impl From<crate::W<T0LOADLO_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `LOAD_LO` reader - Low 32 bits of the value that a reload will load onto timer 0 time-base Counter."]
+#[doc = "Field `LOAD_LO` reader - Low 32 bits of the value that a reload will load onto timer %s time-base Counter."]
 pub type LOAD_LO_R = crate::FieldReader<u32>;
-#[doc = "Field `LOAD_LO` writer - Low 32 bits of the value that a reload will load onto timer 0 time-base Counter."]
+#[doc = "Field `LOAD_LO` writer - Low 32 bits of the value that a reload will load onto timer %s time-base Counter."]
 pub type LOAD_LO_W<'a, const O: u8> = crate::FieldWriter<'a, T0LOADLO_SPEC, 32, O, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Low 32 bits of the value that a reload will load onto timer 0 time-base Counter."]
+    #[doc = "Bits 0:31 - Low 32 bits of the value that a reload will load onto timer %s time-base Counter."]
     #[inline(always)]
     pub fn load_lo(&self) -> LOAD_LO_R {
         LOAD_LO_R::new(self.bits)
@@ -60,7 +60,7 @@ impl core::fmt::Debug for crate::generic::Reg<T0LOADLO_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Low 32 bits of the value that a reload will load onto timer 0 time-base Counter."]
+    #[doc = "Bits 0:31 - Low 32 bits of the value that a reload will load onto timer %s time-base Counter."]
     #[inline(always)]
     #[must_use]
     pub fn load_lo(&mut self) -> LOAD_LO_W<0> {
@@ -73,7 +73,7 @@ impl W {
         self
     }
 }
-#[doc = "Timer $x reload value, low 32 bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0loadlo](index.html) module"]
+#[doc = "Timer %s reload value, low 32 bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0loadlo](index.html) module"]
 pub struct T0LOADLO_SPEC;
 impl crate::RegisterSpec for T0LOADLO_SPEC {
     type Ux = u32;

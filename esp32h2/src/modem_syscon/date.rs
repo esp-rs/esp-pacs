@@ -34,12 +34,12 @@ impl From<crate::W<DATE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DATE` reader - ."]
+#[doc = "Field `DATE` reader - "]
 pub type DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `DATE` writer - ."]
+#[doc = "Field `DATE` writer - "]
 pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 28, O, u32>;
 impl R {
-    #[doc = "Bits 0:27 - ."]
+    #[doc = "Bits 0:27"]
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
         DATE_R::new(self.bits & 0x0fff_ffff)
@@ -60,7 +60,7 @@ impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:27 - ."]
+    #[doc = "Bits 0:27"]
     #[inline(always)]
     #[must_use]
     pub fn date(&mut self) -> DATE_W<0> {

@@ -34,6 +34,10 @@ impl From<crate::W<CLK_EN_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `LP_TOUCH_CK_EN` reader - need_des"]
+pub type LP_TOUCH_CK_EN_R = crate::BitReader;
+#[doc = "Field `LP_TOUCH_CK_EN` writer - need_des"]
+pub type LP_TOUCH_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `RNG_CK_EN` reader - need_des"]
 pub type RNG_CK_EN_R = crate::BitReader;
 #[doc = "Field `RNG_CK_EN` writer - need_des"]
@@ -67,6 +71,11 @@ pub type LP_CPU_CK_EN_R = crate::BitReader;
 #[doc = "Field `LP_CPU_CK_EN` writer - need_des"]
 pub type LP_CPU_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 impl R {
+    #[doc = "Bit 23 - need_des"]
+    #[inline(always)]
+    pub fn lp_touch_ck_en(&self) -> LP_TOUCH_CK_EN_R {
+        LP_TOUCH_CK_EN_R::new(((self.bits >> 23) & 1) != 0)
+    }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
     pub fn rng_ck_en(&self) -> RNG_CK_EN_R {
@@ -112,6 +121,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_EN")
+            .field(
+                "lp_touch_ck_en",
+                &format_args!("{}", self.lp_touch_ck_en().bit()),
+            )
             .field("rng_ck_en", &format_args!("{}", self.rng_ck_en().bit()))
             .field(
                 "otp_dbg_ck_en",
@@ -145,6 +158,12 @@ impl core::fmt::Debug for crate::generic::Reg<CLK_EN_SPEC> {
     }
 }
 impl W {
+    #[doc = "Bit 23 - need_des"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lp_touch_ck_en(&mut self) -> LP_TOUCH_CK_EN_W<23> {
+        LP_TOUCH_CK_EN_W::new(self)
+    }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
     #[must_use]
@@ -215,7 +234,7 @@ impl crate::Writable for CLK_EN_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets CLK_EN to value 0x7f00_0000"]
+#[doc = "`reset()` method sets CLK_EN to value 0x7f80_0000"]
 impl crate::Resettable for CLK_EN_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7f00_0000;
+    const RESET_VALUE: Self::Ux = 0x7f80_0000;
 }

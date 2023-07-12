@@ -13,17 +13,17 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `READ_DONE_INT_RAW` reader - read done interrupt raw status"]
+#[doc = "Field `READ_DONE_INT_RAW` reader - "]
 pub type READ_DONE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `PGM_DONE_INT_RAW` reader - program done interrupt raw status"]
+#[doc = "Field `PGM_DONE_INT_RAW` reader - "]
 pub type PGM_DONE_INT_RAW_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - read done interrupt raw status"]
+    #[doc = "Bit 0"]
     #[inline(always)]
     pub fn read_done_int_raw(&self) -> READ_DONE_INT_RAW_R {
         READ_DONE_INT_RAW_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - program done interrupt raw status"]
+    #[doc = "Bit 1"]
     #[inline(always)]
     pub fn pgm_done_int_raw(&self) -> PGM_DONE_INT_RAW_R {
         PGM_DONE_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)

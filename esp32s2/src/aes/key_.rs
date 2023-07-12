@@ -34,22 +34,22 @@ impl From<crate::W<KEY__SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `KEY_0` reader - Stores AES keys."]
-pub type KEY_0_R = crate::FieldReader<u32>;
-#[doc = "Field `KEY_0` writer - Stores AES keys."]
-pub type KEY_0_W<'a, const O: u8> = crate::FieldWriter<'a, KEY__SPEC, 32, O, u32>;
+#[doc = "Field `KEY` reader - Stores AES keys."]
+pub type KEY_R = crate::FieldReader<u32>;
+#[doc = "Field `KEY` writer - Stores AES keys."]
+pub type KEY_W<'a, const O: u8> = crate::FieldWriter<'a, KEY__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores AES keys."]
     #[inline(always)]
-    pub fn key_0(&self) -> KEY_0_R {
-        KEY_0_R::new(self.bits)
+    pub fn key(&self) -> KEY_R {
+        KEY_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("KEY_")
-            .field("key_0", &format_args!("{}", self.key_0().bits()))
+            .field("key", &format_args!("{}", self.key().bits()))
             .finish()
     }
 }
@@ -63,8 +63,8 @@ impl W {
     #[doc = "Bits 0:31 - Stores AES keys."]
     #[inline(always)]
     #[must_use]
-    pub fn key_0(&mut self) -> KEY_0_W<0> {
-        KEY_0_W::new(self)
+    pub fn key(&mut self) -> KEY_W<0> {
+        KEY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

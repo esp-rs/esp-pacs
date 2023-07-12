@@ -13,13 +13,13 @@ impl From<crate::R<RD_SYS_DATA_PART2__SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `SYS_DATA_PART2_0` reader - Stores the %sth 32 bits of the 2nd part of system data."]
-pub type SYS_DATA_PART2_0_R = crate::FieldReader<u32>;
+#[doc = "Field `SYS_DATA_PART2` reader - Stores the %sth 32 bits of the 2nd part of system data."]
+pub type SYS_DATA_PART2_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the %sth 32 bits of the 2nd part of system data."]
     #[inline(always)]
-    pub fn sys_data_part2_0(&self) -> SYS_DATA_PART2_0_R {
-        SYS_DATA_PART2_0_R::new(self.bits)
+    pub fn sys_data_part2(&self) -> SYS_DATA_PART2_R {
+        SYS_DATA_PART2_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -27,8 +27,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_SYS_DATA_PART2_")
             .field(
-                "sys_data_part2_0",
-                &format_args!("{}", self.sys_data_part2_0().bits()),
+                "sys_data_part2",
+                &format_args!("{}", self.sys_data_part2().bits()),
             )
             .finish()
     }

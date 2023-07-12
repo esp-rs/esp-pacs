@@ -6,19 +6,19 @@ pub struct RegisterBlock {
     pub t0config: T0CONFIG,
     #[doc = "0x04 - Timer %s current value, low 32 bits"]
     pub t0lo: T0LO,
-    #[doc = "0x08 - Timer $x current value, high 22 bits"]
+    #[doc = "0x08 - Timer %s current value, high 22 bits"]
     pub t0hi: T0HI,
-    #[doc = "0x0c - Write to copy current timer value to TIMGn_T$x_(LO/HI)_REG"]
+    #[doc = "0x0c - Write to copy current timer value to TIMGn_T%s_(LO/HI)_REG"]
     pub t0update: T0UPDATE,
-    #[doc = "0x10 - Timer $x alarm value, low 32 bits"]
+    #[doc = "0x10 - Timer %s alarm value, low 32 bits"]
     pub t0alarmlo: T0ALARMLO,
-    #[doc = "0x14 - Timer $x alarm value, high bits"]
+    #[doc = "0x14 - Timer %s alarm value, high bits"]
     pub t0alarmhi: T0ALARMHI,
-    #[doc = "0x18 - Timer $x reload value, low 32 bits"]
+    #[doc = "0x18 - Timer %s reload value, low 32 bits"]
     pub t0loadlo: T0LOADLO,
-    #[doc = "0x1c - Timer $x reload value, high 22 bits"]
+    #[doc = "0x1c - Timer %s reload value, high 22 bits"]
     pub t0loadhi: T0LOADHI,
-    #[doc = "0x20 - Write to reload timer from TIMG_T$x_(LOADLOLOADHI)_REG"]
+    #[doc = "0x20 - Write to reload timer from TIMG_T%s_(LOADLOLOADHI)_REG"]
     pub t0load: T0LOAD,
     _reserved9: [u8; 0x24],
     #[doc = "0x48 - Watchdog timer configuration register"]
@@ -67,31 +67,31 @@ pub type T0LO = crate::Reg<t0lo::T0LO_SPEC>;
 pub mod t0lo;
 #[doc = "T0HI (r) register accessor: an alias for `Reg<T0HI_SPEC>`"]
 pub type T0HI = crate::Reg<t0hi::T0HI_SPEC>;
-#[doc = "Timer $x current value, high 22 bits"]
+#[doc = "Timer %s current value, high 22 bits"]
 pub mod t0hi;
 #[doc = "T0UPDATE (rw) register accessor: an alias for `Reg<T0UPDATE_SPEC>`"]
 pub type T0UPDATE = crate::Reg<t0update::T0UPDATE_SPEC>;
-#[doc = "Write to copy current timer value to TIMGn_T$x_(LO/HI)_REG"]
+#[doc = "Write to copy current timer value to TIMGn_T%s_(LO/HI)_REG"]
 pub mod t0update;
 #[doc = "T0ALARMLO (rw) register accessor: an alias for `Reg<T0ALARMLO_SPEC>`"]
 pub type T0ALARMLO = crate::Reg<t0alarmlo::T0ALARMLO_SPEC>;
-#[doc = "Timer $x alarm value, low 32 bits"]
+#[doc = "Timer %s alarm value, low 32 bits"]
 pub mod t0alarmlo;
 #[doc = "T0ALARMHI (rw) register accessor: an alias for `Reg<T0ALARMHI_SPEC>`"]
 pub type T0ALARMHI = crate::Reg<t0alarmhi::T0ALARMHI_SPEC>;
-#[doc = "Timer $x alarm value, high bits"]
+#[doc = "Timer %s alarm value, high bits"]
 pub mod t0alarmhi;
 #[doc = "T0LOADLO (rw) register accessor: an alias for `Reg<T0LOADLO_SPEC>`"]
 pub type T0LOADLO = crate::Reg<t0loadlo::T0LOADLO_SPEC>;
-#[doc = "Timer $x reload value, low 32 bits"]
+#[doc = "Timer %s reload value, low 32 bits"]
 pub mod t0loadlo;
 #[doc = "T0LOADHI (rw) register accessor: an alias for `Reg<T0LOADHI_SPEC>`"]
 pub type T0LOADHI = crate::Reg<t0loadhi::T0LOADHI_SPEC>;
-#[doc = "Timer $x reload value, high 22 bits"]
+#[doc = "Timer %s reload value, high 22 bits"]
 pub mod t0loadhi;
 #[doc = "T0LOAD (w) register accessor: an alias for `Reg<T0LOAD_SPEC>`"]
 pub type T0LOAD = crate::Reg<t0load::T0LOAD_SPEC>;
-#[doc = "Write to reload timer from TIMG_T$x_(LOADLOLOADHI)_REG"]
+#[doc = "Write to reload timer from TIMG_T%s_(LOADLOLOADHI)_REG"]
 pub mod t0load;
 #[doc = "WDTCONFIG0 (rw) register accessor: an alias for `Reg<WDTCONFIG0_SPEC>`"]
 pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;

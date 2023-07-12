@@ -19,7 +19,9 @@ impl From<crate::W<REF_CNT_RST_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CH[TX_REF_CNT_RST_CH0,TX_REF_CNT_RST_CH1,TX_REF_CNT_RST_CH2,TX_REF_CNT_RST_CH3,RX_REF_CNT_RST_CH4,RX_REF_CNT_RST_CH5,RX_REF_CNT_RST_CH6,RX_REF_CNT_RST_CH7]` writer - This register is used to reset the clock divider of CHANNEL0."]
+#[doc = "Field `TX_REF_CNT_RST` writer - This register is used to reset the clock divider of CHANNEL0."]
+pub type TX_REF_CNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
+#[doc = "Field `CH[TX_REF_CNT_RST_CH1,TX_REF_CNT_RST_CH2,TX_REF_CNT_RST_CH3,RX_REF_CNT_RST_CH4,RX_REF_CNT_RST_CH5,RX_REF_CNT_RST_CH6,RX_REF_CNT_RST_CH7]` writer - This register is used to reset the clock divider of CHANNEL1."]
 pub type CH_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
@@ -28,55 +30,55 @@ impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
     }
 }
 impl W {
-    #[doc = "This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_ref_cnt_rst(&mut self) -> TX_REF_CNT_RST_W<0> {
+        TX_REF_CNT_RST_W::new(self)
+    }
+    #[doc = "This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub unsafe fn ch<const O: u8>(&mut self) -> CH_W<O> {
         CH_W::new(self)
     }
-    #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
-    #[inline(always)]
-    #[must_use]
-    pub fn chtx_ref_cnt_rst_ch0(&mut self) -> CH_W<0> {
-        CH_W::new(self)
-    }
-    #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub fn chtx_ref_cnt_rst_ch1(&mut self) -> CH_W<1> {
         CH_W::new(self)
     }
-    #[doc = "Bit 2 - This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 2 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub fn chtx_ref_cnt_rst_ch2(&mut self) -> CH_W<2> {
         CH_W::new(self)
     }
-    #[doc = "Bit 3 - This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 3 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub fn chtx_ref_cnt_rst_ch3(&mut self) -> CH_W<3> {
         CH_W::new(self)
     }
-    #[doc = "Bit 4 - This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 4 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub fn chrx_ref_cnt_rst_ch4(&mut self) -> CH_W<4> {
         CH_W::new(self)
     }
-    #[doc = "Bit 5 - This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 5 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub fn chrx_ref_cnt_rst_ch5(&mut self) -> CH_W<5> {
         CH_W::new(self)
     }
-    #[doc = "Bit 6 - This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 6 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub fn chrx_ref_cnt_rst_ch6(&mut self) -> CH_W<6> {
         CH_W::new(self)
     }
-    #[doc = "Bit 7 - This register is used to reset the clock divider of CHANNEL0."]
+    #[doc = "Bit 7 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
     #[must_use]
     pub fn chrx_ref_cnt_rst_ch7(&mut self) -> CH_W<7> {
