@@ -274,33 +274,33 @@ impl core::fmt::Debug for LP_I2C_ANA_MST {
 #[doc = "LP_I2C_ANA_MST Peripheral"]
 pub mod lp_i2c_ana_mst;
 #[doc = "Low-power Input/Output Multiplexer"]
-pub struct LP_IO_MUX {
+pub struct LP_IO {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for LP_IO_MUX {}
-impl LP_IO_MUX {
+unsafe impl Send for LP_IO {}
+impl LP_IO {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const lp_io_mux::RegisterBlock = 0x600b_2000 as *const _;
+    pub const PTR: *const lp_io::RegisterBlock = 0x600b_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const lp_io_mux::RegisterBlock {
+    pub const fn ptr() -> *const lp_io::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for LP_IO_MUX {
-    type Target = lp_io_mux::RegisterBlock;
+impl Deref for LP_IO {
+    type Target = lp_io::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for LP_IO_MUX {
+impl core::fmt::Debug for LP_IO {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_IO_MUX").finish()
+        f.debug_struct("LP_IO").finish()
     }
 }
 #[doc = "Low-power Input/Output Multiplexer"]
-pub mod lp_io_mux;
+pub mod lp_io;
 #[doc = "Low-power Trusted Execution Environment"]
 pub struct LP_TEE {
     _marker: PhantomData<*const ()>,
@@ -432,8 +432,8 @@ pub struct Peripherals {
     pub LP_CLKRST: LP_CLKRST,
     #[doc = "LP_I2C_ANA_MST"]
     pub LP_I2C_ANA_MST: LP_I2C_ANA_MST,
-    #[doc = "LP_IO_MUX"]
-    pub LP_IO_MUX: LP_IO_MUX,
+    #[doc = "LP_IO"]
+    pub LP_IO: LP_IO,
     #[doc = "LP_TEE"]
     pub LP_TEE: LP_TEE,
     #[doc = "LP_TIMER"]
@@ -485,7 +485,7 @@ impl Peripherals {
             LP_I2C_ANA_MST: LP_I2C_ANA_MST {
                 _marker: PhantomData,
             },
-            LP_IO_MUX: LP_IO_MUX {
+            LP_IO: LP_IO {
                 _marker: PhantomData,
             },
             LP_TEE: LP_TEE {

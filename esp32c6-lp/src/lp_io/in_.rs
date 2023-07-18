@@ -13,13 +13,13 @@ impl From<crate::R<IN_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `LP_GPIO_IN_DATA_NEXT` reader - need des"]
-pub type LP_GPIO_IN_DATA_NEXT_R = crate::FieldReader;
+#[doc = "Field `IN_DATA_NEXT` reader - need des"]
+pub type IN_DATA_NEXT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - need des"]
     #[inline(always)]
-    pub fn lp_gpio_in_data_next(&self) -> LP_GPIO_IN_DATA_NEXT_R {
-        LP_GPIO_IN_DATA_NEXT_R::new((self.bits & 0xff) as u8)
+    pub fn in_data_next(&self) -> IN_DATA_NEXT_R {
+        IN_DATA_NEXT_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -27,8 +27,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN")
             .field(
-                "lp_gpio_in_data_next",
-                &format_args!("{}", self.lp_gpio_in_data_next().bits()),
+                "in_data_next",
+                &format_args!("{}", self.in_data_next().bits()),
             )
             .finish()
     }
