@@ -34,15 +34,15 @@ impl From<crate::W<STATUS_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `LP_GPIO_STATUS_INTERRUPT` reader - set lp gpio output data"]
-pub type LP_GPIO_STATUS_INTERRUPT_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO_STATUS_INTERRUPT` writer - set lp gpio output data"]
-pub type LP_GPIO_STATUS_INTERRUPT_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS_SPEC, 8, O>;
+#[doc = "Field `STATUS_INTERRUPT` reader - set lp gpio output data"]
+pub type STATUS_INTERRUPT_R = crate::FieldReader;
+#[doc = "Field `STATUS_INTERRUPT` writer - set lp gpio output data"]
+pub type STATUS_INTERRUPT_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
-    pub fn lp_gpio_status_interrupt(&self) -> LP_GPIO_STATUS_INTERRUPT_R {
-        LP_GPIO_STATUS_INTERRUPT_R::new((self.bits & 0xff) as u8)
+    pub fn status_interrupt(&self) -> STATUS_INTERRUPT_R {
+        STATUS_INTERRUPT_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -50,8 +50,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
             .field(
-                "lp_gpio_status_interrupt",
-                &format_args!("{}", self.lp_gpio_status_interrupt().bits()),
+                "status_interrupt",
+                &format_args!("{}", self.status_interrupt().bits()),
             )
             .finish()
     }
@@ -66,8 +66,8 @@ impl W {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio_status_interrupt(&mut self) -> LP_GPIO_STATUS_INTERRUPT_W<0> {
-        LP_GPIO_STATUS_INTERRUPT_W::new(self)
+    pub fn status_interrupt(&mut self) -> STATUS_INTERRUPT_W<0> {
+        STATUS_INTERRUPT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
