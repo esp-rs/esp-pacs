@@ -1172,33 +1172,33 @@ impl core::fmt::Debug for RTC_I2C {
 #[doc = "Low-power I2C (Inter-Integrated Circuit) Controller"]
 pub mod rtc_i2c;
 #[doc = "SD/MMC Host Controller"]
-pub struct SDMMC {
+pub struct SDHOST {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for SDMMC {}
-impl SDMMC {
+unsafe impl Send for SDHOST {}
+impl SDHOST {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const sdmmc::RegisterBlock = 0x3ff6_8000 as *const _;
+    pub const PTR: *const sdhost::RegisterBlock = 0x3ff6_8000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const sdmmc::RegisterBlock {
+    pub const fn ptr() -> *const sdhost::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for SDMMC {
-    type Target = sdmmc::RegisterBlock;
+impl Deref for SDHOST {
+    type Target = sdhost::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for SDMMC {
+impl core::fmt::Debug for SDHOST {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SDMMC").finish()
+        f.debug_struct("SDHOST").finish()
     }
 }
 #[doc = "SD/MMC Host Controller"]
-pub mod sdmmc;
+pub mod sdhost;
 #[doc = "SENS Peripheral"]
 pub struct SENS {
     _marker: PhantomData<*const ()>,
@@ -1704,8 +1704,8 @@ pub struct Peripherals {
     pub RTC_IO: RTC_IO,
     #[doc = "RTC_I2C"]
     pub RTC_I2C: RTC_I2C,
-    #[doc = "SDMMC"]
-    pub SDMMC: SDMMC,
+    #[doc = "SDHOST"]
+    pub SDHOST: SDHOST,
     #[doc = "SENS"]
     pub SENS: SENS,
     #[doc = "SHA"]
@@ -1838,7 +1838,7 @@ impl Peripherals {
             RTC_I2C: RTC_I2C {
                 _marker: PhantomData,
             },
-            SDMMC: SDMMC {
+            SDHOST: SDHOST {
                 _marker: PhantomData,
             },
             SENS: SENS {
