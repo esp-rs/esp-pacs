@@ -14,3 +14,9 @@ EFUSE:
       description: eFuse clock configuration register.
     CONF:
       description: eFuse operation mode configuration register.
+
+USB_DEVICE:
+  _modify:
+    _interrupts:
+      USB_SERIAL_JTAG:
+        name: USB_DEVICE
