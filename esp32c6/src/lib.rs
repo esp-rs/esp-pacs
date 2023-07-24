@@ -75,7 +75,7 @@ extern "C" {
     fn LEDC();
     fn TWAI0();
     fn TWAI1();
-    fn USB();
+    fn USB_DEVICE();
     fn RMT();
     fn I2C_EXT0();
     fn TG0_T0_LEVEL();
@@ -203,7 +203,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _handler: LEDC },
     Vector { _handler: TWAI0 },
     Vector { _handler: TWAI1 },
-    Vector { _handler: USB },
+    Vector {
+        _handler: USB_DEVICE,
+    },
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
     Vector {

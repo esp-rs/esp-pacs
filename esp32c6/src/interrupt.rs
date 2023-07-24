@@ -98,8 +98,8 @@ pub enum Interrupt {
     TWAI0 = 46,
     #[doc = "47 - TWAI1"]
     TWAI1 = 47,
-    #[doc = "48 - USB"]
-    USB = 48,
+    #[doc = "48 - USB_DEVICE"]
+    USB_DEVICE = 48,
     #[doc = "49 - RMT"]
     RMT = 49,
     #[doc = "50 - I2C_EXT0"]
@@ -213,7 +213,7 @@ impl Interrupt {
             45 => Ok(Interrupt::LEDC),
             46 => Ok(Interrupt::TWAI0),
             47 => Ok(Interrupt::TWAI1),
-            48 => Ok(Interrupt::USB),
+            48 => Ok(Interrupt::USB_DEVICE),
             49 => Ok(Interrupt::RMT),
             50 => Ok(Interrupt::I2C_EXT0),
             51 => Ok(Interrupt::TG0_T0_LEVEL),

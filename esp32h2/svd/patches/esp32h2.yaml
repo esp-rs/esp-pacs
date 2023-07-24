@@ -1,1 +1,7 @@
 _svd: "../esp32h2.base.svd"
+
+USB_DEVICE:
+  _modify:
+    _interrupts:
+      USB:
+        name: USB_DEVICE
