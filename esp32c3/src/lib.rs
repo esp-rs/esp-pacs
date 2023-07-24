@@ -53,7 +53,7 @@ extern "C" {
     fn LEDC();
     fn EFUSE();
     fn TWAI0();
-    fn USB_SERIAL_JTAG();
+    fn USB_DEVICE();
     fn RTC_CORE();
     fn RMT();
     fn I2C_EXT0();
@@ -135,7 +135,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 62] = [
     Vector { _handler: EFUSE },
     Vector { _handler: TWAI0 },
     Vector {
-        _handler: USB_SERIAL_JTAG,
+        _handler: USB_DEVICE,
     },
     Vector { _handler: RTC_CORE },
     Vector { _handler: RMT },
