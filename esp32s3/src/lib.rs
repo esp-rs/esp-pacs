@@ -20,7 +20,7 @@
 use core::marker::PhantomData;
 use core::ops::Deref;
 #[doc = r"Number available in the NVIC for configuring priority"]
-pub const NVIC_PRIO_BITS: u8 = 3;
+pub const NVIC_PRIO_BITS: u8 = 0;
 #[allow(unused_imports)]
 use generic::*;
 #[doc = r"Common register and bit access and modify traits"]

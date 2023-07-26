@@ -1,15 +1,15 @@
-#[doc = "Register `CH2STATUS` reader"]
-pub struct R(crate::R<CH2STATUS_SPEC>);
+#[doc = "Register `CH%s_RX_STATUS` reader"]
+pub struct R(crate::R<CH_RX_STATUS_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CH2STATUS_SPEC>;
+    type Target = crate::R<CH_RX_STATUS_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CH2STATUS_SPEC>> for R {
+impl From<crate::R<CH_RX_STATUS_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CH2STATUS_SPEC>) -> Self {
+    fn from(reader: crate::R<CH_RX_STATUS_SPEC>) -> Self {
         R(reader)
     }
 }
@@ -60,7 +60,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CH2STATUS")
+        f.debug_struct("CH_RX_STATUS")
             .field(
                 "mem_waddr_ex",
                 &format_args!("{}", self.mem_waddr_ex().bits()),
@@ -83,21 +83,21 @@ impl core::fmt::Debug for R {
     }
 }
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH2STATUS_SPEC> {
+impl core::fmt::Debug for crate::generic::Reg<CH_RX_STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         self.read().fmt(f)
     }
 }
-#[doc = "RMT_CH2STATUS_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch2status](index.html) module"]
-pub struct CH2STATUS_SPEC;
-impl crate::RegisterSpec for CH2STATUS_SPEC {
+#[doc = "RMT_CH2STATUS_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_rx_status](index.html) module"]
+pub struct CH_RX_STATUS_SPEC;
+impl crate::RegisterSpec for CH_RX_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch2status::R](R) reader structure"]
-impl crate::Readable for CH2STATUS_SPEC {
+#[doc = "`read()` method returns [ch_rx_status::R](R) reader structure"]
+impl crate::Readable for CH_RX_STATUS_SPEC {
     type Reader = R;
 }
-#[doc = "`reset()` method sets CH2STATUS to value 0"]
-impl crate::Resettable for CH2STATUS_SPEC {
+#[doc = "`reset()` method sets CH%s_RX_STATUS to value 0"]
+impl crate::Resettable for CH_RX_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

@@ -1,15 +1,15 @@
-#[doc = "Register `CH0ADDR` reader"]
-pub struct R(crate::R<CH0ADDR_SPEC>);
+#[doc = "Register `CH%sADDR` reader"]
+pub struct R(crate::R<CHADDR_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CH0ADDR_SPEC>;
+    type Target = crate::R<CHADDR_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CH0ADDR_SPEC>> for R {
+impl From<crate::R<CHADDR_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CH0ADDR_SPEC>) -> Self {
+    fn from(reader: crate::R<CHADDR_SPEC>) -> Self {
         R(reader)
     }
 }
@@ -25,7 +25,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CH0ADDR")
+        f.debug_struct("CHADDR")
             .field(
                 "apb_mem_addr",
                 &format_args!("{}", self.apb_mem_addr().bits()),
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
     }
 }
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH0ADDR_SPEC> {
+impl core::fmt::Debug for crate::generic::Reg<CHADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0addr](index.html) module"]
-pub struct CH0ADDR_SPEC;
-impl crate::RegisterSpec for CH0ADDR_SPEC {
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chaddr](index.html) module"]
+pub struct CHADDR_SPEC;
+impl crate::RegisterSpec for CHADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch0addr::R](R) reader structure"]
-impl crate::Readable for CH0ADDR_SPEC {
+#[doc = "`read()` method returns [chaddr::R](R) reader structure"]
+impl crate::Readable for CHADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`reset()` method sets CH0ADDR to value 0"]
-impl crate::Resettable for CH0ADDR_SPEC {
+#[doc = "`reset()` method sets CH%sADDR to value 0"]
+impl crate::Resettable for CHADDR_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

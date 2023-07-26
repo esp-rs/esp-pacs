@@ -3,21 +3,21 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00..0x10 - The read and write data register for CHANNEL%s by apb fifo access."]
-    pub tx_chdata: [TX_CHDATA; 4],
+    pub chdata: [CHDATA; 4],
     #[doc = "0x10..0x18 - Channel %s configure register 0"]
     pub ch_tx_conf0: [CH_TX_CONF0; 2],
     #[doc = "0x18 - Channel %s configure register 0"]
-    pub rx_ch0conf0: RX_CHCONF0,
+    pub ch2_rx_conf0: CH_RX_CONF0,
     #[doc = "0x1c - Channel %s configure register 1"]
-    pub rx_ch0conf1: RX_CHCONF1,
+    pub ch2_rx_conf1: CH_RX_CONF1,
     #[doc = "0x20 - Channel %s configure register 0"]
-    pub rx_ch1conf0: RX_CHCONF0,
+    pub ch3_rx_conf0: CH_RX_CONF0,
     #[doc = "0x24 - Channel %s configure register 1"]
-    pub rx_ch1conf1: RX_CHCONF1,
+    pub ch3_rx_conf1: CH_RX_CONF1,
     #[doc = "0x28..0x30 - Channel %s status register"]
-    pub tx_chstatus: [TX_CHSTATUS; 2],
+    pub ch_tx_status: [CH_TX_STATUS; 2],
     #[doc = "0x30..0x38 - Channel %s status register"]
-    pub rx_chstatus: [RX_CHSTATUS; 2],
+    pub ch_rx_status: [CH_RX_STATUS; 2],
     #[doc = "0x38 - Raw interrupt status"]
     pub int_raw: INT_RAW,
     #[doc = "0x3c - Masked interrupt status"]
@@ -44,30 +44,30 @@ pub struct RegisterBlock {
     #[doc = "0xcc - RMT version register"]
     pub date: DATE,
 }
-#[doc = "TX_CHDATA (r) register accessor: an alias for `Reg<TX_CHDATA_SPEC>`"]
-pub type TX_CHDATA = crate::Reg<tx_chdata::TX_CHDATA_SPEC>;
+#[doc = "CHDATA (rw) register accessor: an alias for `Reg<CHDATA_SPEC>`"]
+pub type CHDATA = crate::Reg<chdata::CHDATA_SPEC>;
 #[doc = "The read and write data register for CHANNEL%s by apb fifo access."]
-pub mod tx_chdata;
+pub mod chdata;
 #[doc = "CH_TX_CONF0 (rw) register accessor: an alias for `Reg<CH_TX_CONF0_SPEC>`"]
 pub type CH_TX_CONF0 = crate::Reg<ch_tx_conf0::CH_TX_CONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
 pub mod ch_tx_conf0;
-#[doc = "RX_CHCONF0 (rw) register accessor: an alias for `Reg<RX_CHCONF0_SPEC>`"]
-pub type RX_CHCONF0 = crate::Reg<rx_chconf0::RX_CHCONF0_SPEC>;
+#[doc = "CH_RX_CONF0 (rw) register accessor: an alias for `Reg<CH_RX_CONF0_SPEC>`"]
+pub type CH_RX_CONF0 = crate::Reg<ch_rx_conf0::CH_RX_CONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
-pub mod rx_chconf0;
-#[doc = "RX_CHCONF1 (rw) register accessor: an alias for `Reg<RX_CHCONF1_SPEC>`"]
-pub type RX_CHCONF1 = crate::Reg<rx_chconf1::RX_CHCONF1_SPEC>;
+pub mod ch_rx_conf0;
+#[doc = "CH_RX_CONF1 (rw) register accessor: an alias for `Reg<CH_RX_CONF1_SPEC>`"]
+pub type CH_RX_CONF1 = crate::Reg<ch_rx_conf1::CH_RX_CONF1_SPEC>;
 #[doc = "Channel %s configure register 1"]
-pub mod rx_chconf1;
-#[doc = "TX_CHSTATUS (r) register accessor: an alias for `Reg<TX_CHSTATUS_SPEC>`"]
-pub type TX_CHSTATUS = crate::Reg<tx_chstatus::TX_CHSTATUS_SPEC>;
+pub mod ch_rx_conf1;
+#[doc = "CH_TX_STATUS (r) register accessor: an alias for `Reg<CH_TX_STATUS_SPEC>`"]
+pub type CH_TX_STATUS = crate::Reg<ch_tx_status::CH_TX_STATUS_SPEC>;
 #[doc = "Channel %s status register"]
-pub mod tx_chstatus;
-#[doc = "RX_CHSTATUS (r) register accessor: an alias for `Reg<RX_CHSTATUS_SPEC>`"]
-pub type RX_CHSTATUS = crate::Reg<rx_chstatus::RX_CHSTATUS_SPEC>;
+pub mod ch_tx_status;
+#[doc = "CH_RX_STATUS (r) register accessor: an alias for `Reg<CH_RX_STATUS_SPEC>`"]
+pub type CH_RX_STATUS = crate::Reg<ch_rx_status::CH_RX_STATUS_SPEC>;
 #[doc = "Channel %s status register"]
-pub mod rx_chstatus;
+pub mod ch_rx_status;
 #[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]

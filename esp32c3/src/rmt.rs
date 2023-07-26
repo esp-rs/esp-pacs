@@ -2,32 +2,22 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    #[doc = "0x00 - RMT_CH0DATA_REG."]
-    pub ch0data: CH0DATA,
-    #[doc = "0x04 - RMT_CH1DATA_REG."]
-    pub ch1data: CH1DATA,
-    #[doc = "0x08 - RMT_CH2DATA_REG."]
-    pub ch2data: CH2DATA,
-    #[doc = "0x0c - RMT_CH3DATA_REG."]
-    pub ch3data: CH3DATA,
+    #[doc = "0x00..0x10 - RMT_CH%sDATA_REG."]
+    pub chdata: [CHDATA; 4],
     #[doc = "0x10..0x18 - RMT_CH%sCONF%s_REG."]
     pub ch_tx_conf0: [CH_TX_CONF0; 2],
     #[doc = "0x18 - RMT_CH2CONF0_REG."]
     pub ch2_rx_conf0: CH_RX_CONF0,
     #[doc = "0x1c - RMT_CH2CONF1_REG."]
-    pub rx_ch0conf1: RX_CH0CONF1,
+    pub ch2_rx_conf1: CH_RX_CONF1,
     #[doc = "0x20 - RMT_CH2CONF0_REG."]
     pub ch3_rx_conf0: CH_RX_CONF0,
-    #[doc = "0x24 - RMT_CH3CONF1_REG."]
-    pub rx_ch1conf1: RX_CH1CONF1,
-    #[doc = "0x28 - RMT_CH0STATUS_REG."]
-    pub ch0status: CH0STATUS,
-    #[doc = "0x2c - RMT_CH1STATUS_REG."]
-    pub ch1status: CH1STATUS,
-    #[doc = "0x30 - RMT_CH2STATUS_REG."]
-    pub ch2status: CH2STATUS,
-    #[doc = "0x34 - RMT_CH3STATUS_REG."]
-    pub ch3status: CH3STATUS,
+    #[doc = "0x24 - RMT_CH2CONF1_REG."]
+    pub ch3_rx_conf1: CH_RX_CONF1,
+    #[doc = "0x28..0x30 - RMT_CH%sSTATUS_REG."]
+    pub ch_tx_status: [CH_TX_STATUS; 2],
+    #[doc = "0x30..0x38 - RMT_CH2STATUS_REG."]
+    pub ch_rx_status: [CH_RX_STATUS; 2],
     #[doc = "0x38 - RMT_INT_RAW_REG."]
     pub int_raw: INT_RAW,
     #[doc = "0x3c - RMT_INT_ST_REG."]
@@ -50,11 +40,31 @@ pub struct RegisterBlock {
     pub tx_sim: TX_SIM,
     #[doc = "0x70 - RMT_REF_CNT_RST_REG."]
     pub ref_cnt_rst: REF_CNT_RST,
-    _reserved24: [u8; 0x58],
+    _reserved19: [u8; 0x58],
     #[doc = "0xcc - RMT_DATE_REG."]
     pub date: DATE,
 }
 impl RegisterBlock {
+    #[doc = "0x30 - RMT_CH2STATUS_REG."]
+    #[inline(always)]
+    pub fn ch2_rx_status(&self) -> &CH_RX_STATUS {
+        &self.ch_rx_status[0]
+    }
+    #[doc = "0x34 - RMT_CH2STATUS_REG."]
+    #[inline(always)]
+    pub fn ch3_rx_status(&self) -> &CH_RX_STATUS {
+        &self.ch_rx_status[1]
+    }
+    #[doc = "0x50 - RMT_CH2_RX_CARRIER_RM_REG."]
+    #[inline(always)]
+    pub fn ch2_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
+        &self.ch_rx_carrier_rm[0]
+    }
+    #[doc = "0x54 - RMT_CH2_RX_CARRIER_RM_REG."]
+    #[inline(always)]
+    pub fn ch3_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
+        &self.ch_rx_carrier_rm[1]
+    }
     #[doc = "0x60 - RMT_CH2_RX_LIM_REG."]
     #[inline(always)]
     pub fn ch2_rx_lim(&self) -> &CH_RX_LIM {
@@ -66,22 +76,10 @@ impl RegisterBlock {
         &self.ch_rx_lim[1]
     }
 }
-#[doc = "CH0DATA (rw) register accessor: an alias for `Reg<CH0DATA_SPEC>`"]
-pub type CH0DATA = crate::Reg<ch0data::CH0DATA_SPEC>;
-#[doc = "RMT_CH0DATA_REG."]
-pub mod ch0data;
-#[doc = "CH1DATA (rw) register accessor: an alias for `Reg<CH1DATA_SPEC>`"]
-pub type CH1DATA = crate::Reg<ch1data::CH1DATA_SPEC>;
-#[doc = "RMT_CH1DATA_REG."]
-pub mod ch1data;
-#[doc = "CH2DATA (rw) register accessor: an alias for `Reg<CH2DATA_SPEC>`"]
-pub type CH2DATA = crate::Reg<ch2data::CH2DATA_SPEC>;
-#[doc = "RMT_CH2DATA_REG."]
-pub mod ch2data;
-#[doc = "CH3DATA (rw) register accessor: an alias for `Reg<CH3DATA_SPEC>`"]
-pub type CH3DATA = crate::Reg<ch3data::CH3DATA_SPEC>;
-#[doc = "RMT_CH3DATA_REG."]
-pub mod ch3data;
+#[doc = "CHDATA (rw) register accessor: an alias for `Reg<CHDATA_SPEC>`"]
+pub type CHDATA = crate::Reg<chdata::CHDATA_SPEC>;
+#[doc = "RMT_CH%sDATA_REG."]
+pub mod chdata;
 #[doc = "CH_TX_CONF0 (rw) register accessor: an alias for `Reg<CH_TX_CONF0_SPEC>`"]
 pub type CH_TX_CONF0 = crate::Reg<ch_tx_conf0::CH_TX_CONF0_SPEC>;
 #[doc = "RMT_CH%sCONF%s_REG."]
@@ -90,30 +88,18 @@ pub mod ch_tx_conf0;
 pub type CH_RX_CONF0 = crate::Reg<ch_rx_conf0::CH_RX_CONF0_SPEC>;
 #[doc = "RMT_CH2CONF0_REG."]
 pub mod ch_rx_conf0;
-#[doc = "RX_CH0CONF1 (rw) register accessor: an alias for `Reg<RX_CH0CONF1_SPEC>`"]
-pub type RX_CH0CONF1 = crate::Reg<rx_ch0conf1::RX_CH0CONF1_SPEC>;
+#[doc = "CH_RX_CONF1 (rw) register accessor: an alias for `Reg<CH_RX_CONF1_SPEC>`"]
+pub type CH_RX_CONF1 = crate::Reg<ch_rx_conf1::CH_RX_CONF1_SPEC>;
 #[doc = "RMT_CH2CONF1_REG."]
-pub mod rx_ch0conf1;
-#[doc = "RX_CH1CONF1 (rw) register accessor: an alias for `Reg<RX_CH1CONF1_SPEC>`"]
-pub type RX_CH1CONF1 = crate::Reg<rx_ch1conf1::RX_CH1CONF1_SPEC>;
-#[doc = "RMT_CH3CONF1_REG."]
-pub mod rx_ch1conf1;
-#[doc = "CH0STATUS (r) register accessor: an alias for `Reg<CH0STATUS_SPEC>`"]
-pub type CH0STATUS = crate::Reg<ch0status::CH0STATUS_SPEC>;
-#[doc = "RMT_CH0STATUS_REG."]
-pub mod ch0status;
-#[doc = "CH1STATUS (r) register accessor: an alias for `Reg<CH1STATUS_SPEC>`"]
-pub type CH1STATUS = crate::Reg<ch1status::CH1STATUS_SPEC>;
-#[doc = "RMT_CH1STATUS_REG."]
-pub mod ch1status;
-#[doc = "CH2STATUS (r) register accessor: an alias for `Reg<CH2STATUS_SPEC>`"]
-pub type CH2STATUS = crate::Reg<ch2status::CH2STATUS_SPEC>;
+pub mod ch_rx_conf1;
+#[doc = "CH_TX_STATUS (r) register accessor: an alias for `Reg<CH_TX_STATUS_SPEC>`"]
+pub type CH_TX_STATUS = crate::Reg<ch_tx_status::CH_TX_STATUS_SPEC>;
+#[doc = "RMT_CH%sSTATUS_REG."]
+pub mod ch_tx_status;
+#[doc = "CH_RX_STATUS (r) register accessor: an alias for `Reg<CH_RX_STATUS_SPEC>`"]
+pub type CH_RX_STATUS = crate::Reg<ch_rx_status::CH_RX_STATUS_SPEC>;
 #[doc = "RMT_CH2STATUS_REG."]
-pub mod ch2status;
-#[doc = "CH3STATUS (r) register accessor: an alias for `Reg<CH3STATUS_SPEC>`"]
-pub type CH3STATUS = crate::Reg<ch3status::CH3STATUS_SPEC>;
-#[doc = "RMT_CH3STATUS_REG."]
-pub mod ch3status;
+pub mod ch_rx_status;
 #[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "RMT_INT_RAW_REG."]

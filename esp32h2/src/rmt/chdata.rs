@@ -34,12 +34,12 @@ impl From<crate::W<CHDATA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DATA` reader - The read and write data register for CHANNEL%s by apb fifo access."]
+#[doc = "Field `DATA` reader - Read and write data for channel %s via APB FIFO."]
 pub type DATA_R = crate::FieldReader<u32>;
-#[doc = "Field `DATA` writer - The read and write data register for CHANNEL%s by apb fifo access."]
+#[doc = "Field `DATA` writer - Read and write data for channel %s via APB FIFO."]
 pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CHDATA_SPEC, 32, O, u32>;
 impl R {
-    #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
+    #[doc = "Bits 0:31 - Read and write data for channel %s via APB FIFO."]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new(self.bits)
@@ -60,7 +60,7 @@ impl core::fmt::Debug for crate::generic::Reg<CHDATA_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
+    #[doc = "Bits 0:31 - Read and write data for channel %s via APB FIFO."]
     #[inline(always)]
     #[must_use]
     pub fn data(&mut self) -> DATA_W<0> {

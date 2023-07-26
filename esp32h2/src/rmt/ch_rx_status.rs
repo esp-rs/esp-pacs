@@ -26,15 +26,15 @@ pub type MEM_FULL_R = crate::BitReader;
 #[doc = "Field `APB_MEM_RD_ERR` reader - This status bit will be set if the offset address out of memory size when reads via APB bus."]
 pub type APB_MEM_RD_ERR_R = crate::BitReader;
 impl R {
-    #[doc = "Bits 0:9 - This register records the memory address offset when receiver of CHANNEL%s is using the RAM."]
+    #[doc = "Bits 0:8 - This register records the memory address offset when receiver of CHANNEL%s is using the RAM."]
     #[inline(always)]
     pub fn mem_waddr_ex(&self) -> MEM_WADDR_EX_R {
-        MEM_WADDR_EX_R::new((self.bits & 0x03ff) as u16)
+        MEM_WADDR_EX_R::new((self.bits & 0x01ff) as u16)
     }
-    #[doc = "Bits 11:20 - This register records the memory address offset when reads RAM over APB bus."]
+    #[doc = "Bits 12:20 - This register records the memory address offset when reads RAM over APB bus."]
     #[inline(always)]
     pub fn apb_mem_raddr(&self) -> APB_MEM_RADDR_R {
-        APB_MEM_RADDR_R::new(((self.bits >> 11) & 0x03ff) as u16)
+        APB_MEM_RADDR_R::new(((self.bits >> 12) & 0x01ff) as u16)
     }
     #[doc = "Bits 22:24 - This register records the FSM status of CHANNEL%s."]
     #[inline(always)]
@@ -97,7 +97,7 @@ impl crate::RegisterSpec for CH_RX_STATUS_SPEC {
 impl crate::Readable for CH_RX_STATUS_SPEC {
     type Reader = R;
 }
-#[doc = "`reset()` method sets CH%s_RX_STATUS to value 0x0006_00c0"]
+#[doc = "`reset()` method sets CH%s_RX_STATUS to value 0"]
 impl crate::Resettable for CH_RX_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0006_00c0;
+    const RESET_VALUE: Self::Ux = 0;
 }
