@@ -1,22 +1,22 @@
-#[doc = "Register `CH0DATA` reader"]
-pub struct R(crate::R<CH0DATA_SPEC>);
+#[doc = "Register `CH%sDATA` reader"]
+pub struct R(crate::R<CHDATA_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CH0DATA_SPEC>;
+    type Target = crate::R<CHDATA_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CH0DATA_SPEC>> for R {
+impl From<crate::R<CHDATA_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CH0DATA_SPEC>) -> Self {
+    fn from(reader: crate::R<CHDATA_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CH0DATA` writer"]
-pub struct W(crate::W<CH0DATA_SPEC>);
+#[doc = "Register `CH%sDATA` writer"]
+pub struct W(crate::W<CHDATA_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CH0DATA_SPEC>;
+    type Target = crate::W<CHDATA_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,16 +28,16 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CH0DATA_SPEC>> for W {
+impl From<crate::W<CHDATA_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CH0DATA_SPEC>) -> Self {
+    fn from(writer: crate::W<CHDATA_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `DATA` reader - Reserved."]
 pub type DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA` writer - Reserved."]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CH0DATA_SPEC, 32, O, u32>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CHDATA_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
@@ -48,13 +48,13 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CH0DATA")
+        f.debug_struct("CHDATA")
             .field("data", &format_args!("{}", self.data().bits()))
             .finish()
     }
 }
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH0DATA_SPEC> {
+impl core::fmt::Debug for crate::generic::Reg<CHDATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         self.read().fmt(f)
     }
@@ -73,22 +73,22 @@ impl W {
         self
     }
 }
-#[doc = "RMT_CH0DATA_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0data](index.html) module"]
-pub struct CH0DATA_SPEC;
-impl crate::RegisterSpec for CH0DATA_SPEC {
+#[doc = "RMT_CH%sDATA_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chdata](index.html) module"]
+pub struct CHDATA_SPEC;
+impl crate::RegisterSpec for CHDATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch0data::R](R) reader structure"]
-impl crate::Readable for CH0DATA_SPEC {
+#[doc = "`read()` method returns [chdata::R](R) reader structure"]
+impl crate::Readable for CHDATA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ch0data::W](W) writer structure"]
-impl crate::Writable for CH0DATA_SPEC {
+#[doc = "`write(|w| ..)` method takes [chdata::W](W) writer structure"]
+impl crate::Writable for CHDATA_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets CH0DATA to value 0"]
-impl crate::Resettable for CH0DATA_SPEC {
+#[doc = "`reset()` method sets CH%sDATA to value 0"]
+impl crate::Resettable for CHDATA_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32 C-Series</series>
-  <version>15</version>
+  <version>16</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -27,7 +27,7 @@
     <endian>little</endian>
     <mpuPresent>false</mpuPresent>
     <fpuPresent>false</fpuPresent>
-    <nvicPrioBits>4</nvicPrioBits>
+    <nvicPrioBits>0</nvicPrioBits>
     <vendorSystickConfig>false</vendorSystickConfig>
   </cpu>
   <addressUnitBits>32</addressUnitBits>
@@ -16200,7 +16200,7 @@
           <dimIncrement>0x14</dimIncrement>
           <dimIndex>0-5</dimIndex>
           <name>CH%s_CONF0</name>
-          <description>LEDC_LSCH%s_CONF0.</description>
+          <description>LEDC_LSCH%s_CONF%s.</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
@@ -16964,54 +16964,12 @@
       </interrupt>
       <registers>
         <register>
-          <name>CH0DATA</name>
-          <description>RMT_CH0DATA_REG.</description>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-3</dimIndex>
+          <name>CH%sDATA</name>
+          <description>RMT_CH%sDATA_REG.</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DATA</name>
-              <description>Reserved.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH1DATA</name>
-          <description>RMT_CH1DATA_REG.</description>
-          <addressOffset>0x4</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DATA</name>
-              <description>Reserved.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH2DATA</name>
-          <description>RMT_CH2DATA_REG.</description>
-          <addressOffset>0x8</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DATA</name>
-              <description>Reserved.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH3DATA</name>
-          <description>RMT_CH3DATA_REG.</description>
-          <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -17188,7 +17146,10 @@
           </fields>
         </register>
         <register>
-          <name>RX_CH0CONF1</name>
+          <dim>2</dim>
+          <dimIncrement>0x8</dimIncrement>
+          <dimIndex>2-3</dimIndex>
+          <name>CH%s_RX_CONF1</name>
           <description>RMT_CH2CONF1_REG.</description>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
@@ -17260,80 +17221,11 @@
           </fields>
         </register>
         <register>
-          <name>RX_CH1CONF1</name>
-          <description>RMT_CH3CONF1_REG.</description>
-          <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x000001E8</resetValue>
-          <fields>
-            <field>
-              <name>RX_EN</name>
-              <description>reg_rx_en_ch3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MEM_WR_RST</name>
-              <description>reg_mem_wr_rst_ch3.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RST</name>
-              <description>reg_apb_mem_rst_ch3.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER</name>
-              <description>reg_mem_owner_ch3.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_FILTER_EN</name>
-              <description>reg_rx_filter_en_ch3.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_FILTER_THRES</name>
-              <description>reg_rx_filter_thres_ch3.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MEM_RX_WRAP_EN</name>
-              <description>reg_mem_rx_wrap_en_ch3.</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AFIFO_RST</name>
-              <description>reg_afifo_rst_ch3.</description>
-              <bitOffset>14</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>CONF_UPDATE</name>
-              <description>reg_conf_update_ch3.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH0STATUS</name>
-          <description>RMT_CH0STATUS_REG.</description>
+          <dim>2</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-1</dimIndex>
+          <name>CH%s_TX_STATUS</name>
+          <description>RMT_CH%sSTATUS_REG.</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <fields>
@@ -17389,64 +17281,10 @@
           </fields>
         </register>
         <register>
-          <name>CH1STATUS</name>
-          <description>RMT_CH1STATUS_REG.</description>
-          <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>reg_mem_raddr_ex_ch1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>9</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>reg_state_ch1.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WADDR</name>
-              <description>reg_apb_mem_waddr_ch1.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>9</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>reg_apb_mem_rd_err_ch1.</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>reg_mem_empty_ch1.</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>reg_apb_mem_wr_err_ch1.</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RADDR</name>
-              <description>reg_apb_mem_raddr_ch1.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH2STATUS</name>
+          <dim>2</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>2-3</dimIndex>
+          <name>CH%s_RX_STATUS</name>
           <description>RMT_CH2STATUS_REG.</description>
           <addressOffset>0x30</addressOffset>
           <size>0x20</size>
@@ -17496,56 +17334,6 @@
           </fields>
         </register>
         <register>
-          <name>CH3STATUS</name>
-          <description>RMT_CH3STATUS_REG.</description>
-          <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>reg_mem_waddr_ex_ch3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>9</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RADDR</name>
-              <description>reg_apb_mem_raddr_ch3.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>9</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>reg_state_ch3.</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>reg_mem_owner_err_ch3.</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>reg_mem_full_ch3.</description>
-              <bitOffset>26</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>reg_apb_mem_rd_err_ch3.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
           <name>INT_RAW</name>
           <description>RMT_INT_RAW_REG.</description>
           <addressOffset>0x38</addressOffset>
@@ -17555,7 +17343,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_END_INT_RAW</name>
+              <name>CH%s_TX_END</name>
               <description>reg_ch%s_tx_end_int_raw.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17565,7 +17353,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_END_INT_RAW</name>
+              <name>CH%s_RX_END</name>
               <description>reg_ch2_rx_end_int_raw.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17575,7 +17363,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_ERR_INT_RAW</name>
+              <name>CH%s_TX_ERR</name>
               <description>reg_ch%s_err_int_raw.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17585,7 +17373,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_ERR_INT_RAW</name>
+              <name>CH%s_RX_ERR</name>
               <description>reg_ch2_err_int_raw.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17595,23 +17383,19 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_RAW</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>reg_ch%s_tx_thr_event_int_raw.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH2_RX_THR_EVENT_INT_RAW</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>reg_ch2_rx_thr_event_int_raw.</description>
               <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH3_RX_THR_EVENT_INT_RAW</name>
-              <description>reg_ch3_rx_thr_event_int_raw.</description>
-              <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -17619,7 +17403,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_LOOP_INT_RAW</name>
+              <name>CH%s_TX_LOOP</name>
               <description>reg_ch%s_tx_loop_int_raw.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17637,7 +17421,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_END_INT_ST</name>
+              <name>CH%s_TX_END</name>
               <description>reg_ch%s_tx_end_int_st.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17647,7 +17431,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_END_INT_ST</name>
+              <name>CH%s_RX_END</name>
               <description>reg_ch2_rx_end_int_st.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17657,7 +17441,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_ERR_INT_ST</name>
+              <name>CH%s_TX_ERR</name>
               <description>reg_ch%s_err_int_st.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17667,7 +17451,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_ERR_INT_ST</name>
+              <name>CH%s_RX_ERR</name>
               <description>reg_ch2_err_int_st.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17677,23 +17461,19 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_ST</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>reg_ch%s_tx_thr_event_int_st.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CH2_RX_THR_EVENT_INT_ST</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>reg_ch2_rx_thr_event_int_st.</description>
               <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CH3_RX_THR_EVENT_INT_ST</name>
-              <description>reg_ch3_rx_thr_event_int_st.</description>
-              <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
@@ -17701,7 +17481,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_LOOP_INT_ST</name>
+              <name>CH%s_TX_LOOP</name>
               <description>reg_ch%s_tx_loop_int_st.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17719,7 +17499,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_END_INT_ENA</name>
+              <name>CH%s_TX_END</name>
               <description>reg_ch%s_tx_end_int_ena.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17729,7 +17509,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_END_INT_ENA</name>
+              <name>CH%s_RX_END</name>
               <description>reg_ch2_rx_end_int_ena.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17739,7 +17519,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_ERR_INT_ENA</name>
+              <name>CH%s_TX_ERR</name>
               <description>reg_ch%s_err_int_ena.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17749,7 +17529,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_ERR_INT_ENA</name>
+              <name>CH%s_RX_ERR</name>
               <description>reg_ch2_err_int_ena.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17759,23 +17539,19 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_ENA</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>reg_ch%s_tx_thr_event_int_ena.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH2_RX_THR_EVENT_INT_ENA</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>reg_ch2_rx_thr_event_int_ena.</description>
               <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH3_RX_THR_EVENT_INT_ENA</name>
-              <description>reg_ch3_rx_thr_event_int_ena.</description>
-              <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -17783,7 +17559,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_LOOP_INT_ENA</name>
+              <name>CH%s_TX_LOOP</name>
               <description>reg_ch%s_tx_loop_int_ena.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17801,7 +17577,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_END_INT_CLR</name>
+              <name>CH%s_TX_END</name>
               <description>reg_ch%s_tx_end_int_clr.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17811,7 +17587,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_END_INT_CLR</name>
+              <name>CH%s_RX_END</name>
               <description>reg_ch2_rx_end_int_clr.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17821,7 +17597,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_ERR_INT_CLR</name>
+              <name>CH%s_TX_ERR</name>
               <description>reg_ch%s_err_int_clr.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17831,7 +17607,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_ERR_INT_CLR</name>
+              <name>CH%s_RX_ERR</name>
               <description>reg_ch2_err_int_clr.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17841,23 +17617,19 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_CLR</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>reg_ch%s_tx_thr_event_int_clr.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CH2_RX_THR_EVENT_INT_CLR</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>reg_ch2_rx_thr_event_int_clr.</description>
               <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>CH3_RX_THR_EVENT_INT_CLR</name>
-              <description>reg_ch3_rx_thr_event_int_clr.</description>
-              <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
@@ -17865,7 +17637,7 @@
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_LOOP_INT_CLR</name>
+              <name>CH%s_TX_LOOP</name>
               <description>reg_ch%s_tx_loop_int_clr.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17902,7 +17674,7 @@
         <register>
           <dim>2</dim>
           <dimIncrement>0x4</dimIncrement>
-          <dimIndex>0-1</dimIndex>
+          <dimIndex>2-3</dimIndex>
           <name>CH%s_RX_CARRIER_RM</name>
           <description>RMT_CH2_RX_CARRIER_RM_REG.</description>
           <addressOffset>0x50</addressOffset>

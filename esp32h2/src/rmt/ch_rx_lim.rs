@@ -34,25 +34,22 @@ impl From<crate::W<CH_RX_LIM_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RMT_RX_LIM_CH2` reader - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub type RMT_RX_LIM_CH2_R = crate::FieldReader<u16>;
-#[doc = "Field `RMT_RX_LIM_CH2` writer - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub type RMT_RX_LIM_CH2_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16>;
+#[doc = "Field `RMT_RX_LIM` reader - This register is used to configure the maximum entries that CHANNEL%s can receive."]
+pub type RMT_RX_LIM_R = crate::FieldReader<u16>;
+#[doc = "Field `RMT_RX_LIM` writer - This register is used to configure the maximum entries that CHANNEL%s can receive."]
+pub type RMT_RX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]
-    pub fn rmt_rx_lim_ch2(&self) -> RMT_RX_LIM_CH2_R {
-        RMT_RX_LIM_CH2_R::new((self.bits & 0x01ff) as u16)
+    pub fn rmt_rx_lim(&self) -> RMT_RX_LIM_R {
+        RMT_RX_LIM_R::new((self.bits & 0x01ff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_RX_LIM")
-            .field(
-                "rmt_rx_lim_ch2",
-                &format_args!("{}", self.rmt_rx_lim_ch2().bits()),
-            )
+            .field("rmt_rx_lim", &format_args!("{}", self.rmt_rx_lim().bits()))
             .finish()
     }
 }
@@ -66,8 +63,8 @@ impl W {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_rx_lim_ch2(&mut self) -> RMT_RX_LIM_CH2_W<0> {
-        RMT_RX_LIM_CH2_W::new(self)
+    pub fn rmt_rx_lim(&mut self) -> RMT_RX_LIM_W<0> {
+        RMT_RX_LIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

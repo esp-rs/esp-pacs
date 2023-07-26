@@ -19,8 +19,8 @@ impl From<crate::W<REF_CNT_RST_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TX_REF_CNT_RST_CH0` writer - This register is used to reset the clock divider of CHANNEL0."]
-pub type TX_REF_CNT_RST_CH0_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
+#[doc = "Field `TX_REF_CNT_RST` writer - This register is used to reset the clock divider of CHANNEL0."]
+pub type TX_REF_CNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `TX_REF_CNT_RST_CH1` writer - This register is used to reset the clock divider of CHANNEL1."]
 pub type TX_REF_CNT_RST_CH1_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `RX_REF_CNT_RST_CH2` writer - This register is used to reset the clock divider of CHANNEL2."]
@@ -37,8 +37,8 @@ impl W {
     #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_ref_cnt_rst_ch0(&mut self) -> TX_REF_CNT_RST_CH0_W<0> {
-        TX_REF_CNT_RST_CH0_W::new(self)
+    pub fn tx_ref_cnt_rst(&mut self) -> TX_REF_CNT_RST_W<0> {
+        TX_REF_CNT_RST_W::new(self)
     }
     #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]

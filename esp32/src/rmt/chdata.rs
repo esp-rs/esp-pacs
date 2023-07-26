@@ -34,23 +34,10 @@ impl From<crate::W<CHDATA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DATA` reader - The read and write data register for CHANNEL%s by apb fifo access."]
-pub type DATA_R = crate::FieldReader<u32>;
-#[doc = "Field `DATA` writer - The read and write data register for CHANNEL%s by apb fifo access."]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CHDATA_SPEC, 32, O, u32>;
-impl R {
-    #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
-    #[inline(always)]
-    pub fn data(&self) -> DATA_R {
-        DATA_R::new(self.bits)
-    }
-}
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CHDATA")
-            .field("data", &format_args!("{}", self.data().bits()))
-            .finish()
+        write!(f, "{}", self.bits())
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -60,12 +47,6 @@ impl core::fmt::Debug for crate::generic::Reg<CHDATA_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
-    #[inline(always)]
-    #[must_use]
-    pub fn data(&mut self) -> DATA_W<0> {
-        DATA_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -73,7 +54,7 @@ impl W {
         self
     }
 }
-#[doc = "The read and write data register for CHANNEL%s by apb fifo access.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chdata](index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chdata](index.html) module"]
 pub struct CHDATA_SPEC;
 impl crate::RegisterSpec for CHDATA_SPEC {
     type Ux = u32;
