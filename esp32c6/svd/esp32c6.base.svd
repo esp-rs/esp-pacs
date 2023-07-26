@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C6</name>
   <series>ESP32 C-Series</series>
-  <version>6</version>
+  <version>7</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi 6 &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -27,7 +27,7 @@
     <endian>little</endian>
     <mpuPresent>false</mpuPresent>
     <fpuPresent>false</fpuPresent>
-    <nvicPrioBits>4</nvicPrioBits>
+    <nvicPrioBits>0</nvicPrioBits>
     <vendorSystickConfig>false</vendorSystickConfig>
   </cpu>
   <addressUnitBits>32</addressUnitBits>
@@ -47575,17 +47575,17 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>TX_CH%sDATA</name>
+          <name>CH%sDATA</name>
           <description>The read and write  data register for CHANNEL%s by apb fifo access.</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>CHDATA</name>
+              <name>DATA</name>
               <description>Read and write data for channel %s via APB FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -47712,7 +47712,8 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>2</dim>
           <dimIncrement>0x8</dimIncrement>
-          <name>RX_CH%sCONF0</name>
+          <dimIndex>2-3</dimIndex>
+          <name>CH%s_RX_CONF0</name>
           <description>Channel %s configure register 0</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
@@ -47762,7 +47763,8 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>2</dim>
           <dimIncrement>0x8</dimIncrement>
-          <name>RX_CH%sCONF1</name>
+          <dimIndex>2-3</dimIndex>
+          <name>CH%s_RX_CONF1</name>
           <description>Channel %s configure register 1</description>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
@@ -47840,55 +47842,55 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>2</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>TX_CH%sSTATUS</name>
+          <name>CH%s_TX_STATUS</name>
           <description>Channel %s status register</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>MEM_RADDR_EX_CH0</name>
+              <name>MEM_RADDR_EX</name>
               <description>This register records the memory address offset when transmitter of CHANNEL%s is using the RAM.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>STATE_CH0</name>
+              <name>STATE</name>
               <description>This register records the FSM status of CHANNEL%s.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_WADDR_CH0</name>
+              <name>APB_MEM_WADDR</name>
               <description>This register records the memory address offset when writes RAM over APB bus.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_RD_ERR_CH0</name>
+              <name>APB_MEM_RD_ERR</name>
               <description>This status bit will be set if the offset address out of memory size when reading via APB bus.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>MEM_EMPTY_CH0</name>
+              <name>MEM_EMPTY</name>
               <description>This status bit will be set when the data to be set is more than memory size and the wraparound mode is disabled.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_WR_ERR_CH0</name>
+              <name>APB_MEM_WR_ERR</name>
               <description>This status bit will be set if the offset address out of memory size when writes via APB bus.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_RADDR_CH0</name>
+              <name>APB_MEM_RADDR</name>
               <description>This register records the memory address offset when reading RAM over APB bus.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>8</bitWidth>
@@ -47899,48 +47901,48 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>2</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>RX_CH%sSTATUS</name>
+          <name>CH%s_RX_STATUS</name>
           <description>Channel %s status register</description>
           <addressOffset>0x30</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>MEM_WADDR_EX_CH2</name>
+              <name>MEM_WADDR_EX</name>
               <description>This register records the memory address offset when receiver of CHANNEL%s is using the RAM.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_RADDR_CH2</name>
+              <name>APB_MEM_RADDR</name>
               <description>This register records the memory address offset when reads RAM over APB bus.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>STATE_CH2</name>
+              <name>STATE</name>
               <description>This register records the FSM status of CHANNEL%s.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>MEM_OWNER_ERR_CH2</name>
+              <name>MEM_OWNER_ERR</name>
               <description>This status bit will be set when the ownership of memory block is wrong.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>MEM_FULL_CH2</name>
+              <name>MEM_FULL</name>
               <description>This status bit will be set if the receiver receives more data than the memory size.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>APB_MEM_RD_ERR_CH2</name>
+              <name>APB_MEM_RD_ERR</name>
               <description>This status bit will be set if the offset address out of memory size when reads via APB bus.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -47958,7 +47960,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_END_INT_RAW</name>
+              <name>CH%s_TX_END</name>
               <description>The interrupt raw bit for CHANNEL%s. Triggered when transmission done.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -47968,17 +47970,17 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_END_INT_RAW</name>
+              <name>CH%s_RX_END</name>
               <description>The interrupt raw bit for CHANNEL2. Triggered when reception done.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <dim>4</dim>
+              <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
-              <dimIndex>0-3</dimIndex>
-              <name>CH%s_TX_ERR_INT_RAW</name>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_ERR</name>
               <description>The interrupt raw bit for CHANNEL4. Triggered when error occurs.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -47987,8 +47989,18 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             <field>
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_ERR</name>
+              <description>The interrupt raw bit for CHANNEL6. Triggered when error occurs.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_RAW</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
@@ -47998,7 +48010,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_THR_EVENT_INT_RAW</name>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>The interrupt raw bit for CHANNEL2. Triggered when receiver receive more data than configured value.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -48008,21 +48020,9 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_LOOP_INT_RAW</name>
+              <name>CH%s_TX_LOOP</name>
               <description>The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value.</description>
               <bitOffset>12</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH2_RX_ERR_INT_RAW</name>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH3_RX_ERR_INT_RAW</name>
-              <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -48035,100 +48035,72 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CH0_TX_END_INT_ST</name>
-              <description>The masked interrupt status bit for CH0_TX_END_INT.</description>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_END</name>
+              <description>The masked interrupt status bit for CH%s_TX_END_INT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CH1_TX_END_INT_ST</name>
-              <description>The masked interrupt status bit for CH1_TX_END_INT.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CH2_RX_END_INT_ST</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_END</name>
               <description>The masked interrupt status bit for CH2_RX_END_INT.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CH3_RX_END_INT_ST</name>
-              <description>The masked interrupt status bit for CH3_RX_END_INT.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RX_CH0_ERR_INT_ST</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_ERR</name>
               <description>The masked interrupt status bit for CH4_ERR_INT.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RX_CH1_ERR_INT_ST</name>
-              <description>The masked interrupt status bit for CH5_ERR_INT.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RX_CH2_ERR_INT_ST</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_ERR</name>
               <description>The masked interrupt status bit for CH6_ERR_INT.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RX_CH3_ERR_INT_ST</name>
-              <description>The masked interrupt status bit for CH7_ERR_INT.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CH0_TX_THR_EVENT_INT_ST</name>
-              <description>The masked interrupt status bit for CH0_TX_THR_EVENT_INT.</description>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_THR_EVENT</name>
+              <description>The masked interrupt status bit for CH%s_TX_THR_EVENT_INT.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CH1_TX_THR_EVENT_INT_ST</name>
-              <description>The masked interrupt status bit for CH1_TX_THR_EVENT_INT.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CH2_RX_THR_EVENT_INT_ST</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>The masked interrupt status bit for CH2_RX_THR_EVENT_INT.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CH3_RX_THR_EVENT_INT_ST</name>
-              <description>The masked interrupt status bit for CH3_RX_THR_EVENT_INT.</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CH0_TX_LOOP_INT_ST</name>
-              <description>The masked interrupt status bit for CH0_TX_LOOP_INT.</description>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_X_LOOP</name>
+              <description>The masked interrupt status bit for CH%s_TX_LOOP_INT.</description>
               <bitOffset>12</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CH1_TX_LOOP_INT_ST</name>
-              <description>The masked interrupt status bit for CH1_TX_LOOP_INT.</description>
-              <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
@@ -48141,100 +48113,72 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CH0_TX_END_INT_ENA</name>
-              <description>The interrupt enable bit for CH0_TX_END_INT.</description>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_END</name>
+              <description>The interrupt enable bit for CH%s_TX_END_INT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_TX_END_INT_ENA</name>
-              <description>The interrupt enable bit for CH1_TX_END_INT.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH2_RX_END_INT_ENA</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_END</name>
               <description>The interrupt enable bit for CH2_RX_END_INT.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH3_RX_END_INT_ENA</name>
-              <description>The interrupt enable bit for CH3_RX_END_INT.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH0_ERR_INT_ENA</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_ERR</name>
               <description>The interrupt enable bit for CH4_ERR_INT.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_ERR_INT_ENA</name>
-              <description>The interrupt enable bit for CH5_ERR_INT.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH2_ERR_INT_ENA</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_ERR</name>
               <description>The interrupt enable bit for CH6_ERR_INT.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH3_ERR_INT_ENA</name>
-              <description>The interrupt enable bit for CH7_ERR_INT.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH0_TX_THR_EVENT_INT_ENA</name>
-              <description>The interrupt enable bit for CH0_TX_THR_EVENT_INT.</description>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_THR_EVENT</name>
+              <description>The interrupt enable bit for CH%s_TX_THR_EVENT_INT.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_TX_THR_EVENT_INT_ENA</name>
-              <description>The interrupt enable bit for CH1_TX_THR_EVENT_INT.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH2_RX_THR_EVENT_INT_ENA</name>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>The interrupt enable bit for CH2_RX_THR_EVENT_INT.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH3_RX_THR_EVENT_INT_ENA</name>
-              <description>The interrupt enable bit for CH3_RX_THR_EVENT_INT.</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH0_TX_LOOP_INT_ENA</name>
-              <description>The interrupt enable bit for CH0_TX_LOOP_INT.</description>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_X_LOOP</name>
+              <description>The interrupt enable bit for CH%s_TX_LOOP_INT.</description>
               <bitOffset>12</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CH1_TX_LOOP_INT_ENA</name>
-              <description>The interrupt enable bit for CH1_TX_LOOP_INT.</description>
-              <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -48250,7 +48194,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_END_INT_CLR</name>
+              <name>CH%s_TX_END</name>
               <description>Set this bit to clear theCH%s_TX_END_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -48260,37 +48204,9 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_END_INT_CLR</name>
+              <name>CH%s_RX_END</name>
               <description>Set this bit to clear theCH2_RX_END_INT interrupt.</description>
               <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>CH0_TX_ERR_INT_CLR</name>
-              <description>Set this bit to clear theCH4_ERR_INT interrupt.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>CH1_TX_ERR_INT_CLR</name>
-              <description>Set this bit to clear theCH5_ERR_INT interrupt.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>CH2_RX_ERR_INT_CLR</name>
-              <description>Set this bit to clear theCH6_ERR_INT interrupt.</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>CH3_RX_ERR_INT_CLR</name>
-              <description>Set this bit to clear theCH7_ERR_INT interrupt.</description>
-              <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
@@ -48298,7 +48214,27 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-1</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_CLR</name>
+              <name>CH%s_TX_ERR</name>
+              <description>Set this bit to clear theCH4_ERR_INT interrupt.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>2-3</dimIndex>
+              <name>CH%s_RX_ERR</name>
+              <description>Set this bit to clear theCH6_ERR_INT interrupt.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>Set this bit to clear theCH%s_TX_THR_EVENT_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
@@ -48308,23 +48244,19 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <dim>2</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>2-3</dimIndex>
-              <name>CH%s_RX_THR_EVENT_INT_CLR</name>
+              <name>CH%s_RX_THR_EVENT</name>
               <description>Set this bit to clear theCH2_RX_THR_EVENT_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CH0_TX_LOOP_INT_CLR</name>
-              <description>Set this bit to clear theCH0_TX_LOOP_INT interrupt.</description>
+              <dim>2</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-1</dimIndex>
+              <name>CH%s_TX_LOOP</name>
+              <description>Set this bit to clear theCH%s_TX_LOOP_INT interrupt.</description>
               <bitOffset>12</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>CH1_TX_LOOP_INT_CLR</name>
-              <description>Set this bit to clear theCH1_TX_LOOP_INT interrupt.</description>
-              <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
@@ -48340,14 +48272,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00400040</resetValue>
           <fields>
             <field>
-              <name>CARRIER_LOW_CH</name>
+              <name>CARRIER_LOW</name>
               <description>This register is used to configure carrier wave 's low level clock period for CHANNEL%s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_HIGH_CH</name>
+              <name>CARRIER_HIGH</name>
               <description>This register is used to configure carrier wave 's high level clock period for CHANNEL%s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -48364,14 +48296,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CARRIER_LOW_THRES_CH</name>
+              <name>CARRIER_LOW_THRES</name>
               <description>The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CARRIER_HIGH_THRES_CH</name>
+              <name>CARRIER_HIGH_THRES</name>
               <description>The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -48435,7 +48367,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00000080</resetValue>
           <fields>
             <field>
-              <name>RMT_RX_LIM_CH2</name>
+              <name>RMT_RX_LIM</name>
               <description>This register is used to configure the maximum entries that CHANNEL%s can receive.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
@@ -48558,7 +48490,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>TX_REF_CNT_RST_CH0</name>
+              <name>TX_REF_CNT_RST</name>
               <description>This register is used to reset the clock divider of CHANNEL0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>

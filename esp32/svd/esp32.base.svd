@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32 Series</series>
-  <version>12</version>
+  <version>13</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -27,7 +27,7 @@
     <endian>little</endian>
     <mpuPresent>false</mpuPresent>
     <fpuPresent>true</fpuPresent>
-    <nvicPrioBits>3</nvicPrioBits>
+    <nvicPrioBits>0</nvicPrioBits>
     <vendorSystickConfig>false</vendorSystickConfig>
   </cpu>
   <addressUnitBits>32</addressUnitBits>
@@ -21116,43 +21116,11 @@
       </interrupt>
       <registers>
         <register>
-          <name>CH0DATA</name>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>CH%sDATA</name>
           <addressOffset>0x0</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>CH1DATA</name>
-          <addressOffset>0x4</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>CH2DATA</name>
-          <addressOffset>0x8</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>CH3DATA</name>
-          <addressOffset>0xC</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>CH4DATA</name>
-          <addressOffset>0x10</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>CH5DATA</name>
-          <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>CH6DATA</name>
-          <addressOffset>0x18</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>CH7DATA</name>
-          <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
         </register>
         <register>
@@ -21318,7 +21286,10 @@
           </fields>
         </register>
         <register>
-          <name>CH0STATUS</name>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>CH%sSTATUS</name>
           <addressOffset>0x60</addressOffset>
           <size>0x20</size>
           <fields>
@@ -21388,601 +21359,16 @@
           </fields>
         </register>
         <register>
-          <name>CH1STATUS</name>
-          <addressOffset>0x64</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>STATUS</name>
-              <description>The status for channel1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>The current memory read address of channel1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>The current memory write address of channel1.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>The channel1 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>When channel1 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>The memory full status bit for channel1 turns to high level when mem_waddr_ex is greater than or equal to the configuration range.</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>The memory empty status bit for channel1. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range.</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>The apb write memory status bit for channel1 turns to high level when the apb write address exceeds the configuration range.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>The apb read memory status bit for channel1 turns to high level when the apb read address exceeds the configuration range.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH2STATUS</name>
-          <addressOffset>0x68</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>STATUS</name>
-              <description>The status for channel2</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>The current memory read address of channel2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>The current memory write address of channel2.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>The channel2 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>When channel2 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>The memory full status bit for channel2 turns to high level when mem_waddr_ex is greater than or equal to the configuration range.</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>The memory empty status bit for channel2. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range.</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>The apb write memory status bit for channel2 turns to high level when the apb write address exceeds the configuration range.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>The apb read memory status bit for channel2 turns to high level when the apb read address exceeds the configuration range.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH3STATUS</name>
-          <addressOffset>0x6C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>STATUS</name>
-              <description>The status for channel3</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>The current memory read address of channel3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>The current memory write address of channel3.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>The channel3 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>When channel3 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>The memory full status bit for channel3 turns to high level when mem_waddr_ex is greater than or equal to the configuration range.</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>The memory empty status bit for channel3. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range.</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>The apb write memory status bit for channel3 turns to high level when the apb write address exceeds the configuration range.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>The apb read memory status bit for channel3 turns to high level when the apb read address exceeds the configuration range.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH4STATUS</name>
-          <addressOffset>0x70</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>STATUS</name>
-              <description>The status for channel4</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>The current memory read address of channel4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>The current memory write address of channel4.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>The channel4 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>When channel4 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>The memory full status bit for channel4 turns to high level when mem_waddr_ex is greater than or equal to the configuration range.</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>The memory empty status bit for channel4. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range.</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>The apb write memory status bit for channel4 turns to high level when the apb write address exceeds the configuration range.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>The apb read memory status bit for channel4 turns to high level when the apb read address exceeds the configuration range.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH5STATUS</name>
-          <addressOffset>0x74</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>STATUS</name>
-              <description>The status for channel5</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>The current memory read address of channel5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>The current memory write address of channel5.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>The channel5 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>When channel5 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>The memory full status bit for channel5 turns to high level when mem_waddr_ex is greater than or equal to the configuration range.</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>The memory empty status bit for channel5. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range.</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>The apb write memory status bit for channel5 turns to high level when the apb write address exceeds the configuration range.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>The apb read memory status bit for channel5 turns to high level when the apb read address exceeds the configuration range.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH6STATUS</name>
-          <addressOffset>0x78</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>STATUS</name>
-              <description>The status for channel6</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>The current memory read address of channel6.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>The current memory write address of channel6.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>The channel6 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>When channel6 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>The memory full status bit for channel6 turns to high level when mem_waddr_ex is greater than or equal to the configuration range.</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>The memory empty status bit for channel6. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range.</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>The apb write memory status bit for channel6 turns to high level when the apb write address exceeds the configuration range.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>The apb read memory status bit for channel6 turns to high level when the apb read address exceeds the configuration range.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH7STATUS</name>
-          <addressOffset>0x7C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>STATUS</name>
-              <description>The status for channel7</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_WADDR_EX</name>
-              <description>The current memory read address of channel7.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_RADDR_EX</name>
-              <description>The current memory write address of channel7.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>STATE</name>
-              <description>The channel7 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_OWNER_ERR</name>
-              <description>When channel7 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1.</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_FULL</name>
-              <description>The memory full status bit for channel7 turns to high level when mem_waddr_ex is greater than or equal to the configuration range.</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>MEM_EMPTY</name>
-              <description>The memory empty status bit for channel7. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range.</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_WR_ERR</name>
-              <description>The apb write memory status bit for channel7 turns to high level when the apb write address exceeds the configuration range.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>APB_MEM_RD_ERR</name>
-              <description>The apb read memory status bit for channel7 turns to high level when the apb read address exceeds the configuration range.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH0ADDR</name>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>CH%sADDR</name>
           <addressOffset>0x80</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>APB_MEM_ADDR</name>
               <description>The ram relative address in channel0 by apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH1ADDR</name>
-          <addressOffset>0x84</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>APB_MEM_ADDR</name>
-              <description>The ram relative address in channel1 by apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH2ADDR</name>
-          <addressOffset>0x88</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>APB_MEM_ADDR</name>
-              <description>The ram relative address in channel2 by apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH3ADDR</name>
-          <addressOffset>0x8C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>APB_MEM_ADDR</name>
-              <description>The ram relative address in channel3 by apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH4ADDR</name>
-          <addressOffset>0x90</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>APB_MEM_ADDR</name>
-              <description>The ram relative address in channel4 by apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH5ADDR</name>
-          <addressOffset>0x94</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>APB_MEM_ADDR</name>
-              <description>The ram relative address in channel5 by apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH6ADDR</name>
-          <addressOffset>0x98</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>APB_MEM_ADDR</name>
-              <description>The ram relative address in channel6 by apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CH7ADDR</name>
-          <addressOffset>0x9C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>APB_MEM_ADDR</name>
-              <description>The ram relative address in channel7 by apb fifo access</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -21998,7 +21384,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_END_INT_RAW</name>
+              <name>CH%s_TX_END</name>
               <description>The interrupt raw bit for channel %s turns to high level when the transmit process is done.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22008,7 +21394,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_RX_END_INT_RAW</name>
+              <name>CH%s_RX_END</name>
               <description>The interrupt raw bit for channel %s turns to high level when the receive process is done.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22018,7 +21404,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_ERR_INT_RAW</name>
+              <name>CH%s_ERR</name>
               <description>The interrupt raw bit for channel %s turns to high level when channle %s detects some errors.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22028,7 +21414,7 @@
               <dim>8</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_RAW</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>The interrupt raw bit for channel %s turns to high level when transmitter in channle%s  have send datas more than  reg_rmt_tx_lim_ch%s  after detecting this interrupt  software can updata the old datas with new datas.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22045,7 +21431,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_END_INT_ST</name>
+              <name>CH%s_TX_END</name>
               <description>The interrupt  state bit for channel %s's mt_ch%s_tx_end_int_raw when mt_ch%s_tx_end_int_ena is set to %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22055,7 +21441,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_RX_END_INT_ST</name>
+              <name>CH%s_RX_END</name>
               <description>The interrupt  state bit for channel %s's rmt_ch%s_rx_end_int_raw when  rmt_ch%s_rx_end_int_ena is set to %s.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22065,7 +21451,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_ERR_INT_ST</name>
+              <name>CH%s_ERR</name>
               <description>The interrupt  state bit for channel %s's rmt_ch%s_err_int_raw when  rmt_ch%s_err_int_ena is set to %s.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22075,7 +21461,7 @@
               <dim>8</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_ST</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>The interrupt state bit  for channel %s's rmt_ch%s_tx_thr_event_int_raw when mt_ch%s_tx_thr_event_int_ena is set to 1.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22092,7 +21478,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_END_INT_ENA</name>
+              <name>CH%s_TX_END</name>
               <description>Set this bit to enable rmt_ch%s_tx_end_int_st.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22102,7 +21488,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_RX_END_INT_ENA</name>
+              <name>CH%s_RX_END</name>
               <description>Set this bit to enable rmt_ch%s_rx_end_int_st.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22112,7 +21498,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_ERR_INT_ENA</name>
+              <name>CH%s_ERR</name>
               <description>Set this bit to enable rmt_ch%s_err_int_st.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22122,7 +21508,7 @@
               <dim>8</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_ENA</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>Set this bit to enable rmt_ch%s_tx_thr_event_int_st.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22139,7 +21525,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_END_INT_CLR</name>
+              <name>CH%s_TX_END</name>
               <description>Set this bit to clear the rmt_ch%s_rx_end_int_raw..</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22149,7 +21535,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_RX_END_INT_CLR</name>
+              <name>CH%s_RX_END</name>
               <description>Set this bit to clear the rmt_ch%s_tx_end_int_raw.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22159,7 +21545,7 @@
               <dim>8</dim>
               <dimIncrement>0x3</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_ERR_INT_CLR</name>
+              <name>CH%s_ERR</name>
               <description>Set this bit to clear the  rmt_ch%s_err_int_raw.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22169,7 +21555,7 @@
               <dim>8</dim>
               <dimIncrement>0x1</dimIncrement>
               <dimIndex>0-7</dimIndex>
-              <name>CH%s_TX_THR_EVENT_INT_CLR</name>
+              <name>CH%s_TX_THR_EVENT</name>
               <description>Set this bit to clear the  rmt_ch%s_tx_thr_event_int_raw interrupt.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -27416,7 +26802,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>SDMMC</name>
+      <name>SDHOST</name>
       <description>SD/MMC Host Controller</description>
       <groupName>SDHOST</groupName>
       <baseAddress>0x3FF68000</baseAddress>
