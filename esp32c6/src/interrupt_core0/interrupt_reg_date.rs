@@ -92,7 +92,7 @@ impl crate::Writable for INTERRUPT_REG_DATE_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets INTERRUPT_REG_DATE to value 0x0230_2220"]
+#[doc = "`reset()` method sets INTERRUPT_REG_DATE to value 0x0220_3110"]
 impl crate::Resettable for INTERRUPT_REG_DATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0230_2220;
+    const RESET_VALUE: Self::Ux = 0x0220_3110;
 }
