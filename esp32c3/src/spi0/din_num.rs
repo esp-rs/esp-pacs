@@ -1,55 +1,23 @@
 #[doc = "Register `DIN_NUM` reader"]
-pub struct R(crate::R<DIN_NUM_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIN_NUM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIN_NUM_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIN_NUM_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIN_NUM_SPEC>;
 #[doc = "Register `DIN_NUM` writer"]
-pub struct W(crate::W<DIN_NUM_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIN_NUM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIN_NUM_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIN_NUM_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIN_NUM_SPEC>;
 #[doc = "Field `DIN0_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
 pub type DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN0_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
+pub type DIN0_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `DIN1_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
 pub type DIN1_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN1_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
+pub type DIN1_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `DIN2_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
 pub type DIN2_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN2_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
+pub type DIN2_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `DIN3_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
 pub type DIN3_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN3_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
+pub type DIN3_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
@@ -93,46 +61,43 @@ impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
     #[must_use]
-    pub fn din0_num(&mut self) -> DIN0_NUM_W<0> {
+    pub fn din0_num(&mut self) -> DIN0_NUM_W<DIN_NUM_SPEC, 0> {
         DIN0_NUM_W::new(self)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
     #[must_use]
-    pub fn din1_num(&mut self) -> DIN1_NUM_W<2> {
+    pub fn din1_num(&mut self) -> DIN1_NUM_W<DIN_NUM_SPEC, 2> {
         DIN1_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
     #[must_use]
-    pub fn din2_num(&mut self) -> DIN2_NUM_W<4> {
+    pub fn din2_num(&mut self) -> DIN2_NUM_W<DIN_NUM_SPEC, 4> {
         DIN2_NUM_W::new(self)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
     #[must_use]
-    pub fn din3_num(&mut self) -> DIN3_NUM_W<6> {
+    pub fn din3_num(&mut self) -> DIN3_NUM_W<DIN_NUM_SPEC, 6> {
         DIN3_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI0 input delay number control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [din_num](index.html) module"]
+#[doc = "SPI0 input delay number control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_num::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`din_num::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIN_NUM_SPEC;
 impl crate::RegisterSpec for DIN_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [din_num::R](R) reader structure"]
-impl crate::Readable for DIN_NUM_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [din_num::W](W) writer structure"]
+#[doc = "`read()` method returns [`din_num::R`](R) reader structure"]
+impl crate::Readable for DIN_NUM_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`din_num::W`](W) writer structure"]
 impl crate::Writable for DIN_NUM_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

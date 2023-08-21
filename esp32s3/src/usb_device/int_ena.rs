@@ -1,87 +1,55 @@
 #[doc = "Register `INT_ENA` reader"]
-pub struct R(crate::R<INT_ENA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_ENA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_ENA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
-pub struct W(crate::W<INT_ENA_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INT_ENA_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INT_ENA_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `JTAG_IN_FLUSH_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
 pub type JTAG_IN_FLUSH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `JTAG_IN_FLUSH_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
-pub type JTAG_IN_FLUSH_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type JTAG_IN_FLUSH_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SOF_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_SOF_INT interrupt."]
 pub type SOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SOF_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_SOF_INT interrupt."]
-pub type SOF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type SOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SERIAL_OUT_RECV_PKT_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
 pub type SERIAL_OUT_RECV_PKT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_RECV_PKT_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
-pub type SERIAL_OUT_RECV_PKT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type SERIAL_OUT_RECV_PKT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SERIAL_IN_EMPTY_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
 pub type SERIAL_IN_EMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_EMPTY_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
-pub type SERIAL_IN_EMPTY_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type SERIAL_IN_EMPTY_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PID_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_PID_ERR_INT interrupt."]
 pub type PID_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PID_ERR_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_PID_ERR_INT interrupt."]
-pub type PID_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type PID_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CRC5_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_CRC5_ERR_INT interrupt."]
 pub type CRC5_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CRC5_ERR_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_CRC5_ERR_INT interrupt."]
-pub type CRC5_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CRC5_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CRC16_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_CRC16_ERR_INT interrupt."]
 pub type CRC16_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CRC16_ERR_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_CRC16_ERR_INT interrupt."]
-pub type CRC16_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CRC16_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STUFF_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_STUFF_ERR_INT interrupt."]
 pub type STUFF_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `STUFF_ERR_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_STUFF_ERR_INT interrupt."]
-pub type STUFF_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type STUFF_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_TOKEN_REC_IN_EP1_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_IN_TOKEN_REC_IN_EP1_INT interrupt."]
 pub type IN_TOKEN_REC_IN_EP1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_TOKEN_REC_IN_EP1_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_IN_TOKEN_REC_IN_EP1_INT interrupt."]
-pub type IN_TOKEN_REC_IN_EP1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type IN_TOKEN_REC_IN_EP1_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USB_BUS_RESET_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
 pub type USB_BUS_RESET_INT_ENA_R = crate::BitReader;
 #[doc = "Field `USB_BUS_RESET_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
-pub type USB_BUS_RESET_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type USB_BUS_RESET_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_EP1_ZERO_PAYLOAD_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
 pub type OUT_EP1_ZERO_PAYLOAD_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_EP1_ZERO_PAYLOAD_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
-pub type OUT_EP1_ZERO_PAYLOAD_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type OUT_EP1_ZERO_PAYLOAD_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_EP2_ZERO_PAYLOAD_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
 pub type OUT_EP2_ZERO_PAYLOAD_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_EP2_ZERO_PAYLOAD_INT_ENA` writer - The interrupt enable bit for the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
-pub type OUT_EP2_ZERO_PAYLOAD_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type OUT_EP2_ZERO_PAYLOAD_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
     #[inline(always)]
@@ -206,94 +174,99 @@ impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn jtag_in_flush_int_ena(&mut self) -> JTAG_IN_FLUSH_INT_ENA_W<0> {
+    pub fn jtag_in_flush_int_ena(&mut self) -> JTAG_IN_FLUSH_INT_ENA_W<INT_ENA_SPEC, 0> {
         JTAG_IN_FLUSH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the USB_DEVICE_SOF_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn sof_int_ena(&mut self) -> SOF_INT_ENA_W<1> {
+    pub fn sof_int_ena(&mut self) -> SOF_INT_ENA_W<INT_ENA_SPEC, 1> {
         SOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn serial_out_recv_pkt_int_ena(&mut self) -> SERIAL_OUT_RECV_PKT_INT_ENA_W<2> {
+    pub fn serial_out_recv_pkt_int_ena(
+        &mut self,
+    ) -> SERIAL_OUT_RECV_PKT_INT_ENA_W<INT_ENA_SPEC, 2> {
         SERIAL_OUT_RECV_PKT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn serial_in_empty_int_ena(&mut self) -> SERIAL_IN_EMPTY_INT_ENA_W<3> {
+    pub fn serial_in_empty_int_ena(&mut self) -> SERIAL_IN_EMPTY_INT_ENA_W<INT_ENA_SPEC, 3> {
         SERIAL_IN_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the USB_DEVICE_PID_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn pid_err_int_ena(&mut self) -> PID_ERR_INT_ENA_W<4> {
+    pub fn pid_err_int_ena(&mut self) -> PID_ERR_INT_ENA_W<INT_ENA_SPEC, 4> {
         PID_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the USB_DEVICE_CRC5_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn crc5_err_int_ena(&mut self) -> CRC5_ERR_INT_ENA_W<5> {
+    pub fn crc5_err_int_ena(&mut self) -> CRC5_ERR_INT_ENA_W<INT_ENA_SPEC, 5> {
         CRC5_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The interrupt enable bit for the USB_DEVICE_CRC16_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn crc16_err_int_ena(&mut self) -> CRC16_ERR_INT_ENA_W<6> {
+    pub fn crc16_err_int_ena(&mut self) -> CRC16_ERR_INT_ENA_W<INT_ENA_SPEC, 6> {
         CRC16_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the USB_DEVICE_STUFF_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn stuff_err_int_ena(&mut self) -> STUFF_ERR_INT_ENA_W<7> {
+    pub fn stuff_err_int_ena(&mut self) -> STUFF_ERR_INT_ENA_W<INT_ENA_SPEC, 7> {
         STUFF_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The interrupt enable bit for the USB_DEVICE_IN_TOKEN_REC_IN_EP1_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn in_token_rec_in_ep1_int_ena(&mut self) -> IN_TOKEN_REC_IN_EP1_INT_ENA_W<8> {
+    pub fn in_token_rec_in_ep1_int_ena(
+        &mut self,
+    ) -> IN_TOKEN_REC_IN_EP1_INT_ENA_W<INT_ENA_SPEC, 8> {
         IN_TOKEN_REC_IN_EP1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The interrupt enable bit for the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_bus_reset_int_ena(&mut self) -> USB_BUS_RESET_INT_ENA_W<9> {
+    pub fn usb_bus_reset_int_ena(&mut self) -> USB_BUS_RESET_INT_ENA_W<INT_ENA_SPEC, 9> {
         USB_BUS_RESET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The interrupt enable bit for the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn out_ep1_zero_payload_int_ena(&mut self) -> OUT_EP1_ZERO_PAYLOAD_INT_ENA_W<10> {
+    pub fn out_ep1_zero_payload_int_ena(
+        &mut self,
+    ) -> OUT_EP1_ZERO_PAYLOAD_INT_ENA_W<INT_ENA_SPEC, 10> {
         OUT_EP1_ZERO_PAYLOAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - The interrupt enable bit for the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn out_ep2_zero_payload_int_ena(&mut self) -> OUT_EP2_ZERO_PAYLOAD_INT_ENA_W<11> {
+    pub fn out_ep2_zero_payload_int_ena(
+        &mut self,
+    ) -> OUT_EP2_ZERO_PAYLOAD_INT_ENA_W<INT_ENA_SPEC, 11> {
         OUT_EP2_ZERO_PAYLOAD_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
-impl crate::Readable for INT_ENA_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for INT_ENA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

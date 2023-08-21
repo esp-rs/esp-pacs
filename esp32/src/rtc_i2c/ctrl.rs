@@ -1,63 +1,31 @@
 #[doc = "Register `CTRL` reader"]
-pub struct R(crate::R<CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CTRL_SPEC>;
 #[doc = "Register `CTRL` writer"]
-pub struct W(crate::W<CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `SDA_FORCE_OUT` reader - SDA is push-pull (1) or open-drain (0)"]
 pub type SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SDA_FORCE_OUT` writer - SDA is push-pull (1) or open-drain (0)"]
-pub type SDA_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type SDA_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SCL_FORCE_OUT` reader - SCL is push-pull (1) or open-drain (0)"]
 pub type SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SCL_FORCE_OUT` writer - SCL is push-pull (1) or open-drain (0)"]
-pub type SCL_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type SCL_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MS_MODE` reader - Master (1) or slave (0)"]
 pub type MS_MODE_R = crate::BitReader;
 #[doc = "Field `MS_MODE` writer - Master (1) or slave (0)"]
-pub type MS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type MS_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TRANS_START` reader - Force to generate start condition"]
 pub type TRANS_START_R = crate::BitReader;
 #[doc = "Field `TRANS_START` writer - Force to generate start condition"]
-pub type TRANS_START_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type TRANS_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_LSB_FIRST` reader - Send LSB first"]
 pub type TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST` writer - Send LSB first"]
-pub type TX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type TX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_LSB_FIRST` reader - Receive LSB first"]
 pub type RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST` writer - Receive LSB first"]
-pub type RX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type RX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - SDA is push-pull (1) or open-drain (0)"]
     #[inline(always)]
@@ -125,58 +93,55 @@ impl W {
     #[doc = "Bit 0 - SDA is push-pull (1) or open-drain (0)"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<0> {
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTRL_SPEC, 0> {
         SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - SCL is push-pull (1) or open-drain (0)"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<1> {
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTRL_SPEC, 1> {
         SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 4 - Master (1) or slave (0)"]
     #[inline(always)]
     #[must_use]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<4> {
+    pub fn ms_mode(&mut self) -> MS_MODE_W<CTRL_SPEC, 4> {
         MS_MODE_W::new(self)
     }
     #[doc = "Bit 5 - Force to generate start condition"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_start(&mut self) -> TRANS_START_W<5> {
+    pub fn trans_start(&mut self) -> TRANS_START_W<CTRL_SPEC, 5> {
         TRANS_START_W::new(self)
     }
     #[doc = "Bit 6 - Send LSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<6> {
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTRL_SPEC, 6> {
         TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 7 - Receive LSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<7> {
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTRL_SPEC, 7> {
         RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
-impl crate::Readable for CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`ctrl::R`](R) reader structure"]
+impl crate::Readable for CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

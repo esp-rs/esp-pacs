@@ -1,18 +1,5 @@
 #[doc = "Register `IN1` reader"]
-pub struct R(crate::R<IN1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IN1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IN1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IN1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IN1_SPEC>;
 #[doc = "Field `IN_DATA1_NEXT` reader - GPIO32 ~ 53 input value. Each bit represents a pad input value."]
 pub type IN_DATA1_NEXT_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<IN1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "GPIO32 ~ 53 input register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in1](index.html) module"]
+#[doc = "GPIO32 ~ 53 input register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN1_SPEC;
 impl crate::RegisterSpec for IN1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in1::R](R) reader structure"]
-impl crate::Readable for IN1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`in1::R`](R) reader structure"]
+impl crate::Readable for IN1_SPEC {}
 #[doc = "`reset()` method sets IN1 to value 0"]
 impl crate::Resettable for IN1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

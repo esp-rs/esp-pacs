@@ -1,39 +1,7 @@
 #[doc = "Register `DMA_INT_ST` reader"]
-pub struct R(crate::R<DMA_INT_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_INT_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_INT_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_INT_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_INT_ST_SPEC>;
 #[doc = "Register `DMA_INT_ST` writer"]
-pub struct W(crate::W<DMA_INT_ST_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMA_INT_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMA_INT_ST_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMA_INT_ST_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMA_INT_ST_SPEC>;
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_ST` reader - The status bit for lack of enough inlink descriptors."]
 pub type INLINK_DSCR_EMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_ST` reader - The status bit for outlink descriptor error."]
@@ -59,23 +27,23 @@ pub type OUTFIFO_EMPTY_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_ST` reader - The status bit for SPI slave CMD6 interrupt."]
 pub type SLV_CMD6_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_ST` writer - The status bit for SPI slave CMD6 interrupt."]
-pub type SLV_CMD6_INT_ST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_ST_SPEC, O>;
+pub type SLV_CMD6_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_CMD7_INT_ST` reader - The status bit for SPI slave CMD7 interrupt."]
 pub type SLV_CMD7_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD7_INT_ST` writer - The status bit for SPI slave CMD7 interrupt."]
-pub type SLV_CMD7_INT_ST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_ST_SPEC, O>;
+pub type SLV_CMD7_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_CMD8_INT_ST` reader - The status bit for SPI slave CMD8 interrupt."]
 pub type SLV_CMD8_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD8_INT_ST` writer - The status bit for SPI slave CMD8 interrupt."]
-pub type SLV_CMD8_INT_ST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_ST_SPEC, O>;
+pub type SLV_CMD8_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_CMD9_INT_ST` reader - The status bit for SPI slave CMD9 interrupt."]
 pub type SLV_CMD9_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD9_INT_ST` writer - The status bit for SPI slave CMD9 interrupt."]
-pub type SLV_CMD9_INT_ST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_ST_SPEC, O>;
+pub type SLV_CMD9_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_CMDA_INT_ST` reader - The status bit for SPI slave CMDA interrupt."]
 pub type SLV_CMDA_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMDA_INT_ST` writer - The status bit for SPI slave CMDA interrupt."]
-pub type SLV_CMDA_INT_ST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_ST_SPEC, O>;
+pub type SLV_CMDA_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - The status bit for lack of enough inlink descriptors."]
     #[inline(always)]
@@ -239,52 +207,49 @@ impl W {
     #[doc = "Bit 11 - The status bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd6_int_st(&mut self) -> SLV_CMD6_INT_ST_W<11> {
+    pub fn slv_cmd6_int_st(&mut self) -> SLV_CMD6_INT_ST_W<DMA_INT_ST_SPEC, 11> {
         SLV_CMD6_INT_ST_W::new(self)
     }
     #[doc = "Bit 12 - The status bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd7_int_st(&mut self) -> SLV_CMD7_INT_ST_W<12> {
+    pub fn slv_cmd7_int_st(&mut self) -> SLV_CMD7_INT_ST_W<DMA_INT_ST_SPEC, 12> {
         SLV_CMD7_INT_ST_W::new(self)
     }
     #[doc = "Bit 13 - The status bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd8_int_st(&mut self) -> SLV_CMD8_INT_ST_W<13> {
+    pub fn slv_cmd8_int_st(&mut self) -> SLV_CMD8_INT_ST_W<DMA_INT_ST_SPEC, 13> {
         SLV_CMD8_INT_ST_W::new(self)
     }
     #[doc = "Bit 14 - The status bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd9_int_st(&mut self) -> SLV_CMD9_INT_ST_W<14> {
+    pub fn slv_cmd9_int_st(&mut self) -> SLV_CMD9_INT_ST_W<DMA_INT_ST_SPEC, 14> {
         SLV_CMD9_INT_ST_W::new(self)
     }
     #[doc = "Bit 15 - The status bit for SPI slave CMDA interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmda_int_st(&mut self) -> SLV_CMDA_INT_ST_W<15> {
+    pub fn slv_cmda_int_st(&mut self) -> SLV_CMDA_INT_ST_W<DMA_INT_ST_SPEC, 15> {
         SLV_CMDA_INT_ST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI DMA interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_int_st](index.html) module"]
+#[doc = "SPI DMA interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_int_st::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_int_st::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_INT_ST_SPEC;
 impl crate::RegisterSpec for DMA_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_int_st::R](R) reader structure"]
-impl crate::Readable for DMA_INT_ST_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dma_int_st::W](W) writer structure"]
+#[doc = "`read()` method returns [`dma_int_st::R`](R) reader structure"]
+impl crate::Readable for DMA_INT_ST_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dma_int_st::W`](W) writer structure"]
 impl crate::Writable for DMA_INT_ST_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

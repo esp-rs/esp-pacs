@@ -1,67 +1,33 @@
 #[doc = "Register `ULP_CP_CTRL` reader"]
-pub struct R(crate::R<ULP_CP_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ULP_CP_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ULP_CP_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ULP_CP_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ULP_CP_CTRL_SPEC>;
 #[doc = "Register `ULP_CP_CTRL` writer"]
-pub struct W(crate::W<ULP_CP_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ULP_CP_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ULP_CP_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ULP_CP_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ULP_CP_CTRL_SPEC>;
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` reader - "]
 pub type ULP_CP_MEM_ADDR_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` writer - "]
-pub type ULP_CP_MEM_ADDR_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16>;
+pub type ULP_CP_MEM_ADDR_INIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` reader - "]
 pub type ULP_CP_MEM_ADDR_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` writer - "]
-pub type ULP_CP_MEM_ADDR_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16>;
+pub type ULP_CP_MEM_ADDR_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
 #[doc = "Field `ULP_CP_MEM_OFFSET_CLR` writer - "]
-pub type ULP_CP_MEM_OFFSET_CLR_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
+pub type ULP_CP_MEM_OFFSET_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ULP_CP_CLK_FO` reader - ULP-FSM clock force on"]
 pub type ULP_CP_CLK_FO_R = crate::BitReader;
 #[doc = "Field `ULP_CP_CLK_FO` writer - ULP-FSM clock force on"]
-pub type ULP_CP_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
+pub type ULP_CP_CLK_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ULP_CP_RESET` reader - ULP-FSM clock software reset"]
 pub type ULP_CP_RESET_R = crate::BitReader;
 #[doc = "Field `ULP_CP_RESET` writer - ULP-FSM clock software reset"]
-pub type ULP_CP_RESET_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
+pub type ULP_CP_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - Write 1 to start ULP-FSM by software"]
 pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` writer - Write 1 to start ULP-FSM by software"]
-pub type ULP_CP_FORCE_START_TOP_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
+pub type ULP_CP_FORCE_START_TOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-FSM"]
 pub type ULP_CP_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_START_TOP` writer - Write 1 to start ULP-FSM"]
-pub type ULP_CP_START_TOP_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
+pub type ULP_CP_START_TOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -135,64 +101,61 @@ impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_mem_addr_init(&mut self) -> ULP_CP_MEM_ADDR_INIT_W<0> {
+    pub fn ulp_cp_mem_addr_init(&mut self) -> ULP_CP_MEM_ADDR_INIT_W<ULP_CP_CTRL_SPEC, 0> {
         ULP_CP_MEM_ADDR_INIT_W::new(self)
     }
     #[doc = "Bits 11:21"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_mem_addr_size(&mut self) -> ULP_CP_MEM_ADDR_SIZE_W<11> {
+    pub fn ulp_cp_mem_addr_size(&mut self) -> ULP_CP_MEM_ADDR_SIZE_W<ULP_CP_CTRL_SPEC, 11> {
         ULP_CP_MEM_ADDR_SIZE_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_mem_offset_clr(&mut self) -> ULP_CP_MEM_OFFSET_CLR_W<22> {
+    pub fn ulp_cp_mem_offset_clr(&mut self) -> ULP_CP_MEM_OFFSET_CLR_W<ULP_CP_CTRL_SPEC, 22> {
         ULP_CP_MEM_OFFSET_CLR_W::new(self)
     }
     #[doc = "Bit 28 - ULP-FSM clock force on"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_clk_fo(&mut self) -> ULP_CP_CLK_FO_W<28> {
+    pub fn ulp_cp_clk_fo(&mut self) -> ULP_CP_CLK_FO_W<ULP_CP_CTRL_SPEC, 28> {
         ULP_CP_CLK_FO_W::new(self)
     }
     #[doc = "Bit 29 - ULP-FSM clock software reset"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_reset(&mut self) -> ULP_CP_RESET_W<29> {
+    pub fn ulp_cp_reset(&mut self) -> ULP_CP_RESET_W<ULP_CP_CTRL_SPEC, 29> {
         ULP_CP_RESET_W::new(self)
     }
     #[doc = "Bit 30 - Write 1 to start ULP-FSM by software"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<30> {
+    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<ULP_CP_CTRL_SPEC, 30> {
         ULP_CP_FORCE_START_TOP_W::new(self)
     }
     #[doc = "Bit 31 - Write 1 to start ULP-FSM"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<31> {
+    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<ULP_CP_CTRL_SPEC, 31> {
         ULP_CP_START_TOP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "ULP-FSM configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ulp_cp_ctrl](index.html) module"]
+#[doc = "ULP-FSM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ulp_cp_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ulp_cp_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ULP_CP_CTRL_SPEC;
 impl crate::RegisterSpec for ULP_CP_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ulp_cp_ctrl::R](R) reader structure"]
-impl crate::Readable for ULP_CP_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ulp_cp_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`ulp_cp_ctrl::R`](R) reader structure"]
+impl crate::Readable for ULP_CP_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ulp_cp_ctrl::W`](W) writer structure"]
 impl crate::Writable for ULP_CP_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

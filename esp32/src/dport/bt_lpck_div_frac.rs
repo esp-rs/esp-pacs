@@ -1,65 +1,31 @@
 #[doc = "Register `BT_LPCK_DIV_FRAC` reader"]
-pub struct R(crate::R<BT_LPCK_DIV_FRAC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BT_LPCK_DIV_FRAC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BT_LPCK_DIV_FRAC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BT_LPCK_DIV_FRAC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BT_LPCK_DIV_FRAC_SPEC>;
 #[doc = "Register `BT_LPCK_DIV_FRAC` writer"]
-pub struct W(crate::W<BT_LPCK_DIV_FRAC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BT_LPCK_DIV_FRAC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BT_LPCK_DIV_FRAC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BT_LPCK_DIV_FRAC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BT_LPCK_DIV_FRAC_SPEC>;
 #[doc = "Field `BT_LPCK_DIV_B` reader - "]
 pub type BT_LPCK_DIV_B_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_B` writer - "]
-pub type BT_LPCK_DIV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16>;
+pub type BT_LPCK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
 #[doc = "Field `BT_LPCK_DIV_A` reader - "]
 pub type BT_LPCK_DIV_A_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_A` writer - "]
-pub type BT_LPCK_DIV_A_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16>;
+pub type BT_LPCK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` reader - "]
 pub type LPCLK_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` writer - "]
-pub type LPCLK_SEL_RTC_SLOW_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
+pub type LPCLK_SEL_RTC_SLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LPCLK_SEL_8M` reader - "]
 pub type LPCLK_SEL_8M_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_8M` writer - "]
-pub type LPCLK_SEL_8M_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
+pub type LPCLK_SEL_8M_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LPCLK_SEL_XTAL` reader - "]
 pub type LPCLK_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL` writer - "]
-pub type LPCLK_SEL_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
+pub type LPCLK_SEL_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LPCLK_SEL_XTAL32K` reader - "]
 pub type LPCLK_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL32K` writer - "]
-pub type LPCLK_SEL_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
+pub type LPCLK_SEL_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -133,58 +99,55 @@ impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<0> {
+    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<BT_LPCK_DIV_FRAC_SPEC, 0> {
         BT_LPCK_DIV_B_W::new(self)
     }
     #[doc = "Bits 12:23"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<12> {
+    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<BT_LPCK_DIV_FRAC_SPEC, 12> {
         BT_LPCK_DIV_A_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<24> {
+    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC, 24> {
         LPCLK_SEL_RTC_SLOW_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<25> {
+    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC, 25> {
         LPCLK_SEL_8M_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<26> {
+    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC, 26> {
         LPCLK_SEL_XTAL_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<27> {
+    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC, 27> {
         LPCLK_SEL_XTAL32K_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bt_lpck_div_frac](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bt_lpck_div_frac::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bt_lpck_div_frac::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BT_LPCK_DIV_FRAC_SPEC;
 impl crate::RegisterSpec for BT_LPCK_DIV_FRAC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bt_lpck_div_frac::R](R) reader structure"]
-impl crate::Readable for BT_LPCK_DIV_FRAC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [bt_lpck_div_frac::W](W) writer structure"]
+#[doc = "`read()` method returns [`bt_lpck_div_frac::R`](R) reader structure"]
+impl crate::Readable for BT_LPCK_DIV_FRAC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`bt_lpck_div_frac::W`](W) writer structure"]
 impl crate::Writable for BT_LPCK_DIV_FRAC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

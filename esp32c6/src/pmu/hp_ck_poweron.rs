@@ -1,43 +1,11 @@
 #[doc = "Register `HP_CK_POWERON` reader"]
-pub struct R(crate::R<HP_CK_POWERON_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HP_CK_POWERON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HP_CK_POWERON_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HP_CK_POWERON_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HP_CK_POWERON_SPEC>;
 #[doc = "Register `HP_CK_POWERON` writer"]
-pub struct W(crate::W<HP_CK_POWERON_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HP_CK_POWERON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HP_CK_POWERON_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HP_CK_POWERON_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HP_CK_POWERON_SPEC>;
 #[doc = "Field `I2C_POR_WAIT_TARGET` reader - need_des"]
 pub type I2C_POR_WAIT_TARGET_R = crate::FieldReader;
 #[doc = "Field `I2C_POR_WAIT_TARGET` writer - need_des"]
-pub type I2C_POR_WAIT_TARGET_W<'a, const O: u8> = crate::FieldWriter<'a, HP_CK_POWERON_SPEC, 8, O>;
+pub type I2C_POR_WAIT_TARGET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_por_wait_target(&mut self) -> I2C_POR_WAIT_TARGET_W<0> {
+    pub fn i2c_por_wait_target(&mut self) -> I2C_POR_WAIT_TARGET_W<HP_CK_POWERON_SPEC, 0> {
         I2C_POR_WAIT_TARGET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hp_ck_poweron](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_ck_poweron::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_ck_poweron::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_CK_POWERON_SPEC;
 impl crate::RegisterSpec for HP_CK_POWERON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hp_ck_poweron::R](R) reader structure"]
-impl crate::Readable for HP_CK_POWERON_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hp_ck_poweron::W](W) writer structure"]
+#[doc = "`read()` method returns [`hp_ck_poweron::R`](R) reader structure"]
+impl crate::Readable for HP_CK_POWERON_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hp_ck_poweron::W`](W) writer structure"]
 impl crate::Writable for HP_CK_POWERON_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

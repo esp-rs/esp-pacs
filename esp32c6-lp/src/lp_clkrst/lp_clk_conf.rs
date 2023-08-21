@@ -1,51 +1,19 @@
 #[doc = "Register `LP_CLK_CONF` reader"]
-pub struct R(crate::R<LP_CLK_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LP_CLK_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LP_CLK_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LP_CLK_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LP_CLK_CONF_SPEC>;
 #[doc = "Register `LP_CLK_CONF` writer"]
-pub struct W(crate::W<LP_CLK_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LP_CLK_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LP_CLK_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LP_CLK_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LP_CLK_CONF_SPEC>;
 #[doc = "Field `SLOW_CLK_SEL` reader - need_des"]
 pub type SLOW_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SLOW_CLK_SEL` writer - need_des"]
-pub type SLOW_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, LP_CLK_CONF_SPEC, 2, O>;
+pub type SLOW_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `FAST_CLK_SEL` reader - need_des"]
 pub type FAST_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `FAST_CLK_SEL` writer - need_des"]
-pub type FAST_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_CONF_SPEC, O>;
+pub type FAST_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_PERI_DIV_NUM` reader - need_des"]
 pub type LP_PERI_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `LP_PERI_DIV_NUM` writer - need_des"]
-pub type LP_PERI_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LP_CLK_CONF_SPEC, 8, O>;
+pub type LP_PERI_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
@@ -92,40 +60,37 @@ impl W {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn slow_clk_sel(&mut self) -> SLOW_CLK_SEL_W<0> {
+    pub fn slow_clk_sel(&mut self) -> SLOW_CLK_SEL_W<LP_CLK_CONF_SPEC, 0> {
         SLOW_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn fast_clk_sel(&mut self) -> FAST_CLK_SEL_W<2> {
+    pub fn fast_clk_sel(&mut self) -> FAST_CLK_SEL_W<LP_CLK_CONF_SPEC, 2> {
         FAST_CLK_SEL_W::new(self)
     }
     #[doc = "Bits 3:10 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_div_num(&mut self) -> LP_PERI_DIV_NUM_W<3> {
+    pub fn lp_peri_div_num(&mut self) -> LP_PERI_DIV_NUM_W<LP_CLK_CONF_SPEC, 3> {
         LP_PERI_DIV_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lp_clk_conf](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_clk_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lp_clk_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LP_CLK_CONF_SPEC;
 impl crate::RegisterSpec for LP_CLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lp_clk_conf::R](R) reader structure"]
-impl crate::Readable for LP_CLK_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lp_clk_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`lp_clk_conf::R`](R) reader structure"]
+impl crate::Readable for LP_CLK_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lp_clk_conf::W`](W) writer structure"]
 impl crate::Writable for LP_CLK_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -95,183 +95,183 @@ pub struct RegisterBlock {
     #[doc = "0xfc - Version control register"]
     pub date: DATE,
 }
-#[doc = "PIN_CTRL (rw) register accessor: an alias for `Reg<PIN_CTRL_SPEC>`"]
+#[doc = "PIN_CTRL (rw) register accessor: Clock output configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pin_ctrl`] module"]
 pub type PIN_CTRL = crate::Reg<pin_ctrl::PIN_CTRL_SPEC>;
 #[doc = "Clock output configuration register"]
 pub mod pin_ctrl;
-#[doc = "GPIO0 (rw) register accessor: an alias for `Reg<GPIO0_SPEC>`"]
+#[doc = "GPIO0 (rw) register accessor: Configuration register for pin GPIO0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio0`] module"]
 pub type GPIO0 = crate::Reg<gpio0::GPIO0_SPEC>;
 #[doc = "Configuration register for pin GPIO0"]
 pub mod gpio0;
-#[doc = "GPIO1 (rw) register accessor: an alias for `Reg<GPIO1_SPEC>`"]
+#[doc = "GPIO1 (rw) register accessor: Configuration register for pin GPIO1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio1`] module"]
 pub type GPIO1 = crate::Reg<gpio1::GPIO1_SPEC>;
 #[doc = "Configuration register for pin GPIO1"]
 pub mod gpio1;
-#[doc = "GPIO2 (rw) register accessor: an alias for `Reg<GPIO2_SPEC>`"]
+#[doc = "GPIO2 (rw) register accessor: Configuration register for pin GPIO2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio2`] module"]
 pub type GPIO2 = crate::Reg<gpio2::GPIO2_SPEC>;
 #[doc = "Configuration register for pin GPIO2"]
 pub mod gpio2;
-#[doc = "GPIO3 (rw) register accessor: an alias for `Reg<GPIO3_SPEC>`"]
+#[doc = "GPIO3 (rw) register accessor: Configuration register for pin GPIO3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio3`] module"]
 pub type GPIO3 = crate::Reg<gpio3::GPIO3_SPEC>;
 #[doc = "Configuration register for pin GPIO3"]
 pub mod gpio3;
-#[doc = "GPIO4 (rw) register accessor: an alias for `Reg<GPIO4_SPEC>`"]
+#[doc = "GPIO4 (rw) register accessor: Configuration register for pin GPIO4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio4`] module"]
 pub type GPIO4 = crate::Reg<gpio4::GPIO4_SPEC>;
 #[doc = "Configuration register for pin GPIO4"]
 pub mod gpio4;
-#[doc = "GPIO5 (rw) register accessor: an alias for `Reg<GPIO5_SPEC>`"]
+#[doc = "GPIO5 (rw) register accessor: Configuration register for pin GPIO5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio5`] module"]
 pub type GPIO5 = crate::Reg<gpio5::GPIO5_SPEC>;
 #[doc = "Configuration register for pin GPIO5"]
 pub mod gpio5;
-#[doc = "GPIO6 (rw) register accessor: an alias for `Reg<GPIO6_SPEC>`"]
+#[doc = "GPIO6 (rw) register accessor: Configuration register for pin GPIO6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio6`] module"]
 pub type GPIO6 = crate::Reg<gpio6::GPIO6_SPEC>;
 #[doc = "Configuration register for pin GPIO6"]
 pub mod gpio6;
-#[doc = "GPIO7 (rw) register accessor: an alias for `Reg<GPIO7_SPEC>`"]
+#[doc = "GPIO7 (rw) register accessor: Configuration register for pin GPIO7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio7`] module"]
 pub type GPIO7 = crate::Reg<gpio7::GPIO7_SPEC>;
 #[doc = "Configuration register for pin GPIO7"]
 pub mod gpio7;
-#[doc = "GPIO8 (rw) register accessor: an alias for `Reg<GPIO8_SPEC>`"]
+#[doc = "GPIO8 (rw) register accessor: Configuration register for pin GPIO8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio8`] module"]
 pub type GPIO8 = crate::Reg<gpio8::GPIO8_SPEC>;
 #[doc = "Configuration register for pin GPIO8"]
 pub mod gpio8;
-#[doc = "GPIO9 (rw) register accessor: an alias for `Reg<GPIO9_SPEC>`"]
+#[doc = "GPIO9 (rw) register accessor: Configuration register for pin GPIO9\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio9`] module"]
 pub type GPIO9 = crate::Reg<gpio9::GPIO9_SPEC>;
 #[doc = "Configuration register for pin GPIO9"]
 pub mod gpio9;
-#[doc = "GPIO10 (rw) register accessor: an alias for `Reg<GPIO10_SPEC>`"]
+#[doc = "GPIO10 (rw) register accessor: Configuration register for pin GPIO10\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio10`] module"]
 pub type GPIO10 = crate::Reg<gpio10::GPIO10_SPEC>;
 #[doc = "Configuration register for pin GPIO10"]
 pub mod gpio10;
-#[doc = "GPIO11 (rw) register accessor: an alias for `Reg<GPIO11_SPEC>`"]
+#[doc = "GPIO11 (rw) register accessor: Configuration register for pin GPIO11\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio11::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio11::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio11`] module"]
 pub type GPIO11 = crate::Reg<gpio11::GPIO11_SPEC>;
 #[doc = "Configuration register for pin GPIO11"]
 pub mod gpio11;
-#[doc = "GPIO12 (rw) register accessor: an alias for `Reg<GPIO12_SPEC>`"]
+#[doc = "GPIO12 (rw) register accessor: Configuration register for pin GPIO12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio12::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio12::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio12`] module"]
 pub type GPIO12 = crate::Reg<gpio12::GPIO12_SPEC>;
 #[doc = "Configuration register for pin GPIO12"]
 pub mod gpio12;
-#[doc = "GPIO13 (rw) register accessor: an alias for `Reg<GPIO13_SPEC>`"]
+#[doc = "GPIO13 (rw) register accessor: Configuration register for pin GPIO13\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio13::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio13::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio13`] module"]
 pub type GPIO13 = crate::Reg<gpio13::GPIO13_SPEC>;
 #[doc = "Configuration register for pin GPIO13"]
 pub mod gpio13;
-#[doc = "GPIO14 (rw) register accessor: an alias for `Reg<GPIO14_SPEC>`"]
+#[doc = "GPIO14 (rw) register accessor: Configuration register for pin GPIO14\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio14::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio14::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio14`] module"]
 pub type GPIO14 = crate::Reg<gpio14::GPIO14_SPEC>;
 #[doc = "Configuration register for pin GPIO14"]
 pub mod gpio14;
-#[doc = "GPIO19 (rw) register accessor: an alias for `Reg<GPIO19_SPEC>`"]
+#[doc = "GPIO19 (rw) register accessor: Configuration register for pin GPIO19\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio19::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio19::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio19`] module"]
 pub type GPIO19 = crate::Reg<gpio19::GPIO19_SPEC>;
 #[doc = "Configuration register for pin GPIO19"]
 pub mod gpio19;
-#[doc = "GPIO20 (rw) register accessor: an alias for `Reg<GPIO20_SPEC>`"]
+#[doc = "GPIO20 (rw) register accessor: Configuration register for pin GPIO20\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio20::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio20::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio20`] module"]
 pub type GPIO20 = crate::Reg<gpio20::GPIO20_SPEC>;
 #[doc = "Configuration register for pin GPIO20"]
 pub mod gpio20;
-#[doc = "GPIO21 (rw) register accessor: an alias for `Reg<GPIO21_SPEC>`"]
+#[doc = "GPIO21 (rw) register accessor: Configuration register for pin GPIO21\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio21::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio21::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio21`] module"]
 pub type GPIO21 = crate::Reg<gpio21::GPIO21_SPEC>;
 #[doc = "Configuration register for pin GPIO21"]
 pub mod gpio21;
-#[doc = "GPIO33 (rw) register accessor: an alias for `Reg<GPIO33_SPEC>`"]
+#[doc = "GPIO33 (rw) register accessor: Configuration register for pin GPIO33\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio33::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio33::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio33`] module"]
 pub type GPIO33 = crate::Reg<gpio33::GPIO33_SPEC>;
 #[doc = "Configuration register for pin GPIO33"]
 pub mod gpio33;
-#[doc = "GPIO34 (rw) register accessor: an alias for `Reg<GPIO34_SPEC>`"]
+#[doc = "GPIO34 (rw) register accessor: Configuration register for pin GPIO34\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio34::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio34::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio34`] module"]
 pub type GPIO34 = crate::Reg<gpio34::GPIO34_SPEC>;
 #[doc = "Configuration register for pin GPIO34"]
 pub mod gpio34;
-#[doc = "GPIO35 (rw) register accessor: an alias for `Reg<GPIO35_SPEC>`"]
+#[doc = "GPIO35 (rw) register accessor: Configuration register for pin GPIO35\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio35::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio35::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio35`] module"]
 pub type GPIO35 = crate::Reg<gpio35::GPIO35_SPEC>;
 #[doc = "Configuration register for pin GPIO35"]
 pub mod gpio35;
-#[doc = "GPIO36 (rw) register accessor: an alias for `Reg<GPIO36_SPEC>`"]
+#[doc = "GPIO36 (rw) register accessor: Configuration register for pin GPIO36\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio36::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio36::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio36`] module"]
 pub type GPIO36 = crate::Reg<gpio36::GPIO36_SPEC>;
 #[doc = "Configuration register for pin GPIO36"]
 pub mod gpio36;
-#[doc = "GPIO37 (rw) register accessor: an alias for `Reg<GPIO37_SPEC>`"]
+#[doc = "GPIO37 (rw) register accessor: Configuration register for pin GPIO37\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio37::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio37::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio37`] module"]
 pub type GPIO37 = crate::Reg<gpio37::GPIO37_SPEC>;
 #[doc = "Configuration register for pin GPIO37"]
 pub mod gpio37;
-#[doc = "GPIO38 (rw) register accessor: an alias for `Reg<GPIO38_SPEC>`"]
+#[doc = "GPIO38 (rw) register accessor: Configuration register for pin GPIO38\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio38::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio38::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio38`] module"]
 pub type GPIO38 = crate::Reg<gpio38::GPIO38_SPEC>;
 #[doc = "Configuration register for pin GPIO38"]
 pub mod gpio38;
-#[doc = "GPIO45 (rw) register accessor: an alias for `Reg<GPIO45_SPEC>`"]
+#[doc = "GPIO45 (rw) register accessor: Configuration register for pin GPIO45\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio45::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio45::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio45`] module"]
 pub type GPIO45 = crate::Reg<gpio45::GPIO45_SPEC>;
 #[doc = "Configuration register for pin GPIO45"]
 pub mod gpio45;
-#[doc = "GPIO46 (rw) register accessor: an alias for `Reg<GPIO46_SPEC>`"]
+#[doc = "GPIO46 (rw) register accessor: Configuration register for pin GPIO46\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio46::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio46::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio46`] module"]
 pub type GPIO46 = crate::Reg<gpio46::GPIO46_SPEC>;
 #[doc = "Configuration register for pin GPIO46"]
 pub mod gpio46;
-#[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
+#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
-#[doc = "GPIO15 (rw) register accessor: an alias for `Reg<GPIO15_SPEC>`"]
+#[doc = "GPIO15 (rw) register accessor: Configuration register for pin GPIO15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio15::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio15::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio15`] module"]
 pub type GPIO15 = crate::Reg<gpio15::GPIO15_SPEC>;
 #[doc = "Configuration register for pin GPIO15"]
 pub mod gpio15;
-#[doc = "GPIO16 (rw) register accessor: an alias for `Reg<GPIO16_SPEC>`"]
+#[doc = "GPIO16 (rw) register accessor: Configuration register for pin GPIO16\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio16::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio16::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio16`] module"]
 pub type GPIO16 = crate::Reg<gpio16::GPIO16_SPEC>;
 #[doc = "Configuration register for pin GPIO16"]
 pub mod gpio16;
-#[doc = "GPIO17 (rw) register accessor: an alias for `Reg<GPIO17_SPEC>`"]
+#[doc = "GPIO17 (rw) register accessor: Configuration register for pin GPIO17\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio17::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio17::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio17`] module"]
 pub type GPIO17 = crate::Reg<gpio17::GPIO17_SPEC>;
 #[doc = "Configuration register for pin GPIO17"]
 pub mod gpio17;
-#[doc = "GPIO18 (rw) register accessor: an alias for `Reg<GPIO18_SPEC>`"]
+#[doc = "GPIO18 (rw) register accessor: Configuration register for pin GPIO18\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio18::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio18::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio18`] module"]
 pub type GPIO18 = crate::Reg<gpio18::GPIO18_SPEC>;
 #[doc = "Configuration register for pin GPIO18"]
 pub mod gpio18;
-#[doc = "GPIO26 (rw) register accessor: an alias for `Reg<GPIO26_SPEC>`"]
+#[doc = "GPIO26 (rw) register accessor: Configuration register for pin GPIO26\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio26::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio26::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio26`] module"]
 pub type GPIO26 = crate::Reg<gpio26::GPIO26_SPEC>;
 #[doc = "Configuration register for pin GPIO26"]
 pub mod gpio26;
-#[doc = "GPIO27 (rw) register accessor: an alias for `Reg<GPIO27_SPEC>`"]
+#[doc = "GPIO27 (rw) register accessor: Configuration register for pin GPIO27\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio27::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio27::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio27`] module"]
 pub type GPIO27 = crate::Reg<gpio27::GPIO27_SPEC>;
 #[doc = "Configuration register for pin GPIO27"]
 pub mod gpio27;
-#[doc = "GPIO28 (rw) register accessor: an alias for `Reg<GPIO28_SPEC>`"]
+#[doc = "GPIO28 (rw) register accessor: Configuration register for pin GPIO28\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio28::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio28::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio28`] module"]
 pub type GPIO28 = crate::Reg<gpio28::GPIO28_SPEC>;
 #[doc = "Configuration register for pin GPIO28"]
 pub mod gpio28;
-#[doc = "GPIO29 (rw) register accessor: an alias for `Reg<GPIO29_SPEC>`"]
+#[doc = "GPIO29 (rw) register accessor: Configuration register for pin GPIO29\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio29::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio29::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio29`] module"]
 pub type GPIO29 = crate::Reg<gpio29::GPIO29_SPEC>;
 #[doc = "Configuration register for pin GPIO29"]
 pub mod gpio29;
-#[doc = "GPIO30 (rw) register accessor: an alias for `Reg<GPIO30_SPEC>`"]
+#[doc = "GPIO30 (rw) register accessor: Configuration register for pin GPIO30\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio30::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio30::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio30`] module"]
 pub type GPIO30 = crate::Reg<gpio30::GPIO30_SPEC>;
 #[doc = "Configuration register for pin GPIO30"]
 pub mod gpio30;
-#[doc = "GPIO31 (rw) register accessor: an alias for `Reg<GPIO31_SPEC>`"]
+#[doc = "GPIO31 (rw) register accessor: Configuration register for pin GPIO31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio31::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio31::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio31`] module"]
 pub type GPIO31 = crate::Reg<gpio31::GPIO31_SPEC>;
 #[doc = "Configuration register for pin GPIO31"]
 pub mod gpio31;
-#[doc = "GPIO32 (rw) register accessor: an alias for `Reg<GPIO32_SPEC>`"]
+#[doc = "GPIO32 (rw) register accessor: Configuration register for pin GPIO32\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio32::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio32::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio32`] module"]
 pub type GPIO32 = crate::Reg<gpio32::GPIO32_SPEC>;
 #[doc = "Configuration register for pin GPIO32"]
 pub mod gpio32;
-#[doc = "GPIO39 (rw) register accessor: an alias for `Reg<GPIO39_SPEC>`"]
+#[doc = "GPIO39 (rw) register accessor: Configuration register for pin GPIO39\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio39::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio39::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio39`] module"]
 pub type GPIO39 = crate::Reg<gpio39::GPIO39_SPEC>;
 #[doc = "Configuration register for pin GPIO39"]
 pub mod gpio39;
-#[doc = "GPIO40 (rw) register accessor: an alias for `Reg<GPIO40_SPEC>`"]
+#[doc = "GPIO40 (rw) register accessor: Configuration register for pin GPIO40\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio40::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio40::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio40`] module"]
 pub type GPIO40 = crate::Reg<gpio40::GPIO40_SPEC>;
 #[doc = "Configuration register for pin GPIO40"]
 pub mod gpio40;
-#[doc = "GPIO41 (rw) register accessor: an alias for `Reg<GPIO41_SPEC>`"]
+#[doc = "GPIO41 (rw) register accessor: Configuration register for pin GPIO41\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio41::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio41::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio41`] module"]
 pub type GPIO41 = crate::Reg<gpio41::GPIO41_SPEC>;
 #[doc = "Configuration register for pin GPIO41"]
 pub mod gpio41;
-#[doc = "GPIO42 (rw) register accessor: an alias for `Reg<GPIO42_SPEC>`"]
+#[doc = "GPIO42 (rw) register accessor: Configuration register for pin GPIO42\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio42::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio42::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio42`] module"]
 pub type GPIO42 = crate::Reg<gpio42::GPIO42_SPEC>;
 #[doc = "Configuration register for pin GPIO42"]
 pub mod gpio42;
-#[doc = "GPIO43 (rw) register accessor: an alias for `Reg<GPIO43_SPEC>`"]
+#[doc = "GPIO43 (rw) register accessor: Configuration register for pin GPIO43\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio43::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio43::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio43`] module"]
 pub type GPIO43 = crate::Reg<gpio43::GPIO43_SPEC>;
 #[doc = "Configuration register for pin GPIO43"]
 pub mod gpio43;
-#[doc = "GPIO44 (rw) register accessor: an alias for `Reg<GPIO44_SPEC>`"]
+#[doc = "GPIO44 (rw) register accessor: Configuration register for pin GPIO44\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio44::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio44::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gpio44`] module"]
 pub type GPIO44 = crate::Reg<gpio44::GPIO44_SPEC>;
 #[doc = "Configuration register for pin GPIO44"]
 pub mod gpio44;

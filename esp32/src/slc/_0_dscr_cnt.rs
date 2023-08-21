@@ -1,18 +1,5 @@
 #[doc = "Register `_0_DSCR_CNT` reader"]
-pub struct R(crate::R<_0_DSCR_CNT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<_0_DSCR_CNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<_0_DSCR_CNT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<_0_DSCR_CNT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<_0_DSCR_CNT_SPEC>;
 #[doc = "Field `SLC0_RX_DSCR_CNT_LAT` reader - "]
 pub type SLC0_RX_DSCR_CNT_LAT_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0_RX_GET_EOF_OCC` reader - "]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<_0_DSCR_CNT_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0_dscr_cnt](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0_dscr_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _0_DSCR_CNT_SPEC;
 impl crate::RegisterSpec for _0_DSCR_CNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [_0_dscr_cnt::R](R) reader structure"]
-impl crate::Readable for _0_DSCR_CNT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`_0_dscr_cnt::R`](R) reader structure"]
+impl crate::Readable for _0_DSCR_CNT_SPEC {}
 #[doc = "`reset()` method sets _0_DSCR_CNT to value 0"]
 impl crate::Resettable for _0_DSCR_CNT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

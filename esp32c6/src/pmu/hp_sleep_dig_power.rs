@@ -1,73 +1,35 @@
 #[doc = "Register `HP_SLEEP_DIG_POWER` reader"]
-pub struct R(crate::R<HP_SLEEP_DIG_POWER_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HP_SLEEP_DIG_POWER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HP_SLEEP_DIG_POWER_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HP_SLEEP_DIG_POWER_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HP_SLEEP_DIG_POWER_SPEC>;
 #[doc = "Register `HP_SLEEP_DIG_POWER` writer"]
-pub struct W(crate::W<HP_SLEEP_DIG_POWER_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HP_SLEEP_DIG_POWER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HP_SLEEP_DIG_POWER_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HP_SLEEP_DIG_POWER_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HP_SLEEP_DIG_POWER_SPEC>;
 #[doc = "Field `HP_SLEEP_VDD_SPI_PD_EN` reader - need_des"]
 pub type HP_SLEEP_VDD_SPI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_VDD_SPI_PD_EN` writer - need_des"]
-pub type HP_SLEEP_VDD_SPI_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_SLEEP_DIG_POWER_SPEC, O>;
+pub type HP_SLEEP_VDD_SPI_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_SLEEP_HP_MEM_DSLP` reader - need_des"]
 pub type HP_SLEEP_HP_MEM_DSLP_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_HP_MEM_DSLP` writer - need_des"]
-pub type HP_SLEEP_HP_MEM_DSLP_W<'a, const O: u8> = crate::BitWriter<'a, HP_SLEEP_DIG_POWER_SPEC, O>;
+pub type HP_SLEEP_HP_MEM_DSLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_SLEEP_PD_HP_MEM_PD_EN` reader - need_des"]
 pub type HP_SLEEP_PD_HP_MEM_PD_EN_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_PD_HP_MEM_PD_EN` writer - need_des"]
-pub type HP_SLEEP_PD_HP_MEM_PD_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HP_SLEEP_DIG_POWER_SPEC, 4, O>;
+pub type HP_SLEEP_PD_HP_MEM_PD_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `HP_SLEEP_PD_HP_WIFI_PD_EN` reader - need_des"]
 pub type HP_SLEEP_PD_HP_WIFI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_HP_WIFI_PD_EN` writer - need_des"]
-pub type HP_SLEEP_PD_HP_WIFI_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_SLEEP_DIG_POWER_SPEC, O>;
+pub type HP_SLEEP_PD_HP_WIFI_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_SLEEP_PD_HP_CPU_PD_EN` reader - need_des"]
 pub type HP_SLEEP_PD_HP_CPU_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_HP_CPU_PD_EN` writer - need_des"]
-pub type HP_SLEEP_PD_HP_CPU_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_SLEEP_DIG_POWER_SPEC, O>;
+pub type HP_SLEEP_PD_HP_CPU_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_SLEEP_PD_HP_AON_PD_EN` reader - need_des"]
 pub type HP_SLEEP_PD_HP_AON_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_HP_AON_PD_EN` writer - need_des"]
-pub type HP_SLEEP_PD_HP_AON_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_SLEEP_DIG_POWER_SPEC, O>;
+pub type HP_SLEEP_PD_HP_AON_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_SLEEP_PD_TOP_PD_EN` reader - need_des"]
 pub type HP_SLEEP_PD_TOP_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_TOP_PD_EN` writer - need_des"]
-pub type HP_SLEEP_PD_TOP_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_SLEEP_DIG_POWER_SPEC, O>;
+pub type HP_SLEEP_PD_TOP_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
@@ -150,64 +112,73 @@ impl W {
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_vdd_spi_pd_en(&mut self) -> HP_SLEEP_VDD_SPI_PD_EN_W<21> {
+    pub fn hp_sleep_vdd_spi_pd_en(
+        &mut self,
+    ) -> HP_SLEEP_VDD_SPI_PD_EN_W<HP_SLEEP_DIG_POWER_SPEC, 21> {
         HP_SLEEP_VDD_SPI_PD_EN_W::new(self)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_hp_mem_dslp(&mut self) -> HP_SLEEP_HP_MEM_DSLP_W<22> {
+    pub fn hp_sleep_hp_mem_dslp(&mut self) -> HP_SLEEP_HP_MEM_DSLP_W<HP_SLEEP_DIG_POWER_SPEC, 22> {
         HP_SLEEP_HP_MEM_DSLP_W::new(self)
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_pd_hp_mem_pd_en(&mut self) -> HP_SLEEP_PD_HP_MEM_PD_EN_W<23> {
+    pub fn hp_sleep_pd_hp_mem_pd_en(
+        &mut self,
+    ) -> HP_SLEEP_PD_HP_MEM_PD_EN_W<HP_SLEEP_DIG_POWER_SPEC, 23> {
         HP_SLEEP_PD_HP_MEM_PD_EN_W::new(self)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_pd_hp_wifi_pd_en(&mut self) -> HP_SLEEP_PD_HP_WIFI_PD_EN_W<27> {
+    pub fn hp_sleep_pd_hp_wifi_pd_en(
+        &mut self,
+    ) -> HP_SLEEP_PD_HP_WIFI_PD_EN_W<HP_SLEEP_DIG_POWER_SPEC, 27> {
         HP_SLEEP_PD_HP_WIFI_PD_EN_W::new(self)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_pd_hp_cpu_pd_en(&mut self) -> HP_SLEEP_PD_HP_CPU_PD_EN_W<29> {
+    pub fn hp_sleep_pd_hp_cpu_pd_en(
+        &mut self,
+    ) -> HP_SLEEP_PD_HP_CPU_PD_EN_W<HP_SLEEP_DIG_POWER_SPEC, 29> {
         HP_SLEEP_PD_HP_CPU_PD_EN_W::new(self)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_pd_hp_aon_pd_en(&mut self) -> HP_SLEEP_PD_HP_AON_PD_EN_W<30> {
+    pub fn hp_sleep_pd_hp_aon_pd_en(
+        &mut self,
+    ) -> HP_SLEEP_PD_HP_AON_PD_EN_W<HP_SLEEP_DIG_POWER_SPEC, 30> {
         HP_SLEEP_PD_HP_AON_PD_EN_W::new(self)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_pd_top_pd_en(&mut self) -> HP_SLEEP_PD_TOP_PD_EN_W<31> {
+    pub fn hp_sleep_pd_top_pd_en(
+        &mut self,
+    ) -> HP_SLEEP_PD_TOP_PD_EN_W<HP_SLEEP_DIG_POWER_SPEC, 31> {
         HP_SLEEP_PD_TOP_PD_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hp_sleep_dig_power](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_sleep_dig_power::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_sleep_dig_power::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_SLEEP_DIG_POWER_SPEC;
 impl crate::RegisterSpec for HP_SLEEP_DIG_POWER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hp_sleep_dig_power::R](R) reader structure"]
-impl crate::Readable for HP_SLEEP_DIG_POWER_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hp_sleep_dig_power::W](W) writer structure"]
+#[doc = "`read()` method returns [`hp_sleep_dig_power::R`](R) reader structure"]
+impl crate::Readable for HP_SLEEP_DIG_POWER_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hp_sleep_dig_power::W`](W) writer structure"]
 impl crate::Writable for HP_SLEEP_DIG_POWER_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

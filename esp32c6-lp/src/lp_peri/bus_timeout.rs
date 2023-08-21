@@ -1,50 +1,17 @@
 #[doc = "Register `BUS_TIMEOUT` reader"]
-pub struct R(crate::R<BUS_TIMEOUT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BUS_TIMEOUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BUS_TIMEOUT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BUS_TIMEOUT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BUS_TIMEOUT_SPEC>;
 #[doc = "Register `BUS_TIMEOUT` writer"]
-pub struct W(crate::W<BUS_TIMEOUT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BUS_TIMEOUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BUS_TIMEOUT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BUS_TIMEOUT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BUS_TIMEOUT_SPEC>;
 #[doc = "Field `LP_PERI_TIMEOUT_THRES` reader - need_des"]
 pub type LP_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_THRES` writer - need_des"]
-pub type LP_PERI_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BUS_TIMEOUT_SPEC, 16, O, u16>;
+pub type LP_PERI_TIMEOUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_INT_CLEAR` writer - need_des"]
-pub type LP_PERI_TIMEOUT_INT_CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, BUS_TIMEOUT_SPEC, O>;
+pub type LP_PERI_TIMEOUT_INT_CLEAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_PERI_TIMEOUT_PROTECT_EN` reader - need_des"]
 pub type LP_PERI_TIMEOUT_PROTECT_EN_R = crate::BitReader;
 #[doc = "Field `LP_PERI_TIMEOUT_PROTECT_EN` writer - need_des"]
-pub type LP_PERI_TIMEOUT_PROTECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, BUS_TIMEOUT_SPEC, O>;
+pub type LP_PERI_TIMEOUT_PROTECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 14:29 - need_des"]
     #[inline(always)]
@@ -82,40 +49,41 @@ impl W {
     #[doc = "Bits 14:29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_timeout_thres(&mut self) -> LP_PERI_TIMEOUT_THRES_W<14> {
+    pub fn lp_peri_timeout_thres(&mut self) -> LP_PERI_TIMEOUT_THRES_W<BUS_TIMEOUT_SPEC, 14> {
         LP_PERI_TIMEOUT_THRES_W::new(self)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_timeout_int_clear(&mut self) -> LP_PERI_TIMEOUT_INT_CLEAR_W<30> {
+    pub fn lp_peri_timeout_int_clear(
+        &mut self,
+    ) -> LP_PERI_TIMEOUT_INT_CLEAR_W<BUS_TIMEOUT_SPEC, 30> {
         LP_PERI_TIMEOUT_INT_CLEAR_W::new(self)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_timeout_protect_en(&mut self) -> LP_PERI_TIMEOUT_PROTECT_EN_W<31> {
+    pub fn lp_peri_timeout_protect_en(
+        &mut self,
+    ) -> LP_PERI_TIMEOUT_PROTECT_EN_W<BUS_TIMEOUT_SPEC, 31> {
         LP_PERI_TIMEOUT_PROTECT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_timeout](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bus_timeout::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bus_timeout::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUS_TIMEOUT_SPEC;
 impl crate::RegisterSpec for BUS_TIMEOUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bus_timeout::R](R) reader structure"]
-impl crate::Readable for BUS_TIMEOUT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [bus_timeout::W](W) writer structure"]
+#[doc = "`read()` method returns [`bus_timeout::R`](R) reader structure"]
+impl crate::Readable for BUS_TIMEOUT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`bus_timeout::W`](W) writer structure"]
 impl crate::Writable for BUS_TIMEOUT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

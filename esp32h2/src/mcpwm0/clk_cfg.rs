@@ -1,43 +1,11 @@
 #[doc = "Register `CLK_CFG` reader"]
-pub struct R(crate::R<CLK_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_CFG_SPEC>;
 #[doc = "Register `CLK_CFG` writer"]
-pub struct W(crate::W<CLK_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLK_CFG_SPEC>;
 #[doc = "Field `CLK_PRESCALE` reader - Period of PWM_clk = 6.25ns * (PWM_CLK_PRESCALE + 1)"]
 pub type CLK_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CLK_PRESCALE` writer - Period of PWM_clk = 6.25ns * (PWM_CLK_PRESCALE + 1)"]
-pub type CLK_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CFG_SPEC, 8, O>;
+pub type CLK_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Period of PWM_clk = 6.25ns * (PWM_CLK_PRESCALE + 1)"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:7 - Period of PWM_clk = 6.25ns * (PWM_CLK_PRESCALE + 1)"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_prescale(&mut self) -> CLK_PRESCALE_W<0> {
+    pub fn clk_prescale(&mut self) -> CLK_PRESCALE_W<CLK_CFG_SPEC, 0> {
         CLK_PRESCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "PWM clock prescaler register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_cfg](index.html) module"]
+#[doc = "PWM clock prescaler register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_CFG_SPEC;
 impl crate::RegisterSpec for CLK_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_cfg::R](R) reader structure"]
-impl crate::Readable for CLK_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`clk_cfg::R`](R) reader structure"]
+impl crate::Readable for CLK_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clk_cfg::W`](W) writer structure"]
 impl crate::Writable for CLK_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

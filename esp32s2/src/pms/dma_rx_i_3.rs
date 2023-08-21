@@ -1,18 +1,5 @@
 #[doc = "Register `DMA_RX_I_3` reader"]
-pub struct R(crate::R<DMA_RX_I_3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_RX_I_3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_RX_I_3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_RX_I_3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_RX_I_3_SPEC>;
 #[doc = "Field `DMA_RX_I_ILG_ST` reader - Record the illegitimate information of RX Copy DMA. \\[22:6\\]: store the bits \\[18:2\\] of address. \\[5\\]: if bits \\[31:19\\] of address are 0x7ff, then the bit value is 1, otherwise it is 0. \\[4\\]: 1 means write operation, 0 means read operation. \\[3:0\\]: RX Copy DMA bus byte enables."]
 pub type DMA_RX_I_ILG_ST_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_RX_I_3_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "RX Copy DMA status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_rx_i_3](index.html) module"]
+#[doc = "RX Copy DMA status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_rx_i_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_RX_I_3_SPEC;
 impl crate::RegisterSpec for DMA_RX_I_3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_rx_i_3::R](R) reader structure"]
-impl crate::Readable for DMA_RX_I_3_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dma_rx_i_3::R`](R) reader structure"]
+impl crate::Readable for DMA_RX_I_3_SPEC {}
 #[doc = "`reset()` method sets DMA_RX_I_3 to value 0"]
 impl crate::Resettable for DMA_RX_I_3_SPEC {
     const RESET_VALUE: Self::Ux = 0;

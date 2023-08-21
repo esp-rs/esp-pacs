@@ -1,43 +1,11 @@
 #[doc = "Register `WDTCONFIG0` reader"]
-pub struct R(crate::R<WDTCONFIG0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<WDTCONFIG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<WDTCONFIG0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<WDTCONFIG0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<WDTCONFIG0_SPEC>;
 #[doc = "Register `WDTCONFIG0` writer"]
-pub struct W(crate::W<WDTCONFIG0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<WDTCONFIG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<WDTCONFIG0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<WDTCONFIG0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<WDTCONFIG0_SPEC>;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` reader - When set flash boot protection is enabled"]
 pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - When set flash boot protection is enabled"]
-pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
+pub type WDT_FLASHBOOT_MOD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<WDT_SYS_RESET_LENGTH_A>;
 #[doc = "length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
@@ -86,89 +54,93 @@ impl WDT_SYS_RESET_LENGTH_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NS100`"]
+    #[doc = "100ns"]
     #[inline(always)]
     pub fn is_ns100(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS100
     }
-    #[doc = "Checks if the value of the field is `NS200`"]
+    #[doc = "200ns"]
     #[inline(always)]
     pub fn is_ns200(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS200
     }
-    #[doc = "Checks if the value of the field is `NS300`"]
+    #[doc = "300ns"]
     #[inline(always)]
     pub fn is_ns300(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS300
     }
-    #[doc = "Checks if the value of the field is `NS400`"]
+    #[doc = "400ns"]
     #[inline(always)]
     pub fn is_ns400(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS400
     }
-    #[doc = "Checks if the value of the field is `NS500`"]
+    #[doc = "500ns"]
     #[inline(always)]
     pub fn is_ns500(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS500
     }
-    #[doc = "Checks if the value of the field is `NS800`"]
+    #[doc = "800ns"]
     #[inline(always)]
     pub fn is_ns800(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS800
     }
-    #[doc = "Checks if the value of the field is `NS1600`"]
+    #[doc = "1.6us"]
     #[inline(always)]
     pub fn is_ns1600(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS1600
     }
-    #[doc = "Checks if the value of the field is `NS3200`"]
+    #[doc = "3.2us"]
     #[inline(always)]
     pub fn is_ns3200(&self) -> bool {
         *self == WDT_SYS_RESET_LENGTH_A::NS3200
     }
 }
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_SYS_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, WDT_SYS_RESET_LENGTH_A>;
-impl<'a, const O: u8> WDT_SYS_RESET_LENGTH_W<'a, O> {
+pub type WDT_SYS_RESET_LENGTH_W<'a, REG, const O: u8> =
+    crate::FieldWriterSafe<'a, REG, 3, O, WDT_SYS_RESET_LENGTH_A>;
+impl<'a, REG, const O: u8> WDT_SYS_RESET_LENGTH_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "100ns"]
     #[inline(always)]
-    pub fn ns100(self) -> &'a mut W {
+    pub fn ns100(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS100)
     }
     #[doc = "200ns"]
     #[inline(always)]
-    pub fn ns200(self) -> &'a mut W {
+    pub fn ns200(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS200)
     }
     #[doc = "300ns"]
     #[inline(always)]
-    pub fn ns300(self) -> &'a mut W {
+    pub fn ns300(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS300)
     }
     #[doc = "400ns"]
     #[inline(always)]
-    pub fn ns400(self) -> &'a mut W {
+    pub fn ns400(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS400)
     }
     #[doc = "500ns"]
     #[inline(always)]
-    pub fn ns500(self) -> &'a mut W {
+    pub fn ns500(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS500)
     }
     #[doc = "800ns"]
     #[inline(always)]
-    pub fn ns800(self) -> &'a mut W {
+    pub fn ns800(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS800)
     }
     #[doc = "1.6us"]
     #[inline(always)]
-    pub fn ns1600(self) -> &'a mut W {
+    pub fn ns1600(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS1600)
     }
     #[doc = "3.2us"]
     #[inline(always)]
-    pub fn ns3200(self) -> &'a mut W {
+    pub fn ns3200(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_SYS_RESET_LENGTH_A::NS3200)
     }
 }
@@ -220,100 +192,104 @@ impl WDT_CPU_RESET_LENGTH_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NS100`"]
+    #[doc = "100ns"]
     #[inline(always)]
     pub fn is_ns100(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS100
     }
-    #[doc = "Checks if the value of the field is `NS200`"]
+    #[doc = "200ns"]
     #[inline(always)]
     pub fn is_ns200(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS200
     }
-    #[doc = "Checks if the value of the field is `NS300`"]
+    #[doc = "300ns"]
     #[inline(always)]
     pub fn is_ns300(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS300
     }
-    #[doc = "Checks if the value of the field is `NS400`"]
+    #[doc = "400ns"]
     #[inline(always)]
     pub fn is_ns400(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS400
     }
-    #[doc = "Checks if the value of the field is `NS500`"]
+    #[doc = "500ns"]
     #[inline(always)]
     pub fn is_ns500(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS500
     }
-    #[doc = "Checks if the value of the field is `NS800`"]
+    #[doc = "800ns"]
     #[inline(always)]
     pub fn is_ns800(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS800
     }
-    #[doc = "Checks if the value of the field is `NS1600`"]
+    #[doc = "1.6us"]
     #[inline(always)]
     pub fn is_ns1600(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS1600
     }
-    #[doc = "Checks if the value of the field is `NS3200`"]
+    #[doc = "3.2us"]
     #[inline(always)]
     pub fn is_ns3200(&self) -> bool {
         *self == WDT_CPU_RESET_LENGTH_A::NS3200
     }
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_CPU_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, WDT_CPU_RESET_LENGTH_A>;
-impl<'a, const O: u8> WDT_CPU_RESET_LENGTH_W<'a, O> {
+pub type WDT_CPU_RESET_LENGTH_W<'a, REG, const O: u8> =
+    crate::FieldWriterSafe<'a, REG, 3, O, WDT_CPU_RESET_LENGTH_A>;
+impl<'a, REG, const O: u8> WDT_CPU_RESET_LENGTH_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "100ns"]
     #[inline(always)]
-    pub fn ns100(self) -> &'a mut W {
+    pub fn ns100(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS100)
     }
     #[doc = "200ns"]
     #[inline(always)]
-    pub fn ns200(self) -> &'a mut W {
+    pub fn ns200(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS200)
     }
     #[doc = "300ns"]
     #[inline(always)]
-    pub fn ns300(self) -> &'a mut W {
+    pub fn ns300(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS300)
     }
     #[doc = "400ns"]
     #[inline(always)]
-    pub fn ns400(self) -> &'a mut W {
+    pub fn ns400(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS400)
     }
     #[doc = "500ns"]
     #[inline(always)]
-    pub fn ns500(self) -> &'a mut W {
+    pub fn ns500(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS500)
     }
     #[doc = "800ns"]
     #[inline(always)]
-    pub fn ns800(self) -> &'a mut W {
+    pub fn ns800(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS800)
     }
     #[doc = "1.6us"]
     #[inline(always)]
-    pub fn ns1600(self) -> &'a mut W {
+    pub fn ns1600(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS1600)
     }
     #[doc = "3.2us"]
     #[inline(always)]
-    pub fn ns3200(self) -> &'a mut W {
+    pub fn ns3200(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_CPU_RESET_LENGTH_A::NS3200)
     }
 }
 #[doc = "Field `WDT_LEVEL_INT_EN` reader - When set level type interrupt generation is enabled"]
 pub type WDT_LEVEL_INT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_LEVEL_INT_EN` writer - When set level type interrupt generation is enabled"]
-pub type WDT_LEVEL_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
+pub type WDT_LEVEL_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WDT_EDGE_INT_EN` reader - When set edge type interrupt generation is enabled"]
 pub type WDT_EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EDGE_INT_EN` writer - When set edge type interrupt generation is enabled"]
-pub type WDT_EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
+pub type WDT_EDGE_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
 pub type WDT_STG3_R = crate::FieldReader<WDT_STG3_A>;
 #[doc = "Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system\n\nValue on reset: 0"]
@@ -350,49 +326,52 @@ impl WDT_STG3_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `OFF`"]
+    #[doc = "Off"]
     #[inline(always)]
     pub fn is_off(&self) -> bool {
         *self == WDT_STG3_A::OFF
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT`"]
+    #[doc = "Interrupt"]
     #[inline(always)]
     pub fn is_interrupt(&self) -> bool {
         *self == WDT_STG3_A::INTERRUPT
     }
-    #[doc = "Checks if the value of the field is `RESET`"]
+    #[doc = "Reset CPU"]
     #[inline(always)]
     pub fn is_reset(&self) -> bool {
         *self == WDT_STG3_A::RESET
     }
-    #[doc = "Checks if the value of the field is `RESET_SYS`"]
+    #[doc = "Reset system"]
     #[inline(always)]
     pub fn is_reset_sys(&self) -> bool {
         *self == WDT_STG3_A::RESET_SYS
     }
 }
 #[doc = "Field `WDT_STG3` writer - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
-pub type WDT_STG3_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 2, O, WDT_STG3_A>;
-impl<'a, const O: u8> WDT_STG3_W<'a, O> {
+pub type WDT_STG3_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, WDT_STG3_A>;
+impl<'a, REG, const O: u8> WDT_STG3_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Off"]
     #[inline(always)]
-    pub fn off(self) -> &'a mut W {
+    pub fn off(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_STG3_A::OFF)
     }
     #[doc = "Interrupt"]
     #[inline(always)]
-    pub fn interrupt(self) -> &'a mut W {
+    pub fn interrupt(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_STG3_A::INTERRUPT)
     }
     #[doc = "Reset CPU"]
     #[inline(always)]
-    pub fn reset(self) -> &'a mut W {
+    pub fn reset(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_STG3_A::RESET)
     }
     #[doc = "Reset system"]
     #[inline(always)]
-    pub fn reset_sys(self) -> &'a mut W {
+    pub fn reset_sys(self) -> &'a mut crate::W<REG> {
         self.variant(WDT_STG3_A::RESET_SYS)
     }
 }
@@ -411,7 +390,7 @@ pub use WDT_STG3_W as WDT_STG0_W;
 #[doc = "Field `WDT_EN` reader - When set SWDT is enabled"]
 pub type WDT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EN` writer - When set SWDT is enabled"]
-pub type WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
+pub type WDT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 14 - When set flash boot protection is enabled"]
     #[inline(always)]
@@ -506,82 +485,79 @@ impl W {
     #[doc = "Bit 14 - When set flash boot protection is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<14> {
+    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<WDTCONFIG0_SPEC, 14> {
         WDT_FLASHBOOT_MOD_EN_W::new(self)
     }
     #[doc = "Bits 15:17 - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<15> {
+    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<WDTCONFIG0_SPEC, 15> {
         WDT_SYS_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bits 18:20 - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<18> {
+    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<WDTCONFIG0_SPEC, 18> {
         WDT_CPU_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bit 21 - When set level type interrupt generation is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_level_int_en(&mut self) -> WDT_LEVEL_INT_EN_W<21> {
+    pub fn wdt_level_int_en(&mut self) -> WDT_LEVEL_INT_EN_W<WDTCONFIG0_SPEC, 21> {
         WDT_LEVEL_INT_EN_W::new(self)
     }
     #[doc = "Bit 22 - When set edge type interrupt generation is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_edge_int_en(&mut self) -> WDT_EDGE_INT_EN_W<22> {
+    pub fn wdt_edge_int_en(&mut self) -> WDT_EDGE_INT_EN_W<WDTCONFIG0_SPEC, 22> {
         WDT_EDGE_INT_EN_W::new(self)
     }
     #[doc = "Bits 23:24 - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<23> {
+    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<WDTCONFIG0_SPEC, 23> {
         WDT_STG3_W::new(self)
     }
     #[doc = "Bits 25:26 - Stage 2 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<25> {
+    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<WDTCONFIG0_SPEC, 25> {
         WDT_STG2_W::new(self)
     }
     #[doc = "Bits 27:28 - Stage 1 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<27> {
+    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<WDTCONFIG0_SPEC, 27> {
         WDT_STG1_W::new(self)
     }
     #[doc = "Bits 29:30 - Stage 0 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<29> {
+    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<WDTCONFIG0_SPEC, 29> {
         WDT_STG0_W::new(self)
     }
     #[doc = "Bit 31 - When set SWDT is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_en(&mut self) -> WDT_EN_W<31> {
+    pub fn wdt_en(&mut self) -> WDT_EN_W<WDTCONFIG0_SPEC, 31> {
         WDT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdtconfig0](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wdtconfig0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wdtconfig0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WDTCONFIG0_SPEC;
 impl crate::RegisterSpec for WDTCONFIG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [wdtconfig0::R](R) reader structure"]
-impl crate::Readable for WDTCONFIG0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [wdtconfig0::W](W) writer structure"]
+#[doc = "`read()` method returns [`wdtconfig0::R`](R) reader structure"]
+impl crate::Readable for WDTCONFIG0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`wdtconfig0::W`](W) writer structure"]
 impl crate::Writable for WDTCONFIG0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

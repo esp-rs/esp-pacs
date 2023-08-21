@@ -1,43 +1,11 @@
 #[doc = "Register `FRC1_CTRL` reader"]
-pub struct R(crate::R<FRC1_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FRC1_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FRC1_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FRC1_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FRC1_CTRL_SPEC>;
 #[doc = "Register `FRC1_CTRL` writer"]
-pub struct W(crate::W<FRC1_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FRC1_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FRC1_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FRC1_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FRC1_CTRL_SPEC>;
 #[doc = "Field `frc1_ctrl` reader - bit\\[7\\]: timer enable, bit\\[6\\]: automatically reload, when the counter isequal to zero, bit\\[3:2\\]: prescale-divider, 0: divided by 1, 1: dividedby 16, 2 or 3: divided by 256, bit\\[0\\]: interrupt type, 0:edge, 1:level"]
 pub type FRC1_CTRL_R = crate::FieldReader;
 #[doc = "Field `frc1_ctrl` writer - bit\\[7\\]: timer enable, bit\\[6\\]: automatically reload, when the counter isequal to zero, bit\\[3:2\\]: prescale-divider, 0: divided by 1, 1: dividedby 16, 2 or 3: divided by 256, bit\\[0\\]: interrupt type, 0:edge, 1:level"]
-pub type FRC1_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, FRC1_CTRL_SPEC, 8, O>;
+pub type FRC1_CTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `interrupt_type` reader - Configure the interrupt type"]
 pub type INTERRUPT_TYPE_R = crate::BitReader<INTERRUPT_TYPE_A>;
 #[doc = "Configure the interrupt type\n\nValue on reset: 0"]
@@ -63,29 +31,31 @@ impl INTERRUPT_TYPE_R {
             true => INTERRUPT_TYPE_A::LEVEL,
         }
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "edge"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INTERRUPT_TYPE_A::EDGE
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "level"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INTERRUPT_TYPE_A::LEVEL
     }
 }
 #[doc = "Field `interrupt_type` writer - Configure the interrupt type"]
-pub type INTERRUPT_TYPE_W<'a, const O: u8> =
-    crate::BitWriter<'a, FRC1_CTRL_SPEC, O, INTERRUPT_TYPE_A>;
-impl<'a, const O: u8> INTERRUPT_TYPE_W<'a, O> {
+pub type INTERRUPT_TYPE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INTERRUPT_TYPE_A>;
+impl<'a, REG, const O: u8> INTERRUPT_TYPE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "edge"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INTERRUPT_TYPE_A::EDGE)
     }
     #[doc = "level"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INTERRUPT_TYPE_A::LEVEL)
     }
 }
@@ -122,50 +92,54 @@ impl PRESCALE_DIVIDER_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `DEVIDED_BY_1`"]
+    #[doc = "divided by 1"]
     #[inline(always)]
     pub fn is_devided_by_1(&self) -> bool {
         *self == PRESCALE_DIVIDER_A::DEVIDED_BY_1
     }
-    #[doc = "Checks if the value of the field is `DEVIDED_BY_16`"]
+    #[doc = "divided by 16"]
     #[inline(always)]
     pub fn is_devided_by_16(&self) -> bool {
         *self == PRESCALE_DIVIDER_A::DEVIDED_BY_16
     }
-    #[doc = "Checks if the value of the field is `DEVIDED_BY_256`"]
+    #[doc = "divided by 256"]
     #[inline(always)]
     pub fn is_devided_by_256(&self) -> bool {
         *self == PRESCALE_DIVIDER_A::DEVIDED_BY_256
     }
 }
 #[doc = "Field `prescale_divider` writer - Pre-scale divider for the timer"]
-pub type PRESCALE_DIVIDER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, FRC1_CTRL_SPEC, 2, O, PRESCALE_DIVIDER_A>;
-impl<'a, const O: u8> PRESCALE_DIVIDER_W<'a, O> {
+pub type PRESCALE_DIVIDER_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O, PRESCALE_DIVIDER_A>;
+impl<'a, REG, const O: u8> PRESCALE_DIVIDER_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "divided by 1"]
     #[inline(always)]
-    pub fn devided_by_1(self) -> &'a mut W {
+    pub fn devided_by_1(self) -> &'a mut crate::W<REG> {
         self.variant(PRESCALE_DIVIDER_A::DEVIDED_BY_1)
     }
     #[doc = "divided by 16"]
     #[inline(always)]
-    pub fn devided_by_16(self) -> &'a mut W {
+    pub fn devided_by_16(self) -> &'a mut crate::W<REG> {
         self.variant(PRESCALE_DIVIDER_A::DEVIDED_BY_16)
     }
     #[doc = "divided by 256"]
     #[inline(always)]
-    pub fn devided_by_256(self) -> &'a mut W {
+    pub fn devided_by_256(self) -> &'a mut crate::W<REG> {
         self.variant(PRESCALE_DIVIDER_A::DEVIDED_BY_256)
     }
 }
 #[doc = "Field `rollover` reader - Automatically reload when the counter hits zero"]
 pub type ROLLOVER_R = crate::BitReader;
 #[doc = "Field `rollover` writer - Automatically reload when the counter hits zero"]
-pub type ROLLOVER_W<'a, const O: u8> = crate::BitWriter<'a, FRC1_CTRL_SPEC, O>;
+pub type ROLLOVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `timer_enable` reader - Enable or disable the timer"]
 pub type TIMER_ENABLE_R = crate::BitReader;
 #[doc = "Field `timer_enable` writer - Enable or disable the timer"]
-pub type TIMER_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, FRC1_CTRL_SPEC, O>;
+pub type TIMER_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `frc1_int` reader - the status of the interrupt, when the count isdereased to zero"]
 pub type FRC1_INT_R = crate::BitReader;
 impl R {
@@ -232,52 +206,49 @@ impl W {
     #[doc = "Bits 0:7 - bit\\[7\\]: timer enable, bit\\[6\\]: automatically reload, when the counter isequal to zero, bit\\[3:2\\]: prescale-divider, 0: divided by 1, 1: dividedby 16, 2 or 3: divided by 256, bit\\[0\\]: interrupt type, 0:edge, 1:level"]
     #[inline(always)]
     #[must_use]
-    pub fn frc1_ctrl(&mut self) -> FRC1_CTRL_W<0> {
+    pub fn frc1_ctrl(&mut self) -> FRC1_CTRL_W<FRC1_CTRL_SPEC, 0> {
         FRC1_CTRL_W::new(self)
     }
     #[doc = "Bit 0 - Configure the interrupt type"]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_type(&mut self) -> INTERRUPT_TYPE_W<0> {
+    pub fn interrupt_type(&mut self) -> INTERRUPT_TYPE_W<FRC1_CTRL_SPEC, 0> {
         INTERRUPT_TYPE_W::new(self)
     }
     #[doc = "Bits 2:3 - Pre-scale divider for the timer"]
     #[inline(always)]
     #[must_use]
-    pub fn prescale_divider(&mut self) -> PRESCALE_DIVIDER_W<2> {
+    pub fn prescale_divider(&mut self) -> PRESCALE_DIVIDER_W<FRC1_CTRL_SPEC, 2> {
         PRESCALE_DIVIDER_W::new(self)
     }
     #[doc = "Bit 6 - Automatically reload when the counter hits zero"]
     #[inline(always)]
     #[must_use]
-    pub fn rollover(&mut self) -> ROLLOVER_W<6> {
+    pub fn rollover(&mut self) -> ROLLOVER_W<FRC1_CTRL_SPEC, 6> {
         ROLLOVER_W::new(self)
     }
     #[doc = "Bit 7 - Enable or disable the timer"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_enable(&mut self) -> TIMER_ENABLE_W<7> {
+    pub fn timer_enable(&mut self) -> TIMER_ENABLE_W<FRC1_CTRL_SPEC, 7> {
         TIMER_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "FRC1_CTRL\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [frc1_ctrl](index.html) module"]
+#[doc = "FRC1_CTRL\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`frc1_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`frc1_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FRC1_CTRL_SPEC;
 impl crate::RegisterSpec for FRC1_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [frc1_ctrl::R](R) reader structure"]
-impl crate::Readable for FRC1_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [frc1_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`frc1_ctrl::R`](R) reader structure"]
+impl crate::Readable for FRC1_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`frc1_ctrl::W`](W) writer structure"]
 impl crate::Writable for FRC1_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

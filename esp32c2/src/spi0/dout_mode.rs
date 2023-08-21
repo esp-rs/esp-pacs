@@ -1,18 +1,5 @@
 #[doc = "Register `DOUT_MODE` reader"]
-pub struct R(crate::R<DOUT_MODE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DOUT_MODE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DOUT_MODE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DOUT_MODE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DOUT_MODE_SPEC>;
 #[doc = "Field `DOUT0_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
 pub type DOUT0_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT1_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
@@ -60,15 +47,13 @@ impl core::fmt::Debug for crate::generic::Reg<DOUT_MODE_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI0 output delay mode control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dout_mode](index.html) module"]
+#[doc = "SPI0 output delay mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dout_mode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOUT_MODE_SPEC;
 impl crate::RegisterSpec for DOUT_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dout_mode::R](R) reader structure"]
-impl crate::Readable for DOUT_MODE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dout_mode::R`](R) reader structure"]
+impl crate::Readable for DOUT_MODE_SPEC {}
 #[doc = "`reset()` method sets DOUT_MODE to value 0"]
 impl crate::Resettable for DOUT_MODE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

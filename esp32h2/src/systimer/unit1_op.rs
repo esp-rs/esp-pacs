@@ -1,43 +1,11 @@
 #[doc = "Register `UNIT1_OP` reader"]
-pub struct R(crate::R<UNIT1_OP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UNIT1_OP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UNIT1_OP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UNIT1_OP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UNIT1_OP_SPEC>;
 #[doc = "Register `UNIT1_OP` writer"]
-pub struct W(crate::W<UNIT1_OP_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UNIT1_OP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UNIT1_OP_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UNIT1_OP_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UNIT1_OP_SPEC>;
 #[doc = "Field `TIMER_UNIT1_VALUE_VALID` reader - timer value is sync and valid"]
 pub type TIMER_UNIT1_VALUE_VALID_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT1_UPDATE` writer - update timer unit1"]
-pub type TIMER_UNIT1_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, UNIT1_OP_SPEC, O>;
+pub type TIMER_UNIT1_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 29 - timer value is sync and valid"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bit 30 - update timer unit1"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_unit1_update(&mut self) -> TIMER_UNIT1_UPDATE_W<30> {
+    pub fn timer_unit1_update(&mut self) -> TIMER_UNIT1_UPDATE_W<UNIT1_OP_SPEC, 30> {
         TIMER_UNIT1_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "system timer unit1 value update register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [unit1_op](index.html) module"]
+#[doc = "system timer unit1 value update register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`unit1_op::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`unit1_op::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UNIT1_OP_SPEC;
 impl crate::RegisterSpec for UNIT1_OP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [unit1_op::R](R) reader structure"]
-impl crate::Readable for UNIT1_OP_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [unit1_op::W](W) writer structure"]
+#[doc = "`read()` method returns [`unit1_op::R`](R) reader structure"]
+impl crate::Readable for UNIT1_OP_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`unit1_op::W`](W) writer structure"]
 impl crate::Writable for UNIT1_OP_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `CAP_CH1` reader"]
-pub struct R(crate::R<CAP_CH1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CAP_CH1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CAP_CH1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CAP_CH1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CAP_CH1_SPEC>;
 #[doc = "Field `CAP1_VALUE` reader - "]
 pub type CAP1_VALUE_R = crate::FieldReader<u32>;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<CAP_CH1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_ch1](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_ch1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAP_CH1_SPEC;
 impl crate::RegisterSpec for CAP_CH1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cap_ch1::R](R) reader structure"]
-impl crate::Readable for CAP_CH1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`cap_ch1::R`](R) reader structure"]
+impl crate::Readable for CAP_CH1_SPEC {}
 #[doc = "`reset()` method sets CAP_CH1 to value 0"]
 impl crate::Resettable for CAP_CH1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

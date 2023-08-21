@@ -1,47 +1,15 @@
 #[doc = "Register `COMD%s` reader"]
-pub struct R(crate::R<COMD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<COMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<COMD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<COMD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<COMD_SPEC>;
 #[doc = "Register `COMD%s` writer"]
-pub struct W(crate::W<COMD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<COMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<COMD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<COMD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<COMD_SPEC>;
 #[doc = "Field `COMMAND` reader - reg_command"]
 pub type COMMAND_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND` writer - reg_command"]
-pub type COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, COMD_SPEC, 14, O, u16>;
+pub type COMMAND_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
 #[doc = "Field `COMMAND_DONE` reader - reg_command_done"]
 pub type COMMAND_DONE_R = crate::BitReader;
 #[doc = "Field `COMMAND_DONE` writer - reg_command_done"]
-pub type COMMAND_DONE_W<'a, const O: u8> = crate::BitWriter<'a, COMD_SPEC, O>;
+pub type COMMAND_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:13 - reg_command"]
     #[inline(always)]
@@ -76,34 +44,31 @@ impl W {
     #[doc = "Bits 0:13 - reg_command"]
     #[inline(always)]
     #[must_use]
-    pub fn command(&mut self) -> COMMAND_W<0> {
+    pub fn command(&mut self) -> COMMAND_W<COMD_SPEC, 0> {
         COMMAND_W::new(self)
     }
     #[doc = "Bit 31 - reg_command_done"]
     #[inline(always)]
     #[must_use]
-    pub fn command_done(&mut self) -> COMMAND_DONE_W<31> {
+    pub fn command_done(&mut self) -> COMMAND_DONE_W<COMD_SPEC, 31> {
         COMMAND_DONE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2C_COMD%s_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comd](index.html) module"]
+#[doc = "I2C_COMD%s_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`comd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COMD_SPEC;
 impl crate::RegisterSpec for COMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [comd::R](R) reader structure"]
-impl crate::Readable for COMD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [comd::W](W) writer structure"]
+#[doc = "`read()` method returns [`comd::R`](R) reader structure"]
+impl crate::Readable for COMD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`comd::W`](W) writer structure"]
 impl crate::Writable for COMD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

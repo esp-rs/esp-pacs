@@ -1,43 +1,11 @@
 #[doc = "Register `SLV_WR_STATUS` reader"]
-pub struct R(crate::R<SLV_WR_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLV_WR_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLV_WR_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLV_WR_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLV_WR_STATUS_SPEC>;
 #[doc = "Register `SLV_WR_STATUS` writer"]
-pub struct W(crate::W<SLV_WR_STATUS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLV_WR_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLV_WR_STATUS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLV_WR_STATUS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLV_WR_STATUS_SPEC>;
 #[doc = "Field `SLV_WR_ST` reader - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
 pub type SLV_WR_ST_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_WR_ST` writer - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
-pub type SLV_WR_ST_W<'a, const O: u8> = crate::FieldWriter<'a, SLV_WR_STATUS_SPEC, 32, O, u32>;
+pub type SLV_WR_ST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:31 - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wr_st(&mut self) -> SLV_WR_ST_W<0> {
+    pub fn slv_wr_st(&mut self) -> SLV_WR_ST_W<SLV_WR_STATUS_SPEC, 0> {
         SLV_WR_ST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slv_wr_status](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slv_wr_status::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slv_wr_status::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLV_WR_STATUS_SPEC;
 impl crate::RegisterSpec for SLV_WR_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slv_wr_status::R](R) reader structure"]
-impl crate::Readable for SLV_WR_STATUS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [slv_wr_status::W](W) writer structure"]
+#[doc = "`read()` method returns [`slv_wr_status::R`](R) reader structure"]
+impl crate::Readable for SLV_WR_STATUS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`slv_wr_status::W`](W) writer structure"]
 impl crate::Writable for SLV_WR_STATUS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

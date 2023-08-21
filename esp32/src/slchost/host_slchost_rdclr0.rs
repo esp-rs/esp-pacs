@@ -1,49 +1,17 @@
 #[doc = "Register `HOST_SLCHOST_RDCLR0` reader"]
-pub struct R(crate::R<HOST_SLCHOST_RDCLR0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HOST_SLCHOST_RDCLR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HOST_SLCHOST_RDCLR0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HOST_SLCHOST_RDCLR0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HOST_SLCHOST_RDCLR0_SPEC>;
 #[doc = "Register `HOST_SLCHOST_RDCLR0` writer"]
-pub struct W(crate::W<HOST_SLCHOST_RDCLR0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HOST_SLCHOST_RDCLR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HOST_SLCHOST_RDCLR0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HOST_SLCHOST_RDCLR0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HOST_SLCHOST_RDCLR0_SPEC>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT7_CLRADDR` reader - "]
 pub type HOST_SLCHOST_SLC0_BIT7_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT7_CLRADDR` writer - "]
-pub type HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HOST_SLCHOST_RDCLR0_SPEC, 9, O, u16>;
+pub type HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT6_CLRADDR` reader - "]
 pub type HOST_SLCHOST_SLC0_BIT6_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT6_CLRADDR` writer - "]
-pub type HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HOST_SLCHOST_RDCLR0_SPEC, 9, O, u16>;
+pub type HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -81,34 +49,35 @@ impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_slc0_bit7_clraddr(&mut self) -> HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<0> {
+    pub fn host_slchost_slc0_bit7_clraddr(
+        &mut self,
+    ) -> HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC, 0> {
         HOST_SLCHOST_SLC0_BIT7_CLRADDR_W::new(self)
     }
     #[doc = "Bits 9:17"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_slc0_bit6_clraddr(&mut self) -> HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<9> {
+    pub fn host_slchost_slc0_bit6_clraddr(
+        &mut self,
+    ) -> HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC, 9> {
         HOST_SLCHOST_SLC0_BIT6_CLRADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_rdclr0](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_slchost_rdclr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`host_slchost_rdclr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HOST_SLCHOST_RDCLR0_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_RDCLR0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_slchost_rdclr0::R](R) reader structure"]
-impl crate::Readable for HOST_SLCHOST_RDCLR0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [host_slchost_rdclr0::W](W) writer structure"]
+#[doc = "`read()` method returns [`host_slchost_rdclr0::R`](R) reader structure"]
+impl crate::Readable for HOST_SLCHOST_RDCLR0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`host_slchost_rdclr0::W`](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_RDCLR0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

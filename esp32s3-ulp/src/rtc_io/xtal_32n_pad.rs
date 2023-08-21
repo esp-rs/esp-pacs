@@ -1,75 +1,43 @@
 #[doc = "Register `XTAL_32N_PAD` reader"]
-pub struct R(crate::R<XTAL_32N_PAD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<XTAL_32N_PAD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<XTAL_32N_PAD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<XTAL_32N_PAD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<XTAL_32N_PAD_SPEC>;
 #[doc = "Register `XTAL_32N_PAD` writer"]
-pub struct W(crate::W<XTAL_32N_PAD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<XTAL_32N_PAD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<XTAL_32N_PAD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<XTAL_32N_PAD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<XTAL_32N_PAD_SPEC>;
 #[doc = "Field `X32N_FUN_IE` reader - input enable in work mode"]
 pub type X32N_FUN_IE_R = crate::BitReader;
 #[doc = "Field `X32N_FUN_IE` writer - input enable in work mode"]
-pub type X32N_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
+pub type X32N_FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_SLP_OE` reader - output enable in sleep mode"]
 pub type X32N_SLP_OE_R = crate::BitReader;
 #[doc = "Field `X32N_SLP_OE` writer - output enable in sleep mode"]
-pub type X32N_SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
+pub type X32N_SLP_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_SLP_IE` reader - input enable in sleep mode"]
 pub type X32N_SLP_IE_R = crate::BitReader;
 #[doc = "Field `X32N_SLP_IE` writer - input enable in sleep mode"]
-pub type X32N_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
+pub type X32N_SLP_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_SLP_SEL` reader - 1: enable sleep mode during sleep,0: no sleep mode"]
 pub type X32N_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `X32N_SLP_SEL` writer - 1: enable sleep mode during sleep,0: no sleep mode"]
-pub type X32N_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
+pub type X32N_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_FUN_SEL` reader - function sel"]
 pub type X32N_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `X32N_FUN_SEL` writer - function sel"]
-pub type X32N_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL_32N_PAD_SPEC, 2, O>;
+pub type X32N_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `X32N_MUX_SEL` reader - 1: use RTC GPIO,0: use digital GPIO"]
 pub type X32N_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `X32N_MUX_SEL` writer - 1: use RTC GPIO,0: use digital GPIO"]
-pub type X32N_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
+pub type X32N_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_RUE` reader - RUE"]
 pub type X32N_RUE_R = crate::BitReader;
 #[doc = "Field `X32N_RUE` writer - RUE"]
-pub type X32N_RUE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
+pub type X32N_RUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_RDE` reader - RDE"]
 pub type X32N_RDE_R = crate::BitReader;
 #[doc = "Field `X32N_RDE` writer - RDE"]
-pub type X32N_RDE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
+pub type X32N_RDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_DRV` reader - DRV"]
 pub type X32N_DRV_R = crate::FieldReader;
 #[doc = "Field `X32N_DRV` writer - DRV"]
-pub type X32N_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL_32N_PAD_SPEC, 2, O>;
+pub type X32N_DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
@@ -152,76 +120,73 @@ impl W {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_fun_ie(&mut self) -> X32N_FUN_IE_W<13> {
+    pub fn x32n_fun_ie(&mut self) -> X32N_FUN_IE_W<XTAL_32N_PAD_SPEC, 13> {
         X32N_FUN_IE_W::new(self)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_slp_oe(&mut self) -> X32N_SLP_OE_W<14> {
+    pub fn x32n_slp_oe(&mut self) -> X32N_SLP_OE_W<XTAL_32N_PAD_SPEC, 14> {
         X32N_SLP_OE_W::new(self)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_slp_ie(&mut self) -> X32N_SLP_IE_W<15> {
+    pub fn x32n_slp_ie(&mut self) -> X32N_SLP_IE_W<XTAL_32N_PAD_SPEC, 15> {
         X32N_SLP_IE_W::new(self)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_slp_sel(&mut self) -> X32N_SLP_SEL_W<16> {
+    pub fn x32n_slp_sel(&mut self) -> X32N_SLP_SEL_W<XTAL_32N_PAD_SPEC, 16> {
         X32N_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 17:18 - function sel"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_fun_sel(&mut self) -> X32N_FUN_SEL_W<17> {
+    pub fn x32n_fun_sel(&mut self) -> X32N_FUN_SEL_W<XTAL_32N_PAD_SPEC, 17> {
         X32N_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_mux_sel(&mut self) -> X32N_MUX_SEL_W<19> {
+    pub fn x32n_mux_sel(&mut self) -> X32N_MUX_SEL_W<XTAL_32N_PAD_SPEC, 19> {
         X32N_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 27 - RUE"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_rue(&mut self) -> X32N_RUE_W<27> {
+    pub fn x32n_rue(&mut self) -> X32N_RUE_W<XTAL_32N_PAD_SPEC, 27> {
         X32N_RUE_W::new(self)
     }
     #[doc = "Bit 28 - RDE"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_rde(&mut self) -> X32N_RDE_W<28> {
+    pub fn x32n_rde(&mut self) -> X32N_RDE_W<XTAL_32N_PAD_SPEC, 28> {
         X32N_RDE_W::new(self)
     }
     #[doc = "Bits 29:30 - DRV"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_drv(&mut self) -> X32N_DRV_W<29> {
+    pub fn x32n_drv(&mut self) -> X32N_DRV_W<XTAL_32N_PAD_SPEC, 29> {
         X32N_DRV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "configure RTC PAD16\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal_32n_pad](index.html) module"]
+#[doc = "configure RTC PAD16\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`xtal_32n_pad::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`xtal_32n_pad::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct XTAL_32N_PAD_SPEC;
 impl crate::RegisterSpec for XTAL_32N_PAD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [xtal_32n_pad::R](R) reader structure"]
-impl crate::Readable for XTAL_32N_PAD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [xtal_32n_pad::W](W) writer structure"]
+#[doc = "`read()` method returns [`xtal_32n_pad::R`](R) reader structure"]
+impl crate::Readable for XTAL_32N_PAD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`xtal_32n_pad::W`](W) writer structure"]
 impl crate::Writable for XTAL_32N_PAD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

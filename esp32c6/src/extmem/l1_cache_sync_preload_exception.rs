@@ -1,18 +1,5 @@
 #[doc = "Register `L1_CACHE_SYNC_PRELOAD_EXCEPTION` reader"]
-pub struct R(crate::R<L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC>;
 #[doc = "Field `L1_ICACHE0_PLD_ERR_CODE` reader - The value 2 is Only available which means preload size is error in L1-ICache0."]
 pub type L1_ICACHE0_PLD_ERR_CODE_R = crate::FieldReader;
 #[doc = "Field `L1_ICACHE1_PLD_ERR_CODE` reader - The value 2 is Only available which means preload size is error in L1-ICache1."]
@@ -94,15 +81,13 @@ impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_SYNC_PRELOAD_EXCEPTION_SP
         self.read().fmt(f)
     }
 }
-#[doc = "Cache Sync/Preload Operation exception register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_cache_sync_preload_exception](index.html) module"]
+#[doc = "Cache Sync/Preload Operation exception register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_sync_preload_exception::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC;
 impl crate::RegisterSpec for L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l1_cache_sync_preload_exception::R](R) reader structure"]
-impl crate::Readable for L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`l1_cache_sync_preload_exception::R`](R) reader structure"]
+impl crate::Readable for L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {}
 #[doc = "`reset()` method sets L1_CACHE_SYNC_PRELOAD_EXCEPTION to value 0"]
 impl crate::Resettable for L1_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {
     const RESET_VALUE: Self::Ux = 0;

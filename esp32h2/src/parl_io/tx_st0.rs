@@ -1,18 +1,5 @@
 #[doc = "Register `TX_ST0` reader"]
-pub struct R(crate::R<TX_ST0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TX_ST0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TX_ST0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TX_ST0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TX_ST0_SPEC>;
 #[doc = "Field `TX_CNT` reader - Indicates the cycle number of reading Tx FIFO."]
 pub type TX_CNT_R = crate::FieldReader;
 #[doc = "Field `TX_FIFO_RD_BIT_CNT` reader - Indicates the current read bit number from Tx FIFO."]
@@ -47,15 +34,13 @@ impl core::fmt::Debug for crate::generic::Reg<TX_ST0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Parallel IO TX status register0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_st0](index.html) module"]
+#[doc = "Parallel IO TX status register0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_st0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_ST0_SPEC;
 impl crate::RegisterSpec for TX_ST0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_st0::R](R) reader structure"]
-impl crate::Readable for TX_ST0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`tx_st0::R`](R) reader structure"]
+impl crate::Readable for TX_ST0_SPEC {}
 #[doc = "`reset()` method sets TX_ST0 to value 0"]
 impl crate::Resettable for TX_ST0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

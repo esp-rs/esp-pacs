@@ -1,47 +1,15 @@
 #[doc = "Register `CLOCK_DIVIDER` reader"]
-pub struct R(crate::R<CLOCK_DIVIDER_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLOCK_DIVIDER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLOCK_DIVIDER_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLOCK_DIVIDER_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLOCK_DIVIDER_SPEC>;
 #[doc = "Register `CLOCK_DIVIDER` writer"]
-pub struct W(crate::W<CLOCK_DIVIDER_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLOCK_DIVIDER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLOCK_DIVIDER_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLOCK_DIVIDER_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLOCK_DIVIDER_SPEC>;
 #[doc = "Field `CD` reader - These bits are used to define the frequency at the external CLKOUT pin."]
 pub type CD_R = crate::FieldReader;
 #[doc = "Field `CD` writer - These bits are used to define the frequency at the external CLKOUT pin."]
-pub type CD_W<'a, const O: u8> = crate::FieldWriter<'a, CLOCK_DIVIDER_SPEC, 8, O>;
+pub type CD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `CLOCK_OFF` reader - 1: Disable the external CLKOUT pin. 0: Enable the external CLKOUT pin. Software has R/W permission in reset mode and RO in operation mode."]
 pub type CLOCK_OFF_R = crate::BitReader;
 #[doc = "Field `CLOCK_OFF` writer - 1: Disable the external CLKOUT pin. 0: Enable the external CLKOUT pin. Software has R/W permission in reset mode and RO in operation mode."]
-pub type CLOCK_OFF_W<'a, const O: u8> = crate::BitWriter<'a, CLOCK_DIVIDER_SPEC, O>;
+pub type CLOCK_OFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - These bits are used to define the frequency at the external CLKOUT pin."]
     #[inline(always)]
@@ -73,34 +41,31 @@ impl W {
     #[doc = "Bits 0:7 - These bits are used to define the frequency at the external CLKOUT pin."]
     #[inline(always)]
     #[must_use]
-    pub fn cd(&mut self) -> CD_W<0> {
+    pub fn cd(&mut self) -> CD_W<CLOCK_DIVIDER_SPEC, 0> {
         CD_W::new(self)
     }
     #[doc = "Bit 8 - 1: Disable the external CLKOUT pin. 0: Enable the external CLKOUT pin. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
     #[must_use]
-    pub fn clock_off(&mut self) -> CLOCK_OFF_W<8> {
+    pub fn clock_off(&mut self) -> CLOCK_OFF_W<CLOCK_DIVIDER_SPEC, 8> {
         CLOCK_OFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Clock divider register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock_divider](index.html) module"]
+#[doc = "Clock divider register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_divider::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock_divider::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLOCK_DIVIDER_SPEC;
 impl crate::RegisterSpec for CLOCK_DIVIDER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clock_divider::R](R) reader structure"]
-impl crate::Readable for CLOCK_DIVIDER_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clock_divider::W](W) writer structure"]
+#[doc = "`read()` method returns [`clock_divider::R`](R) reader structure"]
+impl crate::Readable for CLOCK_DIVIDER_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clock_divider::W`](W) writer structure"]
 impl crate::Writable for CLOCK_DIVIDER_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

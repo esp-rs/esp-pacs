@@ -1,59 +1,27 @@
 #[doc = "Register `SLEEP_CONF2` reader"]
-pub struct R(crate::R<SLEEP_CONF2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLEEP_CONF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLEEP_CONF2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLEEP_CONF2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLEEP_CONF2_SPEC>;
 #[doc = "Register `SLEEP_CONF2` writer"]
-pub struct W(crate::W<SLEEP_CONF2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLEEP_CONF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLEEP_CONF2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLEEP_CONF2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLEEP_CONF2_SPEC>;
 #[doc = "Field `ACTIVE_THRESHOLD` reader - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
 pub type ACTIVE_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `ACTIVE_THRESHOLD` writer - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
-pub type ACTIVE_THRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 10, O, u16>;
+pub type ACTIVE_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `RX_WAKE_UP_THRHD` reader - In wake up mode 1 this field is used to set the received data number threshold to wake up chip."]
 pub type RX_WAKE_UP_THRHD_R = crate::FieldReader;
 #[doc = "Field `RX_WAKE_UP_THRHD` writer - In wake up mode 1 this field is used to set the received data number threshold to wake up chip."]
-pub type RX_WAKE_UP_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 5, O>;
+pub type RX_WAKE_UP_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `WK_CHAR_NUM` reader - This register is used to select number of wake up char."]
 pub type WK_CHAR_NUM_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR_NUM` writer - This register is used to select number of wake up char."]
-pub type WK_CHAR_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 3, O>;
+pub type WK_CHAR_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `WK_CHAR_MASK` reader - This register is used to mask wake up char."]
 pub type WK_CHAR_MASK_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR_MASK` writer - This register is used to mask wake up char."]
-pub type WK_CHAR_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 5, O>;
+pub type WK_CHAR_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `WK_MODE_SEL` reader - This register is used to select wake up mode. 0: RXD toggling to wake up. 1: received data number larger than"]
 pub type WK_MODE_SEL_R = crate::FieldReader;
 #[doc = "Field `WK_MODE_SEL` writer - This register is used to select wake up mode. 0: RXD toggling to wake up. 1: received data number larger than"]
-pub type WK_MODE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 2, O>;
+pub type WK_MODE_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:9 - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
     #[inline(always)]
@@ -118,52 +86,49 @@ impl W {
     #[doc = "Bits 0:9 - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
     #[inline(always)]
     #[must_use]
-    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<0> {
+    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<SLEEP_CONF2_SPEC, 0> {
         ACTIVE_THRESHOLD_W::new(self)
     }
     #[doc = "Bits 13:17 - In wake up mode 1 this field is used to set the received data number threshold to wake up chip."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_wake_up_thrhd(&mut self) -> RX_WAKE_UP_THRHD_W<13> {
+    pub fn rx_wake_up_thrhd(&mut self) -> RX_WAKE_UP_THRHD_W<SLEEP_CONF2_SPEC, 13> {
         RX_WAKE_UP_THRHD_W::new(self)
     }
     #[doc = "Bits 18:20 - This register is used to select number of wake up char."]
     #[inline(always)]
     #[must_use]
-    pub fn wk_char_num(&mut self) -> WK_CHAR_NUM_W<18> {
+    pub fn wk_char_num(&mut self) -> WK_CHAR_NUM_W<SLEEP_CONF2_SPEC, 18> {
         WK_CHAR_NUM_W::new(self)
     }
     #[doc = "Bits 21:25 - This register is used to mask wake up char."]
     #[inline(always)]
     #[must_use]
-    pub fn wk_char_mask(&mut self) -> WK_CHAR_MASK_W<21> {
+    pub fn wk_char_mask(&mut self) -> WK_CHAR_MASK_W<SLEEP_CONF2_SPEC, 21> {
         WK_CHAR_MASK_W::new(self)
     }
     #[doc = "Bits 26:27 - This register is used to select wake up mode. 0: RXD toggling to wake up. 1: received data number larger than"]
     #[inline(always)]
     #[must_use]
-    pub fn wk_mode_sel(&mut self) -> WK_MODE_SEL_W<26> {
+    pub fn wk_mode_sel(&mut self) -> WK_MODE_SEL_W<SLEEP_CONF2_SPEC, 26> {
         WK_MODE_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "UART sleep configure register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sleep_conf2](index.html) module"]
+#[doc = "UART sleep configure register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sleep_conf2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sleep_conf2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLEEP_CONF2_SPEC;
 impl crate::RegisterSpec for SLEEP_CONF2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sleep_conf2::R](R) reader structure"]
-impl crate::Readable for SLEEP_CONF2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sleep_conf2::W](W) writer structure"]
+#[doc = "`read()` method returns [`sleep_conf2::R`](R) reader structure"]
+impl crate::Readable for SLEEP_CONF2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sleep_conf2::W`](W) writer structure"]
 impl crate::Writable for SLEEP_CONF2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

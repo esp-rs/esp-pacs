@@ -1,47 +1,15 @@
 #[doc = "Register `SWFC_CONF0` reader"]
-pub struct R(crate::R<SWFC_CONF0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SWFC_CONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SWFC_CONF0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SWFC_CONF0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SWFC_CONF0_SPEC>;
 #[doc = "Register `SWFC_CONF0` writer"]
-pub struct W(crate::W<SWFC_CONF0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SWFC_CONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SWFC_CONF0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SWFC_CONF0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SWFC_CONF0_SPEC>;
 #[doc = "Field `XOFF_THRESHOLD` reader - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
 pub type XOFF_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `XOFF_THRESHOLD` writer - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
-pub type XOFF_THRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SPEC, 10, O, u16>;
+pub type XOFF_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `XOFF_CHAR` reader - This register stores the Xoff flow control char."]
 pub type XOFF_CHAR_R = crate::FieldReader;
 #[doc = "Field `XOFF_CHAR` writer - This register stores the Xoff flow control char."]
-pub type XOFF_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SPEC, 8, O>;
+pub type XOFF_CHAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:9 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
     #[inline(always)]
@@ -76,34 +44,31 @@ impl W {
     #[doc = "Bits 0:9 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
     #[inline(always)]
     #[must_use]
-    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<0> {
+    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF0_SPEC, 0> {
         XOFF_THRESHOLD_W::new(self)
     }
     #[doc = "Bits 10:17 - This register stores the Xoff flow control char."]
     #[inline(always)]
     #[must_use]
-    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<10> {
+    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF0_SPEC, 10> {
         XOFF_CHAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Software flow-control character configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swfc_conf0](index.html) module"]
+#[doc = "Software flow-control character configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swfc_conf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swfc_conf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SWFC_CONF0_SPEC;
 impl crate::RegisterSpec for SWFC_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swfc_conf0::R](R) reader structure"]
-impl crate::Readable for SWFC_CONF0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [swfc_conf0::W](W) writer structure"]
+#[doc = "`read()` method returns [`swfc_conf0::R`](R) reader structure"]
+impl crate::Readable for SWFC_CONF0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`swfc_conf0::W`](W) writer structure"]
 impl crate::Writable for SWFC_CONF0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

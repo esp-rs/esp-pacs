@@ -1,87 +1,55 @@
 #[doc = "Register `CONF2` reader"]
-pub struct R(crate::R<CONF2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF2_SPEC>;
 #[doc = "Register `CONF2` writer"]
-pub struct W(crate::W<CONF2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF2_SPEC>;
 #[doc = "Field `CAMERA_EN` reader - Set this bit to enable camera mode."]
 pub type CAMERA_EN_R = crate::BitReader;
 #[doc = "Field `CAMERA_EN` writer - Set this bit to enable camera mode."]
-pub type CAMERA_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type CAMERA_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_TX_WRX2_EN` reader - LCD WR double for one datum."]
 pub type LCD_TX_WRX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_WRX2_EN` writer - LCD WR double for one datum."]
-pub type LCD_TX_WRX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type LCD_TX_WRX2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_TX_SDX2_EN` reader - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
 pub type LCD_TX_SDX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_SDX2_EN` writer - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
-pub type LCD_TX_SDX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type LCD_TX_SDX2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DATA_ENABLE_TEST_EN` reader - for debug camera mode enable"]
 pub type DATA_ENABLE_TEST_EN_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE_TEST_EN` writer - for debug camera mode enable"]
-pub type DATA_ENABLE_TEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type DATA_ENABLE_TEST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DATA_ENABLE` reader - for debug camera mode enable"]
 pub type DATA_ENABLE_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE` writer - for debug camera mode enable"]
-pub type DATA_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type DATA_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_EN` reader - Set this bit to enable LCD mode."]
 pub type LCD_EN_R = crate::BitReader;
 #[doc = "Field `LCD_EN` writer - Set this bit to enable LCD mode."]
-pub type LCD_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type LCD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EXT_ADC_START_EN` reader - Set this bit to enable the function that ADC mode is triggered by external signal."]
 pub type EXT_ADC_START_EN_R = crate::BitReader;
 #[doc = "Field `EXT_ADC_START_EN` writer - Set this bit to enable the function that ADC mode is triggered by external signal."]
-pub type EXT_ADC_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type EXT_ADC_START_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INTER_VALID_EN` reader - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
 pub type INTER_VALID_EN_R = crate::BitReader;
 #[doc = "Field `INTER_VALID_EN` writer - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
-pub type INTER_VALID_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type INTER_VALID_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAM_SYNC_FIFO_RESET` reader - Set this bit to reset FIFO in camera mode."]
 pub type CAM_SYNC_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `CAM_SYNC_FIFO_RESET` writer - Set this bit to reset FIFO in camera mode."]
-pub type CAM_SYNC_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type CAM_SYNC_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAM_CLK_LOOPBACK` reader - Set this bit to loopback PCLK from I2S0I_WS_out."]
 pub type CAM_CLK_LOOPBACK_R = crate::BitReader;
 #[doc = "Field `CAM_CLK_LOOPBACK` writer - Set this bit to loopback PCLK from I2S0I_WS_out."]
-pub type CAM_CLK_LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type CAM_CLK_LOOPBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VSYNC_FILTER_EN` reader - Set this bit to enable I2S VSYNC filter function."]
 pub type VSYNC_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `VSYNC_FILTER_EN` writer - Set this bit to enable I2S VSYNC filter function."]
-pub type VSYNC_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type VSYNC_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VSYNC_FILTER_THRES` reader - Configure the I2S VSYNC filter threshold value."]
 pub type VSYNC_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `VSYNC_FILTER_THRES` writer - Configure the I2S VSYNC filter threshold value."]
-pub type VSYNC_FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CONF2_SPEC, 3, O>;
+pub type VSYNC_FILTER_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable camera mode."]
     #[inline(always)]
@@ -200,94 +168,91 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable camera mode."]
     #[inline(always)]
     #[must_use]
-    pub fn camera_en(&mut self) -> CAMERA_EN_W<0> {
+    pub fn camera_en(&mut self) -> CAMERA_EN_W<CONF2_SPEC, 0> {
         CAMERA_EN_W::new(self)
     }
     #[doc = "Bit 1 - LCD WR double for one datum."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<1> {
+    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<CONF2_SPEC, 1> {
         LCD_TX_WRX2_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<2> {
+    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<CONF2_SPEC, 2> {
         LCD_TX_SDX2_EN_W::new(self)
     }
     #[doc = "Bit 3 - for debug camera mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<3> {
+    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<CONF2_SPEC, 3> {
         DATA_ENABLE_TEST_EN_W::new(self)
     }
     #[doc = "Bit 4 - for debug camera mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn data_enable(&mut self) -> DATA_ENABLE_W<4> {
+    pub fn data_enable(&mut self) -> DATA_ENABLE_W<CONF2_SPEC, 4> {
         DATA_ENABLE_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable LCD mode."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_en(&mut self) -> LCD_EN_W<5> {
+    pub fn lcd_en(&mut self) -> LCD_EN_W<CONF2_SPEC, 5> {
         LCD_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable the function that ADC mode is triggered by external signal."]
     #[inline(always)]
     #[must_use]
-    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<6> {
+    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<CONF2_SPEC, 6> {
         EXT_ADC_START_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
     #[inline(always)]
     #[must_use]
-    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<7> {
+    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<CONF2_SPEC, 7> {
         INTER_VALID_EN_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to reset FIFO in camera mode."]
     #[inline(always)]
     #[must_use]
-    pub fn cam_sync_fifo_reset(&mut self) -> CAM_SYNC_FIFO_RESET_W<8> {
+    pub fn cam_sync_fifo_reset(&mut self) -> CAM_SYNC_FIFO_RESET_W<CONF2_SPEC, 8> {
         CAM_SYNC_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to loopback PCLK from I2S0I_WS_out."]
     #[inline(always)]
     #[must_use]
-    pub fn cam_clk_loopback(&mut self) -> CAM_CLK_LOOPBACK_W<9> {
+    pub fn cam_clk_loopback(&mut self) -> CAM_CLK_LOOPBACK_W<CONF2_SPEC, 9> {
         CAM_CLK_LOOPBACK_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable I2S VSYNC filter function."]
     #[inline(always)]
     #[must_use]
-    pub fn vsync_filter_en(&mut self) -> VSYNC_FILTER_EN_W<10> {
+    pub fn vsync_filter_en(&mut self) -> VSYNC_FILTER_EN_W<CONF2_SPEC, 10> {
         VSYNC_FILTER_EN_W::new(self)
     }
     #[doc = "Bits 11:13 - Configure the I2S VSYNC filter threshold value."]
     #[inline(always)]
     #[must_use]
-    pub fn vsync_filter_thres(&mut self) -> VSYNC_FILTER_THRES_W<11> {
+    pub fn vsync_filter_thres(&mut self) -> VSYNC_FILTER_THRES_W<CONF2_SPEC, 11> {
         VSYNC_FILTER_THRES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S configuration register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf2](index.html) module"]
+#[doc = "I2S configuration register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF2_SPEC;
 impl crate::RegisterSpec for CONF2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf2::R](R) reader structure"]
-impl crate::Readable for CONF2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf2::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf2::R`](R) reader structure"]
+impl crate::Readable for CONF2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf2::W`](W) writer structure"]
 impl crate::Writable for CONF2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

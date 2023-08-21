@@ -1,51 +1,19 @@
 #[doc = "Register `CMD` reader"]
-pub struct R(crate::R<CMD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CMD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CMD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CMD_SPEC>;
 #[doc = "Register `CMD` writer"]
-pub struct W(crate::W<CMD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CMD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CMD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CMD_SPEC>;
 #[doc = "Field `READ_CMD` reader - Set this bit to send read command."]
 pub type READ_CMD_R = crate::BitReader;
 #[doc = "Field `READ_CMD` writer - Set this bit to send read command."]
-pub type READ_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
+pub type READ_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PGM_CMD` reader - Set this bit to send programming command."]
 pub type PGM_CMD_R = crate::BitReader;
 #[doc = "Field `PGM_CMD` writer - Set this bit to send programming command."]
-pub type PGM_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
+pub type PGM_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BLK_NUM` reader - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
 pub type BLK_NUM_R = crate::FieldReader;
 #[doc = "Field `BLK_NUM` writer - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
-pub type BLK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 2, O>;
+pub type BLK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to send read command."]
     #[inline(always)]
@@ -83,40 +51,37 @@ impl W {
     #[doc = "Bit 0 - Set this bit to send read command."]
     #[inline(always)]
     #[must_use]
-    pub fn read_cmd(&mut self) -> READ_CMD_W<0> {
+    pub fn read_cmd(&mut self) -> READ_CMD_W<CMD_SPEC, 0> {
         READ_CMD_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to send programming command."]
     #[inline(always)]
     #[must_use]
-    pub fn pgm_cmd(&mut self) -> PGM_CMD_W<1> {
+    pub fn pgm_cmd(&mut self) -> PGM_CMD_W<CMD_SPEC, 1> {
         PGM_CMD_W::new(self)
     }
     #[doc = "Bits 2:3 - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
     #[inline(always)]
     #[must_use]
-    pub fn blk_num(&mut self) -> BLK_NUM_W<2> {
+    pub fn blk_num(&mut self) -> BLK_NUM_W<CMD_SPEC, 2> {
         BLK_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "eFuse command register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd](index.html) module"]
+#[doc = "eFuse command register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMD_SPEC;
 impl crate::RegisterSpec for CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmd::R](R) reader structure"]
-impl crate::Readable for CMD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
+#[doc = "`read()` method returns [`cmd::R`](R) reader structure"]
+impl crate::Readable for CMD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cmd::W`](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

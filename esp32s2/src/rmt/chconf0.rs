@@ -1,63 +1,31 @@
 #[doc = "Register `CH%sCONF0` reader"]
-pub struct R(crate::R<CHCONF0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CHCONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CHCONF0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CHCONF0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CHCONF0_SPEC>;
 #[doc = "Register `CH%sCONF0` writer"]
-pub struct W(crate::W<CHCONF0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CHCONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CHCONF0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CHCONF0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CHCONF0_SPEC>;
 #[doc = "Field `DIV_CNT` reader - This register is used to configure the divider for clock of CHANNEL%s."]
 pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - This register is used to configure the divider for clock of CHANNEL%s."]
-pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, CHCONF0_SPEC, 8, O>;
+pub type DIV_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `IDLE_THRES` reader - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
 pub type IDLE_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `IDLE_THRES` writer - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
-pub type IDLE_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CHCONF0_SPEC, 16, O, u16>;
+pub type IDLE_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `MEM_SIZE` reader - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
 pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
-pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CHCONF0_SPEC, 3, O>;
+pub type MEM_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `CARRIER_EFF_EN` reader - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
 pub type CARRIER_EFF_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EFF_EN` writer - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
-pub type CARRIER_EFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF0_SPEC, O>;
+pub type CARRIER_EFF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CARRIER_EN` reader - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
 pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
-pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF0_SPEC, O>;
+pub type CARRIER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CARRIER_OUT_LV` reader - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
 pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
-pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF0_SPEC, O>;
+pub type CARRIER_OUT_LV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the divider for clock of CHANNEL%s."]
     #[inline(always)]
@@ -119,58 +87,55 @@ impl W {
     #[doc = "Bits 0:7 - This register is used to configure the divider for clock of CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn div_cnt(&mut self) -> DIV_CNT_W<0> {
+    pub fn div_cnt(&mut self) -> DIV_CNT_W<CHCONF0_SPEC, 0> {
         DIV_CNT_W::new(self)
     }
     #[doc = "Bits 8:23 - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
     #[inline(always)]
     #[must_use]
-    pub fn idle_thres(&mut self) -> IDLE_THRES_W<8> {
+    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CHCONF0_SPEC, 8> {
         IDLE_THRES_W::new(self)
     }
     #[doc = "Bits 24:26 - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_size(&mut self) -> MEM_SIZE_W<24> {
+    pub fn mem_size(&mut self) -> MEM_SIZE_W<CHCONF0_SPEC, 24> {
         MEM_SIZE_W::new(self)
     }
     #[doc = "Bit 27 - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<27> {
+    pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<CHCONF0_SPEC, 27> {
         CARRIER_EFF_EN_W::new(self)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_en(&mut self) -> CARRIER_EN_W<28> {
+    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CHCONF0_SPEC, 28> {
         CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 29 - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<29> {
+    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CHCONF0_SPEC, 29> {
         CARRIER_OUT_LV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Channel %s configure register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chconf0](index.html) module"]
+#[doc = "Channel %s configure register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chconf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chconf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CHCONF0_SPEC;
 impl crate::RegisterSpec for CHCONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [chconf0::R](R) reader structure"]
-impl crate::Readable for CHCONF0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [chconf0::W](W) writer structure"]
+#[doc = "`read()` method returns [`chconf0::R`](R) reader structure"]
+impl crate::Readable for CHCONF0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`chconf0::W`](W) writer structure"]
 impl crate::Writable for CHCONF0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

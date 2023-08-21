@@ -1,43 +1,11 @@
 #[doc = "Register `OUT_PRI_CH%s` reader"]
-pub struct R(crate::R<OUT_PRI_CH_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OUT_PRI_CH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OUT_PRI_CH_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OUT_PRI_CH_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OUT_PRI_CH_SPEC>;
 #[doc = "Register `OUT_PRI_CH%s` writer"]
-pub struct W(crate::W<OUT_PRI_CH_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<OUT_PRI_CH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<OUT_PRI_CH_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<OUT_PRI_CH_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<OUT_PRI_CH_SPEC>;
 #[doc = "Field `TX_PRI` reader - The priority of Tx channel 0. The larger of the value the higher of the priority."]
 pub type TX_PRI_R = crate::FieldReader;
 #[doc = "Field `TX_PRI` writer - The priority of Tx channel 0. The larger of the value the higher of the priority."]
-pub type TX_PRI_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_PRI_CH_SPEC, 4, O>;
+pub type TX_PRI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - The priority of Tx channel 0. The larger of the value the higher of the priority."]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:3 - The priority of Tx channel 0. The larger of the value the higher of the priority."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pri(&mut self) -> TX_PRI_W<0> {
+    pub fn tx_pri(&mut self) -> TX_PRI_W<OUT_PRI_CH_SPEC, 0> {
         TX_PRI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Priority register of Tx channel 0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_pri_ch](index.html) module"]
+#[doc = "Priority register of Tx channel 0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_pri_ch::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_pri_ch::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_PRI_CH_SPEC;
 impl crate::RegisterSpec for OUT_PRI_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_pri_ch::R](R) reader structure"]
-impl crate::Readable for OUT_PRI_CH_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [out_pri_ch::W](W) writer structure"]
+#[doc = "`read()` method returns [`out_pri_ch::R`](R) reader structure"]
+impl crate::Readable for OUT_PRI_CH_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`out_pri_ch::W`](W) writer structure"]
 impl crate::Writable for OUT_PRI_CH_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

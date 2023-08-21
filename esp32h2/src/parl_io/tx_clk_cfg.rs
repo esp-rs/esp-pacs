@@ -1,47 +1,15 @@
 #[doc = "Register `TX_CLK_CFG` reader"]
-pub struct R(crate::R<TX_CLK_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TX_CLK_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TX_CLK_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TX_CLK_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TX_CLK_CFG_SPEC>;
 #[doc = "Register `TX_CLK_CFG` writer"]
-pub struct W(crate::W<TX_CLK_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TX_CLK_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TX_CLK_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TX_CLK_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TX_CLK_CFG_SPEC>;
 #[doc = "Field `TX_CLK_I_INV` reader - Set this bit to invert the input Tx core clock."]
 pub type TX_CLK_I_INV_R = crate::BitReader;
 #[doc = "Field `TX_CLK_I_INV` writer - Set this bit to invert the input Tx core clock."]
-pub type TX_CLK_I_INV_W<'a, const O: u8> = crate::BitWriter<'a, TX_CLK_CFG_SPEC, O>;
+pub type TX_CLK_I_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_CLK_O_INV` reader - Set this bit to invert the output Tx core clock."]
 pub type TX_CLK_O_INV_R = crate::BitReader;
 #[doc = "Field `TX_CLK_O_INV` writer - Set this bit to invert the output Tx core clock."]
-pub type TX_CLK_O_INV_W<'a, const O: u8> = crate::BitWriter<'a, TX_CLK_CFG_SPEC, O>;
+pub type TX_CLK_O_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 30 - Set this bit to invert the input Tx core clock."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bit 30 - Set this bit to invert the input Tx core clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_i_inv(&mut self) -> TX_CLK_I_INV_W<30> {
+    pub fn tx_clk_i_inv(&mut self) -> TX_CLK_I_INV_W<TX_CLK_CFG_SPEC, 30> {
         TX_CLK_I_INV_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to invert the output Tx core clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_o_inv(&mut self) -> TX_CLK_O_INV_W<31> {
+    pub fn tx_clk_o_inv(&mut self) -> TX_CLK_O_INV_W<TX_CLK_CFG_SPEC, 31> {
         TX_CLK_O_INV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Parallel IO TX clk configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_clk_cfg](index.html) module"]
+#[doc = "Parallel IO TX clk configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_clk_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_clk_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_CLK_CFG_SPEC;
 impl crate::RegisterSpec for TX_CLK_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_clk_cfg::R](R) reader structure"]
-impl crate::Readable for TX_CLK_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tx_clk_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`tx_clk_cfg::R`](R) reader structure"]
+impl crate::Readable for TX_CLK_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tx_clk_cfg::W`](W) writer structure"]
 impl crate::Writable for TX_CLK_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,44 +1,11 @@
 #[doc = "Register `TRACEMEM_MUX_MODE` reader"]
-pub struct R(crate::R<TRACEMEM_MUX_MODE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TRACEMEM_MUX_MODE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TRACEMEM_MUX_MODE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TRACEMEM_MUX_MODE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TRACEMEM_MUX_MODE_SPEC>;
 #[doc = "Register `TRACEMEM_MUX_MODE` writer"]
-pub struct W(crate::W<TRACEMEM_MUX_MODE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TRACEMEM_MUX_MODE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TRACEMEM_MUX_MODE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TRACEMEM_MUX_MODE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TRACEMEM_MUX_MODE_SPEC>;
 #[doc = "Field `TRACEMEM_MUX_MODE` reader - "]
 pub type TRACEMEM_MUX_MODE_R = crate::FieldReader;
 #[doc = "Field `TRACEMEM_MUX_MODE` writer - "]
-pub type TRACEMEM_MUX_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TRACEMEM_MUX_MODE_SPEC, 2, O>;
+pub type TRACEMEM_MUX_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -67,28 +34,25 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn tracemem_mux_mode(&mut self) -> TRACEMEM_MUX_MODE_W<0> {
+    pub fn tracemem_mux_mode(&mut self) -> TRACEMEM_MUX_MODE_W<TRACEMEM_MUX_MODE_SPEC, 0> {
         TRACEMEM_MUX_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tracemem_mux_mode](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tracemem_mux_mode::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tracemem_mux_mode::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TRACEMEM_MUX_MODE_SPEC;
 impl crate::RegisterSpec for TRACEMEM_MUX_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tracemem_mux_mode::R](R) reader structure"]
-impl crate::Readable for TRACEMEM_MUX_MODE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tracemem_mux_mode::W](W) writer structure"]
+#[doc = "`read()` method returns [`tracemem_mux_mode::R`](R) reader structure"]
+impl crate::Readable for TRACEMEM_MUX_MODE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tracemem_mux_mode::W`](W) writer structure"]
 impl crate::Writable for TRACEMEM_MUX_MODE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

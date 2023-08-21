@@ -1,79 +1,47 @@
 #[doc = "Register `REG` reader"]
-pub struct R(crate::R<REG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<REG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<REG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<REG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<REG_SPEC>;
 #[doc = "Register `REG` writer"]
-pub struct W(crate::W<REG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<REG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<REG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<REG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<REG_SPEC>;
 #[doc = "Field `SCK_DCAP_FORCE` reader - N/A"]
 pub type SCK_DCAP_FORCE_R = crate::BitReader;
 #[doc = "Field `SCK_DCAP_FORCE` writer - N/A"]
-pub type SCK_DCAP_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
+pub type SCK_DCAP_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DIG_DBIAS_SLP` reader - DIG_REG_DBIAS during sleep"]
 pub type DIG_DBIAS_SLP_R = crate::FieldReader;
 #[doc = "Field `DIG_DBIAS_SLP` writer - DIG_REG_DBIAS during sleep"]
-pub type DIG_DBIAS_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
+pub type DIG_DBIAS_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `DIG_DBIAS_WAK` reader - DIG_REG_DBIAS during wakeup"]
 pub type DIG_DBIAS_WAK_R = crate::FieldReader;
 #[doc = "Field `DIG_DBIAS_WAK` writer - DIG_REG_DBIAS during wakeup"]
-pub type DIG_DBIAS_WAK_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
+pub type DIG_DBIAS_WAK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `SCK_DCAP` reader - SCK_DCAP"]
 pub type SCK_DCAP_R = crate::FieldReader;
 #[doc = "Field `SCK_DCAP` writer - SCK_DCAP"]
-pub type SCK_DCAP_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 8, O>;
+pub type SCK_DCAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `DBIAS_SLP` reader - RTC_DBIAS during sleep"]
 pub type DBIAS_SLP_R = crate::FieldReader;
 #[doc = "Field `DBIAS_SLP` writer - RTC_DBIAS during sleep"]
-pub type DBIAS_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
+pub type DBIAS_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `DBIAS_WAK` reader - RTC_DBIAS during wakeup"]
 pub type DBIAS_WAK_R = crate::FieldReader;
 #[doc = "Field `DBIAS_WAK` writer - RTC_DBIAS during wakeup"]
-pub type DBIAS_WAK_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
+pub type DBIAS_WAK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
 pub type DBOOST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PD` writer - RTC_DBOOST force power down"]
-pub type DBOOST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
+pub type DBOOST_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
 pub type DBOOST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PU` writer - RTC_DBOOST force power up"]
-pub type DBOOST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
+pub type DBOOST_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_PD` reader - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
 pub type FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_PD` writer - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub type FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
+pub type FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_PU` reader - RTC_REG force power up"]
 pub type FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_PU` writer - RTC_REG force power up"]
-pub type FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
+pub type FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 7 - N/A"]
     #[inline(always)]
@@ -168,82 +136,79 @@ impl W {
     #[doc = "Bit 7 - N/A"]
     #[inline(always)]
     #[must_use]
-    pub fn sck_dcap_force(&mut self) -> SCK_DCAP_FORCE_W<7> {
+    pub fn sck_dcap_force(&mut self) -> SCK_DCAP_FORCE_W<REG_SPEC, 7> {
         SCK_DCAP_FORCE_W::new(self)
     }
     #[doc = "Bits 8:10 - DIG_REG_DBIAS during sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn dig_dbias_slp(&mut self) -> DIG_DBIAS_SLP_W<8> {
+    pub fn dig_dbias_slp(&mut self) -> DIG_DBIAS_SLP_W<REG_SPEC, 8> {
         DIG_DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 11:13 - DIG_REG_DBIAS during wakeup"]
     #[inline(always)]
     #[must_use]
-    pub fn dig_dbias_wak(&mut self) -> DIG_DBIAS_WAK_W<11> {
+    pub fn dig_dbias_wak(&mut self) -> DIG_DBIAS_WAK_W<REG_SPEC, 11> {
         DIG_DBIAS_WAK_W::new(self)
     }
     #[doc = "Bits 14:21 - SCK_DCAP"]
     #[inline(always)]
     #[must_use]
-    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<14> {
+    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<REG_SPEC, 14> {
         SCK_DCAP_W::new(self)
     }
     #[doc = "Bits 22:24 - RTC_DBIAS during sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn dbias_slp(&mut self) -> DBIAS_SLP_W<22> {
+    pub fn dbias_slp(&mut self) -> DBIAS_SLP_W<REG_SPEC, 22> {
         DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 25:27 - RTC_DBIAS during wakeup"]
     #[inline(always)]
     #[must_use]
-    pub fn dbias_wak(&mut self) -> DBIAS_WAK_W<25> {
+    pub fn dbias_wak(&mut self) -> DBIAS_WAK_W<REG_SPEC, 25> {
         DBIAS_WAK_W::new(self)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
     #[must_use]
-    pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<28> {
+    pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<REG_SPEC, 28> {
         DBOOST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<29> {
+    pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<REG_SPEC, 29> {
         DBOOST_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
     #[must_use]
-    pub fn force_pd(&mut self) -> FORCE_PD_W<30> {
+    pub fn force_pd(&mut self) -> FORCE_PD_W<REG_SPEC, 30> {
         FORCE_PD_W::new(self)
     }
     #[doc = "Bit 31 - RTC_REG force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn force_pu(&mut self) -> FORCE_PU_W<31> {
+    pub fn force_pu(&mut self) -> FORCE_PU_W<REG_SPEC, 31> {
         FORCE_PU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REG_SPEC;
 impl crate::RegisterSpec for REG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reg::R](R) reader structure"]
-impl crate::Readable for REG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reg::W](W) writer structure"]
+#[doc = "`read()` method returns [`reg::R`](R) reader structure"]
+impl crate::Readable for REG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`reg::W`](W) writer structure"]
 impl crate::Writable for REG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

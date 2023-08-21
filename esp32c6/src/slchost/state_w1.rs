@@ -1,18 +1,5 @@
 #[doc = "Register `STATE_W1` reader"]
-pub struct R(crate::R<STATE_W1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STATE_W1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STATE_W1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STATE_W1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STATE_W1_SPEC>;
 #[doc = "Field `SLCHOST_STATE4` reader - *******Description***********"]
 pub type SLCHOST_STATE4_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_STATE5` reader - *******Description***********"]
@@ -72,15 +59,13 @@ impl core::fmt::Debug for crate::generic::Reg<STATE_W1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state_w1](index.html) module"]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`state_w1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATE_W1_SPEC;
 impl crate::RegisterSpec for STATE_W1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [state_w1::R](R) reader structure"]
-impl crate::Readable for STATE_W1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`state_w1::R`](R) reader structure"]
+impl crate::Readable for STATE_W1_SPEC {}
 #[doc = "`reset()` method sets STATE_W1 to value 0"]
 impl crate::Resettable for STATE_W1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

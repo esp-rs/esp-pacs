@@ -1,55 +1,23 @@
 #[doc = "Register `TIME_UPDATE` reader"]
-pub struct R(crate::R<TIME_UPDATE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TIME_UPDATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TIME_UPDATE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TIME_UPDATE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TIME_UPDATE_SPEC>;
 #[doc = "Register `TIME_UPDATE` writer"]
-pub struct W(crate::W<TIME_UPDATE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TIME_UPDATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TIME_UPDATE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TIME_UPDATE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TIME_UPDATE_SPEC>;
 #[doc = "Field `TIMER_SYS_STALL` reader - Enable to record system stall time"]
 pub type TIMER_SYS_STALL_R = crate::BitReader;
 #[doc = "Field `TIMER_SYS_STALL` writer - Enable to record system stall time"]
-pub type TIMER_SYS_STALL_W<'a, const O: u8> = crate::BitWriter<'a, TIME_UPDATE_SPEC, O>;
+pub type TIMER_SYS_STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TIMER_XTL_OFF` reader - Enable to record 40M XTAL OFF time"]
 pub type TIMER_XTL_OFF_R = crate::BitReader;
 #[doc = "Field `TIMER_XTL_OFF` writer - Enable to record 40M XTAL OFF time"]
-pub type TIMER_XTL_OFF_W<'a, const O: u8> = crate::BitWriter<'a, TIME_UPDATE_SPEC, O>;
+pub type TIMER_XTL_OFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TIMER_SYS_RST` reader - enable to record system reset time"]
 pub type TIMER_SYS_RST_R = crate::BitReader;
 #[doc = "Field `TIMER_SYS_RST` writer - enable to record system reset time"]
-pub type TIMER_SYS_RST_W<'a, const O: u8> = crate::BitWriter<'a, TIME_UPDATE_SPEC, O>;
+pub type TIMER_SYS_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TIME_UPDATE` reader - Set 1: to update register with RTC timer"]
 pub type TIME_UPDATE_R = crate::BitReader;
 #[doc = "Field `TIME_UPDATE` writer - Set 1: to update register with RTC timer"]
-pub type TIME_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, TIME_UPDATE_SPEC, O>;
+pub type TIME_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 27 - Enable to record system stall time"]
     #[inline(always)]
@@ -102,46 +70,43 @@ impl W {
     #[doc = "Bit 27 - Enable to record system stall time"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_sys_stall(&mut self) -> TIMER_SYS_STALL_W<27> {
+    pub fn timer_sys_stall(&mut self) -> TIMER_SYS_STALL_W<TIME_UPDATE_SPEC, 27> {
         TIMER_SYS_STALL_W::new(self)
     }
     #[doc = "Bit 28 - Enable to record 40M XTAL OFF time"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_xtl_off(&mut self) -> TIMER_XTL_OFF_W<28> {
+    pub fn timer_xtl_off(&mut self) -> TIMER_XTL_OFF_W<TIME_UPDATE_SPEC, 28> {
         TIMER_XTL_OFF_W::new(self)
     }
     #[doc = "Bit 29 - enable to record system reset time"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_sys_rst(&mut self) -> TIMER_SYS_RST_W<29> {
+    pub fn timer_sys_rst(&mut self) -> TIMER_SYS_RST_W<TIME_UPDATE_SPEC, 29> {
         TIMER_SYS_RST_W::new(self)
     }
     #[doc = "Bit 31 - Set 1: to update register with RTC timer"]
     #[inline(always)]
     #[must_use]
-    pub fn time_update(&mut self) -> TIME_UPDATE_W<31> {
+    pub fn time_update(&mut self) -> TIME_UPDATE_W<TIME_UPDATE_SPEC, 31> {
         TIME_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [time_update](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_update::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`time_update::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIME_UPDATE_SPEC;
 impl crate::RegisterSpec for TIME_UPDATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [time_update::R](R) reader structure"]
-impl crate::Readable for TIME_UPDATE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [time_update::W](W) writer structure"]
+#[doc = "`read()` method returns [`time_update::R`](R) reader structure"]
+impl crate::Readable for TIME_UPDATE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`time_update::W`](W) writer structure"]
 impl crate::Writable for TIME_UPDATE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,63 +1,31 @@
 #[doc = "Register `PLC_CONF0` reader"]
-pub struct R(crate::R<PLC_CONF0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PLC_CONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PLC_CONF0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PLC_CONF0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PLC_CONF0_SPEC>;
 #[doc = "Register `PLC_CONF0` writer"]
-pub struct W(crate::W<PLC_CONF0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PLC_CONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PLC_CONF0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PLC_CONF0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PLC_CONF0_SPEC>;
 #[doc = "Field `GOOD_PACK_MAX` reader - "]
 pub type GOOD_PACK_MAX_R = crate::FieldReader;
 #[doc = "Field `GOOD_PACK_MAX` writer - "]
-pub type GOOD_PACK_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 6, O>;
+pub type GOOD_PACK_MAX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `N_ERR_SEG` reader - "]
 pub type N_ERR_SEG_R = crate::FieldReader;
 #[doc = "Field `N_ERR_SEG` writer - "]
-pub type N_ERR_SEG_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 3, O>;
+pub type N_ERR_SEG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `SHIFT_RATE` reader - "]
 pub type SHIFT_RATE_R = crate::FieldReader;
 #[doc = "Field `SHIFT_RATE` writer - "]
-pub type SHIFT_RATE_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 3, O>;
+pub type SHIFT_RATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `MAX_SLIDE_SAMPLE` reader - "]
 pub type MAX_SLIDE_SAMPLE_R = crate::FieldReader;
 #[doc = "Field `MAX_SLIDE_SAMPLE` writer - "]
-pub type MAX_SLIDE_SAMPLE_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 8, O>;
+pub type MAX_SLIDE_SAMPLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `PACK_LEN_8K` reader - "]
 pub type PACK_LEN_8K_R = crate::FieldReader;
 #[doc = "Field `PACK_LEN_8K` writer - "]
-pub type PACK_LEN_8K_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 5, O>;
+pub type PACK_LEN_8K_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `N_MIN_ERR` reader - "]
 pub type N_MIN_ERR_R = crate::FieldReader;
 #[doc = "Field `N_MIN_ERR` writer - "]
-pub type N_MIN_ERR_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 3, O>;
+pub type N_MIN_ERR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -122,58 +90,55 @@ impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn good_pack_max(&mut self) -> GOOD_PACK_MAX_W<0> {
+    pub fn good_pack_max(&mut self) -> GOOD_PACK_MAX_W<PLC_CONF0_SPEC, 0> {
         GOOD_PACK_MAX_W::new(self)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
     #[must_use]
-    pub fn n_err_seg(&mut self) -> N_ERR_SEG_W<6> {
+    pub fn n_err_seg(&mut self) -> N_ERR_SEG_W<PLC_CONF0_SPEC, 6> {
         N_ERR_SEG_W::new(self)
     }
     #[doc = "Bits 9:11"]
     #[inline(always)]
     #[must_use]
-    pub fn shift_rate(&mut self) -> SHIFT_RATE_W<9> {
+    pub fn shift_rate(&mut self) -> SHIFT_RATE_W<PLC_CONF0_SPEC, 9> {
         SHIFT_RATE_W::new(self)
     }
     #[doc = "Bits 12:19"]
     #[inline(always)]
     #[must_use]
-    pub fn max_slide_sample(&mut self) -> MAX_SLIDE_SAMPLE_W<12> {
+    pub fn max_slide_sample(&mut self) -> MAX_SLIDE_SAMPLE_W<PLC_CONF0_SPEC, 12> {
         MAX_SLIDE_SAMPLE_W::new(self)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
     #[must_use]
-    pub fn pack_len_8k(&mut self) -> PACK_LEN_8K_W<20> {
+    pub fn pack_len_8k(&mut self) -> PACK_LEN_8K_W<PLC_CONF0_SPEC, 20> {
         PACK_LEN_8K_W::new(self)
     }
     #[doc = "Bits 25:27"]
     #[inline(always)]
     #[must_use]
-    pub fn n_min_err(&mut self) -> N_MIN_ERR_W<25> {
+    pub fn n_min_err(&mut self) -> N_MIN_ERR_W<PLC_CONF0_SPEC, 25> {
         N_MIN_ERR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [plc_conf0](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`plc_conf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`plc_conf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLC_CONF0_SPEC;
 impl crate::RegisterSpec for PLC_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [plc_conf0::R](R) reader structure"]
-impl crate::Readable for PLC_CONF0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [plc_conf0::W](W) writer structure"]
+#[doc = "`read()` method returns [`plc_conf0::R`](R) reader structure"]
+impl crate::Readable for PLC_CONF0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`plc_conf0::W`](W) writer structure"]
 impl crate::Writable for PLC_CONF0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

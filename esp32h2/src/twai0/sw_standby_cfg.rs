@@ -1,47 +1,15 @@
 #[doc = "Register `SW_STANDBY_CFG` reader"]
-pub struct R(crate::R<SW_STANDBY_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SW_STANDBY_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SW_STANDBY_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SW_STANDBY_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SW_STANDBY_CFG_SPEC>;
 #[doc = "Register `SW_STANDBY_CFG` writer"]
-pub struct W(crate::W<SW_STANDBY_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SW_STANDBY_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SW_STANDBY_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SW_STANDBY_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SW_STANDBY_CFG_SPEC>;
 #[doc = "Field `SW_STANDBY_EN` reader - Enable standby pin."]
 pub type SW_STANDBY_EN_R = crate::BitReader;
 #[doc = "Field `SW_STANDBY_EN` writer - Enable standby pin."]
-pub type SW_STANDBY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SW_STANDBY_CFG_SPEC, O>;
+pub type SW_STANDBY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SW_STANDBY_CLR` reader - Clear standby pin."]
 pub type SW_STANDBY_CLR_R = crate::BitReader;
 #[doc = "Field `SW_STANDBY_CLR` writer - Clear standby pin."]
-pub type SW_STANDBY_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SW_STANDBY_CFG_SPEC, O>;
+pub type SW_STANDBY_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Enable standby pin."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bit 0 - Enable standby pin."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_standby_en(&mut self) -> SW_STANDBY_EN_W<0> {
+    pub fn sw_standby_en(&mut self) -> SW_STANDBY_EN_W<SW_STANDBY_CFG_SPEC, 0> {
         SW_STANDBY_EN_W::new(self)
     }
     #[doc = "Bit 1 - Clear standby pin."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_standby_clr(&mut self) -> SW_STANDBY_CLR_W<1> {
+    pub fn sw_standby_clr(&mut self) -> SW_STANDBY_CLR_W<SW_STANDBY_CFG_SPEC, 1> {
         SW_STANDBY_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Software configure standby pin directly.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sw_standby_cfg](index.html) module"]
+#[doc = "Software configure standby pin directly.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sw_standby_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sw_standby_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SW_STANDBY_CFG_SPEC;
 impl crate::RegisterSpec for SW_STANDBY_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sw_standby_cfg::R](R) reader structure"]
-impl crate::Readable for SW_STANDBY_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sw_standby_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`sw_standby_cfg::R`](R) reader structure"]
+impl crate::Readable for SW_STANDBY_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sw_standby_cfg::W`](W) writer structure"]
 impl crate::Writable for SW_STANDBY_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

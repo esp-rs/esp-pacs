@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_MEM_SRAM_CLK` reader"]
-pub struct R(crate::R<SPI_MEM_SRAM_CLK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_MEM_SRAM_CLK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_MEM_SRAM_CLK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_MEM_SRAM_CLK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_MEM_SRAM_CLK_SPEC>;
 #[doc = "Field `SPI_MEM_SCLKCNT_L` reader - For SPI0 external RAM interface, it must be equal to spi_mem_clkcnt_N."]
 pub type SPI_MEM_SCLKCNT_L_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_SCLKCNT_H` reader - For SPI0 external RAM interface, it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
@@ -72,15 +59,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_SRAM_CLK_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI0 external RAM clock control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_sram_clk](index.html) module"]
+#[doc = "SPI0 external RAM clock control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_sram_clk::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_SRAM_CLK_SPEC;
 impl crate::RegisterSpec for SPI_MEM_SRAM_CLK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_mem_sram_clk::R](R) reader structure"]
-impl crate::Readable for SPI_MEM_SRAM_CLK_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_mem_sram_clk::R`](R) reader structure"]
+impl crate::Readable for SPI_MEM_SRAM_CLK_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_SRAM_CLK to value 0x0003_0103"]
 impl crate::Resettable for SPI_MEM_SRAM_CLK_SPEC {
     const RESET_VALUE: Self::Ux = 0x0003_0103;

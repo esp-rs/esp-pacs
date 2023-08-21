@@ -1,18 +1,5 @@
 #[doc = "Register `RD_RS_ERR` reader"]
-pub struct R(crate::R<RD_RS_ERR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_RS_ERR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_RS_ERR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_RS_ERR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_RS_ERR_SPEC>;
 #[doc = "Field `BLK1_ERR_NUM` reader - The value of this signal means the number of error bytes in block1."]
 pub type BLK1_ERR_NUM_R = crate::FieldReader;
 #[doc = "Field `BLK1_FAIL` reader - 0: Means no failure and that the data of block1 is reliable 1: Means that programming user data failed and the number of error bytes is over 6."]
@@ -85,15 +72,13 @@ impl core::fmt::Debug for crate::generic::Reg<RD_RS_ERR_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Programming error record register 0 of BLOCK1-10.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_rs_err](index.html) module"]
+#[doc = "Programming error record register 0 of BLOCK1-10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_rs_err::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_RS_ERR_SPEC;
 impl crate::RegisterSpec for RD_RS_ERR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_rs_err::R](R) reader structure"]
-impl crate::Readable for RD_RS_ERR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rd_rs_err::R`](R) reader structure"]
+impl crate::Readable for RD_RS_ERR_SPEC {}
 #[doc = "`reset()` method sets RD_RS_ERR to value 0"]
 impl crate::Resettable for RD_RS_ERR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

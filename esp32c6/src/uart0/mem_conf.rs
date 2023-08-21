@@ -1,47 +1,15 @@
 #[doc = "Register `MEM_CONF` reader"]
-pub struct R(crate::R<MEM_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MEM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MEM_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MEM_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MEM_CONF_SPEC>;
 #[doc = "Register `MEM_CONF` writer"]
-pub struct W(crate::W<MEM_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MEM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MEM_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MEM_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MEM_CONF_SPEC>;
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force power down UART memory."]
 pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to force power down UART memory."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force power up UART memory."]
 pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - Set this bit to force power up UART memory."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 25 - Set this bit to force power down UART memory."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bit 25 - Set this bit to force power down UART memory."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<25> {
+    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<MEM_CONF_SPEC, 25> {
         MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to force power up UART memory."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<26> {
+    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<MEM_CONF_SPEC, 26> {
         MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "UART memory power configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_conf](index.html) module"]
+#[doc = "UART memory power configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mem_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MEM_CONF_SPEC;
 impl crate::RegisterSpec for MEM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_conf::R](R) reader structure"]
-impl crate::Readable for MEM_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [mem_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`mem_conf::R`](R) reader structure"]
+impl crate::Readable for MEM_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`mem_conf::W`](W) writer structure"]
 impl crate::Writable for MEM_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

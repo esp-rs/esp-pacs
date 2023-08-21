@@ -1,18 +1,5 @@
 #[doc = "Register `RX_ST1` reader"]
-pub struct R(crate::R<RX_ST1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RX_ST1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RX_ST1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RX_ST1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RX_ST1_SPEC>;
 #[doc = "Field `RX_FIFO_RD_BIT_CNT` reader - Indicates the current read bit number from Rx FIFO."]
 pub type RX_FIFO_RD_BIT_CNT_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<RX_ST1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Parallel IO RX status register1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_st1](index.html) module"]
+#[doc = "Parallel IO RX status register1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_st1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_ST1_SPEC;
 impl crate::RegisterSpec for RX_ST1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rx_st1::R](R) reader structure"]
-impl crate::Readable for RX_ST1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rx_st1::R`](R) reader structure"]
+impl crate::Readable for RX_ST1_SPEC {}
 #[doc = "`reset()` method sets RX_ST1 to value 0"]
 impl crate::Resettable for RX_ST1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

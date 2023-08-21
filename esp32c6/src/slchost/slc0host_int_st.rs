@@ -1,18 +1,5 @@
 #[doc = "Register `SLC0HOST_INT_ST` reader"]
-pub struct R(crate::R<SLC0HOST_INT_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLC0HOST_INT_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLC0HOST_INT_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLC0HOST_INT_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLC0HOST_INT_ST_SPEC>;
 #[doc = "Field `SLC0_TOHOST_BIT0_INT_ST` reader - *******Description***********"]
 pub type SLC0_TOHOST_BIT0_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLC0_TOHOST_BIT1_INT_ST` reader - *******Description***********"]
@@ -314,15 +301,13 @@ impl core::fmt::Debug for crate::generic::Reg<SLC0HOST_INT_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slc0host_int_st](index.html) module"]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc0host_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC0HOST_INT_ST_SPEC;
 impl crate::RegisterSpec for SLC0HOST_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slc0host_int_st::R](R) reader structure"]
-impl crate::Readable for SLC0HOST_INT_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`slc0host_int_st::R`](R) reader structure"]
+impl crate::Readable for SLC0HOST_INT_ST_SPEC {}
 #[doc = "`reset()` method sets SLC0HOST_INT_ST to value 0"]
 impl crate::Resettable for SLC0HOST_INT_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

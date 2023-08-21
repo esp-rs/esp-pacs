@@ -1,18 +1,5 @@
 #[doc = "Register `OUT_DSCR_CH0` reader"]
-pub struct R(crate::R<OUT_DSCR_CH0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OUT_DSCR_CH0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OUT_DSCR_CH0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OUT_DSCR_CH0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OUT_DSCR_CH0_SPEC>;
 #[doc = "Field `OUTLINK_DSCR` reader - The address of the current outlink descriptor y."]
 pub type OUTLINK_DSCR_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_DSCR_CH0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "DMA_OUT_DSCR_CH0_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_dscr_ch0](index.html) module"]
+#[doc = "DMA_OUT_DSCR_CH0_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_dscr_ch0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_DSCR_CH0_SPEC;
 impl crate::RegisterSpec for OUT_DSCR_CH0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_dscr_ch0::R](R) reader structure"]
-impl crate::Readable for OUT_DSCR_CH0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`out_dscr_ch0::R`](R) reader structure"]
+impl crate::Readable for OUT_DSCR_CH0_SPEC {}
 #[doc = "`reset()` method sets OUT_DSCR_CH0 to value 0"]
 impl crate::Resettable for OUT_DSCR_CH0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

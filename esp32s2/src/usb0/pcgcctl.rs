@@ -1,55 +1,23 @@
 #[doc = "Register `PCGCCTL` reader"]
-pub struct R(crate::R<PCGCCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PCGCCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PCGCCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PCGCCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PCGCCTL_SPEC>;
 #[doc = "Register `PCGCCTL` writer"]
-pub struct W(crate::W<PCGCCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PCGCCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PCGCCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PCGCCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PCGCCTL_SPEC>;
 #[doc = "Field `STOPPCLK` reader - "]
 pub type STOPPCLK_R = crate::BitReader;
 #[doc = "Field `STOPPCLK` writer - "]
-pub type STOPPCLK_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
+pub type STOPPCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GATEHCLK` reader - "]
 pub type GATEHCLK_R = crate::BitReader;
 #[doc = "Field `GATEHCLK` writer - "]
-pub type GATEHCLK_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
+pub type GATEHCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PWRCLMP` reader - "]
 pub type PWRCLMP_R = crate::BitReader;
 #[doc = "Field `PWRCLMP` writer - "]
-pub type PWRCLMP_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
+pub type PWRCLMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RSTPDWNMODULE` reader - "]
 pub type RSTPDWNMODULE_R = crate::BitReader;
 #[doc = "Field `RSTPDWNMODULE` writer - "]
-pub type RSTPDWNMODULE_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
+pub type RSTPDWNMODULE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PHYSLEEP` reader - "]
 pub type PHYSLEEP_R = crate::BitReader;
 #[doc = "Field `L1SUSPENDED` reader - "]
@@ -57,7 +25,7 @@ pub type L1SUSPENDED_R = crate::BitReader;
 #[doc = "Field `RESETAFTERSUSP` reader - "]
 pub type RESETAFTERSUSP_R = crate::BitReader;
 #[doc = "Field `RESETAFTERSUSP` writer - "]
-pub type RESETAFTERSUSP_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
+pub type RESETAFTERSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -125,52 +93,49 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn stoppclk(&mut self) -> STOPPCLK_W<0> {
+    pub fn stoppclk(&mut self) -> STOPPCLK_W<PCGCCTL_SPEC, 0> {
         STOPPCLK_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gatehclk(&mut self) -> GATEHCLK_W<1> {
+    pub fn gatehclk(&mut self) -> GATEHCLK_W<PCGCCTL_SPEC, 1> {
         GATEHCLK_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrclmp(&mut self) -> PWRCLMP_W<2> {
+    pub fn pwrclmp(&mut self) -> PWRCLMP_W<PCGCCTL_SPEC, 2> {
         PWRCLMP_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<3> {
+    pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<PCGCCTL_SPEC, 3> {
         RSTPDWNMODULE_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<8> {
+    pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<PCGCCTL_SPEC, 8> {
         RESETAFTERSUSP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcgcctl](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcgcctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcgcctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PCGCCTL_SPEC;
 impl crate::RegisterSpec for PCGCCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pcgcctl::R](R) reader structure"]
-impl crate::Readable for PCGCCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pcgcctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`pcgcctl::R`](R) reader structure"]
+impl crate::Readable for PCGCCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pcgcctl::W`](W) writer structure"]
 impl crate::Writable for PCGCCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

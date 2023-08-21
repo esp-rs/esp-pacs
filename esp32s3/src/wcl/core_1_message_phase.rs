@@ -1,18 +1,5 @@
 #[doc = "Register `Core_1_MESSAGE_PHASE` reader"]
-pub struct R(crate::R<CORE_1_MESSAGE_PHASE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CORE_1_MESSAGE_PHASE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CORE_1_MESSAGE_PHASE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CORE_1_MESSAGE_PHASE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CORE_1_MESSAGE_PHASE_SPEC>;
 #[doc = "Field `CORE_1_MESSAGE_MATCH` reader - This bit indicates whether the check is successful"]
 pub type CORE_1_MESSAGE_MATCH_R = crate::BitReader;
 #[doc = "Field `CORE_1_MESSAGE_EXPECT` reader - This field indicates the data to be written next time"]
@@ -72,15 +59,13 @@ impl core::fmt::Debug for crate::generic::Reg<CORE_1_MESSAGE_PHASE_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Clear writer_buffer status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_message_phase](index.html) module"]
+#[doc = "Clear writer_buffer status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_message_phase::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_MESSAGE_PHASE_SPEC;
 impl crate::RegisterSpec for CORE_1_MESSAGE_PHASE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_message_phase::R](R) reader structure"]
-impl crate::Readable for CORE_1_MESSAGE_PHASE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`core_1_message_phase::R`](R) reader structure"]
+impl crate::Readable for CORE_1_MESSAGE_PHASE_SPEC {}
 #[doc = "`reset()` method sets Core_1_MESSAGE_PHASE to value 0"]
 impl crate::Resettable for CORE_1_MESSAGE_PHASE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

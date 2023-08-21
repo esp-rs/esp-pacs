@@ -1,18 +1,5 @@
 #[doc = "Register `INT_STATUS` reader"]
-pub struct R(crate::R<INT_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_STATUS_SPEC>;
 #[doc = "Field `RXFIFO_WM_INT_ST` reader - reg_rxfifo_wm_int_st"]
 pub type RXFIFO_WM_INT_ST_R = crate::BitReader;
 #[doc = "Field `TXFIFO_WM_INT_ST` reader - reg_txfifo_wm_int_st"]
@@ -223,15 +210,13 @@ impl core::fmt::Debug for crate::generic::Reg<INT_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "I2C_INT_STATUS_REG\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_status](index.html) module"]
+#[doc = "I2C_INT_STATUS_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_STATUS_SPEC;
 impl crate::RegisterSpec for INT_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_status::R](R) reader structure"]
-impl crate::Readable for INT_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`int_status::R`](R) reader structure"]
+impl crate::Readable for INT_STATUS_SPEC {}
 #[doc = "`reset()` method sets INT_STATUS to value 0"]
 impl crate::Resettable for INT_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

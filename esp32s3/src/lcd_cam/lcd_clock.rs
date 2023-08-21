@@ -1,75 +1,43 @@
 #[doc = "Register `LCD_CLOCK` reader"]
-pub struct R(crate::R<LCD_CLOCK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LCD_CLOCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LCD_CLOCK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LCD_CLOCK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LCD_CLOCK_SPEC>;
 #[doc = "Register `LCD_CLOCK` writer"]
-pub struct W(crate::W<LCD_CLOCK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LCD_CLOCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LCD_CLOCK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LCD_CLOCK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LCD_CLOCK_SPEC>;
 #[doc = "Field `LCD_CLKCNT_N` reader - f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1) when reg_clk_equ_sysclk is 0."]
 pub type LCD_CLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `LCD_CLKCNT_N` writer - f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1) when reg_clk_equ_sysclk is 0."]
-pub type LCD_CLKCNT_N_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CLOCK_SPEC, 6, O>;
+pub type LCD_CLKCNT_N_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `LCD_CLK_EQU_SYSCLK` reader - 1: f_LCD_PCLK = f_LCD_CLK. 0: f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1)."]
 pub type LCD_CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `LCD_CLK_EQU_SYSCLK` writer - 1: f_LCD_PCLK = f_LCD_CLK. 0: f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1)."]
-pub type LCD_CLK_EQU_SYSCLK_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CLOCK_SPEC, O>;
+pub type LCD_CLK_EQU_SYSCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_CK_IDLE_EDGE` reader - 1: LCD_PCLK line is high when idle 0: LCD_PCLK line is low when idle."]
 pub type LCD_CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `LCD_CK_IDLE_EDGE` writer - 1: LCD_PCLK line is high when idle 0: LCD_PCLK line is low when idle."]
-pub type LCD_CK_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CLOCK_SPEC, O>;
+pub type LCD_CK_IDLE_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_CK_OUT_EDGE` reader - 1: LCD_PCLK high in first half clock cycle. 0: LCD_PCLK low in first half clock cycle."]
 pub type LCD_CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `LCD_CK_OUT_EDGE` writer - 1: LCD_PCLK high in first half clock cycle. 0: LCD_PCLK low in first half clock cycle."]
-pub type LCD_CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CLOCK_SPEC, O>;
+pub type LCD_CK_OUT_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_CLKM_DIV_NUM` reader - Integral LCD clock divider value"]
 pub type LCD_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `LCD_CLKM_DIV_NUM` writer - Integral LCD clock divider value"]
-pub type LCD_CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CLOCK_SPEC, 8, O>;
+pub type LCD_CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `LCD_CLKM_DIV_B` reader - Fractional clock divider numerator value"]
 pub type LCD_CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `LCD_CLKM_DIV_B` writer - Fractional clock divider numerator value"]
-pub type LCD_CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CLOCK_SPEC, 6, O>;
+pub type LCD_CLKM_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `LCD_CLKM_DIV_A` reader - Fractional clock divider denominator value"]
 pub type LCD_CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `LCD_CLKM_DIV_A` writer - Fractional clock divider denominator value"]
-pub type LCD_CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CLOCK_SPEC, 6, O>;
+pub type LCD_CLKM_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `LCD_CLK_SEL` reader - Select LCD module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: no clock."]
 pub type LCD_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `LCD_CLK_SEL` writer - Select LCD module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: no clock."]
-pub type LCD_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CLOCK_SPEC, 2, O>;
+pub type LCD_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CLOCK_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:5 - f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1) when reg_clk_equ_sysclk is 0."]
     #[inline(always)]
@@ -167,76 +135,73 @@ impl W {
     #[doc = "Bits 0:5 - f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1) when reg_clk_equ_sysclk is 0."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_clkcnt_n(&mut self) -> LCD_CLKCNT_N_W<0> {
+    pub fn lcd_clkcnt_n(&mut self) -> LCD_CLKCNT_N_W<LCD_CLOCK_SPEC, 0> {
         LCD_CLKCNT_N_W::new(self)
     }
     #[doc = "Bit 6 - 1: f_LCD_PCLK = f_LCD_CLK. 0: f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1)."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_clk_equ_sysclk(&mut self) -> LCD_CLK_EQU_SYSCLK_W<6> {
+    pub fn lcd_clk_equ_sysclk(&mut self) -> LCD_CLK_EQU_SYSCLK_W<LCD_CLOCK_SPEC, 6> {
         LCD_CLK_EQU_SYSCLK_W::new(self)
     }
     #[doc = "Bit 7 - 1: LCD_PCLK line is high when idle 0: LCD_PCLK line is low when idle."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_ck_idle_edge(&mut self) -> LCD_CK_IDLE_EDGE_W<7> {
+    pub fn lcd_ck_idle_edge(&mut self) -> LCD_CK_IDLE_EDGE_W<LCD_CLOCK_SPEC, 7> {
         LCD_CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 8 - 1: LCD_PCLK high in first half clock cycle. 0: LCD_PCLK low in first half clock cycle."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_ck_out_edge(&mut self) -> LCD_CK_OUT_EDGE_W<8> {
+    pub fn lcd_ck_out_edge(&mut self) -> LCD_CK_OUT_EDGE_W<LCD_CLOCK_SPEC, 8> {
         LCD_CK_OUT_EDGE_W::new(self)
     }
     #[doc = "Bits 9:16 - Integral LCD clock divider value"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_clkm_div_num(&mut self) -> LCD_CLKM_DIV_NUM_W<9> {
+    pub fn lcd_clkm_div_num(&mut self) -> LCD_CLKM_DIV_NUM_W<LCD_CLOCK_SPEC, 9> {
         LCD_CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 17:22 - Fractional clock divider numerator value"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_clkm_div_b(&mut self) -> LCD_CLKM_DIV_B_W<17> {
+    pub fn lcd_clkm_div_b(&mut self) -> LCD_CLKM_DIV_B_W<LCD_CLOCK_SPEC, 17> {
         LCD_CLKM_DIV_B_W::new(self)
     }
     #[doc = "Bits 23:28 - Fractional clock divider denominator value"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_clkm_div_a(&mut self) -> LCD_CLKM_DIV_A_W<23> {
+    pub fn lcd_clkm_div_a(&mut self) -> LCD_CLKM_DIV_A_W<LCD_CLOCK_SPEC, 23> {
         LCD_CLKM_DIV_A_W::new(self)
     }
     #[doc = "Bits 29:30 - Select LCD module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: no clock."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_clk_sel(&mut self) -> LCD_CLK_SEL_W<29> {
+    pub fn lcd_clk_sel(&mut self) -> LCD_CLK_SEL_W<LCD_CLOCK_SPEC, 29> {
         LCD_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable clk gate"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<31> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<LCD_CLOCK_SPEC, 31> {
         CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "LCD clock register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_clock](index.html) module"]
+#[doc = "LCD clock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_clock::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_clock::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCD_CLOCK_SPEC;
 impl crate::RegisterSpec for LCD_CLOCK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lcd_clock::R](R) reader structure"]
-impl crate::Readable for LCD_CLOCK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lcd_clock::W](W) writer structure"]
+#[doc = "`read()` method returns [`lcd_clock::R`](R) reader structure"]
+impl crate::Readable for LCD_CLOCK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lcd_clock::W`](W) writer structure"]
 impl crate::Writable for LCD_CLOCK_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

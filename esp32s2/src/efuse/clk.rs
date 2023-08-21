@@ -1,55 +1,23 @@
 #[doc = "Register `CLK` reader"]
-pub struct R(crate::R<CLK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_SPEC>;
 #[doc = "Register `CLK` writer"]
-pub struct W(crate::W<CLK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLK_SPEC>;
 #[doc = "Field `EFUSE_MEM_FORCE_PD` reader - If set, forces eFuse SRAM into power-saving mode."]
 pub type EFUSE_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `EFUSE_MEM_FORCE_PD` writer - If set, forces eFuse SRAM into power-saving mode."]
-pub type EFUSE_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
+pub type EFUSE_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - If set, forces to activate clock signal of eFuse SRAM."]
 pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - If set, forces to activate clock signal of eFuse SRAM."]
-pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
+pub type MEM_CLK_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EFUSE_MEM_FORCE_PU` reader - If set, forces eFuse SRAM into working mode."]
 pub type EFUSE_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `EFUSE_MEM_FORCE_PU` writer - If set, forces eFuse SRAM into working mode."]
-pub type EFUSE_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
+pub type EFUSE_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EN` reader - If set, forces to enable clock signal of eFuse memory."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - If set, forces to enable clock signal of eFuse memory."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
+pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - If set, forces eFuse SRAM into power-saving mode."]
     #[inline(always)]
@@ -102,46 +70,43 @@ impl W {
     #[doc = "Bit 0 - If set, forces eFuse SRAM into power-saving mode."]
     #[inline(always)]
     #[must_use]
-    pub fn efuse_mem_force_pd(&mut self) -> EFUSE_MEM_FORCE_PD_W<0> {
+    pub fn efuse_mem_force_pd(&mut self) -> EFUSE_MEM_FORCE_PD_W<CLK_SPEC, 0> {
         EFUSE_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 1 - If set, forces to activate clock signal of eFuse SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<1> {
+    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<CLK_SPEC, 1> {
         MEM_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 2 - If set, forces eFuse SRAM into working mode."]
     #[inline(always)]
     #[must_use]
-    pub fn efuse_mem_force_pu(&mut self) -> EFUSE_MEM_FORCE_PU_W<2> {
+    pub fn efuse_mem_force_pu(&mut self) -> EFUSE_MEM_FORCE_PU_W<CLK_SPEC, 2> {
         EFUSE_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 16 - If set, forces to enable clock signal of eFuse memory."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<16> {
+    pub fn en(&mut self) -> EN_W<CLK_SPEC, 16> {
         EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "eFuse clock configuration register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk](index.html) module"]
+#[doc = "eFuse clock configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_SPEC;
 impl crate::RegisterSpec for CLK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk::R](R) reader structure"]
-impl crate::Readable for CLK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk::W](W) writer structure"]
+#[doc = "`read()` method returns [`clk::R`](R) reader structure"]
+impl crate::Readable for CLK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clk::W`](W) writer structure"]
 impl crate::Writable for CLK_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

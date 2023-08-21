@@ -1,60 +1,27 @@
 #[doc = "Register `SLC_TOKEN0` reader"]
-pub struct R(crate::R<SLC_TOKEN0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLC_TOKEN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLC_TOKEN0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLC_TOKEN0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLC_TOKEN0_SPEC>;
 #[doc = "Register `SLC_TOKEN0` writer"]
-pub struct W(crate::W<SLC_TOKEN0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLC_TOKEN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLC_TOKEN0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLC_TOKEN0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLC_TOKEN0_SPEC>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WDATA` reader - "]
 pub type SLC_TOKEN0_LOCAL_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WDATA` writer - "]
-pub type SLC_TOKEN0_LOCAL_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLC_TOKEN0_SPEC, 12, O, u16>;
+pub type SLC_TOKEN0_LOCAL_WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WR` reader - "]
 pub type SLC_TOKEN0_LOCAL_WR_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WR` writer - "]
-pub type SLC_TOKEN0_LOCAL_WR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_TOKEN0_SPEC, O>;
+pub type SLC_TOKEN0_LOCAL_WR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC` reader - "]
 pub type SLC_TOKEN0_LOCAL_INC_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC` writer - "]
-pub type SLC_TOKEN0_LOCAL_INC_W<'a, const O: u8> = crate::BitWriter<'a, SLC_TOKEN0_SPEC, O>;
+pub type SLC_TOKEN0_LOCAL_INC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC_MORE` reader - "]
 pub type SLC_TOKEN0_LOCAL_INC_MORE_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC_MORE` writer - "]
-pub type SLC_TOKEN0_LOCAL_INC_MORE_W<'a, const O: u8> = crate::BitWriter<'a, SLC_TOKEN0_SPEC, O>;
+pub type SLC_TOKEN0_LOCAL_INC_MORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TOKEN0` reader - "]
 pub type SLC_TOKEN0_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TOKEN0` writer - "]
-pub type SLC_TOKEN0_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_TOKEN0_SPEC, 12, O, u16>;
+pub type SLC_TOKEN0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -116,52 +83,51 @@ impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_wdata(&mut self) -> SLC_TOKEN0_LOCAL_WDATA_W<0> {
+    pub fn slc_token0_local_wdata(&mut self) -> SLC_TOKEN0_LOCAL_WDATA_W<SLC_TOKEN0_SPEC, 0> {
         SLC_TOKEN0_LOCAL_WDATA_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_wr(&mut self) -> SLC_TOKEN0_LOCAL_WR_W<12> {
+    pub fn slc_token0_local_wr(&mut self) -> SLC_TOKEN0_LOCAL_WR_W<SLC_TOKEN0_SPEC, 12> {
         SLC_TOKEN0_LOCAL_WR_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_inc(&mut self) -> SLC_TOKEN0_LOCAL_INC_W<13> {
+    pub fn slc_token0_local_inc(&mut self) -> SLC_TOKEN0_LOCAL_INC_W<SLC_TOKEN0_SPEC, 13> {
         SLC_TOKEN0_LOCAL_INC_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_inc_more(&mut self) -> SLC_TOKEN0_LOCAL_INC_MORE_W<14> {
+    pub fn slc_token0_local_inc_more(
+        &mut self,
+    ) -> SLC_TOKEN0_LOCAL_INC_MORE_W<SLC_TOKEN0_SPEC, 14> {
         SLC_TOKEN0_LOCAL_INC_MORE_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0(&mut self) -> SLC_TOKEN0_W<16> {
+    pub fn slc_token0(&mut self) -> SLC_TOKEN0_W<SLC_TOKEN0_SPEC, 16> {
         SLC_TOKEN0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SLC_TOKEN0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slc_token0](index.html) module"]
+#[doc = "SLC_TOKEN0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc_token0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slc_token0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC_TOKEN0_SPEC;
 impl crate::RegisterSpec for SLC_TOKEN0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slc_token0::R](R) reader structure"]
-impl crate::Readable for SLC_TOKEN0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [slc_token0::W](W) writer structure"]
+#[doc = "`read()` method returns [`slc_token0::R`](R) reader structure"]
+impl crate::Readable for SLC_TOKEN0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`slc_token0::W`](W) writer structure"]
 impl crate::Writable for SLC_TOKEN0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,55 +1,23 @@
 #[doc = "Register `FUNC%s_OUT_SEL_CFG` reader"]
-pub struct R(crate::R<FUNC_OUT_SEL_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FUNC_OUT_SEL_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FUNC_OUT_SEL_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FUNC_OUT_SEL_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FUNC_OUT_SEL_CFG_SPEC>;
 #[doc = "Register `FUNC%s_OUT_SEL_CFG` writer"]
-pub struct W(crate::W<FUNC_OUT_SEL_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FUNC_OUT_SEL_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FUNC_OUT_SEL_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FUNC_OUT_SEL_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FUNC_OUT_SEL_CFG_SPEC>;
 #[doc = "Field `OUT_SEL` reader - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-255: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=256: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
 pub type OUT_SEL_R = crate::FieldReader;
 #[doc = "Field `OUT_SEL` writer - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-255: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=256: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
-pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 8, O>;
+pub type OUT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `INV_SEL` reader - set this bit to invert output signal.1:invert.0:not invert."]
 pub type INV_SEL_R = crate::BitReader;
 #[doc = "Field `INV_SEL` writer - set this bit to invert output signal.1:invert.0:not invert."]
-pub type INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_OUT_SEL_CFG_SPEC, O>;
+pub type INV_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OEN_SEL` reader - set this bit to select output enable signal.1:use GPIO_ENABLE_REG\\[n\\] as output enable signal.0:use peripheral output enable signal."]
 pub type OEN_SEL_R = crate::BitReader;
 #[doc = "Field `OEN_SEL` writer - set this bit to select output enable signal.1:use GPIO_ENABLE_REG\\[n\\] as output enable signal.0:use peripheral output enable signal."]
-pub type OEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_OUT_SEL_CFG_SPEC, O>;
+pub type OEN_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OEN_INV_SEL` reader - set this bit to invert output enable signal.1:invert.0:not invert."]
 pub type OEN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `OEN_INV_SEL` writer - set this bit to invert output enable signal.1:invert.0:not invert."]
-pub type OEN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_OUT_SEL_CFG_SPEC, O>;
+pub type OEN_INV_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-255: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=256: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
     #[inline(always)]
@@ -93,46 +61,43 @@ impl W {
     #[doc = "Bits 0:7 - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-255: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=256: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
     #[inline(always)]
     #[must_use]
-    pub fn out_sel(&mut self) -> OUT_SEL_W<0> {
+    pub fn out_sel(&mut self) -> OUT_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 0> {
         OUT_SEL_W::new(self)
     }
     #[doc = "Bit 8 - set this bit to invert output signal.1:invert.0:not invert."]
     #[inline(always)]
     #[must_use]
-    pub fn inv_sel(&mut self) -> INV_SEL_W<8> {
+    pub fn inv_sel(&mut self) -> INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 8> {
         INV_SEL_W::new(self)
     }
     #[doc = "Bit 9 - set this bit to select output enable signal.1:use GPIO_ENABLE_REG\\[n\\] as output enable signal.0:use peripheral output enable signal."]
     #[inline(always)]
     #[must_use]
-    pub fn oen_sel(&mut self) -> OEN_SEL_W<9> {
+    pub fn oen_sel(&mut self) -> OEN_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 9> {
         OEN_SEL_W::new(self)
     }
     #[doc = "Bit 10 - set this bit to invert output enable signal.1:invert.0:not invert."]
     #[inline(always)]
     #[must_use]
-    pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<10> {
+    pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 10> {
         OEN_INV_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "GPIO output function select register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [func_out_sel_cfg](index.html) module"]
+#[doc = "GPIO output function select register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`func_out_sel_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FUNC_OUT_SEL_CFG_SPEC;
 impl crate::RegisterSpec for FUNC_OUT_SEL_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [func_out_sel_cfg::R](R) reader structure"]
-impl crate::Readable for FUNC_OUT_SEL_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [func_out_sel_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`func_out_sel_cfg::R`](R) reader structure"]
+impl crate::Readable for FUNC_OUT_SEL_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`func_out_sel_cfg::W`](W) writer structure"]
 impl crate::Writable for FUNC_OUT_SEL_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

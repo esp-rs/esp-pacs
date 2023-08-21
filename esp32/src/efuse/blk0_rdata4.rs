@@ -1,49 +1,17 @@
 #[doc = "Register `BLK0_RDATA4` reader"]
-pub struct R(crate::R<BLK0_RDATA4_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BLK0_RDATA4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BLK0_RDATA4_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BLK0_RDATA4_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BLK0_RDATA4_SPEC>;
 #[doc = "Register `BLK0_RDATA4` writer"]
-pub struct W(crate::W<BLK0_RDATA4_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BLK0_RDATA4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BLK0_RDATA4_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BLK0_RDATA4_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BLK0_RDATA4_SPEC>;
 #[doc = "Field `RD_CLK8M_FREQ` reader - "]
 pub type RD_CLK8M_FREQ_R = crate::FieldReader;
 #[doc = "Field `RD_ADC_VREF` reader - "]
 pub type RD_ADC_VREF_R = crate::FieldReader;
 #[doc = "Field `RD_ADC_VREF` writer - "]
-pub type RD_ADC_VREF_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_RDATA4_SPEC, 5, O>;
+pub type RD_ADC_VREF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `RD_RESERVE_0_141` reader - "]
 pub type RD_RESERVE_0_141_R = crate::BitReader;
 #[doc = "Field `RD_RESERVE_0_141` writer - "]
-pub type RD_RESERVE_0_141_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_RDATA4_SPEC, O>;
+pub type RD_RESERVE_0_141_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RD_XPD_SDIO` reader - "]
 pub type RD_XPD_SDIO_R = crate::BitReader;
 #[doc = "Field `RD_XPD_SDIO_TIEH` reader - "]
@@ -53,7 +21,7 @@ pub type RD_XPD_SDIO_FORCE_R = crate::BitReader;
 #[doc = "Field `RD_RESERVE_0_145` reader - "]
 pub type RD_RESERVE_0_145_R = crate::FieldReader<u16>;
 #[doc = "Field `RD_RESERVE_0_145` writer - "]
-pub type RD_RESERVE_0_145_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_RDATA4_SPEC, 15, O, u16>;
+pub type RD_RESERVE_0_145_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -133,40 +101,37 @@ impl W {
     #[doc = "Bits 8:12"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_adc_vref(&mut self) -> RD_ADC_VREF_W<8> {
+    pub fn rd_adc_vref(&mut self) -> RD_ADC_VREF_W<BLK0_RDATA4_SPEC, 8> {
         RD_ADC_VREF_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_reserve_0_141(&mut self) -> RD_RESERVE_0_141_W<13> {
+    pub fn rd_reserve_0_141(&mut self) -> RD_RESERVE_0_141_W<BLK0_RDATA4_SPEC, 13> {
         RD_RESERVE_0_141_W::new(self)
     }
     #[doc = "Bits 17:31"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_reserve_0_145(&mut self) -> RD_RESERVE_0_145_W<17> {
+    pub fn rd_reserve_0_145(&mut self) -> RD_RESERVE_0_145_W<BLK0_RDATA4_SPEC, 17> {
         RD_RESERVE_0_145_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata4](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_rdata4::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blk0_rdata4::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLK0_RDATA4_SPEC;
 impl crate::RegisterSpec for BLK0_RDATA4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_rdata4::R](R) reader structure"]
-impl crate::Readable for BLK0_RDATA4_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [blk0_rdata4::W](W) writer structure"]
+#[doc = "`read()` method returns [`blk0_rdata4::R`](R) reader structure"]
+impl crate::Readable for BLK0_RDATA4_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`blk0_rdata4::W`](W) writer structure"]
 impl crate::Writable for BLK0_RDATA4_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

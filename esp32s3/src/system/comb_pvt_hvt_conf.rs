@@ -1,51 +1,17 @@
 #[doc = "Register `COMB_PVT_HVT_CONF` reader"]
-pub struct R(crate::R<COMB_PVT_HVT_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<COMB_PVT_HVT_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<COMB_PVT_HVT_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<COMB_PVT_HVT_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<COMB_PVT_HVT_CONF_SPEC>;
 #[doc = "Register `COMB_PVT_HVT_CONF` writer"]
-pub struct W(crate::W<COMB_PVT_HVT_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<COMB_PVT_HVT_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<COMB_PVT_HVT_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<COMB_PVT_HVT_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<COMB_PVT_HVT_CONF_SPEC>;
 #[doc = "Field `COMB_PATH_LEN_HVT` reader - ******* Description ***********"]
 pub type COMB_PATH_LEN_HVT_R = crate::FieldReader;
 #[doc = "Field `COMB_PATH_LEN_HVT` writer - ******* Description ***********"]
-pub type COMB_PATH_LEN_HVT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, COMB_PVT_HVT_CONF_SPEC, 5, O>;
+pub type COMB_PATH_LEN_HVT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `COMB_ERR_CNT_CLR_HVT` writer - ******* Description ***********"]
-pub type COMB_ERR_CNT_CLR_HVT_W<'a, const O: u8> = crate::BitWriter<'a, COMB_PVT_HVT_CONF_SPEC, O>;
+pub type COMB_ERR_CNT_CLR_HVT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `COMB_PVT_MONITOR_EN_HVT` reader - ******* Description ***********"]
 pub type COMB_PVT_MONITOR_EN_HVT_R = crate::BitReader;
 #[doc = "Field `COMB_PVT_MONITOR_EN_HVT` writer - ******* Description ***********"]
-pub type COMB_PVT_MONITOR_EN_HVT_W<'a, const O: u8> =
-    crate::BitWriter<'a, COMB_PVT_HVT_CONF_SPEC, O>;
+pub type COMB_PVT_MONITOR_EN_HVT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:4 - ******* Description ***********"]
     #[inline(always)]
@@ -83,40 +49,39 @@ impl W {
     #[doc = "Bits 0:4 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn comb_path_len_hvt(&mut self) -> COMB_PATH_LEN_HVT_W<0> {
+    pub fn comb_path_len_hvt(&mut self) -> COMB_PATH_LEN_HVT_W<COMB_PVT_HVT_CONF_SPEC, 0> {
         COMB_PATH_LEN_HVT_W::new(self)
     }
     #[doc = "Bit 5 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn comb_err_cnt_clr_hvt(&mut self) -> COMB_ERR_CNT_CLR_HVT_W<5> {
+    pub fn comb_err_cnt_clr_hvt(&mut self) -> COMB_ERR_CNT_CLR_HVT_W<COMB_PVT_HVT_CONF_SPEC, 5> {
         COMB_ERR_CNT_CLR_HVT_W::new(self)
     }
     #[doc = "Bit 6 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn comb_pvt_monitor_en_hvt(&mut self) -> COMB_PVT_MONITOR_EN_HVT_W<6> {
+    pub fn comb_pvt_monitor_en_hvt(
+        &mut self,
+    ) -> COMB_PVT_MONITOR_EN_HVT_W<COMB_PVT_HVT_CONF_SPEC, 6> {
         COMB_PVT_MONITOR_EN_HVT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comb_pvt_hvt_conf](index.html) module"]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comb_pvt_hvt_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`comb_pvt_hvt_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COMB_PVT_HVT_CONF_SPEC;
 impl crate::RegisterSpec for COMB_PVT_HVT_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [comb_pvt_hvt_conf::R](R) reader structure"]
-impl crate::Readable for COMB_PVT_HVT_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [comb_pvt_hvt_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`comb_pvt_hvt_conf::R`](R) reader structure"]
+impl crate::Readable for COMB_PVT_HVT_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`comb_pvt_hvt_conf::W`](W) writer structure"]
 impl crate::Writable for COMB_PVT_HVT_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

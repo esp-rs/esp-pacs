@@ -1,63 +1,31 @@
 #[doc = "Register `CARRIER0_CFG` reader"]
-pub struct R(crate::R<CARRIER0_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CARRIER0_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CARRIER0_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CARRIER0_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CARRIER0_CFG_SPEC>;
 #[doc = "Register `CARRIER0_CFG` writer"]
-pub struct W(crate::W<CARRIER0_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CARRIER0_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CARRIER0_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CARRIER0_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CARRIER0_CFG_SPEC>;
 #[doc = "Field `CARRIER0_EN` reader - "]
 pub type CARRIER0_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER0_EN` writer - "]
-pub type CARRIER0_EN_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER0_CFG_SPEC, O>;
+pub type CARRIER0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CARRIER0_PRESCALE` reader - "]
 pub type CARRIER0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CARRIER0_PRESCALE` writer - "]
-pub type CARRIER0_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER0_CFG_SPEC, 4, O>;
+pub type CARRIER0_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `CARRIER0_DUTY` reader - "]
 pub type CARRIER0_DUTY_R = crate::FieldReader;
 #[doc = "Field `CARRIER0_DUTY` writer - "]
-pub type CARRIER0_DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER0_CFG_SPEC, 3, O>;
+pub type CARRIER0_DUTY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `CARRIER0_OSHTWTH` reader - "]
 pub type CARRIER0_OSHTWTH_R = crate::FieldReader;
 #[doc = "Field `CARRIER0_OSHTWTH` writer - "]
-pub type CARRIER0_OSHTWTH_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER0_CFG_SPEC, 4, O>;
+pub type CARRIER0_OSHTWTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `CARRIER0_OUT_INVERT` reader - "]
 pub type CARRIER0_OUT_INVERT_R = crate::BitReader;
 #[doc = "Field `CARRIER0_OUT_INVERT` writer - "]
-pub type CARRIER0_OUT_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER0_CFG_SPEC, O>;
+pub type CARRIER0_OUT_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CARRIER0_IN_INVERT` reader - "]
 pub type CARRIER0_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CARRIER0_IN_INVERT` writer - "]
-pub type CARRIER0_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER0_CFG_SPEC, O>;
+pub type CARRIER0_IN_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -128,58 +96,55 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_en(&mut self) -> CARRIER0_EN_W<0> {
+    pub fn carrier0_en(&mut self) -> CARRIER0_EN_W<CARRIER0_CFG_SPEC, 0> {
         CARRIER0_EN_W::new(self)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_prescale(&mut self) -> CARRIER0_PRESCALE_W<1> {
+    pub fn carrier0_prescale(&mut self) -> CARRIER0_PRESCALE_W<CARRIER0_CFG_SPEC, 1> {
         CARRIER0_PRESCALE_W::new(self)
     }
     #[doc = "Bits 5:7"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_duty(&mut self) -> CARRIER0_DUTY_W<5> {
+    pub fn carrier0_duty(&mut self) -> CARRIER0_DUTY_W<CARRIER0_CFG_SPEC, 5> {
         CARRIER0_DUTY_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_oshtwth(&mut self) -> CARRIER0_OSHTWTH_W<8> {
+    pub fn carrier0_oshtwth(&mut self) -> CARRIER0_OSHTWTH_W<CARRIER0_CFG_SPEC, 8> {
         CARRIER0_OSHTWTH_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_out_invert(&mut self) -> CARRIER0_OUT_INVERT_W<12> {
+    pub fn carrier0_out_invert(&mut self) -> CARRIER0_OUT_INVERT_W<CARRIER0_CFG_SPEC, 12> {
         CARRIER0_OUT_INVERT_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_in_invert(&mut self) -> CARRIER0_IN_INVERT_W<13> {
+    pub fn carrier0_in_invert(&mut self) -> CARRIER0_IN_INVERT_W<CARRIER0_CFG_SPEC, 13> {
         CARRIER0_IN_INVERT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [carrier0_cfg](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`carrier0_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`carrier0_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CARRIER0_CFG_SPEC;
 impl crate::RegisterSpec for CARRIER0_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [carrier0_cfg::R](R) reader structure"]
-impl crate::Readable for CARRIER0_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [carrier0_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`carrier0_cfg::R`](R) reader structure"]
+impl crate::Readable for CARRIER0_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`carrier0_cfg::W`](W) writer structure"]
 impl crate::Writable for CARRIER0_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

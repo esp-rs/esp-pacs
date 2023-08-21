@@ -1,47 +1,15 @@
 #[doc = "Register `SAR_MEAS2_MUX` reader"]
-pub struct R(crate::R<SAR_MEAS2_MUX_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_MEAS2_MUX_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_MEAS2_MUX_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_MEAS2_MUX_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_MEAS2_MUX_SPEC>;
 #[doc = "Register `SAR_MEAS2_MUX` writer"]
-pub struct W(crate::W<SAR_MEAS2_MUX_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_MEAS2_MUX_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_MEAS2_MUX_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_MEAS2_MUX_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_MEAS2_MUX_SPEC>;
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
 pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
-pub type SAR2_PWDET_CCT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS2_MUX_SPEC, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `SAR2_RTC_FORCE` reader - In sleep, force to use RTC to control ADC."]
 pub type SAR2_RTC_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR2_RTC_FORCE` writer - In sleep, force to use RTC to control ADC."]
-pub type SAR2_RTC_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS2_MUX_SPEC, O>;
+pub type SAR2_RTC_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<28> {
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_MEAS2_MUX_SPEC, 28> {
         SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bit 31 - In sleep, force to use RTC to control ADC."]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W<31> {
+    pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W<SAR_MEAS2_MUX_SPEC, 31> {
         SAR2_RTC_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Select the controller for SAR ADC2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas2_mux](index.html) module"]
+#[doc = "Select the controller for SAR ADC2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_meas2_mux::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_meas2_mux::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_MEAS2_MUX_SPEC;
 impl crate::RegisterSpec for SAR_MEAS2_MUX_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_meas2_mux::R](R) reader structure"]
-impl crate::Readable for SAR_MEAS2_MUX_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_meas2_mux::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_meas2_mux::R`](R) reader structure"]
+impl crate::Readable for SAR_MEAS2_MUX_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_meas2_mux::W`](W) writer structure"]
 impl crate::Writable for SAR_MEAS2_MUX_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

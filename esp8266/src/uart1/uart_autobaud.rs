@@ -1,47 +1,15 @@
 #[doc = "Register `UART_AUTOBAUD` reader"]
-pub struct R(crate::R<UART_AUTOBAUD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UART_AUTOBAUD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UART_AUTOBAUD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UART_AUTOBAUD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UART_AUTOBAUD_SPEC>;
 #[doc = "Register `UART_AUTOBAUD` writer"]
-pub struct W(crate::W<UART_AUTOBAUD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UART_AUTOBAUD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UART_AUTOBAUD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UART_AUTOBAUD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UART_AUTOBAUD_SPEC>;
 #[doc = "Field `autobaud_en` reader - Set this bit to enable baudrate detect"]
 pub type AUTOBAUD_EN_R = crate::BitReader;
 #[doc = "Field `autobaud_en` writer - Set this bit to enable baudrate detect"]
-pub type AUTOBAUD_EN_W<'a, const O: u8> = crate::BitWriter<'a, UART_AUTOBAUD_SPEC, O>;
+pub type AUTOBAUD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `glitch_filt` reader - "]
 pub type GLITCH_FILT_R = crate::FieldReader;
 #[doc = "Field `glitch_filt` writer - "]
-pub type GLITCH_FILT_W<'a, const O: u8> = crate::FieldWriter<'a, UART_AUTOBAUD_SPEC, 8, O>;
+pub type GLITCH_FILT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable baudrate detect"]
     #[inline(always)]
@@ -76,34 +44,31 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable baudrate detect"]
     #[inline(always)]
     #[must_use]
-    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<0> {
+    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<UART_AUTOBAUD_SPEC, 0> {
         AUTOBAUD_EN_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<8> {
+    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<UART_AUTOBAUD_SPEC, 8> {
         GLITCH_FILT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "UART BAUDRATE DETECT REGISTER\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_autobaud](index.html) module"]
+#[doc = "UART BAUDRATE DETECT REGISTER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart_autobaud::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart_autobaud::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UART_AUTOBAUD_SPEC;
 impl crate::RegisterSpec for UART_AUTOBAUD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uart_autobaud::R](R) reader structure"]
-impl crate::Readable for UART_AUTOBAUD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [uart_autobaud::W](W) writer structure"]
+#[doc = "`read()` method returns [`uart_autobaud::R`](R) reader structure"]
+impl crate::Readable for UART_AUTOBAUD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`uart_autobaud::W`](W) writer structure"]
 impl crate::Writable for UART_AUTOBAUD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

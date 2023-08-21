@@ -1,18 +1,5 @@
 #[doc = "Register `PKT_LEN1` reader"]
-pub struct R(crate::R<PKT_LEN1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PKT_LEN1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PKT_LEN1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PKT_LEN1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PKT_LEN1_SPEC>;
 #[doc = "Field `HOSTSLCHOST_SLC0_LEN1` reader - *******Description***********"]
 pub type HOSTSLCHOST_SLC0_LEN1_R = crate::FieldReader<u32>;
 #[doc = "Field `HOSTSLCHOST_SLC0_LEN1_CHECK` reader - *******Description***********"]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<PKT_LEN1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pkt_len1](index.html) module"]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pkt_len1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PKT_LEN1_SPEC;
 impl crate::RegisterSpec for PKT_LEN1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pkt_len1::R](R) reader structure"]
-impl crate::Readable for PKT_LEN1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`pkt_len1::R`](R) reader structure"]
+impl crate::Readable for PKT_LEN1_SPEC {}
 #[doc = "`reset()` method sets PKT_LEN1 to value 0"]
 impl crate::Resettable for PKT_LEN1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

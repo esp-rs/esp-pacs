@@ -1,51 +1,19 @@
 #[doc = "Register `TX_GENRL_CFG` reader"]
-pub struct R(crate::R<TX_GENRL_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TX_GENRL_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TX_GENRL_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TX_GENRL_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TX_GENRL_CFG_SPEC>;
 #[doc = "Register `TX_GENRL_CFG` writer"]
-pub struct W(crate::W<TX_GENRL_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TX_GENRL_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TX_GENRL_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TX_GENRL_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TX_GENRL_CFG_SPEC>;
 #[doc = "Field `TX_IDLE_VALUE` reader - Configures bus value of transmitter in IDLE state."]
 pub type TX_IDLE_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_IDLE_VALUE` writer - Configures bus value of transmitter in IDLE state."]
-pub type TX_IDLE_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, TX_GENRL_CFG_SPEC, 16, O, u16>;
+pub type TX_IDLE_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `TX_GATING_EN` reader - Set this bit to enable the clock gating of output tx clock."]
 pub type TX_GATING_EN_R = crate::BitReader;
 #[doc = "Field `TX_GATING_EN` writer - Set this bit to enable the clock gating of output tx clock."]
-pub type TX_GATING_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_GENRL_CFG_SPEC, O>;
+pub type TX_GATING_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_VALID_OUTPUT_EN` reader - Set this bit to enable the output of tx data valid signal."]
 pub type TX_VALID_OUTPUT_EN_R = crate::BitReader;
 #[doc = "Field `TX_VALID_OUTPUT_EN` writer - Set this bit to enable the output of tx data valid signal."]
-pub type TX_VALID_OUTPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_GENRL_CFG_SPEC, O>;
+pub type TX_VALID_OUTPUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 14:29 - Configures bus value of transmitter in IDLE state."]
     #[inline(always)]
@@ -92,40 +60,37 @@ impl W {
     #[doc = "Bits 14:29 - Configures bus value of transmitter in IDLE state."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_idle_value(&mut self) -> TX_IDLE_VALUE_W<14> {
+    pub fn tx_idle_value(&mut self) -> TX_IDLE_VALUE_W<TX_GENRL_CFG_SPEC, 14> {
         TX_IDLE_VALUE_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to enable the clock gating of output tx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<30> {
+    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<TX_GENRL_CFG_SPEC, 30> {
         TX_GATING_EN_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable the output of tx data valid signal."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_valid_output_en(&mut self) -> TX_VALID_OUTPUT_EN_W<31> {
+    pub fn tx_valid_output_en(&mut self) -> TX_VALID_OUTPUT_EN_W<TX_GENRL_CFG_SPEC, 31> {
         TX_VALID_OUTPUT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Parallel TX general configuration register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_genrl_cfg](index.html) module"]
+#[doc = "Parallel TX general configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_genrl_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_genrl_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_GENRL_CFG_SPEC;
 impl crate::RegisterSpec for TX_GENRL_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_genrl_cfg::R](R) reader structure"]
-impl crate::Readable for TX_GENRL_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tx_genrl_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`tx_genrl_cfg::R`](R) reader structure"]
+impl crate::Readable for TX_GENRL_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tx_genrl_cfg::W`](W) writer structure"]
 impl crate::Writable for TX_GENRL_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

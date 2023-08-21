@@ -1,18 +1,5 @@
 #[doc = "Register `MEM_RX_STATUS` reader"]
-pub struct R(crate::R<MEM_RX_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MEM_RX_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MEM_RX_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MEM_RX_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MEM_RX_STATUS_SPEC>;
 #[doc = "Field `RX_SRAM_RADDR` reader - This register stores the offset read address in RX-SRAM."]
 pub type RX_SRAM_RADDR_R = crate::FieldReader;
 #[doc = "Field `RX_SRAM_WADDR` reader - This register stores the offset write address in Rx-SRAM."]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<MEM_RX_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Rx-SRAM write and read offset address.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_rx_status](index.html) module"]
+#[doc = "Rx-SRAM write and read offset address.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_rx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MEM_RX_STATUS_SPEC;
 impl crate::RegisterSpec for MEM_RX_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_rx_status::R](R) reader structure"]
-impl crate::Readable for MEM_RX_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`mem_rx_status::R`](R) reader structure"]
+impl crate::Readable for MEM_RX_STATUS_SPEC {}
 #[doc = "`reset()` method sets MEM_RX_STATUS to value 0x0001_0080"]
 impl crate::Resettable for MEM_RX_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0x0001_0080;

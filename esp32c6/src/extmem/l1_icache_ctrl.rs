@@ -1,18 +1,5 @@
 #[doc = "Register `L1_ICACHE_CTRL` reader"]
-pub struct R(crate::R<L1_ICACHE_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L1_ICACHE_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L1_ICACHE_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L1_ICACHE_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L1_ICACHE_CTRL_SPEC>;
 #[doc = "Field `L1_ICACHE_SHUT_IBUS0` reader - The bit is used to disable core0 ibus access L1-ICache, 0: enable, 1: disable"]
 pub type L1_ICACHE_SHUT_IBUS0_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE_SHUT_IBUS1` reader - The bit is used to disable core1 ibus access L1-ICache, 0: enable, 1: disable"]
@@ -83,15 +70,13 @@ impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE_CTRL_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "L1 instruction Cache(L1-ICache) control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_icache_ctrl](index.html) module"]
+#[doc = "L1 instruction Cache(L1-ICache) control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_ICACHE_CTRL_SPEC;
 impl crate::RegisterSpec for L1_ICACHE_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l1_icache_ctrl::R](R) reader structure"]
-impl crate::Readable for L1_ICACHE_CTRL_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`l1_icache_ctrl::R`](R) reader structure"]
+impl crate::Readable for L1_ICACHE_CTRL_SPEC {}
 #[doc = "`reset()` method sets L1_ICACHE_CTRL to value 0"]
 impl crate::Resettable for L1_ICACHE_CTRL_SPEC {
     const RESET_VALUE: Self::Ux = 0;

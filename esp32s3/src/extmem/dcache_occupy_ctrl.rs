@@ -1,43 +1,11 @@
 #[doc = "Register `DCACHE_OCCUPY_CTRL` reader"]
-pub struct R(crate::R<DCACHE_OCCUPY_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DCACHE_OCCUPY_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DCACHE_OCCUPY_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DCACHE_OCCUPY_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DCACHE_OCCUPY_CTRL_SPEC>;
 #[doc = "Register `DCACHE_OCCUPY_CTRL` writer"]
-pub struct W(crate::W<DCACHE_OCCUPY_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DCACHE_OCCUPY_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DCACHE_OCCUPY_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DCACHE_OCCUPY_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DCACHE_OCCUPY_CTRL_SPEC>;
 #[doc = "Field `DCACHE_OCCUPY_ENA` reader - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
 pub type DCACHE_OCCUPY_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_OCCUPY_ENA` writer - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
-pub type DCACHE_OCCUPY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_OCCUPY_CTRL_SPEC, O>;
+pub type DCACHE_OCCUPY_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DCACHE_OCCUPY_DONE` reader - The bit is used to indicate occupy operation is finished."]
 pub type DCACHE_OCCUPY_DONE_R = crate::BitReader;
 impl R {
@@ -77,28 +45,25 @@ impl W {
     #[doc = "Bit 0 - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_occupy_ena(&mut self) -> DCACHE_OCCUPY_ENA_W<0> {
+    pub fn dcache_occupy_ena(&mut self) -> DCACHE_OCCUPY_ENA_W<DCACHE_OCCUPY_CTRL_SPEC, 0> {
         DCACHE_OCCUPY_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_occupy_ctrl](index.html) module"]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcache_occupy_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dcache_occupy_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCACHE_OCCUPY_CTRL_SPEC;
 impl crate::RegisterSpec for DCACHE_OCCUPY_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcache_occupy_ctrl::R](R) reader structure"]
-impl crate::Readable for DCACHE_OCCUPY_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dcache_occupy_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`dcache_occupy_ctrl::R`](R) reader structure"]
+impl crate::Readable for DCACHE_OCCUPY_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dcache_occupy_ctrl::W`](W) writer structure"]
 impl crate::Writable for DCACHE_OCCUPY_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

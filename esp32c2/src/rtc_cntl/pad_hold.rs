@@ -1,63 +1,31 @@
 #[doc = "Register `PAD_HOLD` reader"]
-pub struct R(crate::R<PAD_HOLD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PAD_HOLD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PAD_HOLD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PAD_HOLD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PAD_HOLD_SPEC>;
 #[doc = "Register `PAD_HOLD` writer"]
-pub struct W(crate::W<PAD_HOLD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PAD_HOLD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PAD_HOLD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PAD_HOLD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PAD_HOLD_SPEC>;
 #[doc = "Field `GPIO_PIN0_HOLD` reader - Need add desc"]
 pub type GPIO_PIN0_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN0_HOLD` writer - Need add desc"]
-pub type GPIO_PIN0_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
+pub type GPIO_PIN0_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN1_HOLD` reader - Need add desc"]
 pub type GPIO_PIN1_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN1_HOLD` writer - Need add desc"]
-pub type GPIO_PIN1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
+pub type GPIO_PIN1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN2_HOLD` reader - Need add desc"]
 pub type GPIO_PIN2_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_HOLD` writer - Need add desc"]
-pub type GPIO_PIN2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
+pub type GPIO_PIN2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN3_HOLD` reader - Need add desc"]
 pub type GPIO_PIN3_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN3_HOLD` writer - Need add desc"]
-pub type GPIO_PIN3_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
+pub type GPIO_PIN3_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN4_HOLD` reader - Need add desc"]
 pub type GPIO_PIN4_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN4_HOLD` writer - Need add desc"]
-pub type GPIO_PIN4_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
+pub type GPIO_PIN4_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN5_HOLD` reader - Need add desc"]
 pub type GPIO_PIN5_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN5_HOLD` writer - Need add desc"]
-pub type GPIO_PIN5_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
+pub type GPIO_PIN5_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Need add desc"]
     #[inline(always)]
@@ -131,58 +99,55 @@ impl W {
     #[doc = "Bit 0 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin0_hold(&mut self) -> GPIO_PIN0_HOLD_W<0> {
+    pub fn gpio_pin0_hold(&mut self) -> GPIO_PIN0_HOLD_W<PAD_HOLD_SPEC, 0> {
         GPIO_PIN0_HOLD_W::new(self)
     }
     #[doc = "Bit 1 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin1_hold(&mut self) -> GPIO_PIN1_HOLD_W<1> {
+    pub fn gpio_pin1_hold(&mut self) -> GPIO_PIN1_HOLD_W<PAD_HOLD_SPEC, 1> {
         GPIO_PIN1_HOLD_W::new(self)
     }
     #[doc = "Bit 2 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_hold(&mut self) -> GPIO_PIN2_HOLD_W<2> {
+    pub fn gpio_pin2_hold(&mut self) -> GPIO_PIN2_HOLD_W<PAD_HOLD_SPEC, 2> {
         GPIO_PIN2_HOLD_W::new(self)
     }
     #[doc = "Bit 3 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin3_hold(&mut self) -> GPIO_PIN3_HOLD_W<3> {
+    pub fn gpio_pin3_hold(&mut self) -> GPIO_PIN3_HOLD_W<PAD_HOLD_SPEC, 3> {
         GPIO_PIN3_HOLD_W::new(self)
     }
     #[doc = "Bit 4 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin4_hold(&mut self) -> GPIO_PIN4_HOLD_W<4> {
+    pub fn gpio_pin4_hold(&mut self) -> GPIO_PIN4_HOLD_W<PAD_HOLD_SPEC, 4> {
         GPIO_PIN4_HOLD_W::new(self)
     }
     #[doc = "Bit 5 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin5_hold(&mut self) -> GPIO_PIN5_HOLD_W<5> {
+    pub fn gpio_pin5_hold(&mut self) -> GPIO_PIN5_HOLD_W<PAD_HOLD_SPEC, 5> {
         GPIO_PIN5_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pad_hold](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_hold::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_hold::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PAD_HOLD_SPEC;
 impl crate::RegisterSpec for PAD_HOLD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pad_hold::R](R) reader structure"]
-impl crate::Readable for PAD_HOLD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pad_hold::W](W) writer structure"]
+#[doc = "`read()` method returns [`pad_hold::R`](R) reader structure"]
+impl crate::Readable for PAD_HOLD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pad_hold::W`](W) writer structure"]
 impl crate::Writable for PAD_HOLD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

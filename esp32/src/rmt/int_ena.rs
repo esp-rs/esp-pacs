@@ -1,55 +1,23 @@
 #[doc = "Register `INT_ENA` reader"]
-pub struct R(crate::R<INT_ENA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_ENA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_ENA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
-pub struct W(crate::W<INT_ENA_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INT_ENA_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INT_ENA_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `CH_TX_END[0-7]` reader - Set this bit to enable rmt_ch%s_tx_end_int_st."]
 pub type CH_TX_END_R = crate::BitReader;
 #[doc = "Field `CH_TX_END[0-7]` writer - Set this bit to enable rmt_ch%s_tx_end_int_st."]
-pub type CH_TX_END_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_TX_END_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_RX_END[0-7]` reader - Set this bit to enable rmt_ch%s_rx_end_int_st."]
 pub type CH_RX_END_R = crate::BitReader;
 #[doc = "Field `CH_RX_END[0-7]` writer - Set this bit to enable rmt_ch%s_rx_end_int_st."]
-pub type CH_RX_END_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_RX_END_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_ERR[0-7]` reader - Set this bit to enable rmt_ch%s_err_int_st."]
 pub type CH_ERR_R = crate::BitReader;
 #[doc = "Field `CH_ERR[0-7]` writer - Set this bit to enable rmt_ch%s_err_int_st."]
-pub type CH_ERR_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_TX_THR_EVENT[0-7]` reader - Set this bit to enable rmt_ch%s_tx_thr_event_int_st."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT[0-7]` writer - Set this bit to enable rmt_ch%s_tx_thr_event_int_st."]
-pub type CH_TX_THR_EVENT_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_TX_THR_EVENT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Set this bit to enable rmt_ch[0-7]_tx_end_int_st."]
     #[inline(always)]
@@ -305,238 +273,235 @@ impl W {
     #[doc = "Set this bit to enable rmt_ch[0-7]_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_tx_end<const O: u8>(&mut self) -> CH_TX_END_W<O> {
+    pub unsafe fn ch_tx_end<const O: u8>(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, O> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 0 - Set this bit to enable rmt_ch0_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<0> {
+    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 0> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable rmt_ch1_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<3> {
+    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 3> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable rmt_ch2_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_tx_end(&mut self) -> CH_TX_END_W<6> {
+    pub fn ch2_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 6> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to enable rmt_ch3_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<9> {
+    pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 9> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable rmt_ch4_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch4_tx_end(&mut self) -> CH_TX_END_W<12> {
+    pub fn ch4_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 12> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to enable rmt_ch5_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch5_tx_end(&mut self) -> CH_TX_END_W<15> {
+    pub fn ch5_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 15> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to enable rmt_ch6_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch6_tx_end(&mut self) -> CH_TX_END_W<18> {
+    pub fn ch6_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 18> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to enable rmt_ch7_tx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch7_tx_end(&mut self) -> CH_TX_END_W<21> {
+    pub fn ch7_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 21> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Set this bit to enable rmt_ch[0-7]_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_rx_end<const O: u8>(&mut self) -> CH_RX_END_W<O> {
+    pub unsafe fn ch_rx_end<const O: u8>(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, O> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable rmt_ch0_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_rx_end(&mut self) -> CH_RX_END_W<1> {
+    pub fn ch0_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 1> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable rmt_ch1_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_rx_end(&mut self) -> CH_RX_END_W<4> {
+    pub fn ch1_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 4> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable rmt_ch2_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<7> {
+    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 7> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable rmt_ch3_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<10> {
+    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 10> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to enable rmt_ch4_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch4_rx_end(&mut self) -> CH_RX_END_W<13> {
+    pub fn ch4_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 13> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to enable rmt_ch5_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch5_rx_end(&mut self) -> CH_RX_END_W<16> {
+    pub fn ch5_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 16> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to enable rmt_ch6_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch6_rx_end(&mut self) -> CH_RX_END_W<19> {
+    pub fn ch6_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 19> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to enable rmt_ch7_rx_end_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch7_rx_end(&mut self) -> CH_RX_END_W<22> {
+    pub fn ch7_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 22> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Set this bit to enable rmt_ch[0-7]_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_err<const O: u8>(&mut self) -> CH_ERR_W<O> {
+    pub unsafe fn ch_err<const O: u8>(&mut self) -> CH_ERR_W<INT_ENA_SPEC, O> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable rmt_ch0_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_err(&mut self) -> CH_ERR_W<2> {
+    pub fn ch0_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 2> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable rmt_ch1_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_err(&mut self) -> CH_ERR_W<5> {
+    pub fn ch1_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 5> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to enable rmt_ch2_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_err(&mut self) -> CH_ERR_W<8> {
+    pub fn ch2_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 8> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to enable rmt_ch3_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_err(&mut self) -> CH_ERR_W<11> {
+    pub fn ch3_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 11> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable rmt_ch4_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch4_err(&mut self) -> CH_ERR_W<14> {
+    pub fn ch4_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 14> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to enable rmt_ch5_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch5_err(&mut self) -> CH_ERR_W<17> {
+    pub fn ch5_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 17> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to enable rmt_ch6_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch6_err(&mut self) -> CH_ERR_W<20> {
+    pub fn ch6_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 20> {
         CH_ERR_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to enable rmt_ch7_err_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch7_err(&mut self) -> CH_ERR_W<23> {
+    pub fn ch7_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC, 23> {
         CH_ERR_W::new(self)
     }
     #[doc = "Set this bit to enable rmt_ch[0-7]_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_tx_thr_event<const O: u8>(&mut self) -> CH_TX_THR_EVENT_W<O> {
+    pub unsafe fn ch_tx_thr_event<const O: u8>(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, O> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to enable rmt_ch0_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<24> {
+    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 24> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 25 - Set this bit to enable rmt_ch1_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<25> {
+    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 25> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to enable rmt_ch2_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<26> {
+    pub fn ch2_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 26> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 27 - Set this bit to enable rmt_ch3_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<27> {
+    pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 27> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to enable rmt_ch4_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch4_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<28> {
+    pub fn ch4_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 28> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to enable rmt_ch5_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch5_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<29> {
+    pub fn ch5_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 29> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to enable rmt_ch6_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch6_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<30> {
+    pub fn ch6_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 30> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable rmt_ch7_tx_thr_event_int_st."]
     #[inline(always)]
     #[must_use]
-    pub fn ch7_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<31> {
+    pub fn ch7_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 31> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
-impl crate::Readable for INT_ENA_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for INT_ENA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

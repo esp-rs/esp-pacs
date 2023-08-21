@@ -198,444 +198,444 @@ pub struct RegisterBlock {
     #[doc = "0xffc - SENSITIVE_DATE_REG"]
     pub date: DATE,
 }
-#[doc = "ROM_TABLE_LOCK (rw) register accessor: an alias for `Reg<ROM_TABLE_LOCK_SPEC>`"]
+#[doc = "ROM_TABLE_LOCK (rw) register accessor: SENSITIVE_ROM_TABLE_LOCK_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rom_table_lock::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rom_table_lock::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rom_table_lock`] module"]
 pub type ROM_TABLE_LOCK = crate::Reg<rom_table_lock::ROM_TABLE_LOCK_SPEC>;
 #[doc = "SENSITIVE_ROM_TABLE_LOCK_REG"]
 pub mod rom_table_lock;
-#[doc = "ROM_TABLE (rw) register accessor: an alias for `Reg<ROM_TABLE_SPEC>`"]
+#[doc = "ROM_TABLE (rw) register accessor: SENSITIVE_ROM_TABLE_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rom_table::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rom_table::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rom_table`] module"]
 pub type ROM_TABLE = crate::Reg<rom_table::ROM_TABLE_SPEC>;
 #[doc = "SENSITIVE_ROM_TABLE_REG"]
 pub mod rom_table;
-#[doc = "PRIVILEGE_MODE_SEL_LOCK (rw) register accessor: an alias for `Reg<PRIVILEGE_MODE_SEL_LOCK_SPEC>`"]
+#[doc = "PRIVILEGE_MODE_SEL_LOCK (rw) register accessor: SENSITIVE_PRIVILEGE_MODE_SEL_LOCK_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`privilege_mode_sel_lock::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`privilege_mode_sel_lock::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`privilege_mode_sel_lock`] module"]
 pub type PRIVILEGE_MODE_SEL_LOCK =
     crate::Reg<privilege_mode_sel_lock::PRIVILEGE_MODE_SEL_LOCK_SPEC>;
 #[doc = "SENSITIVE_PRIVILEGE_MODE_SEL_LOCK_REG"]
 pub mod privilege_mode_sel_lock;
-#[doc = "PRIVILEGE_MODE_SEL (rw) register accessor: an alias for `Reg<PRIVILEGE_MODE_SEL_SPEC>`"]
+#[doc = "PRIVILEGE_MODE_SEL (rw) register accessor: SENSITIVE_PRIVILEGE_MODE_SEL_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`privilege_mode_sel::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`privilege_mode_sel::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`privilege_mode_sel`] module"]
 pub type PRIVILEGE_MODE_SEL = crate::Reg<privilege_mode_sel::PRIVILEGE_MODE_SEL_SPEC>;
 #[doc = "SENSITIVE_PRIVILEGE_MODE_SEL_REG"]
 pub mod privilege_mode_sel;
-#[doc = "APB_PERIPHERAL_ACCESS_0 (rw) register accessor: an alias for `Reg<APB_PERIPHERAL_ACCESS_0_SPEC>`"]
+#[doc = "APB_PERIPHERAL_ACCESS_0 (rw) register accessor: SENSITIVE_APB_PERIPHERAL_ACCESS_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_peripheral_access_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_peripheral_access_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`apb_peripheral_access_0`] module"]
 pub type APB_PERIPHERAL_ACCESS_0 =
     crate::Reg<apb_peripheral_access_0::APB_PERIPHERAL_ACCESS_0_SPEC>;
 #[doc = "SENSITIVE_APB_PERIPHERAL_ACCESS_0_REG"]
 pub mod apb_peripheral_access_0;
-#[doc = "APB_PERIPHERAL_ACCESS_1 (rw) register accessor: an alias for `Reg<APB_PERIPHERAL_ACCESS_1_SPEC>`"]
+#[doc = "APB_PERIPHERAL_ACCESS_1 (rw) register accessor: SENSITIVE_APB_PERIPHERAL_ACCESS_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_peripheral_access_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_peripheral_access_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`apb_peripheral_access_1`] module"]
 pub type APB_PERIPHERAL_ACCESS_1 =
     crate::Reg<apb_peripheral_access_1::APB_PERIPHERAL_ACCESS_1_SPEC>;
 #[doc = "SENSITIVE_APB_PERIPHERAL_ACCESS_1_REG"]
 pub mod apb_peripheral_access_1;
-#[doc = "INTERNAL_SRAM_USAGE_0 (rw) register accessor: an alias for `Reg<INTERNAL_SRAM_USAGE_0_SPEC>`"]
+#[doc = "INTERNAL_SRAM_USAGE_0 (rw) register accessor: SENSITIVE_INTERNAL_SRAM_USAGE_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`internal_sram_usage_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`internal_sram_usage_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`internal_sram_usage_0`] module"]
 pub type INTERNAL_SRAM_USAGE_0 = crate::Reg<internal_sram_usage_0::INTERNAL_SRAM_USAGE_0_SPEC>;
 #[doc = "SENSITIVE_INTERNAL_SRAM_USAGE_0_REG"]
 pub mod internal_sram_usage_0;
-#[doc = "INTERNAL_SRAM_USAGE_1 (rw) register accessor: an alias for `Reg<INTERNAL_SRAM_USAGE_1_SPEC>`"]
+#[doc = "INTERNAL_SRAM_USAGE_1 (rw) register accessor: SENSITIVE_INTERNAL_SRAM_USAGE_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`internal_sram_usage_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`internal_sram_usage_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`internal_sram_usage_1`] module"]
 pub type INTERNAL_SRAM_USAGE_1 = crate::Reg<internal_sram_usage_1::INTERNAL_SRAM_USAGE_1_SPEC>;
 #[doc = "SENSITIVE_INTERNAL_SRAM_USAGE_1_REG"]
 pub mod internal_sram_usage_1;
-#[doc = "INTERNAL_SRAM_USAGE_3 (rw) register accessor: an alias for `Reg<INTERNAL_SRAM_USAGE_3_SPEC>`"]
+#[doc = "INTERNAL_SRAM_USAGE_3 (rw) register accessor: SENSITIVE_INTERNAL_SRAM_USAGE_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`internal_sram_usage_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`internal_sram_usage_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`internal_sram_usage_3`] module"]
 pub type INTERNAL_SRAM_USAGE_3 = crate::Reg<internal_sram_usage_3::INTERNAL_SRAM_USAGE_3_SPEC>;
 #[doc = "SENSITIVE_INTERNAL_SRAM_USAGE_3_REG"]
 pub mod internal_sram_usage_3;
-#[doc = "INTERNAL_SRAM_USAGE_4 (rw) register accessor: an alias for `Reg<INTERNAL_SRAM_USAGE_4_SPEC>`"]
+#[doc = "INTERNAL_SRAM_USAGE_4 (rw) register accessor: SENSITIVE_INTERNAL_SRAM_USAGE_4_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`internal_sram_usage_4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`internal_sram_usage_4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`internal_sram_usage_4`] module"]
 pub type INTERNAL_SRAM_USAGE_4 = crate::Reg<internal_sram_usage_4::INTERNAL_SRAM_USAGE_4_SPEC>;
 #[doc = "SENSITIVE_INTERNAL_SRAM_USAGE_4_REG"]
 pub mod internal_sram_usage_4;
-#[doc = "CACHE_TAG_ACCESS_0 (rw) register accessor: an alias for `Reg<CACHE_TAG_ACCESS_0_SPEC>`"]
+#[doc = "CACHE_TAG_ACCESS_0 (rw) register accessor: SENSITIVE_CACHE_TAG_ACCESS_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_tag_access_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_tag_access_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cache_tag_access_0`] module"]
 pub type CACHE_TAG_ACCESS_0 = crate::Reg<cache_tag_access_0::CACHE_TAG_ACCESS_0_SPEC>;
 #[doc = "SENSITIVE_CACHE_TAG_ACCESS_0_REG"]
 pub mod cache_tag_access_0;
-#[doc = "CACHE_TAG_ACCESS_1 (rw) register accessor: an alias for `Reg<CACHE_TAG_ACCESS_1_SPEC>`"]
+#[doc = "CACHE_TAG_ACCESS_1 (rw) register accessor: SENSITIVE_CACHE_TAG_ACCESS_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_tag_access_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_tag_access_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cache_tag_access_1`] module"]
 pub type CACHE_TAG_ACCESS_1 = crate::Reg<cache_tag_access_1::CACHE_TAG_ACCESS_1_SPEC>;
 #[doc = "SENSITIVE_CACHE_TAG_ACCESS_1_REG"]
 pub mod cache_tag_access_1;
-#[doc = "CACHE_MMU_ACCESS_0 (rw) register accessor: an alias for `Reg<CACHE_MMU_ACCESS_0_SPEC>`"]
+#[doc = "CACHE_MMU_ACCESS_0 (rw) register accessor: SENSITIVE_CACHE_MMU_ACCESS_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_mmu_access_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_mmu_access_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cache_mmu_access_0`] module"]
 pub type CACHE_MMU_ACCESS_0 = crate::Reg<cache_mmu_access_0::CACHE_MMU_ACCESS_0_SPEC>;
 #[doc = "SENSITIVE_CACHE_MMU_ACCESS_0_REG"]
 pub mod cache_mmu_access_0;
-#[doc = "CACHE_MMU_ACCESS_1 (rw) register accessor: an alias for `Reg<CACHE_MMU_ACCESS_1_SPEC>`"]
+#[doc = "CACHE_MMU_ACCESS_1 (rw) register accessor: SENSITIVE_CACHE_MMU_ACCESS_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_mmu_access_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_mmu_access_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cache_mmu_access_1`] module"]
 pub type CACHE_MMU_ACCESS_1 = crate::Reg<cache_mmu_access_1::CACHE_MMU_ACCESS_1_SPEC>;
 #[doc = "SENSITIVE_CACHE_MMU_ACCESS_1_REG"]
 pub mod cache_mmu_access_1;
-#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_spi2_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_spi2_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_spi2_pms_constrain_0`] module"]
 pub type DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_spi2_pms_constrain_0::DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_spi2_pms_constrain_0;
-#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_spi2_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_spi2_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_spi2_pms_constrain_1`] module"]
 pub type DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_spi2_pms_constrain_1::DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_spi2_pms_constrain_1;
-#[doc = "DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_uchi0_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_uchi0_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_uchi0_pms_constrain_0`] module"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_uchi0_pms_constrain_0::DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_uchi0_pms_constrain_0;
-#[doc = "DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_uchi0_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_uchi0_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_uchi0_pms_constrain_1`] module"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_uchi0_pms_constrain_1::DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_uchi0_pms_constrain_1;
-#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_i2s0_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_i2s0_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_i2s0_pms_constrain_0`] module"]
 pub type DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_i2s0_pms_constrain_0::DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_i2s0_pms_constrain_0;
-#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_i2s0_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_i2s0_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_i2s0_pms_constrain_1`] module"]
 pub type DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_i2s0_pms_constrain_1::DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_i2s0_pms_constrain_1;
-#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_MAC_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_mac_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_mac_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_mac_pms_constrain_0`] module"]
 pub type DMA_APBPERI_MAC_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_mac_pms_constrain_0::DMA_APBPERI_MAC_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_mac_pms_constrain_0;
-#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_mac_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_mac_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_mac_pms_constrain_1`] module"]
 pub type DMA_APBPERI_MAC_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_mac_pms_constrain_1::DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_mac_pms_constrain_1;
-#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_backup_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_backup_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_backup_pms_constrain_0`] module"]
 pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_backup_pms_constrain_0::DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_backup_pms_constrain_0;
-#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_backup_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_backup_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_backup_pms_constrain_1`] module"]
 pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_backup_pms_constrain_1::DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_backup_pms_constrain_1;
-#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_lc_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_lc_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_lc_pms_constrain_0`] module"]
 pub type DMA_APBPERI_LC_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_lc_pms_constrain_0::DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_lc_pms_constrain_0;
-#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_lc_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_lc_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_lc_pms_constrain_1`] module"]
 pub type DMA_APBPERI_LC_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_lc_pms_constrain_1::DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_lc_pms_constrain_1;
-#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_AES_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_aes_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_aes_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_aes_pms_constrain_0`] module"]
 pub type DMA_APBPERI_AES_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_aes_pms_constrain_0::DMA_APBPERI_AES_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_aes_pms_constrain_0;
-#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_aes_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_aes_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_aes_pms_constrain_1`] module"]
 pub type DMA_APBPERI_AES_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_aes_pms_constrain_1::DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_aes_pms_constrain_1;
-#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_SHA_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_sha_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_sha_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_sha_pms_constrain_0`] module"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_sha_pms_constrain_0::DMA_APBPERI_SHA_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_sha_pms_constrain_0;
-#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_sha_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_sha_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_sha_pms_constrain_1`] module"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_sha_pms_constrain_1::DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_sha_pms_constrain_1;
-#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_adc_dac_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_adc_dac_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_adc_dac_pms_constrain_0`] module"]
 pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 =
     crate::Reg<dma_apbperi_adc_dac_pms_constrain_0::DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_REG"]
 pub mod dma_apbperi_adc_dac_pms_constrain_0;
-#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_adc_dac_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_adc_dac_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_adc_dac_pms_constrain_1`] module"]
 pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 =
     crate::Reg<dma_apbperi_adc_dac_pms_constrain_1::DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_REG"]
 pub mod dma_apbperi_adc_dac_pms_constrain_1;
-#[doc = "DMA_APBPERI_PMS_MONITOR_0 (rw) register accessor: an alias for `Reg<DMA_APBPERI_PMS_MONITOR_0_SPEC>`"]
+#[doc = "DMA_APBPERI_PMS_MONITOR_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_PMS_MONITOR_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_pms_monitor_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_pms_monitor_0`] module"]
 pub type DMA_APBPERI_PMS_MONITOR_0 =
     crate::Reg<dma_apbperi_pms_monitor_0::DMA_APBPERI_PMS_MONITOR_0_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_PMS_MONITOR_0_REG"]
 pub mod dma_apbperi_pms_monitor_0;
-#[doc = "DMA_APBPERI_PMS_MONITOR_1 (rw) register accessor: an alias for `Reg<DMA_APBPERI_PMS_MONITOR_1_SPEC>`"]
+#[doc = "DMA_APBPERI_PMS_MONITOR_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_PMS_MONITOR_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_pms_monitor_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_pms_monitor_1`] module"]
 pub type DMA_APBPERI_PMS_MONITOR_1 =
     crate::Reg<dma_apbperi_pms_monitor_1::DMA_APBPERI_PMS_MONITOR_1_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_PMS_MONITOR_1_REG"]
 pub mod dma_apbperi_pms_monitor_1;
-#[doc = "DMA_APBPERI_PMS_MONITOR_2 (r) register accessor: an alias for `Reg<DMA_APBPERI_PMS_MONITOR_2_SPEC>`"]
+#[doc = "DMA_APBPERI_PMS_MONITOR_2 (r) register accessor: SENSITIVE_DMA_APBPERI_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_pms_monitor_2`] module"]
 pub type DMA_APBPERI_PMS_MONITOR_2 =
     crate::Reg<dma_apbperi_pms_monitor_2::DMA_APBPERI_PMS_MONITOR_2_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_PMS_MONITOR_2_REG"]
 pub mod dma_apbperi_pms_monitor_2;
-#[doc = "DMA_APBPERI_PMS_MONITOR_3 (r) register accessor: an alias for `Reg<DMA_APBPERI_PMS_MONITOR_3_SPEC>`"]
+#[doc = "DMA_APBPERI_PMS_MONITOR_3 (r) register accessor: SENSITIVE_DMA_APBPERI_PMS_MONITOR_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_apbperi_pms_monitor_3`] module"]
 pub type DMA_APBPERI_PMS_MONITOR_3 =
     crate::Reg<dma_apbperi_pms_monitor_3::DMA_APBPERI_PMS_MONITOR_3_SPEC>;
 #[doc = "SENSITIVE_DMA_APBPERI_PMS_MONITOR_3_REG"]
 pub mod dma_apbperi_pms_monitor_3;
-#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC>`"]
+#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_dram0_dma_split_line_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_dram0_dma_split_line_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_dram0_dma_split_line_constrain_0`] module"]
 pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0 = crate :: Reg < core_x_iram0_dram0_dma_split_line_constrain_0 :: CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC > ;
 #[doc = "SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_REG"]
 pub mod core_x_iram0_dram0_dma_split_line_constrain_0;
-#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>`"]
+#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_dram0_dma_split_line_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_dram0_dma_split_line_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_dram0_dma_split_line_constrain_1`] module"]
 pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1 = crate :: Reg < core_x_iram0_dram0_dma_split_line_constrain_1 :: CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC > ;
 #[doc = "SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_REG"]
 pub mod core_x_iram0_dram0_dma_split_line_constrain_1;
-#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>`"]
+#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_dram0_dma_split_line_constrain_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_dram0_dma_split_line_constrain_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_dram0_dma_split_line_constrain_2`] module"]
 pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2 = crate :: Reg < core_x_iram0_dram0_dma_split_line_constrain_2 :: CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC > ;
 #[doc = "SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_REG"]
 pub mod core_x_iram0_dram0_dma_split_line_constrain_2;
-#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_3 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_3_SPEC>`"]
+#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_3 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_dram0_dma_split_line_constrain_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_dram0_dma_split_line_constrain_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_dram0_dma_split_line_constrain_3`] module"]
 pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_3 = crate :: Reg < core_x_iram0_dram0_dma_split_line_constrain_3 :: CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_3_SPEC > ;
 #[doc = "SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_3_REG"]
 pub mod core_x_iram0_dram0_dma_split_line_constrain_3;
-#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC>`"]
+#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_dram0_dma_split_line_constrain_4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_dram0_dma_split_line_constrain_4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_dram0_dma_split_line_constrain_4`] module"]
 pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4 = crate :: Reg < core_x_iram0_dram0_dma_split_line_constrain_4 :: CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC > ;
 #[doc = "SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_REG"]
 pub mod core_x_iram0_dram0_dma_split_line_constrain_4;
-#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>`"]
+#[doc = "CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_dram0_dma_split_line_constrain_5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_dram0_dma_split_line_constrain_5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_dram0_dma_split_line_constrain_5`] module"]
 pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5 = crate :: Reg < core_x_iram0_dram0_dma_split_line_constrain_5 :: CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC > ;
 #[doc = "SENSITIVE_CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_REG"]
 pub mod core_x_iram0_dram0_dma_split_line_constrain_5;
-#[doc = "CORE_X_IRAM0_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "CORE_X_IRAM0_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_pms_constrain_0`] module"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_0 =
     crate::Reg<core_x_iram0_pms_constrain_0::CORE_X_IRAM0_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_CORE_X_IRAM0_PMS_CONSTRAIN_0_REG"]
 pub mod core_x_iram0_pms_constrain_0;
-#[doc = "CORE_X_IRAM0_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "CORE_X_IRAM0_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_pms_constrain_1`] module"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_1 =
     crate::Reg<core_x_iram0_pms_constrain_1::CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_CORE_X_IRAM0_PMS_CONSTRAIN_1_REG"]
 pub mod core_x_iram0_pms_constrain_1;
-#[doc = "CORE_X_IRAM0_PMS_CONSTRAIN_2 (rw) register accessor: an alias for `Reg<CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC>`"]
+#[doc = "CORE_X_IRAM0_PMS_CONSTRAIN_2 (rw) register accessor: SENSITIVE_CORE_X_IRAM0_PMS_CONSTRAIN_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_pms_constrain_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_pms_constrain_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_iram0_pms_constrain_2`] module"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_2 =
     crate::Reg<core_x_iram0_pms_constrain_2::CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC>;
 #[doc = "SENSITIVE_CORE_X_IRAM0_PMS_CONSTRAIN_2_REG"]
 pub mod core_x_iram0_pms_constrain_2;
-#[doc = "CORE_0_IRAM0_PMS_MONITOR_0 (rw) register accessor: an alias for `Reg<CORE_0_IRAM0_PMS_MONITOR_0_SPEC>`"]
+#[doc = "CORE_0_IRAM0_PMS_MONITOR_0 (rw) register accessor: SENSITIVE_CORE_0_IRAM0_PMS_MONITOR_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_iram0_pms_monitor_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_iram0_pms_monitor_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_iram0_pms_monitor_0`] module"]
 pub type CORE_0_IRAM0_PMS_MONITOR_0 =
     crate::Reg<core_0_iram0_pms_monitor_0::CORE_0_IRAM0_PMS_MONITOR_0_SPEC>;
 #[doc = "SENSITIVE_CORE_0_IRAM0_PMS_MONITOR_0_REG"]
 pub mod core_0_iram0_pms_monitor_0;
-#[doc = "CORE_0_IRAM0_PMS_MONITOR_1 (rw) register accessor: an alias for `Reg<CORE_0_IRAM0_PMS_MONITOR_1_SPEC>`"]
+#[doc = "CORE_0_IRAM0_PMS_MONITOR_1 (rw) register accessor: SENSITIVE_CORE_0_IRAM0_PMS_MONITOR_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_iram0_pms_monitor_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_iram0_pms_monitor_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_iram0_pms_monitor_1`] module"]
 pub type CORE_0_IRAM0_PMS_MONITOR_1 =
     crate::Reg<core_0_iram0_pms_monitor_1::CORE_0_IRAM0_PMS_MONITOR_1_SPEC>;
 #[doc = "SENSITIVE_CORE_0_IRAM0_PMS_MONITOR_1_REG"]
 pub mod core_0_iram0_pms_monitor_1;
-#[doc = "CORE_0_IRAM0_PMS_MONITOR_2 (r) register accessor: an alias for `Reg<CORE_0_IRAM0_PMS_MONITOR_2_SPEC>`"]
+#[doc = "CORE_0_IRAM0_PMS_MONITOR_2 (r) register accessor: SENSITIVE_CORE_0_IRAM0_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_iram0_pms_monitor_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_iram0_pms_monitor_2`] module"]
 pub type CORE_0_IRAM0_PMS_MONITOR_2 =
     crate::Reg<core_0_iram0_pms_monitor_2::CORE_0_IRAM0_PMS_MONITOR_2_SPEC>;
 #[doc = "SENSITIVE_CORE_0_IRAM0_PMS_MONITOR_2_REG"]
 pub mod core_0_iram0_pms_monitor_2;
-#[doc = "CORE_X_DRAM0_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<CORE_X_DRAM0_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "CORE_X_DRAM0_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_CORE_X_DRAM0_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_dram0_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_dram0_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_dram0_pms_constrain_0`] module"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_0 =
     crate::Reg<core_x_dram0_pms_constrain_0::CORE_X_DRAM0_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_CORE_X_DRAM0_PMS_CONSTRAIN_0_REG"]
 pub mod core_x_dram0_pms_constrain_0;
-#[doc = "CORE_X_DRAM0_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "CORE_X_DRAM0_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_CORE_X_DRAM0_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_dram0_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_dram0_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_x_dram0_pms_constrain_1`] module"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_1 =
     crate::Reg<core_x_dram0_pms_constrain_1::CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_CORE_X_DRAM0_PMS_CONSTRAIN_1_REG"]
 pub mod core_x_dram0_pms_constrain_1;
-#[doc = "CORE_0_DRAM0_PMS_MONITOR_0 (rw) register accessor: an alias for `Reg<CORE_0_DRAM0_PMS_MONITOR_0_SPEC>`"]
+#[doc = "CORE_0_DRAM0_PMS_MONITOR_0 (rw) register accessor: SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_pms_monitor_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_dram0_pms_monitor_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_dram0_pms_monitor_0`] module"]
 pub type CORE_0_DRAM0_PMS_MONITOR_0 =
     crate::Reg<core_0_dram0_pms_monitor_0::CORE_0_DRAM0_PMS_MONITOR_0_SPEC>;
 #[doc = "SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_0_REG"]
 pub mod core_0_dram0_pms_monitor_0;
-#[doc = "CORE_0_DRAM0_PMS_MONITOR_1 (rw) register accessor: an alias for `Reg<CORE_0_DRAM0_PMS_MONITOR_1_SPEC>`"]
+#[doc = "CORE_0_DRAM0_PMS_MONITOR_1 (rw) register accessor: SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_pms_monitor_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_dram0_pms_monitor_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_dram0_pms_monitor_1`] module"]
 pub type CORE_0_DRAM0_PMS_MONITOR_1 =
     crate::Reg<core_0_dram0_pms_monitor_1::CORE_0_DRAM0_PMS_MONITOR_1_SPEC>;
 #[doc = "SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_1_REG"]
 pub mod core_0_dram0_pms_monitor_1;
-#[doc = "CORE_0_DRAM0_PMS_MONITOR_2 (r) register accessor: an alias for `Reg<CORE_0_DRAM0_PMS_MONITOR_2_SPEC>`"]
+#[doc = "CORE_0_DRAM0_PMS_MONITOR_2 (r) register accessor: SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_pms_monitor_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_dram0_pms_monitor_2`] module"]
 pub type CORE_0_DRAM0_PMS_MONITOR_2 =
     crate::Reg<core_0_dram0_pms_monitor_2::CORE_0_DRAM0_PMS_MONITOR_2_SPEC>;
 #[doc = "SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_2_REG"]
 pub mod core_0_dram0_pms_monitor_2;
-#[doc = "CORE_0_DRAM0_PMS_MONITOR_3 (r) register accessor: an alias for `Reg<CORE_0_DRAM0_PMS_MONITOR_3_SPEC>`"]
+#[doc = "CORE_0_DRAM0_PMS_MONITOR_3 (r) register accessor: SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_pms_monitor_3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_dram0_pms_monitor_3`] module"]
 pub type CORE_0_DRAM0_PMS_MONITOR_3 =
     crate::Reg<core_0_dram0_pms_monitor_3::CORE_0_DRAM0_PMS_MONITOR_3_SPEC>;
 #[doc = "SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_3_REG"]
 pub mod core_0_dram0_pms_monitor_3;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_0`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_0 =
     crate::Reg<core_0_pif_pms_constrain_0::CORE_0_PIF_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_0_REG"]
 pub mod core_0_pif_pms_constrain_0;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_1`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_1 =
     crate::Reg<core_0_pif_pms_constrain_1::CORE_0_PIF_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_1_REG"]
 pub mod core_0_pif_pms_constrain_1;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_2 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_2_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_2 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_2`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_2 =
     crate::Reg<core_0_pif_pms_constrain_2::CORE_0_PIF_PMS_CONSTRAIN_2_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_2_REG"]
 pub mod core_0_pif_pms_constrain_2;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_3 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_3 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_3`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_3 =
     crate::Reg<core_0_pif_pms_constrain_3::CORE_0_PIF_PMS_CONSTRAIN_3_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_3_REG"]
 pub mod core_0_pif_pms_constrain_3;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_4 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_4 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_4_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_4`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_4 =
     crate::Reg<core_0_pif_pms_constrain_4::CORE_0_PIF_PMS_CONSTRAIN_4_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_4_REG"]
 pub mod core_0_pif_pms_constrain_4;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_5 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_5_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_5 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_5_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_5`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_5 =
     crate::Reg<core_0_pif_pms_constrain_5::CORE_0_PIF_PMS_CONSTRAIN_5_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_5_REG"]
 pub mod core_0_pif_pms_constrain_5;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_6 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_6 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_6_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_6`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_6 =
     crate::Reg<core_0_pif_pms_constrain_6::CORE_0_PIF_PMS_CONSTRAIN_6_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_6_REG"]
 pub mod core_0_pif_pms_constrain_6;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_7 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_7 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_7_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_7`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_7 =
     crate::Reg<core_0_pif_pms_constrain_7::CORE_0_PIF_PMS_CONSTRAIN_7_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_7_REG"]
 pub mod core_0_pif_pms_constrain_7;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_8 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_8_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_8 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_8_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_8`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_8 =
     crate::Reg<core_0_pif_pms_constrain_8::CORE_0_PIF_PMS_CONSTRAIN_8_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_8_REG"]
 pub mod core_0_pif_pms_constrain_8;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_9 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_9_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_9 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_9_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_9`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_9 =
     crate::Reg<core_0_pif_pms_constrain_9::CORE_0_PIF_PMS_CONSTRAIN_9_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_9_REG"]
 pub mod core_0_pif_pms_constrain_9;
-#[doc = "CORE_0_PIF_PMS_CONSTRAIN_10 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_CONSTRAIN_10_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_CONSTRAIN_10 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_10_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_constrain_10`] module"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_10 =
     crate::Reg<core_0_pif_pms_constrain_10::CORE_0_PIF_PMS_CONSTRAIN_10_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_CONSTRAIN_10_REG"]
 pub mod core_0_pif_pms_constrain_10;
-#[doc = "REGION_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_0`] module"]
 pub type REGION_PMS_CONSTRAIN_0 = crate::Reg<region_pms_constrain_0::REGION_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_0_REG"]
 pub mod region_pms_constrain_0;
-#[doc = "REGION_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_1`] module"]
 pub type REGION_PMS_CONSTRAIN_1 = crate::Reg<region_pms_constrain_1::REGION_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_1_REG"]
 pub mod region_pms_constrain_1;
-#[doc = "REGION_PMS_CONSTRAIN_2 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_2_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_2 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_2`] module"]
 pub type REGION_PMS_CONSTRAIN_2 = crate::Reg<region_pms_constrain_2::REGION_PMS_CONSTRAIN_2_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_2_REG"]
 pub mod region_pms_constrain_2;
-#[doc = "REGION_PMS_CONSTRAIN_3 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_3_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_3 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_3`] module"]
 pub type REGION_PMS_CONSTRAIN_3 = crate::Reg<region_pms_constrain_3::REGION_PMS_CONSTRAIN_3_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_3_REG"]
 pub mod region_pms_constrain_3;
-#[doc = "REGION_PMS_CONSTRAIN_4 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_4_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_4 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_4_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_4`] module"]
 pub type REGION_PMS_CONSTRAIN_4 = crate::Reg<region_pms_constrain_4::REGION_PMS_CONSTRAIN_4_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_4_REG"]
 pub mod region_pms_constrain_4;
-#[doc = "REGION_PMS_CONSTRAIN_5 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_5_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_5 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_5_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_5`] module"]
 pub type REGION_PMS_CONSTRAIN_5 = crate::Reg<region_pms_constrain_5::REGION_PMS_CONSTRAIN_5_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_5_REG"]
 pub mod region_pms_constrain_5;
-#[doc = "REGION_PMS_CONSTRAIN_6 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_6_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_6 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_6_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_6`] module"]
 pub type REGION_PMS_CONSTRAIN_6 = crate::Reg<region_pms_constrain_6::REGION_PMS_CONSTRAIN_6_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_6_REG"]
 pub mod region_pms_constrain_6;
-#[doc = "REGION_PMS_CONSTRAIN_7 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_7_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_7 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_7_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_7`] module"]
 pub type REGION_PMS_CONSTRAIN_7 = crate::Reg<region_pms_constrain_7::REGION_PMS_CONSTRAIN_7_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_7_REG"]
 pub mod region_pms_constrain_7;
-#[doc = "REGION_PMS_CONSTRAIN_8 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_8_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_8 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_8_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_8`] module"]
 pub type REGION_PMS_CONSTRAIN_8 = crate::Reg<region_pms_constrain_8::REGION_PMS_CONSTRAIN_8_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_8_REG"]
 pub mod region_pms_constrain_8;
-#[doc = "REGION_PMS_CONSTRAIN_9 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_9_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_9 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_9_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_9`] module"]
 pub type REGION_PMS_CONSTRAIN_9 = crate::Reg<region_pms_constrain_9::REGION_PMS_CONSTRAIN_9_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_9_REG"]
 pub mod region_pms_constrain_9;
-#[doc = "REGION_PMS_CONSTRAIN_10 (rw) register accessor: an alias for `Reg<REGION_PMS_CONSTRAIN_10_SPEC>`"]
+#[doc = "REGION_PMS_CONSTRAIN_10 (rw) register accessor: SENSITIVE_REGION_PMS_CONSTRAIN_10_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_pms_constrain_10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_pms_constrain_10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_pms_constrain_10`] module"]
 pub type REGION_PMS_CONSTRAIN_10 =
     crate::Reg<region_pms_constrain_10::REGION_PMS_CONSTRAIN_10_SPEC>;
 #[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_10_REG"]
 pub mod region_pms_constrain_10;
-#[doc = "CORE_0_PIF_PMS_MONITOR_0 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_MONITOR_0_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_MONITOR_0 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_MONITOR_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_monitor_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_monitor_0`] module"]
 pub type CORE_0_PIF_PMS_MONITOR_0 =
     crate::Reg<core_0_pif_pms_monitor_0::CORE_0_PIF_PMS_MONITOR_0_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_0_REG"]
 pub mod core_0_pif_pms_monitor_0;
-#[doc = "CORE_0_PIF_PMS_MONITOR_1 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_MONITOR_1_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_MONITOR_1 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_MONITOR_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_monitor_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_monitor_1`] module"]
 pub type CORE_0_PIF_PMS_MONITOR_1 =
     crate::Reg<core_0_pif_pms_monitor_1::CORE_0_PIF_PMS_MONITOR_1_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_1_REG"]
 pub mod core_0_pif_pms_monitor_1;
-#[doc = "CORE_0_PIF_PMS_MONITOR_2 (r) register accessor: an alias for `Reg<CORE_0_PIF_PMS_MONITOR_2_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_MONITOR_2 (r) register accessor: SENSITIVE_CORE_0_PIF_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_monitor_2`] module"]
 pub type CORE_0_PIF_PMS_MONITOR_2 =
     crate::Reg<core_0_pif_pms_monitor_2::CORE_0_PIF_PMS_MONITOR_2_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_2_REG"]
 pub mod core_0_pif_pms_monitor_2;
-#[doc = "CORE_0_PIF_PMS_MONITOR_3 (r) register accessor: an alias for `Reg<CORE_0_PIF_PMS_MONITOR_3_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_MONITOR_3 (r) register accessor: SENSITIVE_CORE_0_PIF_PMS_MONITOR_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_monitor_3`] module"]
 pub type CORE_0_PIF_PMS_MONITOR_3 =
     crate::Reg<core_0_pif_pms_monitor_3::CORE_0_PIF_PMS_MONITOR_3_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_3_REG"]
 pub mod core_0_pif_pms_monitor_3;
-#[doc = "CORE_0_PIF_PMS_MONITOR_4 (rw) register accessor: an alias for `Reg<CORE_0_PIF_PMS_MONITOR_4_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_MONITOR_4 (rw) register accessor: SENSITIVE_CORE_0_PIF_PMS_MONITOR_4_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_monitor_4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_monitor_4`] module"]
 pub type CORE_0_PIF_PMS_MONITOR_4 =
     crate::Reg<core_0_pif_pms_monitor_4::CORE_0_PIF_PMS_MONITOR_4_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_4_REG"]
 pub mod core_0_pif_pms_monitor_4;
-#[doc = "CORE_0_PIF_PMS_MONITOR_5 (r) register accessor: an alias for `Reg<CORE_0_PIF_PMS_MONITOR_5_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_MONITOR_5 (r) register accessor: SENSITIVE_CORE_0_PIF_PMS_MONITOR_5_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_monitor_5`] module"]
 pub type CORE_0_PIF_PMS_MONITOR_5 =
     crate::Reg<core_0_pif_pms_monitor_5::CORE_0_PIF_PMS_MONITOR_5_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_5_REG"]
 pub mod core_0_pif_pms_monitor_5;
-#[doc = "CORE_0_PIF_PMS_MONITOR_6 (r) register accessor: an alias for `Reg<CORE_0_PIF_PMS_MONITOR_6_SPEC>`"]
+#[doc = "CORE_0_PIF_PMS_MONITOR_6 (r) register accessor: SENSITIVE_CORE_0_PIF_PMS_MONITOR_6_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`core_0_pif_pms_monitor_6`] module"]
 pub type CORE_0_PIF_PMS_MONITOR_6 =
     crate::Reg<core_0_pif_pms_monitor_6::CORE_0_PIF_PMS_MONITOR_6_SPEC>;
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_6_REG"]
 pub mod core_0_pif_pms_monitor_6;
-#[doc = "BACKUP_BUS_PMS_CONSTRAIN_0 (rw) register accessor: an alias for `Reg<BACKUP_BUS_PMS_CONSTRAIN_0_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_constrain_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`backup_bus_pms_constrain_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_constrain_0`] module"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_0 =
     crate::Reg<backup_bus_pms_constrain_0::BACKUP_BUS_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_0_REG"]
 pub mod backup_bus_pms_constrain_0;
-#[doc = "BACKUP_BUS_PMS_CONSTRAIN_1 (rw) register accessor: an alias for `Reg<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_constrain_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`backup_bus_pms_constrain_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_constrain_1`] module"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_1 =
     crate::Reg<backup_bus_pms_constrain_1::BACKUP_BUS_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_1_REG"]
 pub mod backup_bus_pms_constrain_1;
-#[doc = "BACKUP_BUS_PMS_CONSTRAIN_2 (rw) register accessor: an alias for `Reg<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_CONSTRAIN_2 (rw) register accessor: SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_constrain_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`backup_bus_pms_constrain_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_constrain_2`] module"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_2 =
     crate::Reg<backup_bus_pms_constrain_2::BACKUP_BUS_PMS_CONSTRAIN_2_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_2_REG"]
 pub mod backup_bus_pms_constrain_2;
-#[doc = "BACKUP_BUS_PMS_CONSTRAIN_3 (rw) register accessor: an alias for `Reg<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_CONSTRAIN_3 (rw) register accessor: SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_constrain_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`backup_bus_pms_constrain_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_constrain_3`] module"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_3 =
     crate::Reg<backup_bus_pms_constrain_3::BACKUP_BUS_PMS_CONSTRAIN_3_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_3_REG"]
 pub mod backup_bus_pms_constrain_3;
-#[doc = "BACKUP_BUS_PMS_CONSTRAIN_4 (rw) register accessor: an alias for `Reg<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_CONSTRAIN_4 (rw) register accessor: SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_4_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_constrain_4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`backup_bus_pms_constrain_4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_constrain_4`] module"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_4 =
     crate::Reg<backup_bus_pms_constrain_4::BACKUP_BUS_PMS_CONSTRAIN_4_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_4_REG"]
 pub mod backup_bus_pms_constrain_4;
-#[doc = "BACKUP_BUS_PMS_MONITOR_0 (rw) register accessor: an alias for `Reg<BACKUP_BUS_PMS_MONITOR_0_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_MONITOR_0 (rw) register accessor: SENSITIVE_BACKUP_BUS_PMS_MONITOR_0_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_monitor_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`backup_bus_pms_monitor_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_monitor_0`] module"]
 pub type BACKUP_BUS_PMS_MONITOR_0 =
     crate::Reg<backup_bus_pms_monitor_0::BACKUP_BUS_PMS_MONITOR_0_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_0_REG"]
 pub mod backup_bus_pms_monitor_0;
-#[doc = "BACKUP_BUS_PMS_MONITOR_1 (rw) register accessor: an alias for `Reg<BACKUP_BUS_PMS_MONITOR_1_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_MONITOR_1 (rw) register accessor: SENSITIVE_BACKUP_BUS_PMS_MONITOR_1_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_monitor_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`backup_bus_pms_monitor_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_monitor_1`] module"]
 pub type BACKUP_BUS_PMS_MONITOR_1 =
     crate::Reg<backup_bus_pms_monitor_1::BACKUP_BUS_PMS_MONITOR_1_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_1_REG"]
 pub mod backup_bus_pms_monitor_1;
-#[doc = "BACKUP_BUS_PMS_MONITOR_2 (r) register accessor: an alias for `Reg<BACKUP_BUS_PMS_MONITOR_2_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_MONITOR_2 (r) register accessor: SENSITIVE_BACKUP_BUS_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_monitor_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_monitor_2`] module"]
 pub type BACKUP_BUS_PMS_MONITOR_2 =
     crate::Reg<backup_bus_pms_monitor_2::BACKUP_BUS_PMS_MONITOR_2_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_2_REG"]
 pub mod backup_bus_pms_monitor_2;
-#[doc = "BACKUP_BUS_PMS_MONITOR_3 (r) register accessor: an alias for `Reg<BACKUP_BUS_PMS_MONITOR_3_SPEC>`"]
+#[doc = "BACKUP_BUS_PMS_MONITOR_3 (r) register accessor: SENSITIVE_BACKUP_BUS_PMS_MONITOR_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_monitor_3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`backup_bus_pms_monitor_3`] module"]
 pub type BACKUP_BUS_PMS_MONITOR_3 =
     crate::Reg<backup_bus_pms_monitor_3::BACKUP_BUS_PMS_MONITOR_3_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_3_REG"]
 pub mod backup_bus_pms_monitor_3;
-#[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
+#[doc = "CLOCK_GATE (rw) register accessor: SENSITIVE_CLOCK_GATE_REG_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_gate::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "SENSITIVE_CLOCK_GATE_REG_REG"]
 pub mod clock_gate;
-#[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
+#[doc = "DATE (rw) register accessor: SENSITIVE_DATE_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "SENSITIVE_DATE_REG"]
 pub mod date;

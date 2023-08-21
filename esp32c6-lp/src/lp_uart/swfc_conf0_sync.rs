@@ -1,75 +1,43 @@
 #[doc = "Register `SWFC_CONF0_SYNC` reader"]
-pub struct R(crate::R<SWFC_CONF0_SYNC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SWFC_CONF0_SYNC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SWFC_CONF0_SYNC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SWFC_CONF0_SYNC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SWFC_CONF0_SYNC_SPEC>;
 #[doc = "Register `SWFC_CONF0_SYNC` writer"]
-pub struct W(crate::W<SWFC_CONF0_SYNC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SWFC_CONF0_SYNC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SWFC_CONF0_SYNC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SWFC_CONF0_SYNC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SWFC_CONF0_SYNC_SPEC>;
 #[doc = "Field `XON_CHAR` reader - This register stores the Xon flow control char."]
 pub type XON_CHAR_R = crate::FieldReader;
 #[doc = "Field `XON_CHAR` writer - This register stores the Xon flow control char."]
-pub type XON_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SYNC_SPEC, 8, O>;
+pub type XON_CHAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `XOFF_CHAR` reader - This register stores the Xoff flow control char."]
 pub type XOFF_CHAR_R = crate::FieldReader;
 #[doc = "Field `XOFF_CHAR` writer - This register stores the Xoff flow control char."]
-pub type XOFF_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SYNC_SPEC, 8, O>;
+pub type XOFF_CHAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `XON_XOFF_STILL_SEND` reader - In software flow control mode, UART Tx is disabled once UART Rx receives XOFF. In this status, UART Tx can not transmit XOFF even the received data number is larger than UART_XOFF_THRESHOLD. Set this bit to enable UART Tx can transmit XON/XOFF when UART Tx is disabled."]
 pub type XON_XOFF_STILL_SEND_R = crate::BitReader;
 #[doc = "Field `XON_XOFF_STILL_SEND` writer - In software flow control mode, UART Tx is disabled once UART Rx receives XOFF. In this status, UART Tx can not transmit XOFF even the received data number is larger than UART_XOFF_THRESHOLD. Set this bit to enable UART Tx can transmit XON/XOFF when UART Tx is disabled."]
-pub type XON_XOFF_STILL_SEND_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SYNC_SPEC, O>;
+pub type XON_XOFF_STILL_SEND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SW_FLOW_CON_EN` reader - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
 pub type SW_FLOW_CON_EN_R = crate::BitReader;
 #[doc = "Field `SW_FLOW_CON_EN` writer - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
-pub type SW_FLOW_CON_EN_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SYNC_SPEC, O>;
+pub type SW_FLOW_CON_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `XONOFF_DEL` reader - Set this bit to remove flow control char from the received data."]
 pub type XONOFF_DEL_R = crate::BitReader;
 #[doc = "Field `XONOFF_DEL` writer - Set this bit to remove flow control char from the received data."]
-pub type XONOFF_DEL_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SYNC_SPEC, O>;
+pub type XONOFF_DEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_XON` reader - Set this bit to enable the transmitter to go on sending data."]
 pub type FORCE_XON_R = crate::BitReader;
 #[doc = "Field `FORCE_XON` writer - Set this bit to enable the transmitter to go on sending data."]
-pub type FORCE_XON_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SYNC_SPEC, O>;
+pub type FORCE_XON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_XOFF` reader - Set this bit to stop the transmitter from sending data."]
 pub type FORCE_XOFF_R = crate::BitReader;
 #[doc = "Field `FORCE_XOFF` writer - Set this bit to stop the transmitter from sending data."]
-pub type FORCE_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SYNC_SPEC, O>;
+pub type FORCE_XOFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEND_XON` reader - Set this bit to send Xon char. It is cleared by hardware automatically."]
 pub type SEND_XON_R = crate::BitReader;
 #[doc = "Field `SEND_XON` writer - Set this bit to send Xon char. It is cleared by hardware automatically."]
-pub type SEND_XON_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SYNC_SPEC, O>;
+pub type SEND_XON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEND_XOFF` reader - Set this bit to send Xoff char. It is cleared by hardware automatically."]
 pub type SEND_XOFF_R = crate::BitReader;
 #[doc = "Field `SEND_XOFF` writer - Set this bit to send Xoff char. It is cleared by hardware automatically."]
-pub type SEND_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SYNC_SPEC, O>;
+pub type SEND_XOFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - This register stores the Xon flow control char."]
     #[inline(always)]
@@ -149,76 +117,73 @@ impl W {
     #[doc = "Bits 0:7 - This register stores the Xon flow control char."]
     #[inline(always)]
     #[must_use]
-    pub fn xon_char(&mut self) -> XON_CHAR_W<0> {
+    pub fn xon_char(&mut self) -> XON_CHAR_W<SWFC_CONF0_SYNC_SPEC, 0> {
         XON_CHAR_W::new(self)
     }
     #[doc = "Bits 8:15 - This register stores the Xoff flow control char."]
     #[inline(always)]
     #[must_use]
-    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<8> {
+    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF0_SYNC_SPEC, 8> {
         XOFF_CHAR_W::new(self)
     }
     #[doc = "Bit 16 - In software flow control mode, UART Tx is disabled once UART Rx receives XOFF. In this status, UART Tx can not transmit XOFF even the received data number is larger than UART_XOFF_THRESHOLD. Set this bit to enable UART Tx can transmit XON/XOFF when UART Tx is disabled."]
     #[inline(always)]
     #[must_use]
-    pub fn xon_xoff_still_send(&mut self) -> XON_XOFF_STILL_SEND_W<16> {
+    pub fn xon_xoff_still_send(&mut self) -> XON_XOFF_STILL_SEND_W<SWFC_CONF0_SYNC_SPEC, 16> {
         XON_XOFF_STILL_SEND_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<17> {
+    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<SWFC_CONF0_SYNC_SPEC, 17> {
         SW_FLOW_CON_EN_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to remove flow control char from the received data."]
     #[inline(always)]
     #[must_use]
-    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<18> {
+    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<SWFC_CONF0_SYNC_SPEC, 18> {
         XONOFF_DEL_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to enable the transmitter to go on sending data."]
     #[inline(always)]
     #[must_use]
-    pub fn force_xon(&mut self) -> FORCE_XON_W<19> {
+    pub fn force_xon(&mut self) -> FORCE_XON_W<SWFC_CONF0_SYNC_SPEC, 19> {
         FORCE_XON_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to stop the transmitter from sending data."]
     #[inline(always)]
     #[must_use]
-    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<20> {
+    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<SWFC_CONF0_SYNC_SPEC, 20> {
         FORCE_XOFF_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to send Xon char. It is cleared by hardware automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn send_xon(&mut self) -> SEND_XON_W<21> {
+    pub fn send_xon(&mut self) -> SEND_XON_W<SWFC_CONF0_SYNC_SPEC, 21> {
         SEND_XON_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to send Xoff char. It is cleared by hardware automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn send_xoff(&mut self) -> SEND_XOFF_W<22> {
+    pub fn send_xoff(&mut self) -> SEND_XOFF_W<SWFC_CONF0_SYNC_SPEC, 22> {
         SEND_XOFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Software flow-control character configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swfc_conf0_sync](index.html) module"]
+#[doc = "Software flow-control character configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swfc_conf0_sync::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swfc_conf0_sync::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SWFC_CONF0_SYNC_SPEC;
 impl crate::RegisterSpec for SWFC_CONF0_SYNC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swfc_conf0_sync::R](R) reader structure"]
-impl crate::Readable for SWFC_CONF0_SYNC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [swfc_conf0_sync::W](W) writer structure"]
+#[doc = "`read()` method returns [`swfc_conf0_sync::R`](R) reader structure"]
+impl crate::Readable for SWFC_CONF0_SYNC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`swfc_conf0_sync::W`](W) writer structure"]
 impl crate::Writable for SWFC_CONF0_SYNC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

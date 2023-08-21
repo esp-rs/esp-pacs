@@ -1,18 +1,5 @@
 #[doc = "Register `IN_SCAN` reader"]
-pub struct R(crate::R<IN_SCAN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IN_SCAN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IN_SCAN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IN_SCAN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IN_SCAN_SPEC>;
 #[doc = "Field `IN_STATUS` reader - GPIO input value after configured by DEDIC_GPIO_IN_DLY_REG."]
 pub type IN_STATUS_R = crate::FieldReader;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<IN_SCAN_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Dedicated GPIO input status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_scan](index.html) module"]
+#[doc = "Dedicated GPIO input status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_scan::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_SCAN_SPEC;
 impl crate::RegisterSpec for IN_SCAN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_scan::R](R) reader structure"]
-impl crate::Readable for IN_SCAN_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`in_scan::R`](R) reader structure"]
+impl crate::Readable for IN_SCAN_SPEC {}
 #[doc = "`reset()` method sets IN_SCAN to value 0"]
 impl crate::Resettable for IN_SCAN_SPEC {
     const RESET_VALUE: Self::Ux = 0;

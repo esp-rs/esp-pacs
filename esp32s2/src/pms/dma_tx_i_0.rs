@@ -1,43 +1,11 @@
 #[doc = "Register `DMA_TX_I_0` reader"]
-pub struct R(crate::R<DMA_TX_I_0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_TX_I_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_TX_I_0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_TX_I_0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_TX_I_0_SPEC>;
 #[doc = "Register `DMA_TX_I_0` writer"]
-pub struct W(crate::W<DMA_TX_I_0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMA_TX_I_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMA_TX_I_0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMA_TX_I_0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMA_TX_I_0_SPEC>;
 #[doc = "Field `DMA_TX_I_LOCK` reader - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
 pub type DMA_TX_I_LOCK_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_LOCK` writer - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
-pub type DMA_TX_I_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_0_SPEC, O>;
+pub type DMA_TX_I_LOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_tx_i_lock(&mut self) -> DMA_TX_I_LOCK_W<0> {
+    pub fn dma_tx_i_lock(&mut self) -> DMA_TX_I_LOCK_W<DMA_TX_I_0_SPEC, 0> {
         DMA_TX_I_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "TX Copy DMA permission control register 0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_tx_i_0](index.html) module"]
+#[doc = "TX Copy DMA permission control register 0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_tx_i_0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_tx_i_0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_TX_I_0_SPEC;
 impl crate::RegisterSpec for DMA_TX_I_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_tx_i_0::R](R) reader structure"]
-impl crate::Readable for DMA_TX_I_0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dma_tx_i_0::W](W) writer structure"]
+#[doc = "`read()` method returns [`dma_tx_i_0::R`](R) reader structure"]
+impl crate::Readable for DMA_TX_I_0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dma_tx_i_0::W`](W) writer structure"]
 impl crate::Writable for DMA_TX_I_0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

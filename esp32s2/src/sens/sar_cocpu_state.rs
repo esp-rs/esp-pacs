@@ -1,41 +1,9 @@
 #[doc = "Register `SAR_COCPU_STATE` reader"]
-pub struct R(crate::R<SAR_COCPU_STATE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_COCPU_STATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_COCPU_STATE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_COCPU_STATE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_COCPU_STATE_SPEC>;
 #[doc = "Register `SAR_COCPU_STATE` writer"]
-pub struct W(crate::W<SAR_COCPU_STATE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_COCPU_STATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_COCPU_STATE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_COCPU_STATE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_COCPU_STATE_SPEC>;
 #[doc = "Field `COCPU_DBG_TRIGGER` writer - Trigger ULP-RISCV debug registers"]
-pub type COCPU_DBG_TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_STATE_SPEC, O>;
+pub type COCPU_DBG_TRIGGER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `COCPU_CLK_EN` reader - Check ULP-RISCV whether clk on"]
 pub type COCPU_CLK_EN_R = crate::BitReader;
 #[doc = "Field `COCPU_RESET_N` reader - Check ULP-RISCV whether in reset state"]
@@ -104,28 +72,25 @@ impl W {
     #[doc = "Bit 25 - Trigger ULP-RISCV debug registers"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_dbg_trigger(&mut self) -> COCPU_DBG_TRIGGER_W<25> {
+    pub fn cocpu_dbg_trigger(&mut self) -> COCPU_DBG_TRIGGER_W<SAR_COCPU_STATE_SPEC, 25> {
         COCPU_DBG_TRIGGER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "ULP-RISCV status\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_state](index.html) module"]
+#[doc = "ULP-RISCV status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_state::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_cocpu_state::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_STATE_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_cocpu_state::R](R) reader structure"]
-impl crate::Readable for SAR_COCPU_STATE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_cocpu_state::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_cocpu_state::R`](R) reader structure"]
+impl crate::Readable for SAR_COCPU_STATE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_cocpu_state::W`](W) writer structure"]
 impl crate::Writable for SAR_COCPU_STATE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

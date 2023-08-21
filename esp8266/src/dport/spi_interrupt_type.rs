@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_INTERRUPT_TYPE` reader"]
-pub struct R(crate::R<SPI_INTERRUPT_TYPE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_INTERRUPT_TYPE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_INTERRUPT_TYPE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_INTERRUPT_TYPE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_INTERRUPT_TYPE_SPEC>;
 #[doc = "Field `spi0` reader - SPI0 interrupt"]
 pub type SPI0_R = crate::BitReader;
 #[doc = "Field `spi1` reader - SPI1 interrupt"]
@@ -52,15 +39,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_INTERRUPT_TYPE_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI interrupt type register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_interrupt_type](index.html) module"]
+#[doc = "SPI interrupt type register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_interrupt_type::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_INTERRUPT_TYPE_SPEC;
 impl crate::RegisterSpec for SPI_INTERRUPT_TYPE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_interrupt_type::R](R) reader structure"]
-impl crate::Readable for SPI_INTERRUPT_TYPE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_interrupt_type::R`](R) reader structure"]
+impl crate::Readable for SPI_INTERRUPT_TYPE_SPEC {}
 #[doc = "`reset()` method sets SPI_INTERRUPT_TYPE to value 0"]
 impl crate::Resettable for SPI_INTERRUPT_TYPE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,75 +1,43 @@
 #[doc = "Register `SLAVE1` reader"]
-pub struct R(crate::R<SLAVE1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLAVE1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLAVE1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLAVE1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLAVE1_SPEC>;
 #[doc = "Register `SLAVE1` writer"]
-pub struct W(crate::W<SLAVE1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLAVE1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLAVE1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLAVE1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLAVE1_SPEC>;
 #[doc = "Field `SLV_RDBUF_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
 pub type SLV_RDBUF_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RDBUF_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
-pub type SLV_RDBUF_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
+pub type SLV_RDBUF_DUMMY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_WRBUF_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
 pub type SLV_WRBUF_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `SLV_WRBUF_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
-pub type SLV_WRBUF_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
+pub type SLV_WRBUF_DUMMY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_RDSTA_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for read-status operations."]
 pub type SLV_RDSTA_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RDSTA_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for read-status operations."]
-pub type SLV_RDSTA_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
+pub type SLV_RDSTA_DUMMY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_WRSTA_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for write-status operations."]
 pub type SLV_WRSTA_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `SLV_WRSTA_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for write-status operations."]
-pub type SLV_WRSTA_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
+pub type SLV_WRSTA_DUMMY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_WR_ADDR_BITLEN` reader - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
 pub type SLV_WR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SLV_WR_ADDR_BITLEN` writer - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
-pub type SLV_WR_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 6, O>;
+pub type SLV_WR_ADDR_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SLV_RD_ADDR_BITLEN` reader - In the slave mode it is the address length in bits for read-buffer operation. The register value shall be (bit_num-1)."]
 pub type SLV_RD_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SLV_RD_ADDR_BITLEN` writer - In the slave mode it is the address length in bits for read-buffer operation. The register value shall be (bit_num-1)."]
-pub type SLV_RD_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 6, O>;
+pub type SLV_RD_ADDR_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SLV_STATUS_READBACK` reader - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
 pub type SLV_STATUS_READBACK_R = crate::BitReader;
 #[doc = "Field `SLV_STATUS_READBACK` writer - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
-pub type SLV_STATUS_READBACK_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
+pub type SLV_STATUS_READBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_STATUS_FAST_EN` reader - In the slave mode enable fast read status."]
 pub type SLV_STATUS_FAST_EN_R = crate::BitReader;
 #[doc = "Field `SLV_STATUS_FAST_EN` writer - In the slave mode enable fast read status."]
-pub type SLV_STATUS_FAST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
+pub type SLV_STATUS_FAST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLV_STATUS_BITLEN` reader - In the slave mode it is the length of status bit."]
 pub type SLV_STATUS_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SLV_STATUS_BITLEN` writer - In the slave mode it is the length of status bit."]
-pub type SLV_STATUS_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 5, O>;
+pub type SLV_STATUS_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 impl R {
     #[doc = "Bit 0 - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
     #[inline(always)]
@@ -170,76 +138,73 @@ impl W {
     #[doc = "Bit 0 - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rdbuf_dummy_en(&mut self) -> SLV_RDBUF_DUMMY_EN_W<0> {
+    pub fn slv_rdbuf_dummy_en(&mut self) -> SLV_RDBUF_DUMMY_EN_W<SLAVE1_SPEC, 0> {
         SLV_RDBUF_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 1 - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wrbuf_dummy_en(&mut self) -> SLV_WRBUF_DUMMY_EN_W<1> {
+    pub fn slv_wrbuf_dummy_en(&mut self) -> SLV_WRBUF_DUMMY_EN_W<SLAVE1_SPEC, 1> {
         SLV_WRBUF_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 2 - In the slave mode it is the enable bit of dummy phase for read-status operations."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rdsta_dummy_en(&mut self) -> SLV_RDSTA_DUMMY_EN_W<2> {
+    pub fn slv_rdsta_dummy_en(&mut self) -> SLV_RDSTA_DUMMY_EN_W<SLAVE1_SPEC, 2> {
         SLV_RDSTA_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 3 - In the slave mode it is the enable bit of dummy phase for write-status operations."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wrsta_dummy_en(&mut self) -> SLV_WRSTA_DUMMY_EN_W<3> {
+    pub fn slv_wrsta_dummy_en(&mut self) -> SLV_WRSTA_DUMMY_EN_W<SLAVE1_SPEC, 3> {
         SLV_WRSTA_DUMMY_EN_W::new(self)
     }
     #[doc = "Bits 4:9 - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wr_addr_bitlen(&mut self) -> SLV_WR_ADDR_BITLEN_W<4> {
+    pub fn slv_wr_addr_bitlen(&mut self) -> SLV_WR_ADDR_BITLEN_W<SLAVE1_SPEC, 4> {
         SLV_WR_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bits 10:15 - In the slave mode it is the address length in bits for read-buffer operation. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rd_addr_bitlen(&mut self) -> SLV_RD_ADDR_BITLEN_W<10> {
+    pub fn slv_rd_addr_bitlen(&mut self) -> SLV_RD_ADDR_BITLEN_W<SLAVE1_SPEC, 10> {
         SLV_RD_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bit 25 - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_status_readback(&mut self) -> SLV_STATUS_READBACK_W<25> {
+    pub fn slv_status_readback(&mut self) -> SLV_STATUS_READBACK_W<SLAVE1_SPEC, 25> {
         SLV_STATUS_READBACK_W::new(self)
     }
     #[doc = "Bit 26 - In the slave mode enable fast read status."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_status_fast_en(&mut self) -> SLV_STATUS_FAST_EN_W<26> {
+    pub fn slv_status_fast_en(&mut self) -> SLV_STATUS_FAST_EN_W<SLAVE1_SPEC, 26> {
         SLV_STATUS_FAST_EN_W::new(self)
     }
     #[doc = "Bits 27:31 - In the slave mode it is the length of status bit."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_status_bitlen(&mut self) -> SLV_STATUS_BITLEN_W<27> {
+    pub fn slv_status_bitlen(&mut self) -> SLV_STATUS_BITLEN_W<SLAVE1_SPEC, 27> {
         SLV_STATUS_BITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave1](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slave1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slave1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLAVE1_SPEC;
 impl crate::RegisterSpec for SLAVE1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slave1::R](R) reader structure"]
-impl crate::Readable for SLAVE1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [slave1::W](W) writer structure"]
+#[doc = "`read()` method returns [`slave1::R`](R) reader structure"]
+impl crate::Readable for SLAVE1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`slave1::W`](W) writer structure"]
 impl crate::Writable for SLAVE1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

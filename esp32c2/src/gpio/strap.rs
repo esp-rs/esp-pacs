@@ -1,18 +1,5 @@
 #[doc = "Register `STRAP` reader"]
-pub struct R(crate::R<STRAP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STRAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STRAP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STRAP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STRAP_SPEC>;
 #[doc = "Field `STRAPPING` reader - pad strapping register"]
 pub type STRAPPING_R = crate::FieldReader<u16>;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<STRAP_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "pad strapping register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [strap](index.html) module"]
+#[doc = "pad strapping register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`strap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STRAP_SPEC;
 impl crate::RegisterSpec for STRAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [strap::R](R) reader structure"]
-impl crate::Readable for STRAP_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`strap::R`](R) reader structure"]
+impl crate::Readable for STRAP_SPEC {}
 #[doc = "`reset()` method sets STRAP to value 0"]
 impl crate::Resettable for STRAP_SPEC {
     const RESET_VALUE: Self::Ux = 0;

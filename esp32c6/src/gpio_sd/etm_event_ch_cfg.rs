@@ -1,47 +1,15 @@
 #[doc = "Register `ETM_EVENT_CH%s_CFG` reader"]
-pub struct R(crate::R<ETM_EVENT_CH_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ETM_EVENT_CH_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ETM_EVENT_CH_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ETM_EVENT_CH_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ETM_EVENT_CH_CFG_SPEC>;
 #[doc = "Register `ETM_EVENT_CH%s_CFG` writer"]
-pub struct W(crate::W<ETM_EVENT_CH_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ETM_EVENT_CH_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ETM_EVENT_CH_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ETM_EVENT_CH_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ETM_EVENT_CH_CFG_SPEC>;
 #[doc = "Field `ETM_CH0_EVENT_SEL` reader - Etm event channel select gpio."]
 pub type ETM_CH0_EVENT_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_CH0_EVENT_SEL` writer - Etm event channel select gpio."]
-pub type ETM_CH0_EVENT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, ETM_EVENT_CH_CFG_SPEC, 5, O>;
+pub type ETM_CH0_EVENT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `ETM_CH0_EVENT_EN` reader - Etm event send enable bit."]
 pub type ETM_CH0_EVENT_EN_R = crate::BitReader;
 #[doc = "Field `ETM_CH0_EVENT_EN` writer - Etm event send enable bit."]
-pub type ETM_CH0_EVENT_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_EVENT_CH_CFG_SPEC, O>;
+pub type ETM_CH0_EVENT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:4 - Etm event channel select gpio."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 0:4 - Etm event channel select gpio."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_ch0_event_sel(&mut self) -> ETM_CH0_EVENT_SEL_W<0> {
+    pub fn etm_ch0_event_sel(&mut self) -> ETM_CH0_EVENT_SEL_W<ETM_EVENT_CH_CFG_SPEC, 0> {
         ETM_CH0_EVENT_SEL_W::new(self)
     }
     #[doc = "Bit 7 - Etm event send enable bit."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_ch0_event_en(&mut self) -> ETM_CH0_EVENT_EN_W<7> {
+    pub fn etm_ch0_event_en(&mut self) -> ETM_CH0_EVENT_EN_W<ETM_EVENT_CH_CFG_SPEC, 7> {
         ETM_CH0_EVENT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Etm Config register of Channel%s\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [etm_event_ch_cfg](index.html) module"]
+#[doc = "Etm Config register of Channel%s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`etm_event_ch_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`etm_event_ch_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ETM_EVENT_CH_CFG_SPEC;
 impl crate::RegisterSpec for ETM_EVENT_CH_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [etm_event_ch_cfg::R](R) reader structure"]
-impl crate::Readable for ETM_EVENT_CH_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [etm_event_ch_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`etm_event_ch_cfg::R`](R) reader structure"]
+impl crate::Readable for ETM_EVENT_CH_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`etm_event_ch_cfg::W`](W) writer structure"]
 impl crate::Writable for ETM_EVENT_CH_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,55 +1,23 @@
 #[doc = "Register `TEST_CONF` reader"]
-pub struct R(crate::R<TEST_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TEST_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TEST_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TEST_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TEST_CONF_SPEC>;
 #[doc = "Register `TEST_CONF` writer"]
-pub struct W(crate::W<TEST_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TEST_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TEST_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TEST_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TEST_CONF_SPEC>;
 #[doc = "Field `TEST_ENABLE` reader - Enable test of the USB pad"]
 pub type TEST_ENABLE_R = crate::BitReader;
 #[doc = "Field `TEST_ENABLE` writer - Enable test of the USB pad"]
-pub type TEST_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, TEST_CONF_SPEC, O>;
+pub type TEST_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TEST_USB_OE` reader - USB pad oen in test"]
 pub type TEST_USB_OE_R = crate::BitReader;
 #[doc = "Field `TEST_USB_OE` writer - USB pad oen in test"]
-pub type TEST_USB_OE_W<'a, const O: u8> = crate::BitWriter<'a, TEST_CONF_SPEC, O>;
+pub type TEST_USB_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TEST_TX_DP` reader - USB D+ tx value in test"]
 pub type TEST_TX_DP_R = crate::BitReader;
 #[doc = "Field `TEST_TX_DP` writer - USB D+ tx value in test"]
-pub type TEST_TX_DP_W<'a, const O: u8> = crate::BitWriter<'a, TEST_CONF_SPEC, O>;
+pub type TEST_TX_DP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TEST_TX_DM` reader - USB D- tx value in test"]
 pub type TEST_TX_DM_R = crate::BitReader;
 #[doc = "Field `TEST_TX_DM` writer - USB D- tx value in test"]
-pub type TEST_TX_DM_W<'a, const O: u8> = crate::BitWriter<'a, TEST_CONF_SPEC, O>;
+pub type TEST_TX_DM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TEST_RX_RCV` reader - USB differential rx value in test"]
 pub type TEST_RX_RCV_R = crate::BitReader;
 #[doc = "Field `TEST_RX_DP` reader - USB D+ rx value in test"]
@@ -117,46 +85,43 @@ impl W {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
     #[must_use]
-    pub fn test_enable(&mut self) -> TEST_ENABLE_W<0> {
+    pub fn test_enable(&mut self) -> TEST_ENABLE_W<TEST_CONF_SPEC, 0> {
         TEST_ENABLE_W::new(self)
     }
     #[doc = "Bit 1 - USB pad oen in test"]
     #[inline(always)]
     #[must_use]
-    pub fn test_usb_oe(&mut self) -> TEST_USB_OE_W<1> {
+    pub fn test_usb_oe(&mut self) -> TEST_USB_OE_W<TEST_CONF_SPEC, 1> {
         TEST_USB_OE_W::new(self)
     }
     #[doc = "Bit 2 - USB D+ tx value in test"]
     #[inline(always)]
     #[must_use]
-    pub fn test_tx_dp(&mut self) -> TEST_TX_DP_W<2> {
+    pub fn test_tx_dp(&mut self) -> TEST_TX_DP_W<TEST_CONF_SPEC, 2> {
         TEST_TX_DP_W::new(self)
     }
     #[doc = "Bit 3 - USB D- tx value in test"]
     #[inline(always)]
     #[must_use]
-    pub fn test_tx_dm(&mut self) -> TEST_TX_DM_W<3> {
+    pub fn test_tx_dm(&mut self) -> TEST_TX_DM_W<TEST_CONF_SPEC, 3> {
         TEST_TX_DM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "USB Internal PHY Testing Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [test_conf](index.html) module"]
+#[doc = "USB Internal PHY Testing Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`test_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`test_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TEST_CONF_SPEC;
 impl crate::RegisterSpec for TEST_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [test_conf::R](R) reader structure"]
-impl crate::Readable for TEST_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [test_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`test_conf::R`](R) reader structure"]
+impl crate::Readable for TEST_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`test_conf::W`](W) writer structure"]
 impl crate::Writable for TEST_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `M3_EXCEPTION_INFO1` reader"]
-pub struct R(crate::R<M3_EXCEPTION_INFO1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<M3_EXCEPTION_INFO1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<M3_EXCEPTION_INFO1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<M3_EXCEPTION_INFO1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<M3_EXCEPTION_INFO1_SPEC>;
 #[doc = "Field `M3_EXCEPTION_ADDR` reader - Exception addr"]
 pub type M3_EXCEPTION_ADDR_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<M3_EXCEPTION_INFO1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "M3 exception_info1 register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [m3_exception_info1](index.html) module"]
+#[doc = "M3 exception_info1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m3_exception_info1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct M3_EXCEPTION_INFO1_SPEC;
 impl crate::RegisterSpec for M3_EXCEPTION_INFO1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [m3_exception_info1::R](R) reader structure"]
-impl crate::Readable for M3_EXCEPTION_INFO1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`m3_exception_info1::R`](R) reader structure"]
+impl crate::Readable for M3_EXCEPTION_INFO1_SPEC {}
 #[doc = "`reset()` method sets M3_EXCEPTION_INFO1 to value 0"]
 impl crate::Resettable for M3_EXCEPTION_INFO1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,39 +1,7 @@
 #[doc = "Register `BLK0_WDATA3` reader"]
-pub struct R(crate::R<BLK0_WDATA3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BLK0_WDATA3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BLK0_WDATA3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BLK0_WDATA3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BLK0_WDATA3_SPEC>;
 #[doc = "Register `BLK0_WDATA3` writer"]
-pub struct W(crate::W<BLK0_WDATA3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BLK0_WDATA3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BLK0_WDATA3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BLK0_WDATA3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BLK0_WDATA3_SPEC>;
 #[doc = "Field `DISABLE_APP_CPU` reader - "]
 pub type DISABLE_APP_CPU_R = crate::BitReader;
 #[doc = "Field `DISABLE_BT` reader - "]
@@ -47,27 +15,27 @@ pub type SPI_PAD_CONFIG_HD_R = crate::FieldReader;
 #[doc = "Field `CHIP_PACKAGE` reader - "]
 pub type CHIP_PACKAGE_R = crate::FieldReader;
 #[doc = "Field `CHIP_PACKAGE` writer - "]
-pub type CHIP_PACKAGE_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA3_SPEC, 3, O>;
+pub type CHIP_PACKAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `CHIP_CPU_FREQ_LOW` reader - "]
 pub type CHIP_CPU_FREQ_LOW_R = crate::BitReader;
 #[doc = "Field `CHIP_CPU_FREQ_LOW` writer - "]
-pub type CHIP_CPU_FREQ_LOW_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA3_SPEC, O>;
+pub type CHIP_CPU_FREQ_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CHIP_CPU_FREQ_RATED` reader - "]
 pub type CHIP_CPU_FREQ_RATED_R = crate::BitReader;
 #[doc = "Field `CHIP_CPU_FREQ_RATED` writer - "]
-pub type CHIP_CPU_FREQ_RATED_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA3_SPEC, O>;
+pub type CHIP_CPU_FREQ_RATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BLK3_PART_RESERVE` reader - "]
 pub type BLK3_PART_RESERVE_R = crate::BitReader;
 #[doc = "Field `BLK3_PART_RESERVE` writer - "]
-pub type BLK3_PART_RESERVE_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA3_SPEC, O>;
+pub type BLK3_PART_RESERVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CHIP_VER_REV1` reader - "]
 pub type CHIP_VER_REV1_R = crate::BitReader;
 #[doc = "Field `CHIP_VER_REV1` writer - "]
-pub type CHIP_VER_REV1_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA3_SPEC, O>;
+pub type CHIP_VER_REV1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RESERVE_0_112` reader - "]
 pub type RESERVE_0_112_R = crate::FieldReader<u16>;
 #[doc = "Field `RESERVE_0_112` writer - "]
-pub type RESERVE_0_112_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA3_SPEC, 16, O, u16>;
+pub type RESERVE_0_112_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -180,58 +148,55 @@ impl W {
     #[doc = "Bits 9:11"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_package(&mut self) -> CHIP_PACKAGE_W<9> {
+    pub fn chip_package(&mut self) -> CHIP_PACKAGE_W<BLK0_WDATA3_SPEC, 9> {
         CHIP_PACKAGE_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_cpu_freq_low(&mut self) -> CHIP_CPU_FREQ_LOW_W<12> {
+    pub fn chip_cpu_freq_low(&mut self) -> CHIP_CPU_FREQ_LOW_W<BLK0_WDATA3_SPEC, 12> {
         CHIP_CPU_FREQ_LOW_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W<13> {
+    pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W<BLK0_WDATA3_SPEC, 13> {
         CHIP_CPU_FREQ_RATED_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W<14> {
+    pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W<BLK0_WDATA3_SPEC, 14> {
         BLK3_PART_RESERVE_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_ver_rev1(&mut self) -> CHIP_VER_REV1_W<15> {
+    pub fn chip_ver_rev1(&mut self) -> CHIP_VER_REV1_W<BLK0_WDATA3_SPEC, 15> {
         CHIP_VER_REV1_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn reserve_0_112(&mut self) -> RESERVE_0_112_W<16> {
+    pub fn reserve_0_112(&mut self) -> RESERVE_0_112_W<BLK0_WDATA3_SPEC, 16> {
         RESERVE_0_112_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata3](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_wdata3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blk0_wdata3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLK0_WDATA3_SPEC;
 impl crate::RegisterSpec for BLK0_WDATA3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_wdata3::R](R) reader structure"]
-impl crate::Readable for BLK0_WDATA3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [blk0_wdata3::W](W) writer structure"]
+#[doc = "`read()` method returns [`blk0_wdata3::R`](R) reader structure"]
+impl crate::Readable for BLK0_WDATA3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`blk0_wdata3::W`](W) writer structure"]
 impl crate::Writable for BLK0_WDATA3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,43 +1,11 @@
 #[doc = "Register `SEARCH_POS` reader"]
-pub struct R(crate::R<SEARCH_POS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SEARCH_POS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SEARCH_POS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SEARCH_POS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SEARCH_POS_SPEC>;
 #[doc = "Register `SEARCH_POS` writer"]
-pub struct W(crate::W<SEARCH_POS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SEARCH_POS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SEARCH_POS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SEARCH_POS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SEARCH_POS_SPEC>;
 #[doc = "Field `SEARCH_POS` reader - Is used to configure the starting address when the acceleration option of search is used."]
 pub type SEARCH_POS_R = crate::FieldReader<u16>;
 #[doc = "Field `SEARCH_POS` writer - Is used to configure the starting address when the acceleration option of search is used."]
-pub type SEARCH_POS_W<'a, const O: u8> = crate::FieldWriter<'a, SEARCH_POS_SPEC, 12, O, u16>;
+pub type SEARCH_POS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - Is used to configure the starting address when the acceleration option of search is used."]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:11 - Is used to configure the starting address when the acceleration option of search is used."]
     #[inline(always)]
     #[must_use]
-    pub fn search_pos(&mut self) -> SEARCH_POS_W<0> {
+    pub fn search_pos(&mut self) -> SEARCH_POS_W<SEARCH_POS_SPEC, 0> {
         SEARCH_POS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "The search position\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [search_pos](index.html) module"]
+#[doc = "The search position\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`search_pos::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`search_pos::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SEARCH_POS_SPEC;
 impl crate::RegisterSpec for SEARCH_POS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [search_pos::R](R) reader structure"]
-impl crate::Readable for SEARCH_POS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [search_pos::W](W) writer structure"]
+#[doc = "`read()` method returns [`search_pos::R`](R) reader structure"]
+impl crate::Readable for SEARCH_POS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`search_pos::W`](W) writer structure"]
 impl crate::Writable for SEARCH_POS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

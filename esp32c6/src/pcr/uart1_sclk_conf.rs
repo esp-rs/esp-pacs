@@ -1,59 +1,27 @@
 #[doc = "Register `UART1_SCLK_CONF` reader"]
-pub struct R(crate::R<UART1_SCLK_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UART1_SCLK_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UART1_SCLK_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UART1_SCLK_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UART1_SCLK_CONF_SPEC>;
 #[doc = "Register `UART1_SCLK_CONF` writer"]
-pub struct W(crate::W<UART1_SCLK_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UART1_SCLK_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UART1_SCLK_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UART1_SCLK_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UART1_SCLK_CONF_SPEC>;
 #[doc = "Field `UART1_SCLK_DIV_A` reader - The denominator of the frequency divider factor of the uart1 function clock."]
 pub type UART1_SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `UART1_SCLK_DIV_A` writer - The denominator of the frequency divider factor of the uart1 function clock."]
-pub type UART1_SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, UART1_SCLK_CONF_SPEC, 6, O>;
+pub type UART1_SCLK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `UART1_SCLK_DIV_B` reader - The numerator of the frequency divider factor of the uart1 function clock."]
 pub type UART1_SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `UART1_SCLK_DIV_B` writer - The numerator of the frequency divider factor of the uart1 function clock."]
-pub type UART1_SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, UART1_SCLK_CONF_SPEC, 6, O>;
+pub type UART1_SCLK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `UART1_SCLK_DIV_NUM` reader - The integral part of the frequency divider factor of the uart1 function clock."]
 pub type UART1_SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `UART1_SCLK_DIV_NUM` writer - The integral part of the frequency divider factor of the uart1 function clock."]
-pub type UART1_SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, UART1_SCLK_CONF_SPEC, 8, O>;
+pub type UART1_SCLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `UART1_SCLK_SEL` reader - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
 pub type UART1_SCLK_SEL_R = crate::FieldReader;
 #[doc = "Field `UART1_SCLK_SEL` writer - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
-pub type UART1_SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, UART1_SCLK_CONF_SPEC, 2, O>;
+pub type UART1_SCLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `UART1_SCLK_EN` reader - Set 1 to enable uart0 function clock"]
 pub type UART1_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `UART1_SCLK_EN` writer - Set 1 to enable uart0 function clock"]
-pub type UART1_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, UART1_SCLK_CONF_SPEC, O>;
+pub type UART1_SCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the uart1 function clock."]
     #[inline(always)]
@@ -118,52 +86,49 @@ impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the uart1 function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_sclk_div_a(&mut self) -> UART1_SCLK_DIV_A_W<0> {
+    pub fn uart1_sclk_div_a(&mut self) -> UART1_SCLK_DIV_A_W<UART1_SCLK_CONF_SPEC, 0> {
         UART1_SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the uart1 function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_sclk_div_b(&mut self) -> UART1_SCLK_DIV_B_W<6> {
+    pub fn uart1_sclk_div_b(&mut self) -> UART1_SCLK_DIV_B_W<UART1_SCLK_CONF_SPEC, 6> {
         UART1_SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the uart1 function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_sclk_div_num(&mut self) -> UART1_SCLK_DIV_NUM_W<12> {
+    pub fn uart1_sclk_div_num(&mut self) -> UART1_SCLK_DIV_NUM_W<UART1_SCLK_CONF_SPEC, 12> {
         UART1_SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 20:21 - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_sclk_sel(&mut self) -> UART1_SCLK_SEL_W<20> {
+    pub fn uart1_sclk_sel(&mut self) -> UART1_SCLK_SEL_W<UART1_SCLK_CONF_SPEC, 20> {
         UART1_SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 22 - Set 1 to enable uart0 function clock"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_sclk_en(&mut self) -> UART1_SCLK_EN_W<22> {
+    pub fn uart1_sclk_en(&mut self) -> UART1_SCLK_EN_W<UART1_SCLK_CONF_SPEC, 22> {
         UART1_SCLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "UART1_SCLK configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart1_sclk_conf](index.html) module"]
+#[doc = "UART1_SCLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart1_sclk_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart1_sclk_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UART1_SCLK_CONF_SPEC;
 impl crate::RegisterSpec for UART1_SCLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uart1_sclk_conf::R](R) reader structure"]
-impl crate::Readable for UART1_SCLK_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [uart1_sclk_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`uart1_sclk_conf::R`](R) reader structure"]
+impl crate::Readable for UART1_SCLK_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`uart1_sclk_conf::W`](W) writer structure"]
 impl crate::Writable for UART1_SCLK_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

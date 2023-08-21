@@ -1,18 +1,5 @@
 #[doc = "Register `DSTS` reader"]
-pub struct R(crate::R<DSTS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DSTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DSTS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DSTS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DSTS_SPEC>;
 #[doc = "Field `SUSPSTS` reader - "]
 pub type SUSPSTS_R = crate::BitReader;
 #[doc = "Field `ENUMSPD` reader - "]
@@ -68,15 +55,13 @@ impl core::fmt::Debug for crate::generic::Reg<DSTS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dsts](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSTS_SPEC;
 impl crate::RegisterSpec for DSTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dsts::R](R) reader structure"]
-impl crate::Readable for DSTS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dsts::R`](R) reader structure"]
+impl crate::Readable for DSTS_SPEC {}
 #[doc = "`reset()` method sets DSTS to value 0x02"]
 impl crate::Resettable for DSTS_SPEC {
     const RESET_VALUE: Self::Ux = 0x02;

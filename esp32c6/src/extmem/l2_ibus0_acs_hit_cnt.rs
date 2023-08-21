@@ -1,18 +1,5 @@
 #[doc = "Register `L2_IBUS0_ACS_HIT_CNT` reader"]
-pub struct R(crate::R<L2_IBUS0_ACS_HIT_CNT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L2_IBUS0_ACS_HIT_CNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L2_IBUS0_ACS_HIT_CNT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L2_IBUS0_ACS_HIT_CNT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L2_IBUS0_ACS_HIT_CNT_SPEC>;
 #[doc = "Field `L2_IBUS0_HIT_CNT` reader - The register records the number of hits when L1-ICache0 accesses L2-Cache due to bus0 accessing L1-ICache0."]
 pub type L2_IBUS0_HIT_CNT_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<L2_IBUS0_ACS_HIT_CNT_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "L2-Cache bus0 Hit-Access Counter register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_ibus0_acs_hit_cnt](index.html) module"]
+#[doc = "L2-Cache bus0 Hit-Access Counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_ibus0_acs_hit_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_IBUS0_ACS_HIT_CNT_SPEC;
 impl crate::RegisterSpec for L2_IBUS0_ACS_HIT_CNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l2_ibus0_acs_hit_cnt::R](R) reader structure"]
-impl crate::Readable for L2_IBUS0_ACS_HIT_CNT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`l2_ibus0_acs_hit_cnt::R`](R) reader structure"]
+impl crate::Readable for L2_IBUS0_ACS_HIT_CNT_SPEC {}
 #[doc = "`reset()` method sets L2_IBUS0_ACS_HIT_CNT to value 0"]
 impl crate::Resettable for L2_IBUS0_ACS_HIT_CNT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

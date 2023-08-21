@@ -1,18 +1,5 @@
 #[doc = "Register `L1_CACHE_ACS_CNT_INT_ST` reader"]
-pub struct R(crate::R<L1_CACHE_ACS_CNT_INT_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L1_CACHE_ACS_CNT_INT_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L1_CACHE_ACS_CNT_INT_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L1_CACHE_ACS_CNT_INT_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L1_CACHE_ACS_CNT_INT_ST_SPEC>;
 #[doc = "Field `L1_IBUS0_OVF_INT_ST` reader - The bit indicates the interrupt status of one of counters overflow that occurs in L1-ICache0 due to bus0 accesses L1-ICache0."]
 pub type L1_IBUS0_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `L1_IBUS1_OVF_INT_ST` reader - The bit indicates the interrupt status of one of counters overflow that occurs in L1-ICache1 due to bus1 accesses L1-ICache1."]
@@ -116,15 +103,13 @@ impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_CNT_INT_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Cache Access Counter Interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_cache_acs_cnt_int_st](index.html) module"]
+#[doc = "Cache Access Counter Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_acs_cnt_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_ACS_CNT_INT_ST_SPEC;
 impl crate::RegisterSpec for L1_CACHE_ACS_CNT_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l1_cache_acs_cnt_int_st::R](R) reader structure"]
-impl crate::Readable for L1_CACHE_ACS_CNT_INT_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`l1_cache_acs_cnt_int_st::R`](R) reader structure"]
+impl crate::Readable for L1_CACHE_ACS_CNT_INT_ST_SPEC {}
 #[doc = "`reset()` method sets L1_CACHE_ACS_CNT_INT_ST to value 0"]
 impl crate::Resettable for L1_CACHE_ACS_CNT_INT_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

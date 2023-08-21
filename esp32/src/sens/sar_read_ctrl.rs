@@ -1,67 +1,35 @@
 #[doc = "Register `SAR_READ_CTRL` reader"]
-pub struct R(crate::R<SAR_READ_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_READ_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_READ_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_READ_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_READ_CTRL_SPEC>;
 #[doc = "Register `SAR_READ_CTRL` writer"]
-pub struct W(crate::W<SAR_READ_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_READ_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_READ_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_READ_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_READ_CTRL_SPEC>;
 #[doc = "Field `SAR1_CLK_DIV` reader - clock divider"]
 pub type SAR1_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SAR1_CLK_DIV` writer - clock divider"]
-pub type SAR1_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 8, O>;
+pub type SAR1_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SAR1_SAMPLE_CYCLE` reader - sample cycles for SAR ADC1"]
 pub type SAR1_SAMPLE_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SAR1_SAMPLE_CYCLE` writer - sample cycles for SAR ADC1"]
-pub type SAR1_SAMPLE_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 8, O>;
+pub type SAR1_SAMPLE_CYCLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SAR1_SAMPLE_BIT` reader - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
 pub type SAR1_SAMPLE_BIT_R = crate::FieldReader;
 #[doc = "Field `SAR1_SAMPLE_BIT` writer - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
-pub type SAR1_SAMPLE_BIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 2, O>;
+pub type SAR1_SAMPLE_BIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `SAR1_CLK_GATED` reader - "]
 pub type SAR1_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SAR1_CLK_GATED` writer - "]
-pub type SAR1_CLK_GATED_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READ_CTRL_SPEC, O>;
+pub type SAR1_CLK_GATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SAR1_SAMPLE_NUM` reader - "]
 pub type SAR1_SAMPLE_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR1_SAMPLE_NUM` writer - "]
-pub type SAR1_SAMPLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 8, O>;
+pub type SAR1_SAMPLE_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SAR1_DIG_FORCE` reader - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
 pub type SAR1_DIG_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR1_DIG_FORCE` writer - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
-pub type SAR1_DIG_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READ_CTRL_SPEC, O>;
+pub type SAR1_DIG_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SAR1_DATA_INV` reader - Invert SAR ADC1 data"]
 pub type SAR1_DATA_INV_R = crate::BitReader;
 #[doc = "Field `SAR1_DATA_INV` writer - Invert SAR ADC1 data"]
-pub type SAR1_DATA_INV_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READ_CTRL_SPEC, O>;
+pub type SAR1_DATA_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
@@ -144,64 +112,61 @@ impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_clk_div(&mut self) -> SAR1_CLK_DIV_W<0> {
+    pub fn sar1_clk_div(&mut self) -> SAR1_CLK_DIV_W<SAR_READ_CTRL_SPEC, 0> {
         SAR1_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 8:15 - sample cycles for SAR ADC1"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_sample_cycle(&mut self) -> SAR1_SAMPLE_CYCLE_W<8> {
+    pub fn sar1_sample_cycle(&mut self) -> SAR1_SAMPLE_CYCLE_W<SAR_READ_CTRL_SPEC, 8> {
         SAR1_SAMPLE_CYCLE_W::new(self)
     }
     #[doc = "Bits 16:17 - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_sample_bit(&mut self) -> SAR1_SAMPLE_BIT_W<16> {
+    pub fn sar1_sample_bit(&mut self) -> SAR1_SAMPLE_BIT_W<SAR_READ_CTRL_SPEC, 16> {
         SAR1_SAMPLE_BIT_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_clk_gated(&mut self) -> SAR1_CLK_GATED_W<18> {
+    pub fn sar1_clk_gated(&mut self) -> SAR1_CLK_GATED_W<SAR_READ_CTRL_SPEC, 18> {
         SAR1_CLK_GATED_W::new(self)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_sample_num(&mut self) -> SAR1_SAMPLE_NUM_W<19> {
+    pub fn sar1_sample_num(&mut self) -> SAR1_SAMPLE_NUM_W<SAR_READ_CTRL_SPEC, 19> {
         SAR1_SAMPLE_NUM_W::new(self)
     }
     #[doc = "Bit 27 - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_dig_force(&mut self) -> SAR1_DIG_FORCE_W<27> {
+    pub fn sar1_dig_force(&mut self) -> SAR1_DIG_FORCE_W<SAR_READ_CTRL_SPEC, 27> {
         SAR1_DIG_FORCE_W::new(self)
     }
     #[doc = "Bit 28 - Invert SAR ADC1 data"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_data_inv(&mut self) -> SAR1_DATA_INV_W<28> {
+    pub fn sar1_data_inv(&mut self) -> SAR1_DATA_INV_W<SAR_READ_CTRL_SPEC, 28> {
         SAR1_DATA_INV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_read_ctrl](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_read_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_read_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_READ_CTRL_SPEC;
 impl crate::RegisterSpec for SAR_READ_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_read_ctrl::R](R) reader structure"]
-impl crate::Readable for SAR_READ_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_read_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_read_ctrl::R`](R) reader structure"]
+impl crate::Readable for SAR_READ_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_read_ctrl::W`](W) writer structure"]
 impl crate::Writable for SAR_READ_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

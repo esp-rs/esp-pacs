@@ -1,58 +1,23 @@
 #[doc = "Register `RETENTION_CTRL3` reader"]
-pub struct R(crate::R<RETENTION_CTRL3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RETENTION_CTRL3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RETENTION_CTRL3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RETENTION_CTRL3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RETENTION_CTRL3_SPEC>;
 #[doc = "Register `RETENTION_CTRL3` writer"]
-pub struct W(crate::W<RETENTION_CTRL3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RETENTION_CTRL3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RETENTION_CTRL3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RETENTION_CTRL3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RETENTION_CTRL3_SPEC>;
 #[doc = "Field `RET_DCACHE_SIZE` reader - ******* Description ***********"]
 pub type RET_DCACHE_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_SIZE` writer - ******* Description ***********"]
-pub type RET_DCACHE_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16>;
+pub type RET_DCACHE_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` reader - ******* Description ***********"]
 pub type RET_DCACHE_VLD_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` writer - ******* Description ***********"]
-pub type RET_DCACHE_VLD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16>;
+pub type RET_DCACHE_VLD_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` reader - ******* Description ***********"]
 pub type RET_DCACHE_START_POINT_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` writer - ******* Description ***********"]
-pub type RET_DCACHE_START_POINT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16>;
+pub type RET_DCACHE_START_POINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `RET_DCACHE_ENABLE` reader - ******* Description ***********"]
 pub type RET_DCACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `RET_DCACHE_ENABLE` writer - ******* Description ***********"]
-pub type RET_DCACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, RETENTION_CTRL3_SPEC, O>;
+pub type RET_DCACHE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
@@ -108,46 +73,43 @@ impl W {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_size(&mut self) -> RET_DCACHE_SIZE_W<4> {
+    pub fn ret_dcache_size(&mut self) -> RET_DCACHE_SIZE_W<RETENTION_CTRL3_SPEC, 4> {
         RET_DCACHE_SIZE_W::new(self)
     }
     #[doc = "Bits 13:21 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_vld_size(&mut self) -> RET_DCACHE_VLD_SIZE_W<13> {
+    pub fn ret_dcache_vld_size(&mut self) -> RET_DCACHE_VLD_SIZE_W<RETENTION_CTRL3_SPEC, 13> {
         RET_DCACHE_VLD_SIZE_W::new(self)
     }
     #[doc = "Bits 22:30 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_start_point(&mut self) -> RET_DCACHE_START_POINT_W<22> {
+    pub fn ret_dcache_start_point(&mut self) -> RET_DCACHE_START_POINT_W<RETENTION_CTRL3_SPEC, 22> {
         RET_DCACHE_START_POINT_W::new(self)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_enable(&mut self) -> RET_DCACHE_ENABLE_W<31> {
+    pub fn ret_dcache_enable(&mut self) -> RET_DCACHE_ENABLE_W<RETENTION_CTRL3_SPEC, 31> {
         RET_DCACHE_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_ctrl3](index.html) module"]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`retention_ctrl3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`retention_ctrl3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RETENTION_CTRL3_SPEC;
 impl crate::RegisterSpec for RETENTION_CTRL3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [retention_ctrl3::R](R) reader structure"]
-impl crate::Readable for RETENTION_CTRL3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [retention_ctrl3::W](W) writer structure"]
+#[doc = "`read()` method returns [`retention_ctrl3::R`](R) reader structure"]
+impl crate::Readable for RETENTION_CTRL3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`retention_ctrl3::W`](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

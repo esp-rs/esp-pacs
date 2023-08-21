@@ -1,135 +1,103 @@
 #[doc = "Register `CONF0` reader"]
-pub struct R(crate::R<CONF0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF0_SPEC>;
 #[doc = "Register `CONF0` writer"]
-pub struct W(crate::W<CONF0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF0_SPEC>;
 #[doc = "Field `IN_RST` reader - Set this bit to reset in link operations."]
 pub type IN_RST_R = crate::BitReader;
 #[doc = "Field `IN_RST` writer - Set this bit to reset in link operations."]
-pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type IN_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_RST` reader - Set this bit to reset out link operations."]
 pub type OUT_RST_R = crate::BitReader;
 #[doc = "Field `OUT_RST` writer - Set this bit to reset out link operations."]
-pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type OUT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AHBM_FIFO_RST` reader - Set this bit to reset dma ahb fifo."]
 pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - Set this bit to reset dma ahb fifo."]
-pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type AHBM_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AHBM_RST` reader - Set this bit to reset dma ahb interface."]
 pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - Set this bit to reset dma ahb interface."]
-pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type AHBM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_LOOP_TEST` reader - Set this bit to enable loop test for in links."]
 pub type IN_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `IN_LOOP_TEST` writer - Set this bit to enable loop test for in links."]
-pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type IN_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_LOOP_TEST` reader - Set this bit to enable loop test for out links."]
 pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - Set this bit to enable loop test for out links."]
-pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type OUT_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - when in link's length is 0 go on to use the next in link automatically."]
 pub type OUT_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - when in link's length is 0 go on to use the next in link automatically."]
-pub type OUT_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type OUT_AUTO_WRBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_NO_RESTART_CLR` reader - don't use"]
 pub type OUT_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `OUT_NO_RESTART_CLR` writer - don't use"]
-pub type OUT_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type OUT_NO_RESTART_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_EOF_MODE` reader - Set this bit to produce eof after DMA pops all data clear this bit to produce eof after DMA pushes all data"]
 pub type OUT_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_MODE` writer - Set this bit to produce eof after DMA pops all data clear this bit to produce eof after DMA pushes all data"]
-pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type OUT_EOF_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART0_CE` reader - Set this bit to use UART to transmit or receive data."]
 pub type UART0_CE_R = crate::BitReader;
 #[doc = "Field `UART0_CE` writer - Set this bit to use UART to transmit or receive data."]
-pub type UART0_CE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type UART0_CE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART1_CE` reader - Set this bit to use UART1 to transmit or receive data."]
 pub type UART1_CE_R = crate::BitReader;
 #[doc = "Field `UART1_CE` writer - Set this bit to use UART1 to transmit or receive data."]
-pub type UART1_CE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type UART1_CE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART2_CE` reader - Set this bit to use UART2 to transmit or receive data."]
 pub type UART2_CE_R = crate::BitReader;
 #[doc = "Field `UART2_CE` writer - Set this bit to use UART2 to transmit or receive data."]
-pub type UART2_CE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type UART2_CE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - Set this bit to enable DMA in links to use burst mode."]
 pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - Set this bit to enable DMA in links to use burst mode."]
-pub type OUTDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type OUTDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INDSCR_BURST_EN` reader - Set this bit to enable DMA out links to use burst mode."]
 pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - Set this bit to enable DMA out links to use burst mode."]
-pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type INDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - Set this bit to enable DMA burst MODE"]
 pub type OUT_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - Set this bit to enable DMA burst MODE"]
-pub type OUT_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type OUT_DATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MEM_TRANS_EN` reader - "]
 pub type MEM_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TRANS_EN` writer - "]
-pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type MEM_TRANS_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEPER_EN` reader - Set this bit to use special char to separate the data frame."]
 pub type SEPER_EN_R = crate::BitReader;
 #[doc = "Field `SEPER_EN` writer - Set this bit to use special char to separate the data frame."]
-pub type SEPER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type SEPER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEAD_EN` reader - Set this bit to enable to use head packet before the data frame."]
 pub type HEAD_EN_R = crate::BitReader;
 #[doc = "Field `HEAD_EN` writer - Set this bit to enable to use head packet before the data frame."]
-pub type HEAD_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type HEAD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CRC_REC_EN` reader - Set this bit to enable receiver''s ability of crc calculation when crc_en bit in head packet is 1 then there will be crc bytes after data_frame"]
 pub type CRC_REC_EN_R = crate::BitReader;
 #[doc = "Field `CRC_REC_EN` writer - Set this bit to enable receiver''s ability of crc calculation when crc_en bit in head packet is 1 then there will be crc bytes after data_frame"]
-pub type CRC_REC_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type CRC_REC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART_IDLE_EOF_EN` reader - Set this bit to enable to use idle time when the idle time after data frame is satisfied this means the end of a data frame."]
 pub type UART_IDLE_EOF_EN_R = crate::BitReader;
 #[doc = "Field `UART_IDLE_EOF_EN` writer - Set this bit to enable to use idle time when the idle time after data frame is satisfied this means the end of a data frame."]
-pub type UART_IDLE_EOF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type UART_IDLE_EOF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LEN_EOF_EN` reader - Set this bit to enable to use packet_len in packet head when the received data is equal to packet_len this means the end of a data frame."]
 pub type LEN_EOF_EN_R = crate::BitReader;
 #[doc = "Field `LEN_EOF_EN` writer - Set this bit to enable to use packet_len in packet head when the received data is equal to packet_len this means the end of a data frame."]
-pub type LEN_EOF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type LEN_EOF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENCODE_CRC_EN` reader - Set this bit to enable crc calculation for data frame when bit6 in the head packet is 1."]
 pub type ENCODE_CRC_EN_R = crate::BitReader;
 #[doc = "Field `ENCODE_CRC_EN` writer - Set this bit to enable crc calculation for data frame when bit6 in the head packet is 1."]
-pub type ENCODE_CRC_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type ENCODE_CRC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clock-gating for read or write registers."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clock-gating for read or write registers."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART_RX_BRK_EOF_EN` reader - Set this bit to enable to use brk char as the end of a data frame."]
 pub type UART_RX_BRK_EOF_EN_R = crate::BitReader;
 #[doc = "Field `UART_RX_BRK_EOF_EN` writer - Set this bit to enable to use brk char as the end of a data frame."]
-pub type UART_RX_BRK_EOF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
+pub type UART_RX_BRK_EOF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to reset in link operations."]
     #[inline(always)]
@@ -332,166 +300,163 @@ impl W {
     #[doc = "Bit 0 - Set this bit to reset in link operations."]
     #[inline(always)]
     #[must_use]
-    pub fn in_rst(&mut self) -> IN_RST_W<0> {
+    pub fn in_rst(&mut self) -> IN_RST_W<CONF0_SPEC, 0> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset out link operations."]
     #[inline(always)]
     #[must_use]
-    pub fn out_rst(&mut self) -> OUT_RST_W<1> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<CONF0_SPEC, 1> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset dma ahb fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<2> {
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<CONF0_SPEC, 2> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset dma ahb interface."]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<3> {
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<CONF0_SPEC, 3> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable loop test for in links."]
     #[inline(always)]
     #[must_use]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<4> {
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<CONF0_SPEC, 4> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable loop test for out links."]
     #[inline(always)]
     #[must_use]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<5> {
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<CONF0_SPEC, 5> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6 - when in link's length is 0 go on to use the next in link automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<6> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<CONF0_SPEC, 6> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7 - don't use"]
     #[inline(always)]
     #[must_use]
-    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<7> {
+    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<CONF0_SPEC, 7> {
         OUT_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to produce eof after DMA pops all data clear this bit to produce eof after DMA pushes all data"]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<8> {
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<CONF0_SPEC, 8> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to use UART to transmit or receive data."]
     #[inline(always)]
     #[must_use]
-    pub fn uart0_ce(&mut self) -> UART0_CE_W<9> {
+    pub fn uart0_ce(&mut self) -> UART0_CE_W<CONF0_SPEC, 9> {
         UART0_CE_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to use UART1 to transmit or receive data."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_ce(&mut self) -> UART1_CE_W<10> {
+    pub fn uart1_ce(&mut self) -> UART1_CE_W<CONF0_SPEC, 10> {
         UART1_CE_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to use UART2 to transmit or receive data."]
     #[inline(always)]
     #[must_use]
-    pub fn uart2_ce(&mut self) -> UART2_CE_W<11> {
+    pub fn uart2_ce(&mut self) -> UART2_CE_W<CONF0_SPEC, 11> {
         UART2_CE_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable DMA in links to use burst mode."]
     #[inline(always)]
     #[must_use]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<12> {
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<CONF0_SPEC, 12> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to enable DMA out links to use burst mode."]
     #[inline(always)]
     #[must_use]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<13> {
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<CONF0_SPEC, 13> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable DMA burst MODE"]
     #[inline(always)]
     #[must_use]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<14> {
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<CONF0_SPEC, 14> {
         OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<15> {
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<CONF0_SPEC, 15> {
         MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to use special char to separate the data frame."]
     #[inline(always)]
     #[must_use]
-    pub fn seper_en(&mut self) -> SEPER_EN_W<16> {
+    pub fn seper_en(&mut self) -> SEPER_EN_W<CONF0_SPEC, 16> {
         SEPER_EN_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to enable to use head packet before the data frame."]
     #[inline(always)]
     #[must_use]
-    pub fn head_en(&mut self) -> HEAD_EN_W<17> {
+    pub fn head_en(&mut self) -> HEAD_EN_W<CONF0_SPEC, 17> {
         HEAD_EN_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to enable receiver''s ability of crc calculation when crc_en bit in head packet is 1 then there will be crc bytes after data_frame"]
     #[inline(always)]
     #[must_use]
-    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<18> {
+    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<CONF0_SPEC, 18> {
         CRC_REC_EN_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to enable to use idle time when the idle time after data frame is satisfied this means the end of a data frame."]
     #[inline(always)]
     #[must_use]
-    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<19> {
+    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<CONF0_SPEC, 19> {
         UART_IDLE_EOF_EN_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to enable to use packet_len in packet head when the received data is equal to packet_len this means the end of a data frame."]
     #[inline(always)]
     #[must_use]
-    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<20> {
+    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<CONF0_SPEC, 20> {
         LEN_EOF_EN_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to enable crc calculation for data frame when bit6 in the head packet is 1."]
     #[inline(always)]
     #[must_use]
-    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<21> {
+    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<CONF0_SPEC, 21> {
         ENCODE_CRC_EN_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to enable clock-gating for read or write registers."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<22> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<CONF0_SPEC, 22> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to enable to use brk char as the end of a data frame."]
     #[inline(always)]
     #[must_use]
-    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<23> {
+    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<CONF0_SPEC, 23> {
         UART_RX_BRK_EOF_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf0](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF0_SPEC;
 impl crate::RegisterSpec for CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf0::R](R) reader structure"]
-impl crate::Readable for CONF0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf0::R`](R) reader structure"]
+impl crate::Readable for CONF0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf0::W`](W) writer structure"]
 impl crate::Writable for CONF0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

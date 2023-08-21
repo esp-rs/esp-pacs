@@ -1,79 +1,47 @@
 #[doc = "Register `SYS_CONF` reader"]
-pub struct R(crate::R<SYS_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SYS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SYS_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SYS_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SYS_CONF_SPEC>;
 #[doc = "Register `SYS_CONF` writer"]
-pub struct W(crate::W<SYS_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SYS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SYS_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SYS_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SYS_CONF_SPEC>;
 #[doc = "Field `APB_FIFO_MASK` reader - reg_apb_fifo_mask."]
 pub type APB_FIFO_MASK_R = crate::BitReader;
 #[doc = "Field `APB_FIFO_MASK` writer - reg_apb_fifo_mask."]
-pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
+pub type APB_FIFO_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - reg_mem_clk_force_on."]
 pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - reg_mem_clk_force_on."]
-pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
+pub type MEM_CLK_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MEM_FORCE_PD` reader - reg_rmt_mem_force_pd."]
 pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - reg_rmt_mem_force_pd."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
+pub type MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MEM_FORCE_PU` reader - reg_rmt_mem_force_pu."]
 pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - reg_rmt_mem_force_pu."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
+pub type MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SCLK_DIV_NUM` reader - reg_rmt_sclk_div_num."]
 pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - reg_rmt_sclk_div_num."]
-pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SCLK_DIV_A` reader - reg_rmt_sclk_div_a."]
 pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - reg_rmt_sclk_div_a."]
-pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 6, O>;
+pub type SCLK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SCLK_DIV_B` reader - reg_rmt_sclk_div_b."]
 pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - reg_rmt_sclk_div_b."]
-pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 6, O>;
+pub type SCLK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SCLK_SEL` reader - reg_rmt_sclk_sel."]
 pub type SCLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SCLK_SEL` writer - reg_rmt_sclk_sel."]
-pub type SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 2, O>;
+pub type SCLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `SCLK_ACTIVE` reader - reg_rmt_sclk_active."]
 pub type SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `SCLK_ACTIVE` writer - reg_rmt_sclk_active."]
-pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
+pub type SCLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLK_EN` reader - reg_clk_en."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - reg_clk_en."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - reg_apb_fifo_mask."]
     #[inline(always)]
@@ -168,82 +136,79 @@ impl W {
     #[doc = "Bit 0 - reg_apb_fifo_mask."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<0> {
+    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<SYS_CONF_SPEC, 0> {
         APB_FIFO_MASK_W::new(self)
     }
     #[doc = "Bit 1 - reg_mem_clk_force_on."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<1> {
+    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<SYS_CONF_SPEC, 1> {
         MEM_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 2 - reg_rmt_mem_force_pd."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<2> {
+    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<SYS_CONF_SPEC, 2> {
         MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 3 - reg_rmt_mem_force_pu."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<3> {
+    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<SYS_CONF_SPEC, 3> {
         MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bits 4:11 - reg_rmt_sclk_div_num."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<4> {
+    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<SYS_CONF_SPEC, 4> {
         SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 12:17 - reg_rmt_sclk_div_a."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<12> {
+    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<SYS_CONF_SPEC, 12> {
         SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 18:23 - reg_rmt_sclk_div_b."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<18> {
+    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<SYS_CONF_SPEC, 18> {
         SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bits 24:25 - reg_rmt_sclk_sel."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<24> {
+    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<SYS_CONF_SPEC, 24> {
         SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 26 - reg_rmt_sclk_active."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<26> {
+    pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<SYS_CONF_SPEC, 26> {
         SCLK_ACTIVE_W::new(self)
     }
     #[doc = "Bit 31 - reg_clk_en."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<31> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<SYS_CONF_SPEC, 31> {
         CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "RMT_SYS_CONF_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sys_conf](index.html) module"]
+#[doc = "RMT_SYS_CONF_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sys_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sys_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYS_CONF_SPEC;
 impl crate::RegisterSpec for SYS_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sys_conf::R](R) reader structure"]
-impl crate::Readable for SYS_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sys_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`sys_conf::R`](R) reader structure"]
+impl crate::Readable for SYS_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sys_conf::W`](W) writer structure"]
 impl crate::Writable for SYS_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

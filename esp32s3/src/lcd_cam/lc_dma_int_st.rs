@@ -1,18 +1,5 @@
 #[doc = "Register `LC_DMA_INT_ST` reader"]
-pub struct R(crate::R<LC_DMA_INT_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LC_DMA_INT_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LC_DMA_INT_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LC_DMA_INT_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LC_DMA_INT_ST_SPEC>;
 #[doc = "Field `LCD_VSYNC_INT_ST` reader - The status bit for LCD frame end interrupt."]
 pub type LCD_VSYNC_INT_ST_R = crate::BitReader;
 #[doc = "Field `LCD_TRANS_DONE_INT_ST` reader - The status bit for lcd transfer end interrupt."]
@@ -72,15 +59,13 @@ impl core::fmt::Debug for crate::generic::Reg<LC_DMA_INT_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "LCD_camera DMA masked inturrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_dma_int_st](index.html) module"]
+#[doc = "LCD_camera DMA masked inturrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_dma_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LC_DMA_INT_ST_SPEC;
 impl crate::RegisterSpec for LC_DMA_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lc_dma_int_st::R](R) reader structure"]
-impl crate::Readable for LC_DMA_INT_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`lc_dma_int_st::R`](R) reader structure"]
+impl crate::Readable for LC_DMA_INT_ST_SPEC {}
 #[doc = "`reset()` method sets LC_DMA_INT_ST to value 0"]
 impl crate::Resettable for LC_DMA_INT_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,18 +1,5 @@
 #[doc = "Register `CLK_STATE0` reader"]
-pub struct R(crate::R<CLK_STATE0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_STATE0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_STATE0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_STATE0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_STATE0_SPEC>;
 #[doc = "Field `STABLE_XPD_BBPLL_STATE` reader - need_des"]
 pub type STABLE_XPD_BBPLL_STATE_R = crate::BitReader;
 #[doc = "Field `STABLE_XPD_XTAL_STATE` reader - need_des"]
@@ -215,15 +202,13 @@ impl core::fmt::Debug for crate::generic::Reg<CLK_STATE0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_state0](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk_state0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_STATE0_SPEC;
 impl crate::RegisterSpec for CLK_STATE0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_state0::R](R) reader structure"]
-impl crate::Readable for CLK_STATE0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`clk_state0::R`](R) reader structure"]
+impl crate::Readable for CLK_STATE0_SPEC {}
 #[doc = "`reset()` method sets CLK_STATE0 to value 0x03"]
 impl crate::Resettable for CLK_STATE0_SPEC {
     const RESET_VALUE: Self::Ux = 0x03;

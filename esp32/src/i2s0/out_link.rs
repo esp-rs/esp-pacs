@@ -1,55 +1,23 @@
 #[doc = "Register `OUT_LINK` reader"]
-pub struct R(crate::R<OUT_LINK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OUT_LINK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OUT_LINK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OUT_LINK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OUT_LINK_SPEC>;
 #[doc = "Register `OUT_LINK` writer"]
-pub struct W(crate::W<OUT_LINK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<OUT_LINK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<OUT_LINK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<OUT_LINK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<OUT_LINK_SPEC>;
 #[doc = "Field `OUTLINK_ADDR` reader - "]
 pub type OUTLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - "]
-pub type OUTLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_LINK_SPEC, 20, O, u32>;
+pub type OUTLINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
 #[doc = "Field `OUTLINK_STOP` reader - "]
 pub type OUTLINK_STOP_R = crate::BitReader;
 #[doc = "Field `OUTLINK_STOP` writer - "]
-pub type OUTLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, OUT_LINK_SPEC, O>;
+pub type OUTLINK_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTLINK_START` reader - "]
 pub type OUTLINK_START_R = crate::BitReader;
 #[doc = "Field `OUTLINK_START` writer - "]
-pub type OUTLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, OUT_LINK_SPEC, O>;
+pub type OUTLINK_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTLINK_RESTART` reader - "]
 pub type OUTLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `OUTLINK_RESTART` writer - "]
-pub type OUTLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, OUT_LINK_SPEC, O>;
+pub type OUTLINK_RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTLINK_PARK` reader - "]
 pub type OUTLINK_PARK_R = crate::BitReader;
 impl R {
@@ -116,46 +84,43 @@ impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<0> {
+    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<OUT_LINK_SPEC, 0> {
         OUTLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<28> {
+    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<OUT_LINK_SPEC, 28> {
         OUTLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_start(&mut self) -> OUTLINK_START_W<29> {
+    pub fn outlink_start(&mut self) -> OUTLINK_START_W<OUT_LINK_SPEC, 29> {
         OUTLINK_START_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<30> {
+    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<OUT_LINK_SPEC, 30> {
         OUTLINK_RESTART_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_link](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_link::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_link::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_LINK_SPEC;
 impl crate::RegisterSpec for OUT_LINK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_link::R](R) reader structure"]
-impl crate::Readable for OUT_LINK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [out_link::W](W) writer structure"]
+#[doc = "`read()` method returns [`out_link::R`](R) reader structure"]
+impl crate::Readable for OUT_LINK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`out_link::W`](W) writer structure"]
 impl crate::Writable for OUT_LINK_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

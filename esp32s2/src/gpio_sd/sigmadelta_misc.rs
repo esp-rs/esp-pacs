@@ -1,47 +1,15 @@
 #[doc = "Register `SIGMADELTA_MISC` reader"]
-pub struct R(crate::R<SIGMADELTA_MISC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SIGMADELTA_MISC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SIGMADELTA_MISC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SIGMADELTA_MISC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SIGMADELTA_MISC_SPEC>;
 #[doc = "Register `SIGMADELTA_MISC` writer"]
-pub struct W(crate::W<SIGMADELTA_MISC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SIGMADELTA_MISC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SIGMADELTA_MISC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SIGMADELTA_MISC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SIGMADELTA_MISC_SPEC>;
 #[doc = "Field `FUNCTION_CLK_EN` reader - Clock enable bit of sigma delta modulation."]
 pub type FUNCTION_CLK_EN_R = crate::BitReader;
 #[doc = "Field `FUNCTION_CLK_EN` writer - Clock enable bit of sigma delta modulation."]
-pub type FUNCTION_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SIGMADELTA_MISC_SPEC, O>;
+pub type FUNCTION_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SPI_SWAP` reader - Reserved."]
 pub type SPI_SWAP_R = crate::BitReader;
 #[doc = "Field `SPI_SWAP` writer - Reserved."]
-pub type SPI_SWAP_W<'a, const O: u8> = crate::BitWriter<'a, SIGMADELTA_MISC_SPEC, O>;
+pub type SPI_SWAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
@@ -76,34 +44,31 @@ impl W {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
     #[must_use]
-    pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W<30> {
+    pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W<SIGMADELTA_MISC_SPEC, 30> {
         FUNCTION_CLK_EN_W::new(self)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_swap(&mut self) -> SPI_SWAP_W<31> {
+    pub fn spi_swap(&mut self) -> SPI_SWAP_W<SIGMADELTA_MISC_SPEC, 31> {
         SPI_SWAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "MISC register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sigmadelta_misc](index.html) module"]
+#[doc = "MISC register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sigmadelta_misc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sigmadelta_misc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SIGMADELTA_MISC_SPEC;
 impl crate::RegisterSpec for SIGMADELTA_MISC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sigmadelta_misc::R](R) reader structure"]
-impl crate::Readable for SIGMADELTA_MISC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sigmadelta_misc::W](W) writer structure"]
+#[doc = "`read()` method returns [`sigmadelta_misc::R`](R) reader structure"]
+impl crate::Readable for SIGMADELTA_MISC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sigmadelta_misc::W`](W) writer structure"]
 impl crate::Writable for SIGMADELTA_MISC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

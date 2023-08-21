@@ -1,79 +1,47 @@
 #[doc = "Register `HCCHAR2` reader"]
-pub struct R(crate::R<HCCHAR2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCCHAR2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCCHAR2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCCHAR2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCCHAR2_SPEC>;
 #[doc = "Register `HCCHAR2` writer"]
-pub struct W(crate::W<HCCHAR2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCCHAR2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCCHAR2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCCHAR2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCCHAR2_SPEC>;
 #[doc = "Field `H_MPS2` reader - "]
 pub type H_MPS2_R = crate::FieldReader<u16>;
 #[doc = "Field `H_MPS2` writer - "]
-pub type H_MPS2_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR2_SPEC, 11, O, u16>;
+pub type H_MPS2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
 #[doc = "Field `H_EPNUM2` reader - "]
 pub type H_EPNUM2_R = crate::FieldReader;
 #[doc = "Field `H_EPNUM2` writer - "]
-pub type H_EPNUM2_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR2_SPEC, 4, O>;
+pub type H_EPNUM2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `H_EPDIR2` reader - "]
 pub type H_EPDIR2_R = crate::BitReader;
 #[doc = "Field `H_EPDIR2` writer - "]
-pub type H_EPDIR2_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR2_SPEC, O>;
+pub type H_EPDIR2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_LSPDDEV2` reader - "]
 pub type H_LSPDDEV2_R = crate::BitReader;
 #[doc = "Field `H_LSPDDEV2` writer - "]
-pub type H_LSPDDEV2_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR2_SPEC, O>;
+pub type H_LSPDDEV2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_EPTYPE2` reader - "]
 pub type H_EPTYPE2_R = crate::FieldReader;
 #[doc = "Field `H_EPTYPE2` writer - "]
-pub type H_EPTYPE2_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR2_SPEC, 2, O>;
+pub type H_EPTYPE2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `H_EC2` reader - "]
 pub type H_EC2_R = crate::BitReader;
 #[doc = "Field `H_EC2` writer - "]
-pub type H_EC2_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR2_SPEC, O>;
+pub type H_EC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_DEVADDR2` reader - "]
 pub type H_DEVADDR2_R = crate::FieldReader;
 #[doc = "Field `H_DEVADDR2` writer - "]
-pub type H_DEVADDR2_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR2_SPEC, 7, O>;
+pub type H_DEVADDR2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `H_ODDFRM2` reader - "]
 pub type H_ODDFRM2_R = crate::BitReader;
 #[doc = "Field `H_ODDFRM2` writer - "]
-pub type H_ODDFRM2_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR2_SPEC, O>;
+pub type H_ODDFRM2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_CHDIS2` reader - "]
 pub type H_CHDIS2_R = crate::BitReader;
 #[doc = "Field `H_CHDIS2` writer - "]
-pub type H_CHDIS2_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR2_SPEC, O>;
+pub type H_CHDIS2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_CHENA2` reader - "]
 pub type H_CHENA2_R = crate::BitReader;
 #[doc = "Field `H_CHENA2` writer - "]
-pub type H_CHENA2_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR2_SPEC, O>;
+pub type H_CHENA2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -153,82 +121,79 @@ impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
     #[must_use]
-    pub fn h_mps2(&mut self) -> H_MPS2_W<0> {
+    pub fn h_mps2(&mut self) -> H_MPS2_W<HCCHAR2_SPEC, 0> {
         H_MPS2_W::new(self)
     }
     #[doc = "Bits 11:14"]
     #[inline(always)]
     #[must_use]
-    pub fn h_epnum2(&mut self) -> H_EPNUM2_W<11> {
+    pub fn h_epnum2(&mut self) -> H_EPNUM2_W<HCCHAR2_SPEC, 11> {
         H_EPNUM2_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn h_epdir2(&mut self) -> H_EPDIR2_W<15> {
+    pub fn h_epdir2(&mut self) -> H_EPDIR2_W<HCCHAR2_SPEC, 15> {
         H_EPDIR2_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn h_lspddev2(&mut self) -> H_LSPDDEV2_W<17> {
+    pub fn h_lspddev2(&mut self) -> H_LSPDDEV2_W<HCCHAR2_SPEC, 17> {
         H_LSPDDEV2_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn h_eptype2(&mut self) -> H_EPTYPE2_W<18> {
+    pub fn h_eptype2(&mut self) -> H_EPTYPE2_W<HCCHAR2_SPEC, 18> {
         H_EPTYPE2_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ec2(&mut self) -> H_EC2_W<21> {
+    pub fn h_ec2(&mut self) -> H_EC2_W<HCCHAR2_SPEC, 21> {
         H_EC2_W::new(self)
     }
     #[doc = "Bits 22:28"]
     #[inline(always)]
     #[must_use]
-    pub fn h_devaddr2(&mut self) -> H_DEVADDR2_W<22> {
+    pub fn h_devaddr2(&mut self) -> H_DEVADDR2_W<HCCHAR2_SPEC, 22> {
         H_DEVADDR2_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn h_oddfrm2(&mut self) -> H_ODDFRM2_W<29> {
+    pub fn h_oddfrm2(&mut self) -> H_ODDFRM2_W<HCCHAR2_SPEC, 29> {
         H_ODDFRM2_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chdis2(&mut self) -> H_CHDIS2_W<30> {
+    pub fn h_chdis2(&mut self) -> H_CHDIS2_W<HCCHAR2_SPEC, 30> {
         H_CHDIS2_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chena2(&mut self) -> H_CHENA2_W<31> {
+    pub fn h_chena2(&mut self) -> H_CHENA2_W<HCCHAR2_SPEC, 31> {
         H_CHENA2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcchar2](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcchar2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcchar2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCCHAR2_SPEC;
 impl crate::RegisterSpec for HCCHAR2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcchar2::R](R) reader structure"]
-impl crate::Readable for HCCHAR2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hcchar2::W](W) writer structure"]
+#[doc = "`read()` method returns [`hcchar2::R`](R) reader structure"]
+impl crate::Readable for HCCHAR2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hcchar2::W`](W) writer structure"]
 impl crate::Writable for HCCHAR2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

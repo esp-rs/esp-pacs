@@ -1,64 +1,31 @@
 #[doc = "Register `IO_MUX_SD_CMD` reader"]
-pub struct R(crate::R<IO_MUX_SD_CMD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IO_MUX_SD_CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IO_MUX_SD_CMD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IO_MUX_SD_CMD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IO_MUX_SD_CMD_SPEC>;
 #[doc = "Register `IO_MUX_SD_CMD` writer"]
-pub struct W(crate::W<IO_MUX_SD_CMD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IO_MUX_SD_CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IO_MUX_SD_CMD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IO_MUX_SD_CMD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IO_MUX_SD_CMD_SPEC>;
 #[doc = "Field `Register` reader - "]
 pub type REGISTER_R = crate::FieldReader<u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, IO_MUX_SD_CMD_SPEC, 32, O, u32>;
+pub type REGISTER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 #[doc = "Field `SLEEP_ENABLE` reader - configures output enable during sleep mode"]
 pub type SLEEP_ENABLE_R = crate::BitReader;
 #[doc = "Field `SLEEP_ENABLE` writer - configures output enable during sleep mode"]
-pub type SLEEP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_SD_CMD_SPEC, O>;
+pub type SLEEP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLEEP_PULLUP` reader - configures pull up during sleep mode"]
 pub type SLEEP_PULLUP_R = crate::BitReader;
 #[doc = "Field `SLEEP_PULLUP` writer - configures pull up during sleep mode"]
-pub type SLEEP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_SD_CMD_SPEC, O>;
+pub type SLEEP_PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FUNCTION_SELECT_LOW_BITS` reader - configures IO_MUX function, bottom 2 bits"]
 pub type FUNCTION_SELECT_LOW_BITS_R = crate::FieldReader;
 #[doc = "Field `FUNCTION_SELECT_LOW_BITS` writer - configures IO_MUX function, bottom 2 bits"]
-pub type FUNCTION_SELECT_LOW_BITS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, IO_MUX_SD_CMD_SPEC, 2, O>;
+pub type FUNCTION_SELECT_LOW_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `PULLUP` reader - configures pull up"]
 pub type PULLUP_R = crate::BitReader;
 #[doc = "Field `PULLUP` writer - configures pull up"]
-pub type PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_SD_CMD_SPEC, O>;
+pub type PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FUNCTION_SELECT_HIGH_BIT` reader - configures IO_MUX function, upper bit"]
 pub type FUNCTION_SELECT_HIGH_BIT_R = crate::BitReader;
 #[doc = "Field `FUNCTION_SELECT_HIGH_BIT` writer - configures IO_MUX function, upper bit"]
-pub type FUNCTION_SELECT_HIGH_BIT_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_SD_CMD_SPEC, O>;
+pub type FUNCTION_SELECT_HIGH_BIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -126,58 +93,59 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn register(&mut self) -> REGISTER_W<0> {
+    pub fn register(&mut self) -> REGISTER_W<IO_MUX_SD_CMD_SPEC, 0> {
         REGISTER_W::new(self)
     }
     #[doc = "Bit 0 - configures output enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_enable(&mut self) -> SLEEP_ENABLE_W<0> {
+    pub fn sleep_enable(&mut self) -> SLEEP_ENABLE_W<IO_MUX_SD_CMD_SPEC, 0> {
         SLEEP_ENABLE_W::new(self)
     }
     #[doc = "Bit 3 - configures pull up during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_pullup(&mut self) -> SLEEP_PULLUP_W<3> {
+    pub fn sleep_pullup(&mut self) -> SLEEP_PULLUP_W<IO_MUX_SD_CMD_SPEC, 3> {
         SLEEP_PULLUP_W::new(self)
     }
     #[doc = "Bits 4:5 - configures IO_MUX function, bottom 2 bits"]
     #[inline(always)]
     #[must_use]
-    pub fn function_select_low_bits(&mut self) -> FUNCTION_SELECT_LOW_BITS_W<4> {
+    pub fn function_select_low_bits(
+        &mut self,
+    ) -> FUNCTION_SELECT_LOW_BITS_W<IO_MUX_SD_CMD_SPEC, 4> {
         FUNCTION_SELECT_LOW_BITS_W::new(self)
     }
     #[doc = "Bit 7 - configures pull up"]
     #[inline(always)]
     #[must_use]
-    pub fn pullup(&mut self) -> PULLUP_W<7> {
+    pub fn pullup(&mut self) -> PULLUP_W<IO_MUX_SD_CMD_SPEC, 7> {
         PULLUP_W::new(self)
     }
     #[doc = "Bit 8 - configures IO_MUX function, upper bit"]
     #[inline(always)]
     #[must_use]
-    pub fn function_select_high_bit(&mut self) -> FUNCTION_SELECT_HIGH_BIT_W<8> {
+    pub fn function_select_high_bit(
+        &mut self,
+    ) -> FUNCTION_SELECT_HIGH_BIT_W<IO_MUX_SD_CMD_SPEC, 8> {
         FUNCTION_SELECT_HIGH_BIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "IO_MUX_SD_CMD\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [io_mux_sd_cmd](index.html) module"]
+#[doc = "IO_MUX_SD_CMD\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`io_mux_sd_cmd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`io_mux_sd_cmd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IO_MUX_SD_CMD_SPEC;
 impl crate::RegisterSpec for IO_MUX_SD_CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [io_mux_sd_cmd::R](R) reader structure"]
-impl crate::Readable for IO_MUX_SD_CMD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [io_mux_sd_cmd::W](W) writer structure"]
+#[doc = "`read()` method returns [`io_mux_sd_cmd::R`](R) reader structure"]
+impl crate::Readable for IO_MUX_SD_CMD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`io_mux_sd_cmd::W`](W) writer structure"]
 impl crate::Writable for IO_MUX_SD_CMD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

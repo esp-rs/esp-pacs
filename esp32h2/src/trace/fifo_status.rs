@@ -1,18 +1,5 @@
 #[doc = "Register `FIFO_STATUS` reader"]
-pub struct R(crate::R<FIFO_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FIFO_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FIFO_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FIFO_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FIFO_STATUS_SPEC>;
 #[doc = "Field `FIFO_EMPTY` reader - 1 indicate that fifo is empty"]
 pub type FIFO_EMPTY_R = crate::BitReader;
 #[doc = "Field `WORK_STATUS` reader - mem_full interrupt status"]
@@ -44,15 +31,13 @@ impl core::fmt::Debug for crate::generic::Reg<FIFO_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "fifo status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_status](index.html) module"]
+#[doc = "fifo status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_STATUS_SPEC;
 impl crate::RegisterSpec for FIFO_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fifo_status::R](R) reader structure"]
-impl crate::Readable for FIFO_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`fifo_status::R`](R) reader structure"]
+impl crate::Readable for FIFO_STATUS_SPEC {}
 #[doc = "`reset()` method sets FIFO_STATUS to value 0x01"]
 impl crate::Resettable for FIFO_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0x01;

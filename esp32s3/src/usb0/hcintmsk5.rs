@@ -1,91 +1,59 @@
 #[doc = "Register `HCINTMSK5` reader"]
-pub struct R(crate::R<HCINTMSK5_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCINTMSK5_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCINTMSK5_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCINTMSK5_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCINTMSK5_SPEC>;
 #[doc = "Register `HCINTMSK5` writer"]
-pub struct W(crate::W<HCINTMSK5_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCINTMSK5_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCINTMSK5_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCINTMSK5_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCINTMSK5_SPEC>;
 #[doc = "Field `H_XFERCOMPLMSK5` reader - "]
 pub type H_XFERCOMPLMSK5_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPLMSK5` writer - "]
-pub type H_XFERCOMPLMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_XFERCOMPLMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_CHHLTDMSK5` reader - "]
 pub type H_CHHLTDMSK5_R = crate::BitReader;
 #[doc = "Field `H_CHHLTDMSK5` writer - "]
-pub type H_CHHLTDMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_CHHLTDMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_AHBERRMSK5` reader - "]
 pub type H_AHBERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_AHBERRMSK5` writer - "]
-pub type H_AHBERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_AHBERRMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_STALLMSK5` reader - "]
 pub type H_STALLMSK5_R = crate::BitReader;
 #[doc = "Field `H_STALLMSK5` writer - "]
-pub type H_STALLMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_STALLMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_NAKMSK5` reader - "]
 pub type H_NAKMSK5_R = crate::BitReader;
 #[doc = "Field `H_NAKMSK5` writer - "]
-pub type H_NAKMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_NAKMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_ACKMSK5` reader - "]
 pub type H_ACKMSK5_R = crate::BitReader;
 #[doc = "Field `H_ACKMSK5` writer - "]
-pub type H_ACKMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_ACKMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_NYETMSK5` reader - "]
 pub type H_NYETMSK5_R = crate::BitReader;
 #[doc = "Field `H_NYETMSK5` writer - "]
-pub type H_NYETMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_NYETMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_XACTERRMSK5` reader - "]
 pub type H_XACTERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_XACTERRMSK5` writer - "]
-pub type H_XACTERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_XACTERRMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_BBLERRMSK5` reader - "]
 pub type H_BBLERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_BBLERRMSK5` writer - "]
-pub type H_BBLERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_BBLERRMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_FRMOVRUNMSK5` reader - "]
 pub type H_FRMOVRUNMSK5_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUNMSK5` writer - "]
-pub type H_FRMOVRUNMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_FRMOVRUNMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_DATATGLERRMSK5` reader - "]
 pub type H_DATATGLERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERRMSK5` writer - "]
-pub type H_DATATGLERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_DATATGLERRMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_BNAINTRMSK5` reader - "]
 pub type H_BNAINTRMSK5_R = crate::BitReader;
 #[doc = "Field `H_BNAINTRMSK5` writer - "]
-pub type H_BNAINTRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_BNAINTRMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_DESC_LST_ROLLINTRMSK5` reader - "]
 pub type H_DESC_LST_ROLLINTRMSK5_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTRMSK5` writer - "]
-pub type H_DESC_LST_ROLLINTRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
+pub type H_DESC_LST_ROLLINTRMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -210,100 +178,97 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xfercomplmsk5(&mut self) -> H_XFERCOMPLMSK5_W<0> {
+    pub fn h_xfercomplmsk5(&mut self) -> H_XFERCOMPLMSK5_W<HCINTMSK5_SPEC, 0> {
         H_XFERCOMPLMSK5_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chhltdmsk5(&mut self) -> H_CHHLTDMSK5_W<1> {
+    pub fn h_chhltdmsk5(&mut self) -> H_CHHLTDMSK5_W<HCINTMSK5_SPEC, 1> {
         H_CHHLTDMSK5_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ahberrmsk5(&mut self) -> H_AHBERRMSK5_W<2> {
+    pub fn h_ahberrmsk5(&mut self) -> H_AHBERRMSK5_W<HCINTMSK5_SPEC, 2> {
         H_AHBERRMSK5_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn h_stallmsk5(&mut self) -> H_STALLMSK5_W<3> {
+    pub fn h_stallmsk5(&mut self) -> H_STALLMSK5_W<HCINTMSK5_SPEC, 3> {
         H_STALLMSK5_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nakmsk5(&mut self) -> H_NAKMSK5_W<4> {
+    pub fn h_nakmsk5(&mut self) -> H_NAKMSK5_W<HCINTMSK5_SPEC, 4> {
         H_NAKMSK5_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ackmsk5(&mut self) -> H_ACKMSK5_W<5> {
+    pub fn h_ackmsk5(&mut self) -> H_ACKMSK5_W<HCINTMSK5_SPEC, 5> {
         H_ACKMSK5_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nyetmsk5(&mut self) -> H_NYETMSK5_W<6> {
+    pub fn h_nyetmsk5(&mut self) -> H_NYETMSK5_W<HCINTMSK5_SPEC, 6> {
         H_NYETMSK5_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xacterrmsk5(&mut self) -> H_XACTERRMSK5_W<7> {
+    pub fn h_xacterrmsk5(&mut self) -> H_XACTERRMSK5_W<HCINTMSK5_SPEC, 7> {
         H_XACTERRMSK5_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bblerrmsk5(&mut self) -> H_BBLERRMSK5_W<8> {
+    pub fn h_bblerrmsk5(&mut self) -> H_BBLERRMSK5_W<HCINTMSK5_SPEC, 8> {
         H_BBLERRMSK5_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frmovrunmsk5(&mut self) -> H_FRMOVRUNMSK5_W<9> {
+    pub fn h_frmovrunmsk5(&mut self) -> H_FRMOVRUNMSK5_W<HCINTMSK5_SPEC, 9> {
         H_FRMOVRUNMSK5_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn h_datatglerrmsk5(&mut self) -> H_DATATGLERRMSK5_W<10> {
+    pub fn h_datatglerrmsk5(&mut self) -> H_DATATGLERRMSK5_W<HCINTMSK5_SPEC, 10> {
         H_DATATGLERRMSK5_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bnaintrmsk5(&mut self) -> H_BNAINTRMSK5_W<11> {
+    pub fn h_bnaintrmsk5(&mut self) -> H_BNAINTRMSK5_W<HCINTMSK5_SPEC, 11> {
         H_BNAINTRMSK5_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn h_desc_lst_rollintrmsk5(&mut self) -> H_DESC_LST_ROLLINTRMSK5_W<13> {
+    pub fn h_desc_lst_rollintrmsk5(&mut self) -> H_DESC_LST_ROLLINTRMSK5_W<HCINTMSK5_SPEC, 13> {
         H_DESC_LST_ROLLINTRMSK5_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcintmsk5](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcintmsk5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcintmsk5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCINTMSK5_SPEC;
 impl crate::RegisterSpec for HCINTMSK5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcintmsk5::R](R) reader structure"]
-impl crate::Readable for HCINTMSK5_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hcintmsk5::W](W) writer structure"]
+#[doc = "`read()` method returns [`hcintmsk5::R`](R) reader structure"]
+impl crate::Readable for HCINTMSK5_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hcintmsk5::W`](W) writer structure"]
 impl crate::Writable for HCINTMSK5_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

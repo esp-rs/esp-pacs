@@ -1,51 +1,19 @@
 #[doc = "Register `CLK_CONF_FORCE_ON` reader"]
-pub struct R(crate::R<CLK_CONF_FORCE_ON_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_CONF_FORCE_ON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_CONF_FORCE_ON_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_CONF_FORCE_ON_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_CONF_FORCE_ON_SPEC>;
 #[doc = "Register `CLK_CONF_FORCE_ON` writer"]
-pub struct W(crate::W<CLK_CONF_FORCE_ON_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_CONF_FORCE_ON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_CONF_FORCE_ON_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_CONF_FORCE_ON_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLK_CONF_FORCE_ON_SPEC>;
 #[doc = "Field `CLK_COEX_FO` reader - "]
 pub type CLK_COEX_FO_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_FO` writer - "]
-pub type CLK_COEX_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
+pub type CLK_COEX_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLK_I2C_MST_FO` reader - "]
 pub type CLK_I2C_MST_FO_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_FO` writer - "]
-pub type CLK_I2C_MST_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
+pub type CLK_I2C_MST_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLK_FE_MEM_FO` reader - "]
 pub type CLK_FE_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_MEM_FO` writer - "]
-pub type CLK_FE_MEM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
+pub type CLK_FE_MEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1"]
     #[inline(always)]
@@ -89,40 +57,37 @@ impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<1> {
+    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<CLK_CONF_FORCE_ON_SPEC, 1> {
         CLK_COEX_FO_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<2> {
+    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<CLK_CONF_FORCE_ON_SPEC, 2> {
         CLK_I2C_MST_FO_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_mem_fo(&mut self) -> CLK_FE_MEM_FO_W<5> {
+    pub fn clk_fe_mem_fo(&mut self) -> CLK_FE_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 5> {
         CLK_FE_MEM_FO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf_force_on](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk_conf_force_on::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_conf_force_on::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_CONF_FORCE_ON_SPEC;
 impl crate::RegisterSpec for CLK_CONF_FORCE_ON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_conf_force_on::R](R) reader structure"]
-impl crate::Readable for CLK_CONF_FORCE_ON_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk_conf_force_on::W](W) writer structure"]
+#[doc = "`read()` method returns [`clk_conf_force_on::R`](R) reader structure"]
+impl crate::Readable for CLK_CONF_FORCE_ON_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clk_conf_force_on::W`](W) writer structure"]
 impl crate::Writable for CLK_CONF_FORCE_ON_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

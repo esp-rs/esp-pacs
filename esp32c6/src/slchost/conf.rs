@@ -1,71 +1,39 @@
 #[doc = "Register `CONF` reader"]
-pub struct R(crate::R<CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF_SPEC>;
 #[doc = "Register `CONF` writer"]
-pub struct W(crate::W<CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `FRC_SDIO11` reader - *******Description***********"]
 pub type FRC_SDIO11_R = crate::FieldReader;
 #[doc = "Field `FRC_SDIO11` writer - *******Description***********"]
-pub type FRC_SDIO11_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
+pub type FRC_SDIO11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `FRC_SDIO20` reader - *******Description***********"]
 pub type FRC_SDIO20_R = crate::FieldReader;
 #[doc = "Field `FRC_SDIO20` writer - *******Description***********"]
-pub type FRC_SDIO20_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
+pub type FRC_SDIO20_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `FRC_NEG_SAMP` reader - *******Description***********"]
 pub type FRC_NEG_SAMP_R = crate::FieldReader;
 #[doc = "Field `FRC_NEG_SAMP` writer - *******Description***********"]
-pub type FRC_NEG_SAMP_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
+pub type FRC_NEG_SAMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `FRC_POS_SAMP` reader - *******Description***********"]
 pub type FRC_POS_SAMP_R = crate::FieldReader;
 #[doc = "Field `FRC_POS_SAMP` writer - *******Description***********"]
-pub type FRC_POS_SAMP_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
+pub type FRC_POS_SAMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `FRC_QUICK_IN` reader - *******Description***********"]
 pub type FRC_QUICK_IN_R = crate::FieldReader;
 #[doc = "Field `FRC_QUICK_IN` writer - *******Description***********"]
-pub type FRC_QUICK_IN_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
+pub type FRC_QUICK_IN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `SDIO20_INT_DELAY` reader - *******Description***********"]
 pub type SDIO20_INT_DELAY_R = crate::BitReader;
 #[doc = "Field `SDIO20_INT_DELAY` writer - *******Description***********"]
-pub type SDIO20_INT_DELAY_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type SDIO20_INT_DELAY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SDIO_PAD_PULLUP` reader - *******Description***********"]
 pub type SDIO_PAD_PULLUP_R = crate::BitReader;
 #[doc = "Field `SDIO_PAD_PULLUP` writer - *******Description***********"]
-pub type SDIO_PAD_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type SDIO_PAD_PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HSPEED_CON_EN` reader - *******Description***********"]
 pub type HSPEED_CON_EN_R = crate::BitReader;
 #[doc = "Field `HSPEED_CON_EN` writer - *******Description***********"]
-pub type HSPEED_CON_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type HSPEED_CON_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:4 - *******Description***********"]
     #[inline(always)]
@@ -151,70 +119,67 @@ impl W {
     #[doc = "Bits 0:4 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn frc_sdio11(&mut self) -> FRC_SDIO11_W<0> {
+    pub fn frc_sdio11(&mut self) -> FRC_SDIO11_W<CONF_SPEC, 0> {
         FRC_SDIO11_W::new(self)
     }
     #[doc = "Bits 5:9 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn frc_sdio20(&mut self) -> FRC_SDIO20_W<5> {
+    pub fn frc_sdio20(&mut self) -> FRC_SDIO20_W<CONF_SPEC, 5> {
         FRC_SDIO20_W::new(self)
     }
     #[doc = "Bits 10:14 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn frc_neg_samp(&mut self) -> FRC_NEG_SAMP_W<10> {
+    pub fn frc_neg_samp(&mut self) -> FRC_NEG_SAMP_W<CONF_SPEC, 10> {
         FRC_NEG_SAMP_W::new(self)
     }
     #[doc = "Bits 15:19 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn frc_pos_samp(&mut self) -> FRC_POS_SAMP_W<15> {
+    pub fn frc_pos_samp(&mut self) -> FRC_POS_SAMP_W<CONF_SPEC, 15> {
         FRC_POS_SAMP_W::new(self)
     }
     #[doc = "Bits 20:24 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn frc_quick_in(&mut self) -> FRC_QUICK_IN_W<20> {
+    pub fn frc_quick_in(&mut self) -> FRC_QUICK_IN_W<CONF_SPEC, 20> {
         FRC_QUICK_IN_W::new(self)
     }
     #[doc = "Bit 25 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio20_int_delay(&mut self) -> SDIO20_INT_DELAY_W<25> {
+    pub fn sdio20_int_delay(&mut self) -> SDIO20_INT_DELAY_W<CONF_SPEC, 25> {
         SDIO20_INT_DELAY_W::new(self)
     }
     #[doc = "Bit 26 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_pad_pullup(&mut self) -> SDIO_PAD_PULLUP_W<26> {
+    pub fn sdio_pad_pullup(&mut self) -> SDIO_PAD_PULLUP_W<CONF_SPEC, 26> {
         SDIO_PAD_PULLUP_W::new(self)
     }
     #[doc = "Bit 27 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn hspeed_con_en(&mut self) -> HSPEED_CON_EN_W<27> {
+    pub fn hspeed_con_en(&mut self) -> HSPEED_CON_EN_W<CONF_SPEC, 27> {
         HSPEED_CON_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf](index.html) module"]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF_SPEC;
 impl crate::RegisterSpec for CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf::R](R) reader structure"]
-impl crate::Readable for CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf::R`](R) reader structure"]
+impl crate::Readable for CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf::W`](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

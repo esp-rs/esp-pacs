@@ -1,18 +1,5 @@
 #[doc = "Register `OUT_EP1_ST` reader"]
-pub struct R(crate::R<OUT_EP1_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OUT_EP1_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OUT_EP1_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OUT_EP1_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OUT_EP1_ST_SPEC>;
 #[doc = "Field `OUT_EP1_STATE` reader - State of OUT Endpoint 1."]
 pub type OUT_EP1_STATE_R = crate::FieldReader;
 #[doc = "Field `OUT_EP1_WR_ADDR` reader - Write data address of OUT endpoint 1. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is detected, there are USB_DEVICE_OUT_EP1_WR_ADDR-2 bytes data in OUT EP1."]
@@ -72,15 +59,13 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_EP1_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "USB_DEVICE_OUT_EP1_ST_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_ep1_st](index.html) module"]
+#[doc = "USB_DEVICE_OUT_EP1_ST_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_ep1_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_EP1_ST_SPEC;
 impl crate::RegisterSpec for OUT_EP1_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_ep1_st::R](R) reader structure"]
-impl crate::Readable for OUT_EP1_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`out_ep1_st::R`](R) reader structure"]
+impl crate::Readable for OUT_EP1_ST_SPEC {}
 #[doc = "`reset()` method sets OUT_EP1_ST to value 0"]
 impl crate::Resettable for OUT_EP1_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

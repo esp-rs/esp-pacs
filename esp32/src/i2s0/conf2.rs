@@ -1,71 +1,39 @@
 #[doc = "Register `CONF2` reader"]
-pub struct R(crate::R<CONF2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF2_SPEC>;
 #[doc = "Register `CONF2` writer"]
-pub struct W(crate::W<CONF2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF2_SPEC>;
 #[doc = "Field `CAMERA_EN` reader - "]
 pub type CAMERA_EN_R = crate::BitReader;
 #[doc = "Field `CAMERA_EN` writer - "]
-pub type CAMERA_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type CAMERA_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_TX_WRX2_EN` reader - "]
 pub type LCD_TX_WRX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_WRX2_EN` writer - "]
-pub type LCD_TX_WRX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type LCD_TX_WRX2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_TX_SDX2_EN` reader - "]
 pub type LCD_TX_SDX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_SDX2_EN` writer - "]
-pub type LCD_TX_SDX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type LCD_TX_SDX2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DATA_ENABLE_TEST_EN` reader - "]
 pub type DATA_ENABLE_TEST_EN_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE_TEST_EN` writer - "]
-pub type DATA_ENABLE_TEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type DATA_ENABLE_TEST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DATA_ENABLE` reader - "]
 pub type DATA_ENABLE_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE` writer - "]
-pub type DATA_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type DATA_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LCD_EN` reader - "]
 pub type LCD_EN_R = crate::BitReader;
 #[doc = "Field `LCD_EN` writer - "]
-pub type LCD_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type LCD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EXT_ADC_START_EN` reader - "]
 pub type EXT_ADC_START_EN_R = crate::BitReader;
 #[doc = "Field `EXT_ADC_START_EN` writer - "]
-pub type EXT_ADC_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type EXT_ADC_START_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INTER_VALID_EN` reader - "]
 pub type INTER_VALID_EN_R = crate::BitReader;
 #[doc = "Field `INTER_VALID_EN` writer - "]
-pub type INTER_VALID_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
+pub type INTER_VALID_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -148,70 +116,67 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_en(&mut self) -> CAMERA_EN_W<0> {
+    pub fn camera_en(&mut self) -> CAMERA_EN_W<CONF2_SPEC, 0> {
         CAMERA_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<1> {
+    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<CONF2_SPEC, 1> {
         LCD_TX_WRX2_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<2> {
+    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<CONF2_SPEC, 2> {
         LCD_TX_SDX2_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<3> {
+    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<CONF2_SPEC, 3> {
         DATA_ENABLE_TEST_EN_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn data_enable(&mut self) -> DATA_ENABLE_W<4> {
+    pub fn data_enable(&mut self) -> DATA_ENABLE_W<CONF2_SPEC, 4> {
         DATA_ENABLE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_en(&mut self) -> LCD_EN_W<5> {
+    pub fn lcd_en(&mut self) -> LCD_EN_W<CONF2_SPEC, 5> {
         LCD_EN_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<6> {
+    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<CONF2_SPEC, 6> {
         EXT_ADC_START_EN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<7> {
+    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<CONF2_SPEC, 7> {
         INTER_VALID_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf2](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF2_SPEC;
 impl crate::RegisterSpec for CONF2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf2::R](R) reader structure"]
-impl crate::Readable for CONF2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf2::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf2::R`](R) reader structure"]
+impl crate::Readable for CONF2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf2::W`](W) writer structure"]
 impl crate::Writable for CONF2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

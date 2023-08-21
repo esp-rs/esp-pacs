@@ -1,18 +1,5 @@
 #[doc = "Register `CORE_0_DRAM0_EXCEPTION_MONITOR_5` reader"]
-pub struct R(crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC>;
 #[doc = "Field `CORE_0_DRAM0_RECORDING_PC_1` reader - The second dram0's PC status when trigger DRAM busy interrupt"]
 pub type CORE_0_DRAM0_RECORDING_PC_1_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<CORE_0_DRAM0_EXCEPTION_MONITOR_5_S
         self.read().fmt(f)
     }
 }
-#[doc = "core0 bus busy configuration regsiter\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_dram0_exception_monitor_5](index.html) module"]
+#[doc = "core0 bus busy configuration regsiter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_exception_monitor_5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC;
 impl crate::RegisterSpec for CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_dram0_exception_monitor_5::R](R) reader structure"]
-impl crate::Readable for CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`core_0_dram0_exception_monitor_5::R`](R) reader structure"]
+impl crate::Readable for CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC {}
 #[doc = "`reset()` method sets CORE_0_DRAM0_EXCEPTION_MONITOR_5 to value 0xffff_ffff"]
 impl crate::Resettable for CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC {
     const RESET_VALUE: Self::Ux = 0xffff_ffff;

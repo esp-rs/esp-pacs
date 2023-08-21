@@ -1,18 +1,5 @@
 #[doc = "Register `INFIFO_STATUS_CH2` reader"]
-pub struct R(crate::R<INFIFO_STATUS_CH2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INFIFO_STATUS_CH2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INFIFO_STATUS_CH2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INFIFO_STATUS_CH2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INFIFO_STATUS_CH2_SPEC>;
 #[doc = "Field `INFIFO_FULL` reader - L1 Rx FIFO full signal for Rx channel 2."]
 pub type INFIFO_FULL_R = crate::BitReader;
 #[doc = "Field `INFIFO_EMPTY` reader - L1 Rx FIFO empty signal for Rx channel 2."]
@@ -110,15 +97,13 @@ impl core::fmt::Debug for crate::generic::Reg<INFIFO_STATUS_CH2_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "DMA_INFIFO_STATUS_CH2_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [infifo_status_ch2](index.html) module"]
+#[doc = "DMA_INFIFO_STATUS_CH2_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`infifo_status_ch2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INFIFO_STATUS_CH2_SPEC;
 impl crate::RegisterSpec for INFIFO_STATUS_CH2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [infifo_status_ch2::R](R) reader structure"]
-impl crate::Readable for INFIFO_STATUS_CH2_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`infifo_status_ch2::R`](R) reader structure"]
+impl crate::Readable for INFIFO_STATUS_CH2_SPEC {}
 #[doc = "`reset()` method sets INFIFO_STATUS_CH2 to value 0x0780_0003"]
 impl crate::Resettable for INFIFO_STATUS_CH2_SPEC {
     const RESET_VALUE: Self::Ux = 0x0780_0003;

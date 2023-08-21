@@ -136,267 +136,267 @@ pub struct RegisterBlock {
     #[doc = "0x3fc - SPI version control"]
     pub reg_date: REG_DATE,
 }
-#[doc = "CMD (rw) register accessor: an alias for `Reg<CMD_SPEC>`"]
+#[doc = "CMD (rw) register accessor: Command control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmd::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmd::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cmd`] module"]
 pub type CMD = crate::Reg<cmd::CMD_SPEC>;
 #[doc = "Command control register"]
 pub mod cmd;
-#[doc = "ADDR (rw) register accessor: an alias for `Reg<ADDR_SPEC>`"]
+#[doc = "ADDR (rw) register accessor: Address value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`addr`] module"]
 pub type ADDR = crate::Reg<addr::ADDR_SPEC>;
 #[doc = "Address value"]
 pub mod addr;
-#[doc = "CTRL (rw) register accessor: an alias for `Reg<CTRL_SPEC>`"]
+#[doc = "CTRL (rw) register accessor: SPI control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl`] module"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "SPI control register"]
 pub mod ctrl;
-#[doc = "CTRL1 (rw) register accessor: an alias for `Reg<CTRL1_SPEC>`"]
+#[doc = "CTRL1 (rw) register accessor: SPI control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl1`] module"]
 pub type CTRL1 = crate::Reg<ctrl1::CTRL1_SPEC>;
 #[doc = "SPI control register 1"]
 pub mod ctrl1;
-#[doc = "CTRL2 (rw) register accessor: an alias for `Reg<CTRL2_SPEC>`"]
+#[doc = "CTRL2 (rw) register accessor: SPI control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl2`] module"]
 pub type CTRL2 = crate::Reg<ctrl2::CTRL2_SPEC>;
 #[doc = "SPI control register 2"]
 pub mod ctrl2;
-#[doc = "CLOCK (rw) register accessor: an alias for `Reg<CLOCK_SPEC>`"]
+#[doc = "CLOCK (rw) register accessor: SPI clock control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clock`] module"]
 pub type CLOCK = crate::Reg<clock::CLOCK_SPEC>;
 #[doc = "SPI clock control register"]
 pub mod clock;
-#[doc = "USER (rw) register accessor: an alias for `Reg<USER_SPEC>`"]
+#[doc = "USER (rw) register accessor: SPI USER control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`user::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`user::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`user`] module"]
 pub type USER = crate::Reg<user::USER_SPEC>;
 #[doc = "SPI USER control register"]
 pub mod user;
-#[doc = "USER1 (rw) register accessor: an alias for `Reg<USER1_SPEC>`"]
+#[doc = "USER1 (rw) register accessor: SPI USER control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`user1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`user1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`user1`] module"]
 pub type USER1 = crate::Reg<user1::USER1_SPEC>;
 #[doc = "SPI USER control register 1"]
 pub mod user1;
-#[doc = "USER2 (rw) register accessor: an alias for `Reg<USER2_SPEC>`"]
+#[doc = "USER2 (rw) register accessor: SPI USER control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`user2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`user2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`user2`] module"]
 pub type USER2 = crate::Reg<user2::USER2_SPEC>;
 #[doc = "SPI USER control register 2"]
 pub mod user2;
-#[doc = "MOSI_DLEN (rw) register accessor: an alias for `Reg<MOSI_DLEN_SPEC>`"]
+#[doc = "MOSI_DLEN (rw) register accessor: MOSI length\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mosi_dlen::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mosi_dlen::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mosi_dlen`] module"]
 pub type MOSI_DLEN = crate::Reg<mosi_dlen::MOSI_DLEN_SPEC>;
 #[doc = "MOSI length"]
 pub mod mosi_dlen;
-#[doc = "MISO_DLEN (rw) register accessor: an alias for `Reg<MISO_DLEN_SPEC>`"]
+#[doc = "MISO_DLEN (rw) register accessor: MISO length\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`miso_dlen::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`miso_dlen::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`miso_dlen`] module"]
 pub type MISO_DLEN = crate::Reg<miso_dlen::MISO_DLEN_SPEC>;
 #[doc = "MISO length"]
 pub mod miso_dlen;
-#[doc = "MISC (rw) register accessor: an alias for `Reg<MISC_SPEC>`"]
+#[doc = "MISC (rw) register accessor: SPI misc register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`misc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`misc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`misc`] module"]
 pub type MISC = crate::Reg<misc::MISC_SPEC>;
 #[doc = "SPI misc register"]
 pub mod misc;
-#[doc = "SLAVE (rw) register accessor: an alias for `Reg<SLAVE_SPEC>`"]
+#[doc = "SLAVE (rw) register accessor: SPI slave control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slave::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slave::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`slave`] module"]
 pub type SLAVE = crate::Reg<slave::SLAVE_SPEC>;
 #[doc = "SPI slave control register"]
 pub mod slave;
-#[doc = "SLAVE1 (rw) register accessor: an alias for `Reg<SLAVE1_SPEC>`"]
+#[doc = "SLAVE1 (rw) register accessor: SPI slave control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slave1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slave1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`slave1`] module"]
 pub type SLAVE1 = crate::Reg<slave1::SLAVE1_SPEC>;
 #[doc = "SPI slave control register 1"]
 pub mod slave1;
-#[doc = "SLV_WRBUF_DLEN (rw) register accessor: an alias for `Reg<SLV_WRBUF_DLEN_SPEC>`"]
+#[doc = "SLV_WRBUF_DLEN (rw) register accessor: SPI slave Wr_BUF interrupt and CONF control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slv_wrbuf_dlen::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slv_wrbuf_dlen::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`slv_wrbuf_dlen`] module"]
 pub type SLV_WRBUF_DLEN = crate::Reg<slv_wrbuf_dlen::SLV_WRBUF_DLEN_SPEC>;
 #[doc = "SPI slave Wr_BUF interrupt and CONF control register"]
 pub mod slv_wrbuf_dlen;
-#[doc = "SLV_RDBUF_DLEN (rw) register accessor: an alias for `Reg<SLV_RDBUF_DLEN_SPEC>`"]
+#[doc = "SLV_RDBUF_DLEN (rw) register accessor: SPI magic error and slave control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slv_rdbuf_dlen::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slv_rdbuf_dlen::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`slv_rdbuf_dlen`] module"]
 pub type SLV_RDBUF_DLEN = crate::Reg<slv_rdbuf_dlen::SLV_RDBUF_DLEN_SPEC>;
 #[doc = "SPI magic error and slave control register"]
 pub mod slv_rdbuf_dlen;
-#[doc = "SLV_RD_BYTE (rw) register accessor: an alias for `Reg<SLV_RD_BYTE_SPEC>`"]
+#[doc = "SLV_RD_BYTE (rw) register accessor: SPI interrupt control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slv_rd_byte::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slv_rd_byte::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`slv_rd_byte`] module"]
 pub type SLV_RD_BYTE = crate::Reg<slv_rd_byte::SLV_RD_BYTE_SPEC>;
 #[doc = "SPI interrupt control register"]
 pub mod slv_rd_byte;
-#[doc = "FSM (rw) register accessor: an alias for `Reg<FSM_SPEC>`"]
+#[doc = "FSM (rw) register accessor: SPI master status and DMA read byte control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fsm::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fsm::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`fsm`] module"]
 pub type FSM = crate::Reg<fsm::FSM_SPEC>;
 #[doc = "SPI master status and DMA read byte control register"]
 pub mod fsm;
-#[doc = "HOLD (rw) register accessor: an alias for `Reg<HOLD_SPEC>`"]
+#[doc = "HOLD (rw) register accessor: SPI hold register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hold::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hold::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hold`] module"]
 pub type HOLD = crate::Reg<hold::HOLD_SPEC>;
 #[doc = "SPI hold register"]
 pub mod hold;
-#[doc = "DMA_CONF (rw) register accessor: an alias for `Reg<DMA_CONF_SPEC>`"]
+#[doc = "DMA_CONF (rw) register accessor: SPI DMA control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_conf`] module"]
 pub type DMA_CONF = crate::Reg<dma_conf::DMA_CONF_SPEC>;
 #[doc = "SPI DMA control register"]
 pub mod dma_conf;
-#[doc = "DMA_OUT_LINK (rw) register accessor: an alias for `Reg<DMA_OUT_LINK_SPEC>`"]
+#[doc = "DMA_OUT_LINK (rw) register accessor: SPI DMA TX link configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_out_link::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_out_link::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_out_link`] module"]
 pub type DMA_OUT_LINK = crate::Reg<dma_out_link::DMA_OUT_LINK_SPEC>;
 #[doc = "SPI DMA TX link configuration"]
 pub mod dma_out_link;
-#[doc = "DMA_IN_LINK (rw) register accessor: an alias for `Reg<DMA_IN_LINK_SPEC>`"]
+#[doc = "DMA_IN_LINK (rw) register accessor: SPI DMA RX link configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_in_link::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_in_link::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_in_link`] module"]
 pub type DMA_IN_LINK = crate::Reg<dma_in_link::DMA_IN_LINK_SPEC>;
 #[doc = "SPI DMA RX link configuration"]
 pub mod dma_in_link;
-#[doc = "DMA_INT_ENA (rw) register accessor: an alias for `Reg<DMA_INT_ENA_SPEC>`"]
+#[doc = "DMA_INT_ENA (rw) register accessor: SPI DMA interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_int_ena`] module"]
 pub type DMA_INT_ENA = crate::Reg<dma_int_ena::DMA_INT_ENA_SPEC>;
 #[doc = "SPI DMA interrupt enable register"]
 pub mod dma_int_ena;
-#[doc = "DMA_INT_RAW (rw) register accessor: an alias for `Reg<DMA_INT_RAW_SPEC>`"]
+#[doc = "DMA_INT_RAW (rw) register accessor: SPI DMA interrupt raw register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_int_raw`] module"]
 pub type DMA_INT_RAW = crate::Reg<dma_int_raw::DMA_INT_RAW_SPEC>;
 #[doc = "SPI DMA interrupt raw register"]
 pub mod dma_int_raw;
-#[doc = "DMA_INT_ST (rw) register accessor: an alias for `Reg<DMA_INT_ST_SPEC>`"]
+#[doc = "DMA_INT_ST (rw) register accessor: SPI DMA interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_int_st::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_int_st::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_int_st`] module"]
 pub type DMA_INT_ST = crate::Reg<dma_int_st::DMA_INT_ST_SPEC>;
 #[doc = "SPI DMA interrupt status register"]
 pub mod dma_int_st;
-#[doc = "DMA_INT_CLR (rw) register accessor: an alias for `Reg<DMA_INT_CLR_SPEC>`"]
+#[doc = "DMA_INT_CLR (rw) register accessor: SPI DMA interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_int_clr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_int_clr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_int_clr`] module"]
 pub type DMA_INT_CLR = crate::Reg<dma_int_clr::DMA_INT_CLR_SPEC>;
 #[doc = "SPI DMA interrupt clear register"]
 pub mod dma_int_clr;
-#[doc = "IN_ERR_EOF_DES_ADDR (r) register accessor: an alias for `Reg<IN_ERR_EOF_DES_ADDR_SPEC>`"]
+#[doc = "IN_ERR_EOF_DES_ADDR (r) register accessor: The latest SPI DMA RX descriptor address receiving error\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_err_eof_des_addr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`in_err_eof_des_addr`] module"]
 pub type IN_ERR_EOF_DES_ADDR = crate::Reg<in_err_eof_des_addr::IN_ERR_EOF_DES_ADDR_SPEC>;
 #[doc = "The latest SPI DMA RX descriptor address receiving error"]
 pub mod in_err_eof_des_addr;
-#[doc = "IN_SUC_EOF_DES_ADDR (r) register accessor: an alias for `Reg<IN_SUC_EOF_DES_ADDR_SPEC>`"]
+#[doc = "IN_SUC_EOF_DES_ADDR (r) register accessor: The latest SPI DMA eof RX descriptor address\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_suc_eof_des_addr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`in_suc_eof_des_addr`] module"]
 pub type IN_SUC_EOF_DES_ADDR = crate::Reg<in_suc_eof_des_addr::IN_SUC_EOF_DES_ADDR_SPEC>;
 #[doc = "The latest SPI DMA eof RX descriptor address"]
 pub mod in_suc_eof_des_addr;
-#[doc = "INLINK_DSCR (r) register accessor: an alias for `Reg<INLINK_DSCR_SPEC>`"]
+#[doc = "INLINK_DSCR (r) register accessor: Current SPI DMA RX descriptor pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inlink_dscr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`inlink_dscr`] module"]
 pub type INLINK_DSCR = crate::Reg<inlink_dscr::INLINK_DSCR_SPEC>;
 #[doc = "Current SPI DMA RX descriptor pointer"]
 pub mod inlink_dscr;
-#[doc = "INLINK_DSCR_BF0 (r) register accessor: an alias for `Reg<INLINK_DSCR_BF0_SPEC>`"]
+#[doc = "INLINK_DSCR_BF0 (r) register accessor: Next SPI DMA RX descriptor pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inlink_dscr_bf0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`inlink_dscr_bf0`] module"]
 pub type INLINK_DSCR_BF0 = crate::Reg<inlink_dscr_bf0::INLINK_DSCR_BF0_SPEC>;
 #[doc = "Next SPI DMA RX descriptor pointer"]
 pub mod inlink_dscr_bf0;
-#[doc = "INLINK_DSCR_BF1 (r) register accessor: an alias for `Reg<INLINK_DSCR_BF1_SPEC>`"]
+#[doc = "INLINK_DSCR_BF1 (r) register accessor: Current SPI DMA RX buffer pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inlink_dscr_bf1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`inlink_dscr_bf1`] module"]
 pub type INLINK_DSCR_BF1 = crate::Reg<inlink_dscr_bf1::INLINK_DSCR_BF1_SPEC>;
 #[doc = "Current SPI DMA RX buffer pointer"]
 pub mod inlink_dscr_bf1;
-#[doc = "OUT_EOF_BFR_DES_ADDR (r) register accessor: an alias for `Reg<OUT_EOF_BFR_DES_ADDR_SPEC>`"]
+#[doc = "OUT_EOF_BFR_DES_ADDR (r) register accessor: The latest SPI DMA eof TX buffer address\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_eof_bfr_des_addr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`out_eof_bfr_des_addr`] module"]
 pub type OUT_EOF_BFR_DES_ADDR = crate::Reg<out_eof_bfr_des_addr::OUT_EOF_BFR_DES_ADDR_SPEC>;
 #[doc = "The latest SPI DMA eof TX buffer address"]
 pub mod out_eof_bfr_des_addr;
-#[doc = "OUT_EOF_DES_ADDR (r) register accessor: an alias for `Reg<OUT_EOF_DES_ADDR_SPEC>`"]
+#[doc = "OUT_EOF_DES_ADDR (r) register accessor: The latest SPI DMA eof TX descriptor address\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_eof_des_addr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`out_eof_des_addr`] module"]
 pub type OUT_EOF_DES_ADDR = crate::Reg<out_eof_des_addr::OUT_EOF_DES_ADDR_SPEC>;
 #[doc = "The latest SPI DMA eof TX descriptor address"]
 pub mod out_eof_des_addr;
-#[doc = "OUTLINK_DSCR (r) register accessor: an alias for `Reg<OUTLINK_DSCR_SPEC>`"]
+#[doc = "OUTLINK_DSCR (r) register accessor: Current SPI DMA TX descriptor pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`outlink_dscr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`outlink_dscr`] module"]
 pub type OUTLINK_DSCR = crate::Reg<outlink_dscr::OUTLINK_DSCR_SPEC>;
 #[doc = "Current SPI DMA TX descriptor pointer"]
 pub mod outlink_dscr;
-#[doc = "OUTLINK_DSCR_BF0 (r) register accessor: an alias for `Reg<OUTLINK_DSCR_BF0_SPEC>`"]
+#[doc = "OUTLINK_DSCR_BF0 (r) register accessor: Next SPI DMA TX descriptor pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`outlink_dscr_bf0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`outlink_dscr_bf0`] module"]
 pub type OUTLINK_DSCR_BF0 = crate::Reg<outlink_dscr_bf0::OUTLINK_DSCR_BF0_SPEC>;
 #[doc = "Next SPI DMA TX descriptor pointer"]
 pub mod outlink_dscr_bf0;
-#[doc = "OUTLINK_DSCR_BF1 (r) register accessor: an alias for `Reg<OUTLINK_DSCR_BF1_SPEC>`"]
+#[doc = "OUTLINK_DSCR_BF1 (r) register accessor: Current SPI DMA TX buffer pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`outlink_dscr_bf1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`outlink_dscr_bf1`] module"]
 pub type OUTLINK_DSCR_BF1 = crate::Reg<outlink_dscr_bf1::OUTLINK_DSCR_BF1_SPEC>;
 #[doc = "Current SPI DMA TX buffer pointer"]
 pub mod outlink_dscr_bf1;
-#[doc = "DMA_OUTSTATUS (r) register accessor: an alias for `Reg<DMA_OUTSTATUS_SPEC>`"]
+#[doc = "DMA_OUTSTATUS (r) register accessor: SPI DMA TX status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_outstatus::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_outstatus`] module"]
 pub type DMA_OUTSTATUS = crate::Reg<dma_outstatus::DMA_OUTSTATUS_SPEC>;
 #[doc = "SPI DMA TX status"]
 pub mod dma_outstatus;
-#[doc = "DMA_INSTATUS (r) register accessor: an alias for `Reg<DMA_INSTATUS_SPEC>`"]
+#[doc = "DMA_INSTATUS (r) register accessor: SPI DMA RX status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_instatus::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dma_instatus`] module"]
 pub type DMA_INSTATUS = crate::Reg<dma_instatus::DMA_INSTATUS_SPEC>;
 #[doc = "SPI DMA RX status"]
 pub mod dma_instatus;
-#[doc = "W0 (rw) register accessor: an alias for `Reg<W0_SPEC>`"]
+#[doc = "W0 (rw) register accessor: Data buffer 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w0`] module"]
 pub type W0 = crate::Reg<w0::W0_SPEC>;
 #[doc = "Data buffer 0"]
 pub mod w0;
-#[doc = "W1 (rw) register accessor: an alias for `Reg<W1_SPEC>`"]
+#[doc = "W1 (rw) register accessor: Data buffer 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w1`] module"]
 pub type W1 = crate::Reg<w1::W1_SPEC>;
 #[doc = "Data buffer 1"]
 pub mod w1;
-#[doc = "W2 (rw) register accessor: an alias for `Reg<W2_SPEC>`"]
+#[doc = "W2 (rw) register accessor: Data buffer 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w2`] module"]
 pub type W2 = crate::Reg<w2::W2_SPEC>;
 #[doc = "Data buffer 2"]
 pub mod w2;
-#[doc = "W3 (rw) register accessor: an alias for `Reg<W3_SPEC>`"]
+#[doc = "W3 (rw) register accessor: Data buffer 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w3`] module"]
 pub type W3 = crate::Reg<w3::W3_SPEC>;
 #[doc = "Data buffer 3"]
 pub mod w3;
-#[doc = "W4 (rw) register accessor: an alias for `Reg<W4_SPEC>`"]
+#[doc = "W4 (rw) register accessor: Data buffer 4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w4`] module"]
 pub type W4 = crate::Reg<w4::W4_SPEC>;
 #[doc = "Data buffer 4"]
 pub mod w4;
-#[doc = "W5 (rw) register accessor: an alias for `Reg<W5_SPEC>`"]
+#[doc = "W5 (rw) register accessor: Data buffer 5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w5`] module"]
 pub type W5 = crate::Reg<w5::W5_SPEC>;
 #[doc = "Data buffer 5"]
 pub mod w5;
-#[doc = "W6 (rw) register accessor: an alias for `Reg<W6_SPEC>`"]
+#[doc = "W6 (rw) register accessor: Data buffer 6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w6`] module"]
 pub type W6 = crate::Reg<w6::W6_SPEC>;
 #[doc = "Data buffer 6"]
 pub mod w6;
-#[doc = "W7 (rw) register accessor: an alias for `Reg<W7_SPEC>`"]
+#[doc = "W7 (rw) register accessor: Data buffer 7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w7`] module"]
 pub type W7 = crate::Reg<w7::W7_SPEC>;
 #[doc = "Data buffer 7"]
 pub mod w7;
-#[doc = "W8 (rw) register accessor: an alias for `Reg<W8_SPEC>`"]
+#[doc = "W8 (rw) register accessor: Data buffer 8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w8`] module"]
 pub type W8 = crate::Reg<w8::W8_SPEC>;
 #[doc = "Data buffer 8"]
 pub mod w8;
-#[doc = "W9 (rw) register accessor: an alias for `Reg<W9_SPEC>`"]
+#[doc = "W9 (rw) register accessor: Data buffer 9\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w9`] module"]
 pub type W9 = crate::Reg<w9::W9_SPEC>;
 #[doc = "Data buffer 9"]
 pub mod w9;
-#[doc = "W10 (rw) register accessor: an alias for `Reg<W10_SPEC>`"]
+#[doc = "W10 (rw) register accessor: Data buffer 10\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w10`] module"]
 pub type W10 = crate::Reg<w10::W10_SPEC>;
 #[doc = "Data buffer 10"]
 pub mod w10;
-#[doc = "W11 (rw) register accessor: an alias for `Reg<W11_SPEC>`"]
+#[doc = "W11 (rw) register accessor: Data buffer 11\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w11::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w11::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w11`] module"]
 pub type W11 = crate::Reg<w11::W11_SPEC>;
 #[doc = "Data buffer 11"]
 pub mod w11;
-#[doc = "W12 (rw) register accessor: an alias for `Reg<W12_SPEC>`"]
+#[doc = "W12 (rw) register accessor: Data buffer 12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w12::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w12::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w12`] module"]
 pub type W12 = crate::Reg<w12::W12_SPEC>;
 #[doc = "Data buffer 12"]
 pub mod w12;
-#[doc = "W13 (rw) register accessor: an alias for `Reg<W13_SPEC>`"]
+#[doc = "W13 (rw) register accessor: Data buffer 13\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w13::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w13::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w13`] module"]
 pub type W13 = crate::Reg<w13::W13_SPEC>;
 #[doc = "Data buffer 13"]
 pub mod w13;
-#[doc = "W14 (rw) register accessor: an alias for `Reg<W14_SPEC>`"]
+#[doc = "W14 (rw) register accessor: Data buffer 14\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w14::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w14::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w14`] module"]
 pub type W14 = crate::Reg<w14::W14_SPEC>;
 #[doc = "Data buffer 14"]
 pub mod w14;
-#[doc = "W15 (rw) register accessor: an alias for `Reg<W15_SPEC>`"]
+#[doc = "W15 (rw) register accessor: Data buffer 15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w15::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w15::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w15`] module"]
 pub type W15 = crate::Reg<w15::W15_SPEC>;
 #[doc = "Data buffer 15"]
 pub mod w15;
-#[doc = "W16 (rw) register accessor: an alias for `Reg<W16_SPEC>`"]
+#[doc = "W16 (rw) register accessor: Data buffer 16\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w16::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w16::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w16`] module"]
 pub type W16 = crate::Reg<w16::W16_SPEC>;
 #[doc = "Data buffer 16"]
 pub mod w16;
-#[doc = "W17 (rw) register accessor: an alias for `Reg<W17_SPEC>`"]
+#[doc = "W17 (rw) register accessor: Data buffer 17\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w17::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w17::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`w17`] module"]
 pub type W17 = crate::Reg<w17::W17_SPEC>;
 #[doc = "Data buffer 17"]
 pub mod w17;
-#[doc = "DIN_MODE (rw) register accessor: an alias for `Reg<DIN_MODE_SPEC>`"]
+#[doc = "DIN_MODE (rw) register accessor: SPI input delay mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_mode::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`din_mode::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`din_mode`] module"]
 pub type DIN_MODE = crate::Reg<din_mode::DIN_MODE_SPEC>;
 #[doc = "SPI input delay mode configuration"]
 pub mod din_mode;
-#[doc = "DIN_NUM (rw) register accessor: an alias for `Reg<DIN_NUM_SPEC>`"]
+#[doc = "DIN_NUM (rw) register accessor: SPI input delay number configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_num::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`din_num::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`din_num`] module"]
 pub type DIN_NUM = crate::Reg<din_num::DIN_NUM_SPEC>;
 #[doc = "SPI input delay number configuration"]
 pub mod din_num;
-#[doc = "DOUT_MODE (rw) register accessor: an alias for `Reg<DOUT_MODE_SPEC>`"]
+#[doc = "DOUT_MODE (rw) register accessor: SPI output delay mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dout_mode::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dout_mode::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dout_mode`] module"]
 pub type DOUT_MODE = crate::Reg<dout_mode::DOUT_MODE_SPEC>;
 #[doc = "SPI output delay mode configuration"]
 pub mod dout_mode;
-#[doc = "DOUT_NUM (rw) register accessor: an alias for `Reg<DOUT_NUM_SPEC>`"]
+#[doc = "DOUT_NUM (rw) register accessor: SPI output delay number configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dout_num::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dout_num::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dout_num`] module"]
 pub type DOUT_NUM = crate::Reg<dout_num::DOUT_NUM_SPEC>;
 #[doc = "SPI output delay number configuration"]
 pub mod dout_num;
-#[doc = "LCD_CTRL (rw) register accessor: an alias for `Reg<LCD_CTRL_SPEC>`"]
+#[doc = "LCD_CTRL (rw) register accessor: LCD frame control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lcd_ctrl`] module"]
 pub type LCD_CTRL = crate::Reg<lcd_ctrl::LCD_CTRL_SPEC>;
 #[doc = "LCD frame control register"]
 pub mod lcd_ctrl;
-#[doc = "LCD_CTRL1 (rw) register accessor: an alias for `Reg<LCD_CTRL1_SPEC>`"]
+#[doc = "LCD_CTRL1 (rw) register accessor: LCD frame control1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_ctrl1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_ctrl1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lcd_ctrl1`] module"]
 pub type LCD_CTRL1 = crate::Reg<lcd_ctrl1::LCD_CTRL1_SPEC>;
 #[doc = "LCD frame control1 register"]
 pub mod lcd_ctrl1;
-#[doc = "LCD_CTRL2 (rw) register accessor: an alias for `Reg<LCD_CTRL2_SPEC>`"]
+#[doc = "LCD_CTRL2 (rw) register accessor: LCD frame control2 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_ctrl2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_ctrl2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lcd_ctrl2`] module"]
 pub type LCD_CTRL2 = crate::Reg<lcd_ctrl2::LCD_CTRL2_SPEC>;
 #[doc = "LCD frame control2 register"]
 pub mod lcd_ctrl2;
-#[doc = "LCD_D_MODE (rw) register accessor: an alias for `Reg<LCD_D_MODE_SPEC>`"]
+#[doc = "LCD_D_MODE (rw) register accessor: LCD delay number\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_d_mode::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_d_mode::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lcd_d_mode`] module"]
 pub type LCD_D_MODE = crate::Reg<lcd_d_mode::LCD_D_MODE_SPEC>;
 #[doc = "LCD delay number"]
 pub mod lcd_d_mode;
-#[doc = "LCD_D_NUM (rw) register accessor: an alias for `Reg<LCD_D_NUM_SPEC>`"]
+#[doc = "LCD_D_NUM (rw) register accessor: LCD delay mode\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_d_num::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_d_num::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lcd_d_num`] module"]
 pub type LCD_D_NUM = crate::Reg<lcd_d_num::LCD_D_NUM_SPEC>;
 #[doc = "LCD delay mode"]
 pub mod lcd_d_num;
-#[doc = "REG_DATE (rw) register accessor: an alias for `Reg<REG_DATE_SPEC>`"]
+#[doc = "REG_DATE (rw) register accessor: SPI version control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`reg_date`] module"]
 pub type REG_DATE = crate::Reg<reg_date::REG_DATE_SPEC>;
 #[doc = "SPI version control"]
 pub mod reg_date;

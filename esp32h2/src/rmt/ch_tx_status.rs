@@ -1,18 +1,5 @@
 #[doc = "Register `CH%s_TX_STATUS` reader"]
-pub struct R(crate::R<CH_TX_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CH_TX_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CH_TX_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CH_TX_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CH_TX_STATUS_SPEC>;
 #[doc = "Field `MEM_RADDR_EX` reader - This register records the memory address offset when transmitter of CHANNEL%s is using the RAM."]
 pub type MEM_RADDR_EX_R = crate::FieldReader<u16>;
 #[doc = "Field `STATE` reader - This register records the FSM status of CHANNEL%s."]
@@ -99,15 +86,13 @@ impl core::fmt::Debug for crate::generic::Reg<CH_TX_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Channel %s status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_tx_status](index.html) module"]
+#[doc = "Channel %s status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_tx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_TX_STATUS_SPEC;
 impl crate::RegisterSpec for CH_TX_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch_tx_status::R](R) reader structure"]
-impl crate::Readable for CH_TX_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ch_tx_status::R`](R) reader structure"]
+impl crate::Readable for CH_TX_STATUS_SPEC {}
 #[doc = "`reset()` method sets CH%s_TX_STATUS to value 0"]
 impl crate::Resettable for CH_TX_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

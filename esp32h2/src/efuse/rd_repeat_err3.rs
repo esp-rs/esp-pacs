@@ -1,18 +1,5 @@
 #[doc = "Register `RD_REPEAT_ERR3` reader"]
-pub struct R(crate::R<RD_REPEAT_ERR3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_REPEAT_ERR3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_REPEAT_ERR3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_REPEAT_ERR3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_REPEAT_ERR3_SPEC>;
 #[doc = "Field `DIS_DOWNLOAD_MODE_ERR` reader - Indicates a programming error of DIS_DOWNLOAD_MODE."]
 pub type DIS_DOWNLOAD_MODE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DIRECT_BOOT_ERR` reader - Indicates a programming error of DIS_DIRECT_BOOT."]
@@ -149,15 +136,13 @@ impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR3_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Programming error record register 3 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err3](index.html) module"]
+#[doc = "Programming error record register 3 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_ERR3_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_ERR3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_repeat_err3::R](R) reader structure"]
-impl crate::Readable for RD_REPEAT_ERR3_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rd_repeat_err3::R`](R) reader structure"]
+impl crate::Readable for RD_REPEAT_ERR3_SPEC {}
 #[doc = "`reset()` method sets RD_REPEAT_ERR3 to value 0"]
 impl crate::Resettable for RD_REPEAT_ERR3_SPEC {
     const RESET_VALUE: Self::Ux = 0;

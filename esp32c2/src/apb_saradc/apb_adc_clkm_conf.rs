@@ -1,59 +1,27 @@
 #[doc = "Register `APB_ADC_CLKM_CONF` reader"]
-pub struct R(crate::R<APB_ADC_CLKM_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<APB_ADC_CLKM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<APB_ADC_CLKM_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<APB_ADC_CLKM_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<APB_ADC_CLKM_CONF_SPEC>;
 #[doc = "Register `APB_ADC_CLKM_CONF` writer"]
-pub struct W(crate::W<APB_ADC_CLKM_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<APB_ADC_CLKM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<APB_ADC_CLKM_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<APB_ADC_CLKM_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<APB_ADC_CLKM_CONF_SPEC>;
 #[doc = "Field `REG_CLKM_DIV_NUM` reader - Integral I2S clock divider value"]
 pub type REG_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `REG_CLKM_DIV_NUM` writer - Integral I2S clock divider value"]
-pub type REG_CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, APB_ADC_CLKM_CONF_SPEC, 8, O>;
+pub type REG_CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `REG_CLKM_DIV_B` reader - Fractional clock divider numerator value"]
 pub type REG_CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `REG_CLKM_DIV_B` writer - Fractional clock divider numerator value"]
-pub type REG_CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, APB_ADC_CLKM_CONF_SPEC, 6, O>;
+pub type REG_CLKM_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `REG_CLKM_DIV_A` reader - Fractional clock divider denominator value"]
 pub type REG_CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `REG_CLKM_DIV_A` writer - Fractional clock divider denominator value"]
-pub type REG_CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, APB_ADC_CLKM_CONF_SPEC, 6, O>;
+pub type REG_CLKM_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `CLK_EN` reader - Need add description"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Need add description"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB_ADC_CLKM_CONF_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `REG_CLK_SEL` reader - Set this bit to enable clk_apll"]
 pub type REG_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `REG_CLK_SEL` writer - Set this bit to enable clk_apll"]
-pub type REG_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, APB_ADC_CLKM_CONF_SPEC, 2, O>;
+pub type REG_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
@@ -115,52 +83,49 @@ impl W {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_clkm_div_num(&mut self) -> REG_CLKM_DIV_NUM_W<0> {
+    pub fn reg_clkm_div_num(&mut self) -> REG_CLKM_DIV_NUM_W<APB_ADC_CLKM_CONF_SPEC, 0> {
         REG_CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 8:13 - Fractional clock divider numerator value"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_clkm_div_b(&mut self) -> REG_CLKM_DIV_B_W<8> {
+    pub fn reg_clkm_div_b(&mut self) -> REG_CLKM_DIV_B_W<APB_ADC_CLKM_CONF_SPEC, 8> {
         REG_CLKM_DIV_B_W::new(self)
     }
     #[doc = "Bits 14:19 - Fractional clock divider denominator value"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_clkm_div_a(&mut self) -> REG_CLKM_DIV_A_W<14> {
+    pub fn reg_clkm_div_a(&mut self) -> REG_CLKM_DIV_A_W<APB_ADC_CLKM_CONF_SPEC, 14> {
         REG_CLKM_DIV_A_W::new(self)
     }
     #[doc = "Bit 20 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<20> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<APB_ADC_CLKM_CONF_SPEC, 20> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bits 21:22 - Set this bit to enable clk_apll"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_clk_sel(&mut self) -> REG_CLK_SEL_W<21> {
+    pub fn reg_clk_sel(&mut self) -> REG_CLK_SEL_W<APB_ADC_CLKM_CONF_SPEC, 21> {
         REG_CLK_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_adc_clkm_conf](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_adc_clkm_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_adc_clkm_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB_ADC_CLKM_CONF_SPEC;
 impl crate::RegisterSpec for APB_ADC_CLKM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_adc_clkm_conf::R](R) reader structure"]
-impl crate::Readable for APB_ADC_CLKM_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [apb_adc_clkm_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`apb_adc_clkm_conf::R`](R) reader structure"]
+impl crate::Readable for APB_ADC_CLKM_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`apb_adc_clkm_conf::W`](W) writer structure"]
 impl crate::Writable for APB_ADC_CLKM_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

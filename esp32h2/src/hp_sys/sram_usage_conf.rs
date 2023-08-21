@@ -1,47 +1,15 @@
 #[doc = "Register `SRAM_USAGE_CONF` reader"]
-pub struct R(crate::R<SRAM_USAGE_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SRAM_USAGE_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SRAM_USAGE_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SRAM_USAGE_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SRAM_USAGE_CONF_SPEC>;
 #[doc = "Register `SRAM_USAGE_CONF` writer"]
-pub struct W(crate::W<SRAM_USAGE_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SRAM_USAGE_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SRAM_USAGE_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SRAM_USAGE_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SRAM_USAGE_CONF_SPEC>;
 #[doc = "Field `SRAM_USAGE` reader - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
 pub type SRAM_USAGE_R = crate::FieldReader;
 #[doc = "Field `SRAM_USAGE` writer - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
-pub type SRAM_USAGE_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_USAGE_CONF_SPEC, 5, O>;
+pub type SRAM_USAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `MAC_DUMP_ALLOC` reader - reserved."]
 pub type MAC_DUMP_ALLOC_R = crate::FieldReader;
 #[doc = "Field `MAC_DUMP_ALLOC` writer - reserved."]
-pub type MAC_DUMP_ALLOC_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_USAGE_CONF_SPEC, 5, O>;
+pub type MAC_DUMP_ALLOC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `CACHE_USAGE` reader - reserved"]
 pub type CACHE_USAGE_R = crate::BitReader;
 impl R {
@@ -84,34 +52,31 @@ impl W {
     #[doc = "Bits 10:14 - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<10> {
+    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<SRAM_USAGE_CONF_SPEC, 10> {
         SRAM_USAGE_W::new(self)
     }
     #[doc = "Bits 20:24 - reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<20> {
+    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<SRAM_USAGE_CONF_SPEC, 20> {
         MAC_DUMP_ALLOC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "HP memory usage configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sram_usage_conf](index.html) module"]
+#[doc = "HP memory usage configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sram_usage_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sram_usage_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SRAM_USAGE_CONF_SPEC;
 impl crate::RegisterSpec for SRAM_USAGE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sram_usage_conf::R](R) reader structure"]
-impl crate::Readable for SRAM_USAGE_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sram_usage_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`sram_usage_conf::R`](R) reader structure"]
+impl crate::Readable for SRAM_USAGE_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sram_usage_conf::W`](W) writer structure"]
 impl crate::Writable for SRAM_USAGE_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

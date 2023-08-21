@@ -1,18 +1,5 @@
 #[doc = "Register `GRXSTSR` reader"]
-pub struct R(crate::R<GRXSTSR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GRXSTSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GRXSTSR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GRXSTSR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GRXSTSR_SPEC>;
 #[doc = "Field `G_CHNUM` reader - "]
 pub type G_CHNUM_R = crate::FieldReader;
 #[doc = "Field `G_BCNT` reader - "]
@@ -68,15 +55,13 @@ impl core::fmt::Debug for crate::generic::Reg<GRXSTSR_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grxstsr](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grxstsr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRXSTSR_SPEC;
 impl crate::RegisterSpec for GRXSTSR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [grxstsr::R](R) reader structure"]
-impl crate::Readable for GRXSTSR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`grxstsr::R`](R) reader structure"]
+impl crate::Readable for GRXSTSR_SPEC {}
 #[doc = "`reset()` method sets GRXSTSR to value 0"]
 impl crate::Resettable for GRXSTSR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

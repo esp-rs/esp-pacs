@@ -23,31 +23,31 @@ pub struct RegisterBlock {
     #[doc = "0xa0 - PAD_XPD_DCDC_CONF"]
     pub pad_xpd_dcdc_conf: PAD_XPD_DCDC_CONF,
 }
-#[doc = "RTC_STORE0 (rw) register accessor: an alias for `Reg<RTC_STORE0_SPEC>`"]
+#[doc = "RTC_STORE0 (rw) register accessor: RTC_STORE0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_store0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_store0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rtc_store0`] module"]
 pub type RTC_STORE0 = crate::Reg<rtc_store0::RTC_STORE0_SPEC>;
 #[doc = "RTC_STORE0"]
 pub mod rtc_store0;
-#[doc = "RTC_STATE1 (rw) register accessor: an alias for `Reg<RTC_STATE1_SPEC>`"]
+#[doc = "RTC_STATE1 (rw) register accessor: RTC_STATE1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_state1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_state1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rtc_state1`] module"]
 pub type RTC_STATE1 = crate::Reg<rtc_state1::RTC_STATE1_SPEC>;
 #[doc = "RTC_STATE1"]
 pub mod rtc_state1;
-#[doc = "PAD_XPD_DCDC_CONF (rw) register accessor: an alias for `Reg<PAD_XPD_DCDC_CONF_SPEC>`"]
+#[doc = "PAD_XPD_DCDC_CONF (rw) register accessor: PAD_XPD_DCDC_CONF\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_xpd_dcdc_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_xpd_dcdc_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pad_xpd_dcdc_conf`] module"]
 pub type PAD_XPD_DCDC_CONF = crate::Reg<pad_xpd_dcdc_conf::PAD_XPD_DCDC_CONF_SPEC>;
 #[doc = "PAD_XPD_DCDC_CONF"]
 pub mod pad_xpd_dcdc_conf;
-#[doc = "RTC_GPIO_CONF (rw) register accessor: an alias for `Reg<RTC_GPIO_CONF_SPEC>`"]
+#[doc = "RTC_GPIO_CONF (rw) register accessor: RTC_GPIO_CONF\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rtc_gpio_conf`] module"]
 pub type RTC_GPIO_CONF = crate::Reg<rtc_gpio_conf::RTC_GPIO_CONF_SPEC>;
 #[doc = "RTC_GPIO_CONF"]
 pub mod rtc_gpio_conf;
-#[doc = "RTC_GPIO_ENABLE (rw) register accessor: an alias for `Reg<RTC_GPIO_ENABLE_SPEC>`"]
+#[doc = "RTC_GPIO_ENABLE (rw) register accessor: RTC_GPIO_ENABLE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_enable::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_enable::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rtc_gpio_enable`] module"]
 pub type RTC_GPIO_ENABLE = crate::Reg<rtc_gpio_enable::RTC_GPIO_ENABLE_SPEC>;
 #[doc = "RTC_GPIO_ENABLE"]
 pub mod rtc_gpio_enable;
-#[doc = "RTC_GPIO_IN_DATA (rw) register accessor: an alias for `Reg<RTC_GPIO_IN_DATA_SPEC>`"]
+#[doc = "RTC_GPIO_IN_DATA (rw) register accessor: RTC_GPIO_IN_DATA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_in_data::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_in_data::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rtc_gpio_in_data`] module"]
 pub type RTC_GPIO_IN_DATA = crate::Reg<rtc_gpio_in_data::RTC_GPIO_IN_DATA_SPEC>;
 #[doc = "RTC_GPIO_IN_DATA"]
 pub mod rtc_gpio_in_data;
-#[doc = "RTC_GPIO_OUT (rw) register accessor: an alias for `Reg<RTC_GPIO_OUT_SPEC>`"]
+#[doc = "RTC_GPIO_OUT (rw) register accessor: RTC_GPIO_OUT\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_out::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_out::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rtc_gpio_out`] module"]
 pub type RTC_GPIO_OUT = crate::Reg<rtc_gpio_out::RTC_GPIO_OUT_SPEC>;
 #[doc = "RTC_GPIO_OUT"]
 pub mod rtc_gpio_out;

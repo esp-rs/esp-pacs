@@ -1,43 +1,11 @@
 #[doc = "Register `SAR_CCT` reader"]
-pub struct R(crate::R<SAR_CCT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_CCT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_CCT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_CCT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_CCT_SPEC>;
 #[doc = "Register `SAR_CCT` writer"]
-pub struct W(crate::W<SAR_CCT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_CCT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_CCT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_CCT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_CCT_SPEC>;
 #[doc = "Field `SAR2_PWDET_CCT` reader - need_des"]
 pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - need_des"]
-pub type SAR2_PWDET_CCT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_CCT_SPEC, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<29> {
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_CCT_SPEC, 29> {
         SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cct](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cct::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_cct::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_CCT_SPEC;
 impl crate::RegisterSpec for SAR_CCT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_cct::R](R) reader structure"]
-impl crate::Readable for SAR_CCT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_cct::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_cct::R`](R) reader structure"]
+impl crate::Readable for SAR_CCT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_cct::W`](W) writer structure"]
 impl crate::Writable for SAR_CCT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

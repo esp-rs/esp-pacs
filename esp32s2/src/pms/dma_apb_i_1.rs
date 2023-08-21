@@ -1,92 +1,60 @@
 #[doc = "Register `DMA_APB_I_1` reader"]
-pub struct R(crate::R<DMA_APB_I_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_APB_I_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_APB_I_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_APB_I_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_APB_I_1_SPEC>;
 #[doc = "Register `DMA_APB_I_1` writer"]
-pub struct W(crate::W<DMA_APB_I_1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMA_APB_I_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMA_APB_I_1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMA_APB_I_1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMA_APB_I_1_SPEC>;
 #[doc = "Field `DMA_APB_I_SRAM_0_R` reader - Setting to 1 grants internal DMA permission to read SRAM Block 0."]
 pub type DMA_APB_I_SRAM_0_R_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_0_R` writer - Setting to 1 grants internal DMA permission to read SRAM Block 0."]
-pub type DMA_APB_I_SRAM_0_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_0_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_0_W` reader - Setting to 1 grants internal DMA permission to write SRAM Block 0."]
 pub type DMA_APB_I_SRAM_0_W_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_0_W` writer - Setting to 1 grants internal DMA permission to write SRAM Block 0."]
-pub type DMA_APB_I_SRAM_0_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_0_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_1_R` reader - Setting to 1 grants internal DMA permission to read SRAM Block 1."]
 pub type DMA_APB_I_SRAM_1_R_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_1_R` writer - Setting to 1 grants internal DMA permission to read SRAM Block 1."]
-pub type DMA_APB_I_SRAM_1_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_1_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_1_W` reader - Setting to 1 grants internal DMA permission to write SRAM Block 1."]
 pub type DMA_APB_I_SRAM_1_W_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_1_W` writer - Setting to 1 grants internal DMA permission to write SRAM Block 1."]
-pub type DMA_APB_I_SRAM_1_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_1_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_2_R` reader - Setting to 1 grants internal DMA permission to read SRAM Block 2."]
 pub type DMA_APB_I_SRAM_2_R_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_2_R` writer - Setting to 1 grants internal DMA permission to read SRAM Block 2."]
-pub type DMA_APB_I_SRAM_2_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_2_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_2_W` reader - Setting to 1 grants internal DMA permission to write SRAM Block 2."]
 pub type DMA_APB_I_SRAM_2_W_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_2_W` writer - Setting to 1 grants internal DMA permission to write SRAM Block 2."]
-pub type DMA_APB_I_SRAM_2_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_2_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_3_R` reader - Setting to 1 grants internal DMA permission to read SRAM Block 3."]
 pub type DMA_APB_I_SRAM_3_R_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_3_R` writer - Setting to 1 grants internal DMA permission to read SRAM Block 3."]
-pub type DMA_APB_I_SRAM_3_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_3_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_3_W` reader - Setting to 1 grants internal DMA permission to write SRAM Block 3."]
 pub type DMA_APB_I_SRAM_3_W_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_3_W` writer - Setting to 1 grants internal DMA permission to write SRAM Block 3."]
-pub type DMA_APB_I_SRAM_3_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_3_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_4_SPLTADDR` reader - Configure the split address of SRAM Block 4-21 for internal DMA access."]
 pub type DMA_APB_I_SRAM_4_SPLTADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMA_APB_I_SRAM_4_SPLTADDR` writer - Configure the split address of SRAM Block 4-21 for internal DMA access."]
-pub type DMA_APB_I_SRAM_4_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DMA_APB_I_1_SPEC, 17, O, u32>;
+pub type DMA_APB_I_SRAM_4_SPLTADDR_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 17, O, u32>;
 #[doc = "Field `DMA_APB_I_SRAM_4_L_R` reader - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 low address region."]
 pub type DMA_APB_I_SRAM_4_L_R_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_4_L_R` writer - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 low address region."]
-pub type DMA_APB_I_SRAM_4_L_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_4_L_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_4_L_W` reader - Setting to 1 grants internal DMA permission to write SRAM Block 4-21 low address region."]
 pub type DMA_APB_I_SRAM_4_L_W_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_4_L_W` writer - Setting to 1 grants internal DMA permission to write SRAM Block 4-21 low address region."]
-pub type DMA_APB_I_SRAM_4_L_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_4_L_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_4_H_R` reader - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 high address region."]
 pub type DMA_APB_I_SRAM_4_H_R_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_4_H_R` writer - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 high address region."]
-pub type DMA_APB_I_SRAM_4_H_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_4_H_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_APB_I_SRAM_4_H_W` reader - Setting to 1 grants internal DMA permission to write SRAM Block 4-21 high address region."]
 pub type DMA_APB_I_SRAM_4_H_W_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_4_H_W` writer - Setting to 1 grants internal DMA permission to write SRAM Block 4-21 high address region."]
-pub type DMA_APB_I_SRAM_4_H_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
+pub type DMA_APB_I_SRAM_4_H_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Setting to 1 grants internal DMA permission to read SRAM Block 0."]
     #[inline(always)]
@@ -223,100 +191,99 @@ impl W {
     #[doc = "Bit 0 - Setting to 1 grants internal DMA permission to read SRAM Block 0."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_0_r(&mut self) -> DMA_APB_I_SRAM_0_R_W<0> {
+    pub fn dma_apb_i_sram_0_r(&mut self) -> DMA_APB_I_SRAM_0_R_W<DMA_APB_I_1_SPEC, 0> {
         DMA_APB_I_SRAM_0_R_W::new(self)
     }
     #[doc = "Bit 1 - Setting to 1 grants internal DMA permission to write SRAM Block 0."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_0_w(&mut self) -> DMA_APB_I_SRAM_0_W_W<1> {
+    pub fn dma_apb_i_sram_0_w(&mut self) -> DMA_APB_I_SRAM_0_W_W<DMA_APB_I_1_SPEC, 1> {
         DMA_APB_I_SRAM_0_W_W::new(self)
     }
     #[doc = "Bit 2 - Setting to 1 grants internal DMA permission to read SRAM Block 1."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_1_r(&mut self) -> DMA_APB_I_SRAM_1_R_W<2> {
+    pub fn dma_apb_i_sram_1_r(&mut self) -> DMA_APB_I_SRAM_1_R_W<DMA_APB_I_1_SPEC, 2> {
         DMA_APB_I_SRAM_1_R_W::new(self)
     }
     #[doc = "Bit 3 - Setting to 1 grants internal DMA permission to write SRAM Block 1."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_1_w(&mut self) -> DMA_APB_I_SRAM_1_W_W<3> {
+    pub fn dma_apb_i_sram_1_w(&mut self) -> DMA_APB_I_SRAM_1_W_W<DMA_APB_I_1_SPEC, 3> {
         DMA_APB_I_SRAM_1_W_W::new(self)
     }
     #[doc = "Bit 4 - Setting to 1 grants internal DMA permission to read SRAM Block 2."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_2_r(&mut self) -> DMA_APB_I_SRAM_2_R_W<4> {
+    pub fn dma_apb_i_sram_2_r(&mut self) -> DMA_APB_I_SRAM_2_R_W<DMA_APB_I_1_SPEC, 4> {
         DMA_APB_I_SRAM_2_R_W::new(self)
     }
     #[doc = "Bit 5 - Setting to 1 grants internal DMA permission to write SRAM Block 2."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_2_w(&mut self) -> DMA_APB_I_SRAM_2_W_W<5> {
+    pub fn dma_apb_i_sram_2_w(&mut self) -> DMA_APB_I_SRAM_2_W_W<DMA_APB_I_1_SPEC, 5> {
         DMA_APB_I_SRAM_2_W_W::new(self)
     }
     #[doc = "Bit 6 - Setting to 1 grants internal DMA permission to read SRAM Block 3."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_3_r(&mut self) -> DMA_APB_I_SRAM_3_R_W<6> {
+    pub fn dma_apb_i_sram_3_r(&mut self) -> DMA_APB_I_SRAM_3_R_W<DMA_APB_I_1_SPEC, 6> {
         DMA_APB_I_SRAM_3_R_W::new(self)
     }
     #[doc = "Bit 7 - Setting to 1 grants internal DMA permission to write SRAM Block 3."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_3_w(&mut self) -> DMA_APB_I_SRAM_3_W_W<7> {
+    pub fn dma_apb_i_sram_3_w(&mut self) -> DMA_APB_I_SRAM_3_W_W<DMA_APB_I_1_SPEC, 7> {
         DMA_APB_I_SRAM_3_W_W::new(self)
     }
     #[doc = "Bits 8:24 - Configure the split address of SRAM Block 4-21 for internal DMA access."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_4_spltaddr(&mut self) -> DMA_APB_I_SRAM_4_SPLTADDR_W<8> {
+    pub fn dma_apb_i_sram_4_spltaddr(
+        &mut self,
+    ) -> DMA_APB_I_SRAM_4_SPLTADDR_W<DMA_APB_I_1_SPEC, 8> {
         DMA_APB_I_SRAM_4_SPLTADDR_W::new(self)
     }
     #[doc = "Bit 25 - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_4_l_r(&mut self) -> DMA_APB_I_SRAM_4_L_R_W<25> {
+    pub fn dma_apb_i_sram_4_l_r(&mut self) -> DMA_APB_I_SRAM_4_L_R_W<DMA_APB_I_1_SPEC, 25> {
         DMA_APB_I_SRAM_4_L_R_W::new(self)
     }
     #[doc = "Bit 26 - Setting to 1 grants internal DMA permission to write SRAM Block 4-21 low address region."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_4_l_w(&mut self) -> DMA_APB_I_SRAM_4_L_W_W<26> {
+    pub fn dma_apb_i_sram_4_l_w(&mut self) -> DMA_APB_I_SRAM_4_L_W_W<DMA_APB_I_1_SPEC, 26> {
         DMA_APB_I_SRAM_4_L_W_W::new(self)
     }
     #[doc = "Bit 27 - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 high address region."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_4_h_r(&mut self) -> DMA_APB_I_SRAM_4_H_R_W<27> {
+    pub fn dma_apb_i_sram_4_h_r(&mut self) -> DMA_APB_I_SRAM_4_H_R_W<DMA_APB_I_1_SPEC, 27> {
         DMA_APB_I_SRAM_4_H_R_W::new(self)
     }
     #[doc = "Bit 28 - Setting to 1 grants internal DMA permission to write SRAM Block 4-21 high address region."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_sram_4_h_w(&mut self) -> DMA_APB_I_SRAM_4_H_W_W<28> {
+    pub fn dma_apb_i_sram_4_h_w(&mut self) -> DMA_APB_I_SRAM_4_H_W_W<DMA_APB_I_1_SPEC, 28> {
         DMA_APB_I_SRAM_4_H_W_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Internal DMA permission control register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_apb_i_1](index.html) module"]
+#[doc = "Internal DMA permission control register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apb_i_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apb_i_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_APB_I_1_SPEC;
 impl crate::RegisterSpec for DMA_APB_I_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_apb_i_1::R](R) reader structure"]
-impl crate::Readable for DMA_APB_I_1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dma_apb_i_1::W](W) writer structure"]
+#[doc = "`read()` method returns [`dma_apb_i_1::R`](R) reader structure"]
+impl crate::Readable for DMA_APB_I_1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dma_apb_i_1::W`](W) writer structure"]
 impl crate::Writable for DMA_APB_I_1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

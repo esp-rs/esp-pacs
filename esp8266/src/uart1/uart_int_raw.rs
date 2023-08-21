@@ -1,18 +1,5 @@
 #[doc = "Register `UART_INT_RAW` reader"]
-pub struct R(crate::R<UART_INT_RAW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UART_INT_RAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UART_INT_RAW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UART_INT_RAW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UART_INT_RAW_SPEC>;
 #[doc = "Field `rxfifo_full_int_raw` reader - The interrupt raw bit for rx fifo full interrupt(depands onUART_RXFIFO_FULL_THRHD bits)"]
 pub type RXFIFO_FULL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `txfifo_empty_int_raw` reader - The interrupt raw bit for tx fifo empty interrupt(depands onUART_TXFIFO_EMPTY_THRHD bits)"]
@@ -127,15 +114,13 @@ impl core::fmt::Debug for crate::generic::Reg<UART_INT_RAW_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "UART INTERRUPT RAW STATE\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_int_raw](index.html) module"]
+#[doc = "UART INTERRUPT RAW STATE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart_int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UART_INT_RAW_SPEC;
 impl crate::RegisterSpec for UART_INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uart_int_raw::R](R) reader structure"]
-impl crate::Readable for UART_INT_RAW_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`uart_int_raw::R`](R) reader structure"]
+impl crate::Readable for UART_INT_RAW_SPEC {}
 #[doc = "`reset()` method sets UART_INT_RAW to value 0"]
 impl crate::Resettable for UART_INT_RAW_SPEC {
     const RESET_VALUE: Self::Ux = 0;

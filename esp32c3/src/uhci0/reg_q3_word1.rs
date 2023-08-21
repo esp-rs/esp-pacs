@@ -1,43 +1,11 @@
 #[doc = "Register `REG_Q3_WORD1` reader"]
-pub struct R(crate::R<REG_Q3_WORD1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<REG_Q3_WORD1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<REG_Q3_WORD1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<REG_Q3_WORD1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<REG_Q3_WORD1_SPEC>;
 #[doc = "Register `REG_Q3_WORD1` writer"]
-pub struct W(crate::W<REG_Q3_WORD1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<REG_Q3_WORD1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<REG_Q3_WORD1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<REG_Q3_WORD1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<REG_Q3_WORD1_SPEC>;
 #[doc = "Field `SEND_Q3_WORD1` reader - a"]
 pub type SEND_Q3_WORD1_R = crate::FieldReader<u32>;
 #[doc = "Field `SEND_Q3_WORD1` writer - a"]
-pub type SEND_Q3_WORD1_W<'a, const O: u8> = crate::FieldWriter<'a, REG_Q3_WORD1_SPEC, 32, O, u32>;
+pub type SEND_Q3_WORD1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - a"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:31 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn send_q3_word1(&mut self) -> SEND_Q3_WORD1_W<0> {
+    pub fn send_q3_word1(&mut self) -> SEND_Q3_WORD1_W<REG_Q3_WORD1_SPEC, 0> {
         SEND_Q3_WORD1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "a\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg_q3_word1](index.html) module"]
+#[doc = "a\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q3_word1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q3_word1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REG_Q3_WORD1_SPEC;
 impl crate::RegisterSpec for REG_Q3_WORD1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reg_q3_word1::R](R) reader structure"]
-impl crate::Readable for REG_Q3_WORD1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reg_q3_word1::W](W) writer structure"]
+#[doc = "`read()` method returns [`reg_q3_word1::R`](R) reader structure"]
+impl crate::Readable for REG_Q3_WORD1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`reg_q3_word1::W`](W) writer structure"]
 impl crate::Writable for REG_Q3_WORD1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

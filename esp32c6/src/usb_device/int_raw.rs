@@ -1,103 +1,71 @@
 #[doc = "Register `INT_RAW` reader"]
-pub struct R(crate::R<INT_RAW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_RAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_RAW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_RAW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
-pub struct W(crate::W<INT_RAW_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INT_RAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INT_RAW_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INT_RAW_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `JTAG_IN_FLUSH_INT_RAW` reader - The raw interrupt bit turns to high level when flush cmd is received for IN endpoint 2 of JTAG."]
 pub type JTAG_IN_FLUSH_INT_RAW_R = crate::BitReader;
 #[doc = "Field `JTAG_IN_FLUSH_INT_RAW` writer - The raw interrupt bit turns to high level when flush cmd is received for IN endpoint 2 of JTAG."]
-pub type JTAG_IN_FLUSH_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type JTAG_IN_FLUSH_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SOF_INT_RAW` reader - The raw interrupt bit turns to high level when SOF frame is received."]
 pub type SOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SOF_INT_RAW` writer - The raw interrupt bit turns to high level when SOF frame is received."]
-pub type SOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type SOF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SERIAL_OUT_RECV_PKT_INT_RAW` reader - The raw interrupt bit turns to high level when Serial Port OUT Endpoint received one packet."]
 pub type SERIAL_OUT_RECV_PKT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_RECV_PKT_INT_RAW` writer - The raw interrupt bit turns to high level when Serial Port OUT Endpoint received one packet."]
-pub type SERIAL_OUT_RECV_PKT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type SERIAL_OUT_RECV_PKT_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SERIAL_IN_EMPTY_INT_RAW` reader - The raw interrupt bit turns to high level when Serial Port IN Endpoint is empty."]
 pub type SERIAL_IN_EMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_EMPTY_INT_RAW` writer - The raw interrupt bit turns to high level when Serial Port IN Endpoint is empty."]
-pub type SERIAL_IN_EMPTY_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type SERIAL_IN_EMPTY_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PID_ERR_INT_RAW` reader - The raw interrupt bit turns to high level when pid error is detected."]
 pub type PID_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `PID_ERR_INT_RAW` writer - The raw interrupt bit turns to high level when pid error is detected."]
-pub type PID_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type PID_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CRC5_ERR_INT_RAW` reader - The raw interrupt bit turns to high level when CRC5 error is detected."]
 pub type CRC5_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CRC5_ERR_INT_RAW` writer - The raw interrupt bit turns to high level when CRC5 error is detected."]
-pub type CRC5_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type CRC5_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CRC16_ERR_INT_RAW` reader - The raw interrupt bit turns to high level when CRC16 error is detected."]
 pub type CRC16_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CRC16_ERR_INT_RAW` writer - The raw interrupt bit turns to high level when CRC16 error is detected."]
-pub type CRC16_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type CRC16_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STUFF_ERR_INT_RAW` reader - The raw interrupt bit turns to high level when stuff error is detected."]
 pub type STUFF_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `STUFF_ERR_INT_RAW` writer - The raw interrupt bit turns to high level when stuff error is detected."]
-pub type STUFF_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type STUFF_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_TOKEN_REC_IN_EP1_INT_RAW` reader - The raw interrupt bit turns to high level when IN token for IN endpoint 1 is received."]
 pub type IN_TOKEN_REC_IN_EP1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_TOKEN_REC_IN_EP1_INT_RAW` writer - The raw interrupt bit turns to high level when IN token for IN endpoint 1 is received."]
-pub type IN_TOKEN_REC_IN_EP1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type IN_TOKEN_REC_IN_EP1_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USB_BUS_RESET_INT_RAW` reader - The raw interrupt bit turns to high level when usb bus reset is detected."]
 pub type USB_BUS_RESET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `USB_BUS_RESET_INT_RAW` writer - The raw interrupt bit turns to high level when usb bus reset is detected."]
-pub type USB_BUS_RESET_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type USB_BUS_RESET_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_EP1_ZERO_PAYLOAD_INT_RAW` reader - The raw interrupt bit turns to high level when OUT endpoint 1 received packet with zero palyload."]
 pub type OUT_EP1_ZERO_PAYLOAD_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_EP1_ZERO_PAYLOAD_INT_RAW` writer - The raw interrupt bit turns to high level when OUT endpoint 1 received packet with zero palyload."]
-pub type OUT_EP1_ZERO_PAYLOAD_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type OUT_EP1_ZERO_PAYLOAD_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_EP2_ZERO_PAYLOAD_INT_RAW` reader - The raw interrupt bit turns to high level when OUT endpoint 2 received packet with zero palyload."]
 pub type OUT_EP2_ZERO_PAYLOAD_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_EP2_ZERO_PAYLOAD_INT_RAW` writer - The raw interrupt bit turns to high level when OUT endpoint 2 received packet with zero palyload."]
-pub type OUT_EP2_ZERO_PAYLOAD_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type OUT_EP2_ZERO_PAYLOAD_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RTS_CHG_INT_RAW` reader - The raw interrupt bit turns to high level when level of RTS from usb serial channel is changed."]
 pub type RTS_CHG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RTS_CHG_INT_RAW` writer - The raw interrupt bit turns to high level when level of RTS from usb serial channel is changed."]
-pub type RTS_CHG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type RTS_CHG_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DTR_CHG_INT_RAW` reader - The raw interrupt bit turns to high level when level of DTR from usb serial channel is changed."]
 pub type DTR_CHG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DTR_CHG_INT_RAW` writer - The raw interrupt bit turns to high level when level of DTR from usb serial channel is changed."]
-pub type DTR_CHG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type DTR_CHG_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GET_LINE_CODE_INT_RAW` reader - The raw interrupt bit turns to high level when level of GET LINE CODING request is received."]
 pub type GET_LINE_CODE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `GET_LINE_CODE_INT_RAW` writer - The raw interrupt bit turns to high level when level of GET LINE CODING request is received."]
-pub type GET_LINE_CODE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type GET_LINE_CODE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SET_LINE_CODE_INT_RAW` reader - The raw interrupt bit turns to high level when level of SET LINE CODING request is received."]
 pub type SET_LINE_CODE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SET_LINE_CODE_INT_RAW` writer - The raw interrupt bit turns to high level when level of SET LINE CODING request is received."]
-pub type SET_LINE_CODE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
+pub type SET_LINE_CODE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when flush cmd is received for IN endpoint 2 of JTAG."]
     #[inline(always)]
@@ -258,118 +226,123 @@ impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when flush cmd is received for IN endpoint 2 of JTAG."]
     #[inline(always)]
     #[must_use]
-    pub fn jtag_in_flush_int_raw(&mut self) -> JTAG_IN_FLUSH_INT_RAW_W<0> {
+    pub fn jtag_in_flush_int_raw(&mut self) -> JTAG_IN_FLUSH_INT_RAW_W<INT_RAW_SPEC, 0> {
         JTAG_IN_FLUSH_INT_RAW_W::new(self)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when SOF frame is received."]
     #[inline(always)]
     #[must_use]
-    pub fn sof_int_raw(&mut self) -> SOF_INT_RAW_W<1> {
+    pub fn sof_int_raw(&mut self) -> SOF_INT_RAW_W<INT_RAW_SPEC, 1> {
         SOF_INT_RAW_W::new(self)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when Serial Port OUT Endpoint received one packet."]
     #[inline(always)]
     #[must_use]
-    pub fn serial_out_recv_pkt_int_raw(&mut self) -> SERIAL_OUT_RECV_PKT_INT_RAW_W<2> {
+    pub fn serial_out_recv_pkt_int_raw(
+        &mut self,
+    ) -> SERIAL_OUT_RECV_PKT_INT_RAW_W<INT_RAW_SPEC, 2> {
         SERIAL_OUT_RECV_PKT_INT_RAW_W::new(self)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when Serial Port IN Endpoint is empty."]
     #[inline(always)]
     #[must_use]
-    pub fn serial_in_empty_int_raw(&mut self) -> SERIAL_IN_EMPTY_INT_RAW_W<3> {
+    pub fn serial_in_empty_int_raw(&mut self) -> SERIAL_IN_EMPTY_INT_RAW_W<INT_RAW_SPEC, 3> {
         SERIAL_IN_EMPTY_INT_RAW_W::new(self)
     }
     #[doc = "Bit 4 - The raw interrupt bit turns to high level when pid error is detected."]
     #[inline(always)]
     #[must_use]
-    pub fn pid_err_int_raw(&mut self) -> PID_ERR_INT_RAW_W<4> {
+    pub fn pid_err_int_raw(&mut self) -> PID_ERR_INT_RAW_W<INT_RAW_SPEC, 4> {
         PID_ERR_INT_RAW_W::new(self)
     }
     #[doc = "Bit 5 - The raw interrupt bit turns to high level when CRC5 error is detected."]
     #[inline(always)]
     #[must_use]
-    pub fn crc5_err_int_raw(&mut self) -> CRC5_ERR_INT_RAW_W<5> {
+    pub fn crc5_err_int_raw(&mut self) -> CRC5_ERR_INT_RAW_W<INT_RAW_SPEC, 5> {
         CRC5_ERR_INT_RAW_W::new(self)
     }
     #[doc = "Bit 6 - The raw interrupt bit turns to high level when CRC16 error is detected."]
     #[inline(always)]
     #[must_use]
-    pub fn crc16_err_int_raw(&mut self) -> CRC16_ERR_INT_RAW_W<6> {
+    pub fn crc16_err_int_raw(&mut self) -> CRC16_ERR_INT_RAW_W<INT_RAW_SPEC, 6> {
         CRC16_ERR_INT_RAW_W::new(self)
     }
     #[doc = "Bit 7 - The raw interrupt bit turns to high level when stuff error is detected."]
     #[inline(always)]
     #[must_use]
-    pub fn stuff_err_int_raw(&mut self) -> STUFF_ERR_INT_RAW_W<7> {
+    pub fn stuff_err_int_raw(&mut self) -> STUFF_ERR_INT_RAW_W<INT_RAW_SPEC, 7> {
         STUFF_ERR_INT_RAW_W::new(self)
     }
     #[doc = "Bit 8 - The raw interrupt bit turns to high level when IN token for IN endpoint 1 is received."]
     #[inline(always)]
     #[must_use]
-    pub fn in_token_rec_in_ep1_int_raw(&mut self) -> IN_TOKEN_REC_IN_EP1_INT_RAW_W<8> {
+    pub fn in_token_rec_in_ep1_int_raw(
+        &mut self,
+    ) -> IN_TOKEN_REC_IN_EP1_INT_RAW_W<INT_RAW_SPEC, 8> {
         IN_TOKEN_REC_IN_EP1_INT_RAW_W::new(self)
     }
     #[doc = "Bit 9 - The raw interrupt bit turns to high level when usb bus reset is detected."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_bus_reset_int_raw(&mut self) -> USB_BUS_RESET_INT_RAW_W<9> {
+    pub fn usb_bus_reset_int_raw(&mut self) -> USB_BUS_RESET_INT_RAW_W<INT_RAW_SPEC, 9> {
         USB_BUS_RESET_INT_RAW_W::new(self)
     }
     #[doc = "Bit 10 - The raw interrupt bit turns to high level when OUT endpoint 1 received packet with zero palyload."]
     #[inline(always)]
     #[must_use]
-    pub fn out_ep1_zero_payload_int_raw(&mut self) -> OUT_EP1_ZERO_PAYLOAD_INT_RAW_W<10> {
+    pub fn out_ep1_zero_payload_int_raw(
+        &mut self,
+    ) -> OUT_EP1_ZERO_PAYLOAD_INT_RAW_W<INT_RAW_SPEC, 10> {
         OUT_EP1_ZERO_PAYLOAD_INT_RAW_W::new(self)
     }
     #[doc = "Bit 11 - The raw interrupt bit turns to high level when OUT endpoint 2 received packet with zero palyload."]
     #[inline(always)]
     #[must_use]
-    pub fn out_ep2_zero_payload_int_raw(&mut self) -> OUT_EP2_ZERO_PAYLOAD_INT_RAW_W<11> {
+    pub fn out_ep2_zero_payload_int_raw(
+        &mut self,
+    ) -> OUT_EP2_ZERO_PAYLOAD_INT_RAW_W<INT_RAW_SPEC, 11> {
         OUT_EP2_ZERO_PAYLOAD_INT_RAW_W::new(self)
     }
     #[doc = "Bit 12 - The raw interrupt bit turns to high level when level of RTS from usb serial channel is changed."]
     #[inline(always)]
     #[must_use]
-    pub fn rts_chg_int_raw(&mut self) -> RTS_CHG_INT_RAW_W<12> {
+    pub fn rts_chg_int_raw(&mut self) -> RTS_CHG_INT_RAW_W<INT_RAW_SPEC, 12> {
         RTS_CHG_INT_RAW_W::new(self)
     }
     #[doc = "Bit 13 - The raw interrupt bit turns to high level when level of DTR from usb serial channel is changed."]
     #[inline(always)]
     #[must_use]
-    pub fn dtr_chg_int_raw(&mut self) -> DTR_CHG_INT_RAW_W<13> {
+    pub fn dtr_chg_int_raw(&mut self) -> DTR_CHG_INT_RAW_W<INT_RAW_SPEC, 13> {
         DTR_CHG_INT_RAW_W::new(self)
     }
     #[doc = "Bit 14 - The raw interrupt bit turns to high level when level of GET LINE CODING request is received."]
     #[inline(always)]
     #[must_use]
-    pub fn get_line_code_int_raw(&mut self) -> GET_LINE_CODE_INT_RAW_W<14> {
+    pub fn get_line_code_int_raw(&mut self) -> GET_LINE_CODE_INT_RAW_W<INT_RAW_SPEC, 14> {
         GET_LINE_CODE_INT_RAW_W::new(self)
     }
     #[doc = "Bit 15 - The raw interrupt bit turns to high level when level of SET LINE CODING request is received."]
     #[inline(always)]
     #[must_use]
-    pub fn set_line_code_int_raw(&mut self) -> SET_LINE_CODE_INT_RAW_W<15> {
+    pub fn set_line_code_int_raw(&mut self) -> SET_LINE_CODE_INT_RAW_W<INT_RAW_SPEC, 15> {
         SET_LINE_CODE_INT_RAW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt raw status register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
+#[doc = "Interrupt raw status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw::R](R) reader structure"]
-impl crate::Readable for INT_RAW_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [int_raw::W](W) writer structure"]
+#[doc = "`read()` method returns [`int_raw::R`](R) reader structure"]
+impl crate::Readable for INT_RAW_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_raw::W`](W) writer structure"]
 impl crate::Writable for INT_RAW_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

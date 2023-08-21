@@ -1,59 +1,27 @@
 #[doc = "Register `PLL` reader"]
-pub struct R(crate::R<PLL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PLL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PLL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PLL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PLL_SPEC>;
 #[doc = "Register `PLL` writer"]
-pub struct W(crate::W<PLL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PLL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PLL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PLL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PLL_SPEC>;
 #[doc = "Field `BLOCK` reader - Block"]
 pub type BLOCK_R = crate::FieldReader;
 #[doc = "Field `BLOCK` writer - Block"]
-pub type BLOCK_W<'a, const O: u8> = crate::FieldWriter<'a, PLL_SPEC, 8, O>;
+pub type BLOCK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `ADDR` reader - Address"]
 pub type ADDR_R = crate::FieldReader;
 #[doc = "Field `ADDR` writer - Address"]
-pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, PLL_SPEC, 8, O>;
+pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `DATA` reader - Data"]
 pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - Data"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, PLL_SPEC, 8, O>;
+pub type DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `WRITE` reader - Write"]
 pub type WRITE_R = crate::BitReader;
 #[doc = "Field `WRITE` writer - Write"]
-pub type WRITE_W<'a, const O: u8> = crate::BitWriter<'a, PLL_SPEC, O>;
+pub type WRITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BUSY` reader - Ready"]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `BUSY` writer - Ready"]
-pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, PLL_SPEC, O>;
+pub type BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - Block"]
     #[inline(always)]
@@ -103,52 +71,49 @@ impl W {
     #[doc = "Bits 0:7 - Block"]
     #[inline(always)]
     #[must_use]
-    pub fn block(&mut self) -> BLOCK_W<0> {
+    pub fn block(&mut self) -> BLOCK_W<PLL_SPEC, 0> {
         BLOCK_W::new(self)
     }
     #[doc = "Bits 8:15 - Address"]
     #[inline(always)]
     #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<8> {
+    pub fn addr(&mut self) -> ADDR_W<PLL_SPEC, 8> {
         ADDR_W::new(self)
     }
     #[doc = "Bits 16:23 - Data"]
     #[inline(always)]
     #[must_use]
-    pub fn data(&mut self) -> DATA_W<16> {
+    pub fn data(&mut self) -> DATA_W<PLL_SPEC, 16> {
         DATA_W::new(self)
     }
     #[doc = "Bit 24 - Write"]
     #[inline(always)]
     #[must_use]
-    pub fn write(&mut self) -> WRITE_W<24> {
+    pub fn write(&mut self) -> WRITE_W<PLL_SPEC, 24> {
         WRITE_W::new(self)
     }
     #[doc = "Bit 25 - Ready"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<25> {
+    pub fn busy(&mut self) -> BUSY_W<PLL_SPEC, 25> {
         BUSY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "PLL I2C Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pll](index.html) module"]
+#[doc = "PLL I2C Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pll::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pll::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLL_SPEC;
 impl crate::RegisterSpec for PLL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pll::R](R) reader structure"]
-impl crate::Readable for PLL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pll::W](W) writer structure"]
+#[doc = "`read()` method returns [`pll::R`](R) reader structure"]
+impl crate::Readable for PLL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pll::W`](W) writer structure"]
 impl crate::Writable for PLL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

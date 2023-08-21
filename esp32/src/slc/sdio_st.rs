@@ -1,18 +1,5 @@
 #[doc = "Register `SDIO_ST` reader"]
-pub struct R(crate::R<SDIO_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SDIO_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SDIO_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SDIO_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SDIO_ST_SPEC>;
 #[doc = "Field `CMD_ST` reader - "]
 pub type CMD_ST_R = crate::FieldReader;
 #[doc = "Field `FUNC_ST` reader - "]
@@ -82,15 +69,13 @@ impl core::fmt::Debug for crate::generic::Reg<SDIO_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sdio_st](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sdio_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SDIO_ST_SPEC;
 impl crate::RegisterSpec for SDIO_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sdio_st::R](R) reader structure"]
-impl crate::Readable for SDIO_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sdio_st::R`](R) reader structure"]
+impl crate::Readable for SDIO_ST_SPEC {}
 #[doc = "`reset()` method sets SDIO_ST to value 0"]
 impl crate::Resettable for SDIO_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

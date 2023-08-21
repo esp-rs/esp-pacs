@@ -1,18 +1,5 @@
 #[doc = "Register `RD_MAC_SPI_SYS_1` reader"]
-pub struct R(crate::R<RD_MAC_SPI_SYS_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_MAC_SPI_SYS_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_MAC_SPI_SYS_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_MAC_SPI_SYS_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_MAC_SPI_SYS_1_SPEC>;
 #[doc = "Field `MAC_1` reader - Stores the high 16 bits of MAC address."]
 pub type MAC_1_R = crate::FieldReader<u16>;
 #[doc = "Field `MAC_EXT` reader - Stores the extended bits of MAC address."]
@@ -44,15 +31,13 @@ impl core::fmt::Debug for crate::generic::Reg<RD_MAC_SPI_SYS_1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "BLOCK1 data register $n.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_mac_spi_sys_1](index.html) module"]
+#[doc = "BLOCK1 data register $n.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_mac_spi_sys_1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_MAC_SPI_SYS_1_SPEC;
 impl crate::RegisterSpec for RD_MAC_SPI_SYS_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_mac_spi_sys_1::R](R) reader structure"]
-impl crate::Readable for RD_MAC_SPI_SYS_1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rd_mac_spi_sys_1::R`](R) reader structure"]
+impl crate::Readable for RD_MAC_SPI_SYS_1_SPEC {}
 #[doc = "`reset()` method sets RD_MAC_SPI_SYS_1 to value 0"]
 impl crate::Resettable for RD_MAC_SPI_SYS_1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

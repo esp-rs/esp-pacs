@@ -1,39 +1,7 @@
 #[doc = "Register `SAR_TOUCH_CTRL2` reader"]
-pub struct R(crate::R<SAR_TOUCH_CTRL2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_TOUCH_CTRL2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_TOUCH_CTRL2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_TOUCH_CTRL2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_TOUCH_CTRL2_SPEC>;
 #[doc = "Register `SAR_TOUCH_CTRL2` writer"]
-pub struct W(crate::W<SAR_TOUCH_CTRL2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_TOUCH_CTRL2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_TOUCH_CTRL2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_TOUCH_CTRL2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_TOUCH_CTRL2_SPEC>;
 #[doc = "Field `TOUCH_MEAS_EN` reader - 10-bit register to indicate which pads are \"touched\""]
 pub type TOUCH_MEAS_EN_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_DONE` reader - fsm set 1 to indicate touch touch meas is done"]
@@ -41,22 +9,21 @@ pub type TOUCH_MEAS_DONE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
 pub type TOUCH_START_FSM_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FSM_EN` writer - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
-pub type TOUCH_START_FSM_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
+pub type TOUCH_START_FSM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_START_EN` reader - 1: start touch fsm valid when reg_touch_start_force is set"]
 pub type TOUCH_START_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_EN` writer - 1: start touch fsm valid when reg_touch_start_force is set"]
-pub type TOUCH_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
+pub type TOUCH_START_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_START_FORCE` reader - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
 pub type TOUCH_START_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FORCE` writer - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
-pub type TOUCH_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
+pub type TOUCH_START_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` reader - sleep cycles for timer"]
 pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` writer - sleep cycles for timer"]
-pub type TOUCH_SLEEP_CYCLES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_CTRL2_SPEC, 16, O, u16>;
+pub type TOUCH_SLEEP_CYCLES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `TOUCH_MEAS_EN_CLR` writer - to clear reg_touch_meas_en"]
-pub type TOUCH_MEAS_EN_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
+pub type TOUCH_MEAS_EN_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:9 - 10-bit register to indicate which pads are \"touched\""]
     #[inline(always)]
@@ -130,52 +97,49 @@ impl W {
     #[doc = "Bit 11 - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<11> {
+    pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<SAR_TOUCH_CTRL2_SPEC, 11> {
         TOUCH_START_FSM_EN_W::new(self)
     }
     #[doc = "Bit 12 - 1: start touch fsm valid when reg_touch_start_force is set"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<12> {
+    pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<SAR_TOUCH_CTRL2_SPEC, 12> {
         TOUCH_START_EN_W::new(self)
     }
     #[doc = "Bit 13 - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<13> {
+    pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<SAR_TOUCH_CTRL2_SPEC, 13> {
         TOUCH_START_FORCE_W::new(self)
     }
     #[doc = "Bits 14:29 - sleep cycles for timer"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<14> {
+    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<SAR_TOUCH_CTRL2_SPEC, 14> {
         TOUCH_SLEEP_CYCLES_W::new(self)
     }
     #[doc = "Bit 30 - to clear reg_touch_meas_en"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_meas_en_clr(&mut self) -> TOUCH_MEAS_EN_CLR_W<30> {
+    pub fn touch_meas_en_clr(&mut self) -> TOUCH_MEAS_EN_CLR_W<SAR_TOUCH_CTRL2_SPEC, 30> {
         TOUCH_MEAS_EN_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_ctrl2](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_touch_ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_TOUCH_CTRL2_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_touch_ctrl2::R](R) reader structure"]
-impl crate::Readable for SAR_TOUCH_CTRL2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_touch_ctrl2::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_touch_ctrl2::R`](R) reader structure"]
+impl crate::Readable for SAR_TOUCH_CTRL2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_touch_ctrl2::W`](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_CTRL2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

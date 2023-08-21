@@ -1,43 +1,11 @@
 #[doc = "Register `REG_MAP3` reader"]
-pub struct R(crate::R<REG_MAP3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<REG_MAP3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<REG_MAP3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<REG_MAP3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<REG_MAP3_SPEC>;
 #[doc = "Register `REG_MAP3` writer"]
-pub struct W(crate::W<REG_MAP3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<REG_MAP3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<REG_MAP3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<REG_MAP3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<REG_MAP3_SPEC>;
 #[doc = "Field `MAP3` reader - x"]
 pub type MAP3_R = crate::FieldReader<u32>;
 #[doc = "Field `MAP3` writer - x"]
-pub type MAP3_W<'a, const O: u8> = crate::FieldWriter<'a, REG_MAP3_SPEC, 32, O, u32>;
+pub type MAP3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn map3(&mut self) -> MAP3_W<0> {
+    pub fn map3(&mut self) -> MAP3_W<REG_MAP3_SPEC, 0> {
         MAP3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "x\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg_map3](index.html) module"]
+#[doc = "x\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_map3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_map3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REG_MAP3_SPEC;
 impl crate::RegisterSpec for REG_MAP3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reg_map3::R](R) reader structure"]
-impl crate::Readable for REG_MAP3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reg_map3::W](W) writer structure"]
+#[doc = "`read()` method returns [`reg_map3::R`](R) reader structure"]
+impl crate::Readable for REG_MAP3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`reg_map3::W`](W) writer structure"]
 impl crate::Writable for REG_MAP3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

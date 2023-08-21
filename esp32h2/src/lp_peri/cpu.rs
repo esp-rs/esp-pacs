@@ -1,43 +1,11 @@
 #[doc = "Register `CPU` reader"]
-pub struct R(crate::R<CPU_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CPU_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CPU_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CPU_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CPU_SPEC>;
 #[doc = "Register `CPU` writer"]
-pub struct W(crate::W<CPU_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CPU_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CPU_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CPU_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CPU_SPEC>;
 #[doc = "Field `LPCORE_DBGM_UNAVALIABLE` reader - need_des"]
 pub type LPCORE_DBGM_UNAVALIABLE_R = crate::BitReader;
 #[doc = "Field `LPCORE_DBGM_UNAVALIABLE` writer - need_des"]
-pub type LPCORE_DBGM_UNAVALIABLE_W<'a, const O: u8> = crate::BitWriter<'a, CPU_SPEC, O>;
+pub type LPCORE_DBGM_UNAVALIABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lpcore_dbgm_unavaliable(&mut self) -> LPCORE_DBGM_UNAVALIABLE_W<31> {
+    pub fn lpcore_dbgm_unavaliable(&mut self) -> LPCORE_DBGM_UNAVALIABLE_W<CPU_SPEC, 31> {
         LPCORE_DBGM_UNAVALIABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cpu::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CPU_SPEC;
 impl crate::RegisterSpec for CPU_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cpu::R](R) reader structure"]
-impl crate::Readable for CPU_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cpu::W](W) writer structure"]
+#[doc = "`read()` method returns [`cpu::R`](R) reader structure"]
+impl crate::Readable for CPU_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cpu::W`](W) writer structure"]
 impl crate::Writable for CPU_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

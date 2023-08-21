@@ -1,53 +1,21 @@
 #[doc = "Register `CAP_TIMER_CFG` reader"]
-pub struct R(crate::R<CAP_TIMER_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CAP_TIMER_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CAP_TIMER_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CAP_TIMER_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CAP_TIMER_CFG_SPEC>;
 #[doc = "Register `CAP_TIMER_CFG` writer"]
-pub struct W(crate::W<CAP_TIMER_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CAP_TIMER_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CAP_TIMER_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CAP_TIMER_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CAP_TIMER_CFG_SPEC>;
 #[doc = "Field `CAP_TIMER_EN` reader - When set, capture timer incrementing under APB_clk is enabled."]
 pub type CAP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `CAP_TIMER_EN` writer - When set, capture timer incrementing under APB_clk is enabled."]
-pub type CAP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAP_TIMER_CFG_SPEC, O>;
+pub type CAP_TIMER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAP_SYNCI_EN` reader - When set, capture timer sync is enabled."]
 pub type CAP_SYNCI_EN_R = crate::BitReader;
 #[doc = "Field `CAP_SYNCI_EN` writer - When set, capture timer sync is enabled."]
-pub type CAP_SYNCI_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAP_TIMER_CFG_SPEC, O>;
+pub type CAP_SYNCI_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAP_SYNCI_SEL` reader - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
 pub type CAP_SYNCI_SEL_R = crate::FieldReader;
 #[doc = "Field `CAP_SYNCI_SEL` writer - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
-pub type CAP_SYNCI_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_TIMER_CFG_SPEC, 3, O>;
+pub type CAP_SYNCI_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `CAP_SYNC_SW` writer - Write 1 will force a capture timer sync, capture timer is loaded with value in phase register."]
-pub type CAP_SYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, CAP_TIMER_CFG_SPEC, O>;
+pub type CAP_SYNC_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - When set, capture timer incrementing under APB_clk is enabled."]
     #[inline(always)]
@@ -94,46 +62,43 @@ impl W {
     #[doc = "Bit 0 - When set, capture timer incrementing under APB_clk is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<0> {
+    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<CAP_TIMER_CFG_SPEC, 0> {
         CAP_TIMER_EN_W::new(self)
     }
     #[doc = "Bit 1 - When set, capture timer sync is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<1> {
+    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<CAP_TIMER_CFG_SPEC, 1> {
         CAP_SYNCI_EN_W::new(self)
     }
     #[doc = "Bits 2:4 - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
     #[inline(always)]
     #[must_use]
-    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<2> {
+    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<CAP_TIMER_CFG_SPEC, 2> {
         CAP_SYNCI_SEL_W::new(self)
     }
     #[doc = "Bit 5 - Write 1 will force a capture timer sync, capture timer is loaded with value in phase register."]
     #[inline(always)]
     #[must_use]
-    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<5> {
+    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<CAP_TIMER_CFG_SPEC, 5> {
         CAP_SYNC_SW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Configure capture timer\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_timer_cfg](index.html) module"]
+#[doc = "Configure capture timer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_timer_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cap_timer_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAP_TIMER_CFG_SPEC;
 impl crate::RegisterSpec for CAP_TIMER_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cap_timer_cfg::R](R) reader structure"]
-impl crate::Readable for CAP_TIMER_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cap_timer_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`cap_timer_cfg::R`](R) reader structure"]
+impl crate::Readable for CAP_TIMER_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cap_timer_cfg::W`](W) writer structure"]
 impl crate::Writable for CAP_TIMER_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

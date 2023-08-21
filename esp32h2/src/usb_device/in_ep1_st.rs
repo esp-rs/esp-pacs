@@ -1,18 +1,5 @@
 #[doc = "Register `IN_EP1_ST` reader"]
-pub struct R(crate::R<IN_EP1_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IN_EP1_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IN_EP1_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IN_EP1_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IN_EP1_ST_SPEC>;
 #[doc = "Field `IN_EP1_STATE` reader - State of IN Endpoint 1."]
 pub type IN_EP1_STATE_R = crate::FieldReader;
 #[doc = "Field `IN_EP1_WR_ADDR` reader - Write data address of IN endpoint 1."]
@@ -61,15 +48,13 @@ impl core::fmt::Debug for crate::generic::Reg<IN_EP1_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "CDC-ACM IN endpoint status information.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_ep1_st](index.html) module"]
+#[doc = "CDC-ACM IN endpoint status information.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_ep1_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_EP1_ST_SPEC;
 impl crate::RegisterSpec for IN_EP1_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_ep1_st::R](R) reader structure"]
-impl crate::Readable for IN_EP1_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`in_ep1_st::R`](R) reader structure"]
+impl crate::Readable for IN_EP1_ST_SPEC {}
 #[doc = "`reset()` method sets IN_EP1_ST to value 0x01"]
 impl crate::Resettable for IN_EP1_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0x01;

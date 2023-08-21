@@ -1,103 +1,71 @@
 #[doc = "Register `TZ2_CFG0` reader"]
-pub struct R(crate::R<TZ2_CFG0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TZ2_CFG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TZ2_CFG0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TZ2_CFG0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TZ2_CFG0_SPEC>;
 #[doc = "Register `TZ2_CFG0` writer"]
-pub struct W(crate::W<TZ2_CFG0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TZ2_CFG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TZ2_CFG0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TZ2_CFG0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TZ2_CFG0_SPEC>;
 #[doc = "Field `TZ2_SW_CBC` reader - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
 pub type TZ2_SW_CBC_R = crate::BitReader;
 #[doc = "Field `TZ2_SW_CBC` writer - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ2_SW_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_SW_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_F2_CBC` reader - event_f2 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
 pub type TZ2_F2_CBC_R = crate::BitReader;
 #[doc = "Field `TZ2_F2_CBC` writer - event_f2 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ2_F2_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_F2_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_F1_CBC` reader - event_f1 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
 pub type TZ2_F1_CBC_R = crate::BitReader;
 #[doc = "Field `TZ2_F1_CBC` writer - event_f1 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ2_F1_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_F1_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_F0_CBC` reader - event_f0 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
 pub type TZ2_F0_CBC_R = crate::BitReader;
 #[doc = "Field `TZ2_F0_CBC` writer - event_f0 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ2_F0_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_F0_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_SW_OST` reader - Enable register for software force one-shot mode action. 0: disable, 1: enable"]
 pub type TZ2_SW_OST_R = crate::BitReader;
 #[doc = "Field `TZ2_SW_OST` writer - Enable register for software force one-shot mode action. 0: disable, 1: enable"]
-pub type TZ2_SW_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_SW_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_F2_OST` reader - event_f2 will trigger one-shot mode action. 0: disable, 1: enable"]
 pub type TZ2_F2_OST_R = crate::BitReader;
 #[doc = "Field `TZ2_F2_OST` writer - event_f2 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ2_F2_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_F2_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_F1_OST` reader - event_f1 will trigger one-shot mode action. 0: disable, 1: enable"]
 pub type TZ2_F1_OST_R = crate::BitReader;
 #[doc = "Field `TZ2_F1_OST` writer - event_f1 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ2_F1_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_F1_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_F0_OST` reader - event_f0 will trigger one-shot mode action. 0: disable, 1: enable"]
 pub type TZ2_F0_OST_R = crate::BitReader;
 #[doc = "Field `TZ2_F0_OST` writer - event_f0 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ2_F0_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG0_SPEC, O>;
+pub type TZ2_F0_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TZ2_A_CBC_D` reader - Cycle-by-cycle mode action on PWM2A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_A_CBC_D_R = crate::FieldReader;
 #[doc = "Field `TZ2_A_CBC_D` writer - Cycle-by-cycle mode action on PWM2A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_A_CBC_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_A_CBC_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TZ2_A_CBC_U` reader - Cycle-by-cycle mode action on PWM2A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_A_CBC_U_R = crate::FieldReader;
 #[doc = "Field `TZ2_A_CBC_U` writer - Cycle-by-cycle mode action on PWM2A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_A_CBC_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_A_CBC_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TZ2_A_OST_D` reader - One-shot mode action on PWM2A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_A_OST_D_R = crate::FieldReader;
 #[doc = "Field `TZ2_A_OST_D` writer - One-shot mode action on PWM2A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_A_OST_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_A_OST_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TZ2_A_OST_U` reader - One-shot mode action on PWM2A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_A_OST_U_R = crate::FieldReader;
 #[doc = "Field `TZ2_A_OST_U` writer - One-shot mode action on PWM2A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_A_OST_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_A_OST_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TZ2_B_CBC_D` reader - Cycle-by-cycle mode action on PWM2B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_B_CBC_D_R = crate::FieldReader;
 #[doc = "Field `TZ2_B_CBC_D` writer - Cycle-by-cycle mode action on PWM2B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_B_CBC_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_B_CBC_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TZ2_B_CBC_U` reader - Cycle-by-cycle mode action on PWM2B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_B_CBC_U_R = crate::FieldReader;
 #[doc = "Field `TZ2_B_CBC_U` writer - Cycle-by-cycle mode action on PWM2B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_B_CBC_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_B_CBC_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TZ2_B_OST_D` reader - One-shot mode action on PWM2B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_B_OST_D_R = crate::FieldReader;
 #[doc = "Field `TZ2_B_OST_D` writer - One-shot mode action on PWM2B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_B_OST_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_B_OST_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TZ2_B_OST_U` reader - One-shot mode action on PWM2B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
 pub type TZ2_B_OST_U_R = crate::FieldReader;
 #[doc = "Field `TZ2_B_OST_U` writer - One-shot mode action on PWM2B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ2_B_OST_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG0_SPEC, 2, O>;
+pub type TZ2_B_OST_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bit 0 - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
@@ -237,118 +205,115 @@ impl W {
     #[doc = "Bit 0 - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_sw_cbc(&mut self) -> TZ2_SW_CBC_W<0> {
+    pub fn tz2_sw_cbc(&mut self) -> TZ2_SW_CBC_W<TZ2_CFG0_SPEC, 0> {
         TZ2_SW_CBC_W::new(self)
     }
     #[doc = "Bit 1 - event_f2 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_f2_cbc(&mut self) -> TZ2_F2_CBC_W<1> {
+    pub fn tz2_f2_cbc(&mut self) -> TZ2_F2_CBC_W<TZ2_CFG0_SPEC, 1> {
         TZ2_F2_CBC_W::new(self)
     }
     #[doc = "Bit 2 - event_f1 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_f1_cbc(&mut self) -> TZ2_F1_CBC_W<2> {
+    pub fn tz2_f1_cbc(&mut self) -> TZ2_F1_CBC_W<TZ2_CFG0_SPEC, 2> {
         TZ2_F1_CBC_W::new(self)
     }
     #[doc = "Bit 3 - event_f0 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_f0_cbc(&mut self) -> TZ2_F0_CBC_W<3> {
+    pub fn tz2_f0_cbc(&mut self) -> TZ2_F0_CBC_W<TZ2_CFG0_SPEC, 3> {
         TZ2_F0_CBC_W::new(self)
     }
     #[doc = "Bit 4 - Enable register for software force one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_sw_ost(&mut self) -> TZ2_SW_OST_W<4> {
+    pub fn tz2_sw_ost(&mut self) -> TZ2_SW_OST_W<TZ2_CFG0_SPEC, 4> {
         TZ2_SW_OST_W::new(self)
     }
     #[doc = "Bit 5 - event_f2 will trigger one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_f2_ost(&mut self) -> TZ2_F2_OST_W<5> {
+    pub fn tz2_f2_ost(&mut self) -> TZ2_F2_OST_W<TZ2_CFG0_SPEC, 5> {
         TZ2_F2_OST_W::new(self)
     }
     #[doc = "Bit 6 - event_f1 will trigger one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_f1_ost(&mut self) -> TZ2_F1_OST_W<6> {
+    pub fn tz2_f1_ost(&mut self) -> TZ2_F1_OST_W<TZ2_CFG0_SPEC, 6> {
         TZ2_F1_OST_W::new(self)
     }
     #[doc = "Bit 7 - event_f0 will trigger one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_f0_ost(&mut self) -> TZ2_F0_OST_W<7> {
+    pub fn tz2_f0_ost(&mut self) -> TZ2_F0_OST_W<TZ2_CFG0_SPEC, 7> {
         TZ2_F0_OST_W::new(self)
     }
     #[doc = "Bits 8:9 - Cycle-by-cycle mode action on PWM2A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_a_cbc_d(&mut self) -> TZ2_A_CBC_D_W<8> {
+    pub fn tz2_a_cbc_d(&mut self) -> TZ2_A_CBC_D_W<TZ2_CFG0_SPEC, 8> {
         TZ2_A_CBC_D_W::new(self)
     }
     #[doc = "Bits 10:11 - Cycle-by-cycle mode action on PWM2A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_a_cbc_u(&mut self) -> TZ2_A_CBC_U_W<10> {
+    pub fn tz2_a_cbc_u(&mut self) -> TZ2_A_CBC_U_W<TZ2_CFG0_SPEC, 10> {
         TZ2_A_CBC_U_W::new(self)
     }
     #[doc = "Bits 12:13 - One-shot mode action on PWM2A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_a_ost_d(&mut self) -> TZ2_A_OST_D_W<12> {
+    pub fn tz2_a_ost_d(&mut self) -> TZ2_A_OST_D_W<TZ2_CFG0_SPEC, 12> {
         TZ2_A_OST_D_W::new(self)
     }
     #[doc = "Bits 14:15 - One-shot mode action on PWM2A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_a_ost_u(&mut self) -> TZ2_A_OST_U_W<14> {
+    pub fn tz2_a_ost_u(&mut self) -> TZ2_A_OST_U_W<TZ2_CFG0_SPEC, 14> {
         TZ2_A_OST_U_W::new(self)
     }
     #[doc = "Bits 16:17 - Cycle-by-cycle mode action on PWM2B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_b_cbc_d(&mut self) -> TZ2_B_CBC_D_W<16> {
+    pub fn tz2_b_cbc_d(&mut self) -> TZ2_B_CBC_D_W<TZ2_CFG0_SPEC, 16> {
         TZ2_B_CBC_D_W::new(self)
     }
     #[doc = "Bits 18:19 - Cycle-by-cycle mode action on PWM2B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_b_cbc_u(&mut self) -> TZ2_B_CBC_U_W<18> {
+    pub fn tz2_b_cbc_u(&mut self) -> TZ2_B_CBC_U_W<TZ2_CFG0_SPEC, 18> {
         TZ2_B_CBC_U_W::new(self)
     }
     #[doc = "Bits 20:21 - One-shot mode action on PWM2B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_b_ost_d(&mut self) -> TZ2_B_OST_D_W<20> {
+    pub fn tz2_b_ost_d(&mut self) -> TZ2_B_OST_D_W<TZ2_CFG0_SPEC, 20> {
         TZ2_B_OST_D_W::new(self)
     }
     #[doc = "Bits 22:23 - One-shot mode action on PWM2B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
     #[must_use]
-    pub fn tz2_b_ost_u(&mut self) -> TZ2_B_OST_U_W<22> {
+    pub fn tz2_b_ost_u(&mut self) -> TZ2_B_OST_U_W<TZ2_CFG0_SPEC, 22> {
         TZ2_B_OST_U_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Actions on PWM2A and PWM2B trip events\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tz2_cfg0](index.html) module"]
+#[doc = "Actions on PWM2A and PWM2B trip events\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tz2_cfg0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tz2_cfg0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TZ2_CFG0_SPEC;
 impl crate::RegisterSpec for TZ2_CFG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tz2_cfg0::R](R) reader structure"]
-impl crate::Readable for TZ2_CFG0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tz2_cfg0::W](W) writer structure"]
+#[doc = "`read()` method returns [`tz2_cfg0::R`](R) reader structure"]
+impl crate::Readable for TZ2_CFG0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tz2_cfg0::W`](W) writer structure"]
 impl crate::Writable for TZ2_CFG0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

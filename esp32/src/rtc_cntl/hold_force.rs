@@ -1,111 +1,79 @@
 #[doc = "Register `HOLD_FORCE` reader"]
-pub struct R(crate::R<HOLD_FORCE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HOLD_FORCE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HOLD_FORCE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HOLD_FORCE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HOLD_FORCE_SPEC>;
 #[doc = "Register `HOLD_FORCE` writer"]
-pub struct W(crate::W<HOLD_FORCE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HOLD_FORCE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HOLD_FORCE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HOLD_FORCE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HOLD_FORCE_SPEC>;
 #[doc = "Field `ADC1_HOLD_FORCE` reader - "]
 pub type ADC1_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC1_HOLD_FORCE` writer - "]
-pub type ADC1_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type ADC1_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADC2_HOLD_FORCE` reader - "]
 pub type ADC2_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC2_HOLD_FORCE` writer - "]
-pub type ADC2_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type ADC2_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDAC1_HOLD_FORCE` reader - "]
 pub type PDAC1_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `PDAC1_HOLD_FORCE` writer - "]
-pub type PDAC1_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type PDAC1_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDAC2_HOLD_FORCE` reader - "]
 pub type PDAC2_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `PDAC2_HOLD_FORCE` writer - "]
-pub type PDAC2_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type PDAC2_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SENSE1_HOLD_FORCE` reader - "]
 pub type SENSE1_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `SENSE1_HOLD_FORCE` writer - "]
-pub type SENSE1_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type SENSE1_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SENSE2_HOLD_FORCE` reader - "]
 pub type SENSE2_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `SENSE2_HOLD_FORCE` writer - "]
-pub type SENSE2_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type SENSE2_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SENSE3_HOLD_FORCE` reader - "]
 pub type SENSE3_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `SENSE3_HOLD_FORCE` writer - "]
-pub type SENSE3_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type SENSE3_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SENSE4_HOLD_FORCE` reader - "]
 pub type SENSE4_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `SENSE4_HOLD_FORCE` writer - "]
-pub type SENSE4_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type SENSE4_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD0_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD0_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD0_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD0_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD1_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD1_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD1_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD1_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD1_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD2_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD2_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD2_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD2_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD2_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD3_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD3_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD3_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD3_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD3_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD4_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD4_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD4_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD4_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD4_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD5_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD5_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD5_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD5_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD5_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD6_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD6_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD6_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD6_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD6_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_PAD7_HOLD_FORCE` reader - "]
 pub type TOUCH_PAD7_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD7_HOLD_FORCE` writer - "]
-pub type TOUCH_PAD7_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type TOUCH_PAD7_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32P_HOLD_FORCE` reader - "]
 pub type X32P_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `X32P_HOLD_FORCE` writer - "]
-pub type X32P_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type X32P_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `X32N_HOLD_FORCE` reader - "]
 pub type X32N_HOLD_FORCE_R = crate::BitReader;
 #[doc = "Field `X32N_HOLD_FORCE` writer - "]
-pub type X32N_HOLD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_FORCE_SPEC, O>;
+pub type X32N_HOLD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -287,130 +255,127 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_hold_force(&mut self) -> ADC1_HOLD_FORCE_W<0> {
+    pub fn adc1_hold_force(&mut self) -> ADC1_HOLD_FORCE_W<HOLD_FORCE_SPEC, 0> {
         ADC1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_hold_force(&mut self) -> ADC2_HOLD_FORCE_W<1> {
+    pub fn adc2_hold_force(&mut self) -> ADC2_HOLD_FORCE_W<HOLD_FORCE_SPEC, 1> {
         ADC2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac1_hold_force(&mut self) -> PDAC1_HOLD_FORCE_W<2> {
+    pub fn pdac1_hold_force(&mut self) -> PDAC1_HOLD_FORCE_W<HOLD_FORCE_SPEC, 2> {
         PDAC1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_hold_force(&mut self) -> PDAC2_HOLD_FORCE_W<3> {
+    pub fn pdac2_hold_force(&mut self) -> PDAC2_HOLD_FORCE_W<HOLD_FORCE_SPEC, 3> {
         PDAC2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn sense1_hold_force(&mut self) -> SENSE1_HOLD_FORCE_W<4> {
+    pub fn sense1_hold_force(&mut self) -> SENSE1_HOLD_FORCE_W<HOLD_FORCE_SPEC, 4> {
         SENSE1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn sense2_hold_force(&mut self) -> SENSE2_HOLD_FORCE_W<5> {
+    pub fn sense2_hold_force(&mut self) -> SENSE2_HOLD_FORCE_W<HOLD_FORCE_SPEC, 5> {
         SENSE2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn sense3_hold_force(&mut self) -> SENSE3_HOLD_FORCE_W<6> {
+    pub fn sense3_hold_force(&mut self) -> SENSE3_HOLD_FORCE_W<HOLD_FORCE_SPEC, 6> {
         SENSE3_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn sense4_hold_force(&mut self) -> SENSE4_HOLD_FORCE_W<7> {
+    pub fn sense4_hold_force(&mut self) -> SENSE4_HOLD_FORCE_W<HOLD_FORCE_SPEC, 7> {
         SENSE4_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad0_hold_force(&mut self) -> TOUCH_PAD0_HOLD_FORCE_W<8> {
+    pub fn touch_pad0_hold_force(&mut self) -> TOUCH_PAD0_HOLD_FORCE_W<HOLD_FORCE_SPEC, 8> {
         TOUCH_PAD0_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad1_hold_force(&mut self) -> TOUCH_PAD1_HOLD_FORCE_W<9> {
+    pub fn touch_pad1_hold_force(&mut self) -> TOUCH_PAD1_HOLD_FORCE_W<HOLD_FORCE_SPEC, 9> {
         TOUCH_PAD1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad2_hold_force(&mut self) -> TOUCH_PAD2_HOLD_FORCE_W<10> {
+    pub fn touch_pad2_hold_force(&mut self) -> TOUCH_PAD2_HOLD_FORCE_W<HOLD_FORCE_SPEC, 10> {
         TOUCH_PAD2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad3_hold_force(&mut self) -> TOUCH_PAD3_HOLD_FORCE_W<11> {
+    pub fn touch_pad3_hold_force(&mut self) -> TOUCH_PAD3_HOLD_FORCE_W<HOLD_FORCE_SPEC, 11> {
         TOUCH_PAD3_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad4_hold_force(&mut self) -> TOUCH_PAD4_HOLD_FORCE_W<12> {
+    pub fn touch_pad4_hold_force(&mut self) -> TOUCH_PAD4_HOLD_FORCE_W<HOLD_FORCE_SPEC, 12> {
         TOUCH_PAD4_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad5_hold_force(&mut self) -> TOUCH_PAD5_HOLD_FORCE_W<13> {
+    pub fn touch_pad5_hold_force(&mut self) -> TOUCH_PAD5_HOLD_FORCE_W<HOLD_FORCE_SPEC, 13> {
         TOUCH_PAD5_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad6_hold_force(&mut self) -> TOUCH_PAD6_HOLD_FORCE_W<14> {
+    pub fn touch_pad6_hold_force(&mut self) -> TOUCH_PAD6_HOLD_FORCE_W<HOLD_FORCE_SPEC, 14> {
         TOUCH_PAD6_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad7_hold_force(&mut self) -> TOUCH_PAD7_HOLD_FORCE_W<15> {
+    pub fn touch_pad7_hold_force(&mut self) -> TOUCH_PAD7_HOLD_FORCE_W<HOLD_FORCE_SPEC, 15> {
         TOUCH_PAD7_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn x32p_hold_force(&mut self) -> X32P_HOLD_FORCE_W<16> {
+    pub fn x32p_hold_force(&mut self) -> X32P_HOLD_FORCE_W<HOLD_FORCE_SPEC, 16> {
         X32P_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_hold_force(&mut self) -> X32N_HOLD_FORCE_W<17> {
+    pub fn x32n_hold_force(&mut self) -> X32N_HOLD_FORCE_W<HOLD_FORCE_SPEC, 17> {
         X32N_HOLD_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hold_force](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hold_force::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hold_force::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HOLD_FORCE_SPEC;
 impl crate::RegisterSpec for HOLD_FORCE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hold_force::R](R) reader structure"]
-impl crate::Readable for HOLD_FORCE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hold_force::W](W) writer structure"]
+#[doc = "`read()` method returns [`hold_force::R`](R) reader structure"]
+impl crate::Readable for HOLD_FORCE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hold_force::W`](W) writer structure"]
 impl crate::Writable for HOLD_FORCE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

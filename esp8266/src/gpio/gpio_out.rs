@@ -1,47 +1,15 @@
 #[doc = "Register `GPIO_OUT` reader"]
-pub struct R(crate::R<GPIO_OUT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPIO_OUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPIO_OUT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPIO_OUT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPIO_OUT_SPEC>;
 #[doc = "Register `GPIO_OUT` writer"]
-pub struct W(crate::W<GPIO_OUT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPIO_OUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPIO_OUT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPIO_OUT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GPIO_OUT_SPEC>;
 #[doc = "Field `GPIO_OUT_DATA` reader - The output value when the GPIO pin is set as output."]
 pub type GPIO_OUT_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_OUT_DATA` writer - The output value when the GPIO pin is set as output."]
-pub type GPIO_OUT_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16>;
+pub type GPIO_OUT_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `GPIO_BT_SEL` reader - BT-Coexist Selection register"]
 pub type GPIO_BT_SEL_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_BT_SEL` writer - BT-Coexist Selection register"]
-pub type GPIO_BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16>;
+pub type GPIO_BT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The output value when the GPIO pin is set as output."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 0:15 - The output value when the GPIO pin is set as output."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_out_data(&mut self) -> GPIO_OUT_DATA_W<0> {
+    pub fn gpio_out_data(&mut self) -> GPIO_OUT_DATA_W<GPIO_OUT_SPEC, 0> {
         GPIO_OUT_DATA_W::new(self)
     }
     #[doc = "Bits 16:31 - BT-Coexist Selection register"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_bt_sel(&mut self) -> GPIO_BT_SEL_W<16> {
+    pub fn gpio_bt_sel(&mut self) -> GPIO_BT_SEL_W<GPIO_OUT_SPEC, 16> {
         GPIO_BT_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "BT-Coexist Selection register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_out](index.html) module"]
+#[doc = "BT-Coexist Selection register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio_out::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_out::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_OUT_SPEC;
 impl crate::RegisterSpec for GPIO_OUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpio_out::R](R) reader structure"]
-impl crate::Readable for GPIO_OUT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpio_out::W](W) writer structure"]
+#[doc = "`read()` method returns [`gpio_out::R`](R) reader structure"]
+impl crate::Readable for GPIO_OUT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gpio_out::W`](W) writer structure"]
 impl crate::Writable for GPIO_OUT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

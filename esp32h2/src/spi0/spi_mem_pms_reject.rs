@@ -1,45 +1,13 @@
 #[doc = "Register `SPI_MEM_PMS_REJECT` reader"]
-pub struct R(crate::R<SPI_MEM_PMS_REJECT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_MEM_PMS_REJECT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_MEM_PMS_REJECT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_MEM_PMS_REJECT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_MEM_PMS_REJECT_SPEC>;
 #[doc = "Register `SPI_MEM_PMS_REJECT` writer"]
-pub struct W(crate::W<SPI_MEM_PMS_REJECT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_MEM_PMS_REJECT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_MEM_PMS_REJECT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_MEM_PMS_REJECT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SPI_MEM_PMS_REJECT_SPEC>;
 #[doc = "Field `SPI_MEM_REJECT_ADDR` reader - This bits show the first SPI1 access error address. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
 pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_PM_EN` reader - Set this bit to enable SPI0/1 transfer permission control function."]
 pub type SPI_MEM_PM_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PM_EN` writer - Set this bit to enable SPI0/1 transfer permission control function."]
-pub type SPI_MEM_PM_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_PMS_REJECT_SPEC, O>;
+pub type SPI_MEM_PM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SPI_MEM_PMS_LD` reader - 1: SPI1 write access error. 0: No write access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
 pub type SPI_MEM_PMS_LD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_ST` reader - 1: SPI1 read access error. 0: No read access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
@@ -121,28 +89,25 @@ impl W {
     #[doc = "Bit 26 - Set this bit to enable SPI0/1 transfer permission control function."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_pm_en(&mut self) -> SPI_MEM_PM_EN_W<26> {
+    pub fn spi_mem_pm_en(&mut self) -> SPI_MEM_PM_EN_W<SPI_MEM_PMS_REJECT_SPEC, 26> {
         SPI_MEM_PM_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI1 access reject register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_pms_reject](index.html) module"]
+#[doc = "SPI1 access reject register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_pms_reject::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi_mem_pms_reject::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_PMS_REJECT_SPEC;
 impl crate::RegisterSpec for SPI_MEM_PMS_REJECT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_mem_pms_reject::R](R) reader structure"]
-impl crate::Readable for SPI_MEM_PMS_REJECT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi_mem_pms_reject::W](W) writer structure"]
+#[doc = "`read()` method returns [`spi_mem_pms_reject::R`](R) reader structure"]
+impl crate::Readable for SPI_MEM_PMS_REJECT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`spi_mem_pms_reject::W`](W) writer structure"]
 impl crate::Writable for SPI_MEM_PMS_REJECT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `INTERRUPT` reader"]
-pub struct R(crate::R<INTERRUPT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTERRUPT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTERRUPT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTERRUPT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTERRUPT_SPEC>;
 #[doc = "Field `RECEIVE_INT_ST` reader - 1: this bit is set while the receive FIFO is not empty and the RIE bit is set within the interrupt enable register. 0: reset"]
 pub type RECEIVE_INT_ST_R = crate::BitReader;
 #[doc = "Field `TRANSMIT_INT_ST` reader - 1: this bit is set whenever the transmit buffer status changes from '0-to-1' (released) and the TIE bit is set within the interrupt enable register. 0: reset"]
@@ -113,15 +100,13 @@ impl core::fmt::Debug for crate::generic::Reg<INTERRUPT_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Interrupt signals' register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [interrupt](index.html) module"]
+#[doc = "Interrupt signals' register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`interrupt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERRUPT_SPEC;
 impl crate::RegisterSpec for INTERRUPT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [interrupt::R](R) reader structure"]
-impl crate::Readable for INTERRUPT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`interrupt::R`](R) reader structure"]
+impl crate::Readable for INTERRUPT_SPEC {}
 #[doc = "`reset()` method sets INTERRUPT to value 0"]
 impl crate::Resettable for INTERRUPT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

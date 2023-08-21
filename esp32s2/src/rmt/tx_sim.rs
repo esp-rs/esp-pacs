@@ -1,59 +1,27 @@
 #[doc = "Register `TX_SIM` reader"]
-pub struct R(crate::R<TX_SIM_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TX_SIM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TX_SIM_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TX_SIM_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TX_SIM_SPEC>;
 #[doc = "Register `TX_SIM` writer"]
-pub struct W(crate::W<TX_SIM_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TX_SIM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TX_SIM_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TX_SIM_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TX_SIM_SPEC>;
 #[doc = "Field `CH0` reader - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
 pub type CH0_R = crate::BitReader;
 #[doc = "Field `CH0` writer - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
-pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
+pub type CH0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH1` reader - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
 pub type CH1_R = crate::BitReader;
 #[doc = "Field `CH1` writer - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
-pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
+pub type CH1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH2` reader - Set this bit to enable CHANNEL2 to start sending data synchronously with other enabled channels."]
 pub type CH2_R = crate::BitReader;
 #[doc = "Field `CH2` writer - Set this bit to enable CHANNEL2 to start sending data synchronously with other enabled channels."]
-pub type CH2_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
+pub type CH2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH3` reader - Set this bit to enable CHANNEL3 to start sending data synchronously with other enabled channels."]
 pub type CH3_R = crate::BitReader;
 #[doc = "Field `CH3` writer - Set this bit to enable CHANNEL3 to start sending data synchronously with other enabled channels."]
-pub type CH3_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
+pub type CH3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EN` reader - This register is used to enable multiple of channels to start sending data synchronously."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - This register is used to enable multiple of channels to start sending data synchronously."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
+pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
@@ -103,52 +71,49 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0(&mut self) -> CH0_W<0> {
+    pub fn ch0(&mut self) -> CH0_W<TX_SIM_SPEC, 0> {
         CH0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1(&mut self) -> CH1_W<1> {
+    pub fn ch1(&mut self) -> CH1_W<TX_SIM_SPEC, 1> {
         CH1_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable CHANNEL2 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2(&mut self) -> CH2_W<2> {
+    pub fn ch2(&mut self) -> CH2_W<TX_SIM_SPEC, 2> {
         CH2_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable CHANNEL3 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3(&mut self) -> CH3_W<3> {
+    pub fn ch3(&mut self) -> CH3_W<TX_SIM_SPEC, 3> {
         CH3_W::new(self)
     }
     #[doc = "Bit 4 - This register is used to enable multiple of channels to start sending data synchronously."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<4> {
+    pub fn en(&mut self) -> EN_W<TX_SIM_SPEC, 4> {
         EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "RMT TX synchronous register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_sim](index.html) module"]
+#[doc = "RMT TX synchronous register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_sim::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_sim::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_SIM_SPEC;
 impl crate::RegisterSpec for TX_SIM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_sim::R](R) reader structure"]
-impl crate::Readable for TX_SIM_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tx_sim::W](W) writer structure"]
+#[doc = "`read()` method returns [`tx_sim::R`](R) reader structure"]
+impl crate::Readable for TX_SIM_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tx_sim::W`](W) writer structure"]
 impl crate::Writable for TX_SIM_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `INT_ST_CH2` reader"]
-pub struct R(crate::R<INT_ST_CH2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_ST_CH2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_ST_CH2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_ST_CH2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_ST_CH2_SPEC>;
 #[doc = "Field `IN_DONE` reader - The raw interrupt status bit for the IN_DONE_CH_INT interrupt."]
 pub type IN_DONE_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF` reader - The raw interrupt status bit for the IN_SUC_EOF_CH_INT interrupt."]
@@ -141,15 +128,13 @@ impl core::fmt::Debug for crate::generic::Reg<INT_ST_CH2_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "DMA_INT_ST_CH2_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st_ch2](index.html) module"]
+#[doc = "DMA_INT_ST_CH2_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_ch2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_CH2_SPEC;
 impl crate::RegisterSpec for INT_ST_CH2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_st_ch2::R](R) reader structure"]
-impl crate::Readable for INT_ST_CH2_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`int_st_ch2::R`](R) reader structure"]
+impl crate::Readable for INT_ST_CH2_SPEC {}
 #[doc = "`reset()` method sets INT_ST_CH2 to value 0"]
 impl crate::Resettable for INT_ST_CH2_SPEC {
     const RESET_VALUE: Self::Ux = 0;

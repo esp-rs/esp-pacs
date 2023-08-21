@@ -1,43 +1,11 @@
 #[doc = "Register `BUS_CLK_UPDATE` reader"]
-pub struct R(crate::R<BUS_CLK_UPDATE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BUS_CLK_UPDATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BUS_CLK_UPDATE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BUS_CLK_UPDATE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BUS_CLK_UPDATE_SPEC>;
 #[doc = "Register `BUS_CLK_UPDATE` writer"]
-pub struct W(crate::W<BUS_CLK_UPDATE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BUS_CLK_UPDATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BUS_CLK_UPDATE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BUS_CLK_UPDATE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BUS_CLK_UPDATE_SPEC>;
 #[doc = "Field `BUS_CLOCK_UPDATE` reader - xxxx"]
 pub type BUS_CLOCK_UPDATE_R = crate::BitReader;
 #[doc = "Field `BUS_CLOCK_UPDATE` writer - xxxx"]
-pub type BUS_CLOCK_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, BUS_CLK_UPDATE_SPEC, O>;
+pub type BUS_CLOCK_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<0> {
+    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<BUS_CLK_UPDATE_SPEC, 0> {
         BUS_CLOCK_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "xxxx\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_clk_update](index.html) module"]
+#[doc = "xxxx\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bus_clk_update::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bus_clk_update::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUS_CLK_UPDATE_SPEC;
 impl crate::RegisterSpec for BUS_CLK_UPDATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bus_clk_update::R](R) reader structure"]
-impl crate::Readable for BUS_CLK_UPDATE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [bus_clk_update::W](W) writer structure"]
+#[doc = "`read()` method returns [`bus_clk_update::R`](R) reader structure"]
+impl crate::Readable for BUS_CLK_UPDATE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`bus_clk_update::W`](W) writer structure"]
 impl crate::Writable for BUS_CLK_UPDATE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

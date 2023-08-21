@@ -1,18 +1,5 @@
 #[doc = "Register `HCON` reader"]
-pub struct R(crate::R<HCON_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCON_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCON_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCON_SPEC>;
 #[doc = "Field `CARD_TYPE` reader - Hardware support SDIO and MMC."]
 pub type CARD_TYPE_R = crate::BitReader;
 #[doc = "Field `CARD_NUM` reader - Support card number is 2."]
@@ -103,15 +90,13 @@ impl core::fmt::Debug for crate::generic::Reg<HCON_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Hardware feature register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcon](index.html) module"]
+#[doc = "Hardware feature register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcon::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCON_SPEC;
 impl crate::RegisterSpec for HCON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcon::R](R) reader structure"]
-impl crate::Readable for HCON_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`hcon::R`](R) reader structure"]
+impl crate::Readable for HCON_SPEC {}
 #[doc = "`reset()` method sets HCON to value 0x0344_4cc3"]
 impl crate::Resettable for HCON_SPEC {
     const RESET_VALUE: Self::Ux = 0x0344_4cc3;

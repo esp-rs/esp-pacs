@@ -72,139 +72,139 @@ pub struct RegisterBlock {
     #[doc = "0xffc - Version register"]
     pub date: DATE,
 }
-#[doc = "M0_MODE_CTRL (rw) register accessor: an alias for `Reg<M0_MODE_CTRL_SPEC>`"]
+#[doc = "M0_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m0_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m0_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m0_mode_ctrl`] module"]
 pub type M0_MODE_CTRL = crate::Reg<m0_mode_ctrl::M0_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m0_mode_ctrl;
-#[doc = "M1_MODE_CTRL (rw) register accessor: an alias for `Reg<M1_MODE_CTRL_SPEC>`"]
+#[doc = "M1_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m1_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m1_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m1_mode_ctrl`] module"]
 pub type M1_MODE_CTRL = crate::Reg<m1_mode_ctrl::M1_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m1_mode_ctrl;
-#[doc = "M2_MODE_CTRL (rw) register accessor: an alias for `Reg<M2_MODE_CTRL_SPEC>`"]
+#[doc = "M2_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m2_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m2_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m2_mode_ctrl`] module"]
 pub type M2_MODE_CTRL = crate::Reg<m2_mode_ctrl::M2_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m2_mode_ctrl;
-#[doc = "M3_MODE_CTRL (rw) register accessor: an alias for `Reg<M3_MODE_CTRL_SPEC>`"]
+#[doc = "M3_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m3_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m3_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m3_mode_ctrl`] module"]
 pub type M3_MODE_CTRL = crate::Reg<m3_mode_ctrl::M3_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m3_mode_ctrl;
-#[doc = "M4_MODE_CTRL (rw) register accessor: an alias for `Reg<M4_MODE_CTRL_SPEC>`"]
+#[doc = "M4_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m4_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m4_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m4_mode_ctrl`] module"]
 pub type M4_MODE_CTRL = crate::Reg<m4_mode_ctrl::M4_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m4_mode_ctrl;
-#[doc = "M5_MODE_CTRL (rw) register accessor: an alias for `Reg<M5_MODE_CTRL_SPEC>`"]
+#[doc = "M5_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m5_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m5_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m5_mode_ctrl`] module"]
 pub type M5_MODE_CTRL = crate::Reg<m5_mode_ctrl::M5_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m5_mode_ctrl;
-#[doc = "M6_MODE_CTRL (rw) register accessor: an alias for `Reg<M6_MODE_CTRL_SPEC>`"]
+#[doc = "M6_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m6_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m6_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m6_mode_ctrl`] module"]
 pub type M6_MODE_CTRL = crate::Reg<m6_mode_ctrl::M6_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m6_mode_ctrl;
-#[doc = "M7_MODE_CTRL (rw) register accessor: an alias for `Reg<M7_MODE_CTRL_SPEC>`"]
+#[doc = "M7_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m7_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m7_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m7_mode_ctrl`] module"]
 pub type M7_MODE_CTRL = crate::Reg<m7_mode_ctrl::M7_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m7_mode_ctrl;
-#[doc = "M8_MODE_CTRL (rw) register accessor: an alias for `Reg<M8_MODE_CTRL_SPEC>`"]
+#[doc = "M8_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m8_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m8_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m8_mode_ctrl`] module"]
 pub type M8_MODE_CTRL = crate::Reg<m8_mode_ctrl::M8_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m8_mode_ctrl;
-#[doc = "M9_MODE_CTRL (rw) register accessor: an alias for `Reg<M9_MODE_CTRL_SPEC>`"]
+#[doc = "M9_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m9_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m9_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m9_mode_ctrl`] module"]
 pub type M9_MODE_CTRL = crate::Reg<m9_mode_ctrl::M9_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m9_mode_ctrl;
-#[doc = "M10_MODE_CTRL (rw) register accessor: an alias for `Reg<M10_MODE_CTRL_SPEC>`"]
+#[doc = "M10_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m10_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m10_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m10_mode_ctrl`] module"]
 pub type M10_MODE_CTRL = crate::Reg<m10_mode_ctrl::M10_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m10_mode_ctrl;
-#[doc = "M11_MODE_CTRL (rw) register accessor: an alias for `Reg<M11_MODE_CTRL_SPEC>`"]
+#[doc = "M11_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m11_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m11_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m11_mode_ctrl`] module"]
 pub type M11_MODE_CTRL = crate::Reg<m11_mode_ctrl::M11_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m11_mode_ctrl;
-#[doc = "M12_MODE_CTRL (rw) register accessor: an alias for `Reg<M12_MODE_CTRL_SPEC>`"]
+#[doc = "M12_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m12_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m12_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m12_mode_ctrl`] module"]
 pub type M12_MODE_CTRL = crate::Reg<m12_mode_ctrl::M12_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m12_mode_ctrl;
-#[doc = "M13_MODE_CTRL (rw) register accessor: an alias for `Reg<M13_MODE_CTRL_SPEC>`"]
+#[doc = "M13_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m13_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m13_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m13_mode_ctrl`] module"]
 pub type M13_MODE_CTRL = crate::Reg<m13_mode_ctrl::M13_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m13_mode_ctrl;
-#[doc = "M14_MODE_CTRL (rw) register accessor: an alias for `Reg<M14_MODE_CTRL_SPEC>`"]
+#[doc = "M14_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m14_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m14_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m14_mode_ctrl`] module"]
 pub type M14_MODE_CTRL = crate::Reg<m14_mode_ctrl::M14_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m14_mode_ctrl;
-#[doc = "M15_MODE_CTRL (rw) register accessor: an alias for `Reg<M15_MODE_CTRL_SPEC>`"]
+#[doc = "M15_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m15_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m15_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m15_mode_ctrl`] module"]
 pub type M15_MODE_CTRL = crate::Reg<m15_mode_ctrl::M15_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m15_mode_ctrl;
-#[doc = "M16_MODE_CTRL (rw) register accessor: an alias for `Reg<M16_MODE_CTRL_SPEC>`"]
+#[doc = "M16_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m16_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m16_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m16_mode_ctrl`] module"]
 pub type M16_MODE_CTRL = crate::Reg<m16_mode_ctrl::M16_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m16_mode_ctrl;
-#[doc = "M17_MODE_CTRL (rw) register accessor: an alias for `Reg<M17_MODE_CTRL_SPEC>`"]
+#[doc = "M17_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m17_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m17_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m17_mode_ctrl`] module"]
 pub type M17_MODE_CTRL = crate::Reg<m17_mode_ctrl::M17_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m17_mode_ctrl;
-#[doc = "M18_MODE_CTRL (rw) register accessor: an alias for `Reg<M18_MODE_CTRL_SPEC>`"]
+#[doc = "M18_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m18_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m18_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m18_mode_ctrl`] module"]
 pub type M18_MODE_CTRL = crate::Reg<m18_mode_ctrl::M18_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m18_mode_ctrl;
-#[doc = "M19_MODE_CTRL (rw) register accessor: an alias for `Reg<M19_MODE_CTRL_SPEC>`"]
+#[doc = "M19_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m19_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m19_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m19_mode_ctrl`] module"]
 pub type M19_MODE_CTRL = crate::Reg<m19_mode_ctrl::M19_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m19_mode_ctrl;
-#[doc = "M20_MODE_CTRL (rw) register accessor: an alias for `Reg<M20_MODE_CTRL_SPEC>`"]
+#[doc = "M20_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m20_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m20_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m20_mode_ctrl`] module"]
 pub type M20_MODE_CTRL = crate::Reg<m20_mode_ctrl::M20_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m20_mode_ctrl;
-#[doc = "M21_MODE_CTRL (rw) register accessor: an alias for `Reg<M21_MODE_CTRL_SPEC>`"]
+#[doc = "M21_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m21_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m21_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m21_mode_ctrl`] module"]
 pub type M21_MODE_CTRL = crate::Reg<m21_mode_ctrl::M21_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m21_mode_ctrl;
-#[doc = "M22_MODE_CTRL (rw) register accessor: an alias for `Reg<M22_MODE_CTRL_SPEC>`"]
+#[doc = "M22_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m22_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m22_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m22_mode_ctrl`] module"]
 pub type M22_MODE_CTRL = crate::Reg<m22_mode_ctrl::M22_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m22_mode_ctrl;
-#[doc = "M23_MODE_CTRL (rw) register accessor: an alias for `Reg<M23_MODE_CTRL_SPEC>`"]
+#[doc = "M23_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m23_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m23_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m23_mode_ctrl`] module"]
 pub type M23_MODE_CTRL = crate::Reg<m23_mode_ctrl::M23_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m23_mode_ctrl;
-#[doc = "M24_MODE_CTRL (rw) register accessor: an alias for `Reg<M24_MODE_CTRL_SPEC>`"]
+#[doc = "M24_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m24_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m24_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m24_mode_ctrl`] module"]
 pub type M24_MODE_CTRL = crate::Reg<m24_mode_ctrl::M24_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m24_mode_ctrl;
-#[doc = "M25_MODE_CTRL (rw) register accessor: an alias for `Reg<M25_MODE_CTRL_SPEC>`"]
+#[doc = "M25_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m25_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m25_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m25_mode_ctrl`] module"]
 pub type M25_MODE_CTRL = crate::Reg<m25_mode_ctrl::M25_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m25_mode_ctrl;
-#[doc = "M26_MODE_CTRL (rw) register accessor: an alias for `Reg<M26_MODE_CTRL_SPEC>`"]
+#[doc = "M26_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m26_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m26_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m26_mode_ctrl`] module"]
 pub type M26_MODE_CTRL = crate::Reg<m26_mode_ctrl::M26_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m26_mode_ctrl;
-#[doc = "M27_MODE_CTRL (rw) register accessor: an alias for `Reg<M27_MODE_CTRL_SPEC>`"]
+#[doc = "M27_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m27_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m27_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m27_mode_ctrl`] module"]
 pub type M27_MODE_CTRL = crate::Reg<m27_mode_ctrl::M27_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m27_mode_ctrl;
-#[doc = "M28_MODE_CTRL (rw) register accessor: an alias for `Reg<M28_MODE_CTRL_SPEC>`"]
+#[doc = "M28_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m28_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m28_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m28_mode_ctrl`] module"]
 pub type M28_MODE_CTRL = crate::Reg<m28_mode_ctrl::M28_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m28_mode_ctrl;
-#[doc = "M29_MODE_CTRL (rw) register accessor: an alias for `Reg<M29_MODE_CTRL_SPEC>`"]
+#[doc = "M29_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m29_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m29_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m29_mode_ctrl`] module"]
 pub type M29_MODE_CTRL = crate::Reg<m29_mode_ctrl::M29_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m29_mode_ctrl;
-#[doc = "M30_MODE_CTRL (rw) register accessor: an alias for `Reg<M30_MODE_CTRL_SPEC>`"]
+#[doc = "M30_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m30_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m30_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m30_mode_ctrl`] module"]
 pub type M30_MODE_CTRL = crate::Reg<m30_mode_ctrl::M30_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m30_mode_ctrl;
-#[doc = "M31_MODE_CTRL (rw) register accessor: an alias for `Reg<M31_MODE_CTRL_SPEC>`"]
+#[doc = "M31_MODE_CTRL (rw) register accessor: Tee mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m31_mode_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m31_mode_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m31_mode_ctrl`] module"]
 pub type M31_MODE_CTRL = crate::Reg<m31_mode_ctrl::M31_MODE_CTRL_SPEC>;
 #[doc = "Tee mode control register"]
 pub mod m31_mode_ctrl;
-#[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
+#[doc = "CLOCK_GATE (rw) register accessor: Clock gating register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_gate::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Clock gating register"]
 pub mod clock_gate;
-#[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
+#[doc = "DATE (rw) register accessor: Version register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version register"]
 pub mod date;

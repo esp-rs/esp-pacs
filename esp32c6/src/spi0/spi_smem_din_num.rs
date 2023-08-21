@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_SMEM_DIN_NUM` reader"]
-pub struct R(crate::R<SPI_SMEM_DIN_NUM_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_SMEM_DIN_NUM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_SMEM_DIN_NUM_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_SMEM_DIN_NUM_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_SMEM_DIN_NUM_SPEC>;
 #[doc = "Field `SPI_SMEM_DIN0_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
 pub type SPI_SMEM_DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN1_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
@@ -127,15 +114,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DIN_NUM_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "MSPI external RAM input timing delay number control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_din_num](index.html) module"]
+#[doc = "MSPI external RAM input timing delay number control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_din_num::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SMEM_DIN_NUM_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_DIN_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_smem_din_num::R](R) reader structure"]
-impl crate::Readable for SPI_SMEM_DIN_NUM_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_smem_din_num::R`](R) reader structure"]
+impl crate::Readable for SPI_SMEM_DIN_NUM_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_DIN_NUM to value 0"]
 impl crate::Resettable for SPI_SMEM_DIN_NUM_SPEC {
     const RESET_VALUE: Self::Ux = 0;

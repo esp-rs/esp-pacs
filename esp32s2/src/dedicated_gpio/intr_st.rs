@@ -1,18 +1,5 @@
 #[doc = "Register `INTR_ST` reader"]
-pub struct R(crate::R<INTR_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTR_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTR_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTR_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTR_ST_SPEC>;
 #[doc = "Field `GPIO0_INT_ST` reader - This is the status bit for DEDIC_GPIO0_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
 pub type GPIO0_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO1_INT_ST` reader - This is the status bit for DEDIC_GPIO1_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
@@ -116,15 +103,13 @@ impl core::fmt::Debug for crate::generic::Reg<INTR_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_st](index.html) module"]
+#[doc = "Masked interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_ST_SPEC;
 impl crate::RegisterSpec for INTR_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [intr_st::R](R) reader structure"]
-impl crate::Readable for INTR_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`intr_st::R`](R) reader structure"]
+impl crate::Readable for INTR_ST_SPEC {}
 #[doc = "`reset()` method sets INTR_ST to value 0"]
 impl crate::Resettable for INTR_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

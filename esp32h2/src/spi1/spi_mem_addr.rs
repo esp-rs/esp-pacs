@@ -1,44 +1,11 @@
 #[doc = "Register `SPI_MEM_ADDR` reader"]
-pub struct R(crate::R<SPI_MEM_ADDR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_MEM_ADDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_MEM_ADDR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_MEM_ADDR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_MEM_ADDR_SPEC>;
 #[doc = "Register `SPI_MEM_ADDR` writer"]
-pub struct W(crate::W<SPI_MEM_ADDR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_MEM_ADDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_MEM_ADDR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_MEM_ADDR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SPI_MEM_ADDR_SPEC>;
 #[doc = "Field `SPI_MEM_USR_ADDR_VALUE` reader - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
 pub type SPI_MEM_USR_ADDR_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_USR_ADDR_VALUE` writer - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
-pub type SPI_MEM_USR_ADDR_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_ADDR_SPEC, 32, O, u32>;
+pub type SPI_MEM_USR_ADDR_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]
@@ -67,28 +34,25 @@ impl W {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_usr_addr_value(&mut self) -> SPI_MEM_USR_ADDR_VALUE_W<0> {
+    pub fn spi_mem_usr_addr_value(&mut self) -> SPI_MEM_USR_ADDR_VALUE_W<SPI_MEM_ADDR_SPEC, 0> {
         SPI_MEM_USR_ADDR_VALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI1 address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_addr](index.html) module"]
+#[doc = "SPI1 address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi_mem_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_ADDR_SPEC;
 impl crate::RegisterSpec for SPI_MEM_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_mem_addr::R](R) reader structure"]
-impl crate::Readable for SPI_MEM_ADDR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi_mem_addr::W](W) writer structure"]
+#[doc = "`read()` method returns [`spi_mem_addr::R`](R) reader structure"]
+impl crate::Readable for SPI_MEM_ADDR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`spi_mem_addr::W`](W) writer structure"]
 impl crate::Writable for SPI_MEM_ADDR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

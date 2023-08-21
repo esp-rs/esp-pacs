@@ -1,107 +1,75 @@
 #[doc = "Register `INT_ENA` reader"]
-pub struct R(crate::R<INT_ENA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_ENA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_ENA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
-pub struct W(crate::W<INT_ENA_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INT_ENA_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INT_ENA_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `RX_START_INT_ENA` reader - This is the interrupt enable bit for UHCI_RX_START_INT interrupt."]
 pub type RX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_START_INT_ENA` writer - This is the interrupt enable bit for UHCI_RX_START_INT interrupt."]
-pub type RX_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type RX_START_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_START_INT_ENA` reader - This is the interrupt enable bit for UHCI_TX_START_INT interrupt."]
 pub type TX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_ENA` writer - This is the interrupt enable bit for UHCI_TX_START_INT interrupt."]
-pub type TX_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type TX_START_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_HUNG_INT_ENA` reader - This is the interrupt enable bit for UHCI_RX_HUNG_INT interrupt."]
 pub type RX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_ENA` writer - This is the interrupt enable bit for UHCI_RX_HUNG_INT interrupt."]
-pub type RX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type RX_HUNG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_HUNG_INT_ENA` reader - This is the interrupt enable bit for UHCI_TX_HUNG_INT interrupt."]
 pub type TX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_ENA` writer - This is the interrupt enable bit for UHCI_TX_HUNG_INT interrupt."]
-pub type TX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type TX_HUNG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_DONE_INT_ENA` reader - This is the interrupt enable bit for UHCI_IN_DONE_INT interrupt."]
 pub type IN_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_ENA` writer - This is the interrupt enable bit for UHCI_IN_DONE_INT interrupt."]
-pub type IN_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type IN_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_SUC_EOF_INT_ENA` reader - This is the interrupt enable bit for UHCI_IN_SUC_EOF_INT interrupt."]
 pub type IN_SUC_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_ENA` writer - This is the interrupt enable bit for UHCI_IN_SUC_EOF_INT interrupt."]
-pub type IN_SUC_EOF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type IN_SUC_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_ERR_EOF_INT_ENA` reader - This is the interrupt enable bit for UHCI_IN_ERR_EOF_INT interrupt."]
 pub type IN_ERR_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_ENA` writer - This is the interrupt enable bit for UHCI_IN_ERR_EOF_INT interrupt."]
-pub type IN_ERR_EOF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type IN_ERR_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_DONE_INT_ENA` reader - This is the interrupt enable bit for UHCI_OUT_DONE_INT interrupt."]
 pub type OUT_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_ENA` writer - This is the interrupt enable bit for UHCI_OUT_DONE_INT interrupt."]
-pub type OUT_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type OUT_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_EOF_INT_ENA` reader - This is the interrupt enable bit for UHCI_OUT_EOF_INT interrupt."]
 pub type OUT_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_ENA` writer - This is the interrupt enable bit for UHCI_OUT_EOF_INT interrupt."]
-pub type OUT_EOF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type OUT_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_DSCR_ERR_INT_ENA` reader - This is the interrupt enable bit for UHCI_IN_DSCR_ERR_INT interrupt."]
 pub type IN_DSCR_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_ERR_INT_ENA` writer - This is the interrupt enable bit for UHCI_IN_DSCR_ERR_INT interrupt."]
-pub type IN_DSCR_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type IN_DSCR_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_DSCR_ERR_INT_ENA` reader - This is the interrupt enable bit for UHCI_OUT_DSCR_ERR_INT interrupt."]
 pub type OUT_DSCR_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_DSCR_ERR_INT_ENA` writer - This is the interrupt enable bit for UHCI_OUT_DSCR_ERR_INT interrupt."]
-pub type OUT_DSCR_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type OUT_DSCR_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_DSCR_EMPTY_INT_ENA` reader - This is the interrupt enable bit for UHCI_IN_DSCR_EMPTY_INT interrupt."]
 pub type IN_DSCR_EMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_EMPTY_INT_ENA` writer - This is the interrupt enable bit for UHCI_IN_DSCR_EMPTY_INT interrupt."]
-pub type IN_DSCR_EMPTY_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type IN_DSCR_EMPTY_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ENA` reader - This is the interrupt enable bit for UHCI_OUTLINK_EOF_ERR_INT interrupt."]
 pub type OUTLINK_EOF_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ENA` writer - This is the interrupt enable bit for UHCI_OUTLINK_EOF_ERR_INT interrupt."]
-pub type OUTLINK_EOF_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type OUTLINK_EOF_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ENA` reader - This is the interrupt enable bit for UHCI_OUT_TOTAL_EOF_INT interrupt."]
 pub type OUT_TOTAL_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ENA` writer - This is the interrupt enable bit for UHCI_OUT_TOTAL_EOF_INT interrupt."]
-pub type OUT_TOTAL_EOF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type OUT_TOTAL_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEND_S_REG_Q_INT_ENA` reader - This is the interrupt enable bit for UHCI_SEND_S_REG_Q_INT interrupt."]
 pub type SEND_S_REG_Q_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_ENA` writer - This is the interrupt enable bit for UHCI_SEND_S_REG_Q_INT interrupt."]
-pub type SEND_S_REG_Q_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type SEND_S_REG_Q_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEND_A_REG_Q_INT_ENA` reader - This is the interrupt enable bit for UHCI_SEND_A_REG_Q_INT interrupt."]
 pub type SEND_A_REG_Q_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_ENA` writer - This is the interrupt enable bit for UHCI_SEND_A_REG_Q_INT interrupt."]
-pub type SEND_A_REG_Q_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type SEND_A_REG_Q_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA_INFIFO_FULL_WM_INT_ENA` reader - This is the interrupt enable bit for UHCI_DMA_INFIFO_FULL_WM_INT interrupt."]
 pub type DMA_INFIFO_FULL_WM_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DMA_INFIFO_FULL_WM_INT_ENA` writer - This is the interrupt enable bit for UHCI_DMA_INFIFO_FULL_WM_INT interrupt."]
-pub type DMA_INFIFO_FULL_WM_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type DMA_INFIFO_FULL_WM_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - This is the interrupt enable bit for UHCI_RX_START_INT interrupt."]
     #[inline(always)]
@@ -274,124 +242,121 @@ impl W {
     #[doc = "Bit 0 - This is the interrupt enable bit for UHCI_RX_START_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_start_int_ena(&mut self) -> RX_START_INT_ENA_W<0> {
+    pub fn rx_start_int_ena(&mut self) -> RX_START_INT_ENA_W<INT_ENA_SPEC, 0> {
         RX_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - This is the interrupt enable bit for UHCI_TX_START_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_start_int_ena(&mut self) -> TX_START_INT_ENA_W<1> {
+    pub fn tx_start_int_ena(&mut self) -> TX_START_INT_ENA_W<INT_ENA_SPEC, 1> {
         TX_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - This is the interrupt enable bit for UHCI_RX_HUNG_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_hung_int_ena(&mut self) -> RX_HUNG_INT_ENA_W<2> {
+    pub fn rx_hung_int_ena(&mut self) -> RX_HUNG_INT_ENA_W<INT_ENA_SPEC, 2> {
         RX_HUNG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - This is the interrupt enable bit for UHCI_TX_HUNG_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_hung_int_ena(&mut self) -> TX_HUNG_INT_ENA_W<3> {
+    pub fn tx_hung_int_ena(&mut self) -> TX_HUNG_INT_ENA_W<INT_ENA_SPEC, 3> {
         TX_HUNG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - This is the interrupt enable bit for UHCI_IN_DONE_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn in_done_int_ena(&mut self) -> IN_DONE_INT_ENA_W<4> {
+    pub fn in_done_int_ena(&mut self) -> IN_DONE_INT_ENA_W<INT_ENA_SPEC, 4> {
         IN_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - This is the interrupt enable bit for UHCI_IN_SUC_EOF_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn in_suc_eof_int_ena(&mut self) -> IN_SUC_EOF_INT_ENA_W<5> {
+    pub fn in_suc_eof_int_ena(&mut self) -> IN_SUC_EOF_INT_ENA_W<INT_ENA_SPEC, 5> {
         IN_SUC_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - This is the interrupt enable bit for UHCI_IN_ERR_EOF_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn in_err_eof_int_ena(&mut self) -> IN_ERR_EOF_INT_ENA_W<6> {
+    pub fn in_err_eof_int_ena(&mut self) -> IN_ERR_EOF_INT_ENA_W<INT_ENA_SPEC, 6> {
         IN_ERR_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - This is the interrupt enable bit for UHCI_OUT_DONE_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn out_done_int_ena(&mut self) -> OUT_DONE_INT_ENA_W<7> {
+    pub fn out_done_int_ena(&mut self) -> OUT_DONE_INT_ENA_W<INT_ENA_SPEC, 7> {
         OUT_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - This is the interrupt enable bit for UHCI_OUT_EOF_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof_int_ena(&mut self) -> OUT_EOF_INT_ENA_W<8> {
+    pub fn out_eof_int_ena(&mut self) -> OUT_EOF_INT_ENA_W<INT_ENA_SPEC, 8> {
         OUT_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - This is the interrupt enable bit for UHCI_IN_DSCR_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn in_dscr_err_int_ena(&mut self) -> IN_DSCR_ERR_INT_ENA_W<9> {
+    pub fn in_dscr_err_int_ena(&mut self) -> IN_DSCR_ERR_INT_ENA_W<INT_ENA_SPEC, 9> {
         IN_DSCR_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - This is the interrupt enable bit for UHCI_OUT_DSCR_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn out_dscr_err_int_ena(&mut self) -> OUT_DSCR_ERR_INT_ENA_W<10> {
+    pub fn out_dscr_err_int_ena(&mut self) -> OUT_DSCR_ERR_INT_ENA_W<INT_ENA_SPEC, 10> {
         OUT_DSCR_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - This is the interrupt enable bit for UHCI_IN_DSCR_EMPTY_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn in_dscr_empty_int_ena(&mut self) -> IN_DSCR_EMPTY_INT_ENA_W<11> {
+    pub fn in_dscr_empty_int_ena(&mut self) -> IN_DSCR_EMPTY_INT_ENA_W<INT_ENA_SPEC, 11> {
         IN_DSCR_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - This is the interrupt enable bit for UHCI_OUTLINK_EOF_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_eof_err_int_ena(&mut self) -> OUTLINK_EOF_ERR_INT_ENA_W<12> {
+    pub fn outlink_eof_err_int_ena(&mut self) -> OUTLINK_EOF_ERR_INT_ENA_W<INT_ENA_SPEC, 12> {
         OUTLINK_EOF_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - This is the interrupt enable bit for UHCI_OUT_TOTAL_EOF_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn out_total_eof_int_ena(&mut self) -> OUT_TOTAL_EOF_INT_ENA_W<13> {
+    pub fn out_total_eof_int_ena(&mut self) -> OUT_TOTAL_EOF_INT_ENA_W<INT_ENA_SPEC, 13> {
         OUT_TOTAL_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - This is the interrupt enable bit for UHCI_SEND_S_REG_Q_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn send_s_reg_q_int_ena(&mut self) -> SEND_S_REG_Q_INT_ENA_W<14> {
+    pub fn send_s_reg_q_int_ena(&mut self) -> SEND_S_REG_Q_INT_ENA_W<INT_ENA_SPEC, 14> {
         SEND_S_REG_Q_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - This is the interrupt enable bit for UHCI_SEND_A_REG_Q_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn send_a_reg_q_int_ena(&mut self) -> SEND_A_REG_Q_INT_ENA_W<15> {
+    pub fn send_a_reg_q_int_ena(&mut self) -> SEND_A_REG_Q_INT_ENA_W<INT_ENA_SPEC, 15> {
         SEND_A_REG_Q_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - This is the interrupt enable bit for UHCI_DMA_INFIFO_FULL_WM_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_infifo_full_wm_int_ena(&mut self) -> DMA_INFIFO_FULL_WM_INT_ENA_W<16> {
+    pub fn dma_infifo_full_wm_int_ena(&mut self) -> DMA_INFIFO_FULL_WM_INT_ENA_W<INT_ENA_SPEC, 16> {
         DMA_INFIFO_FULL_WM_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
-impl crate::Readable for INT_ENA_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for INT_ENA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

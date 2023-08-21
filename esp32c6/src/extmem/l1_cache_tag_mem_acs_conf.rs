@@ -1,39 +1,7 @@
 #[doc = "Register `L1_CACHE_TAG_MEM_ACS_CONF` reader"]
-pub struct R(crate::R<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>;
 #[doc = "Register `L1_CACHE_TAG_MEM_ACS_CONF` writer"]
-pub struct W(crate::W<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<L1_CACHE_TAG_MEM_ACS_CONF_SPEC>;
 #[doc = "Field `L1_ICACHE0_TAG_MEM_RD_EN` reader - The bit is used to enable config-bus read L1-ICache0 tag memoryory. 0: disable, 1: enable."]
 pub type L1_ICACHE0_TAG_MEM_RD_EN_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE0_TAG_MEM_WR_EN` reader - The bit is used to enable config-bus write L1-ICache0 tag memoryory. 0: disable, 1: enable."]
@@ -53,13 +21,11 @@ pub type L1_ICACHE3_TAG_MEM_WR_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_RD_EN` reader - The bit is used to enable config-bus read L1-Cache tag memoryory. 0: disable, 1: enable."]
 pub type L1_CACHE_TAG_MEM_RD_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_RD_EN` writer - The bit is used to enable config-bus read L1-Cache tag memoryory. 0: disable, 1: enable."]
-pub type L1_CACHE_TAG_MEM_RD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, L1_CACHE_TAG_MEM_ACS_CONF_SPEC, O>;
+pub type L1_CACHE_TAG_MEM_RD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `L1_CACHE_TAG_MEM_WR_EN` reader - The bit is used to enable config-bus write L1-Cache tag memoryory. 0: disable, 1: enable."]
 pub type L1_CACHE_TAG_MEM_WR_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_WR_EN` writer - The bit is used to enable config-bus write L1-Cache tag memoryory. 0: disable, 1: enable."]
-pub type L1_CACHE_TAG_MEM_WR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, L1_CACHE_TAG_MEM_ACS_CONF_SPEC, O>;
+pub type L1_CACHE_TAG_MEM_WR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable config-bus read L1-ICache0 tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
@@ -169,34 +135,35 @@ impl W {
     #[doc = "Bit 16 - The bit is used to enable config-bus read L1-Cache tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_tag_mem_rd_en(&mut self) -> L1_CACHE_TAG_MEM_RD_EN_W<16> {
+    pub fn l1_cache_tag_mem_rd_en(
+        &mut self,
+    ) -> L1_CACHE_TAG_MEM_RD_EN_W<L1_CACHE_TAG_MEM_ACS_CONF_SPEC, 16> {
         L1_CACHE_TAG_MEM_RD_EN_W::new(self)
     }
     #[doc = "Bit 17 - The bit is used to enable config-bus write L1-Cache tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_tag_mem_wr_en(&mut self) -> L1_CACHE_TAG_MEM_WR_EN_W<17> {
+    pub fn l1_cache_tag_mem_wr_en(
+        &mut self,
+    ) -> L1_CACHE_TAG_MEM_WR_EN_W<L1_CACHE_TAG_MEM_ACS_CONF_SPEC, 17> {
         L1_CACHE_TAG_MEM_WR_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Cache tag memory access configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_cache_tag_mem_acs_conf](index.html) module"]
+#[doc = "Cache tag memory access configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_tag_mem_acs_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`l1_cache_tag_mem_acs_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_TAG_MEM_ACS_CONF_SPEC;
 impl crate::RegisterSpec for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l1_cache_tag_mem_acs_conf::R](R) reader structure"]
-impl crate::Readable for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [l1_cache_tag_mem_acs_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`l1_cache_tag_mem_acs_conf::R`](R) reader structure"]
+impl crate::Readable for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`l1_cache_tag_mem_acs_conf::W`](W) writer structure"]
 impl crate::Writable for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

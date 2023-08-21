@@ -1,18 +1,5 @@
 #[doc = "Register `RX_HEAD` reader"]
-pub struct R(crate::R<RX_HEAD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RX_HEAD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RX_HEAD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RX_HEAD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RX_HEAD_SPEC>;
 #[doc = "Field `RX_HEAD` reader - This register stores the packet header received by DMA"]
 pub type RX_HEAD_R = crate::FieldReader<u32>;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<RX_HEAD_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_head](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_head::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_HEAD_SPEC;
 impl crate::RegisterSpec for RX_HEAD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rx_head::R](R) reader structure"]
-impl crate::Readable for RX_HEAD_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rx_head::R`](R) reader structure"]
+impl crate::Readable for RX_HEAD_SPEC {}
 #[doc = "`reset()` method sets RX_HEAD to value 0"]
 impl crate::Resettable for RX_HEAD_SPEC {
     const RESET_VALUE: Self::Ux = 0;

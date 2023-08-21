@@ -1,71 +1,39 @@
 #[doc = "Register `RESET_EN` reader"]
-pub struct R(crate::R<RESET_EN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RESET_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RESET_EN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RESET_EN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RESET_EN_SPEC>;
 #[doc = "Register `RESET_EN` writer"]
-pub struct W(crate::W<RESET_EN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RESET_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RESET_EN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RESET_EN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RESET_EN_SPEC>;
 #[doc = "Field `BUS_RESET_EN` writer - need_des"]
-pub type BUS_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type BUS_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_BLE_TIMER_RESET_EN` reader - need_des"]
 pub type LP_BLE_TIMER_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_BLE_TIMER_RESET_EN` writer - need_des"]
-pub type LP_BLE_TIMER_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type LP_BLE_TIMER_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OTP_DBG_RESET_EN` reader - need_des"]
 pub type OTP_DBG_RESET_EN_R = crate::BitReader;
 #[doc = "Field `OTP_DBG_RESET_EN` writer - need_des"]
-pub type OTP_DBG_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type OTP_DBG_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_UART_RESET_EN` reader - need_des"]
 pub type LP_UART_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_UART_RESET_EN` writer - need_des"]
-pub type LP_UART_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type LP_UART_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_IO_RESET_EN` reader - need_des"]
 pub type LP_IO_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_IO_RESET_EN` writer - need_des"]
-pub type LP_IO_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type LP_IO_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_EXT_I2C_RESET_EN` reader - need_des"]
 pub type LP_EXT_I2C_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_EXT_I2C_RESET_EN` writer - need_des"]
-pub type LP_EXT_I2C_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type LP_EXT_I2C_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_ANA_I2C_RESET_EN` reader - need_des"]
 pub type LP_ANA_I2C_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_ANA_I2C_RESET_EN` writer - need_des"]
-pub type LP_ANA_I2C_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type LP_ANA_I2C_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EFUSE_RESET_EN` reader - need_des"]
 pub type EFUSE_RESET_EN_R = crate::BitReader;
 #[doc = "Field `EFUSE_RESET_EN` writer - need_des"]
-pub type EFUSE_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type EFUSE_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_CPU_RESET_EN` writer - need_des"]
-pub type LP_CPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
+pub type LP_CPU_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
@@ -148,76 +116,73 @@ impl W {
     #[doc = "Bit 23 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bus_reset_en(&mut self) -> BUS_RESET_EN_W<23> {
+    pub fn bus_reset_en(&mut self) -> BUS_RESET_EN_W<RESET_EN_SPEC, 23> {
         BUS_RESET_EN_W::new(self)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_ble_timer_reset_en(&mut self) -> LP_BLE_TIMER_RESET_EN_W<24> {
+    pub fn lp_ble_timer_reset_en(&mut self) -> LP_BLE_TIMER_RESET_EN_W<RESET_EN_SPEC, 24> {
         LP_BLE_TIMER_RESET_EN_W::new(self)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn otp_dbg_reset_en(&mut self) -> OTP_DBG_RESET_EN_W<25> {
+    pub fn otp_dbg_reset_en(&mut self) -> OTP_DBG_RESET_EN_W<RESET_EN_SPEC, 25> {
         OTP_DBG_RESET_EN_W::new(self)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_uart_reset_en(&mut self) -> LP_UART_RESET_EN_W<26> {
+    pub fn lp_uart_reset_en(&mut self) -> LP_UART_RESET_EN_W<RESET_EN_SPEC, 26> {
         LP_UART_RESET_EN_W::new(self)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_io_reset_en(&mut self) -> LP_IO_RESET_EN_W<27> {
+    pub fn lp_io_reset_en(&mut self) -> LP_IO_RESET_EN_W<RESET_EN_SPEC, 27> {
         LP_IO_RESET_EN_W::new(self)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_ext_i2c_reset_en(&mut self) -> LP_EXT_I2C_RESET_EN_W<28> {
+    pub fn lp_ext_i2c_reset_en(&mut self) -> LP_EXT_I2C_RESET_EN_W<RESET_EN_SPEC, 28> {
         LP_EXT_I2C_RESET_EN_W::new(self)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_ana_i2c_reset_en(&mut self) -> LP_ANA_I2C_RESET_EN_W<29> {
+    pub fn lp_ana_i2c_reset_en(&mut self) -> LP_ANA_I2C_RESET_EN_W<RESET_EN_SPEC, 29> {
         LP_ANA_I2C_RESET_EN_W::new(self)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn efuse_reset_en(&mut self) -> EFUSE_RESET_EN_W<30> {
+    pub fn efuse_reset_en(&mut self) -> EFUSE_RESET_EN_W<RESET_EN_SPEC, 30> {
         EFUSE_RESET_EN_W::new(self)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_cpu_reset_en(&mut self) -> LP_CPU_RESET_EN_W<31> {
+    pub fn lp_cpu_reset_en(&mut self) -> LP_CPU_RESET_EN_W<RESET_EN_SPEC, 31> {
         LP_CPU_RESET_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reset_en](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reset_en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reset_en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESET_EN_SPEC;
 impl crate::RegisterSpec for RESET_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reset_en::R](R) reader structure"]
-impl crate::Readable for RESET_EN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reset_en::W](W) writer structure"]
+#[doc = "`read()` method returns [`reset_en::R`](R) reader structure"]
+impl crate::Readable for RESET_EN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`reset_en::W`](W) writer structure"]
 impl crate::Writable for RESET_EN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,87 +1,55 @@
 #[doc = "Register `DOEPMSK` reader"]
-pub struct R(crate::R<DOEPMSK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DOEPMSK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DOEPMSK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DOEPMSK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DOEPMSK_SPEC>;
 #[doc = "Register `DOEPMSK` writer"]
-pub struct W(crate::W<DOEPMSK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DOEPMSK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DOEPMSK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DOEPMSK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DOEPMSK_SPEC>;
 #[doc = "Field `XFERCOMPLMSK` reader - "]
 pub type XFERCOMPLMSK_R = crate::BitReader;
 #[doc = "Field `XFERCOMPLMSK` writer - "]
-pub type XFERCOMPLMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type XFERCOMPLMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPDISBLDMSK` reader - "]
 pub type EPDISBLDMSK_R = crate::BitReader;
 #[doc = "Field `EPDISBLDMSK` writer - "]
-pub type EPDISBLDMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type EPDISBLDMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AHBERMSK` reader - "]
 pub type AHBERMSK_R = crate::BitReader;
 #[doc = "Field `AHBERMSK` writer - "]
-pub type AHBERMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type AHBERMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SETUPMSK` reader - "]
 pub type SETUPMSK_R = crate::BitReader;
 #[doc = "Field `SETUPMSK` writer - "]
-pub type SETUPMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type SETUPMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTTKNEPDISMSK` reader - "]
 pub type OUTTKNEPDISMSK_R = crate::BitReader;
 #[doc = "Field `OUTTKNEPDISMSK` writer - "]
-pub type OUTTKNEPDISMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type OUTTKNEPDISMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STSPHSERCVDMSK` reader - "]
 pub type STSPHSERCVDMSK_R = crate::BitReader;
 #[doc = "Field `STSPHSERCVDMSK` writer - "]
-pub type STSPHSERCVDMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type STSPHSERCVDMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BACK2BACKSETUP` reader - "]
 pub type BACK2BACKSETUP_R = crate::BitReader;
 #[doc = "Field `BACK2BACKSETUP` writer - "]
-pub type BACK2BACKSETUP_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type BACK2BACKSETUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTPKTERRMSK` reader - "]
 pub type OUTPKTERRMSK_R = crate::BitReader;
 #[doc = "Field `OUTPKTERRMSK` writer - "]
-pub type OUTPKTERRMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type OUTPKTERRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BNAOUTINTRMSK` reader - "]
 pub type BNAOUTINTRMSK_R = crate::BitReader;
 #[doc = "Field `BNAOUTINTRMSK` writer - "]
-pub type BNAOUTINTRMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type BNAOUTINTRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BBLEERRMSK` reader - "]
 pub type BBLEERRMSK_R = crate::BitReader;
 #[doc = "Field `BBLEERRMSK` writer - "]
-pub type BBLEERRMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type BBLEERRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NAKMSK` reader - "]
 pub type NAKMSK_R = crate::BitReader;
 #[doc = "Field `NAKMSK` writer - "]
-pub type NAKMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type NAKMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NYETMSK` reader - "]
 pub type NYETMSK_R = crate::BitReader;
 #[doc = "Field `NYETMSK` writer - "]
-pub type NYETMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
+pub type NYETMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -191,94 +159,91 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn xfercomplmsk(&mut self) -> XFERCOMPLMSK_W<0> {
+    pub fn xfercomplmsk(&mut self) -> XFERCOMPLMSK_W<DOEPMSK_SPEC, 0> {
         XFERCOMPLMSK_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn epdisbldmsk(&mut self) -> EPDISBLDMSK_W<1> {
+    pub fn epdisbldmsk(&mut self) -> EPDISBLDMSK_W<DOEPMSK_SPEC, 1> {
         EPDISBLDMSK_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbermsk(&mut self) -> AHBERMSK_W<2> {
+    pub fn ahbermsk(&mut self) -> AHBERMSK_W<DOEPMSK_SPEC, 2> {
         AHBERMSK_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn setupmsk(&mut self) -> SETUPMSK_W<3> {
+    pub fn setupmsk(&mut self) -> SETUPMSK_W<DOEPMSK_SPEC, 3> {
         SETUPMSK_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn outtknepdismsk(&mut self) -> OUTTKNEPDISMSK_W<4> {
+    pub fn outtknepdismsk(&mut self) -> OUTTKNEPDISMSK_W<DOEPMSK_SPEC, 4> {
         OUTTKNEPDISMSK_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn stsphsercvdmsk(&mut self) -> STSPHSERCVDMSK_W<5> {
+    pub fn stsphsercvdmsk(&mut self) -> STSPHSERCVDMSK_W<DOEPMSK_SPEC, 5> {
         STSPHSERCVDMSK_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn back2backsetup(&mut self) -> BACK2BACKSETUP_W<6> {
+    pub fn back2backsetup(&mut self) -> BACK2BACKSETUP_W<DOEPMSK_SPEC, 6> {
         BACK2BACKSETUP_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn outpkterrmsk(&mut self) -> OUTPKTERRMSK_W<8> {
+    pub fn outpkterrmsk(&mut self) -> OUTPKTERRMSK_W<DOEPMSK_SPEC, 8> {
         OUTPKTERRMSK_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn bnaoutintrmsk(&mut self) -> BNAOUTINTRMSK_W<9> {
+    pub fn bnaoutintrmsk(&mut self) -> BNAOUTINTRMSK_W<DOEPMSK_SPEC, 9> {
         BNAOUTINTRMSK_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn bbleerrmsk(&mut self) -> BBLEERRMSK_W<12> {
+    pub fn bbleerrmsk(&mut self) -> BBLEERRMSK_W<DOEPMSK_SPEC, 12> {
         BBLEERRMSK_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn nakmsk(&mut self) -> NAKMSK_W<13> {
+    pub fn nakmsk(&mut self) -> NAKMSK_W<DOEPMSK_SPEC, 13> {
         NAKMSK_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn nyetmsk(&mut self) -> NYETMSK_W<14> {
+    pub fn nyetmsk(&mut self) -> NYETMSK_W<DOEPMSK_SPEC, 14> {
         NYETMSK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [doepmsk](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepmsk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepmsk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPMSK_SPEC;
 impl crate::RegisterSpec for DOEPMSK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [doepmsk::R](R) reader structure"]
-impl crate::Readable for DOEPMSK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [doepmsk::W](W) writer structure"]
+#[doc = "`read()` method returns [`doepmsk::R`](R) reader structure"]
+impl crate::Readable for DOEPMSK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`doepmsk::W`](W) writer structure"]
 impl crate::Writable for DOEPMSK_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

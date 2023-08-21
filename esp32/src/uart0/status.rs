@@ -1,18 +1,5 @@
 #[doc = "Register `STATUS` reader"]
-pub struct R(crate::R<STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STATUS_SPEC>;
 #[doc = "Field `RXFIFO_CNT` reader - (rx_mem_cnt rxfifo_cnt) stores the byte num of valid datas in receiver's fifo. rx_mem_cnt register stores the 3 most significant bits rxfifo_cnt stores the 8 least significant bits."]
 pub type RXFIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `ST_URX_OUT` reader - This register stores the value of receiver's finite state machine. 0:RX_IDLE 1:RX_STRT 2:RX_DAT0 3:RX_DAT1 4:RX_DAT2 5:RX_DAT3 6:RX_DAT4 7:RX_DAT5 8:RX_DAT6 9:RX_DAT7 10:RX_PRTY 11:RX_STP1 12:RX_STP2 13:RX_DL1"]
@@ -108,15 +95,13 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status::R](R) reader structure"]
-impl crate::Readable for STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`status::R`](R) reader structure"]
+impl crate::Readable for STATUS_SPEC {}
 #[doc = "`reset()` method sets STATUS to value 0"]
 impl crate::Resettable for STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,43 +1,11 @@
 #[doc = "Register `MOSI_DLEN` reader"]
-pub struct R(crate::R<MOSI_DLEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MOSI_DLEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MOSI_DLEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MOSI_DLEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MOSI_DLEN_SPEC>;
 #[doc = "Register `MOSI_DLEN` writer"]
-pub struct W(crate::W<MOSI_DLEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MOSI_DLEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MOSI_DLEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MOSI_DLEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MOSI_DLEN_SPEC>;
 #[doc = "Field `USR_MOSI_DBITLEN` reader - The length in bits of DOUT phase. The register value shall be (bit_num-1)."]
 pub type USR_MOSI_DBITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `USR_MOSI_DBITLEN` writer - The length in bits of DOUT phase. The register value shall be (bit_num-1)."]
-pub type USR_MOSI_DBITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, MOSI_DLEN_SPEC, 10, O, u16>;
+pub type USR_MOSI_DBITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - The length in bits of DOUT phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:9 - The length in bits of DOUT phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_mosi_dbitlen(&mut self) -> USR_MOSI_DBITLEN_W<0> {
+    pub fn usr_mosi_dbitlen(&mut self) -> USR_MOSI_DBITLEN_W<MOSI_DLEN_SPEC, 0> {
         USR_MOSI_DBITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI1 write-data bit length register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mosi_dlen](index.html) module"]
+#[doc = "SPI1 write-data bit length register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mosi_dlen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mosi_dlen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MOSI_DLEN_SPEC;
 impl crate::RegisterSpec for MOSI_DLEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mosi_dlen::R](R) reader structure"]
-impl crate::Readable for MOSI_DLEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [mosi_dlen::W](W) writer structure"]
+#[doc = "`read()` method returns [`mosi_dlen::R`](R) reader structure"]
+impl crate::Readable for MOSI_DLEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`mosi_dlen::W`](W) writer structure"]
 impl crate::Writable for MOSI_DLEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

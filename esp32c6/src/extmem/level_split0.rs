@@ -1,18 +1,5 @@
 #[doc = "Register `LEVEL_SPLIT0` reader"]
-pub struct R(crate::R<LEVEL_SPLIT0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LEVEL_SPLIT0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LEVEL_SPLIT0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LEVEL_SPLIT0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LEVEL_SPLIT0_SPEC>;
 #[doc = "Field `LEVEL_SPLIT0` reader - Reserved"]
 pub type LEVEL_SPLIT0_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<LEVEL_SPLIT0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "USED TO SPLIT L1 CACHE AND L2 CACHE\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [level_split0](index.html) module"]
+#[doc = "USED TO SPLIT L1 CACHE AND L2 CACHE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`level_split0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LEVEL_SPLIT0_SPEC;
 impl crate::RegisterSpec for LEVEL_SPLIT0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [level_split0::R](R) reader structure"]
-impl crate::Readable for LEVEL_SPLIT0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`level_split0::R`](R) reader structure"]
+impl crate::Readable for LEVEL_SPLIT0_SPEC {}
 #[doc = "`reset()` method sets LEVEL_SPLIT0 to value 0x0258"]
 impl crate::Resettable for LEVEL_SPLIT0_SPEC {
     const RESET_VALUE: Self::Ux = 0x0258;

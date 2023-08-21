@@ -1,18 +1,5 @@
 #[doc = "Register `RTC_GPIO_IN` reader"]
-pub struct R(crate::R<RTC_GPIO_IN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RTC_GPIO_IN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RTC_GPIO_IN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RTC_GPIO_IN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RTC_GPIO_IN_SPEC>;
 #[doc = "Field `NEXT` reader - RTC GPIO input data"]
 pub type NEXT_R = crate::FieldReader<u32>;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_IN_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "RTC GPIO input data\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_in](index.html) module"]
+#[doc = "RTC GPIO input data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_in::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_GPIO_IN_SPEC;
 impl crate::RegisterSpec for RTC_GPIO_IN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_gpio_in::R](R) reader structure"]
-impl crate::Readable for RTC_GPIO_IN_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rtc_gpio_in::R`](R) reader structure"]
+impl crate::Readable for RTC_GPIO_IN_SPEC {}
 #[doc = "`reset()` method sets RTC_GPIO_IN to value 0"]
 impl crate::Resettable for RTC_GPIO_IN_SPEC {
     const RESET_VALUE: Self::Ux = 0;

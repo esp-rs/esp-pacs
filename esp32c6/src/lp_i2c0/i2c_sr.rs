@@ -1,18 +1,5 @@
 #[doc = "Register `I2C_SR` reader"]
-pub struct R(crate::R<I2C_SR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<I2C_SR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<I2C_SR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<I2C_SR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<I2C_SR_SPEC>;
 #[doc = "Field `I2C_RESP_REC` reader - The received ACK value in master mode or slave mode. 0: ACK, 1: NACK."]
 pub type I2C_RESP_REC_R = crate::BitReader;
 #[doc = "Field `I2C_ARB_LOST` reader - When the I2C controller loses control of SCL line, this register changes to 1."]
@@ -105,15 +92,13 @@ impl core::fmt::Debug for crate::generic::Reg<I2C_SR_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Describe I2C work status.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2c_sr](index.html) module"]
+#[doc = "Describe I2C work status.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2c_sr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2C_SR_SPEC;
 impl crate::RegisterSpec for I2C_SR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [i2c_sr::R](R) reader structure"]
-impl crate::Readable for I2C_SR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`i2c_sr::R`](R) reader structure"]
+impl crate::Readable for I2C_SR_SPEC {}
 #[doc = "`reset()` method sets I2C_SR to value 0"]
 impl crate::Resettable for I2C_SR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

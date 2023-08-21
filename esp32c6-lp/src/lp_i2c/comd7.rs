@@ -1,47 +1,15 @@
 #[doc = "Register `COMD7` reader"]
-pub struct R(crate::R<COMD7_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<COMD7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<COMD7_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<COMD7_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<COMD7_SPEC>;
 #[doc = "Register `COMD7` writer"]
-pub struct W(crate::W<COMD7_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<COMD7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<COMD7_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<COMD7_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<COMD7_SPEC>;
 #[doc = "Field `COMMAND7` reader - This is the content of command 7. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
 pub type COMMAND7_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND7` writer - This is the content of command 7. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
-pub type COMMAND7_W<'a, const O: u8> = crate::FieldWriter<'a, COMD7_SPEC, 14, O, u16>;
+pub type COMMAND7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
 #[doc = "Field `COMMAND7_DONE` reader - When command 7 is done in I2C Master mode, this bit changes to high level."]
 pub type COMMAND7_DONE_R = crate::BitReader;
 #[doc = "Field `COMMAND7_DONE` writer - When command 7 is done in I2C Master mode, this bit changes to high level."]
-pub type COMMAND7_DONE_W<'a, const O: u8> = crate::BitWriter<'a, COMD7_SPEC, O>;
+pub type COMMAND7_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:13 - This is the content of command 7. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
     #[inline(always)]
@@ -76,34 +44,31 @@ impl W {
     #[doc = "Bits 0:13 - This is the content of command 7. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
     #[inline(always)]
     #[must_use]
-    pub fn command7(&mut self) -> COMMAND7_W<0> {
+    pub fn command7(&mut self) -> COMMAND7_W<COMD7_SPEC, 0> {
         COMMAND7_W::new(self)
     }
     #[doc = "Bit 31 - When command 7 is done in I2C Master mode, this bit changes to high level."]
     #[inline(always)]
     #[must_use]
-    pub fn command7_done(&mut self) -> COMMAND7_DONE_W<31> {
+    pub fn command7_done(&mut self) -> COMMAND7_DONE_W<COMD7_SPEC, 31> {
         COMMAND7_DONE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2C command register 7\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comd7](index.html) module"]
+#[doc = "I2C command register 7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comd7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`comd7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COMD7_SPEC;
 impl crate::RegisterSpec for COMD7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [comd7::R](R) reader structure"]
-impl crate::Readable for COMD7_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [comd7::W](W) writer structure"]
+#[doc = "`read()` method returns [`comd7::R`](R) reader structure"]
+impl crate::Readable for COMD7_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`comd7::W`](W) writer structure"]
 impl crate::Writable for COMD7_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

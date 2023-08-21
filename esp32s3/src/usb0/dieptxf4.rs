@@ -1,47 +1,15 @@
 #[doc = "Register `DIEPTXF4` reader"]
-pub struct R(crate::R<DIEPTXF4_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIEPTXF4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIEPTXF4_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIEPTXF4_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIEPTXF4_SPEC>;
 #[doc = "Register `DIEPTXF4` writer"]
-pub struct W(crate::W<DIEPTXF4_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIEPTXF4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIEPTXF4_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIEPTXF4_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIEPTXF4_SPEC>;
 #[doc = "Field `INEP4TXFSTADDR` reader - "]
 pub type INEP4TXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `INEP4TXFSTADDR` writer - "]
-pub type INEP4TXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF4_SPEC, 16, O, u16>;
+pub type INEP4TXFSTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `INEP4TXFDEP` reader - "]
 pub type INEP4TXFDEP_R = crate::FieldReader<u16>;
 #[doc = "Field `INEP4TXFDEP` writer - "]
-pub type INEP4TXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF4_SPEC, 16, O, u16>;
+pub type INEP4TXFDEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
-    pub fn inep4txfstaddr(&mut self) -> INEP4TXFSTADDR_W<0> {
+    pub fn inep4txfstaddr(&mut self) -> INEP4TXFSTADDR_W<DIEPTXF4_SPEC, 0> {
         INEP4TXFSTADDR_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn inep4txfdep(&mut self) -> INEP4TXFDEP_W<16> {
+    pub fn inep4txfdep(&mut self) -> INEP4TXFDEP_W<DIEPTXF4_SPEC, 16> {
         INEP4TXFDEP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dieptxf4](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf4::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf4::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPTXF4_SPEC;
 impl crate::RegisterSpec for DIEPTXF4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dieptxf4::R](R) reader structure"]
-impl crate::Readable for DIEPTXF4_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dieptxf4::W](W) writer structure"]
+#[doc = "`read()` method returns [`dieptxf4::R`](R) reader structure"]
+impl crate::Readable for DIEPTXF4_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dieptxf4::W`](W) writer structure"]
 impl crate::Writable for DIEPTXF4_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

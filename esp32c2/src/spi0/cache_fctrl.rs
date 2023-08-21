@@ -1,75 +1,43 @@
 #[doc = "Register `CACHE_FCTRL` reader"]
-pub struct R(crate::R<CACHE_FCTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CACHE_FCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CACHE_FCTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CACHE_FCTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CACHE_FCTRL_SPEC>;
 #[doc = "Register `CACHE_FCTRL` writer"]
-pub struct W(crate::W<CACHE_FCTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CACHE_FCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CACHE_FCTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CACHE_FCTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CACHE_FCTRL_SPEC>;
 #[doc = "Field `CACHE_REQ_EN` reader - For SPI0, Cache access enable, 1: enable, 0:disable."]
 pub type CACHE_REQ_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_REQ_EN` writer - For SPI0, Cache access enable, 1: enable, 0:disable."]
-pub type CACHE_REQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type CACHE_REQ_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CACHE_USR_ADDR_4BYTE` reader - For SPI0, cache read flash with 4 bytes address, 1: enable, 0:disable."]
 pub type CACHE_USR_ADDR_4BYTE_R = crate::BitReader;
 #[doc = "Field `CACHE_USR_ADDR_4BYTE` writer - For SPI0, cache read flash with 4 bytes address, 1: enable, 0:disable."]
-pub type CACHE_USR_ADDR_4BYTE_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type CACHE_USR_ADDR_4BYTE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CACHE_FLASH_USR_CMD` reader - For SPI0, cache read flash for user define command, 1: enable, 0:disable."]
 pub type CACHE_FLASH_USR_CMD_R = crate::BitReader;
 #[doc = "Field `CACHE_FLASH_USR_CMD` writer - For SPI0, cache read flash for user define command, 1: enable, 0:disable."]
-pub type CACHE_FLASH_USR_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type CACHE_FLASH_USR_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FDIN_DUAL` reader - For SPI0 flash, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
 pub type FDIN_DUAL_R = crate::BitReader;
 #[doc = "Field `FDIN_DUAL` writer - For SPI0 flash, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FDIN_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type FDIN_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FDOUT_DUAL` reader - For SPI0 flash, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
 pub type FDOUT_DUAL_R = crate::BitReader;
 #[doc = "Field `FDOUT_DUAL` writer - For SPI0 flash, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FDOUT_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type FDOUT_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FADDR_DUAL` reader - For SPI0 flash, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
 pub type FADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `FADDR_DUAL` writer - For SPI0 flash, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FADDR_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type FADDR_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FDIN_QUAD` reader - For SPI0 flash, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type FDIN_QUAD_R = crate::BitReader;
 #[doc = "Field `FDIN_QUAD` writer - For SPI0 flash, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FDIN_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type FDIN_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FDOUT_QUAD` reader - For SPI0 flash, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type FDOUT_QUAD_R = crate::BitReader;
 #[doc = "Field `FDOUT_QUAD` writer - For SPI0 flash, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FDOUT_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type FDOUT_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FADDR_QUAD` reader - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `FADDR_QUAD` writer - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
+pub type FADDR_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - For SPI0, Cache access enable, 1: enable, 0:disable."]
     #[inline(always)]
@@ -152,76 +120,73 @@ impl W {
     #[doc = "Bit 0 - For SPI0, Cache access enable, 1: enable, 0:disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<0> {
+    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<CACHE_FCTRL_SPEC, 0> {
         CACHE_REQ_EN_W::new(self)
     }
     #[doc = "Bit 1 - For SPI0, cache read flash with 4 bytes address, 1: enable, 0:disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_usr_addr_4byte(&mut self) -> CACHE_USR_ADDR_4BYTE_W<1> {
+    pub fn cache_usr_addr_4byte(&mut self) -> CACHE_USR_ADDR_4BYTE_W<CACHE_FCTRL_SPEC, 1> {
         CACHE_USR_ADDR_4BYTE_W::new(self)
     }
     #[doc = "Bit 2 - For SPI0, cache read flash for user define command, 1: enable, 0:disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<2> {
+    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<CACHE_FCTRL_SPEC, 2> {
         CACHE_FLASH_USR_CMD_W::new(self)
     }
     #[doc = "Bit 3 - For SPI0 flash, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
     #[must_use]
-    pub fn fdin_dual(&mut self) -> FDIN_DUAL_W<3> {
+    pub fn fdin_dual(&mut self) -> FDIN_DUAL_W<CACHE_FCTRL_SPEC, 3> {
         FDIN_DUAL_W::new(self)
     }
     #[doc = "Bit 4 - For SPI0 flash, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
     #[must_use]
-    pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W<4> {
+    pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W<CACHE_FCTRL_SPEC, 4> {
         FDOUT_DUAL_W::new(self)
     }
     #[doc = "Bit 5 - For SPI0 flash, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
     #[must_use]
-    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<5> {
+    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CACHE_FCTRL_SPEC, 5> {
         FADDR_DUAL_W::new(self)
     }
     #[doc = "Bit 6 - For SPI0 flash, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
     #[must_use]
-    pub fn fdin_quad(&mut self) -> FDIN_QUAD_W<6> {
+    pub fn fdin_quad(&mut self) -> FDIN_QUAD_W<CACHE_FCTRL_SPEC, 6> {
         FDIN_QUAD_W::new(self)
     }
     #[doc = "Bit 7 - For SPI0 flash, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
     #[must_use]
-    pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W<7> {
+    pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W<CACHE_FCTRL_SPEC, 7> {
         FDOUT_QUAD_W::new(self)
     }
     #[doc = "Bit 8 - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
     #[must_use]
-    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<8> {
+    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CACHE_FCTRL_SPEC, 8> {
         FADDR_QUAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI0 bit mode control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_fctrl](index.html) module"]
+#[doc = "SPI0 bit mode control register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_fctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_fctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CACHE_FCTRL_SPEC;
 impl crate::RegisterSpec for CACHE_FCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_fctrl::R](R) reader structure"]
-impl crate::Readable for CACHE_FCTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cache_fctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`cache_fctrl::R`](R) reader structure"]
+impl crate::Readable for CACHE_FCTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cache_fctrl::W`](W) writer structure"]
 impl crate::Writable for CACHE_FCTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

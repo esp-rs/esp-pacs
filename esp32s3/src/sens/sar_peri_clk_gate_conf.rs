@@ -1,55 +1,23 @@
 #[doc = "Register `SAR_PERI_CLK_GATE_CONF` reader"]
-pub struct R(crate::R<SAR_PERI_CLK_GATE_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_PERI_CLK_GATE_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_PERI_CLK_GATE_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_PERI_CLK_GATE_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_PERI_CLK_GATE_CONF_SPEC>;
 #[doc = "Register `SAR_PERI_CLK_GATE_CONF` writer"]
-pub struct W(crate::W<SAR_PERI_CLK_GATE_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_PERI_CLK_GATE_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_PERI_CLK_GATE_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_PERI_CLK_GATE_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_PERI_CLK_GATE_CONF_SPEC>;
 #[doc = "Field `RTC_I2C_CLK_EN` reader - enable rtc i2c clock"]
 pub type RTC_I2C_CLK_EN_R = crate::BitReader;
 #[doc = "Field `RTC_I2C_CLK_EN` writer - enable rtc i2c clock"]
-pub type RTC_I2C_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_CLK_GATE_CONF_SPEC, O>;
+pub type RTC_I2C_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TSENS_CLK_EN` reader - enable tsens clock"]
 pub type TSENS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_EN` writer - enable tsens clock"]
-pub type TSENS_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_CLK_GATE_CONF_SPEC, O>;
+pub type TSENS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SARADC_CLK_EN` reader - enbale saradc clock"]
 pub type SARADC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_CLK_EN` writer - enbale saradc clock"]
-pub type SARADC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_CLK_GATE_CONF_SPEC, O>;
+pub type SARADC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IOMUX_CLK_EN` reader - enable io_mux clock"]
 pub type IOMUX_CLK_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_CLK_EN` writer - enable io_mux clock"]
-pub type IOMUX_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_CLK_GATE_CONF_SPEC, O>;
+pub type IOMUX_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 27 - enable rtc i2c clock"]
     #[inline(always)]
@@ -105,46 +73,43 @@ impl W {
     #[doc = "Bit 27 - enable rtc i2c clock"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_i2c_clk_en(&mut self) -> RTC_I2C_CLK_EN_W<27> {
+    pub fn rtc_i2c_clk_en(&mut self) -> RTC_I2C_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 27> {
         RTC_I2C_CLK_EN_W::new(self)
     }
     #[doc = "Bit 29 - enable tsens clock"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<29> {
+    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 29> {
         TSENS_CLK_EN_W::new(self)
     }
     #[doc = "Bit 30 - enbale saradc clock"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<30> {
+    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 30> {
         SARADC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 31 - enable io_mux clock"]
     #[inline(always)]
     #[must_use]
-    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<31> {
+    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 31> {
         IOMUX_CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "the peri clock gate of rtc peri\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_peri_clk_gate_conf](index.html) module"]
+#[doc = "the peri clock gate of rtc peri\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_peri_clk_gate_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_peri_clk_gate_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_PERI_CLK_GATE_CONF_SPEC;
 impl crate::RegisterSpec for SAR_PERI_CLK_GATE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_peri_clk_gate_conf::R](R) reader structure"]
-impl crate::Readable for SAR_PERI_CLK_GATE_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_peri_clk_gate_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_peri_clk_gate_conf::R`](R) reader structure"]
+impl crate::Readable for SAR_PERI_CLK_GATE_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_peri_clk_gate_conf::W`](W) writer structure"]
 impl crate::Writable for SAR_PERI_CLK_GATE_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

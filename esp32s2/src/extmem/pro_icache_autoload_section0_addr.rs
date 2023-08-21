@@ -1,44 +1,12 @@
 #[doc = "Register `PRO_ICACHE_AUTOLOAD_SECTION0_ADDR` reader"]
-pub struct R(crate::R<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>;
 #[doc = "Register `PRO_ICACHE_AUTOLOAD_SECTION0_ADDR` writer"]
-pub struct W(crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_ADDR` reader - The bits are used to configure the start virtual address of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
 pub type PRO_ICACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_ADDR` writer - The bits are used to configure the start virtual address of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
-pub type PRO_ICACHE_AUTOLOAD_SCT0_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC, 32, O, u32>;
+pub type PRO_ICACHE_AUTOLOAD_SCT0_ADDR_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
     #[inline(always)]
@@ -67,28 +35,27 @@ impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
     #[inline(always)]
     #[must_use]
-    pub fn pro_icache_autoload_sct0_addr(&mut self) -> PRO_ICACHE_AUTOLOAD_SCT0_ADDR_W<0> {
+    pub fn pro_icache_autoload_sct0_addr(
+        &mut self,
+    ) -> PRO_ICACHE_AUTOLOAD_SCT0_ADDR_W<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC, 0> {
         PRO_ICACHE_AUTOLOAD_SCT0_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_icache_autoload_section0_addr](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_icache_autoload_section0_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pro_icache_autoload_section0_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC;
 impl crate::RegisterSpec for PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_icache_autoload_section0_addr::R](R) reader structure"]
-impl crate::Readable for PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pro_icache_autoload_section0_addr::W](W) writer structure"]
+#[doc = "`read()` method returns [`pro_icache_autoload_section0_addr::R`](R) reader structure"]
+impl crate::Readable for PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pro_icache_autoload_section0_addr::W`](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

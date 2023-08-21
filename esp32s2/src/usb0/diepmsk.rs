@@ -1,79 +1,47 @@
 #[doc = "Register `DIEPMSK` reader"]
-pub struct R(crate::R<DIEPMSK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIEPMSK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIEPMSK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIEPMSK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIEPMSK_SPEC>;
 #[doc = "Register `DIEPMSK` writer"]
-pub struct W(crate::W<DIEPMSK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIEPMSK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIEPMSK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIEPMSK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIEPMSK_SPEC>;
 #[doc = "Field `DI_XFERCOMPLMSK` reader - "]
 pub type DI_XFERCOMPLMSK_R = crate::BitReader;
 #[doc = "Field `DI_XFERCOMPLMSK` writer - "]
-pub type DI_XFERCOMPLMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type DI_XFERCOMPLMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DI_EPDISBLDMSK` reader - "]
 pub type DI_EPDISBLDMSK_R = crate::BitReader;
 #[doc = "Field `DI_EPDISBLDMSK` writer - "]
-pub type DI_EPDISBLDMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type DI_EPDISBLDMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DI_AHBERMSK` reader - "]
 pub type DI_AHBERMSK_R = crate::BitReader;
 #[doc = "Field `DI_AHBERMSK` writer - "]
-pub type DI_AHBERMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type DI_AHBERMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TIMEOUTMSK` reader - "]
 pub type TIMEOUTMSK_R = crate::BitReader;
 #[doc = "Field `TIMEOUTMSK` writer - "]
-pub type TIMEOUTMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type TIMEOUTMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INTKNTXFEMPMSK` reader - "]
 pub type INTKNTXFEMPMSK_R = crate::BitReader;
 #[doc = "Field `INTKNTXFEMPMSK` writer - "]
-pub type INTKNTXFEMPMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type INTKNTXFEMPMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INTKNEPMISMSK` reader - "]
 pub type INTKNEPMISMSK_R = crate::BitReader;
 #[doc = "Field `INTKNEPMISMSK` writer - "]
-pub type INTKNEPMISMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type INTKNEPMISMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEPNAKEFFMSK` reader - "]
 pub type INEPNAKEFFMSK_R = crate::BitReader;
 #[doc = "Field `INEPNAKEFFMSK` writer - "]
-pub type INEPNAKEFFMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type INEPNAKEFFMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFIFOUNDRNMSK` reader - "]
 pub type TXFIFOUNDRNMSK_R = crate::BitReader;
 #[doc = "Field `TXFIFOUNDRNMSK` writer - "]
-pub type TXFIFOUNDRNMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type TXFIFOUNDRNMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BNAININTRMSK` reader - "]
 pub type BNAININTRMSK_R = crate::BitReader;
 #[doc = "Field `BNAININTRMSK` writer - "]
-pub type BNAININTRMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type BNAININTRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DI_NAKMSK` reader - "]
 pub type DI_NAKMSK_R = crate::BitReader;
 #[doc = "Field `DI_NAKMSK` writer - "]
-pub type DI_NAKMSK_W<'a, const O: u8> = crate::BitWriter<'a, DIEPMSK_SPEC, O>;
+pub type DI_NAKMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -174,82 +142,79 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn di_xfercomplmsk(&mut self) -> DI_XFERCOMPLMSK_W<0> {
+    pub fn di_xfercomplmsk(&mut self) -> DI_XFERCOMPLMSK_W<DIEPMSK_SPEC, 0> {
         DI_XFERCOMPLMSK_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn di_epdisbldmsk(&mut self) -> DI_EPDISBLDMSK_W<1> {
+    pub fn di_epdisbldmsk(&mut self) -> DI_EPDISBLDMSK_W<DIEPMSK_SPEC, 1> {
         DI_EPDISBLDMSK_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn di_ahbermsk(&mut self) -> DI_AHBERMSK_W<2> {
+    pub fn di_ahbermsk(&mut self) -> DI_AHBERMSK_W<DIEPMSK_SPEC, 2> {
         DI_AHBERMSK_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<3> {
+    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<DIEPMSK_SPEC, 3> {
         TIMEOUTMSK_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<4> {
+    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<DIEPMSK_SPEC, 4> {
         INTKNTXFEMPMSK_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn intknepmismsk(&mut self) -> INTKNEPMISMSK_W<5> {
+    pub fn intknepmismsk(&mut self) -> INTKNEPMISMSK_W<DIEPMSK_SPEC, 5> {
         INTKNEPMISMSK_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn inepnakeffmsk(&mut self) -> INEPNAKEFFMSK_W<6> {
+    pub fn inepnakeffmsk(&mut self) -> INEPNAKEFFMSK_W<DIEPMSK_SPEC, 6> {
         INEPNAKEFFMSK_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifoundrnmsk(&mut self) -> TXFIFOUNDRNMSK_W<8> {
+    pub fn txfifoundrnmsk(&mut self) -> TXFIFOUNDRNMSK_W<DIEPMSK_SPEC, 8> {
         TXFIFOUNDRNMSK_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn bnainintrmsk(&mut self) -> BNAININTRMSK_W<9> {
+    pub fn bnainintrmsk(&mut self) -> BNAININTRMSK_W<DIEPMSK_SPEC, 9> {
         BNAININTRMSK_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn di_nakmsk(&mut self) -> DI_NAKMSK_W<13> {
+    pub fn di_nakmsk(&mut self) -> DI_NAKMSK_W<DIEPMSK_SPEC, 13> {
         DI_NAKMSK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diepmsk](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepmsk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepmsk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPMSK_SPEC;
 impl crate::RegisterSpec for DIEPMSK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [diepmsk::R](R) reader structure"]
-impl crate::Readable for DIEPMSK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [diepmsk::W](W) writer structure"]
+#[doc = "`read()` method returns [`diepmsk::R`](R) reader structure"]
+impl crate::Readable for DIEPMSK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`diepmsk::W`](W) writer structure"]
 impl crate::Writable for DIEPMSK_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

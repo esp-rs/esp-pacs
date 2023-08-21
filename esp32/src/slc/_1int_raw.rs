@@ -1,18 +1,5 @@
 #[doc = "Register `_1INT_RAW` reader"]
-pub struct R(crate::R<_1INT_RAW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<_1INT_RAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<_1INT_RAW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<_1INT_RAW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<_1INT_RAW_SPEC>;
 #[doc = "Field `FRHOST_BIT8_INT_RAW` reader - "]
 pub type FRHOST_BIT8_INT_RAW_R = crate::BitReader;
 #[doc = "Field `FRHOST_BIT9_INT_RAW` reader - "]
@@ -303,15 +290,13 @@ impl core::fmt::Debug for crate::generic::Reg<_1INT_RAW_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_1int_raw](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_1int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _1INT_RAW_SPEC;
 impl crate::RegisterSpec for _1INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [_1int_raw::R](R) reader structure"]
-impl crate::Readable for _1INT_RAW_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`_1int_raw::R`](R) reader structure"]
+impl crate::Readable for _1INT_RAW_SPEC {}
 #[doc = "`reset()` method sets _1INT_RAW to value 0"]
 impl crate::Resettable for _1INT_RAW_SPEC {
     const RESET_VALUE: Self::Ux = 0;

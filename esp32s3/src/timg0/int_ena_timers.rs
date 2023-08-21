@@ -1,51 +1,19 @@
 #[doc = "Register `INT_ENA_TIMERS` reader"]
-pub struct R(crate::R<INT_ENA_TIMERS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_ENA_TIMERS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_ENA_TIMERS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_ENA_TIMERS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_ENA_TIMERS_SPEC>;
 #[doc = "Register `INT_ENA_TIMERS` writer"]
-pub struct W(crate::W<INT_ENA_TIMERS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INT_ENA_TIMERS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INT_ENA_TIMERS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INT_ENA_TIMERS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INT_ENA_TIMERS_SPEC>;
 #[doc = "Field `T0_INT_ENA` reader - The interrupt enable bit for the TIMG_T0_INT interrupt."]
 pub type T0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `T0_INT_ENA` writer - The interrupt enable bit for the TIMG_T0_INT interrupt."]
-pub type T0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_TIMERS_SPEC, O>;
+pub type T0_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `T1_INT_ENA` reader - The interrupt enable bit for the TIMG_T1_INT interrupt."]
 pub type T1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `T1_INT_ENA` writer - The interrupt enable bit for the TIMG_T1_INT interrupt."]
-pub type T1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_TIMERS_SPEC, O>;
+pub type T1_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WDT_INT_ENA` reader - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
 pub type WDT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ENA` writer - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
-pub type WDT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_TIMERS_SPEC, O>;
+pub type WDT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
@@ -83,40 +51,37 @@ impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn t0_int_ena(&mut self) -> T0_INT_ENA_W<0> {
+    pub fn t0_int_ena(&mut self) -> T0_INT_ENA_W<INT_ENA_TIMERS_SPEC, 0> {
         T0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the TIMG_T1_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn t1_int_ena(&mut self) -> T1_INT_ENA_W<1> {
+    pub fn t1_int_ena(&mut self) -> T1_INT_ENA_W<INT_ENA_TIMERS_SPEC, 1> {
         T1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<2> {
+    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_TIMERS_SPEC, 2> {
         WDT_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena_timers](index.html) module"]
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena_timers::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena_timers::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_TIMERS_SPEC;
 impl crate::RegisterSpec for INT_ENA_TIMERS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena_timers::R](R) reader structure"]
-impl crate::Readable for INT_ENA_TIMERS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [int_ena_timers::W](W) writer structure"]
+#[doc = "`read()` method returns [`int_ena_timers::R`](R) reader structure"]
+impl crate::Readable for INT_ENA_TIMERS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_ena_timers::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_TIMERS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

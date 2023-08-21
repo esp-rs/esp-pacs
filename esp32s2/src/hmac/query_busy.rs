@@ -1,18 +1,5 @@
 #[doc = "Register `QUERY_BUSY` reader"]
-pub struct R(crate::R<QUERY_BUSY_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<QUERY_BUSY_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<QUERY_BUSY_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<QUERY_BUSY_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<QUERY_BUSY_SPEC>;
 #[doc = "Field `BUSY_STATE` reader - The state of Hmac. 1'b0: idle. 1'b1: busy."]
 pub type BUSY_STATE_R = crate::BitReader;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<QUERY_BUSY_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "The busy state of HMAC module\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_busy](index.html) module"]
+#[doc = "The busy state of HMAC module\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_busy::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct QUERY_BUSY_SPEC;
 impl crate::RegisterSpec for QUERY_BUSY_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [query_busy::R](R) reader structure"]
-impl crate::Readable for QUERY_BUSY_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`query_busy::R`](R) reader structure"]
+impl crate::Readable for QUERY_BUSY_SPEC {}
 #[doc = "`reset()` method sets QUERY_BUSY to value 0"]
 impl crate::Resettable for QUERY_BUSY_SPEC {
     const RESET_VALUE: Self::Ux = 0;

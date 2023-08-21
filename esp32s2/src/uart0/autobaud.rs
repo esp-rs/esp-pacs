@@ -1,47 +1,15 @@
 #[doc = "Register `AUTOBAUD` reader"]
-pub struct R(crate::R<AUTOBAUD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<AUTOBAUD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<AUTOBAUD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<AUTOBAUD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<AUTOBAUD_SPEC>;
 #[doc = "Register `AUTOBAUD` writer"]
-pub struct W(crate::W<AUTOBAUD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<AUTOBAUD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<AUTOBAUD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<AUTOBAUD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<AUTOBAUD_SPEC>;
 #[doc = "Field `EN` reader - This is the enable bit for baud rate detection."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - This is the enable bit for baud rate detection."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, AUTOBAUD_SPEC, O>;
+pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GLITCH_FILT` reader - When input pulse width is lower than this value, the pulse is ignored. This register is used in autobaud detection."]
 pub type GLITCH_FILT_R = crate::FieldReader;
 #[doc = "Field `GLITCH_FILT` writer - When input pulse width is lower than this value, the pulse is ignored. This register is used in autobaud detection."]
-pub type GLITCH_FILT_W<'a, const O: u8> = crate::FieldWriter<'a, AUTOBAUD_SPEC, 8, O>;
+pub type GLITCH_FILT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bit 0 - This is the enable bit for baud rate detection."]
     #[inline(always)]
@@ -76,34 +44,31 @@ impl W {
     #[doc = "Bit 0 - This is the enable bit for baud rate detection."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<0> {
+    pub fn en(&mut self) -> EN_W<AUTOBAUD_SPEC, 0> {
         EN_W::new(self)
     }
     #[doc = "Bits 8:15 - When input pulse width is lower than this value, the pulse is ignored. This register is used in autobaud detection."]
     #[inline(always)]
     #[must_use]
-    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<8> {
+    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<AUTOBAUD_SPEC, 8> {
         GLITCH_FILT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Autobaud configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [autobaud](index.html) module"]
+#[doc = "Autobaud configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`autobaud::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`autobaud::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AUTOBAUD_SPEC;
 impl crate::RegisterSpec for AUTOBAUD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [autobaud::R](R) reader structure"]
-impl crate::Readable for AUTOBAUD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [autobaud::W](W) writer structure"]
+#[doc = "`read()` method returns [`autobaud::R`](R) reader structure"]
+impl crate::Readable for AUTOBAUD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`autobaud::W`](W) writer structure"]
 impl crate::Writable for AUTOBAUD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

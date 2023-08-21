@@ -1,43 +1,11 @@
 #[doc = "Register `DMA_CH0_INT_MAP` reader"]
-pub struct R(crate::R<DMA_CH0_INT_MAP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_CH0_INT_MAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_CH0_INT_MAP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_CH0_INT_MAP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_CH0_INT_MAP_SPEC>;
 #[doc = "Register `DMA_CH0_INT_MAP` writer"]
-pub struct W(crate::W<DMA_CH0_INT_MAP_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMA_CH0_INT_MAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMA_CH0_INT_MAP_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMA_CH0_INT_MAP_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMA_CH0_INT_MAP_SPEC>;
 #[doc = "Field `DMA_CH0_INT_MAP` reader - Need add description"]
 pub type DMA_CH0_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `DMA_CH0_INT_MAP` writer - Need add description"]
-pub type DMA_CH0_INT_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_CH0_INT_MAP_SPEC, 5, O>;
+pub type DMA_CH0_INT_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ch0_int_map(&mut self) -> DMA_CH0_INT_MAP_W<0> {
+    pub fn dma_ch0_int_map(&mut self) -> DMA_CH0_INT_MAP_W<DMA_CH0_INT_MAP_SPEC, 0> {
         DMA_CH0_INT_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_ch0_int_map](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_ch0_int_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_ch0_int_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_CH0_INT_MAP_SPEC;
 impl crate::RegisterSpec for DMA_CH0_INT_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_ch0_int_map::R](R) reader structure"]
-impl crate::Readable for DMA_CH0_INT_MAP_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dma_ch0_int_map::W](W) writer structure"]
+#[doc = "`read()` method returns [`dma_ch0_int_map::R`](R) reader structure"]
+impl crate::Readable for DMA_CH0_INT_MAP_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dma_ch0_int_map::W`](W) writer structure"]
 impl crate::Writable for DMA_CH0_INT_MAP_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

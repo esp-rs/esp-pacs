@@ -1,18 +1,5 @@
 #[doc = "Register `U%s_STATUS` reader"]
-pub struct R(crate::R<U_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<U_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<U_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<U_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<U_STATUS_SPEC>;
 #[doc = "Field `ZERO_MODE` reader - The pulse counter status of PCNT_U%s corresponding to 0. 0: pulse counter decreases from positive to 0. 1: pulse counter increases from negative to 0. 2: pulse counter is negative. 3: pulse counter is positive."]
 pub type ZERO_MODE_R = crate::FieldReader;
 #[doc = "Field `THRES1` reader - The latched value of thres1 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres1 and thres1 event is valid. 0: others."]
@@ -76,15 +63,13 @@ impl core::fmt::Debug for crate::generic::Reg<U_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "PNCT UNIT%s status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u_status](index.html) module"]
+#[doc = "PNCT UNIT%s status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct U_STATUS_SPEC;
 impl crate::RegisterSpec for U_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [u_status::R](R) reader structure"]
-impl crate::Readable for U_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`u_status::R`](R) reader structure"]
+impl crate::Readable for U_STATUS_SPEC {}
 #[doc = "`reset()` method sets U%s_STATUS to value 0"]
 impl crate::Resettable for U_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

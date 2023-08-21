@@ -1,43 +1,11 @@
 #[doc = "Register `T0ALARMLO` reader"]
-pub struct R(crate::R<T0ALARMLO_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<T0ALARMLO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<T0ALARMLO_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<T0ALARMLO_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<T0ALARMLO_SPEC>;
 #[doc = "Register `T0ALARMLO` writer"]
-pub struct W(crate::W<T0ALARMLO_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<T0ALARMLO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<T0ALARMLO_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<T0ALARMLO_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<T0ALARMLO_SPEC>;
 #[doc = "Field `ALARM_LO` reader - Timer 0 time-base counter value lower 32 bits that will trigger the alarm"]
 pub type ALARM_LO_R = crate::FieldReader<u32>;
 #[doc = "Field `ALARM_LO` writer - Timer 0 time-base counter value lower 32 bits that will trigger the alarm"]
-pub type ALARM_LO_W<'a, const O: u8> = crate::FieldWriter<'a, T0ALARMLO_SPEC, 32, O, u32>;
+pub type ALARM_LO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Timer 0 time-base counter value lower 32 bits that will trigger the alarm"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:31 - Timer 0 time-base counter value lower 32 bits that will trigger the alarm"]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_lo(&mut self) -> ALARM_LO_W<0> {
+    pub fn alarm_lo(&mut self) -> ALARM_LO_W<T0ALARMLO_SPEC, 0> {
         ALARM_LO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0alarmlo](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0alarmlo::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0alarmlo::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct T0ALARMLO_SPEC;
 impl crate::RegisterSpec for T0ALARMLO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t0alarmlo::R](R) reader structure"]
-impl crate::Readable for T0ALARMLO_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [t0alarmlo::W](W) writer structure"]
+#[doc = "`read()` method returns [`t0alarmlo::R`](R) reader structure"]
+impl crate::Readable for T0ALARMLO_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`t0alarmlo::W`](W) writer structure"]
 impl crate::Writable for T0ALARMLO_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

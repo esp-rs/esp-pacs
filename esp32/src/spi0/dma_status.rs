@@ -1,18 +1,5 @@
 #[doc = "Register `DMA_STATUS` reader"]
-pub struct R(crate::R<DMA_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_STATUS_SPEC>;
 #[doc = "Field `DMA_RX_EN` reader - spi dma read data status bit."]
 pub type DMA_RX_EN_R = crate::BitReader;
 #[doc = "Field `DMA_TX_EN` reader - spi dma write data status bit."]
@@ -44,15 +31,13 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_status](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_STATUS_SPEC;
 impl crate::RegisterSpec for DMA_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_status::R](R) reader structure"]
-impl crate::Readable for DMA_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dma_status::R`](R) reader structure"]
+impl crate::Readable for DMA_STATUS_SPEC {}
 #[doc = "`reset()` method sets DMA_STATUS to value 0"]
 impl crate::Resettable for DMA_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

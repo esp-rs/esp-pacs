@@ -1,67 +1,35 @@
 #[doc = "Register `DTHRCTL` reader"]
-pub struct R(crate::R<DTHRCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DTHRCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DTHRCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DTHRCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DTHRCTL_SPEC>;
 #[doc = "Register `DTHRCTL` writer"]
-pub struct W(crate::W<DTHRCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DTHRCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DTHRCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DTHRCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DTHRCTL_SPEC>;
 #[doc = "Field `NONISOTHREN` reader - "]
 pub type NONISOTHREN_R = crate::BitReader;
 #[doc = "Field `NONISOTHREN` writer - "]
-pub type NONISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
+pub type NONISOTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ISOTHREN` reader - "]
 pub type ISOTHREN_R = crate::BitReader;
 #[doc = "Field `ISOTHREN` writer - "]
-pub type ISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
+pub type ISOTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXTHRLEN` reader - "]
 pub type TXTHRLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TXTHRLEN` writer - "]
-pub type TXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, DTHRCTL_SPEC, 9, O, u16>;
+pub type TXTHRLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `AHBTHRRATIO` reader - "]
 pub type AHBTHRRATIO_R = crate::FieldReader;
 #[doc = "Field `AHBTHRRATIO` writer - "]
-pub type AHBTHRRATIO_W<'a, const O: u8> = crate::FieldWriter<'a, DTHRCTL_SPEC, 2, O>;
+pub type AHBTHRRATIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `RXTHREN` reader - "]
 pub type RXTHREN_R = crate::BitReader;
 #[doc = "Field `RXTHREN` writer - "]
-pub type RXTHREN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
+pub type RXTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXTHRLEN` reader - "]
 pub type RXTHRLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `RXTHRLEN` writer - "]
-pub type RXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, DTHRCTL_SPEC, 9, O, u16>;
+pub type RXTHRLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `ARBPRKEN` reader - "]
 pub type ARBPRKEN_R = crate::BitReader;
 #[doc = "Field `ARBPRKEN` writer - "]
-pub type ARBPRKEN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
+pub type ARBPRKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -126,64 +94,61 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn nonisothren(&mut self) -> NONISOTHREN_W<0> {
+    pub fn nonisothren(&mut self) -> NONISOTHREN_W<DTHRCTL_SPEC, 0> {
         NONISOTHREN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn isothren(&mut self) -> ISOTHREN_W<1> {
+    pub fn isothren(&mut self) -> ISOTHREN_W<DTHRCTL_SPEC, 1> {
         ISOTHREN_W::new(self)
     }
     #[doc = "Bits 2:10"]
     #[inline(always)]
     #[must_use]
-    pub fn txthrlen(&mut self) -> TXTHRLEN_W<2> {
+    pub fn txthrlen(&mut self) -> TXTHRLEN_W<DTHRCTL_SPEC, 2> {
         TXTHRLEN_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W<11> {
+    pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W<DTHRCTL_SPEC, 11> {
         AHBTHRRATIO_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn rxthren(&mut self) -> RXTHREN_W<16> {
+    pub fn rxthren(&mut self) -> RXTHREN_W<DTHRCTL_SPEC, 16> {
         RXTHREN_W::new(self)
     }
     #[doc = "Bits 17:25"]
     #[inline(always)]
     #[must_use]
-    pub fn rxthrlen(&mut self) -> RXTHRLEN_W<17> {
+    pub fn rxthrlen(&mut self) -> RXTHRLEN_W<DTHRCTL_SPEC, 17> {
         RXTHRLEN_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn arbprken(&mut self) -> ARBPRKEN_W<27> {
+    pub fn arbprken(&mut self) -> ARBPRKEN_W<DTHRCTL_SPEC, 27> {
         ARBPRKEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dthrctl](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dthrctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dthrctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DTHRCTL_SPEC;
 impl crate::RegisterSpec for DTHRCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dthrctl::R](R) reader structure"]
-impl crate::Readable for DTHRCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dthrctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`dthrctl::R`](R) reader structure"]
+impl crate::Readable for DTHRCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dthrctl::W`](W) writer structure"]
 impl crate::Writable for DTHRCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

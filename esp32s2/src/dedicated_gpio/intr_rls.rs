@@ -1,71 +1,39 @@
 #[doc = "Register `INTR_RLS` reader"]
-pub struct R(crate::R<INTR_RLS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTR_RLS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTR_RLS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTR_RLS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTR_RLS_SPEC>;
 #[doc = "Register `INTR_RLS` writer"]
-pub struct W(crate::W<INTR_RLS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INTR_RLS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INTR_RLS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INTR_RLS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INTR_RLS_SPEC>;
 #[doc = "Field `GPIO0_INT_ENA` reader - The enable bit for DEDIC_GPIO0_INT_ST register."]
 pub type GPIO0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO0_INT_ENA` writer - The enable bit for DEDIC_GPIO0_INT_ST register."]
-pub type GPIO0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO0_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO1_INT_ENA` reader - The enable bit for DEDIC_GPIO1_INT_ST register."]
 pub type GPIO1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO1_INT_ENA` writer - The enable bit for DEDIC_GPIO1_INT_ST register."]
-pub type GPIO1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO1_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO2_INT_ENA` reader - The enable bit for DEDIC_GPIO2_INT_ST register."]
 pub type GPIO2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO2_INT_ENA` writer - The enable bit for DEDIC_GPIO2_INT_ST register."]
-pub type GPIO2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO2_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO3_INT_ENA` reader - The enable bit for DEDIC_GPIO3_INT_ST register."]
 pub type GPIO3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO3_INT_ENA` writer - The enable bit for DEDIC_GPIO3_INT_ST register."]
-pub type GPIO3_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO3_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO4_INT_ENA` reader - The enable bit for DEDIC_GPIO4_INT_ST register."]
 pub type GPIO4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO4_INT_ENA` writer - The enable bit for DEDIC_GPIO4_INT_ST register."]
-pub type GPIO4_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO4_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO5_INT_ENA` reader - The enable bit for DEDIC_GPIO5_INT_ST register."]
 pub type GPIO5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO5_INT_ENA` writer - The enable bit for DEDIC_GPIO5_INT_ST register."]
-pub type GPIO5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO5_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO6_INT_ENA` reader - The enable bit for DEDIC_GPIO6_INT_ST register."]
 pub type GPIO6_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO6_INT_ENA` writer - The enable bit for DEDIC_GPIO6_INT_ST register."]
-pub type GPIO6_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO6_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO7_INT_ENA` reader - The enable bit for DEDIC_GPIO7_INT_ST register."]
 pub type GPIO7_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO7_INT_ENA` writer - The enable bit for DEDIC_GPIO7_INT_ST register."]
-pub type GPIO7_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
+pub type GPIO7_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
@@ -157,70 +125,67 @@ impl W {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio0_int_ena(&mut self) -> GPIO0_INT_ENA_W<0> {
+    pub fn gpio0_int_ena(&mut self) -> GPIO0_INT_ENA_W<INTR_RLS_SPEC, 0> {
         GPIO0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for DEDIC_GPIO1_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio1_int_ena(&mut self) -> GPIO1_INT_ENA_W<1> {
+    pub fn gpio1_int_ena(&mut self) -> GPIO1_INT_ENA_W<INTR_RLS_SPEC, 1> {
         GPIO1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for DEDIC_GPIO2_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio2_int_ena(&mut self) -> GPIO2_INT_ENA_W<2> {
+    pub fn gpio2_int_ena(&mut self) -> GPIO2_INT_ENA_W<INTR_RLS_SPEC, 2> {
         GPIO2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for DEDIC_GPIO3_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio3_int_ena(&mut self) -> GPIO3_INT_ENA_W<3> {
+    pub fn gpio3_int_ena(&mut self) -> GPIO3_INT_ENA_W<INTR_RLS_SPEC, 3> {
         GPIO3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The enable bit for DEDIC_GPIO4_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio4_int_ena(&mut self) -> GPIO4_INT_ENA_W<4> {
+    pub fn gpio4_int_ena(&mut self) -> GPIO4_INT_ENA_W<INTR_RLS_SPEC, 4> {
         GPIO4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The enable bit for DEDIC_GPIO5_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio5_int_ena(&mut self) -> GPIO5_INT_ENA_W<5> {
+    pub fn gpio5_int_ena(&mut self) -> GPIO5_INT_ENA_W<INTR_RLS_SPEC, 5> {
         GPIO5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The enable bit for DEDIC_GPIO6_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio6_int_ena(&mut self) -> GPIO6_INT_ENA_W<6> {
+    pub fn gpio6_int_ena(&mut self) -> GPIO6_INT_ENA_W<INTR_RLS_SPEC, 6> {
         GPIO6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The enable bit for DEDIC_GPIO7_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio7_int_ena(&mut self) -> GPIO7_INT_ENA_W<7> {
+    pub fn gpio7_int_ena(&mut self) -> GPIO7_INT_ENA_W<INTR_RLS_SPEC, 7> {
         GPIO7_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_rls](index.html) module"]
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_rls::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr_rls::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_RLS_SPEC;
 impl crate::RegisterSpec for INTR_RLS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [intr_rls::R](R) reader structure"]
-impl crate::Readable for INTR_RLS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [intr_rls::W](W) writer structure"]
+#[doc = "`read()` method returns [`intr_rls::R`](R) reader structure"]
+impl crate::Readable for INTR_RLS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`intr_rls::W`](W) writer structure"]
 impl crate::Writable for INTR_RLS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

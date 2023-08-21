@@ -1,18 +1,5 @@
 #[doc = "Register `HCDMAB0` reader"]
-pub struct R(crate::R<HCDMAB0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCDMAB0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCDMAB0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCDMAB0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCDMAB0_SPEC>;
 #[doc = "Field `H_HCDMAB0` reader - "]
 pub type H_HCDMAB0_R = crate::FieldReader<u32>;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<HCDMAB0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcdmab0](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcdmab0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCDMAB0_SPEC;
 impl crate::RegisterSpec for HCDMAB0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcdmab0::R](R) reader structure"]
-impl crate::Readable for HCDMAB0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`hcdmab0::R`](R) reader structure"]
+impl crate::Readable for HCDMAB0_SPEC {}
 #[doc = "`reset()` method sets HCDMAB0 to value 0"]
 impl crate::Resettable for HCDMAB0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

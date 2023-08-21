@@ -1,55 +1,23 @@
 #[doc = "Register `IN_LINK` reader"]
-pub struct R(crate::R<IN_LINK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IN_LINK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IN_LINK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IN_LINK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IN_LINK_SPEC>;
 #[doc = "Register `IN_LINK` writer"]
-pub struct W(crate::W<IN_LINK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IN_LINK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IN_LINK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IN_LINK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IN_LINK_SPEC>;
 #[doc = "Field `INLINK_ADDR` reader - The address of first inlink descriptor."]
 pub type INLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `INLINK_ADDR` writer - The address of first inlink descriptor."]
-pub type INLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, IN_LINK_SPEC, 20, O, u32>;
+pub type INLINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
 #[doc = "Field `INLINK_STOP` reader - Set this bit to stop inlink descriptor."]
 pub type INLINK_STOP_R = crate::BitReader;
 #[doc = "Field `INLINK_STOP` writer - Set this bit to stop inlink descriptor."]
-pub type INLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, IN_LINK_SPEC, O>;
+pub type INLINK_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INLINK_START` reader - Set this bit to start inlink descriptor."]
 pub type INLINK_START_R = crate::BitReader;
 #[doc = "Field `INLINK_START` writer - Set this bit to start inlink descriptor."]
-pub type INLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, IN_LINK_SPEC, O>;
+pub type INLINK_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INLINK_RESTART` reader - Set this bit to restart inlink descriptor."]
 pub type INLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `INLINK_RESTART` writer - Set this bit to restart inlink descriptor."]
-pub type INLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, IN_LINK_SPEC, O>;
+pub type INLINK_RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INLINK_PARK` reader - "]
 pub type INLINK_PARK_R = crate::BitReader;
 impl R {
@@ -110,46 +78,43 @@ impl W {
     #[doc = "Bits 0:19 - The address of first inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<0> {
+    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<IN_LINK_SPEC, 0> {
         INLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to stop inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<28> {
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<IN_LINK_SPEC, 28> {
         INLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to start inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_start(&mut self) -> INLINK_START_W<29> {
+    pub fn inlink_start(&mut self) -> INLINK_START_W<IN_LINK_SPEC, 29> {
         INLINK_START_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to restart inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<30> {
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<IN_LINK_SPEC, 30> {
         INLINK_RESTART_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S DMA RX configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_link](index.html) module"]
+#[doc = "I2S DMA RX configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_link::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_link::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_LINK_SPEC;
 impl crate::RegisterSpec for IN_LINK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_link::R](R) reader structure"]
-impl crate::Readable for IN_LINK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [in_link::W](W) writer structure"]
+#[doc = "`read()` method returns [`in_link::R`](R) reader structure"]
+impl crate::Readable for IN_LINK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`in_link::W`](W) writer structure"]
 impl crate::Writable for IN_LINK_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `ACPU_INT1` reader"]
-pub struct R(crate::R<ACPU_INT1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ACPU_INT1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ACPU_INT1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ACPU_INT1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ACPU_INT1_SPEC>;
 #[doc = "Field `APPCPU_INT_H` reader - GPIO32~39 APP CPU interrupt status"]
 pub type APPCPU_INT_H_R = crate::FieldReader;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<ACPU_INT1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [acpu_int1](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`acpu_int1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ACPU_INT1_SPEC;
 impl crate::RegisterSpec for ACPU_INT1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [acpu_int1::R](R) reader structure"]
-impl crate::Readable for ACPU_INT1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`acpu_int1::R`](R) reader structure"]
+impl crate::Readable for ACPU_INT1_SPEC {}
 #[doc = "`reset()` method sets ACPU_INT1 to value 0"]
 impl crate::Resettable for ACPU_INT1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

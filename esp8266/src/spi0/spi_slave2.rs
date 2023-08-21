@@ -1,59 +1,23 @@
 #[doc = "Register `SPI_SLAVE2` reader"]
-pub struct R(crate::R<SPI_SLAVE2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_SLAVE2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_SLAVE2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_SLAVE2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_SLAVE2_SPEC>;
 #[doc = "Register `SPI_SLAVE2` writer"]
-pub struct W(crate::W<SPI_SLAVE2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_SLAVE2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_SLAVE2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_SLAVE2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SPI_SLAVE2_SPEC>;
 #[doc = "Field `slv_rdsta_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-status\" operations. Theregister value shall be (cycle_num-1)"]
 pub type SLV_RDSTA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_rdsta_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-status\" operations. Theregister value shall be (cycle_num-1)"]
-pub type SLV_RDSTA_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
+pub type SLV_RDSTA_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `slv_wrsta_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"write-status\" operations. Theregister value shall be (cycle_num-1)"]
 pub type SLV_WRSTA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_wrsta_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"write-status\" operations. Theregister value shall be (cycle_num-1)"]
-pub type SLV_WRSTA_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
+pub type SLV_WRSTA_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `slv_rdbuf_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-buffer\" operations. The registervalue shall be (cycle_num-1)"]
 pub type SLV_RDBUF_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_rdbuf_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-buffer\" operations. The registervalue shall be (cycle_num-1)"]
-pub type SLV_RDBUF_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
+pub type SLV_RDBUF_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `slv_wrbuf_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles \"dummy\" phase for \"write-buffer\" operations. The registervalue shall be (cycle_num-1)"]
 pub type SLV_WRBUF_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_wrbuf_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles \"dummy\" phase for \"write-buffer\" operations. The registervalue shall be (cycle_num-1)"]
-pub type SLV_WRBUF_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
+pub type SLV_WRBUF_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-status\" operations. Theregister value shall be (cycle_num-1)"]
     #[inline(always)]
@@ -109,46 +73,43 @@ impl W {
     #[doc = "Bits 0:7 - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-status\" operations. Theregister value shall be (cycle_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rdsta_dummy_cyclelen(&mut self) -> SLV_RDSTA_DUMMY_CYCLELEN_W<0> {
+    pub fn slv_rdsta_dummy_cyclelen(&mut self) -> SLV_RDSTA_DUMMY_CYCLELEN_W<SPI_SLAVE2_SPEC, 0> {
         SLV_RDSTA_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 8:15 - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"write-status\" operations. Theregister value shall be (cycle_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wrsta_dummy_cyclelen(&mut self) -> SLV_WRSTA_DUMMY_CYCLELEN_W<8> {
+    pub fn slv_wrsta_dummy_cyclelen(&mut self) -> SLV_WRSTA_DUMMY_CYCLELEN_W<SPI_SLAVE2_SPEC, 8> {
         SLV_WRSTA_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 16:23 - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-buffer\" operations. The registervalue shall be (cycle_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rdbuf_dummy_cyclelen(&mut self) -> SLV_RDBUF_DUMMY_CYCLELEN_W<16> {
+    pub fn slv_rdbuf_dummy_cyclelen(&mut self) -> SLV_RDBUF_DUMMY_CYCLELEN_W<SPI_SLAVE2_SPEC, 16> {
         SLV_RDBUF_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 24:31 - In the slave mode, it is the length in spi_clk cycles \"dummy\" phase for \"write-buffer\" operations. The registervalue shall be (cycle_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wrbuf_dummy_cyclelen(&mut self) -> SLV_WRBUF_DUMMY_CYCLELEN_W<24> {
+    pub fn slv_wrbuf_dummy_cyclelen(&mut self) -> SLV_WRBUF_DUMMY_CYCLELEN_W<SPI_SLAVE2_SPEC, 24> {
         SLV_WRBUF_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "In the slave mode, it is the length in spi_clk cycles \"dummy\" phase for \"write-buffer\" operations. The registervalue shall be (cycle_num-1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_slave2](index.html) module"]
+#[doc = "In the slave mode, it is the length in spi_clk cycles \"dummy\" phase for \"write-buffer\" operations. The registervalue shall be (cycle_num-1)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_slave2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi_slave2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SLAVE2_SPEC;
 impl crate::RegisterSpec for SPI_SLAVE2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_slave2::R](R) reader structure"]
-impl crate::Readable for SPI_SLAVE2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi_slave2::W](W) writer structure"]
+#[doc = "`read()` method returns [`spi_slave2::R`](R) reader structure"]
+impl crate::Readable for SPI_SLAVE2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`spi_slave2::W`](W) writer structure"]
 impl crate::Writable for SPI_SLAVE2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

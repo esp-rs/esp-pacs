@@ -1,18 +1,5 @@
 #[doc = "Register `DIN_MODE` reader"]
-pub struct R(crate::R<DIN_MODE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIN_MODE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIN_MODE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIN_MODE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIN_MODE_SPEC>;
 #[doc = "Field `DIN0_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN0_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN1_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
@@ -103,15 +90,13 @@ impl core::fmt::Debug for crate::generic::Reg<DIN_MODE_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI input delay mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [din_mode](index.html) module"]
+#[doc = "SPI input delay mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_mode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIN_MODE_SPEC;
 impl crate::RegisterSpec for DIN_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [din_mode::R](R) reader structure"]
-impl crate::Readable for DIN_MODE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`din_mode::R`](R) reader structure"]
+impl crate::Readable for DIN_MODE_SPEC {}
 #[doc = "`reset()` method sets DIN_MODE to value 0"]
 impl crate::Resettable for DIN_MODE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

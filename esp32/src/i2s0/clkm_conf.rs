@@ -1,59 +1,27 @@
 #[doc = "Register `CLKM_CONF` reader"]
-pub struct R(crate::R<CLKM_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLKM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLKM_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLKM_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLKM_CONF_SPEC>;
 #[doc = "Register `CLKM_CONF` writer"]
-pub struct W(crate::W<CLKM_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLKM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLKM_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLKM_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLKM_CONF_SPEC>;
 #[doc = "Field `CLKM_DIV_NUM` reader - "]
 pub type CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_NUM` writer - "]
-pub type CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 8, O>;
+pub type CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `CLKM_DIV_B` reader - "]
 pub type CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_B` writer - "]
-pub type CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 6, O>;
+pub type CLKM_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `CLKM_DIV_A` reader - "]
 pub type CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_A` writer - "]
-pub type CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 6, O>;
+pub type CLKM_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLKM_CONF_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLKA_ENA` reader - "]
 pub type CLKA_ENA_R = crate::BitReader;
 #[doc = "Field `CLKA_ENA` writer - "]
-pub type CLKA_ENA_W<'a, const O: u8> = crate::BitWriter<'a, CLKM_CONF_SPEC, O>;
+pub type CLKA_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -106,52 +74,49 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<0> {
+    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<CLKM_CONF_SPEC, 0> {
         CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<8> {
+    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<CLKM_CONF_SPEC, 8> {
         CLKM_DIV_B_W::new(self)
     }
     #[doc = "Bits 14:19"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<14> {
+    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<CLKM_CONF_SPEC, 14> {
         CLKM_DIV_A_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<20> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<CLKM_CONF_SPEC, 20> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn clka_ena(&mut self) -> CLKA_ENA_W<21> {
+    pub fn clka_ena(&mut self) -> CLKA_ENA_W<CLKM_CONF_SPEC, 21> {
         CLKA_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkm_conf](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkm_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkm_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLKM_CONF_SPEC;
 impl crate::RegisterSpec for CLKM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clkm_conf::R](R) reader structure"]
-impl crate::Readable for CLKM_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clkm_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`clkm_conf::R`](R) reader structure"]
+impl crate::Readable for CLKM_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clkm_conf::W`](W) writer structure"]
 impl crate::Writable for CLKM_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

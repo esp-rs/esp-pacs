@@ -1,18 +1,5 @@
 #[doc = "Register `TZ0_STATUS` reader"]
-pub struct R(crate::R<TZ0_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TZ0_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TZ0_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TZ0_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TZ0_STATUS_SPEC>;
 #[doc = "Field `TZ0_CBC_ON` reader - Set and reset by hardware. If set, a cycle-by-cycle mode action is on going"]
 pub type TZ0_CBC_ON_R = crate::BitReader;
 #[doc = "Field `TZ0_OST_ON` reader - Set and reset by hardware. If set, an one-shot mode action is on going"]
@@ -44,15 +31,13 @@ impl core::fmt::Debug for crate::generic::Reg<TZ0_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Status of fault events.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tz0_status](index.html) module"]
+#[doc = "Status of fault events.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tz0_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TZ0_STATUS_SPEC;
 impl crate::RegisterSpec for TZ0_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tz0_status::R](R) reader structure"]
-impl crate::Readable for TZ0_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`tz0_status::R`](R) reader structure"]
+impl crate::Readable for TZ0_STATUS_SPEC {}
 #[doc = "`reset()` method sets TZ0_STATUS to value 0"]
 impl crate::Resettable for TZ0_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

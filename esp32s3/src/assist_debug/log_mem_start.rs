@@ -1,43 +1,11 @@
 #[doc = "Register `LOG_MEM_START` reader"]
-pub struct R(crate::R<LOG_MEM_START_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LOG_MEM_START_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LOG_MEM_START_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LOG_MEM_START_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LOG_MEM_START_SPEC>;
 #[doc = "Register `LOG_MEM_START` writer"]
-pub struct W(crate::W<LOG_MEM_START_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LOG_MEM_START_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LOG_MEM_START_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LOG_MEM_START_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LOG_MEM_START_SPEC>;
 #[doc = "Field `LOG_MEM_START` reader - mem start addr"]
 pub type LOG_MEM_START_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_MEM_START` writer - mem start addr"]
-pub type LOG_MEM_START_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MEM_START_SPEC, 32, O, u32>;
+pub type LOG_MEM_START_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - mem start addr"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:31 - mem start addr"]
     #[inline(always)]
     #[must_use]
-    pub fn log_mem_start(&mut self) -> LOG_MEM_START_W<0> {
+    pub fn log_mem_start(&mut self) -> LOG_MEM_START_W<LOG_MEM_START_SPEC, 0> {
         LOG_MEM_START_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "log mem region configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_mem_start](index.html) module"]
+#[doc = "log mem region configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`log_mem_start::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`log_mem_start::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOG_MEM_START_SPEC;
 impl crate::RegisterSpec for LOG_MEM_START_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [log_mem_start::R](R) reader structure"]
-impl crate::Readable for LOG_MEM_START_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [log_mem_start::W](W) writer structure"]
+#[doc = "`read()` method returns [`log_mem_start::R`](R) reader structure"]
+impl crate::Readable for LOG_MEM_START_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`log_mem_start::W`](W) writer structure"]
 impl crate::Writable for LOG_MEM_START_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
