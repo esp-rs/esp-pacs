@@ -1,43 +1,11 @@
 #[doc = "Register `MISC` reader"]
-pub struct R(crate::R<MISC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MISC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MISC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MISC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MISC_SPEC>;
 #[doc = "Register `MISC` writer"]
-pub struct W(crate::W<MISC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MISC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MISC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MISC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MISC_SPEC>;
 #[doc = "Field `SPI_SWAP` reader - "]
 pub type SPI_SWAP_R = crate::BitReader;
 #[doc = "Field `SPI_SWAP` writer - "]
-pub type SPI_SWAP_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
+pub type SPI_SWAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 31"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_swap(&mut self) -> SPI_SWAP_W<31> {
+    pub fn spi_swap(&mut self) -> SPI_SWAP_W<MISC_SPEC, 31> {
         SPI_SWAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [misc](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`misc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`misc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MISC_SPEC;
 impl crate::RegisterSpec for MISC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [misc::R](R) reader structure"]
-impl crate::Readable for MISC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [misc::W](W) writer structure"]
+#[doc = "`read()` method returns [`misc::R`](R) reader structure"]
+impl crate::Readable for MISC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`misc::W`](W) writer structure"]
 impl crate::Writable for MISC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

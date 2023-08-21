@@ -1,67 +1,35 @@
 #[doc = "Register `T0CONFIG` reader"]
-pub struct R(crate::R<T0CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<T0CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<T0CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<T0CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<T0CONFIG_SPEC>;
 #[doc = "Register `T0CONFIG` writer"]
-pub struct W(crate::W<T0CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<T0CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<T0CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<T0CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<T0CONFIG_SPEC>;
 #[doc = "Field `ALARM_EN` reader - When set alarm is enabled"]
 pub type ALARM_EN_R = crate::BitReader;
 #[doc = "Field `ALARM_EN` writer - When set alarm is enabled"]
-pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
+pub type ALARM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LEVEL_INT_EN` reader - When set level type interrupt will be generated during alarm"]
 pub type LEVEL_INT_EN_R = crate::BitReader;
 #[doc = "Field `LEVEL_INT_EN` writer - When set level type interrupt will be generated during alarm"]
-pub type LEVEL_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
+pub type LEVEL_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EDGE_INT_EN` reader - When set edge type interrupt will be generated during alarm"]
 pub type EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `EDGE_INT_EN` writer - When set edge type interrupt will be generated during alarm"]
-pub type EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
+pub type EDGE_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DIVIDER` reader - Timer 0 clock (T0_clk) prescale value."]
 pub type DIVIDER_R = crate::FieldReader<u16>;
 #[doc = "Field `DIVIDER` writer - Timer 0 clock (T0_clk) prescale value."]
-pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, T0CONFIG_SPEC, 16, O, u16>;
+pub type DIVIDER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `AUTORELOAD` reader - When set timer 0 auto-reload at alarming is enabled"]
 pub type AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `AUTORELOAD` writer - When set timer 0 auto-reload at alarming is enabled"]
-pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
+pub type AUTORELOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INCREASE` reader - When set timer 0 time-base counter increment. When cleared timer 0 time-base counter decrement."]
 pub type INCREASE_R = crate::BitReader;
 #[doc = "Field `INCREASE` writer - When set timer 0 time-base counter increment. When cleared timer 0 time-base counter decrement."]
-pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
+pub type INCREASE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EN` reader - When set timer 0 time-base counter is enabled"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - When set timer 0 time-base counter is enabled"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
+pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
@@ -126,64 +94,61 @@ impl W {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_en(&mut self) -> ALARM_EN_W<10> {
+    pub fn alarm_en(&mut self) -> ALARM_EN_W<T0CONFIG_SPEC, 10> {
         ALARM_EN_W::new(self)
     }
     #[doc = "Bit 11 - When set level type interrupt will be generated during alarm"]
     #[inline(always)]
     #[must_use]
-    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<11> {
+    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<T0CONFIG_SPEC, 11> {
         LEVEL_INT_EN_W::new(self)
     }
     #[doc = "Bit 12 - When set edge type interrupt will be generated during alarm"]
     #[inline(always)]
     #[must_use]
-    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<12> {
+    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<T0CONFIG_SPEC, 12> {
         EDGE_INT_EN_W::new(self)
     }
     #[doc = "Bits 13:28 - Timer 0 clock (T0_clk) prescale value."]
     #[inline(always)]
     #[must_use]
-    pub fn divider(&mut self) -> DIVIDER_W<13> {
+    pub fn divider(&mut self) -> DIVIDER_W<T0CONFIG_SPEC, 13> {
         DIVIDER_W::new(self)
     }
     #[doc = "Bit 29 - When set timer 0 auto-reload at alarming is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn autoreload(&mut self) -> AUTORELOAD_W<29> {
+    pub fn autoreload(&mut self) -> AUTORELOAD_W<T0CONFIG_SPEC, 29> {
         AUTORELOAD_W::new(self)
     }
     #[doc = "Bit 30 - When set timer 0 time-base counter increment. When cleared timer 0 time-base counter decrement."]
     #[inline(always)]
     #[must_use]
-    pub fn increase(&mut self) -> INCREASE_W<30> {
+    pub fn increase(&mut self) -> INCREASE_W<T0CONFIG_SPEC, 30> {
         INCREASE_W::new(self)
     }
     #[doc = "Bit 31 - When set timer 0 time-base counter is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<31> {
+    pub fn en(&mut self) -> EN_W<T0CONFIG_SPEC, 31> {
         EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0config](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0config::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0config::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct T0CONFIG_SPEC;
 impl crate::RegisterSpec for T0CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t0config::R](R) reader structure"]
-impl crate::Readable for T0CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [t0config::W](W) writer structure"]
+#[doc = "`read()` method returns [`t0config::R`](R) reader structure"]
+impl crate::Readable for T0CONFIG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`t0config::W`](W) writer structure"]
 impl crate::Writable for T0CONFIG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

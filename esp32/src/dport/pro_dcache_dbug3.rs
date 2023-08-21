@@ -1,39 +1,7 @@
 #[doc = "Register `PRO_DCACHE_DBUG3` reader"]
-pub struct R(crate::R<PRO_DCACHE_DBUG3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PRO_DCACHE_DBUG3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PRO_DCACHE_DBUG3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PRO_DCACHE_DBUG3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PRO_DCACHE_DBUG3_SPEC>;
 #[doc = "Register `PRO_DCACHE_DBUG3` writer"]
-pub struct W(crate::W<PRO_DCACHE_DBUG3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PRO_DCACHE_DBUG3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PRO_DCACHE_DBUG3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PRO_DCACHE_DBUG3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PRO_DCACHE_DBUG3_SPEC>;
 #[doc = "Field `PRO_MMU_RDATA` reader - "]
 pub type PRO_MMU_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA` reader - "]
@@ -41,33 +9,27 @@ pub type PRO_CPU_DISABLED_CACHE_IA_R = crate::FieldReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_OPPOSITE` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_OPPOSITE` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a, const O: u8> =
-    crate::BitWriter<'a, PRO_DCACHE_DBUG3_SPEC, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DRAM1` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DRAM1` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a, const O: u8> =
-    crate::BitWriter<'a, PRO_DCACHE_DBUG3_SPEC, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IROM0` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IROM0` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, PRO_DCACHE_DBUG3_SPEC, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM1` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM1` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a, const O: u8> =
-    crate::BitWriter<'a, PRO_DCACHE_DBUG3_SPEC, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM0` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM0` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, PRO_DCACHE_DBUG3_SPEC, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DROM0` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DROM0` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, PRO_DCACHE_DBUG3_SPEC, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRO_CACHE_IRAM0_PID_ERROR` reader - "]
 pub type PRO_CACHE_IRAM0_PID_ERROR_R = crate::BitReader;
 impl R {
@@ -172,58 +134,65 @@ impl W {
     #[must_use]
     pub fn pro_cpu_disabled_cache_ia_opposite(
         &mut self,
-    ) -> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<9> {
+    ) -> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<PRO_DCACHE_DBUG3_SPEC, 9> {
         PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_disabled_cache_ia_dram1(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<10> {
+    pub fn pro_cpu_disabled_cache_ia_dram1(
+        &mut self,
+    ) -> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<PRO_DCACHE_DBUG3_SPEC, 10> {
         PRO_CPU_DISABLED_CACHE_IA_DRAM1_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_disabled_cache_ia_irom0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IROM0_W<11> {
+    pub fn pro_cpu_disabled_cache_ia_irom0(
+        &mut self,
+    ) -> PRO_CPU_DISABLED_CACHE_IA_IROM0_W<PRO_DCACHE_DBUG3_SPEC, 11> {
         PRO_CPU_DISABLED_CACHE_IA_IROM0_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_disabled_cache_ia_iram1(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<12> {
+    pub fn pro_cpu_disabled_cache_ia_iram1(
+        &mut self,
+    ) -> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<PRO_DCACHE_DBUG3_SPEC, 12> {
         PRO_CPU_DISABLED_CACHE_IA_IRAM1_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_disabled_cache_ia_iram0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<13> {
+    pub fn pro_cpu_disabled_cache_ia_iram0(
+        &mut self,
+    ) -> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<PRO_DCACHE_DBUG3_SPEC, 13> {
         PRO_CPU_DISABLED_CACHE_IA_IRAM0_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_disabled_cache_ia_drom0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_DROM0_W<14> {
+    pub fn pro_cpu_disabled_cache_ia_drom0(
+        &mut self,
+    ) -> PRO_CPU_DISABLED_CACHE_IA_DROM0_W<PRO_DCACHE_DBUG3_SPEC, 14> {
         PRO_CPU_DISABLED_CACHE_IA_DROM0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_dcache_dbug3](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_dcache_dbug3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pro_dcache_dbug3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRO_DCACHE_DBUG3_SPEC;
 impl crate::RegisterSpec for PRO_DCACHE_DBUG3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_dcache_dbug3::R](R) reader structure"]
-impl crate::Readable for PRO_DCACHE_DBUG3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pro_dcache_dbug3::W](W) writer structure"]
+#[doc = "`read()` method returns [`pro_dcache_dbug3::R`](R) reader structure"]
+impl crate::Readable for PRO_DCACHE_DBUG3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pro_dcache_dbug3::W`](W) writer structure"]
 impl crate::Writable for PRO_DCACHE_DBUG3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

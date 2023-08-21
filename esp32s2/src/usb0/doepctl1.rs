@@ -1,39 +1,7 @@
 #[doc = "Register `DOEPCTL1` reader"]
-pub struct R(crate::R<DOEPCTL1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DOEPCTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DOEPCTL1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DOEPCTL1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DOEPCTL1_SPEC>;
 #[doc = "Register `DOEPCTL1` writer"]
-pub struct W(crate::W<DOEPCTL1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DOEPCTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DOEPCTL1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DOEPCTL1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DOEPCTL1_SPEC>;
 #[doc = "Field `MPS1` reader - "]
 pub type MPS1_R = crate::FieldReader<u16>;
 #[doc = "Field `USBACTEP1` reader - "]
@@ -45,25 +13,25 @@ pub type EPTYPE1_R = crate::FieldReader;
 #[doc = "Field `SNP1` reader - "]
 pub type SNP1_R = crate::BitReader;
 #[doc = "Field `SNP1` writer - "]
-pub type SNP1_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL1_SPEC, O>;
+pub type SNP1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STALL1` reader - "]
 pub type STALL1_R = crate::BitReader;
 #[doc = "Field `STALL1` writer - "]
-pub type STALL1_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL1_SPEC, O>;
+pub type STALL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CNAK1` writer - "]
-pub type CNAK1_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL1_SPEC, O>;
+pub type CNAK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DO_SNAK1` writer - "]
-pub type DO_SNAK1_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL1_SPEC, O>;
+pub type DO_SNAK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DO_SETD0PID1` writer - "]
-pub type DO_SETD0PID1_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL1_SPEC, O>;
+pub type DO_SETD0PID1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DO_SETD1PID1` writer - "]
-pub type DO_SETD1PID1_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL1_SPEC, O>;
+pub type DO_SETD1PID1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPDIS1` reader - "]
 pub type EPDIS1_R = crate::BitReader;
 #[doc = "Field `EPENA1` reader - "]
 pub type EPENA1_R = crate::BitReader;
 #[doc = "Field `EPENA1` writer - "]
-pub type EPENA1_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL1_SPEC, O>;
+pub type EPENA1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -131,64 +99,61 @@ impl W {
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn snp1(&mut self) -> SNP1_W<20> {
+    pub fn snp1(&mut self) -> SNP1_W<DOEPCTL1_SPEC, 20> {
         SNP1_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn stall1(&mut self) -> STALL1_W<21> {
+    pub fn stall1(&mut self) -> STALL1_W<DOEPCTL1_SPEC, 21> {
         STALL1_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak1(&mut self) -> CNAK1_W<26> {
+    pub fn cnak1(&mut self) -> CNAK1_W<DOEPCTL1_SPEC, 26> {
         CNAK1_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn do_snak1(&mut self) -> DO_SNAK1_W<27> {
+    pub fn do_snak1(&mut self) -> DO_SNAK1_W<DOEPCTL1_SPEC, 27> {
         DO_SNAK1_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn do_setd0pid1(&mut self) -> DO_SETD0PID1_W<28> {
+    pub fn do_setd0pid1(&mut self) -> DO_SETD0PID1_W<DOEPCTL1_SPEC, 28> {
         DO_SETD0PID1_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn do_setd1pid1(&mut self) -> DO_SETD1PID1_W<29> {
+    pub fn do_setd1pid1(&mut self) -> DO_SETD1PID1_W<DOEPCTL1_SPEC, 29> {
         DO_SETD1PID1_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn epena1(&mut self) -> EPENA1_W<31> {
+    pub fn epena1(&mut self) -> EPENA1_W<DOEPCTL1_SPEC, 31> {
         EPENA1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [doepctl1](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPCTL1_SPEC;
 impl crate::RegisterSpec for DOEPCTL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [doepctl1::R](R) reader structure"]
-impl crate::Readable for DOEPCTL1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [doepctl1::W](W) writer structure"]
+#[doc = "`read()` method returns [`doepctl1::R`](R) reader structure"]
+impl crate::Readable for DOEPCTL1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`doepctl1::W`](W) writer structure"]
 impl crate::Writable for DOEPCTL1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

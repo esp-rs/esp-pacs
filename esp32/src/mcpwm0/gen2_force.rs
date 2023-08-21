@@ -1,67 +1,35 @@
 #[doc = "Register `GEN2_FORCE` reader"]
-pub struct R(crate::R<GEN2_FORCE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GEN2_FORCE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GEN2_FORCE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GEN2_FORCE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GEN2_FORCE_SPEC>;
 #[doc = "Register `GEN2_FORCE` writer"]
-pub struct W(crate::W<GEN2_FORCE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GEN2_FORCE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GEN2_FORCE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GEN2_FORCE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GEN2_FORCE_SPEC>;
 #[doc = "Field `GEN2_CNTUFORCE_UPMETHOD` reader - "]
 pub type GEN2_CNTUFORCE_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN2_CNTUFORCE_UPMETHOD` writer - "]
-pub type GEN2_CNTUFORCE_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_FORCE_SPEC, 6, O>;
+pub type GEN2_CNTUFORCE_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `GEN2_A_CNTUFORCE_MODE` reader - "]
 pub type GEN2_A_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN2_A_CNTUFORCE_MODE` writer - "]
-pub type GEN2_A_CNTUFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_FORCE_SPEC, 2, O>;
+pub type GEN2_A_CNTUFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `GEN2_B_CNTUFORCE_MODE` reader - "]
 pub type GEN2_B_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN2_B_CNTUFORCE_MODE` writer - "]
-pub type GEN2_B_CNTUFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_FORCE_SPEC, 2, O>;
+pub type GEN2_B_CNTUFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `GEN2_A_NCIFORCE` reader - "]
 pub type GEN2_A_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN2_A_NCIFORCE` writer - "]
-pub type GEN2_A_NCIFORCE_W<'a, const O: u8> = crate::BitWriter<'a, GEN2_FORCE_SPEC, O>;
+pub type GEN2_A_NCIFORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GEN2_A_NCIFORCE_MODE` reader - "]
 pub type GEN2_A_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN2_A_NCIFORCE_MODE` writer - "]
-pub type GEN2_A_NCIFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_FORCE_SPEC, 2, O>;
+pub type GEN2_A_NCIFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `GEN2_B_NCIFORCE` reader - "]
 pub type GEN2_B_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN2_B_NCIFORCE` writer - "]
-pub type GEN2_B_NCIFORCE_W<'a, const O: u8> = crate::BitWriter<'a, GEN2_FORCE_SPEC, O>;
+pub type GEN2_B_NCIFORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GEN2_B_NCIFORCE_MODE` reader - "]
 pub type GEN2_B_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN2_B_NCIFORCE_MODE` writer - "]
-pub type GEN2_B_NCIFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_FORCE_SPEC, 2, O>;
+pub type GEN2_B_NCIFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -144,64 +112,61 @@ impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn gen2_cntuforce_upmethod(&mut self) -> GEN2_CNTUFORCE_UPMETHOD_W<0> {
+    pub fn gen2_cntuforce_upmethod(&mut self) -> GEN2_CNTUFORCE_UPMETHOD_W<GEN2_FORCE_SPEC, 0> {
         GEN2_CNTUFORCE_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     #[must_use]
-    pub fn gen2_a_cntuforce_mode(&mut self) -> GEN2_A_CNTUFORCE_MODE_W<6> {
+    pub fn gen2_a_cntuforce_mode(&mut self) -> GEN2_A_CNTUFORCE_MODE_W<GEN2_FORCE_SPEC, 6> {
         GEN2_A_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     #[must_use]
-    pub fn gen2_b_cntuforce_mode(&mut self) -> GEN2_B_CNTUFORCE_MODE_W<8> {
+    pub fn gen2_b_cntuforce_mode(&mut self) -> GEN2_B_CNTUFORCE_MODE_W<GEN2_FORCE_SPEC, 8> {
         GEN2_B_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn gen2_a_nciforce(&mut self) -> GEN2_A_NCIFORCE_W<10> {
+    pub fn gen2_a_nciforce(&mut self) -> GEN2_A_NCIFORCE_W<GEN2_FORCE_SPEC, 10> {
         GEN2_A_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     #[must_use]
-    pub fn gen2_a_nciforce_mode(&mut self) -> GEN2_A_NCIFORCE_MODE_W<11> {
+    pub fn gen2_a_nciforce_mode(&mut self) -> GEN2_A_NCIFORCE_MODE_W<GEN2_FORCE_SPEC, 11> {
         GEN2_A_NCIFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn gen2_b_nciforce(&mut self) -> GEN2_B_NCIFORCE_W<13> {
+    pub fn gen2_b_nciforce(&mut self) -> GEN2_B_NCIFORCE_W<GEN2_FORCE_SPEC, 13> {
         GEN2_B_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     #[must_use]
-    pub fn gen2_b_nciforce_mode(&mut self) -> GEN2_B_NCIFORCE_MODE_W<14> {
+    pub fn gen2_b_nciforce_mode(&mut self) -> GEN2_B_NCIFORCE_MODE_W<GEN2_FORCE_SPEC, 14> {
         GEN2_B_NCIFORCE_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen2_force](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gen2_force::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gen2_force::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GEN2_FORCE_SPEC;
 impl crate::RegisterSpec for GEN2_FORCE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gen2_force::R](R) reader structure"]
-impl crate::Readable for GEN2_FORCE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gen2_force::W](W) writer structure"]
+#[doc = "`read()` method returns [`gen2_force::R`](R) reader structure"]
+impl crate::Readable for GEN2_FORCE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gen2_force::W`](W) writer structure"]
 impl crate::Writable for GEN2_FORCE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

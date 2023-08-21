@@ -1,53 +1,21 @@
 #[doc = "Register `APB_TSENS_CTRL` reader"]
-pub struct R(crate::R<APB_TSENS_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<APB_TSENS_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<APB_TSENS_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<APB_TSENS_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<APB_TSENS_CTRL_SPEC>;
 #[doc = "Register `APB_TSENS_CTRL` writer"]
-pub struct W(crate::W<APB_TSENS_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<APB_TSENS_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<APB_TSENS_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<APB_TSENS_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<APB_TSENS_CTRL_SPEC>;
 #[doc = "Field `REG_TSENS_OUT` reader - Need add description"]
 pub type REG_TSENS_OUT_R = crate::FieldReader;
 #[doc = "Field `REG_TSENS_IN_INV` reader - Need add description"]
 pub type REG_TSENS_IN_INV_R = crate::BitReader;
 #[doc = "Field `REG_TSENS_IN_INV` writer - Need add description"]
-pub type REG_TSENS_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_CTRL_SPEC, O>;
+pub type REG_TSENS_IN_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `REG_TSENS_CLK_DIV` reader - Need add description"]
 pub type REG_TSENS_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `REG_TSENS_CLK_DIV` writer - Need add description"]
-pub type REG_TSENS_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, APB_TSENS_CTRL_SPEC, 8, O>;
+pub type REG_TSENS_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `REG_TSENS_PU` reader - Need add description"]
 pub type REG_TSENS_PU_R = crate::BitReader;
 #[doc = "Field `REG_TSENS_PU` writer - Need add description"]
-pub type REG_TSENS_PU_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_CTRL_SPEC, O>;
+pub type REG_TSENS_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
@@ -103,40 +71,37 @@ impl W {
     #[doc = "Bit 13 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_in_inv(&mut self) -> REG_TSENS_IN_INV_W<13> {
+    pub fn reg_tsens_in_inv(&mut self) -> REG_TSENS_IN_INV_W<APB_TSENS_CTRL_SPEC, 13> {
         REG_TSENS_IN_INV_W::new(self)
     }
     #[doc = "Bits 14:21 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_clk_div(&mut self) -> REG_TSENS_CLK_DIV_W<14> {
+    pub fn reg_tsens_clk_div(&mut self) -> REG_TSENS_CLK_DIV_W<APB_TSENS_CTRL_SPEC, 14> {
         REG_TSENS_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 22 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_pu(&mut self) -> REG_TSENS_PU_W<22> {
+    pub fn reg_tsens_pu(&mut self) -> REG_TSENS_PU_W<APB_TSENS_CTRL_SPEC, 22> {
         REG_TSENS_PU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_tsens_ctrl](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_tsens_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_tsens_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB_TSENS_CTRL_SPEC;
 impl crate::RegisterSpec for APB_TSENS_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_tsens_ctrl::R](R) reader structure"]
-impl crate::Readable for APB_TSENS_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [apb_tsens_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`apb_tsens_ctrl::R`](R) reader structure"]
+impl crate::Readable for APB_TSENS_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`apb_tsens_ctrl::W`](W) writer structure"]
 impl crate::Writable for APB_TSENS_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

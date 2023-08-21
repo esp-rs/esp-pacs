@@ -1,91 +1,59 @@
 #[doc = "Register `BIAS_CONF` reader"]
-pub struct R(crate::R<BIAS_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BIAS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BIAS_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BIAS_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BIAS_CONF_SPEC>;
 #[doc = "Register `BIAS_CONF` writer"]
-pub struct W(crate::W<BIAS_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BIAS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BIAS_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BIAS_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BIAS_CONF_SPEC>;
 #[doc = "Field `DG_VDD_DRV_B_SLP` reader - Need add desc"]
 pub type DG_VDD_DRV_B_SLP_R = crate::FieldReader;
 #[doc = "Field `DG_VDD_DRV_B_SLP` writer - Need add desc"]
-pub type DG_VDD_DRV_B_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 8, O>;
+pub type DG_VDD_DRV_B_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `DG_VDD_DRV_B_SLP_EN` reader - Need add desc"]
 pub type DG_VDD_DRV_B_SLP_EN_R = crate::BitReader;
 #[doc = "Field `DG_VDD_DRV_B_SLP_EN` writer - Need add desc"]
-pub type DG_VDD_DRV_B_SLP_EN_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type DG_VDD_DRV_B_SLP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BIAS_BUF_IDLE` reader - Need add desc"]
 pub type BIAS_BUF_IDLE_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_IDLE` writer - Need add desc"]
-pub type BIAS_BUF_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type BIAS_BUF_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BIAS_BUF_WAKE` reader - Need add desc"]
 pub type BIAS_BUF_WAKE_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_WAKE` writer - Need add desc"]
-pub type BIAS_BUF_WAKE_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type BIAS_BUF_WAKE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BIAS_BUF_DEEP_SLP` reader - Need add desc"]
 pub type BIAS_BUF_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_DEEP_SLP` writer - Need add desc"]
-pub type BIAS_BUF_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type BIAS_BUF_DEEP_SLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BIAS_BUF_MONITOR` reader - Need add desc"]
 pub type BIAS_BUF_MONITOR_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_MONITOR` writer - Need add desc"]
-pub type BIAS_BUF_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type BIAS_BUF_MONITOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD_CUR_DEEP_SLP` reader - xpd cur when rtc in sleep_state"]
 pub type PD_CUR_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `PD_CUR_DEEP_SLP` writer - xpd cur when rtc in sleep_state"]
-pub type PD_CUR_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type PD_CUR_DEEP_SLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD_CUR_MONITOR` reader - xpd cur when rtc in monitor state"]
 pub type PD_CUR_MONITOR_R = crate::BitReader;
 #[doc = "Field `PD_CUR_MONITOR` writer - xpd cur when rtc in monitor state"]
-pub type PD_CUR_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type PD_CUR_MONITOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BIAS_SLEEP_DEEP_SLP` reader - bias_sleep when rtc in sleep_state"]
 pub type BIAS_SLEEP_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `BIAS_SLEEP_DEEP_SLP` writer - bias_sleep when rtc in sleep_state"]
-pub type BIAS_SLEEP_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type BIAS_SLEEP_DEEP_SLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BIAS_SLEEP_MONITOR` reader - bias_sleep when rtc in monitor state"]
 pub type BIAS_SLEEP_MONITOR_R = crate::BitReader;
 #[doc = "Field `BIAS_SLEEP_MONITOR` writer - bias_sleep when rtc in monitor state"]
-pub type BIAS_SLEEP_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type BIAS_SLEEP_MONITOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DBG_ATTEN_DEEP_SLP` reader - DBG_ATTEN when rtc in sleep state"]
 pub type DBG_ATTEN_DEEP_SLP_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN_DEEP_SLP` writer - DBG_ATTEN when rtc in sleep state"]
-pub type DBG_ATTEN_DEEP_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 4, O>;
+pub type DBG_ATTEN_DEEP_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `DBG_ATTEN_MONITOR` reader - DBG_ATTEN when rtc in active state"]
 pub type DBG_ATTEN_MONITOR_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN_MONITOR` writer - DBG_ATTEN when rtc in active state"]
-pub type DBG_ATTEN_MONITOR_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 4, O>;
+pub type DBG_ATTEN_MONITOR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `DBG_ATTEN_ACTIVE` reader - Need add desc"]
 pub type DBG_ATTEN_ACTIVE_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN_ACTIVE` writer - Need add desc"]
-pub type DBG_ATTEN_ACTIVE_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 4, O>;
+pub type DBG_ATTEN_ACTIVE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 impl R {
     #[doc = "Bits 0:7 - Need add desc"]
     #[inline(always)]
@@ -222,100 +190,97 @@ impl W {
     #[doc = "Bits 0:7 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<0> {
+    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<BIAS_CONF_SPEC, 0> {
         DG_VDD_DRV_B_SLP_W::new(self)
     }
     #[doc = "Bit 8 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_vdd_drv_b_slp_en(&mut self) -> DG_VDD_DRV_B_SLP_EN_W<8> {
+    pub fn dg_vdd_drv_b_slp_en(&mut self) -> DG_VDD_DRV_B_SLP_EN_W<BIAS_CONF_SPEC, 8> {
         DG_VDD_DRV_B_SLP_EN_W::new(self)
     }
     #[doc = "Bit 10 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_idle(&mut self) -> BIAS_BUF_IDLE_W<10> {
+    pub fn bias_buf_idle(&mut self) -> BIAS_BUF_IDLE_W<BIAS_CONF_SPEC, 10> {
         BIAS_BUF_IDLE_W::new(self)
     }
     #[doc = "Bit 11 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_wake(&mut self) -> BIAS_BUF_WAKE_W<11> {
+    pub fn bias_buf_wake(&mut self) -> BIAS_BUF_WAKE_W<BIAS_CONF_SPEC, 11> {
         BIAS_BUF_WAKE_W::new(self)
     }
     #[doc = "Bit 12 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_deep_slp(&mut self) -> BIAS_BUF_DEEP_SLP_W<12> {
+    pub fn bias_buf_deep_slp(&mut self) -> BIAS_BUF_DEEP_SLP_W<BIAS_CONF_SPEC, 12> {
         BIAS_BUF_DEEP_SLP_W::new(self)
     }
     #[doc = "Bit 13 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_monitor(&mut self) -> BIAS_BUF_MONITOR_W<13> {
+    pub fn bias_buf_monitor(&mut self) -> BIAS_BUF_MONITOR_W<BIAS_CONF_SPEC, 13> {
         BIAS_BUF_MONITOR_W::new(self)
     }
     #[doc = "Bit 14 - xpd cur when rtc in sleep_state"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_cur_deep_slp(&mut self) -> PD_CUR_DEEP_SLP_W<14> {
+    pub fn pd_cur_deep_slp(&mut self) -> PD_CUR_DEEP_SLP_W<BIAS_CONF_SPEC, 14> {
         PD_CUR_DEEP_SLP_W::new(self)
     }
     #[doc = "Bit 15 - xpd cur when rtc in monitor state"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_cur_monitor(&mut self) -> PD_CUR_MONITOR_W<15> {
+    pub fn pd_cur_monitor(&mut self) -> PD_CUR_MONITOR_W<BIAS_CONF_SPEC, 15> {
         PD_CUR_MONITOR_W::new(self)
     }
     #[doc = "Bit 16 - bias_sleep when rtc in sleep_state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_sleep_deep_slp(&mut self) -> BIAS_SLEEP_DEEP_SLP_W<16> {
+    pub fn bias_sleep_deep_slp(&mut self) -> BIAS_SLEEP_DEEP_SLP_W<BIAS_CONF_SPEC, 16> {
         BIAS_SLEEP_DEEP_SLP_W::new(self)
     }
     #[doc = "Bit 17 - bias_sleep when rtc in monitor state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_sleep_monitor(&mut self) -> BIAS_SLEEP_MONITOR_W<17> {
+    pub fn bias_sleep_monitor(&mut self) -> BIAS_SLEEP_MONITOR_W<BIAS_CONF_SPEC, 17> {
         BIAS_SLEEP_MONITOR_W::new(self)
     }
     #[doc = "Bits 18:21 - DBG_ATTEN when rtc in sleep state"]
     #[inline(always)]
     #[must_use]
-    pub fn dbg_atten_deep_slp(&mut self) -> DBG_ATTEN_DEEP_SLP_W<18> {
+    pub fn dbg_atten_deep_slp(&mut self) -> DBG_ATTEN_DEEP_SLP_W<BIAS_CONF_SPEC, 18> {
         DBG_ATTEN_DEEP_SLP_W::new(self)
     }
     #[doc = "Bits 22:25 - DBG_ATTEN when rtc in active state"]
     #[inline(always)]
     #[must_use]
-    pub fn dbg_atten_monitor(&mut self) -> DBG_ATTEN_MONITOR_W<22> {
+    pub fn dbg_atten_monitor(&mut self) -> DBG_ATTEN_MONITOR_W<BIAS_CONF_SPEC, 22> {
         DBG_ATTEN_MONITOR_W::new(self)
     }
     #[doc = "Bits 26:29 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn dbg_atten_active(&mut self) -> DBG_ATTEN_ACTIVE_W<26> {
+    pub fn dbg_atten_active(&mut self) -> DBG_ATTEN_ACTIVE_W<BIAS_CONF_SPEC, 26> {
         DBG_ATTEN_ACTIVE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bias_conf](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bias_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bias_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BIAS_CONF_SPEC;
 impl crate::RegisterSpec for BIAS_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bias_conf::R](R) reader structure"]
-impl crate::Readable for BIAS_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [bias_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`bias_conf::R`](R) reader structure"]
+impl crate::Readable for BIAS_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`bias_conf::W`](W) writer structure"]
 impl crate::Writable for BIAS_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

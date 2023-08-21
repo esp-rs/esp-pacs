@@ -1,18 +1,5 @@
 #[doc = "Register `SAR_TOUCH_STATUS1` reader"]
-pub struct R(crate::R<SAR_TOUCH_STATUS1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_TOUCH_STATUS1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_TOUCH_STATUS1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_TOUCH_STATUS1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_TOUCH_STATUS1_SPEC>;
 #[doc = "Field `SAR_TOUCH_PAD1_DATA` reader - touch data debounce of touch pad 1"]
 pub type SAR_TOUCH_PAD1_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR_TOUCH_PAD1_DEBOUNCE` reader - touch current debounce of touch pad 1"]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_STATUS1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "touch channel status of touch pad 1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_status1](index.html) module"]
+#[doc = "touch channel status of touch pad 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_status1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_TOUCH_STATUS1_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_STATUS1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_touch_status1::R](R) reader structure"]
-impl crate::Readable for SAR_TOUCH_STATUS1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sar_touch_status1::R`](R) reader structure"]
+impl crate::Readable for SAR_TOUCH_STATUS1_SPEC {}
 #[doc = "`reset()` method sets SAR_TOUCH_STATUS1 to value 0"]
 impl crate::Resettable for SAR_TOUCH_STATUS1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

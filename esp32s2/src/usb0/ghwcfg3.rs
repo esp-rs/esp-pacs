@@ -1,18 +1,5 @@
 #[doc = "Register `GHWCFG3` reader"]
-pub struct R(crate::R<GHWCFG3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GHWCFG3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GHWCFG3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GHWCFG3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GHWCFG3_SPEC>;
 #[doc = "Field `XFERSIZEWIDTH` reader - "]
 pub type XFERSIZEWIDTH_R = crate::FieldReader;
 #[doc = "Field `PKTSIZEWIDTH` reader - "]
@@ -130,15 +117,13 @@ impl core::fmt::Debug for crate::generic::Reg<GHWCFG3_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ghwcfg3](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ghwcfg3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GHWCFG3_SPEC;
 impl crate::RegisterSpec for GHWCFG3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ghwcfg3::R](R) reader structure"]
-impl crate::Readable for GHWCFG3_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ghwcfg3::R`](R) reader structure"]
+impl crate::Readable for GHWCFG3_SPEC {}
 #[doc = "`reset()` method sets GHWCFG3 to value 0x0100_04b5"]
 impl crate::Resettable for GHWCFG3_SPEC {
     const RESET_VALUE: Self::Ux = 0x0100_04b5;

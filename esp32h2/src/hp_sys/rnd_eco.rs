@@ -1,43 +1,11 @@
 #[doc = "Register `RND_ECO` reader"]
-pub struct R(crate::R<RND_ECO_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RND_ECO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RND_ECO_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RND_ECO_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RND_ECO_SPEC>;
 #[doc = "Register `RND_ECO` writer"]
-pub struct W(crate::W<RND_ECO_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RND_ECO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RND_ECO_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RND_ECO_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RND_ECO_SPEC>;
 #[doc = "Field `REDCY_ENA` reader - Only reserved for ECO."]
 pub type REDCY_ENA_R = crate::BitReader;
 #[doc = "Field `REDCY_ENA` writer - Only reserved for ECO."]
-pub type REDCY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, RND_ECO_SPEC, O>;
+pub type REDCY_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `REDCY_RESULT` reader - Only reserved for ECO."]
 pub type REDCY_RESULT_R = crate::BitReader;
 impl R {
@@ -74,28 +42,25 @@ impl W {
     #[doc = "Bit 0 - Only reserved for ECO."]
     #[inline(always)]
     #[must_use]
-    pub fn redcy_ena(&mut self) -> REDCY_ENA_W<0> {
+    pub fn redcy_ena(&mut self) -> REDCY_ENA_W<RND_ECO_SPEC, 0> {
         REDCY_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "redcy eco register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rnd_eco](index.html) module"]
+#[doc = "redcy eco register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rnd_eco::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rnd_eco::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RND_ECO_SPEC;
 impl crate::RegisterSpec for RND_ECO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rnd_eco::R](R) reader structure"]
-impl crate::Readable for RND_ECO_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rnd_eco::W](W) writer structure"]
+#[doc = "`read()` method returns [`rnd_eco::R`](R) reader structure"]
+impl crate::Readable for RND_ECO_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rnd_eco::W`](W) writer structure"]
 impl crate::Writable for RND_ECO_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

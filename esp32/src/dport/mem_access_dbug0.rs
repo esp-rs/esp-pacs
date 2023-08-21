@@ -1,18 +1,5 @@
 #[doc = "Register `MEM_ACCESS_DBUG0` reader"]
-pub struct R(crate::R<MEM_ACCESS_DBUG0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MEM_ACCESS_DBUG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MEM_ACCESS_DBUG0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MEM_ACCESS_DBUG0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MEM_ACCESS_DBUG0_SPEC>;
 #[doc = "Field `PRO_ROM_MPU_AD` reader - "]
 pub type PRO_ROM_MPU_AD_R = crate::BitReader;
 #[doc = "Field `PRO_ROM_IA` reader - "]
@@ -121,15 +108,13 @@ impl core::fmt::Debug for crate::generic::Reg<MEM_ACCESS_DBUG0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_access_dbug0](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_access_dbug0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MEM_ACCESS_DBUG0_SPEC;
 impl crate::RegisterSpec for MEM_ACCESS_DBUG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_access_dbug0::R](R) reader structure"]
-impl crate::Readable for MEM_ACCESS_DBUG0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`mem_access_dbug0::R`](R) reader structure"]
+impl crate::Readable for MEM_ACCESS_DBUG0_SPEC {}
 #[doc = "`reset()` method sets MEM_ACCESS_DBUG0 to value 0"]
 impl crate::Resettable for MEM_ACCESS_DBUG0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

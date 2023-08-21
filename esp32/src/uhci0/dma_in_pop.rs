@@ -1,45 +1,13 @@
 #[doc = "Register `DMA_IN_POP` reader"]
-pub struct R(crate::R<DMA_IN_POP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_IN_POP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_IN_POP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_IN_POP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_IN_POP_SPEC>;
 #[doc = "Register `DMA_IN_POP` writer"]
-pub struct W(crate::W<DMA_IN_POP_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMA_IN_POP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMA_IN_POP_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMA_IN_POP_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMA_IN_POP_SPEC>;
 #[doc = "Field `INFIFO_RDATA` reader - This register stores the data pop from in link descriptor's fifo."]
 pub type INFIFO_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `INFIFO_POP` reader - Set this bit to pop data in in link descriptor's fifo."]
 pub type INFIFO_POP_R = crate::BitReader;
 #[doc = "Field `INFIFO_POP` writer - Set this bit to pop data in in link descriptor's fifo."]
-pub type INFIFO_POP_W<'a, const O: u8> = crate::BitWriter<'a, DMA_IN_POP_SPEC, O>;
+pub type INFIFO_POP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:11 - This register stores the data pop from in link descriptor's fifo."]
     #[inline(always)]
@@ -74,28 +42,25 @@ impl W {
     #[doc = "Bit 16 - Set this bit to pop data in in link descriptor's fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<16> {
+    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<DMA_IN_POP_SPEC, 16> {
         INFIFO_POP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_in_pop](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_in_pop::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_in_pop::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_IN_POP_SPEC;
 impl crate::RegisterSpec for DMA_IN_POP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_in_pop::R](R) reader structure"]
-impl crate::Readable for DMA_IN_POP_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dma_in_pop::W](W) writer structure"]
+#[doc = "`read()` method returns [`dma_in_pop::R`](R) reader structure"]
+impl crate::Readable for DMA_IN_POP_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dma_in_pop::W`](W) writer structure"]
 impl crate::Writable for DMA_IN_POP_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

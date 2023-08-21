@@ -1,18 +1,5 @@
 #[doc = "Register `RD_REPEAT_DATA0` reader"]
-pub struct R(crate::R<RD_REPEAT_DATA0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_REPEAT_DATA0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_REPEAT_DATA0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_REPEAT_DATA0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_REPEAT_DATA0_SPEC>;
 #[doc = "Field `RD_DIS` reader - Represents whether reading of individual eFuse block(block4~block10) is disabled or enabled. 1: disabled. 0: enabled."]
 pub type RD_DIS_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED0_4` reader - Reserved."]
@@ -233,15 +220,13 @@ impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "BLOCK0 data register 1.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data0](index.html) module"]
+#[doc = "BLOCK0 data register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA0_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_repeat_data0::R](R) reader structure"]
-impl crate::Readable for RD_REPEAT_DATA0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rd_repeat_data0::R`](R) reader structure"]
+impl crate::Readable for RD_REPEAT_DATA0_SPEC {}
 #[doc = "`reset()` method sets RD_REPEAT_DATA0 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

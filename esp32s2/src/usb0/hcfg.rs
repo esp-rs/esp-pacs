@@ -1,67 +1,35 @@
 #[doc = "Register `HCFG` reader"]
-pub struct R(crate::R<HCFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCFG_SPEC>;
 #[doc = "Register `HCFG` writer"]
-pub struct W(crate::W<HCFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCFG_SPEC>;
 #[doc = "Field `H_FSLSPCLKSEL` reader - "]
 pub type H_FSLSPCLKSEL_R = crate::FieldReader;
 #[doc = "Field `H_FSLSPCLKSEL` writer - "]
-pub type H_FSLSPCLKSEL_W<'a, const O: u8> = crate::FieldWriter<'a, HCFG_SPEC, 2, O>;
+pub type H_FSLSPCLKSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `H_FSLSSUPP` reader - "]
 pub type H_FSLSSUPP_R = crate::BitReader;
 #[doc = "Field `H_FSLSSUPP` writer - "]
-pub type H_FSLSSUPP_W<'a, const O: u8> = crate::BitWriter<'a, HCFG_SPEC, O>;
+pub type H_FSLSSUPP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_ENA32KHZS` reader - "]
 pub type H_ENA32KHZS_R = crate::BitReader;
 #[doc = "Field `H_ENA32KHZS` writer - "]
-pub type H_ENA32KHZS_W<'a, const O: u8> = crate::BitWriter<'a, HCFG_SPEC, O>;
+pub type H_ENA32KHZS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_DESCDMA` reader - "]
 pub type H_DESCDMA_R = crate::BitReader;
 #[doc = "Field `H_DESCDMA` writer - "]
-pub type H_DESCDMA_W<'a, const O: u8> = crate::BitWriter<'a, HCFG_SPEC, O>;
+pub type H_DESCDMA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_FRLISTEN` reader - "]
 pub type H_FRLISTEN_R = crate::FieldReader;
 #[doc = "Field `H_FRLISTEN` writer - "]
-pub type H_FRLISTEN_W<'a, const O: u8> = crate::FieldWriter<'a, HCFG_SPEC, 2, O>;
+pub type H_FRLISTEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `H_PERSCHEDENA` reader - "]
 pub type H_PERSCHEDENA_R = crate::BitReader;
 #[doc = "Field `H_PERSCHEDENA` writer - "]
-pub type H_PERSCHEDENA_W<'a, const O: u8> = crate::BitWriter<'a, HCFG_SPEC, O>;
+pub type H_PERSCHEDENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_MODECHTIMEN` reader - "]
 pub type H_MODECHTIMEN_R = crate::BitReader;
 #[doc = "Field `H_MODECHTIMEN` writer - "]
-pub type H_MODECHTIMEN_W<'a, const O: u8> = crate::BitWriter<'a, HCFG_SPEC, O>;
+pub type H_MODECHTIMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -132,64 +100,61 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_fslspclksel(&mut self) -> H_FSLSPCLKSEL_W<0> {
+    pub fn h_fslspclksel(&mut self) -> H_FSLSPCLKSEL_W<HCFG_SPEC, 0> {
         H_FSLSPCLKSEL_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_fslssupp(&mut self) -> H_FSLSSUPP_W<2> {
+    pub fn h_fslssupp(&mut self) -> H_FSLSSUPP_W<HCFG_SPEC, 2> {
         H_FSLSSUPP_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ena32khzs(&mut self) -> H_ENA32KHZS_W<7> {
+    pub fn h_ena32khzs(&mut self) -> H_ENA32KHZS_W<HCFG_SPEC, 7> {
         H_ENA32KHZS_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn h_descdma(&mut self) -> H_DESCDMA_W<23> {
+    pub fn h_descdma(&mut self) -> H_DESCDMA_W<HCFG_SPEC, 23> {
         H_DESCDMA_W::new(self)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frlisten(&mut self) -> H_FRLISTEN_W<24> {
+    pub fn h_frlisten(&mut self) -> H_FRLISTEN_W<HCFG_SPEC, 24> {
         H_FRLISTEN_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn h_perschedena(&mut self) -> H_PERSCHEDENA_W<26> {
+    pub fn h_perschedena(&mut self) -> H_PERSCHEDENA_W<HCFG_SPEC, 26> {
         H_PERSCHEDENA_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn h_modechtimen(&mut self) -> H_MODECHTIMEN_W<31> {
+    pub fn h_modechtimen(&mut self) -> H_MODECHTIMEN_W<HCFG_SPEC, 31> {
         H_MODECHTIMEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcfg](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCFG_SPEC;
 impl crate::RegisterSpec for HCFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcfg::R](R) reader structure"]
-impl crate::Readable for HCFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hcfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`hcfg::R`](R) reader structure"]
+impl crate::Readable for HCFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hcfg::W`](W) writer structure"]
 impl crate::Writable for HCFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

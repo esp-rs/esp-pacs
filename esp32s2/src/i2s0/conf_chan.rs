@@ -1,47 +1,15 @@
 #[doc = "Register `CONF_CHAN` reader"]
-pub struct R(crate::R<CONF_CHAN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF_CHAN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF_CHAN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF_CHAN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF_CHAN_SPEC>;
 #[doc = "Register `CONF_CHAN` writer"]
-pub struct W(crate::W<CONF_CHAN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF_CHAN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF_CHAN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF_CHAN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF_CHAN_SPEC>;
 #[doc = "Field `TX_CHAN_MOD` reader - I2S transmitter channel mode configuration bits."]
 pub type TX_CHAN_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_CHAN_MOD` writer - I2S transmitter channel mode configuration bits."]
-pub type TX_CHAN_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_CHAN_SPEC, 3, O>;
+pub type TX_CHAN_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `RX_CHAN_MOD` reader - I2S receiver channel mode configuration bits."]
 pub type RX_CHAN_MOD_R = crate::FieldReader;
 #[doc = "Field `RX_CHAN_MOD` writer - I2S receiver channel mode configuration bits."]
-pub type RX_CHAN_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_CHAN_SPEC, 2, O>;
+pub type RX_CHAN_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:2 - I2S transmitter channel mode configuration bits."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 0:2 - I2S transmitter channel mode configuration bits."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_chan_mod(&mut self) -> TX_CHAN_MOD_W<0> {
+    pub fn tx_chan_mod(&mut self) -> TX_CHAN_MOD_W<CONF_CHAN_SPEC, 0> {
         TX_CHAN_MOD_W::new(self)
     }
     #[doc = "Bits 3:4 - I2S receiver channel mode configuration bits."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_chan_mod(&mut self) -> RX_CHAN_MOD_W<3> {
+    pub fn rx_chan_mod(&mut self) -> RX_CHAN_MOD_W<CONF_CHAN_SPEC, 3> {
         RX_CHAN_MOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S channel configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf_chan](index.html) module"]
+#[doc = "I2S channel configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf_chan::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf_chan::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF_CHAN_SPEC;
 impl crate::RegisterSpec for CONF_CHAN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf_chan::R](R) reader structure"]
-impl crate::Readable for CONF_CHAN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf_chan::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf_chan::R`](R) reader structure"]
+impl crate::Readable for CONF_CHAN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf_chan::W`](W) writer structure"]
 impl crate::Writable for CONF_CHAN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

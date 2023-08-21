@@ -1,47 +1,15 @@
 #[doc = "Register `TIMER6` reader"]
-pub struct R(crate::R<TIMER6_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TIMER6_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TIMER6_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TIMER6_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TIMER6_SPEC>;
 #[doc = "Register `TIMER6` writer"]
-pub struct W(crate::W<TIMER6_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TIMER6_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TIMER6_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TIMER6_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TIMER6_SPEC>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` reader - digital peri power domain wakeup time"]
 pub type DG_PERI_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` writer - digital peri power domain wakeup time"]
-pub type DG_PERI_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16>;
+pub type DG_PERI_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` reader - digital peri power domain power on time"]
 pub type DG_PERI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` writer - digital peri power domain power on time"]
-pub type DG_PERI_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER6_SPEC, 7, O>;
+pub type DG_PERI_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 impl R {
     #[doc = "Bits 16:24 - digital peri power domain wakeup time"]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 16:24 - digital peri power domain wakeup time"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<16> {
+    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<TIMER6_SPEC, 16> {
         DG_PERI_WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 25:31 - digital peri power domain power on time"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<25> {
+    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<TIMER6_SPEC, 25> {
         DG_PERI_POWERUP_TIMER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer6](index.html) module"]
+#[doc = "rtc configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer6::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timer6::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMER6_SPEC;
 impl crate::RegisterSpec for TIMER6_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timer6::R](R) reader structure"]
-impl crate::Readable for TIMER6_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [timer6::W](W) writer structure"]
+#[doc = "`read()` method returns [`timer6::R`](R) reader structure"]
+impl crate::Readable for TIMER6_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`timer6::W`](W) writer structure"]
 impl crate::Writable for TIMER6_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

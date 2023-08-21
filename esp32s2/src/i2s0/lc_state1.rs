@@ -1,18 +1,5 @@
 #[doc = "Register `LC_STATE1` reader"]
-pub struct R(crate::R<LC_STATE1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LC_STATE1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LC_STATE1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LC_STATE1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LC_STATE1_SPEC>;
 #[doc = "Field `INLINK_DSCR_ADDR` reader - I2S DMA in descriptor address."]
 pub type INLINK_DSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `IN_DSCR_STATE` reader - I2S DMA in descriptor state."]
@@ -85,15 +72,13 @@ impl core::fmt::Debug for crate::generic::Reg<LC_STATE1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "I2S DMA RX status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_state1](index.html) module"]
+#[doc = "I2S DMA RX status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_state1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LC_STATE1_SPEC;
 impl crate::RegisterSpec for LC_STATE1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lc_state1::R](R) reader structure"]
-impl crate::Readable for LC_STATE1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`lc_state1::R`](R) reader structure"]
+impl crate::Readable for LC_STATE1_SPEC {}
 #[doc = "`reset()` method sets LC_STATE1 to value 0"]
 impl crate::Resettable for LC_STATE1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

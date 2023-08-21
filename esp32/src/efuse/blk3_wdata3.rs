@@ -1,55 +1,23 @@
 #[doc = "Register `BLK3_WDATA3` reader"]
-pub struct R(crate::R<BLK3_WDATA3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BLK3_WDATA3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BLK3_WDATA3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BLK3_WDATA3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BLK3_WDATA3_SPEC>;
 #[doc = "Register `BLK3_WDATA3` writer"]
-pub struct W(crate::W<BLK3_WDATA3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BLK3_WDATA3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BLK3_WDATA3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BLK3_WDATA3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BLK3_WDATA3_SPEC>;
 #[doc = "Field `ADC1_TP_LOW` reader - "]
 pub type ADC1_TP_LOW_R = crate::FieldReader;
 #[doc = "Field `ADC1_TP_LOW` writer - "]
-pub type ADC1_TP_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 7, O>;
+pub type ADC1_TP_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `ADC1_TP_HIGH` reader - "]
 pub type ADC1_TP_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `ADC1_TP_HIGH` writer - "]
-pub type ADC1_TP_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 9, O, u16>;
+pub type ADC1_TP_HIGH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `ADC2_TP_LOW` reader - "]
 pub type ADC2_TP_LOW_R = crate::FieldReader;
 #[doc = "Field `ADC2_TP_LOW` writer - "]
-pub type ADC2_TP_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 7, O>;
+pub type ADC2_TP_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `ADC2_TP_HIGH` reader - "]
 pub type ADC2_TP_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `ADC2_TP_HIGH` writer - "]
-pub type ADC2_TP_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 9, O, u16>;
+pub type ADC2_TP_HIGH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -105,46 +73,43 @@ impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_tp_low(&mut self) -> ADC1_TP_LOW_W<0> {
+    pub fn adc1_tp_low(&mut self) -> ADC1_TP_LOW_W<BLK3_WDATA3_SPEC, 0> {
         ADC1_TP_LOW_W::new(self)
     }
     #[doc = "Bits 7:15"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_tp_high(&mut self) -> ADC1_TP_HIGH_W<7> {
+    pub fn adc1_tp_high(&mut self) -> ADC1_TP_HIGH_W<BLK3_WDATA3_SPEC, 7> {
         ADC1_TP_HIGH_W::new(self)
     }
     #[doc = "Bits 16:22"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_tp_low(&mut self) -> ADC2_TP_LOW_W<16> {
+    pub fn adc2_tp_low(&mut self) -> ADC2_TP_LOW_W<BLK3_WDATA3_SPEC, 16> {
         ADC2_TP_LOW_W::new(self)
     }
     #[doc = "Bits 23:31"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_tp_high(&mut self) -> ADC2_TP_HIGH_W<23> {
+    pub fn adc2_tp_high(&mut self) -> ADC2_TP_HIGH_W<BLK3_WDATA3_SPEC, 23> {
         ADC2_TP_HIGH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk3_wdata3](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_wdata3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blk3_wdata3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLK3_WDATA3_SPEC;
 impl crate::RegisterSpec for BLK3_WDATA3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk3_wdata3::R](R) reader structure"]
-impl crate::Readable for BLK3_WDATA3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [blk3_wdata3::W](W) writer structure"]
+#[doc = "`read()` method returns [`blk3_wdata3::R`](R) reader structure"]
+impl crate::Readable for BLK3_WDATA3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`blk3_wdata3::W`](W) writer structure"]
 impl crate::Writable for BLK3_WDATA3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

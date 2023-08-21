@@ -1,43 +1,11 @@
 #[doc = "Register `T0LOADHI` reader"]
-pub struct R(crate::R<T0LOADHI_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<T0LOADHI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<T0LOADHI_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<T0LOADHI_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<T0LOADHI_SPEC>;
 #[doc = "Register `T0LOADHI` writer"]
-pub struct W(crate::W<T0LOADHI_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<T0LOADHI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<T0LOADHI_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<T0LOADHI_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<T0LOADHI_SPEC>;
 #[doc = "Field `LOAD_HI` reader - reg_t0_load_hi."]
 pub type LOAD_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `LOAD_HI` writer - reg_t0_load_hi."]
-pub type LOAD_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T0LOADHI_SPEC, 22, O, u32>;
+pub type LOAD_HI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - reg_t0_load_hi."]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:21 - reg_t0_load_hi."]
     #[inline(always)]
     #[must_use]
-    pub fn load_hi(&mut self) -> LOAD_HI_W<0> {
+    pub fn load_hi(&mut self) -> LOAD_HI_W<T0LOADHI_SPEC, 0> {
         LOAD_HI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "TIMG_T0LOADHI_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0loadhi](index.html) module"]
+#[doc = "TIMG_T0LOADHI_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0loadhi::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0loadhi::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct T0LOADHI_SPEC;
 impl crate::RegisterSpec for T0LOADHI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t0loadhi::R](R) reader structure"]
-impl crate::Readable for T0LOADHI_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [t0loadhi::W](W) writer structure"]
+#[doc = "`read()` method returns [`t0loadhi::R`](R) reader structure"]
+impl crate::Readable for T0LOADHI_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`t0loadhi::W`](W) writer structure"]
 impl crate::Writable for T0LOADHI_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

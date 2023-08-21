@@ -1,115 +1,83 @@
 #[doc = "Register `CONF` reader"]
-pub struct R(crate::R<CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF_SPEC>;
 #[doc = "Register `CONF` writer"]
-pub struct W(crate::W<CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `TX_RESET` writer - Set this bit to reset transmitter."]
-pub type TX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_RESET` writer - Set this bit to reset receiver."]
-pub type RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_FIFO_RESET` writer - Set this bit to reset TX FIFO."]
-pub type TX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_FIFO_RESET` writer - Set this bit to reset RX FIFO."]
-pub type RX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_START` reader - Set this bit to start transmitting data."]
 pub type TX_START_R = crate::BitReader;
 #[doc = "Field `TX_START` writer - Set this bit to start transmitting data."]
-pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_START` reader - Set this bit to start receiving data."]
 pub type RX_START_R = crate::BitReader;
 #[doc = "Field `RX_START` writer - Set this bit to start receiving data."]
-pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_SLAVE_MOD` reader - Set this bit to enable slave transmitter mode."]
 pub type TX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `TX_SLAVE_MOD` writer - Set this bit to enable slave transmitter mode."]
-pub type TX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_SLAVE_MOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_SLAVE_MOD` reader - Set this bit to enable slave receiver mode."]
 pub type RX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `RX_SLAVE_MOD` writer - Set this bit to enable slave receiver mode."]
-pub type RX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_SLAVE_MOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_RIGHT_FIRST` reader - Set this bit to transmit right channel data first."]
 pub type TX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_RIGHT_FIRST` writer - Set this bit to transmit right channel data first."]
-pub type TX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_RIGHT_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_RIGHT_FIRST` reader - Set this bit to receive right channel data first."]
 pub type RX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_RIGHT_FIRST` writer - Set this bit to receive right channel data first."]
-pub type RX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_RIGHT_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_MSB_SHIFT` reader - Set this bit to enable transmitter in Phillips standard mode."]
 pub type TX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_SHIFT` writer - Set this bit to enable transmitter in Phillips standard mode."]
-pub type TX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_MSB_SHIFT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_MSB_SHIFT` reader - Set this bit to enable receiver in Phillips standard mode."]
 pub type RX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_SHIFT` writer - Set this bit to enable receiver in Phillips standard mode."]
-pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_MSB_SHIFT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_SHORT_SYNC` reader - Set this bit to enable transmitter in PCM standard mode."]
 pub type TX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `TX_SHORT_SYNC` writer - Set this bit to enable transmitter in PCM standard mode."]
-pub type TX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_SHORT_SYNC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_SHORT_SYNC` reader - Set this bit to enable receiver in PCM standard mode."]
 pub type RX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `RX_SHORT_SYNC` writer - Set this bit to enable receiver in PCM standard mode."]
-pub type RX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_SHORT_SYNC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_MONO` reader - Set this bit to enable transmitter in mono mode."]
 pub type TX_MONO_R = crate::BitReader;
 #[doc = "Field `TX_MONO` writer - Set this bit to enable transmitter in mono mode."]
-pub type TX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_MONO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_MONO` reader - Set this bit to enable receiver in mono mode."]
 pub type RX_MONO_R = crate::BitReader;
 #[doc = "Field `RX_MONO` writer - Set this bit to enable receiver in mono mode."]
-pub type RX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_MONO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_MSB_RIGHT` reader - Set this bit to place right channel data at the MSB in TX FIFO."]
 pub type TX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_RIGHT` writer - Set this bit to place right channel data at the MSB in TX FIFO."]
-pub type TX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_MSB_RIGHT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_MSB_RIGHT` reader - Set this bit to place right channel data at the MSB in RX FIFO."]
 pub type RX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_RIGHT` writer - Set this bit to place right channel data at the MSB in RX FIFO."]
-pub type RX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_MSB_RIGHT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_LSB_FIRST_DMA` reader - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
 pub type TX_LSB_FIRST_DMA_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST_DMA` writer - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
-pub type TX_LSB_FIRST_DMA_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_LSB_FIRST_DMA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_LSB_FIRST_DMA` reader - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
 pub type RX_LSB_FIRST_DMA_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST_DMA` writer - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
-pub type RX_LSB_FIRST_DMA_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_LSB_FIRST_DMA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SIG_LOOPBACK` reader - Enable signal loopback mode with transmitter module and receiver module sharing the same WS and BCK signals."]
 pub type SIG_LOOPBACK_R = crate::BitReader;
 #[doc = "Field `SIG_LOOPBACK` writer - Enable signal loopback mode with transmitter module and receiver module sharing the same WS and BCK signals."]
-pub type SIG_LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type SIG_LOOPBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_FIFO_RESET_ST` reader - I2S TX FIFO reset status. 1: I2S_TX_FIFO_RESET is not completed. 0: I2S_TX_FIFO_RESET is completed."]
 pub type TX_FIFO_RESET_ST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_RESET_ST` reader - I2S RX FIFO reset status. 1: I2S_RX_FIFO_RESET is not completed. 0: I2S_RX_FIFO_RESET is completed."]
@@ -119,23 +87,23 @@ pub type TX_RESET_ST_R = crate::BitReader;
 #[doc = "Field `TX_DMA_EQUAL` reader - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
 pub type TX_DMA_EQUAL_R = crate::BitReader;
 #[doc = "Field `TX_DMA_EQUAL` writer - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
-pub type TX_DMA_EQUAL_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_DMA_EQUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_DMA_EQUAL` reader - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
 pub type RX_DMA_EQUAL_R = crate::BitReader;
 #[doc = "Field `RX_DMA_EQUAL` writer - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
-pub type RX_DMA_EQUAL_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_DMA_EQUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRE_REQ_EN` reader - Set this bit to enable I2S to prepare data earlier."]
 pub type PRE_REQ_EN_R = crate::BitReader;
 #[doc = "Field `PRE_REQ_EN` writer - Set this bit to enable I2S to prepare data earlier."]
-pub type PRE_REQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type PRE_REQ_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_BIG_ENDIAN` reader - I2S TX byte endianness."]
 pub type TX_BIG_ENDIAN_R = crate::BitReader;
 #[doc = "Field `TX_BIG_ENDIAN` writer - I2S TX byte endianness."]
-pub type TX_BIG_ENDIAN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type TX_BIG_ENDIAN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_BIG_ENDIAN` reader - I2S RX byte endianness."]
 pub type RX_BIG_ENDIAN_R = crate::BitReader;
 #[doc = "Field `RX_BIG_ENDIAN` writer - I2S RX byte endianness."]
-pub type RX_BIG_ENDIAN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
+pub type RX_BIG_ENDIAN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_RESET_ST` reader - I2S RX reset status. 1: I2S_RX_RESET is not completed. 0: I2S_RX_RESET is completed."]
 pub type RX_RESET_ST_R = crate::BitReader;
 impl R {
@@ -370,178 +338,175 @@ impl W {
     #[doc = "Bit 0 - Set this bit to reset transmitter."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_reset(&mut self) -> TX_RESET_W<0> {
+    pub fn tx_reset(&mut self) -> TX_RESET_W<CONF_SPEC, 0> {
         TX_RESET_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset receiver."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_reset(&mut self) -> RX_RESET_W<1> {
+    pub fn rx_reset(&mut self) -> RX_RESET_W<CONF_SPEC, 1> {
         RX_RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset TX FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<2> {
+    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<CONF_SPEC, 2> {
         TX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset RX FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<3> {
+    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<CONF_SPEC, 3> {
         RX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to start transmitting data."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_start(&mut self) -> TX_START_W<4> {
+    pub fn tx_start(&mut self) -> TX_START_W<CONF_SPEC, 4> {
         TX_START_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to start receiving data."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_start(&mut self) -> RX_START_W<5> {
+    pub fn rx_start(&mut self) -> RX_START_W<CONF_SPEC, 5> {
         RX_START_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable slave transmitter mode."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<6> {
+    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<CONF_SPEC, 6> {
         TX_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable slave receiver mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<7> {
+    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<CONF_SPEC, 7> {
         RX_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to transmit right channel data first."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<8> {
+    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<CONF_SPEC, 8> {
         TX_RIGHT_FIRST_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to receive right channel data first."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<9> {
+    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<CONF_SPEC, 9> {
         RX_RIGHT_FIRST_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable transmitter in Phillips standard mode."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<10> {
+    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<CONF_SPEC, 10> {
         TX_MSB_SHIFT_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to enable receiver in Phillips standard mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<11> {
+    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<CONF_SPEC, 11> {
         RX_MSB_SHIFT_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable transmitter in PCM standard mode."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<12> {
+    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<CONF_SPEC, 12> {
         TX_SHORT_SYNC_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to enable receiver in PCM standard mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<13> {
+    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<CONF_SPEC, 13> {
         RX_SHORT_SYNC_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable transmitter in mono mode."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_mono(&mut self) -> TX_MONO_W<14> {
+    pub fn tx_mono(&mut self) -> TX_MONO_W<CONF_SPEC, 14> {
         TX_MONO_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to enable receiver in mono mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_mono(&mut self) -> RX_MONO_W<15> {
+    pub fn rx_mono(&mut self) -> RX_MONO_W<CONF_SPEC, 15> {
         RX_MONO_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to place right channel data at the MSB in TX FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<16> {
+    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<CONF_SPEC, 16> {
         TX_MSB_RIGHT_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to place right channel data at the MSB in RX FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<17> {
+    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<CONF_SPEC, 17> {
         RX_MSB_RIGHT_W::new(self)
     }
     #[doc = "Bit 18 - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_lsb_first_dma(&mut self) -> TX_LSB_FIRST_DMA_W<18> {
+    pub fn tx_lsb_first_dma(&mut self) -> TX_LSB_FIRST_DMA_W<CONF_SPEC, 18> {
         TX_LSB_FIRST_DMA_W::new(self)
     }
     #[doc = "Bit 19 - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_lsb_first_dma(&mut self) -> RX_LSB_FIRST_DMA_W<19> {
+    pub fn rx_lsb_first_dma(&mut self) -> RX_LSB_FIRST_DMA_W<CONF_SPEC, 19> {
         RX_LSB_FIRST_DMA_W::new(self)
     }
     #[doc = "Bit 20 - Enable signal loopback mode with transmitter module and receiver module sharing the same WS and BCK signals."]
     #[inline(always)]
     #[must_use]
-    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<20> {
+    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<CONF_SPEC, 20> {
         SIG_LOOPBACK_W::new(self)
     }
     #[doc = "Bit 24 - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_dma_equal(&mut self) -> TX_DMA_EQUAL_W<24> {
+    pub fn tx_dma_equal(&mut self) -> TX_DMA_EQUAL_W<CONF_SPEC, 24> {
         TX_DMA_EQUAL_W::new(self)
     }
     #[doc = "Bit 25 - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_dma_equal(&mut self) -> RX_DMA_EQUAL_W<25> {
+    pub fn rx_dma_equal(&mut self) -> RX_DMA_EQUAL_W<CONF_SPEC, 25> {
         RX_DMA_EQUAL_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to enable I2S to prepare data earlier."]
     #[inline(always)]
     #[must_use]
-    pub fn pre_req_en(&mut self) -> PRE_REQ_EN_W<26> {
+    pub fn pre_req_en(&mut self) -> PRE_REQ_EN_W<CONF_SPEC, 26> {
         PRE_REQ_EN_W::new(self)
     }
     #[doc = "Bit 27 - I2S TX byte endianness."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_big_endian(&mut self) -> TX_BIG_ENDIAN_W<27> {
+    pub fn tx_big_endian(&mut self) -> TX_BIG_ENDIAN_W<CONF_SPEC, 27> {
         TX_BIG_ENDIAN_W::new(self)
     }
     #[doc = "Bit 28 - I2S RX byte endianness."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_big_endian(&mut self) -> RX_BIG_ENDIAN_W<28> {
+    pub fn rx_big_endian(&mut self) -> RX_BIG_ENDIAN_W<CONF_SPEC, 28> {
         RX_BIG_ENDIAN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf](index.html) module"]
+#[doc = "I2S configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF_SPEC;
 impl crate::RegisterSpec for CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf::R](R) reader structure"]
-impl crate::Readable for CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf::R`](R) reader structure"]
+impl crate::Readable for CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf::W`](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

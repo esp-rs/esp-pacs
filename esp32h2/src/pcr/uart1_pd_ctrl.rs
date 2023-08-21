@@ -1,47 +1,15 @@
 #[doc = "Register `UART1_PD_CTRL` reader"]
-pub struct R(crate::R<UART1_PD_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UART1_PD_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UART1_PD_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UART1_PD_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UART1_PD_CTRL_SPEC>;
 #[doc = "Register `UART1_PD_CTRL` writer"]
-pub struct W(crate::W<UART1_PD_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UART1_PD_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UART1_PD_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UART1_PD_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UART1_PD_CTRL_SPEC>;
 #[doc = "Field `UART1_MEM_FORCE_PU` reader - Set this bit to force power down UART1 memory."]
 pub type UART1_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `UART1_MEM_FORCE_PU` writer - Set this bit to force power down UART1 memory."]
-pub type UART1_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, UART1_PD_CTRL_SPEC, O>;
+pub type UART1_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART1_MEM_FORCE_PD` reader - Set this bit to force power up UART1 memory."]
 pub type UART1_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `UART1_MEM_FORCE_PD` writer - Set this bit to force power up UART1 memory."]
-pub type UART1_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, UART1_PD_CTRL_SPEC, O>;
+pub type UART1_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - Set this bit to force power down UART1 memory."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bit 1 - Set this bit to force power down UART1 memory."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_mem_force_pu(&mut self) -> UART1_MEM_FORCE_PU_W<1> {
+    pub fn uart1_mem_force_pu(&mut self) -> UART1_MEM_FORCE_PU_W<UART1_PD_CTRL_SPEC, 1> {
         UART1_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to force power up UART1 memory."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_mem_force_pd(&mut self) -> UART1_MEM_FORCE_PD_W<2> {
+    pub fn uart1_mem_force_pd(&mut self) -> UART1_MEM_FORCE_PD_W<UART1_PD_CTRL_SPEC, 2> {
         UART1_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "UART1 power control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart1_pd_ctrl](index.html) module"]
+#[doc = "UART1 power control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart1_pd_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart1_pd_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UART1_PD_CTRL_SPEC;
 impl crate::RegisterSpec for UART1_PD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uart1_pd_ctrl::R](R) reader structure"]
-impl crate::Readable for UART1_PD_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [uart1_pd_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`uart1_pd_ctrl::R`](R) reader structure"]
+impl crate::Readable for UART1_PD_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`uart1_pd_ctrl::W`](W) writer structure"]
 impl crate::Writable for UART1_PD_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

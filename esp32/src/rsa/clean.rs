@@ -1,18 +1,5 @@
 #[doc = "Register `CLEAN` reader"]
-pub struct R(crate::R<CLEAN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLEAN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLEAN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLEAN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLEAN_SPEC>;
 #[doc = "Field `CLEAN` reader - This bit will read 1 once the memory initialization is completed."]
 pub type CLEAN_R = crate::BitReader;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<CLEAN_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clean](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clean::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLEAN_SPEC;
 impl crate::RegisterSpec for CLEAN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clean::R](R) reader structure"]
-impl crate::Readable for CLEAN_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`clean::R`](R) reader structure"]
+impl crate::Readable for CLEAN_SPEC {}
 #[doc = "`reset()` method sets CLEAN to value 0"]
 impl crate::Resettable for CLEAN_SPEC {
     const RESET_VALUE: Self::Ux = 0;

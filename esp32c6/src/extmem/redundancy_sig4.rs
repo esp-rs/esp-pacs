@@ -1,18 +1,5 @@
 #[doc = "Register `REDUNDANCY_SIG4` reader"]
-pub struct R(crate::R<REDUNDANCY_SIG4_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<REDUNDANCY_SIG4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<REDUNDANCY_SIG4_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<REDUNDANCY_SIG4_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<REDUNDANCY_SIG4_SPEC>;
 #[doc = "Field `CACHE_REDCY_SIG4` reader - Those bits are prepared for ECO."]
 pub type CACHE_REDCY_SIG4_R = crate::FieldReader;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<REDUNDANCY_SIG4_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Cache redundancy signal 0 register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [redundancy_sig4](index.html) module"]
+#[doc = "Cache redundancy signal 0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`redundancy_sig4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REDUNDANCY_SIG4_SPEC;
 impl crate::RegisterSpec for REDUNDANCY_SIG4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [redundancy_sig4::R](R) reader structure"]
-impl crate::Readable for REDUNDANCY_SIG4_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`redundancy_sig4::R`](R) reader structure"]
+impl crate::Readable for REDUNDANCY_SIG4_SPEC {}
 #[doc = "`reset()` method sets REDUNDANCY_SIG4 to value 0"]
 impl crate::Resettable for REDUNDANCY_SIG4_SPEC {
     const RESET_VALUE: Self::Ux = 0;

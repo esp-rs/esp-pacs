@@ -1,47 +1,15 @@
 #[doc = "Register `RTC_IO_TOUCH_CTRL` reader"]
-pub struct R(crate::R<RTC_IO_TOUCH_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RTC_IO_TOUCH_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RTC_IO_TOUCH_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RTC_IO_TOUCH_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RTC_IO_TOUCH_CTRL_SPEC>;
 #[doc = "Register `RTC_IO_TOUCH_CTRL` writer"]
-pub struct W(crate::W<RTC_IO_TOUCH_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RTC_IO_TOUCH_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RTC_IO_TOUCH_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RTC_IO_TOUCH_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RTC_IO_TOUCH_CTRL_SPEC>;
 #[doc = "Field `IO_TOUCH_BUFSEL` reader - "]
 pub type IO_TOUCH_BUFSEL_R = crate::FieldReader;
 #[doc = "Field `IO_TOUCH_BUFSEL` writer - "]
-pub type IO_TOUCH_BUFSEL_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_IO_TOUCH_CTRL_SPEC, 4, O>;
+pub type IO_TOUCH_BUFSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `IO_TOUCH_BUFMODE` reader - "]
 pub type IO_TOUCH_BUFMODE_R = crate::BitReader;
 #[doc = "Field `IO_TOUCH_BUFMODE` writer - "]
-pub type IO_TOUCH_BUFMODE_W<'a, const O: u8> = crate::BitWriter<'a, RTC_IO_TOUCH_CTRL_SPEC, O>;
+pub type IO_TOUCH_BUFMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
     #[must_use]
-    pub fn io_touch_bufsel(&mut self) -> IO_TOUCH_BUFSEL_W<0> {
+    pub fn io_touch_bufsel(&mut self) -> IO_TOUCH_BUFSEL_W<RTC_IO_TOUCH_CTRL_SPEC, 0> {
         IO_TOUCH_BUFSEL_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn io_touch_bufmode(&mut self) -> IO_TOUCH_BUFMODE_W<4> {
+    pub fn io_touch_bufmode(&mut self) -> IO_TOUCH_BUFMODE_W<RTC_IO_TOUCH_CTRL_SPEC, 4> {
         IO_TOUCH_BUFMODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Touch control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_io_touch_ctrl](index.html) module"]
+#[doc = "Touch control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_io_touch_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_io_touch_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_IO_TOUCH_CTRL_SPEC;
 impl crate::RegisterSpec for RTC_IO_TOUCH_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_io_touch_ctrl::R](R) reader structure"]
-impl crate::Readable for RTC_IO_TOUCH_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rtc_io_touch_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`rtc_io_touch_ctrl::R`](R) reader structure"]
+impl crate::Readable for RTC_IO_TOUCH_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rtc_io_touch_ctrl::W`](W) writer structure"]
 impl crate::Writable for RTC_IO_TOUCH_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

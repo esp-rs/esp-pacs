@@ -1,18 +1,5 @@
 #[doc = "Register `RD_KEY3_DATA%s` reader"]
-pub struct R(crate::R<RD_KEY3_DATA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_KEY3_DATA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_KEY3_DATA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_KEY3_DATA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_KEY3_DATA_SPEC>;
 #[doc = "Field `KEY3_DATA` reader - Stores the %sth 32 bits of KEY3."]
 pub type KEY3_DATA_R = crate::FieldReader<u32>;
 impl R {
@@ -36,15 +23,13 @@ impl core::fmt::Debug for crate::generic::Reg<RD_KEY3_DATA_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Register %s of BLOCK7 (KEY3).\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_key3_data](index.html) module"]
+#[doc = "Register %s of BLOCK7 (KEY3).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key3_data::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_KEY3_DATA_SPEC;
 impl crate::RegisterSpec for RD_KEY3_DATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_key3_data::R](R) reader structure"]
-impl crate::Readable for RD_KEY3_DATA_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rd_key3_data::R`](R) reader structure"]
+impl crate::Readable for RD_KEY3_DATA_SPEC {}
 #[doc = "`reset()` method sets RD_KEY3_DATA%s to value 0"]
 impl crate::Resettable for RD_KEY3_DATA_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,18 +1,5 @@
 #[doc = "Register `TOKEN_LAT` reader"]
-pub struct R(crate::R<TOKEN_LAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TOKEN_LAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TOKEN_LAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TOKEN_LAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TOKEN_LAT_SPEC>;
 #[doc = "Field `SLC0_TOKEN` reader - "]
 pub type SLC0_TOKEN_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC1_TOKEN` reader - "]
@@ -44,15 +31,13 @@ impl core::fmt::Debug for crate::generic::Reg<TOKEN_LAT_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [token_lat](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`token_lat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TOKEN_LAT_SPEC;
 impl crate::RegisterSpec for TOKEN_LAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [token_lat::R](R) reader structure"]
-impl crate::Readable for TOKEN_LAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`token_lat::R`](R) reader structure"]
+impl crate::Readable for TOKEN_LAT_SPEC {}
 #[doc = "`reset()` method sets TOKEN_LAT to value 0"]
 impl crate::Resettable for TOKEN_LAT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

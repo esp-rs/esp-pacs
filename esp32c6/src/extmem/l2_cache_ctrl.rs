@@ -1,18 +1,5 @@
 #[doc = "Register `L2_CACHE_CTRL` reader"]
-pub struct R(crate::R<L2_CACHE_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L2_CACHE_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L2_CACHE_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L2_CACHE_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L2_CACHE_CTRL_SPEC>;
 #[doc = "Field `L2_CACHE_SHUT_DMA` reader - The bit is used to disable DMA access L2-Cache, 0: enable, 1: disable"]
 pub type L2_CACHE_SHUT_DMA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_UNDEF_OP` reader - Reserved"]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_CTRL_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "L2 Cache(L2-Cache) control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_ctrl](index.html) module"]
+#[doc = "L2 Cache(L2-Cache) control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_CTRL_SPEC;
 impl crate::RegisterSpec for L2_CACHE_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l2_cache_ctrl::R](R) reader structure"]
-impl crate::Readable for L2_CACHE_CTRL_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`l2_cache_ctrl::R`](R) reader structure"]
+impl crate::Readable for L2_CACHE_CTRL_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_CTRL to value 0"]
 impl crate::Resettable for L2_CACHE_CTRL_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,18 +1,5 @@
 #[doc = "Register `RD_REPEAT_ERR` reader"]
-pub struct R(crate::R<RD_REPEAT_ERR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_REPEAT_ERR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_REPEAT_ERR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_REPEAT_ERR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_REPEAT_ERR_SPEC>;
 #[doc = "Field `RD_DIS_ERR` reader - If any bit in RD_DIS is 1, then it indicates a programming error."]
 pub type RD_DIS_ERR_R = crate::FieldReader;
 #[doc = "Field `WDT_DELAY_SEL_ERR` reader - If any bit in WDT_DELAY_SEL is 1, then it indicates a programming error."]
@@ -190,15 +177,13 @@ impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Programming error record register 0 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err](index.html) module"]
+#[doc = "Programming error record register 0 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_ERR_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_ERR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_repeat_err::R](R) reader structure"]
-impl crate::Readable for RD_REPEAT_ERR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rd_repeat_err::R`](R) reader structure"]
+impl crate::Readable for RD_REPEAT_ERR_SPEC {}
 #[doc = "`reset()` method sets RD_REPEAT_ERR to value 0"]
 impl crate::Resettable for RD_REPEAT_ERR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,43 +1,11 @@
 #[doc = "Register `DB2_FED_CFG` reader"]
-pub struct R(crate::R<DB2_FED_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DB2_FED_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DB2_FED_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DB2_FED_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DB2_FED_CFG_SPEC>;
 #[doc = "Register `DB2_FED_CFG` writer"]
-pub struct W(crate::W<DB2_FED_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DB2_FED_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DB2_FED_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DB2_FED_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DB2_FED_CFG_SPEC>;
 #[doc = "Field `DB2_FED` reader - Shadow register for FED"]
 pub type DB2_FED_R = crate::FieldReader<u16>;
 #[doc = "Field `DB2_FED` writer - Shadow register for FED"]
-pub type DB2_FED_W<'a, const O: u8> = crate::FieldWriter<'a, DB2_FED_CFG_SPEC, 16, O, u16>;
+pub type DB2_FED_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Shadow register for FED"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:15 - Shadow register for FED"]
     #[inline(always)]
     #[must_use]
-    pub fn db2_fed(&mut self) -> DB2_FED_W<0> {
+    pub fn db2_fed(&mut self) -> DB2_FED_W<DB2_FED_CFG_SPEC, 0> {
         DB2_FED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Shadow register for falling edge delay (FED).\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [db2_fed_cfg](index.html) module"]
+#[doc = "Shadow register for falling edge delay (FED).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`db2_fed_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`db2_fed_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DB2_FED_CFG_SPEC;
 impl crate::RegisterSpec for DB2_FED_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [db2_fed_cfg::R](R) reader structure"]
-impl crate::Readable for DB2_FED_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [db2_fed_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`db2_fed_cfg::R`](R) reader structure"]
+impl crate::Readable for DB2_FED_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`db2_fed_cfg::W`](W) writer structure"]
 impl crate::Writable for DB2_FED_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

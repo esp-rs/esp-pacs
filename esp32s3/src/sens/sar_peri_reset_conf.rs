@@ -1,55 +1,23 @@
 #[doc = "Register `SAR_PERI_RESET_CONF` reader"]
-pub struct R(crate::R<SAR_PERI_RESET_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_PERI_RESET_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_PERI_RESET_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_PERI_RESET_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_PERI_RESET_CONF_SPEC>;
 #[doc = "Register `SAR_PERI_RESET_CONF` writer"]
-pub struct W(crate::W<SAR_PERI_RESET_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_PERI_RESET_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_PERI_RESET_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_PERI_RESET_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_PERI_RESET_CONF_SPEC>;
 #[doc = "Field `SAR_COCPU_RESET` reader - enable ulp-riscv reset"]
 pub type SAR_COCPU_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_RESET` writer - enable ulp-riscv reset"]
-pub type SAR_COCPU_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
+pub type SAR_COCPU_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SAR_RTC_I2C_RESET` reader - Reserved."]
 pub type SAR_RTC_I2C_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_RTC_I2C_RESET` writer - Reserved."]
-pub type SAR_RTC_I2C_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
+pub type SAR_RTC_I2C_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SAR_TSENS_RESET` reader - enbale saradc reset"]
 pub type SAR_TSENS_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_RESET` writer - enbale saradc reset"]
-pub type SAR_TSENS_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
+pub type SAR_TSENS_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SAR_SARADC_RESET` reader - enable io_mux reset"]
 pub type SAR_SARADC_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_SARADC_RESET` writer - enable io_mux reset"]
-pub type SAR_SARADC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
+pub type SAR_SARADC_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 25 - enable ulp-riscv reset"]
     #[inline(always)]
@@ -105,46 +73,43 @@ impl W {
     #[doc = "Bit 25 - enable ulp-riscv reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_cocpu_reset(&mut self) -> SAR_COCPU_RESET_W<25> {
+    pub fn sar_cocpu_reset(&mut self) -> SAR_COCPU_RESET_W<SAR_PERI_RESET_CONF_SPEC, 25> {
         SAR_COCPU_RESET_W::new(self)
     }
     #[doc = "Bit 27 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn sar_rtc_i2c_reset(&mut self) -> SAR_RTC_I2C_RESET_W<27> {
+    pub fn sar_rtc_i2c_reset(&mut self) -> SAR_RTC_I2C_RESET_W<SAR_PERI_RESET_CONF_SPEC, 27> {
         SAR_RTC_I2C_RESET_W::new(self)
     }
     #[doc = "Bit 29 - enbale saradc reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_tsens_reset(&mut self) -> SAR_TSENS_RESET_W<29> {
+    pub fn sar_tsens_reset(&mut self) -> SAR_TSENS_RESET_W<SAR_PERI_RESET_CONF_SPEC, 29> {
         SAR_TSENS_RESET_W::new(self)
     }
     #[doc = "Bit 30 - enable io_mux reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_saradc_reset(&mut self) -> SAR_SARADC_RESET_W<30> {
+    pub fn sar_saradc_reset(&mut self) -> SAR_SARADC_RESET_W<SAR_PERI_RESET_CONF_SPEC, 30> {
         SAR_SARADC_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "the peri reset of rtc peri\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_peri_reset_conf](index.html) module"]
+#[doc = "the peri reset of rtc peri\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_peri_reset_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_peri_reset_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_PERI_RESET_CONF_SPEC;
 impl crate::RegisterSpec for SAR_PERI_RESET_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_peri_reset_conf::R](R) reader structure"]
-impl crate::Readable for SAR_PERI_RESET_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_peri_reset_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_peri_reset_conf::R`](R) reader structure"]
+impl crate::Readable for SAR_PERI_RESET_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_peri_reset_conf::W`](W) writer structure"]
 impl crate::Writable for SAR_PERI_RESET_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

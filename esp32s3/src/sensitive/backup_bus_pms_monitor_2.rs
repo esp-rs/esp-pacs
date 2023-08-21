@@ -1,18 +1,5 @@
 #[doc = "Register `BACKUP_BUS_PMS_MONITOR_2` reader"]
-pub struct R(crate::R<BACKUP_BUS_PMS_MONITOR_2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BACKUP_BUS_PMS_MONITOR_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BACKUP_BUS_PMS_MONITOR_2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BACKUP_BUS_PMS_MONITOR_2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BACKUP_BUS_PMS_MONITOR_2_SPEC>;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR` reader - Record BackUp illegal access interrupt state."]
 pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS` reader - Record htrans when BackUp initate illegal access."]
@@ -87,15 +74,13 @@ impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_MONITOR_2_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "BackUp permission report register 2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_monitor_2](index.html) module"]
+#[doc = "BackUp permission report register 2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`backup_bus_pms_monitor_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BACKUP_BUS_PMS_MONITOR_2_SPEC;
 impl crate::RegisterSpec for BACKUP_BUS_PMS_MONITOR_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [backup_bus_pms_monitor_2::R](R) reader structure"]
-impl crate::Readable for BACKUP_BUS_PMS_MONITOR_2_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`backup_bus_pms_monitor_2::R`](R) reader structure"]
+impl crate::Readable for BACKUP_BUS_PMS_MONITOR_2_SPEC {}
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_MONITOR_2 to value 0"]
 impl crate::Resettable for BACKUP_BUS_PMS_MONITOR_2_SPEC {
     const RESET_VALUE: Self::Ux = 0;

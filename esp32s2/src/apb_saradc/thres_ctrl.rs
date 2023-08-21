@@ -1,67 +1,35 @@
 #[doc = "Register `THRES_CTRL` reader"]
-pub struct R(crate::R<THRES_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<THRES_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<THRES_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<THRES_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<THRES_CTRL_SPEC>;
 #[doc = "Register `THRES_CTRL` writer"]
-pub struct W(crate::W<THRES_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<THRES_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<THRES_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<THRES_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<THRES_CTRL_SPEC>;
 #[doc = "Field `CLK_EN` reader - Clock gate enable."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Clock gate enable."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADC2_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
 pub type ADC2_THRES_MODE_R = crate::BitReader;
 #[doc = "Field `ADC2_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
-pub type ADC2_THRES_MODE_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
+pub type ADC2_THRES_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADC1_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
 pub type ADC1_THRES_MODE_R = crate::BitReader;
 #[doc = "Field `ADC1_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
-pub type ADC1_THRES_MODE_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
+pub type ADC1_THRES_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADC2_THRES` reader - ADC2 threshold."]
 pub type ADC2_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `ADC2_THRES` writer - ADC2 threshold."]
-pub type ADC2_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16>;
+pub type ADC2_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
 #[doc = "Field `ADC1_THRES` reader - ADC1 threshold."]
 pub type ADC1_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `ADC1_THRES` writer - ADC1 threshold."]
-pub type ADC1_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16>;
+pub type ADC1_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
 #[doc = "Field `ADC2_THRES_EN` reader - Enable ADC2 threshold monitor."]
 pub type ADC2_THRES_EN_R = crate::BitReader;
 #[doc = "Field `ADC2_THRES_EN` writer - Enable ADC2 threshold monitor."]
-pub type ADC2_THRES_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
+pub type ADC2_THRES_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADC1_THRES_EN` reader - Enable ADC1 threshold monitor."]
 pub type ADC1_THRES_EN_R = crate::BitReader;
 #[doc = "Field `ADC1_THRES_EN` writer - Enable ADC1 threshold monitor."]
-pub type ADC1_THRES_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
+pub type ADC1_THRES_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
@@ -135,64 +103,61 @@ impl W {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<0> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<THRES_CTRL_SPEC, 0> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_thres_mode(&mut self) -> ADC2_THRES_MODE_W<2> {
+    pub fn adc2_thres_mode(&mut self) -> ADC2_THRES_MODE_W<THRES_CTRL_SPEC, 2> {
         ADC2_THRES_MODE_W::new(self)
     }
     #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_thres_mode(&mut self) -> ADC1_THRES_MODE_W<3> {
+    pub fn adc1_thres_mode(&mut self) -> ADC1_THRES_MODE_W<THRES_CTRL_SPEC, 3> {
         ADC1_THRES_MODE_W::new(self)
     }
     #[doc = "Bits 4:16 - ADC2 threshold."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_thres(&mut self) -> ADC2_THRES_W<4> {
+    pub fn adc2_thres(&mut self) -> ADC2_THRES_W<THRES_CTRL_SPEC, 4> {
         ADC2_THRES_W::new(self)
     }
     #[doc = "Bits 17:29 - ADC1 threshold."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_thres(&mut self) -> ADC1_THRES_W<17> {
+    pub fn adc1_thres(&mut self) -> ADC1_THRES_W<THRES_CTRL_SPEC, 17> {
         ADC1_THRES_W::new(self)
     }
     #[doc = "Bit 30 - Enable ADC2 threshold monitor."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_thres_en(&mut self) -> ADC2_THRES_EN_W<30> {
+    pub fn adc2_thres_en(&mut self) -> ADC2_THRES_EN_W<THRES_CTRL_SPEC, 30> {
         ADC2_THRES_EN_W::new(self)
     }
     #[doc = "Bit 31 - Enable ADC1 threshold monitor."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_thres_en(&mut self) -> ADC1_THRES_EN_W<31> {
+    pub fn adc1_thres_en(&mut self) -> ADC1_THRES_EN_W<THRES_CTRL_SPEC, 31> {
         ADC1_THRES_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Configure monitor threshold for DIG ADC2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [thres_ctrl](index.html) module"]
+#[doc = "Configure monitor threshold for DIG ADC2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`thres_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`thres_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct THRES_CTRL_SPEC;
 impl crate::RegisterSpec for THRES_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [thres_ctrl::R](R) reader structure"]
-impl crate::Readable for THRES_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [thres_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`thres_ctrl::R`](R) reader structure"]
+impl crate::Readable for THRES_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`thres_ctrl::W`](W) writer structure"]
 impl crate::Writable for THRES_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

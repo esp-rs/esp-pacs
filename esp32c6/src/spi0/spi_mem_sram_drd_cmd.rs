@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_MEM_SRAM_DRD_CMD` reader"]
-pub struct R(crate::R<SPI_MEM_SRAM_DRD_CMD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_MEM_SRAM_DRD_CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_MEM_SRAM_DRD_CMD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_MEM_SRAM_DRD_CMD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_MEM_SRAM_DRD_CMD_SPEC>;
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_RD_CMD_VALUE` reader - For SPI0,When cache mode is enable it is the read command value of command phase for sram."]
 pub type SPI_MEM_CACHE_SRAM_USR_RD_CMD_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_RD_CMD_BITLEN` reader - For SPI0,When cache mode is enable it is the length in bits of command phase for sram. The register value shall be (bit_num-1)."]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_SRAM_DRD_CMD_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI0 external RAM DDR read command control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_sram_drd_cmd](index.html) module"]
+#[doc = "SPI0 external RAM DDR read command control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_sram_drd_cmd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_SRAM_DRD_CMD_SPEC;
 impl crate::RegisterSpec for SPI_MEM_SRAM_DRD_CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_mem_sram_drd_cmd::R](R) reader structure"]
-impl crate::Readable for SPI_MEM_SRAM_DRD_CMD_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_mem_sram_drd_cmd::R`](R) reader structure"]
+impl crate::Readable for SPI_MEM_SRAM_DRD_CMD_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_SRAM_DRD_CMD to value 0"]
 impl crate::Resettable for SPI_MEM_SRAM_DRD_CMD_SPEC {
     const RESET_VALUE: Self::Ux = 0;

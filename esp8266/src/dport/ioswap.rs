@@ -1,67 +1,35 @@
 #[doc = "Register `IOSWAP` reader"]
-pub struct R(crate::R<IOSWAP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IOSWAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IOSWAP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IOSWAP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IOSWAP_SPEC>;
 #[doc = "Register `IOSWAP` writer"]
-pub struct W(crate::W<IOSWAP_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IOSWAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IOSWAP_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IOSWAP_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IOSWAP_SPEC>;
 #[doc = "Field `uart` reader - Swap UART"]
 pub type UART_R = crate::BitReader;
 #[doc = "Field `uart` writer - Swap UART"]
-pub type UART_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
+pub type UART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `spi` reader - Swap SPI"]
 pub type SPI_R = crate::BitReader;
 #[doc = "Field `spi` writer - Swap SPI"]
-pub type SPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
+pub type SPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `uart0` reader - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
 pub type UART0_R = crate::BitReader;
 #[doc = "Field `uart0` writer - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
-pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
+pub type UART0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `uart1` reader - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
 pub type UART1_R = crate::BitReader;
 #[doc = "Field `uart1` writer - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
-pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
+pub type UART1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `hspi` reader - Set HSPI with higher priority"]
 pub type HSPI_R = crate::BitReader;
 #[doc = "Field `hspi` writer - Set HSPI with higher priority"]
-pub type HSPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
+pub type HSPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `double_hspi` reader - Set two SPI masters on HSPI"]
 pub type DOUBLE_HSPI_R = crate::BitReader;
 #[doc = "Field `double_hspi` writer - Set two SPI masters on HSPI"]
-pub type DOUBLE_HSPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
+pub type DOUBLE_HSPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `double_cspi` reader - Set two SPI masters on CSPI"]
 pub type DOUBLE_CSPI_R = crate::BitReader;
 #[doc = "Field `double_cspi` writer - Set two SPI masters on CSPI"]
-pub type DOUBLE_CSPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
+pub type DOUBLE_CSPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Swap UART"]
     #[inline(always)]
@@ -123,64 +91,61 @@ impl W {
     #[doc = "Bit 0 - Swap UART"]
     #[inline(always)]
     #[must_use]
-    pub fn uart(&mut self) -> UART_W<0> {
+    pub fn uart(&mut self) -> UART_W<IOSWAP_SPEC, 0> {
         UART_W::new(self)
     }
     #[doc = "Bit 1 - Swap SPI"]
     #[inline(always)]
     #[must_use]
-    pub fn spi(&mut self) -> SPI_W<1> {
+    pub fn spi(&mut self) -> SPI_W<IOSWAP_SPEC, 1> {
         SPI_W::new(self)
     }
     #[doc = "Bit 2 - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
     #[inline(always)]
     #[must_use]
-    pub fn uart0(&mut self) -> UART0_W<2> {
+    pub fn uart0(&mut self) -> UART0_W<IOSWAP_SPEC, 2> {
         UART0_W::new(self)
     }
     #[doc = "Bit 3 - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1(&mut self) -> UART1_W<3> {
+    pub fn uart1(&mut self) -> UART1_W<IOSWAP_SPEC, 3> {
         UART1_W::new(self)
     }
     #[doc = "Bit 5 - Set HSPI with higher priority"]
     #[inline(always)]
     #[must_use]
-    pub fn hspi(&mut self) -> HSPI_W<5> {
+    pub fn hspi(&mut self) -> HSPI_W<IOSWAP_SPEC, 5> {
         HSPI_W::new(self)
     }
     #[doc = "Bit 6 - Set two SPI masters on HSPI"]
     #[inline(always)]
     #[must_use]
-    pub fn double_hspi(&mut self) -> DOUBLE_HSPI_W<6> {
+    pub fn double_hspi(&mut self) -> DOUBLE_HSPI_W<IOSWAP_SPEC, 6> {
         DOUBLE_HSPI_W::new(self)
     }
     #[doc = "Bit 7 - Set two SPI masters on CSPI"]
     #[inline(always)]
     #[must_use]
-    pub fn double_cspi(&mut self) -> DOUBLE_CSPI_W<7> {
+    pub fn double_cspi(&mut self) -> DOUBLE_CSPI_W<IOSWAP_SPEC, 7> {
         DOUBLE_CSPI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "IO Swap register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ioswap](index.html) module"]
+#[doc = "IO Swap register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ioswap::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ioswap::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IOSWAP_SPEC;
 impl crate::RegisterSpec for IOSWAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ioswap::R](R) reader structure"]
-impl crate::Readable for IOSWAP_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ioswap::W](W) writer structure"]
+#[doc = "`read()` method returns [`ioswap::R`](R) reader structure"]
+impl crate::Readable for IOSWAP_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ioswap::W`](W) writer structure"]
 impl crate::Writable for IOSWAP_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

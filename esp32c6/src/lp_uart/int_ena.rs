@@ -1,107 +1,75 @@
 #[doc = "Register `INT_ENA` reader"]
-pub struct R(crate::R<INT_ENA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_ENA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_ENA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
-pub struct W(crate::W<INT_ENA_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INT_ENA_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INT_ENA_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `RXFIFO_FULL_INT_ENA` reader - This is the enable bit for rxfifo_full_int_st register."]
 pub type RXFIFO_FULL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_FULL_INT_ENA` writer - This is the enable bit for rxfifo_full_int_st register."]
-pub type RXFIFO_FULL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type RXFIFO_FULL_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` reader - This is the enable bit for txfifo_empty_int_st register."]
 pub type TXFIFO_EMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` writer - This is the enable bit for txfifo_empty_int_st register."]
-pub type TXFIFO_EMPTY_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type TXFIFO_EMPTY_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PARITY_ERR_INT_ENA` reader - This is the enable bit for parity_err_int_st register."]
 pub type PARITY_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PARITY_ERR_INT_ENA` writer - This is the enable bit for parity_err_int_st register."]
-pub type PARITY_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type PARITY_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FRM_ERR_INT_ENA` reader - This is the enable bit for frm_err_int_st register."]
 pub type FRM_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `FRM_ERR_INT_ENA` writer - This is the enable bit for frm_err_int_st register."]
-pub type FRM_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type FRM_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` reader - This is the enable bit for rxfifo_ovf_int_st register."]
 pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` writer - This is the enable bit for rxfifo_ovf_int_st register."]
-pub type RXFIFO_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type RXFIFO_OVF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DSR_CHG_INT_ENA` reader - This is the enable bit for dsr_chg_int_st register."]
 pub type DSR_CHG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DSR_CHG_INT_ENA` writer - This is the enable bit for dsr_chg_int_st register."]
-pub type DSR_CHG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type DSR_CHG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CTS_CHG_INT_ENA` reader - This is the enable bit for cts_chg_int_st register."]
 pub type CTS_CHG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CTS_CHG_INT_ENA` writer - This is the enable bit for cts_chg_int_st register."]
-pub type CTS_CHG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CTS_CHG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BRK_DET_INT_ENA` reader - This is the enable bit for brk_det_int_st register."]
 pub type BRK_DET_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BRK_DET_INT_ENA` writer - This is the enable bit for brk_det_int_st register."]
-pub type BRK_DET_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type BRK_DET_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFIFO_TOUT_INT_ENA` reader - This is the enable bit for rxfifo_tout_int_st register."]
 pub type RXFIFO_TOUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TOUT_INT_ENA` writer - This is the enable bit for rxfifo_tout_int_st register."]
-pub type RXFIFO_TOUT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type RXFIFO_TOUT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SW_XON_INT_ENA` reader - This is the enable bit for sw_xon_int_st register."]
 pub type SW_XON_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SW_XON_INT_ENA` writer - This is the enable bit for sw_xon_int_st register."]
-pub type SW_XON_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type SW_XON_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SW_XOFF_INT_ENA` reader - This is the enable bit for sw_xoff_int_st register."]
 pub type SW_XOFF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SW_XOFF_INT_ENA` writer - This is the enable bit for sw_xoff_int_st register."]
-pub type SW_XOFF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type SW_XOFF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GLITCH_DET_INT_ENA` reader - This is the enable bit for glitch_det_int_st register."]
 pub type GLITCH_DET_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GLITCH_DET_INT_ENA` writer - This is the enable bit for glitch_det_int_st register."]
-pub type GLITCH_DET_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type GLITCH_DET_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_BRK_DONE_INT_ENA` reader - This is the enable bit for tx_brk_done_int_st register."]
 pub type TX_BRK_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_BRK_DONE_INT_ENA` writer - This is the enable bit for tx_brk_done_int_st register."]
-pub type TX_BRK_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type TX_BRK_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_ENA` reader - This is the enable bit for tx_brk_idle_done_int_st register."]
 pub type TX_BRK_IDLE_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_ENA` writer - This is the enable bit for tx_brk_idle_done_int_st register."]
-pub type TX_BRK_IDLE_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type TX_BRK_IDLE_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_DONE_INT_ENA` reader - This is the enable bit for tx_done_int_st register."]
 pub type TX_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_DONE_INT_ENA` writer - This is the enable bit for tx_done_int_st register."]
-pub type TX_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type TX_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_ENA` reader - This is the enable bit for at_cmd_char_det_int_st register."]
 pub type AT_CMD_CHAR_DET_INT_ENA_R = crate::BitReader;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_ENA` writer - This is the enable bit for at_cmd_char_det_int_st register."]
-pub type AT_CMD_CHAR_DET_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type AT_CMD_CHAR_DET_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WAKEUP_INT_ENA` reader - This is the enable bit for uart_wakeup_int_st register."]
 pub type WAKEUP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `WAKEUP_INT_ENA` writer - This is the enable bit for uart_wakeup_int_st register."]
-pub type WAKEUP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type WAKEUP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - This is the enable bit for rxfifo_full_int_st register."]
     #[inline(always)]
@@ -274,124 +242,121 @@ impl W {
     #[doc = "Bit 0 - This is the enable bit for rxfifo_full_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W<0> {
+    pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W<INT_ENA_SPEC, 0> {
         RXFIFO_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - This is the enable bit for txfifo_empty_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W<1> {
+    pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W<INT_ENA_SPEC, 1> {
         TXFIFO_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - This is the enable bit for parity_err_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn parity_err_int_ena(&mut self) -> PARITY_ERR_INT_ENA_W<2> {
+    pub fn parity_err_int_ena(&mut self) -> PARITY_ERR_INT_ENA_W<INT_ENA_SPEC, 2> {
         PARITY_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - This is the enable bit for frm_err_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn frm_err_int_ena(&mut self) -> FRM_ERR_INT_ENA_W<3> {
+    pub fn frm_err_int_ena(&mut self) -> FRM_ERR_INT_ENA_W<INT_ENA_SPEC, 3> {
         FRM_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - This is the enable bit for rxfifo_ovf_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<4> {
+    pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<INT_ENA_SPEC, 4> {
         RXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - This is the enable bit for dsr_chg_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn dsr_chg_int_ena(&mut self) -> DSR_CHG_INT_ENA_W<5> {
+    pub fn dsr_chg_int_ena(&mut self) -> DSR_CHG_INT_ENA_W<INT_ENA_SPEC, 5> {
         DSR_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - This is the enable bit for cts_chg_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn cts_chg_int_ena(&mut self) -> CTS_CHG_INT_ENA_W<6> {
+    pub fn cts_chg_int_ena(&mut self) -> CTS_CHG_INT_ENA_W<INT_ENA_SPEC, 6> {
         CTS_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - This is the enable bit for brk_det_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn brk_det_int_ena(&mut self) -> BRK_DET_INT_ENA_W<7> {
+    pub fn brk_det_int_ena(&mut self) -> BRK_DET_INT_ENA_W<INT_ENA_SPEC, 7> {
         BRK_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - This is the enable bit for rxfifo_tout_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_tout_int_ena(&mut self) -> RXFIFO_TOUT_INT_ENA_W<8> {
+    pub fn rxfifo_tout_int_ena(&mut self) -> RXFIFO_TOUT_INT_ENA_W<INT_ENA_SPEC, 8> {
         RXFIFO_TOUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - This is the enable bit for sw_xon_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_xon_int_ena(&mut self) -> SW_XON_INT_ENA_W<9> {
+    pub fn sw_xon_int_ena(&mut self) -> SW_XON_INT_ENA_W<INT_ENA_SPEC, 9> {
         SW_XON_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - This is the enable bit for sw_xoff_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_xoff_int_ena(&mut self) -> SW_XOFF_INT_ENA_W<10> {
+    pub fn sw_xoff_int_ena(&mut self) -> SW_XOFF_INT_ENA_W<INT_ENA_SPEC, 10> {
         SW_XOFF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - This is the enable bit for glitch_det_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn glitch_det_int_ena(&mut self) -> GLITCH_DET_INT_ENA_W<11> {
+    pub fn glitch_det_int_ena(&mut self) -> GLITCH_DET_INT_ENA_W<INT_ENA_SPEC, 11> {
         GLITCH_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - This is the enable bit for tx_brk_done_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_brk_done_int_ena(&mut self) -> TX_BRK_DONE_INT_ENA_W<12> {
+    pub fn tx_brk_done_int_ena(&mut self) -> TX_BRK_DONE_INT_ENA_W<INT_ENA_SPEC, 12> {
         TX_BRK_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - This is the enable bit for tx_brk_idle_done_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_brk_idle_done_int_ena(&mut self) -> TX_BRK_IDLE_DONE_INT_ENA_W<13> {
+    pub fn tx_brk_idle_done_int_ena(&mut self) -> TX_BRK_IDLE_DONE_INT_ENA_W<INT_ENA_SPEC, 13> {
         TX_BRK_IDLE_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - This is the enable bit for tx_done_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_done_int_ena(&mut self) -> TX_DONE_INT_ENA_W<14> {
+    pub fn tx_done_int_ena(&mut self) -> TX_DONE_INT_ENA_W<INT_ENA_SPEC, 14> {
         TX_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 18 - This is the enable bit for at_cmd_char_det_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn at_cmd_char_det_int_ena(&mut self) -> AT_CMD_CHAR_DET_INT_ENA_W<18> {
+    pub fn at_cmd_char_det_int_ena(&mut self) -> AT_CMD_CHAR_DET_INT_ENA_W<INT_ENA_SPEC, 18> {
         AT_CMD_CHAR_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 19 - This is the enable bit for uart_wakeup_int_st register."]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_int_ena(&mut self) -> WAKEUP_INT_ENA_W<19> {
+    pub fn wakeup_int_ena(&mut self) -> WAKEUP_INT_ENA_W<INT_ENA_SPEC, 19> {
         WAKEUP_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
-impl crate::Readable for INT_ENA_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for INT_ENA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,95 +1,63 @@
 #[doc = "Register `LC_CONF` reader"]
-pub struct R(crate::R<LC_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LC_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LC_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LC_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LC_CONF_SPEC>;
 #[doc = "Register `LC_CONF` writer"]
-pub struct W(crate::W<LC_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LC_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LC_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LC_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LC_CONF_SPEC>;
 #[doc = "Field `IN_RST` reader - "]
 pub type IN_RST_R = crate::BitReader;
 #[doc = "Field `IN_RST` writer - "]
-pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type IN_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_RST` reader - "]
 pub type OUT_RST_R = crate::BitReader;
 #[doc = "Field `OUT_RST` writer - "]
-pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type OUT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AHBM_FIFO_RST` reader - "]
 pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - "]
-pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type AHBM_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AHBM_RST` reader - "]
 pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - "]
-pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type AHBM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_LOOP_TEST` reader - "]
 pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - "]
-pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type OUT_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IN_LOOP_TEST` reader - "]
 pub type IN_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `IN_LOOP_TEST` writer - "]
-pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type IN_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - "]
 pub type OUT_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - "]
-pub type OUT_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type OUT_AUTO_WRBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_NO_RESTART_CLR` reader - "]
 pub type OUT_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `OUT_NO_RESTART_CLR` writer - "]
-pub type OUT_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type OUT_NO_RESTART_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_EOF_MODE` reader - "]
 pub type OUT_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_MODE` writer - "]
-pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type OUT_EOF_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - "]
 pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - "]
-pub type OUTDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type OUTDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INDSCR_BURST_EN` reader - "]
 pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - "]
-pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type INDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - "]
 pub type OUT_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - "]
-pub type OUT_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type OUT_DATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CHECK_OWNER` reader - "]
 pub type CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `CHECK_OWNER` writer - "]
-pub type CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MEM_TRANS_EN` reader - "]
 pub type MEM_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TRANS_EN` writer - "]
-pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
+pub type MEM_TRANS_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -223,106 +191,103 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn in_rst(&mut self) -> IN_RST_W<0> {
+    pub fn in_rst(&mut self) -> IN_RST_W<LC_CONF_SPEC, 0> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn out_rst(&mut self) -> OUT_RST_W<1> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<LC_CONF_SPEC, 1> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<2> {
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<LC_CONF_SPEC, 2> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<3> {
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<LC_CONF_SPEC, 3> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<4> {
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<LC_CONF_SPEC, 4> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<5> {
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<LC_CONF_SPEC, 5> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<6> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<LC_CONF_SPEC, 6> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<7> {
+    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<LC_CONF_SPEC, 7> {
         OUT_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<8> {
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<LC_CONF_SPEC, 8> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<9> {
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<LC_CONF_SPEC, 9> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<10> {
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<LC_CONF_SPEC, 10> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<11> {
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<LC_CONF_SPEC, 11> {
         OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn check_owner(&mut self) -> CHECK_OWNER_W<12> {
+    pub fn check_owner(&mut self) -> CHECK_OWNER_W<LC_CONF_SPEC, 12> {
         CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<13> {
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<LC_CONF_SPEC, 13> {
         MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_conf](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lc_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LC_CONF_SPEC;
 impl crate::RegisterSpec for LC_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lc_conf::R](R) reader structure"]
-impl crate::Readable for LC_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lc_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`lc_conf::R`](R) reader structure"]
+impl crate::Readable for LC_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lc_conf::W`](W) writer structure"]
 impl crate::Writable for LC_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

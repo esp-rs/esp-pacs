@@ -1,67 +1,35 @@
 #[doc = "Register `BIAS_CONF` reader"]
-pub struct R(crate::R<BIAS_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BIAS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BIAS_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BIAS_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BIAS_CONF_SPEC>;
 #[doc = "Register `BIAS_CONF` writer"]
-pub struct W(crate::W<BIAS_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BIAS_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BIAS_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BIAS_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BIAS_CONF_SPEC>;
 #[doc = "Field `DBG_ATTEN` reader - DBG_ATTEN"]
 pub type DBG_ATTEN_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN` writer - DBG_ATTEN"]
-pub type DBG_ATTEN_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 2, O>;
+pub type DBG_ATTEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `ENB_SCK_XTAL` reader - ENB_SCK_XTAL"]
 pub type ENB_SCK_XTAL_R = crate::BitReader;
 #[doc = "Field `ENB_SCK_XTAL` writer - ENB_SCK_XTAL"]
-pub type ENB_SCK_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type ENB_SCK_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` reader - INC_HEARTBEAT_REFRESH"]
 pub type INC_HEARTBEAT_REFRESH_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` writer - INC_HEARTBEAT_REFRESH"]
-pub type INC_HEARTBEAT_REFRESH_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type INC_HEARTBEAT_REFRESH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` reader - DEC_HEARTBEAT_PERIOD"]
 pub type DEC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` writer - DEC_HEARTBEAT_PERIOD"]
-pub type DEC_HEARTBEAT_PERIOD_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type DEC_HEARTBEAT_PERIOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` reader - INC_HEARTBEAT_PERIOD"]
 pub type INC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` writer - INC_HEARTBEAT_PERIOD"]
-pub type INC_HEARTBEAT_PERIOD_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type INC_HEARTBEAT_PERIOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` reader - DEC_HEARTBEAT_WIDTH"]
 pub type DEC_HEARTBEAT_WIDTH_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` writer - DEC_HEARTBEAT_WIDTH"]
-pub type DEC_HEARTBEAT_WIDTH_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type DEC_HEARTBEAT_WIDTH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RST_BIAS_I2C` reader - RST_BIAS_I2C"]
 pub type RST_BIAS_I2C_R = crate::BitReader;
 #[doc = "Field `RST_BIAS_I2C` writer - RST_BIAS_I2C"]
-pub type RST_BIAS_I2C_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
+pub type RST_BIAS_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
@@ -141,64 +109,61 @@ impl W {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
     #[must_use]
-    pub fn dbg_atten(&mut self) -> DBG_ATTEN_W<24> {
+    pub fn dbg_atten(&mut self) -> DBG_ATTEN_W<BIAS_CONF_SPEC, 24> {
         DBG_ATTEN_W::new(self)
     }
     #[doc = "Bit 26 - ENB_SCK_XTAL"]
     #[inline(always)]
     #[must_use]
-    pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<26> {
+    pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<BIAS_CONF_SPEC, 26> {
         ENB_SCK_XTAL_W::new(self)
     }
     #[doc = "Bit 27 - INC_HEARTBEAT_REFRESH"]
     #[inline(always)]
     #[must_use]
-    pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<27> {
+    pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<BIAS_CONF_SPEC, 27> {
         INC_HEARTBEAT_REFRESH_W::new(self)
     }
     #[doc = "Bit 28 - DEC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     #[must_use]
-    pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<28> {
+    pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC, 28> {
         DEC_HEARTBEAT_PERIOD_W::new(self)
     }
     #[doc = "Bit 29 - INC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     #[must_use]
-    pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<29> {
+    pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC, 29> {
         INC_HEARTBEAT_PERIOD_W::new(self)
     }
     #[doc = "Bit 30 - DEC_HEARTBEAT_WIDTH"]
     #[inline(always)]
     #[must_use]
-    pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<30> {
+    pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<BIAS_CONF_SPEC, 30> {
         DEC_HEARTBEAT_WIDTH_W::new(self)
     }
     #[doc = "Bit 31 - RST_BIAS_I2C"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<31> {
+    pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<BIAS_CONF_SPEC, 31> {
         RST_BIAS_I2C_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bias_conf](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bias_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bias_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BIAS_CONF_SPEC;
 impl crate::RegisterSpec for BIAS_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bias_conf::R](R) reader structure"]
-impl crate::Readable for BIAS_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [bias_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`bias_conf::R`](R) reader structure"]
+impl crate::Readable for BIAS_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`bias_conf::W`](W) writer structure"]
 impl crate::Writable for BIAS_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

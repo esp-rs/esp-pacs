@@ -1,57 +1,25 @@
 #[doc = "Register `CAP_CH2_CFG` reader"]
-pub struct R(crate::R<CAP_CH2_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CAP_CH2_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CAP_CH2_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CAP_CH2_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CAP_CH2_CFG_SPEC>;
 #[doc = "Register `CAP_CH2_CFG` writer"]
-pub struct W(crate::W<CAP_CH2_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CAP_CH2_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CAP_CH2_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CAP_CH2_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CAP_CH2_CFG_SPEC>;
 #[doc = "Field `CAP2_EN` reader - "]
 pub type CAP2_EN_R = crate::BitReader;
 #[doc = "Field `CAP2_EN` writer - "]
-pub type CAP2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH2_CFG_SPEC, O>;
+pub type CAP2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAP2_MODE` reader - "]
 pub type CAP2_MODE_R = crate::FieldReader;
 #[doc = "Field `CAP2_MODE` writer - "]
-pub type CAP2_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_CH2_CFG_SPEC, 2, O>;
+pub type CAP2_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CAP2_PRESCALE` reader - "]
 pub type CAP2_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CAP2_PRESCALE` writer - "]
-pub type CAP2_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_CH2_CFG_SPEC, 8, O>;
+pub type CAP2_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `CAP2_IN_INVERT` reader - "]
 pub type CAP2_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CAP2_IN_INVERT` writer - "]
-pub type CAP2_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH2_CFG_SPEC, O>;
+pub type CAP2_IN_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAP2_SW` writer - "]
-pub type CAP2_SW_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH2_CFG_SPEC, O>;
+pub type CAP2_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -101,52 +69,49 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn cap2_en(&mut self) -> CAP2_EN_W<0> {
+    pub fn cap2_en(&mut self) -> CAP2_EN_W<CAP_CH2_CFG_SPEC, 0> {
         CAP2_EN_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
     #[must_use]
-    pub fn cap2_mode(&mut self) -> CAP2_MODE_W<1> {
+    pub fn cap2_mode(&mut self) -> CAP2_MODE_W<CAP_CH2_CFG_SPEC, 1> {
         CAP2_MODE_W::new(self)
     }
     #[doc = "Bits 3:10"]
     #[inline(always)]
     #[must_use]
-    pub fn cap2_prescale(&mut self) -> CAP2_PRESCALE_W<3> {
+    pub fn cap2_prescale(&mut self) -> CAP2_PRESCALE_W<CAP_CH2_CFG_SPEC, 3> {
         CAP2_PRESCALE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn cap2_in_invert(&mut self) -> CAP2_IN_INVERT_W<11> {
+    pub fn cap2_in_invert(&mut self) -> CAP2_IN_INVERT_W<CAP_CH2_CFG_SPEC, 11> {
         CAP2_IN_INVERT_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn cap2_sw(&mut self) -> CAP2_SW_W<12> {
+    pub fn cap2_sw(&mut self) -> CAP2_SW_W<CAP_CH2_CFG_SPEC, 12> {
         CAP2_SW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_ch2_cfg](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_ch2_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cap_ch2_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAP_CH2_CFG_SPEC;
 impl crate::RegisterSpec for CAP_CH2_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cap_ch2_cfg::R](R) reader structure"]
-impl crate::Readable for CAP_CH2_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cap_ch2_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`cap_ch2_cfg::R`](R) reader structure"]
+impl crate::Readable for CAP_CH2_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cap_ch2_cfg::W`](W) writer structure"]
 impl crate::Writable for CAP_CH2_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

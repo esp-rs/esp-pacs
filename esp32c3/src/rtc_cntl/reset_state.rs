@@ -1,39 +1,7 @@
 #[doc = "Register `RESET_STATE` reader"]
-pub struct R(crate::R<RESET_STATE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RESET_STATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RESET_STATE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RESET_STATE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RESET_STATE_SPEC>;
 #[doc = "Register `RESET_STATE` writer"]
-pub struct W(crate::W<RESET_STATE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RESET_STATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RESET_STATE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RESET_STATE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RESET_STATE_SPEC>;
 #[doc = "Field `RESET_CAUSE_PROCPU` reader - reset cause of PRO CPU"]
 pub type RESET_CAUSE_PROCPU_R = crate::FieldReader;
 #[doc = "Field `RESET_CAUSE_APPCPU` reader - reset cause of APP CPU"]
@@ -41,43 +9,43 @@ pub type RESET_CAUSE_APPCPU_R = crate::FieldReader;
 #[doc = "Field `STAT_VECTOR_SEL_APPCPU` reader - APP CPU state vector sel"]
 pub type STAT_VECTOR_SEL_APPCPU_R = crate::BitReader;
 #[doc = "Field `STAT_VECTOR_SEL_APPCPU` writer - APP CPU state vector sel"]
-pub type STAT_VECTOR_SEL_APPCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type STAT_VECTOR_SEL_APPCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` reader - PRO CPU state vector sel"]
 pub type STAT_VECTOR_SEL_PROCPU_R = crate::BitReader;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` writer - PRO CPU state vector sel"]
-pub type STAT_VECTOR_SEL_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type STAT_VECTOR_SEL_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ALL_RESET_FLAG_PROCPU` reader - PRO CPU reset_flag"]
 pub type ALL_RESET_FLAG_PROCPU_R = crate::BitReader;
 #[doc = "Field `ALL_RESET_FLAG_APPCPU` reader - APP CPU reset flag"]
 pub type ALL_RESET_FLAG_APPCPU_R = crate::BitReader;
 #[doc = "Field `ALL_RESET_FLAG_CLR_PROCPU` writer - clear PRO CPU reset_flag"]
-pub type ALL_RESET_FLAG_CLR_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type ALL_RESET_FLAG_CLR_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ALL_RESET_FLAG_CLR_APPCPU` writer - clear APP CPU reset flag"]
-pub type ALL_RESET_FLAG_CLR_APPCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type ALL_RESET_FLAG_CLR_APPCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OCD_HALT_ON_RESET_APPCPU` reader - APPCPU OcdHaltOnReset"]
 pub type OCD_HALT_ON_RESET_APPCPU_R = crate::BitReader;
 #[doc = "Field `OCD_HALT_ON_RESET_APPCPU` writer - APPCPU OcdHaltOnReset"]
-pub type OCD_HALT_ON_RESET_APPCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type OCD_HALT_ON_RESET_APPCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` reader - PROCPU OcdHaltOnReset"]
 pub type OCD_HALT_ON_RESET_PROCPU_R = crate::BitReader;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` writer - PROCPU OcdHaltOnReset"]
-pub type OCD_HALT_ON_RESET_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type OCD_HALT_ON_RESET_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `JTAG_RESET_FLAG_PROCPU` reader - configure jtag reset configure"]
 pub type JTAG_RESET_FLAG_PROCPU_R = crate::BitReader;
 #[doc = "Field `JTAG_RESET_FLAG_APPCPU` reader - configure jtag reset configure"]
 pub type JTAG_RESET_FLAG_APPCPU_R = crate::BitReader;
 #[doc = "Field `JTAG_RESET_FLAG_CLR_PROCPU` writer - configure jtag reset configure"]
-pub type JTAG_RESET_FLAG_CLR_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type JTAG_RESET_FLAG_CLR_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `JTAG_RESET_FLAG_CLR_APPCPU` writer - configure jtag reset configure"]
-pub type JTAG_RESET_FLAG_CLR_APPCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type JTAG_RESET_FLAG_CLR_APPCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DRESET_MASK_APPCPU` reader - configure dreset configure"]
 pub type DRESET_MASK_APPCPU_R = crate::BitReader;
 #[doc = "Field `DRESET_MASK_APPCPU` writer - configure dreset configure"]
-pub type DRESET_MASK_APPCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type DRESET_MASK_APPCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DRESET_MASK_PROCPU` reader - configure dreset configure"]
 pub type DRESET_MASK_PROCPU_R = crate::BitReader;
 #[doc = "Field `DRESET_MASK_PROCPU` writer - configure dreset configure"]
-pub type DRESET_MASK_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
+pub type DRESET_MASK_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
@@ -205,82 +173,87 @@ impl W {
     #[doc = "Bit 12 - APP CPU state vector sel"]
     #[inline(always)]
     #[must_use]
-    pub fn stat_vector_sel_appcpu(&mut self) -> STAT_VECTOR_SEL_APPCPU_W<12> {
+    pub fn stat_vector_sel_appcpu(&mut self) -> STAT_VECTOR_SEL_APPCPU_W<RESET_STATE_SPEC, 12> {
         STAT_VECTOR_SEL_APPCPU_W::new(self)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
     #[must_use]
-    pub fn stat_vector_sel_procpu(&mut self) -> STAT_VECTOR_SEL_PROCPU_W<13> {
+    pub fn stat_vector_sel_procpu(&mut self) -> STAT_VECTOR_SEL_PROCPU_W<RESET_STATE_SPEC, 13> {
         STAT_VECTOR_SEL_PROCPU_W::new(self)
     }
     #[doc = "Bit 16 - clear PRO CPU reset_flag"]
     #[inline(always)]
     #[must_use]
-    pub fn all_reset_flag_clr_procpu(&mut self) -> ALL_RESET_FLAG_CLR_PROCPU_W<16> {
+    pub fn all_reset_flag_clr_procpu(
+        &mut self,
+    ) -> ALL_RESET_FLAG_CLR_PROCPU_W<RESET_STATE_SPEC, 16> {
         ALL_RESET_FLAG_CLR_PROCPU_W::new(self)
     }
     #[doc = "Bit 17 - clear APP CPU reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn all_reset_flag_clr_appcpu(&mut self) -> ALL_RESET_FLAG_CLR_APPCPU_W<17> {
+    pub fn all_reset_flag_clr_appcpu(
+        &mut self,
+    ) -> ALL_RESET_FLAG_CLR_APPCPU_W<RESET_STATE_SPEC, 17> {
         ALL_RESET_FLAG_CLR_APPCPU_W::new(self)
     }
     #[doc = "Bit 18 - APPCPU OcdHaltOnReset"]
     #[inline(always)]
     #[must_use]
-    pub fn ocd_halt_on_reset_appcpu(&mut self) -> OCD_HALT_ON_RESET_APPCPU_W<18> {
+    pub fn ocd_halt_on_reset_appcpu(&mut self) -> OCD_HALT_ON_RESET_APPCPU_W<RESET_STATE_SPEC, 18> {
         OCD_HALT_ON_RESET_APPCPU_W::new(self)
     }
     #[doc = "Bit 19 - PROCPU OcdHaltOnReset"]
     #[inline(always)]
     #[must_use]
-    pub fn ocd_halt_on_reset_procpu(&mut self) -> OCD_HALT_ON_RESET_PROCPU_W<19> {
+    pub fn ocd_halt_on_reset_procpu(&mut self) -> OCD_HALT_ON_RESET_PROCPU_W<RESET_STATE_SPEC, 19> {
         OCD_HALT_ON_RESET_PROCPU_W::new(self)
     }
     #[doc = "Bit 22 - configure jtag reset configure"]
     #[inline(always)]
     #[must_use]
-    pub fn jtag_reset_flag_clr_procpu(&mut self) -> JTAG_RESET_FLAG_CLR_PROCPU_W<22> {
+    pub fn jtag_reset_flag_clr_procpu(
+        &mut self,
+    ) -> JTAG_RESET_FLAG_CLR_PROCPU_W<RESET_STATE_SPEC, 22> {
         JTAG_RESET_FLAG_CLR_PROCPU_W::new(self)
     }
     #[doc = "Bit 23 - configure jtag reset configure"]
     #[inline(always)]
     #[must_use]
-    pub fn jtag_reset_flag_clr_appcpu(&mut self) -> JTAG_RESET_FLAG_CLR_APPCPU_W<23> {
+    pub fn jtag_reset_flag_clr_appcpu(
+        &mut self,
+    ) -> JTAG_RESET_FLAG_CLR_APPCPU_W<RESET_STATE_SPEC, 23> {
         JTAG_RESET_FLAG_CLR_APPCPU_W::new(self)
     }
     #[doc = "Bit 24 - configure dreset configure"]
     #[inline(always)]
     #[must_use]
-    pub fn dreset_mask_appcpu(&mut self) -> DRESET_MASK_APPCPU_W<24> {
+    pub fn dreset_mask_appcpu(&mut self) -> DRESET_MASK_APPCPU_W<RESET_STATE_SPEC, 24> {
         DRESET_MASK_APPCPU_W::new(self)
     }
     #[doc = "Bit 25 - configure dreset configure"]
     #[inline(always)]
     #[must_use]
-    pub fn dreset_mask_procpu(&mut self) -> DRESET_MASK_PROCPU_W<25> {
+    pub fn dreset_mask_procpu(&mut self) -> DRESET_MASK_PROCPU_W<RESET_STATE_SPEC, 25> {
         DRESET_MASK_PROCPU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reset_state](index.html) module"]
+#[doc = "rtc configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reset_state::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reset_state::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESET_STATE_SPEC;
 impl crate::RegisterSpec for RESET_STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reset_state::R](R) reader structure"]
-impl crate::Readable for RESET_STATE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reset_state::W](W) writer structure"]
+#[doc = "`read()` method returns [`reset_state::R`](R) reader structure"]
+impl crate::Readable for RESET_STATE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`reset_state::W`](W) writer structure"]
 impl crate::Writable for RESET_STATE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

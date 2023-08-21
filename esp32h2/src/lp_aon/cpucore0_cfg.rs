@@ -1,58 +1,25 @@
 #[doc = "Register `CPUCORE0_CFG` reader"]
-pub struct R(crate::R<CPUCORE0_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CPUCORE0_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CPUCORE0_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CPUCORE0_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CPUCORE0_CFG_SPEC>;
 #[doc = "Register `CPUCORE0_CFG` writer"]
-pub struct W(crate::W<CPUCORE0_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CPUCORE0_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CPUCORE0_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CPUCORE0_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CPUCORE0_CFG_SPEC>;
 #[doc = "Field `CPU_CORE0_SW_STALL` reader - need_des"]
 pub type CPU_CORE0_SW_STALL_R = crate::FieldReader;
 #[doc = "Field `CPU_CORE0_SW_STALL` writer - need_des"]
-pub type CPU_CORE0_SW_STALL_W<'a, const O: u8> = crate::FieldWriter<'a, CPUCORE0_CFG_SPEC, 8, O>;
+pub type CPU_CORE0_SW_STALL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `CPU_CORE0_SW_RESET` writer - need_des"]
-pub type CPU_CORE0_SW_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
+pub type CPU_CORE0_SW_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CPU_CORE0_OCD_HALT_ON_RESET` reader - need_des"]
 pub type CPU_CORE0_OCD_HALT_ON_RESET_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_OCD_HALT_ON_RESET` writer - need_des"]
-pub type CPU_CORE0_OCD_HALT_ON_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
+pub type CPU_CORE0_OCD_HALT_ON_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CPU_CORE0_STAT_VECTOR_SEL` reader - need_des"]
 pub type CPU_CORE0_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_STAT_VECTOR_SEL` writer - need_des"]
-pub type CPU_CORE0_STAT_VECTOR_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
+pub type CPU_CORE0_STAT_VECTOR_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CPU_CORE0_DRESET_MASK` reader - need_des"]
 pub type CPU_CORE0_DRESET_MASK_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_DRESET_MASK` writer - need_des"]
-pub type CPU_CORE0_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
+pub type CPU_CORE0_DRESET_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -108,52 +75,53 @@ impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<0> {
+    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<CPUCORE0_CFG_SPEC, 0> {
         CPU_CORE0_SW_STALL_W::new(self)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<28> {
+    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<CPUCORE0_CFG_SPEC, 28> {
         CPU_CORE0_SW_RESET_W::new(self)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_ocd_halt_on_reset(&mut self) -> CPU_CORE0_OCD_HALT_ON_RESET_W<29> {
+    pub fn cpu_core0_ocd_halt_on_reset(
+        &mut self,
+    ) -> CPU_CORE0_OCD_HALT_ON_RESET_W<CPUCORE0_CFG_SPEC, 29> {
         CPU_CORE0_OCD_HALT_ON_RESET_W::new(self)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_stat_vector_sel(&mut self) -> CPU_CORE0_STAT_VECTOR_SEL_W<30> {
+    pub fn cpu_core0_stat_vector_sel(
+        &mut self,
+    ) -> CPU_CORE0_STAT_VECTOR_SEL_W<CPUCORE0_CFG_SPEC, 30> {
         CPU_CORE0_STAT_VECTOR_SEL_W::new(self)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<31> {
+    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<CPUCORE0_CFG_SPEC, 31> {
         CPU_CORE0_DRESET_MASK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpucore0_cfg](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpucore0_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cpucore0_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CPUCORE0_CFG_SPEC;
 impl crate::RegisterSpec for CPUCORE0_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cpucore0_cfg::R](R) reader structure"]
-impl crate::Readable for CPUCORE0_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cpucore0_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`cpucore0_cfg::R`](R) reader structure"]
+impl crate::Readable for CPUCORE0_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cpucore0_cfg::W`](W) writer structure"]
 impl crate::Writable for CPUCORE0_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

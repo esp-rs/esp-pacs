@@ -1,18 +1,5 @@
 #[doc = "Register `SAR_COCPU_INT_RAW` reader"]
-pub struct R(crate::R<SAR_COCPU_INT_RAW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_COCPU_INT_RAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_COCPU_INT_RAW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_COCPU_INT_RAW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_COCPU_INT_RAW_SPEC>;
 #[doc = "Field `SAR_COCPU_TOUCH_DONE_INT_RAW` reader - int from touch done"]
 pub type SAR_COCPU_TOUCH_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_TOUCH_INACTIVE_INT_RAW` reader - int from touch inactive"]
@@ -165,15 +152,13 @@ impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_RAW_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "the interrupt raw of ulp\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_int_raw](index.html) module"]
+#[doc = "the interrupt raw of ulp\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_INT_RAW_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_cocpu_int_raw::R](R) reader structure"]
-impl crate::Readable for SAR_COCPU_INT_RAW_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sar_cocpu_int_raw::R`](R) reader structure"]
+impl crate::Readable for SAR_COCPU_INT_RAW_SPEC {}
 #[doc = "`reset()` method sets SAR_COCPU_INT_RAW to value 0"]
 impl crate::Resettable for SAR_COCPU_INT_RAW_SPEC {
     const RESET_VALUE: Self::Ux = 0;

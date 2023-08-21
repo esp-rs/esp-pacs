@@ -1,43 +1,11 @@
 #[doc = "Register `W12` reader"]
-pub struct R(crate::R<W12_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<W12_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<W12_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<W12_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<W12_SPEC>;
 #[doc = "Register `W12` writer"]
-pub struct W(crate::W<W12_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<W12_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<W12_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<W12_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<W12_SPEC>;
 #[doc = "Field `BUF12` reader - data buffer"]
 pub type BUF12_R = crate::FieldReader<u32>;
 #[doc = "Field `BUF12` writer - data buffer"]
-pub type BUF12_W<'a, const O: u8> = crate::FieldWriter<'a, W12_SPEC, 32, O, u32>;
+pub type BUF12_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
     #[must_use]
-    pub fn buf12(&mut self) -> BUF12_W<0> {
+    pub fn buf12(&mut self) -> BUF12_W<W12_SPEC, 0> {
         BUF12_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI1 memory data buffer12\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [w12](index.html) module"]
+#[doc = "SPI1 memory data buffer12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w12::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w12::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct W12_SPEC;
 impl crate::RegisterSpec for W12_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [w12::R](R) reader structure"]
-impl crate::Readable for W12_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [w12::W](W) writer structure"]
+#[doc = "`read()` method returns [`w12::R`](R) reader structure"]
+impl crate::Readable for W12_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`w12::W`](W) writer structure"]
 impl crate::Writable for W12_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

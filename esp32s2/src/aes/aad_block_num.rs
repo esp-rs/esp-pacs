@@ -1,43 +1,11 @@
 #[doc = "Register `AAD_BLOCK_NUM` reader"]
-pub struct R(crate::R<AAD_BLOCK_NUM_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<AAD_BLOCK_NUM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<AAD_BLOCK_NUM_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<AAD_BLOCK_NUM_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<AAD_BLOCK_NUM_SPEC>;
 #[doc = "Register `AAD_BLOCK_NUM` writer"]
-pub struct W(crate::W<AAD_BLOCK_NUM_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<AAD_BLOCK_NUM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<AAD_BLOCK_NUM_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<AAD_BLOCK_NUM_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<AAD_BLOCK_NUM_SPEC>;
 #[doc = "Field `AAD_BLOCK_NUM` reader - Stores the ADD Block Number for the GCM operation."]
 pub type AAD_BLOCK_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `AAD_BLOCK_NUM` writer - Stores the ADD Block Number for the GCM operation."]
-pub type AAD_BLOCK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, AAD_BLOCK_NUM_SPEC, 32, O, u32>;
+pub type AAD_BLOCK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the ADD Block Number for the GCM operation."]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:31 - Stores the ADD Block Number for the GCM operation."]
     #[inline(always)]
     #[must_use]
-    pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<0> {
+    pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<AAD_BLOCK_NUM_SPEC, 0> {
         AAD_BLOCK_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "AAD block number configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [aad_block_num](index.html) module"]
+#[doc = "AAD block number configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`aad_block_num::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`aad_block_num::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AAD_BLOCK_NUM_SPEC;
 impl crate::RegisterSpec for AAD_BLOCK_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [aad_block_num::R](R) reader structure"]
-impl crate::Readable for AAD_BLOCK_NUM_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [aad_block_num::W](W) writer structure"]
+#[doc = "`read()` method returns [`aad_block_num::R`](R) reader structure"]
+impl crate::Readable for AAD_BLOCK_NUM_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`aad_block_num::W`](W) writer structure"]
 impl crate::Writable for AAD_BLOCK_NUM_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

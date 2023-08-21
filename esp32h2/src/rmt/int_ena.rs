@@ -1,67 +1,35 @@
 #[doc = "Register `INT_ENA` reader"]
-pub struct R(crate::R<INT_ENA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_ENA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_ENA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
-pub struct W(crate::W<INT_ENA_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INT_ENA_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INT_ENA_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `CH_TX_END[0-1]` reader - The interrupt enable bit for CH%s_TX_END_INT."]
 pub type CH_TX_END_R = crate::BitReader;
 #[doc = "Field `CH_TX_END[0-1]` writer - The interrupt enable bit for CH%s_TX_END_INT."]
-pub type CH_TX_END_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_TX_END_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_RX_END[2-3]` reader - The interrupt enable bit for CH2_RX_END_INT."]
 pub type CH_RX_END_R = crate::BitReader;
 #[doc = "Field `CH_RX_END[2-3]` writer - The interrupt enable bit for CH2_RX_END_INT."]
-pub type CH_RX_END_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_RX_END_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_TX_ERR[0-1]` reader - The interrupt enable bit for CH4_ERR_INT."]
 pub type CH_TX_ERR_R = crate::BitReader;
 #[doc = "Field `CH_TX_ERR[0-1]` writer - The interrupt enable bit for CH4_ERR_INT."]
-pub type CH_TX_ERR_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_TX_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_RX_ERR[2-3]` reader - The interrupt enable bit for CH6_ERR_INT."]
 pub type CH_RX_ERR_R = crate::BitReader;
 #[doc = "Field `CH_RX_ERR[2-3]` writer - The interrupt enable bit for CH6_ERR_INT."]
-pub type CH_RX_ERR_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_RX_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_TX_THR_EVENT[0-1]` reader - The interrupt enable bit for CH%s_TX_THR_EVENT_INT."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT[0-1]` writer - The interrupt enable bit for CH%s_TX_THR_EVENT_INT."]
-pub type CH_TX_THR_EVENT_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_TX_THR_EVENT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_RX_THR_EVENT[2-3]` reader - The interrupt enable bit for CH2_RX_THR_EVENT_INT."]
 pub type CH_RX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH_RX_THR_EVENT[2-3]` writer - The interrupt enable bit for CH2_RX_THR_EVENT_INT."]
-pub type CH_RX_THR_EVENT_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_RX_THR_EVENT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH_X_LOOP[0-1]` reader - The interrupt enable bit for CH%s_TX_LOOP_INT."]
 pub type CH_X_LOOP_R = crate::BitReader;
 #[doc = "Field `CH_X_LOOP[0-1]` writer - The interrupt enable bit for CH%s_TX_LOOP_INT."]
-pub type CH_X_LOOP_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
+pub type CH_X_LOOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "The interrupt enable bit for CH[0-1]_TX_END_INT."]
     #[inline(always)]
@@ -212,148 +180,145 @@ impl W {
     #[doc = "The interrupt enable bit for CH[0-1]_TX_END_INT."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_tx_end<const O: u8>(&mut self) -> CH_TX_END_W<O> {
+    pub unsafe fn ch_tx_end<const O: u8>(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, O> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 0 - The interrupt enable bit for CH0_TX_END_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<0> {
+    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 0> {
         CH_TX_END_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for CH1_TX_END_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<1> {
+    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC, 1> {
         CH_TX_END_W::new(self)
     }
     #[doc = "The interrupt enable bit for CH2_RX_END_INT."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_rx_end<const O: u8>(&mut self) -> CH_RX_END_W<O> {
+    pub unsafe fn ch_rx_end<const O: u8>(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, O> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for CH2_RX_END_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<2> {
+    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 2> {
         CH_RX_END_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for CH2_RX_END_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<3> {
+    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC, 3> {
         CH_RX_END_W::new(self)
     }
     #[doc = "The interrupt enable bit for CH4_ERR_INT."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_tx_err<const O: u8>(&mut self) -> CH_TX_ERR_W<O> {
+    pub unsafe fn ch_tx_err<const O: u8>(&mut self) -> CH_TX_ERR_W<INT_ENA_SPEC, O> {
         CH_TX_ERR_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt enable bit for CH4_ERR_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_tx_err(&mut self) -> CH_TX_ERR_W<4> {
+    pub fn ch0_tx_err(&mut self) -> CH_TX_ERR_W<INT_ENA_SPEC, 4> {
         CH_TX_ERR_W::new(self)
     }
     #[doc = "Bit 5 - The interrupt enable bit for CH4_ERR_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_tx_err(&mut self) -> CH_TX_ERR_W<5> {
+    pub fn ch1_tx_err(&mut self) -> CH_TX_ERR_W<INT_ENA_SPEC, 5> {
         CH_TX_ERR_W::new(self)
     }
     #[doc = "The interrupt enable bit for CH6_ERR_INT."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_rx_err<const O: u8>(&mut self) -> CH_RX_ERR_W<O> {
+    pub unsafe fn ch_rx_err<const O: u8>(&mut self) -> CH_RX_ERR_W<INT_ENA_SPEC, O> {
         CH_RX_ERR_W::new(self)
     }
     #[doc = "Bit 6 - The interrupt enable bit for CH6_ERR_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_rx_err(&mut self) -> CH_RX_ERR_W<6> {
+    pub fn ch2_rx_err(&mut self) -> CH_RX_ERR_W<INT_ENA_SPEC, 6> {
         CH_RX_ERR_W::new(self)
     }
     #[doc = "Bit 7 - The interrupt enable bit for CH6_ERR_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<7> {
+    pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<INT_ENA_SPEC, 7> {
         CH_RX_ERR_W::new(self)
     }
     #[doc = "The interrupt enable bit for CH[0-1]_TX_THR_EVENT_INT."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_tx_thr_event<const O: u8>(&mut self) -> CH_TX_THR_EVENT_W<O> {
+    pub unsafe fn ch_tx_thr_event<const O: u8>(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, O> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 8 - The interrupt enable bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<8> {
+    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 8> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 9 - The interrupt enable bit for CH1_TX_THR_EVENT_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<9> {
+    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC, 9> {
         CH_TX_THR_EVENT_W::new(self)
     }
     #[doc = "The interrupt enable bit for CH2_RX_THR_EVENT_INT."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_rx_thr_event<const O: u8>(&mut self) -> CH_RX_THR_EVENT_W<O> {
+    pub unsafe fn ch_rx_thr_event<const O: u8>(&mut self) -> CH_RX_THR_EVENT_W<INT_ENA_SPEC, O> {
         CH_RX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 10 - The interrupt enable bit for CH2_RX_THR_EVENT_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<10> {
+    pub fn ch2_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_ENA_SPEC, 10> {
         CH_RX_THR_EVENT_W::new(self)
     }
     #[doc = "Bit 11 - The interrupt enable bit for CH2_RX_THR_EVENT_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<11> {
+    pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_ENA_SPEC, 11> {
         CH_RX_THR_EVENT_W::new(self)
     }
     #[doc = "The interrupt enable bit for CH[0-1]_TX_LOOP_INT."]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ch_x_loop<const O: u8>(&mut self) -> CH_X_LOOP_W<O> {
+    pub unsafe fn ch_x_loop<const O: u8>(&mut self) -> CH_X_LOOP_W<INT_ENA_SPEC, O> {
         CH_X_LOOP_W::new(self)
     }
     #[doc = "Bit 12 - The interrupt enable bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_x_loop(&mut self) -> CH_X_LOOP_W<12> {
+    pub fn ch0_x_loop(&mut self) -> CH_X_LOOP_W<INT_ENA_SPEC, 12> {
         CH_X_LOOP_W::new(self)
     }
     #[doc = "Bit 13 - The interrupt enable bit for CH1_TX_LOOP_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_x_loop(&mut self) -> CH_X_LOOP_W<13> {
+    pub fn ch1_x_loop(&mut self) -> CH_X_LOOP_W<INT_ENA_SPEC, 13> {
         CH_X_LOOP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
-impl crate::Readable for INT_ENA_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for INT_ENA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

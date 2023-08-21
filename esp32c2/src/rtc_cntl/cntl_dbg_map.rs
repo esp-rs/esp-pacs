@@ -1,87 +1,55 @@
 #[doc = "Register `CNTL_DBG_MAP` reader"]
-pub struct R(crate::R<CNTL_DBG_MAP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CNTL_DBG_MAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CNTL_DBG_MAP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CNTL_DBG_MAP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CNTL_DBG_MAP_SPEC>;
 #[doc = "Register `CNTL_DBG_MAP` writer"]
-pub struct W(crate::W<CNTL_DBG_MAP_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CNTL_DBG_MAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CNTL_DBG_MAP_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CNTL_DBG_MAP_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CNTL_DBG_MAP_SPEC>;
 #[doc = "Field `GPIO_PIN5_MUX_SEL` reader - Need add desc"]
 pub type GPIO_PIN5_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN5_MUX_SEL` writer - Need add desc"]
-pub type GPIO_PIN5_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_DBG_MAP_SPEC, O>;
+pub type GPIO_PIN5_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN4_MUX_SEL` reader - Need add desc"]
 pub type GPIO_PIN4_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN4_MUX_SEL` writer - Need add desc"]
-pub type GPIO_PIN4_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_DBG_MAP_SPEC, O>;
+pub type GPIO_PIN4_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN3_MUX_SEL` reader - Need add desc"]
 pub type GPIO_PIN3_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN3_MUX_SEL` writer - Need add desc"]
-pub type GPIO_PIN3_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_DBG_MAP_SPEC, O>;
+pub type GPIO_PIN3_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN2_MUX_SEL` reader - Need add desc"]
 pub type GPIO_PIN2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_MUX_SEL` writer - Need add desc"]
-pub type GPIO_PIN2_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_DBG_MAP_SPEC, O>;
+pub type GPIO_PIN2_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN1_MUX_SEL` reader - Need add desc"]
 pub type GPIO_PIN1_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN1_MUX_SEL` writer - Need add desc"]
-pub type GPIO_PIN1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_DBG_MAP_SPEC, O>;
+pub type GPIO_PIN1_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN0_MUX_SEL` reader - Need add desc"]
 pub type GPIO_PIN0_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN0_MUX_SEL` writer - Need add desc"]
-pub type GPIO_PIN0_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_DBG_MAP_SPEC, O>;
+pub type GPIO_PIN0_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_PIN5_FUN_SEL` reader - Need add desc"]
 pub type GPIO_PIN5_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN5_FUN_SEL` writer - Need add desc"]
-pub type GPIO_PIN5_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DBG_MAP_SPEC, 4, O>;
+pub type GPIO_PIN5_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `GPIO_PIN4_FUN_SEL` reader - Need add desc"]
 pub type GPIO_PIN4_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN4_FUN_SEL` writer - Need add desc"]
-pub type GPIO_PIN4_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DBG_MAP_SPEC, 4, O>;
+pub type GPIO_PIN4_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `GPIO_PIN3_FUN_SEL` reader - Need add desc"]
 pub type GPIO_PIN3_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN3_FUN_SEL` writer - Need add desc"]
-pub type GPIO_PIN3_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DBG_MAP_SPEC, 4, O>;
+pub type GPIO_PIN3_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `GPIO_PIN2_FUN_SEL` reader - Need add desc"]
 pub type GPIO_PIN2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN2_FUN_SEL` writer - Need add desc"]
-pub type GPIO_PIN2_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DBG_MAP_SPEC, 4, O>;
+pub type GPIO_PIN2_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `GPIO_PIN1_FUN_SEL` reader - Need add desc"]
 pub type GPIO_PIN1_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN1_FUN_SEL` writer - Need add desc"]
-pub type GPIO_PIN1_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DBG_MAP_SPEC, 4, O>;
+pub type GPIO_PIN1_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `GPIO_PIN0_FUN_SEL` reader - Need add desc"]
 pub type GPIO_PIN0_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN0_FUN_SEL` writer - Need add desc"]
-pub type GPIO_PIN0_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DBG_MAP_SPEC, 4, O>;
+pub type GPIO_PIN0_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 impl R {
     #[doc = "Bit 2 - Need add desc"]
     #[inline(always)]
@@ -209,94 +177,91 @@ impl W {
     #[doc = "Bit 2 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin5_mux_sel(&mut self) -> GPIO_PIN5_MUX_SEL_W<2> {
+    pub fn gpio_pin5_mux_sel(&mut self) -> GPIO_PIN5_MUX_SEL_W<CNTL_DBG_MAP_SPEC, 2> {
         GPIO_PIN5_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 3 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin4_mux_sel(&mut self) -> GPIO_PIN4_MUX_SEL_W<3> {
+    pub fn gpio_pin4_mux_sel(&mut self) -> GPIO_PIN4_MUX_SEL_W<CNTL_DBG_MAP_SPEC, 3> {
         GPIO_PIN4_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 4 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin3_mux_sel(&mut self) -> GPIO_PIN3_MUX_SEL_W<4> {
+    pub fn gpio_pin3_mux_sel(&mut self) -> GPIO_PIN3_MUX_SEL_W<CNTL_DBG_MAP_SPEC, 4> {
         GPIO_PIN3_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 5 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_mux_sel(&mut self) -> GPIO_PIN2_MUX_SEL_W<5> {
+    pub fn gpio_pin2_mux_sel(&mut self) -> GPIO_PIN2_MUX_SEL_W<CNTL_DBG_MAP_SPEC, 5> {
         GPIO_PIN2_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 6 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin1_mux_sel(&mut self) -> GPIO_PIN1_MUX_SEL_W<6> {
+    pub fn gpio_pin1_mux_sel(&mut self) -> GPIO_PIN1_MUX_SEL_W<CNTL_DBG_MAP_SPEC, 6> {
         GPIO_PIN1_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 7 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin0_mux_sel(&mut self) -> GPIO_PIN0_MUX_SEL_W<7> {
+    pub fn gpio_pin0_mux_sel(&mut self) -> GPIO_PIN0_MUX_SEL_W<CNTL_DBG_MAP_SPEC, 7> {
         GPIO_PIN0_MUX_SEL_W::new(self)
     }
     #[doc = "Bits 8:11 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin5_fun_sel(&mut self) -> GPIO_PIN5_FUN_SEL_W<8> {
+    pub fn gpio_pin5_fun_sel(&mut self) -> GPIO_PIN5_FUN_SEL_W<CNTL_DBG_MAP_SPEC, 8> {
         GPIO_PIN5_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 12:15 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin4_fun_sel(&mut self) -> GPIO_PIN4_FUN_SEL_W<12> {
+    pub fn gpio_pin4_fun_sel(&mut self) -> GPIO_PIN4_FUN_SEL_W<CNTL_DBG_MAP_SPEC, 12> {
         GPIO_PIN4_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 16:19 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin3_fun_sel(&mut self) -> GPIO_PIN3_FUN_SEL_W<16> {
+    pub fn gpio_pin3_fun_sel(&mut self) -> GPIO_PIN3_FUN_SEL_W<CNTL_DBG_MAP_SPEC, 16> {
         GPIO_PIN3_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 20:23 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_fun_sel(&mut self) -> GPIO_PIN2_FUN_SEL_W<20> {
+    pub fn gpio_pin2_fun_sel(&mut self) -> GPIO_PIN2_FUN_SEL_W<CNTL_DBG_MAP_SPEC, 20> {
         GPIO_PIN2_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 24:27 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin1_fun_sel(&mut self) -> GPIO_PIN1_FUN_SEL_W<24> {
+    pub fn gpio_pin1_fun_sel(&mut self) -> GPIO_PIN1_FUN_SEL_W<CNTL_DBG_MAP_SPEC, 24> {
         GPIO_PIN1_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 28:31 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin0_fun_sel(&mut self) -> GPIO_PIN0_FUN_SEL_W<28> {
+    pub fn gpio_pin0_fun_sel(&mut self) -> GPIO_PIN0_FUN_SEL_W<CNTL_DBG_MAP_SPEC, 28> {
         GPIO_PIN0_FUN_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntl_dbg_map](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cntl_dbg_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cntl_dbg_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CNTL_DBG_MAP_SPEC;
 impl crate::RegisterSpec for CNTL_DBG_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cntl_dbg_map::R](R) reader structure"]
-impl crate::Readable for CNTL_DBG_MAP_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cntl_dbg_map::W](W) writer structure"]
+#[doc = "`read()` method returns [`cntl_dbg_map::R`](R) reader structure"]
+impl crate::Readable for CNTL_DBG_MAP_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cntl_dbg_map::W`](W) writer structure"]
 impl crate::Writable for CNTL_DBG_MAP_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,75 +1,43 @@
 #[doc = "Register `GAHBCFG` reader"]
-pub struct R(crate::R<GAHBCFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GAHBCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GAHBCFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GAHBCFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GAHBCFG_SPEC>;
 #[doc = "Register `GAHBCFG` writer"]
-pub struct W(crate::W<GAHBCFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GAHBCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GAHBCFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GAHBCFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GAHBCFG_SPEC>;
 #[doc = "Field `GLBLLNTRMSK` reader - "]
 pub type GLBLLNTRMSK_R = crate::BitReader;
 #[doc = "Field `GLBLLNTRMSK` writer - "]
-pub type GLBLLNTRMSK_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type GLBLLNTRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HBSTLEN` reader - "]
 pub type HBSTLEN_R = crate::FieldReader;
 #[doc = "Field `HBSTLEN` writer - "]
-pub type HBSTLEN_W<'a, const O: u8> = crate::FieldWriter<'a, GAHBCFG_SPEC, 4, O>;
+pub type HBSTLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `DMAEN` reader - "]
 pub type DMAEN_R = crate::BitReader;
 #[doc = "Field `DMAEN` writer - "]
-pub type DMAEN_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type DMAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NPTXFEMPLVL` reader - "]
 pub type NPTXFEMPLVL_R = crate::BitReader;
 #[doc = "Field `NPTXFEMPLVL` writer - "]
-pub type NPTXFEMPLVL_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type NPTXFEMPLVL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PTXFEMPLVL` reader - "]
 pub type PTXFEMPLVL_R = crate::BitReader;
 #[doc = "Field `PTXFEMPLVL` writer - "]
-pub type PTXFEMPLVL_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type PTXFEMPLVL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `REMMEMSUPP` reader - "]
 pub type REMMEMSUPP_R = crate::BitReader;
 #[doc = "Field `REMMEMSUPP` writer - "]
-pub type REMMEMSUPP_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type REMMEMSUPP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NOTIALLDMAWRIT` reader - "]
 pub type NOTIALLDMAWRIT_R = crate::BitReader;
 #[doc = "Field `NOTIALLDMAWRIT` writer - "]
-pub type NOTIALLDMAWRIT_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type NOTIALLDMAWRIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AHBSINGLE` reader - "]
 pub type AHBSINGLE_R = crate::BitReader;
 #[doc = "Field `AHBSINGLE` writer - "]
-pub type AHBSINGLE_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type AHBSINGLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INVDESCENDIANESS` reader - "]
 pub type INVDESCENDIANESS_R = crate::BitReader;
 #[doc = "Field `INVDESCENDIANESS` writer - "]
-pub type INVDESCENDIANESS_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
+pub type INVDESCENDIANESS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -149,76 +117,73 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn glbllntrmsk(&mut self) -> GLBLLNTRMSK_W<0> {
+    pub fn glbllntrmsk(&mut self) -> GLBLLNTRMSK_W<GAHBCFG_SPEC, 0> {
         GLBLLNTRMSK_W::new(self)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
     #[must_use]
-    pub fn hbstlen(&mut self) -> HBSTLEN_W<1> {
+    pub fn hbstlen(&mut self) -> HBSTLEN_W<GAHBCFG_SPEC, 1> {
         HBSTLEN_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<5> {
+    pub fn dmaen(&mut self) -> DMAEN_W<GAHBCFG_SPEC, 5> {
         DMAEN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<7> {
+    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<GAHBCFG_SPEC, 7> {
         NPTXFEMPLVL_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<8> {
+    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<GAHBCFG_SPEC, 8> {
         PTXFEMPLVL_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn remmemsupp(&mut self) -> REMMEMSUPP_W<21> {
+    pub fn remmemsupp(&mut self) -> REMMEMSUPP_W<GAHBCFG_SPEC, 21> {
         REMMEMSUPP_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn notialldmawrit(&mut self) -> NOTIALLDMAWRIT_W<22> {
+    pub fn notialldmawrit(&mut self) -> NOTIALLDMAWRIT_W<GAHBCFG_SPEC, 22> {
         NOTIALLDMAWRIT_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbsingle(&mut self) -> AHBSINGLE_W<23> {
+    pub fn ahbsingle(&mut self) -> AHBSINGLE_W<GAHBCFG_SPEC, 23> {
         AHBSINGLE_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn invdescendianess(&mut self) -> INVDESCENDIANESS_W<24> {
+    pub fn invdescendianess(&mut self) -> INVDESCENDIANESS_W<GAHBCFG_SPEC, 24> {
         INVDESCENDIANESS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gahbcfg](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gahbcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gahbcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GAHBCFG_SPEC;
 impl crate::RegisterSpec for GAHBCFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gahbcfg::R](R) reader structure"]
-impl crate::Readable for GAHBCFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gahbcfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`gahbcfg::R`](R) reader structure"]
+impl crate::Readable for GAHBCFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gahbcfg::W`](W) writer structure"]
 impl crate::Writable for GAHBCFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

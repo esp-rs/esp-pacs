@@ -1,49 +1,17 @@
 #[doc = "Register `LPCORE` reader"]
-pub struct R(crate::R<LPCORE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LPCORE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LPCORE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LPCORE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LPCORE_SPEC>;
 #[doc = "Register `LPCORE` writer"]
-pub struct W(crate::W<LPCORE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LPCORE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LPCORE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LPCORE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LPCORE_SPEC>;
 #[doc = "Field `ETM_WAKEUP_FLAG_CLR` writer - need_des"]
-pub type ETM_WAKEUP_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LPCORE_SPEC, O>;
+pub type ETM_WAKEUP_FLAG_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ETM_WAKEUP_FLAG` reader - need_des"]
 pub type ETM_WAKEUP_FLAG_R = crate::BitReader;
 #[doc = "Field `ETM_WAKEUP_FLAG` writer - need_des"]
-pub type ETM_WAKEUP_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, LPCORE_SPEC, O>;
+pub type ETM_WAKEUP_FLAG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DISABLE` reader - need_des"]
 pub type DISABLE_R = crate::BitReader;
 #[doc = "Field `DISABLE` writer - need_des"]
-pub type DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, LPCORE_SPEC, O>;
+pub type DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
@@ -78,40 +46,37 @@ impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn etm_wakeup_flag_clr(&mut self) -> ETM_WAKEUP_FLAG_CLR_W<0> {
+    pub fn etm_wakeup_flag_clr(&mut self) -> ETM_WAKEUP_FLAG_CLR_W<LPCORE_SPEC, 0> {
         ETM_WAKEUP_FLAG_CLR_W::new(self)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn etm_wakeup_flag(&mut self) -> ETM_WAKEUP_FLAG_W<1> {
+    pub fn etm_wakeup_flag(&mut self) -> ETM_WAKEUP_FLAG_W<LPCORE_SPEC, 1> {
         ETM_WAKEUP_FLAG_W::new(self)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn disable(&mut self) -> DISABLE_W<31> {
+    pub fn disable(&mut self) -> DISABLE_W<LPCORE_SPEC, 31> {
         DISABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpcore](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lpcore::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lpcore::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LPCORE_SPEC;
 impl crate::RegisterSpec for LPCORE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lpcore::R](R) reader structure"]
-impl crate::Readable for LPCORE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lpcore::W](W) writer structure"]
+#[doc = "`read()` method returns [`lpcore::R`](R) reader structure"]
+impl crate::Readable for LPCORE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lpcore::W`](W) writer structure"]
 impl crate::Writable for LPCORE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

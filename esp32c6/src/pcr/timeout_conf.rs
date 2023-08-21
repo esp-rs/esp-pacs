@@ -1,47 +1,15 @@
 #[doc = "Register `TIMEOUT_CONF` reader"]
-pub struct R(crate::R<TIMEOUT_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TIMEOUT_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TIMEOUT_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TIMEOUT_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TIMEOUT_CONF_SPEC>;
 #[doc = "Register `TIMEOUT_CONF` writer"]
-pub struct W(crate::W<TIMEOUT_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TIMEOUT_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TIMEOUT_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TIMEOUT_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TIMEOUT_CONF_SPEC>;
 #[doc = "Field `CPU_TIMEOUT_RST_EN` reader - Set 0 to reset cpu_peri timeout module"]
 pub type CPU_TIMEOUT_RST_EN_R = crate::BitReader;
 #[doc = "Field `CPU_TIMEOUT_RST_EN` writer - Set 0 to reset cpu_peri timeout module"]
-pub type CPU_TIMEOUT_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMEOUT_CONF_SPEC, O>;
+pub type CPU_TIMEOUT_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_TIMEOUT_RST_EN` reader - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
 pub type HP_TIMEOUT_RST_EN_R = crate::BitReader;
 #[doc = "Field `HP_TIMEOUT_RST_EN` writer - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
-pub type HP_TIMEOUT_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMEOUT_CONF_SPEC, O>;
+pub type HP_TIMEOUT_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - Set 0 to reset cpu_peri timeout module"]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bit 1 - Set 0 to reset cpu_peri timeout module"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_timeout_rst_en(&mut self) -> CPU_TIMEOUT_RST_EN_W<1> {
+    pub fn cpu_timeout_rst_en(&mut self) -> CPU_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC, 1> {
         CPU_TIMEOUT_RST_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_timeout_rst_en(&mut self) -> HP_TIMEOUT_RST_EN_W<2> {
+    pub fn hp_timeout_rst_en(&mut self) -> HP_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC, 2> {
         HP_TIMEOUT_RST_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "TIMEOUT configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timeout_conf](index.html) module"]
+#[doc = "TIMEOUT configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timeout_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timeout_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMEOUT_CONF_SPEC;
 impl crate::RegisterSpec for TIMEOUT_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timeout_conf::R](R) reader structure"]
-impl crate::Readable for TIMEOUT_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [timeout_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`timeout_conf::R`](R) reader structure"]
+impl crate::Readable for TIMEOUT_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`timeout_conf::W`](W) writer structure"]
 impl crate::Writable for TIMEOUT_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

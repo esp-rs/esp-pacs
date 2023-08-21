@@ -1,18 +1,5 @@
 #[doc = "Register `SLC_APBWIN_RDATA` reader"]
-pub struct R(crate::R<SLC_APBWIN_RDATA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLC_APBWIN_RDATA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLC_APBWIN_RDATA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLC_APBWIN_RDATA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLC_APBWIN_RDATA_SPEC>;
 #[doc = "Field `SLC_APBWIN_RDATA` reader - *******Description***********"]
 pub type SLC_APBWIN_RDATA_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<SLC_APBWIN_RDATA_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slc_apbwin_rdata](index.html) module"]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc_apbwin_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC_APBWIN_RDATA_SPEC;
 impl crate::RegisterSpec for SLC_APBWIN_RDATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slc_apbwin_rdata::R](R) reader structure"]
-impl crate::Readable for SLC_APBWIN_RDATA_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`slc_apbwin_rdata::R`](R) reader structure"]
+impl crate::Readable for SLC_APBWIN_RDATA_SPEC {}
 #[doc = "`reset()` method sets SLC_APBWIN_RDATA to value 0"]
 impl crate::Resettable for SLC_APBWIN_RDATA_SPEC {
     const RESET_VALUE: Self::Ux = 0;

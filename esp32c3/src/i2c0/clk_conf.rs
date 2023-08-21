@@ -1,59 +1,27 @@
 #[doc = "Register `CLK_CONF` reader"]
-pub struct R(crate::R<CLK_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_CONF_SPEC>;
 #[doc = "Register `CLK_CONF` writer"]
-pub struct W(crate::W<CLK_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLK_CONF_SPEC>;
 #[doc = "Field `SCLK_DIV_NUM` reader - reg_sclk_div_num"]
 pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - reg_sclk_div_num"]
-pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SCLK_DIV_A` reader - reg_sclk_div_a"]
 pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - reg_sclk_div_a"]
-pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
+pub type SCLK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SCLK_DIV_B` reader - reg_sclk_div_b"]
 pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - reg_sclk_div_b"]
-pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
+pub type SCLK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SCLK_SEL` reader - reg_sclk_sel"]
 pub type SCLK_SEL_R = crate::BitReader;
 #[doc = "Field `SCLK_SEL` writer - reg_sclk_sel"]
-pub type SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
+pub type SCLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SCLK_ACTIVE` reader - reg_sclk_active"]
 pub type SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `SCLK_ACTIVE` writer - reg_sclk_active"]
-pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
+pub type SCLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
@@ -106,52 +74,49 @@ impl W {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<0> {
+    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC, 0> {
         SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 8:13 - reg_sclk_div_a"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<8> {
+    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC, 8> {
         SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 14:19 - reg_sclk_div_b"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<14> {
+    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC, 14> {
         SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bit 20 - reg_sclk_sel"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<20> {
+    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC, 20> {
         SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 21 - reg_sclk_active"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<21> {
+    pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<CLK_CONF_SPEC, 21> {
         SCLK_ACTIVE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2C_CLK_CONF_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf](index.html) module"]
+#[doc = "I2C_CLK_CONF_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_CONF_SPEC;
 impl crate::RegisterSpec for CLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_conf::R](R) reader structure"]
-impl crate::Readable for CLK_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`clk_conf::R`](R) reader structure"]
+impl crate::Readable for CLK_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clk_conf::W`](W) writer structure"]
 impl crate::Writable for CLK_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

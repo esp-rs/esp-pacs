@@ -1,63 +1,31 @@
 #[doc = "Register `RX_CONF1` reader"]
-pub struct R(crate::R<RX_CONF1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RX_CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RX_CONF1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RX_CONF1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RX_CONF1_SPEC>;
 #[doc = "Register `RX_CONF1` writer"]
-pub struct W(crate::W<RX_CONF1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RX_CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RX_CONF1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RX_CONF1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RX_CONF1_SPEC>;
 #[doc = "Field `RX_TDM_WS_WIDTH` reader - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
 pub type RX_TDM_WS_WIDTH_R = crate::FieldReader;
 #[doc = "Field `RX_TDM_WS_WIDTH` writer - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
-pub type RX_TDM_WS_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 7, O>;
+pub type RX_TDM_WS_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `RX_BCK_DIV_NUM` reader - Bit clock configuration bits in receiver mode."]
 pub type RX_BCK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_DIV_NUM` writer - Bit clock configuration bits in receiver mode."]
-pub type RX_BCK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 6, O>;
+pub type RX_BCK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `RX_BITS_MOD` reader - Set the bits to configure the valid data bit length of I2S receiver channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
 pub type RX_BITS_MOD_R = crate::FieldReader;
 #[doc = "Field `RX_BITS_MOD` writer - Set the bits to configure the valid data bit length of I2S receiver channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
-pub type RX_BITS_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 5, O>;
+pub type RX_BITS_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `RX_HALF_SAMPLE_BITS` reader - I2S Rx half sample bits -1."]
 pub type RX_HALF_SAMPLE_BITS_R = crate::FieldReader;
 #[doc = "Field `RX_HALF_SAMPLE_BITS` writer - I2S Rx half sample bits -1."]
-pub type RX_HALF_SAMPLE_BITS_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 6, O>;
+pub type RX_HALF_SAMPLE_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `RX_TDM_CHAN_BITS` reader - The Rx bit number for each channel minus 1in TDM mode."]
 pub type RX_TDM_CHAN_BITS_R = crate::FieldReader;
 #[doc = "Field `RX_TDM_CHAN_BITS` writer - The Rx bit number for each channel minus 1in TDM mode."]
-pub type RX_TDM_CHAN_BITS_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 5, O>;
+pub type RX_TDM_CHAN_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `RX_MSB_SHIFT` reader - Set this bit to enable receiver in Phillips standard mode"]
 pub type RX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_SHIFT` writer - Set this bit to enable receiver in Phillips standard mode"]
-pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF1_SPEC, O>;
+pub type RX_MSB_SHIFT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:6 - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
     #[inline(always)]
@@ -131,58 +99,55 @@ impl W {
     #[doc = "Bits 0:6 - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tdm_ws_width(&mut self) -> RX_TDM_WS_WIDTH_W<0> {
+    pub fn rx_tdm_ws_width(&mut self) -> RX_TDM_WS_WIDTH_W<RX_CONF1_SPEC, 0> {
         RX_TDM_WS_WIDTH_W::new(self)
     }
     #[doc = "Bits 7:12 - Bit clock configuration bits in receiver mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_bck_div_num(&mut self) -> RX_BCK_DIV_NUM_W<7> {
+    pub fn rx_bck_div_num(&mut self) -> RX_BCK_DIV_NUM_W<RX_CONF1_SPEC, 7> {
         RX_BCK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 13:17 - Set the bits to configure the valid data bit length of I2S receiver channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_bits_mod(&mut self) -> RX_BITS_MOD_W<13> {
+    pub fn rx_bits_mod(&mut self) -> RX_BITS_MOD_W<RX_CONF1_SPEC, 13> {
         RX_BITS_MOD_W::new(self)
     }
     #[doc = "Bits 18:23 - I2S Rx half sample bits -1."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_half_sample_bits(&mut self) -> RX_HALF_SAMPLE_BITS_W<18> {
+    pub fn rx_half_sample_bits(&mut self) -> RX_HALF_SAMPLE_BITS_W<RX_CONF1_SPEC, 18> {
         RX_HALF_SAMPLE_BITS_W::new(self)
     }
     #[doc = "Bits 24:28 - The Rx bit number for each channel minus 1in TDM mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tdm_chan_bits(&mut self) -> RX_TDM_CHAN_BITS_W<24> {
+    pub fn rx_tdm_chan_bits(&mut self) -> RX_TDM_CHAN_BITS_W<RX_CONF1_SPEC, 24> {
         RX_TDM_CHAN_BITS_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to enable receiver in Phillips standard mode"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<29> {
+    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<RX_CONF1_SPEC, 29> {
         RX_MSB_SHIFT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S RX configure register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_conf1](index.html) module"]
+#[doc = "I2S RX configure register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_conf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_conf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_CONF1_SPEC;
 impl crate::RegisterSpec for RX_CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rx_conf1::R](R) reader structure"]
-impl crate::Readable for RX_CONF1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rx_conf1::W](W) writer structure"]
+#[doc = "`read()` method returns [`rx_conf1::R`](R) reader structure"]
+impl crate::Readable for RX_CONF1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rx_conf1::W`](W) writer structure"]
 impl crate::Writable for RX_CONF1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

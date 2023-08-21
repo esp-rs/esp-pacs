@@ -1,59 +1,27 @@
 #[doc = "Register `CFG_TIMING` reader"]
-pub struct R(crate::R<CFG_TIMING_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CFG_TIMING_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CFG_TIMING_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CFG_TIMING_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CFG_TIMING_SPEC>;
 #[doc = "Register `CFG_TIMING` writer"]
-pub struct W(crate::W<CFG_TIMING_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CFG_TIMING_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CFG_TIMING_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CFG_TIMING_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CFG_TIMING_SPEC>;
 #[doc = "Field `NCRC` reader - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
 pub type NCRC_R = crate::FieldReader;
 #[doc = "Field `NCRC` writer - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
-pub type NCRC_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 3, O>;
+pub type NCRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `PST_END_CMD_LOW_VALUE` reader - configure cycles to lower cmd after voltage is changed to 1.8V."]
 pub type PST_END_CMD_LOW_VALUE_R = crate::FieldReader;
 #[doc = "Field `PST_END_CMD_LOW_VALUE` writer - configure cycles to lower cmd after voltage is changed to 1.8V."]
-pub type PST_END_CMD_LOW_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 7, O>;
+pub type PST_END_CMD_LOW_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `PST_END_DATA_LOW_VALUE` reader - configure cycles to lower data after voltage is changed to 1.8V."]
 pub type PST_END_DATA_LOW_VALUE_R = crate::FieldReader;
 #[doc = "Field `PST_END_DATA_LOW_VALUE` writer - configure cycles to lower data after voltage is changed to 1.8V."]
-pub type PST_END_DATA_LOW_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 6, O>;
+pub type PST_END_DATA_LOW_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SDCLK_STOP_THRES` reader - Configure the number of cycles of module clk to judge sdclk has stopped"]
 pub type SDCLK_STOP_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `SDCLK_STOP_THRES` writer - Configure the number of cycles of module clk to judge sdclk has stopped"]
-pub type SDCLK_STOP_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 11, O, u16>;
+pub type SDCLK_STOP_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` reader - module clk divider to sample sdclk"]
 pub type SAMPLE_CLK_DIVIDER_R = crate::FieldReader;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` writer - module clk divider to sample sdclk"]
-pub type SAMPLE_CLK_DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 4, O>;
+pub type SAMPLE_CLK_DIVIDER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 impl R {
     #[doc = "Bits 0:2 - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
     #[inline(always)]
@@ -115,52 +83,49 @@ impl W {
     #[doc = "Bits 0:2 - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
     #[inline(always)]
     #[must_use]
-    pub fn ncrc(&mut self) -> NCRC_W<0> {
+    pub fn ncrc(&mut self) -> NCRC_W<CFG_TIMING_SPEC, 0> {
         NCRC_W::new(self)
     }
     #[doc = "Bits 3:9 - configure cycles to lower cmd after voltage is changed to 1.8V."]
     #[inline(always)]
     #[must_use]
-    pub fn pst_end_cmd_low_value(&mut self) -> PST_END_CMD_LOW_VALUE_W<3> {
+    pub fn pst_end_cmd_low_value(&mut self) -> PST_END_CMD_LOW_VALUE_W<CFG_TIMING_SPEC, 3> {
         PST_END_CMD_LOW_VALUE_W::new(self)
     }
     #[doc = "Bits 10:15 - configure cycles to lower data after voltage is changed to 1.8V."]
     #[inline(always)]
     #[must_use]
-    pub fn pst_end_data_low_value(&mut self) -> PST_END_DATA_LOW_VALUE_W<10> {
+    pub fn pst_end_data_low_value(&mut self) -> PST_END_DATA_LOW_VALUE_W<CFG_TIMING_SPEC, 10> {
         PST_END_DATA_LOW_VALUE_W::new(self)
     }
     #[doc = "Bits 16:26 - Configure the number of cycles of module clk to judge sdclk has stopped"]
     #[inline(always)]
     #[must_use]
-    pub fn sdclk_stop_thres(&mut self) -> SDCLK_STOP_THRES_W<16> {
+    pub fn sdclk_stop_thres(&mut self) -> SDCLK_STOP_THRES_W<CFG_TIMING_SPEC, 16> {
         SDCLK_STOP_THRES_W::new(self)
     }
     #[doc = "Bits 28:31 - module clk divider to sample sdclk"]
     #[inline(always)]
     #[must_use]
-    pub fn sample_clk_divider(&mut self) -> SAMPLE_CLK_DIVIDER_W<28> {
+    pub fn sample_clk_divider(&mut self) -> SAMPLE_CLK_DIVIDER_W<CFG_TIMING_SPEC, 28> {
         SAMPLE_CLK_DIVIDER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Timing configuration registers\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg_timing](index.html) module"]
+#[doc = "Timing configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg_timing::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg_timing::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG_TIMING_SPEC;
 impl crate::RegisterSpec for CFG_TIMING_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cfg_timing::R](R) reader structure"]
-impl crate::Readable for CFG_TIMING_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cfg_timing::W](W) writer structure"]
+#[doc = "`read()` method returns [`cfg_timing::R`](R) reader structure"]
+impl crate::Readable for CFG_TIMING_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cfg_timing::W`](W) writer structure"]
 impl crate::Writable for CFG_TIMING_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

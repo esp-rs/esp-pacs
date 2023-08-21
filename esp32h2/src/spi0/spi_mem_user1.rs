@@ -1,51 +1,17 @@
 #[doc = "Register `SPI_MEM_USER1` reader"]
-pub struct R(crate::R<SPI_MEM_USER1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_MEM_USER1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_MEM_USER1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_MEM_USER1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_MEM_USER1_SPEC>;
 #[doc = "Register `SPI_MEM_USER1` writer"]
-pub struct W(crate::W<SPI_MEM_USER1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_MEM_USER1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_MEM_USER1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_MEM_USER1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SPI_MEM_USER1_SPEC>;
 #[doc = "Field `SPI_MEM_USR_DUMMY_CYCLELEN` reader - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
 pub type SPI_MEM_USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_DUMMY_CYCLELEN` writer - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
-pub type SPI_MEM_USR_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_USER1_SPEC, 6, O>;
+pub type SPI_MEM_USR_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `SPI_MEM_USR_DBYTELEN` reader - SPI0 USR_CMD read or write data byte length -1"]
 pub type SPI_MEM_USR_DBYTELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_ADDR_BITLEN` reader - The length in bits of address phase. The register value shall be (bit_num-1)."]
 pub type SPI_MEM_USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_ADDR_BITLEN` writer - The length in bits of address phase. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_USR_ADDR_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_USER1_SPEC, 6, O>;
+pub type SPI_MEM_USR_ADDR_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
     #[inline(always)]
@@ -92,34 +58,33 @@ impl W {
     #[doc = "Bits 0:5 - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_usr_dummy_cyclelen(&mut self) -> SPI_MEM_USR_DUMMY_CYCLELEN_W<0> {
+    pub fn spi_mem_usr_dummy_cyclelen(
+        &mut self,
+    ) -> SPI_MEM_USR_DUMMY_CYCLELEN_W<SPI_MEM_USER1_SPEC, 0> {
         SPI_MEM_USR_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 26:31 - The length in bits of address phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_usr_addr_bitlen(&mut self) -> SPI_MEM_USR_ADDR_BITLEN_W<26> {
+    pub fn spi_mem_usr_addr_bitlen(&mut self) -> SPI_MEM_USR_ADDR_BITLEN_W<SPI_MEM_USER1_SPEC, 26> {
         SPI_MEM_USR_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI0 user1 register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_user1](index.html) module"]
+#[doc = "SPI0 user1 register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_user1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi_mem_user1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_USER1_SPEC;
 impl crate::RegisterSpec for SPI_MEM_USER1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_mem_user1::R](R) reader structure"]
-impl crate::Readable for SPI_MEM_USER1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi_mem_user1::W](W) writer structure"]
+#[doc = "`read()` method returns [`spi_mem_user1::R`](R) reader structure"]
+impl crate::Readable for SPI_MEM_USER1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`spi_mem_user1::W`](W) writer structure"]
 impl crate::Writable for SPI_MEM_USER1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

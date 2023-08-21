@@ -1,70 +1,35 @@
 #[doc = "Register `INTERRUPT_ENABLE` reader"]
-pub struct R(crate::R<INTERRUPT_ENABLE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTERRUPT_ENABLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTERRUPT_ENABLE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTERRUPT_ENABLE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTERRUPT_ENABLE_SPEC>;
 #[doc = "Register `INTERRUPT_ENABLE` writer"]
-pub struct W(crate::W<INTERRUPT_ENABLE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INTERRUPT_ENABLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INTERRUPT_ENABLE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INTERRUPT_ENABLE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INTERRUPT_ENABLE_SPEC>;
 #[doc = "Field `EXT_RECEIVE_INT_ENA` reader - 1: enabled, when the receive buffer status is 'full' the TWAI controller requests the respective interrupt. 0: disable"]
 pub type EXT_RECEIVE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `EXT_RECEIVE_INT_ENA` writer - 1: enabled, when the receive buffer status is 'full' the TWAI controller requests the respective interrupt. 0: disable"]
-pub type EXT_RECEIVE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTERRUPT_ENABLE_SPEC, O>;
+pub type EXT_RECEIVE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EXT_TRANSMIT_INT_ENA` reader - 1: enabled, when a message has been successfully transmitted or the transmit buffer is accessible again (e.g. after an abort transmission command), the TWAI controller requests the respective interrupt. 0: disable"]
 pub type EXT_TRANSMIT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `EXT_TRANSMIT_INT_ENA` writer - 1: enabled, when a message has been successfully transmitted or the transmit buffer is accessible again (e.g. after an abort transmission command), the TWAI controller requests the respective interrupt. 0: disable"]
-pub type EXT_TRANSMIT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTERRUPT_ENABLE_SPEC, O>;
+pub type EXT_TRANSMIT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EXT_ERR_WARNING_INT_ENA` reader - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
 pub type EXT_ERR_WARNING_INT_ENA_R = crate::BitReader;
 #[doc = "Field `EXT_ERR_WARNING_INT_ENA` writer - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
-pub type EXT_ERR_WARNING_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, INTERRUPT_ENABLE_SPEC, O>;
+pub type EXT_ERR_WARNING_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EXT_DATA_OVERRUN_INT_ENA` reader - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
 pub type EXT_DATA_OVERRUN_INT_ENA_R = crate::BitReader;
 #[doc = "Field `EXT_DATA_OVERRUN_INT_ENA` writer - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
-pub type EXT_DATA_OVERRUN_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, INTERRUPT_ENABLE_SPEC, O>;
+pub type EXT_DATA_OVERRUN_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` reader - 1: enabled, if the error status of the TWAI controller changes from error active to error passive or vice versa, the respective interrupt is requested. 0: disable"]
 pub type ERR_PASSIVE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` writer - 1: enabled, if the error status of the TWAI controller changes from error active to error passive or vice versa, the respective interrupt is requested. 0: disable"]
-pub type ERR_PASSIVE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTERRUPT_ENABLE_SPEC, O>;
+pub type ERR_PASSIVE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` reader - 1: enabled, if the TWAI controller has lost arbitration, the respective interrupt is requested. 0: disable"]
 pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` writer - 1: enabled, if the TWAI controller has lost arbitration, the respective interrupt is requested. 0: disable"]
-pub type ARBITRATION_LOST_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, INTERRUPT_ENABLE_SPEC, O>;
+pub type ARBITRATION_LOST_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BUS_ERR_INT_ENA` reader - 1: enabled, if an bus error has been detected, the TWAI controller requests the respective interrupt. 0: disable"]
 pub type BUS_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BUS_ERR_INT_ENA` writer - 1: enabled, if an bus error has been detected, the TWAI controller requests the respective interrupt. 0: disable"]
-pub type BUS_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTERRUPT_ENABLE_SPEC, O>;
+pub type BUS_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IDLE_INT_ENA` reader - 1: enabled, if state of TWAI become IDLE, the TWAI controller requests the respective interrupt. 0: disable"]
 pub type IDLE_INT_ENA_R = crate::BitReader;
 impl R {
@@ -158,64 +123,67 @@ impl W {
     #[doc = "Bit 0 - 1: enabled, when the receive buffer status is 'full' the TWAI controller requests the respective interrupt. 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_receive_int_ena(&mut self) -> EXT_RECEIVE_INT_ENA_W<0> {
+    pub fn ext_receive_int_ena(&mut self) -> EXT_RECEIVE_INT_ENA_W<INTERRUPT_ENABLE_SPEC, 0> {
         EXT_RECEIVE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - 1: enabled, when a message has been successfully transmitted or the transmit buffer is accessible again (e.g. after an abort transmission command), the TWAI controller requests the respective interrupt. 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_transmit_int_ena(&mut self) -> EXT_TRANSMIT_INT_ENA_W<1> {
+    pub fn ext_transmit_int_ena(&mut self) -> EXT_TRANSMIT_INT_ENA_W<INTERRUPT_ENABLE_SPEC, 1> {
         EXT_TRANSMIT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_err_warning_int_ena(&mut self) -> EXT_ERR_WARNING_INT_ENA_W<2> {
+    pub fn ext_err_warning_int_ena(
+        &mut self,
+    ) -> EXT_ERR_WARNING_INT_ENA_W<INTERRUPT_ENABLE_SPEC, 2> {
         EXT_ERR_WARNING_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_data_overrun_int_ena(&mut self) -> EXT_DATA_OVERRUN_INT_ENA_W<3> {
+    pub fn ext_data_overrun_int_ena(
+        &mut self,
+    ) -> EXT_DATA_OVERRUN_INT_ENA_W<INTERRUPT_ENABLE_SPEC, 3> {
         EXT_DATA_OVERRUN_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - 1: enabled, if the error status of the TWAI controller changes from error active to error passive or vice versa, the respective interrupt is requested. 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn err_passive_int_ena(&mut self) -> ERR_PASSIVE_INT_ENA_W<5> {
+    pub fn err_passive_int_ena(&mut self) -> ERR_PASSIVE_INT_ENA_W<INTERRUPT_ENABLE_SPEC, 5> {
         ERR_PASSIVE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - 1: enabled, if the TWAI controller has lost arbitration, the respective interrupt is requested. 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<6> {
+    pub fn arbitration_lost_int_ena(
+        &mut self,
+    ) -> ARBITRATION_LOST_INT_ENA_W<INTERRUPT_ENABLE_SPEC, 6> {
         ARBITRATION_LOST_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - 1: enabled, if an bus error has been detected, the TWAI controller requests the respective interrupt. 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn bus_err_int_ena(&mut self) -> BUS_ERR_INT_ENA_W<7> {
+    pub fn bus_err_int_ena(&mut self) -> BUS_ERR_INT_ENA_W<INTERRUPT_ENABLE_SPEC, 7> {
         BUS_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [interrupt_enable](index.html) module"]
+#[doc = "Interrupt enable register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`interrupt_enable::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`interrupt_enable::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERRUPT_ENABLE_SPEC;
 impl crate::RegisterSpec for INTERRUPT_ENABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [interrupt_enable::R](R) reader structure"]
-impl crate::Readable for INTERRUPT_ENABLE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [interrupt_enable::W](W) writer structure"]
+#[doc = "`read()` method returns [`interrupt_enable::R`](R) reader structure"]
+impl crate::Readable for INTERRUPT_ENABLE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`interrupt_enable::W`](W) writer structure"]
 impl crate::Writable for INTERRUPT_ENABLE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

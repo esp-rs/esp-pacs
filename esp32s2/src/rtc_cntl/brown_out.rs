@@ -1,73 +1,41 @@
 #[doc = "Register `BROWN_OUT` reader"]
-pub struct R(crate::R<BROWN_OUT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BROWN_OUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BROWN_OUT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BROWN_OUT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BROWN_OUT_SPEC>;
 #[doc = "Register `BROWN_OUT` writer"]
-pub struct W(crate::W<BROWN_OUT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BROWN_OUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BROWN_OUT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BROWN_OUT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BROWN_OUT_SPEC>;
 #[doc = "Field `BROWN_OUT2_ENA` reader - Enables the brown_out2 to initiate a chip reset."]
 pub type BROWN_OUT2_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT2_ENA` writer - Enables the brown_out2 to initiate a chip reset."]
-pub type BROWN_OUT2_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
+pub type BROWN_OUT2_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INT_WAIT` reader - Configures the waiting cycle before sending an interrupt."]
 pub type INT_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `INT_WAIT` writer - Configures the waiting cycle before sending an interrupt."]
-pub type INT_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16>;
+pub type INT_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `CLOSE_FLASH_ENA` reader - Set this bit to enable PD the flash when a brown-out happens."]
 pub type CLOSE_FLASH_ENA_R = crate::BitReader;
 #[doc = "Field `CLOSE_FLASH_ENA` writer - Set this bit to enable PD the flash when a brown-out happens."]
-pub type CLOSE_FLASH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
+pub type CLOSE_FLASH_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD_RF_ENA` reader - Set this bit to enable PD the RF circuits when a brown-out happens."]
 pub type PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `PD_RF_ENA` writer - Set this bit to enable PD the RF circuits when a brown-out happens."]
-pub type PD_RF_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
+pub type PD_RF_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RST_WAIT` reader - Configures the waiting cycle before the reset after a brown-out."]
 pub type RST_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `RST_WAIT` writer - Configures the waiting cycle before the reset after a brown-out."]
-pub type RST_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16>;
+pub type RST_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `RST_ENA` reader - Enables to reset brown-out."]
 pub type RST_ENA_R = crate::BitReader;
 #[doc = "Field `RST_ENA` writer - Enables to reset brown-out."]
-pub type RST_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
+pub type RST_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RST_SEL` reader - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
 pub type RST_SEL_R = crate::BitReader;
 #[doc = "Field `RST_SEL` writer - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
-pub type RST_SEL_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
+pub type RST_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CNT_CLR` writer - Clears the brown-out counter."]
-pub type CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
+pub type CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENA` reader - Set this bit to enable brown-out detection."]
 pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - Set this bit to enable brown-out detection."]
-pub type ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
+pub type ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DET` reader - Indicates the status of the brown-out signal."]
 pub type DET_R = crate::BitReader;
 impl R {
@@ -149,76 +117,73 @@ impl W {
     #[doc = "Bit 0 - Enables the brown_out2 to initiate a chip reset."]
     #[inline(always)]
     #[must_use]
-    pub fn brown_out2_ena(&mut self) -> BROWN_OUT2_ENA_W<0> {
+    pub fn brown_out2_ena(&mut self) -> BROWN_OUT2_ENA_W<BROWN_OUT_SPEC, 0> {
         BROWN_OUT2_ENA_W::new(self)
     }
     #[doc = "Bits 4:13 - Configures the waiting cycle before sending an interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn int_wait(&mut self) -> INT_WAIT_W<4> {
+    pub fn int_wait(&mut self) -> INT_WAIT_W<BROWN_OUT_SPEC, 4> {
         INT_WAIT_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable PD the flash when a brown-out happens."]
     #[inline(always)]
     #[must_use]
-    pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<14> {
+    pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<BROWN_OUT_SPEC, 14> {
         CLOSE_FLASH_ENA_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to enable PD the RF circuits when a brown-out happens."]
     #[inline(always)]
     #[must_use]
-    pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<15> {
+    pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<BROWN_OUT_SPEC, 15> {
         PD_RF_ENA_W::new(self)
     }
     #[doc = "Bits 16:25 - Configures the waiting cycle before the reset after a brown-out."]
     #[inline(always)]
     #[must_use]
-    pub fn rst_wait(&mut self) -> RST_WAIT_W<16> {
+    pub fn rst_wait(&mut self) -> RST_WAIT_W<BROWN_OUT_SPEC, 16> {
         RST_WAIT_W::new(self)
     }
     #[doc = "Bit 26 - Enables to reset brown-out."]
     #[inline(always)]
     #[must_use]
-    pub fn rst_ena(&mut self) -> RST_ENA_W<26> {
+    pub fn rst_ena(&mut self) -> RST_ENA_W<BROWN_OUT_SPEC, 26> {
         RST_ENA_W::new(self)
     }
     #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
     #[inline(always)]
     #[must_use]
-    pub fn rst_sel(&mut self) -> RST_SEL_W<27> {
+    pub fn rst_sel(&mut self) -> RST_SEL_W<BROWN_OUT_SPEC, 27> {
         RST_SEL_W::new(self)
     }
     #[doc = "Bit 29 - Clears the brown-out counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_clr(&mut self) -> CNT_CLR_W<29> {
+    pub fn cnt_clr(&mut self) -> CNT_CLR_W<BROWN_OUT_SPEC, 29> {
         CNT_CLR_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to enable brown-out detection."]
     #[inline(always)]
     #[must_use]
-    pub fn ena(&mut self) -> ENA_W<30> {
+    pub fn ena(&mut self) -> ENA_W<BROWN_OUT_SPEC, 30> {
         ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Brownout configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [brown_out](index.html) module"]
+#[doc = "Brownout configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`brown_out::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`brown_out::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BROWN_OUT_SPEC;
 impl crate::RegisterSpec for BROWN_OUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [brown_out::R](R) reader structure"]
-impl crate::Readable for BROWN_OUT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [brown_out::W](W) writer structure"]
+#[doc = "`read()` method returns [`brown_out::R`](R) reader structure"]
+impl crate::Readable for BROWN_OUT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`brown_out::W`](W) writer structure"]
 impl crate::Writable for BROWN_OUT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

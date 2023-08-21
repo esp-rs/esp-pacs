@@ -1,55 +1,23 @@
 #[doc = "Register `HCTSIZ4` reader"]
-pub struct R(crate::R<HCTSIZ4_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCTSIZ4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCTSIZ4_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCTSIZ4_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCTSIZ4_SPEC>;
 #[doc = "Register `HCTSIZ4` writer"]
-pub struct W(crate::W<HCTSIZ4_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCTSIZ4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCTSIZ4_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCTSIZ4_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCTSIZ4_SPEC>;
 #[doc = "Field `H_XFERSIZE4` reader - "]
 pub type H_XFERSIZE4_R = crate::FieldReader<u32>;
 #[doc = "Field `H_XFERSIZE4` writer - "]
-pub type H_XFERSIZE4_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ4_SPEC, 19, O, u32>;
+pub type H_XFERSIZE4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 19, O, u32>;
 #[doc = "Field `H_PKTCNT4` reader - "]
 pub type H_PKTCNT4_R = crate::FieldReader<u16>;
 #[doc = "Field `H_PKTCNT4` writer - "]
-pub type H_PKTCNT4_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ4_SPEC, 10, O, u16>;
+pub type H_PKTCNT4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `H_PID4` reader - "]
 pub type H_PID4_R = crate::FieldReader;
 #[doc = "Field `H_PID4` writer - "]
-pub type H_PID4_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ4_SPEC, 2, O>;
+pub type H_PID4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `H_DOPNG4` reader - "]
 pub type H_DOPNG4_R = crate::BitReader;
 #[doc = "Field `H_DOPNG4` writer - "]
-pub type H_DOPNG4_W<'a, const O: u8> = crate::BitWriter<'a, HCTSIZ4_SPEC, O>;
+pub type H_DOPNG4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:18"]
     #[inline(always)]
@@ -96,46 +64,43 @@ impl W {
     #[doc = "Bits 0:18"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xfersize4(&mut self) -> H_XFERSIZE4_W<0> {
+    pub fn h_xfersize4(&mut self) -> H_XFERSIZE4_W<HCTSIZ4_SPEC, 0> {
         H_XFERSIZE4_W::new(self)
     }
     #[doc = "Bits 19:28"]
     #[inline(always)]
     #[must_use]
-    pub fn h_pktcnt4(&mut self) -> H_PKTCNT4_W<19> {
+    pub fn h_pktcnt4(&mut self) -> H_PKTCNT4_W<HCTSIZ4_SPEC, 19> {
         H_PKTCNT4_W::new(self)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
     #[must_use]
-    pub fn h_pid4(&mut self) -> H_PID4_W<29> {
+    pub fn h_pid4(&mut self) -> H_PID4_W<HCTSIZ4_SPEC, 29> {
         H_PID4_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn h_dopng4(&mut self) -> H_DOPNG4_W<31> {
+    pub fn h_dopng4(&mut self) -> H_DOPNG4_W<HCTSIZ4_SPEC, 31> {
         H_DOPNG4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hctsiz4](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hctsiz4::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hctsiz4::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCTSIZ4_SPEC;
 impl crate::RegisterSpec for HCTSIZ4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hctsiz4::R](R) reader structure"]
-impl crate::Readable for HCTSIZ4_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hctsiz4::W](W) writer structure"]
+#[doc = "`read()` method returns [`hctsiz4::R`](R) reader structure"]
+impl crate::Readable for HCTSIZ4_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hctsiz4::W`](W) writer structure"]
 impl crate::Writable for HCTSIZ4_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,83 +1,51 @@
 #[doc = "Register `DCFG` reader"]
-pub struct R(crate::R<DCFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DCFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DCFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DCFG_SPEC>;
 #[doc = "Register `DCFG` writer"]
-pub struct W(crate::W<DCFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DCFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DCFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DCFG_SPEC>;
 #[doc = "Field `NZSTSOUTHSHK` reader - "]
 pub type NZSTSOUTHSHK_R = crate::BitReader;
 #[doc = "Field `NZSTSOUTHSHK` writer - "]
-pub type NZSTSOUTHSHK_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
+pub type NZSTSOUTHSHK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENA32KHZSUSP` reader - "]
 pub type ENA32KHZSUSP_R = crate::BitReader;
 #[doc = "Field `ENA32KHZSUSP` writer - "]
-pub type ENA32KHZSUSP_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
+pub type ENA32KHZSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DEVADDR` reader - "]
 pub type DEVADDR_R = crate::FieldReader;
 #[doc = "Field `DEVADDR` writer - "]
-pub type DEVADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 7, O>;
+pub type DEVADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `PERFRLINT` reader - "]
 pub type PERFRLINT_R = crate::FieldReader;
 #[doc = "Field `PERFRLINT` writer - "]
-pub type PERFRLINT_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 2, O>;
+pub type PERFRLINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `ENDEVOUTNAK` reader - "]
 pub type ENDEVOUTNAK_R = crate::BitReader;
 #[doc = "Field `ENDEVOUTNAK` writer - "]
-pub type ENDEVOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
+pub type ENDEVOUTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `XCVRDLY` reader - "]
 pub type XCVRDLY_R = crate::BitReader;
 #[doc = "Field `XCVRDLY` writer - "]
-pub type XCVRDLY_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
+pub type XCVRDLY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ERRATICINTMSK` reader - "]
 pub type ERRATICINTMSK_R = crate::BitReader;
 #[doc = "Field `ERRATICINTMSK` writer - "]
-pub type ERRATICINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
+pub type ERRATICINTMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPMISCNT` reader - "]
 pub type EPMISCNT_R = crate::FieldReader;
 #[doc = "Field `EPMISCNT` writer - "]
-pub type EPMISCNT_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 5, O>;
+pub type EPMISCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `DESCDMA` reader - "]
 pub type DESCDMA_R = crate::BitReader;
 #[doc = "Field `DESCDMA` writer - "]
-pub type DESCDMA_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
+pub type DESCDMA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PERSCHINTVL` reader - "]
 pub type PERSCHINTVL_R = crate::FieldReader;
 #[doc = "Field `PERSCHINTVL` writer - "]
-pub type PERSCHINTVL_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 2, O>;
+pub type PERSCHINTVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `RESVALID` reader - "]
 pub type RESVALID_R = crate::FieldReader;
 #[doc = "Field `RESVALID` writer - "]
-pub type RESVALID_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 6, O>;
+pub type RESVALID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -175,88 +143,85 @@ impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<2> {
+    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<DCFG_SPEC, 2> {
         NZSTSOUTHSHK_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ena32khzsusp(&mut self) -> ENA32KHZSUSP_W<3> {
+    pub fn ena32khzsusp(&mut self) -> ENA32KHZSUSP_W<DCFG_SPEC, 3> {
         ENA32KHZSUSP_W::new(self)
     }
     #[doc = "Bits 4:10"]
     #[inline(always)]
     #[must_use]
-    pub fn devaddr(&mut self) -> DEVADDR_W<4> {
+    pub fn devaddr(&mut self) -> DEVADDR_W<DCFG_SPEC, 4> {
         DEVADDR_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     #[must_use]
-    pub fn perfrlint(&mut self) -> PERFRLINT_W<11> {
+    pub fn perfrlint(&mut self) -> PERFRLINT_W<DCFG_SPEC, 11> {
         PERFRLINT_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn endevoutnak(&mut self) -> ENDEVOUTNAK_W<13> {
+    pub fn endevoutnak(&mut self) -> ENDEVOUTNAK_W<DCFG_SPEC, 13> {
         ENDEVOUTNAK_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn xcvrdly(&mut self) -> XCVRDLY_W<14> {
+    pub fn xcvrdly(&mut self) -> XCVRDLY_W<DCFG_SPEC, 14> {
         XCVRDLY_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn erraticintmsk(&mut self) -> ERRATICINTMSK_W<15> {
+    pub fn erraticintmsk(&mut self) -> ERRATICINTMSK_W<DCFG_SPEC, 15> {
         ERRATICINTMSK_W::new(self)
     }
     #[doc = "Bits 18:22"]
     #[inline(always)]
     #[must_use]
-    pub fn epmiscnt(&mut self) -> EPMISCNT_W<18> {
+    pub fn epmiscnt(&mut self) -> EPMISCNT_W<DCFG_SPEC, 18> {
         EPMISCNT_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn descdma(&mut self) -> DESCDMA_W<23> {
+    pub fn descdma(&mut self) -> DESCDMA_W<DCFG_SPEC, 23> {
         DESCDMA_W::new(self)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
     #[must_use]
-    pub fn perschintvl(&mut self) -> PERSCHINTVL_W<24> {
+    pub fn perschintvl(&mut self) -> PERSCHINTVL_W<DCFG_SPEC, 24> {
         PERSCHINTVL_W::new(self)
     }
     #[doc = "Bits 26:31"]
     #[inline(always)]
     #[must_use]
-    pub fn resvalid(&mut self) -> RESVALID_W<26> {
+    pub fn resvalid(&mut self) -> RESVALID_W<DCFG_SPEC, 26> {
         RESVALID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcfg](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCFG_SPEC;
 impl crate::RegisterSpec for DCFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcfg::R](R) reader structure"]
-impl crate::Readable for DCFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dcfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`dcfg::R`](R) reader structure"]
+impl crate::Readable for DCFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dcfg::W`](W) writer structure"]
 impl crate::Writable for DCFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

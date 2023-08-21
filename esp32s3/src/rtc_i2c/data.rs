@@ -1,45 +1,13 @@
 #[doc = "Register `DATA` reader"]
-pub struct R(crate::R<DATA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DATA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DATA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DATA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DATA_SPEC>;
 #[doc = "Register `DATA` writer"]
-pub struct W(crate::W<DATA_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DATA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DATA_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DATA_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DATA_SPEC>;
 #[doc = "Field `I2C_RDATA` reader - data received"]
 pub type I2C_RDATA_R = crate::FieldReader;
 #[doc = "Field `SLAVE_TX_DATA` reader - data sent by slave"]
 pub type SLAVE_TX_DATA_R = crate::FieldReader;
 #[doc = "Field `SLAVE_TX_DATA` writer - data sent by slave"]
-pub type SLAVE_TX_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, DATA_SPEC, 8, O>;
+pub type SLAVE_TX_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `I2C_DONE` reader - i2c done"]
 pub type I2C_DONE_R = crate::BitReader;
 impl R {
@@ -82,28 +50,25 @@ impl W {
     #[doc = "Bits 8:15 - data sent by slave"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_tx_data(&mut self) -> SLAVE_TX_DATA_W<8> {
+    pub fn slave_tx_data(&mut self) -> SLAVE_TX_DATA_W<DATA_SPEC, 8> {
         SLAVE_TX_DATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "get i2c data status\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data](index.html) module"]
+#[doc = "get i2c data status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`data::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATA_SPEC;
 impl crate::RegisterSpec for DATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [data::R](R) reader structure"]
-impl crate::Readable for DATA_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [data::W](W) writer structure"]
+#[doc = "`read()` method returns [`data::R`](R) reader structure"]
+impl crate::Readable for DATA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`data::W`](W) writer structure"]
 impl crate::Writable for DATA_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

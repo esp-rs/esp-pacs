@@ -1,18 +1,5 @@
 #[doc = "Register `ERR_CODE_CAP` reader"]
-pub struct R(crate::R<ERR_CODE_CAP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ERR_CODE_CAP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ERR_CODE_CAP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ERR_CODE_CAP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ERR_CODE_CAP_SPEC>;
 #[doc = "Field `ECC_SEGMENT` reader - This register contains information about the location of errors, see Table 181 for details."]
 pub type ECC_SEGMENT_R = crate::FieldReader;
 #[doc = "Field `ECC_DIRECTION` reader - This register contains information about transmission direction of the node when error occurs. 1: Error occurs when receiving a message; 0: Error occurs when transmitting a message"]
@@ -58,15 +45,13 @@ impl core::fmt::Debug for crate::generic::Reg<ERR_CODE_CAP_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Error Code Capture Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [err_code_cap](index.html) module"]
+#[doc = "Error Code Capture Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`err_code_cap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ERR_CODE_CAP_SPEC;
 impl crate::RegisterSpec for ERR_CODE_CAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [err_code_cap::R](R) reader structure"]
-impl crate::Readable for ERR_CODE_CAP_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`err_code_cap::R`](R) reader structure"]
+impl crate::Readable for ERR_CODE_CAP_SPEC {}
 #[doc = "`reset()` method sets ERR_CODE_CAP to value 0"]
 impl crate::Resettable for ERR_CODE_CAP_SPEC {
     const RESET_VALUE: Self::Ux = 0;

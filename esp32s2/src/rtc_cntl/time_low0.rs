@@ -1,18 +1,5 @@
 #[doc = "Register `TIME_LOW0` reader"]
-pub struct R(crate::R<TIME_LOW0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TIME_LOW0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TIME_LOW0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TIME_LOW0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TIME_LOW0_SPEC>;
 #[doc = "Field `TIMER_VALUE0_LOW` reader - Stores the lower 32 bits of RTC timer 0."]
 pub type TIMER_VALUE0_LOW_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<TIME_LOW0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Stores the lower 32 bits of RTC timer 0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [time_low0](index.html) module"]
+#[doc = "Stores the lower 32 bits of RTC timer 0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_low0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIME_LOW0_SPEC;
 impl crate::RegisterSpec for TIME_LOW0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [time_low0::R](R) reader structure"]
-impl crate::Readable for TIME_LOW0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`time_low0::R`](R) reader structure"]
+impl crate::Readable for TIME_LOW0_SPEC {}
 #[doc = "`reset()` method sets TIME_LOW0 to value 0"]
 impl crate::Resettable for TIME_LOW0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

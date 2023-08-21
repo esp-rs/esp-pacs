@@ -1,18 +1,5 @@
 #[doc = "Register `APB_SARADC1_DATA_STATUS` reader"]
-pub struct R(crate::R<APB_SARADC1_DATA_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<APB_SARADC1_DATA_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<APB_SARADC1_DATA_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<APB_SARADC1_DATA_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<APB_SARADC1_DATA_STATUS_SPEC>;
 #[doc = "Field `APB_SARADC1_DATA` reader - apbsaradc sample data"]
 pub type APB_SARADC1_DATA_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<APB_SARADC1_DATA_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "get apb saradc sample data\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_saradc1_data_status](index.html) module"]
+#[doc = "get apb saradc sample data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_saradc1_data_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB_SARADC1_DATA_STATUS_SPEC;
 impl crate::RegisterSpec for APB_SARADC1_DATA_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_saradc1_data_status::R](R) reader structure"]
-impl crate::Readable for APB_SARADC1_DATA_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`apb_saradc1_data_status::R`](R) reader structure"]
+impl crate::Readable for APB_SARADC1_DATA_STATUS_SPEC {}
 #[doc = "`reset()` method sets APB_SARADC1_DATA_STATUS to value 0"]
 impl crate::Resettable for APB_SARADC1_DATA_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,18 +1,5 @@
 #[doc = "Register `FIFO_ST` reader"]
-pub struct R(crate::R<FIFO_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FIFO_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FIFO_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FIFO_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FIFO_ST_SPEC>;
 #[doc = "Field `RXFIFO_RADDR` reader - This is the offset address of the APB reading from rxfifo"]
 pub type RXFIFO_RADDR_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_WADDR` reader - This is the offset address of i2c module receiving data and writing to rxfifo."]
@@ -72,15 +59,13 @@ impl core::fmt::Debug for crate::generic::Reg<FIFO_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "FIFO status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_st](index.html) module"]
+#[doc = "FIFO status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_ST_SPEC;
 impl crate::RegisterSpec for FIFO_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fifo_st::R](R) reader structure"]
-impl crate::Readable for FIFO_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`fifo_st::R`](R) reader structure"]
+impl crate::Readable for FIFO_ST_SPEC {}
 #[doc = "`reset()` method sets FIFO_ST to value 0"]
 impl crate::Resettable for FIFO_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,64 +1,27 @@
 #[doc = "Register `HP_ACTIVE_HP_CK_POWER` reader"]
-pub struct R(crate::R<HP_ACTIVE_HP_CK_POWER_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HP_ACTIVE_HP_CK_POWER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HP_ACTIVE_HP_CK_POWER_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HP_ACTIVE_HP_CK_POWER_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HP_ACTIVE_HP_CK_POWER_SPEC>;
 #[doc = "Register `HP_ACTIVE_HP_CK_POWER` writer"]
-pub struct W(crate::W<HP_ACTIVE_HP_CK_POWER_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HP_ACTIVE_HP_CK_POWER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HP_ACTIVE_HP_CK_POWER_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HP_ACTIVE_HP_CK_POWER_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HP_ACTIVE_HP_CK_POWER_SPEC>;
 #[doc = "Field `HP_ACTIVE_I2C_ISO_EN` reader - need_des"]
 pub type HP_ACTIVE_I2C_ISO_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_I2C_ISO_EN` writer - need_des"]
-pub type HP_ACTIVE_I2C_ISO_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
+pub type HP_ACTIVE_I2C_ISO_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_ACTIVE_I2C_RETENTION` reader - need_des"]
 pub type HP_ACTIVE_I2C_RETENTION_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_I2C_RETENTION` writer - need_des"]
-pub type HP_ACTIVE_I2C_RETENTION_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
+pub type HP_ACTIVE_I2C_RETENTION_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_ACTIVE_XPD_BB_I2C` reader - need_des"]
 pub type HP_ACTIVE_XPD_BB_I2C_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_XPD_BB_I2C` writer - need_des"]
-pub type HP_ACTIVE_XPD_BB_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
+pub type HP_ACTIVE_XPD_BB_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL_I2C` reader - need_des"]
 pub type HP_ACTIVE_XPD_BBPLL_I2C_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL_I2C` writer - need_des"]
-pub type HP_ACTIVE_XPD_BBPLL_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
+pub type HP_ACTIVE_XPD_BBPLL_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL` reader - need_des"]
 pub type HP_ACTIVE_XPD_BBPLL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL` writer - need_des"]
-pub type HP_ACTIVE_XPD_BBPLL_W<'a, const O: u8> =
-    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
+pub type HP_ACTIVE_XPD_BBPLL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
@@ -123,52 +86,57 @@ impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_i2c_iso_en(&mut self) -> HP_ACTIVE_I2C_ISO_EN_W<26> {
+    pub fn hp_active_i2c_iso_en(
+        &mut self,
+    ) -> HP_ACTIVE_I2C_ISO_EN_W<HP_ACTIVE_HP_CK_POWER_SPEC, 26> {
         HP_ACTIVE_I2C_ISO_EN_W::new(self)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_i2c_retention(&mut self) -> HP_ACTIVE_I2C_RETENTION_W<27> {
+    pub fn hp_active_i2c_retention(
+        &mut self,
+    ) -> HP_ACTIVE_I2C_RETENTION_W<HP_ACTIVE_HP_CK_POWER_SPEC, 27> {
         HP_ACTIVE_I2C_RETENTION_W::new(self)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_xpd_bb_i2c(&mut self) -> HP_ACTIVE_XPD_BB_I2C_W<28> {
+    pub fn hp_active_xpd_bb_i2c(
+        &mut self,
+    ) -> HP_ACTIVE_XPD_BB_I2C_W<HP_ACTIVE_HP_CK_POWER_SPEC, 28> {
         HP_ACTIVE_XPD_BB_I2C_W::new(self)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_xpd_bbpll_i2c(&mut self) -> HP_ACTIVE_XPD_BBPLL_I2C_W<29> {
+    pub fn hp_active_xpd_bbpll_i2c(
+        &mut self,
+    ) -> HP_ACTIVE_XPD_BBPLL_I2C_W<HP_ACTIVE_HP_CK_POWER_SPEC, 29> {
         HP_ACTIVE_XPD_BBPLL_I2C_W::new(self)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_xpd_bbpll(&mut self) -> HP_ACTIVE_XPD_BBPLL_W<30> {
+    pub fn hp_active_xpd_bbpll(&mut self) -> HP_ACTIVE_XPD_BBPLL_W<HP_ACTIVE_HP_CK_POWER_SPEC, 30> {
         HP_ACTIVE_XPD_BBPLL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hp_active_hp_ck_power](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_active_hp_ck_power::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_active_hp_ck_power::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_ACTIVE_HP_CK_POWER_SPEC;
 impl crate::RegisterSpec for HP_ACTIVE_HP_CK_POWER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hp_active_hp_ck_power::R](R) reader structure"]
-impl crate::Readable for HP_ACTIVE_HP_CK_POWER_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hp_active_hp_ck_power::W](W) writer structure"]
+#[doc = "`read()` method returns [`hp_active_hp_ck_power::R`](R) reader structure"]
+impl crate::Readable for HP_ACTIVE_HP_CK_POWER_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hp_active_hp_ck_power::W`](W) writer structure"]
 impl crate::Writable for HP_ACTIVE_HP_CK_POWER_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,43 +1,11 @@
 #[doc = "Register `OUT_ENABLE` reader"]
-pub struct R(crate::R<OUT_ENABLE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OUT_ENABLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OUT_ENABLE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OUT_ENABLE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OUT_ENABLE_SPEC>;
 #[doc = "Register `OUT_ENABLE` writer"]
-pub struct W(crate::W<OUT_ENABLE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<OUT_ENABLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<OUT_ENABLE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<OUT_ENABLE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<OUT_ENABLE_SPEC>;
 #[doc = "Field `LP_GPIO_ENABLE` reader - set lp gpio output data"]
 pub type LP_GPIO_ENABLE_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO_ENABLE` writer - set lp gpio output data"]
-pub type LP_GPIO_ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_ENABLE_SPEC, 8, O>;
+pub type LP_GPIO_ENABLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio_enable(&mut self) -> LP_GPIO_ENABLE_W<0> {
+    pub fn lp_gpio_enable(&mut self) -> LP_GPIO_ENABLE_W<OUT_ENABLE_SPEC, 0> {
         LP_GPIO_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_enable](index.html) module"]
+#[doc = "need des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_enable::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_enable::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_ENABLE_SPEC;
 impl crate::RegisterSpec for OUT_ENABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_enable::R](R) reader structure"]
-impl crate::Readable for OUT_ENABLE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [out_enable::W](W) writer structure"]
+#[doc = "`read()` method returns [`out_enable::R`](R) reader structure"]
+impl crate::Readable for OUT_ENABLE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`out_enable::W`](W) writer structure"]
 impl crate::Writable for OUT_ENABLE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,43 +1,11 @@
 #[doc = "Register `CLK_EN` reader"]
-pub struct R(crate::R<CLK_EN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_EN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_EN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_EN_SPEC>;
 #[doc = "Register `CLK_EN` writer"]
-pub struct W(crate::W<CLK_EN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_EN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_EN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLK_EN_SPEC>;
 #[doc = "Field `CLK_EN` reader - clock enable"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - clock enable"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - clock enable"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bit 0 - clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<0> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<CLK_EN_SPEC, 0> {
         CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "etm clock enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_en](index.html) module"]
+#[doc = "etm clock enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk_en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_EN_SPEC;
 impl crate::RegisterSpec for CLK_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_en::R](R) reader structure"]
-impl crate::Readable for CLK_EN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk_en::W](W) writer structure"]
+#[doc = "`read()` method returns [`clk_en::R`](R) reader structure"]
+impl crate::Readable for CLK_EN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clk_en::W`](W) writer structure"]
 impl crate::Writable for CLK_EN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

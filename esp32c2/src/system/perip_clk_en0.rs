@@ -1,83 +1,51 @@
 #[doc = "Register `PERIP_CLK_EN0` reader"]
-pub struct R(crate::R<PERIP_CLK_EN0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PERIP_CLK_EN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PERIP_CLK_EN0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PERIP_CLK_EN0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PERIP_CLK_EN0_SPEC>;
 #[doc = "Register `PERIP_CLK_EN0` writer"]
-pub struct W(crate::W<PERIP_CLK_EN0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PERIP_CLK_EN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PERIP_CLK_EN0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PERIP_CLK_EN0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PERIP_CLK_EN0_SPEC>;
 #[doc = "Field `SPI01_CLK_EN` reader - Set 1 to enable SPI01 clock"]
 pub type SPI01_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI01_CLK_EN` writer - Set 1 to enable SPI01 clock"]
-pub type SPI01_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type SPI01_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART_CLK_EN` reader - Set 1 to enable UART clock"]
 pub type UART_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART_CLK_EN` writer - Set 1 to enable UART clock"]
-pub type UART_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type UART_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART1_CLK_EN` reader - Set 1 to enable UART1 clock"]
 pub type UART1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART1_CLK_EN` writer - Set 1 to enable UART1 clock"]
-pub type UART1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type UART1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SPI2_CLK_EN` reader - Set 1 to enable SPI2 clock"]
 pub type SPI2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_CLK_EN` writer - Set 1 to enable SPI2 clock"]
-pub type SPI2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type SPI2_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `I2C_EXT0_CLK_EN` reader - Set 1 to enable I2C_EXT0 clock"]
 pub type I2C_EXT0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2C_EXT0_CLK_EN` writer - Set 1 to enable I2C_EXT0 clock"]
-pub type I2C_EXT0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type I2C_EXT0_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LEDC_CLK_EN` reader - Set 1 to enable LEDC clock"]
 pub type LEDC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LEDC_CLK_EN` writer - Set 1 to enable LEDC clock"]
-pub type LEDC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type LEDC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TIMERGROUP_CLK_EN` reader - Set 1 to enable TIMERGROUP clock"]
 pub type TIMERGROUP_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP_CLK_EN` writer - Set 1 to enable TIMERGROUP clock"]
-pub type TIMERGROUP_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type TIMERGROUP_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART_MEM_CLK_EN` reader - Set 1 to enable UART_MEM clock"]
 pub type UART_MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART_MEM_CLK_EN` writer - Set 1 to enable UART_MEM clock"]
-pub type UART_MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type UART_MEM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `APB_SARADC_CLK_EN` reader - Set 1 to enable APB_SARADC clock"]
 pub type APB_SARADC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_CLK_EN` writer - Set 1 to enable APB_SARADC clock"]
-pub type APB_SARADC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type APB_SARADC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SYSTIMER_CLK_EN` reader - Set 1 to enable SYSTEMTIMER clock"]
 pub type SYSTIMER_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SYSTIMER_CLK_EN` writer - Set 1 to enable SYSTEMTIMER clock"]
-pub type SYSTIMER_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type SYSTIMER_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADC2_ARB_CLK_EN` reader - Set 1 to enable ADC2_ARB clock"]
 pub type ADC2_ARB_CLK_EN_R = crate::BitReader;
 #[doc = "Field `ADC2_ARB_CLK_EN` writer - Set 1 to enable ADC2_ARB clock"]
-pub type ADC2_ARB_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN0_SPEC, O>;
+pub type ADC2_ARB_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - Set 1 to enable SPI01 clock"]
     #[inline(always)]
@@ -187,88 +155,85 @@ impl W {
     #[doc = "Bit 1 - Set 1 to enable SPI01 clock"]
     #[inline(always)]
     #[must_use]
-    pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<1> {
+    pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<PERIP_CLK_EN0_SPEC, 1> {
         SPI01_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable UART clock"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<2> {
+    pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<PERIP_CLK_EN0_SPEC, 2> {
         UART_CLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set 1 to enable UART1 clock"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<5> {
+    pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<PERIP_CLK_EN0_SPEC, 5> {
         UART1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set 1 to enable SPI2 clock"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<6> {
+    pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<PERIP_CLK_EN0_SPEC, 6> {
         SPI2_CLK_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 to enable I2C_EXT0 clock"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W<7> {
+    pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W<PERIP_CLK_EN0_SPEC, 7> {
         I2C_EXT0_CLK_EN_W::new(self)
     }
     #[doc = "Bit 11 - Set 1 to enable LEDC clock"]
     #[inline(always)]
     #[must_use]
-    pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<11> {
+    pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<PERIP_CLK_EN0_SPEC, 11> {
         LEDC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 13 - Set 1 to enable TIMERGROUP clock"]
     #[inline(always)]
     #[must_use]
-    pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<13> {
+    pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<PERIP_CLK_EN0_SPEC, 13> {
         TIMERGROUP_CLK_EN_W::new(self)
     }
     #[doc = "Bit 24 - Set 1 to enable UART_MEM clock"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<24> {
+    pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<PERIP_CLK_EN0_SPEC, 24> {
         UART_MEM_CLK_EN_W::new(self)
     }
     #[doc = "Bit 28 - Set 1 to enable APB_SARADC clock"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_clk_en(&mut self) -> APB_SARADC_CLK_EN_W<28> {
+    pub fn apb_saradc_clk_en(&mut self) -> APB_SARADC_CLK_EN_W<PERIP_CLK_EN0_SPEC, 28> {
         APB_SARADC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 29 - Set 1 to enable SYSTEMTIMER clock"]
     #[inline(always)]
     #[must_use]
-    pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<29> {
+    pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<PERIP_CLK_EN0_SPEC, 29> {
         SYSTIMER_CLK_EN_W::new(self)
     }
     #[doc = "Bit 30 - Set 1 to enable ADC2_ARB clock"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_arb_clk_en(&mut self) -> ADC2_ARB_CLK_EN_W<30> {
+    pub fn adc2_arb_clk_en(&mut self) -> ADC2_ARB_CLK_EN_W<PERIP_CLK_EN0_SPEC, 30> {
         ADC2_ARB_CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "peripheral clock gating register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_clk_en0](index.html) module"]
+#[doc = "peripheral clock gating register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`perip_clk_en0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`perip_clk_en0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PERIP_CLK_EN0_SPEC;
 impl crate::RegisterSpec for PERIP_CLK_EN0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [perip_clk_en0::R](R) reader structure"]
-impl crate::Readable for PERIP_CLK_EN0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [perip_clk_en0::W](W) writer structure"]
+#[doc = "`read()` method returns [`perip_clk_en0::R`](R) reader structure"]
+impl crate::Readable for PERIP_CLK_EN0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`perip_clk_en0::W`](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

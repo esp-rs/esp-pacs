@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_MEM_AXI_ERR_ADDR` reader"]
-pub struct R(crate::R<SPI_MEM_AXI_ERR_ADDR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_MEM_AXI_ERR_ADDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_MEM_AXI_ERR_ADDR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_MEM_AXI_ERR_ADDR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_MEM_AXI_ERR_ADDR_SPEC>;
 #[doc = "Field `SPI_MEM_AXI_ERR_ADDR` reader - This bits show the first AXI write/read invalid error or AXI write flash error address. It is cleared by when SPI_MEM_AXI_WADDR_ERR_INT_CLR, SPI_MEM_AXI_WR_FLASH_ERR_IN_CLR or SPI_MEM_AXI_RADDR_ERR_IN_CLR bit is set."]
 pub type SPI_MEM_AXI_ERR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_ALL_FIFO_EMPTY` reader - The empty status of all AFIFO and SYNC_FIFO in MSPI module. 1: All AXI transfers and SPI0 transfers are done. 0: Others."]
@@ -105,15 +92,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_AXI_ERR_ADDR_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI0 AXI request error address.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_axi_err_addr](index.html) module"]
+#[doc = "SPI0 AXI request error address.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_axi_err_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_AXI_ERR_ADDR_SPEC;
 impl crate::RegisterSpec for SPI_MEM_AXI_ERR_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_mem_axi_err_addr::R](R) reader structure"]
-impl crate::Readable for SPI_MEM_AXI_ERR_ADDR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_mem_axi_err_addr::R`](R) reader structure"]
+impl crate::Readable for SPI_MEM_AXI_ERR_ADDR_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_AXI_ERR_ADDR to value 0xfc00_0000"]
 impl crate::Resettable for SPI_MEM_AXI_ERR_ADDR_SPEC {
     const RESET_VALUE: Self::Ux = 0xfc00_0000;

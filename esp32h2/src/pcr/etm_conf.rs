@@ -1,47 +1,15 @@
 #[doc = "Register `ETM_CONF` reader"]
-pub struct R(crate::R<ETM_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ETM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ETM_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ETM_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ETM_CONF_SPEC>;
 #[doc = "Register `ETM_CONF` writer"]
-pub struct W(crate::W<ETM_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ETM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ETM_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ETM_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ETM_CONF_SPEC>;
 #[doc = "Field `ETM_CLK_EN` reader - Set 1 to enable etm clock"]
 pub type ETM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `ETM_CLK_EN` writer - Set 1 to enable etm clock"]
-pub type ETM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_CONF_SPEC, O>;
+pub type ETM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ETM_RST_EN` reader - Set 0 to reset etm module"]
 pub type ETM_RST_EN_R = crate::BitReader;
 #[doc = "Field `ETM_RST_EN` writer - Set 0 to reset etm module"]
-pub type ETM_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_CONF_SPEC, O>;
+pub type ETM_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ETM_READY` reader - Query this field after reset etm module"]
 pub type ETM_READY_R = crate::BitReader;
 impl R {
@@ -81,34 +49,31 @@ impl W {
     #[doc = "Bit 0 - Set 1 to enable etm clock"]
     #[inline(always)]
     #[must_use]
-    pub fn etm_clk_en(&mut self) -> ETM_CLK_EN_W<0> {
+    pub fn etm_clk_en(&mut self) -> ETM_CLK_EN_W<ETM_CONF_SPEC, 0> {
         ETM_CLK_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set 0 to reset etm module"]
     #[inline(always)]
     #[must_use]
-    pub fn etm_rst_en(&mut self) -> ETM_RST_EN_W<1> {
+    pub fn etm_rst_en(&mut self) -> ETM_RST_EN_W<ETM_CONF_SPEC, 1> {
         ETM_RST_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "ETM configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [etm_conf](index.html) module"]
+#[doc = "ETM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`etm_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`etm_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ETM_CONF_SPEC;
 impl crate::RegisterSpec for ETM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [etm_conf::R](R) reader structure"]
-impl crate::Readable for ETM_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [etm_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`etm_conf::R`](R) reader structure"]
+impl crate::Readable for ETM_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`etm_conf::W`](W) writer structure"]
 impl crate::Writable for ETM_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

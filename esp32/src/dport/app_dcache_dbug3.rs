@@ -1,39 +1,7 @@
 #[doc = "Register `APP_DCACHE_DBUG3` reader"]
-pub struct R(crate::R<APP_DCACHE_DBUG3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<APP_DCACHE_DBUG3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<APP_DCACHE_DBUG3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<APP_DCACHE_DBUG3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<APP_DCACHE_DBUG3_SPEC>;
 #[doc = "Register `APP_DCACHE_DBUG3` writer"]
-pub struct W(crate::W<APP_DCACHE_DBUG3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<APP_DCACHE_DBUG3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<APP_DCACHE_DBUG3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<APP_DCACHE_DBUG3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<APP_DCACHE_DBUG3_SPEC>;
 #[doc = "Field `APP_MMU_RDATA` reader - "]
 pub type APP_MMU_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA` reader - "]
@@ -41,33 +9,27 @@ pub type APP_CPU_DISABLED_CACHE_IA_R = crate::FieldReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_OPPOSITE` reader - "]
 pub type APP_CPU_DISABLED_CACHE_IA_OPPOSITE_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_OPPOSITE` writer - "]
-pub type APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a, const O: u8> =
-    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
+pub type APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DRAM1` reader - "]
 pub type APP_CPU_DISABLED_CACHE_IA_DRAM1_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DRAM1` writer - "]
-pub type APP_CPU_DISABLED_CACHE_IA_DRAM1_W<'a, const O: u8> =
-    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
+pub type APP_CPU_DISABLED_CACHE_IA_DRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IROM0` reader - "]
 pub type APP_CPU_DISABLED_CACHE_IA_IROM0_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IROM0` writer - "]
-pub type APP_CPU_DISABLED_CACHE_IA_IROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
+pub type APP_CPU_DISABLED_CACHE_IA_IROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM1` reader - "]
 pub type APP_CPU_DISABLED_CACHE_IA_IRAM1_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM1` writer - "]
-pub type APP_CPU_DISABLED_CACHE_IA_IRAM1_W<'a, const O: u8> =
-    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
+pub type APP_CPU_DISABLED_CACHE_IA_IRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM0` reader - "]
 pub type APP_CPU_DISABLED_CACHE_IA_IRAM0_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM0` writer - "]
-pub type APP_CPU_DISABLED_CACHE_IA_IRAM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
+pub type APP_CPU_DISABLED_CACHE_IA_IRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DROM0` reader - "]
 pub type APP_CPU_DISABLED_CACHE_IA_DROM0_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DROM0` writer - "]
-pub type APP_CPU_DISABLED_CACHE_IA_DROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
+pub type APP_CPU_DISABLED_CACHE_IA_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `APP_CACHE_IRAM0_PID_ERROR` reader - "]
 pub type APP_CACHE_IRAM0_PID_ERROR_R = crate::BitReader;
 impl R {
@@ -172,58 +134,65 @@ impl W {
     #[must_use]
     pub fn app_cpu_disabled_cache_ia_opposite(
         &mut self,
-    ) -> APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<9> {
+    ) -> APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<APP_DCACHE_DBUG3_SPEC, 9> {
         APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cpu_disabled_cache_ia_dram1(&mut self) -> APP_CPU_DISABLED_CACHE_IA_DRAM1_W<10> {
+    pub fn app_cpu_disabled_cache_ia_dram1(
+        &mut self,
+    ) -> APP_CPU_DISABLED_CACHE_IA_DRAM1_W<APP_DCACHE_DBUG3_SPEC, 10> {
         APP_CPU_DISABLED_CACHE_IA_DRAM1_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cpu_disabled_cache_ia_irom0(&mut self) -> APP_CPU_DISABLED_CACHE_IA_IROM0_W<11> {
+    pub fn app_cpu_disabled_cache_ia_irom0(
+        &mut self,
+    ) -> APP_CPU_DISABLED_CACHE_IA_IROM0_W<APP_DCACHE_DBUG3_SPEC, 11> {
         APP_CPU_DISABLED_CACHE_IA_IROM0_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cpu_disabled_cache_ia_iram1(&mut self) -> APP_CPU_DISABLED_CACHE_IA_IRAM1_W<12> {
+    pub fn app_cpu_disabled_cache_ia_iram1(
+        &mut self,
+    ) -> APP_CPU_DISABLED_CACHE_IA_IRAM1_W<APP_DCACHE_DBUG3_SPEC, 12> {
         APP_CPU_DISABLED_CACHE_IA_IRAM1_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cpu_disabled_cache_ia_iram0(&mut self) -> APP_CPU_DISABLED_CACHE_IA_IRAM0_W<13> {
+    pub fn app_cpu_disabled_cache_ia_iram0(
+        &mut self,
+    ) -> APP_CPU_DISABLED_CACHE_IA_IRAM0_W<APP_DCACHE_DBUG3_SPEC, 13> {
         APP_CPU_DISABLED_CACHE_IA_IRAM0_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cpu_disabled_cache_ia_drom0(&mut self) -> APP_CPU_DISABLED_CACHE_IA_DROM0_W<14> {
+    pub fn app_cpu_disabled_cache_ia_drom0(
+        &mut self,
+    ) -> APP_CPU_DISABLED_CACHE_IA_DROM0_W<APP_DCACHE_DBUG3_SPEC, 14> {
         APP_CPU_DISABLED_CACHE_IA_DROM0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_dcache_dbug3](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`app_dcache_dbug3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`app_dcache_dbug3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APP_DCACHE_DBUG3_SPEC;
 impl crate::RegisterSpec for APP_DCACHE_DBUG3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [app_dcache_dbug3::R](R) reader structure"]
-impl crate::Readable for APP_DCACHE_DBUG3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [app_dcache_dbug3::W](W) writer structure"]
+#[doc = "`read()` method returns [`app_dcache_dbug3::R`](R) reader structure"]
+impl crate::Readable for APP_DCACHE_DBUG3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`app_dcache_dbug3::W`](W) writer structure"]
 impl crate::Writable for APP_DCACHE_DBUG3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

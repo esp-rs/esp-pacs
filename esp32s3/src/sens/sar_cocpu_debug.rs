@@ -1,18 +1,5 @@
 #[doc = "Register `SAR_COCPU_DEBUG` reader"]
-pub struct R(crate::R<SAR_COCPU_DEBUG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_COCPU_DEBUG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_COCPU_DEBUG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_COCPU_DEBUG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_COCPU_DEBUG_SPEC>;
 #[doc = "Field `SAR_COCPU_PC` reader - cocpu Program counter"]
 pub type SAR_COCPU_PC_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_COCPU_MEM_VLD` reader - cocpu mem valid output"]
@@ -83,15 +70,13 @@ impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_DEBUG_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Ulp-riscv debug signal\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_debug](index.html) module"]
+#[doc = "Ulp-riscv debug signal\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_debug::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_DEBUG_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_DEBUG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_cocpu_debug::R](R) reader structure"]
-impl crate::Readable for SAR_COCPU_DEBUG_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sar_cocpu_debug::R`](R) reader structure"]
+impl crate::Readable for SAR_COCPU_DEBUG_SPEC {}
 #[doc = "`reset()` method sets SAR_COCPU_DEBUG to value 0"]
 impl crate::Resettable for SAR_COCPU_DEBUG_SPEC {
     const RESET_VALUE: Self::Ux = 0;

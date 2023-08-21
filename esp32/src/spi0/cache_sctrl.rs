@@ -1,75 +1,43 @@
 #[doc = "Register `CACHE_SCTRL` reader"]
-pub struct R(crate::R<CACHE_SCTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CACHE_SCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CACHE_SCTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CACHE_SCTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CACHE_SCTRL_SPEC>;
 #[doc = "Register `CACHE_SCTRL` writer"]
-pub struct W(crate::W<CACHE_SCTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CACHE_SCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CACHE_SCTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CACHE_SCTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CACHE_SCTRL_SPEC>;
 #[doc = "Field `USR_SRAM_DIO` reader - For SPI0 In the spi sram mode spi dual I/O mode enable 1: enable 0:disable"]
 pub type USR_SRAM_DIO_R = crate::BitReader;
 #[doc = "Field `USR_SRAM_DIO` writer - For SPI0 In the spi sram mode spi dual I/O mode enable 1: enable 0:disable"]
-pub type USR_SRAM_DIO_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_SCTRL_SPEC, O>;
+pub type USR_SRAM_DIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USR_SRAM_QIO` reader - For SPI0 In the spi sram mode spi quad I/O mode enable 1: enable 0:disable"]
 pub type USR_SRAM_QIO_R = crate::BitReader;
 #[doc = "Field `USR_SRAM_QIO` writer - For SPI0 In the spi sram mode spi quad I/O mode enable 1: enable 0:disable"]
-pub type USR_SRAM_QIO_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_SCTRL_SPEC, O>;
+pub type USR_SRAM_QIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USR_WR_SRAM_DUMMY` reader - For SPI0 In the spi sram mode it is the enable bit of dummy phase for write operations."]
 pub type USR_WR_SRAM_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_WR_SRAM_DUMMY` writer - For SPI0 In the spi sram mode it is the enable bit of dummy phase for write operations."]
-pub type USR_WR_SRAM_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_SCTRL_SPEC, O>;
+pub type USR_WR_SRAM_DUMMY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USR_RD_SRAM_DUMMY` reader - For SPI0 In the spi sram mode it is the enable bit of dummy phase for read operations."]
 pub type USR_RD_SRAM_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_RD_SRAM_DUMMY` writer - For SPI0 In the spi sram mode it is the enable bit of dummy phase for read operations."]
-pub type USR_RD_SRAM_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_SCTRL_SPEC, O>;
+pub type USR_RD_SRAM_DUMMY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CACHE_SRAM_USR_RCMD` reader - For SPI0 In the spi sram mode cache read sram for user define command."]
 pub type CACHE_SRAM_USR_RCMD_R = crate::BitReader;
 #[doc = "Field `CACHE_SRAM_USR_RCMD` writer - For SPI0 In the spi sram mode cache read sram for user define command."]
-pub type CACHE_SRAM_USR_RCMD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_SCTRL_SPEC, O>;
+pub type CACHE_SRAM_USR_RCMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRAM_BYTES_LEN` reader - For SPI0 In the sram mode it is the byte length of spi read sram data."]
 pub type SRAM_BYTES_LEN_R = crate::FieldReader;
 #[doc = "Field `SRAM_BYTES_LEN` writer - For SPI0 In the sram mode it is the byte length of spi read sram data."]
-pub type SRAM_BYTES_LEN_W<'a, const O: u8> = crate::FieldWriter<'a, CACHE_SCTRL_SPEC, 8, O>;
+pub type SRAM_BYTES_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SRAM_DUMMY_CYCLELEN` reader - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
 pub type SRAM_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SRAM_DUMMY_CYCLELEN` writer - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
-pub type SRAM_DUMMY_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, CACHE_SCTRL_SPEC, 8, O>;
+pub type SRAM_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SRAM_ADDR_BITLEN` reader - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
 pub type SRAM_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SRAM_ADDR_BITLEN` writer - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
-pub type SRAM_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, CACHE_SCTRL_SPEC, 6, O>;
+pub type SRAM_ADDR_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `CACHE_SRAM_USR_WCMD` reader - For SPI0 In the spi sram mode cache write sram for user define command"]
 pub type CACHE_SRAM_USR_WCMD_R = crate::BitReader;
 #[doc = "Field `CACHE_SRAM_USR_WCMD` writer - For SPI0 In the spi sram mode cache write sram for user define command"]
-pub type CACHE_SRAM_USR_WCMD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_SCTRL_SPEC, O>;
+pub type CACHE_SRAM_USR_WCMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - For SPI0 In the spi sram mode spi dual I/O mode enable 1: enable 0:disable"]
     #[inline(always)]
@@ -170,76 +138,73 @@ impl W {
     #[doc = "Bit 1 - For SPI0 In the spi sram mode spi dual I/O mode enable 1: enable 0:disable"]
     #[inline(always)]
     #[must_use]
-    pub fn usr_sram_dio(&mut self) -> USR_SRAM_DIO_W<1> {
+    pub fn usr_sram_dio(&mut self) -> USR_SRAM_DIO_W<CACHE_SCTRL_SPEC, 1> {
         USR_SRAM_DIO_W::new(self)
     }
     #[doc = "Bit 2 - For SPI0 In the spi sram mode spi quad I/O mode enable 1: enable 0:disable"]
     #[inline(always)]
     #[must_use]
-    pub fn usr_sram_qio(&mut self) -> USR_SRAM_QIO_W<2> {
+    pub fn usr_sram_qio(&mut self) -> USR_SRAM_QIO_W<CACHE_SCTRL_SPEC, 2> {
         USR_SRAM_QIO_W::new(self)
     }
     #[doc = "Bit 3 - For SPI0 In the spi sram mode it is the enable bit of dummy phase for write operations."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_wr_sram_dummy(&mut self) -> USR_WR_SRAM_DUMMY_W<3> {
+    pub fn usr_wr_sram_dummy(&mut self) -> USR_WR_SRAM_DUMMY_W<CACHE_SCTRL_SPEC, 3> {
         USR_WR_SRAM_DUMMY_W::new(self)
     }
     #[doc = "Bit 4 - For SPI0 In the spi sram mode it is the enable bit of dummy phase for read operations."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_rd_sram_dummy(&mut self) -> USR_RD_SRAM_DUMMY_W<4> {
+    pub fn usr_rd_sram_dummy(&mut self) -> USR_RD_SRAM_DUMMY_W<CACHE_SCTRL_SPEC, 4> {
         USR_RD_SRAM_DUMMY_W::new(self)
     }
     #[doc = "Bit 5 - For SPI0 In the spi sram mode cache read sram for user define command."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_sram_usr_rcmd(&mut self) -> CACHE_SRAM_USR_RCMD_W<5> {
+    pub fn cache_sram_usr_rcmd(&mut self) -> CACHE_SRAM_USR_RCMD_W<CACHE_SCTRL_SPEC, 5> {
         CACHE_SRAM_USR_RCMD_W::new(self)
     }
     #[doc = "Bits 6:13 - For SPI0 In the sram mode it is the byte length of spi read sram data."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_bytes_len(&mut self) -> SRAM_BYTES_LEN_W<6> {
+    pub fn sram_bytes_len(&mut self) -> SRAM_BYTES_LEN_W<CACHE_SCTRL_SPEC, 6> {
         SRAM_BYTES_LEN_W::new(self)
     }
     #[doc = "Bits 14:21 - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_dummy_cyclelen(&mut self) -> SRAM_DUMMY_CYCLELEN_W<14> {
+    pub fn sram_dummy_cyclelen(&mut self) -> SRAM_DUMMY_CYCLELEN_W<CACHE_SCTRL_SPEC, 14> {
         SRAM_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 22:27 - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_addr_bitlen(&mut self) -> SRAM_ADDR_BITLEN_W<22> {
+    pub fn sram_addr_bitlen(&mut self) -> SRAM_ADDR_BITLEN_W<CACHE_SCTRL_SPEC, 22> {
         SRAM_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bit 28 - For SPI0 In the spi sram mode cache write sram for user define command"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_sram_usr_wcmd(&mut self) -> CACHE_SRAM_USR_WCMD_W<28> {
+    pub fn cache_sram_usr_wcmd(&mut self) -> CACHE_SRAM_USR_WCMD_W<CACHE_SCTRL_SPEC, 28> {
         CACHE_SRAM_USR_WCMD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_sctrl](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_sctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_sctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CACHE_SCTRL_SPEC;
 impl crate::RegisterSpec for CACHE_SCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_sctrl::R](R) reader structure"]
-impl crate::Readable for CACHE_SCTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cache_sctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`cache_sctrl::R`](R) reader structure"]
+impl crate::Readable for CACHE_SCTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cache_sctrl::W`](W) writer structure"]
 impl crate::Writable for CACHE_SCTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

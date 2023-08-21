@@ -1,43 +1,11 @@
 #[doc = "Register `LP_SLEEP_XTAL` reader"]
-pub struct R(crate::R<LP_SLEEP_XTAL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LP_SLEEP_XTAL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LP_SLEEP_XTAL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LP_SLEEP_XTAL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LP_SLEEP_XTAL_SPEC>;
 #[doc = "Register `LP_SLEEP_XTAL` writer"]
-pub struct W(crate::W<LP_SLEEP_XTAL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LP_SLEEP_XTAL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LP_SLEEP_XTAL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LP_SLEEP_XTAL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LP_SLEEP_XTAL_SPEC>;
 #[doc = "Field `LP_SLEEP_XPD_XTAL` reader - need_des"]
 pub type LP_SLEEP_XPD_XTAL_R = crate::BitReader;
 #[doc = "Field `LP_SLEEP_XPD_XTAL` writer - need_des"]
-pub type LP_SLEEP_XPD_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, LP_SLEEP_XTAL_SPEC, O>;
+pub type LP_SLEEP_XPD_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_sleep_xpd_xtal(&mut self) -> LP_SLEEP_XPD_XTAL_W<31> {
+    pub fn lp_sleep_xpd_xtal(&mut self) -> LP_SLEEP_XPD_XTAL_W<LP_SLEEP_XTAL_SPEC, 31> {
         LP_SLEEP_XPD_XTAL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lp_sleep_xtal](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_sleep_xtal::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lp_sleep_xtal::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LP_SLEEP_XTAL_SPEC;
 impl crate::RegisterSpec for LP_SLEEP_XTAL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lp_sleep_xtal::R](R) reader structure"]
-impl crate::Readable for LP_SLEEP_XTAL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lp_sleep_xtal::W](W) writer structure"]
+#[doc = "`read()` method returns [`lp_sleep_xtal::R`](R) reader structure"]
+impl crate::Readable for LP_SLEEP_XTAL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lp_sleep_xtal::W`](W) writer structure"]
 impl crate::Writable for LP_SLEEP_XTAL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

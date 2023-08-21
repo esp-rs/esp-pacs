@@ -1,51 +1,19 @@
 #[doc = "Register `SLP_WAKEUP_CNTL3` reader"]
-pub struct R(crate::R<SLP_WAKEUP_CNTL3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLP_WAKEUP_CNTL3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLP_WAKEUP_CNTL3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLP_WAKEUP_CNTL3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLP_WAKEUP_CNTL3_SPEC>;
 #[doc = "Register `SLP_WAKEUP_CNTL3` writer"]
-pub struct W(crate::W<SLP_WAKEUP_CNTL3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLP_WAKEUP_CNTL3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLP_WAKEUP_CNTL3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLP_WAKEUP_CNTL3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLP_WAKEUP_CNTL3_SPEC>;
 #[doc = "Field `LP_MIN_SLP_VAL` reader - need_des"]
 pub type LP_MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `LP_MIN_SLP_VAL` writer - need_des"]
-pub type LP_MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_WAKEUP_CNTL3_SPEC, 8, O>;
+pub type LP_MIN_SLP_VAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `HP_MIN_SLP_VAL` reader - need_des"]
 pub type HP_MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `HP_MIN_SLP_VAL` writer - need_des"]
-pub type HP_MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_WAKEUP_CNTL3_SPEC, 8, O>;
+pub type HP_MIN_SLP_VAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SLEEP_PRT_SEL` reader - need_des"]
 pub type SLEEP_PRT_SEL_R = crate::FieldReader;
 #[doc = "Field `SLEEP_PRT_SEL` writer - need_des"]
-pub type SLEEP_PRT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_WAKEUP_CNTL3_SPEC, 2, O>;
+pub type SLEEP_PRT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -92,40 +60,37 @@ impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_min_slp_val(&mut self) -> LP_MIN_SLP_VAL_W<0> {
+    pub fn lp_min_slp_val(&mut self) -> LP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC, 0> {
         LP_MIN_SLP_VAL_W::new(self)
     }
     #[doc = "Bits 8:15 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_min_slp_val(&mut self) -> HP_MIN_SLP_VAL_W<8> {
+    pub fn hp_min_slp_val(&mut self) -> HP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC, 8> {
         HP_MIN_SLP_VAL_W::new(self)
     }
     #[doc = "Bits 16:17 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_prt_sel(&mut self) -> SLEEP_PRT_SEL_W<16> {
+    pub fn sleep_prt_sel(&mut self) -> SLEEP_PRT_SEL_W<SLP_WAKEUP_CNTL3_SPEC, 16> {
         SLEEP_PRT_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slp_wakeup_cntl3](index.html) module"]
+#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slp_wakeup_cntl3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slp_wakeup_cntl3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLP_WAKEUP_CNTL3_SPEC;
 impl crate::RegisterSpec for SLP_WAKEUP_CNTL3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slp_wakeup_cntl3::R](R) reader structure"]
-impl crate::Readable for SLP_WAKEUP_CNTL3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [slp_wakeup_cntl3::W](W) writer structure"]
+#[doc = "`read()` method returns [`slp_wakeup_cntl3::R`](R) reader structure"]
+impl crate::Readable for SLP_WAKEUP_CNTL3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`slp_wakeup_cntl3::W`](W) writer structure"]
 impl crate::Writable for SLP_WAKEUP_CNTL3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

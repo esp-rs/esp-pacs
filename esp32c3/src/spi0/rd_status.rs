@@ -1,43 +1,11 @@
 #[doc = "Register `RD_STATUS` reader"]
-pub struct R(crate::R<RD_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_STATUS_SPEC>;
 #[doc = "Register `RD_STATUS` writer"]
-pub struct W(crate::W<RD_STATUS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RD_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RD_STATUS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RD_STATUS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RD_STATUS_SPEC>;
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
 pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `WB_MODE` writer - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
-pub type WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 8, O>;
+pub type WB_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
     #[must_use]
-    pub fn wb_mode(&mut self) -> WB_MODE_W<16> {
+    pub fn wb_mode(&mut self) -> WB_MODE_W<RD_STATUS_SPEC, 16> {
         WB_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI0 read control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_status](index.html) module"]
+#[doc = "SPI0 read control register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_status::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rd_status::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_STATUS_SPEC;
 impl crate::RegisterSpec for RD_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_status::R](R) reader structure"]
-impl crate::Readable for RD_STATUS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rd_status::W](W) writer structure"]
+#[doc = "`read()` method returns [`rd_status::R`](R) reader structure"]
+impl crate::Readable for RD_STATUS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rd_status::W`](W) writer structure"]
 impl crate::Writable for RD_STATUS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,61 +1,29 @@
 #[doc = "Register `PIN2` reader"]
-pub struct R(crate::R<PIN2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PIN2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PIN2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PIN2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PIN2_SPEC>;
 #[doc = "Register `PIN2` writer"]
-pub struct W(crate::W<PIN2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PIN2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PIN2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PIN2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PIN2_SPEC>;
 #[doc = "Field `LP_GPIO2_SYNC_BYPASS` reader - need des"]
 pub type LP_GPIO2_SYNC_BYPASS_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO2_SYNC_BYPASS` writer - need des"]
-pub type LP_GPIO2_SYNC_BYPASS_W<'a, const O: u8> = crate::FieldWriter<'a, PIN2_SPEC, 2, O>;
+pub type LP_GPIO2_SYNC_BYPASS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `LP_GPIO2_PAD_DRIVER` reader - need des"]
 pub type LP_GPIO2_PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `LP_GPIO2_PAD_DRIVER` writer - need des"]
-pub type LP_GPIO2_PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, PIN2_SPEC, O>;
+pub type LP_GPIO2_PAD_DRIVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_GPIO2_EDGE_WAKEUP_CLR` writer - need des"]
-pub type LP_GPIO2_EDGE_WAKEUP_CLR_W<'a, const O: u8> = crate::BitWriter<'a, PIN2_SPEC, O>;
+pub type LP_GPIO2_EDGE_WAKEUP_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_GPIO2_INT_TYPE` reader - need des"]
 pub type LP_GPIO2_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO2_INT_TYPE` writer - need des"]
-pub type LP_GPIO2_INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, PIN2_SPEC, 3, O>;
+pub type LP_GPIO2_INT_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `LP_GPIO2_WAKEUP_ENABLE` reader - need des"]
 pub type LP_GPIO2_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO2_WAKEUP_ENABLE` writer - need des"]
-pub type LP_GPIO2_WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, PIN2_SPEC, O>;
+pub type LP_GPIO2_WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LP_GPIO2_FILTER_EN` reader - need des"]
 pub type LP_GPIO2_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `LP_GPIO2_FILTER_EN` writer - need des"]
-pub type LP_GPIO2_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, PIN2_SPEC, O>;
+pub type LP_GPIO2_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
@@ -120,58 +88,55 @@ impl W {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio2_sync_bypass(&mut self) -> LP_GPIO2_SYNC_BYPASS_W<0> {
+    pub fn lp_gpio2_sync_bypass(&mut self) -> LP_GPIO2_SYNC_BYPASS_W<PIN2_SPEC, 0> {
         LP_GPIO2_SYNC_BYPASS_W::new(self)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio2_pad_driver(&mut self) -> LP_GPIO2_PAD_DRIVER_W<2> {
+    pub fn lp_gpio2_pad_driver(&mut self) -> LP_GPIO2_PAD_DRIVER_W<PIN2_SPEC, 2> {
         LP_GPIO2_PAD_DRIVER_W::new(self)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio2_edge_wakeup_clr(&mut self) -> LP_GPIO2_EDGE_WAKEUP_CLR_W<3> {
+    pub fn lp_gpio2_edge_wakeup_clr(&mut self) -> LP_GPIO2_EDGE_WAKEUP_CLR_W<PIN2_SPEC, 3> {
         LP_GPIO2_EDGE_WAKEUP_CLR_W::new(self)
     }
     #[doc = "Bits 7:9 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio2_int_type(&mut self) -> LP_GPIO2_INT_TYPE_W<7> {
+    pub fn lp_gpio2_int_type(&mut self) -> LP_GPIO2_INT_TYPE_W<PIN2_SPEC, 7> {
         LP_GPIO2_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio2_wakeup_enable(&mut self) -> LP_GPIO2_WAKEUP_ENABLE_W<10> {
+    pub fn lp_gpio2_wakeup_enable(&mut self) -> LP_GPIO2_WAKEUP_ENABLE_W<PIN2_SPEC, 10> {
         LP_GPIO2_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio2_filter_en(&mut self) -> LP_GPIO2_FILTER_EN_W<11> {
+    pub fn lp_gpio2_filter_en(&mut self) -> LP_GPIO2_FILTER_EN_W<PIN2_SPEC, 11> {
         LP_GPIO2_FILTER_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin2](index.html) module"]
+#[doc = "need des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PIN2_SPEC;
 impl crate::RegisterSpec for PIN2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pin2::R](R) reader structure"]
-impl crate::Readable for PIN2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pin2::W](W) writer structure"]
+#[doc = "`read()` method returns [`pin2::R`](R) reader structure"]
+impl crate::Readable for PIN2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pin2::W`](W) writer structure"]
 impl crate::Writable for PIN2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

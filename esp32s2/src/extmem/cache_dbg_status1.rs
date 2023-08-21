@@ -1,18 +1,5 @@
 #[doc = "Register `CACHE_DBG_STATUS1` reader"]
-pub struct R(crate::R<CACHE_DBG_STATUS1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CACHE_DBG_STATUS1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CACHE_DBG_STATUS1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CACHE_DBG_STATUS1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CACHE_DBG_STATUS1_SPEC>;
 #[doc = "Field `DBUS0_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus0 is disabled or dcache is disabled which include speculative access."]
 pub type DBUS0_ACS_MSK_DCACHE_ST_R = crate::BitReader;
 #[doc = "Field `DBUS1_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus1 is disabled or dcache is disabled which include speculative access."]
@@ -314,15 +301,13 @@ impl core::fmt::Debug for crate::generic::Reg<CACHE_DBG_STATUS1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_dbg_status1](index.html) module"]
+#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_dbg_status1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CACHE_DBG_STATUS1_SPEC;
 impl crate::RegisterSpec for CACHE_DBG_STATUS1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_dbg_status1::R](R) reader structure"]
-impl crate::Readable for CACHE_DBG_STATUS1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`cache_dbg_status1::R`](R) reader structure"]
+impl crate::Readable for CACHE_DBG_STATUS1_SPEC {}
 #[doc = "`reset()` method sets CACHE_DBG_STATUS1 to value 0"]
 impl crate::Resettable for CACHE_DBG_STATUS1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

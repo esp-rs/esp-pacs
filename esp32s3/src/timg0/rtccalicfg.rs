@@ -1,57 +1,25 @@
 #[doc = "Register `RTCCALICFG` reader"]
-pub struct R(crate::R<RTCCALICFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RTCCALICFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RTCCALICFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RTCCALICFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RTCCALICFG_SPEC>;
 #[doc = "Register `RTCCALICFG` writer"]
-pub struct W(crate::W<RTCCALICFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RTCCALICFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RTCCALICFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RTCCALICFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RTCCALICFG_SPEC>;
 #[doc = "Field `RTC_CALI_START_CYCLING` reader - Reserved"]
 pub type RTC_CALI_START_CYCLING_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_START_CYCLING` writer - Reserved"]
-pub type RTC_CALI_START_CYCLING_W<'a, const O: u8> = crate::BitWriter<'a, RTCCALICFG_SPEC, O>;
+pub type RTC_CALI_START_CYCLING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RTC_CALI_CLK_SEL` reader - 0:rtc slow clock. 1:clk_80m. 2:xtal_32k."]
 pub type RTC_CALI_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `RTC_CALI_CLK_SEL` writer - 0:rtc slow clock. 1:clk_80m. 2:xtal_32k."]
-pub type RTC_CALI_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RTCCALICFG_SPEC, 2, O>;
+pub type RTC_CALI_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `RTC_CALI_RDY` reader - Reserved"]
 pub type RTC_CALI_RDY_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_MAX` reader - Reserved"]
 pub type RTC_CALI_MAX_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_CALI_MAX` writer - Reserved"]
-pub type RTC_CALI_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, RTCCALICFG_SPEC, 15, O, u16>;
+pub type RTC_CALI_MAX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
 #[doc = "Field `RTC_CALI_START` reader - Reserved"]
 pub type RTC_CALI_START_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_START` writer - Reserved"]
-pub type RTC_CALI_START_W<'a, const O: u8> = crate::BitWriter<'a, RTCCALICFG_SPEC, O>;
+pub type RTC_CALI_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
@@ -116,46 +84,43 @@ impl W {
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<12> {
+    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<RTCCALICFG_SPEC, 12> {
         RTC_CALI_START_CYCLING_W::new(self)
     }
     #[doc = "Bits 13:14 - 0:rtc slow clock. 1:clk_80m. 2:xtal_32k."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<13> {
+    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<RTCCALICFG_SPEC, 13> {
         RTC_CALI_CLK_SEL_W::new(self)
     }
     #[doc = "Bits 16:30 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<16> {
+    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<RTCCALICFG_SPEC, 16> {
         RTC_CALI_MAX_W::new(self)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<31> {
+    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<RTCCALICFG_SPEC, 31> {
         RTC_CALI_START_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "RTC calibration configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtccalicfg](index.html) module"]
+#[doc = "RTC calibration configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtccalicfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtccalicfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTCCALICFG_SPEC;
 impl crate::RegisterSpec for RTCCALICFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtccalicfg::R](R) reader structure"]
-impl crate::Readable for RTCCALICFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rtccalicfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`rtccalicfg::R`](R) reader structure"]
+impl crate::Readable for RTCCALICFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rtccalicfg::W`](W) writer structure"]
 impl crate::Writable for RTCCALICFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

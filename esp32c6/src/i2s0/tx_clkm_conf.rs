@@ -1,55 +1,23 @@
 #[doc = "Register `TX_CLKM_CONF` reader"]
-pub struct R(crate::R<TX_CLKM_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TX_CLKM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TX_CLKM_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TX_CLKM_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TX_CLKM_CONF_SPEC>;
 #[doc = "Register `TX_CLKM_CONF` writer"]
-pub struct W(crate::W<TX_CLKM_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TX_CLKM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TX_CLKM_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TX_CLKM_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TX_CLKM_CONF_SPEC>;
 #[doc = "Field `TX_CLKM_DIV_NUM` reader - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
 pub type TX_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_CLKM_DIV_NUM` writer - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
-pub type TX_CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CLKM_CONF_SPEC, 8, O>;
+pub type TX_CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `TX_CLK_ACTIVE` reader - I2S Tx module clock enable signal."]
 pub type TX_CLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `TX_CLK_ACTIVE` writer - I2S Tx module clock enable signal."]
-pub type TX_CLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, TX_CLKM_CONF_SPEC, O>;
+pub type TX_CLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_CLK_SEL` reader - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
 pub type TX_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `TX_CLK_SEL` writer - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
-pub type TX_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CLKM_CONF_SPEC, 2, O>;
+pub type TX_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_CLKM_CONF_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
@@ -99,46 +67,43 @@ impl W {
     #[doc = "Bits 0:7 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clkm_div_num(&mut self) -> TX_CLKM_DIV_NUM_W<0> {
+    pub fn tx_clkm_div_num(&mut self) -> TX_CLKM_DIV_NUM_W<TX_CLKM_CONF_SPEC, 0> {
         TX_CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bit 26 - I2S Tx module clock enable signal."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_active(&mut self) -> TX_CLK_ACTIVE_W<26> {
+    pub fn tx_clk_active(&mut self) -> TX_CLK_ACTIVE_W<TX_CLKM_CONF_SPEC, 26> {
         TX_CLK_ACTIVE_W::new(self)
     }
     #[doc = "Bits 27:28 - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_sel(&mut self) -> TX_CLK_SEL_W<27> {
+    pub fn tx_clk_sel(&mut self) -> TX_CLK_SEL_W<TX_CLKM_CONF_SPEC, 27> {
         TX_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to enable clk gate"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<29> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<TX_CLKM_CONF_SPEC, 29> {
         CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S TX clock configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_clkm_conf](index.html) module"]
+#[doc = "I2S TX clock configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_clkm_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_clkm_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_CLKM_CONF_SPEC;
 impl crate::RegisterSpec for TX_CLKM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_clkm_conf::R](R) reader structure"]
-impl crate::Readable for TX_CLKM_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tx_clkm_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`tx_clkm_conf::R`](R) reader structure"]
+impl crate::Readable for TX_CLKM_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tx_clkm_conf::W`](W) writer structure"]
 impl crate::Writable for TX_CLKM_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

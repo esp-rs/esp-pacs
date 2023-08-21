@@ -1,18 +1,5 @@
 #[doc = "Register `CORE_1_PIF_PMS_MONITOR_5` reader"]
-pub struct R(crate::R<CORE_1_PIF_PMS_MONITOR_5_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CORE_1_PIF_PMS_MONITOR_5_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CORE_1_PIF_PMS_MONITOR_5_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CORE_1_PIF_PMS_MONITOR_5_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CORE_1_PIF_PMS_MONITOR_5_SPEC>;
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR` reader - Record core1 unsupported access type interrupt state."]
 pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R = crate::BitReader;
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE` reader - Record access type when core1 initiate unsupported access type."]
@@ -78,15 +65,13 @@ impl core::fmt::Debug for crate::generic::Reg<CORE_1_PIF_PMS_MONITOR_5_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "core1 permission report register 5.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_pif_pms_monitor_5](index.html) module"]
+#[doc = "core1 permission report register 5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_pif_pms_monitor_5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_PIF_PMS_MONITOR_5_SPEC;
 impl crate::RegisterSpec for CORE_1_PIF_PMS_MONITOR_5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_pif_pms_monitor_5::R](R) reader structure"]
-impl crate::Readable for CORE_1_PIF_PMS_MONITOR_5_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`core_1_pif_pms_monitor_5::R`](R) reader structure"]
+impl crate::Readable for CORE_1_PIF_PMS_MONITOR_5_SPEC {}
 #[doc = "`reset()` method sets CORE_1_PIF_PMS_MONITOR_5 to value 0"]
 impl crate::Resettable for CORE_1_PIF_PMS_MONITOR_5_SPEC {
     const RESET_VALUE: Self::Ux = 0;

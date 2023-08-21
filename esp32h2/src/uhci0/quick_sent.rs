@@ -1,53 +1,21 @@
 #[doc = "Register `QUICK_SENT` reader"]
-pub struct R(crate::R<QUICK_SENT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<QUICK_SENT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<QUICK_SENT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<QUICK_SENT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<QUICK_SENT_SPEC>;
 #[doc = "Register `QUICK_SENT` writer"]
-pub struct W(crate::W<QUICK_SENT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<QUICK_SENT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<QUICK_SENT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<QUICK_SENT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<QUICK_SENT_SPEC>;
 #[doc = "Field `SINGLE_SEND_NUM` reader - a"]
 pub type SINGLE_SEND_NUM_R = crate::FieldReader;
 #[doc = "Field `SINGLE_SEND_NUM` writer - a"]
-pub type SINGLE_SEND_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, QUICK_SENT_SPEC, 3, O>;
+pub type SINGLE_SEND_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `SINGLE_SEND_EN` writer - a"]
-pub type SINGLE_SEND_EN_W<'a, const O: u8> = crate::BitWriter<'a, QUICK_SENT_SPEC, O>;
+pub type SINGLE_SEND_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ALWAYS_SEND_NUM` reader - a"]
 pub type ALWAYS_SEND_NUM_R = crate::FieldReader;
 #[doc = "Field `ALWAYS_SEND_NUM` writer - a"]
-pub type ALWAYS_SEND_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, QUICK_SENT_SPEC, 3, O>;
+pub type ALWAYS_SEND_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `ALWAYS_SEND_EN` reader - a"]
 pub type ALWAYS_SEND_EN_R = crate::BitReader;
 #[doc = "Field `ALWAYS_SEND_EN` writer - a"]
-pub type ALWAYS_SEND_EN_W<'a, const O: u8> = crate::BitWriter<'a, QUICK_SENT_SPEC, O>;
+pub type ALWAYS_SEND_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:2 - a"]
     #[inline(always)]
@@ -94,46 +62,43 @@ impl W {
     #[doc = "Bits 0:2 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<0> {
+    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<QUICK_SENT_SPEC, 0> {
         SINGLE_SEND_NUM_W::new(self)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<3> {
+    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<QUICK_SENT_SPEC, 3> {
         SINGLE_SEND_EN_W::new(self)
     }
     #[doc = "Bits 4:6 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<4> {
+    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<QUICK_SENT_SPEC, 4> {
         ALWAYS_SEND_NUM_W::new(self)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<7> {
+    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<QUICK_SENT_SPEC, 7> {
         ALWAYS_SEND_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "a\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [quick_sent](index.html) module"]
+#[doc = "a\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`quick_sent::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`quick_sent::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct QUICK_SENT_SPEC;
 impl crate::RegisterSpec for QUICK_SENT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [quick_sent::R](R) reader structure"]
-impl crate::Readable for QUICK_SENT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [quick_sent::W](W) writer structure"]
+#[doc = "`read()` method returns [`quick_sent::R`](R) reader structure"]
+impl crate::Readable for QUICK_SENT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`quick_sent::W`](W) writer structure"]
 impl crate::Writable for QUICK_SENT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

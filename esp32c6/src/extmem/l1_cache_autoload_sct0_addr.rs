@@ -1,44 +1,12 @@
 #[doc = "Register `L1_CACHE_AUTOLOAD_SCT0_ADDR` reader"]
-pub struct R(crate::R<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>;
 #[doc = "Register `L1_CACHE_AUTOLOAD_SCT0_ADDR` writer"]
-pub struct W(crate::W<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT0_ADDR` reader - Those bits are used to configure the start virtual address of the first section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT0_SIZE and L1_CACHE_AUTOLOAD_SCT0_ENA."]
 pub type L1_CACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT0_ADDR` writer - Those bits are used to configure the start virtual address of the first section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT0_SIZE and L1_CACHE_AUTOLOAD_SCT0_ENA."]
-pub type L1_CACHE_AUTOLOAD_SCT0_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC, 32, O, u32>;
+pub type L1_CACHE_AUTOLOAD_SCT0_ADDR_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the first section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT0_SIZE and L1_CACHE_AUTOLOAD_SCT0_ENA."]
     #[inline(always)]
@@ -67,28 +35,27 @@ impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the first section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT0_SIZE and L1_CACHE_AUTOLOAD_SCT0_ENA."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_autoload_sct0_addr(&mut self) -> L1_CACHE_AUTOLOAD_SCT0_ADDR_W<0> {
+    pub fn l1_cache_autoload_sct0_addr(
+        &mut self,
+    ) -> L1_CACHE_AUTOLOAD_SCT0_ADDR_W<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC, 0> {
         L1_CACHE_AUTOLOAD_SCT0_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "L1 Cache autoload section 0 address configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_cache_autoload_sct0_addr](index.html) module"]
+#[doc = "L1 Cache autoload section 0 address configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_autoload_sct0_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`l1_cache_autoload_sct0_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC;
 impl crate::RegisterSpec for L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l1_cache_autoload_sct0_addr::R](R) reader structure"]
-impl crate::Readable for L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [l1_cache_autoload_sct0_addr::W](W) writer structure"]
+#[doc = "`read()` method returns [`l1_cache_autoload_sct0_addr::R`](R) reader structure"]
+impl crate::Readable for L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`l1_cache_autoload_sct0_addr::W`](W) writer structure"]
 impl crate::Writable for L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

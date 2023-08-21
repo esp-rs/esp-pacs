@@ -1,88 +1,55 @@
 #[doc = "Register `PDM_CONF` reader"]
-pub struct R(crate::R<PDM_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PDM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PDM_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PDM_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PDM_CONF_SPEC>;
 #[doc = "Register `PDM_CONF` writer"]
-pub struct W(crate::W<PDM_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PDM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PDM_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PDM_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PDM_CONF_SPEC>;
 #[doc = "Field `TX_PDM_EN` reader - "]
 pub type TX_PDM_EN_R = crate::BitReader;
 #[doc = "Field `TX_PDM_EN` writer - "]
-pub type TX_PDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
+pub type TX_PDM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_PDM_EN` reader - "]
 pub type RX_PDM_EN_R = crate::BitReader;
 #[doc = "Field `RX_PDM_EN` writer - "]
-pub type RX_PDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
+pub type RX_PDM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCM2PDM_CONV_EN` reader - "]
 pub type PCM2PDM_CONV_EN_R = crate::BitReader;
 #[doc = "Field `PCM2PDM_CONV_EN` writer - "]
-pub type PCM2PDM_CONV_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
+pub type PCM2PDM_CONV_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDM2PCM_CONV_EN` reader - "]
 pub type PDM2PCM_CONV_EN_R = crate::BitReader;
 #[doc = "Field `PDM2PCM_CONV_EN` writer - "]
-pub type PDM2PCM_CONV_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
+pub type PDM2PCM_CONV_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_PDM_SINC_OSR2` reader - "]
 pub type TX_PDM_SINC_OSR2_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_SINC_OSR2` writer - "]
-pub type TX_PDM_SINC_OSR2_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 4, O>;
+pub type TX_PDM_SINC_OSR2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `TX_PDM_PRESCALE` reader - "]
 pub type TX_PDM_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_PRESCALE` writer - "]
-pub type TX_PDM_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 8, O>;
+pub type TX_PDM_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` reader - "]
 pub type TX_PDM_HP_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` writer - "]
-pub type TX_PDM_HP_IN_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
+pub type TX_PDM_HP_IN_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` reader - "]
 pub type TX_PDM_LP_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` writer - "]
-pub type TX_PDM_LP_IN_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
+pub type TX_PDM_LP_IN_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` reader - "]
 pub type TX_PDM_SINC_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` writer - "]
-pub type TX_PDM_SINC_IN_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
+pub type TX_PDM_SINC_IN_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` reader - "]
 pub type TX_PDM_SIGMADELTA_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` writer - "]
-pub type TX_PDM_SIGMADELTA_IN_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
+pub type TX_PDM_SIGMADELTA_IN_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `RX_PDM_SINC_DSR_16_EN` reader - "]
 pub type RX_PDM_SINC_DSR_16_EN_R = crate::BitReader;
 #[doc = "Field `RX_PDM_SINC_DSR_16_EN` writer - "]
-pub type RX_PDM_SINC_DSR_16_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
+pub type RX_PDM_SINC_DSR_16_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_PDM_HP_BYPASS` reader - "]
 pub type TX_PDM_HP_BYPASS_R = crate::BitReader;
 #[doc = "Field `TX_PDM_HP_BYPASS` writer - "]
-pub type TX_PDM_HP_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
+pub type TX_PDM_HP_BYPASS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -204,94 +171,93 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_en(&mut self) -> TX_PDM_EN_W<0> {
+    pub fn tx_pdm_en(&mut self) -> TX_PDM_EN_W<PDM_CONF_SPEC, 0> {
         TX_PDM_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pdm_en(&mut self) -> RX_PDM_EN_W<1> {
+    pub fn rx_pdm_en(&mut self) -> RX_PDM_EN_W<PDM_CONF_SPEC, 1> {
         RX_PDM_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pcm2pdm_conv_en(&mut self) -> PCM2PDM_CONV_EN_W<2> {
+    pub fn pcm2pdm_conv_en(&mut self) -> PCM2PDM_CONV_EN_W<PDM_CONF_SPEC, 2> {
         PCM2PDM_CONV_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pdm2pcm_conv_en(&mut self) -> PDM2PCM_CONV_EN_W<3> {
+    pub fn pdm2pcm_conv_en(&mut self) -> PDM2PCM_CONV_EN_W<PDM_CONF_SPEC, 3> {
         PDM2PCM_CONV_EN_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_sinc_osr2(&mut self) -> TX_PDM_SINC_OSR2_W<4> {
+    pub fn tx_pdm_sinc_osr2(&mut self) -> TX_PDM_SINC_OSR2_W<PDM_CONF_SPEC, 4> {
         TX_PDM_SINC_OSR2_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_prescale(&mut self) -> TX_PDM_PRESCALE_W<8> {
+    pub fn tx_pdm_prescale(&mut self) -> TX_PDM_PRESCALE_W<PDM_CONF_SPEC, 8> {
         TX_PDM_PRESCALE_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_hp_in_shift(&mut self) -> TX_PDM_HP_IN_SHIFT_W<16> {
+    pub fn tx_pdm_hp_in_shift(&mut self) -> TX_PDM_HP_IN_SHIFT_W<PDM_CONF_SPEC, 16> {
         TX_PDM_HP_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_lp_in_shift(&mut self) -> TX_PDM_LP_IN_SHIFT_W<18> {
+    pub fn tx_pdm_lp_in_shift(&mut self) -> TX_PDM_LP_IN_SHIFT_W<PDM_CONF_SPEC, 18> {
         TX_PDM_LP_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_sinc_in_shift(&mut self) -> TX_PDM_SINC_IN_SHIFT_W<20> {
+    pub fn tx_pdm_sinc_in_shift(&mut self) -> TX_PDM_SINC_IN_SHIFT_W<PDM_CONF_SPEC, 20> {
         TX_PDM_SINC_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_sigmadelta_in_shift(&mut self) -> TX_PDM_SIGMADELTA_IN_SHIFT_W<22> {
+    pub fn tx_pdm_sigmadelta_in_shift(
+        &mut self,
+    ) -> TX_PDM_SIGMADELTA_IN_SHIFT_W<PDM_CONF_SPEC, 22> {
         TX_PDM_SIGMADELTA_IN_SHIFT_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pdm_sinc_dsr_16_en(&mut self) -> RX_PDM_SINC_DSR_16_EN_W<24> {
+    pub fn rx_pdm_sinc_dsr_16_en(&mut self) -> RX_PDM_SINC_DSR_16_EN_W<PDM_CONF_SPEC, 24> {
         RX_PDM_SINC_DSR_16_EN_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_hp_bypass(&mut self) -> TX_PDM_HP_BYPASS_W<25> {
+    pub fn tx_pdm_hp_bypass(&mut self) -> TX_PDM_HP_BYPASS_W<PDM_CONF_SPEC, 25> {
         TX_PDM_HP_BYPASS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pdm_conf](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdm_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pdm_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PDM_CONF_SPEC;
 impl crate::RegisterSpec for PDM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pdm_conf::R](R) reader structure"]
-impl crate::Readable for PDM_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pdm_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`pdm_conf::R`](R) reader structure"]
+impl crate::Readable for PDM_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pdm_conf::W`](W) writer structure"]
 impl crate::Writable for PDM_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

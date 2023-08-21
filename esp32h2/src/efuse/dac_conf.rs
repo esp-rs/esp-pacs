@@ -1,55 +1,23 @@
 #[doc = "Register `DAC_CONF` reader"]
-pub struct R(crate::R<DAC_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DAC_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DAC_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DAC_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DAC_CONF_SPEC>;
 #[doc = "Register `DAC_CONF` writer"]
-pub struct W(crate::W<DAC_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DAC_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DAC_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DAC_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DAC_CONF_SPEC>;
 #[doc = "Field `DAC_CLK_DIV` reader - Controls the division factor of the rising clock of the programming voltage."]
 pub type DAC_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `DAC_CLK_DIV` writer - Controls the division factor of the rising clock of the programming voltage."]
-pub type DAC_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, DAC_CONF_SPEC, 8, O>;
+pub type DAC_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `DAC_CLK_PAD_SEL` reader - Don't care."]
 pub type DAC_CLK_PAD_SEL_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_PAD_SEL` writer - Don't care."]
-pub type DAC_CLK_PAD_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DAC_CONF_SPEC, O>;
+pub type DAC_CLK_PAD_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DAC_NUM` reader - Controls the rising period of the programming voltage."]
 pub type DAC_NUM_R = crate::FieldReader;
 #[doc = "Field `DAC_NUM` writer - Controls the rising period of the programming voltage."]
-pub type DAC_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DAC_CONF_SPEC, 8, O>;
+pub type DAC_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `OE_CLR` reader - Reduces the power supply of the programming voltage."]
 pub type OE_CLR_R = crate::BitReader;
 #[doc = "Field `OE_CLR` writer - Reduces the power supply of the programming voltage."]
-pub type OE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DAC_CONF_SPEC, O>;
+pub type OE_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - Controls the division factor of the rising clock of the programming voltage."]
     #[inline(always)]
@@ -99,46 +67,43 @@ impl W {
     #[doc = "Bits 0:7 - Controls the division factor of the rising clock of the programming voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<0> {
+    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<DAC_CONF_SPEC, 0> {
         DAC_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 8 - Don't care."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<8> {
+    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<DAC_CONF_SPEC, 8> {
         DAC_CLK_PAD_SEL_W::new(self)
     }
     #[doc = "Bits 9:16 - Controls the rising period of the programming voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_num(&mut self) -> DAC_NUM_W<9> {
+    pub fn dac_num(&mut self) -> DAC_NUM_W<DAC_CONF_SPEC, 9> {
         DAC_NUM_W::new(self)
     }
     #[doc = "Bit 17 - Reduces the power supply of the programming voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn oe_clr(&mut self) -> OE_CLR_W<17> {
+    pub fn oe_clr(&mut self) -> OE_CLR_W<DAC_CONF_SPEC, 17> {
         OE_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Controls the eFuse programming voltage.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac_conf](index.html) module"]
+#[doc = "Controls the eFuse programming voltage.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dac_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dac_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DAC_CONF_SPEC;
 impl crate::RegisterSpec for DAC_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dac_conf::R](R) reader structure"]
-impl crate::Readable for DAC_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dac_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`dac_conf::R`](R) reader structure"]
+impl crate::Readable for DAC_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dac_conf::W`](W) writer structure"]
 impl crate::Writable for DAC_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

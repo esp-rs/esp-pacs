@@ -1,18 +1,5 @@
 #[doc = "Register `HOST_SLC0HOST_TOKEN_RDATA` reader"]
-pub struct R(crate::R<HOST_SLC0HOST_TOKEN_RDATA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HOST_SLC0HOST_TOKEN_RDATA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HOST_SLC0HOST_TOKEN_RDATA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HOST_SLC0HOST_TOKEN_RDATA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HOST_SLC0HOST_TOKEN_RDATA_SPEC>;
 #[doc = "Field `HOST_SLC0_TOKEN0` reader - "]
 pub type HOST_SLC0_TOKEN0_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLC0_RX_PF_VALID` reader - "]
@@ -72,15 +59,13 @@ impl core::fmt::Debug for crate::generic::Reg<HOST_SLC0HOST_TOKEN_RDATA_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slc0host_token_rdata](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_slc0host_token_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HOST_SLC0HOST_TOKEN_RDATA_SPEC;
 impl crate::RegisterSpec for HOST_SLC0HOST_TOKEN_RDATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_slc0host_token_rdata::R](R) reader structure"]
-impl crate::Readable for HOST_SLC0HOST_TOKEN_RDATA_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`host_slc0host_token_rdata::R`](R) reader structure"]
+impl crate::Readable for HOST_SLC0HOST_TOKEN_RDATA_SPEC {}
 #[doc = "`reset()` method sets HOST_SLC0HOST_TOKEN_RDATA to value 0"]
 impl crate::Resettable for HOST_SLC0HOST_TOKEN_RDATA_SPEC {
     const RESET_VALUE: Self::Ux = 0;

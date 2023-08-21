@@ -1,18 +1,5 @@
 #[doc = "Register `STATUS_INT` reader"]
-pub struct R(crate::R<STATUS_INT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STATUS_INT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STATUS_INT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STATUS_INT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STATUS_INT_SPEC>;
 #[doc = "Field `STATUS_INTERRUPT_NEXT` reader - need des"]
 pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_INT_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "need des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status_int](index.html) module"]
+#[doc = "need des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_int::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATUS_INT_SPEC;
 impl crate::RegisterSpec for STATUS_INT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status_int::R](R) reader structure"]
-impl crate::Readable for STATUS_INT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`status_int::R`](R) reader structure"]
+impl crate::Readable for STATUS_INT_SPEC {}
 #[doc = "`reset()` method sets STATUS_INT to value 0"]
 impl crate::Resettable for STATUS_INT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

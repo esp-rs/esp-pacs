@@ -1,18 +1,5 @@
 #[doc = "Register `M2_EXCEPTION_INFO0` reader"]
-pub struct R(crate::R<M2_EXCEPTION_INFO0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<M2_EXCEPTION_INFO0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<M2_EXCEPTION_INFO0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<M2_EXCEPTION_INFO0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<M2_EXCEPTION_INFO0_SPEC>;
 #[doc = "Field `M2_EXCEPTION_REGION` reader - Exception region"]
 pub type M2_EXCEPTION_REGION_R = crate::FieldReader<u16>;
 #[doc = "Field `M2_EXCEPTION_MODE` reader - Exception mode"]
@@ -61,15 +48,13 @@ impl core::fmt::Debug for crate::generic::Reg<M2_EXCEPTION_INFO0_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "M2 exception_info0 register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [m2_exception_info0](index.html) module"]
+#[doc = "M2 exception_info0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m2_exception_info0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct M2_EXCEPTION_INFO0_SPEC;
 impl crate::RegisterSpec for M2_EXCEPTION_INFO0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [m2_exception_info0::R](R) reader structure"]
-impl crate::Readable for M2_EXCEPTION_INFO0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`m2_exception_info0::R`](R) reader structure"]
+impl crate::Readable for M2_EXCEPTION_INFO0_SPEC {}
 #[doc = "`reset()` method sets M2_EXCEPTION_INFO0 to value 0"]
 impl crate::Resettable for M2_EXCEPTION_INFO0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

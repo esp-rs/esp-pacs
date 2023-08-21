@@ -1,39 +1,7 @@
 #[doc = "Register `GPIO_PIN2` reader"]
-pub struct R(crate::R<GPIO_PIN2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPIO_PIN2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPIO_PIN2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPIO_PIN2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPIO_PIN2_SPEC>;
 #[doc = "Register `GPIO_PIN2` writer"]
-pub struct W(crate::W<GPIO_PIN2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPIO_PIN2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPIO_PIN2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPIO_PIN2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GPIO_PIN2_SPEC>;
 #[doc = "Field `GPIO_PIN2_SOURCE` reader - 1: sigma-delta; 0: GPIO_DATA"]
 pub type GPIO_PIN2_SOURCE_R = crate::BitReader<GPIO_PIN2_SOURCE_A>;
 #[doc = "1: sigma-delta; 0: GPIO_DATA\n\nValue on reset: 0"]
@@ -59,29 +27,32 @@ impl GPIO_PIN2_SOURCE_R {
             true => GPIO_PIN2_SOURCE_A::GPIO_DATA,
         }
     }
-    #[doc = "Checks if the value of the field is `SIGMA_DELTA`"]
+    #[doc = "sigma-delta"]
     #[inline(always)]
     pub fn is_sigma_delta(&self) -> bool {
         *self == GPIO_PIN2_SOURCE_A::SIGMA_DELTA
     }
-    #[doc = "Checks if the value of the field is `GPIO_DATA`"]
+    #[doc = "gpio data"]
     #[inline(always)]
     pub fn is_gpio_data(&self) -> bool {
         *self == GPIO_PIN2_SOURCE_A::GPIO_DATA
     }
 }
 #[doc = "Field `GPIO_PIN2_SOURCE` writer - 1: sigma-delta; 0: GPIO_DATA"]
-pub type GPIO_PIN2_SOURCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, GPIO_PIN2_SPEC, O, GPIO_PIN2_SOURCE_A>;
-impl<'a, const O: u8> GPIO_PIN2_SOURCE_W<'a, O> {
+pub type GPIO_PIN2_SOURCE_W<'a, REG, const O: u8> =
+    crate::BitWriter<'a, REG, O, GPIO_PIN2_SOURCE_A>;
+impl<'a, REG, const O: u8> GPIO_PIN2_SOURCE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "sigma-delta"]
     #[inline(always)]
-    pub fn sigma_delta(self) -> &'a mut W {
+    pub fn sigma_delta(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_SOURCE_A::SIGMA_DELTA)
     }
     #[doc = "gpio data"]
     #[inline(always)]
-    pub fn gpio_data(self) -> &'a mut W {
+    pub fn gpio_data(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_SOURCE_A::GPIO_DATA)
     }
 }
@@ -110,29 +81,32 @@ impl GPIO_PIN2_DRIVER_R {
             true => GPIO_PIN2_DRIVER_A::NORMAL,
         }
     }
-    #[doc = "Checks if the value of the field is `OPEN_DRAIN`"]
+    #[doc = "open drain"]
     #[inline(always)]
     pub fn is_open_drain(&self) -> bool {
         *self == GPIO_PIN2_DRIVER_A::OPEN_DRAIN
     }
-    #[doc = "Checks if the value of the field is `NORMAL`"]
+    #[doc = "normal"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
         *self == GPIO_PIN2_DRIVER_A::NORMAL
     }
 }
 #[doc = "Field `GPIO_PIN2_DRIVER` writer - 1: open drain; 0: normal"]
-pub type GPIO_PIN2_DRIVER_W<'a, const O: u8> =
-    crate::BitWriter<'a, GPIO_PIN2_SPEC, O, GPIO_PIN2_DRIVER_A>;
-impl<'a, const O: u8> GPIO_PIN2_DRIVER_W<'a, O> {
+pub type GPIO_PIN2_DRIVER_W<'a, REG, const O: u8> =
+    crate::BitWriter<'a, REG, O, GPIO_PIN2_DRIVER_A>;
+impl<'a, REG, const O: u8> GPIO_PIN2_DRIVER_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "open drain"]
     #[inline(always)]
-    pub fn open_drain(self) -> &'a mut W {
+    pub fn open_drain(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_DRIVER_A::OPEN_DRAIN)
     }
     #[doc = "normal"]
     #[inline(always)]
-    pub fn normal(self) -> &'a mut W {
+    pub fn normal(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_DRIVER_A::NORMAL)
     }
 }
@@ -178,76 +152,80 @@ impl GPIO_PIN2_INT_TYPE_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "interrupt is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == GPIO_PIN2_INT_TYPE_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `POSITIVE_EDGE`"]
+    #[doc = "interrupt is triggered on the positive edge"]
     #[inline(always)]
     pub fn is_positive_edge(&self) -> bool {
         *self == GPIO_PIN2_INT_TYPE_A::POSITIVE_EDGE
     }
-    #[doc = "Checks if the value of the field is `NEGATIVE_EDGE`"]
+    #[doc = "interrupt is triggered on the negative edge"]
     #[inline(always)]
     pub fn is_negative_edge(&self) -> bool {
         *self == GPIO_PIN2_INT_TYPE_A::NEGATIVE_EDGE
     }
-    #[doc = "Checks if the value of the field is `BOTH_EDGES`"]
+    #[doc = "interrupt is triggered on both edges"]
     #[inline(always)]
     pub fn is_both_edges(&self) -> bool {
         *self == GPIO_PIN2_INT_TYPE_A::BOTH_EDGES
     }
-    #[doc = "Checks if the value of the field is `LOW_LEVEL`"]
+    #[doc = "interrupt is triggered on the low level"]
     #[inline(always)]
     pub fn is_low_level(&self) -> bool {
         *self == GPIO_PIN2_INT_TYPE_A::LOW_LEVEL
     }
-    #[doc = "Checks if the value of the field is `HIGH_LEVEL`"]
+    #[doc = "interrupt is triggered on the high level"]
     #[inline(always)]
     pub fn is_high_level(&self) -> bool {
         *self == GPIO_PIN2_INT_TYPE_A::HIGH_LEVEL
     }
 }
 #[doc = "Field `GPIO_PIN2_INT_TYPE` writer - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
-pub type GPIO_PIN2_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, GPIO_PIN2_SPEC, 3, O, GPIO_PIN2_INT_TYPE_A>;
-impl<'a, const O: u8> GPIO_PIN2_INT_TYPE_W<'a, O> {
+pub type GPIO_PIN2_INT_TYPE_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 3, O, GPIO_PIN2_INT_TYPE_A>;
+impl<'a, REG, const O: u8> GPIO_PIN2_INT_TYPE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "interrupt is disabled"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_INT_TYPE_A::DISABLED)
     }
     #[doc = "interrupt is triggered on the positive edge"]
     #[inline(always)]
-    pub fn positive_edge(self) -> &'a mut W {
+    pub fn positive_edge(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_INT_TYPE_A::POSITIVE_EDGE)
     }
     #[doc = "interrupt is triggered on the negative edge"]
     #[inline(always)]
-    pub fn negative_edge(self) -> &'a mut W {
+    pub fn negative_edge(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_INT_TYPE_A::NEGATIVE_EDGE)
     }
     #[doc = "interrupt is triggered on both edges"]
     #[inline(always)]
-    pub fn both_edges(self) -> &'a mut W {
+    pub fn both_edges(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_INT_TYPE_A::BOTH_EDGES)
     }
     #[doc = "interrupt is triggered on the low level"]
     #[inline(always)]
-    pub fn low_level(self) -> &'a mut W {
+    pub fn low_level(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_INT_TYPE_A::LOW_LEVEL)
     }
     #[doc = "interrupt is triggered on the high level"]
     #[inline(always)]
-    pub fn high_level(self) -> &'a mut W {
+    pub fn high_level(self) -> &'a mut crate::W<REG> {
         self.variant(GPIO_PIN2_INT_TYPE_A::HIGH_LEVEL)
     }
 }
 #[doc = "Field `GPIO_PIN2_WAKEUP_ENABLE` reader - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
 pub type GPIO_PIN2_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_WAKEUP_ENABLE` writer - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
-pub type GPIO_PIN2_WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO_PIN2_SPEC, O>;
+pub type GPIO_PIN2_WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - 1: sigma-delta; 0: GPIO_DATA"]
     #[inline(always)]
@@ -303,46 +281,43 @@ impl W {
     #[doc = "Bit 0 - 1: sigma-delta; 0: GPIO_DATA"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_source(&mut self) -> GPIO_PIN2_SOURCE_W<0> {
+    pub fn gpio_pin2_source(&mut self) -> GPIO_PIN2_SOURCE_W<GPIO_PIN2_SPEC, 0> {
         GPIO_PIN2_SOURCE_W::new(self)
     }
     #[doc = "Bit 2 - 1: open drain; 0: normal"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_driver(&mut self) -> GPIO_PIN2_DRIVER_W<2> {
+    pub fn gpio_pin2_driver(&mut self) -> GPIO_PIN2_DRIVER_W<GPIO_PIN2_SPEC, 2> {
         GPIO_PIN2_DRIVER_W::new(self)
     }
     #[doc = "Bits 7:9 - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_int_type(&mut self) -> GPIO_PIN2_INT_TYPE_W<7> {
+    pub fn gpio_pin2_int_type(&mut self) -> GPIO_PIN2_INT_TYPE_W<GPIO_PIN2_SPEC, 7> {
         GPIO_PIN2_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_wakeup_enable(&mut self) -> GPIO_PIN2_WAKEUP_ENABLE_W<10> {
+    pub fn gpio_pin2_wakeup_enable(&mut self) -> GPIO_PIN2_WAKEUP_ENABLE_W<GPIO_PIN2_SPEC, 10> {
         GPIO_PIN2_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "GPIO_PIN2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_pin2](index.html) module"]
+#[doc = "GPIO_PIN2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio_pin2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_pin2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_PIN2_SPEC;
 impl crate::RegisterSpec for GPIO_PIN2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpio_pin2::R](R) reader structure"]
-impl crate::Readable for GPIO_PIN2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpio_pin2::W](W) writer structure"]
+#[doc = "`read()` method returns [`gpio_pin2::R`](R) reader structure"]
+impl crate::Readable for GPIO_PIN2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gpio_pin2::W`](W) writer structure"]
 impl crate::Writable for GPIO_PIN2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

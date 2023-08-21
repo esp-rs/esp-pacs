@@ -1,63 +1,31 @@
 #[doc = "Register `T%sCONFIG` reader"]
-pub struct R(crate::R<TCONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TCONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TCONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TCONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TCONFIG_SPEC>;
 #[doc = "Register `T%sCONFIG` writer"]
-pub struct W(crate::W<TCONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TCONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TCONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TCONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TCONFIG_SPEC>;
 #[doc = "Field `USE_XTAL` reader - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
 pub type USE_XTAL_R = crate::BitReader;
 #[doc = "Field `USE_XTAL` writer - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
-pub type USE_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
+pub type USE_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ALARM_EN` reader - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
 pub type ALARM_EN_R = crate::BitReader;
 #[doc = "Field `ALARM_EN` writer - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
-pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
+pub type ALARM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DIVIDER` reader - Timer %s clock (T%s_clk) prescaler value."]
 pub type DIVIDER_R = crate::FieldReader<u16>;
 #[doc = "Field `DIVIDER` writer - Timer %s clock (T%s_clk) prescaler value."]
-pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, TCONFIG_SPEC, 16, O, u16>;
+pub type DIVIDER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `AUTORELOAD` reader - When set, timer %s auto-reload at alarm is enabled."]
 pub type AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `AUTORELOAD` writer - When set, timer %s auto-reload at alarm is enabled."]
-pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
+pub type AUTORELOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INCREASE` reader - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
 pub type INCREASE_R = crate::BitReader;
 #[doc = "Field `INCREASE` writer - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
-pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
+pub type INCREASE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EN` reader - When set, the timer %s time-base counter is enabled."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - When set, the timer %s time-base counter is enabled."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
+pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 9 - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
     #[inline(always)]
@@ -113,58 +81,55 @@ impl W {
     #[doc = "Bit 9 - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
     #[inline(always)]
     #[must_use]
-    pub fn use_xtal(&mut self) -> USE_XTAL_W<9> {
+    pub fn use_xtal(&mut self) -> USE_XTAL_W<TCONFIG_SPEC, 9> {
         USE_XTAL_W::new(self)
     }
     #[doc = "Bit 10 - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_en(&mut self) -> ALARM_EN_W<10> {
+    pub fn alarm_en(&mut self) -> ALARM_EN_W<TCONFIG_SPEC, 10> {
         ALARM_EN_W::new(self)
     }
     #[doc = "Bits 13:28 - Timer %s clock (T%s_clk) prescaler value."]
     #[inline(always)]
     #[must_use]
-    pub fn divider(&mut self) -> DIVIDER_W<13> {
+    pub fn divider(&mut self) -> DIVIDER_W<TCONFIG_SPEC, 13> {
         DIVIDER_W::new(self)
     }
     #[doc = "Bit 29 - When set, timer %s auto-reload at alarm is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn autoreload(&mut self) -> AUTORELOAD_W<29> {
+    pub fn autoreload(&mut self) -> AUTORELOAD_W<TCONFIG_SPEC, 29> {
         AUTORELOAD_W::new(self)
     }
     #[doc = "Bit 30 - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
     #[inline(always)]
     #[must_use]
-    pub fn increase(&mut self) -> INCREASE_W<30> {
+    pub fn increase(&mut self) -> INCREASE_W<TCONFIG_SPEC, 30> {
         INCREASE_W::new(self)
     }
     #[doc = "Bit 31 - When set, the timer %s time-base counter is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<31> {
+    pub fn en(&mut self) -> EN_W<TCONFIG_SPEC, 31> {
         EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Timer %s configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tconfig](index.html) module"]
+#[doc = "Timer %s configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tconfig::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tconfig::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TCONFIG_SPEC;
 impl crate::RegisterSpec for TCONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tconfig::R](R) reader structure"]
-impl crate::Readable for TCONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tconfig::W](W) writer structure"]
+#[doc = "`read()` method returns [`tconfig::R`](R) reader structure"]
+impl crate::Readable for TCONFIG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tconfig::W`](W) writer structure"]
 impl crate::Writable for TCONFIG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

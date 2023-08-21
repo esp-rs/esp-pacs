@@ -1,18 +1,5 @@
 #[doc = "Register `COMB_PVT_ERR_NVT_SITE3` reader"]
-pub struct R(crate::R<COMB_PVT_ERR_NVT_SITE3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<COMB_PVT_ERR_NVT_SITE3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<COMB_PVT_ERR_NVT_SITE3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<COMB_PVT_ERR_NVT_SITE3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<COMB_PVT_ERR_NVT_SITE3_SPEC>;
 #[doc = "Field `COMB_TIMING_ERR_CNT_NVT_SITE3` reader - ******* Description ***********"]
 pub type COMB_TIMING_ERR_CNT_NVT_SITE3_R = crate::FieldReader<u16>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<COMB_PVT_ERR_NVT_SITE3_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comb_pvt_err_nvt_site3](index.html) module"]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comb_pvt_err_nvt_site3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COMB_PVT_ERR_NVT_SITE3_SPEC;
 impl crate::RegisterSpec for COMB_PVT_ERR_NVT_SITE3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [comb_pvt_err_nvt_site3::R](R) reader structure"]
-impl crate::Readable for COMB_PVT_ERR_NVT_SITE3_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`comb_pvt_err_nvt_site3::R`](R) reader structure"]
+impl crate::Readable for COMB_PVT_ERR_NVT_SITE3_SPEC {}
 #[doc = "`reset()` method sets COMB_PVT_ERR_NVT_SITE3 to value 0"]
 impl crate::Resettable for COMB_PVT_ERR_NVT_SITE3_SPEC {
     const RESET_VALUE: Self::Ux = 0;

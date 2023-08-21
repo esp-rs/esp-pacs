@@ -1,49 +1,17 @@
 #[doc = "Register `L1_DCACHE_PRELOCK_SCT_SIZE` reader"]
-pub struct R(crate::R<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>;
 #[doc = "Register `L1_DCACHE_PRELOCK_SCT_SIZE` writer"]
-pub struct W(crate::W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_SIZE` reader - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
 pub type L1_CACHE_PRELOCK_SCT0_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_SIZE` writer - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
-pub type L1_CACHE_PRELOCK_SCT0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, L1_DCACHE_PRELOCK_SCT_SIZE_SPEC, 14, O, u16>;
+pub type L1_CACHE_PRELOCK_SCT0_SIZE_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 14, O, u16>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_SIZE` reader - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
 pub type L1_CACHE_PRELOCK_SCT1_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_SIZE` writer - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
-pub type L1_CACHE_PRELOCK_SCT1_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, L1_DCACHE_PRELOCK_SCT_SIZE_SPEC, 14, O, u16>;
+pub type L1_CACHE_PRELOCK_SCT1_SIZE_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 14, O, u16>;
 impl R {
     #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
@@ -81,34 +49,35 @@ impl W {
     #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_prelock_sct0_size(&mut self) -> L1_CACHE_PRELOCK_SCT0_SIZE_W<0> {
+    pub fn l1_cache_prelock_sct0_size(
+        &mut self,
+    ) -> L1_CACHE_PRELOCK_SCT0_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC, 0> {
         L1_CACHE_PRELOCK_SCT0_SIZE_W::new(self)
     }
     #[doc = "Bits 16:29 - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_prelock_sct1_size(&mut self) -> L1_CACHE_PRELOCK_SCT1_SIZE_W<16> {
+    pub fn l1_cache_prelock_sct1_size(
+        &mut self,
+    ) -> L1_CACHE_PRELOCK_SCT1_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC, 16> {
         L1_CACHE_PRELOCK_SCT1_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "L1 Cache prelock section size configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_dcache_prelock_sct_size](index.html) module"]
+#[doc = "L1 Cache prelock section size configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_dcache_prelock_sct_size::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`l1_dcache_prelock_sct_size::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_DCACHE_PRELOCK_SCT_SIZE_SPEC;
 impl crate::RegisterSpec for L1_DCACHE_PRELOCK_SCT_SIZE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l1_dcache_prelock_sct_size::R](R) reader structure"]
-impl crate::Readable for L1_DCACHE_PRELOCK_SCT_SIZE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [l1_dcache_prelock_sct_size::W](W) writer structure"]
+#[doc = "`read()` method returns [`l1_dcache_prelock_sct_size::R`](R) reader structure"]
+impl crate::Readable for L1_DCACHE_PRELOCK_SCT_SIZE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`l1_dcache_prelock_sct_size::W`](W) writer structure"]
 impl crate::Writable for L1_DCACHE_PRELOCK_SCT_SIZE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

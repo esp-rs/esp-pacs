@@ -1,18 +1,5 @@
 #[doc = "Register `DMA_OUTSTATUS` reader"]
-pub struct R(crate::R<DMA_OUTSTATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_OUTSTATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_OUTSTATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_OUTSTATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMA_OUTSTATUS_SPEC>;
 #[doc = "Field `DMA_OUTDSCR_ADDR` reader - SPI dma out descriptor address."]
 pub type DMA_OUTDSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMA_OUTDSCR_STATE` reader - SPI dma out descriptor state."]
@@ -94,15 +81,13 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_OUTSTATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI DMA TX status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_outstatus](index.html) module"]
+#[doc = "SPI DMA TX status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_outstatus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_OUTSTATUS_SPEC;
 impl crate::RegisterSpec for DMA_OUTSTATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_outstatus::R](R) reader structure"]
-impl crate::Readable for DMA_OUTSTATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dma_outstatus::R`](R) reader structure"]
+impl crate::Readable for DMA_OUTSTATUS_SPEC {}
 #[doc = "`reset()` method sets DMA_OUTSTATUS to value 0x8000_0000"]
 impl crate::Resettable for DMA_OUTSTATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0x8000_0000;

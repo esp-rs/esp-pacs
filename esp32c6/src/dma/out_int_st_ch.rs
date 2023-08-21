@@ -1,18 +1,5 @@
 #[doc = "Register `OUT_INT_ST_CH%s` reader"]
-pub struct R(crate::R<OUT_INT_ST_CH_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OUT_INT_ST_CH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OUT_INT_ST_CH_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OUT_INT_ST_CH_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OUT_INT_ST_CH_SPEC>;
 #[doc = "Field `OUT_DONE` reader - The raw interrupt status bit for the OUT_DONE_CH_INT interrupt."]
 pub type OUT_DONE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF` reader - The raw interrupt status bit for the OUT_EOF_CH_INT interrupt."]
@@ -82,15 +69,13 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_INT_ST_CH_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Masked interrupt of channel 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_int_st_ch](index.html) module"]
+#[doc = "Masked interrupt of channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_int_st_ch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_INT_ST_CH_SPEC;
 impl crate::RegisterSpec for OUT_INT_ST_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_int_st_ch::R](R) reader structure"]
-impl crate::Readable for OUT_INT_ST_CH_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`out_int_st_ch::R`](R) reader structure"]
+impl crate::Readable for OUT_INT_ST_CH_SPEC {}
 #[doc = "`reset()` method sets OUT_INT_ST_CH%s to value 0"]
 impl crate::Resettable for OUT_INT_ST_CH_SPEC {
     const RESET_VALUE: Self::Ux = 0;

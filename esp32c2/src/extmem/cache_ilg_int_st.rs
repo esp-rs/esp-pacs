@@ -1,18 +1,5 @@
 #[doc = "Register `CACHE_ILG_INT_ST` reader"]
-pub struct R(crate::R<CACHE_ILG_INT_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CACHE_ILG_INT_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CACHE_ILG_INT_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CACHE_ILG_INT_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CACHE_ILG_INT_ST_SPEC>;
 #[doc = "Field `ICACHE_SYNC_OP_FAULT_ST` reader - The bit is used to indicate interrupt by sync configurations fault."]
 pub type ICACHE_SYNC_OP_FAULT_ST_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_OP_FAULT_ST` reader - The bit is used to indicate interrupt by preload configurations fault."]
@@ -105,15 +92,13 @@ impl core::fmt::Debug for crate::generic::Reg<CACHE_ILG_INT_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_ilg_int_st](index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_ilg_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CACHE_ILG_INT_ST_SPEC;
 impl crate::RegisterSpec for CACHE_ILG_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_ilg_int_st::R](R) reader structure"]
-impl crate::Readable for CACHE_ILG_INT_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`cache_ilg_int_st::R`](R) reader structure"]
+impl crate::Readable for CACHE_ILG_INT_ST_SPEC {}
 #[doc = "`reset()` method sets CACHE_ILG_INT_ST to value 0"]
 impl crate::Resettable for CACHE_ILG_INT_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

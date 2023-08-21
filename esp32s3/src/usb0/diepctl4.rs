@@ -1,43 +1,11 @@
 #[doc = "Register `DIEPCTL4` reader"]
-pub struct R(crate::R<DIEPCTL4_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIEPCTL4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIEPCTL4_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIEPCTL4_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIEPCTL4_SPEC>;
 #[doc = "Register `DIEPCTL4` writer"]
-pub struct W(crate::W<DIEPCTL4_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIEPCTL4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIEPCTL4_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIEPCTL4_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIEPCTL4_SPEC>;
 #[doc = "Field `D_MPS4` reader - "]
 pub type D_MPS4_R = crate::FieldReader;
 #[doc = "Field `D_MPS4` writer - "]
-pub type D_MPS4_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPCTL4_SPEC, 2, O>;
+pub type D_MPS4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `D_USBACTEP4` reader - "]
 pub type D_USBACTEP4_R = crate::BitReader;
 #[doc = "Field `D_NAKSTS4` reader - "]
@@ -47,27 +15,27 @@ pub type D_EPTYPE4_R = crate::FieldReader;
 #[doc = "Field `D_STALL4` reader - "]
 pub type D_STALL4_R = crate::BitReader;
 #[doc = "Field `D_STALL4` writer - "]
-pub type D_STALL4_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL4_SPEC, O>;
+pub type D_STALL4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `D_TXFNUM4` reader - "]
 pub type D_TXFNUM4_R = crate::FieldReader;
 #[doc = "Field `D_TXFNUM4` writer - "]
-pub type D_TXFNUM4_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPCTL4_SPEC, 4, O>;
+pub type D_TXFNUM4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `D_CNAK4` writer - "]
-pub type D_CNAK4_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL4_SPEC, O>;
+pub type D_CNAK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DI_SNAK4` writer - "]
-pub type DI_SNAK4_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL4_SPEC, O>;
+pub type DI_SNAK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DI_SETD0PID4` writer - "]
-pub type DI_SETD0PID4_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL4_SPEC, O>;
+pub type DI_SETD0PID4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DI_SETD1PID4` writer - "]
-pub type DI_SETD1PID4_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL4_SPEC, O>;
+pub type DI_SETD1PID4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `D_EPDIS4` reader - "]
 pub type D_EPDIS4_R = crate::BitReader;
 #[doc = "Field `D_EPDIS4` writer - "]
-pub type D_EPDIS4_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL4_SPEC, O>;
+pub type D_EPDIS4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `D_EPENA4` reader - "]
 pub type D_EPENA4_R = crate::BitReader;
 #[doc = "Field `D_EPENA4` writer - "]
-pub type D_EPENA4_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL4_SPEC, O>;
+pub type D_EPENA4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -135,76 +103,73 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn d_mps4(&mut self) -> D_MPS4_W<0> {
+    pub fn d_mps4(&mut self) -> D_MPS4_W<DIEPCTL4_SPEC, 0> {
         D_MPS4_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn d_stall4(&mut self) -> D_STALL4_W<21> {
+    pub fn d_stall4(&mut self) -> D_STALL4_W<DIEPCTL4_SPEC, 21> {
         D_STALL4_W::new(self)
     }
     #[doc = "Bits 22:25"]
     #[inline(always)]
     #[must_use]
-    pub fn d_txfnum4(&mut self) -> D_TXFNUM4_W<22> {
+    pub fn d_txfnum4(&mut self) -> D_TXFNUM4_W<DIEPCTL4_SPEC, 22> {
         D_TXFNUM4_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn d_cnak4(&mut self) -> D_CNAK4_W<26> {
+    pub fn d_cnak4(&mut self) -> D_CNAK4_W<DIEPCTL4_SPEC, 26> {
         D_CNAK4_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn di_snak4(&mut self) -> DI_SNAK4_W<27> {
+    pub fn di_snak4(&mut self) -> DI_SNAK4_W<DIEPCTL4_SPEC, 27> {
         DI_SNAK4_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn di_setd0pid4(&mut self) -> DI_SETD0PID4_W<28> {
+    pub fn di_setd0pid4(&mut self) -> DI_SETD0PID4_W<DIEPCTL4_SPEC, 28> {
         DI_SETD0PID4_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn di_setd1pid4(&mut self) -> DI_SETD1PID4_W<29> {
+    pub fn di_setd1pid4(&mut self) -> DI_SETD1PID4_W<DIEPCTL4_SPEC, 29> {
         DI_SETD1PID4_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn d_epdis4(&mut self) -> D_EPDIS4_W<30> {
+    pub fn d_epdis4(&mut self) -> D_EPDIS4_W<DIEPCTL4_SPEC, 30> {
         D_EPDIS4_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn d_epena4(&mut self) -> D_EPENA4_W<31> {
+    pub fn d_epena4(&mut self) -> D_EPENA4_W<DIEPCTL4_SPEC, 31> {
         D_EPENA4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diepctl4](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl4::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl4::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPCTL4_SPEC;
 impl crate::RegisterSpec for DIEPCTL4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [diepctl4::R](R) reader structure"]
-impl crate::Readable for DIEPCTL4_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [diepctl4::W](W) writer structure"]
+#[doc = "`read()` method returns [`diepctl4::R`](R) reader structure"]
+impl crate::Readable for DIEPCTL4_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`diepctl4::W`](W) writer structure"]
 impl crate::Writable for DIEPCTL4_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,87 +1,55 @@
 #[doc = "Register `DT0_CFG` reader"]
-pub struct R(crate::R<DT0_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DT0_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DT0_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DT0_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DT0_CFG_SPEC>;
 #[doc = "Register `DT0_CFG` writer"]
-pub struct W(crate::W<DT0_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DT0_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DT0_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DT0_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DT0_CFG_SPEC>;
 #[doc = "Field `DT0_FED_UPMETHOD` reader - "]
 pub type DT0_FED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DT0_FED_UPMETHOD` writer - "]
-pub type DT0_FED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DT0_CFG_SPEC, 4, O>;
+pub type DT0_FED_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `DT0_RED_UPMETHOD` reader - "]
 pub type DT0_RED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DT0_RED_UPMETHOD` writer - "]
-pub type DT0_RED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DT0_CFG_SPEC, 4, O>;
+pub type DT0_RED_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `DT0_DEB_MODE` reader - "]
 pub type DT0_DEB_MODE_R = crate::BitReader;
 #[doc = "Field `DT0_DEB_MODE` writer - "]
-pub type DT0_DEB_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_DEB_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_A_OUTSWAP` reader - "]
 pub type DT0_A_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DT0_A_OUTSWAP` writer - "]
-pub type DT0_A_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_A_OUTSWAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_B_OUTSWAP` reader - "]
 pub type DT0_B_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DT0_B_OUTSWAP` writer - "]
-pub type DT0_B_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_B_OUTSWAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_RED_INSEL` reader - "]
 pub type DT0_RED_INSEL_R = crate::BitReader;
 #[doc = "Field `DT0_RED_INSEL` writer - "]
-pub type DT0_RED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_RED_INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_FED_INSEL` reader - "]
 pub type DT0_FED_INSEL_R = crate::BitReader;
 #[doc = "Field `DT0_FED_INSEL` writer - "]
-pub type DT0_FED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_FED_INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_RED_OUTINVERT` reader - "]
 pub type DT0_RED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DT0_RED_OUTINVERT` writer - "]
-pub type DT0_RED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_RED_OUTINVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_FED_OUTINVERT` reader - "]
 pub type DT0_FED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DT0_FED_OUTINVERT` writer - "]
-pub type DT0_FED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_FED_OUTINVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_A_OUTBYPASS` reader - "]
 pub type DT0_A_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DT0_A_OUTBYPASS` writer - "]
-pub type DT0_A_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_A_OUTBYPASS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_B_OUTBYPASS` reader - "]
 pub type DT0_B_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DT0_B_OUTBYPASS` writer - "]
-pub type DT0_B_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_B_OUTBYPASS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DT0_CLK_SEL` reader - "]
 pub type DT0_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `DT0_CLK_SEL` writer - "]
-pub type DT0_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DT0_CFG_SPEC, O>;
+pub type DT0_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -206,94 +174,91 @@ impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_fed_upmethod(&mut self) -> DT0_FED_UPMETHOD_W<0> {
+    pub fn dt0_fed_upmethod(&mut self) -> DT0_FED_UPMETHOD_W<DT0_CFG_SPEC, 0> {
         DT0_FED_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_red_upmethod(&mut self) -> DT0_RED_UPMETHOD_W<4> {
+    pub fn dt0_red_upmethod(&mut self) -> DT0_RED_UPMETHOD_W<DT0_CFG_SPEC, 4> {
         DT0_RED_UPMETHOD_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_deb_mode(&mut self) -> DT0_DEB_MODE_W<8> {
+    pub fn dt0_deb_mode(&mut self) -> DT0_DEB_MODE_W<DT0_CFG_SPEC, 8> {
         DT0_DEB_MODE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_a_outswap(&mut self) -> DT0_A_OUTSWAP_W<9> {
+    pub fn dt0_a_outswap(&mut self) -> DT0_A_OUTSWAP_W<DT0_CFG_SPEC, 9> {
         DT0_A_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_b_outswap(&mut self) -> DT0_B_OUTSWAP_W<10> {
+    pub fn dt0_b_outswap(&mut self) -> DT0_B_OUTSWAP_W<DT0_CFG_SPEC, 10> {
         DT0_B_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_red_insel(&mut self) -> DT0_RED_INSEL_W<11> {
+    pub fn dt0_red_insel(&mut self) -> DT0_RED_INSEL_W<DT0_CFG_SPEC, 11> {
         DT0_RED_INSEL_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_fed_insel(&mut self) -> DT0_FED_INSEL_W<12> {
+    pub fn dt0_fed_insel(&mut self) -> DT0_FED_INSEL_W<DT0_CFG_SPEC, 12> {
         DT0_FED_INSEL_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_red_outinvert(&mut self) -> DT0_RED_OUTINVERT_W<13> {
+    pub fn dt0_red_outinvert(&mut self) -> DT0_RED_OUTINVERT_W<DT0_CFG_SPEC, 13> {
         DT0_RED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_fed_outinvert(&mut self) -> DT0_FED_OUTINVERT_W<14> {
+    pub fn dt0_fed_outinvert(&mut self) -> DT0_FED_OUTINVERT_W<DT0_CFG_SPEC, 14> {
         DT0_FED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_a_outbypass(&mut self) -> DT0_A_OUTBYPASS_W<15> {
+    pub fn dt0_a_outbypass(&mut self) -> DT0_A_OUTBYPASS_W<DT0_CFG_SPEC, 15> {
         DT0_A_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_b_outbypass(&mut self) -> DT0_B_OUTBYPASS_W<16> {
+    pub fn dt0_b_outbypass(&mut self) -> DT0_B_OUTBYPASS_W<DT0_CFG_SPEC, 16> {
         DT0_B_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0_clk_sel(&mut self) -> DT0_CLK_SEL_W<17> {
+    pub fn dt0_clk_sel(&mut self) -> DT0_CLK_SEL_W<DT0_CFG_SPEC, 17> {
         DT0_CLK_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dt0_cfg](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dt0_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dt0_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DT0_CFG_SPEC;
 impl crate::RegisterSpec for DT0_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dt0_cfg::R](R) reader structure"]
-impl crate::Readable for DT0_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dt0_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`dt0_cfg::R`](R) reader structure"]
+impl crate::Readable for DT0_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dt0_cfg::W`](W) writer structure"]
 impl crate::Writable for DT0_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

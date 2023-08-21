@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_MEM_DDR` reader"]
-pub struct R(crate::R<SPI_MEM_DDR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_MEM_DDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_MEM_DDR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_MEM_DDR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_MEM_DDR_SPEC>;
 #[doc = "Field `SPI_FMEM_DDR_EN` reader - 1: in DDR mode, 0 in SDR mode"]
 pub type SPI_FMEM_DDR_EN_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_VAR_DUMMY` reader - Set the bit to enable variable dummy cycle in spi DDR mode."]
@@ -204,15 +191,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_DDR_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI0 flash DDR mode control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_ddr](index.html) module"]
+#[doc = "SPI0 flash DDR mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_ddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_DDR_SPEC;
 impl crate::RegisterSpec for SPI_MEM_DDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_mem_ddr::R](R) reader structure"]
-impl crate::Readable for SPI_MEM_DDR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_mem_ddr::R`](R) reader structure"]
+impl crate::Readable for SPI_MEM_DDR_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_DDR to value 0x3020"]
 impl crate::Resettable for SPI_MEM_DDR_SPEC {
     const RESET_VALUE: Self::Ux = 0x3020;

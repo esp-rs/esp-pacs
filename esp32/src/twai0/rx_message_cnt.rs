@@ -1,18 +1,5 @@
 #[doc = "Register `RX_MESSAGE_CNT` reader"]
-pub struct R(crate::R<RX_MESSAGE_CNT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RX_MESSAGE_CNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RX_MESSAGE_CNT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RX_MESSAGE_CNT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RX_MESSAGE_CNT_SPEC>;
 #[doc = "Field `RX_MESSAGE_COUNTER` reader - This register reflects the number of messages available within the RX FIFO."]
 pub type RX_MESSAGE_COUNTER_R = crate::FieldReader;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<RX_MESSAGE_CNT_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Receive Message Counter Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_message_cnt](index.html) module"]
+#[doc = "Receive Message Counter Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_message_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_MESSAGE_CNT_SPEC;
 impl crate::RegisterSpec for RX_MESSAGE_CNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rx_message_cnt::R](R) reader structure"]
-impl crate::Readable for RX_MESSAGE_CNT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rx_message_cnt::R`](R) reader structure"]
+impl crate::Readable for RX_MESSAGE_CNT_SPEC {}
 #[doc = "`reset()` method sets RX_MESSAGE_CNT to value 0"]
 impl crate::Resettable for RX_MESSAGE_CNT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

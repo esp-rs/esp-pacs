@@ -1,95 +1,63 @@
 #[doc = "Register `CONF1` reader"]
-pub struct R(crate::R<CONF1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF1_SPEC>;
 #[doc = "Register `CONF1` writer"]
-pub struct W(crate::W<CONF1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF1_SPEC>;
 #[doc = "Field `SLC0_CHECK_OWNER` reader - "]
 pub type SLC0_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `SLC0_CHECK_OWNER` writer - "]
-pub type SLC0_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC0_CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` reader - "]
 pub type SLC0_TX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` writer - "]
-pub type SLC0_TX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC0_TX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` reader - "]
 pub type SLC0_RX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` writer - "]
-pub type SLC0_RX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC0_RX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CMD_HOLD_EN` reader - "]
 pub type CMD_HOLD_EN_R = crate::BitReader;
 #[doc = "Field `CMD_HOLD_EN` writer - "]
-pub type CMD_HOLD_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type CMD_HOLD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` reader - "]
 pub type SLC0_LEN_AUTO_CLR_R = crate::BitReader;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` writer - "]
-pub type SLC0_LEN_AUTO_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC0_LEN_AUTO_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC0_TX_STITCH_EN` reader - "]
 pub type SLC0_TX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_STITCH_EN` writer - "]
-pub type SLC0_TX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC0_TX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC0_RX_STITCH_EN` reader - "]
 pub type SLC0_RX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_STITCH_EN` writer - "]
-pub type SLC0_RX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC0_RX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC1_CHECK_OWNER` reader - "]
 pub type SLC1_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `SLC1_CHECK_OWNER` writer - "]
-pub type SLC1_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC1_CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` reader - "]
 pub type SLC1_TX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` writer - "]
-pub type SLC1_TX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC1_TX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` reader - "]
 pub type SLC1_RX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` writer - "]
-pub type SLC1_RX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC1_RX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HOST_INT_LEVEL_SEL` reader - "]
 pub type HOST_INT_LEVEL_SEL_R = crate::BitReader;
 #[doc = "Field `HOST_INT_LEVEL_SEL` writer - "]
-pub type HOST_INT_LEVEL_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type HOST_INT_LEVEL_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC1_TX_STITCH_EN` reader - "]
 pub type SLC1_TX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_STITCH_EN` writer - "]
-pub type SLC1_TX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC1_TX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC1_RX_STITCH_EN` reader - "]
 pub type SLC1_RX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_STITCH_EN` writer - "]
-pub type SLC1_RX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SLC1_RX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -229,106 +197,103 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_check_owner(&mut self) -> SLC0_CHECK_OWNER_W<0> {
+    pub fn slc0_check_owner(&mut self) -> SLC0_CHECK_OWNER_W<CONF1_SPEC, 0> {
         SLC0_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_check_sum_en(&mut self) -> SLC0_TX_CHECK_SUM_EN_W<1> {
+    pub fn slc0_tx_check_sum_en(&mut self) -> SLC0_TX_CHECK_SUM_EN_W<CONF1_SPEC, 1> {
         SLC0_TX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_check_sum_en(&mut self) -> SLC0_RX_CHECK_SUM_EN_W<2> {
+    pub fn slc0_rx_check_sum_en(&mut self) -> SLC0_RX_CHECK_SUM_EN_W<CONF1_SPEC, 2> {
         SLC0_RX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_hold_en(&mut self) -> CMD_HOLD_EN_W<3> {
+    pub fn cmd_hold_en(&mut self) -> CMD_HOLD_EN_W<CONF1_SPEC, 3> {
         CMD_HOLD_EN_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_len_auto_clr(&mut self) -> SLC0_LEN_AUTO_CLR_W<4> {
+    pub fn slc0_len_auto_clr(&mut self) -> SLC0_LEN_AUTO_CLR_W<CONF1_SPEC, 4> {
         SLC0_LEN_AUTO_CLR_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_stitch_en(&mut self) -> SLC0_TX_STITCH_EN_W<5> {
+    pub fn slc0_tx_stitch_en(&mut self) -> SLC0_TX_STITCH_EN_W<CONF1_SPEC, 5> {
         SLC0_TX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_stitch_en(&mut self) -> SLC0_RX_STITCH_EN_W<6> {
+    pub fn slc0_rx_stitch_en(&mut self) -> SLC0_RX_STITCH_EN_W<CONF1_SPEC, 6> {
         SLC0_RX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_check_owner(&mut self) -> SLC1_CHECK_OWNER_W<16> {
+    pub fn slc1_check_owner(&mut self) -> SLC1_CHECK_OWNER_W<CONF1_SPEC, 16> {
         SLC1_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tx_check_sum_en(&mut self) -> SLC1_TX_CHECK_SUM_EN_W<17> {
+    pub fn slc1_tx_check_sum_en(&mut self) -> SLC1_TX_CHECK_SUM_EN_W<CONF1_SPEC, 17> {
         SLC1_TX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_check_sum_en(&mut self) -> SLC1_RX_CHECK_SUM_EN_W<18> {
+    pub fn slc1_rx_check_sum_en(&mut self) -> SLC1_RX_CHECK_SUM_EN_W<CONF1_SPEC, 18> {
         SLC1_RX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn host_int_level_sel(&mut self) -> HOST_INT_LEVEL_SEL_W<19> {
+    pub fn host_int_level_sel(&mut self) -> HOST_INT_LEVEL_SEL_W<CONF1_SPEC, 19> {
         HOST_INT_LEVEL_SEL_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tx_stitch_en(&mut self) -> SLC1_TX_STITCH_EN_W<20> {
+    pub fn slc1_tx_stitch_en(&mut self) -> SLC1_TX_STITCH_EN_W<CONF1_SPEC, 20> {
         SLC1_TX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_stitch_en(&mut self) -> SLC1_RX_STITCH_EN_W<21> {
+    pub fn slc1_rx_stitch_en(&mut self) -> SLC1_RX_STITCH_EN_W<CONF1_SPEC, 21> {
         SLC1_RX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<22> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<CONF1_SPEC, 22> {
         CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF1_SPEC;
 impl crate::RegisterSpec for CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf1::R](R) reader structure"]
-impl crate::Readable for CONF1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf1::R`](R) reader structure"]
+impl crate::Readable for CONF1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf1::W`](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

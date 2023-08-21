@@ -1,48 +1,15 @@
 #[doc = "Register `_1RXFIFO_PUSH` reader"]
-pub struct R(crate::R<_1RXFIFO_PUSH_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<_1RXFIFO_PUSH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<_1RXFIFO_PUSH_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<_1RXFIFO_PUSH_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<_1RXFIFO_PUSH_SPEC>;
 #[doc = "Register `_1RXFIFO_PUSH` writer"]
-pub struct W(crate::W<_1RXFIFO_PUSH_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<_1RXFIFO_PUSH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<_1RXFIFO_PUSH_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<_1RXFIFO_PUSH_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<_1RXFIFO_PUSH_SPEC>;
 #[doc = "Field `SLC1_RXFIFO_WDATA` reader - "]
 pub type SLC1_RXFIFO_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC1_RXFIFO_WDATA` writer - "]
-pub type SLC1_RXFIFO_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, _1RXFIFO_PUSH_SPEC, 9, O, u16>;
+pub type SLC1_RXFIFO_WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 #[doc = "Field `SLC1_RXFIFO_PUSH` reader - "]
 pub type SLC1_RXFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `SLC1_RXFIFO_PUSH` writer - "]
-pub type SLC1_RXFIFO_PUSH_W<'a, const O: u8> = crate::BitWriter<'a, _1RXFIFO_PUSH_SPEC, O>;
+pub type SLC1_RXFIFO_PUSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -80,34 +47,31 @@ impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rxfifo_wdata(&mut self) -> SLC1_RXFIFO_WDATA_W<0> {
+    pub fn slc1_rxfifo_wdata(&mut self) -> SLC1_RXFIFO_WDATA_W<_1RXFIFO_PUSH_SPEC, 0> {
         SLC1_RXFIFO_WDATA_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rxfifo_push(&mut self) -> SLC1_RXFIFO_PUSH_W<16> {
+    pub fn slc1_rxfifo_push(&mut self) -> SLC1_RXFIFO_PUSH_W<_1RXFIFO_PUSH_SPEC, 16> {
         SLC1_RXFIFO_PUSH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_1rxfifo_push](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_1rxfifo_push::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`_1rxfifo_push::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _1RXFIFO_PUSH_SPEC;
 impl crate::RegisterSpec for _1RXFIFO_PUSH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [_1rxfifo_push::R](R) reader structure"]
-impl crate::Readable for _1RXFIFO_PUSH_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [_1rxfifo_push::W](W) writer structure"]
+#[doc = "`read()` method returns [`_1rxfifo_push::R`](R) reader structure"]
+impl crate::Readable for _1RXFIFO_PUSH_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`_1rxfifo_push::W`](W) writer structure"]
 impl crate::Writable for _1RXFIFO_PUSH_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

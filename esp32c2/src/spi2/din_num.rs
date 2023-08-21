@@ -1,18 +1,5 @@
 #[doc = "Register `DIN_NUM` reader"]
-pub struct R(crate::R<DIN_NUM_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIN_NUM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIN_NUM_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIN_NUM_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIN_NUM_SPEC>;
 #[doc = "Field `DIN0_NUM` reader - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN1_NUM` reader - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
@@ -92,15 +79,13 @@ impl core::fmt::Debug for crate::generic::Reg<DIN_NUM_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SPI input delay number configuration\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [din_num](index.html) module"]
+#[doc = "SPI input delay number configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_num::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIN_NUM_SPEC;
 impl crate::RegisterSpec for DIN_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [din_num::R](R) reader structure"]
-impl crate::Readable for DIN_NUM_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`din_num::R`](R) reader structure"]
+impl crate::Readable for DIN_NUM_SPEC {}
 #[doc = "`reset()` method sets DIN_NUM to value 0"]
 impl crate::Resettable for DIN_NUM_SPEC {
     const RESET_VALUE: Self::Ux = 0;

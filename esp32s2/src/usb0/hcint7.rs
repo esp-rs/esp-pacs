@@ -1,95 +1,63 @@
 #[doc = "Register `HCINT7` reader"]
-pub struct R(crate::R<HCINT7_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCINT7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCINT7_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCINT7_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCINT7_SPEC>;
 #[doc = "Register `HCINT7` writer"]
-pub struct W(crate::W<HCINT7_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCINT7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCINT7_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCINT7_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCINT7_SPEC>;
 #[doc = "Field `H_XFERCOMPL7` reader - "]
 pub type H_XFERCOMPL7_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPL7` writer - "]
-pub type H_XFERCOMPL7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_XFERCOMPL7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_CHHLTD7` reader - "]
 pub type H_CHHLTD7_R = crate::BitReader;
 #[doc = "Field `H_CHHLTD7` writer - "]
-pub type H_CHHLTD7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_CHHLTD7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_AHBERR7` reader - "]
 pub type H_AHBERR7_R = crate::BitReader;
 #[doc = "Field `H_AHBERR7` writer - "]
-pub type H_AHBERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_AHBERR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_STALL7` reader - "]
 pub type H_STALL7_R = crate::BitReader;
 #[doc = "Field `H_STALL7` writer - "]
-pub type H_STALL7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_STALL7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_NACK7` reader - "]
 pub type H_NACK7_R = crate::BitReader;
 #[doc = "Field `H_NACK7` writer - "]
-pub type H_NACK7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_NACK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_ACK7` reader - "]
 pub type H_ACK7_R = crate::BitReader;
 #[doc = "Field `H_ACK7` writer - "]
-pub type H_ACK7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_ACK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_NYET7` reader - "]
 pub type H_NYET7_R = crate::BitReader;
 #[doc = "Field `H_NYET7` writer - "]
-pub type H_NYET7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_NYET7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_XACTERR7` reader - "]
 pub type H_XACTERR7_R = crate::BitReader;
 #[doc = "Field `H_XACTERR7` writer - "]
-pub type H_XACTERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_XACTERR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_BBLERR7` reader - "]
 pub type H_BBLERR7_R = crate::BitReader;
 #[doc = "Field `H_BBLERR7` writer - "]
-pub type H_BBLERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_BBLERR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_FRMOVRUN7` reader - "]
 pub type H_FRMOVRUN7_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUN7` writer - "]
-pub type H_FRMOVRUN7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_FRMOVRUN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_DATATGLERR7` reader - "]
 pub type H_DATATGLERR7_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERR7` writer - "]
-pub type H_DATATGLERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_DATATGLERR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_BNAINTR7` reader - "]
 pub type H_BNAINTR7_R = crate::BitReader;
 #[doc = "Field `H_BNAINTR7` writer - "]
-pub type H_BNAINTR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_BNAINTR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_XCS_XACT_ERR7` reader - "]
 pub type H_XCS_XACT_ERR7_R = crate::BitReader;
 #[doc = "Field `H_XCS_XACT_ERR7` writer - "]
-pub type H_XCS_XACT_ERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_XCS_XACT_ERR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_DESC_LST_ROLLINTR7` reader - "]
 pub type H_DESC_LST_ROLLINTR7_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTR7` writer - "]
-pub type H_DESC_LST_ROLLINTR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
+pub type H_DESC_LST_ROLLINTR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -205,106 +173,103 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xfercompl7(&mut self) -> H_XFERCOMPL7_W<0> {
+    pub fn h_xfercompl7(&mut self) -> H_XFERCOMPL7_W<HCINT7_SPEC, 0> {
         H_XFERCOMPL7_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chhltd7(&mut self) -> H_CHHLTD7_W<1> {
+    pub fn h_chhltd7(&mut self) -> H_CHHLTD7_W<HCINT7_SPEC, 1> {
         H_CHHLTD7_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ahberr7(&mut self) -> H_AHBERR7_W<2> {
+    pub fn h_ahberr7(&mut self) -> H_AHBERR7_W<HCINT7_SPEC, 2> {
         H_AHBERR7_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn h_stall7(&mut self) -> H_STALL7_W<3> {
+    pub fn h_stall7(&mut self) -> H_STALL7_W<HCINT7_SPEC, 3> {
         H_STALL7_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nack7(&mut self) -> H_NACK7_W<4> {
+    pub fn h_nack7(&mut self) -> H_NACK7_W<HCINT7_SPEC, 4> {
         H_NACK7_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ack7(&mut self) -> H_ACK7_W<5> {
+    pub fn h_ack7(&mut self) -> H_ACK7_W<HCINT7_SPEC, 5> {
         H_ACK7_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nyet7(&mut self) -> H_NYET7_W<6> {
+    pub fn h_nyet7(&mut self) -> H_NYET7_W<HCINT7_SPEC, 6> {
         H_NYET7_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xacterr7(&mut self) -> H_XACTERR7_W<7> {
+    pub fn h_xacterr7(&mut self) -> H_XACTERR7_W<HCINT7_SPEC, 7> {
         H_XACTERR7_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bblerr7(&mut self) -> H_BBLERR7_W<8> {
+    pub fn h_bblerr7(&mut self) -> H_BBLERR7_W<HCINT7_SPEC, 8> {
         H_BBLERR7_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frmovrun7(&mut self) -> H_FRMOVRUN7_W<9> {
+    pub fn h_frmovrun7(&mut self) -> H_FRMOVRUN7_W<HCINT7_SPEC, 9> {
         H_FRMOVRUN7_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn h_datatglerr7(&mut self) -> H_DATATGLERR7_W<10> {
+    pub fn h_datatglerr7(&mut self) -> H_DATATGLERR7_W<HCINT7_SPEC, 10> {
         H_DATATGLERR7_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bnaintr7(&mut self) -> H_BNAINTR7_W<11> {
+    pub fn h_bnaintr7(&mut self) -> H_BNAINTR7_W<HCINT7_SPEC, 11> {
         H_BNAINTR7_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xcs_xact_err7(&mut self) -> H_XCS_XACT_ERR7_W<12> {
+    pub fn h_xcs_xact_err7(&mut self) -> H_XCS_XACT_ERR7_W<HCINT7_SPEC, 12> {
         H_XCS_XACT_ERR7_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn h_desc_lst_rollintr7(&mut self) -> H_DESC_LST_ROLLINTR7_W<13> {
+    pub fn h_desc_lst_rollintr7(&mut self) -> H_DESC_LST_ROLLINTR7_W<HCINT7_SPEC, 13> {
         H_DESC_LST_ROLLINTR7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcint7](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcint7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcint7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCINT7_SPEC;
 impl crate::RegisterSpec for HCINT7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcint7::R](R) reader structure"]
-impl crate::Readable for HCINT7_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hcint7::W](W) writer structure"]
+#[doc = "`read()` method returns [`hcint7::R`](R) reader structure"]
+impl crate::Readable for HCINT7_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hcint7::W`](W) writer structure"]
 impl crate::Writable for HCINT7_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

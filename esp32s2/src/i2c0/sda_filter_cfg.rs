@@ -1,47 +1,15 @@
 #[doc = "Register `SDA_FILTER_CFG` reader"]
-pub struct R(crate::R<SDA_FILTER_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SDA_FILTER_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SDA_FILTER_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SDA_FILTER_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SDA_FILTER_CFG_SPEC>;
 #[doc = "Register `SDA_FILTER_CFG` writer"]
-pub struct W(crate::W<SDA_FILTER_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SDA_FILTER_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SDA_FILTER_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SDA_FILTER_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SDA_FILTER_CFG_SPEC>;
 #[doc = "Field `SDA_FILTER_THRES` reader - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
 pub type SDA_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `SDA_FILTER_THRES` writer - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub type SDA_FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_FILTER_CFG_SPEC, 4, O>;
+pub type SDA_FILTER_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `SDA_FILTER_EN` reader - This is the filter enable bit for SDA."]
 pub type SDA_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `SDA_FILTER_EN` writer - This is the filter enable bit for SDA."]
-pub type SDA_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDA_FILTER_CFG_SPEC, O>;
+pub type SDA_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:3 - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
@@ -79,34 +47,31 @@ impl W {
     #[doc = "Bits 0:3 - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
     #[must_use]
-    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<0> {
+    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<SDA_FILTER_CFG_SPEC, 0> {
         SDA_FILTER_THRES_W::new(self)
     }
     #[doc = "Bit 4 - This is the filter enable bit for SDA."]
     #[inline(always)]
     #[must_use]
-    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<4> {
+    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<SDA_FILTER_CFG_SPEC, 4> {
         SDA_FILTER_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SDA filter configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sda_filter_cfg](index.html) module"]
+#[doc = "SDA filter configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sda_filter_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sda_filter_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SDA_FILTER_CFG_SPEC;
 impl crate::RegisterSpec for SDA_FILTER_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sda_filter_cfg::R](R) reader structure"]
-impl crate::Readable for SDA_FILTER_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sda_filter_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`sda_filter_cfg::R`](R) reader structure"]
+impl crate::Readable for SDA_FILTER_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sda_filter_cfg::W`](W) writer structure"]
 impl crate::Writable for SDA_FILTER_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

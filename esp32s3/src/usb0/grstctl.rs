@@ -1,63 +1,31 @@
 #[doc = "Register `GRSTCTL` reader"]
-pub struct R(crate::R<GRSTCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GRSTCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GRSTCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GRSTCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GRSTCTL_SPEC>;
 #[doc = "Register `GRSTCTL` writer"]
-pub struct W(crate::W<GRSTCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GRSTCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GRSTCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GRSTCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GRSTCTL_SPEC>;
 #[doc = "Field `CSFTRST` reader - "]
 pub type CSFTRST_R = crate::BitReader;
 #[doc = "Field `CSFTRST` writer - "]
-pub type CSFTRST_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
+pub type CSFTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PIUFSSFTRST` reader - "]
 pub type PIUFSSFTRST_R = crate::BitReader;
 #[doc = "Field `PIUFSSFTRST` writer - "]
-pub type PIUFSSFTRST_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
+pub type PIUFSSFTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FRMCNTRRST` reader - "]
 pub type FRMCNTRRST_R = crate::BitReader;
 #[doc = "Field `FRMCNTRRST` writer - "]
-pub type FRMCNTRRST_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
+pub type FRMCNTRRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFFLSH` reader - "]
 pub type RXFFLSH_R = crate::BitReader;
 #[doc = "Field `RXFFLSH` writer - "]
-pub type RXFFLSH_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
+pub type RXFFLSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFFLSH` reader - "]
 pub type TXFFLSH_R = crate::BitReader;
 #[doc = "Field `TXFFLSH` writer - "]
-pub type TXFFLSH_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
+pub type TXFFLSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFNUM` reader - "]
 pub type TXFNUM_R = crate::FieldReader;
 #[doc = "Field `TXFNUM` writer - "]
-pub type TXFNUM_W<'a, const O: u8> = crate::FieldWriter<'a, GRSTCTL_SPEC, 5, O>;
+pub type TXFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `DMAREQ` reader - "]
 pub type DMAREQ_R = crate::BitReader;
 #[doc = "Field `AHBIDLE` reader - "]
@@ -129,58 +97,55 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn csftrst(&mut self) -> CSFTRST_W<0> {
+    pub fn csftrst(&mut self) -> CSFTRST_W<GRSTCTL_SPEC, 0> {
         CSFTRST_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn piufssftrst(&mut self) -> PIUFSSFTRST_W<1> {
+    pub fn piufssftrst(&mut self) -> PIUFSSFTRST_W<GRSTCTL_SPEC, 1> {
         PIUFSSFTRST_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn frmcntrrst(&mut self) -> FRMCNTRRST_W<2> {
+    pub fn frmcntrrst(&mut self) -> FRMCNTRRST_W<GRSTCTL_SPEC, 2> {
         FRMCNTRRST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfflsh(&mut self) -> RXFFLSH_W<4> {
+    pub fn rxfflsh(&mut self) -> RXFFLSH_W<GRSTCTL_SPEC, 4> {
         RXFFLSH_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn txfflsh(&mut self) -> TXFFLSH_W<5> {
+    pub fn txfflsh(&mut self) -> TXFFLSH_W<GRSTCTL_SPEC, 5> {
         TXFFLSH_W::new(self)
     }
     #[doc = "Bits 6:10"]
     #[inline(always)]
     #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<6> {
+    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC, 6> {
         TXFNUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grstctl](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`grstctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRSTCTL_SPEC;
 impl crate::RegisterSpec for GRSTCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [grstctl::R](R) reader structure"]
-impl crate::Readable for GRSTCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [grstctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`grstctl::R`](R) reader structure"]
+impl crate::Readable for GRSTCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`grstctl::W`](W) writer structure"]
 impl crate::Writable for GRSTCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

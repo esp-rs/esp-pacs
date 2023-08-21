@@ -1,79 +1,47 @@
 #[doc = "Register `CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2` reader"]
-pub struct R(crate::R<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>;
 #[doc = "Register `CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2` writer"]
-pub struct W(crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0` reader - category0 of core_x_iram0_dram_dma_line, if the splitaddress in block0 of SRAM, configured as 0x10, else if the splitaddress below block0 of SRAM, configured as 0x11, else if splitaddress higher than block0 of SRAM, configured as 0x00"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0` writer - category0 of core_x_iram0_dram_dma_line, if the splitaddress in block0 of SRAM, configured as 0x10, else if the splitaddress below block0 of SRAM, configured as 0x11, else if splitaddress higher than block0 of SRAM, configured as 0x00"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1` reader - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1` writer - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2` reader - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2` writer - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3` reader - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3` writer - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4` reader - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4` writer - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5` reader - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5` writer - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6` reader - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6` writer - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR` reader - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
 pub type CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR` writer - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
-pub type CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 8, O>;
+pub type CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR_W<'a, REG, const O: u8> =
+    crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:1 - category0 of core_x_iram0_dram_dma_line, if the splitaddress in block0 of SRAM, configured as 0x10, else if the splitaddress below block0 of SRAM, configured as 0x11, else if splitaddress higher than block0 of SRAM, configured as 0x00"]
     #[inline(always)]
@@ -167,7 +135,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_category_0(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_W<0> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 0>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_W::new(self)
     }
     #[doc = "Bits 2:3 - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
@@ -175,7 +144,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_category_1(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_W<2> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 2>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_W::new(self)
     }
     #[doc = "Bits 4:5 - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
@@ -183,7 +153,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_category_2(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_W<4> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 4>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_W::new(self)
     }
     #[doc = "Bits 6:7 - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
@@ -191,7 +162,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_category_3(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_W<6> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 6>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_W::new(self)
     }
     #[doc = "Bits 8:9 - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
@@ -199,7 +171,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_category_4(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_W<8> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 8>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_W::new(self)
     }
     #[doc = "Bits 10:11 - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
@@ -207,7 +180,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_category_5(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_W<10> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 10>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_W::new(self)
     }
     #[doc = "Bits 12:13 - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
@@ -215,7 +189,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_category_6(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_W<12> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 12>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_W::new(self)
     }
     #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
@@ -223,28 +198,26 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_sram_line_0_splitaddr(
         &mut self,
-    ) -> CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR_W<14> {
+    ) -> CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC, 14>
+    {
         CORE_X_IRAM0_SRAM_LINE_0_SPLITADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "sram split line configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_x_iram0_dram0_dma_split_line_constrain_2](index.html) module"]
+#[doc = "sram split line configuration register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_x_iram0_dram0_dma_split_line_constrain_2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_x_iram0_dram0_dma_split_line_constrain_2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC;
 impl crate::RegisterSpec for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_x_iram0_dram0_dma_split_line_constrain_2::R](R) reader structure"]
-impl crate::Readable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_dma_split_line_constrain_2::W](W) writer structure"]
+#[doc = "`read()` method returns [`core_x_iram0_dram0_dma_split_line_constrain_2::R`](R) reader structure"]
+impl crate::Readable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`core_x_iram0_dram0_dma_split_line_constrain_2::W`](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

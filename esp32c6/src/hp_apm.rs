@@ -142,279 +142,279 @@ pub struct RegisterBlock {
     #[doc = "0x7fc - Version register"]
     pub date: DATE,
 }
-#[doc = "REGION_FILTER_EN (rw) register accessor: an alias for `Reg<REGION_FILTER_EN_SPEC>`"]
+#[doc = "REGION_FILTER_EN (rw) register accessor: Region filter enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region_filter_en::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region_filter_en::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region_filter_en`] module"]
 pub type REGION_FILTER_EN = crate::Reg<region_filter_en::REGION_FILTER_EN_SPEC>;
 #[doc = "Region filter enable register"]
 pub mod region_filter_en;
-#[doc = "REGION0_ADDR_START (rw) register accessor: an alias for `Reg<REGION0_ADDR_START_SPEC>`"]
+#[doc = "REGION0_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region0_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region0_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region0_addr_start`] module"]
 pub type REGION0_ADDR_START = crate::Reg<region0_addr_start::REGION0_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region0_addr_start;
-#[doc = "REGION0_ADDR_END (rw) register accessor: an alias for `Reg<REGION0_ADDR_END_SPEC>`"]
+#[doc = "REGION0_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region0_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region0_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region0_addr_end`] module"]
 pub type REGION0_ADDR_END = crate::Reg<region0_addr_end::REGION0_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region0_addr_end;
-#[doc = "REGION0_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION0_PMS_ATTR_SPEC>`"]
+#[doc = "REGION0_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region0_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region0_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region0_pms_attr`] module"]
 pub type REGION0_PMS_ATTR = crate::Reg<region0_pms_attr::REGION0_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region0_pms_attr;
-#[doc = "REGION1_ADDR_START (rw) register accessor: an alias for `Reg<REGION1_ADDR_START_SPEC>`"]
+#[doc = "REGION1_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region1_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region1_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region1_addr_start`] module"]
 pub type REGION1_ADDR_START = crate::Reg<region1_addr_start::REGION1_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region1_addr_start;
-#[doc = "REGION1_ADDR_END (rw) register accessor: an alias for `Reg<REGION1_ADDR_END_SPEC>`"]
+#[doc = "REGION1_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region1_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region1_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region1_addr_end`] module"]
 pub type REGION1_ADDR_END = crate::Reg<region1_addr_end::REGION1_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region1_addr_end;
-#[doc = "REGION1_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION1_PMS_ATTR_SPEC>`"]
+#[doc = "REGION1_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region1_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region1_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region1_pms_attr`] module"]
 pub type REGION1_PMS_ATTR = crate::Reg<region1_pms_attr::REGION1_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region1_pms_attr;
-#[doc = "REGION2_ADDR_START (rw) register accessor: an alias for `Reg<REGION2_ADDR_START_SPEC>`"]
+#[doc = "REGION2_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region2_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region2_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region2_addr_start`] module"]
 pub type REGION2_ADDR_START = crate::Reg<region2_addr_start::REGION2_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region2_addr_start;
-#[doc = "REGION2_ADDR_END (rw) register accessor: an alias for `Reg<REGION2_ADDR_END_SPEC>`"]
+#[doc = "REGION2_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region2_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region2_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region2_addr_end`] module"]
 pub type REGION2_ADDR_END = crate::Reg<region2_addr_end::REGION2_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region2_addr_end;
-#[doc = "REGION2_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION2_PMS_ATTR_SPEC>`"]
+#[doc = "REGION2_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region2_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region2_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region2_pms_attr`] module"]
 pub type REGION2_PMS_ATTR = crate::Reg<region2_pms_attr::REGION2_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region2_pms_attr;
-#[doc = "REGION3_ADDR_START (rw) register accessor: an alias for `Reg<REGION3_ADDR_START_SPEC>`"]
+#[doc = "REGION3_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region3_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region3_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region3_addr_start`] module"]
 pub type REGION3_ADDR_START = crate::Reg<region3_addr_start::REGION3_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region3_addr_start;
-#[doc = "REGION3_ADDR_END (rw) register accessor: an alias for `Reg<REGION3_ADDR_END_SPEC>`"]
+#[doc = "REGION3_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region3_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region3_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region3_addr_end`] module"]
 pub type REGION3_ADDR_END = crate::Reg<region3_addr_end::REGION3_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region3_addr_end;
-#[doc = "REGION3_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION3_PMS_ATTR_SPEC>`"]
+#[doc = "REGION3_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region3_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region3_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region3_pms_attr`] module"]
 pub type REGION3_PMS_ATTR = crate::Reg<region3_pms_attr::REGION3_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region3_pms_attr;
-#[doc = "REGION4_ADDR_START (rw) register accessor: an alias for `Reg<REGION4_ADDR_START_SPEC>`"]
+#[doc = "REGION4_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region4_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region4_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region4_addr_start`] module"]
 pub type REGION4_ADDR_START = crate::Reg<region4_addr_start::REGION4_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region4_addr_start;
-#[doc = "REGION4_ADDR_END (rw) register accessor: an alias for `Reg<REGION4_ADDR_END_SPEC>`"]
+#[doc = "REGION4_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region4_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region4_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region4_addr_end`] module"]
 pub type REGION4_ADDR_END = crate::Reg<region4_addr_end::REGION4_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region4_addr_end;
-#[doc = "REGION4_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION4_PMS_ATTR_SPEC>`"]
+#[doc = "REGION4_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region4_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region4_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region4_pms_attr`] module"]
 pub type REGION4_PMS_ATTR = crate::Reg<region4_pms_attr::REGION4_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region4_pms_attr;
-#[doc = "REGION5_ADDR_START (rw) register accessor: an alias for `Reg<REGION5_ADDR_START_SPEC>`"]
+#[doc = "REGION5_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region5_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region5_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region5_addr_start`] module"]
 pub type REGION5_ADDR_START = crate::Reg<region5_addr_start::REGION5_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region5_addr_start;
-#[doc = "REGION5_ADDR_END (rw) register accessor: an alias for `Reg<REGION5_ADDR_END_SPEC>`"]
+#[doc = "REGION5_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region5_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region5_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region5_addr_end`] module"]
 pub type REGION5_ADDR_END = crate::Reg<region5_addr_end::REGION5_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region5_addr_end;
-#[doc = "REGION5_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION5_PMS_ATTR_SPEC>`"]
+#[doc = "REGION5_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region5_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region5_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region5_pms_attr`] module"]
 pub type REGION5_PMS_ATTR = crate::Reg<region5_pms_attr::REGION5_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region5_pms_attr;
-#[doc = "REGION6_ADDR_START (rw) register accessor: an alias for `Reg<REGION6_ADDR_START_SPEC>`"]
+#[doc = "REGION6_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region6_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region6_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region6_addr_start`] module"]
 pub type REGION6_ADDR_START = crate::Reg<region6_addr_start::REGION6_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region6_addr_start;
-#[doc = "REGION6_ADDR_END (rw) register accessor: an alias for `Reg<REGION6_ADDR_END_SPEC>`"]
+#[doc = "REGION6_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region6_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region6_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region6_addr_end`] module"]
 pub type REGION6_ADDR_END = crate::Reg<region6_addr_end::REGION6_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region6_addr_end;
-#[doc = "REGION6_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION6_PMS_ATTR_SPEC>`"]
+#[doc = "REGION6_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region6_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region6_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region6_pms_attr`] module"]
 pub type REGION6_PMS_ATTR = crate::Reg<region6_pms_attr::REGION6_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region6_pms_attr;
-#[doc = "REGION7_ADDR_START (rw) register accessor: an alias for `Reg<REGION7_ADDR_START_SPEC>`"]
+#[doc = "REGION7_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region7_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region7_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region7_addr_start`] module"]
 pub type REGION7_ADDR_START = crate::Reg<region7_addr_start::REGION7_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region7_addr_start;
-#[doc = "REGION7_ADDR_END (rw) register accessor: an alias for `Reg<REGION7_ADDR_END_SPEC>`"]
+#[doc = "REGION7_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region7_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region7_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region7_addr_end`] module"]
 pub type REGION7_ADDR_END = crate::Reg<region7_addr_end::REGION7_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region7_addr_end;
-#[doc = "REGION7_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION7_PMS_ATTR_SPEC>`"]
+#[doc = "REGION7_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region7_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region7_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region7_pms_attr`] module"]
 pub type REGION7_PMS_ATTR = crate::Reg<region7_pms_attr::REGION7_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region7_pms_attr;
-#[doc = "REGION8_ADDR_START (rw) register accessor: an alias for `Reg<REGION8_ADDR_START_SPEC>`"]
+#[doc = "REGION8_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region8_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region8_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region8_addr_start`] module"]
 pub type REGION8_ADDR_START = crate::Reg<region8_addr_start::REGION8_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region8_addr_start;
-#[doc = "REGION8_ADDR_END (rw) register accessor: an alias for `Reg<REGION8_ADDR_END_SPEC>`"]
+#[doc = "REGION8_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region8_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region8_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region8_addr_end`] module"]
 pub type REGION8_ADDR_END = crate::Reg<region8_addr_end::REGION8_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region8_addr_end;
-#[doc = "REGION8_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION8_PMS_ATTR_SPEC>`"]
+#[doc = "REGION8_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region8_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region8_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region8_pms_attr`] module"]
 pub type REGION8_PMS_ATTR = crate::Reg<region8_pms_attr::REGION8_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region8_pms_attr;
-#[doc = "REGION9_ADDR_START (rw) register accessor: an alias for `Reg<REGION9_ADDR_START_SPEC>`"]
+#[doc = "REGION9_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region9_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region9_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region9_addr_start`] module"]
 pub type REGION9_ADDR_START = crate::Reg<region9_addr_start::REGION9_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region9_addr_start;
-#[doc = "REGION9_ADDR_END (rw) register accessor: an alias for `Reg<REGION9_ADDR_END_SPEC>`"]
+#[doc = "REGION9_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region9_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region9_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region9_addr_end`] module"]
 pub type REGION9_ADDR_END = crate::Reg<region9_addr_end::REGION9_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region9_addr_end;
-#[doc = "REGION9_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION9_PMS_ATTR_SPEC>`"]
+#[doc = "REGION9_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region9_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region9_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region9_pms_attr`] module"]
 pub type REGION9_PMS_ATTR = crate::Reg<region9_pms_attr::REGION9_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region9_pms_attr;
-#[doc = "REGION10_ADDR_START (rw) register accessor: an alias for `Reg<REGION10_ADDR_START_SPEC>`"]
+#[doc = "REGION10_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region10_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region10_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region10_addr_start`] module"]
 pub type REGION10_ADDR_START = crate::Reg<region10_addr_start::REGION10_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region10_addr_start;
-#[doc = "REGION10_ADDR_END (rw) register accessor: an alias for `Reg<REGION10_ADDR_END_SPEC>`"]
+#[doc = "REGION10_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region10_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region10_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region10_addr_end`] module"]
 pub type REGION10_ADDR_END = crate::Reg<region10_addr_end::REGION10_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region10_addr_end;
-#[doc = "REGION10_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION10_PMS_ATTR_SPEC>`"]
+#[doc = "REGION10_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region10_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region10_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region10_pms_attr`] module"]
 pub type REGION10_PMS_ATTR = crate::Reg<region10_pms_attr::REGION10_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region10_pms_attr;
-#[doc = "REGION11_ADDR_START (rw) register accessor: an alias for `Reg<REGION11_ADDR_START_SPEC>`"]
+#[doc = "REGION11_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region11_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region11_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region11_addr_start`] module"]
 pub type REGION11_ADDR_START = crate::Reg<region11_addr_start::REGION11_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region11_addr_start;
-#[doc = "REGION11_ADDR_END (rw) register accessor: an alias for `Reg<REGION11_ADDR_END_SPEC>`"]
+#[doc = "REGION11_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region11_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region11_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region11_addr_end`] module"]
 pub type REGION11_ADDR_END = crate::Reg<region11_addr_end::REGION11_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region11_addr_end;
-#[doc = "REGION11_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION11_PMS_ATTR_SPEC>`"]
+#[doc = "REGION11_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region11_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region11_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region11_pms_attr`] module"]
 pub type REGION11_PMS_ATTR = crate::Reg<region11_pms_attr::REGION11_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region11_pms_attr;
-#[doc = "REGION12_ADDR_START (rw) register accessor: an alias for `Reg<REGION12_ADDR_START_SPEC>`"]
+#[doc = "REGION12_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region12_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region12_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region12_addr_start`] module"]
 pub type REGION12_ADDR_START = crate::Reg<region12_addr_start::REGION12_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region12_addr_start;
-#[doc = "REGION12_ADDR_END (rw) register accessor: an alias for `Reg<REGION12_ADDR_END_SPEC>`"]
+#[doc = "REGION12_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region12_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region12_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region12_addr_end`] module"]
 pub type REGION12_ADDR_END = crate::Reg<region12_addr_end::REGION12_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region12_addr_end;
-#[doc = "REGION12_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION12_PMS_ATTR_SPEC>`"]
+#[doc = "REGION12_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region12_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region12_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region12_pms_attr`] module"]
 pub type REGION12_PMS_ATTR = crate::Reg<region12_pms_attr::REGION12_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region12_pms_attr;
-#[doc = "REGION13_ADDR_START (rw) register accessor: an alias for `Reg<REGION13_ADDR_START_SPEC>`"]
+#[doc = "REGION13_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region13_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region13_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region13_addr_start`] module"]
 pub type REGION13_ADDR_START = crate::Reg<region13_addr_start::REGION13_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region13_addr_start;
-#[doc = "REGION13_ADDR_END (rw) register accessor: an alias for `Reg<REGION13_ADDR_END_SPEC>`"]
+#[doc = "REGION13_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region13_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region13_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region13_addr_end`] module"]
 pub type REGION13_ADDR_END = crate::Reg<region13_addr_end::REGION13_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region13_addr_end;
-#[doc = "REGION13_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION13_PMS_ATTR_SPEC>`"]
+#[doc = "REGION13_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region13_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region13_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region13_pms_attr`] module"]
 pub type REGION13_PMS_ATTR = crate::Reg<region13_pms_attr::REGION13_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region13_pms_attr;
-#[doc = "REGION14_ADDR_START (rw) register accessor: an alias for `Reg<REGION14_ADDR_START_SPEC>`"]
+#[doc = "REGION14_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region14_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region14_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region14_addr_start`] module"]
 pub type REGION14_ADDR_START = crate::Reg<region14_addr_start::REGION14_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region14_addr_start;
-#[doc = "REGION14_ADDR_END (rw) register accessor: an alias for `Reg<REGION14_ADDR_END_SPEC>`"]
+#[doc = "REGION14_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region14_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region14_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region14_addr_end`] module"]
 pub type REGION14_ADDR_END = crate::Reg<region14_addr_end::REGION14_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region14_addr_end;
-#[doc = "REGION14_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION14_PMS_ATTR_SPEC>`"]
+#[doc = "REGION14_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region14_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region14_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region14_pms_attr`] module"]
 pub type REGION14_PMS_ATTR = crate::Reg<region14_pms_attr::REGION14_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region14_pms_attr;
-#[doc = "REGION15_ADDR_START (rw) register accessor: an alias for `Reg<REGION15_ADDR_START_SPEC>`"]
+#[doc = "REGION15_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region15_addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region15_addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region15_addr_start`] module"]
 pub type REGION15_ADDR_START = crate::Reg<region15_addr_start::REGION15_ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod region15_addr_start;
-#[doc = "REGION15_ADDR_END (rw) register accessor: an alias for `Reg<REGION15_ADDR_END_SPEC>`"]
+#[doc = "REGION15_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region15_addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region15_addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region15_addr_end`] module"]
 pub type REGION15_ADDR_END = crate::Reg<region15_addr_end::REGION15_ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod region15_addr_end;
-#[doc = "REGION15_PMS_ATTR (rw) register accessor: an alias for `Reg<REGION15_PMS_ATTR_SPEC>`"]
+#[doc = "REGION15_PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`region15_pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`region15_pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`region15_pms_attr`] module"]
 pub type REGION15_PMS_ATTR = crate::Reg<region15_pms_attr::REGION15_PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod region15_pms_attr;
-#[doc = "FUNC_CTRL (rw) register accessor: an alias for `Reg<FUNC_CTRL_SPEC>`"]
+#[doc = "FUNC_CTRL (rw) register accessor: PMS function control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`func_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`func_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`func_ctrl`] module"]
 pub type FUNC_CTRL = crate::Reg<func_ctrl::FUNC_CTRL_SPEC>;
 #[doc = "PMS function control register"]
 pub mod func_ctrl;
-#[doc = "M0_STATUS (r) register accessor: an alias for `Reg<M0_STATUS_SPEC>`"]
+#[doc = "M0_STATUS (r) register accessor: M0 status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m0_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m0_status`] module"]
 pub type M0_STATUS = crate::Reg<m0_status::M0_STATUS_SPEC>;
 #[doc = "M0 status register"]
 pub mod m0_status;
-#[doc = "M0_STATUS_CLR (w) register accessor: an alias for `Reg<M0_STATUS_CLR_SPEC>`"]
+#[doc = "M0_STATUS_CLR (w) register accessor: M0 status clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m0_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m0_status_clr`] module"]
 pub type M0_STATUS_CLR = crate::Reg<m0_status_clr::M0_STATUS_CLR_SPEC>;
 #[doc = "M0 status clear register"]
 pub mod m0_status_clr;
-#[doc = "M0_EXCEPTION_INFO0 (r) register accessor: an alias for `Reg<M0_EXCEPTION_INFO0_SPEC>`"]
+#[doc = "M0_EXCEPTION_INFO0 (r) register accessor: M0 exception_info0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m0_exception_info0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m0_exception_info0`] module"]
 pub type M0_EXCEPTION_INFO0 = crate::Reg<m0_exception_info0::M0_EXCEPTION_INFO0_SPEC>;
 #[doc = "M0 exception_info0 register"]
 pub mod m0_exception_info0;
-#[doc = "M0_EXCEPTION_INFO1 (r) register accessor: an alias for `Reg<M0_EXCEPTION_INFO1_SPEC>`"]
+#[doc = "M0_EXCEPTION_INFO1 (r) register accessor: M0 exception_info1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m0_exception_info1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m0_exception_info1`] module"]
 pub type M0_EXCEPTION_INFO1 = crate::Reg<m0_exception_info1::M0_EXCEPTION_INFO1_SPEC>;
 #[doc = "M0 exception_info1 register"]
 pub mod m0_exception_info1;
-#[doc = "M1_STATUS (r) register accessor: an alias for `Reg<M1_STATUS_SPEC>`"]
+#[doc = "M1_STATUS (r) register accessor: M1 status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m1_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m1_status`] module"]
 pub type M1_STATUS = crate::Reg<m1_status::M1_STATUS_SPEC>;
 #[doc = "M1 status register"]
 pub mod m1_status;
-#[doc = "M1_STATUS_CLR (w) register accessor: an alias for `Reg<M1_STATUS_CLR_SPEC>`"]
+#[doc = "M1_STATUS_CLR (w) register accessor: M1 status clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m1_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m1_status_clr`] module"]
 pub type M1_STATUS_CLR = crate::Reg<m1_status_clr::M1_STATUS_CLR_SPEC>;
 #[doc = "M1 status clear register"]
 pub mod m1_status_clr;
-#[doc = "M1_EXCEPTION_INFO0 (r) register accessor: an alias for `Reg<M1_EXCEPTION_INFO0_SPEC>`"]
+#[doc = "M1_EXCEPTION_INFO0 (r) register accessor: M1 exception_info0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m1_exception_info0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m1_exception_info0`] module"]
 pub type M1_EXCEPTION_INFO0 = crate::Reg<m1_exception_info0::M1_EXCEPTION_INFO0_SPEC>;
 #[doc = "M1 exception_info0 register"]
 pub mod m1_exception_info0;
-#[doc = "M1_EXCEPTION_INFO1 (r) register accessor: an alias for `Reg<M1_EXCEPTION_INFO1_SPEC>`"]
+#[doc = "M1_EXCEPTION_INFO1 (r) register accessor: M1 exception_info1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m1_exception_info1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m1_exception_info1`] module"]
 pub type M1_EXCEPTION_INFO1 = crate::Reg<m1_exception_info1::M1_EXCEPTION_INFO1_SPEC>;
 #[doc = "M1 exception_info1 register"]
 pub mod m1_exception_info1;
-#[doc = "M2_STATUS (r) register accessor: an alias for `Reg<M2_STATUS_SPEC>`"]
+#[doc = "M2_STATUS (r) register accessor: M2 status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m2_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m2_status`] module"]
 pub type M2_STATUS = crate::Reg<m2_status::M2_STATUS_SPEC>;
 #[doc = "M2 status register"]
 pub mod m2_status;
-#[doc = "M2_STATUS_CLR (w) register accessor: an alias for `Reg<M2_STATUS_CLR_SPEC>`"]
+#[doc = "M2_STATUS_CLR (w) register accessor: M2 status clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m2_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m2_status_clr`] module"]
 pub type M2_STATUS_CLR = crate::Reg<m2_status_clr::M2_STATUS_CLR_SPEC>;
 #[doc = "M2 status clear register"]
 pub mod m2_status_clr;
-#[doc = "M2_EXCEPTION_INFO0 (r) register accessor: an alias for `Reg<M2_EXCEPTION_INFO0_SPEC>`"]
+#[doc = "M2_EXCEPTION_INFO0 (r) register accessor: M2 exception_info0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m2_exception_info0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m2_exception_info0`] module"]
 pub type M2_EXCEPTION_INFO0 = crate::Reg<m2_exception_info0::M2_EXCEPTION_INFO0_SPEC>;
 #[doc = "M2 exception_info0 register"]
 pub mod m2_exception_info0;
-#[doc = "M2_EXCEPTION_INFO1 (r) register accessor: an alias for `Reg<M2_EXCEPTION_INFO1_SPEC>`"]
+#[doc = "M2_EXCEPTION_INFO1 (r) register accessor: M2 exception_info1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m2_exception_info1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m2_exception_info1`] module"]
 pub type M2_EXCEPTION_INFO1 = crate::Reg<m2_exception_info1::M2_EXCEPTION_INFO1_SPEC>;
 #[doc = "M2 exception_info1 register"]
 pub mod m2_exception_info1;
-#[doc = "M3_STATUS (r) register accessor: an alias for `Reg<M3_STATUS_SPEC>`"]
+#[doc = "M3_STATUS (r) register accessor: M3 status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m3_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m3_status`] module"]
 pub type M3_STATUS = crate::Reg<m3_status::M3_STATUS_SPEC>;
 #[doc = "M3 status register"]
 pub mod m3_status;
-#[doc = "M3_STATUS_CLR (w) register accessor: an alias for `Reg<M3_STATUS_CLR_SPEC>`"]
+#[doc = "M3_STATUS_CLR (w) register accessor: M3 status clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m3_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m3_status_clr`] module"]
 pub type M3_STATUS_CLR = crate::Reg<m3_status_clr::M3_STATUS_CLR_SPEC>;
 #[doc = "M3 status clear register"]
 pub mod m3_status_clr;
-#[doc = "M3_EXCEPTION_INFO0 (r) register accessor: an alias for `Reg<M3_EXCEPTION_INFO0_SPEC>`"]
+#[doc = "M3_EXCEPTION_INFO0 (r) register accessor: M3 exception_info0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m3_exception_info0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m3_exception_info0`] module"]
 pub type M3_EXCEPTION_INFO0 = crate::Reg<m3_exception_info0::M3_EXCEPTION_INFO0_SPEC>;
 #[doc = "M3 exception_info0 register"]
 pub mod m3_exception_info0;
-#[doc = "M3_EXCEPTION_INFO1 (r) register accessor: an alias for `Reg<M3_EXCEPTION_INFO1_SPEC>`"]
+#[doc = "M3_EXCEPTION_INFO1 (r) register accessor: M3 exception_info1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m3_exception_info1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`m3_exception_info1`] module"]
 pub type M3_EXCEPTION_INFO1 = crate::Reg<m3_exception_info1::M3_EXCEPTION_INFO1_SPEC>;
 #[doc = "M3 exception_info1 register"]
 pub mod m3_exception_info1;
-#[doc = "INT_EN (rw) register accessor: an alias for `Reg<INT_EN_SPEC>`"]
+#[doc = "INT_EN (rw) register accessor: APM interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_en::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_en::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_en`] module"]
 pub type INT_EN = crate::Reg<int_en::INT_EN_SPEC>;
 #[doc = "APM interrupt enable register"]
 pub mod int_en;
-#[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
+#[doc = "CLOCK_GATE (rw) register accessor: clock gating register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_gate::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "clock gating register"]
 pub mod clock_gate;
-#[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
+#[doc = "DATE (rw) register accessor: Version register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version register"]
 pub mod date;

@@ -1,64 +1,31 @@
 #[doc = "Register `SAR_TOUCH_CTRL1` reader"]
-pub struct R(crate::R<SAR_TOUCH_CTRL1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SAR_TOUCH_CTRL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SAR_TOUCH_CTRL1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SAR_TOUCH_CTRL1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SAR_TOUCH_CTRL1_SPEC>;
 #[doc = "Register `SAR_TOUCH_CTRL1` writer"]
-pub struct W(crate::W<SAR_TOUCH_CTRL1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SAR_TOUCH_CTRL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SAR_TOUCH_CTRL1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SAR_TOUCH_CTRL1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SAR_TOUCH_CTRL1_SPEC>;
 #[doc = "Field `TOUCH_MEAS_DELAY` reader - the meas length (in 8MHz)"]
 pub type TOUCH_MEAS_DELAY_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_DELAY` writer - the meas length (in 8MHz)"]
-pub type TOUCH_MEAS_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_CTRL1_SPEC, 16, O, u16>;
+pub type TOUCH_MEAS_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `TOUCH_XPD_WAIT` reader - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
 pub type TOUCH_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_XPD_WAIT` writer - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
-pub type TOUCH_XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_TOUCH_CTRL1_SPEC, 8, O>;
+pub type TOUCH_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `TOUCH_OUT_SEL` reader - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
 pub type TOUCH_OUT_SEL_R = crate::BitReader;
 #[doc = "Field `TOUCH_OUT_SEL` writer - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
-pub type TOUCH_OUT_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
+pub type TOUCH_OUT_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_OUT_1EN` reader - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
 pub type TOUCH_OUT_1EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_OUT_1EN` writer - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
-pub type TOUCH_OUT_1EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
+pub type TOUCH_OUT_1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
 pub type XPD_HALL_FORCE_R = crate::BitReader;
 #[doc = "Field `XPD_HALL_FORCE` writer - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub type XPD_HALL_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
+pub type XPD_HALL_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HALL_PHASE_FORCE` reader - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
 pub type HALL_PHASE_FORCE_R = crate::BitReader;
 #[doc = "Field `HALL_PHASE_FORCE` writer - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub type HALL_PHASE_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
+pub type HALL_PHASE_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
@@ -132,58 +99,55 @@ impl W {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W<0> {
+    pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W<SAR_TOUCH_CTRL1_SPEC, 0> {
         TOUCH_MEAS_DELAY_W::new(self)
     }
     #[doc = "Bits 16:23 - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<16> {
+    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<SAR_TOUCH_CTRL1_SPEC, 16> {
         TOUCH_XPD_WAIT_W::new(self)
     }
     #[doc = "Bit 24 - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
     #[inline(always)]
     #[must_use]
-    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<24> {
+    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<SAR_TOUCH_CTRL1_SPEC, 24> {
         TOUCH_OUT_SEL_W::new(self)
     }
     #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
     #[inline(always)]
     #[must_use]
-    pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<25> {
+    pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<SAR_TOUCH_CTRL1_SPEC, 25> {
         TOUCH_OUT_1EN_W::new(self)
     }
     #[doc = "Bit 26 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<26> {
+    pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<SAR_TOUCH_CTRL1_SPEC, 26> {
         XPD_HALL_FORCE_W::new(self)
     }
     #[doc = "Bit 27 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     #[must_use]
-    pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<27> {
+    pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<SAR_TOUCH_CTRL1_SPEC, 27> {
         HALL_PHASE_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_ctrl1](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_touch_ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_TOUCH_CTRL1_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_touch_ctrl1::R](R) reader structure"]
-impl crate::Readable for SAR_TOUCH_CTRL1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sar_touch_ctrl1::W](W) writer structure"]
+#[doc = "`read()` method returns [`sar_touch_ctrl1::R`](R) reader structure"]
+impl crate::Readable for SAR_TOUCH_CTRL1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sar_touch_ctrl1::W`](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_CTRL1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `STATUS` reader"]
-pub struct R(crate::R<STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STATUS_SPEC>;
 #[doc = "Field `FIFO_RX_WATERMARK` reader - FIFO reached Receive watermark level, not qualified with data transfer."]
 pub type FIFO_RX_WATERMARK_R = crate::BitReader;
 #[doc = "Field `FIFO_TX_WATERMARK` reader - FIFO reached Transmit watermark level, not qualified with data transfer."]
@@ -126,15 +113,13 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "SD/MMC status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]
+#[doc = "SD/MMC status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status::R](R) reader structure"]
-impl crate::Readable for STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`status::R`](R) reader structure"]
+impl crate::Readable for STATUS_SPEC {}
 #[doc = "`reset()` method sets STATUS to value 0x0716"]
 impl crate::Resettable for STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0x0716;

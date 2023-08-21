@@ -1,67 +1,35 @@
 #[doc = "Register `SPI_CACHE` reader"]
-pub struct R(crate::R<SPI_CACHE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_CACHE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_CACHE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_CACHE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_CACHE_SPEC>;
 #[doc = "Register `SPI_CACHE` writer"]
-pub struct W(crate::W<SPI_CACHE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_CACHE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_CACHE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_CACHE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SPI_CACHE_SPEC>;
 #[doc = "Field `cache_flush_start` reader - Flush cache"]
 pub type CACHE_FLUSH_START_R = crate::BitReader;
 #[doc = "Field `cache_flush_start` writer - Flush cache"]
-pub type CACHE_FLUSH_START_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
+pub type CACHE_FLUSH_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `cache_empty` reader - Cache is empty"]
 pub type CACHE_EMPTY_R = crate::BitReader;
 #[doc = "Field `cache_empty` writer - Cache is empty"]
-pub type CACHE_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
+pub type CACHE_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `cache_enable` reader - Cache enable"]
 pub type CACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `cache_enable` writer - Cache enable"]
-pub type CACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
+pub type CACHE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `busy` reader - SPI busy"]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `busy` writer - SPI busy"]
-pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
+pub type BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `block` reader - Flash memory block to map, in 2mb blocks"]
 pub type BLOCK_R = crate::FieldReader;
 #[doc = "Field `block` writer - Flash memory block to map, in 2mb blocks"]
-pub type BLOCK_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CACHE_SPEC, 3, O>;
+pub type BLOCK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `offset` reader - Offset within block to map, in megabytes"]
 pub type OFFSET_R = crate::FieldReader;
 #[doc = "Field `offset` writer - Offset within block to map, in megabytes"]
-pub type OFFSET_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CACHE_SPEC, 2, O>;
+pub type OFFSET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `target` reader - Controls where the spi flash is mapped (unconfirmed)"]
 pub type TARGET_R = crate::BitReader;
 #[doc = "Field `target` writer - Controls where the spi flash is mapped (unconfirmed)"]
-pub type TARGET_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
+pub type TARGET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Flush cache"]
     #[inline(always)]
@@ -129,64 +97,61 @@ impl W {
     #[doc = "Bit 0 - Flush cache"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_flush_start(&mut self) -> CACHE_FLUSH_START_W<0> {
+    pub fn cache_flush_start(&mut self) -> CACHE_FLUSH_START_W<SPI_CACHE_SPEC, 0> {
         CACHE_FLUSH_START_W::new(self)
     }
     #[doc = "Bit 1 - Cache is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_empty(&mut self) -> CACHE_EMPTY_W<1> {
+    pub fn cache_empty(&mut self) -> CACHE_EMPTY_W<SPI_CACHE_SPEC, 1> {
         CACHE_EMPTY_W::new(self)
     }
     #[doc = "Bit 8 - Cache enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_enable(&mut self) -> CACHE_ENABLE_W<8> {
+    pub fn cache_enable(&mut self) -> CACHE_ENABLE_W<SPI_CACHE_SPEC, 8> {
         CACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 9 - SPI busy"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<9> {
+    pub fn busy(&mut self) -> BUSY_W<SPI_CACHE_SPEC, 9> {
         BUSY_W::new(self)
     }
     #[doc = "Bits 16:18 - Flash memory block to map, in 2mb blocks"]
     #[inline(always)]
     #[must_use]
-    pub fn block(&mut self) -> BLOCK_W<16> {
+    pub fn block(&mut self) -> BLOCK_W<SPI_CACHE_SPEC, 16> {
         BLOCK_W::new(self)
     }
     #[doc = "Bits 24:25 - Offset within block to map, in megabytes"]
     #[inline(always)]
     #[must_use]
-    pub fn offset(&mut self) -> OFFSET_W<24> {
+    pub fn offset(&mut self) -> OFFSET_W<SPI_CACHE_SPEC, 24> {
         OFFSET_W::new(self)
     }
     #[doc = "Bit 26 - Controls where the spi flash is mapped (unconfirmed)"]
     #[inline(always)]
     #[must_use]
-    pub fn target(&mut self) -> TARGET_W<26> {
+    pub fn target(&mut self) -> TARGET_W<SPI_CACHE_SPEC, 26> {
         TARGET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Controls SPI memory-mapped caching\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_cache](index.html) module"]
+#[doc = "Controls SPI memory-mapped caching\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_cache::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi_cache::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_CACHE_SPEC;
 impl crate::RegisterSpec for SPI_CACHE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_cache::R](R) reader structure"]
-impl crate::Readable for SPI_CACHE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi_cache::W](W) writer structure"]
+#[doc = "`read()` method returns [`spi_cache::R`](R) reader structure"]
+impl crate::Readable for SPI_CACHE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`spi_cache::W`](W) writer structure"]
 impl crate::Writable for SPI_CACHE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

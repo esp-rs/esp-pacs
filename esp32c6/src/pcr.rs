@@ -170,340 +170,340 @@ pub struct RegisterBlock {
     #[doc = "0xffc - Date register."]
     pub date: DATE,
 }
-#[doc = "UART0_CONF (rw) register accessor: an alias for `Reg<UART0_CONF_SPEC>`"]
+#[doc = "UART0_CONF (rw) register accessor: UART0 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart0_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart0_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`uart0_conf`] module"]
 pub type UART0_CONF = crate::Reg<uart0_conf::UART0_CONF_SPEC>;
 #[doc = "UART0 configuration register"]
 pub mod uart0_conf;
-#[doc = "UART0_SCLK_CONF (rw) register accessor: an alias for `Reg<UART0_SCLK_CONF_SPEC>`"]
+#[doc = "UART0_SCLK_CONF (rw) register accessor: UART0_SCLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart0_sclk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart0_sclk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`uart0_sclk_conf`] module"]
 pub type UART0_SCLK_CONF = crate::Reg<uart0_sclk_conf::UART0_SCLK_CONF_SPEC>;
 #[doc = "UART0_SCLK configuration register"]
 pub mod uart0_sclk_conf;
-#[doc = "UART0_PD_CTRL (rw) register accessor: an alias for `Reg<UART0_PD_CTRL_SPEC>`"]
+#[doc = "UART0_PD_CTRL (rw) register accessor: UART0 power control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart0_pd_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart0_pd_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`uart0_pd_ctrl`] module"]
 pub type UART0_PD_CTRL = crate::Reg<uart0_pd_ctrl::UART0_PD_CTRL_SPEC>;
 #[doc = "UART0 power control register"]
 pub mod uart0_pd_ctrl;
-#[doc = "UART1_CONF (rw) register accessor: an alias for `Reg<UART1_CONF_SPEC>`"]
+#[doc = "UART1_CONF (rw) register accessor: UART1 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart1_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart1_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`uart1_conf`] module"]
 pub type UART1_CONF = crate::Reg<uart1_conf::UART1_CONF_SPEC>;
 #[doc = "UART1 configuration register"]
 pub mod uart1_conf;
-#[doc = "UART1_SCLK_CONF (rw) register accessor: an alias for `Reg<UART1_SCLK_CONF_SPEC>`"]
+#[doc = "UART1_SCLK_CONF (rw) register accessor: UART1_SCLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart1_sclk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart1_sclk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`uart1_sclk_conf`] module"]
 pub type UART1_SCLK_CONF = crate::Reg<uart1_sclk_conf::UART1_SCLK_CONF_SPEC>;
 #[doc = "UART1_SCLK configuration register"]
 pub mod uart1_sclk_conf;
-#[doc = "UART1_PD_CTRL (rw) register accessor: an alias for `Reg<UART1_PD_CTRL_SPEC>`"]
+#[doc = "UART1_PD_CTRL (rw) register accessor: UART1 power control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart1_pd_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart1_pd_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`uart1_pd_ctrl`] module"]
 pub type UART1_PD_CTRL = crate::Reg<uart1_pd_ctrl::UART1_PD_CTRL_SPEC>;
 #[doc = "UART1 power control register"]
 pub mod uart1_pd_ctrl;
-#[doc = "MSPI_CONF (rw) register accessor: an alias for `Reg<MSPI_CONF_SPEC>`"]
+#[doc = "MSPI_CONF (rw) register accessor: MSPI configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mspi_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mspi_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mspi_conf`] module"]
 pub type MSPI_CONF = crate::Reg<mspi_conf::MSPI_CONF_SPEC>;
 #[doc = "MSPI configuration register"]
 pub mod mspi_conf;
-#[doc = "MSPI_CLK_CONF (rw) register accessor: an alias for `Reg<MSPI_CLK_CONF_SPEC>`"]
+#[doc = "MSPI_CLK_CONF (rw) register accessor: MSPI_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mspi_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mspi_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mspi_clk_conf`] module"]
 pub type MSPI_CLK_CONF = crate::Reg<mspi_clk_conf::MSPI_CLK_CONF_SPEC>;
 #[doc = "MSPI_CLK configuration register"]
 pub mod mspi_clk_conf;
-#[doc = "I2C0_CONF (rw) register accessor: an alias for `Reg<I2C0_CONF_SPEC>`"]
+#[doc = "I2C0_CONF (rw) register accessor: I2C configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2c0_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2c0_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2c0_conf`] module"]
 pub type I2C0_CONF = crate::Reg<i2c0_conf::I2C0_CONF_SPEC>;
 #[doc = "I2C configuration register"]
 pub mod i2c0_conf;
-#[doc = "I2C_SCLK_CONF (rw) register accessor: an alias for `Reg<I2C_SCLK_CONF_SPEC>`"]
+#[doc = "I2C_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2c_sclk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2c_sclk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2c_sclk_conf`] module"]
 pub type I2C_SCLK_CONF = crate::Reg<i2c_sclk_conf::I2C_SCLK_CONF_SPEC>;
 #[doc = "I2C_SCLK configuration register"]
 pub mod i2c_sclk_conf;
-#[doc = "UHCI_CONF (rw) register accessor: an alias for `Reg<UHCI_CONF_SPEC>`"]
+#[doc = "UHCI_CONF (rw) register accessor: UHCI configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uhci_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uhci_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`uhci_conf`] module"]
 pub type UHCI_CONF = crate::Reg<uhci_conf::UHCI_CONF_SPEC>;
 #[doc = "UHCI configuration register"]
 pub mod uhci_conf;
-#[doc = "RMT_CONF (rw) register accessor: an alias for `Reg<RMT_CONF_SPEC>`"]
+#[doc = "RMT_CONF (rw) register accessor: RMT configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rmt_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rmt_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rmt_conf`] module"]
 pub type RMT_CONF = crate::Reg<rmt_conf::RMT_CONF_SPEC>;
 #[doc = "RMT configuration register"]
 pub mod rmt_conf;
-#[doc = "RMT_SCLK_CONF (rw) register accessor: an alias for `Reg<RMT_SCLK_CONF_SPEC>`"]
+#[doc = "RMT_SCLK_CONF (rw) register accessor: RMT_SCLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rmt_sclk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rmt_sclk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rmt_sclk_conf`] module"]
 pub type RMT_SCLK_CONF = crate::Reg<rmt_sclk_conf::RMT_SCLK_CONF_SPEC>;
 #[doc = "RMT_SCLK configuration register"]
 pub mod rmt_sclk_conf;
-#[doc = "LEDC_CONF (rw) register accessor: an alias for `Reg<LEDC_CONF_SPEC>`"]
+#[doc = "LEDC_CONF (rw) register accessor: LEDC configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ledc_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ledc_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ledc_conf`] module"]
 pub type LEDC_CONF = crate::Reg<ledc_conf::LEDC_CONF_SPEC>;
 #[doc = "LEDC configuration register"]
 pub mod ledc_conf;
-#[doc = "LEDC_SCLK_CONF (rw) register accessor: an alias for `Reg<LEDC_SCLK_CONF_SPEC>`"]
+#[doc = "LEDC_SCLK_CONF (rw) register accessor: LEDC_SCLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ledc_sclk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ledc_sclk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ledc_sclk_conf`] module"]
 pub type LEDC_SCLK_CONF = crate::Reg<ledc_sclk_conf::LEDC_SCLK_CONF_SPEC>;
 #[doc = "LEDC_SCLK configuration register"]
 pub mod ledc_sclk_conf;
-#[doc = "TIMERGROUP0_CONF (rw) register accessor: an alias for `Reg<TIMERGROUP0_CONF_SPEC>`"]
+#[doc = "TIMERGROUP0_CONF (rw) register accessor: TIMERGROUP0 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timergroup0_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timergroup0_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timergroup0_conf`] module"]
 pub type TIMERGROUP0_CONF = crate::Reg<timergroup0_conf::TIMERGROUP0_CONF_SPEC>;
 #[doc = "TIMERGROUP0 configuration register"]
 pub mod timergroup0_conf;
-#[doc = "TIMERGROUP0_TIMER_CLK_CONF (rw) register accessor: an alias for `Reg<TIMERGROUP0_TIMER_CLK_CONF_SPEC>`"]
+#[doc = "TIMERGROUP0_TIMER_CLK_CONF (rw) register accessor: TIMERGROUP0_TIMER_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timergroup0_timer_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timergroup0_timer_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timergroup0_timer_clk_conf`] module"]
 pub type TIMERGROUP0_TIMER_CLK_CONF =
     crate::Reg<timergroup0_timer_clk_conf::TIMERGROUP0_TIMER_CLK_CONF_SPEC>;
 #[doc = "TIMERGROUP0_TIMER_CLK configuration register"]
 pub mod timergroup0_timer_clk_conf;
-#[doc = "TIMERGROUP0_WDT_CLK_CONF (rw) register accessor: an alias for `Reg<TIMERGROUP0_WDT_CLK_CONF_SPEC>`"]
+#[doc = "TIMERGROUP0_WDT_CLK_CONF (rw) register accessor: TIMERGROUP0_WDT_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timergroup0_wdt_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timergroup0_wdt_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timergroup0_wdt_clk_conf`] module"]
 pub type TIMERGROUP0_WDT_CLK_CONF =
     crate::Reg<timergroup0_wdt_clk_conf::TIMERGROUP0_WDT_CLK_CONF_SPEC>;
 #[doc = "TIMERGROUP0_WDT_CLK configuration register"]
 pub mod timergroup0_wdt_clk_conf;
-#[doc = "TIMERGROUP1_CONF (rw) register accessor: an alias for `Reg<TIMERGROUP1_CONF_SPEC>`"]
+#[doc = "TIMERGROUP1_CONF (rw) register accessor: TIMERGROUP1 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timergroup1_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timergroup1_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timergroup1_conf`] module"]
 pub type TIMERGROUP1_CONF = crate::Reg<timergroup1_conf::TIMERGROUP1_CONF_SPEC>;
 #[doc = "TIMERGROUP1 configuration register"]
 pub mod timergroup1_conf;
-#[doc = "TIMERGROUP1_TIMER_CLK_CONF (rw) register accessor: an alias for `Reg<TIMERGROUP1_TIMER_CLK_CONF_SPEC>`"]
+#[doc = "TIMERGROUP1_TIMER_CLK_CONF (rw) register accessor: TIMERGROUP1_TIMER_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timergroup1_timer_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timergroup1_timer_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timergroup1_timer_clk_conf`] module"]
 pub type TIMERGROUP1_TIMER_CLK_CONF =
     crate::Reg<timergroup1_timer_clk_conf::TIMERGROUP1_TIMER_CLK_CONF_SPEC>;
 #[doc = "TIMERGROUP1_TIMER_CLK configuration register"]
 pub mod timergroup1_timer_clk_conf;
-#[doc = "TIMERGROUP1_WDT_CLK_CONF (rw) register accessor: an alias for `Reg<TIMERGROUP1_WDT_CLK_CONF_SPEC>`"]
+#[doc = "TIMERGROUP1_WDT_CLK_CONF (rw) register accessor: TIMERGROUP1_WDT_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timergroup1_wdt_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timergroup1_wdt_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timergroup1_wdt_clk_conf`] module"]
 pub type TIMERGROUP1_WDT_CLK_CONF =
     crate::Reg<timergroup1_wdt_clk_conf::TIMERGROUP1_WDT_CLK_CONF_SPEC>;
 #[doc = "TIMERGROUP1_WDT_CLK configuration register"]
 pub mod timergroup1_wdt_clk_conf;
-#[doc = "SYSTIMER_CONF (rw) register accessor: an alias for `Reg<SYSTIMER_CONF_SPEC>`"]
+#[doc = "SYSTIMER_CONF (rw) register accessor: SYSTIMER configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`systimer_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`systimer_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`systimer_conf`] module"]
 pub type SYSTIMER_CONF = crate::Reg<systimer_conf::SYSTIMER_CONF_SPEC>;
 #[doc = "SYSTIMER configuration register"]
 pub mod systimer_conf;
-#[doc = "SYSTIMER_FUNC_CLK_CONF (rw) register accessor: an alias for `Reg<SYSTIMER_FUNC_CLK_CONF_SPEC>`"]
+#[doc = "SYSTIMER_FUNC_CLK_CONF (rw) register accessor: SYSTIMER_FUNC_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`systimer_func_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`systimer_func_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`systimer_func_clk_conf`] module"]
 pub type SYSTIMER_FUNC_CLK_CONF = crate::Reg<systimer_func_clk_conf::SYSTIMER_FUNC_CLK_CONF_SPEC>;
 #[doc = "SYSTIMER_FUNC_CLK configuration register"]
 pub mod systimer_func_clk_conf;
-#[doc = "TWAI0_CONF (rw) register accessor: an alias for `Reg<TWAI0_CONF_SPEC>`"]
+#[doc = "TWAI0_CONF (rw) register accessor: TWAI0 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`twai0_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`twai0_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`twai0_conf`] module"]
 pub type TWAI0_CONF = crate::Reg<twai0_conf::TWAI0_CONF_SPEC>;
 #[doc = "TWAI0 configuration register"]
 pub mod twai0_conf;
-#[doc = "TWAI0_FUNC_CLK_CONF (rw) register accessor: an alias for `Reg<TWAI0_FUNC_CLK_CONF_SPEC>`"]
+#[doc = "TWAI0_FUNC_CLK_CONF (rw) register accessor: TWAI0_FUNC_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`twai0_func_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`twai0_func_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`twai0_func_clk_conf`] module"]
 pub type TWAI0_FUNC_CLK_CONF = crate::Reg<twai0_func_clk_conf::TWAI0_FUNC_CLK_CONF_SPEC>;
 #[doc = "TWAI0_FUNC_CLK configuration register"]
 pub mod twai0_func_clk_conf;
-#[doc = "TWAI1_CONF (rw) register accessor: an alias for `Reg<TWAI1_CONF_SPEC>`"]
+#[doc = "TWAI1_CONF (rw) register accessor: TWAI1 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`twai1_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`twai1_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`twai1_conf`] module"]
 pub type TWAI1_CONF = crate::Reg<twai1_conf::TWAI1_CONF_SPEC>;
 #[doc = "TWAI1 configuration register"]
 pub mod twai1_conf;
-#[doc = "TWAI1_FUNC_CLK_CONF (rw) register accessor: an alias for `Reg<TWAI1_FUNC_CLK_CONF_SPEC>`"]
+#[doc = "TWAI1_FUNC_CLK_CONF (rw) register accessor: TWAI1_FUNC_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`twai1_func_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`twai1_func_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`twai1_func_clk_conf`] module"]
 pub type TWAI1_FUNC_CLK_CONF = crate::Reg<twai1_func_clk_conf::TWAI1_FUNC_CLK_CONF_SPEC>;
 #[doc = "TWAI1_FUNC_CLK configuration register"]
 pub mod twai1_func_clk_conf;
-#[doc = "I2S_CONF (rw) register accessor: an alias for `Reg<I2S_CONF_SPEC>`"]
+#[doc = "I2S_CONF (rw) register accessor: I2S configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2s_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2s_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2s_conf`] module"]
 pub type I2S_CONF = crate::Reg<i2s_conf::I2S_CONF_SPEC>;
 #[doc = "I2S configuration register"]
 pub mod i2s_conf;
-#[doc = "I2S_TX_CLKM_CONF (rw) register accessor: an alias for `Reg<I2S_TX_CLKM_CONF_SPEC>`"]
+#[doc = "I2S_TX_CLKM_CONF (rw) register accessor: I2S_TX_CLKM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2s_tx_clkm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2s_tx_clkm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2s_tx_clkm_conf`] module"]
 pub type I2S_TX_CLKM_CONF = crate::Reg<i2s_tx_clkm_conf::I2S_TX_CLKM_CONF_SPEC>;
 #[doc = "I2S_TX_CLKM configuration register"]
 pub mod i2s_tx_clkm_conf;
-#[doc = "I2S_TX_CLKM_DIV_CONF (rw) register accessor: an alias for `Reg<I2S_TX_CLKM_DIV_CONF_SPEC>`"]
+#[doc = "I2S_TX_CLKM_DIV_CONF (rw) register accessor: I2S_TX_CLKM_DIV configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2s_tx_clkm_div_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2s_tx_clkm_div_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2s_tx_clkm_div_conf`] module"]
 pub type I2S_TX_CLKM_DIV_CONF = crate::Reg<i2s_tx_clkm_div_conf::I2S_TX_CLKM_DIV_CONF_SPEC>;
 #[doc = "I2S_TX_CLKM_DIV configuration register"]
 pub mod i2s_tx_clkm_div_conf;
-#[doc = "I2S_RX_CLKM_CONF (rw) register accessor: an alias for `Reg<I2S_RX_CLKM_CONF_SPEC>`"]
+#[doc = "I2S_RX_CLKM_CONF (rw) register accessor: I2S_RX_CLKM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2s_rx_clkm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2s_rx_clkm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2s_rx_clkm_conf`] module"]
 pub type I2S_RX_CLKM_CONF = crate::Reg<i2s_rx_clkm_conf::I2S_RX_CLKM_CONF_SPEC>;
 #[doc = "I2S_RX_CLKM configuration register"]
 pub mod i2s_rx_clkm_conf;
-#[doc = "I2S_RX_CLKM_DIV_CONF (rw) register accessor: an alias for `Reg<I2S_RX_CLKM_DIV_CONF_SPEC>`"]
+#[doc = "I2S_RX_CLKM_DIV_CONF (rw) register accessor: I2S_RX_CLKM_DIV configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2s_rx_clkm_div_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2s_rx_clkm_div_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2s_rx_clkm_div_conf`] module"]
 pub type I2S_RX_CLKM_DIV_CONF = crate::Reg<i2s_rx_clkm_div_conf::I2S_RX_CLKM_DIV_CONF_SPEC>;
 #[doc = "I2S_RX_CLKM_DIV configuration register"]
 pub mod i2s_rx_clkm_div_conf;
-#[doc = "SARADC_CONF (rw) register accessor: an alias for `Reg<SARADC_CONF_SPEC>`"]
+#[doc = "SARADC_CONF (rw) register accessor: SARADC configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`saradc_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`saradc_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`saradc_conf`] module"]
 pub type SARADC_CONF = crate::Reg<saradc_conf::SARADC_CONF_SPEC>;
 #[doc = "SARADC configuration register"]
 pub mod saradc_conf;
-#[doc = "SARADC_CLKM_CONF (rw) register accessor: an alias for `Reg<SARADC_CLKM_CONF_SPEC>`"]
+#[doc = "SARADC_CLKM_CONF (rw) register accessor: SARADC_CLKM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`saradc_clkm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`saradc_clkm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`saradc_clkm_conf`] module"]
 pub type SARADC_CLKM_CONF = crate::Reg<saradc_clkm_conf::SARADC_CLKM_CONF_SPEC>;
 #[doc = "SARADC_CLKM configuration register"]
 pub mod saradc_clkm_conf;
-#[doc = "TSENS_CLK_CONF (rw) register accessor: an alias for `Reg<TSENS_CLK_CONF_SPEC>`"]
+#[doc = "TSENS_CLK_CONF (rw) register accessor: TSENS_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsens_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsens_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`tsens_clk_conf`] module"]
 pub type TSENS_CLK_CONF = crate::Reg<tsens_clk_conf::TSENS_CLK_CONF_SPEC>;
 #[doc = "TSENS_CLK configuration register"]
 pub mod tsens_clk_conf;
-#[doc = "USB_DEVICE_CONF (rw) register accessor: an alias for `Reg<USB_DEVICE_CONF_SPEC>`"]
+#[doc = "USB_DEVICE_CONF (rw) register accessor: USB_DEVICE configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usb_device_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usb_device_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`usb_device_conf`] module"]
 pub type USB_DEVICE_CONF = crate::Reg<usb_device_conf::USB_DEVICE_CONF_SPEC>;
 #[doc = "USB_DEVICE configuration register"]
 pub mod usb_device_conf;
-#[doc = "INTMTX_CONF (rw) register accessor: an alias for `Reg<INTMTX_CONF_SPEC>`"]
+#[doc = "INTMTX_CONF (rw) register accessor: INTMTX configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intmtx_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intmtx_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`intmtx_conf`] module"]
 pub type INTMTX_CONF = crate::Reg<intmtx_conf::INTMTX_CONF_SPEC>;
 #[doc = "INTMTX configuration register"]
 pub mod intmtx_conf;
-#[doc = "PCNT_CONF (rw) register accessor: an alias for `Reg<PCNT_CONF_SPEC>`"]
+#[doc = "PCNT_CONF (rw) register accessor: PCNT configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcnt_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcnt_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pcnt_conf`] module"]
 pub type PCNT_CONF = crate::Reg<pcnt_conf::PCNT_CONF_SPEC>;
 #[doc = "PCNT configuration register"]
 pub mod pcnt_conf;
-#[doc = "ETM_CONF (rw) register accessor: an alias for `Reg<ETM_CONF_SPEC>`"]
+#[doc = "ETM_CONF (rw) register accessor: ETM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`etm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`etm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`etm_conf`] module"]
 pub type ETM_CONF = crate::Reg<etm_conf::ETM_CONF_SPEC>;
 #[doc = "ETM configuration register"]
 pub mod etm_conf;
-#[doc = "PWM_CONF (rw) register accessor: an alias for `Reg<PWM_CONF_SPEC>`"]
+#[doc = "PWM_CONF (rw) register accessor: PWM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pwm_conf`] module"]
 pub type PWM_CONF = crate::Reg<pwm_conf::PWM_CONF_SPEC>;
 #[doc = "PWM configuration register"]
 pub mod pwm_conf;
-#[doc = "PWM_CLK_CONF (rw) register accessor: an alias for `Reg<PWM_CLK_CONF_SPEC>`"]
+#[doc = "PWM_CLK_CONF (rw) register accessor: PWM_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwm_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwm_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pwm_clk_conf`] module"]
 pub type PWM_CLK_CONF = crate::Reg<pwm_clk_conf::PWM_CLK_CONF_SPEC>;
 #[doc = "PWM_CLK configuration register"]
 pub mod pwm_clk_conf;
-#[doc = "PARL_IO_CONF (rw) register accessor: an alias for `Reg<PARL_IO_CONF_SPEC>`"]
+#[doc = "PARL_IO_CONF (rw) register accessor: PARL_IO configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`parl_io_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`parl_io_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`parl_io_conf`] module"]
 pub type PARL_IO_CONF = crate::Reg<parl_io_conf::PARL_IO_CONF_SPEC>;
 #[doc = "PARL_IO configuration register"]
 pub mod parl_io_conf;
-#[doc = "PARL_CLK_RX_CONF (rw) register accessor: an alias for `Reg<PARL_CLK_RX_CONF_SPEC>`"]
+#[doc = "PARL_CLK_RX_CONF (rw) register accessor: PARL_CLK_RX configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`parl_clk_rx_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`parl_clk_rx_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`parl_clk_rx_conf`] module"]
 pub type PARL_CLK_RX_CONF = crate::Reg<parl_clk_rx_conf::PARL_CLK_RX_CONF_SPEC>;
 #[doc = "PARL_CLK_RX configuration register"]
 pub mod parl_clk_rx_conf;
-#[doc = "PARL_CLK_TX_CONF (rw) register accessor: an alias for `Reg<PARL_CLK_TX_CONF_SPEC>`"]
+#[doc = "PARL_CLK_TX_CONF (rw) register accessor: PARL_CLK_TX configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`parl_clk_tx_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`parl_clk_tx_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`parl_clk_tx_conf`] module"]
 pub type PARL_CLK_TX_CONF = crate::Reg<parl_clk_tx_conf::PARL_CLK_TX_CONF_SPEC>;
 #[doc = "PARL_CLK_TX configuration register"]
 pub mod parl_clk_tx_conf;
-#[doc = "SDIO_SLAVE_CONF (rw) register accessor: an alias for `Reg<SDIO_SLAVE_CONF_SPEC>`"]
+#[doc = "SDIO_SLAVE_CONF (rw) register accessor: SDIO_SLAVE configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sdio_slave_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sdio_slave_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sdio_slave_conf`] module"]
 pub type SDIO_SLAVE_CONF = crate::Reg<sdio_slave_conf::SDIO_SLAVE_CONF_SPEC>;
 #[doc = "SDIO_SLAVE configuration register"]
 pub mod sdio_slave_conf;
-#[doc = "PVT_MONITOR_CONF (rw) register accessor: an alias for `Reg<PVT_MONITOR_CONF_SPEC>`"]
+#[doc = "PVT_MONITOR_CONF (rw) register accessor: PVT_MONITOR configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pvt_monitor_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pvt_monitor_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pvt_monitor_conf`] module"]
 pub type PVT_MONITOR_CONF = crate::Reg<pvt_monitor_conf::PVT_MONITOR_CONF_SPEC>;
 #[doc = "PVT_MONITOR configuration register"]
 pub mod pvt_monitor_conf;
-#[doc = "PVT_MONITOR_FUNC_CLK_CONF (rw) register accessor: an alias for `Reg<PVT_MONITOR_FUNC_CLK_CONF_SPEC>`"]
+#[doc = "PVT_MONITOR_FUNC_CLK_CONF (rw) register accessor: PVT_MONITOR function clock configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pvt_monitor_func_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pvt_monitor_func_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pvt_monitor_func_clk_conf`] module"]
 pub type PVT_MONITOR_FUNC_CLK_CONF =
     crate::Reg<pvt_monitor_func_clk_conf::PVT_MONITOR_FUNC_CLK_CONF_SPEC>;
 #[doc = "PVT_MONITOR function clock configuration register"]
 pub mod pvt_monitor_func_clk_conf;
-#[doc = "GDMA_CONF (rw) register accessor: an alias for `Reg<GDMA_CONF_SPEC>`"]
+#[doc = "GDMA_CONF (rw) register accessor: GDMA configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gdma_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gdma_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`gdma_conf`] module"]
 pub type GDMA_CONF = crate::Reg<gdma_conf::GDMA_CONF_SPEC>;
 #[doc = "GDMA configuration register"]
 pub mod gdma_conf;
-#[doc = "SPI2_CONF (rw) register accessor: an alias for `Reg<SPI2_CONF_SPEC>`"]
+#[doc = "SPI2_CONF (rw) register accessor: SPI2 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi2_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi2_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`spi2_conf`] module"]
 pub type SPI2_CONF = crate::Reg<spi2_conf::SPI2_CONF_SPEC>;
 #[doc = "SPI2 configuration register"]
 pub mod spi2_conf;
-#[doc = "SPI2_CLKM_CONF (rw) register accessor: an alias for `Reg<SPI2_CLKM_CONF_SPEC>`"]
+#[doc = "SPI2_CLKM_CONF (rw) register accessor: SPI2_CLKM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi2_clkm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi2_clkm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`spi2_clkm_conf`] module"]
 pub type SPI2_CLKM_CONF = crate::Reg<spi2_clkm_conf::SPI2_CLKM_CONF_SPEC>;
 #[doc = "SPI2_CLKM configuration register"]
 pub mod spi2_clkm_conf;
-#[doc = "AES_CONF (rw) register accessor: an alias for `Reg<AES_CONF_SPEC>`"]
+#[doc = "AES_CONF (rw) register accessor: AES configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`aes_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`aes_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`aes_conf`] module"]
 pub type AES_CONF = crate::Reg<aes_conf::AES_CONF_SPEC>;
 #[doc = "AES configuration register"]
 pub mod aes_conf;
-#[doc = "SHA_CONF (rw) register accessor: an alias for `Reg<SHA_CONF_SPEC>`"]
+#[doc = "SHA_CONF (rw) register accessor: SHA configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sha_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sha_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sha_conf`] module"]
 pub type SHA_CONF = crate::Reg<sha_conf::SHA_CONF_SPEC>;
 #[doc = "SHA configuration register"]
 pub mod sha_conf;
-#[doc = "RSA_CONF (rw) register accessor: an alias for `Reg<RSA_CONF_SPEC>`"]
+#[doc = "RSA_CONF (rw) register accessor: RSA configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rsa_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rsa_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rsa_conf`] module"]
 pub type RSA_CONF = crate::Reg<rsa_conf::RSA_CONF_SPEC>;
 #[doc = "RSA configuration register"]
 pub mod rsa_conf;
-#[doc = "RSA_PD_CTRL (rw) register accessor: an alias for `Reg<RSA_PD_CTRL_SPEC>`"]
+#[doc = "RSA_PD_CTRL (rw) register accessor: RSA power control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rsa_pd_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rsa_pd_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rsa_pd_ctrl`] module"]
 pub type RSA_PD_CTRL = crate::Reg<rsa_pd_ctrl::RSA_PD_CTRL_SPEC>;
 #[doc = "RSA power control register"]
 pub mod rsa_pd_ctrl;
-#[doc = "ECC_CONF (rw) register accessor: an alias for `Reg<ECC_CONF_SPEC>`"]
+#[doc = "ECC_CONF (rw) register accessor: ECC configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ecc_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ecc_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ecc_conf`] module"]
 pub type ECC_CONF = crate::Reg<ecc_conf::ECC_CONF_SPEC>;
 #[doc = "ECC configuration register"]
 pub mod ecc_conf;
-#[doc = "ECC_PD_CTRL (rw) register accessor: an alias for `Reg<ECC_PD_CTRL_SPEC>`"]
+#[doc = "ECC_PD_CTRL (rw) register accessor: ECC power control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ecc_pd_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ecc_pd_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ecc_pd_ctrl`] module"]
 pub type ECC_PD_CTRL = crate::Reg<ecc_pd_ctrl::ECC_PD_CTRL_SPEC>;
 #[doc = "ECC power control register"]
 pub mod ecc_pd_ctrl;
-#[doc = "DS_CONF (rw) register accessor: an alias for `Reg<DS_CONF_SPEC>`"]
+#[doc = "DS_CONF (rw) register accessor: DS configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ds_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ds_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ds_conf`] module"]
 pub type DS_CONF = crate::Reg<ds_conf::DS_CONF_SPEC>;
 #[doc = "DS configuration register"]
 pub mod ds_conf;
-#[doc = "HMAC_CONF (rw) register accessor: an alias for `Reg<HMAC_CONF_SPEC>`"]
+#[doc = "HMAC_CONF (rw) register accessor: HMAC configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hmac_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hmac_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hmac_conf`] module"]
 pub type HMAC_CONF = crate::Reg<hmac_conf::HMAC_CONF_SPEC>;
 #[doc = "HMAC configuration register"]
 pub mod hmac_conf;
-#[doc = "IOMUX_CONF (rw) register accessor: an alias for `Reg<IOMUX_CONF_SPEC>`"]
+#[doc = "IOMUX_CONF (rw) register accessor: IOMUX configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iomux_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iomux_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`iomux_conf`] module"]
 pub type IOMUX_CONF = crate::Reg<iomux_conf::IOMUX_CONF_SPEC>;
 #[doc = "IOMUX configuration register"]
 pub mod iomux_conf;
-#[doc = "IOMUX_CLK_CONF (rw) register accessor: an alias for `Reg<IOMUX_CLK_CONF_SPEC>`"]
+#[doc = "IOMUX_CLK_CONF (rw) register accessor: IOMUX_CLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iomux_clk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iomux_clk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`iomux_clk_conf`] module"]
 pub type IOMUX_CLK_CONF = crate::Reg<iomux_clk_conf::IOMUX_CLK_CONF_SPEC>;
 #[doc = "IOMUX_CLK configuration register"]
 pub mod iomux_clk_conf;
-#[doc = "MEM_MONITOR_CONF (rw) register accessor: an alias for `Reg<MEM_MONITOR_CONF_SPEC>`"]
+#[doc = "MEM_MONITOR_CONF (rw) register accessor: MEM_MONITOR configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_monitor_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mem_monitor_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mem_monitor_conf`] module"]
 pub type MEM_MONITOR_CONF = crate::Reg<mem_monitor_conf::MEM_MONITOR_CONF_SPEC>;
 #[doc = "MEM_MONITOR configuration register"]
 pub mod mem_monitor_conf;
-#[doc = "REGDMA_CONF (rw) register accessor: an alias for `Reg<REGDMA_CONF_SPEC>`"]
+#[doc = "REGDMA_CONF (rw) register accessor: REGDMA configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`regdma_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`regdma_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`regdma_conf`] module"]
 pub type REGDMA_CONF = crate::Reg<regdma_conf::REGDMA_CONF_SPEC>;
 #[doc = "REGDMA configuration register"]
 pub mod regdma_conf;
-#[doc = "RETENTION_CONF (rw) register accessor: an alias for `Reg<RETENTION_CONF_SPEC>`"]
+#[doc = "RETENTION_CONF (rw) register accessor: retention configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`retention_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`retention_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`retention_conf`] module"]
 pub type RETENTION_CONF = crate::Reg<retention_conf::RETENTION_CONF_SPEC>;
 #[doc = "retention configuration register"]
 pub mod retention_conf;
-#[doc = "TRACE_CONF (rw) register accessor: an alias for `Reg<TRACE_CONF_SPEC>`"]
+#[doc = "TRACE_CONF (rw) register accessor: TRACE configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`trace_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`trace_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`trace_conf`] module"]
 pub type TRACE_CONF = crate::Reg<trace_conf::TRACE_CONF_SPEC>;
 #[doc = "TRACE configuration register"]
 pub mod trace_conf;
-#[doc = "ASSIST_CONF (rw) register accessor: an alias for `Reg<ASSIST_CONF_SPEC>`"]
+#[doc = "ASSIST_CONF (rw) register accessor: ASSIST configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`assist_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`assist_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`assist_conf`] module"]
 pub type ASSIST_CONF = crate::Reg<assist_conf::ASSIST_CONF_SPEC>;
 #[doc = "ASSIST configuration register"]
 pub mod assist_conf;
-#[doc = "CACHE_CONF (rw) register accessor: an alias for `Reg<CACHE_CONF_SPEC>`"]
+#[doc = "CACHE_CONF (rw) register accessor: CACHE configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cache_conf`] module"]
 pub type CACHE_CONF = crate::Reg<cache_conf::CACHE_CONF_SPEC>;
 #[doc = "CACHE configuration register"]
 pub mod cache_conf;
-#[doc = "MODEM_APB_CONF (rw) register accessor: an alias for `Reg<MODEM_APB_CONF_SPEC>`"]
+#[doc = "MODEM_APB_CONF (rw) register accessor: MODEM_APB configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`modem_apb_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`modem_apb_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`modem_apb_conf`] module"]
 pub type MODEM_APB_CONF = crate::Reg<modem_apb_conf::MODEM_APB_CONF_SPEC>;
 #[doc = "MODEM_APB configuration register"]
 pub mod modem_apb_conf;
-#[doc = "TIMEOUT_CONF (rw) register accessor: an alias for `Reg<TIMEOUT_CONF_SPEC>`"]
+#[doc = "TIMEOUT_CONF (rw) register accessor: TIMEOUT configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timeout_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timeout_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timeout_conf`] module"]
 pub type TIMEOUT_CONF = crate::Reg<timeout_conf::TIMEOUT_CONF_SPEC>;
 #[doc = "TIMEOUT configuration register"]
 pub mod timeout_conf;
-#[doc = "SYSCLK_CONF (rw) register accessor: an alias for `Reg<SYSCLK_CONF_SPEC>`"]
+#[doc = "SYSCLK_CONF (rw) register accessor: SYSCLK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sysclk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sysclk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sysclk_conf`] module"]
 pub type SYSCLK_CONF = crate::Reg<sysclk_conf::SYSCLK_CONF_SPEC>;
 #[doc = "SYSCLK configuration register"]
 pub mod sysclk_conf;
-#[doc = "CPU_WAITI_CONF (rw) register accessor: an alias for `Reg<CPU_WAITI_CONF_SPEC>`"]
+#[doc = "CPU_WAITI_CONF (rw) register accessor: CPU_WAITI configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_waiti_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cpu_waiti_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cpu_waiti_conf`] module"]
 pub type CPU_WAITI_CONF = crate::Reg<cpu_waiti_conf::CPU_WAITI_CONF_SPEC>;
 #[doc = "CPU_WAITI configuration register"]
 pub mod cpu_waiti_conf;
-#[doc = "CPU_FREQ_CONF (rw) register accessor: an alias for `Reg<CPU_FREQ_CONF_SPEC>`"]
+#[doc = "CPU_FREQ_CONF (rw) register accessor: CPU_FREQ configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_freq_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cpu_freq_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cpu_freq_conf`] module"]
 pub type CPU_FREQ_CONF = crate::Reg<cpu_freq_conf::CPU_FREQ_CONF_SPEC>;
 #[doc = "CPU_FREQ configuration register"]
 pub mod cpu_freq_conf;
-#[doc = "AHB_FREQ_CONF (rw) register accessor: an alias for `Reg<AHB_FREQ_CONF_SPEC>`"]
+#[doc = "AHB_FREQ_CONF (rw) register accessor: AHB_FREQ configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahb_freq_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahb_freq_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ahb_freq_conf`] module"]
 pub type AHB_FREQ_CONF = crate::Reg<ahb_freq_conf::AHB_FREQ_CONF_SPEC>;
 #[doc = "AHB_FREQ configuration register"]
 pub mod ahb_freq_conf;
-#[doc = "APB_FREQ_CONF (rw) register accessor: an alias for `Reg<APB_FREQ_CONF_SPEC>`"]
+#[doc = "APB_FREQ_CONF (rw) register accessor: APB_FREQ configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_freq_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_freq_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`apb_freq_conf`] module"]
 pub type APB_FREQ_CONF = crate::Reg<apb_freq_conf::APB_FREQ_CONF_SPEC>;
 #[doc = "APB_FREQ configuration register"]
 pub mod apb_freq_conf;
-#[doc = "SYSCLK_FREQ_QUERY_0 (r) register accessor: an alias for `Reg<SYSCLK_FREQ_QUERY_0_SPEC>`"]
+#[doc = "SYSCLK_FREQ_QUERY_0 (r) register accessor: SYSCLK frequency query 0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sysclk_freq_query_0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sysclk_freq_query_0`] module"]
 pub type SYSCLK_FREQ_QUERY_0 = crate::Reg<sysclk_freq_query_0::SYSCLK_FREQ_QUERY_0_SPEC>;
 #[doc = "SYSCLK frequency query 0 register"]
 pub mod sysclk_freq_query_0;
-#[doc = "PLL_DIV_CLK_EN (rw) register accessor: an alias for `Reg<PLL_DIV_CLK_EN_SPEC>`"]
+#[doc = "PLL_DIV_CLK_EN (rw) register accessor: SPLL DIV clock-gating configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pll_div_clk_en::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pll_div_clk_en::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pll_div_clk_en`] module"]
 pub type PLL_DIV_CLK_EN = crate::Reg<pll_div_clk_en::PLL_DIV_CLK_EN_SPEC>;
 #[doc = "SPLL DIV clock-gating configuration register"]
 pub mod pll_div_clk_en;
-#[doc = "CTRL_CLK_OUT_EN (rw) register accessor: an alias for `Reg<CTRL_CLK_OUT_EN_SPEC>`"]
+#[doc = "CTRL_CLK_OUT_EN (rw) register accessor: CLK_OUT_EN configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_clk_out_en::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_clk_out_en::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl_clk_out_en`] module"]
 pub type CTRL_CLK_OUT_EN = crate::Reg<ctrl_clk_out_en::CTRL_CLK_OUT_EN_SPEC>;
 #[doc = "CLK_OUT_EN configuration register"]
 pub mod ctrl_clk_out_en;
-#[doc = "CTRL_TICK_CONF (rw) register accessor: an alias for `Reg<CTRL_TICK_CONF_SPEC>`"]
+#[doc = "CTRL_TICK_CONF (rw) register accessor: TICK configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_tick_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_tick_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl_tick_conf`] module"]
 pub type CTRL_TICK_CONF = crate::Reg<ctrl_tick_conf::CTRL_TICK_CONF_SPEC>;
 #[doc = "TICK configuration register"]
 pub mod ctrl_tick_conf;
-#[doc = "CTRL_32K_CONF (rw) register accessor: an alias for `Reg<CTRL_32K_CONF_SPEC>`"]
+#[doc = "CTRL_32K_CONF (rw) register accessor: 32KHz clock configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_32k_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_32k_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl_32k_conf`] module"]
 pub type CTRL_32K_CONF = crate::Reg<ctrl_32k_conf::CTRL_32K_CONF_SPEC>;
 #[doc = "32KHz clock configuration register"]
 pub mod ctrl_32k_conf;
-#[doc = "SRAM_POWER_CONF (rw) register accessor: an alias for `Reg<SRAM_POWER_CONF_SPEC>`"]
+#[doc = "SRAM_POWER_CONF (rw) register accessor: HP SRAM/ROM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sram_power_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sram_power_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sram_power_conf`] module"]
 pub type SRAM_POWER_CONF = crate::Reg<sram_power_conf::SRAM_POWER_CONF_SPEC>;
 #[doc = "HP SRAM/ROM configuration register"]
 pub mod sram_power_conf;
-#[doc = "RESET_EVENT_BYPASS (rw) register accessor: an alias for `Reg<RESET_EVENT_BYPASS_SPEC>`"]
+#[doc = "RESET_EVENT_BYPASS (rw) register accessor: reset event bypass backdoor configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reset_event_bypass::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reset_event_bypass::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`reset_event_bypass`] module"]
 pub type RESET_EVENT_BYPASS = crate::Reg<reset_event_bypass::RESET_EVENT_BYPASS_SPEC>;
 #[doc = "reset event bypass backdoor configuration register"]
 pub mod reset_event_bypass;
-#[doc = "FPGA_DEBUG (rw) register accessor: an alias for `Reg<FPGA_DEBUG_SPEC>`"]
+#[doc = "FPGA_DEBUG (rw) register accessor: fpga debug register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fpga_debug::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fpga_debug::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`fpga_debug`] module"]
 pub type FPGA_DEBUG = crate::Reg<fpga_debug::FPGA_DEBUG_SPEC>;
 #[doc = "fpga debug register"]
 pub mod fpga_debug;
-#[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
+#[doc = "CLOCK_GATE (rw) register accessor: PCR clock gating configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_gate::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "PCR clock gating configure register"]
 pub mod clock_gate;
-#[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
+#[doc = "DATE (rw) register accessor: Date register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Date register."]
 pub mod date;

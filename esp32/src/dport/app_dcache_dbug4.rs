@@ -1,18 +1,5 @@
 #[doc = "Register `APP_DCACHE_DBUG4` reader"]
-pub struct R(crate::R<APP_DCACHE_DBUG4_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<APP_DCACHE_DBUG4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<APP_DCACHE_DBUG4_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<APP_DCACHE_DBUG4_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<APP_DCACHE_DBUG4_SPEC>;
 #[doc = "Field `APP_DRAM1ADDR0_IA` reader - "]
 pub type APP_DRAM1ADDR0_IA_R = crate::FieldReader<u32>;
 impl R {
@@ -39,15 +26,13 @@ impl core::fmt::Debug for crate::generic::Reg<APP_DCACHE_DBUG4_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_dcache_dbug4](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`app_dcache_dbug4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APP_DCACHE_DBUG4_SPEC;
 impl crate::RegisterSpec for APP_DCACHE_DBUG4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [app_dcache_dbug4::R](R) reader structure"]
-impl crate::Readable for APP_DCACHE_DBUG4_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`app_dcache_dbug4::R`](R) reader structure"]
+impl crate::Readable for APP_DCACHE_DBUG4_SPEC {}
 #[doc = "`reset()` method sets APP_DCACHE_DBUG4 to value 0"]
 impl crate::Resettable for APP_DCACHE_DBUG4_SPEC {
     const RESET_VALUE: Self::Ux = 0;

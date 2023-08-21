@@ -1,127 +1,95 @@
 #[doc = "Register `SLC_INT_CLR` reader"]
-pub struct R(crate::R<SLC_INT_CLR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLC_INT_CLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLC_INT_CLR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLC_INT_CLR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLC_INT_CLR_SPEC>;
 #[doc = "Register `SLC_INT_CLR` writer"]
-pub struct W(crate::W<SLC_INT_CLR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLC_INT_CLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLC_INT_CLR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLC_INT_CLR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLC_INT_CLR_SPEC>;
 #[doc = "Field `SLC_FRHOST_BIT0_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT0_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT0_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT0_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_FRHOST_BIT1_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT1_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT1_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT1_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_FRHOST_BIT2_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT2_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT2_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT2_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_FRHOST_BIT3_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT3_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT3_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT3_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT3_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_FRHOST_BIT4_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT4_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT4_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT4_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT4_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_FRHOST_BIT5_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT5_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT5_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT5_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_FRHOST_BIT6_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT6_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT6_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT6_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT6_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_FRHOST_BIT7_INT_CLR` reader - "]
 pub type SLC_FRHOST_BIT7_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_FRHOST_BIT7_INT_CLR` writer - "]
-pub type SLC_FRHOST_BIT7_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_FRHOST_BIT7_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_RX_START_INT_CLR` reader - "]
 pub type SLC_RX_START_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_RX_START_INT_CLR` writer - "]
-pub type SLC_RX_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_RX_START_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TX_START_INT_CLR` reader - "]
 pub type SLC_TX_START_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TX_START_INT_CLR` writer - "]
-pub type SLC_TX_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TX_START_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_RX_UDF_INT_CLR` reader - "]
 pub type SLC_RX_UDF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_RX_UDF_INT_CLR` writer - "]
-pub type SLC_RX_UDF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_RX_UDF_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TX_OVF_INT_CLR` reader - "]
 pub type SLC_TX_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TX_OVF_INT_CLR` writer - "]
-pub type SLC_TX_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TX_OVF_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TOKEN0_1TO0_INT_CLR` reader - "]
 pub type SLC_TOKEN0_1TO0_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_1TO0_INT_CLR` writer - "]
-pub type SLC_TOKEN0_1TO0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TOKEN0_1TO0_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TOKEN1_1TO0_INT_CLR` reader - "]
 pub type SLC_TOKEN1_1TO0_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN1_1TO0_INT_CLR` writer - "]
-pub type SLC_TOKEN1_1TO0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TOKEN1_1TO0_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TX_DONE_INT_CLR` reader - "]
 pub type SLC_TX_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TX_DONE_INT_CLR` writer - "]
-pub type SLC_TX_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TX_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TX_EOF_INT_CLR` reader - "]
 pub type SLC_TX_EOF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TX_EOF_INT_CLR` writer - "]
-pub type SLC_TX_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TX_EOF_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_RX_DONE_INT_CLR` reader - "]
 pub type SLC_RX_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_RX_DONE_INT_CLR` writer - "]
-pub type SLC_RX_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_RX_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_RX_EOF_INT_CLR` reader - "]
 pub type SLC_RX_EOF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_RX_EOF_INT_CLR` writer - "]
-pub type SLC_RX_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_RX_EOF_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TOHOST_INT_CLR` reader - "]
 pub type SLC_TOHOST_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TOHOST_INT_CLR` writer - "]
-pub type SLC_TOHOST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TOHOST_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TX_DSCR_ERR_INT_CLR` reader - "]
 pub type SLC_TX_DSCR_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TX_DSCR_ERR_INT_CLR` writer - "]
-pub type SLC_TX_DSCR_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TX_DSCR_ERR_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_RX_DSCR_ERR_INT_CLR` reader - "]
 pub type SLC_RX_DSCR_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_RX_DSCR_ERR_INT_CLR` writer - "]
-pub type SLC_RX_DSCR_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_RX_DSCR_ERR_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLC_TX_DSCR_EMPTY_INT_CLR` reader - "]
 pub type SLC_TX_DSCR_EMPTY_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_TX_DSCR_EMPTY_INT_CLR` writer - "]
-pub type SLC_TX_DSCR_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_INT_CLR_SPEC, O>;
+pub type SLC_TX_DSCR_EMPTY_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -339,154 +307,153 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit0_int_clr(&mut self) -> SLC_FRHOST_BIT0_INT_CLR_W<0> {
+    pub fn slc_frhost_bit0_int_clr(&mut self) -> SLC_FRHOST_BIT0_INT_CLR_W<SLC_INT_CLR_SPEC, 0> {
         SLC_FRHOST_BIT0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit1_int_clr(&mut self) -> SLC_FRHOST_BIT1_INT_CLR_W<1> {
+    pub fn slc_frhost_bit1_int_clr(&mut self) -> SLC_FRHOST_BIT1_INT_CLR_W<SLC_INT_CLR_SPEC, 1> {
         SLC_FRHOST_BIT1_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit2_int_clr(&mut self) -> SLC_FRHOST_BIT2_INT_CLR_W<2> {
+    pub fn slc_frhost_bit2_int_clr(&mut self) -> SLC_FRHOST_BIT2_INT_CLR_W<SLC_INT_CLR_SPEC, 2> {
         SLC_FRHOST_BIT2_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit3_int_clr(&mut self) -> SLC_FRHOST_BIT3_INT_CLR_W<3> {
+    pub fn slc_frhost_bit3_int_clr(&mut self) -> SLC_FRHOST_BIT3_INT_CLR_W<SLC_INT_CLR_SPEC, 3> {
         SLC_FRHOST_BIT3_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit4_int_clr(&mut self) -> SLC_FRHOST_BIT4_INT_CLR_W<4> {
+    pub fn slc_frhost_bit4_int_clr(&mut self) -> SLC_FRHOST_BIT4_INT_CLR_W<SLC_INT_CLR_SPEC, 4> {
         SLC_FRHOST_BIT4_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit5_int_clr(&mut self) -> SLC_FRHOST_BIT5_INT_CLR_W<5> {
+    pub fn slc_frhost_bit5_int_clr(&mut self) -> SLC_FRHOST_BIT5_INT_CLR_W<SLC_INT_CLR_SPEC, 5> {
         SLC_FRHOST_BIT5_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit6_int_clr(&mut self) -> SLC_FRHOST_BIT6_INT_CLR_W<6> {
+    pub fn slc_frhost_bit6_int_clr(&mut self) -> SLC_FRHOST_BIT6_INT_CLR_W<SLC_INT_CLR_SPEC, 6> {
         SLC_FRHOST_BIT6_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_frhost_bit7_int_clr(&mut self) -> SLC_FRHOST_BIT7_INT_CLR_W<7> {
+    pub fn slc_frhost_bit7_int_clr(&mut self) -> SLC_FRHOST_BIT7_INT_CLR_W<SLC_INT_CLR_SPEC, 7> {
         SLC_FRHOST_BIT7_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rx_start_int_clr(&mut self) -> SLC_RX_START_INT_CLR_W<8> {
+    pub fn slc_rx_start_int_clr(&mut self) -> SLC_RX_START_INT_CLR_W<SLC_INT_CLR_SPEC, 8> {
         SLC_RX_START_INT_CLR_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_start_int_clr(&mut self) -> SLC_TX_START_INT_CLR_W<9> {
+    pub fn slc_tx_start_int_clr(&mut self) -> SLC_TX_START_INT_CLR_W<SLC_INT_CLR_SPEC, 9> {
         SLC_TX_START_INT_CLR_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rx_udf_int_clr(&mut self) -> SLC_RX_UDF_INT_CLR_W<10> {
+    pub fn slc_rx_udf_int_clr(&mut self) -> SLC_RX_UDF_INT_CLR_W<SLC_INT_CLR_SPEC, 10> {
         SLC_RX_UDF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_ovf_int_clr(&mut self) -> SLC_TX_OVF_INT_CLR_W<11> {
+    pub fn slc_tx_ovf_int_clr(&mut self) -> SLC_TX_OVF_INT_CLR_W<SLC_INT_CLR_SPEC, 11> {
         SLC_TX_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_1to0_int_clr(&mut self) -> SLC_TOKEN0_1TO0_INT_CLR_W<12> {
+    pub fn slc_token0_1to0_int_clr(&mut self) -> SLC_TOKEN0_1TO0_INT_CLR_W<SLC_INT_CLR_SPEC, 12> {
         SLC_TOKEN0_1TO0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token1_1to0_int_clr(&mut self) -> SLC_TOKEN1_1TO0_INT_CLR_W<13> {
+    pub fn slc_token1_1to0_int_clr(&mut self) -> SLC_TOKEN1_1TO0_INT_CLR_W<SLC_INT_CLR_SPEC, 13> {
         SLC_TOKEN1_1TO0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_done_int_clr(&mut self) -> SLC_TX_DONE_INT_CLR_W<14> {
+    pub fn slc_tx_done_int_clr(&mut self) -> SLC_TX_DONE_INT_CLR_W<SLC_INT_CLR_SPEC, 14> {
         SLC_TX_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_eof_int_clr(&mut self) -> SLC_TX_EOF_INT_CLR_W<15> {
+    pub fn slc_tx_eof_int_clr(&mut self) -> SLC_TX_EOF_INT_CLR_W<SLC_INT_CLR_SPEC, 15> {
         SLC_TX_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rx_done_int_clr(&mut self) -> SLC_RX_DONE_INT_CLR_W<16> {
+    pub fn slc_rx_done_int_clr(&mut self) -> SLC_RX_DONE_INT_CLR_W<SLC_INT_CLR_SPEC, 16> {
         SLC_RX_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rx_eof_int_clr(&mut self) -> SLC_RX_EOF_INT_CLR_W<17> {
+    pub fn slc_rx_eof_int_clr(&mut self) -> SLC_RX_EOF_INT_CLR_W<SLC_INT_CLR_SPEC, 17> {
         SLC_RX_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tohost_int_clr(&mut self) -> SLC_TOHOST_INT_CLR_W<18> {
+    pub fn slc_tohost_int_clr(&mut self) -> SLC_TOHOST_INT_CLR_W<SLC_INT_CLR_SPEC, 18> {
         SLC_TOHOST_INT_CLR_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_dscr_err_int_clr(&mut self) -> SLC_TX_DSCR_ERR_INT_CLR_W<19> {
+    pub fn slc_tx_dscr_err_int_clr(&mut self) -> SLC_TX_DSCR_ERR_INT_CLR_W<SLC_INT_CLR_SPEC, 19> {
         SLC_TX_DSCR_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rx_dscr_err_int_clr(&mut self) -> SLC_RX_DSCR_ERR_INT_CLR_W<20> {
+    pub fn slc_rx_dscr_err_int_clr(&mut self) -> SLC_RX_DSCR_ERR_INT_CLR_W<SLC_INT_CLR_SPEC, 20> {
         SLC_RX_DSCR_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_dscr_empty_int_clr(&mut self) -> SLC_TX_DSCR_EMPTY_INT_CLR_W<21> {
+    pub fn slc_tx_dscr_empty_int_clr(
+        &mut self,
+    ) -> SLC_TX_DSCR_EMPTY_INT_CLR_W<SLC_INT_CLR_SPEC, 21> {
         SLC_TX_DSCR_EMPTY_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SLC_INT_CLR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slc_int_clr](index.html) module"]
+#[doc = "SLC_INT_CLR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc_int_clr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slc_int_clr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC_INT_CLR_SPEC;
 impl crate::RegisterSpec for SLC_INT_CLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slc_int_clr::R](R) reader structure"]
-impl crate::Readable for SLC_INT_CLR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [slc_int_clr::W](W) writer structure"]
+#[doc = "`read()` method returns [`slc_int_clr::R`](R) reader structure"]
+impl crate::Readable for SLC_INT_CLR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`slc_int_clr::W`](W) writer structure"]
 impl crate::Writable for SLC_INT_CLR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

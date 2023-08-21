@@ -1,18 +1,5 @@
 #[doc = "Register `_0INT_ST` reader"]
-pub struct R(crate::R<_0INT_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<_0INT_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<_0INT_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<_0INT_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<_0INT_ST_SPEC>;
 #[doc = "Field `FRHOST_BIT0_INT_ST` reader - "]
 pub type FRHOST_BIT0_INT_ST_R = crate::BitReader;
 #[doc = "Field `FRHOST_BIT1_INT_ST` reader - "]
@@ -325,15 +312,13 @@ impl core::fmt::Debug for crate::generic::Reg<_0INT_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0int_st](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _0INT_ST_SPEC;
 impl crate::RegisterSpec for _0INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [_0int_st::R](R) reader structure"]
-impl crate::Readable for _0INT_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`_0int_st::R`](R) reader structure"]
+impl crate::Readable for _0INT_ST_SPEC {}
 #[doc = "`reset()` method sets _0INT_ST to value 0"]
 impl crate::Resettable for _0INT_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,71 +1,39 @@
 #[doc = "Register `CONF1` reader"]
-pub struct R(crate::R<CONF1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF1_SPEC>;
 #[doc = "Register `CONF1` writer"]
-pub struct W(crate::W<CONF1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONF1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONF1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONF1_SPEC>;
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
 pub type RXFIFO_FULL_THRHD_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_FULL_THRHD` writer - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
-pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 8, O>;
+pub type RXFIFO_FULL_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
 pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` writer - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
-pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 8, O>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `CTS_INV` reader - Set this bit to inverse the level value of uart cts signal."]
 pub type CTS_INV_R = crate::BitReader;
 #[doc = "Field `CTS_INV` writer - Set this bit to inverse the level value of uart cts signal."]
-pub type CTS_INV_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type CTS_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DSR_INV` reader - Set this bit to inverse the level value of uart dsr signal."]
 pub type DSR_INV_R = crate::BitReader;
 #[doc = "Field `DSR_INV` writer - Set this bit to inverse the level value of uart dsr signal."]
-pub type DSR_INV_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type DSR_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RTS_INV` reader - Set this bit to inverse the level value of uart rts signal."]
 pub type RTS_INV_R = crate::BitReader;
 #[doc = "Field `RTS_INV` writer - Set this bit to inverse the level value of uart rts signal."]
-pub type RTS_INV_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type RTS_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DTR_INV` reader - Set this bit to inverse the level value of uart dtr signal."]
 pub type DTR_INV_R = crate::BitReader;
 #[doc = "Field `DTR_INV` writer - Set this bit to inverse the level value of uart dtr signal."]
-pub type DTR_INV_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type DTR_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SW_DTR` reader - This register is used to configure the software dtr signal which is used in software flow control."]
 pub type SW_DTR_R = crate::BitReader;
 #[doc = "Field `SW_DTR` writer - This register is used to configure the software dtr signal which is used in software flow control."]
-pub type SW_DTR_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type SW_DTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLK_EN` reader - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
+pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
     #[inline(always)]
@@ -139,70 +107,67 @@ impl W {
     #[doc = "Bits 0:7 - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<0> {
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC, 0> {
         RXFIFO_FULL_THRHD_W::new(self)
     }
     #[doc = "Bits 8:15 - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<8> {
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC, 8> {
         TXFIFO_EMPTY_THRHD_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to inverse the level value of uart cts signal."]
     #[inline(always)]
     #[must_use]
-    pub fn cts_inv(&mut self) -> CTS_INV_W<16> {
+    pub fn cts_inv(&mut self) -> CTS_INV_W<CONF1_SPEC, 16> {
         CTS_INV_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to inverse the level value of uart dsr signal."]
     #[inline(always)]
     #[must_use]
-    pub fn dsr_inv(&mut self) -> DSR_INV_W<17> {
+    pub fn dsr_inv(&mut self) -> DSR_INV_W<CONF1_SPEC, 17> {
         DSR_INV_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to inverse the level value of uart rts signal."]
     #[inline(always)]
     #[must_use]
-    pub fn rts_inv(&mut self) -> RTS_INV_W<18> {
+    pub fn rts_inv(&mut self) -> RTS_INV_W<CONF1_SPEC, 18> {
         RTS_INV_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to inverse the level value of uart dtr signal."]
     #[inline(always)]
     #[must_use]
-    pub fn dtr_inv(&mut self) -> DTR_INV_W<19> {
+    pub fn dtr_inv(&mut self) -> DTR_INV_W<CONF1_SPEC, 19> {
         DTR_INV_W::new(self)
     }
     #[doc = "Bit 20 - This register is used to configure the software dtr signal which is used in software flow control."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_dtr(&mut self) -> SW_DTR_W<20> {
+    pub fn sw_dtr(&mut self) -> SW_DTR_W<CONF1_SPEC, 20> {
         SW_DTR_W::new(self)
     }
     #[doc = "Bit 21 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<21> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<CONF1_SPEC, 21> {
         CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1](index.html) module"]
+#[doc = "Configuration register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF1_SPEC;
 impl crate::RegisterSpec for CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf1::R](R) reader structure"]
-impl crate::Readable for CONF1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
+#[doc = "`read()` method returns [`conf1::R`](R) reader structure"]
+impl crate::Readable for CONF1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf1::W`](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

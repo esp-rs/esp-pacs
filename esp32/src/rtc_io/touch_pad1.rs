@@ -1,99 +1,67 @@
 #[doc = "Register `TOUCH_PAD1` reader"]
-pub struct R(crate::R<TOUCH_PAD1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TOUCH_PAD1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TOUCH_PAD1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TOUCH_PAD1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TOUCH_PAD1_SPEC>;
 #[doc = "Register `TOUCH_PAD1` writer"]
-pub struct W(crate::W<TOUCH_PAD1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TOUCH_PAD1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TOUCH_PAD1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TOUCH_PAD1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TOUCH_PAD1_SPEC>;
 #[doc = "Field `TO_GPIO` reader - connect the rtc pad input to digital pad input Ó0Ó is availbale.GPIO0"]
 pub type TO_GPIO_R = crate::BitReader;
 #[doc = "Field `TO_GPIO` writer - connect the rtc pad input to digital pad input Ó0Ó is availbale.GPIO0"]
-pub type TO_GPIO_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type TO_GPIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FUN_IE` reader - the input enable of the pad"]
 pub type FUN_IE_R = crate::BitReader;
 #[doc = "Field `FUN_IE` writer - the input enable of the pad"]
-pub type FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLP_OE` reader - the output enable of the pad in sleep status"]
 pub type SLP_OE_R = crate::BitReader;
 #[doc = "Field `SLP_OE` writer - the output enable of the pad in sleep status"]
-pub type SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type SLP_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLP_IE` reader - the input enable of the pad in sleep status"]
 pub type SLP_IE_R = crate::BitReader;
 #[doc = "Field `SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type SLP_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLP_SEL` reader - the sleep status selection signal of the pad"]
 pub type SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FUN_SEL` reader - the functional selection signal of the pad"]
 pub type FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `FUN_SEL` writer - the functional selection signal of the pad"]
-pub type FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_PAD1_SPEC, 2, O>;
+pub type FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
 pub type MUX_SEL_R = crate::BitReader;
 #[doc = "Field `MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `XPD` reader - touch sensor power on."]
 pub type XPD_R = crate::BitReader;
 #[doc = "Field `XPD` writer - touch sensor power on."]
-pub type XPD_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type XPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TIE_OPT` reader - default touch sensor tie option. 0: tie low 1: tie high."]
 pub type TIE_OPT_R = crate::BitReader;
 #[doc = "Field `TIE_OPT` writer - default touch sensor tie option. 0: tie low 1: tie high."]
-pub type TIE_OPT_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type TIE_OPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `START` reader - start touch sensor."]
 pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - start touch sensor."]
-pub type START_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DAC` reader - touch sensor slope control. 3-bit for each touch panel default 100."]
 pub type DAC_R = crate::FieldReader;
 #[doc = "Field `DAC` writer - touch sensor slope control. 3-bit for each touch panel default 100."]
-pub type DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_PAD1_SPEC, 3, O>;
+pub type DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `RUE` reader - the pull up enable of the pad"]
 pub type RUE_R = crate::BitReader;
 #[doc = "Field `RUE` writer - the pull up enable of the pad"]
-pub type RUE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type RUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RDE` reader - the pull down enable of the pad"]
 pub type RDE_R = crate::BitReader;
 #[doc = "Field `RDE` writer - the pull down enable of the pad"]
-pub type RDE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type RDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DRV` reader - the driver strength of the pad"]
 pub type DRV_R = crate::FieldReader;
 #[doc = "Field `DRV` writer - the driver strength of the pad"]
-pub type DRV_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_PAD1_SPEC, 2, O>;
+pub type DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `HOLD` reader - "]
 pub type HOLD_R = crate::BitReader;
 #[doc = "Field `HOLD` writer - "]
-pub type HOLD_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD1_SPEC, O>;
+pub type HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 12 - connect the rtc pad input to digital pad input Ó0Ó is availbale.GPIO0"]
     #[inline(always)]
@@ -203,112 +171,109 @@ impl W {
     #[doc = "Bit 12 - connect the rtc pad input to digital pad input Ó0Ó is availbale.GPIO0"]
     #[inline(always)]
     #[must_use]
-    pub fn to_gpio(&mut self) -> TO_GPIO_W<12> {
+    pub fn to_gpio(&mut self) -> TO_GPIO_W<TOUCH_PAD1_SPEC, 12> {
         TO_GPIO_W::new(self)
     }
     #[doc = "Bit 13 - the input enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_ie(&mut self) -> FUN_IE_W<13> {
+    pub fn fun_ie(&mut self) -> FUN_IE_W<TOUCH_PAD1_SPEC, 13> {
         FUN_IE_W::new(self)
     }
     #[doc = "Bit 14 - the output enable of the pad in sleep status"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_oe(&mut self) -> SLP_OE_W<14> {
+    pub fn slp_oe(&mut self) -> SLP_OE_W<TOUCH_PAD1_SPEC, 14> {
         SLP_OE_W::new(self)
     }
     #[doc = "Bit 15 - the input enable of the pad in sleep status"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_ie(&mut self) -> SLP_IE_W<15> {
+    pub fn slp_ie(&mut self) -> SLP_IE_W<TOUCH_PAD1_SPEC, 15> {
         SLP_IE_W::new(self)
     }
     #[doc = "Bit 16 - the sleep status selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_sel(&mut self) -> SLP_SEL_W<16> {
+    pub fn slp_sel(&mut self) -> SLP_SEL_W<TOUCH_PAD1_SPEC, 16> {
         SLP_SEL_W::new(self)
     }
     #[doc = "Bits 17:18 - the functional selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_sel(&mut self) -> FUN_SEL_W<17> {
+    pub fn fun_sel(&mut self) -> FUN_SEL_W<TOUCH_PAD1_SPEC, 17> {
         FUN_SEL_W::new(self)
     }
     #[doc = "Bit 19 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     #[must_use]
-    pub fn mux_sel(&mut self) -> MUX_SEL_W<19> {
+    pub fn mux_sel(&mut self) -> MUX_SEL_W<TOUCH_PAD1_SPEC, 19> {
         MUX_SEL_W::new(self)
     }
     #[doc = "Bit 20 - touch sensor power on."]
     #[inline(always)]
     #[must_use]
-    pub fn xpd(&mut self) -> XPD_W<20> {
+    pub fn xpd(&mut self) -> XPD_W<TOUCH_PAD1_SPEC, 20> {
         XPD_W::new(self)
     }
     #[doc = "Bit 21 - default touch sensor tie option. 0: tie low 1: tie high."]
     #[inline(always)]
     #[must_use]
-    pub fn tie_opt(&mut self) -> TIE_OPT_W<21> {
+    pub fn tie_opt(&mut self) -> TIE_OPT_W<TOUCH_PAD1_SPEC, 21> {
         TIE_OPT_W::new(self)
     }
     #[doc = "Bit 22 - start touch sensor."]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<22> {
+    pub fn start(&mut self) -> START_W<TOUCH_PAD1_SPEC, 22> {
         START_W::new(self)
     }
     #[doc = "Bits 23:25 - touch sensor slope control. 3-bit for each touch panel default 100."]
     #[inline(always)]
     #[must_use]
-    pub fn dac(&mut self) -> DAC_W<23> {
+    pub fn dac(&mut self) -> DAC_W<TOUCH_PAD1_SPEC, 23> {
         DAC_W::new(self)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn rue(&mut self) -> RUE_W<27> {
+    pub fn rue(&mut self) -> RUE_W<TOUCH_PAD1_SPEC, 27> {
         RUE_W::new(self)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn rde(&mut self) -> RDE_W<28> {
+    pub fn rde(&mut self) -> RDE_W<TOUCH_PAD1_SPEC, 28> {
         RDE_W::new(self)
     }
     #[doc = "Bits 29:30 - the driver strength of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn drv(&mut self) -> DRV_W<29> {
+    pub fn drv(&mut self) -> DRV_W<TOUCH_PAD1_SPEC, 29> {
         DRV_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn hold(&mut self) -> HOLD_W<31> {
+    pub fn hold(&mut self) -> HOLD_W<TOUCH_PAD1_SPEC, 31> {
         HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_pad1](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`touch_pad1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`touch_pad1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TOUCH_PAD1_SPEC;
 impl crate::RegisterSpec for TOUCH_PAD1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_pad1::R](R) reader structure"]
-impl crate::Readable for TOUCH_PAD1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [touch_pad1::W](W) writer structure"]
+#[doc = "`read()` method returns [`touch_pad1::R`](R) reader structure"]
+impl crate::Readable for TOUCH_PAD1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`touch_pad1::W`](W) writer structure"]
 impl crate::Writable for TOUCH_PAD1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,123 +1,91 @@
 #[doc = "Register `PWC` reader"]
-pub struct R(crate::R<PWC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PWC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PWC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PWC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PWC_SPEC>;
 #[doc = "Register `PWC` writer"]
-pub struct W(crate::W<PWC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PWC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PWC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PWC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PWC_SPEC>;
 #[doc = "Field `FASTMEM_FORCE_NOISO` reader - Fast RTC memory force no ISO"]
 pub type FASTMEM_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_NOISO` writer - Fast RTC memory force no ISO"]
-pub type FASTMEM_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_FORCE_NOISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FASTMEM_FORCE_ISO` reader - Fast RTC memory force ISO"]
 pub type FASTMEM_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_ISO` writer - Fast RTC memory force ISO"]
-pub type FASTMEM_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_FORCE_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_FORCE_NOISO` reader - RTC memory force no ISO"]
 pub type SLOWMEM_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_NOISO` writer - RTC memory force no ISO"]
-pub type SLOWMEM_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_FORCE_NOISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_FORCE_ISO` reader - RTC memory force ISO"]
 pub type SLOWMEM_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_ISO` writer - RTC memory force ISO"]
-pub type SLOWMEM_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_FORCE_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_ISO` reader - rtc_peri force ISO"]
 pub type FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_ISO` writer - rtc_peri force ISO"]
-pub type FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FORCE_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_NOISO` reader - rtc_peri force no ISO"]
 pub type FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `FORCE_NOISO` writer - rtc_peri force no ISO"]
-pub type FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FORCE_NOISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FASTMEM_FOLW_CPU` reader - 1: Fast RTC memory PD following CPU 0: fast RTC memory PD following RTC state machine"]
 pub type FASTMEM_FOLW_CPU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FOLW_CPU` writer - 1: Fast RTC memory PD following CPU 0: fast RTC memory PD following RTC state machine"]
-pub type FASTMEM_FOLW_CPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_FOLW_CPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FASTMEM_FORCE_LPD` reader - Fast RTC memory force PD"]
 pub type FASTMEM_FORCE_LPD_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPD` writer - Fast RTC memory force PD"]
-pub type FASTMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_FORCE_LPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FASTMEM_FORCE_LPU` reader - Fast RTC memory force no PD"]
 pub type FASTMEM_FORCE_LPU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPU` writer - Fast RTC memory force no PD"]
-pub type FASTMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_FORCE_LPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_FOLW_CPU` reader - 1: RTC memory PD following CPU 0: RTC memory PD following RTC state machine"]
 pub type SLOWMEM_FOLW_CPU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FOLW_CPU` writer - 1: RTC memory PD following CPU 0: RTC memory PD following RTC state machine"]
-pub type SLOWMEM_FOLW_CPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_FOLW_CPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_FORCE_LPD` reader - RTC memory force PD"]
 pub type SLOWMEM_FORCE_LPD_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_LPD` writer - RTC memory force PD"]
-pub type SLOWMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_FORCE_LPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_FORCE_LPU` reader - RTC memory force no PD"]
 pub type SLOWMEM_FORCE_LPU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_LPU` writer - RTC memory force no PD"]
-pub type SLOWMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_FORCE_LPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FASTMEM_FORCE_PD` reader - Fast RTC memory force power down"]
 pub type FASTMEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_PD` writer - Fast RTC memory force power down"]
-pub type FASTMEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FASTMEM_FORCE_PU` reader - Fast RTC memory force power up"]
 pub type FASTMEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_PU` writer - Fast RTC memory force power up"]
-pub type FASTMEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FASTMEM_PD_EN` reader - enable power down fast RTC memory in sleep"]
 pub type FASTMEM_PD_EN_R = crate::BitReader;
 #[doc = "Field `FASTMEM_PD_EN` writer - enable power down fast RTC memory in sleep"]
-pub type FASTMEM_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FASTMEM_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_FORCE_PD` reader - RTC memory force power down"]
 pub type SLOWMEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_PD` writer - RTC memory force power down"]
-pub type SLOWMEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_FORCE_PU` reader - RTC memory force power up"]
 pub type SLOWMEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_PU` writer - RTC memory force power up"]
-pub type SLOWMEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SLOWMEM_PD_EN` reader - enable power down RTC memory in sleep"]
 pub type SLOWMEM_PD_EN_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_PD_EN` writer - enable power down RTC memory in sleep"]
-pub type SLOWMEM_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type SLOWMEM_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_PD` reader - rtc_peri force power down"]
 pub type FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_PD` writer - rtc_peri force power down"]
-pub type FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_PU` reader - rtc_peri force power up"]
 pub type FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_PU` writer - rtc_peri force power up"]
-pub type FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD_EN` reader - enable power down rtc_peri in sleep"]
 pub type PD_EN_R = crate::BitReader;
 #[doc = "Field `PD_EN` writer - enable power down rtc_peri in sleep"]
-pub type PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
+pub type PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Fast RTC memory force no ISO"]
     #[inline(always)]
@@ -311,148 +279,145 @@ impl W {
     #[doc = "Bit 0 - Fast RTC memory force no ISO"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_noiso(&mut self) -> FASTMEM_FORCE_NOISO_W<0> {
+    pub fn fastmem_force_noiso(&mut self) -> FASTMEM_FORCE_NOISO_W<PWC_SPEC, 0> {
         FASTMEM_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 1 - Fast RTC memory force ISO"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_iso(&mut self) -> FASTMEM_FORCE_ISO_W<1> {
+    pub fn fastmem_force_iso(&mut self) -> FASTMEM_FORCE_ISO_W<PWC_SPEC, 1> {
         FASTMEM_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 2 - RTC memory force no ISO"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_noiso(&mut self) -> SLOWMEM_FORCE_NOISO_W<2> {
+    pub fn slowmem_force_noiso(&mut self) -> SLOWMEM_FORCE_NOISO_W<PWC_SPEC, 2> {
         SLOWMEM_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 3 - RTC memory force ISO"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_iso(&mut self) -> SLOWMEM_FORCE_ISO_W<3> {
+    pub fn slowmem_force_iso(&mut self) -> SLOWMEM_FORCE_ISO_W<PWC_SPEC, 3> {
         SLOWMEM_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 4 - rtc_peri force ISO"]
     #[inline(always)]
     #[must_use]
-    pub fn force_iso(&mut self) -> FORCE_ISO_W<4> {
+    pub fn force_iso(&mut self) -> FORCE_ISO_W<PWC_SPEC, 4> {
         FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 5 - rtc_peri force no ISO"]
     #[inline(always)]
     #[must_use]
-    pub fn force_noiso(&mut self) -> FORCE_NOISO_W<5> {
+    pub fn force_noiso(&mut self) -> FORCE_NOISO_W<PWC_SPEC, 5> {
         FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 6 - 1: Fast RTC memory PD following CPU 0: fast RTC memory PD following RTC state machine"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_folw_cpu(&mut self) -> FASTMEM_FOLW_CPU_W<6> {
+    pub fn fastmem_folw_cpu(&mut self) -> FASTMEM_FOLW_CPU_W<PWC_SPEC, 6> {
         FASTMEM_FOLW_CPU_W::new(self)
     }
     #[doc = "Bit 7 - Fast RTC memory force PD"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<7> {
+    pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<PWC_SPEC, 7> {
         FASTMEM_FORCE_LPD_W::new(self)
     }
     #[doc = "Bit 8 - Fast RTC memory force no PD"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<8> {
+    pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<PWC_SPEC, 8> {
         FASTMEM_FORCE_LPU_W::new(self)
     }
     #[doc = "Bit 9 - 1: RTC memory PD following CPU 0: RTC memory PD following RTC state machine"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_folw_cpu(&mut self) -> SLOWMEM_FOLW_CPU_W<9> {
+    pub fn slowmem_folw_cpu(&mut self) -> SLOWMEM_FOLW_CPU_W<PWC_SPEC, 9> {
         SLOWMEM_FOLW_CPU_W::new(self)
     }
     #[doc = "Bit 10 - RTC memory force PD"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_lpd(&mut self) -> SLOWMEM_FORCE_LPD_W<10> {
+    pub fn slowmem_force_lpd(&mut self) -> SLOWMEM_FORCE_LPD_W<PWC_SPEC, 10> {
         SLOWMEM_FORCE_LPD_W::new(self)
     }
     #[doc = "Bit 11 - RTC memory force no PD"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_lpu(&mut self) -> SLOWMEM_FORCE_LPU_W<11> {
+    pub fn slowmem_force_lpu(&mut self) -> SLOWMEM_FORCE_LPU_W<PWC_SPEC, 11> {
         SLOWMEM_FORCE_LPU_W::new(self)
     }
     #[doc = "Bit 12 - Fast RTC memory force power down"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_pd(&mut self) -> FASTMEM_FORCE_PD_W<12> {
+    pub fn fastmem_force_pd(&mut self) -> FASTMEM_FORCE_PD_W<PWC_SPEC, 12> {
         FASTMEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 13 - Fast RTC memory force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_pu(&mut self) -> FASTMEM_FORCE_PU_W<13> {
+    pub fn fastmem_force_pu(&mut self) -> FASTMEM_FORCE_PU_W<PWC_SPEC, 13> {
         FASTMEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 14 - enable power down fast RTC memory in sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_pd_en(&mut self) -> FASTMEM_PD_EN_W<14> {
+    pub fn fastmem_pd_en(&mut self) -> FASTMEM_PD_EN_W<PWC_SPEC, 14> {
         FASTMEM_PD_EN_W::new(self)
     }
     #[doc = "Bit 15 - RTC memory force power down"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_pd(&mut self) -> SLOWMEM_FORCE_PD_W<15> {
+    pub fn slowmem_force_pd(&mut self) -> SLOWMEM_FORCE_PD_W<PWC_SPEC, 15> {
         SLOWMEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 16 - RTC memory force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_pu(&mut self) -> SLOWMEM_FORCE_PU_W<16> {
+    pub fn slowmem_force_pu(&mut self) -> SLOWMEM_FORCE_PU_W<PWC_SPEC, 16> {
         SLOWMEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 17 - enable power down RTC memory in sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_pd_en(&mut self) -> SLOWMEM_PD_EN_W<17> {
+    pub fn slowmem_pd_en(&mut self) -> SLOWMEM_PD_EN_W<PWC_SPEC, 17> {
         SLOWMEM_PD_EN_W::new(self)
     }
     #[doc = "Bit 18 - rtc_peri force power down"]
     #[inline(always)]
     #[must_use]
-    pub fn force_pd(&mut self) -> FORCE_PD_W<18> {
+    pub fn force_pd(&mut self) -> FORCE_PD_W<PWC_SPEC, 18> {
         FORCE_PD_W::new(self)
     }
     #[doc = "Bit 19 - rtc_peri force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn force_pu(&mut self) -> FORCE_PU_W<19> {
+    pub fn force_pu(&mut self) -> FORCE_PU_W<PWC_SPEC, 19> {
         FORCE_PU_W::new(self)
     }
     #[doc = "Bit 20 - enable power down rtc_peri in sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_en(&mut self) -> PD_EN_W<20> {
+    pub fn pd_en(&mut self) -> PD_EN_W<PWC_SPEC, 20> {
         PD_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwc](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PWC_SPEC;
 impl crate::RegisterSpec for PWC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pwc::R](R) reader structure"]
-impl crate::Readable for PWC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pwc::W](W) writer structure"]
+#[doc = "`read()` method returns [`pwc::R`](R) reader structure"]
+impl crate::Readable for PWC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pwc::W`](W) writer structure"]
 impl crate::Writable for PWC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `INT_RAW_RTC` reader"]
-pub struct R(crate::R<INT_RAW_RTC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INT_RAW_RTC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INT_RAW_RTC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INT_RAW_RTC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INT_RAW_RTC_SPEC>;
 #[doc = "Field `SLP_WAKEUP_INT_RAW` reader - Stores the raw interrupt triggered when the chip wakes up from sleep."]
 pub type SLP_WAKEUP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_RAW` reader - Stores the raw interrupt triggered when the chip rejects to go to sleep."]
@@ -242,15 +229,13 @@ impl core::fmt::Debug for crate::generic::Reg<INT_RAW_RTC_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "RTC interrupt raw register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw_rtc](index.html) module"]
+#[doc = "RTC interrupt raw register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw_rtc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_RAW_RTC_SPEC;
 impl crate::RegisterSpec for INT_RAW_RTC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw_rtc::R](R) reader structure"]
-impl crate::Readable for INT_RAW_RTC_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`int_raw_rtc::R`](R) reader structure"]
+impl crate::Readable for INT_RAW_RTC_SPEC {}
 #[doc = "`reset()` method sets INT_RAW_RTC to value 0"]
 impl crate::Resettable for INT_RAW_RTC_SPEC {
     const RESET_VALUE: Self::Ux = 0;

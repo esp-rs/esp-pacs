@@ -1,51 +1,19 @@
 #[doc = "Register `LOG_SETTING` reader"]
-pub struct R(crate::R<LOG_SETTING_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LOG_SETTING_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LOG_SETTING_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LOG_SETTING_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LOG_SETTING_SPEC>;
 #[doc = "Register `LOG_SETTING` writer"]
-pub struct W(crate::W<LOG_SETTING_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LOG_SETTING_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LOG_SETTING_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LOG_SETTING_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LOG_SETTING_SPEC>;
 #[doc = "Field `LOG_ENA` reader - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA."]
 pub type LOG_ENA_R = crate::FieldReader;
 #[doc = "Field `LOG_ENA` writer - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA."]
-pub type LOG_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_SETTING_SPEC, 3, O>;
+pub type LOG_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `LOG_MODE` reader - This field must be onehot. 4'b0001 : WR monitor, 4'b0010: WORD monitor, 4'b0100: HALFWORD monitor, 4'b1000: BYTE monitor."]
 pub type LOG_MODE_R = crate::FieldReader;
 #[doc = "Field `LOG_MODE` writer - This field must be onehot. 4'b0001 : WR monitor, 4'b0010: WORD monitor, 4'b0100: HALFWORD monitor, 4'b1000: BYTE monitor."]
-pub type LOG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_SETTING_SPEC, 4, O>;
+pub type LOG_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` reader - Set 1 enable mem_loop, it will loop write at the range of MEM_START and MEM_END"]
 pub type LOG_MEM_LOOP_ENABLE_R = crate::BitReader;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` writer - Set 1 enable mem_loop, it will loop write at the range of MEM_START and MEM_END"]
-pub type LOG_MEM_LOOP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, LOG_SETTING_SPEC, O>;
+pub type LOG_MEM_LOOP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:2 - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA."]
     #[inline(always)]
@@ -86,40 +54,37 @@ impl W {
     #[doc = "Bits 0:2 - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn log_ena(&mut self) -> LOG_ENA_W<0> {
+    pub fn log_ena(&mut self) -> LOG_ENA_W<LOG_SETTING_SPEC, 0> {
         LOG_ENA_W::new(self)
     }
     #[doc = "Bits 3:6 - This field must be onehot. 4'b0001 : WR monitor, 4'b0010: WORD monitor, 4'b0100: HALFWORD monitor, 4'b1000: BYTE monitor."]
     #[inline(always)]
     #[must_use]
-    pub fn log_mode(&mut self) -> LOG_MODE_W<3> {
+    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC, 3> {
         LOG_MODE_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 enable mem_loop, it will loop write at the range of MEM_START and MEM_END"]
     #[inline(always)]
     #[must_use]
-    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<7> {
+    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC, 7> {
         LOG_MEM_LOOP_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "log config regsiter\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_setting](index.html) module"]
+#[doc = "log config regsiter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`log_setting::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`log_setting::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOG_SETTING_SPEC;
 impl crate::RegisterSpec for LOG_SETTING_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [log_setting::R](R) reader structure"]
-impl crate::Readable for LOG_SETTING_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [log_setting::W](W) writer structure"]
+#[doc = "`read()` method returns [`log_setting::R`](R) reader structure"]
+impl crate::Readable for LOG_SETTING_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`log_setting::W`](W) writer structure"]
 impl crate::Writable for LOG_SETTING_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_SMEM_AC` reader"]
-pub struct R(crate::R<SPI_SMEM_AC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_SMEM_AC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_SMEM_AC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_SMEM_AC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_SMEM_AC_SPEC>;
 #[doc = "Field `SPI_SMEM_CS_SETUP` reader - For SPI0 and SPI1, spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
 pub type SPI_SMEM_CS_SETUP_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_CS_HOLD` reader - For SPI0 and SPI1, spi cs keep low when spi is in done phase. 1: enable 0: disable."]
@@ -127,15 +114,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_AC_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "MSPI external RAM ECC and SPI CS timing control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_ac](index.html) module"]
+#[doc = "MSPI external RAM ECC and SPI CS timing control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_ac::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SMEM_AC_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_AC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_smem_ac::R](R) reader structure"]
-impl crate::Readable for SPI_SMEM_AC_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_smem_ac::R`](R) reader structure"]
+impl crate::Readable for SPI_SMEM_AC_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_AC to value 0x8000_b084"]
 impl crate::Resettable for SPI_SMEM_AC_SPEC {
     const RESET_VALUE: Self::Ux = 0x8000_b084;

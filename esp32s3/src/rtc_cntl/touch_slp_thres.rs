@@ -1,51 +1,19 @@
 #[doc = "Register `TOUCH_SLP_THRES` reader"]
-pub struct R(crate::R<TOUCH_SLP_THRES_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TOUCH_SLP_THRES_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TOUCH_SLP_THRES_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TOUCH_SLP_THRES_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TOUCH_SLP_THRES_SPEC>;
 #[doc = "Register `TOUCH_SLP_THRES` writer"]
-pub struct W(crate::W<TOUCH_SLP_THRES_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TOUCH_SLP_THRES_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TOUCH_SLP_THRES_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TOUCH_SLP_THRES_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TOUCH_SLP_THRES_SPEC>;
 #[doc = "Field `TOUCH_SLP_TH` reader - the threshold for sleep touch pad"]
 pub type TOUCH_SLP_TH_R = crate::FieldReader<u32>;
 #[doc = "Field `TOUCH_SLP_TH` writer - the threshold for sleep touch pad"]
-pub type TOUCH_SLP_TH_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_SLP_THRES_SPEC, 22, O, u32>;
+pub type TOUCH_SLP_TH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` reader - sleep pad approach function enable"]
 pub type TOUCH_SLP_APPROACH_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` writer - sleep pad approach function enable"]
-pub type TOUCH_SLP_APPROACH_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_SLP_THRES_SPEC, O>;
+pub type TOUCH_SLP_APPROACH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOUCH_SLP_PAD` reader - configure which pad as slp pad"]
 pub type TOUCH_SLP_PAD_R = crate::FieldReader;
 #[doc = "Field `TOUCH_SLP_PAD` writer - configure which pad as slp pad"]
-pub type TOUCH_SLP_PAD_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_SLP_THRES_SPEC, 5, O>;
+pub type TOUCH_SLP_PAD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 impl R {
     #[doc = "Bits 0:21 - the threshold for sleep touch pad"]
     #[inline(always)]
@@ -92,40 +60,37 @@ impl W {
     #[doc = "Bits 0:21 - the threshold for sleep touch pad"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_th(&mut self) -> TOUCH_SLP_TH_W<0> {
+    pub fn touch_slp_th(&mut self) -> TOUCH_SLP_TH_W<TOUCH_SLP_THRES_SPEC, 0> {
         TOUCH_SLP_TH_W::new(self)
     }
     #[doc = "Bit 26 - sleep pad approach function enable"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<26> {
+    pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<TOUCH_SLP_THRES_SPEC, 26> {
         TOUCH_SLP_APPROACH_EN_W::new(self)
     }
     #[doc = "Bits 27:31 - configure which pad as slp pad"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<27> {
+    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<TOUCH_SLP_THRES_SPEC, 27> {
         TOUCH_SLP_PAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "configure touch controller\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_slp_thres](index.html) module"]
+#[doc = "configure touch controller\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`touch_slp_thres::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`touch_slp_thres::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TOUCH_SLP_THRES_SPEC;
 impl crate::RegisterSpec for TOUCH_SLP_THRES_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_slp_thres::R](R) reader structure"]
-impl crate::Readable for TOUCH_SLP_THRES_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [touch_slp_thres::W](W) writer structure"]
+#[doc = "`read()` method returns [`touch_slp_thres::R`](R) reader structure"]
+impl crate::Readable for TOUCH_SLP_THRES_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`touch_slp_thres::W`](W) writer structure"]
 impl crate::Writable for TOUCH_SLP_THRES_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

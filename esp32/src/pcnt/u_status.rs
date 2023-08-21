@@ -1,65 +1,33 @@
 #[doc = "Register `U%s_STATUS` reader"]
-pub struct R(crate::R<U_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<U_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<U_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<U_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<U_STATUS_SPEC>;
 #[doc = "Register `U%s_STATUS` writer"]
-pub struct W(crate::W<U_STATUS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<U_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<U_STATUS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<U_STATUS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<U_STATUS_SPEC>;
 #[doc = "Field `CORE_STATUS_U0` reader - "]
 pub type CORE_STATUS_U0_R = crate::FieldReader<u32>;
 #[doc = "Field `ZERO_MODE` reader - "]
 pub type ZERO_MODE_R = crate::FieldReader;
 #[doc = "Field `ZERO_MODE` writer - "]
-pub type ZERO_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_STATUS_SPEC, 2, O>;
+pub type ZERO_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `THRES1` reader - "]
 pub type THRES1_R = crate::BitReader;
 #[doc = "Field `THRES1` writer - "]
-pub type THRES1_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
+pub type THRES1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `THRES0` reader - "]
 pub type THRES0_R = crate::BitReader;
 #[doc = "Field `THRES0` writer - "]
-pub type THRES0_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
+pub type THRES0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `L_LIM` reader - "]
 pub type L_LIM_R = crate::BitReader;
 #[doc = "Field `L_LIM` writer - "]
-pub type L_LIM_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
+pub type L_LIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `H_LIM` reader - "]
 pub type H_LIM_R = crate::BitReader;
 #[doc = "Field `H_LIM` writer - "]
-pub type H_LIM_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
+pub type H_LIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ZERO` reader - "]
 pub type ZERO_R = crate::BitReader;
 #[doc = "Field `ZERO` writer - "]
-pub type ZERO_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
+pub type ZERO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -124,58 +92,55 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn zero_mode(&mut self) -> ZERO_MODE_W<0> {
+    pub fn zero_mode(&mut self) -> ZERO_MODE_W<U_STATUS_SPEC, 0> {
         ZERO_MODE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1(&mut self) -> THRES1_W<2> {
+    pub fn thres1(&mut self) -> THRES1_W<U_STATUS_SPEC, 2> {
         THRES1_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0(&mut self) -> THRES0_W<3> {
+    pub fn thres0(&mut self) -> THRES0_W<U_STATUS_SPEC, 3> {
         THRES0_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn l_lim(&mut self) -> L_LIM_W<4> {
+    pub fn l_lim(&mut self) -> L_LIM_W<U_STATUS_SPEC, 4> {
         L_LIM_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn h_lim(&mut self) -> H_LIM_W<5> {
+    pub fn h_lim(&mut self) -> H_LIM_W<U_STATUS_SPEC, 5> {
         H_LIM_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn zero(&mut self) -> ZERO_W<6> {
+    pub fn zero(&mut self) -> ZERO_W<U_STATUS_SPEC, 6> {
         ZERO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u_status](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_status::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`u_status::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct U_STATUS_SPEC;
 impl crate::RegisterSpec for U_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [u_status::R](R) reader structure"]
-impl crate::Readable for U_STATUS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [u_status::W](W) writer structure"]
+#[doc = "`read()` method returns [`u_status::R`](R) reader structure"]
+impl crate::Readable for U_STATUS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`u_status::W`](W) writer structure"]
 impl crate::Writable for U_STATUS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

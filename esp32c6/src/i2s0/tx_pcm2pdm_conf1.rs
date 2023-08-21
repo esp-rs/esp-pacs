@@ -1,57 +1,23 @@
 #[doc = "Register `TX_PCM2PDM_CONF1` reader"]
-pub struct R(crate::R<TX_PCM2PDM_CONF1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TX_PCM2PDM_CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TX_PCM2PDM_CONF1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TX_PCM2PDM_CONF1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TX_PCM2PDM_CONF1_SPEC>;
 #[doc = "Register `TX_PCM2PDM_CONF1` writer"]
-pub struct W(crate::W<TX_PCM2PDM_CONF1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TX_PCM2PDM_CONF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TX_PCM2PDM_CONF1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TX_PCM2PDM_CONF1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TX_PCM2PDM_CONF1_SPEC>;
 #[doc = "Field `TX_PDM_FP` reader - I2S TX PDM Fp"]
 pub type TX_PDM_FP_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FP` writer - I2S TX PDM Fp"]
-pub type TX_PDM_FP_W<'a, const O: u8> = crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16>;
+pub type TX_PDM_FP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `TX_PDM_FS` reader - I2S TX PDM Fs"]
 pub type TX_PDM_FS_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FS` writer - I2S TX PDM Fs"]
-pub type TX_PDM_FS_W<'a, const O: u8> = crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16>;
+pub type TX_PDM_FS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `TX_IIR_HP_MULT12_5` reader - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
 pub type TX_IIR_HP_MULT12_5_R = crate::FieldReader;
 #[doc = "Field `TX_IIR_HP_MULT12_5` writer - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
-pub type TX_IIR_HP_MULT12_5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 3, O>;
+pub type TX_IIR_HP_MULT12_5_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `TX_IIR_HP_MULT12_0` reader - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
 pub type TX_IIR_HP_MULT12_0_R = crate::FieldReader;
 #[doc = "Field `TX_IIR_HP_MULT12_0` writer - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
-pub type TX_IIR_HP_MULT12_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 3, O>;
+pub type TX_IIR_HP_MULT12_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bits 0:9 - I2S TX PDM Fp"]
     #[inline(always)]
@@ -101,46 +67,43 @@ impl W {
     #[doc = "Bits 0:9 - I2S TX PDM Fp"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<0> {
+    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<TX_PCM2PDM_CONF1_SPEC, 0> {
         TX_PDM_FP_W::new(self)
     }
     #[doc = "Bits 10:19 - I2S TX PDM Fs"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<10> {
+    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<TX_PCM2PDM_CONF1_SPEC, 10> {
         TX_PDM_FS_W::new(self)
     }
     #[doc = "Bits 20:22 - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_iir_hp_mult12_5(&mut self) -> TX_IIR_HP_MULT12_5_W<20> {
+    pub fn tx_iir_hp_mult12_5(&mut self) -> TX_IIR_HP_MULT12_5_W<TX_PCM2PDM_CONF1_SPEC, 20> {
         TX_IIR_HP_MULT12_5_W::new(self)
     }
     #[doc = "Bits 23:25 - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_iir_hp_mult12_0(&mut self) -> TX_IIR_HP_MULT12_0_W<23> {
+    pub fn tx_iir_hp_mult12_0(&mut self) -> TX_IIR_HP_MULT12_0_W<TX_PCM2PDM_CONF1_SPEC, 23> {
         TX_IIR_HP_MULT12_0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S TX PCM2PDM configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_pcm2pdm_conf1](index.html) module"]
+#[doc = "I2S TX PCM2PDM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_pcm2pdm_conf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_pcm2pdm_conf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_PCM2PDM_CONF1_SPEC;
 impl crate::RegisterSpec for TX_PCM2PDM_CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_pcm2pdm_conf1::R](R) reader structure"]
-impl crate::Readable for TX_PCM2PDM_CONF1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tx_pcm2pdm_conf1::W](W) writer structure"]
+#[doc = "`read()` method returns [`tx_pcm2pdm_conf1::R`](R) reader structure"]
+impl crate::Readable for TX_PCM2PDM_CONF1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tx_pcm2pdm_conf1::W`](W) writer structure"]
 impl crate::Writable for TX_PCM2PDM_CONF1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

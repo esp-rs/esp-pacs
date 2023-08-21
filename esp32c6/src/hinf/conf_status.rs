@@ -1,18 +1,5 @@
 #[doc = "Register `CONF_STATUS` reader"]
-pub struct R(crate::R<CONF_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONF_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONF_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONF_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONF_STATUS_SPEC>;
 #[doc = "Field `FUNC0_CONFIG0` reader - func0 config0 (addr: 0x20f0 ) status"]
 pub type FUNC0_CONFIG0_R = crate::FieldReader;
 #[doc = "Field `SDR25_ST` reader - sdr25 status"]
@@ -101,15 +88,13 @@ impl core::fmt::Debug for crate::generic::Reg<CONF_STATUS_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "func0 config0 status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf_status](index.html) module"]
+#[doc = "func0 config0 status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF_STATUS_SPEC;
 impl crate::RegisterSpec for CONF_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf_status::R](R) reader structure"]
-impl crate::Readable for CONF_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`conf_status::R`](R) reader structure"]
+impl crate::Readable for CONF_STATUS_SPEC {}
 #[doc = "`reset()` method sets CONF_STATUS to value 0"]
 impl crate::Resettable for CONF_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

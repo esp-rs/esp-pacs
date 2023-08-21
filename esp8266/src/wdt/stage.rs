@@ -1,39 +1,7 @@
 #[doc = "Register `stage` reader"]
-pub struct R(crate::R<STAGE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STAGE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STAGE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STAGE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STAGE_SPEC>;
 #[doc = "Register `stage` writer"]
-pub struct W(crate::W<STAGE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<STAGE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<STAGE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<STAGE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<STAGE_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
@@ -50,22 +18,19 @@ impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "The current watchdog stage\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [stage](index.html) module"]
+#[doc = "The current watchdog stage\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stage::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stage::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STAGE_SPEC;
 impl crate::RegisterSpec for STAGE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [stage::R](R) reader structure"]
-impl crate::Readable for STAGE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [stage::W](W) writer structure"]
+#[doc = "`read()` method returns [`stage::R`](R) reader structure"]
+impl crate::Readable for STAGE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`stage::W`](W) writer structure"]
 impl crate::Writable for STAGE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

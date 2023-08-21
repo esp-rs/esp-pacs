@@ -1,43 +1,11 @@
 #[doc = "Register `DEBUG_SEL1` reader"]
-pub struct R(crate::R<DEBUG_SEL1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DEBUG_SEL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DEBUG_SEL1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DEBUG_SEL1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DEBUG_SEL1_SPEC>;
 #[doc = "Register `DEBUG_SEL1` writer"]
-pub struct W(crate::W<DEBUG_SEL1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DEBUG_SEL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DEBUG_SEL1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DEBUG_SEL1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DEBUG_SEL1_SPEC>;
 #[doc = "Field `LP_DEBUG_SEL4` reader - need des"]
 pub type LP_DEBUG_SEL4_R = crate::FieldReader;
 #[doc = "Field `LP_DEBUG_SEL4` writer - need des"]
-pub type LP_DEBUG_SEL4_W<'a, const O: u8> = crate::FieldWriter<'a, DEBUG_SEL1_SPEC, 7, O>;
+pub type LP_DEBUG_SEL4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
@@ -66,28 +34,25 @@ impl W {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_debug_sel4(&mut self) -> LP_DEBUG_SEL4_W<0> {
+    pub fn lp_debug_sel4(&mut self) -> LP_DEBUG_SEL4_W<DEBUG_SEL1_SPEC, 0> {
         LP_DEBUG_SEL4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "need des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [debug_sel1](index.html) module"]
+#[doc = "need des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`debug_sel1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`debug_sel1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DEBUG_SEL1_SPEC;
 impl crate::RegisterSpec for DEBUG_SEL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [debug_sel1::R](R) reader structure"]
-impl crate::Readable for DEBUG_SEL1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [debug_sel1::W](W) writer structure"]
+#[doc = "`read()` method returns [`debug_sel1::R`](R) reader structure"]
+impl crate::Readable for DEBUG_SEL1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`debug_sel1::W`](W) writer structure"]
 impl crate::Writable for DEBUG_SEL1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

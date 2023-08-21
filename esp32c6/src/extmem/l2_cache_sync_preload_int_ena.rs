@@ -1,18 +1,5 @@
 #[doc = "Register `L2_CACHE_SYNC_PRELOAD_INT_ENA` reader"]
-pub struct R(crate::R<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC>;
 #[doc = "Field `L2_CACHE_PLD_DONE_INT_ENA` reader - The bit is used to enable interrupt of L2-Cache preload-operation done."]
 pub type L2_CACHE_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PLD_ERR_INT_ENA` reader - The bit is used to enable interrupt of L2-Cache preload-operation error."]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC
         self.read().fmt(f)
     }
 }
-#[doc = "L1-Cache Access Fail Interrupt enable register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_sync_preload_int_ena](index.html) module"]
+#[doc = "L1-Cache Access Fail Interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_sync_preload_int_ena::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC;
 impl crate::RegisterSpec for L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l2_cache_sync_preload_int_ena::R](R) reader structure"]
-impl crate::Readable for L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`l2_cache_sync_preload_int_ena::R`](R) reader structure"]
+impl crate::Readable for L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_SYNC_PRELOAD_INT_ENA to value 0"]
 impl crate::Resettable for L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC {
     const RESET_VALUE: Self::Ux = 0;

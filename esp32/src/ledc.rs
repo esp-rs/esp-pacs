@@ -208,83 +208,83 @@ pub struct RegisterBlock {
     #[doc = "0x1fc - "]
     pub date: DATE,
 }
-#[doc = "HSCH_CONF0 (rw) register accessor: an alias for `Reg<HSCH_CONF0_SPEC>`"]
+#[doc = "HSCH_CONF0 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hsch_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hsch_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hsch_conf0`] module"]
 pub type HSCH_CONF0 = crate::Reg<hsch_conf0::HSCH_CONF0_SPEC>;
 #[doc = ""]
 pub mod hsch_conf0;
-#[doc = "HSCH_HPOINT (rw) register accessor: an alias for `Reg<HSCH_HPOINT_SPEC>`"]
+#[doc = "HSCH_HPOINT (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hsch_hpoint::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hsch_hpoint::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hsch_hpoint`] module"]
 pub type HSCH_HPOINT = crate::Reg<hsch_hpoint::HSCH_HPOINT_SPEC>;
 #[doc = ""]
 pub mod hsch_hpoint;
-#[doc = "HSCH_DUTY (rw) register accessor: an alias for `Reg<HSCH_DUTY_SPEC>`"]
+#[doc = "HSCH_DUTY (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hsch_duty::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hsch_duty::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hsch_duty`] module"]
 pub type HSCH_DUTY = crate::Reg<hsch_duty::HSCH_DUTY_SPEC>;
 #[doc = ""]
 pub mod hsch_duty;
-#[doc = "HSCH_CONF1 (rw) register accessor: an alias for `Reg<HSCH_CONF1_SPEC>`"]
+#[doc = "HSCH_CONF1 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hsch_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hsch_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hsch_conf1`] module"]
 pub type HSCH_CONF1 = crate::Reg<hsch_conf1::HSCH_CONF1_SPEC>;
 #[doc = ""]
 pub mod hsch_conf1;
-#[doc = "HSCH_DUTY_R (r) register accessor: an alias for `Reg<HSCH_DUTY_R_SPEC>`"]
+#[doc = "HSCH_DUTY_R (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hsch_duty_r::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hsch_duty_r`] module"]
 pub type HSCH_DUTY_R = crate::Reg<hsch_duty_r::HSCH_DUTY_R_SPEC>;
 #[doc = ""]
 pub mod hsch_duty_r;
-#[doc = "LSCH_CONF0 (rw) register accessor: an alias for `Reg<LSCH_CONF0_SPEC>`"]
+#[doc = "LSCH_CONF0 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lsch_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lsch_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lsch_conf0`] module"]
 pub type LSCH_CONF0 = crate::Reg<lsch_conf0::LSCH_CONF0_SPEC>;
 #[doc = ""]
 pub mod lsch_conf0;
-#[doc = "LSCH_HPOINT (rw) register accessor: an alias for `Reg<LSCH_HPOINT_SPEC>`"]
+#[doc = "LSCH_HPOINT (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lsch_hpoint::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lsch_hpoint::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lsch_hpoint`] module"]
 pub type LSCH_HPOINT = crate::Reg<lsch_hpoint::LSCH_HPOINT_SPEC>;
 #[doc = ""]
 pub mod lsch_hpoint;
-#[doc = "LSCH_DUTY (rw) register accessor: an alias for `Reg<LSCH_DUTY_SPEC>`"]
+#[doc = "LSCH_DUTY (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lsch_duty::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lsch_duty::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lsch_duty`] module"]
 pub type LSCH_DUTY = crate::Reg<lsch_duty::LSCH_DUTY_SPEC>;
 #[doc = ""]
 pub mod lsch_duty;
-#[doc = "LSCH_CONF1 (rw) register accessor: an alias for `Reg<LSCH_CONF1_SPEC>`"]
+#[doc = "LSCH_CONF1 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lsch_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lsch_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lsch_conf1`] module"]
 pub type LSCH_CONF1 = crate::Reg<lsch_conf1::LSCH_CONF1_SPEC>;
 #[doc = ""]
 pub mod lsch_conf1;
-#[doc = "LSCH_DUTY_R (r) register accessor: an alias for `Reg<LSCH_DUTY_R_SPEC>`"]
+#[doc = "LSCH_DUTY_R (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lsch_duty_r::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lsch_duty_r`] module"]
 pub type LSCH_DUTY_R = crate::Reg<lsch_duty_r::LSCH_DUTY_R_SPEC>;
 #[doc = ""]
 pub mod lsch_duty_r;
-#[doc = "HSTIMER_CONF (rw) register accessor: an alias for `Reg<HSTIMER_CONF_SPEC>`"]
+#[doc = "HSTIMER_CONF (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hstimer_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hstimer_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hstimer_conf`] module"]
 pub type HSTIMER_CONF = crate::Reg<hstimer_conf::HSTIMER_CONF_SPEC>;
 #[doc = ""]
 pub mod hstimer_conf;
-#[doc = "HSTIMER_VALUE (r) register accessor: an alias for `Reg<HSTIMER_VALUE_SPEC>`"]
+#[doc = "HSTIMER_VALUE (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hstimer_value::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`hstimer_value`] module"]
 pub type HSTIMER_VALUE = crate::Reg<hstimer_value::HSTIMER_VALUE_SPEC>;
 #[doc = ""]
 pub mod hstimer_value;
-#[doc = "LSTIMER_CONF (rw) register accessor: an alias for `Reg<LSTIMER_CONF_SPEC>`"]
+#[doc = "LSTIMER_CONF (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lstimer_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lstimer_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lstimer_conf`] module"]
 pub type LSTIMER_CONF = crate::Reg<lstimer_conf::LSTIMER_CONF_SPEC>;
 #[doc = ""]
 pub mod lstimer_conf;
-#[doc = "LSTIMER_VALUE (r) register accessor: an alias for `Reg<LSTIMER_VALUE_SPEC>`"]
+#[doc = "LSTIMER_VALUE (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lstimer_value::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`lstimer_value`] module"]
 pub type LSTIMER_VALUE = crate::Reg<lstimer_value::LSTIMER_VALUE_SPEC>;
 #[doc = ""]
 pub mod lstimer_value;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = ""]
 pub mod int_raw;
-#[doc = "INT_ST (r) register accessor: an alias for `Reg<INT_ST_SPEC>`"]
+#[doc = "INT_ST (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_st`] module"]
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = ""]
 pub mod int_st;
-#[doc = "INT_ENA (rw) register accessor: an alias for `Reg<INT_ENA_SPEC>`"]
+#[doc = "INT_ENA (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = ""]
 pub mod int_ena;
-#[doc = "INT_CLR (w) register accessor: an alias for `Reg<INT_CLR_SPEC>`"]
+#[doc = "INT_CLR (w) register accessor: \n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = ""]
 pub mod int_clr;
-#[doc = "CONF (rw) register accessor: an alias for `Reg<CONF_SPEC>`"]
+#[doc = "CONF (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`conf`] module"]
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = ""]
 pub mod conf;
-#[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
+#[doc = "DATE (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = ""]
 pub mod date;

@@ -1,44 +1,11 @@
 #[doc = "Register `I2C_SCL_LOW_PERIOD` reader"]
-pub struct R(crate::R<I2C_SCL_LOW_PERIOD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<I2C_SCL_LOW_PERIOD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<I2C_SCL_LOW_PERIOD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<I2C_SCL_LOW_PERIOD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<I2C_SCL_LOW_PERIOD_SPEC>;
 #[doc = "Register `I2C_SCL_LOW_PERIOD` writer"]
-pub struct W(crate::W<I2C_SCL_LOW_PERIOD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<I2C_SCL_LOW_PERIOD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<I2C_SCL_LOW_PERIOD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<I2C_SCL_LOW_PERIOD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<I2C_SCL_LOW_PERIOD_SPEC>;
 #[doc = "Field `I2C_SCL_LOW_PERIOD` reader - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
 pub type I2C_SCL_LOW_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_SCL_LOW_PERIOD` writer - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
-pub type I2C_SCL_LOW_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2C_SCL_LOW_PERIOD_SPEC, 9, O, u16>;
+pub type I2C_SCL_LOW_PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
     #[inline(always)]
@@ -67,28 +34,25 @@ impl W {
     #[doc = "Bits 0:8 - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_scl_low_period(&mut self) -> I2C_SCL_LOW_PERIOD_W<0> {
+    pub fn i2c_scl_low_period(&mut self) -> I2C_SCL_LOW_PERIOD_W<I2C_SCL_LOW_PERIOD_SPEC, 0> {
         I2C_SCL_LOW_PERIOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Configures the low level width of the SCL Clock\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2c_scl_low_period](index.html) module"]
+#[doc = "Configures the low level width of the SCL Clock\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2c_scl_low_period::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2c_scl_low_period::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2C_SCL_LOW_PERIOD_SPEC;
 impl crate::RegisterSpec for I2C_SCL_LOW_PERIOD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [i2c_scl_low_period::R](R) reader structure"]
-impl crate::Readable for I2C_SCL_LOW_PERIOD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [i2c_scl_low_period::W](W) writer structure"]
+#[doc = "`read()` method returns [`i2c_scl_low_period::R`](R) reader structure"]
+impl crate::Readable for I2C_SCL_LOW_PERIOD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`i2c_scl_low_period::W`](W) writer structure"]
 impl crate::Writable for I2C_SCL_LOW_PERIOD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

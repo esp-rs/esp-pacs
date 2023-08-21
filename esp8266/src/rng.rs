@@ -5,7 +5,7 @@ pub struct RegisterBlock {
     #[doc = "0x00 - RNG register"]
     pub rng: RNG,
 }
-#[doc = "rng (r) register accessor: an alias for `Reg<RNG_SPEC>`"]
+#[doc = "rng (r) register accessor: RNG register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rng::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`rng`] module"]
 pub type RNG = crate::Reg<rng::RNG_SPEC>;
 #[doc = "RNG register"]
 pub mod rng;

@@ -1,47 +1,15 @@
 #[doc = "Register `DCTL` reader"]
-pub struct R(crate::R<DCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DCTL_SPEC>;
 #[doc = "Register `DCTL` writer"]
-pub struct W(crate::W<DCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DCTL_SPEC>;
 #[doc = "Field `RMTWKUPSIG` reader - "]
 pub type RMTWKUPSIG_R = crate::BitReader;
 #[doc = "Field `RMTWKUPSIG` writer - "]
-pub type RMTWKUPSIG_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type RMTWKUPSIG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SFTDISCON` reader - "]
 pub type SFTDISCON_R = crate::BitReader;
 #[doc = "Field `SFTDISCON` writer - "]
-pub type SFTDISCON_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type SFTDISCON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GNPINNAKSTS` reader - "]
 pub type GNPINNAKSTS_R = crate::BitReader;
 #[doc = "Field `GOUTNAKSTS` reader - "]
@@ -49,39 +17,39 @@ pub type GOUTNAKSTS_R = crate::BitReader;
 #[doc = "Field `TSTCTL` reader - "]
 pub type TSTCTL_R = crate::FieldReader;
 #[doc = "Field `TSTCTL` writer - "]
-pub type TSTCTL_W<'a, const O: u8> = crate::FieldWriter<'a, DCTL_SPEC, 3, O>;
+pub type TSTCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `SGNPINNAK` writer - "]
-pub type SGNPINNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type SGNPINNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CGNPINNAK` writer - "]
-pub type CGNPINNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type CGNPINNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SGOUTNAK` writer - "]
-pub type SGOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type SGOUTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CGOUTNAK` writer - "]
-pub type CGOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type CGOUTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PWRONPRGDONE` reader - "]
 pub type PWRONPRGDONE_R = crate::BitReader;
 #[doc = "Field `PWRONPRGDONE` writer - "]
-pub type PWRONPRGDONE_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type PWRONPRGDONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GMC` reader - "]
 pub type GMC_R = crate::FieldReader;
 #[doc = "Field `GMC` writer - "]
-pub type GMC_W<'a, const O: u8> = crate::FieldWriter<'a, DCTL_SPEC, 2, O>;
+pub type GMC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `IGNRFRMNUM` reader - "]
 pub type IGNRFRMNUM_R = crate::BitReader;
 #[doc = "Field `IGNRFRMNUM` writer - "]
-pub type IGNRFRMNUM_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type IGNRFRMNUM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NAKONBBLE` reader - "]
 pub type NAKONBBLE_R = crate::BitReader;
 #[doc = "Field `NAKONBBLE` writer - "]
-pub type NAKONBBLE_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type NAKONBBLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENCOUNTONBNA` reader - "]
 pub type ENCOUNTONBNA_R = crate::BitReader;
 #[doc = "Field `ENCOUNTONBNA` writer - "]
-pub type ENCOUNTONBNA_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type ENCOUNTONBNA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DEEPSLEEPBESLREJECT` reader - "]
 pub type DEEPSLEEPBESLREJECT_R = crate::BitReader;
 #[doc = "Field `DEEPSLEEPBESLREJECT` writer - "]
-pub type DEEPSLEEPBESLREJECT_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
+pub type DEEPSLEEPBESLREJECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -176,100 +144,97 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn rmtwkupsig(&mut self) -> RMTWKUPSIG_W<0> {
+    pub fn rmtwkupsig(&mut self) -> RMTWKUPSIG_W<DCTL_SPEC, 0> {
         RMTWKUPSIG_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sftdiscon(&mut self) -> SFTDISCON_W<1> {
+    pub fn sftdiscon(&mut self) -> SFTDISCON_W<DCTL_SPEC, 1> {
         SFTDISCON_W::new(self)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
     #[must_use]
-    pub fn tstctl(&mut self) -> TSTCTL_W<4> {
+    pub fn tstctl(&mut self) -> TSTCTL_W<DCTL_SPEC, 4> {
         TSTCTL_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<7> {
+    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<DCTL_SPEC, 7> {
         SGNPINNAK_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<8> {
+    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<DCTL_SPEC, 8> {
         CGNPINNAK_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<9> {
+    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<DCTL_SPEC, 9> {
         SGOUTNAK_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<10> {
+    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<DCTL_SPEC, 10> {
         CGOUTNAK_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn pwronprgdone(&mut self) -> PWRONPRGDONE_W<11> {
+    pub fn pwronprgdone(&mut self) -> PWRONPRGDONE_W<DCTL_SPEC, 11> {
         PWRONPRGDONE_W::new(self)
     }
     #[doc = "Bits 13:14"]
     #[inline(always)]
     #[must_use]
-    pub fn gmc(&mut self) -> GMC_W<13> {
+    pub fn gmc(&mut self) -> GMC_W<DCTL_SPEC, 13> {
         GMC_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn ignrfrmnum(&mut self) -> IGNRFRMNUM_W<15> {
+    pub fn ignrfrmnum(&mut self) -> IGNRFRMNUM_W<DCTL_SPEC, 15> {
         IGNRFRMNUM_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn nakonbble(&mut self) -> NAKONBBLE_W<16> {
+    pub fn nakonbble(&mut self) -> NAKONBBLE_W<DCTL_SPEC, 16> {
         NAKONBBLE_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn encountonbna(&mut self) -> ENCOUNTONBNA_W<17> {
+    pub fn encountonbna(&mut self) -> ENCOUNTONBNA_W<DCTL_SPEC, 17> {
         ENCOUNTONBNA_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn deepsleepbeslreject(&mut self) -> DEEPSLEEPBESLREJECT_W<18> {
+    pub fn deepsleepbeslreject(&mut self) -> DEEPSLEEPBESLREJECT_W<DCTL_SPEC, 18> {
         DEEPSLEEPBESLREJECT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dctl](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCTL_SPEC;
 impl crate::RegisterSpec for DCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dctl::R](R) reader structure"]
-impl crate::Readable for DCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`dctl::R`](R) reader structure"]
+impl crate::Readable for DCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dctl::W`](W) writer structure"]
 impl crate::Writable for DCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

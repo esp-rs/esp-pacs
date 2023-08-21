@@ -1,43 +1,11 @@
 #[doc = "Register `CMD10` reader"]
-pub struct R(crate::R<CMD10_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CMD10_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CMD10_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CMD10_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CMD10_SPEC>;
 #[doc = "Register `CMD10` writer"]
-pub struct W(crate::W<CMD10_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CMD10_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CMD10_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CMD10_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CMD10_SPEC>;
 #[doc = "Field `COMMAND10` reader - command10"]
 pub type COMMAND10_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND10` writer - command10"]
-pub type COMMAND10_W<'a, const O: u8> = crate::FieldWriter<'a, CMD10_SPEC, 14, O, u16>;
+pub type COMMAND10_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
 #[doc = "Field `COMMAND10_DONE` reader - command10_done"]
 pub type COMMAND10_DONE_R = crate::BitReader;
 impl R {
@@ -74,28 +42,25 @@ impl W {
     #[doc = "Bits 0:13 - command10"]
     #[inline(always)]
     #[must_use]
-    pub fn command10(&mut self) -> COMMAND10_W<0> {
+    pub fn command10(&mut self) -> COMMAND10_W<CMD10_SPEC, 0> {
         COMMAND10_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "i2c commond10 register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd10](index.html) module"]
+#[doc = "i2c commond10 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmd10::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmd10::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMD10_SPEC;
 impl crate::RegisterSpec for CMD10_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmd10::R](R) reader structure"]
-impl crate::Readable for CMD10_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cmd10::W](W) writer structure"]
+#[doc = "`read()` method returns [`cmd10::R`](R) reader structure"]
+impl crate::Readable for CMD10_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cmd10::W`](W) writer structure"]
 impl crate::Writable for CMD10_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

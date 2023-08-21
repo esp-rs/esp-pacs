@@ -1,43 +1,11 @@
 #[doc = "Register `STORE7` reader"]
-pub struct R(crate::R<STORE7_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STORE7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STORE7_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STORE7_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STORE7_SPEC>;
 #[doc = "Register `STORE7` writer"]
-pub struct W(crate::W<STORE7_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<STORE7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<STORE7_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<STORE7_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<STORE7_SPEC>;
 #[doc = "Field `SCRATCH7` reader - reserved register"]
 pub type SCRATCH7_R = crate::FieldReader<u32>;
 #[doc = "Field `SCRATCH7` writer - reserved register"]
-pub type SCRATCH7_W<'a, const O: u8> = crate::FieldWriter<'a, STORE7_SPEC, 32, O, u32>;
+pub type SCRATCH7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - reserved register"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:31 - reserved register"]
     #[inline(always)]
     #[must_use]
-    pub fn scratch7(&mut self) -> SCRATCH7_W<0> {
+    pub fn scratch7(&mut self) -> SCRATCH7_W<STORE7_SPEC, 0> {
         SCRATCH7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [store7](index.html) module"]
+#[doc = "rtc configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`store7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`store7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STORE7_SPEC;
 impl crate::RegisterSpec for STORE7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [store7::R](R) reader structure"]
-impl crate::Readable for STORE7_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [store7::W](W) writer structure"]
+#[doc = "`read()` method returns [`store7::R`](R) reader structure"]
+impl crate::Readable for STORE7_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`store7::W`](W) writer structure"]
 impl crate::Writable for STORE7_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

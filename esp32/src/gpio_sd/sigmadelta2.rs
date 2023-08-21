@@ -1,47 +1,15 @@
 #[doc = "Register `SIGMADELTA2` reader"]
-pub struct R(crate::R<SIGMADELTA2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SIGMADELTA2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SIGMADELTA2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SIGMADELTA2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SIGMADELTA2_SPEC>;
 #[doc = "Register `SIGMADELTA2` writer"]
-pub struct W(crate::W<SIGMADELTA2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SIGMADELTA2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SIGMADELTA2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SIGMADELTA2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SIGMADELTA2_SPEC>;
 #[doc = "Field `SD2_IN` reader - "]
 pub type SD2_IN_R = crate::FieldReader;
 #[doc = "Field `SD2_IN` writer - "]
-pub type SD2_IN_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA2_SPEC, 8, O>;
+pub type SD2_IN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SD2_PRESCALE` reader - "]
 pub type SD2_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `SD2_PRESCALE` writer - "]
-pub type SD2_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA2_SPEC, 8, O>;
+pub type SD2_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -76,34 +44,31 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn sd2_in(&mut self) -> SD2_IN_W<0> {
+    pub fn sd2_in(&mut self) -> SD2_IN_W<SIGMADELTA2_SPEC, 0> {
         SD2_IN_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn sd2_prescale(&mut self) -> SD2_PRESCALE_W<8> {
+    pub fn sd2_prescale(&mut self) -> SD2_PRESCALE_W<SIGMADELTA2_SPEC, 8> {
         SD2_PRESCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sigmadelta2](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sigmadelta2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sigmadelta2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SIGMADELTA2_SPEC;
 impl crate::RegisterSpec for SIGMADELTA2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sigmadelta2::R](R) reader structure"]
-impl crate::Readable for SIGMADELTA2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sigmadelta2::W](W) writer structure"]
+#[doc = "`read()` method returns [`sigmadelta2::R`](R) reader structure"]
+impl crate::Readable for SIGMADELTA2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sigmadelta2::W`](W) writer structure"]
 impl crate::Writable for SIGMADELTA2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

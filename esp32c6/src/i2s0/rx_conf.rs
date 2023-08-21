@@ -1,103 +1,71 @@
 #[doc = "Register `RX_CONF` reader"]
-pub struct R(crate::R<RX_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RX_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RX_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RX_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RX_CONF_SPEC>;
 #[doc = "Register `RX_CONF` writer"]
-pub struct W(crate::W<RX_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RX_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RX_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RX_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RX_CONF_SPEC>;
 #[doc = "Field `RX_RESET` writer - Set this bit to reset receiver"]
-pub type RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_FIFO_RESET` writer - Set this bit to reset Rx AFIFO"]
-pub type RX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_START` reader - Set this bit to start receiving data"]
 pub type RX_START_R = crate::BitReader;
 #[doc = "Field `RX_START` writer - Set this bit to start receiving data"]
-pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_SLAVE_MOD` reader - Set this bit to enable slave receiver mode"]
 pub type RX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `RX_SLAVE_MOD` writer - Set this bit to enable slave receiver mode"]
-pub type RX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_SLAVE_MOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_MONO` reader - Set this bit to enable receiver in mono mode"]
 pub type RX_MONO_R = crate::BitReader;
 #[doc = "Field `RX_MONO` writer - Set this bit to enable receiver in mono mode"]
-pub type RX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_MONO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_BIG_ENDIAN` reader - I2S Rx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
 pub type RX_BIG_ENDIAN_R = crate::BitReader;
 #[doc = "Field `RX_BIG_ENDIAN` writer - I2S Rx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
-pub type RX_BIG_ENDIAN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_BIG_ENDIAN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_UPDATE` reader - Set 1 to update I2S RX registers from APB clock domain to I2S RX clock domain. This bit will be cleared by hardware after update register done."]
 pub type RX_UPDATE_R = crate::BitReader;
 #[doc = "Field `RX_UPDATE` writer - Set 1 to update I2S RX registers from APB clock domain to I2S RX clock domain. This bit will be cleared by hardware after update register done."]
-pub type RX_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_MONO_FST_VLD` reader - 1: The first channel data value is valid in I2S RX mono mode. 0: The second channel data value is valid in I2S RX mono mode."]
 pub type RX_MONO_FST_VLD_R = crate::BitReader;
 #[doc = "Field `RX_MONO_FST_VLD` writer - 1: The first channel data value is valid in I2S RX mono mode. 0: The second channel data value is valid in I2S RX mono mode."]
-pub type RX_MONO_FST_VLD_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_MONO_FST_VLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_PCM_CONF` reader - I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;"]
 pub type RX_PCM_CONF_R = crate::FieldReader;
 #[doc = "Field `RX_PCM_CONF` writer - I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;"]
-pub type RX_PCM_CONF_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF_SPEC, 2, O>;
+pub type RX_PCM_CONF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `RX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for received data."]
 pub type RX_PCM_BYPASS_R = crate::BitReader;
 #[doc = "Field `RX_PCM_BYPASS` writer - Set this bit to bypass Compress/Decompress module for received data."]
-pub type RX_PCM_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_PCM_BYPASS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_STOP_MODE` reader - 0 : I2S Rx only stop when reg_rx_start is cleared. 1: Stop when reg_rx_start is 0 or in_suc_eof is 1. 2: Stop I2S RX when reg_rx_start is 0 or RX FIFO is full."]
 pub type RX_STOP_MODE_R = crate::FieldReader;
 #[doc = "Field `RX_STOP_MODE` writer - 0 : I2S Rx only stop when reg_rx_start is cleared. 1: Stop when reg_rx_start is 0 or in_suc_eof is 1. 2: Stop I2S RX when reg_rx_start is 0 or RX FIFO is full."]
-pub type RX_STOP_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF_SPEC, 2, O>;
+pub type RX_STOP_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `RX_LEFT_ALIGN` reader - 1: I2S RX left alignment mode. 0: I2S RX right alignment mode."]
 pub type RX_LEFT_ALIGN_R = crate::BitReader;
 #[doc = "Field `RX_LEFT_ALIGN` writer - 1: I2S RX left alignment mode. 0: I2S RX right alignment mode."]
-pub type RX_LEFT_ALIGN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_LEFT_ALIGN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_24_FILL_EN` reader - 1: store 24 channel bits to 32 bits. 0:store 24 channel bits to 24 bits."]
 pub type RX_24_FILL_EN_R = crate::BitReader;
 #[doc = "Field `RX_24_FILL_EN` writer - 1: store 24 channel bits to 32 bits. 0:store 24 channel bits to 24 bits."]
-pub type RX_24_FILL_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_24_FILL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_WS_IDLE_POL` reader - 0: WS should be 0 when receiving left channel data, and WS is 1in right channel. 1: WS should be 1 when receiving left channel data, and WS is 0in right channel."]
 pub type RX_WS_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `RX_WS_IDLE_POL` writer - 0: WS should be 0 when receiving left channel data, and WS is 1in right channel. 1: WS should be 1 when receiving left channel data, and WS is 0in right channel."]
-pub type RX_WS_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_WS_IDLE_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_BIT_ORDER` reader - I2S Rx bit endian. 1:small endian, the LSB is received first. 0:big endian, the MSB is received first."]
 pub type RX_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `RX_BIT_ORDER` writer - I2S Rx bit endian. 1:small endian, the LSB is received first. 0:big endian, the MSB is received first."]
-pub type RX_BIT_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_BIT_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_TDM_EN` reader - 1: Enable I2S TDM Rx mode . 0: Disable."]
 pub type RX_TDM_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_EN` writer - 1: Enable I2S TDM Rx mode . 0: Disable."]
-pub type RX_TDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_TDM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RX_PDM_EN` reader - 1: Enable I2S PDM Rx mode . 0: Disable."]
 pub type RX_PDM_EN_R = crate::BitReader;
 #[doc = "Field `RX_PDM_EN` writer - 1: Enable I2S PDM Rx mode . 0: Disable."]
-pub type RX_PDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF_SPEC, O>;
+pub type RX_PDM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 2 - Set this bit to start receiving data"]
     #[inline(always)]
@@ -237,124 +205,121 @@ impl W {
     #[doc = "Bit 0 - Set this bit to reset receiver"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_reset(&mut self) -> RX_RESET_W<0> {
+    pub fn rx_reset(&mut self) -> RX_RESET_W<RX_CONF_SPEC, 0> {
         RX_RESET_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset Rx AFIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<1> {
+    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<RX_CONF_SPEC, 1> {
         RX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to start receiving data"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_start(&mut self) -> RX_START_W<2> {
+    pub fn rx_start(&mut self) -> RX_START_W<RX_CONF_SPEC, 2> {
         RX_START_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable slave receiver mode"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<3> {
+    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<RX_CONF_SPEC, 3> {
         RX_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable receiver in mono mode"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_mono(&mut self) -> RX_MONO_W<5> {
+    pub fn rx_mono(&mut self) -> RX_MONO_W<RX_CONF_SPEC, 5> {
         RX_MONO_W::new(self)
     }
     #[doc = "Bit 7 - I2S Rx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_big_endian(&mut self) -> RX_BIG_ENDIAN_W<7> {
+    pub fn rx_big_endian(&mut self) -> RX_BIG_ENDIAN_W<RX_CONF_SPEC, 7> {
         RX_BIG_ENDIAN_W::new(self)
     }
     #[doc = "Bit 8 - Set 1 to update I2S RX registers from APB clock domain to I2S RX clock domain. This bit will be cleared by hardware after update register done."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_update(&mut self) -> RX_UPDATE_W<8> {
+    pub fn rx_update(&mut self) -> RX_UPDATE_W<RX_CONF_SPEC, 8> {
         RX_UPDATE_W::new(self)
     }
     #[doc = "Bit 9 - 1: The first channel data value is valid in I2S RX mono mode. 0: The second channel data value is valid in I2S RX mono mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_mono_fst_vld(&mut self) -> RX_MONO_FST_VLD_W<9> {
+    pub fn rx_mono_fst_vld(&mut self) -> RX_MONO_FST_VLD_W<RX_CONF_SPEC, 9> {
         RX_MONO_FST_VLD_W::new(self)
     }
     #[doc = "Bits 10:11 - I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W<10> {
+    pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W<RX_CONF_SPEC, 10> {
         RX_PCM_CONF_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to bypass Compress/Decompress module for received data."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pcm_bypass(&mut self) -> RX_PCM_BYPASS_W<12> {
+    pub fn rx_pcm_bypass(&mut self) -> RX_PCM_BYPASS_W<RX_CONF_SPEC, 12> {
         RX_PCM_BYPASS_W::new(self)
     }
     #[doc = "Bits 13:14 - 0 : I2S Rx only stop when reg_rx_start is cleared. 1: Stop when reg_rx_start is 0 or in_suc_eof is 1. 2: Stop I2S RX when reg_rx_start is 0 or RX FIFO is full."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_stop_mode(&mut self) -> RX_STOP_MODE_W<13> {
+    pub fn rx_stop_mode(&mut self) -> RX_STOP_MODE_W<RX_CONF_SPEC, 13> {
         RX_STOP_MODE_W::new(self)
     }
     #[doc = "Bit 15 - 1: I2S RX left alignment mode. 0: I2S RX right alignment mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_left_align(&mut self) -> RX_LEFT_ALIGN_W<15> {
+    pub fn rx_left_align(&mut self) -> RX_LEFT_ALIGN_W<RX_CONF_SPEC, 15> {
         RX_LEFT_ALIGN_W::new(self)
     }
     #[doc = "Bit 16 - 1: store 24 channel bits to 32 bits. 0:store 24 channel bits to 24 bits."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_24_fill_en(&mut self) -> RX_24_FILL_EN_W<16> {
+    pub fn rx_24_fill_en(&mut self) -> RX_24_FILL_EN_W<RX_CONF_SPEC, 16> {
         RX_24_FILL_EN_W::new(self)
     }
     #[doc = "Bit 17 - 0: WS should be 0 when receiving left channel data, and WS is 1in right channel. 1: WS should be 1 when receiving left channel data, and WS is 0in right channel."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ws_idle_pol(&mut self) -> RX_WS_IDLE_POL_W<17> {
+    pub fn rx_ws_idle_pol(&mut self) -> RX_WS_IDLE_POL_W<RX_CONF_SPEC, 17> {
         RX_WS_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 18 - I2S Rx bit endian. 1:small endian, the LSB is received first. 0:big endian, the MSB is received first."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_bit_order(&mut self) -> RX_BIT_ORDER_W<18> {
+    pub fn rx_bit_order(&mut self) -> RX_BIT_ORDER_W<RX_CONF_SPEC, 18> {
         RX_BIT_ORDER_W::new(self)
     }
     #[doc = "Bit 19 - 1: Enable I2S TDM Rx mode . 0: Disable."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tdm_en(&mut self) -> RX_TDM_EN_W<19> {
+    pub fn rx_tdm_en(&mut self) -> RX_TDM_EN_W<RX_CONF_SPEC, 19> {
         RX_TDM_EN_W::new(self)
     }
     #[doc = "Bit 20 - 1: Enable I2S PDM Rx mode . 0: Disable."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pdm_en(&mut self) -> RX_PDM_EN_W<20> {
+    pub fn rx_pdm_en(&mut self) -> RX_PDM_EN_W<RX_CONF_SPEC, 20> {
         RX_PDM_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2S RX configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_conf](index.html) module"]
+#[doc = "I2S RX configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_CONF_SPEC;
 impl crate::RegisterSpec for RX_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rx_conf::R](R) reader structure"]
-impl crate::Readable for RX_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rx_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`rx_conf::R`](R) reader structure"]
+impl crate::Readable for RX_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rx_conf::W`](W) writer structure"]
 impl crate::Writable for RX_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

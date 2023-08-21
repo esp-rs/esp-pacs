@@ -1,18 +1,5 @@
 #[doc = "Register `L2_CACHE_DATA_MEM_POWER_CTRL` reader"]
-pub struct R(crate::R<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC>;
 #[doc = "Field `L2_CACHE_DATA_MEM_FORCE_ON` reader - The bit is used to close clock gating of L2-Cache data memory. 1: close gating, 0: open clock gating."]
 pub type L2_CACHE_DATA_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_DATA_MEM_FORCE_PD` reader - The bit is used to power L2-Cache data memory down. 0: follow rtc_lslp, 1: power down"]
@@ -61,15 +48,13 @@ impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC>
         self.read().fmt(f)
     }
 }
-#[doc = "Cache data memory power control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_data_mem_power_ctrl](index.html) module"]
+#[doc = "Cache data memory power control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_data_mem_power_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_DATA_MEM_POWER_CTRL_SPEC;
 impl crate::RegisterSpec for L2_CACHE_DATA_MEM_POWER_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l2_cache_data_mem_power_ctrl::R](R) reader structure"]
-impl crate::Readable for L2_CACHE_DATA_MEM_POWER_CTRL_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`l2_cache_data_mem_power_ctrl::R`](R) reader structure"]
+impl crate::Readable for L2_CACHE_DATA_MEM_POWER_CTRL_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_DATA_MEM_POWER_CTRL to value 0"]
 impl crate::Resettable for L2_CACHE_DATA_MEM_POWER_CTRL_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,55 +1,23 @@
 #[doc = "Register `SLAVE3` reader"]
-pub struct R(crate::R<SLAVE3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLAVE3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLAVE3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLAVE3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLAVE3_SPEC>;
 #[doc = "Register `SLAVE3` writer"]
-pub struct W(crate::W<SLAVE3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLAVE3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLAVE3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLAVE3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLAVE3_SPEC>;
 #[doc = "Field `SLV_RDBUF_CMD_VALUE` reader - In the slave mode it is the value of read-buffer command."]
 pub type SLV_RDBUF_CMD_VALUE_R = crate::FieldReader;
 #[doc = "Field `SLV_RDBUF_CMD_VALUE` writer - In the slave mode it is the value of read-buffer command."]
-pub type SLV_RDBUF_CMD_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE3_SPEC, 8, O>;
+pub type SLV_RDBUF_CMD_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SLV_WRBUF_CMD_VALUE` reader - In the slave mode it is the value of write-buffer command."]
 pub type SLV_WRBUF_CMD_VALUE_R = crate::FieldReader;
 #[doc = "Field `SLV_WRBUF_CMD_VALUE` writer - In the slave mode it is the value of write-buffer command."]
-pub type SLV_WRBUF_CMD_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE3_SPEC, 8, O>;
+pub type SLV_WRBUF_CMD_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SLV_RDSTA_CMD_VALUE` reader - In the slave mode it is the value of read-status command."]
 pub type SLV_RDSTA_CMD_VALUE_R = crate::FieldReader;
 #[doc = "Field `SLV_RDSTA_CMD_VALUE` writer - In the slave mode it is the value of read-status command."]
-pub type SLV_RDSTA_CMD_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE3_SPEC, 8, O>;
+pub type SLV_RDSTA_CMD_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `SLV_WRSTA_CMD_VALUE` reader - In the slave mode it is the value of write-status command."]
 pub type SLV_WRSTA_CMD_VALUE_R = crate::FieldReader;
 #[doc = "Field `SLV_WRSTA_CMD_VALUE` writer - In the slave mode it is the value of write-status command."]
-pub type SLV_WRSTA_CMD_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE3_SPEC, 8, O>;
+pub type SLV_WRSTA_CMD_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In the slave mode it is the value of read-buffer command."]
     #[inline(always)]
@@ -105,46 +73,43 @@ impl W {
     #[doc = "Bits 0:7 - In the slave mode it is the value of read-buffer command."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rdbuf_cmd_value(&mut self) -> SLV_RDBUF_CMD_VALUE_W<0> {
+    pub fn slv_rdbuf_cmd_value(&mut self) -> SLV_RDBUF_CMD_VALUE_W<SLAVE3_SPEC, 0> {
         SLV_RDBUF_CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 8:15 - In the slave mode it is the value of write-buffer command."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wrbuf_cmd_value(&mut self) -> SLV_WRBUF_CMD_VALUE_W<8> {
+    pub fn slv_wrbuf_cmd_value(&mut self) -> SLV_WRBUF_CMD_VALUE_W<SLAVE3_SPEC, 8> {
         SLV_WRBUF_CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 16:23 - In the slave mode it is the value of read-status command."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rdsta_cmd_value(&mut self) -> SLV_RDSTA_CMD_VALUE_W<16> {
+    pub fn slv_rdsta_cmd_value(&mut self) -> SLV_RDSTA_CMD_VALUE_W<SLAVE3_SPEC, 16> {
         SLV_RDSTA_CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 24:31 - In the slave mode it is the value of write-status command."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wrsta_cmd_value(&mut self) -> SLV_WRSTA_CMD_VALUE_W<24> {
+    pub fn slv_wrsta_cmd_value(&mut self) -> SLV_WRSTA_CMD_VALUE_W<SLAVE3_SPEC, 24> {
         SLV_WRSTA_CMD_VALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave3](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slave3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slave3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLAVE3_SPEC;
 impl crate::RegisterSpec for SLAVE3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slave3::R](R) reader structure"]
-impl crate::Readable for SLAVE3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [slave3::W](W) writer structure"]
+#[doc = "`read()` method returns [`slave3::R`](R) reader structure"]
+impl crate::Readable for SLAVE3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`slave3::W`](W) writer structure"]
 impl crate::Writable for SLAVE3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

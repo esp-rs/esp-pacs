@@ -1,18 +1,5 @@
 #[doc = "Register `SET_LINE_CODE_W1` reader"]
-pub struct R(crate::R<SET_LINE_CODE_W1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SET_LINE_CODE_W1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SET_LINE_CODE_W1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SET_LINE_CODE_W1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SET_LINE_CODE_W1_SPEC>;
 #[doc = "Field `BCHAR_FORMAT` reader - The value of bCharFormat set by host through SET_LINE_CODING command."]
 pub type BCHAR_FORMAT_R = crate::FieldReader;
 #[doc = "Field `BPARITY_TYPE` reader - The value of bParityTpye set by host through SET_LINE_CODING command."]
@@ -58,15 +45,13 @@ impl core::fmt::Debug for crate::generic::Reg<SET_LINE_CODE_W1_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "W1 of SET_LINE_CODING command.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_line_code_w1](index.html) module"]
+#[doc = "W1 of SET_LINE_CODING command.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`set_line_code_w1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_LINE_CODE_W1_SPEC;
 impl crate::RegisterSpec for SET_LINE_CODE_W1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [set_line_code_w1::R](R) reader structure"]
-impl crate::Readable for SET_LINE_CODE_W1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`set_line_code_w1::R`](R) reader structure"]
+impl crate::Readable for SET_LINE_CODE_W1_SPEC {}
 #[doc = "`reset()` method sets SET_LINE_CODE_W1 to value 0"]
 impl crate::Resettable for SET_LINE_CODE_W1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

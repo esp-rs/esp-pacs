@@ -1,66 +1,29 @@
 #[doc = "Register `ICACHE_AUTOLOAD_CTRL` reader"]
-pub struct R(crate::R<ICACHE_AUTOLOAD_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ICACHE_AUTOLOAD_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ICACHE_AUTOLOAD_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ICACHE_AUTOLOAD_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ICACHE_AUTOLOAD_CTRL_SPEC>;
 #[doc = "Register `ICACHE_AUTOLOAD_CTRL` writer"]
-pub struct W(crate::W<ICACHE_AUTOLOAD_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ICACHE_AUTOLOAD_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ICACHE_AUTOLOAD_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ICACHE_AUTOLOAD_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ICACHE_AUTOLOAD_CTRL_SPEC>;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT0_ENA` reader - The bits are used to enable the first section for autoload operation."]
 pub type ICACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT0_ENA` writer - The bits are used to enable the first section for autoload operation."]
-pub type ICACHE_AUTOLOAD_SCT0_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, ICACHE_AUTOLOAD_CTRL_SPEC, O>;
+pub type ICACHE_AUTOLOAD_SCT0_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT1_ENA` reader - The bits are used to enable the second section for autoload operation."]
 pub type ICACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT1_ENA` writer - The bits are used to enable the second section for autoload operation."]
-pub type ICACHE_AUTOLOAD_SCT1_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, ICACHE_AUTOLOAD_CTRL_SPEC, O>;
+pub type ICACHE_AUTOLOAD_SCT1_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ICACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
 pub type ICACHE_AUTOLOAD_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_ENA` writer - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
-pub type ICACHE_AUTOLOAD_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, ICACHE_AUTOLOAD_CTRL_SPEC, O>;
+pub type ICACHE_AUTOLOAD_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ICACHE_AUTOLOAD_DONE` reader - The bit is used to indicate autoload operation is finished."]
 pub type ICACHE_AUTOLOAD_DONE_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_ORDER` reader - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
 pub type ICACHE_AUTOLOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_ORDER` writer - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
-pub type ICACHE_AUTOLOAD_ORDER_W<'a, const O: u8> =
-    crate::BitWriter<'a, ICACHE_AUTOLOAD_CTRL_SPEC, O>;
+pub type ICACHE_AUTOLOAD_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ICACHE_AUTOLOAD_RQST` reader - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
 pub type ICACHE_AUTOLOAD_RQST_R = crate::FieldReader;
 #[doc = "Field `ICACHE_AUTOLOAD_RQST` writer - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub type ICACHE_AUTOLOAD_RQST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ICACHE_AUTOLOAD_CTRL_SPEC, 2, O>;
+pub type ICACHE_AUTOLOAD_RQST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
@@ -134,52 +97,55 @@ impl W {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_sct0_ena(&mut self) -> ICACHE_AUTOLOAD_SCT0_ENA_W<0> {
+    pub fn icache_autoload_sct0_ena(
+        &mut self,
+    ) -> ICACHE_AUTOLOAD_SCT0_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC, 0> {
         ICACHE_AUTOLOAD_SCT0_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bits are used to enable the second section for autoload operation."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_sct1_ena(&mut self) -> ICACHE_AUTOLOAD_SCT1_ENA_W<1> {
+    pub fn icache_autoload_sct1_ena(
+        &mut self,
+    ) -> ICACHE_AUTOLOAD_SCT1_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC, 1> {
         ICACHE_AUTOLOAD_SCT1_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_ena(&mut self) -> ICACHE_AUTOLOAD_ENA_W<2> {
+    pub fn icache_autoload_ena(&mut self) -> ICACHE_AUTOLOAD_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC, 2> {
         ICACHE_AUTOLOAD_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_order(&mut self) -> ICACHE_AUTOLOAD_ORDER_W<4> {
+    pub fn icache_autoload_order(
+        &mut self,
+    ) -> ICACHE_AUTOLOAD_ORDER_W<ICACHE_AUTOLOAD_CTRL_SPEC, 4> {
         ICACHE_AUTOLOAD_ORDER_W::new(self)
     }
     #[doc = "Bits 5:6 - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_rqst(&mut self) -> ICACHE_AUTOLOAD_RQST_W<5> {
+    pub fn icache_autoload_rqst(&mut self) -> ICACHE_AUTOLOAD_RQST_W<ICACHE_AUTOLOAD_CTRL_SPEC, 5> {
         ICACHE_AUTOLOAD_RQST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_autoload_ctrl](index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`icache_autoload_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`icache_autoload_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ICACHE_AUTOLOAD_CTRL_SPEC;
 impl crate::RegisterSpec for ICACHE_AUTOLOAD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [icache_autoload_ctrl::R](R) reader structure"]
-impl crate::Readable for ICACHE_AUTOLOAD_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [icache_autoload_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`icache_autoload_ctrl::R`](R) reader structure"]
+impl crate::Readable for ICACHE_AUTOLOAD_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`icache_autoload_ctrl::W`](W) writer structure"]
 impl crate::Writable for ICACHE_AUTOLOAD_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

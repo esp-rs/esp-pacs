@@ -1,63 +1,31 @@
 #[doc = "Register `HUNG_CONF` reader"]
-pub struct R(crate::R<HUNG_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HUNG_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HUNG_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HUNG_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HUNG_CONF_SPEC>;
 #[doc = "Register `HUNG_CONF` writer"]
-pub struct W(crate::W<HUNG_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HUNG_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HUNG_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HUNG_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HUNG_CONF_SPEC>;
 #[doc = "Field `TXFIFO_TIMEOUT` reader - a"]
 pub type TXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT` writer - a"]
-pub type TXFIFO_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 8, O>;
+pub type TXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` reader - a"]
 pub type TXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` writer - a"]
-pub type TXFIFO_TIMEOUT_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 3, O>;
+pub type TXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` reader - a"]
 pub type TXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` writer - a"]
-pub type TXFIFO_TIMEOUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HUNG_CONF_SPEC, O>;
+pub type TXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFIFO_TIMEOUT` reader - a"]
 pub type RXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT` writer - a"]
-pub type RXFIFO_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 8, O>;
+pub type RXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` reader - a"]
 pub type RXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` writer - a"]
-pub type RXFIFO_TIMEOUT_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 3, O>;
+pub type RXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` reader - a"]
 pub type RXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` writer - a"]
-pub type RXFIFO_TIMEOUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HUNG_CONF_SPEC, O>;
+pub type RXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - a"]
     #[inline(always)]
@@ -131,58 +99,55 @@ impl W {
     #[doc = "Bits 0:7 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<0> {
+    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 0> {
         TXFIFO_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 8:10 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<8> {
+    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 8> {
         TXFIFO_TIMEOUT_SHIFT_W::new(self)
     }
     #[doc = "Bit 11 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<11> {
+    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 11> {
         TXFIFO_TIMEOUT_ENA_W::new(self)
     }
     #[doc = "Bits 12:19 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<12> {
+    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 12> {
         RXFIFO_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 20:22 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<20> {
+    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 20> {
         RXFIFO_TIMEOUT_SHIFT_W::new(self)
     }
     #[doc = "Bit 23 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<23> {
+    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 23> {
         RXFIFO_TIMEOUT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "a\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hung_conf](index.html) module"]
+#[doc = "a\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hung_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hung_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HUNG_CONF_SPEC;
 impl crate::RegisterSpec for HUNG_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hung_conf::R](R) reader structure"]
-impl crate::Readable for HUNG_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hung_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`hung_conf::R`](R) reader structure"]
+impl crate::Readable for HUNG_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hung_conf::W`](W) writer structure"]
 impl crate::Writable for HUNG_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

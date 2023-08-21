@@ -1,18 +1,5 @@
 #[doc = "Register `RD_REPEAT_DATA2` reader"]
-pub struct R(crate::R<RD_REPEAT_DATA2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RD_REPEAT_DATA2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RD_REPEAT_DATA2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RD_REPEAT_DATA2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RD_REPEAT_DATA2_SPEC>;
 #[doc = "Field `KEY_PURPOSE_2` reader - Represents the purpose of Key2."]
 pub type KEY_PURPOSE_2_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_3` reader - Represents the purpose of Key3."]
@@ -146,15 +133,13 @@ impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA2_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "BLOCK0 data register 3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data2](index.html) module"]
+#[doc = "BLOCK0 data register 3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA2_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_repeat_data2::R](R) reader structure"]
-impl crate::Readable for RD_REPEAT_DATA2_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rd_repeat_data2::R`](R) reader structure"]
+impl crate::Readable for RD_REPEAT_DATA2_SPEC {}
 #[doc = "`reset()` method sets RD_REPEAT_DATA2 to value 0x0008_0000"]
 impl crate::Resettable for RD_REPEAT_DATA2_SPEC {
     const RESET_VALUE: Self::Ux = 0x0008_0000;

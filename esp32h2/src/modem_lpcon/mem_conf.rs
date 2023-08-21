@@ -1,87 +1,55 @@
 #[doc = "Register `MEM_CONF` reader"]
-pub struct R(crate::R<MEM_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MEM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MEM_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MEM_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MEM_CONF_SPEC>;
 #[doc = "Register `MEM_CONF` writer"]
-pub struct W(crate::W<MEM_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MEM_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MEM_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MEM_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MEM_CONF_SPEC>;
 #[doc = "Field `AGC_MEM_FORCE_PU` reader - "]
 pub type AGC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `AGC_MEM_FORCE_PU` writer - "]
-pub type AGC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type AGC_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AGC_MEM_FORCE_PD` reader - "]
 pub type AGC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `AGC_MEM_FORCE_PD` writer - "]
-pub type AGC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type AGC_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBUS_MEM_FORCE_PU` reader - "]
 pub type PBUS_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PBUS_MEM_FORCE_PU` writer - "]
-pub type PBUS_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type PBUS_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBUS_MEM_FORCE_PD` reader - "]
 pub type PBUS_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PBUS_MEM_FORCE_PD` writer - "]
-pub type PBUS_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type PBUS_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `I2C_MST_MEM_FORCE_PU` reader - "]
 pub type I2C_MST_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `I2C_MST_MEM_FORCE_PU` writer - "]
-pub type I2C_MST_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type I2C_MST_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `I2C_MST_MEM_FORCE_PD` reader - "]
 pub type I2C_MST_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `I2C_MST_MEM_FORCE_PD` writer - "]
-pub type I2C_MST_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type I2C_MST_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CHAN_FREQ_MEM_FORCE_PU` reader - "]
 pub type CHAN_FREQ_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CHAN_FREQ_MEM_FORCE_PU` writer - "]
-pub type CHAN_FREQ_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type CHAN_FREQ_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CHAN_FREQ_MEM_FORCE_PD` reader - "]
 pub type CHAN_FREQ_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `CHAN_FREQ_MEM_FORCE_PD` writer - "]
-pub type CHAN_FREQ_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
+pub type CHAN_FREQ_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MODEM_PWR_MEM_WP` reader - "]
 pub type MODEM_PWR_MEM_WP_R = crate::FieldReader;
 #[doc = "Field `MODEM_PWR_MEM_WP` writer - "]
-pub type MODEM_PWR_MEM_WP_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
+pub type MODEM_PWR_MEM_WP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `MODEM_PWR_MEM_WA` reader - "]
 pub type MODEM_PWR_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `MODEM_PWR_MEM_WA` writer - "]
-pub type MODEM_PWR_MEM_WA_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
+pub type MODEM_PWR_MEM_WA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `MODEM_PWR_MEM_RA` reader - "]
 pub type MODEM_PWR_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `MODEM_PWR_MEM_RA` writer - "]
-pub type MODEM_PWR_MEM_RA_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 2, O>;
+pub type MODEM_PWR_MEM_RA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `MODEM_PWR_MEM_RM` reader - "]
 pub type MODEM_PWR_MEM_RM_R = crate::FieldReader;
 #[doc = "Field `MODEM_PWR_MEM_RM` writer - "]
-pub type MODEM_PWR_MEM_RM_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 4, O>;
+pub type MODEM_PWR_MEM_RM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -209,94 +177,91 @@ impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<2> {
+    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<MEM_CONF_SPEC, 2> {
         AGC_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<3> {
+    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<MEM_CONF_SPEC, 3> {
         AGC_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<4> {
+    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<MEM_CONF_SPEC, 4> {
         PBUS_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<5> {
+    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<MEM_CONF_SPEC, 5> {
         PBUS_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_mst_mem_force_pu(&mut self) -> I2C_MST_MEM_FORCE_PU_W<8> {
+    pub fn i2c_mst_mem_force_pu(&mut self) -> I2C_MST_MEM_FORCE_PU_W<MEM_CONF_SPEC, 8> {
         I2C_MST_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_mst_mem_force_pd(&mut self) -> I2C_MST_MEM_FORCE_PD_W<9> {
+    pub fn i2c_mst_mem_force_pd(&mut self) -> I2C_MST_MEM_FORCE_PD_W<MEM_CONF_SPEC, 9> {
         I2C_MST_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn chan_freq_mem_force_pu(&mut self) -> CHAN_FREQ_MEM_FORCE_PU_W<10> {
+    pub fn chan_freq_mem_force_pu(&mut self) -> CHAN_FREQ_MEM_FORCE_PU_W<MEM_CONF_SPEC, 10> {
         CHAN_FREQ_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn chan_freq_mem_force_pd(&mut self) -> CHAN_FREQ_MEM_FORCE_PD_W<11> {
+    pub fn chan_freq_mem_force_pd(&mut self) -> CHAN_FREQ_MEM_FORCE_PD_W<MEM_CONF_SPEC, 11> {
         CHAN_FREQ_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_pwr_mem_wp(&mut self) -> MODEM_PWR_MEM_WP_W<12> {
+    pub fn modem_pwr_mem_wp(&mut self) -> MODEM_PWR_MEM_WP_W<MEM_CONF_SPEC, 12> {
         MODEM_PWR_MEM_WP_W::new(self)
     }
     #[doc = "Bits 15:17"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_pwr_mem_wa(&mut self) -> MODEM_PWR_MEM_WA_W<15> {
+    pub fn modem_pwr_mem_wa(&mut self) -> MODEM_PWR_MEM_WA_W<MEM_CONF_SPEC, 15> {
         MODEM_PWR_MEM_WA_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_pwr_mem_ra(&mut self) -> MODEM_PWR_MEM_RA_W<18> {
+    pub fn modem_pwr_mem_ra(&mut self) -> MODEM_PWR_MEM_RA_W<MEM_CONF_SPEC, 18> {
         MODEM_PWR_MEM_RA_W::new(self)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_pwr_mem_rm(&mut self) -> MODEM_PWR_MEM_RM_W<20> {
+    pub fn modem_pwr_mem_rm(&mut self) -> MODEM_PWR_MEM_RM_W<MEM_CONF_SPEC, 20> {
         MODEM_PWR_MEM_RM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_conf](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mem_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MEM_CONF_SPEC;
 impl crate::RegisterSpec for MEM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_conf::R](R) reader structure"]
-impl crate::Readable for MEM_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [mem_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`mem_conf::R`](R) reader structure"]
+impl crate::Readable for MEM_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`mem_conf::W`](W) writer structure"]
 impl crate::Writable for MEM_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

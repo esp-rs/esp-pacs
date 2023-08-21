@@ -1,63 +1,31 @@
 #[doc = "Register `FLOW_CONF` reader"]
-pub struct R(crate::R<FLOW_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FLOW_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FLOW_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FLOW_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FLOW_CONF_SPEC>;
 #[doc = "Register `FLOW_CONF` writer"]
-pub struct W(crate::W<FLOW_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FLOW_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FLOW_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FLOW_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FLOW_CONF_SPEC>;
 #[doc = "Field `SW_FLOW_CON_EN` reader - Set this bit to enable software flow control. When UART receives flow control characters XON or XOFF, which can be configured by UART_XON_CHAR or UART_XOFF_CHAR respectively, UART_SW_XON_INT or UART_SW_XOFF_INT interrupts can be triggered if enabled."]
 pub type SW_FLOW_CON_EN_R = crate::BitReader;
 #[doc = "Field `SW_FLOW_CON_EN` writer - Set this bit to enable software flow control. When UART receives flow control characters XON or XOFF, which can be configured by UART_XON_CHAR or UART_XOFF_CHAR respectively, UART_SW_XON_INT or UART_SW_XOFF_INT interrupts can be triggered if enabled."]
-pub type SW_FLOW_CON_EN_W<'a, const O: u8> = crate::BitWriter<'a, FLOW_CONF_SPEC, O>;
+pub type SW_FLOW_CON_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `XONOFF_DEL` reader - Set this bit to remove flow control characters from the received data."]
 pub type XONOFF_DEL_R = crate::BitReader;
 #[doc = "Field `XONOFF_DEL` writer - Set this bit to remove flow control characters from the received data."]
-pub type XONOFF_DEL_W<'a, const O: u8> = crate::BitWriter<'a, FLOW_CONF_SPEC, O>;
+pub type XONOFF_DEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_XON` reader - Set this bit to force the transmitter to send data."]
 pub type FORCE_XON_R = crate::BitReader;
 #[doc = "Field `FORCE_XON` writer - Set this bit to force the transmitter to send data."]
-pub type FORCE_XON_W<'a, const O: u8> = crate::BitWriter<'a, FLOW_CONF_SPEC, O>;
+pub type FORCE_XON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_XOFF` reader - Set this bit to stop the transmitter from sending data."]
 pub type FORCE_XOFF_R = crate::BitReader;
 #[doc = "Field `FORCE_XOFF` writer - Set this bit to stop the transmitter from sending data."]
-pub type FORCE_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, FLOW_CONF_SPEC, O>;
+pub type FORCE_XOFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEND_XON` reader - Set this bit to send an XON character. This bit is cleared by hardware automatically."]
 pub type SEND_XON_R = crate::BitReader;
 #[doc = "Field `SEND_XON` writer - Set this bit to send an XON character. This bit is cleared by hardware automatically."]
-pub type SEND_XON_W<'a, const O: u8> = crate::BitWriter<'a, FLOW_CONF_SPEC, O>;
+pub type SEND_XON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEND_XOFF` reader - Set this bit to send an XOFF character. This bit is cleared by hardware automatically."]
 pub type SEND_XOFF_R = crate::BitReader;
 #[doc = "Field `SEND_XOFF` writer - Set this bit to send an XOFF character. This bit is cleared by hardware automatically."]
-pub type SEND_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, FLOW_CONF_SPEC, O>;
+pub type SEND_XOFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable software flow control. When UART receives flow control characters XON or XOFF, which can be configured by UART_XON_CHAR or UART_XOFF_CHAR respectively, UART_SW_XON_INT or UART_SW_XOFF_INT interrupts can be triggered if enabled."]
     #[inline(always)]
@@ -116,58 +84,55 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable software flow control. When UART receives flow control characters XON or XOFF, which can be configured by UART_XON_CHAR or UART_XOFF_CHAR respectively, UART_SW_XON_INT or UART_SW_XOFF_INT interrupts can be triggered if enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<0> {
+    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<FLOW_CONF_SPEC, 0> {
         SW_FLOW_CON_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to remove flow control characters from the received data."]
     #[inline(always)]
     #[must_use]
-    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<1> {
+    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<FLOW_CONF_SPEC, 1> {
         XONOFF_DEL_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to force the transmitter to send data."]
     #[inline(always)]
     #[must_use]
-    pub fn force_xon(&mut self) -> FORCE_XON_W<2> {
+    pub fn force_xon(&mut self) -> FORCE_XON_W<FLOW_CONF_SPEC, 2> {
         FORCE_XON_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to stop the transmitter from sending data."]
     #[inline(always)]
     #[must_use]
-    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<3> {
+    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<FLOW_CONF_SPEC, 3> {
         FORCE_XOFF_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to send an XON character. This bit is cleared by hardware automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn send_xon(&mut self) -> SEND_XON_W<4> {
+    pub fn send_xon(&mut self) -> SEND_XON_W<FLOW_CONF_SPEC, 4> {
         SEND_XON_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to send an XOFF character. This bit is cleared by hardware automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn send_xoff(&mut self) -> SEND_XOFF_W<5> {
+    pub fn send_xoff(&mut self) -> SEND_XOFF_W<FLOW_CONF_SPEC, 5> {
         SEND_XOFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Software flow control configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [flow_conf](index.html) module"]
+#[doc = "Software flow control configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`flow_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`flow_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FLOW_CONF_SPEC;
 impl crate::RegisterSpec for FLOW_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [flow_conf::R](R) reader structure"]
-impl crate::Readable for FLOW_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [flow_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`flow_conf::R`](R) reader structure"]
+impl crate::Readable for FLOW_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`flow_conf::W`](W) writer structure"]
 impl crate::Writable for FLOW_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

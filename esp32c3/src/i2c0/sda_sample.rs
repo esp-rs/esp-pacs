@@ -1,43 +1,11 @@
 #[doc = "Register `SDA_SAMPLE` reader"]
-pub struct R(crate::R<SDA_SAMPLE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SDA_SAMPLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SDA_SAMPLE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SDA_SAMPLE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SDA_SAMPLE_SPEC>;
 #[doc = "Register `SDA_SAMPLE` writer"]
-pub struct W(crate::W<SDA_SAMPLE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SDA_SAMPLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SDA_SAMPLE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SDA_SAMPLE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SDA_SAMPLE_SPEC>;
 #[doc = "Field `TIME` reader - reg_sda_sample_time"]
 pub type TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `TIME` writer - reg_sda_sample_time"]
-pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_SAMPLE_SPEC, 9, O, u16>;
+pub type TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - reg_sda_sample_time"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:8 - reg_sda_sample_time"]
     #[inline(always)]
     #[must_use]
-    pub fn time(&mut self) -> TIME_W<0> {
+    pub fn time(&mut self) -> TIME_W<SDA_SAMPLE_SPEC, 0> {
         TIME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "I2C_SDA_SAMPLE_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sda_sample](index.html) module"]
+#[doc = "I2C_SDA_SAMPLE_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sda_sample::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sda_sample::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SDA_SAMPLE_SPEC;
 impl crate::RegisterSpec for SDA_SAMPLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sda_sample::R](R) reader structure"]
-impl crate::Readable for SDA_SAMPLE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sda_sample::W](W) writer structure"]
+#[doc = "`read()` method returns [`sda_sample::R`](R) reader structure"]
+impl crate::Readable for SDA_SAMPLE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sda_sample::W`](W) writer structure"]
 impl crate::Writable for SDA_SAMPLE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

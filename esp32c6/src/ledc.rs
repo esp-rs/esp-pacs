@@ -158,95 +158,95 @@ pub struct RegisterBlock {
     #[doc = "0x1fc - Version control register"]
     pub date: DATE,
 }
-#[doc = "CH_CONF0 (rw) register accessor: an alias for `Reg<CH_CONF0_SPEC>`"]
+#[doc = "CH_CONF0 (rw) register accessor: Configuration register 0 for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_conf0`] module"]
 pub type CH_CONF0 = crate::Reg<ch_conf0::CH_CONF0_SPEC>;
 #[doc = "Configuration register 0 for channel %s"]
 pub mod ch_conf0;
-#[doc = "CH_HPOINT (rw) register accessor: an alias for `Reg<CH_HPOINT_SPEC>`"]
+#[doc = "CH_HPOINT (rw) register accessor: High point register for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_hpoint::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_hpoint::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_hpoint`] module"]
 pub type CH_HPOINT = crate::Reg<ch_hpoint::CH_HPOINT_SPEC>;
 #[doc = "High point register for channel %s"]
 pub mod ch_hpoint;
-#[doc = "CH_DUTY (rw) register accessor: an alias for `Reg<CH_DUTY_SPEC>`"]
+#[doc = "CH_DUTY (rw) register accessor: Initial duty cycle for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_duty::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_duty::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_duty`] module"]
 pub type CH_DUTY = crate::Reg<ch_duty::CH_DUTY_SPEC>;
 #[doc = "Initial duty cycle for channel %s"]
 pub mod ch_duty;
-#[doc = "CH_CONF1 (rw) register accessor: an alias for `Reg<CH_CONF1_SPEC>`"]
+#[doc = "CH_CONF1 (rw) register accessor: Configuration register 1 for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_conf1`] module"]
 pub type CH_CONF1 = crate::Reg<ch_conf1::CH_CONF1_SPEC>;
 #[doc = "Configuration register 1 for channel %s"]
 pub mod ch_conf1;
-#[doc = "CH_DUTY_R (r) register accessor: an alias for `Reg<CH_DUTY_R_SPEC>`"]
+#[doc = "CH_DUTY_R (r) register accessor: Current duty cycle for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_duty_r::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_duty_r`] module"]
 pub type CH_DUTY_R = crate::Reg<ch_duty_r::CH_DUTY_R_SPEC>;
 #[doc = "Current duty cycle for channel %s"]
 pub mod ch_duty_r;
-#[doc = "TIMER_CONF (rw) register accessor: an alias for `Reg<TIMER_CONF_SPEC>`"]
+#[doc = "TIMER_CONF (rw) register accessor: Timer %s configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timer_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timer_conf`] module"]
 pub type TIMER_CONF = crate::Reg<timer_conf::TIMER_CONF_SPEC>;
 #[doc = "Timer %s configuration"]
 pub mod timer_conf;
-#[doc = "TIMER_VALUE (r) register accessor: an alias for `Reg<TIMER_VALUE_SPEC>`"]
+#[doc = "TIMER_VALUE (r) register accessor: Timer %s current counter value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_value::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timer_value`] module"]
 pub type TIMER_VALUE = crate::Reg<timer_value::TIMER_VALUE_SPEC>;
 #[doc = "Timer %s current counter value"]
 pub mod timer_value;
-#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: Raw interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]
 pub mod int_raw;
-#[doc = "INT_ST (r) register accessor: an alias for `Reg<INT_ST_SPEC>`"]
+#[doc = "INT_ST (r) register accessor: Masked interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_st`] module"]
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "Masked interrupt status"]
 pub mod int_st;
-#[doc = "INT_ENA (rw) register accessor: an alias for `Reg<INT_ENA_SPEC>`"]
+#[doc = "INT_ENA (rw) register accessor: Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Interrupt enable bits"]
 pub mod int_ena;
-#[doc = "INT_CLR (w) register accessor: an alias for `Reg<INT_CLR_SPEC>`"]
+#[doc = "INT_CLR (w) register accessor: Interrupt clear bits\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Interrupt clear bits"]
 pub mod int_clr;
-#[doc = "CH_GAMMA_WR (rw) register accessor: an alias for `Reg<CH_GAMMA_WR_SPEC>`"]
+#[doc = "CH_GAMMA_WR (rw) register accessor: Ledc ch%s gamma ram write register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_gamma_wr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_gamma_wr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_gamma_wr`] module"]
 pub type CH_GAMMA_WR = crate::Reg<ch_gamma_wr::CH_GAMMA_WR_SPEC>;
 #[doc = "Ledc ch%s gamma ram write register."]
 pub mod ch_gamma_wr;
-#[doc = "CH_GAMMA_WR_ADDR (rw) register accessor: an alias for `Reg<CH_GAMMA_WR_ADDR_SPEC>`"]
+#[doc = "CH_GAMMA_WR_ADDR (rw) register accessor: Ledc ch%s gamma ram write address register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_gamma_wr_addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_gamma_wr_addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_gamma_wr_addr`] module"]
 pub type CH_GAMMA_WR_ADDR = crate::Reg<ch_gamma_wr_addr::CH_GAMMA_WR_ADDR_SPEC>;
 #[doc = "Ledc ch%s gamma ram write address register."]
 pub mod ch_gamma_wr_addr;
-#[doc = "CH_GAMMA_RD_ADDR (rw) register accessor: an alias for `Reg<CH_GAMMA_RD_ADDR_SPEC>`"]
+#[doc = "CH_GAMMA_RD_ADDR (rw) register accessor: Ledc ch%s gamma ram read address register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_gamma_rd_addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_gamma_rd_addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_gamma_rd_addr`] module"]
 pub type CH_GAMMA_RD_ADDR = crate::Reg<ch_gamma_rd_addr::CH_GAMMA_RD_ADDR_SPEC>;
 #[doc = "Ledc ch%s gamma ram read address register."]
 pub mod ch_gamma_rd_addr;
-#[doc = "CH_GAMMA_RD_DATA (r) register accessor: an alias for `Reg<CH_GAMMA_RD_DATA_SPEC>`"]
+#[doc = "CH_GAMMA_RD_DATA (r) register accessor: Ledc ch%s gamma ram read data register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_gamma_rd_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_gamma_rd_data`] module"]
 pub type CH_GAMMA_RD_DATA = crate::Reg<ch_gamma_rd_data::CH_GAMMA_RD_DATA_SPEC>;
 #[doc = "Ledc ch%s gamma ram read data register."]
 pub mod ch_gamma_rd_data;
-#[doc = "CH_GAMMA_CONF (rw) register accessor: an alias for `Reg<CH_GAMMA_CONF_SPEC>`"]
+#[doc = "CH_GAMMA_CONF (rw) register accessor: Ledc ch%s gamma config register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_gamma_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_gamma_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ch_gamma_conf`] module"]
 pub type CH_GAMMA_CONF = crate::Reg<ch_gamma_conf::CH_GAMMA_CONF_SPEC>;
 #[doc = "Ledc ch%s gamma config register."]
 pub mod ch_gamma_conf;
-#[doc = "EVT_TASK_EN0 (rw) register accessor: an alias for `Reg<EVT_TASK_EN0_SPEC>`"]
+#[doc = "EVT_TASK_EN0 (rw) register accessor: Ledc event task enable bit register0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evt_task_en0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evt_task_en0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`evt_task_en0`] module"]
 pub type EVT_TASK_EN0 = crate::Reg<evt_task_en0::EVT_TASK_EN0_SPEC>;
 #[doc = "Ledc event task enable bit register0."]
 pub mod evt_task_en0;
-#[doc = "EVT_TASK_EN1 (rw) register accessor: an alias for `Reg<EVT_TASK_EN1_SPEC>`"]
+#[doc = "EVT_TASK_EN1 (rw) register accessor: Ledc event task enable bit register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evt_task_en1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evt_task_en1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`evt_task_en1`] module"]
 pub type EVT_TASK_EN1 = crate::Reg<evt_task_en1::EVT_TASK_EN1_SPEC>;
 #[doc = "Ledc event task enable bit register1."]
 pub mod evt_task_en1;
-#[doc = "EVT_TASK_EN2 (rw) register accessor: an alias for `Reg<EVT_TASK_EN2_SPEC>`"]
+#[doc = "EVT_TASK_EN2 (rw) register accessor: Ledc event task enable bit register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evt_task_en2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evt_task_en2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`evt_task_en2`] module"]
 pub type EVT_TASK_EN2 = crate::Reg<evt_task_en2::EVT_TASK_EN2_SPEC>;
 #[doc = "Ledc event task enable bit register2."]
 pub mod evt_task_en2;
-#[doc = "TIMER_CMP (rw) register accessor: an alias for `Reg<TIMER_CMP_SPEC>`"]
+#[doc = "TIMER_CMP (rw) register accessor: Ledc timer%s compare value register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_cmp::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timer_cmp::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timer_cmp`] module"]
 pub type TIMER_CMP = crate::Reg<timer_cmp::TIMER_CMP_SPEC>;
 #[doc = "Ledc timer%s compare value register."]
 pub mod timer_cmp;
-#[doc = "TIMER_CNT_CAP (r) register accessor: an alias for `Reg<TIMER_CNT_CAP_SPEC>`"]
+#[doc = "TIMER_CNT_CAP (r) register accessor: Ledc timer%s count value capture register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_cnt_cap::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`timer_cnt_cap`] module"]
 pub type TIMER_CNT_CAP = crate::Reg<timer_cnt_cap::TIMER_CNT_CAP_SPEC>;
 #[doc = "Ledc timer%s count value capture register."]
 pub mod timer_cnt_cap;
-#[doc = "CONF (rw) register accessor: an alias for `Reg<CONF_SPEC>`"]
+#[doc = "CONF (rw) register accessor: Global ledc configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`conf`] module"]
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "Global ledc configuration register"]
 pub mod conf;
-#[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
+#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;

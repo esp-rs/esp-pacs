@@ -1,18 +1,5 @@
 #[doc = "Register `OUTFIFO_STATUS_CH%s` reader"]
-pub struct R(crate::R<OUTFIFO_STATUS_CH_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OUTFIFO_STATUS_CH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OUTFIFO_STATUS_CH_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OUTFIFO_STATUS_CH_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OUTFIFO_STATUS_CH_SPEC>;
 #[doc = "Field `OUTFIFO_FULL` reader - L1 Tx FIFO full signal for Tx channel 0."]
 pub type OUTFIFO_FULL_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_EMPTY` reader - L1 Tx FIFO empty signal for Tx channel 0."]
@@ -105,15 +92,13 @@ impl core::fmt::Debug for crate::generic::Reg<OUTFIFO_STATUS_CH_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "Transmit FIFO status of Tx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [outfifo_status_ch](index.html) module"]
+#[doc = "Transmit FIFO status of Tx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`outfifo_status_ch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUTFIFO_STATUS_CH_SPEC;
 impl crate::RegisterSpec for OUTFIFO_STATUS_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [outfifo_status_ch::R](R) reader structure"]
-impl crate::Readable for OUTFIFO_STATUS_CH_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`outfifo_status_ch::R`](R) reader structure"]
+impl crate::Readable for OUTFIFO_STATUS_CH_SPEC {}
 #[doc = "`reset()` method sets OUTFIFO_STATUS_CH%s to value 0x0780_0002"]
 impl crate::Resettable for OUTFIFO_STATUS_CH_SPEC {
     const RESET_VALUE: Self::Ux = 0x0780_0002;

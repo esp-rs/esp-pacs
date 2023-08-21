@@ -1,81 +1,49 @@
 #[doc = "Register `HPRT` reader"]
-pub struct R(crate::R<HPRT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HPRT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HPRT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HPRT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HPRT_SPEC>;
 #[doc = "Register `HPRT` writer"]
-pub struct W(crate::W<HPRT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HPRT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HPRT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HPRT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HPRT_SPEC>;
 #[doc = "Field `PRTCONNSTS` reader - "]
 pub type PRTCONNSTS_R = crate::BitReader;
 #[doc = "Field `PRTCONNDET` reader - "]
 pub type PRTCONNDET_R = crate::BitReader;
 #[doc = "Field `PRTCONNDET` writer - "]
-pub type PRTCONNDET_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTCONNDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTENA` reader - "]
 pub type PRTENA_R = crate::BitReader;
 #[doc = "Field `PRTENA` writer - "]
-pub type PRTENA_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTENCHNG` reader - "]
 pub type PRTENCHNG_R = crate::BitReader;
 #[doc = "Field `PRTENCHNG` writer - "]
-pub type PRTENCHNG_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTENCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTOVRCURRACT` reader - "]
 pub type PRTOVRCURRACT_R = crate::BitReader;
 #[doc = "Field `PRTOVRCURRCHNG` reader - "]
 pub type PRTOVRCURRCHNG_R = crate::BitReader;
 #[doc = "Field `PRTOVRCURRCHNG` writer - "]
-pub type PRTOVRCURRCHNG_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTOVRCURRCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTRES` reader - "]
 pub type PRTRES_R = crate::BitReader;
 #[doc = "Field `PRTRES` writer - "]
-pub type PRTRES_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTSUSP` reader - "]
 pub type PRTSUSP_R = crate::BitReader;
 #[doc = "Field `PRTSUSP` writer - "]
-pub type PRTSUSP_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTRST` reader - "]
 pub type PRTRST_R = crate::BitReader;
 #[doc = "Field `PRTRST` writer - "]
-pub type PRTRST_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTLNSTS` reader - "]
 pub type PRTLNSTS_R = crate::FieldReader;
 #[doc = "Field `PRTPWR` reader - "]
 pub type PRTPWR_R = crate::BitReader;
 #[doc = "Field `PRTPWR` writer - "]
-pub type PRTPWR_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
+pub type PRTPWR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRTTSTCTL` reader - "]
 pub type PRTTSTCTL_R = crate::FieldReader;
 #[doc = "Field `PRTTSTCTL` writer - "]
-pub type PRTTSTCTL_W<'a, const O: u8> = crate::FieldWriter<'a, HPRT_SPEC, 4, O>;
+pub type PRTTSTCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PRTSPD` reader - "]
 pub type PRTSPD_R = crate::FieldReader;
 impl R {
@@ -181,76 +149,73 @@ impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn prtconndet(&mut self) -> PRTCONNDET_W<1> {
+    pub fn prtconndet(&mut self) -> PRTCONNDET_W<HPRT_SPEC, 1> {
         PRTCONNDET_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn prtena(&mut self) -> PRTENA_W<2> {
+    pub fn prtena(&mut self) -> PRTENA_W<HPRT_SPEC, 2> {
         PRTENA_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn prtenchng(&mut self) -> PRTENCHNG_W<3> {
+    pub fn prtenchng(&mut self) -> PRTENCHNG_W<HPRT_SPEC, 3> {
         PRTENCHNG_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn prtovrcurrchng(&mut self) -> PRTOVRCURRCHNG_W<5> {
+    pub fn prtovrcurrchng(&mut self) -> PRTOVRCURRCHNG_W<HPRT_SPEC, 5> {
         PRTOVRCURRCHNG_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn prtres(&mut self) -> PRTRES_W<6> {
+    pub fn prtres(&mut self) -> PRTRES_W<HPRT_SPEC, 6> {
         PRTRES_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn prtsusp(&mut self) -> PRTSUSP_W<7> {
+    pub fn prtsusp(&mut self) -> PRTSUSP_W<HPRT_SPEC, 7> {
         PRTSUSP_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn prtrst(&mut self) -> PRTRST_W<8> {
+    pub fn prtrst(&mut self) -> PRTRST_W<HPRT_SPEC, 8> {
         PRTRST_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn prtpwr(&mut self) -> PRTPWR_W<12> {
+    pub fn prtpwr(&mut self) -> PRTPWR_W<HPRT_SPEC, 12> {
         PRTPWR_W::new(self)
     }
     #[doc = "Bits 13:16"]
     #[inline(always)]
     #[must_use]
-    pub fn prttstctl(&mut self) -> PRTTSTCTL_W<13> {
+    pub fn prttstctl(&mut self) -> PRTTSTCTL_W<HPRT_SPEC, 13> {
         PRTTSTCTL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hprt](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hprt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hprt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HPRT_SPEC;
 impl crate::RegisterSpec for HPRT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hprt::R](R) reader structure"]
-impl crate::Readable for HPRT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hprt::W](W) writer structure"]
+#[doc = "`read()` method returns [`hprt::R`](R) reader structure"]
+impl crate::Readable for HPRT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hprt::W`](W) writer structure"]
 impl crate::Writable for HPRT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

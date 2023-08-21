@@ -1,47 +1,15 @@
 #[doc = "Register `RS485_CONF` reader"]
-pub struct R(crate::R<RS485_CONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RS485_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RS485_CONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RS485_CONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RS485_CONF_SPEC>;
 #[doc = "Register `RS485_CONF` writer"]
-pub struct W(crate::W<RS485_CONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RS485_CONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RS485_CONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RS485_CONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RS485_CONF_SPEC>;
 #[doc = "Field `DL0_EN` reader - Set this bit to delay the stop bit by 1 bit."]
 pub type DL0_EN_R = crate::BitReader;
 #[doc = "Field `DL0_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL0_EN_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
+pub type DL0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DL1_EN` reader - Set this bit to delay the stop bit by 1 bit."]
 pub type DL1_EN_R = crate::BitReader;
 #[doc = "Field `DL1_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL1_EN_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
+pub type DL1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
@@ -73,34 +41,31 @@ impl W {
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     #[must_use]
-    pub fn dl0_en(&mut self) -> DL0_EN_W<1> {
+    pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SPEC, 1> {
         DL0_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     #[must_use]
-    pub fn dl1_en(&mut self) -> DL1_EN_W<2> {
+    pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SPEC, 2> {
         DL1_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "RS485 mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rs485_conf](index.html) module"]
+#[doc = "RS485 mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rs485_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rs485_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RS485_CONF_SPEC;
 impl crate::RegisterSpec for RS485_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rs485_conf::R](R) reader structure"]
-impl crate::Readable for RS485_CONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rs485_conf::W](W) writer structure"]
+#[doc = "`read()` method returns [`rs485_conf::R`](R) reader structure"]
+impl crate::Readable for RS485_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rs485_conf::W`](W) writer structure"]
 impl crate::Writable for RS485_CONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

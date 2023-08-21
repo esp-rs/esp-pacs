@@ -1,43 +1,11 @@
 #[doc = "Register `SCL_HIGH` reader"]
-pub struct R(crate::R<SCL_HIGH_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SCL_HIGH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SCL_HIGH_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SCL_HIGH_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SCL_HIGH_SPEC>;
 #[doc = "Register `SCL_HIGH` writer"]
-pub struct W(crate::W<SCL_HIGH_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SCL_HIGH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SCL_HIGH_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SCL_HIGH_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SCL_HIGH_SPEC>;
 #[doc = "Field `PERIOD` reader - time period that scl = 1"]
 pub type PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `PERIOD` writer - time period that scl = 1"]
-pub type PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_HIGH_SPEC, 20, O, u32>;
+pub type PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - time period that scl = 1"]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 0:19 - time period that scl = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn period(&mut self) -> PERIOD_W<0> {
+    pub fn period(&mut self) -> PERIOD_W<SCL_HIGH_SPEC, 0> {
         PERIOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "configure high scl period\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_high](index.html) module"]
+#[doc = "configure high scl period\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scl_high::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scl_high::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SCL_HIGH_SPEC;
 impl crate::RegisterSpec for SCL_HIGH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [scl_high::R](R) reader structure"]
-impl crate::Readable for SCL_HIGH_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [scl_high::W](W) writer structure"]
+#[doc = "`read()` method returns [`scl_high::R`](R) reader structure"]
+impl crate::Readable for SCL_HIGH_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`scl_high::W`](W) writer structure"]
 impl crate::Writable for SCL_HIGH_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

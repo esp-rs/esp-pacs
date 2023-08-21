@@ -1,43 +1,11 @@
 #[doc = "Register `WAKEUP_STATE` reader"]
-pub struct R(crate::R<WAKEUP_STATE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<WAKEUP_STATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<WAKEUP_STATE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<WAKEUP_STATE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<WAKEUP_STATE_SPEC>;
 #[doc = "Register `WAKEUP_STATE` writer"]
-pub struct W(crate::W<WAKEUP_STATE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<WAKEUP_STATE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<WAKEUP_STATE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<WAKEUP_STATE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<WAKEUP_STATE_SPEC>;
 #[doc = "Field `WAKEUP_ENA` reader - Enables the wakeup bitmap."]
 pub type WAKEUP_ENA_R = crate::FieldReader<u32>;
 #[doc = "Field `WAKEUP_ENA` writer - Enables the wakeup bitmap."]
-pub type WAKEUP_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, WAKEUP_STATE_SPEC, 17, O, u32>;
+pub type WAKEUP_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 17, O, u32>;
 impl R {
     #[doc = "Bits 15:31 - Enables the wakeup bitmap."]
     #[inline(always)]
@@ -63,28 +31,25 @@ impl W {
     #[doc = "Bits 15:31 - Enables the wakeup bitmap."]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<15> {
+    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<WAKEUP_STATE_SPEC, 15> {
         WAKEUP_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Wakeup bitmap enabling register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wakeup_state](index.html) module"]
+#[doc = "Wakeup bitmap enabling register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wakeup_state::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wakeup_state::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WAKEUP_STATE_SPEC;
 impl crate::RegisterSpec for WAKEUP_STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [wakeup_state::R](R) reader structure"]
-impl crate::Readable for WAKEUP_STATE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [wakeup_state::W](W) writer structure"]
+#[doc = "`read()` method returns [`wakeup_state::R`](R) reader structure"]
+impl crate::Readable for WAKEUP_STATE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`wakeup_state::W`](W) writer structure"]
 impl crate::Writable for WAKEUP_STATE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

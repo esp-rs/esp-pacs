@@ -1,18 +1,5 @@
 #[doc = "Register `LOW_POWER_ST` reader"]
-pub struct R(crate::R<LOW_POWER_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LOW_POWER_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LOW_POWER_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LOW_POWER_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LOW_POWER_ST_SPEC>;
 #[doc = "Field `LOW_POWER_DIAG0` reader - "]
 pub type LOW_POWER_DIAG0_R = crate::FieldReader<u32>;
 #[doc = "Field `RDY_FOR_WAKEUP` reader - 1 if RTC controller is ready to execute WAKE instruction, 0 otherwise"]
@@ -50,15 +37,13 @@ impl core::fmt::Debug for crate::generic::Reg<LOW_POWER_ST_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [low_power_st](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`low_power_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOW_POWER_ST_SPEC;
 impl crate::RegisterSpec for LOW_POWER_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [low_power_st::R](R) reader structure"]
-impl crate::Readable for LOW_POWER_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`low_power_st::R`](R) reader structure"]
+impl crate::Readable for LOW_POWER_ST_SPEC {}
 #[doc = "`reset()` method sets LOW_POWER_ST to value 0"]
 impl crate::Resettable for LOW_POWER_ST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

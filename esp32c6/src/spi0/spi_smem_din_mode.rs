@@ -1,18 +1,5 @@
 #[doc = "Register `SPI_SMEM_DIN_MODE` reader"]
-pub struct R(crate::R<SPI_SMEM_DIN_MODE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_SMEM_DIN_MODE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_SMEM_DIN_MODE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_SMEM_DIN_MODE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_SMEM_DIN_MODE_SPEC>;
 #[doc = "Field `SPI_SMEM_DIN0_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
 pub type SPI_SMEM_DIN0_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN1_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
@@ -127,15 +114,13 @@ impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DIN_MODE_SPEC> {
         self.read().fmt(f)
     }
 }
-#[doc = "MSPI external RAM input timing delay mode control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_din_mode](index.html) module"]
+#[doc = "MSPI external RAM input timing delay mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_din_mode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SMEM_DIN_MODE_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_DIN_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_smem_din_mode::R](R) reader structure"]
-impl crate::Readable for SPI_SMEM_DIN_MODE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spi_smem_din_mode::R`](R) reader structure"]
+impl crate::Readable for SPI_SMEM_DIN_MODE_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_DIN_MODE to value 0"]
 impl crate::Resettable for SPI_SMEM_DIN_MODE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

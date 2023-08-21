@@ -1,63 +1,31 @@
 #[doc = "Register `GOTGINT` reader"]
-pub struct R(crate::R<GOTGINT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GOTGINT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GOTGINT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GOTGINT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GOTGINT_SPEC>;
 #[doc = "Register `GOTGINT` writer"]
-pub struct W(crate::W<GOTGINT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GOTGINT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GOTGINT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GOTGINT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GOTGINT_SPEC>;
 #[doc = "Field `SESENDDET` reader - "]
 pub type SESENDDET_R = crate::BitReader;
 #[doc = "Field `SESENDDET` writer - "]
-pub type SESENDDET_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
+pub type SESENDDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SESREQSUCSTSCHNG` reader - "]
 pub type SESREQSUCSTSCHNG_R = crate::BitReader;
 #[doc = "Field `SESREQSUCSTSCHNG` writer - "]
-pub type SESREQSUCSTSCHNG_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
+pub type SESREQSUCSTSCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HSTNEGSUCSTSCHNG` reader - "]
 pub type HSTNEGSUCSTSCHNG_R = crate::BitReader;
 #[doc = "Field `HSTNEGSUCSTSCHNG` writer - "]
-pub type HSTNEGSUCSTSCHNG_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
+pub type HSTNEGSUCSTSCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HSTNEGDET` reader - "]
 pub type HSTNEGDET_R = crate::BitReader;
 #[doc = "Field `HSTNEGDET` writer - "]
-pub type HSTNEGDET_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
+pub type HSTNEGDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADEVTOUTCHG` reader - "]
 pub type ADEVTOUTCHG_R = crate::BitReader;
 #[doc = "Field `ADEVTOUTCHG` writer - "]
-pub type ADEVTOUTCHG_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
+pub type ADEVTOUTCHG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DBNCEDONE` reader - "]
 pub type DBNCEDONE_R = crate::BitReader;
 #[doc = "Field `DBNCEDONE` writer - "]
-pub type DBNCEDONE_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
+pub type DBNCEDONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -119,58 +87,55 @@ impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn sesenddet(&mut self) -> SESENDDET_W<2> {
+    pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC, 2> {
         SESENDDET_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<8> {
+    pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<GOTGINT_SPEC, 8> {
         SESREQSUCSTSCHNG_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<9> {
+    pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<GOTGINT_SPEC, 9> {
         HSTNEGSUCSTSCHNG_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn hstnegdet(&mut self) -> HSTNEGDET_W<17> {
+    pub fn hstnegdet(&mut self) -> HSTNEGDET_W<GOTGINT_SPEC, 17> {
         HSTNEGDET_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<18> {
+    pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<GOTGINT_SPEC, 18> {
         ADEVTOUTCHG_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn dbncedone(&mut self) -> DBNCEDONE_W<19> {
+    pub fn dbncedone(&mut self) -> DBNCEDONE_W<GOTGINT_SPEC, 19> {
         DBNCEDONE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gotgint](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gotgint::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gotgint::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GOTGINT_SPEC;
 impl crate::RegisterSpec for GOTGINT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gotgint::R](R) reader structure"]
-impl crate::Readable for GOTGINT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gotgint::W](W) writer structure"]
+#[doc = "`read()` method returns [`gotgint::R`](R) reader structure"]
+impl crate::Readable for GOTGINT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gotgint::W`](W) writer structure"]
 impl crate::Writable for GOTGINT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,26 +1,7 @@
 #[doc = "Register `SOFT_JTAG_CTRL` writer"]
-pub struct W(crate::W<SOFT_JTAG_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SOFT_JTAG_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SOFT_JTAG_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SOFT_JTAG_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SOFT_JTAG_CTRL_SPEC>;
 #[doc = "Field `SOFT_JTAG_CTRL` writer - Turn on JTAG verification."]
-pub type SOFT_JTAG_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, SOFT_JTAG_CTRL_SPEC, O>;
+pub type SOFT_JTAG_CTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SOFT_JTAG_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -31,24 +12,23 @@ impl W {
     #[doc = "Bit 0 - Turn on JTAG verification."]
     #[inline(always)]
     #[must_use]
-    pub fn soft_jtag_ctrl(&mut self) -> SOFT_JTAG_CTRL_W<0> {
+    pub fn soft_jtag_ctrl(&mut self) -> SOFT_JTAG_CTRL_W<SOFT_JTAG_CTRL_SPEC, 0> {
         SOFT_JTAG_CTRL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Jtag register 0.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [soft_jtag_ctrl](index.html) module"]
+#[doc = "Jtag register 0.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`soft_jtag_ctrl::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SOFT_JTAG_CTRL_SPEC;
 impl crate::RegisterSpec for SOFT_JTAG_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [soft_jtag_ctrl::W](W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [`soft_jtag_ctrl::W`](W) writer structure"]
 impl crate::Writable for SOFT_JTAG_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
