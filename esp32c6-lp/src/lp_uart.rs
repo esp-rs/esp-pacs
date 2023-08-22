@@ -72,7 +72,7 @@ pub struct RegisterBlock {
     #[doc = "0x9c - UART ID register"]
     pub id: ID,
 }
-#[doc = "FIFO (r) register accessor: FIFO data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`fifo`] module"]
+#[doc = "FIFO (rw) register accessor: FIFO data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fifo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`fifo`] module"]
 pub type FIFO = crate::Reg<fifo::FIFO_SPEC>;
 #[doc = "FIFO data register"]
 pub mod fifo;

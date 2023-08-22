@@ -37,3 +37,9 @@ LP_IO:
     _strip: "LP_GPIO0_"
   PIN0:
     _strip: "LP_GPIO0_"
+
+LP_UART:
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
