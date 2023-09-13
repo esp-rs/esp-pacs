@@ -5,3 +5,28 @@ USB_DEVICE:
     _interrupts:
       USB:
         name: USB_DEVICE
+
+ECC:
+  _add:
+        _registers:
+          QX_MEM%s:
+            dim: 32
+            dimIncrement: 0x1
+            description: The memory that stores Qx
+            addressOffset: 0x160
+            size: 0x8
+            access: read-write
+          QY_MEM%s:
+            dim: 32
+            dimIncrement: 0x1
+            description: The memory that stores Qy
+            addressOffset: 0x180
+            size: 0x8
+            access: read-write
+          QZ_MEM%s:
+            dim: 32
+            dimIncrement: 0x1
+            description: The memory that stores Qz
+            addressOffset: 0x1A0
+            size: 0x8
+            access: read-write
