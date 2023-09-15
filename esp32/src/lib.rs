@@ -673,6 +673,144 @@ impl core::fmt::Debug for EFUSE {
 }
 #[doc = "eFuse Controller"]
 pub mod efuse;
+#[doc = "Ethernet DMA configuration and control registers"]
+pub struct EMAC_DMA {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for EMAC_DMA {}
+impl EMAC_DMA {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const emac_dma::RegisterBlock = 0x3ff6_9000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const emac_dma::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for EMAC_DMA {
+    type Target = emac_dma::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for EMAC_DMA {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EMAC_DMA").finish()
+    }
+}
+#[doc = "Ethernet DMA configuration and control registers"]
+pub mod emac_dma;
+#[doc = "Ethernet Clock, PHY type, and SRAM configuration registers"]
+pub struct EMAC_EXT {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for EMAC_EXT {}
+impl EMAC_EXT {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const emac_ext::RegisterBlock = 0x3ff6_9800 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const emac_ext::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for EMAC_EXT {
+    type Target = emac_ext::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for EMAC_EXT {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EMAC_EXT").finish()
+    }
+}
+#[doc = "Ethernet Clock, PHY type, and SRAM configuration registers"]
+pub mod emac_ext;
+#[doc = "Ethernet MAC configuration and control registers"]
+pub struct EMAC_MAC {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for EMAC_MAC {}
+impl EMAC_MAC {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const emac_mac::RegisterBlock = 0x3ff6_a000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const emac_mac::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for EMAC_MAC {
+    type Target = emac_mac::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for EMAC_MAC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EMAC_MAC").finish()
+    }
+}
+#[doc = "Ethernet MAC configuration and control registers"]
+pub mod emac_mac;
 #[doc = "FLASH_ENCRYPTION Peripheral"]
 pub struct FLASH_ENCRYPTION {
     _marker: PhantomData<*const ()>,
@@ -2436,6 +2574,12 @@ pub struct Peripherals {
     pub DPORT: DPORT,
     #[doc = "EFUSE"]
     pub EFUSE: EFUSE,
+    #[doc = "EMAC_DMA"]
+    pub EMAC_DMA: EMAC_DMA,
+    #[doc = "EMAC_EXT"]
+    pub EMAC_EXT: EMAC_EXT,
+    #[doc = "EMAC_MAC"]
+    pub EMAC_MAC: EMAC_MAC,
     #[doc = "FLASH_ENCRYPTION"]
     pub FLASH_ENCRYPTION: FLASH_ENCRYPTION,
     #[doc = "FRC_TIMER"]
@@ -2547,6 +2691,15 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             EFUSE: EFUSE {
+                _marker: PhantomData,
+            },
+            EMAC_DMA: EMAC_DMA {
+                _marker: PhantomData,
+            },
+            EMAC_EXT: EMAC_EXT {
+                _marker: PhantomData,
+            },
+            EMAC_MAC: EMAC_MAC {
                 _marker: PhantomData,
             },
             FLASH_ENCRYPTION: FLASH_ENCRYPTION {
