@@ -1,16 +1,16 @@
 #[doc = "Register `MEM_CNT_STATUS` reader"]
 pub type R = crate::R<MEM_CNT_STATUS_SPEC>;
-#[doc = "Field `RX_MEM_CNT` reader - refer to the rxfifo_cnt's describtion."]
+#[doc = "Field `RX_MEM_CNT` reader - refer to the rxfifo_cnt's description."]
 pub type RX_MEM_CNT_R = crate::FieldReader;
-#[doc = "Field `TX_MEM_CNT` reader - refer to the txfifo_cnt's describtion."]
+#[doc = "Field `TX_MEM_CNT` reader - refer to the txfifo_cnt's description."]
 pub type TX_MEM_CNT_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:2 - refer to the rxfifo_cnt's describtion."]
+    #[doc = "Bits 0:2 - refer to the rxfifo_cnt's description."]
     #[inline(always)]
     pub fn rx_mem_cnt(&self) -> RX_MEM_CNT_R {
         RX_MEM_CNT_R::new((self.bits & 7) as u8)
     }
-    #[doc = "Bits 3:5 - refer to the txfifo_cnt's describtion."]
+    #[doc = "Bits 3:5 - refer to the txfifo_cnt's description."]
     #[inline(always)]
     pub fn tx_mem_cnt(&self) -> TX_MEM_CNT_R {
         TX_MEM_CNT_R::new(((self.bits >> 3) & 7) as u8)

@@ -44010,42 +44010,42 @@ IDINTEN[4]: DU Interrupt.</description>
             </field>
             <field>
               <name>RX_FLOW_THRHD_H3</name>
-              <description>refer to the rx_flow_thrhd's describtion.</description>
+              <description>refer to the rx_flow_thrhd's description.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RX_TOUT_THRHD_H3</name>
-              <description>refer to the rx_tout_thrhd's describtion.</description>
+              <description>refer to the rx_tout_thrhd's description.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XON_THRESHOLD_H2</name>
-              <description>refer to the uart_xon_threshold's describtion.</description>
+              <description>refer to the uart_xon_threshold's description.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XOFF_THRESHOLD_H2</name>
-              <description>refer to the uart_xoff_threshold's describtion.</description>
+              <description>refer to the uart_xoff_threshold's description.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RX_MEM_FULL_THRHD</name>
-              <description>refer to the rxfifo_full_thrhd's describtion.</description>
+              <description>refer to the rxfifo_full_thrhd's description.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TX_MEM_EMPTY_THRHD</name>
-              <description>refer to txfifo_empty_thrhd 's describtion.</description>
+              <description>refer to txfifo_empty_thrhd 's description.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
@@ -44100,14 +44100,14 @@ IDINTEN[4]: DU Interrupt.</description>
           <fields>
             <field>
               <name>RX_MEM_CNT</name>
-              <description>refer to the rxfifo_cnt's describtion.</description>
+              <description>refer to the rxfifo_cnt's description.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>TX_MEM_CNT</name>
-              <description>refer to the txfifo_cnt's describtion.</description>
+              <description>refer to the txfifo_cnt's description.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
