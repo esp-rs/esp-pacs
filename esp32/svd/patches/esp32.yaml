@@ -3,3 +3,14 @@ _svd: ../esp32.base.svd
 _modify:
   SDMMC:
     name: SDHOST
+
+RSA:
+  MODEXP_MODE:
+    _modify:
+      MODEXP_MODE:
+        bitWidth: 3
+  
+  MULT_MODE:
+    _modify:
+      MULT_MODE:
+        bitWidth: 4
