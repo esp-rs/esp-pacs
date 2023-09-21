@@ -332,6 +332,7 @@ pub static __INTERRUPTS: [Vector; 99] = [
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "defmt", defmt::Format)]
 #[repr(u16)]
 pub enum Interrupt {
     #[doc = "0 - WIFI_MAC"]
@@ -531,6 +532,7 @@ unsafe impl xtensa_lx::interrupt::InterruptNumber for Interrupt {
 }
 #[doc = r" TryFromInterruptError"]
 #[derive(Debug, Copy, Clone)]
+#[cfg_attr(feature = "defmt", defmt::Format)]
 pub struct TryFromInterruptError(());
 impl Interrupt {
     #[doc = r" Attempt to convert a given value into an `Interrupt`"]
