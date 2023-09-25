@@ -1,5 +1,8 @@
 _svd: "../esp32c6.base.svd"
 
+_modify:
+  GPIO_SD:
+    baseAddress: 0x60091f00
 
 USB_DEVICE:
   _modify:

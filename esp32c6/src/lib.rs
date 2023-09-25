@@ -737,7 +737,7 @@ pub struct GPIO_SD {
 unsafe impl Send for GPIO_SD {}
 impl GPIO_SD {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio_sd::RegisterBlock = 0x6000_4f00 as *const _;
+    pub const PTR: *const gpio_sd::RegisterBlock = 0x6009_1f00 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const gpio_sd::RegisterBlock {
