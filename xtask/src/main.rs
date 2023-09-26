@@ -10,6 +10,7 @@ use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{Config, Target};
+use svdtools::html::html_cli::svd2html;
 use toml_edit::Document;
 
 #[derive(Debug, Clone, Display, EnumIter, ValueEnum)]
@@ -80,6 +81,14 @@ enum Commands {
         #[clap(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
     },
+
+    // Generates a webpage for a given SVD file containing details on every
+    /// peripheral and register and their level of coverage.
+    Html {
+        /// Chip(s) to target
+        #[clap(value_enum, default_values_t = Chip::iter())]
+        chips: Vec<Chip>,
+    },
 }
 
 fn main() -> Result<()> {
@@ -108,6 +117,7 @@ fn main() -> Result<()> {
         } => chips
             .iter()
             .try_for_each(|chip| bump_version(&workspace, chip, version)),
+        Commands::Html { chips } => generate_html(&workspace, chips),
     }
 }
 
@@ -116,7 +126,7 @@ fn patch_svd(workspace: &Path, chip: &Chip) -> Result<()> {
 
     let svd_path = workspace.join(chip.to_string()).join("svd");
     let yaml_file = svd_path.join("patches").join(format!("{chip}.yaml"));
-    svdtools::patch::process_file(&yaml_file)?;
+    svdtools::patch::process_file(&yaml_file, None, None)?;
 
     let from = svd_path.join(format!("{chip}.base.svd.patched"));
     let to = svd_path.join(format!("{chip}.svd"));
@@ -306,6 +316,22 @@ fn clean(path: &Path) -> Result<()> {
         .arg("clean")
         .current_dir(path)
         .output()?;
+
+    Ok(())
+}
+
+fn generate_html(workspace: &Path, chips: Vec<Chip>) -> Result<()> {
+    let svdfiles = chips
+        .iter()
+        .map(|chip| {
+            workspace
+                .join(chip.to_string())
+                .join("svd")
+                .join(format!("{chip}.svd"))
+        })
+        .collect::<Vec<_>>();
+
+    svd2html(&workspace.join("html"), &svdfiles)?;
 
     Ok(())
 }

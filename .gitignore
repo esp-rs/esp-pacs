@@ -6,3 +6,5 @@ esp*/**/Cargo.lock
 !*.base.svd
 
 target/
+
+html/
