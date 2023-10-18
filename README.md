@@ -92,8 +92,8 @@ Prior to opening a pull request, we ask that you please:
 
 The **M**inimum **S**upported **R**ust **V**ersions are:
 
-- `1.65.0` for RISC-V devices (**ESP32-C2/C3/C6**, **ESP32-H2**, **ESP32-S2/S3 RISC-V ULP coprocessors**)
-- `1.65.0` for Xtensa devices (**ESP32**, **ESP32-S2/S3**, **ESP8266**)
+- `1.67.0` for RISC-V devices (**ESP32-C2/C3/C6**, **ESP32-H2**, **ESP32-S2/S3 RISC-V ULP coprocessors**)
+- `1.67.0` for Xtensa devices (**ESP32**, **ESP32-S2/S3**, **ESP8266**)
 
 Note that targeting the Xtensa ISA currently requires the use of the [esp-rs/rust] compiler fork, which can be installed using [esp-rs/espup].
 
