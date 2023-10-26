@@ -125,7 +125,11 @@ impl W {
     pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<CH_CONF0_SPEC, 16> {
         OVF_CNT_RESET_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

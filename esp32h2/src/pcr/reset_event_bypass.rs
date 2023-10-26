@@ -53,7 +53,11 @@ impl W {
     pub fn reset_event_bypass(&mut self) -> RESET_EVENT_BYPASS_W<RESET_EVENT_BYPASS_SPEC, 1> {
         RESET_EVENT_BYPASS_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -75,7 +75,11 @@ impl W {
     pub fn slow_clk_next_edge(&mut self) -> SLOW_CLK_NEXT_EDGE_W<SLOW_CLK_CONF_SPEC, 31> {
         SLOW_CLK_NEXT_EDGE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

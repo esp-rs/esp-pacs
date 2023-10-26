@@ -37,7 +37,11 @@ impl W {
     pub fn privilege_mode_sel(&mut self) -> PRIVILEGE_MODE_SEL_W<PRIVILEGE_MODE_SEL_SPEC, 0> {
         PRIVILEGE_MODE_SEL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -94,7 +94,11 @@ impl W {
     pub fn adc2_tp_high(&mut self) -> ADC2_TP_HIGH_W<BLK3_WDATA3_SPEC, 23> {
         ADC2_TP_HIGH_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

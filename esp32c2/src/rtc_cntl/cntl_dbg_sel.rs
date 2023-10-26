@@ -136,7 +136,11 @@ impl W {
     pub fn debug_sel4(&mut self) -> DEBUG_SEL4_W<CNTL_DBG_SEL_SPEC, 27> {
         DEBUG_SEL4_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

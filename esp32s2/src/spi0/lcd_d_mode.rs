@@ -136,7 +136,11 @@ impl W {
     pub fn hs_blank_en(&mut self) -> HS_BLANK_EN_W<LCD_D_MODE_SPEC, 16> {
         HS_BLANK_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

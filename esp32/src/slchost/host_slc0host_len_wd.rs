@@ -37,7 +37,11 @@ impl W {
     pub fn host_slc0host_len_wd(&mut self) -> HOST_SLC0HOST_LEN_WD_W<HOST_SLC0HOST_LEN_WD_SPEC, 0> {
         HOST_SLC0HOST_LEN_WD_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

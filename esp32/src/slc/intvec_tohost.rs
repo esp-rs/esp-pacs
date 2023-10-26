@@ -23,7 +23,11 @@ impl W {
     pub fn slc1_tohost_intvec(&mut self) -> SLC1_TOHOST_INTVEC_W<INTVEC_TOHOST_SPEC, 16> {
         SLC1_TOHOST_INTVEC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

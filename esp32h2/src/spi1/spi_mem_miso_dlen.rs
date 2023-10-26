@@ -39,7 +39,11 @@ impl W {
     ) -> SPI_MEM_USR_MISO_DBITLEN_W<SPI_MEM_MISO_DLEN_SPEC, 0> {
         SPI_MEM_USR_MISO_DBITLEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

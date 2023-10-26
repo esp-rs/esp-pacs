@@ -56,7 +56,11 @@ impl W {
     pub fn uart0_mem_force_pd(&mut self) -> UART0_MEM_FORCE_PD_W<UART0_PD_CTRL_SPEC, 2> {
         UART0_MEM_FORCE_PD_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

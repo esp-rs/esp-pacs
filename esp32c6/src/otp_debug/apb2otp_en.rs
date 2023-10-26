@@ -34,7 +34,11 @@ impl W {
     pub fn apb2otp_en(&mut self) -> APB2OTP_EN_W<APB2OTP_EN_SPEC, 0> {
         APB2OTP_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

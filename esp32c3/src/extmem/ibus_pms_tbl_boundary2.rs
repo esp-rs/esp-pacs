@@ -37,7 +37,11 @@ impl W {
     pub fn ibus_pms_boundary2(&mut self) -> IBUS_PMS_BOUNDARY2_W<IBUS_PMS_TBL_BOUNDARY2_SPEC, 0> {
         IBUS_PMS_BOUNDARY2_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -72,7 +72,11 @@ impl W {
     pub fn esc_seq1_char1(&mut self) -> ESC_SEQ1_CHAR1_W<ESC_CONF2_SPEC, 16> {
         ESC_SEQ1_CHAR1_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -112,7 +112,11 @@ impl W {
     ) -> SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC, 5> {
         SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

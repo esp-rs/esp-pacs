@@ -56,7 +56,11 @@ impl W {
     pub fn spi_mem_cs_hold_dly_res(&mut self) -> SPI_MEM_CS_HOLD_DLY_RES_W<SPI_MEM_CTRL1_SPEC, 2> {
         SPI_MEM_CS_HOLD_DLY_RES_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -67,7 +67,11 @@ impl W {
     pub fn icache_unlock_ena(&mut self) -> ICACHE_UNLOCK_ENA_W<ICACHE_LOCK_CTRL_SPEC, 1> {
         ICACHE_UNLOCK_ENA_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

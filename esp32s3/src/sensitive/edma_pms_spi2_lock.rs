@@ -37,7 +37,11 @@ impl W {
     pub fn edma_pms_spi2_lock(&mut self) -> EDMA_PMS_SPI2_LOCK_W<EDMA_PMS_SPI2_LOCK_SPEC, 0> {
         EDMA_PMS_SPI2_LOCK_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

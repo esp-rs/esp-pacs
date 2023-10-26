@@ -69,7 +69,11 @@ impl W {
     pub fn flash_crypt_cnt(&mut self) -> FLASH_CRYPT_CNT_W<BLK0_WDATA0_SPEC, 20> {
         FLASH_CRYPT_CNT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

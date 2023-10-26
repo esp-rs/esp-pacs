@@ -37,7 +37,11 @@ impl W {
     pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<IN_CONF1_CH_SPEC, 12> {
         IN_CHECK_OWNER_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -251,7 +251,11 @@ impl W {
     ) -> HP_MODEM2ACTIVE_BACKUP_EN_W<HP_ACTIVE_BACKUP_SPEC, 30> {
         HP_MODEM2ACTIVE_BACKUP_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

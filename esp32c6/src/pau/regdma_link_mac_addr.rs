@@ -37,7 +37,11 @@ impl W {
     pub fn link_addr_mac(&mut self) -> LINK_ADDR_MAC_W<REGDMA_LINK_MAC_ADDR_SPEC, 0> {
         LINK_ADDR_MAC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

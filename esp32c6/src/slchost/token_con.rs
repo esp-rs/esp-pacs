@@ -79,7 +79,11 @@ impl W {
     pub fn slc0host_len_wr(&mut self) -> SLC0HOST_LEN_WR_W<TOKEN_CON_SPEC, 8> {
         SLC0HOST_LEN_WR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

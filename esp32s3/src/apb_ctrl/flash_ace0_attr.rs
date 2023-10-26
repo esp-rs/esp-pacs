@@ -37,7 +37,11 @@ impl W {
     pub fn flash_ace0_attr(&mut self) -> FLASH_ACE0_ATTR_W<FLASH_ACE0_ATTR_SPEC, 0> {
         FLASH_ACE0_ATTR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

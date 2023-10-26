@@ -37,7 +37,11 @@ impl W {
     pub fn send_q3_word0(&mut self) -> SEND_Q3_WORD0_W<REG_Q3_WORD0_SPEC, 0> {
         SEND_Q3_WORD0_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

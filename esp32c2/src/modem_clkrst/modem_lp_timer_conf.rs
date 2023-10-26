@@ -115,7 +115,11 @@ impl W {
     pub fn lp_timer_clk_div_num(&mut self) -> LP_TIMER_CLK_DIV_NUM_W<MODEM_LP_TIMER_CONF_SPEC, 4> {
         LP_TIMER_CLK_DIV_NUM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

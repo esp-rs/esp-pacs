@@ -85,7 +85,11 @@ impl W {
     pub fn h_dopng5(&mut self) -> H_DOPNG5_W<HCTSIZ5_SPEC, 31> {
         H_DOPNG5_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

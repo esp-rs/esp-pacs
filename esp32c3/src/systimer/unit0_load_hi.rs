@@ -37,7 +37,11 @@ impl W {
     pub fn timer_unit0_load_hi(&mut self) -> TIMER_UNIT0_LOAD_HI_W<UNIT0_LOAD_HI_SPEC, 0> {
         TIMER_UNIT0_LOAD_HI_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -1,12 +1,1 @@
 _svd: ../esp32s3.base.svd
-
-SHA:
-  START:
-    _modify:
-      START:
-        access: write-only
-
-  CONTINUE:
-    _modify:
-      CONTINUE:
-        access: write-only

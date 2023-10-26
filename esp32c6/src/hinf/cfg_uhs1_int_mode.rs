@@ -94,7 +94,11 @@ impl W {
     pub fn int_st_ahead_mode(&mut self) -> INT_ST_AHEAD_MODE_W<CFG_UHS1_INT_MODE_SPEC, 6> {
         INT_ST_AHEAD_MODE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

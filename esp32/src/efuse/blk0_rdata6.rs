@@ -147,7 +147,11 @@ impl W {
     pub fn rd_reserve_0_203(&mut self) -> RD_RESERVE_0_203_W<BLK0_RDATA6_SPEC, 11> {
         RD_RESERVE_0_203_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -58,7 +58,11 @@ impl W {
     pub fn i2c0_rst_en(&mut self) -> I2C0_RST_EN_W<I2C0_CONF_SPEC, 1> {
         I2C0_RST_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

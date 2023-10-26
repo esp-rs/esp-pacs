@@ -75,7 +75,11 @@ impl W {
     pub fn dg_hp_wait_timer(&mut self) -> DG_HP_WAIT_TIMER_W<POWER_WAIT_TIMER0_SPEC, 23> {
         DG_HP_WAIT_TIMER_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

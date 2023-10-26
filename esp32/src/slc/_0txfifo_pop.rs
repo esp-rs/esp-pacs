@@ -48,7 +48,11 @@ impl W {
     pub fn slc0_txfifo_pop(&mut self) -> SLC0_TXFIFO_POP_W<_0TXFIFO_POP_SPEC, 16> {
         SLC0_TXFIFO_POP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

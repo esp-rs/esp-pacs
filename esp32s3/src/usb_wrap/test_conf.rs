@@ -106,7 +106,11 @@ impl W {
     pub fn test_tx_dm(&mut self) -> TEST_TX_DM_W<TEST_CONF_SPEC, 3> {
         TEST_TX_DM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

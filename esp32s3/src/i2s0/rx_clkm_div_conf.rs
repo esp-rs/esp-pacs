@@ -94,7 +94,11 @@ impl W {
     pub fn rx_clkm_div_yn1(&mut self) -> RX_CLKM_DIV_YN1_W<RX_CLKM_DIV_CONF_SPEC, 27> {
         RX_CLKM_DIV_YN1_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

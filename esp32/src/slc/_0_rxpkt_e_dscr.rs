@@ -39,7 +39,11 @@ impl W {
     ) -> SLC0_RX_PKT_E_DSCR_ADDR_W<_0_RXPKT_E_DSCR_SPEC, 0> {
         SLC0_RX_PKT_E_DSCR_ADDR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

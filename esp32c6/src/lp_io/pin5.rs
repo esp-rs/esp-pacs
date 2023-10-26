@@ -121,7 +121,11 @@ impl W {
     pub fn lp_gpio5_filter_en(&mut self) -> LP_GPIO5_FILTER_EN_W<PIN5_SPEC, 11> {
         LP_GPIO5_FILTER_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

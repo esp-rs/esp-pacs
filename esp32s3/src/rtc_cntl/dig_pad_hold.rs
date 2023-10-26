@@ -37,7 +37,11 @@ impl W {
     pub fn dig_pad_hold(&mut self) -> DIG_PAD_HOLD_W<DIG_PAD_HOLD_SPEC, 0> {
         DIG_PAD_HOLD_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

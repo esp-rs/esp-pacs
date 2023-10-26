@@ -34,7 +34,11 @@ impl W {
     pub fn sram_pd_1(&mut self) -> SRAM_PD_1_W<SRAM_PD_CTRL_1_SPEC, 0> {
         SRAM_PD_1_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -150,7 +150,11 @@ impl W {
     ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, 14> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

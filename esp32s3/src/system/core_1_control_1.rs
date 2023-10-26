@@ -37,7 +37,11 @@ impl W {
     pub fn control_core_1_message(&mut self) -> CONTROL_CORE_1_MESSAGE_W<CORE_1_CONTROL_1_SPEC, 0> {
         CONTROL_CORE_1_MESSAGE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

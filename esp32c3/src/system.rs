@@ -32,7 +32,7 @@ pub struct RegisterBlock {
     pub cpu_intr_from_cpu_3: CPU_INTR_FROM_CPU_3,
     #[doc = "0x38 - rsa memory power control register"]
     pub rsa_pd_ctrl: RSA_PD_CTRL,
-    #[doc = "0x3c - edma clock and reset register"]
+    #[doc = "0x3c - EDMA clock and reset register"]
     pub edma_ctrl: EDMA_CTRL,
     #[doc = "0x40 - cache control register"]
     pub cache_control: CACHE_CONTROL,
@@ -144,9 +144,9 @@ pub mod cpu_intr_from_cpu_3;
 pub type RSA_PD_CTRL = crate::Reg<rsa_pd_ctrl::RSA_PD_CTRL_SPEC>;
 #[doc = "rsa memory power control register"]
 pub mod rsa_pd_ctrl;
-#[doc = "EDMA_CTRL (rw) register accessor: edma clock and reset register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`edma_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`edma_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`edma_ctrl`] module"]
+#[doc = "EDMA_CTRL (rw) register accessor: EDMA clock and reset register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`edma_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`edma_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`edma_ctrl`] module"]
 pub type EDMA_CTRL = crate::Reg<edma_ctrl::EDMA_CTRL_SPEC>;
-#[doc = "edma clock and reset register"]
+#[doc = "EDMA clock and reset register"]
 pub mod edma_ctrl;
 #[doc = "CACHE_CONTROL (rw) register accessor: cache control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_control::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_control::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cache_control`] module"]
 pub type CACHE_CONTROL = crate::Reg<cache_control::CACHE_CONTROL_SPEC>;

@@ -136,7 +136,11 @@ impl W {
     pub fn peri_backup_ena(&mut self) -> PERI_BACKUP_ENA_W<PERI_BACKUP_CONFIG_SPEC, 31> {
         PERI_BACKUP_ENA_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

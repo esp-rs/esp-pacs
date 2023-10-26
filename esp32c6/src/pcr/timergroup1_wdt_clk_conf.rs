@@ -56,7 +56,11 @@ impl W {
     pub fn tg1_wdt_clk_en(&mut self) -> TG1_WDT_CLK_EN_W<TIMERGROUP1_WDT_CLK_CONF_SPEC, 22> {
         TG1_WDT_CLK_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

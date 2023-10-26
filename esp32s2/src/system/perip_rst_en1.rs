@@ -132,7 +132,11 @@ impl W {
     pub fn crypto_dma_rst(&mut self) -> CRYPTO_DMA_RST_W<PERIP_RST_EN1_SPEC, 6> {
         CRYPTO_DMA_RST_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

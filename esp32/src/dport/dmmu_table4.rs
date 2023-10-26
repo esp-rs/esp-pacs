@@ -37,7 +37,11 @@ impl W {
     pub fn dmmu_table4(&mut self) -> DMMU_TABLE4_W<DMMU_TABLE4_SPEC, 0> {
         DMMU_TABLE4_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

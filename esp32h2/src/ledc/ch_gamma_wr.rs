@@ -94,7 +94,11 @@ impl W {
     pub fn ch_gamma_duty_num(&mut self) -> CH_GAMMA_DUTY_NUM_W<CH_GAMMA_WR_SPEC, 21> {
         CH_GAMMA_DUTY_NUM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

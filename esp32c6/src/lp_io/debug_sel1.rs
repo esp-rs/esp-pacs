@@ -37,7 +37,11 @@ impl W {
     pub fn lp_debug_sel4(&mut self) -> LP_DEBUG_SEL4_W<DEBUG_SEL1_SPEC, 0> {
         LP_DEBUG_SEL4_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -37,7 +37,11 @@ impl W {
     pub fn cis_conf_w6(&mut self) -> CIS_CONF_W6_W<CIS_CONF_W6_SPEC, 0> {
         CIS_CONF_W6_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

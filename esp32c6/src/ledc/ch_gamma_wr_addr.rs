@@ -37,7 +37,11 @@ impl W {
     pub fn ch_gamma_wr_addr(&mut self) -> CH_GAMMA_WR_ADDR_W<CH_GAMMA_WR_ADDR_SPEC, 0> {
         CH_GAMMA_WR_ADDR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

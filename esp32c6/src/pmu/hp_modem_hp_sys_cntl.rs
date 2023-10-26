@@ -144,7 +144,11 @@ impl W {
     ) -> HP_MODEM_DIG_CPU_STALL_W<HP_MODEM_HP_SYS_CNTL_SPEC, 29> {
         HP_MODEM_DIG_CPU_STALL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

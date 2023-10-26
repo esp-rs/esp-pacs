@@ -50,7 +50,11 @@ impl W {
     pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<PDM_FREQ_CONF_SPEC, 10> {
         TX_PDM_FP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
