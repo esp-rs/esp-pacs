@@ -4,10 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-H2</name>
   <series>ESP32 H-Series</series>
-  <version>8</version>
+  <version>9</version>
   <description>32-bit RISC-V MCU &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
-  <licenseText>
-    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -19,8 +18,7 @@
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
-    limitations under the License.
-</licenseText>
+    limitations under the License.</licenseText>
   <cpu>
     <name>RV32IMAC</name>
     <revision>r0p0</revision>
@@ -4060,6 +4058,33 @@
           <description>The memory that stores Py.</description>
           <addressOffset>0x140</addressOffset>
           <size>0x8</size>
+        </register>
+        <register>
+          <dim>32</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>QX_MEM%s</name>
+          <description>The memory that stores Qx</description>
+          <addressOffset>0x160</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <dim>32</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>QY_MEM%s</name>
+          <description>The memory that stores Qy</description>
+          <addressOffset>0x180</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <dim>32</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>QZ_MEM%s</name>
+          <description>The memory that stores Qz</description>
+          <addressOffset>0x1A0</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
         </register>
       </registers>
     </peripheral>
@@ -26861,7 +26886,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>PARL_IO</name>
-      <description>PARL_IO Peripheral</description>
+      <description>Parallel IO Controller</description>
       <groupName>PARL_IO</groupName>
       <baseAddress>0x60015000</baseAddress>
       <addressBlock>
@@ -36258,7 +36283,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
     </peripheral>
     <peripheral>
       <name>SOC_ETM</name>
-      <description>SOC_ETM Peripheral</description>
+      <description>Event Task Matrix</description>
       <groupName>SOC_ETM</groupName>
       <baseAddress>0x60013000</baseAddress>
       <addressBlock>
@@ -47142,7 +47167,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>TRACE</name>
-      <description>TRACE Peripheral</description>
+      <description>RISC-V Trace Encoder</description>
       <groupName>TRACE</groupName>
       <baseAddress>0x600C0000</baseAddress>
       <addressBlock>
@@ -50890,7 +50915,7 @@ protection is enabled.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>USB</name>
+        <name>USB_DEVICE</name>
         <value>37</value>
       </interrupt>
       <registers>

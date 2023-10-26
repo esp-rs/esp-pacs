@@ -4,10 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32 C-Series</series>
-  <version>16</version>
+  <version>17</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
-  <licenseText>
-    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -19,8 +18,7 @@
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
-    limitations under the License.
-</licenseText>
+    limitations under the License.</licenseText>
   <cpu>
     <name>RV32IMC</name>
     <revision>r0p0</revision>
@@ -9178,7 +9176,7 @@
         </register>
         <register>
           <name>CLK</name>
-          <description>eFuse clcok configuration register.</description>
+          <description>eFuse clock configuration register.</description>
           <addressOffset>0x1C8</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000002</resetValue>
@@ -9215,7 +9213,7 @@
         </register>
         <register>
           <name>CONF</name>
-          <description>eFuse operation mode configuraiton register;</description>
+          <description>eFuse operation mode configuration register.</description>
           <addressOffset>0x1CC</addressOffset>
           <size>0x20</size>
           <fields>
@@ -9464,7 +9462,7 @@
         </register>
         <register>
           <name>WR_TIM_CONF1</name>
-          <description>Configurarion register 1 of eFuse programming timing parameters.</description>
+          <description>Configuration register 1 of eFuse programming timing parameters.</description>
           <addressOffset>0x1F0</addressOffset>
           <size>0x20</size>
           <resetValue>0x00288000</resetValue>
@@ -9480,7 +9478,7 @@
         </register>
         <register>
           <name>WR_TIM_CONF2</name>
-          <description>Configurarion register 2 of eFuse programming timing parameters.</description>
+          <description>Configuration register 2 of eFuse programming timing parameters.</description>
           <addressOffset>0x1F4</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000190</resetValue>
@@ -11680,7 +11678,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>QUREY_CHECK</name>
+              <name>QUERY_CHECK</name>
               <description>Hmac configuration state. 0: key are agree with purpose. 1: error</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -29724,7 +29722,7 @@
         </register>
         <register>
           <name>EDMA_CTRL</name>
-          <description>edma clcok and reset register</description>
+          <description>EDMA clock and reset register</description>
           <addressOffset>0x3C</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000001</resetValue>
@@ -34903,7 +34901,7 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>USB_SERIAL_JTAG</name>
+        <name>USB_DEVICE</name>
         <value>26</value>
       </interrupt>
       <registers>

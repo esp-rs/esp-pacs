@@ -4,10 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32 S-Series</series>
-  <version>17</version>
+  <version>18</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
-  <licenseText>
-    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -19,8 +18,7 @@
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
-    limitations under the License.
-</licenseText>
+    limitations under the License.</licenseText>
   <cpu>
     <name>Xtensa LX7</name>
     <revision>r0p0</revision>
@@ -7153,7 +7151,7 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>QUREY_CHECK</name>
+              <name>QUERY_CHECK</name>
               <description>Hmac error status.
 
 0: hmac key and purpose match.

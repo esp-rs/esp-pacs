@@ -4,10 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32 Series</series>
-  <version>14</version>
+  <version>15</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
-  <licenseText>
-    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -19,8 +18,7 @@
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
-    limitations under the License.
-</licenseText>
+    limitations under the License.</licenseText>
   <cpu>
     <name>Xtensa LX6</name>
     <revision>r0p0</revision>
@@ -392,7 +390,10 @@
           </fields>
         </register>
         <register>
-          <name>APB_SARADC_SAR1_PATT_TAB1</name>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>1-4</dimIndex>
+          <name>APB_SARADC_SAR1_PATT_TAB%s</name>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
           <resetValue>0x0F0F0F0F</resetValue>
@@ -407,52 +408,10 @@
           </fields>
         </register>
         <register>
-          <name>APB_SARADC_SAR1_PATT_TAB2</name>
-          <addressOffset>0x20</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0F0F0F0F</resetValue>
-          <fields>
-            <field>
-              <name>SARADC_SAR1_PATT_TAB2</name>
-              <description>Item 4 ~ 7 for pattern table 1 (each item one byte)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>APB_SARADC_SAR1_PATT_TAB3</name>
-          <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0F0F0F0F</resetValue>
-          <fields>
-            <field>
-              <name>SARADC_SAR1_PATT_TAB3</name>
-              <description>Item 8 ~ 11 for pattern table 1 (each item one byte)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>APB_SARADC_SAR1_PATT_TAB4</name>
-          <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0F0F0F0F</resetValue>
-          <fields>
-            <field>
-              <name>SARADC_SAR1_PATT_TAB4</name>
-              <description>Item 12 ~ 15 for pattern table 1 (each item one byte)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>APB_SARADC_SAR2_PATT_TAB1</name>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>1-4</dimIndex>
+          <name>APB_SARADC_SAR2_PATT_TAB%s</name>
           <addressOffset>0x2C</addressOffset>
           <size>0x20</size>
           <resetValue>0x0F0F0F0F</resetValue>
@@ -460,51 +419,6 @@
             <field>
               <name>SARADC_SAR2_PATT_TAB1</name>
               <description>item 0 ~ 3 for pattern table 2 (each item one byte)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>APB_SARADC_SAR2_PATT_TAB2</name>
-          <addressOffset>0x30</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0F0F0F0F</resetValue>
-          <fields>
-            <field>
-              <name>SARADC_SAR2_PATT_TAB2</name>
-              <description>Item 4 ~ 7 for pattern table 2 (each item one byte)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>APB_SARADC_SAR2_PATT_TAB3</name>
-          <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0F0F0F0F</resetValue>
-          <fields>
-            <field>
-              <name>SARADC_SAR2_PATT_TAB3</name>
-              <description>Item 8 ~ 11 for pattern table 2 (each item one byte)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>APB_SARADC_SAR2_PATT_TAB4</name>
-          <addressOffset>0x38</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0F0F0F0F</resetValue>
-          <fields>
-            <field>
-              <name>SARADC_SAR2_PATT_TAB4</name>
-              <description>Item 12 ~ 15 for pattern table 2 (each item one byte)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -7094,84 +7008,84 @@
             </field>
             <field>
               <name>CACHE_IA_INT_APP_DROM0</name>
-              <description>APP CPU invalid access to DROM0 when cache is disabled </description>
+              <description>APP CPU invalid access to DROM0 when cache is disabled</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_APP_IRAM0</name>
-              <description>APP CPU invalid access to IRAM0 when cache is disabled </description>
+              <description>APP CPU invalid access to IRAM0 when cache is disabled</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_APP_IRAM1</name>
-              <description>APP CPU invalid access to IRAM1 when cache is disabled </description>
+              <description>APP CPU invalid access to IRAM1 when cache is disabled</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_APP_IROM0</name>
-              <description>APP CPU invalid access to IROM0 when cache is disabled </description>
+              <description>APP CPU invalid access to IROM0 when cache is disabled</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_APP_DRAM1</name>
-              <description>APP CPU invalid access to DRAM1 when cache is disabled </description>
+              <description>APP CPU invalid access to DRAM1 when cache is disabled</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_APP_OPPOSITE</name>
-              <description>APP CPU invalid access to APP CPU cache when cache disabled </description>
+              <description>APP CPU invalid access to APP CPU cache when cache disabled</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_PRO_DROM0</name>
-              <description>PRO CPU invalid access to DROM0 when cache is disabled </description>
+              <description>PRO CPU invalid access to DROM0 when cache is disabled</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_PRO_IRAM0</name>
-              <description>PRO CPU invalid access to IRAM0 when cache is disabled </description>
+              <description>PRO CPU invalid access to IRAM0 when cache is disabled</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_PRO_IRAM1</name>
-              <description>PRO CPU invalid access to IRAM1 when cache is disabled </description>
+              <description>PRO CPU invalid access to IRAM1 when cache is disabled</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_PRO_IROM0</name>
-              <description>PRO CPU invalid access to IROM0 when cache is disabled </description>
+              <description>PRO CPU invalid access to IROM0 when cache is disabled</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_PRO_DRAM1</name>
-              <description>PRO CPU invalid access to DRAM1 when cache is disabled </description>
+              <description>PRO CPU invalid access to DRAM1 when cache is disabled</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CACHE_IA_INT_PRO_OPPOSITE</name>
-              <description>PRO CPU invalid access to APP CPU cache when cache disabled </description>
+              <description>PRO CPU invalid access to APP CPU cache when cache disabled</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -10997,7 +10911,7 @@
           <fields>
             <field>
               <name>STRAPPING</name>
-              <description>{10'b0, MTDI, GPIO0, GPIO2, GPIO4, MTDO, GPIO5} </description>
+              <description>{10'b0, MTDI, GPIO0, GPIO2, GPIO4, MTDO, GPIO5}</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-only</access>
@@ -11458,7 +11372,10 @@
       </addressBlock>
       <registers>
         <register>
-          <name>SIGMADELTA0</name>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>SIGMADELTA%s</name>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <resetValue>0x0000FF00</resetValue>
@@ -11471,146 +11388,6 @@
             </field>
             <field>
               <name>SD0_PRESCALE</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SIGMADELTA1</name>
-          <addressOffset>0x4</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0000FF00</resetValue>
-          <fields>
-            <field>
-              <name>SD1_IN</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SD1_PRESCALE</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SIGMADELTA2</name>
-          <addressOffset>0x8</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0000FF00</resetValue>
-          <fields>
-            <field>
-              <name>SD2_IN</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SD2_PRESCALE</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SIGMADELTA3</name>
-          <addressOffset>0xC</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0000FF00</resetValue>
-          <fields>
-            <field>
-              <name>SD3_IN</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SD3_PRESCALE</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SIGMADELTA4</name>
-          <addressOffset>0x10</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0000FF00</resetValue>
-          <fields>
-            <field>
-              <name>SD4_IN</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SD4_PRESCALE</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SIGMADELTA5</name>
-          <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0000FF00</resetValue>
-          <fields>
-            <field>
-              <name>SD5_IN</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SD5_PRESCALE</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SIGMADELTA6</name>
-          <addressOffset>0x18</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0000FF00</resetValue>
-          <fields>
-            <field>
-              <name>SD6_IN</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SD6_PRESCALE</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SIGMADELTA7</name>
-          <addressOffset>0x1C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x0000FF00</resetValue>
-          <fields>
-            <field>
-              <name>SD7_IN</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SD7_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -18054,12 +17831,6 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
-            <field>
-              <name>LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
           </fields>
         </register>
         <register>
@@ -18128,12 +17899,6 @@
               <description>Set this bit  to update  reg_div_num_lstime0 and  reg_lstimer0_lim.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -23504,7 +23269,7 @@
               <name>MODEXP_MODE</name>
               <description>This register contains the mode of modular exponentiation.</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
+              <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -23532,7 +23297,7 @@
               <name>MULT_MODE</name>
               <description>This register contains the mode of modular multiplication and multiplication.</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
+              <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -25975,7 +25740,7 @@
             </field>
             <field>
               <name>RDY_FOR_WAKEUP</name>
-              <description>1 if RTC controller is ready to execute WAKE instruction, 0 otherwise </description>
+              <description>1 if RTC controller is ready to execute WAKE instruction, 0 otherwise</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -28270,7 +28035,7 @@
           <fields>
             <field>
               <name>SCL_LOW_PERIOD</name>
-              <description>number of cycles that scl == 0 </description>
+              <description>number of cycles that scl == 0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>25</bitWidth>
               <access>read-write</access>
@@ -28284,42 +28049,42 @@
           <fields>
             <field>
               <name>SDA_FORCE_OUT</name>
-              <description>SDA is push-pull (1) or open-drain (0) </description>
+              <description>SDA is push-pull (1) or open-drain (0)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SCL_FORCE_OUT</name>
-              <description>SCL is push-pull (1) or open-drain (0) </description>
+              <description>SCL is push-pull (1) or open-drain (0)</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>MS_MODE</name>
-              <description>Master (1) or slave (0) </description>
+              <description>Master (1) or slave (0)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TRANS_START</name>
-              <description>Force to generate start condition </description>
+              <description>Force to generate start condition</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TX_LSB_FIRST</name>
-              <description>Send LSB first </description>
+              <description>Send LSB first</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RX_LSB_FIRST</name>
-              <description>Receive LSB first </description>
+              <description>Receive LSB first</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -28333,63 +28098,63 @@
           <fields>
             <field>
               <name>ACK_VAL</name>
-              <description>The value of an acknowledge signal on the bus </description>
+              <description>The value of an acknowledge signal on the bus</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SLAVE_RW</name>
-              <description>When working as a slave, the value of R/W bit received </description>
+              <description>When working as a slave, the value of R/W bit received</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TIMED_OUT</name>
-              <description>Transfer has timed out </description>
+              <description>Transfer has timed out</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ARB_LOST</name>
-              <description>When working as a master, lost control of I2C bus </description>
+              <description>When working as a master, lost control of I2C bus</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>BUS_BUSY</name>
-              <description>operation is in progress </description>
+              <description>operation is in progress</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SLAVE_ADDR_MATCH</name>
-              <description>When working as a slave, whether address was matched </description>
+              <description>When working as a slave, whether address was matched</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>BYTE_TRANS</name>
-              <description>8 bit transmit done </description>
+              <description>8 bit transmit done</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>MAIN_STATE</name>
-              <description>state of the main state machine </description>
+              <description>state of the main state machine</description>
               <bitOffset>25</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SCL_STATE</name>
-              <description>state of SCL state machine </description>
+              <description>state of SCL state machine</description>
               <bitOffset>28</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
@@ -28403,7 +28168,7 @@
           <fields>
             <field>
               <name>TIMEOUT</name>
-              <description>Maximum number of FAST_CLK cycles that the transmission can take </description>
+              <description>Maximum number of FAST_CLK cycles that the transmission can take</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
@@ -28417,14 +28182,14 @@
           <fields>
             <field>
               <name>SLAVE_ADDR</name>
-              <description>local slave address </description>
+              <description>local slave address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>15</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>_10BIT</name>
-              <description>Set if local slave address is 10-bit </description>
+              <description>Set if local slave address is 10-bit</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -28443,14 +28208,14 @@
           <fields>
             <field>
               <name>SLAVE_TRANS_COMPLETE_INT_RAW</name>
-              <description>Slave accepted 1 byte and address matched </description>
+              <description>Slave accepted 1 byte and address matched</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ARBITRATION_LOST_INT_RAW</name>
-              <description>Master lost arbitration </description>
+              <description>Master lost arbitration</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -28463,14 +28228,14 @@
             </field>
             <field>
               <name>TRANS_COMPLETE_INT_RAW</name>
-              <description>Stop condition has been detected interrupt raw status </description>
+              <description>Stop condition has been detected interrupt raw status</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TIME_OUT_INT_RAW</name>
-              <description>time out interrupt raw status </description>
+              <description>time out interrupt raw status</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -28531,7 +28296,7 @@
           <fields>
             <field>
               <name>SDA_DUTY</name>
-              <description>Number of FAST_CLK cycles SDA will switch after falling edge of SCL </description>
+              <description>Number of FAST_CLK cycles SDA will switch after falling edge of SCL</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
@@ -28545,7 +28310,7 @@
           <fields>
             <field>
               <name>SCL_HIGH_PERIOD</name>
-              <description>Number of FAST_CLK cycles for SCL to be high </description>
+              <description>Number of FAST_CLK cycles for SCL to be high</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
@@ -28559,7 +28324,7 @@
           <fields>
             <field>
               <name>SCL_START_PERIOD</name>
-              <description>Number of FAST_CLK cycles to wait before generating start condition </description>
+              <description>Number of FAST_CLK cycles to wait before generating start condition</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
@@ -28573,7 +28338,7 @@
           <fields>
             <field>
               <name>SCL_STOP_PERIOD</name>
-              <description>Number of FAST_CLK cycles to wait before generating stop condition </description>
+              <description>Number of FAST_CLK cycles to wait before generating stop condition</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
@@ -28587,14 +28352,14 @@
           <fields>
             <field>
               <name>VAL</name>
-              <description>Command content </description>
+              <description>Command content</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DONE</name>
-              <description>Bit is set by HW when command is done </description>
+              <description>Bit is set by HW when command is done</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -44072,21 +43837,21 @@ IDINTEN[4]: DU Interrupt.</description>
           <fields>
             <field>
               <name>MEM_RX_STATUS</name>
-              <description>This register stores the current uart rx mem read address  and rx mem write address </description>
+              <description>This register stores the current uart rx mem read address  and rx mem write address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>24</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>MEM_RX_RD_ADDR</name>
-              <description>This register stores the rx mem read address </description>
+              <description>This register stores the rx mem read address</description>
               <bitOffset>2</bitOffset>
               <bitWidth>11</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>MEM_RX_WR_ADDR</name>
-              <description>This register stores the rx mem write address </description>
+              <description>This register stores the rx mem write address</description>
               <bitOffset>13</bitOffset>
               <bitWidth>11</bitWidth>
               <access>read-only</access>
