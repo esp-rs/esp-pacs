@@ -189,7 +189,11 @@ impl W {
     pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<SAR_TSENS_CTRL_SPEC, 26> {
         TSENS_DUMP_OUT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

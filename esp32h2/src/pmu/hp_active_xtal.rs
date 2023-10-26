@@ -37,7 +37,11 @@ impl W {
     pub fn hp_active_xpd_xtal(&mut self) -> HP_ACTIVE_XPD_XTAL_W<HP_ACTIVE_XTAL_SPEC, 31> {
         HP_ACTIVE_XPD_XTAL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

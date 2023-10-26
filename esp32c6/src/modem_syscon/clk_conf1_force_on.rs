@@ -477,7 +477,11 @@ impl W {
     ) -> CLK_FE_ANAMODE_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 23> {
         CLK_FE_ANAMODE_160M_FO_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

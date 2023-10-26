@@ -23,7 +23,11 @@ impl W {
     pub fn rst_i2c_mst(&mut self) -> RST_I2C_MST_W<RST_CONF_SPEC, 2> {
         RST_I2C_MST_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

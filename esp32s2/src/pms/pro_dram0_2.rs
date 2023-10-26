@@ -116,7 +116,11 @@ impl W {
     pub fn pro_dram0_rtcfast_h_w(&mut self) -> PRO_DRAM0_RTCFAST_H_W_W<PRO_DRAM0_2_SPEC, 14> {
         PRO_DRAM0_RTCFAST_H_W_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

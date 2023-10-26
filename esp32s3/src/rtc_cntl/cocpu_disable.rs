@@ -37,7 +37,11 @@ impl W {
     pub fn disable_rtc_cpu(&mut self) -> DISABLE_RTC_CPU_W<COCPU_DISABLE_SPEC, 31> {
         DISABLE_RTC_CPU_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

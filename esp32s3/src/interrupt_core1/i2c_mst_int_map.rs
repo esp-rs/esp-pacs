@@ -37,7 +37,11 @@ impl W {
     pub fn i2c_mst_int_map(&mut self) -> I2C_MST_INT_MAP_W<I2C_MST_INT_MAP_SPEC, 0> {
         I2C_MST_INT_MAP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

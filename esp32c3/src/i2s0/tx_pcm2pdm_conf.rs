@@ -252,7 +252,11 @@ impl W {
     pub fn pcm2pdm_conv_en(&mut self) -> PCM2PDM_CONV_EN_W<TX_PCM2PDM_CONF_SPEC, 25> {
         PCM2PDM_CONV_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -75,7 +75,11 @@ impl W {
     pub fn pro_dcache_mask_bus2(&mut self) -> PRO_DCACHE_MASK_BUS2_W<PRO_DCACHE_CTRL1_SPEC, 2> {
         PRO_DCACHE_MASK_BUS2_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

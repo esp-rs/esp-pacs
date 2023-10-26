@@ -94,7 +94,11 @@ impl W {
     pub fn gen2_b_shdw_full(&mut self) -> GEN2_B_SHDW_FULL_W<GEN2_STMP_CFG_SPEC, 9> {
         GEN2_B_SHDW_FULL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

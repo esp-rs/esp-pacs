@@ -154,7 +154,11 @@ impl W {
     pub fn pro_iram0_sram_4_h_w(&mut self) -> PRO_IRAM0_SRAM_4_H_W_W<PRO_IRAM0_2_SPEC, 22> {
         PRO_IRAM0_SRAM_4_H_W_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -146,7 +146,11 @@ impl W {
     ) -> CACHE_SYNC_ERR_INT_CLR_W<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, 13> {
         CACHE_SYNC_ERR_INT_CLR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -161,7 +161,11 @@ impl W {
     pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<CONF2_SPEC, 7> {
         INTER_VALID_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

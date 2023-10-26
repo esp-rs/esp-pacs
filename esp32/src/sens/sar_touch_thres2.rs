@@ -56,7 +56,11 @@ impl W {
     pub fn touch_out_th2(&mut self) -> TOUCH_OUT_TH2_W<SAR_TOUCH_THRES2_SPEC, 16> {
         TOUCH_OUT_TH2_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

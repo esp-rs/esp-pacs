@@ -330,7 +330,11 @@ impl W {
     pub fn slv_cmda_int_clr(&mut self) -> SLV_CMDA_INT_CLR_W<DMA_INT_CLR_SPEC, 15> {
         SLV_CMDA_INT_CLR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -126,7 +126,11 @@ impl W {
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_W<CORE_1_PIF_PMS_CONSTRAIN_12_SPEC, 9> {
         CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

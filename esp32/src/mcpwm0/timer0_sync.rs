@@ -110,7 +110,11 @@ impl W {
     pub fn timer0_phase_direction(&mut self) -> TIMER0_PHASE_DIRECTION_W<TIMER0_SYNC_SPEC, 20> {
         TIMER0_PHASE_DIRECTION_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

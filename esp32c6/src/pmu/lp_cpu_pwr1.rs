@@ -45,7 +45,11 @@ impl W {
     pub fn lp_cpu_sleep_req(&mut self) -> LP_CPU_SLEEP_REQ_W<LP_CPU_PWR1_SPEC, 31> {
         LP_CPU_SLEEP_REQ_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

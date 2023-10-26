@@ -191,7 +191,11 @@ impl W {
     pub fn i2c_conf_upgate(&mut self) -> I2C_CONF_UPGATE_W<I2C_CTR_SPEC, 11> {
         I2C_CONF_UPGATE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

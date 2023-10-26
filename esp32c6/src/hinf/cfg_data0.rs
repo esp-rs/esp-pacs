@@ -56,7 +56,11 @@ impl W {
     pub fn user_id_fn1(&mut self) -> USER_ID_FN1_W<CFG_DATA0_SPEC, 16> {
         USER_ID_FN1_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

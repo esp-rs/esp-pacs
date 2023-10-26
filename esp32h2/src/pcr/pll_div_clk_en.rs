@@ -132,7 +132,11 @@ impl W {
     pub fn pll_40m_clk_en(&mut self) -> PLL_40M_CLK_EN_W<PLL_DIV_CLK_EN_SPEC, 5> {
         PLL_40M_CLK_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -129,7 +129,11 @@ impl W {
     pub fn tx_push_idle_num(&mut self) -> TX_PUSH_IDLE_NUM_W<BRIDGE_CONF_SPEC, 16> {
         TX_PUSH_IDLE_NUM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

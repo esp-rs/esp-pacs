@@ -37,7 +37,11 @@ impl W {
     pub fn usb_device_int_map(&mut self) -> USB_DEVICE_INT_MAP_W<USB_DEVICE_INT_MAP_SPEC, 0> {
         USB_DEVICE_INT_MAP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

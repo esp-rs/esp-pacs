@@ -237,7 +237,11 @@ impl W {
     pub fn vsync_filter_thres(&mut self) -> VSYNC_FILTER_THRES_W<CONF2_SPEC, 11> {
         VSYNC_FILTER_THRES_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

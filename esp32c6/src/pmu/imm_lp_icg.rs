@@ -23,7 +23,11 @@ impl W {
     pub fn tie_high_lp_rootclk_sel(&mut self) -> TIE_HIGH_LP_ROOTCLK_SEL_W<IMM_LP_ICG_SPEC, 31> {
         TIE_HIGH_LP_ROOTCLK_SEL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

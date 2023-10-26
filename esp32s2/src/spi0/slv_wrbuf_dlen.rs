@@ -56,7 +56,11 @@ impl W {
     pub fn conf_base_bitlen(&mut self) -> CONF_BASE_BITLEN_W<SLV_WRBUF_DLEN_SPEC, 25> {
         CONF_BASE_BITLEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

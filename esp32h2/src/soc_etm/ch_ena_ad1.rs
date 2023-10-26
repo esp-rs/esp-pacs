@@ -306,7 +306,11 @@ impl W {
     pub fn ch_ena49(&mut self) -> CH_ENA49_W<CH_ENA_AD1_SPEC, 17> {
         CH_ENA49_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

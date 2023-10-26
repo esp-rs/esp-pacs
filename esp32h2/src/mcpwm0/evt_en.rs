@@ -570,7 +570,11 @@ impl W {
     pub fn evt_cap2_en(&mut self) -> EVT_CAP2_EN_W<EVT_EN_SPEC, 29> {
         EVT_CAP2_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

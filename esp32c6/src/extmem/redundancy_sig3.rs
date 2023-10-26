@@ -37,7 +37,11 @@ impl W {
     pub fn cache_redcy_sig3(&mut self) -> CACHE_REDCY_SIG3_W<REDUNDANCY_SIG3_SPEC, 0> {
         CACHE_REDCY_SIG3_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -223,7 +223,11 @@ impl W {
     pub fn spi_close_axi_inf_en(&mut self) -> SPI_CLOSE_AXI_INF_EN_W<SPI_MEM_CACHE_FCTRL_SPEC, 31> {
         SPI_CLOSE_AXI_INF_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

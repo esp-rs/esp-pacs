@@ -37,7 +37,11 @@ impl W {
     pub fn region6_addr_start(&mut self) -> REGION6_ADDR_START_W<REGION6_ADDR_START_SPEC, 0> {
         REGION6_ADDR_START_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

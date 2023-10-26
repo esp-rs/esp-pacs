@@ -146,7 +146,11 @@ impl W {
     pub fn dout7_num(&mut self) -> DOUT7_NUM_W<DOUT_NUM_SPEC, 14> {
         DOUT7_NUM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

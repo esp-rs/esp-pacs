@@ -75,7 +75,11 @@ impl W {
     pub fn sar_tsens_clk_inv(&mut self) -> SAR_TSENS_CLK_INV_W<SAR_TSENS_CTRL2_SPEC, 14> {
         SAR_TSENS_CLK_INV_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

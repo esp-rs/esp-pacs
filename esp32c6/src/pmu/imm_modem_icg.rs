@@ -15,7 +15,11 @@ impl W {
     pub fn update_dig_icg_modem_en(&mut self) -> UPDATE_DIG_ICG_MODEM_EN_W<IMM_MODEM_ICG_SPEC, 31> {
         UPDATE_DIG_ICG_MODEM_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

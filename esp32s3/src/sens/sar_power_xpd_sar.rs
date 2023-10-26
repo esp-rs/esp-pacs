@@ -53,7 +53,11 @@ impl W {
     pub fn sarclk_en(&mut self) -> SARCLK_EN_W<SAR_POWER_XPD_SAR_SPEC, 31> {
         SARCLK_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

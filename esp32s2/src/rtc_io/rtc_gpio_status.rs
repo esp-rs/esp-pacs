@@ -37,7 +37,11 @@ impl W {
     pub fn gpio_status_int(&mut self) -> GPIO_STATUS_INT_W<RTC_GPIO_STATUS_SPEC, 10> {
         GPIO_STATUS_INT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

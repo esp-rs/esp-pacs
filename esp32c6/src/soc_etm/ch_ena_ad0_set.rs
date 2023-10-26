@@ -263,7 +263,11 @@ impl W {
     pub fn ch_set31(&mut self) -> CH_SET31_W<CH_ENA_AD0_SET_SPEC, 31> {
         CH_SET31_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

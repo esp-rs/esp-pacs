@@ -134,7 +134,11 @@ impl W {
     pub fn force_lp_peri_pd(&mut self) -> FORCE_LP_PERI_PD_W<POWER_PD_LPPERI_CNTL_SPEC, 5> {
         FORCE_LP_PERI_PD_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

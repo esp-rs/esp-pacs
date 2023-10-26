@@ -161,7 +161,11 @@ impl W {
     pub fn op2_force_up(&mut self) -> OP2_FORCE_UP_W<UPDATE_CFG_SPEC, 7> {
         OP2_FORCE_UP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

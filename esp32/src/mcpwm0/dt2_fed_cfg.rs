@@ -34,7 +34,11 @@ impl W {
     pub fn dt2_fed(&mut self) -> DT2_FED_W<DT2_FED_CFG_SPEC, 0> {
         DT2_FED_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

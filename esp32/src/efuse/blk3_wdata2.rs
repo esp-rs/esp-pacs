@@ -34,7 +34,11 @@ impl W {
     pub fn blk3_din2(&mut self) -> BLK3_DIN2_W<BLK3_WDATA2_SPEC, 0> {
         BLK3_DIN2_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

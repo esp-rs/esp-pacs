@@ -164,7 +164,11 @@ impl W {
     pub fn outfifo_udf_l3(&mut self) -> OUTFIFO_UDF_L3_W<OUT_INT_RAW_CH_SPEC, 7> {
         OUTFIFO_UDF_L3_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

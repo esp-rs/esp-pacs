@@ -129,7 +129,11 @@ impl W {
     pub fn chopper2_in_invert(&mut self) -> CHOPPER2_IN_INVERT_W<CARRIER2_CFG_SPEC, 13> {
         CHOPPER2_IN_INVERT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

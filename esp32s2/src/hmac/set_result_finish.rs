@@ -15,7 +15,11 @@ impl W {
     pub fn set_result_end(&mut self) -> SET_RESULT_END_W<SET_RESULT_FINISH_SPEC, 0> {
         SET_RESULT_END_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

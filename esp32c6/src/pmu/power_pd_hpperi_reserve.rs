@@ -15,7 +15,11 @@ impl W {
     pub fn hp_peri_reserve(&mut self) -> HP_PERI_RESERVE_W<POWER_PD_HPPERI_RESERVE_SPEC, 0> {
         HP_PERI_RESERVE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

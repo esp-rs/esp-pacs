@@ -37,7 +37,11 @@ impl W {
     pub fn fast_ori_gate(&mut self) -> FAST_ORI_GATE_W<LP_CLK_EN_SPEC, 31> {
         FAST_ORI_GATE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

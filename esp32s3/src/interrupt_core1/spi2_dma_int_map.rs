@@ -37,7 +37,11 @@ impl W {
     pub fn spi2_dma_int_map(&mut self) -> SPI2_DMA_INT_MAP_W<SPI2_DMA_INT_MAP_SPEC, 0> {
         SPI2_DMA_INT_MAP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

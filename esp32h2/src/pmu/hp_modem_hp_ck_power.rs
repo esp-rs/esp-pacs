@@ -117,7 +117,11 @@ impl W {
     pub fn hp_modem_xpd_bbpll(&mut self) -> HP_MODEM_XPD_BBPLL_W<HP_MODEM_HP_CK_POWER_SPEC, 30> {
         HP_MODEM_XPD_BBPLL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -94,7 +94,11 @@ impl W {
     pub fn i2c_sda_pd_en(&mut self) -> I2C_SDA_PD_EN_W<I2C_SCL_SP_CONF_SPEC, 7> {
         I2C_SDA_PD_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

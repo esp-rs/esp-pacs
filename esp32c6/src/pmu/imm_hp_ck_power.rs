@@ -135,7 +135,11 @@ impl W {
     pub fn tie_high_xpd_xtal(&mut self) -> TIE_HIGH_XPD_XTAL_W<IMM_HP_CK_POWER_SPEC, 31> {
         TIE_HIGH_XPD_XTAL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -75,7 +75,11 @@ impl W {
     pub fn target2_work_en(&mut self) -> TARGET2_WORK_EN_W<TARGET2_CONF_SPEC, 31> {
         TARGET2_WORK_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

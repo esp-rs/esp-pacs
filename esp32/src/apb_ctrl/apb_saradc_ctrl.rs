@@ -269,7 +269,11 @@ impl W {
     pub fn saradc_data_to_i2s(&mut self) -> SARADC_DATA_TO_I2S_W<APB_SARADC_CTRL_SPEC, 26> {
         SARADC_DATA_TO_I2S_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -115,7 +115,11 @@ impl W {
     pub fn coex_lpclk_div_num(&mut self) -> COEX_LPCLK_DIV_NUM_W<COEX_LP_CLK_CONF_SPEC, 4> {
         COEX_LPCLK_DIV_NUM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -37,7 +37,11 @@ impl W {
     pub fn dma_ch1_int_map(&mut self) -> DMA_CH1_INT_MAP_W<DMA_CH1_INT_MAP_SPEC, 0> {
         DMA_CH1_INT_MAP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

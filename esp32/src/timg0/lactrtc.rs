@@ -37,7 +37,11 @@ impl W {
     pub fn lact_rtc_step_len(&mut self) -> LACT_RTC_STEP_LEN_W<LACTRTC_SPEC, 6> {
         LACT_RTC_STEP_LEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

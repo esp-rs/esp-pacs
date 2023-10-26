@@ -56,7 +56,11 @@ impl W {
     pub fn mspi_fast_hs_div_num(&mut self) -> MSPI_FAST_HS_DIV_NUM_W<MSPI_CLK_CONF_SPEC, 8> {
         MSPI_FAST_HS_DIV_NUM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

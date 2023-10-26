@@ -26,10 +26,6 @@ pub type TICK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 pub type PARA_UP_R = crate::BitReader;
 #[doc = "Field `PARA_UP` writer - Set this bit to update reg_div_num_lstime0 and reg_lstimer0_lim."]
 pub type PARA_UP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `LIM` reader - "]
-pub type LIM_R = crate::FieldReader;
-#[doc = "Field `LIM` writer - "]
-pub type LIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
@@ -61,11 +57,6 @@ impl R {
     pub fn para_up(&self) -> PARA_UP_R {
         PARA_UP_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bits 31:35"]
-    #[inline(always)]
-    pub fn lim(&self) -> LIM_R {
-        LIM_R::new(((self.bits >> 31) & 0x1f) as u8)
-    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -77,7 +68,6 @@ impl core::fmt::Debug for R {
             .field("rst", &format_args!("{}", self.rst().bit()))
             .field("tick_sel", &format_args!("{}", self.tick_sel().bit()))
             .field("para_up", &format_args!("{}", self.para_up().bit()))
-            .field("lim", &format_args!("{}", self.lim().bits()))
             .finish()
     }
 }
@@ -124,13 +114,11 @@ impl W {
     pub fn para_up(&mut self) -> PARA_UP_W<LSTIMER_CONF_SPEC, 26> {
         PARA_UP_W::new(self)
     }
-    #[doc = "Bits 31:35"]
-    #[inline(always)]
-    #[must_use]
-    pub fn lim(&mut self) -> LIM_W<LSTIMER_CONF_SPEC, 31> {
-        LIM_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

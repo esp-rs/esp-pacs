@@ -48,7 +48,11 @@ impl W {
     pub fn touch_channel_clr(&mut self) -> TOUCH_CHANNEL_CLR_W<SAR_TOUCH_CHN_ST_SPEC, 15> {
         TOUCH_CHANNEL_CLR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

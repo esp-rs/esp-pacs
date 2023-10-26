@@ -37,7 +37,11 @@ impl W {
     pub fn app_mpu_ia_int_map(&mut self) -> APP_MPU_IA_INT_MAP_W<APP_MPU_IA_INT_MAP_SPEC, 0> {
         APP_MPU_IA_INT_MAP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

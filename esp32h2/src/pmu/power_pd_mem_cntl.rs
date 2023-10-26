@@ -94,7 +94,11 @@ impl W {
     pub fn force_hp_mem_pu(&mut self) -> FORCE_HP_MEM_PU_W<POWER_PD_MEM_CNTL_SPEC, 28> {
         FORCE_HP_MEM_PU_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

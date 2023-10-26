@@ -37,7 +37,11 @@ impl W {
     pub fn lp_aon_store2(&mut self) -> LP_AON_STORE2_W<STORE2_SPEC, 0> {
         LP_AON_STORE2_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -189,7 +189,11 @@ impl W {
     pub fn region1_r2_pms_r(&mut self) -> REGION1_R2_PMS_R_W<REGION1_PMS_ATTR_SPEC, 10> {
         REGION1_R2_PMS_R_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

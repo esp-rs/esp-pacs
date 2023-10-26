@@ -37,7 +37,11 @@ impl W {
     pub fn dig_regulator_en_cal(&mut self) -> DIG_REGULATOR_EN_CAL_W<HP_REGULATOR_CFG_SPEC, 31> {
         DIG_REGULATOR_EN_CAL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

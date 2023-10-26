@@ -113,7 +113,11 @@ impl W {
     pub fn sar_sar1_int_en(&mut self) -> SAR_SAR1_INT_EN_W<SAR_READER1_CTRL_SPEC, 29> {
         SAR_SAR1_INT_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

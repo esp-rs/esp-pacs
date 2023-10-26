@@ -61,7 +61,11 @@ impl W {
     pub fn slc0_token0_inc_more(&mut self) -> SLC0_TOKEN0_INC_MORE_W<_0TOKEN0_SPEC, 14> {
         SLC0_TOKEN0_INC_MORE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

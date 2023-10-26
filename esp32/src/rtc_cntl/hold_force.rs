@@ -360,7 +360,11 @@ impl W {
     pub fn x32n_hold_force(&mut self) -> X32N_HOLD_FORCE_W<HOLD_FORCE_SPEC, 17> {
         X32N_HOLD_FORCE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -53,7 +53,11 @@ impl W {
     pub fn usb_uart_chip_rst_dis(&mut self) -> USB_UART_CHIP_RST_DIS_W<CHIP_RST_SPEC, 2> {
         USB_UART_CHIP_RST_DIS_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

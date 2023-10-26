@@ -37,7 +37,11 @@ impl W {
     pub fn scl_main_st_to(&mut self) -> SCL_MAIN_ST_TO_W<SCL_MAIN_ST_TIME_OUT_SPEC, 0> {
         SCL_MAIN_ST_TO_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -94,7 +94,11 @@ impl W {
     pub fn lcd_rgb_mode_en(&mut self) -> LCD_RGB_MODE_EN_W<LCD_CTRL_SPEC, 31> {
         LCD_RGB_MODE_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

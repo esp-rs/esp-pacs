@@ -570,7 +570,11 @@ impl W {
     ) -> HOST_FN1_SLC1_BT_RX_NEW_PACKET_INT_ENA_W<HOST_SLC1HOST_FUNC1_INT_ENA_SPEC, 25> {
         HOST_FN1_SLC1_BT_RX_NEW_PACKET_INT_ENA_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

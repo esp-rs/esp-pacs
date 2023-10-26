@@ -37,7 +37,11 @@ impl W {
     pub fn sleep_cycles_s0(&mut self) -> SLEEP_CYCLES_S0_W<ULP_CP_SLEEP_CYC0_SPEC, 0> {
         SLEEP_CYCLES_S0_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

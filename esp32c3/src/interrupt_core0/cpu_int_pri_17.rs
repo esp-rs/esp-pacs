@@ -37,7 +37,11 @@ impl W {
     pub fn cpu_pri_17_map(&mut self) -> CPU_PRI_17_MAP_W<CPU_INT_PRI_17_SPEC, 0> {
         CPU_PRI_17_MAP_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

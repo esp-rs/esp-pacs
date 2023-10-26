@@ -37,7 +37,11 @@ impl W {
     pub fn lcd_cmd_value(&mut self) -> LCD_CMD_VALUE_W<LCD_CMD_VAL_SPEC, 0> {
         LCD_CMD_VALUE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -83,7 +83,11 @@ impl W {
     pub fn main_timer_sys_rst(&mut self) -> MAIN_TIMER_SYS_RST_W<UPDATE_SPEC, 31> {
         MAIN_TIMER_SYS_RST_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

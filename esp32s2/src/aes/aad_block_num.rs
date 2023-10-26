@@ -37,7 +37,11 @@ impl W {
     pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<AAD_BLOCK_NUM_SPEC, 0> {
         AAD_BLOCK_NUM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

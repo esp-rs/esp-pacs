@@ -37,7 +37,11 @@ impl W {
     pub fn rom_mpu_table1(&mut self) -> ROM_MPU_TABLE1_W<ROM_MPU_TABLE1_SPEC, 0> {
         ROM_MPU_TABLE1_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

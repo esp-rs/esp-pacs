@@ -39,7 +39,11 @@ impl W {
     pub fn rst_lp_timer(&mut self) -> RST_LP_TIMER_W<RST_CONF_SPEC, 3> {
         RST_LP_TIMER_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -37,7 +37,11 @@ impl W {
     pub fn rdn_eco_low(&mut self) -> RDN_ECO_LOW_W<SDIO_SLAVE_ECO_LOW_SPEC, 0> {
         RDN_ECO_LOW_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -535,7 +535,11 @@ impl W {
     pub fn slc0_rx_quick_eof_int_ena(&mut self) -> SLC0_RX_QUICK_EOF_INT_ENA_W<_0INT_ENA_SPEC, 26> {
         SLC0_RX_QUICK_EOF_INT_ENA_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

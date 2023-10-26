@@ -37,7 +37,11 @@ impl W {
     pub fn timer_load_lo(&mut self) -> TIMER_LOAD_LO_W<LOAD_LO_SPEC, 0> {
         TIMER_LOAD_LO_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

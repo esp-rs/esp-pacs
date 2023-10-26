@@ -254,7 +254,11 @@ impl W {
     pub fn h_desc_lst_rollintr5(&mut self) -> H_DESC_LST_ROLLINTR5_W<HCINT5_SPEC, 13> {
         H_DESC_LST_ROLLINTR5_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

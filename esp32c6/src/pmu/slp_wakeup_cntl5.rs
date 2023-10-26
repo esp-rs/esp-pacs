@@ -56,7 +56,11 @@ impl W {
     pub fn lp_ana_wait_target(&mut self) -> LP_ANA_WAIT_TARGET_W<SLP_WAKEUP_CNTL5_SPEC, 24> {
         LP_ANA_WAIT_TARGET_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
