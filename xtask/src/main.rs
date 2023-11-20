@@ -158,8 +158,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
 
     let config = Config {
         target,
-        output_dir: path.clone(),
-        const_generic: true,
+        output_dir: Some(path.clone()),
         impl_debug: true,
         impl_debug_feature: Some("impl-register-debug".to_owned()),
 
