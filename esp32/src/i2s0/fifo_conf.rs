@@ -5,31 +5,31 @@ pub type W = crate::W<FIFO_CONF_SPEC>;
 #[doc = "Field `RX_DATA_NUM` reader - "]
 pub type RX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `RX_DATA_NUM` writer - "]
-pub type RX_DATA_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RX_DATA_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `TX_DATA_NUM` reader - "]
 pub type TX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_DATA_NUM` writer - "]
-pub type TX_DATA_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type TX_DATA_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `DSCR_EN` reader - "]
 pub type DSCR_EN_R = crate::BitReader;
 #[doc = "Field `DSCR_EN` writer - "]
-pub type DSCR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DSCR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_FIFO_MOD` reader - "]
 pub type TX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_FIFO_MOD` writer - "]
-pub type TX_FIFO_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TX_FIFO_MOD_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RX_FIFO_MOD` reader - "]
 pub type RX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `RX_FIFO_MOD` writer - "]
-pub type RX_FIFO_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RX_FIFO_MOD_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TX_FIFO_MOD_FORCE_EN` reader - "]
 pub type TX_FIFO_MOD_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_MOD_FORCE_EN` writer - "]
-pub type TX_FIFO_MOD_FORCE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FIFO_MOD_FORCE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_MOD_FORCE_EN` reader - "]
 pub type RX_FIFO_MOD_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_MOD_FORCE_EN` writer - "]
-pub type RX_FIFO_MOD_FORCE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FIFO_MOD_FORCE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -102,51 +102,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FIFO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_data_num(&mut self) -> RX_DATA_NUM_W<FIFO_CONF_SPEC, 0> {
-        RX_DATA_NUM_W::new(self)
+    pub fn rx_data_num(&mut self) -> RX_DATA_NUM_W<FIFO_CONF_SPEC> {
+        RX_DATA_NUM_W::new(self, 0)
     }
     #[doc = "Bits 6:11"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_data_num(&mut self) -> TX_DATA_NUM_W<FIFO_CONF_SPEC, 6> {
-        TX_DATA_NUM_W::new(self)
+    pub fn tx_data_num(&mut self) -> TX_DATA_NUM_W<FIFO_CONF_SPEC> {
+        TX_DATA_NUM_W::new(self, 6)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn dscr_en(&mut self) -> DSCR_EN_W<FIFO_CONF_SPEC, 12> {
-        DSCR_EN_W::new(self)
+    pub fn dscr_en(&mut self) -> DSCR_EN_W<FIFO_CONF_SPEC> {
+        DSCR_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:15"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_mod(&mut self) -> TX_FIFO_MOD_W<FIFO_CONF_SPEC, 13> {
-        TX_FIFO_MOD_W::new(self)
+    pub fn tx_fifo_mod(&mut self) -> TX_FIFO_MOD_W<FIFO_CONF_SPEC> {
+        TX_FIFO_MOD_W::new(self, 13)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_mod(&mut self) -> RX_FIFO_MOD_W<FIFO_CONF_SPEC, 16> {
-        RX_FIFO_MOD_W::new(self)
+    pub fn rx_fifo_mod(&mut self) -> RX_FIFO_MOD_W<FIFO_CONF_SPEC> {
+        RX_FIFO_MOD_W::new(self, 16)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_mod_force_en(&mut self) -> TX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC, 19> {
-        TX_FIFO_MOD_FORCE_EN_W::new(self)
+    pub fn tx_fifo_mod_force_en(&mut self) -> TX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC> {
+        TX_FIFO_MOD_FORCE_EN_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_mod_force_en(&mut self) -> RX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC, 20> {
-        RX_FIFO_MOD_FORCE_EN_W::new(self)
+    pub fn rx_fifo_mod_force_en(&mut self) -> RX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC> {
+        RX_FIFO_MOD_FORCE_EN_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

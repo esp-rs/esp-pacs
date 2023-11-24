@@ -5,7 +5,7 @@ pub type W = crate::W<RTC_GPIO_ENABLE_SPEC>;
 #[doc = "Field `RTC_GPIO_ENABLE` reader - RTC GPIO 0 ~ 21 enable"]
 pub type RTC_GPIO_ENABLE_R = crate::FieldReader<u32>;
 #[doc = "Field `RTC_GPIO_ENABLE` writer - RTC GPIO 0 ~ 21 enable"]
-pub type RTC_GPIO_ENABLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type RTC_GPIO_ENABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_ENABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_gpio_enable(&mut self) -> RTC_GPIO_ENABLE_W<RTC_GPIO_ENABLE_SPEC, 10> {
-        RTC_GPIO_ENABLE_W::new(self)
+    pub fn rtc_gpio_enable(&mut self) -> RTC_GPIO_ENABLE_W<RTC_GPIO_ENABLE_SPEC> {
+        RTC_GPIO_ENABLE_W::new(self, 10)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

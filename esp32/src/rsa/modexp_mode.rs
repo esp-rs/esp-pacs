@@ -5,7 +5,7 @@ pub type W = crate::W<MODEXP_MODE_SPEC>;
 #[doc = "Field `MODEXP_MODE` reader - This register contains the mode of modular exponentiation."]
 pub type MODEXP_MODE_R = crate::FieldReader;
 #[doc = "Field `MODEXP_MODE` writer - This register contains the mode of modular exponentiation."]
-pub type MODEXP_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MODEXP_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - This register contains the mode of modular exponentiation."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MODEXP_MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - This register contains the mode of modular exponentiation."]
     #[inline(always)]
     #[must_use]
-    pub fn modexp_mode(&mut self) -> MODEXP_MODE_W<MODEXP_MODE_SPEC, 0> {
-        MODEXP_MODE_W::new(self)
+    pub fn modexp_mode(&mut self) -> MODEXP_MODE_W<MODEXP_MODE_SPEC> {
+        MODEXP_MODE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

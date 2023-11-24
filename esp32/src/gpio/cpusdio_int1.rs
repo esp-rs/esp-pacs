@@ -7,23 +7,23 @@ pub type SDIO_INT_H_R = crate::FieldReader;
 #[doc = "Field `PIN_PAD_DRIVER` reader - "]
 pub type PIN_PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `PIN_PAD_DRIVER` writer - "]
-pub type PIN_PAD_DRIVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIN_PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIN_INT_TYPE` reader - "]
 pub type PIN_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `PIN_INT_TYPE` writer - "]
-pub type PIN_INT_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PIN_INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PIN_WAKEUP_ENABLE` reader - "]
 pub type PIN_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `PIN_WAKEUP_ENABLE` writer - "]
-pub type PIN_WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIN_WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIN_CONFIG` reader - "]
 pub type PIN_CONFIG_R = crate::FieldReader;
 #[doc = "Field `PIN_CONFIG` writer - "]
-pub type PIN_CONFIG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PIN_CONFIG_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PIN_INT_ENA` reader - "]
 pub type PIN_INT_ENA_R = crate::FieldReader;
 #[doc = "Field `PIN_INT_ENA` writer - "]
-pub type PIN_INT_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PIN_INT_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:7 - SDIO's extent GPIO32~39 interrupt"]
     #[inline(always)]
@@ -84,39 +84,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPUSDIO_INT1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pin_pad_driver(&mut self) -> PIN_PAD_DRIVER_W<CPUSDIO_INT1_SPEC, 2> {
-        PIN_PAD_DRIVER_W::new(self)
+    pub fn pin_pad_driver(&mut self) -> PIN_PAD_DRIVER_W<CPUSDIO_INT1_SPEC> {
+        PIN_PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
     #[must_use]
-    pub fn pin_int_type(&mut self) -> PIN_INT_TYPE_W<CPUSDIO_INT1_SPEC, 7> {
-        PIN_INT_TYPE_W::new(self)
+    pub fn pin_int_type(&mut self) -> PIN_INT_TYPE_W<CPUSDIO_INT1_SPEC> {
+        PIN_INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn pin_wakeup_enable(&mut self) -> PIN_WAKEUP_ENABLE_W<CPUSDIO_INT1_SPEC, 10> {
-        PIN_WAKEUP_ENABLE_W::new(self)
+    pub fn pin_wakeup_enable(&mut self) -> PIN_WAKEUP_ENABLE_W<CPUSDIO_INT1_SPEC> {
+        PIN_WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     #[must_use]
-    pub fn pin_config(&mut self) -> PIN_CONFIG_W<CPUSDIO_INT1_SPEC, 11> {
-        PIN_CONFIG_W::new(self)
+    pub fn pin_config(&mut self) -> PIN_CONFIG_W<CPUSDIO_INT1_SPEC> {
+        PIN_CONFIG_W::new(self, 11)
     }
     #[doc = "Bits 13:17"]
     #[inline(always)]
     #[must_use]
-    pub fn pin_int_ena(&mut self) -> PIN_INT_ENA_W<CPUSDIO_INT1_SPEC, 13> {
-        PIN_INT_ENA_W::new(self)
+    pub fn pin_int_ena(&mut self) -> PIN_INT_ENA_W<CPUSDIO_INT1_SPEC> {
+        PIN_INT_ENA_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

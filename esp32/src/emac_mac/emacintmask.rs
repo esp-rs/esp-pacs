@@ -5,11 +5,11 @@ pub type W = crate::W<EMACINTMASK_SPEC>;
 #[doc = "Field `PMTINTMASK` reader - When set this bit disables the assertion of the interrupt signal because of the setting of PMT Interrupt Status bit in Register (Interrupt Status Register)."]
 pub type PMTINTMASK_R = crate::BitReader;
 #[doc = "Field `PMTINTMASK` writer - When set this bit disables the assertion of the interrupt signal because of the setting of PMT Interrupt Status bit in Register (Interrupt Status Register)."]
-pub type PMTINTMASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PMTINTMASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPIINTMASK` reader - When set this bit disables the assertion of the interrupt signal because of the setting of the LPI Interrupt Status bit in Register (Interrupt Status Register)."]
 pub type LPIINTMASK_R = crate::BitReader;
 #[doc = "Field `LPIINTMASK` writer - When set this bit disables the assertion of the interrupt signal because of the setting of the LPI Interrupt Status bit in Register (Interrupt Status Register)."]
-pub type LPIINTMASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPIINTMASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - When set this bit disables the assertion of the interrupt signal because of the setting of PMT Interrupt Status bit in Register (Interrupt Status Register)."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EMACINTMASK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3 - When set this bit disables the assertion of the interrupt signal because of the setting of PMT Interrupt Status bit in Register (Interrupt Status Register)."]
     #[inline(always)]
     #[must_use]
-    pub fn pmtintmask(&mut self) -> PMTINTMASK_W<EMACINTMASK_SPEC, 3> {
-        PMTINTMASK_W::new(self)
+    pub fn pmtintmask(&mut self) -> PMTINTMASK_W<EMACINTMASK_SPEC> {
+        PMTINTMASK_W::new(self, 3)
     }
     #[doc = "Bit 10 - When set this bit disables the assertion of the interrupt signal because of the setting of the LPI Interrupt Status bit in Register (Interrupt Status Register)."]
     #[inline(always)]
     #[must_use]
-    pub fn lpiintmask(&mut self) -> LPIINTMASK_W<EMACINTMASK_SPEC, 10> {
-        LPIINTMASK_W::new(self)
+    pub fn lpiintmask(&mut self) -> LPIINTMASK_W<EMACINTMASK_SPEC> {
+        LPIINTMASK_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

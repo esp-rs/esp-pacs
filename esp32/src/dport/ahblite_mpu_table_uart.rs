@@ -5,7 +5,7 @@ pub type W = crate::W<AHBLITE_MPU_TABLE_UART_SPEC>;
 #[doc = "Field `UART_ACCESS_GRANT_CONFIG` reader - "]
 pub type UART_ACCESS_GRANT_CONFIG_R = crate::FieldReader;
 #[doc = "Field `UART_ACCESS_GRANT_CONFIG` writer - "]
-pub type UART_ACCESS_GRANT_CONFIG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type UART_ACCESS_GRANT_CONFIG_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_UART_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn uart_access_grant_config(
         &mut self,
-    ) -> UART_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_UART_SPEC, 0> {
-        UART_ACCESS_GRANT_CONFIG_W::new(self)
+    ) -> UART_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_UART_SPEC> {
+        UART_ACCESS_GRANT_CONFIG_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

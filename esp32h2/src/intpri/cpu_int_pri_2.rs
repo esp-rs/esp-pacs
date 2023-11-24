@@ -5,7 +5,7 @@ pub type W = crate::W<CPU_INT_PRI_2_SPEC>;
 #[doc = "Field `CPU_PRI_2_MAP` reader - Need add description"]
 pub type CPU_PRI_2_MAP_R = crate::FieldReader;
 #[doc = "Field `CPU_PRI_2_MAP` writer - Need add description"]
-pub type CPU_PRI_2_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CPU_PRI_2_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Need add description"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_INT_PRI_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_pri_2_map(&mut self) -> CPU_PRI_2_MAP_W<CPU_INT_PRI_2_SPEC, 0> {
-        CPU_PRI_2_MAP_W::new(self)
+    pub fn cpu_pri_2_map(&mut self) -> CPU_PRI_2_MAP_W<CPU_INT_PRI_2_SPEC> {
+        CPU_PRI_2_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

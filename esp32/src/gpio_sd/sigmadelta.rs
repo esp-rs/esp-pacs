@@ -5,11 +5,11 @@ pub type W = crate::W<SIGMADELTA_SPEC>;
 #[doc = "Field `SD0_IN` reader - "]
 pub type SD0_IN_R = crate::FieldReader;
 #[doc = "Field `SD0_IN` writer - "]
-pub type SD0_IN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SD0_IN_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SD0_PRESCALE` reader - "]
 pub type SD0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `SD0_PRESCALE` writer - "]
-pub type SD0_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SD0_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SIGMADELTA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn sd0_in(&mut self) -> SD0_IN_W<SIGMADELTA_SPEC, 0> {
-        SD0_IN_W::new(self)
+    pub fn sd0_in(&mut self) -> SD0_IN_W<SIGMADELTA_SPEC> {
+        SD0_IN_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn sd0_prescale(&mut self) -> SD0_PRESCALE_W<SIGMADELTA_SPEC, 8> {
-        SD0_PRESCALE_W::new(self)
+    pub fn sd0_prescale(&mut self) -> SD0_PRESCALE_W<SIGMADELTA_SPEC> {
+        SD0_PRESCALE_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

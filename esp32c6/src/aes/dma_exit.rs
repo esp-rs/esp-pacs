@@ -1,7 +1,7 @@
 #[doc = "Register `DMA_EXIT` writer"]
 pub type W = crate::W<DMA_EXIT_SPEC>;
 #[doc = "Field `DMA_EXIT` writer - Set this register to leave calculation done stage. Recommend to use it after software finishes reading DMA's output buffer."]
-pub type DMA_EXIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_EXIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_EXIT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Set this register to leave calculation done stage. Recommend to use it after software finishes reading DMA's output buffer."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_exit(&mut self) -> DMA_EXIT_W<DMA_EXIT_SPEC, 0> {
-        DMA_EXIT_W::new(self)
+    pub fn dma_exit(&mut self) -> DMA_EXIT_W<DMA_EXIT_SPEC> {
+        DMA_EXIT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

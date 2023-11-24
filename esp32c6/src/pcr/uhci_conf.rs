@@ -5,11 +5,11 @@ pub type W = crate::W<UHCI_CONF_SPEC>;
 #[doc = "Field `UHCI_CLK_EN` reader - Set 1 to enable uhci clock"]
 pub type UHCI_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UHCI_CLK_EN` writer - Set 1 to enable uhci clock"]
-pub type UHCI_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI_RST_EN` reader - Set 0 to reset uhci module"]
 pub type UHCI_RST_EN_R = crate::BitReader;
 #[doc = "Field `UHCI_RST_EN` writer - Set 0 to reset uhci module"]
-pub type UHCI_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable uhci clock"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UHCI_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable uhci clock"]
     #[inline(always)]
     #[must_use]
-    pub fn uhci_clk_en(&mut self) -> UHCI_CLK_EN_W<UHCI_CONF_SPEC, 0> {
-        UHCI_CLK_EN_W::new(self)
+    pub fn uhci_clk_en(&mut self) -> UHCI_CLK_EN_W<UHCI_CONF_SPEC> {
+        UHCI_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset uhci module"]
     #[inline(always)]
     #[must_use]
-    pub fn uhci_rst_en(&mut self) -> UHCI_RST_EN_W<UHCI_CONF_SPEC, 1> {
-        UHCI_RST_EN_W::new(self)
+    pub fn uhci_rst_en(&mut self) -> UHCI_RST_EN_W<UHCI_CONF_SPEC> {
+        UHCI_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,31 +5,31 @@ pub type W = crate::W<HP_ACTIVE_DIG_POWER_SPEC>;
 #[doc = "Field `HP_ACTIVE_VDD_SPI_PD_EN` reader - need_des"]
 pub type HP_ACTIVE_VDD_SPI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_VDD_SPI_PD_EN` writer - need_des"]
-pub type HP_ACTIVE_VDD_SPI_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_VDD_SPI_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_HP_MEM_DSLP` reader - need_des"]
 pub type HP_ACTIVE_HP_MEM_DSLP_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_HP_MEM_DSLP` writer - need_des"]
-pub type HP_ACTIVE_HP_MEM_DSLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_HP_MEM_DSLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_PD_HP_MEM_PD_EN` reader - need_des"]
 pub type HP_ACTIVE_PD_HP_MEM_PD_EN_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE_PD_HP_MEM_PD_EN` writer - need_des"]
-pub type HP_ACTIVE_PD_HP_MEM_PD_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type HP_ACTIVE_PD_HP_MEM_PD_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `HP_ACTIVE_PD_HP_WIFI_PD_EN` reader - need_des"]
 pub type HP_ACTIVE_PD_HP_WIFI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_PD_HP_WIFI_PD_EN` writer - need_des"]
-pub type HP_ACTIVE_PD_HP_WIFI_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_PD_HP_WIFI_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_PD_HP_CPU_PD_EN` reader - need_des"]
 pub type HP_ACTIVE_PD_HP_CPU_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_PD_HP_CPU_PD_EN` writer - need_des"]
-pub type HP_ACTIVE_PD_HP_CPU_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_PD_HP_CPU_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_PD_HP_AON_PD_EN` reader - need_des"]
 pub type HP_ACTIVE_PD_HP_AON_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_PD_HP_AON_PD_EN` writer - need_des"]
-pub type HP_ACTIVE_PD_HP_AON_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_PD_HP_AON_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_PD_TOP_PD_EN` reader - need_des"]
 pub type HP_ACTIVE_PD_TOP_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_PD_TOP_PD_EN` writer - need_des"]
-pub type HP_ACTIVE_PD_TOP_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_PD_TOP_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
@@ -105,7 +105,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_DIG_POWER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -114,56 +114,52 @@ impl W {
     #[must_use]
     pub fn hp_active_vdd_spi_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_VDD_SPI_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC, 21> {
-        HP_ACTIVE_VDD_SPI_PD_EN_W::new(self)
+    ) -> HP_ACTIVE_VDD_SPI_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+        HP_ACTIVE_VDD_SPI_PD_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_hp_mem_dslp(
-        &mut self,
-    ) -> HP_ACTIVE_HP_MEM_DSLP_W<HP_ACTIVE_DIG_POWER_SPEC, 22> {
-        HP_ACTIVE_HP_MEM_DSLP_W::new(self)
+    pub fn hp_active_hp_mem_dslp(&mut self) -> HP_ACTIVE_HP_MEM_DSLP_W<HP_ACTIVE_DIG_POWER_SPEC> {
+        HP_ACTIVE_HP_MEM_DSLP_W::new(self, 22)
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_pd_hp_mem_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_MEM_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC, 23> {
-        HP_ACTIVE_PD_HP_MEM_PD_EN_W::new(self)
+    ) -> HP_ACTIVE_PD_HP_MEM_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+        HP_ACTIVE_PD_HP_MEM_PD_EN_W::new(self, 23)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_pd_hp_wifi_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_WIFI_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC, 27> {
-        HP_ACTIVE_PD_HP_WIFI_PD_EN_W::new(self)
+    ) -> HP_ACTIVE_PD_HP_WIFI_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+        HP_ACTIVE_PD_HP_WIFI_PD_EN_W::new(self, 27)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_pd_hp_cpu_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_CPU_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC, 29> {
-        HP_ACTIVE_PD_HP_CPU_PD_EN_W::new(self)
+    ) -> HP_ACTIVE_PD_HP_CPU_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+        HP_ACTIVE_PD_HP_CPU_PD_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_pd_hp_aon_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_AON_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC, 30> {
-        HP_ACTIVE_PD_HP_AON_PD_EN_W::new(self)
+    ) -> HP_ACTIVE_PD_HP_AON_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+        HP_ACTIVE_PD_HP_AON_PD_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_pd_top_pd_en(
-        &mut self,
-    ) -> HP_ACTIVE_PD_TOP_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC, 31> {
-        HP_ACTIVE_PD_TOP_PD_EN_W::new(self)
+    pub fn hp_active_pd_top_pd_en(&mut self) -> HP_ACTIVE_PD_TOP_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+        HP_ACTIVE_PD_TOP_PD_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

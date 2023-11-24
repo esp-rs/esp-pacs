@@ -5,15 +5,15 @@ pub type W = crate::W<MISC_CONF_SPEC>;
 #[doc = "Field `AHBM_RST_INTER` reader - Set this bit then clear this bit to reset the internal ahb FSM."]
 pub type AHBM_RST_INTER_R = crate::BitReader;
 #[doc = "Field `AHBM_RST_INTER` writer - Set this bit then clear this bit to reset the internal ahb FSM."]
-pub type AHBM_RST_INTER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBM_RST_INTER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARB_PRI_DIS` reader - Set this bit to disable priority arbitration function."]
 pub type ARB_PRI_DIS_R = crate::BitReader;
 #[doc = "Field `ARB_PRI_DIS` writer - Set this bit to disable priority arbitration function."]
-pub type ARB_PRI_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARB_PRI_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MISC_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_rst_inter(&mut self) -> AHBM_RST_INTER_W<MISC_CONF_SPEC, 0> {
-        AHBM_RST_INTER_W::new(self)
+    pub fn ahbm_rst_inter(&mut self) -> AHBM_RST_INTER_W<MISC_CONF_SPEC> {
+        AHBM_RST_INTER_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set this bit to disable priority arbitration function."]
     #[inline(always)]
     #[must_use]
-    pub fn arb_pri_dis(&mut self) -> ARB_PRI_DIS_W<MISC_CONF_SPEC, 2> {
-        ARB_PRI_DIS_W::new(self)
+    pub fn arb_pri_dis(&mut self) -> ARB_PRI_DIS_W<MISC_CONF_SPEC> {
+        ARB_PRI_DIS_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<MISC_CONF_SPEC, 3> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<MISC_CONF_SPEC> {
+        CLK_EN_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

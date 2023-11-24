@@ -5,19 +5,19 @@ pub type W = crate::W<FLASH_WAITI_CTRL_SPEC>;
 #[doc = "Field `WAITI_EN` reader - Set this bit to enable auto-waiting flash idle operation when PP/SE/BE/CE/WRSR/PES command is sent."]
 pub type WAITI_EN_R = crate::BitReader;
 #[doc = "Field `WAITI_EN` writer - Set this bit to enable auto-waiting flash idle operation when PP/SE/BE/CE/WRSR/PES command is sent."]
-pub type WAITI_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAITI_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WAITI_DUMMY` reader - Set this bit to enable DUMMY phase in auto wait flash idle transfer(RDSR)."]
 pub type WAITI_DUMMY_R = crate::BitReader;
 #[doc = "Field `WAITI_DUMMY` writer - Set this bit to enable DUMMY phase in auto wait flash idle transfer(RDSR)."]
-pub type WAITI_DUMMY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAITI_DUMMY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WAITI_CMD` reader - The command value of auto wait flash idle transfer(RDSR)."]
 pub type WAITI_CMD_R = crate::FieldReader;
 #[doc = "Field `WAITI_CMD` writer - The command value of auto wait flash idle transfer(RDSR)."]
-pub type WAITI_CMD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WAITI_CMD_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WAITI_DUMMY_CYCLELEN` reader - The dummy cycle length when wait flash idle(RDSR)."]
 pub type WAITI_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `WAITI_DUMMY_CYCLELEN` writer - The dummy cycle length when wait flash idle(RDSR)."]
-pub type WAITI_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type WAITI_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable auto-waiting flash idle operation when PP/SE/BE/CE/WRSR/PES command is sent."]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FLASH_WAITI_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable auto-waiting flash idle operation when PP/SE/BE/CE/WRSR/PES command is sent."]
     #[inline(always)]
     #[must_use]
-    pub fn waiti_en(&mut self) -> WAITI_EN_W<FLASH_WAITI_CTRL_SPEC, 0> {
-        WAITI_EN_W::new(self)
+    pub fn waiti_en(&mut self) -> WAITI_EN_W<FLASH_WAITI_CTRL_SPEC> {
+        WAITI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable DUMMY phase in auto wait flash idle transfer(RDSR)."]
     #[inline(always)]
     #[must_use]
-    pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<FLASH_WAITI_CTRL_SPEC, 1> {
-        WAITI_DUMMY_W::new(self)
+    pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<FLASH_WAITI_CTRL_SPEC> {
+        WAITI_DUMMY_W::new(self, 1)
     }
     #[doc = "Bits 2:9 - The command value of auto wait flash idle transfer(RDSR)."]
     #[inline(always)]
     #[must_use]
-    pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<FLASH_WAITI_CTRL_SPEC, 2> {
-        WAITI_CMD_W::new(self)
+    pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<FLASH_WAITI_CTRL_SPEC> {
+        WAITI_CMD_W::new(self, 2)
     }
     #[doc = "Bits 10:15 - The dummy cycle length when wait flash idle(RDSR)."]
     #[inline(always)]
     #[must_use]
-    pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<FLASH_WAITI_CTRL_SPEC, 10> {
-        WAITI_DUMMY_CYCLELEN_W::new(self)
+    pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<FLASH_WAITI_CTRL_SPEC> {
+        WAITI_DUMMY_CYCLELEN_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

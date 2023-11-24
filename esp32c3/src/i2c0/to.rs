@@ -5,11 +5,11 @@ pub type W = crate::W<TO_SPEC>;
 #[doc = "Field `TIME_OUT_VALUE` reader - reg_time_out_value"]
 pub type TIME_OUT_VALUE_R = crate::FieldReader;
 #[doc = "Field `TIME_OUT_VALUE` writer - reg_time_out_value"]
-pub type TIME_OUT_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TIME_OUT_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `TIME_OUT_EN` reader - reg_time_out_en"]
 pub type TIME_OUT_EN_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_EN` writer - reg_time_out_en"]
-pub type TIME_OUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIME_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - reg_time_out_value"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - reg_time_out_value"]
     #[inline(always)]
     #[must_use]
-    pub fn time_out_value(&mut self) -> TIME_OUT_VALUE_W<TO_SPEC, 0> {
-        TIME_OUT_VALUE_W::new(self)
+    pub fn time_out_value(&mut self) -> TIME_OUT_VALUE_W<TO_SPEC> {
+        TIME_OUT_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 5 - reg_time_out_en"]
     #[inline(always)]
     #[must_use]
-    pub fn time_out_en(&mut self) -> TIME_OUT_EN_W<TO_SPEC, 5> {
-        TIME_OUT_EN_W::new(self)
+    pub fn time_out_en(&mut self) -> TIME_OUT_EN_W<TO_SPEC> {
+        TIME_OUT_EN_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

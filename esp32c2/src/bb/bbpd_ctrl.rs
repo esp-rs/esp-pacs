@@ -5,19 +5,19 @@ pub type W = crate::W<BBPD_CTRL_SPEC>;
 #[doc = "Field `DC_EST_FORCE_PD` reader - "]
 pub type DC_EST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DC_EST_FORCE_PD` writer - "]
-pub type DC_EST_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DC_EST_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DC_EST_FORCE_PU` reader - "]
 pub type DC_EST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DC_EST_FORCE_PU` writer - "]
-pub type DC_EST_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DC_EST_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FFT_FORCE_PD` reader - "]
 pub type FFT_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FFT_FORCE_PD` writer - "]
-pub type FFT_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FFT_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FFT_FORCE_PU` reader - "]
 pub type FFT_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FFT_FORCE_PU` writer - "]
-pub type FFT_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FFT_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BBPD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dc_est_force_pd(&mut self) -> DC_EST_FORCE_PD_W<BBPD_CTRL_SPEC, 0> {
-        DC_EST_FORCE_PD_W::new(self)
+    pub fn dc_est_force_pd(&mut self) -> DC_EST_FORCE_PD_W<BBPD_CTRL_SPEC> {
+        DC_EST_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dc_est_force_pu(&mut self) -> DC_EST_FORCE_PU_W<BBPD_CTRL_SPEC, 1> {
-        DC_EST_FORCE_PU_W::new(self)
+    pub fn dc_est_force_pu(&mut self) -> DC_EST_FORCE_PU_W<BBPD_CTRL_SPEC> {
+        DC_EST_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn fft_force_pd(&mut self) -> FFT_FORCE_PD_W<BBPD_CTRL_SPEC, 2> {
-        FFT_FORCE_PD_W::new(self)
+    pub fn fft_force_pd(&mut self) -> FFT_FORCE_PD_W<BBPD_CTRL_SPEC> {
+        FFT_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn fft_force_pu(&mut self) -> FFT_FORCE_PU_W<BBPD_CTRL_SPEC, 3> {
-        FFT_FORCE_PU_W::new(self)
+    pub fn fft_force_pu(&mut self) -> FFT_FORCE_PU_W<BBPD_CTRL_SPEC> {
+        FFT_FORCE_PU_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

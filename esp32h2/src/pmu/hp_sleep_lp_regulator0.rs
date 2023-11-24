@@ -5,20 +5,19 @@ pub type W = crate::W<HP_SLEEP_LP_REGULATOR0_SPEC>;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_SLP_XPD` reader - need_des"]
 pub type HP_SLEEP_LP_REGULATOR_SLP_XPD_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_SLP_XPD` writer - need_des"]
-pub type HP_SLEEP_LP_REGULATOR_SLP_XPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_LP_REGULATOR_SLP_XPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_XPD` reader - need_des"]
 pub type HP_SLEEP_LP_REGULATOR_XPD_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_XPD` writer - need_des"]
-pub type HP_SLEEP_LP_REGULATOR_XPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_LP_REGULATOR_XPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_SLP_DBIAS` reader - need_des"]
 pub type HP_SLEEP_LP_REGULATOR_SLP_DBIAS_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_SLP_DBIAS` writer - need_des"]
-pub type HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 4, O>;
+pub type HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_DBIAS` reader - need_des"]
 pub type HP_SLEEP_LP_REGULATOR_DBIAS_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_DBIAS` writer - need_des"]
-pub type HP_SLEEP_LP_REGULATOR_DBIAS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type HP_SLEEP_LP_REGULATOR_DBIAS_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
@@ -67,7 +66,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_REGULATOR0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -76,32 +75,32 @@ impl W {
     #[must_use]
     pub fn hp_sleep_lp_regulator_slp_xpd(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_SLP_XPD_W<HP_SLEEP_LP_REGULATOR0_SPEC, 21> {
-        HP_SLEEP_LP_REGULATOR_SLP_XPD_W::new(self)
+    ) -> HP_SLEEP_LP_REGULATOR_SLP_XPD_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+        HP_SLEEP_LP_REGULATOR_SLP_XPD_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_sleep_lp_regulator_xpd(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_XPD_W<HP_SLEEP_LP_REGULATOR0_SPEC, 22> {
-        HP_SLEEP_LP_REGULATOR_XPD_W::new(self)
+    ) -> HP_SLEEP_LP_REGULATOR_XPD_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+        HP_SLEEP_LP_REGULATOR_XPD_W::new(self, 22)
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_sleep_lp_regulator_slp_dbias(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W<HP_SLEEP_LP_REGULATOR0_SPEC, 23> {
-        HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W::new(self)
+    ) -> HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+        HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W::new(self, 23)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_sleep_lp_regulator_dbias(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_DBIAS_W<HP_SLEEP_LP_REGULATOR0_SPEC, 27> {
-        HP_SLEEP_LP_REGULATOR_DBIAS_W::new(self)
+    ) -> HP_SLEEP_LP_REGULATOR_DBIAS_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+        HP_SLEEP_LP_REGULATOR_DBIAS_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<SRAM_CTRL_2_SPEC>;
 #[doc = "Field `SRAM_FORCE_PU` reader - This field is used to power up internal SRAM."]
 pub type SRAM_FORCE_PU_R = crate::FieldReader<u32>;
 #[doc = "Field `SRAM_FORCE_PU` writer - This field is used to power up internal SRAM."]
-pub type SRAM_FORCE_PU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type SRAM_FORCE_PU_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 impl R {
     #[doc = "Bits 0:21 - This field is used to power up internal SRAM."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_CTRL_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - This field is used to power up internal SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_force_pu(&mut self) -> SRAM_FORCE_PU_W<SRAM_CTRL_2_SPEC, 0> {
-        SRAM_FORCE_PU_W::new(self)
+    pub fn sram_force_pu(&mut self) -> SRAM_FORCE_PU_W<SRAM_CTRL_2_SPEC> {
+        SRAM_FORCE_PU_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

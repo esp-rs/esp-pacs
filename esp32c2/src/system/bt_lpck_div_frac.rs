@@ -5,31 +5,31 @@ pub type W = crate::W<BT_LPCK_DIV_FRAC_SPEC>;
 #[doc = "Field `BT_LPCK_DIV_B` reader - This field is lower power clock frequent division factor b"]
 pub type BT_LPCK_DIV_B_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_B` writer - This field is lower power clock frequent division factor b"]
-pub type BT_LPCK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type BT_LPCK_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `BT_LPCK_DIV_A` reader - This field is lower power clock frequent division factor a"]
 pub type BT_LPCK_DIV_A_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_A` writer - This field is lower power clock frequent division factor a"]
-pub type BT_LPCK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type BT_LPCK_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` reader - Set 1 to select rtc-slow clock as rtc low power clock"]
 pub type LPCLK_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` writer - Set 1 to select rtc-slow clock as rtc low power clock"]
-pub type LPCLK_SEL_RTC_SLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_RTC_SLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPCLK_SEL_8M` reader - Set 1 to select 8m clock as rtc low power clock"]
 pub type LPCLK_SEL_8M_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_8M` writer - Set 1 to select 8m clock as rtc low power clock"]
-pub type LPCLK_SEL_8M_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_8M_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPCLK_SEL_XTAL` reader - Set 1 to select xtal clock as rtc low power clock"]
 pub type LPCLK_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL` writer - Set 1 to select xtal clock as rtc low power clock"]
-pub type LPCLK_SEL_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPCLK_SEL_XTAL32K` reader - Set 1 to select xtal32k clock as low power clock"]
 pub type LPCLK_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL32K` writer - Set 1 to select xtal32k clock as low power clock"]
-pub type LPCLK_SEL_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPCLK_RTC_EN` reader - Set 1 to enable RTC low power clock"]
 pub type LPCLK_RTC_EN_R = crate::BitReader;
 #[doc = "Field `LPCLK_RTC_EN` writer - Set 1 to enable RTC low power clock"]
-pub type LPCLK_RTC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_RTC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - This field is lower power clock frequent division factor b"]
     #[inline(always)]
@@ -105,51 +105,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BT_LPCK_DIV_FRAC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - This field is lower power clock frequent division factor b"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<BT_LPCK_DIV_FRAC_SPEC, 0> {
-        BT_LPCK_DIV_B_W::new(self)
+    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<BT_LPCK_DIV_FRAC_SPEC> {
+        BT_LPCK_DIV_B_W::new(self, 0)
     }
     #[doc = "Bits 12:23 - This field is lower power clock frequent division factor a"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<BT_LPCK_DIV_FRAC_SPEC, 12> {
-        BT_LPCK_DIV_A_W::new(self)
+    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<BT_LPCK_DIV_FRAC_SPEC> {
+        BT_LPCK_DIV_A_W::new(self, 12)
     }
     #[doc = "Bit 24 - Set 1 to select rtc-slow clock as rtc low power clock"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC, 24> {
-        LPCLK_SEL_RTC_SLOW_W::new(self)
+    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_RTC_SLOW_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set 1 to select 8m clock as rtc low power clock"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC, 25> {
-        LPCLK_SEL_8M_W::new(self)
+    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_8M_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set 1 to select xtal clock as rtc low power clock"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC, 26> {
-        LPCLK_SEL_XTAL_W::new(self)
+    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set 1 to select xtal32k clock as low power clock"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC, 27> {
-        LPCLK_SEL_XTAL32K_W::new(self)
+    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_XTAL32K_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set 1 to enable RTC low power clock"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<BT_LPCK_DIV_FRAC_SPEC, 28> {
-        LPCLK_RTC_EN_W::new(self)
+    pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_RTC_EN_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

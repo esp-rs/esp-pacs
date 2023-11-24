@@ -5,13 +5,13 @@ pub type W = crate::W<BUS_TIMEOUT_SPEC>;
 #[doc = "Field `LP_PERI_TIMEOUT_THRES` reader - need_des"]
 pub type LP_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_THRES` writer - need_des"]
-pub type LP_PERI_TIMEOUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type LP_PERI_TIMEOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_INT_CLEAR` writer - need_des"]
-pub type LP_PERI_TIMEOUT_INT_CLEAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_PERI_TIMEOUT_INT_CLEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_PERI_TIMEOUT_PROTECT_EN` reader - need_des"]
 pub type LP_PERI_TIMEOUT_PROTECT_EN_R = crate::BitReader;
 #[doc = "Field `LP_PERI_TIMEOUT_PROTECT_EN` writer - need_des"]
-pub type LP_PERI_TIMEOUT_PROTECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_PERI_TIMEOUT_PROTECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 14:29 - need_des"]
     #[inline(always)]
@@ -42,31 +42,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BUS_TIMEOUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 14:29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_timeout_thres(&mut self) -> LP_PERI_TIMEOUT_THRES_W<BUS_TIMEOUT_SPEC, 14> {
-        LP_PERI_TIMEOUT_THRES_W::new(self)
+    pub fn lp_peri_timeout_thres(&mut self) -> LP_PERI_TIMEOUT_THRES_W<BUS_TIMEOUT_SPEC> {
+        LP_PERI_TIMEOUT_THRES_W::new(self, 14)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_timeout_int_clear(
-        &mut self,
-    ) -> LP_PERI_TIMEOUT_INT_CLEAR_W<BUS_TIMEOUT_SPEC, 30> {
-        LP_PERI_TIMEOUT_INT_CLEAR_W::new(self)
+    pub fn lp_peri_timeout_int_clear(&mut self) -> LP_PERI_TIMEOUT_INT_CLEAR_W<BUS_TIMEOUT_SPEC> {
+        LP_PERI_TIMEOUT_INT_CLEAR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_timeout_protect_en(
-        &mut self,
-    ) -> LP_PERI_TIMEOUT_PROTECT_EN_W<BUS_TIMEOUT_SPEC, 31> {
-        LP_PERI_TIMEOUT_PROTECT_EN_W::new(self)
+    pub fn lp_peri_timeout_protect_en(&mut self) -> LP_PERI_TIMEOUT_PROTECT_EN_W<BUS_TIMEOUT_SPEC> {
+        LP_PERI_TIMEOUT_PROTECT_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

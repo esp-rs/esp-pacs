@@ -5,19 +5,19 @@ pub type W = crate::W<TX_CLKM_CONF_SPEC>;
 #[doc = "Field `TX_CLKM_DIV_NUM` reader - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
 pub type TX_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_CLKM_DIV_NUM` writer - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
-pub type TX_CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TX_CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TX_CLK_ACTIVE` reader - I2S Tx module clock enable signal."]
 pub type TX_CLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `TX_CLK_ACTIVE` writer - I2S Tx module clock enable signal."]
-pub type TX_CLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_CLK_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_CLK_SEL` reader - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
 pub type TX_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `TX_CLK_SEL` writer - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
-pub type TX_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TX_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_CLKM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clkm_div_num(&mut self) -> TX_CLKM_DIV_NUM_W<TX_CLKM_CONF_SPEC, 0> {
-        TX_CLKM_DIV_NUM_W::new(self)
+    pub fn tx_clkm_div_num(&mut self) -> TX_CLKM_DIV_NUM_W<TX_CLKM_CONF_SPEC> {
+        TX_CLKM_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 26 - I2S Tx module clock enable signal."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_active(&mut self) -> TX_CLK_ACTIVE_W<TX_CLKM_CONF_SPEC, 26> {
-        TX_CLK_ACTIVE_W::new(self)
+    pub fn tx_clk_active(&mut self) -> TX_CLK_ACTIVE_W<TX_CLKM_CONF_SPEC> {
+        TX_CLK_ACTIVE_W::new(self, 26)
     }
     #[doc = "Bits 27:28 - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_sel(&mut self) -> TX_CLK_SEL_W<TX_CLKM_CONF_SPEC, 27> {
-        TX_CLK_SEL_W::new(self)
+    pub fn tx_clk_sel(&mut self) -> TX_CLK_SEL_W<TX_CLKM_CONF_SPEC> {
+        TX_CLK_SEL_W::new(self, 27)
     }
     #[doc = "Bit 29 - Set this bit to enable clk gate"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<TX_CLKM_CONF_SPEC, 29> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<TX_CLKM_CONF_SPEC> {
+        CLK_EN_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

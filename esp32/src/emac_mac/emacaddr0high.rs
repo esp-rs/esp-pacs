@@ -5,11 +5,11 @@ pub type W = crate::W<EMACADDR0HIGH_SPEC>;
 #[doc = "Field `ADDRESS0_HI` reader - This field contains the upper 16 bits (47:32) of the first 6-byte MAC address.The MAC uses this field for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames."]
 pub type ADDRESS0_HI_R = crate::FieldReader<u16>;
 #[doc = "Field `ADDRESS0_HI` writer - This field contains the upper 16 bits (47:32) of the first 6-byte MAC address.The MAC uses this field for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames."]
-pub type ADDRESS0_HI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type ADDRESS0_HI_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `ADDRESS_ENABLE0` reader - This bit is always set to 1."]
 pub type ADDRESS_ENABLE0_R = crate::BitReader;
 #[doc = "Field `ADDRESS_ENABLE0` writer - This bit is always set to 1."]
-pub type ADDRESS_ENABLE0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDRESS_ENABLE0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - This field contains the upper 16 bits (47:32) of the first 6-byte MAC address.The MAC uses this field for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EMACADDR0HIGH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - This field contains the upper 16 bits (47:32) of the first 6-byte MAC address.The MAC uses this field for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames."]
     #[inline(always)]
     #[must_use]
-    pub fn address0_hi(&mut self) -> ADDRESS0_HI_W<EMACADDR0HIGH_SPEC, 0> {
-        ADDRESS0_HI_W::new(self)
+    pub fn address0_hi(&mut self) -> ADDRESS0_HI_W<EMACADDR0HIGH_SPEC> {
+        ADDRESS0_HI_W::new(self, 0)
     }
     #[doc = "Bit 31 - This bit is always set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn address_enable0(&mut self) -> ADDRESS_ENABLE0_W<EMACADDR0HIGH_SPEC, 31> {
-        ADDRESS_ENABLE0_W::new(self)
+    pub fn address_enable0(&mut self) -> ADDRESS_ENABLE0_W<EMACADDR0HIGH_SPEC> {
+        ADDRESS_ENABLE0_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

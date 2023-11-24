@@ -5,91 +5,91 @@ pub type W = crate::W<PAD_HOLD_SPEC>;
 #[doc = "Field `TOUCH_PAD0_HOLD` reader - Sets the touch GPIO 0 to hold."]
 pub type TOUCH_PAD0_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_HOLD` writer - Sets the touch GPIO 0 to hold."]
-pub type TOUCH_PAD0_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD0_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD1_HOLD` reader - Sets the touch GPIO 1 to hold."]
 pub type TOUCH_PAD1_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD1_HOLD` writer - Sets the touch GPIO 1 to hold."]
-pub type TOUCH_PAD1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD2_HOLD` reader - Sets the touch GPIO 2 to hold."]
 pub type TOUCH_PAD2_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD2_HOLD` writer - Sets the touch GPIO 2 to hold."]
-pub type TOUCH_PAD2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD3_HOLD` reader - Sets the touch GPIO 3 to hold."]
 pub type TOUCH_PAD3_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD3_HOLD` writer - Sets the touch GPIO 3 to hold."]
-pub type TOUCH_PAD3_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD3_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD4_HOLD` reader - Sets the touch GPIO 4 to hold."]
 pub type TOUCH_PAD4_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD4_HOLD` writer - Sets the touch GPIO 4 to hold."]
-pub type TOUCH_PAD4_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD4_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD5_HOLD` reader - Sets the touch GPIO 5 to hold."]
 pub type TOUCH_PAD5_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD5_HOLD` writer - Sets the touch GPIO 5 to hold."]
-pub type TOUCH_PAD5_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD5_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD6_HOLD` reader - Sets the touch GPIO 6 to hold."]
 pub type TOUCH_PAD6_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD6_HOLD` writer - Sets the touch GPIO 6 to hold."]
-pub type TOUCH_PAD6_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD6_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD7_HOLD` reader - Sets the touch GPIO 7 to hold."]
 pub type TOUCH_PAD7_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD7_HOLD` writer - Sets the touch GPIO 7 to hold."]
-pub type TOUCH_PAD7_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD7_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD8_HOLD` reader - Sets the touch GPIO 8 to hold."]
 pub type TOUCH_PAD8_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD8_HOLD` writer - Sets the touch GPIO 8 to hold."]
-pub type TOUCH_PAD8_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD8_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD9_HOLD` reader - Sets the touch GPIO 9 to hold."]
 pub type TOUCH_PAD9_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD9_HOLD` writer - Sets the touch GPIO 9 to hold."]
-pub type TOUCH_PAD9_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD9_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD10_HOLD` reader - Sets the touch GPIO 10 to hold."]
 pub type TOUCH_PAD10_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD10_HOLD` writer - Sets the touch GPIO 10 to hold."]
-pub type TOUCH_PAD10_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD10_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD11_HOLD` reader - Sets the touch GPIO 11 to hold."]
 pub type TOUCH_PAD11_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD11_HOLD` writer - Sets the touch GPIO 11 to hold."]
-pub type TOUCH_PAD11_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD11_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD12_HOLD` reader - Sets the touch GPIO 12 to hold."]
 pub type TOUCH_PAD12_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD12_HOLD` writer - Sets the touch GPIO 12 to hold."]
-pub type TOUCH_PAD12_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD12_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD13_HOLD` reader - Sets the touch GPIO 13 to hold."]
 pub type TOUCH_PAD13_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD13_HOLD` writer - Sets the touch GPIO 13 to hold."]
-pub type TOUCH_PAD13_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD13_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD14_HOLD` reader - Sets the touch GPIO 14 to hold."]
 pub type TOUCH_PAD14_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD14_HOLD` writer - Sets the touch GPIO 14 to hold."]
-pub type TOUCH_PAD14_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD14_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `X32P_HOLD` reader - Sets the x32p to hold."]
 pub type X32P_HOLD_R = crate::BitReader;
 #[doc = "Field `X32P_HOLD` writer - Sets the x32p to hold."]
-pub type X32P_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type X32P_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `X32N_HOLD` reader - Sets the x32n to hold."]
 pub type X32N_HOLD_R = crate::BitReader;
 #[doc = "Field `X32N_HOLD` writer - Sets the x32n to hold."]
-pub type X32N_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type X32N_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC1_HOLD` reader - Sets the pdac1 to hold."]
 pub type PDAC1_HOLD_R = crate::BitReader;
 #[doc = "Field `PDAC1_HOLD` writer - Sets the pdac1 to hold."]
-pub type PDAC1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_HOLD` reader - Sets the pdac2 to hold."]
 pub type PDAC2_HOLD_R = crate::BitReader;
 #[doc = "Field `PDAC2_HOLD` writer - Sets the pdac2 to hold."]
-pub type PDAC2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD19_HOLD` reader - Sets the RTG GPIO 19 to hold."]
 pub type PAD19_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD19_HOLD` writer - Sets the RTG GPIO 19 to hold."]
-pub type PAD19_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD19_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD20_HOLD` reader - Sets the RTG GPIO 20 to hold."]
 pub type PAD20_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD20_HOLD` writer - Sets the RTG GPIO 20 to hold."]
-pub type PAD20_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD20_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD21_HOLD` reader - Sets the RTG GPIO 21 to hold."]
 pub type PAD21_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD21_HOLD` writer - Sets the RTG GPIO 21 to hold."]
-pub type PAD21_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD21_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Sets the touch GPIO 0 to hold."]
     #[inline(always)]
@@ -279,141 +279,141 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PAD_HOLD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Sets the touch GPIO 0 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad0_hold(&mut self) -> TOUCH_PAD0_HOLD_W<PAD_HOLD_SPEC, 0> {
-        TOUCH_PAD0_HOLD_W::new(self)
+    pub fn touch_pad0_hold(&mut self) -> TOUCH_PAD0_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD0_HOLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sets the touch GPIO 1 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad1_hold(&mut self) -> TOUCH_PAD1_HOLD_W<PAD_HOLD_SPEC, 1> {
-        TOUCH_PAD1_HOLD_W::new(self)
+    pub fn touch_pad1_hold(&mut self) -> TOUCH_PAD1_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD1_HOLD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Sets the touch GPIO 2 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad2_hold(&mut self) -> TOUCH_PAD2_HOLD_W<PAD_HOLD_SPEC, 2> {
-        TOUCH_PAD2_HOLD_W::new(self)
+    pub fn touch_pad2_hold(&mut self) -> TOUCH_PAD2_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD2_HOLD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Sets the touch GPIO 3 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad3_hold(&mut self) -> TOUCH_PAD3_HOLD_W<PAD_HOLD_SPEC, 3> {
-        TOUCH_PAD3_HOLD_W::new(self)
+    pub fn touch_pad3_hold(&mut self) -> TOUCH_PAD3_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD3_HOLD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Sets the touch GPIO 4 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad4_hold(&mut self) -> TOUCH_PAD4_HOLD_W<PAD_HOLD_SPEC, 4> {
-        TOUCH_PAD4_HOLD_W::new(self)
+    pub fn touch_pad4_hold(&mut self) -> TOUCH_PAD4_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD4_HOLD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Sets the touch GPIO 5 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad5_hold(&mut self) -> TOUCH_PAD5_HOLD_W<PAD_HOLD_SPEC, 5> {
-        TOUCH_PAD5_HOLD_W::new(self)
+    pub fn touch_pad5_hold(&mut self) -> TOUCH_PAD5_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD5_HOLD_W::new(self, 5)
     }
     #[doc = "Bit 6 - Sets the touch GPIO 6 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad6_hold(&mut self) -> TOUCH_PAD6_HOLD_W<PAD_HOLD_SPEC, 6> {
-        TOUCH_PAD6_HOLD_W::new(self)
+    pub fn touch_pad6_hold(&mut self) -> TOUCH_PAD6_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD6_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Sets the touch GPIO 7 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad7_hold(&mut self) -> TOUCH_PAD7_HOLD_W<PAD_HOLD_SPEC, 7> {
-        TOUCH_PAD7_HOLD_W::new(self)
+    pub fn touch_pad7_hold(&mut self) -> TOUCH_PAD7_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD7_HOLD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Sets the touch GPIO 8 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad8_hold(&mut self) -> TOUCH_PAD8_HOLD_W<PAD_HOLD_SPEC, 8> {
-        TOUCH_PAD8_HOLD_W::new(self)
+    pub fn touch_pad8_hold(&mut self) -> TOUCH_PAD8_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD8_HOLD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Sets the touch GPIO 9 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad9_hold(&mut self) -> TOUCH_PAD9_HOLD_W<PAD_HOLD_SPEC, 9> {
-        TOUCH_PAD9_HOLD_W::new(self)
+    pub fn touch_pad9_hold(&mut self) -> TOUCH_PAD9_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD9_HOLD_W::new(self, 9)
     }
     #[doc = "Bit 10 - Sets the touch GPIO 10 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad10_hold(&mut self) -> TOUCH_PAD10_HOLD_W<PAD_HOLD_SPEC, 10> {
-        TOUCH_PAD10_HOLD_W::new(self)
+    pub fn touch_pad10_hold(&mut self) -> TOUCH_PAD10_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD10_HOLD_W::new(self, 10)
     }
     #[doc = "Bit 11 - Sets the touch GPIO 11 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad11_hold(&mut self) -> TOUCH_PAD11_HOLD_W<PAD_HOLD_SPEC, 11> {
-        TOUCH_PAD11_HOLD_W::new(self)
+    pub fn touch_pad11_hold(&mut self) -> TOUCH_PAD11_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD11_HOLD_W::new(self, 11)
     }
     #[doc = "Bit 12 - Sets the touch GPIO 12 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad12_hold(&mut self) -> TOUCH_PAD12_HOLD_W<PAD_HOLD_SPEC, 12> {
-        TOUCH_PAD12_HOLD_W::new(self)
+    pub fn touch_pad12_hold(&mut self) -> TOUCH_PAD12_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD12_HOLD_W::new(self, 12)
     }
     #[doc = "Bit 13 - Sets the touch GPIO 13 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad13_hold(&mut self) -> TOUCH_PAD13_HOLD_W<PAD_HOLD_SPEC, 13> {
-        TOUCH_PAD13_HOLD_W::new(self)
+    pub fn touch_pad13_hold(&mut self) -> TOUCH_PAD13_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD13_HOLD_W::new(self, 13)
     }
     #[doc = "Bit 14 - Sets the touch GPIO 14 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad14_hold(&mut self) -> TOUCH_PAD14_HOLD_W<PAD_HOLD_SPEC, 14> {
-        TOUCH_PAD14_HOLD_W::new(self)
+    pub fn touch_pad14_hold(&mut self) -> TOUCH_PAD14_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD14_HOLD_W::new(self, 14)
     }
     #[doc = "Bit 15 - Sets the x32p to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn x32p_hold(&mut self) -> X32P_HOLD_W<PAD_HOLD_SPEC, 15> {
-        X32P_HOLD_W::new(self)
+    pub fn x32p_hold(&mut self) -> X32P_HOLD_W<PAD_HOLD_SPEC> {
+        X32P_HOLD_W::new(self, 15)
     }
     #[doc = "Bit 16 - Sets the x32n to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_hold(&mut self) -> X32N_HOLD_W<PAD_HOLD_SPEC, 16> {
-        X32N_HOLD_W::new(self)
+    pub fn x32n_hold(&mut self) -> X32N_HOLD_W<PAD_HOLD_SPEC> {
+        X32N_HOLD_W::new(self, 16)
     }
     #[doc = "Bit 17 - Sets the pdac1 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn pdac1_hold(&mut self) -> PDAC1_HOLD_W<PAD_HOLD_SPEC, 17> {
-        PDAC1_HOLD_W::new(self)
+    pub fn pdac1_hold(&mut self) -> PDAC1_HOLD_W<PAD_HOLD_SPEC> {
+        PDAC1_HOLD_W::new(self, 17)
     }
     #[doc = "Bit 18 - Sets the pdac2 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<PAD_HOLD_SPEC, 18> {
-        PDAC2_HOLD_W::new(self)
+    pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<PAD_HOLD_SPEC> {
+        PDAC2_HOLD_W::new(self, 18)
     }
     #[doc = "Bit 19 - Sets the RTG GPIO 19 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn pad19_hold(&mut self) -> PAD19_HOLD_W<PAD_HOLD_SPEC, 19> {
-        PAD19_HOLD_W::new(self)
+    pub fn pad19_hold(&mut self) -> PAD19_HOLD_W<PAD_HOLD_SPEC> {
+        PAD19_HOLD_W::new(self, 19)
     }
     #[doc = "Bit 20 - Sets the RTG GPIO 20 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn pad20_hold(&mut self) -> PAD20_HOLD_W<PAD_HOLD_SPEC, 20> {
-        PAD20_HOLD_W::new(self)
+    pub fn pad20_hold(&mut self) -> PAD20_HOLD_W<PAD_HOLD_SPEC> {
+        PAD20_HOLD_W::new(self, 20)
     }
     #[doc = "Bit 21 - Sets the RTG GPIO 21 to hold."]
     #[inline(always)]
     #[must_use]
-    pub fn pad21_hold(&mut self) -> PAD21_HOLD_W<PAD_HOLD_SPEC, 21> {
-        PAD21_HOLD_W::new(self)
+    pub fn pad21_hold(&mut self) -> PAD21_HOLD_W<PAD_HOLD_SPEC> {
+        PAD21_HOLD_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

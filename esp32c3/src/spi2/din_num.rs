@@ -5,19 +5,19 @@ pub type W = crate::W<DIN_NUM_SPEC>;
 #[doc = "Field `DIN0_NUM` reader - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN0_NUM` writer - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DIN0_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN0_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN1_NUM` reader - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DIN1_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN1_NUM` writer - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DIN1_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN1_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN2_NUM` reader - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DIN2_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN2_NUM` writer - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DIN2_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN2_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN3_NUM` reader - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DIN3_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN3_NUM` writer - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DIN3_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN3_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
@@ -54,33 +54,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIN_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din0_num(&mut self) -> DIN0_NUM_W<DIN_NUM_SPEC, 0> {
-        DIN0_NUM_W::new(self)
+    pub fn din0_num(&mut self) -> DIN0_NUM_W<DIN_NUM_SPEC> {
+        DIN0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din1_num(&mut self) -> DIN1_NUM_W<DIN_NUM_SPEC, 2> {
-        DIN1_NUM_W::new(self)
+    pub fn din1_num(&mut self) -> DIN1_NUM_W<DIN_NUM_SPEC> {
+        DIN1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din2_num(&mut self) -> DIN2_NUM_W<DIN_NUM_SPEC, 4> {
-        DIN2_NUM_W::new(self)
+    pub fn din2_num(&mut self) -> DIN2_NUM_W<DIN_NUM_SPEC> {
+        DIN2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din3_num(&mut self) -> DIN3_NUM_W<DIN_NUM_SPEC, 6> {
-        DIN3_NUM_W::new(self)
+    pub fn din3_num(&mut self) -> DIN3_NUM_W<DIN_NUM_SPEC> {
+        DIN3_NUM_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

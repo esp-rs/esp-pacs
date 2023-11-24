@@ -5,7 +5,7 @@ pub type W = crate::W<DATA_9_SPEC>;
 #[doc = "Field `TX_BYTE_9` reader - In operation mode, it stores the 9th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
 pub type TX_BYTE_9_R = crate::FieldReader;
 #[doc = "Field `TX_BYTE_9` writer - In operation mode, it stores the 9th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
-pub type TX_BYTE_9_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TX_BYTE_9_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - In operation mode, it stores the 9th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATA_9_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - In operation mode, it stores the 9th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_byte_9(&mut self) -> TX_BYTE_9_W<DATA_9_SPEC, 0> {
-        TX_BYTE_9_W::new(self)
+    pub fn tx_byte_9(&mut self) -> TX_BYTE_9_W<DATA_9_SPEC> {
+        TX_BYTE_9_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<DCACHE_ATOMIC_OPERATE_ENA_SPEC>;
 #[doc = "Field `DCACHE_ATOMIC_OPERATE_ENA` reader - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
 pub type DCACHE_ATOMIC_OPERATE_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_ATOMIC_OPERATE_ENA` writer - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
-pub type DCACHE_ATOMIC_OPERATE_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_ATOMIC_OPERATE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCACHE_ATOMIC_OPERATE_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn dcache_atomic_operate_ena(
         &mut self,
-    ) -> DCACHE_ATOMIC_OPERATE_ENA_W<DCACHE_ATOMIC_OPERATE_ENA_SPEC, 0> {
-        DCACHE_ATOMIC_OPERATE_ENA_W::new(self)
+    ) -> DCACHE_ATOMIC_OPERATE_ENA_W<DCACHE_ATOMIC_OPERATE_ENA_SPEC> {
+        DCACHE_ATOMIC_OPERATE_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,35 +5,35 @@ pub type W = crate::W<FIFO_CONF_SPEC>;
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - "]
 pub type RXFIFO_FULL_THRHD_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_FULL_THRHD` writer - "]
-pub type RXFIFO_FULL_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RXFIFO_FULL_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - Config txfifo empty threhd value when using apb fifo access"]
 pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` writer - Config txfifo empty threhd value when using apb fifo access"]
-pub type TXFIFO_EMPTY_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `NONFIFO_EN` reader - Set this bit to enble apb nonfifo access."]
 pub type NONFIFO_EN_R = crate::BitReader;
 #[doc = "Field `NONFIFO_EN` writer - Set this bit to enble apb nonfifo access."]
-pub type NONFIFO_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NONFIFO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FIFO_ADDR_CFG_EN` reader - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
 pub type FIFO_ADDR_CFG_EN_R = crate::BitReader;
 #[doc = "Field `FIFO_ADDR_CFG_EN` writer - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
-pub type FIFO_ADDR_CFG_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FIFO_ADDR_CFG_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_RST` reader - Set this bit to reset rx fifo when using apb fifo access."]
 pub type RX_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_RST` writer - Set this bit to reset rx fifo when using apb fifo access."]
-pub type RX_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_FIFO_RST` reader - Set this bit to reset tx fifo when using apb fifo access."]
 pub type TX_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_RST` writer - Set this bit to reset tx fifo when using apb fifo access."]
-pub type TX_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NONFIFO_RX_THRES` reader - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
 pub type NONFIFO_RX_THRES_R = crate::FieldReader;
 #[doc = "Field `NONFIFO_RX_THRES` writer - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
-pub type NONFIFO_RX_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type NONFIFO_RX_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `NONFIFO_TX_THRES` reader - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
 pub type NONFIFO_TX_THRES_R = crate::FieldReader;
 #[doc = "Field `NONFIFO_TX_THRES` writer - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
-pub type NONFIFO_TX_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type NONFIFO_TX_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -109,57 +109,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FIFO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<FIFO_CONF_SPEC, 0> {
-        RXFIFO_FULL_THRHD_W::new(self)
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<FIFO_CONF_SPEC> {
+        RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Config txfifo empty threhd value when using apb fifo access"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<FIFO_CONF_SPEC, 5> {
-        TXFIFO_EMPTY_THRHD_W::new(self)
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<FIFO_CONF_SPEC> {
+        TXFIFO_EMPTY_THRHD_W::new(self, 5)
     }
     #[doc = "Bit 10 - Set this bit to enble apb nonfifo access."]
     #[inline(always)]
     #[must_use]
-    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<FIFO_CONF_SPEC, 10> {
-        NONFIFO_EN_W::new(self)
+    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<FIFO_CONF_SPEC> {
+        NONFIFO_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<FIFO_CONF_SPEC, 11> {
-        FIFO_ADDR_CFG_EN_W::new(self)
+    pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<FIFO_CONF_SPEC> {
+        FIFO_ADDR_CFG_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to reset rx fifo when using apb fifo access."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<FIFO_CONF_SPEC, 12> {
-        RX_FIFO_RST_W::new(self)
+    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<FIFO_CONF_SPEC> {
+        RX_FIFO_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to reset tx fifo when using apb fifo access."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<FIFO_CONF_SPEC, 13> {
-        TX_FIFO_RST_W::new(self)
+    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<FIFO_CONF_SPEC> {
+        TX_FIFO_RST_W::new(self, 13)
     }
     #[doc = "Bits 14:19 - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
     #[inline(always)]
     #[must_use]
-    pub fn nonfifo_rx_thres(&mut self) -> NONFIFO_RX_THRES_W<FIFO_CONF_SPEC, 14> {
-        NONFIFO_RX_THRES_W::new(self)
+    pub fn nonfifo_rx_thres(&mut self) -> NONFIFO_RX_THRES_W<FIFO_CONF_SPEC> {
+        NONFIFO_RX_THRES_W::new(self, 14)
     }
     #[doc = "Bits 20:25 - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
     #[inline(always)]
     #[must_use]
-    pub fn nonfifo_tx_thres(&mut self) -> NONFIFO_TX_THRES_W<FIFO_CONF_SPEC, 20> {
-        NONFIFO_TX_THRES_W::new(self)
+    pub fn nonfifo_tx_thres(&mut self) -> NONFIFO_TX_THRES_W<FIFO_CONF_SPEC> {
+        NONFIFO_TX_THRES_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

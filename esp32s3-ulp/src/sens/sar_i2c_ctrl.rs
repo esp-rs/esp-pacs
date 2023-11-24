@@ -5,15 +5,15 @@ pub type W = crate::W<SAR_I2C_CTRL_SPEC>;
 #[doc = "Field `SAR_I2C_CTRL` reader - I2C control data only active when reg_sar_i2c_start_force = 1"]
 pub type SAR_I2C_CTRL_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR_I2C_CTRL` writer - I2C control data only active when reg_sar_i2c_start_force = 1"]
-pub type SAR_I2C_CTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 28, O, u32>;
+pub type SAR_I2C_CTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 #[doc = "Field `SAR_I2C_START` reader - start I2C only active when reg_sar_i2c_start_force = 1"]
 pub type SAR_I2C_START_R = crate::BitReader;
 #[doc = "Field `SAR_I2C_START` writer - start I2C only active when reg_sar_i2c_start_force = 1"]
-pub type SAR_I2C_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_I2C_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_I2C_START_FORCE` reader - 1: I2C started by SW 0: I2C started by FSM"]
 pub type SAR_I2C_START_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR_I2C_START_FORCE` writer - 1: I2C started by SW 0: I2C started by FSM"]
-pub type SAR_I2C_START_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_I2C_START_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:27 - I2C control data only active when reg_sar_i2c_start_force = 1"]
     #[inline(always)]
@@ -53,29 +53,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_I2C_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - I2C control data only active when reg_sar_i2c_start_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_ctrl(&mut self) -> SAR_I2C_CTRL_W<SAR_I2C_CTRL_SPEC, 0> {
-        SAR_I2C_CTRL_W::new(self)
+    pub fn sar_i2c_ctrl(&mut self) -> SAR_I2C_CTRL_W<SAR_I2C_CTRL_SPEC> {
+        SAR_I2C_CTRL_W::new(self, 0)
     }
     #[doc = "Bit 28 - start I2C only active when reg_sar_i2c_start_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_start(&mut self) -> SAR_I2C_START_W<SAR_I2C_CTRL_SPEC, 28> {
-        SAR_I2C_START_W::new(self)
+    pub fn sar_i2c_start(&mut self) -> SAR_I2C_START_W<SAR_I2C_CTRL_SPEC> {
+        SAR_I2C_START_W::new(self, 28)
     }
     #[doc = "Bit 29 - 1: I2C started by SW 0: I2C started by FSM"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_start_force(&mut self) -> SAR_I2C_START_FORCE_W<SAR_I2C_CTRL_SPEC, 29> {
-        SAR_I2C_START_FORCE_W::new(self)
+    pub fn sar_i2c_start_force(&mut self) -> SAR_I2C_START_FORCE_W<SAR_I2C_CTRL_SPEC> {
+        SAR_I2C_START_FORCE_W::new(self, 29)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

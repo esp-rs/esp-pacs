@@ -5,11 +5,11 @@ pub type W = crate::W<EMMCDDR_SPEC>;
 #[doc = "Field `HALFSTARTBIT` reader - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
 pub type HALFSTARTBIT_R = crate::FieldReader;
 #[doc = "Field `HALFSTARTBIT` writer - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
-pub type HALFSTARTBIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HALFSTARTBIT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `HS400_MODE` reader - Set 1 to enable HS400 mode."]
 pub type HS400_MODE_R = crate::BitReader;
 #[doc = "Field `HS400_MODE` writer - Set 1 to enable HS400 mode."]
-pub type HS400_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HS400_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EMMCDDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
     #[inline(always)]
     #[must_use]
-    pub fn halfstartbit(&mut self) -> HALFSTARTBIT_W<EMMCDDR_SPEC, 0> {
-        HALFSTARTBIT_W::new(self)
+    pub fn halfstartbit(&mut self) -> HALFSTARTBIT_W<EMMCDDR_SPEC> {
+        HALFSTARTBIT_W::new(self, 0)
     }
     #[doc = "Bit 31 - Set 1 to enable HS400 mode."]
     #[inline(always)]
     #[must_use]
-    pub fn hs400_mode(&mut self) -> HS400_MODE_W<EMMCDDR_SPEC, 31> {
-        HS400_MODE_W::new(self)
+    pub fn hs400_mode(&mut self) -> HS400_MODE_W<EMMCDDR_SPEC> {
+        HS400_MODE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

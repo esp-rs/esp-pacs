@@ -7,11 +7,11 @@ pub type RECORD_PRO_PDEBUGSTATUS_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGSTATUS_BBCAUSE` reader - "]
 pub type RECORD_PDEBUGSTATUS_BBCAUSE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGSTATUS_BBCAUSE` writer - "]
-pub type RECORD_PDEBUGSTATUS_BBCAUSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RECORD_PDEBUGSTATUS_BBCAUSE_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `RECORD_PDEBUGSTATUS_INSNTYPE` reader - "]
 pub type RECORD_PDEBUGSTATUS_INSNTYPE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGSTATUS_INSNTYPE` writer - "]
-pub type RECORD_PDEBUGSTATUS_INSNTYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RECORD_PDEBUGSTATUS_INSNTYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -51,7 +51,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -60,16 +60,16 @@ impl W {
     #[must_use]
     pub fn record_pdebugstatus_bbcause(
         &mut self,
-    ) -> RECORD_PDEBUGSTATUS_BBCAUSE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC, 0> {
-        RECORD_PDEBUGSTATUS_BBCAUSE_W::new(self)
+    ) -> RECORD_PDEBUGSTATUS_BBCAUSE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
+        RECORD_PDEBUGSTATUS_BBCAUSE_W::new(self, 0)
     }
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugstatus_insntype(
         &mut self,
-    ) -> RECORD_PDEBUGSTATUS_INSNTYPE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC, 0> {
-        RECORD_PDEBUGSTATUS_INSNTYPE_W::new(self)
+    ) -> RECORD_PDEBUGSTATUS_INSNTYPE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
+        RECORD_PDEBUGSTATUS_INSNTYPE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

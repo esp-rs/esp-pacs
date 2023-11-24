@@ -5,7 +5,7 @@ pub type W = crate::W<UART_CLKDIV_SPEC>;
 #[doc = "Field `uart_clkdiv` reader - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
 pub type UART_CLKDIV_R = crate::FieldReader<u32>;
 #[doc = "Field `uart_clkdiv` writer - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
-pub type UART_CLKDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type UART_CLKDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 impl R {
     #[doc = "Bits 0:19 - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UART_CLKDIV_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_clkdiv(&mut self) -> UART_CLKDIV_W<UART_CLKDIV_SPEC, 0> {
-        UART_CLKDIV_W::new(self)
+    pub fn uart_clkdiv(&mut self) -> UART_CLKDIV_W<UART_CLKDIV_SPEC> {
+        UART_CLKDIV_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

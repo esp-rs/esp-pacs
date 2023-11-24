@@ -5,7 +5,7 @@ pub type W = crate::W<REGION13_ADDR_START_SPEC>;
 #[doc = "Field `REGION13_ADDR_START` reader - Start address of region13"]
 pub type REGION13_ADDR_START_R = crate::FieldReader<u32>;
 #[doc = "Field `REGION13_ADDR_START` writer - Start address of region13"]
-pub type REGION13_ADDR_START_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type REGION13_ADDR_START_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Start address of region13"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REGION13_ADDR_START_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Start address of region13"]
     #[inline(always)]
     #[must_use]
-    pub fn region13_addr_start(&mut self) -> REGION13_ADDR_START_W<REGION13_ADDR_START_SPEC, 0> {
-        REGION13_ADDR_START_W::new(self)
+    pub fn region13_addr_start(&mut self) -> REGION13_ADDR_START_W<REGION13_ADDR_START_SPEC> {
+        REGION13_ADDR_START_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

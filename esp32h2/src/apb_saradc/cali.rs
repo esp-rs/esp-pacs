@@ -5,7 +5,7 @@ pub type W = crate::W<CALI_SPEC>;
 #[doc = "Field `APB_SARADC_CALI_CFG` reader - saradc cali factor"]
 pub type APB_SARADC_CALI_CFG_R = crate::FieldReader<u32>;
 #[doc = "Field `APB_SARADC_CALI_CFG` writer - saradc cali factor"]
-pub type APB_SARADC_CALI_CFG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 17, O, u32>;
+pub type APB_SARADC_CALI_CFG_W<'a, REG> = crate::FieldWriter<'a, REG, 17, u32>;
 impl R {
     #[doc = "Bits 0:16 - saradc cali factor"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CALI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:16 - saradc cali factor"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_cali_cfg(&mut self) -> APB_SARADC_CALI_CFG_W<CALI_SPEC, 0> {
-        APB_SARADC_CALI_CFG_W::new(self)
+    pub fn apb_saradc_cali_cfg(&mut self) -> APB_SARADC_CALI_CFG_W<CALI_SPEC> {
+        APB_SARADC_CALI_CFG_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

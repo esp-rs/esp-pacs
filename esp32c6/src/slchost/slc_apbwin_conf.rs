@@ -5,15 +5,15 @@ pub type W = crate::W<SLC_APBWIN_CONF_SPEC>;
 #[doc = "Field `SLC_APBWIN_ADDR` reader - *******Description***********"]
 pub type SLC_APBWIN_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SLC_APBWIN_ADDR` writer - *******Description***********"]
-pub type SLC_APBWIN_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 28, O, u32>;
+pub type SLC_APBWIN_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 #[doc = "Field `SLC_APBWIN_WR` reader - *******Description***********"]
 pub type SLC_APBWIN_WR_R = crate::BitReader;
 #[doc = "Field `SLC_APBWIN_WR` writer - *******Description***********"]
-pub type SLC_APBWIN_WR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_APBWIN_WR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_APBWIN_START` reader - *******Description***********"]
 pub type SLC_APBWIN_START_R = crate::BitReader;
 #[doc = "Field `SLC_APBWIN_START` writer - *******Description***********"]
-pub type SLC_APBWIN_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_APBWIN_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:27 - *******Description***********"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_APBWIN_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_apbwin_addr(&mut self) -> SLC_APBWIN_ADDR_W<SLC_APBWIN_CONF_SPEC, 0> {
-        SLC_APBWIN_ADDR_W::new(self)
+    pub fn slc_apbwin_addr(&mut self) -> SLC_APBWIN_ADDR_W<SLC_APBWIN_CONF_SPEC> {
+        SLC_APBWIN_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_apbwin_wr(&mut self) -> SLC_APBWIN_WR_W<SLC_APBWIN_CONF_SPEC, 28> {
-        SLC_APBWIN_WR_W::new(self)
+    pub fn slc_apbwin_wr(&mut self) -> SLC_APBWIN_WR_W<SLC_APBWIN_CONF_SPEC> {
+        SLC_APBWIN_WR_W::new(self, 28)
     }
     #[doc = "Bit 29 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_apbwin_start(&mut self) -> SLC_APBWIN_START_W<SLC_APBWIN_CONF_SPEC, 29> {
-        SLC_APBWIN_START_W::new(self)
+    pub fn slc_apbwin_start(&mut self) -> SLC_APBWIN_START_W<SLC_APBWIN_CONF_SPEC> {
+        SLC_APBWIN_START_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

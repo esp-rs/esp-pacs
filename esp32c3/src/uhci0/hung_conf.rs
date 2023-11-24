@@ -5,27 +5,27 @@ pub type W = crate::W<HUNG_CONF_SPEC>;
 #[doc = "Field `TXFIFO_TIMEOUT` reader - a"]
 pub type TXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT` writer - a"]
-pub type TXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TXFIFO_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` reader - a"]
 pub type TXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` writer - a"]
-pub type TXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TXFIFO_TIMEOUT_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` reader - a"]
 pub type TXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` writer - a"]
-pub type TXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFO_TIMEOUT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFIFO_TIMEOUT` reader - a"]
 pub type RXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT` writer - a"]
-pub type RXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RXFIFO_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` reader - a"]
 pub type RXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` writer - a"]
-pub type RXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RXFIFO_TIMEOUT_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` reader - a"]
 pub type RXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` writer - a"]
-pub type RXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFIFO_TIMEOUT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - a"]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HUNG_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 0> {
-        TXFIFO_TIMEOUT_W::new(self)
+    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 8> {
-        TXFIFO_TIMEOUT_SHIFT_W::new(self)
+    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 11> {
-        TXFIFO_TIMEOUT_ENA_W::new(self)
+    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_ENA_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 12> {
-        RXFIFO_TIMEOUT_W::new(self)
+    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_W::new(self, 12)
     }
     #[doc = "Bits 20:22 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 20> {
-        RXFIFO_TIMEOUT_SHIFT_W::new(self)
+    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_SHIFT_W::new(self, 20)
     }
     #[doc = "Bit 23 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 23> {
-        RXFIFO_TIMEOUT_ENA_W::new(self)
+    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_ENA_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

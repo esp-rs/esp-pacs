@@ -5,23 +5,23 @@ pub type W = crate::W<ONETIME_SAMPLE_SPEC>;
 #[doc = "Field `SARADC_ONETIME_ATTEN` reader - Need add description"]
 pub type SARADC_ONETIME_ATTEN_R = crate::FieldReader;
 #[doc = "Field `SARADC_ONETIME_ATTEN` writer - Need add description"]
-pub type SARADC_ONETIME_ATTEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SARADC_ONETIME_ATTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SARADC_ONETIME_CHANNEL` reader - Need add description"]
 pub type SARADC_ONETIME_CHANNEL_R = crate::FieldReader;
 #[doc = "Field `SARADC_ONETIME_CHANNEL` writer - Need add description"]
-pub type SARADC_ONETIME_CHANNEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SARADC_ONETIME_CHANNEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SARADC_ONETIME_START` reader - Need add description"]
 pub type SARADC_ONETIME_START_R = crate::BitReader;
 #[doc = "Field `SARADC_ONETIME_START` writer - Need add description"]
-pub type SARADC_ONETIME_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_ONETIME_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC2_ONETIME_SAMPLE` reader - Need add description"]
 pub type SARADC2_ONETIME_SAMPLE_R = crate::BitReader;
 #[doc = "Field `SARADC2_ONETIME_SAMPLE` writer - Need add description"]
-pub type SARADC2_ONETIME_SAMPLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC2_ONETIME_SAMPLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC1_ONETIME_SAMPLE` reader - Need add description"]
 pub type SARADC1_ONETIME_SAMPLE_R = crate::BitReader;
 #[doc = "Field `SARADC1_ONETIME_SAMPLE` writer - Need add description"]
-pub type SARADC1_ONETIME_SAMPLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC1_ONETIME_SAMPLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 23:24 - Need add description"]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ONETIME_SAMPLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 23:24 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_onetime_atten(&mut self) -> SARADC_ONETIME_ATTEN_W<ONETIME_SAMPLE_SPEC, 23> {
-        SARADC_ONETIME_ATTEN_W::new(self)
+    pub fn saradc_onetime_atten(&mut self) -> SARADC_ONETIME_ATTEN_W<ONETIME_SAMPLE_SPEC> {
+        SARADC_ONETIME_ATTEN_W::new(self, 23)
     }
     #[doc = "Bits 25:28 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_onetime_channel(&mut self) -> SARADC_ONETIME_CHANNEL_W<ONETIME_SAMPLE_SPEC, 25> {
-        SARADC_ONETIME_CHANNEL_W::new(self)
+    pub fn saradc_onetime_channel(&mut self) -> SARADC_ONETIME_CHANNEL_W<ONETIME_SAMPLE_SPEC> {
+        SARADC_ONETIME_CHANNEL_W::new(self, 25)
     }
     #[doc = "Bit 29 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_onetime_start(&mut self) -> SARADC_ONETIME_START_W<ONETIME_SAMPLE_SPEC, 29> {
-        SARADC_ONETIME_START_W::new(self)
+    pub fn saradc_onetime_start(&mut self) -> SARADC_ONETIME_START_W<ONETIME_SAMPLE_SPEC> {
+        SARADC_ONETIME_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc2_onetime_sample(&mut self) -> SARADC2_ONETIME_SAMPLE_W<ONETIME_SAMPLE_SPEC, 30> {
-        SARADC2_ONETIME_SAMPLE_W::new(self)
+    pub fn saradc2_onetime_sample(&mut self) -> SARADC2_ONETIME_SAMPLE_W<ONETIME_SAMPLE_SPEC> {
+        SARADC2_ONETIME_SAMPLE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc1_onetime_sample(&mut self) -> SARADC1_ONETIME_SAMPLE_W<ONETIME_SAMPLE_SPEC, 31> {
-        SARADC1_ONETIME_SAMPLE_W::new(self)
+    pub fn saradc1_onetime_sample(&mut self) -> SARADC1_ONETIME_SAMPLE_W<ONETIME_SAMPLE_SPEC> {
+        SARADC1_ONETIME_SAMPLE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

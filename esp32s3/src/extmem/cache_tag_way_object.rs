@@ -5,7 +5,7 @@ pub type W = crate::W<CACHE_TAG_WAY_OBJECT_SPEC>;
 #[doc = "Field `CACHE_TAG_WAY_OBJECT` reader - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
 pub type CACHE_TAG_WAY_OBJECT_R = crate::FieldReader;
 #[doc = "Field `CACHE_TAG_WAY_OBJECT` writer - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
-pub type CACHE_TAG_WAY_OBJECT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CACHE_TAG_WAY_OBJECT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_TAG_WAY_OBJECT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_tag_way_object(&mut self) -> CACHE_TAG_WAY_OBJECT_W<CACHE_TAG_WAY_OBJECT_SPEC, 0> {
-        CACHE_TAG_WAY_OBJECT_W::new(self)
+    pub fn cache_tag_way_object(&mut self) -> CACHE_TAG_WAY_OBJECT_W<CACHE_TAG_WAY_OBJECT_SPEC> {
+        CACHE_TAG_WAY_OBJECT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<SLC_SDIO_ST_SPEC>;
 #[doc = "Field `SLC_CMD_ST` reader - "]
 pub type SLC_CMD_ST_R = crate::FieldReader;
 #[doc = "Field `SLC_CMD_ST` writer - "]
-pub type SLC_CMD_ST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SLC_CMD_ST_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SLC_FUNC_ST` reader - "]
 pub type SLC_FUNC_ST_R = crate::FieldReader;
 #[doc = "Field `SLC_FUNC_ST` writer - "]
-pub type SLC_FUNC_ST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SLC_FUNC_ST_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SLC_SDIO_WAKEUP` reader - "]
 pub type SLC_SDIO_WAKEUP_R = crate::BitReader;
 #[doc = "Field `SLC_SDIO_WAKEUP` writer - "]
-pub type SLC_SDIO_WAKEUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_SDIO_WAKEUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_BUS_ST` reader - "]
 pub type SLC_BUS_ST_R = crate::FieldReader;
 #[doc = "Field `SLC_BUS_ST` writer - "]
-pub type SLC_BUS_ST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SLC_BUS_ST_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -60,35 +60,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_SDIO_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_cmd_st(&mut self) -> SLC_CMD_ST_W<SLC_SDIO_ST_SPEC, 0> {
-        SLC_CMD_ST_W::new(self)
+    pub fn slc_cmd_st(&mut self) -> SLC_CMD_ST_W<SLC_SDIO_ST_SPEC> {
+        SLC_CMD_ST_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_func_st(&mut self) -> SLC_FUNC_ST_W<SLC_SDIO_ST_SPEC, 4> {
-        SLC_FUNC_ST_W::new(self)
+    pub fn slc_func_st(&mut self) -> SLC_FUNC_ST_W<SLC_SDIO_ST_SPEC> {
+        SLC_FUNC_ST_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_sdio_wakeup(&mut self) -> SLC_SDIO_WAKEUP_W<SLC_SDIO_ST_SPEC, 8> {
-        SLC_SDIO_WAKEUP_W::new(self)
+    pub fn slc_sdio_wakeup(&mut self) -> SLC_SDIO_WAKEUP_W<SLC_SDIO_ST_SPEC> {
+        SLC_SDIO_WAKEUP_W::new(self, 8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_bus_st(&mut self) -> SLC_BUS_ST_W<SLC_SDIO_ST_SPEC, 12> {
-        SLC_BUS_ST_W::new(self)
+    pub fn slc_bus_st(&mut self) -> SLC_BUS_ST_W<SLC_SDIO_ST_SPEC> {
+        SLC_BUS_ST_W::new(self, 12)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

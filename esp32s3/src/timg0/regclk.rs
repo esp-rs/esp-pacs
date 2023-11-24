@@ -5,7 +5,7 @@ pub type W = crate::W<REGCLK_SPEC>;
 #[doc = "Field `CLK_EN` reader - Register clock gate signal. 1: The clock for software to read and write registers is always on. 0: The clock for software to read and write registers only exits when the operation happens."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Register clock gate signal. 1: The clock for software to read and write registers is always on. 0: The clock for software to read and write registers only exits when the operation happens."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - Register clock gate signal. 1: The clock for software to read and write registers is always on. 0: The clock for software to read and write registers only exits when the operation happens."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REGCLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - Register clock gate signal. 1: The clock for software to read and write registers is always on. 0: The clock for software to read and write registers only exits when the operation happens."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC, 31> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC> {
+        CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

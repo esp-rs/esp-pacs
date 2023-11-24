@@ -5,39 +5,39 @@ pub type W = crate::W<REGION4_PMS_ATTR_SPEC>;
 #[doc = "Field `REGION4_R0_PMS_X` reader - Region execute authority in REE_MODE0"]
 pub type REGION4_R0_PMS_X_R = crate::BitReader;
 #[doc = "Field `REGION4_R0_PMS_X` writer - Region execute authority in REE_MODE0"]
-pub type REGION4_R0_PMS_X_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R0_PMS_X_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R0_PMS_W` reader - Region write authority in REE_MODE0"]
 pub type REGION4_R0_PMS_W_R = crate::BitReader;
 #[doc = "Field `REGION4_R0_PMS_W` writer - Region write authority in REE_MODE0"]
-pub type REGION4_R0_PMS_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R0_PMS_W_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R0_PMS_R` reader - Region read authority in REE_MODE0"]
 pub type REGION4_R0_PMS_R_R = crate::BitReader;
 #[doc = "Field `REGION4_R0_PMS_R` writer - Region read authority in REE_MODE0"]
-pub type REGION4_R0_PMS_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R0_PMS_R_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R1_PMS_X` reader - Region execute authority in REE_MODE1"]
 pub type REGION4_R1_PMS_X_R = crate::BitReader;
 #[doc = "Field `REGION4_R1_PMS_X` writer - Region execute authority in REE_MODE1"]
-pub type REGION4_R1_PMS_X_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R1_PMS_X_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R1_PMS_W` reader - Region write authority in REE_MODE1"]
 pub type REGION4_R1_PMS_W_R = crate::BitReader;
 #[doc = "Field `REGION4_R1_PMS_W` writer - Region write authority in REE_MODE1"]
-pub type REGION4_R1_PMS_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R1_PMS_W_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R1_PMS_R` reader - Region read authority in REE_MODE1"]
 pub type REGION4_R1_PMS_R_R = crate::BitReader;
 #[doc = "Field `REGION4_R1_PMS_R` writer - Region read authority in REE_MODE1"]
-pub type REGION4_R1_PMS_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R1_PMS_R_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R2_PMS_X` reader - Region execute authority in REE_MODE2"]
 pub type REGION4_R2_PMS_X_R = crate::BitReader;
 #[doc = "Field `REGION4_R2_PMS_X` writer - Region execute authority in REE_MODE2"]
-pub type REGION4_R2_PMS_X_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R2_PMS_X_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R2_PMS_W` reader - Region write authority in REE_MODE2"]
 pub type REGION4_R2_PMS_W_R = crate::BitReader;
 #[doc = "Field `REGION4_R2_PMS_W` writer - Region write authority in REE_MODE2"]
-pub type REGION4_R2_PMS_W_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R2_PMS_W_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGION4_R2_PMS_R` reader - Region read authority in REE_MODE2"]
 pub type REGION4_R2_PMS_R_R = crate::BitReader;
 #[doc = "Field `REGION4_R2_PMS_R` writer - Region read authority in REE_MODE2"]
-pub type REGION4_R2_PMS_R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGION4_R2_PMS_R_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Region execute authority in REE_MODE0"]
     #[inline(always)]
@@ -131,63 +131,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REGION4_PMS_ATTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Region execute authority in REE_MODE0"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r0_pms_x(&mut self) -> REGION4_R0_PMS_X_W<REGION4_PMS_ATTR_SPEC, 0> {
-        REGION4_R0_PMS_X_W::new(self)
+    pub fn region4_r0_pms_x(&mut self) -> REGION4_R0_PMS_X_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R0_PMS_X_W::new(self, 0)
     }
     #[doc = "Bit 1 - Region write authority in REE_MODE0"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r0_pms_w(&mut self) -> REGION4_R0_PMS_W_W<REGION4_PMS_ATTR_SPEC, 1> {
-        REGION4_R0_PMS_W_W::new(self)
+    pub fn region4_r0_pms_w(&mut self) -> REGION4_R0_PMS_W_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R0_PMS_W_W::new(self, 1)
     }
     #[doc = "Bit 2 - Region read authority in REE_MODE0"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r0_pms_r(&mut self) -> REGION4_R0_PMS_R_W<REGION4_PMS_ATTR_SPEC, 2> {
-        REGION4_R0_PMS_R_W::new(self)
+    pub fn region4_r0_pms_r(&mut self) -> REGION4_R0_PMS_R_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R0_PMS_R_W::new(self, 2)
     }
     #[doc = "Bit 4 - Region execute authority in REE_MODE1"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r1_pms_x(&mut self) -> REGION4_R1_PMS_X_W<REGION4_PMS_ATTR_SPEC, 4> {
-        REGION4_R1_PMS_X_W::new(self)
+    pub fn region4_r1_pms_x(&mut self) -> REGION4_R1_PMS_X_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R1_PMS_X_W::new(self, 4)
     }
     #[doc = "Bit 5 - Region write authority in REE_MODE1"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r1_pms_w(&mut self) -> REGION4_R1_PMS_W_W<REGION4_PMS_ATTR_SPEC, 5> {
-        REGION4_R1_PMS_W_W::new(self)
+    pub fn region4_r1_pms_w(&mut self) -> REGION4_R1_PMS_W_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R1_PMS_W_W::new(self, 5)
     }
     #[doc = "Bit 6 - Region read authority in REE_MODE1"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r1_pms_r(&mut self) -> REGION4_R1_PMS_R_W<REGION4_PMS_ATTR_SPEC, 6> {
-        REGION4_R1_PMS_R_W::new(self)
+    pub fn region4_r1_pms_r(&mut self) -> REGION4_R1_PMS_R_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R1_PMS_R_W::new(self, 6)
     }
     #[doc = "Bit 8 - Region execute authority in REE_MODE2"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r2_pms_x(&mut self) -> REGION4_R2_PMS_X_W<REGION4_PMS_ATTR_SPEC, 8> {
-        REGION4_R2_PMS_X_W::new(self)
+    pub fn region4_r2_pms_x(&mut self) -> REGION4_R2_PMS_X_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R2_PMS_X_W::new(self, 8)
     }
     #[doc = "Bit 9 - Region write authority in REE_MODE2"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r2_pms_w(&mut self) -> REGION4_R2_PMS_W_W<REGION4_PMS_ATTR_SPEC, 9> {
-        REGION4_R2_PMS_W_W::new(self)
+    pub fn region4_r2_pms_w(&mut self) -> REGION4_R2_PMS_W_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R2_PMS_W_W::new(self, 9)
     }
     #[doc = "Bit 10 - Region read authority in REE_MODE2"]
     #[inline(always)]
     #[must_use]
-    pub fn region4_r2_pms_r(&mut self) -> REGION4_R2_PMS_R_W<REGION4_PMS_ATTR_SPEC, 10> {
-        REGION4_R2_PMS_R_W::new(self)
+    pub fn region4_r2_pms_r(&mut self) -> REGION4_R2_PMS_R_W<REGION4_PMS_ATTR_SPEC> {
+        REGION4_R2_PMS_R_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

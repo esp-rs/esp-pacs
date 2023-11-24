@@ -5,7 +5,7 @@ pub type W = crate::W<FIFO_SPEC>;
 #[doc = "Field `RXFIFO_RD_BYTE` reader - UART 0 accesses FIFO via this register."]
 pub type RXFIFO_RD_BYTE_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_RD_BYTE` writer - UART 0 accesses FIFO via this register."]
-pub type RXFIFO_RD_BYTE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RXFIFO_RD_BYTE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - UART 0 accesses FIFO via this register."]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FIFO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - UART 0 accesses FIFO via this register."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_rd_byte(&mut self) -> RXFIFO_RD_BYTE_W<FIFO_SPEC, 0> {
-        RXFIFO_RD_BYTE_W::new(self)
+    pub fn rxfifo_rd_byte(&mut self) -> RXFIFO_RD_BYTE_W<FIFO_SPEC> {
+        RXFIFO_RD_BYTE_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -5,7 +5,7 @@ pub type W = crate::W<CPU_PERI_RST_EN_SPEC>;
 #[doc = "Field `RST_EN_DEDICATED_GPIO` reader - Set this bit to reset DEDICATED GPIO module."]
 pub type RST_EN_DEDICATED_GPIO_R = crate::BitReader;
 #[doc = "Field `RST_EN_DEDICATED_GPIO` writer - Set this bit to reset DEDICATED GPIO module."]
-pub type RST_EN_DEDICATED_GPIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_EN_DEDICATED_GPIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 7 - Set this bit to reset DEDICATED GPIO module."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_PERI_RST_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 7 - Set this bit to reset DEDICATED GPIO module."]
     #[inline(always)]
     #[must_use]
-    pub fn rst_en_dedicated_gpio(&mut self) -> RST_EN_DEDICATED_GPIO_W<CPU_PERI_RST_EN_SPEC, 7> {
-        RST_EN_DEDICATED_GPIO_W::new(self)
+    pub fn rst_en_dedicated_gpio(&mut self) -> RST_EN_DEDICATED_GPIO_W<CPU_PERI_RST_EN_SPEC> {
+        RST_EN_DEDICATED_GPIO_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

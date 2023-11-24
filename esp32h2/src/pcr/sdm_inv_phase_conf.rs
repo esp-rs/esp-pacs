@@ -5,11 +5,11 @@ pub type W = crate::W<SDM_INV_PHASE_CONF_SPEC>;
 #[doc = "Field `CLK_SDM_INV_PHASE_ENA` reader - xxxx"]
 pub type CLK_SDM_INV_PHASE_ENA_R = crate::BitReader;
 #[doc = "Field `CLK_SDM_INV_PHASE_ENA` writer - xxxx"]
-pub type CLK_SDM_INV_PHASE_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_SDM_INV_PHASE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_SDM_INV_PHASE_SEL` reader - xxxx"]
 pub type CLK_SDM_INV_PHASE_SEL_R = crate::FieldReader;
 #[doc = "Field `CLK_SDM_INV_PHASE_SEL` writer - xxxx"]
-pub type CLK_SDM_INV_PHASE_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CLK_SDM_INV_PHASE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDM_INV_PHASE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sdm_inv_phase_ena(&mut self) -> CLK_SDM_INV_PHASE_ENA_W<SDM_INV_PHASE_CONF_SPEC, 0> {
-        CLK_SDM_INV_PHASE_ENA_W::new(self)
+    pub fn clk_sdm_inv_phase_ena(&mut self) -> CLK_SDM_INV_PHASE_ENA_W<SDM_INV_PHASE_CONF_SPEC> {
+        CLK_SDM_INV_PHASE_ENA_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sdm_inv_phase_sel(&mut self) -> CLK_SDM_INV_PHASE_SEL_W<SDM_INV_PHASE_CONF_SPEC, 1> {
-        CLK_SDM_INV_PHASE_SEL_W::new(self)
+    pub fn clk_sdm_inv_phase_sel(&mut self) -> CLK_SDM_INV_PHASE_SEL_W<SDM_INV_PHASE_CONF_SPEC> {
+        CLK_SDM_INV_PHASE_SEL_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

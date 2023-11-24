@@ -5,27 +5,27 @@ pub type W = crate::W<FAULT_DETECT_SPEC>;
 #[doc = "Field `F0_EN` reader - "]
 pub type F0_EN_R = crate::BitReader;
 #[doc = "Field `F0_EN` writer - "]
-pub type F0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type F0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `F1_EN` reader - "]
 pub type F1_EN_R = crate::BitReader;
 #[doc = "Field `F1_EN` writer - "]
-pub type F1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type F1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `F2_EN` reader - "]
 pub type F2_EN_R = crate::BitReader;
 #[doc = "Field `F2_EN` writer - "]
-pub type F2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type F2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `F0_POLE` reader - "]
 pub type F0_POLE_R = crate::BitReader;
 #[doc = "Field `F0_POLE` writer - "]
-pub type F0_POLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type F0_POLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `F1_POLE` reader - "]
 pub type F1_POLE_R = crate::BitReader;
 #[doc = "Field `F1_POLE` writer - "]
-pub type F1_POLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type F1_POLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `F2_POLE` reader - "]
 pub type F2_POLE_R = crate::BitReader;
 #[doc = "Field `F2_POLE` writer - "]
-pub type F2_POLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type F2_POLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EVENT_F0` reader - "]
 pub type EVENT_F0_R = crate::BitReader;
 #[doc = "Field `EVENT_F1` reader - "]
@@ -98,45 +98,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FAULT_DETECT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn f0_en(&mut self) -> F0_EN_W<FAULT_DETECT_SPEC, 0> {
-        F0_EN_W::new(self)
+    pub fn f0_en(&mut self) -> F0_EN_W<FAULT_DETECT_SPEC> {
+        F0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn f1_en(&mut self) -> F1_EN_W<FAULT_DETECT_SPEC, 1> {
-        F1_EN_W::new(self)
+    pub fn f1_en(&mut self) -> F1_EN_W<FAULT_DETECT_SPEC> {
+        F1_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn f2_en(&mut self) -> F2_EN_W<FAULT_DETECT_SPEC, 2> {
-        F2_EN_W::new(self)
+    pub fn f2_en(&mut self) -> F2_EN_W<FAULT_DETECT_SPEC> {
+        F2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn f0_pole(&mut self) -> F0_POLE_W<FAULT_DETECT_SPEC, 3> {
-        F0_POLE_W::new(self)
+    pub fn f0_pole(&mut self) -> F0_POLE_W<FAULT_DETECT_SPEC> {
+        F0_POLE_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn f1_pole(&mut self) -> F1_POLE_W<FAULT_DETECT_SPEC, 4> {
-        F1_POLE_W::new(self)
+    pub fn f1_pole(&mut self) -> F1_POLE_W<FAULT_DETECT_SPEC> {
+        F1_POLE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn f2_pole(&mut self) -> F2_POLE_W<FAULT_DETECT_SPEC, 5> {
-        F2_POLE_W::new(self)
+    pub fn f2_pole(&mut self) -> F2_POLE_W<FAULT_DETECT_SPEC> {
+        F2_POLE_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

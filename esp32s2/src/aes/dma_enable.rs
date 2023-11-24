@@ -5,7 +5,7 @@ pub type W = crate::W<DMA_ENABLE_SPEC>;
 #[doc = "Field `DMA_ENABLE` reader - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
 pub type DMA_ENABLE_R = crate::BitReader;
 #[doc = "Field `DMA_ENABLE` writer - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
-pub type DMA_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_ENABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_enable(&mut self) -> DMA_ENABLE_W<DMA_ENABLE_SPEC, 0> {
-        DMA_ENABLE_W::new(self)
+    pub fn dma_enable(&mut self) -> DMA_ENABLE_W<DMA_ENABLE_SPEC> {
+        DMA_ENABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

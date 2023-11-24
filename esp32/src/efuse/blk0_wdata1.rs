@@ -5,7 +5,7 @@ pub type W = crate::W<BLK0_WDATA1_SPEC>;
 #[doc = "Field `WIFI_MAC_CRC_LOW` reader - "]
 pub type WIFI_MAC_CRC_LOW_R = crate::FieldReader<u32>;
 #[doc = "Field `WIFI_MAC_CRC_LOW` writer - "]
-pub type WIFI_MAC_CRC_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type WIFI_MAC_CRC_LOW_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_mac_crc_low(&mut self) -> WIFI_MAC_CRC_LOW_W<BLK0_WDATA1_SPEC, 0> {
-        WIFI_MAC_CRC_LOW_W::new(self)
+    pub fn wifi_mac_crc_low(&mut self) -> WIFI_MAC_CRC_LOW_W<BLK0_WDATA1_SPEC> {
+        WIFI_MAC_CRC_LOW_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

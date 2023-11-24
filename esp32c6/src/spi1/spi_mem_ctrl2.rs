@@ -1,7 +1,7 @@
 #[doc = "Register `SPI_MEM_CTRL2` writer"]
 pub type W = crate::W<SPI_MEM_CTRL2_SPEC>;
 #[doc = "Field `SPI_MEM_SYNC_RESET` writer - The FSM will be reset."]
-pub type SPI_MEM_SYNC_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_SYNC_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_sync_reset(&mut self) -> SPI_MEM_SYNC_RESET_W<SPI_MEM_CTRL2_SPEC, 31> {
-        SPI_MEM_SYNC_RESET_W::new(self)
+    pub fn spi_mem_sync_reset(&mut self) -> SPI_MEM_SYNC_RESET_W<SPI_MEM_CTRL2_SPEC> {
+        SPI_MEM_SYNC_RESET_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

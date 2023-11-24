@@ -5,7 +5,7 @@ pub type W = crate::W<CONSTANT_TIME_SPEC>;
 #[doc = "Field `CONSTANT_TIME` reader - Set this bit to 0 to enable the acceleration option of constant_time for modular exponentiation. Set to 1 to disable the acceleration (by default)."]
 pub type CONSTANT_TIME_R = crate::BitReader;
 #[doc = "Field `CONSTANT_TIME` writer - Set this bit to 0 to enable the acceleration option of constant_time for modular exponentiation. Set to 1 to disable the acceleration (by default)."]
-pub type CONSTANT_TIME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONSTANT_TIME_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to 0 to enable the acceleration option of constant_time for modular exponentiation. Set to 1 to disable the acceleration (by default)."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONSTANT_TIME_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to 0 to enable the acceleration option of constant_time for modular exponentiation. Set to 1 to disable the acceleration (by default)."]
     #[inline(always)]
     #[must_use]
-    pub fn constant_time(&mut self) -> CONSTANT_TIME_W<CONSTANT_TIME_SPEC, 0> {
-        CONSTANT_TIME_W::new(self)
+    pub fn constant_time(&mut self) -> CONSTANT_TIME_W<CONSTANT_TIME_SPEC> {
+        CONSTANT_TIME_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

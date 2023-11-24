@@ -5,19 +5,19 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `PER_END_INT_RAW` reader - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
 pub type PER_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `PER_END_INT_RAW` writer - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
-pub type PER_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PER_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PES_END_INT_RAW` reader - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
 pub type PES_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `PES_END_INT_RAW` writer - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
-pub type PES_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PES_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOTAL_TRANS_END_INT_RAW` reader - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
 pub type TOTAL_TRANS_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOTAL_TRANS_END_INT_RAW` writer - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
-pub type TOTAL_TRANS_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOTAL_TRANS_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BROWN_OUT_INT_RAW` reader - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
 pub type BROWN_OUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_RAW` writer - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
-pub type BROWN_OUT_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BROWN_OUT_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn per_end_int_raw(&mut self) -> PER_END_INT_RAW_W<INT_RAW_SPEC, 0> {
-        PER_END_INT_RAW_W::new(self)
+    pub fn per_end_int_raw(&mut self) -> PER_END_INT_RAW_W<INT_RAW_SPEC> {
+        PER_END_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn pes_end_int_raw(&mut self) -> PES_END_INT_RAW_W<INT_RAW_SPEC, 1> {
-        PES_END_INT_RAW_W::new(self)
+    pub fn pes_end_int_raw(&mut self) -> PES_END_INT_RAW_W<INT_RAW_SPEC> {
+        PES_END_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn total_trans_end_int_raw(&mut self) -> TOTAL_TRANS_END_INT_RAW_W<INT_RAW_SPEC, 2> {
-        TOTAL_TRANS_END_INT_RAW_W::new(self)
+    pub fn total_trans_end_int_raw(&mut self) -> TOTAL_TRANS_END_INT_RAW_W<INT_RAW_SPEC> {
+        TOTAL_TRANS_END_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn brown_out_int_raw(&mut self) -> BROWN_OUT_INT_RAW_W<INT_RAW_SPEC, 3> {
-        BROWN_OUT_INT_RAW_W::new(self)
+    pub fn brown_out_int_raw(&mut self) -> BROWN_OUT_INT_RAW_W<INT_RAW_SPEC> {
+        BROWN_OUT_INT_RAW_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

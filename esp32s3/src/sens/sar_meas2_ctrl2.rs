@@ -9,19 +9,19 @@ pub type MEAS2_DONE_SAR_R = crate::BitReader;
 #[doc = "Field `MEAS2_START_SAR` reader - SAR ADC2 controller (in RTC) starts conversion"]
 pub type MEAS2_START_SAR_R = crate::BitReader;
 #[doc = "Field `MEAS2_START_SAR` writer - SAR ADC2 controller (in RTC) starts conversion"]
-pub type MEAS2_START_SAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEAS2_START_SAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEAS2_START_FORCE` reader - 1: SAR ADC2 controller (in RTC) is started by SW"]
 pub type MEAS2_START_FORCE_R = crate::BitReader;
 #[doc = "Field `MEAS2_START_FORCE` writer - 1: SAR ADC2 controller (in RTC) is started by SW"]
-pub type MEAS2_START_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEAS2_START_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_EN_PAD` reader - SAR ADC2 pad enable bitmap"]
 pub type SAR2_EN_PAD_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR2_EN_PAD` writer - SAR ADC2 pad enable bitmap"]
-pub type SAR2_EN_PAD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SAR2_EN_PAD_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `SAR2_EN_PAD_FORCE` reader - 1: SAR ADC2 pad enable bitmap is controlled by SW"]
 pub type SAR2_EN_PAD_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR2_EN_PAD_FORCE` writer - 1: SAR ADC2 pad enable bitmap is controlled by SW"]
-pub type SAR2_EN_PAD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_EN_PAD_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - SAR ADC2 data"]
     #[inline(always)]
@@ -88,33 +88,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS2_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 17 - SAR ADC2 controller (in RTC) starts conversion"]
     #[inline(always)]
     #[must_use]
-    pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W<SAR_MEAS2_CTRL2_SPEC, 17> {
-        MEAS2_START_SAR_W::new(self)
+    pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W<SAR_MEAS2_CTRL2_SPEC> {
+        MEAS2_START_SAR_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1: SAR ADC2 controller (in RTC) is started by SW"]
     #[inline(always)]
     #[must_use]
-    pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W<SAR_MEAS2_CTRL2_SPEC, 18> {
-        MEAS2_START_FORCE_W::new(self)
+    pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W<SAR_MEAS2_CTRL2_SPEC> {
+        MEAS2_START_FORCE_W::new(self, 18)
     }
     #[doc = "Bits 19:30 - SAR ADC2 pad enable bitmap"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W<SAR_MEAS2_CTRL2_SPEC, 19> {
-        SAR2_EN_PAD_W::new(self)
+    pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W<SAR_MEAS2_CTRL2_SPEC> {
+        SAR2_EN_PAD_W::new(self, 19)
     }
     #[doc = "Bit 31 - 1: SAR ADC2 pad enable bitmap is controlled by SW"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W<SAR_MEAS2_CTRL2_SPEC, 31> {
-        SAR2_EN_PAD_FORCE_W::new(self)
+    pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W<SAR_MEAS2_CTRL2_SPEC> {
+        SAR2_EN_PAD_FORCE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

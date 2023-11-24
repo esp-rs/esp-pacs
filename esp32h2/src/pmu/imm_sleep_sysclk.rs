@@ -1,13 +1,13 @@
 #[doc = "Register `IMM_SLEEP_SYSCLK` writer"]
 pub type W = crate::W<IMM_SLEEP_SYSCLK_SPEC>;
 #[doc = "Field `UPDATE_DIG_ICG_SWITCH` writer - need_des"]
-pub type UPDATE_DIG_ICG_SWITCH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDATE_DIG_ICG_SWITCH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIE_LOW_ICG_SLP_SEL` writer - need_des"]
-pub type TIE_LOW_ICG_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_LOW_ICG_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIE_HIGH_ICG_SLP_SEL` writer - need_des"]
-pub type TIE_HIGH_ICG_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_HIGH_ICG_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UPDATE_DIG_SYS_CLK_SEL` writer - need_des"]
-pub type UPDATE_DIG_SYS_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDATE_DIG_SYS_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IMM_SLEEP_SYSCLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -18,28 +18,26 @@ impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn update_dig_icg_switch(&mut self) -> UPDATE_DIG_ICG_SWITCH_W<IMM_SLEEP_SYSCLK_SPEC, 28> {
-        UPDATE_DIG_ICG_SWITCH_W::new(self)
+    pub fn update_dig_icg_switch(&mut self) -> UPDATE_DIG_ICG_SWITCH_W<IMM_SLEEP_SYSCLK_SPEC> {
+        UPDATE_DIG_ICG_SWITCH_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn tie_low_icg_slp_sel(&mut self) -> TIE_LOW_ICG_SLP_SEL_W<IMM_SLEEP_SYSCLK_SPEC, 29> {
-        TIE_LOW_ICG_SLP_SEL_W::new(self)
+    pub fn tie_low_icg_slp_sel(&mut self) -> TIE_LOW_ICG_SLP_SEL_W<IMM_SLEEP_SYSCLK_SPEC> {
+        TIE_LOW_ICG_SLP_SEL_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn tie_high_icg_slp_sel(&mut self) -> TIE_HIGH_ICG_SLP_SEL_W<IMM_SLEEP_SYSCLK_SPEC, 30> {
-        TIE_HIGH_ICG_SLP_SEL_W::new(self)
+    pub fn tie_high_icg_slp_sel(&mut self) -> TIE_HIGH_ICG_SLP_SEL_W<IMM_SLEEP_SYSCLK_SPEC> {
+        TIE_HIGH_ICG_SLP_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn update_dig_sys_clk_sel(
-        &mut self,
-    ) -> UPDATE_DIG_SYS_CLK_SEL_W<IMM_SLEEP_SYSCLK_SPEC, 31> {
-        UPDATE_DIG_SYS_CLK_SEL_W::new(self)
+    pub fn update_dig_sys_clk_sel(&mut self) -> UPDATE_DIG_SYS_CLK_SEL_W<IMM_SLEEP_SYSCLK_SPEC> {
+        UPDATE_DIG_SYS_CLK_SEL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

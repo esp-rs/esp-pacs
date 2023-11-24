@@ -5,7 +5,7 @@ pub type W = crate::W<FRC1_LOAD_SPEC>;
 #[doc = "Field `frc1_load_value` reader - the load value into the counter"]
 pub type FRC1_LOAD_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `frc1_load_value` writer - the load value into the counter"]
-pub type FRC1_LOAD_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 23, O, u32>;
+pub type FRC1_LOAD_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 23, u32>;
 impl R {
     #[doc = "Bits 0:22 - the load value into the counter"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FRC1_LOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:22 - the load value into the counter"]
     #[inline(always)]
     #[must_use]
-    pub fn frc1_load_value(&mut self) -> FRC1_LOAD_VALUE_W<FRC1_LOAD_SPEC, 0> {
-        FRC1_LOAD_VALUE_W::new(self)
+    pub fn frc1_load_value(&mut self) -> FRC1_LOAD_VALUE_W<FRC1_LOAD_SPEC> {
+        FRC1_LOAD_VALUE_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -11,9 +11,9 @@ pub type TXFIFO_START_ADDR_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_END_ADDR` reader - This is the offset address of the last sent data, as described in I2C_NONFIFO_TX_THRES. The value refreshes when an I2C_TXFIFO_OVF_INT or I2C_TRANS_COMPLETE_INT interrupt is generated."]
 pub type TXFIFO_END_ADDR_R = crate::FieldReader;
 #[doc = "Field `RX_UPDATE` writer - Write 0 or 1 to I2C_RX_UPDATE to update the value of I2C_RXFIFO_END_ADDR and I2C_RXFIFO_START_ADDR."]
-pub type RX_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_UPDATE` writer - Write 0 or 1 to I2C_TX_UPDATE to update the value of I2C_TXFIFO_END_ADDR and I2C_TXFIFO_START_ADDR."]
-pub type TX_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_RW_POINT` reader - The received data in I2C slave mode."]
 pub type SLAVE_RW_POINT_R = crate::FieldReader;
 impl R {
@@ -73,21 +73,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FIFO_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 20 - Write 0 or 1 to I2C_RX_UPDATE to update the value of I2C_RXFIFO_END_ADDR and I2C_RXFIFO_START_ADDR."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_update(&mut self) -> RX_UPDATE_W<FIFO_ST_SPEC, 20> {
-        RX_UPDATE_W::new(self)
+    pub fn rx_update(&mut self) -> RX_UPDATE_W<FIFO_ST_SPEC> {
+        RX_UPDATE_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write 0 or 1 to I2C_TX_UPDATE to update the value of I2C_TXFIFO_END_ADDR and I2C_TXFIFO_START_ADDR."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_update(&mut self) -> TX_UPDATE_W<FIFO_ST_SPEC, 21> {
-        TX_UPDATE_W::new(self)
+    pub fn tx_update(&mut self) -> TX_UPDATE_W<FIFO_ST_SPEC> {
+        TX_UPDATE_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

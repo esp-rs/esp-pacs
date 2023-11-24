@@ -5,11 +5,11 @@ pub type W = crate::W<INT_ENA_RTC_SPEC>;
 #[doc = "Field `SUPER_WDT_INT_ENA` reader - need_des"]
 pub type SUPER_WDT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SUPER_WDT_INT_ENA` writer - need_des"]
-pub type SUPER_WDT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SUPER_WDT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_INT_ENA` reader - need_des"]
 pub type WDT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ENA` writer - need_des"]
-pub type WDT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_RTC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn super_wdt_int_ena(&mut self) -> SUPER_WDT_INT_ENA_W<INT_ENA_RTC_SPEC, 30> {
-        SUPER_WDT_INT_ENA_W::new(self)
+    pub fn super_wdt_int_ena(&mut self) -> SUPER_WDT_INT_ENA_W<INT_ENA_RTC_SPEC> {
+        SUPER_WDT_INT_ENA_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_RTC_SPEC, 31> {
-        WDT_INT_ENA_W::new(self)
+    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_RTC_SPEC> {
+        WDT_INT_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

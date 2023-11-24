@@ -5,11 +5,11 @@ pub type W = crate::W<SAR_IO_MUX_CONF_SPEC>;
 #[doc = "Field `IOMUX_RESET` reader - Reset IO MUX by software"]
 pub type IOMUX_RESET_R = crate::BitReader;
 #[doc = "Field `IOMUX_RESET` writer - Reset IO MUX by software"]
-pub type IOMUX_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IOMUX_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IOMUX_CLK_GATE_EN` reader - IO MUX clock gate enable bit"]
 pub type IOMUX_CLK_GATE_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_CLK_GATE_EN` writer - IO MUX clock gate enable bit"]
-pub type IOMUX_CLK_GATE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IOMUX_CLK_GATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_IO_MUX_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
     #[must_use]
-    pub fn iomux_reset(&mut self) -> IOMUX_RESET_W<SAR_IO_MUX_CONF_SPEC, 30> {
-        IOMUX_RESET_W::new(self)
+    pub fn iomux_reset(&mut self) -> IOMUX_RESET_W<SAR_IO_MUX_CONF_SPEC> {
+        IOMUX_RESET_W::new(self, 30)
     }
     #[doc = "Bit 31 - IO MUX clock gate enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn iomux_clk_gate_en(&mut self) -> IOMUX_CLK_GATE_EN_W<SAR_IO_MUX_CONF_SPEC, 31> {
-        IOMUX_CLK_GATE_EN_W::new(self)
+    pub fn iomux_clk_gate_en(&mut self) -> IOMUX_CLK_GATE_EN_W<SAR_IO_MUX_CONF_SPEC> {
+        IOMUX_CLK_GATE_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

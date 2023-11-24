@@ -5,15 +5,15 @@ pub type W = crate::W<ROM_FO_CTRL_SPEC>;
 #[doc = "Field `PRO_ROM_FO` reader - "]
 pub type PRO_ROM_FO_R = crate::BitReader;
 #[doc = "Field `PRO_ROM_FO` writer - "]
-pub type PRO_ROM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ROM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_ROM_FO` reader - "]
 pub type APP_ROM_FO_R = crate::BitReader;
 #[doc = "Field `APP_ROM_FO` writer - "]
-pub type APP_ROM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_ROM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SHARE_ROM_FO` reader - "]
 pub type SHARE_ROM_FO_R = crate::FieldReader;
 #[doc = "Field `SHARE_ROM_FO` writer - "]
-pub type SHARE_ROM_FO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SHARE_ROM_FO_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ROM_FO_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_rom_fo(&mut self) -> PRO_ROM_FO_W<ROM_FO_CTRL_SPEC, 0> {
-        PRO_ROM_FO_W::new(self)
+    pub fn pro_rom_fo(&mut self) -> PRO_ROM_FO_W<ROM_FO_CTRL_SPEC> {
+        PRO_ROM_FO_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn app_rom_fo(&mut self) -> APP_ROM_FO_W<ROM_FO_CTRL_SPEC, 1> {
-        APP_ROM_FO_W::new(self)
+    pub fn app_rom_fo(&mut self) -> APP_ROM_FO_W<ROM_FO_CTRL_SPEC> {
+        APP_ROM_FO_W::new(self, 1)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
     #[must_use]
-    pub fn share_rom_fo(&mut self) -> SHARE_ROM_FO_W<ROM_FO_CTRL_SPEC, 2> {
-        SHARE_ROM_FO_W::new(self)
+    pub fn share_rom_fo(&mut self) -> SHARE_ROM_FO_W<ROM_FO_CTRL_SPEC> {
+        SHARE_ROM_FO_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

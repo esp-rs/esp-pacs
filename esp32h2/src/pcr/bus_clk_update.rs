@@ -5,7 +5,7 @@ pub type W = crate::W<BUS_CLK_UPDATE_SPEC>;
 #[doc = "Field `BUS_CLOCK_UPDATE` reader - xxxx"]
 pub type BUS_CLOCK_UPDATE_R = crate::BitReader;
 #[doc = "Field `BUS_CLOCK_UPDATE` writer - xxxx"]
-pub type BUS_CLOCK_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUS_CLOCK_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BUS_CLK_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<BUS_CLK_UPDATE_SPEC, 0> {
-        BUS_CLOCK_UPDATE_W::new(self)
+    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<BUS_CLK_UPDATE_SPEC> {
+        BUS_CLOCK_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

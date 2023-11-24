@@ -1,9 +1,9 @@
 #[doc = "Register `INTR_CLR` writer"]
 pub type W = crate::W<INTR_CLR_SPEC>;
 #[doc = "Field `FIFO_OVERFLOW_INTR_CLR` writer - Set 1 clr fifo overflow interrupt"]
-pub type FIFO_OVERFLOW_INTR_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FIFO_OVERFLOW_INTR_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_FULL_INTR_CLR` writer - Set 1 clr mem full interrupt"]
-pub type MEM_FULL_INTR_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_FULL_INTR_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTR_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bit 0 - Set 1 clr fifo overflow interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_overflow_intr_clr(&mut self) -> FIFO_OVERFLOW_INTR_CLR_W<INTR_CLR_SPEC, 0> {
-        FIFO_OVERFLOW_INTR_CLR_W::new(self)
+    pub fn fifo_overflow_intr_clr(&mut self) -> FIFO_OVERFLOW_INTR_CLR_W<INTR_CLR_SPEC> {
+        FIFO_OVERFLOW_INTR_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 clr mem full interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_full_intr_clr(&mut self) -> MEM_FULL_INTR_CLR_W<INTR_CLR_SPEC, 1> {
-        MEM_FULL_INTR_CLR_W::new(self)
+    pub fn mem_full_intr_clr(&mut self) -> MEM_FULL_INTR_CLR_W<INTR_CLR_SPEC> {
+        MEM_FULL_INTR_CLR_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

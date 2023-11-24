@@ -5,7 +5,7 @@ pub type W = crate::W<ICACHE_LOCK_ADDR_SPEC>;
 #[doc = "Field `ICACHE_LOCK_ADDR` reader - The bits are used to configure the start virtual address for lock operations. It should be combined with ICACHE_LOCK_SIZE_REG."]
 pub type ICACHE_LOCK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `ICACHE_LOCK_ADDR` writer - The bits are used to configure the start virtual address for lock operations. It should be combined with ICACHE_LOCK_SIZE_REG."]
-pub type ICACHE_LOCK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type ICACHE_LOCK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for lock operations. It should be combined with ICACHE_LOCK_SIZE_REG."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_LOCK_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for lock operations. It should be combined with ICACHE_LOCK_SIZE_REG."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_lock_addr(&mut self) -> ICACHE_LOCK_ADDR_W<ICACHE_LOCK_ADDR_SPEC, 0> {
-        ICACHE_LOCK_ADDR_W::new(self)
+    pub fn icache_lock_addr(&mut self) -> ICACHE_LOCK_ADDR_W<ICACHE_LOCK_ADDR_SPEC> {
+        ICACHE_LOCK_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

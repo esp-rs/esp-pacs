@@ -5,7 +5,7 @@ pub type W = crate::W<REMAINDER_BIT_NUM_SPEC>;
 #[doc = "Field `REMAINDER_BIT_NUM` reader - Stores the Remainder Bit Number for the GCM operation."]
 pub type REMAINDER_BIT_NUM_R = crate::FieldReader;
 #[doc = "Field `REMAINDER_BIT_NUM` writer - Stores the Remainder Bit Number for the GCM operation."]
-pub type REMAINDER_BIT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type REMAINDER_BIT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - Stores the Remainder Bit Number for the GCM operation."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REMAINDER_BIT_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - Stores the Remainder Bit Number for the GCM operation."]
     #[inline(always)]
     #[must_use]
-    pub fn remainder_bit_num(&mut self) -> REMAINDER_BIT_NUM_W<REMAINDER_BIT_NUM_SPEC, 0> {
-        REMAINDER_BIT_NUM_W::new(self)
+    pub fn remainder_bit_num(&mut self) -> REMAINDER_BIT_NUM_W<REMAINDER_BIT_NUM_SPEC> {
+        REMAINDER_BIT_NUM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

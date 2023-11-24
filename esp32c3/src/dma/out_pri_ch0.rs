@@ -5,7 +5,7 @@ pub type W = crate::W<OUT_PRI_CH0_SPEC>;
 #[doc = "Field `TX_PRI` reader - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
 pub type TX_PRI_R = crate::FieldReader;
 #[doc = "Field `TX_PRI` writer - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
-pub type TX_PRI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TX_PRI_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_PRI_CH0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pri(&mut self) -> TX_PRI_W<OUT_PRI_CH0_SPEC, 0> {
-        TX_PRI_W::new(self)
+    pub fn tx_pri(&mut self) -> TX_PRI_W<OUT_PRI_CH0_SPEC> {
+        TX_PRI_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

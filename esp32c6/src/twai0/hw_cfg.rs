@@ -5,7 +5,7 @@ pub type W = crate::W<HW_CFG_SPEC>;
 #[doc = "Field `HW_STANDBY_EN` reader - Enable function that hardware control standby pin."]
 pub type HW_STANDBY_EN_R = crate::BitReader;
 #[doc = "Field `HW_STANDBY_EN` writer - Enable function that hardware control standby pin."]
-pub type HW_STANDBY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HW_STANDBY_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable function that hardware control standby pin."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HW_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable function that hardware control standby pin."]
     #[inline(always)]
     #[must_use]
-    pub fn hw_standby_en(&mut self) -> HW_STANDBY_EN_W<HW_CFG_SPEC, 0> {
-        HW_STANDBY_EN_W::new(self)
+    pub fn hw_standby_en(&mut self) -> HW_STANDBY_EN_W<HW_CFG_SPEC> {
+        HW_STANDBY_EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

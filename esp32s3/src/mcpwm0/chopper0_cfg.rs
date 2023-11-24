@@ -5,27 +5,27 @@ pub type W = crate::W<CHOPPER0_CFG_SPEC>;
 #[doc = "Field `CHOPPER0_EN` reader - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
 pub type CHOPPER0_EN_R = crate::BitReader;
 #[doc = "Field `CHOPPER0_EN` writer - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
-pub type CHOPPER0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHOPPER0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHOPPER0_PRESCALE` reader - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
 pub type CHOPPER0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CHOPPER0_PRESCALE` writer - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
-pub type CHOPPER0_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CHOPPER0_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CHOPPER0_DUTY` reader - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
 pub type CHOPPER0_DUTY_R = crate::FieldReader;
 #[doc = "Field `CHOPPER0_DUTY` writer - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
-pub type CHOPPER0_DUTY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CHOPPER0_DUTY_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CHOPPER0_OSHTWTH` reader - width of the fist pulse in number of periods of the carrier"]
 pub type CHOPPER0_OSHTWTH_R = crate::FieldReader;
 #[doc = "Field `CHOPPER0_OSHTWTH` writer - width of the fist pulse in number of periods of the carrier"]
-pub type CHOPPER0_OSHTWTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CHOPPER0_OSHTWTH_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CHOPPER0_OUT_INVERT` reader - when set, invert the output of PWM0A and PWM0B for this submodule"]
 pub type CHOPPER0_OUT_INVERT_R = crate::BitReader;
 #[doc = "Field `CHOPPER0_OUT_INVERT` writer - when set, invert the output of PWM0A and PWM0B for this submodule"]
-pub type CHOPPER0_OUT_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHOPPER0_OUT_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHOPPER0_IN_INVERT` reader - when set, invert the input of PWM0A and PWM0B for this submodule"]
 pub type CHOPPER0_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CHOPPER0_IN_INVERT` writer - when set, invert the input of PWM0A and PWM0B for this submodule"]
-pub type CHOPPER0_IN_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHOPPER0_IN_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CHOPPER0_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
     #[inline(always)]
     #[must_use]
-    pub fn chopper0_en(&mut self) -> CHOPPER0_EN_W<CHOPPER0_CFG_SPEC, 0> {
-        CHOPPER0_EN_W::new(self)
+    pub fn chopper0_en(&mut self) -> CHOPPER0_EN_W<CHOPPER0_CFG_SPEC> {
+        CHOPPER0_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
     #[inline(always)]
     #[must_use]
-    pub fn chopper0_prescale(&mut self) -> CHOPPER0_PRESCALE_W<CHOPPER0_CFG_SPEC, 1> {
-        CHOPPER0_PRESCALE_W::new(self)
+    pub fn chopper0_prescale(&mut self) -> CHOPPER0_PRESCALE_W<CHOPPER0_CFG_SPEC> {
+        CHOPPER0_PRESCALE_W::new(self, 1)
     }
     #[doc = "Bits 5:7 - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
     #[inline(always)]
     #[must_use]
-    pub fn chopper0_duty(&mut self) -> CHOPPER0_DUTY_W<CHOPPER0_CFG_SPEC, 5> {
-        CHOPPER0_DUTY_W::new(self)
+    pub fn chopper0_duty(&mut self) -> CHOPPER0_DUTY_W<CHOPPER0_CFG_SPEC> {
+        CHOPPER0_DUTY_W::new(self, 5)
     }
     #[doc = "Bits 8:11 - width of the fist pulse in number of periods of the carrier"]
     #[inline(always)]
     #[must_use]
-    pub fn chopper0_oshtwth(&mut self) -> CHOPPER0_OSHTWTH_W<CHOPPER0_CFG_SPEC, 8> {
-        CHOPPER0_OSHTWTH_W::new(self)
+    pub fn chopper0_oshtwth(&mut self) -> CHOPPER0_OSHTWTH_W<CHOPPER0_CFG_SPEC> {
+        CHOPPER0_OSHTWTH_W::new(self, 8)
     }
     #[doc = "Bit 12 - when set, invert the output of PWM0A and PWM0B for this submodule"]
     #[inline(always)]
     #[must_use]
-    pub fn chopper0_out_invert(&mut self) -> CHOPPER0_OUT_INVERT_W<CHOPPER0_CFG_SPEC, 12> {
-        CHOPPER0_OUT_INVERT_W::new(self)
+    pub fn chopper0_out_invert(&mut self) -> CHOPPER0_OUT_INVERT_W<CHOPPER0_CFG_SPEC> {
+        CHOPPER0_OUT_INVERT_W::new(self, 12)
     }
     #[doc = "Bit 13 - when set, invert the input of PWM0A and PWM0B for this submodule"]
     #[inline(always)]
     #[must_use]
-    pub fn chopper0_in_invert(&mut self) -> CHOPPER0_IN_INVERT_W<CHOPPER0_CFG_SPEC, 13> {
-        CHOPPER0_IN_INVERT_W::new(self)
+    pub fn chopper0_in_invert(&mut self) -> CHOPPER0_IN_INVERT_W<CHOPPER0_CFG_SPEC> {
+        CHOPPER0_IN_INVERT_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<CLK_CONF_FORCE_ON_SPEC>;
 #[doc = "Field `CLK_COEX_FO` reader - "]
 pub type CLK_COEX_FO_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_FO` writer - "]
-pub type CLK_COEX_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_COEX_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_I2C_MST_FO` reader - "]
 pub type CLK_I2C_MST_FO_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_FO` writer - "]
-pub type CLK_I2C_MST_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_I2C_MST_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_MEM_FO` reader - "]
 pub type CLK_FE_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_MEM_FO` writer - "]
-pub type CLK_FE_MEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_MEM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1"]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_FORCE_ON_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<CLK_CONF_FORCE_ON_SPEC, 1> {
-        CLK_COEX_FO_W::new(self)
+    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_COEX_FO_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<CLK_CONF_FORCE_ON_SPEC, 2> {
-        CLK_I2C_MST_FO_W::new(self)
+    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_I2C_MST_FO_W::new(self, 2)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_mem_fo(&mut self) -> CLK_FE_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 5> {
-        CLK_FE_MEM_FO_W::new(self)
+    pub fn clk_fe_mem_fo(&mut self) -> CLK_FE_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_FE_MEM_FO_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

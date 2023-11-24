@@ -5,7 +5,7 @@ pub type W = crate::W<DVBUSPULSE_SPEC>;
 #[doc = "Field `DVBUSPULSE` reader - "]
 pub type DVBUSPULSE_R = crate::FieldReader<u16>;
 #[doc = "Field `DVBUSPULSE` writer - "]
-pub type DVBUSPULSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type DVBUSPULSE_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DVBUSPULSE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn dvbuspulse(&mut self) -> DVBUSPULSE_W<DVBUSPULSE_SPEC, 0> {
-        DVBUSPULSE_W::new(self)
+    pub fn dvbuspulse(&mut self) -> DVBUSPULSE_W<DVBUSPULSE_SPEC> {
+        DVBUSPULSE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

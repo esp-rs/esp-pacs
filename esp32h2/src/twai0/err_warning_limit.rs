@@ -5,7 +5,7 @@ pub type W = crate::W<ERR_WARNING_LIMIT_SPEC>;
 #[doc = "Field `ERR_WARNING_LIMIT` reader - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
 pub type ERR_WARNING_LIMIT_R = crate::FieldReader;
 #[doc = "Field `ERR_WARNING_LIMIT` writer - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
-pub type ERR_WARNING_LIMIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ERR_WARNING_LIMIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ERR_WARNING_LIMIT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
     #[must_use]
-    pub fn err_warning_limit(&mut self) -> ERR_WARNING_LIMIT_W<ERR_WARNING_LIMIT_SPEC, 0> {
-        ERR_WARNING_LIMIT_W::new(self)
+    pub fn err_warning_limit(&mut self) -> ERR_WARNING_LIMIT_W<ERR_WARNING_LIMIT_SPEC> {
+        ERR_WARNING_LIMIT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

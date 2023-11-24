@@ -5,7 +5,7 @@ pub type W = crate::W<GEN1_TSTMP_B_SPEC>;
 #[doc = "Field `CMPR1_B` reader - PWM generator 1 time stamp B's shadow register"]
 pub type CMPR1_B_R = crate::FieldReader<u16>;
 #[doc = "Field `CMPR1_B` writer - PWM generator 1 time stamp B's shadow register"]
-pub type CMPR1_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CMPR1_B_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - PWM generator 1 time stamp B's shadow register"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GEN1_TSTMP_B_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - PWM generator 1 time stamp B's shadow register"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpr1_b(&mut self) -> CMPR1_B_W<GEN1_TSTMP_B_SPEC, 0> {
-        CMPR1_B_W::new(self)
+    pub fn cmpr1_b(&mut self) -> CMPR1_B_W<GEN1_TSTMP_B_SPEC> {
+        CMPR1_B_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

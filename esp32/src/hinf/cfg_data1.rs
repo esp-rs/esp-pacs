@@ -5,29 +5,29 @@ pub type W = crate::W<CFG_DATA1_SPEC>;
 #[doc = "Field `SDIO_ENABLE` reader - "]
 pub type SDIO_ENABLE_R = crate::BitReader;
 #[doc = "Field `SDIO_ENABLE` writer - "]
-pub type SDIO_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_IOREADY1` reader - "]
 pub type SDIO_IOREADY1_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY1` writer - "]
-pub type SDIO_IOREADY1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_IOREADY1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HIGHSPEED_ENABLE` reader - "]
 pub type HIGHSPEED_ENABLE_R = crate::BitReader;
 #[doc = "Field `HIGHSPEED_ENABLE` writer - "]
-pub type HIGHSPEED_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HIGHSPEED_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HIGHSPEED_MODE` reader - "]
 pub type HIGHSPEED_MODE_R = crate::BitReader;
 #[doc = "Field `SDIO_CD_ENABLE` reader - "]
 pub type SDIO_CD_ENABLE_R = crate::BitReader;
 #[doc = "Field `SDIO_CD_ENABLE` writer - "]
-pub type SDIO_CD_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_CD_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_IOREADY2` reader - "]
 pub type SDIO_IOREADY2_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY2` writer - "]
-pub type SDIO_IOREADY2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_IOREADY2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_INT_MASK` reader - "]
 pub type SDIO_INT_MASK_R = crate::BitReader;
 #[doc = "Field `SDIO_INT_MASK` writer - "]
-pub type SDIO_INT_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_INT_MASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IOENABLE2` reader - "]
 pub type IOENABLE2_R = crate::BitReader;
 #[doc = "Field `CD_DISABLE` reader - "]
@@ -41,17 +41,17 @@ pub type IOENABLE1_R = crate::BitReader;
 #[doc = "Field `SDIO20_CONF0` reader - "]
 pub type SDIO20_CONF0_R = crate::FieldReader;
 #[doc = "Field `SDIO20_CONF0` writer - "]
-pub type SDIO20_CONF0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SDIO20_CONF0_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SDIO_VER` reader - "]
 pub type SDIO_VER_R = crate::FieldReader<u16>;
 #[doc = "Field `SDIO_VER` writer - "]
-pub type SDIO_VER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SDIO_VER_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `FUNC2_EPS` reader - "]
 pub type FUNC2_EPS_R = crate::BitReader;
 #[doc = "Field `SDIO20_CONF1` reader - "]
 pub type SDIO20_CONF1_R = crate::FieldReader;
 #[doc = "Field `SDIO20_CONF1` writer - "]
-pub type SDIO20_CONF1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SDIO20_CONF1_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -184,63 +184,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CFG_DATA1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W<CFG_DATA1_SPEC, 0> {
-        SDIO_ENABLE_W::new(self)
+    pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W<CFG_DATA1_SPEC> {
+        SDIO_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W<CFG_DATA1_SPEC, 1> {
-        SDIO_IOREADY1_W::new(self)
+    pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W<CFG_DATA1_SPEC> {
+        SDIO_IOREADY1_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W<CFG_DATA1_SPEC, 2> {
-        HIGHSPEED_ENABLE_W::new(self)
+    pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W<CFG_DATA1_SPEC> {
+        HIGHSPEED_ENABLE_W::new(self, 2)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W<CFG_DATA1_SPEC, 4> {
-        SDIO_CD_ENABLE_W::new(self)
+    pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W<CFG_DATA1_SPEC> {
+        SDIO_CD_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W<CFG_DATA1_SPEC, 5> {
-        SDIO_IOREADY2_W::new(self)
+    pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W<CFG_DATA1_SPEC> {
+        SDIO_IOREADY2_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<CFG_DATA1_SPEC, 6> {
-        SDIO_INT_MASK_W::new(self)
+    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<CFG_DATA1_SPEC> {
+        SDIO_INT_MASK_W::new(self, 6)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio20_conf0(&mut self) -> SDIO20_CONF0_W<CFG_DATA1_SPEC, 12> {
-        SDIO20_CONF0_W::new(self)
+    pub fn sdio20_conf0(&mut self) -> SDIO20_CONF0_W<CFG_DATA1_SPEC> {
+        SDIO20_CONF0_W::new(self, 12)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_ver(&mut self) -> SDIO_VER_W<CFG_DATA1_SPEC, 16> {
-        SDIO_VER_W::new(self)
+    pub fn sdio_ver(&mut self) -> SDIO_VER_W<CFG_DATA1_SPEC> {
+        SDIO_VER_W::new(self, 16)
     }
     #[doc = "Bits 29:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio20_conf1(&mut self) -> SDIO20_CONF1_W<CFG_DATA1_SPEC, 29> {
-        SDIO20_CONF1_W::new(self)
+    pub fn sdio20_conf1(&mut self) -> SDIO20_CONF1_W<CFG_DATA1_SPEC> {
+        SDIO20_CONF1_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

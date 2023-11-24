@@ -5,59 +5,59 @@ pub type W = crate::W<DMA_CONF_SPEC>;
 #[doc = "Field `IN_RST` reader - The bit is used to reset in dma fsm and in data fifo pointer."]
 pub type IN_RST_R = crate::BitReader;
 #[doc = "Field `IN_RST` writer - The bit is used to reset in dma fsm and in data fifo pointer."]
-pub type IN_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_RST` reader - The bit is used to reset out dma fsm and out data fifo pointer."]
 pub type OUT_RST_R = crate::BitReader;
 #[doc = "Field `OUT_RST` writer - The bit is used to reset out dma fsm and out data fifo pointer."]
-pub type OUT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBM_FIFO_RST` reader - reset spi dma ahb master fifo pointer."]
 pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - reset spi dma ahb master fifo pointer."]
-pub type AHBM_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBM_FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBM_RST` reader - reset spi dma ahb master."]
 pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - reset spi dma ahb master."]
-pub type AHBM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_LOOP_TEST` reader - Set bit to test in link."]
 pub type IN_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `IN_LOOP_TEST` writer - Set bit to test in link."]
-pub type IN_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_LOOP_TEST` reader - Set bit to test out link."]
 pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - Set bit to test out link."]
-pub type OUT_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - when the link is empty jump to next automatically."]
 pub type OUT_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - when the link is empty jump to next automatically."]
-pub type OUT_AUTO_WRBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_AUTO_WRBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EOF_MODE` reader - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
 pub type OUT_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_MODE` writer - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
-pub type OUT_EOF_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_EOF_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - read descriptor use burst mode when read data for memory."]
 pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - read descriptor use burst mode when read data for memory."]
-pub type OUTDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INDSCR_BURST_EN` reader - read descriptor use burst mode when write data to memory."]
 pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - read descriptor use burst mode when write data to memory."]
-pub type INDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - spi dma read data from memory in burst mode."]
 pub type OUT_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - spi dma read data from memory in burst mode."]
-pub type OUT_DATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_DATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RX_STOP` reader - spi dma read data stop when in continue tx/rx mode."]
 pub type DMA_RX_STOP_R = crate::BitReader;
 #[doc = "Field `DMA_RX_STOP` writer - spi dma read data stop when in continue tx/rx mode."]
-pub type DMA_RX_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RX_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_TX_STOP` reader - spi dma write data stop when in continue tx/rx mode."]
 pub type DMA_TX_STOP_R = crate::BitReader;
 #[doc = "Field `DMA_TX_STOP` writer - spi dma write data stop when in continue tx/rx mode."]
-pub type DMA_TX_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_TX_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_CONTINUE` reader - spi dma continue tx/rx data."]
 pub type DMA_CONTINUE_R = crate::BitReader;
 #[doc = "Field `DMA_CONTINUE` writer - spi dma continue tx/rx data."]
-pub type DMA_CONTINUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_CONTINUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
@@ -181,93 +181,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
     #[must_use]
-    pub fn in_rst(&mut self) -> IN_RST_W<DMA_CONF_SPEC, 2> {
-        IN_RST_W::new(self)
+    pub fn in_rst(&mut self) -> IN_RST_W<DMA_CONF_SPEC> {
+        IN_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to reset out dma fsm and out data fifo pointer."]
     #[inline(always)]
     #[must_use]
-    pub fn out_rst(&mut self) -> OUT_RST_W<DMA_CONF_SPEC, 3> {
-        OUT_RST_W::new(self)
+    pub fn out_rst(&mut self) -> OUT_RST_W<DMA_CONF_SPEC> {
+        OUT_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - reset spi dma ahb master fifo pointer."]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<DMA_CONF_SPEC, 4> {
-        AHBM_FIFO_RST_W::new(self)
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<DMA_CONF_SPEC> {
+        AHBM_FIFO_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - reset spi dma ahb master."]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<DMA_CONF_SPEC, 5> {
-        AHBM_RST_W::new(self)
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<DMA_CONF_SPEC> {
+        AHBM_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set bit to test in link."]
     #[inline(always)]
     #[must_use]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<DMA_CONF_SPEC, 6> {
-        IN_LOOP_TEST_W::new(self)
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<DMA_CONF_SPEC> {
+        IN_LOOP_TEST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set bit to test out link."]
     #[inline(always)]
     #[must_use]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<DMA_CONF_SPEC, 7> {
-        OUT_LOOP_TEST_W::new(self)
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<DMA_CONF_SPEC> {
+        OUT_LOOP_TEST_W::new(self, 7)
     }
     #[doc = "Bit 8 - when the link is empty jump to next automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<DMA_CONF_SPEC, 8> {
-        OUT_AUTO_WRBACK_W::new(self)
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<DMA_CONF_SPEC> {
+        OUT_AUTO_WRBACK_W::new(self, 8)
     }
     #[doc = "Bit 9 - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<DMA_CONF_SPEC, 9> {
-        OUT_EOF_MODE_W::new(self)
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<DMA_CONF_SPEC> {
+        OUT_EOF_MODE_W::new(self, 9)
     }
     #[doc = "Bit 10 - read descriptor use burst mode when read data for memory."]
     #[inline(always)]
     #[must_use]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<DMA_CONF_SPEC, 10> {
-        OUTDSCR_BURST_EN_W::new(self)
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<DMA_CONF_SPEC> {
+        OUTDSCR_BURST_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - read descriptor use burst mode when write data to memory."]
     #[inline(always)]
     #[must_use]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<DMA_CONF_SPEC, 11> {
-        INDSCR_BURST_EN_W::new(self)
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<DMA_CONF_SPEC> {
+        INDSCR_BURST_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - spi dma read data from memory in burst mode."]
     #[inline(always)]
     #[must_use]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<DMA_CONF_SPEC, 12> {
-        OUT_DATA_BURST_EN_W::new(self)
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<DMA_CONF_SPEC> {
+        OUT_DATA_BURST_EN_W::new(self, 12)
     }
     #[doc = "Bit 14 - spi dma read data stop when in continue tx/rx mode."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W<DMA_CONF_SPEC, 14> {
-        DMA_RX_STOP_W::new(self)
+    pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W<DMA_CONF_SPEC> {
+        DMA_RX_STOP_W::new(self, 14)
     }
     #[doc = "Bit 15 - spi dma write data stop when in continue tx/rx mode."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W<DMA_CONF_SPEC, 15> {
-        DMA_TX_STOP_W::new(self)
+    pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W<DMA_CONF_SPEC> {
+        DMA_TX_STOP_W::new(self, 15)
     }
     #[doc = "Bit 16 - spi dma continue tx/rx data."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<DMA_CONF_SPEC, 16> {
-        DMA_CONTINUE_W::new(self)
+    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<DMA_CONF_SPEC> {
+        DMA_CONTINUE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

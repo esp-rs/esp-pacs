@@ -5,7 +5,7 @@ pub type W = crate::W<TX_DSCR_CONF_SPEC>;
 #[doc = "Field `WR_RETRY_THRESHOLD` reader - "]
 pub type WR_RETRY_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `WR_RETRY_THRESHOLD` writer - "]
-pub type WR_RETRY_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type WR_RETRY_THRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_DSCR_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
     #[must_use]
-    pub fn wr_retry_threshold(&mut self) -> WR_RETRY_THRESHOLD_W<TX_DSCR_CONF_SPEC, 0> {
-        WR_RETRY_THRESHOLD_W::new(self)
+    pub fn wr_retry_threshold(&mut self) -> WR_RETRY_THRESHOLD_W<TX_DSCR_CONF_SPEC> {
+        WR_RETRY_THRESHOLD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

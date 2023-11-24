@@ -23,7 +23,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_TX_I_3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "TX Copy DMA status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_tx_i_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

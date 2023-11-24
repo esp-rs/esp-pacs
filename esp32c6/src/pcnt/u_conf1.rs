@@ -5,11 +5,11 @@ pub type W = crate::W<U_CONF1_SPEC>;
 #[doc = "Field `CNT_THRES0` reader - This register is used to configure the thres0 value for unit %s."]
 pub type CNT_THRES0_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT_THRES0` writer - This register is used to configure the thres0 value for unit %s."]
-pub type CNT_THRES0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CNT_THRES0_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `CNT_THRES1` reader - This register is used to configure the thres1 value for unit %s."]
 pub type CNT_THRES1_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT_THRES1` writer - This register is used to configure the thres1 value for unit %s."]
-pub type CNT_THRES1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CNT_THRES1_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the thres0 value for unit %s."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<U_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the thres0 value for unit %s."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thres0(&mut self) -> CNT_THRES0_W<U_CONF1_SPEC, 0> {
-        CNT_THRES0_W::new(self)
+    pub fn cnt_thres0(&mut self) -> CNT_THRES0_W<U_CONF1_SPEC> {
+        CNT_THRES0_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - This register is used to configure the thres1 value for unit %s."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thres1(&mut self) -> CNT_THRES1_W<U_CONF1_SPEC, 16> {
-        CNT_THRES1_W::new(self)
+    pub fn cnt_thres1(&mut self) -> CNT_THRES1_W<U_CONF1_SPEC> {
+        CNT_THRES1_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

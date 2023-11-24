@@ -3,11 +3,11 @@ pub type R = crate::R<TOUCH_APPROACH_SPEC>;
 #[doc = "Register `TOUCH_APPROACH` writer"]
 pub type W = crate::W<TOUCH_APPROACH_SPEC>;
 #[doc = "Field `TOUCH_SLP_CHANNEL_CLR` writer - Clear touch sleep channel."]
-pub type TOUCH_SLP_CHANNEL_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_SLP_CHANNEL_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEAS_TIME` reader - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
 pub type MEAS_TIME_R = crate::FieldReader;
 #[doc = "Field `MEAS_TIME` writer - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
-pub type MEAS_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MEAS_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 24:31 - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
     #[inline(always)]
@@ -26,21 +26,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_APPROACH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 23 - Clear touch sleep channel."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_channel_clr(&mut self) -> TOUCH_SLP_CHANNEL_CLR_W<TOUCH_APPROACH_SPEC, 23> {
-        TOUCH_SLP_CHANNEL_CLR_W::new(self)
+    pub fn touch_slp_channel_clr(&mut self) -> TOUCH_SLP_CHANNEL_CLR_W<TOUCH_APPROACH_SPEC> {
+        TOUCH_SLP_CHANNEL_CLR_W::new(self, 23)
     }
     #[doc = "Bits 24:31 - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
     #[inline(always)]
     #[must_use]
-    pub fn meas_time(&mut self) -> MEAS_TIME_W<TOUCH_APPROACH_SPEC, 24> {
-        MEAS_TIME_W::new(self)
+    pub fn meas_time(&mut self) -> MEAS_TIME_W<TOUCH_APPROACH_SPEC> {
+        MEAS_TIME_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

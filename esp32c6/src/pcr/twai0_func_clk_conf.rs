@@ -5,11 +5,11 @@ pub type W = crate::W<TWAI0_FUNC_CLK_CONF_SPEC>;
 #[doc = "Field `TWAI0_FUNC_CLK_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
 pub type TWAI0_FUNC_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `TWAI0_FUNC_CLK_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
-pub type TWAI0_FUNC_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWAI0_FUNC_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TWAI0_FUNC_CLK_EN` reader - Set 1 to enable twai0 function clock"]
 pub type TWAI0_FUNC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TWAI0_FUNC_CLK_EN` writer - Set 1 to enable twai0 function clock"]
-pub type TWAI0_FUNC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWAI0_FUNC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 20 - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TWAI0_FUNC_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 20 - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
     #[inline(always)]
     #[must_use]
-    pub fn twai0_func_clk_sel(&mut self) -> TWAI0_FUNC_CLK_SEL_W<TWAI0_FUNC_CLK_CONF_SPEC, 20> {
-        TWAI0_FUNC_CLK_SEL_W::new(self)
+    pub fn twai0_func_clk_sel(&mut self) -> TWAI0_FUNC_CLK_SEL_W<TWAI0_FUNC_CLK_CONF_SPEC> {
+        TWAI0_FUNC_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable twai0 function clock"]
     #[inline(always)]
     #[must_use]
-    pub fn twai0_func_clk_en(&mut self) -> TWAI0_FUNC_CLK_EN_W<TWAI0_FUNC_CLK_CONF_SPEC, 22> {
-        TWAI0_FUNC_CLK_EN_W::new(self)
+    pub fn twai0_func_clk_en(&mut self) -> TWAI0_FUNC_CLK_EN_W<TWAI0_FUNC_CLK_CONF_SPEC> {
+        TWAI0_FUNC_CLK_EN_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

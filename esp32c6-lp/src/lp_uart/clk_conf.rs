@@ -5,43 +5,43 @@ pub type W = crate::W<CLK_CONF_SPEC>;
 #[doc = "Field `SCLK_DIV_B` reader - The denominator of the frequency divider factor."]
 pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - The denominator of the frequency divider factor."]
-pub type SCLK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SCLK_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SCLK_DIV_A` reader - The numerator of the frequency divider factor."]
 pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - The numerator of the frequency divider factor."]
-pub type SCLK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SCLK_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SCLK_DIV_NUM` reader - The integral part of the frequency divider factor."]
 pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - The integral part of the frequency divider factor."]
-pub type SCLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SCLK_SEL` reader - UART clock source select. 1: 80Mhz. 2: 8Mhz. 3: XTAL."]
 pub type SCLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SCLK_SEL` writer - UART clock source select. 1: 80Mhz. 2: 8Mhz. 3: XTAL."]
-pub type SCLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SCLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SCLK_EN` reader - Set this bit to enable UART Tx/Rx clock."]
 pub type SCLK_EN_R = crate::BitReader;
 #[doc = "Field `SCLK_EN` writer - Set this bit to enable UART Tx/Rx clock."]
-pub type SCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_CORE` reader - Write 1 then write 0 to this bit to reset UART Tx/Rx."]
 pub type RST_CORE_R = crate::BitReader;
 #[doc = "Field `RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Tx/Rx."]
-pub type RST_CORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_SCLK_EN` reader - Set this bit to enable UART Tx clock."]
 pub type TX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `TX_SCLK_EN` writer - Set this bit to enable UART Tx clock."]
-pub type TX_SCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_SCLK_EN` reader - Set this bit to enable UART Rx clock."]
 pub type RX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `RX_SCLK_EN` writer - Set this bit to enable UART Rx clock."]
-pub type RX_SCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_RST_CORE` reader - Write 1 then write 0 to this bit to reset UART Tx."]
 pub type TX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `TX_RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Tx."]
-pub type TX_RST_CORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_RST_CORE` reader - Write 1 then write 0 to this bit to reset UART Rx."]
 pub type RX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `RX_RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Rx."]
-pub type RX_RST_CORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor."]
     #[inline(always)]
@@ -117,71 +117,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC, 0> {
-        SCLK_DIV_B_W::new(self)
+    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC> {
+        SCLK_DIV_B_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC, 6> {
-        SCLK_DIV_A_W::new(self)
+    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC> {
+        SCLK_DIV_A_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC, 12> {
-        SCLK_DIV_NUM_W::new(self)
+    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC> {
+        SCLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - UART clock source select. 1: 80Mhz. 2: 8Mhz. 3: XTAL."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC, 20> {
-        SCLK_SEL_W::new(self)
+    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC> {
+        SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set this bit to enable UART Tx/Rx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC, 22> {
-        SCLK_EN_W::new(self)
+    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC> {
+        SCLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Write 1 then write 0 to this bit to reset UART Tx/Rx."]
     #[inline(always)]
     #[must_use]
-    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC, 23> {
-        RST_CORE_W::new(self)
+    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC> {
+        RST_CORE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<CLK_CONF_SPEC, 24> {
-        TX_SCLK_EN_W::new(self)
+    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<CLK_CONF_SPEC> {
+        TX_SCLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to enable UART Rx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_sclk_en(&mut self) -> RX_SCLK_EN_W<CLK_CONF_SPEC, 25> {
-        RX_SCLK_EN_W::new(self)
+    pub fn rx_sclk_en(&mut self) -> RX_SCLK_EN_W<CLK_CONF_SPEC> {
+        RX_SCLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write 1 then write 0 to this bit to reset UART Tx."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<CLK_CONF_SPEC, 26> {
-        TX_RST_CORE_W::new(self)
+    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<CLK_CONF_SPEC> {
+        TX_RST_CORE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Write 1 then write 0 to this bit to reset UART Rx."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_rst_core(&mut self) -> RX_RST_CORE_W<CLK_CONF_SPEC, 27> {
-        RX_RST_CORE_W::new(self)
+    pub fn rx_rst_core(&mut self) -> RX_RST_CORE_W<CLK_CONF_SPEC> {
+        RX_RST_CORE_W::new(self, 27)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

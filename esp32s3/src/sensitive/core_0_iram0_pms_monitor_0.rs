@@ -5,7 +5,7 @@ pub type W = crate::W<CORE_0_IRAM0_PMS_MONITOR_0_SPEC>;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_LOCK` reader - Set 1 to lock core0 iram0 permission monitor register"]
 pub type CORE_0_IRAM0_PMS_MONITOR_LOCK_R = crate::BitReader;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_LOCK` writer - Set 1 to lock core0 iram0 permission monitor register"]
-pub type CORE_0_IRAM0_PMS_MONITOR_LOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_IRAM0_PMS_MONITOR_LOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock core0 iram0 permission monitor register"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_IRAM0_PMS_MONITOR_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn core_0_iram0_pms_monitor_lock(
         &mut self,
-    ) -> CORE_0_IRAM0_PMS_MONITOR_LOCK_W<CORE_0_IRAM0_PMS_MONITOR_0_SPEC, 0> {
-        CORE_0_IRAM0_PMS_MONITOR_LOCK_W::new(self)
+    ) -> CORE_0_IRAM0_PMS_MONITOR_LOCK_W<CORE_0_IRAM0_PMS_MONITOR_0_SPEC> {
+        CORE_0_IRAM0_PMS_MONITOR_LOCK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,31 +5,31 @@ pub type W = crate::W<GEN0_FORCE_SPEC>;
 #[doc = "Field `GEN0_CNTUFORCE_UPMETHOD` reader - "]
 pub type GEN0_CNTUFORCE_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN0_CNTUFORCE_UPMETHOD` writer - "]
-pub type GEN0_CNTUFORCE_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type GEN0_CNTUFORCE_UPMETHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `GEN0_A_CNTUFORCE_MODE` reader - "]
 pub type GEN0_A_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_A_CNTUFORCE_MODE` writer - "]
-pub type GEN0_A_CNTUFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_A_CNTUFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `GEN0_B_CNTUFORCE_MODE` reader - "]
 pub type GEN0_B_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_B_CNTUFORCE_MODE` writer - "]
-pub type GEN0_B_CNTUFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_B_CNTUFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `GEN0_A_NCIFORCE` reader - "]
 pub type GEN0_A_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN0_A_NCIFORCE` writer - "]
-pub type GEN0_A_NCIFORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GEN0_A_NCIFORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GEN0_A_NCIFORCE_MODE` reader - "]
 pub type GEN0_A_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_A_NCIFORCE_MODE` writer - "]
-pub type GEN0_A_NCIFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_A_NCIFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `GEN0_B_NCIFORCE` reader - "]
 pub type GEN0_B_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN0_B_NCIFORCE` writer - "]
-pub type GEN0_B_NCIFORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GEN0_B_NCIFORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GEN0_B_NCIFORCE_MODE` reader - "]
 pub type GEN0_B_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_B_NCIFORCE_MODE` writer - "]
-pub type GEN0_B_NCIFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_B_NCIFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -105,51 +105,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GEN0_FORCE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_cntuforce_upmethod(&mut self) -> GEN0_CNTUFORCE_UPMETHOD_W<GEN0_FORCE_SPEC, 0> {
-        GEN0_CNTUFORCE_UPMETHOD_W::new(self)
+    pub fn gen0_cntuforce_upmethod(&mut self) -> GEN0_CNTUFORCE_UPMETHOD_W<GEN0_FORCE_SPEC> {
+        GEN0_CNTUFORCE_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_a_cntuforce_mode(&mut self) -> GEN0_A_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC, 6> {
-        GEN0_A_CNTUFORCE_MODE_W::new(self)
+    pub fn gen0_a_cntuforce_mode(&mut self) -> GEN0_A_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_A_CNTUFORCE_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_b_cntuforce_mode(&mut self) -> GEN0_B_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC, 8> {
-        GEN0_B_CNTUFORCE_MODE_W::new(self)
+    pub fn gen0_b_cntuforce_mode(&mut self) -> GEN0_B_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_B_CNTUFORCE_MODE_W::new(self, 8)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_a_nciforce(&mut self) -> GEN0_A_NCIFORCE_W<GEN0_FORCE_SPEC, 10> {
-        GEN0_A_NCIFORCE_W::new(self)
+    pub fn gen0_a_nciforce(&mut self) -> GEN0_A_NCIFORCE_W<GEN0_FORCE_SPEC> {
+        GEN0_A_NCIFORCE_W::new(self, 10)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_a_nciforce_mode(&mut self) -> GEN0_A_NCIFORCE_MODE_W<GEN0_FORCE_SPEC, 11> {
-        GEN0_A_NCIFORCE_MODE_W::new(self)
+    pub fn gen0_a_nciforce_mode(&mut self) -> GEN0_A_NCIFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_A_NCIFORCE_MODE_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_b_nciforce(&mut self) -> GEN0_B_NCIFORCE_W<GEN0_FORCE_SPEC, 13> {
-        GEN0_B_NCIFORCE_W::new(self)
+    pub fn gen0_b_nciforce(&mut self) -> GEN0_B_NCIFORCE_W<GEN0_FORCE_SPEC> {
+        GEN0_B_NCIFORCE_W::new(self, 13)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_b_nciforce_mode(&mut self) -> GEN0_B_NCIFORCE_MODE_W<GEN0_FORCE_SPEC, 14> {
-        GEN0_B_NCIFORCE_MODE_W::new(self)
+    pub fn gen0_b_nciforce_mode(&mut self) -> GEN0_B_NCIFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_B_NCIFORCE_MODE_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

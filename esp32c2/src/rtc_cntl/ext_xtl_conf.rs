@@ -5,11 +5,11 @@ pub type W = crate::W<EXT_XTL_CONF_SPEC>;
 #[doc = "Field `XTL_EXT_CTR_LV` reader - 0: power down XTAL at high level"]
 pub type XTL_EXT_CTR_LV_R = crate::BitReader;
 #[doc = "Field `XTL_EXT_CTR_LV` writer - 0: power down XTAL at high level"]
-pub type XTL_EXT_CTR_LV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XTL_EXT_CTR_LV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XTL_EXT_CTR_EN` reader - Need add desc"]
 pub type XTL_EXT_CTR_EN_R = crate::BitReader;
 #[doc = "Field `XTL_EXT_CTR_EN` writer - Need add desc"]
-pub type XTL_EXT_CTR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XTL_EXT_CTR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - 0: power down XTAL at high level"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXT_XTL_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - 0: power down XTAL at high level"]
     #[inline(always)]
     #[must_use]
-    pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<EXT_XTL_CONF_SPEC, 30> {
-        XTL_EXT_CTR_LV_W::new(self)
+    pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<EXT_XTL_CONF_SPEC> {
+        XTL_EXT_CTR_LV_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<EXT_XTL_CONF_SPEC, 31> {
-        XTL_EXT_CTR_EN_W::new(self)
+    pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<EXT_XTL_CONF_SPEC> {
+        XTL_EXT_CTR_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

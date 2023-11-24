@@ -5,7 +5,7 @@ pub type W = crate::W<DCACHE_OCCUPY_CTRL_SPEC>;
 #[doc = "Field `DCACHE_OCCUPY_ENA` reader - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
 pub type DCACHE_OCCUPY_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_OCCUPY_ENA` writer - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
-pub type DCACHE_OCCUPY_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_OCCUPY_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_OCCUPY_DONE` reader - The bit is used to indicate occupy operation is finished."]
 pub type DCACHE_OCCUPY_DONE_R = crate::BitReader;
 impl R {
@@ -38,15 +38,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCACHE_OCCUPY_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_occupy_ena(&mut self) -> DCACHE_OCCUPY_ENA_W<DCACHE_OCCUPY_CTRL_SPEC, 0> {
-        DCACHE_OCCUPY_ENA_W::new(self)
+    pub fn dcache_occupy_ena(&mut self) -> DCACHE_OCCUPY_ENA_W<DCACHE_OCCUPY_CTRL_SPEC> {
+        DCACHE_OCCUPY_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

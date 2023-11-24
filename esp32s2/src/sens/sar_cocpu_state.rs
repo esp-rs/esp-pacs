@@ -3,7 +3,7 @@ pub type R = crate::R<SAR_COCPU_STATE_SPEC>;
 #[doc = "Register `SAR_COCPU_STATE` writer"]
 pub type W = crate::W<SAR_COCPU_STATE_SPEC>;
 #[doc = "Field `COCPU_DBG_TRIGGER` writer - Trigger ULP-RISCV debug registers"]
-pub type COCPU_DBG_TRIGGER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_DBG_TRIGGER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COCPU_CLK_EN` reader - Check ULP-RISCV whether clk on"]
 pub type COCPU_CLK_EN_R = crate::BitReader;
 #[doc = "Field `COCPU_RESET_N` reader - Check ULP-RISCV whether in reset state"]
@@ -65,15 +65,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_STATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 25 - Trigger ULP-RISCV debug registers"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_dbg_trigger(&mut self) -> COCPU_DBG_TRIGGER_W<SAR_COCPU_STATE_SPEC, 25> {
-        COCPU_DBG_TRIGGER_W::new(self)
+    pub fn cocpu_dbg_trigger(&mut self) -> COCPU_DBG_TRIGGER_W<SAR_COCPU_STATE_SPEC> {
+        COCPU_DBG_TRIGGER_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<SCL_HIGH_PERIOD_SPEC>;
 #[doc = "Field `SCL_HIGH_PERIOD` reader - This register is used to configure the clock num during SCL is low level."]
 pub type SCL_HIGH_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `SCL_HIGH_PERIOD` writer - This register is used to configure the clock num during SCL is low level."]
-pub type SCL_HIGH_PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type SCL_HIGH_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
     #[doc = "Bits 0:13 - This register is used to configure the clock num during SCL is low level."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCL_HIGH_PERIOD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - This register is used to configure the clock num during SCL is low level."]
     #[inline(always)]
     #[must_use]
-    pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W<SCL_HIGH_PERIOD_SPEC, 0> {
-        SCL_HIGH_PERIOD_W::new(self)
+    pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W<SCL_HIGH_PERIOD_SPEC> {
+        SCL_HIGH_PERIOD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

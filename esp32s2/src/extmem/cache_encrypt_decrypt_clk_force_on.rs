@@ -5,16 +5,15 @@ pub type W = crate::W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC>;
 #[doc = "Field `CLK_FORCE_ON_DB_ENCRYPT` reader - The bit is used to close clock gating of encrypt clock. 1: close gating, 0: open clock gating."]
 pub type CLK_FORCE_ON_DB_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `CLK_FORCE_ON_DB_ENCRYPT` writer - The bit is used to close clock gating of encrypt clock. 1: close gating, 0: open clock gating."]
-pub type CLK_FORCE_ON_DB_ENCRYPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FORCE_ON_DB_ENCRYPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FORCE_ON_G0CB_DECRYPT` reader - The bit is used to close clock gating of decrypt clock. 1: close gating, 0: open clock gating."]
 pub type CLK_FORCE_ON_G0CB_DECRYPT_R = crate::BitReader;
 #[doc = "Field `CLK_FORCE_ON_G0CB_DECRYPT` writer - The bit is used to close clock gating of decrypt clock. 1: close gating, 0: open clock gating."]
-pub type CLK_FORCE_ON_G0CB_DECRYPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FORCE_ON_G0CB_DECRYPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT` reader - The bit is used to close clock gating of encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
 pub type CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R = crate::BitReader;
 #[doc = "Field `CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT` writer - The bit is used to close clock gating of encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
-pub type CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O>;
+pub type CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to close clock gating of encrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
@@ -56,7 +55,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -65,24 +64,24 @@ impl W {
     #[must_use]
     pub fn clk_force_on_db_encrypt(
         &mut self,
-    ) -> CLK_FORCE_ON_DB_ENCRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC, 0> {
-        CLK_FORCE_ON_DB_ENCRYPT_W::new(self)
+    ) -> CLK_FORCE_ON_DB_ENCRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
+        CLK_FORCE_ON_DB_ENCRYPT_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to close clock gating of decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     #[must_use]
     pub fn clk_force_on_g0cb_decrypt(
         &mut self,
-    ) -> CLK_FORCE_ON_G0CB_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC, 1> {
-        CLK_FORCE_ON_G0CB_DECRYPT_W::new(self)
+    ) -> CLK_FORCE_ON_G0CB_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
+        CLK_FORCE_ON_G0CB_DECRYPT_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to close clock gating of encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     #[must_use]
     pub fn clk_force_on_automatic_encrypt_decrypt(
         &mut self,
-    ) -> CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC, 2> {
-        CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W::new(self)
+    ) -> CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
+        CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

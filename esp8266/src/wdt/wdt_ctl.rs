@@ -5,31 +5,31 @@ pub type W = crate::W<WDT_CTL_SPEC>;
 #[doc = "Field `Register` reader - "]
 pub type REGISTER_R = crate::FieldReader<u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type REGISTER_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[doc = "Field `enable` reader - Enable the watchdog timer."]
 pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `enable` writer - Enable the watchdog timer."]
-pub type ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `stage_1_no_reset` reader - When set to 1, and running in two-stage mode, it turns the watchdog into a single shot timer that doesn't reset the device."]
 pub type STAGE_1_NO_RESET_R = crate::BitReader;
 #[doc = "Field `stage_1_no_reset` writer - When set to 1, and running in two-stage mode, it turns the watchdog into a single shot timer that doesn't reset the device."]
-pub type STAGE_1_NO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STAGE_1_NO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `stage_1_disable` reader - Set to 1 to disable the stage 1 of the watchdog timer"]
 pub type STAGE_1_DISABLE_R = crate::BitReader;
 #[doc = "Field `stage_1_disable` writer - Set to 1 to disable the stage 1 of the watchdog timer"]
-pub type STAGE_1_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STAGE_1_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `unknown_3` reader - "]
 pub type UNKNOWN_3_R = crate::BitReader;
 #[doc = "Field `unknown_3` writer - "]
-pub type UNKNOWN_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UNKNOWN_3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `unknown_4` reader - "]
 pub type UNKNOWN_4_R = crate::BitReader;
 #[doc = "Field `unknown_4` writer - "]
-pub type UNKNOWN_4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UNKNOWN_4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `unknown_5` reader - "]
 pub type UNKNOWN_5_R = crate::BitReader;
 #[doc = "Field `unknown_5` writer - "]
-pub type UNKNOWN_5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UNKNOWN_5_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -90,53 +90,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDT_CTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn register(&mut self) -> REGISTER_W<WDT_CTL_SPEC, 0> {
-        REGISTER_W::new(self)
+    pub fn register(&mut self) -> REGISTER_W<WDT_CTL_SPEC> {
+        REGISTER_W::new(self, 0)
     }
     #[doc = "Bit 0 - Enable the watchdog timer."]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<WDT_CTL_SPEC, 0> {
-        ENABLE_W::new(self)
+    pub fn enable(&mut self) -> ENABLE_W<WDT_CTL_SPEC> {
+        ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - When set to 1, and running in two-stage mode, it turns the watchdog into a single shot timer that doesn't reset the device."]
     #[inline(always)]
     #[must_use]
-    pub fn stage_1_no_reset(&mut self) -> STAGE_1_NO_RESET_W<WDT_CTL_SPEC, 1> {
-        STAGE_1_NO_RESET_W::new(self)
+    pub fn stage_1_no_reset(&mut self) -> STAGE_1_NO_RESET_W<WDT_CTL_SPEC> {
+        STAGE_1_NO_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set to 1 to disable the stage 1 of the watchdog timer"]
     #[inline(always)]
     #[must_use]
-    pub fn stage_1_disable(&mut self) -> STAGE_1_DISABLE_W<WDT_CTL_SPEC, 2> {
-        STAGE_1_DISABLE_W::new(self)
+    pub fn stage_1_disable(&mut self) -> STAGE_1_DISABLE_W<WDT_CTL_SPEC> {
+        STAGE_1_DISABLE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn unknown_3(&mut self) -> UNKNOWN_3_W<WDT_CTL_SPEC, 3> {
-        UNKNOWN_3_W::new(self)
+    pub fn unknown_3(&mut self) -> UNKNOWN_3_W<WDT_CTL_SPEC> {
+        UNKNOWN_3_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn unknown_4(&mut self) -> UNKNOWN_4_W<WDT_CTL_SPEC, 4> {
-        UNKNOWN_4_W::new(self)
+    pub fn unknown_4(&mut self) -> UNKNOWN_4_W<WDT_CTL_SPEC> {
+        UNKNOWN_4_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn unknown_5(&mut self) -> UNKNOWN_5_W<WDT_CTL_SPEC, 5> {
-        UNKNOWN_5_W::new(self)
+    pub fn unknown_5(&mut self) -> UNKNOWN_5_W<WDT_CTL_SPEC> {
+        UNKNOWN_5_W::new(self, 5)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

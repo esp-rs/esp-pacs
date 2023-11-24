@@ -5,43 +5,43 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `SETUP_TIME` reader - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
 pub type SETUP_TIME_R = crate::FieldReader;
 #[doc = "Field `SETUP_TIME` writer - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
-pub type SETUP_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SETUP_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `HOLD_TIME` reader - delay cycles of cs pin by spi clock, this bits combined with spi_cs_hold bit."]
 pub type HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `HOLD_TIME` writer - delay cycles of cs pin by spi clock, this bits combined with spi_cs_hold bit."]
-pub type HOLD_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type HOLD_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CK_OUT_LOW_MODE` reader - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_L bits."]
 pub type CK_OUT_LOW_MODE_R = crate::FieldReader;
 #[doc = "Field `CK_OUT_LOW_MODE` writer - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_L bits."]
-pub type CK_OUT_LOW_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CK_OUT_LOW_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CK_OUT_HIGH_MODE` reader - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_H bits."]
 pub type CK_OUT_HIGH_MODE_R = crate::FieldReader;
 #[doc = "Field `CK_OUT_HIGH_MODE` writer - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_H bits."]
-pub type CK_OUT_HIGH_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CK_OUT_HIGH_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `MISO_DELAY_MODE` reader - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
 pub type MISO_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `MISO_DELAY_MODE` writer - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type MISO_DELAY_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MISO_DELAY_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MISO_DELAY_NUM` reader - MISO signals are delayed by system clock cycles"]
 pub type MISO_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `MISO_DELAY_NUM` writer - MISO signals are delayed by system clock cycles"]
-pub type MISO_DELAY_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MISO_DELAY_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `MOSI_DELAY_MODE` reader - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
 pub type MOSI_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `MOSI_DELAY_MODE` writer - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type MOSI_DELAY_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MOSI_DELAY_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MOSI_DELAY_NUM` reader - MOSI signals are delayed by system clock cycles"]
 pub type MOSI_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `MOSI_DELAY_NUM` writer - MOSI signals are delayed by system clock cycles"]
-pub type MOSI_DELAY_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MOSI_DELAY_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CS_DELAY_MODE` reader - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
 pub type CS_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `CS_DELAY_MODE` writer - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type CS_DELAY_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CS_DELAY_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CS_DELAY_NUM` reader - spi_cs signal is delayed by system clock cycles"]
 pub type CS_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `CS_DELAY_NUM` writer - spi_cs signal is delayed by system clock cycles"]
-pub type CS_DELAY_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CS_DELAY_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
     #[inline(always)]
@@ -138,69 +138,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
     #[inline(always)]
     #[must_use]
-    pub fn setup_time(&mut self) -> SETUP_TIME_W<CTRL2_SPEC, 0> {
-        SETUP_TIME_W::new(self)
+    pub fn setup_time(&mut self) -> SETUP_TIME_W<CTRL2_SPEC> {
+        SETUP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - delay cycles of cs pin by spi clock, this bits combined with spi_cs_hold bit."]
     #[inline(always)]
     #[must_use]
-    pub fn hold_time(&mut self) -> HOLD_TIME_W<CTRL2_SPEC, 4> {
-        HOLD_TIME_W::new(self)
+    pub fn hold_time(&mut self) -> HOLD_TIME_W<CTRL2_SPEC> {
+        HOLD_TIME_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_L bits."]
     #[inline(always)]
     #[must_use]
-    pub fn ck_out_low_mode(&mut self) -> CK_OUT_LOW_MODE_W<CTRL2_SPEC, 8> {
-        CK_OUT_LOW_MODE_W::new(self)
+    pub fn ck_out_low_mode(&mut self) -> CK_OUT_LOW_MODE_W<CTRL2_SPEC> {
+        CK_OUT_LOW_MODE_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_H bits."]
     #[inline(always)]
     #[must_use]
-    pub fn ck_out_high_mode(&mut self) -> CK_OUT_HIGH_MODE_W<CTRL2_SPEC, 12> {
-        CK_OUT_HIGH_MODE_W::new(self)
+    pub fn ck_out_high_mode(&mut self) -> CK_OUT_HIGH_MODE_W<CTRL2_SPEC> {
+        CK_OUT_HIGH_MODE_W::new(self, 12)
     }
     #[doc = "Bits 16:17 - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
     #[must_use]
-    pub fn miso_delay_mode(&mut self) -> MISO_DELAY_MODE_W<CTRL2_SPEC, 16> {
-        MISO_DELAY_MODE_W::new(self)
+    pub fn miso_delay_mode(&mut self) -> MISO_DELAY_MODE_W<CTRL2_SPEC> {
+        MISO_DELAY_MODE_W::new(self, 16)
     }
     #[doc = "Bits 18:20 - MISO signals are delayed by system clock cycles"]
     #[inline(always)]
     #[must_use]
-    pub fn miso_delay_num(&mut self) -> MISO_DELAY_NUM_W<CTRL2_SPEC, 18> {
-        MISO_DELAY_NUM_W::new(self)
+    pub fn miso_delay_num(&mut self) -> MISO_DELAY_NUM_W<CTRL2_SPEC> {
+        MISO_DELAY_NUM_W::new(self, 18)
     }
     #[doc = "Bits 21:22 - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
     #[must_use]
-    pub fn mosi_delay_mode(&mut self) -> MOSI_DELAY_MODE_W<CTRL2_SPEC, 21> {
-        MOSI_DELAY_MODE_W::new(self)
+    pub fn mosi_delay_mode(&mut self) -> MOSI_DELAY_MODE_W<CTRL2_SPEC> {
+        MOSI_DELAY_MODE_W::new(self, 21)
     }
     #[doc = "Bits 23:25 - MOSI signals are delayed by system clock cycles"]
     #[inline(always)]
     #[must_use]
-    pub fn mosi_delay_num(&mut self) -> MOSI_DELAY_NUM_W<CTRL2_SPEC, 23> {
-        MOSI_DELAY_NUM_W::new(self)
+    pub fn mosi_delay_num(&mut self) -> MOSI_DELAY_NUM_W<CTRL2_SPEC> {
+        MOSI_DELAY_NUM_W::new(self, 23)
     }
     #[doc = "Bits 26:27 - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
     #[must_use]
-    pub fn cs_delay_mode(&mut self) -> CS_DELAY_MODE_W<CTRL2_SPEC, 26> {
-        CS_DELAY_MODE_W::new(self)
+    pub fn cs_delay_mode(&mut self) -> CS_DELAY_MODE_W<CTRL2_SPEC> {
+        CS_DELAY_MODE_W::new(self, 26)
     }
     #[doc = "Bits 28:31 - spi_cs signal is delayed by system clock cycles"]
     #[inline(always)]
     #[must_use]
-    pub fn cs_delay_num(&mut self) -> CS_DELAY_NUM_W<CTRL2_SPEC, 28> {
-        CS_DELAY_NUM_W::new(self)
+    pub fn cs_delay_num(&mut self) -> CS_DELAY_NUM_W<CTRL2_SPEC> {
+        CS_DELAY_NUM_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

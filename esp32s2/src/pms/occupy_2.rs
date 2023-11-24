@@ -5,7 +5,7 @@ pub type W = crate::W<OCCUPY_2_SPEC>;
 #[doc = "Field `OCCUPY_MAC_DUMP` reader - Configure whether SRAM Block 18-21 is used as mac dump."]
 pub type OCCUPY_MAC_DUMP_R = crate::FieldReader;
 #[doc = "Field `OCCUPY_MAC_DUMP` writer - Configure whether SRAM Block 18-21 is used as mac dump."]
-pub type OCCUPY_MAC_DUMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type OCCUPY_MAC_DUMP_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 18-21 is used as mac dump."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OCCUPY_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 18-21 is used as mac dump."]
     #[inline(always)]
     #[must_use]
-    pub fn occupy_mac_dump(&mut self) -> OCCUPY_MAC_DUMP_W<OCCUPY_2_SPEC, 0> {
-        OCCUPY_MAC_DUMP_W::new(self)
+    pub fn occupy_mac_dump(&mut self) -> OCCUPY_MAC_DUMP_W<OCCUPY_2_SPEC> {
+        OCCUPY_MAC_DUMP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

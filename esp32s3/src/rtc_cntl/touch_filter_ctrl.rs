@@ -5,47 +5,47 @@ pub type W = crate::W<TOUCH_FILTER_CTRL_SPEC>;
 #[doc = "Field `TOUCH_BYPASS_NEG_NOISE_THRES` reader - bypass neg noise thres"]
 pub type TOUCH_BYPASS_NEG_NOISE_THRES_R = crate::BitReader;
 #[doc = "Field `TOUCH_BYPASS_NEG_NOISE_THRES` writer - bypass neg noise thres"]
-pub type TOUCH_BYPASS_NEG_NOISE_THRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_BYPASS_NEG_NOISE_THRES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_BYPASS_NOISE_THRES` reader - bypaas noise thres"]
 pub type TOUCH_BYPASS_NOISE_THRES_R = crate::BitReader;
 #[doc = "Field `TOUCH_BYPASS_NOISE_THRES` writer - bypaas noise thres"]
-pub type TOUCH_BYPASS_NOISE_THRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_BYPASS_NOISE_THRES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_SMOOTH_LVL` reader - smooth filter factor"]
 pub type TOUCH_SMOOTH_LVL_R = crate::FieldReader;
 #[doc = "Field `TOUCH_SMOOTH_LVL` writer - smooth filter factor"]
-pub type TOUCH_SMOOTH_LVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_SMOOTH_LVL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_JITTER_STEP` reader - touch jitter step"]
 pub type TOUCH_JITTER_STEP_R = crate::FieldReader;
 #[doc = "Field `TOUCH_JITTER_STEP` writer - touch jitter step"]
-pub type TOUCH_JITTER_STEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TOUCH_JITTER_STEP_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TOUCH_NEG_NOISE_LIMIT` reader - negative threshold counter limit"]
 pub type TOUCH_NEG_NOISE_LIMIT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_NEG_NOISE_LIMIT` writer - negative threshold counter limit"]
-pub type TOUCH_NEG_NOISE_LIMIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TOUCH_NEG_NOISE_LIMIT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TOUCH_NEG_NOISE_THRES` reader - neg noise thres"]
 pub type TOUCH_NEG_NOISE_THRES_R = crate::FieldReader;
 #[doc = "Field `TOUCH_NEG_NOISE_THRES` writer - neg noise thres"]
-pub type TOUCH_NEG_NOISE_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_NEG_NOISE_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_NOISE_THRES` reader - noise thres"]
 pub type TOUCH_NOISE_THRES_R = crate::FieldReader;
 #[doc = "Field `TOUCH_NOISE_THRES` writer - noise thres"]
-pub type TOUCH_NOISE_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_NOISE_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_HYSTERESIS` reader - hysteresis"]
 pub type TOUCH_HYSTERESIS_R = crate::FieldReader;
 #[doc = "Field `TOUCH_HYSTERESIS` writer - hysteresis"]
-pub type TOUCH_HYSTERESIS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_HYSTERESIS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_DEBOUNCE` reader - debounce counter"]
 pub type TOUCH_DEBOUNCE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DEBOUNCE` writer - debounce counter"]
-pub type TOUCH_DEBOUNCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_DEBOUNCE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TOUCH_FILTER_MODE` reader - 0: IIR ? 1: IIR ? 2: IIR 1/8 3: Jitter"]
 pub type TOUCH_FILTER_MODE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_FILTER_MODE` writer - 0: IIR ? 1: IIR ? 2: IIR 1/8 3: Jitter"]
-pub type TOUCH_FILTER_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_FILTER_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TOUCH_FILTER_EN` reader - touch filter enable"]
 pub type TOUCH_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_FILTER_EN` writer - touch filter enable"]
-pub type TOUCH_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 7 - bypass neg noise thres"]
     #[inline(always)]
@@ -157,7 +157,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_FILTER_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -166,70 +166,70 @@ impl W {
     #[must_use]
     pub fn touch_bypass_neg_noise_thres(
         &mut self,
-    ) -> TOUCH_BYPASS_NEG_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC, 7> {
-        TOUCH_BYPASS_NEG_NOISE_THRES_W::new(self)
+    ) -> TOUCH_BYPASS_NEG_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_BYPASS_NEG_NOISE_THRES_W::new(self, 7)
     }
     #[doc = "Bit 8 - bypaas noise thres"]
     #[inline(always)]
     #[must_use]
     pub fn touch_bypass_noise_thres(
         &mut self,
-    ) -> TOUCH_BYPASS_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC, 8> {
-        TOUCH_BYPASS_NOISE_THRES_W::new(self)
+    ) -> TOUCH_BYPASS_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_BYPASS_NOISE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - smooth filter factor"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_smooth_lvl(&mut self) -> TOUCH_SMOOTH_LVL_W<TOUCH_FILTER_CTRL_SPEC, 9> {
-        TOUCH_SMOOTH_LVL_W::new(self)
+    pub fn touch_smooth_lvl(&mut self) -> TOUCH_SMOOTH_LVL_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_SMOOTH_LVL_W::new(self, 9)
     }
     #[doc = "Bits 11:14 - touch jitter step"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_jitter_step(&mut self) -> TOUCH_JITTER_STEP_W<TOUCH_FILTER_CTRL_SPEC, 11> {
-        TOUCH_JITTER_STEP_W::new(self)
+    pub fn touch_jitter_step(&mut self) -> TOUCH_JITTER_STEP_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_JITTER_STEP_W::new(self, 11)
     }
     #[doc = "Bits 15:18 - negative threshold counter limit"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_neg_noise_limit(&mut self) -> TOUCH_NEG_NOISE_LIMIT_W<TOUCH_FILTER_CTRL_SPEC, 15> {
-        TOUCH_NEG_NOISE_LIMIT_W::new(self)
+    pub fn touch_neg_noise_limit(&mut self) -> TOUCH_NEG_NOISE_LIMIT_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_NEG_NOISE_LIMIT_W::new(self, 15)
     }
     #[doc = "Bits 19:20 - neg noise thres"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_neg_noise_thres(&mut self) -> TOUCH_NEG_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC, 19> {
-        TOUCH_NEG_NOISE_THRES_W::new(self)
+    pub fn touch_neg_noise_thres(&mut self) -> TOUCH_NEG_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_NEG_NOISE_THRES_W::new(self, 19)
     }
     #[doc = "Bits 21:22 - noise thres"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_noise_thres(&mut self) -> TOUCH_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC, 21> {
-        TOUCH_NOISE_THRES_W::new(self)
+    pub fn touch_noise_thres(&mut self) -> TOUCH_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_NOISE_THRES_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - hysteresis"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_hysteresis(&mut self) -> TOUCH_HYSTERESIS_W<TOUCH_FILTER_CTRL_SPEC, 23> {
-        TOUCH_HYSTERESIS_W::new(self)
+    pub fn touch_hysteresis(&mut self) -> TOUCH_HYSTERESIS_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_HYSTERESIS_W::new(self, 23)
     }
     #[doc = "Bits 25:27 - debounce counter"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_debounce(&mut self) -> TOUCH_DEBOUNCE_W<TOUCH_FILTER_CTRL_SPEC, 25> {
-        TOUCH_DEBOUNCE_W::new(self)
+    pub fn touch_debounce(&mut self) -> TOUCH_DEBOUNCE_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_DEBOUNCE_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - 0: IIR ? 1: IIR ? 2: IIR 1/8 3: Jitter"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_filter_mode(&mut self) -> TOUCH_FILTER_MODE_W<TOUCH_FILTER_CTRL_SPEC, 28> {
-        TOUCH_FILTER_MODE_W::new(self)
+    pub fn touch_filter_mode(&mut self) -> TOUCH_FILTER_MODE_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_FILTER_MODE_W::new(self, 28)
     }
     #[doc = "Bit 31 - touch filter enable"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_filter_en(&mut self) -> TOUCH_FILTER_EN_W<TOUCH_FILTER_CTRL_SPEC, 31> {
-        TOUCH_FILTER_EN_W::new(self)
+    pub fn touch_filter_en(&mut self) -> TOUCH_FILTER_EN_W<TOUCH_FILTER_CTRL_SPEC> {
+        TOUCH_FILTER_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

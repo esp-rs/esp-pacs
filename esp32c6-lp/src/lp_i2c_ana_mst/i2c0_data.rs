@@ -7,11 +7,11 @@ pub type LP_I2C_ANA_MAST_I2C0_RDATA_R = crate::FieldReader;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_CLK_SEL` reader - need_des"]
 pub type LP_I2C_ANA_MAST_I2C0_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_CLK_SEL` writer - need_des"]
-pub type LP_I2C_ANA_MAST_I2C0_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LP_I2C_ANA_MAST_I2C0_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MST_SEL` reader - need des"]
 pub type LP_I2C_ANA_MAST_I2C_MST_SEL_R = crate::BitReader;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MST_SEL` writer - need des"]
-pub type LP_I2C_ANA_MAST_I2C_MST_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_I2C_ANA_MAST_I2C_MST_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -51,7 +51,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C0_DATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -60,18 +60,20 @@ impl W {
     #[must_use]
     pub fn lp_i2c_ana_mast_i2c0_clk_sel(
         &mut self,
-    ) -> LP_I2C_ANA_MAST_I2C0_CLK_SEL_W<I2C0_DATA_SPEC, 8> {
-        LP_I2C_ANA_MAST_I2C0_CLK_SEL_W::new(self)
+    ) -> LP_I2C_ANA_MAST_I2C0_CLK_SEL_W<I2C0_DATA_SPEC> {
+        LP_I2C_ANA_MAST_I2C0_CLK_SEL_W::new(self, 8)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_i2c_ana_mast_i2c_mst_sel(
-        &mut self,
-    ) -> LP_I2C_ANA_MAST_I2C_MST_SEL_W<I2C0_DATA_SPEC, 11> {
-        LP_I2C_ANA_MAST_I2C_MST_SEL_W::new(self)
+    pub fn lp_i2c_ana_mast_i2c_mst_sel(&mut self) -> LP_I2C_ANA_MAST_I2C_MST_SEL_W<I2C0_DATA_SPEC> {
+        LP_I2C_ANA_MAST_I2C_MST_SEL_W::new(self, 11)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

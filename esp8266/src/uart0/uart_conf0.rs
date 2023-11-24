@@ -5,71 +5,71 @@ pub type W = crate::W<UART_CONF0_SPEC>;
 #[doc = "Field `parity` reader - Set parity check: 0:even 1:odd, UART CONFIG1"]
 pub type PARITY_R = crate::BitReader;
 #[doc = "Field `parity` writer - Set parity check: 0:even 1:odd, UART CONFIG1"]
-pub type PARITY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARITY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `parity_en` reader - Set this bit to enable uart parity check"]
 pub type PARITY_EN_R = crate::BitReader;
 #[doc = "Field `parity_en` writer - Set this bit to enable uart parity check"]
-pub type PARITY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARITY_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `bit_num` reader - Set bit num: 0:5bits 1:6bits 2:7bits 3:8bits"]
 pub type BIT_NUM_R = crate::FieldReader;
 #[doc = "Field `bit_num` writer - Set bit num: 0:5bits 1:6bits 2:7bits 3:8bits"]
-pub type BIT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BIT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `stop_bit_num` reader - Set stop bit: 1:1bit 2:1.5bits 3:2bits"]
 pub type STOP_BIT_NUM_R = crate::FieldReader;
 #[doc = "Field `stop_bit_num` writer - Set stop bit: 1:1bit 2:1.5bits 3:2bits"]
-pub type STOP_BIT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type STOP_BIT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `sw_rts` reader - sw rts"]
 pub type SW_RTS_R = crate::BitReader;
 #[doc = "Field `sw_rts` writer - sw rts"]
-pub type SW_RTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_RTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sw_dtr` reader - sw dtr"]
 pub type SW_DTR_R = crate::BitReader;
 #[doc = "Field `sw_dtr` writer - sw dtr"]
-pub type SW_DTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_DTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `txd_brk` reader - RESERVED, DO NOT CHANGE THIS BIT"]
 pub type TXD_BRK_R = crate::BitReader;
 #[doc = "Field `txd_brk` writer - RESERVED, DO NOT CHANGE THIS BIT"]
-pub type TXD_BRK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXD_BRK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart_loopback` reader - Set this bit to enable uart loopback test mode"]
 pub type UART_LOOPBACK_R = crate::BitReader;
 #[doc = "Field `uart_loopback` writer - Set this bit to enable uart loopback test mode"]
-pub type UART_LOOPBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_LOOPBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `tx_flow_en` reader - Set this bit to enable uart tx hardware flow control"]
 pub type TX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `tx_flow_en` writer - Set this bit to enable uart tx hardware flow control"]
-pub type TX_FLOW_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FLOW_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rxfifo_rst` reader - Set this bit to reset uart rx fifo"]
 pub type RXFIFO_RST_R = crate::BitReader;
 #[doc = "Field `rxfifo_rst` writer - Set this bit to reset uart rx fifo"]
-pub type RXFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `txfifo_rst` reader - Set this bit to reset uart tx fifo"]
 pub type TXFIFO_RST_R = crate::BitReader;
 #[doc = "Field `txfifo_rst` writer - Set this bit to reset uart tx fifo"]
-pub type TXFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart_rxd_inv` reader - Set this bit to inverse uart rxd level"]
 pub type UART_RXD_INV_R = crate::BitReader;
 #[doc = "Field `uart_rxd_inv` writer - Set this bit to inverse uart rxd level"]
-pub type UART_RXD_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_RXD_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart_cts_inv` reader - Set this bit to inverse uart cts level"]
 pub type UART_CTS_INV_R = crate::BitReader;
 #[doc = "Field `uart_cts_inv` writer - Set this bit to inverse uart cts level"]
-pub type UART_CTS_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_CTS_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart_dsr_inv` reader - Set this bit to inverse uart dsr level"]
 pub type UART_DSR_INV_R = crate::BitReader;
 #[doc = "Field `uart_dsr_inv` writer - Set this bit to inverse uart dsr level"]
-pub type UART_DSR_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_DSR_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart_txd_inv` reader - Set this bit to inverse uart txd level"]
 pub type UART_TXD_INV_R = crate::BitReader;
 #[doc = "Field `uart_txd_inv` writer - Set this bit to inverse uart txd level"]
-pub type UART_TXD_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_TXD_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart_rts_inv` reader - Set this bit to inverse uart rts level"]
 pub type UART_RTS_INV_R = crate::BitReader;
 #[doc = "Field `uart_rts_inv` writer - Set this bit to inverse uart rts level"]
-pub type UART_RTS_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_RTS_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart_dtr_inv` reader - Set this bit to inverse uart dtr level"]
 pub type UART_DTR_INV_R = crate::BitReader;
 #[doc = "Field `uart_dtr_inv` writer - Set this bit to inverse uart dtr level"]
-pub type UART_DTR_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_DTR_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set parity check: 0:even 1:odd, UART CONFIG1"]
     #[inline(always)]
@@ -208,113 +208,117 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UART_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set parity check: 0:even 1:odd, UART CONFIG1"]
     #[inline(always)]
     #[must_use]
-    pub fn parity(&mut self) -> PARITY_W<UART_CONF0_SPEC, 0> {
-        PARITY_W::new(self)
+    pub fn parity(&mut self) -> PARITY_W<UART_CONF0_SPEC> {
+        PARITY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable uart parity check"]
     #[inline(always)]
     #[must_use]
-    pub fn parity_en(&mut self) -> PARITY_EN_W<UART_CONF0_SPEC, 1> {
-        PARITY_EN_W::new(self)
+    pub fn parity_en(&mut self) -> PARITY_EN_W<UART_CONF0_SPEC> {
+        PARITY_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Set bit num: 0:5bits 1:6bits 2:7bits 3:8bits"]
     #[inline(always)]
     #[must_use]
-    pub fn bit_num(&mut self) -> BIT_NUM_W<UART_CONF0_SPEC, 2> {
-        BIT_NUM_W::new(self)
+    pub fn bit_num(&mut self) -> BIT_NUM_W<UART_CONF0_SPEC> {
+        BIT_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Set stop bit: 1:1bit 2:1.5bits 3:2bits"]
     #[inline(always)]
     #[must_use]
-    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<UART_CONF0_SPEC, 4> {
-        STOP_BIT_NUM_W::new(self)
+    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<UART_CONF0_SPEC> {
+        STOP_BIT_NUM_W::new(self, 4)
     }
     #[doc = "Bit 6 - sw rts"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_rts(&mut self) -> SW_RTS_W<UART_CONF0_SPEC, 6> {
-        SW_RTS_W::new(self)
+    pub fn sw_rts(&mut self) -> SW_RTS_W<UART_CONF0_SPEC> {
+        SW_RTS_W::new(self, 6)
     }
     #[doc = "Bit 7 - sw dtr"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_dtr(&mut self) -> SW_DTR_W<UART_CONF0_SPEC, 7> {
-        SW_DTR_W::new(self)
+    pub fn sw_dtr(&mut self) -> SW_DTR_W<UART_CONF0_SPEC> {
+        SW_DTR_W::new(self, 7)
     }
     #[doc = "Bit 8 - RESERVED, DO NOT CHANGE THIS BIT"]
     #[inline(always)]
     #[must_use]
-    pub fn txd_brk(&mut self) -> TXD_BRK_W<UART_CONF0_SPEC, 8> {
-        TXD_BRK_W::new(self)
+    pub fn txd_brk(&mut self) -> TXD_BRK_W<UART_CONF0_SPEC> {
+        TXD_BRK_W::new(self, 8)
     }
     #[doc = "Bit 14 - Set this bit to enable uart loopback test mode"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_loopback(&mut self) -> UART_LOOPBACK_W<UART_CONF0_SPEC, 14> {
-        UART_LOOPBACK_W::new(self)
+    pub fn uart_loopback(&mut self) -> UART_LOOPBACK_W<UART_CONF0_SPEC> {
+        UART_LOOPBACK_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to enable uart tx hardware flow control"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<UART_CONF0_SPEC, 15> {
-        TX_FLOW_EN_W::new(self)
+    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<UART_CONF0_SPEC> {
+        TX_FLOW_EN_W::new(self, 15)
     }
     #[doc = "Bit 17 - Set this bit to reset uart rx fifo"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<UART_CONF0_SPEC, 17> {
-        RXFIFO_RST_W::new(self)
+    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<UART_CONF0_SPEC> {
+        RXFIFO_RST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to reset uart tx fifo"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<UART_CONF0_SPEC, 18> {
-        TXFIFO_RST_W::new(self)
+    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<UART_CONF0_SPEC> {
+        TXFIFO_RST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to inverse uart rxd level"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_rxd_inv(&mut self) -> UART_RXD_INV_W<UART_CONF0_SPEC, 19> {
-        UART_RXD_INV_W::new(self)
+    pub fn uart_rxd_inv(&mut self) -> UART_RXD_INV_W<UART_CONF0_SPEC> {
+        UART_RXD_INV_W::new(self, 19)
     }
     #[doc = "Bit 20 - Set this bit to inverse uart cts level"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_cts_inv(&mut self) -> UART_CTS_INV_W<UART_CONF0_SPEC, 20> {
-        UART_CTS_INV_W::new(self)
+    pub fn uart_cts_inv(&mut self) -> UART_CTS_INV_W<UART_CONF0_SPEC> {
+        UART_CTS_INV_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to inverse uart dsr level"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_dsr_inv(&mut self) -> UART_DSR_INV_W<UART_CONF0_SPEC, 21> {
-        UART_DSR_INV_W::new(self)
+    pub fn uart_dsr_inv(&mut self) -> UART_DSR_INV_W<UART_CONF0_SPEC> {
+        UART_DSR_INV_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to inverse uart txd level"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_txd_inv(&mut self) -> UART_TXD_INV_W<UART_CONF0_SPEC, 22> {
-        UART_TXD_INV_W::new(self)
+    pub fn uart_txd_inv(&mut self) -> UART_TXD_INV_W<UART_CONF0_SPEC> {
+        UART_TXD_INV_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set this bit to inverse uart rts level"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_rts_inv(&mut self) -> UART_RTS_INV_W<UART_CONF0_SPEC, 23> {
-        UART_RTS_INV_W::new(self)
+    pub fn uart_rts_inv(&mut self) -> UART_RTS_INV_W<UART_CONF0_SPEC> {
+        UART_RTS_INV_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set this bit to inverse uart dtr level"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_dtr_inv(&mut self) -> UART_DTR_INV_W<UART_CONF0_SPEC, 24> {
-        UART_DTR_INV_W::new(self)
+    pub fn uart_dtr_inv(&mut self) -> UART_DTR_INV_W<UART_CONF0_SPEC> {
+        UART_DTR_INV_W::new(self, 24)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

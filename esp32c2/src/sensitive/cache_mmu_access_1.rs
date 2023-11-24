@@ -5,11 +5,11 @@ pub type W = crate::W<CACHE_MMU_ACCESS_1_SPEC>;
 #[doc = "Field `PRO_MMU_RD_ACS` reader - Need add description"]
 pub type PRO_MMU_RD_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_MMU_RD_ACS` writer - Need add description"]
-pub type PRO_MMU_RD_ACS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_MMU_RD_ACS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_MMU_WR_ACS` reader - Need add description"]
 pub type PRO_MMU_WR_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_MMU_WR_ACS` writer - Need add description"]
-pub type PRO_MMU_WR_ACS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_MMU_WR_ACS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_MMU_ACCESS_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_mmu_rd_acs(&mut self) -> PRO_MMU_RD_ACS_W<CACHE_MMU_ACCESS_1_SPEC, 0> {
-        PRO_MMU_RD_ACS_W::new(self)
+    pub fn pro_mmu_rd_acs(&mut self) -> PRO_MMU_RD_ACS_W<CACHE_MMU_ACCESS_1_SPEC> {
+        PRO_MMU_RD_ACS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_mmu_wr_acs(&mut self) -> PRO_MMU_WR_ACS_W<CACHE_MMU_ACCESS_1_SPEC, 1> {
-        PRO_MMU_WR_ACS_W::new(self)
+    pub fn pro_mmu_wr_acs(&mut self) -> PRO_MMU_WR_ACS_W<CACHE_MMU_ACCESS_1_SPEC> {
+        PRO_MMU_WR_ACS_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

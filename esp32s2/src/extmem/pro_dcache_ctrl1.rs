@@ -5,15 +5,15 @@ pub type W = crate::W<PRO_DCACHE_CTRL1_SPEC>;
 #[doc = "Field `PRO_DCACHE_MASK_BUS0` reader - The bit is used to disable dbus0, 0: enable, 1: disable"]
 pub type PRO_DCACHE_MASK_BUS0_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_MASK_BUS0` writer - The bit is used to disable dbus0, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DCACHE_MASK_BUS0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_DCACHE_MASK_BUS1` reader - The bit is used to disable dbus1, 0: enable, 1: disable"]
 pub type PRO_DCACHE_MASK_BUS1_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_MASK_BUS1` writer - The bit is used to disable dbus1, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DCACHE_MASK_BUS1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_DCACHE_MASK_BUS2` reader - The bit is used to disable dbus2, 0: enable, 1: disable"]
 pub type PRO_DCACHE_MASK_BUS2_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_MASK_BUS2` writer - The bit is used to disable dbus2, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DCACHE_MASK_BUS2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable dbus0, 0: enable, 1: disable"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to disable dbus0, 0: enable, 1: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dcache_mask_bus0(&mut self) -> PRO_DCACHE_MASK_BUS0_W<PRO_DCACHE_CTRL1_SPEC, 0> {
-        PRO_DCACHE_MASK_BUS0_W::new(self)
+    pub fn pro_dcache_mask_bus0(&mut self) -> PRO_DCACHE_MASK_BUS0_W<PRO_DCACHE_CTRL1_SPEC> {
+        PRO_DCACHE_MASK_BUS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable dbus1, 0: enable, 1: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dcache_mask_bus1(&mut self) -> PRO_DCACHE_MASK_BUS1_W<PRO_DCACHE_CTRL1_SPEC, 1> {
-        PRO_DCACHE_MASK_BUS1_W::new(self)
+    pub fn pro_dcache_mask_bus1(&mut self) -> PRO_DCACHE_MASK_BUS1_W<PRO_DCACHE_CTRL1_SPEC> {
+        PRO_DCACHE_MASK_BUS1_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to disable dbus2, 0: enable, 1: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dcache_mask_bus2(&mut self) -> PRO_DCACHE_MASK_BUS2_W<PRO_DCACHE_CTRL1_SPEC, 2> {
-        PRO_DCACHE_MASK_BUS2_W::new(self)
+    pub fn pro_dcache_mask_bus2(&mut self) -> PRO_DCACHE_MASK_BUS2_W<PRO_DCACHE_CTRL1_SPEC> {
+        PRO_DCACHE_MASK_BUS2_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

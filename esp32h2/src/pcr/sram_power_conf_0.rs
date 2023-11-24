@@ -5,15 +5,15 @@ pub type W = crate::W<SRAM_POWER_CONF_0_SPEC>;
 #[doc = "Field `ROM_FORCE_PU` reader - Set this bit to force power up ROM"]
 pub type ROM_FORCE_PU_R = crate::FieldReader;
 #[doc = "Field `ROM_FORCE_PU` writer - Set this bit to force power up ROM"]
-pub type ROM_FORCE_PU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_FORCE_PU_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ROM_FORCE_PD` reader - Set this bit to force power down ROM."]
 pub type ROM_FORCE_PD_R = crate::FieldReader;
 #[doc = "Field `ROM_FORCE_PD` writer - Set this bit to force power down ROM."]
-pub type ROM_FORCE_PD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_FORCE_PD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ROM_CLKGATE_FORCE_ON` reader - 1: Force to open the clock and bypass the gate-clock when accessing the ROM. 0: A gate-clock will be used when accessing the ROM."]
 pub type ROM_CLKGATE_FORCE_ON_R = crate::FieldReader;
 #[doc = "Field `ROM_CLKGATE_FORCE_ON` writer - 1: Force to open the clock and bypass the gate-clock when accessing the ROM. 0: A gate-clock will be used when accessing the ROM."]
-pub type ROM_CLKGATE_FORCE_ON_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_CLKGATE_FORCE_ON_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 13:14 - Set this bit to force power up ROM"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_POWER_CONF_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 13:14 - Set this bit to force power up ROM"]
     #[inline(always)]
     #[must_use]
-    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<SRAM_POWER_CONF_0_SPEC, 13> {
-        ROM_FORCE_PU_W::new(self)
+    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<SRAM_POWER_CONF_0_SPEC> {
+        ROM_FORCE_PU_W::new(self, 13)
     }
     #[doc = "Bits 15:16 - Set this bit to force power down ROM."]
     #[inline(always)]
     #[must_use]
-    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<SRAM_POWER_CONF_0_SPEC, 15> {
-        ROM_FORCE_PD_W::new(self)
+    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<SRAM_POWER_CONF_0_SPEC> {
+        ROM_FORCE_PD_W::new(self, 15)
     }
     #[doc = "Bits 17:18 - 1: Force to open the clock and bypass the gate-clock when accessing the ROM. 0: A gate-clock will be used when accessing the ROM."]
     #[inline(always)]
     #[must_use]
-    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<SRAM_POWER_CONF_0_SPEC, 17> {
-        ROM_CLKGATE_FORCE_ON_W::new(self)
+    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<SRAM_POWER_CONF_0_SPEC> {
+        ROM_CLKGATE_FORCE_ON_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

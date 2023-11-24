@@ -5,55 +5,55 @@ pub type W = crate::W<INT_RAW_CH0_SPEC>;
 #[doc = "Field `IN_DONE` reader - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0."]
 pub type IN_DONE_R = crate::BitReader;
 #[doc = "Field `IN_DONE` writer - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0."]
-pub type IN_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_SUC_EOF` reader - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0. For UHCI0, the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0."]
 pub type IN_SUC_EOF_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF` writer - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0. For UHCI0, the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0."]
-pub type IN_SUC_EOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_SUC_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_ERR_EOF` reader - The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 0. For other peripherals, this raw interrupt is reserved."]
 pub type IN_ERR_EOF_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF` writer - The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 0. For other peripherals, this raw interrupt is reserved."]
-pub type IN_ERR_EOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_ERR_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_DONE` reader - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0."]
 pub type OUT_DONE_R = crate::BitReader;
 #[doc = "Field `OUT_DONE` writer - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0."]
-pub type OUT_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EOF` reader - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0."]
 pub type OUT_EOF_R = crate::BitReader;
 #[doc = "Field `OUT_EOF` writer - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0."]
-pub type OUT_EOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_DSCR_ERR` reader - The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 0."]
 pub type IN_DSCR_ERR_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_ERR` writer - The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 0."]
-pub type IN_DSCR_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_DSCR_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_DSCR_ERR` reader - The raw interrupt bit turns to high level when detecting outlink descriptor error, including owner error, the second and third word error of outlink descriptor for Tx channel 0."]
 pub type OUT_DSCR_ERR_R = crate::BitReader;
 #[doc = "Field `OUT_DSCR_ERR` writer - The raw interrupt bit turns to high level when detecting outlink descriptor error, including owner error, the second and third word error of outlink descriptor for Tx channel 0."]
-pub type OUT_DSCR_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_DSCR_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_DSCR_EMPTY` reader - The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed, but there is no more inlink for Rx channel 0."]
 pub type IN_DSCR_EMPTY_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_EMPTY` writer - The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed, but there is no more inlink for Rx channel 0."]
-pub type IN_DSCR_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_DSCR_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_TOTAL_EOF` reader - The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0."]
 pub type OUT_TOTAL_EOF_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF` writer - The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0."]
-pub type OUT_TOTAL_EOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_TOTAL_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INFIFO_OVF` reader - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is overflow."]
 pub type INFIFO_OVF_R = crate::BitReader;
 #[doc = "Field `INFIFO_OVF` writer - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is overflow."]
-pub type INFIFO_OVF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INFIFO_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INFIFO_UDF` reader - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is underflow."]
 pub type INFIFO_UDF_R = crate::BitReader;
 #[doc = "Field `INFIFO_UDF` writer - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is underflow."]
-pub type INFIFO_UDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INFIFO_UDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTFIFO_OVF` reader - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow."]
 pub type OUTFIFO_OVF_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_OVF` writer - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow."]
-pub type OUTFIFO_OVF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTFIFO_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTFIFO_UDF` reader - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow."]
 pub type OUTFIFO_UDF_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_UDF` writer - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow."]
-pub type OUTFIFO_UDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTFIFO_UDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0."]
     #[inline(always)]
@@ -153,87 +153,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_CH0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn in_done(&mut self) -> IN_DONE_W<INT_RAW_CH0_SPEC, 0> {
-        IN_DONE_W::new(self)
+    pub fn in_done(&mut self) -> IN_DONE_W<INT_RAW_CH0_SPEC> {
+        IN_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0. For UHCI0, the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<INT_RAW_CH0_SPEC, 1> {
-        IN_SUC_EOF_W::new(self)
+    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<INT_RAW_CH0_SPEC> {
+        IN_SUC_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 0. For other peripherals, this raw interrupt is reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<INT_RAW_CH0_SPEC, 2> {
-        IN_ERR_EOF_W::new(self)
+    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<INT_RAW_CH0_SPEC> {
+        IN_ERR_EOF_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn out_done(&mut self) -> OUT_DONE_W<INT_RAW_CH0_SPEC, 3> {
-        OUT_DONE_W::new(self)
+    pub fn out_done(&mut self) -> OUT_DONE_W<INT_RAW_CH0_SPEC> {
+        OUT_DONE_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof(&mut self) -> OUT_EOF_W<INT_RAW_CH0_SPEC, 4> {
-        OUT_EOF_W::new(self)
+    pub fn out_eof(&mut self) -> OUT_EOF_W<INT_RAW_CH0_SPEC> {
+        OUT_EOF_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<INT_RAW_CH0_SPEC, 5> {
-        IN_DSCR_ERR_W::new(self)
+    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<INT_RAW_CH0_SPEC> {
+        IN_DSCR_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - The raw interrupt bit turns to high level when detecting outlink descriptor error, including owner error, the second and third word error of outlink descriptor for Tx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<INT_RAW_CH0_SPEC, 6> {
-        OUT_DSCR_ERR_W::new(self)
+    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<INT_RAW_CH0_SPEC> {
+        OUT_DSCR_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed, but there is no more inlink for Rx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<INT_RAW_CH0_SPEC, 7> {
-        IN_DSCR_EMPTY_W::new(self)
+    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<INT_RAW_CH0_SPEC> {
+        IN_DSCR_EMPTY_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0."]
     #[inline(always)]
     #[must_use]
-    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<INT_RAW_CH0_SPEC, 8> {
-        OUT_TOTAL_EOF_W::new(self)
+    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<INT_RAW_CH0_SPEC> {
+        OUT_TOTAL_EOF_W::new(self, 8)
     }
     #[doc = "Bit 9 - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is overflow."]
     #[inline(always)]
     #[must_use]
-    pub fn infifo_ovf(&mut self) -> INFIFO_OVF_W<INT_RAW_CH0_SPEC, 9> {
-        INFIFO_OVF_W::new(self)
+    pub fn infifo_ovf(&mut self) -> INFIFO_OVF_W<INT_RAW_CH0_SPEC> {
+        INFIFO_OVF_W::new(self, 9)
     }
     #[doc = "Bit 10 - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is underflow."]
     #[inline(always)]
     #[must_use]
-    pub fn infifo_udf(&mut self) -> INFIFO_UDF_W<INT_RAW_CH0_SPEC, 10> {
-        INFIFO_UDF_W::new(self)
+    pub fn infifo_udf(&mut self) -> INFIFO_UDF_W<INT_RAW_CH0_SPEC> {
+        INFIFO_UDF_W::new(self, 10)
     }
     #[doc = "Bit 11 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow."]
     #[inline(always)]
     #[must_use]
-    pub fn outfifo_ovf(&mut self) -> OUTFIFO_OVF_W<INT_RAW_CH0_SPEC, 11> {
-        OUTFIFO_OVF_W::new(self)
+    pub fn outfifo_ovf(&mut self) -> OUTFIFO_OVF_W<INT_RAW_CH0_SPEC> {
+        OUTFIFO_OVF_W::new(self, 11)
     }
     #[doc = "Bit 12 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow."]
     #[inline(always)]
     #[must_use]
-    pub fn outfifo_udf(&mut self) -> OUTFIFO_UDF_W<INT_RAW_CH0_SPEC, 12> {
-        OUTFIFO_UDF_W::new(self)
+    pub fn outfifo_udf(&mut self) -> OUTFIFO_UDF_W<INT_RAW_CH0_SPEC> {
+        OUTFIFO_UDF_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

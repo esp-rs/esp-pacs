@@ -5,7 +5,7 @@ pub type W = crate::W<ROM_CTRL_0_SPEC>;
 #[doc = "Field `ROM_FO` reader - This field is used to force on clock gate of internal ROM."]
 pub type ROM_FO_R = crate::FieldReader;
 #[doc = "Field `ROM_FO` writer - This field is used to force on clock gate of internal ROM."]
-pub type ROM_FO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_FO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to force on clock gate of internal ROM."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ROM_CTRL_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - This field is used to force on clock gate of internal ROM."]
     #[inline(always)]
     #[must_use]
-    pub fn rom_fo(&mut self) -> ROM_FO_W<ROM_CTRL_0_SPEC, 0> {
-        ROM_FO_W::new(self)
+    pub fn rom_fo(&mut self) -> ROM_FO_W<ROM_CTRL_0_SPEC> {
+        ROM_FO_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

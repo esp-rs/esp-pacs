@@ -3,7 +3,7 @@ pub type R = crate::R<SAR_COCPU_STATE_SPEC>;
 #[doc = "Register `SAR_COCPU_STATE` writer"]
 pub type W = crate::W<SAR_COCPU_STATE_SPEC>;
 #[doc = "Field `SAR_COCPU_DBG_TRIGGER` writer - trigger cocpu debug registers"]
-pub type SAR_COCPU_DBG_TRIGGER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_COCPU_DBG_TRIGGER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_COCPU_CLK_EN_ST` reader - check cocpu whether clk on"]
 pub type SAR_COCPU_CLK_EN_ST_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_RESET_N` reader - check cocpu whether in reset state"]
@@ -71,15 +71,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_STATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 25 - trigger cocpu debug registers"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_cocpu_dbg_trigger(&mut self) -> SAR_COCPU_DBG_TRIGGER_W<SAR_COCPU_STATE_SPEC, 25> {
-        SAR_COCPU_DBG_TRIGGER_W::new(self)
+    pub fn sar_cocpu_dbg_trigger(&mut self) -> SAR_COCPU_DBG_TRIGGER_W<SAR_COCPU_STATE_SPEC> {
+        SAR_COCPU_DBG_TRIGGER_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

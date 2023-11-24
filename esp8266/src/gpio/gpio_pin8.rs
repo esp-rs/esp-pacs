@@ -21,7 +21,7 @@ impl From<GPIO_PIN8_SOURCE_A> for bool {
 impl GPIO_PIN8_SOURCE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> GPIO_PIN8_SOURCE_A {
+    pub const fn variant(&self) -> GPIO_PIN8_SOURCE_A {
         match self.bits {
             false => GPIO_PIN8_SOURCE_A::SIGMA_DELTA,
             true => GPIO_PIN8_SOURCE_A::GPIO_DATA,
@@ -39,9 +39,8 @@ impl GPIO_PIN8_SOURCE_R {
     }
 }
 #[doc = "Field `GPIO_PIN8_SOURCE` writer - 1: sigma-delta; 0: GPIO_DATA"]
-pub type GPIO_PIN8_SOURCE_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, GPIO_PIN8_SOURCE_A>;
-impl<'a, REG, const O: u8> GPIO_PIN8_SOURCE_W<'a, REG, O>
+pub type GPIO_PIN8_SOURCE_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_PIN8_SOURCE_A>;
+impl<'a, REG> GPIO_PIN8_SOURCE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -75,7 +74,7 @@ impl From<GPIO_PIN8_DRIVER_A> for bool {
 impl GPIO_PIN8_DRIVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> GPIO_PIN8_DRIVER_A {
+    pub const fn variant(&self) -> GPIO_PIN8_DRIVER_A {
         match self.bits {
             false => GPIO_PIN8_DRIVER_A::OPEN_DRAIN,
             true => GPIO_PIN8_DRIVER_A::NORMAL,
@@ -93,9 +92,8 @@ impl GPIO_PIN8_DRIVER_R {
     }
 }
 #[doc = "Field `GPIO_PIN8_DRIVER` writer - 1: open drain; 0: normal"]
-pub type GPIO_PIN8_DRIVER_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, GPIO_PIN8_DRIVER_A>;
-impl<'a, REG, const O: u8> GPIO_PIN8_DRIVER_W<'a, REG, O>
+pub type GPIO_PIN8_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_PIN8_DRIVER_A>;
+impl<'a, REG> GPIO_PIN8_DRIVER_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -141,7 +139,7 @@ impl crate::FieldSpec for GPIO_PIN8_INT_TYPE_A {
 impl GPIO_PIN8_INT_TYPE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<GPIO_PIN8_INT_TYPE_A> {
+    pub const fn variant(&self) -> Option<GPIO_PIN8_INT_TYPE_A> {
         match self.bits {
             0 => Some(GPIO_PIN8_INT_TYPE_A::DISABLED),
             1 => Some(GPIO_PIN8_INT_TYPE_A::POSITIVE_EDGE),
@@ -184,9 +182,8 @@ impl GPIO_PIN8_INT_TYPE_R {
     }
 }
 #[doc = "Field `GPIO_PIN8_INT_TYPE` writer - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
-pub type GPIO_PIN8_INT_TYPE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O, GPIO_PIN8_INT_TYPE_A>;
-impl<'a, REG, const O: u8> GPIO_PIN8_INT_TYPE_W<'a, REG, O>
+pub type GPIO_PIN8_INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3, GPIO_PIN8_INT_TYPE_A>;
+impl<'a, REG> GPIO_PIN8_INT_TYPE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -225,7 +222,7 @@ where
 #[doc = "Field `GPIO_PIN8_WAKEUP_ENABLE` reader - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
 pub type GPIO_PIN8_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN8_WAKEUP_ENABLE` writer - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
-pub type GPIO_PIN8_WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN8_WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: sigma-delta; 0: GPIO_DATA"]
     #[inline(always)]
@@ -274,35 +271,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_PIN8_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1: sigma-delta; 0: GPIO_DATA"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin8_source(&mut self) -> GPIO_PIN8_SOURCE_W<GPIO_PIN8_SPEC, 0> {
-        GPIO_PIN8_SOURCE_W::new(self)
+    pub fn gpio_pin8_source(&mut self) -> GPIO_PIN8_SOURCE_W<GPIO_PIN8_SPEC> {
+        GPIO_PIN8_SOURCE_W::new(self, 0)
     }
     #[doc = "Bit 2 - 1: open drain; 0: normal"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin8_driver(&mut self) -> GPIO_PIN8_DRIVER_W<GPIO_PIN8_SPEC, 2> {
-        GPIO_PIN8_DRIVER_W::new(self)
+    pub fn gpio_pin8_driver(&mut self) -> GPIO_PIN8_DRIVER_W<GPIO_PIN8_SPEC> {
+        GPIO_PIN8_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9 - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin8_int_type(&mut self) -> GPIO_PIN8_INT_TYPE_W<GPIO_PIN8_SPEC, 7> {
-        GPIO_PIN8_INT_TYPE_W::new(self)
+    pub fn gpio_pin8_int_type(&mut self) -> GPIO_PIN8_INT_TYPE_W<GPIO_PIN8_SPEC> {
+        GPIO_PIN8_INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin8_wakeup_enable(&mut self) -> GPIO_PIN8_WAKEUP_ENABLE_W<GPIO_PIN8_SPEC, 10> {
-        GPIO_PIN8_WAKEUP_ENABLE_W::new(self)
+    pub fn gpio_pin8_wakeup_enable(&mut self) -> GPIO_PIN8_WAKEUP_ENABLE_W<GPIO_PIN8_SPEC> {
+        GPIO_PIN8_WAKEUP_ENABLE_W::new(self, 10)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

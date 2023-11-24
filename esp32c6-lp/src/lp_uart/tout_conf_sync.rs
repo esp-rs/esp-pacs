@@ -5,15 +5,15 @@ pub type W = crate::W<TOUT_CONF_SYNC_SPEC>;
 #[doc = "Field `RX_TOUT_EN` reader - This is the enble bit for uart receiver's timeout function."]
 pub type RX_TOUT_EN_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_EN` writer - This is the enble bit for uart receiver's timeout function."]
-pub type RX_TOUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_TOUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_TOUT_FLOW_DIS` reader - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
 pub type RX_TOUT_FLOW_DIS_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_FLOW_DIS` writer - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
-pub type RX_TOUT_FLOW_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_TOUT_FLOW_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
 pub type RX_TOUT_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_TOUT_THRHD` writer - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
-pub type RX_TOUT_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type RX_TOUT_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bit 0 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
@@ -50,29 +50,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUT_CONF_SYNC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<TOUT_CONF_SYNC_SPEC, 0> {
-        RX_TOUT_EN_W::new(self)
+    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<TOUT_CONF_SYNC_SPEC> {
+        RX_TOUT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<TOUT_CONF_SYNC_SPEC, 1> {
-        RX_TOUT_FLOW_DIS_W::new(self)
+    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<TOUT_CONF_SYNC_SPEC> {
+        RX_TOUT_FLOW_DIS_W::new(self, 1)
     }
     #[doc = "Bits 2:11 - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<TOUT_CONF_SYNC_SPEC, 2> {
-        RX_TOUT_THRHD_W::new(self)
+    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<TOUT_CONF_SYNC_SPEC> {
+        RX_TOUT_THRHD_W::new(self, 2)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

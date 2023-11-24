@@ -5,41 +5,41 @@ pub type W = crate::W<PRO_CACHE_CTRL_SPEC>;
 #[doc = "Field `PRO_CACHE_MODE` reader - "]
 pub type PRO_CACHE_MODE_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MODE` writer - "]
-pub type PRO_CACHE_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_ENABLE` reader - "]
 pub type PRO_CACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_ENABLE` writer - "]
-pub type PRO_CACHE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_FLUSH_ENA` reader - "]
 pub type PRO_CACHE_FLUSH_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_FLUSH_ENA` writer - "]
-pub type PRO_CACHE_FLUSH_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_FLUSH_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_FLUSH_DONE` reader - "]
 pub type PRO_CACHE_FLUSH_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_0_EN` reader - "]
 pub type PRO_CACHE_LOCK_0_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_0_EN` writer - "]
-pub type PRO_CACHE_LOCK_0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_LOCK_0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_LOCK_1_EN` reader - "]
 pub type PRO_CACHE_LOCK_1_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_1_EN` writer - "]
-pub type PRO_CACHE_LOCK_1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_LOCK_1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_LOCK_2_EN` reader - "]
 pub type PRO_CACHE_LOCK_2_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_2_EN` writer - "]
-pub type PRO_CACHE_LOCK_2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_LOCK_2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_LOCK_3_EN` reader - "]
 pub type PRO_CACHE_LOCK_3_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_3_EN` writer - "]
-pub type PRO_CACHE_LOCK_3_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_LOCK_3_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_SINGLE_IRAM_ENA` reader - "]
 pub type PRO_SINGLE_IRAM_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_SINGLE_IRAM_ENA` writer - "]
-pub type PRO_SINGLE_IRAM_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_SINGLE_IRAM_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_DRAM_SPLIT` reader - "]
 pub type PRO_DRAM_SPLIT_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM_SPLIT` writer - "]
-pub type PRO_DRAM_SPLIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DRAM_SPLIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_AHB_SPI_REQ` reader - "]
 pub type PRO_AHB_SPI_REQ_R = crate::BitReader;
 #[doc = "Field `PRO_SLAVE_REQ` reader - "]
@@ -51,7 +51,7 @@ pub type SLAVE_REQ_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM_HL` reader - "]
 pub type PRO_DRAM_HL_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM_HL` writer - "]
-pub type PRO_DRAM_HL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DRAM_HL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -190,69 +190,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mode(&mut self) -> PRO_CACHE_MODE_W<PRO_CACHE_CTRL_SPEC, 2> {
-        PRO_CACHE_MODE_W::new(self)
+    pub fn pro_cache_mode(&mut self) -> PRO_CACHE_MODE_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_CACHE_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_enable(&mut self) -> PRO_CACHE_ENABLE_W<PRO_CACHE_CTRL_SPEC, 3> {
-        PRO_CACHE_ENABLE_W::new(self)
+    pub fn pro_cache_enable(&mut self) -> PRO_CACHE_ENABLE_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_CACHE_ENABLE_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_flush_ena(&mut self) -> PRO_CACHE_FLUSH_ENA_W<PRO_CACHE_CTRL_SPEC, 4> {
-        PRO_CACHE_FLUSH_ENA_W::new(self)
+    pub fn pro_cache_flush_ena(&mut self) -> PRO_CACHE_FLUSH_ENA_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_CACHE_FLUSH_ENA_W::new(self, 4)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_lock_0_en(&mut self) -> PRO_CACHE_LOCK_0_EN_W<PRO_CACHE_CTRL_SPEC, 6> {
-        PRO_CACHE_LOCK_0_EN_W::new(self)
+    pub fn pro_cache_lock_0_en(&mut self) -> PRO_CACHE_LOCK_0_EN_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_CACHE_LOCK_0_EN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_lock_1_en(&mut self) -> PRO_CACHE_LOCK_1_EN_W<PRO_CACHE_CTRL_SPEC, 7> {
-        PRO_CACHE_LOCK_1_EN_W::new(self)
+    pub fn pro_cache_lock_1_en(&mut self) -> PRO_CACHE_LOCK_1_EN_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_CACHE_LOCK_1_EN_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_lock_2_en(&mut self) -> PRO_CACHE_LOCK_2_EN_W<PRO_CACHE_CTRL_SPEC, 8> {
-        PRO_CACHE_LOCK_2_EN_W::new(self)
+    pub fn pro_cache_lock_2_en(&mut self) -> PRO_CACHE_LOCK_2_EN_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_CACHE_LOCK_2_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_lock_3_en(&mut self) -> PRO_CACHE_LOCK_3_EN_W<PRO_CACHE_CTRL_SPEC, 9> {
-        PRO_CACHE_LOCK_3_EN_W::new(self)
+    pub fn pro_cache_lock_3_en(&mut self) -> PRO_CACHE_LOCK_3_EN_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_CACHE_LOCK_3_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_single_iram_ena(&mut self) -> PRO_SINGLE_IRAM_ENA_W<PRO_CACHE_CTRL_SPEC, 10> {
-        PRO_SINGLE_IRAM_ENA_W::new(self)
+    pub fn pro_single_iram_ena(&mut self) -> PRO_SINGLE_IRAM_ENA_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_SINGLE_IRAM_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dram_split(&mut self) -> PRO_DRAM_SPLIT_W<PRO_CACHE_CTRL_SPEC, 11> {
-        PRO_DRAM_SPLIT_W::new(self)
+    pub fn pro_dram_split(&mut self) -> PRO_DRAM_SPLIT_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_DRAM_SPLIT_W::new(self, 11)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dram_hl(&mut self) -> PRO_DRAM_HL_W<PRO_CACHE_CTRL_SPEC, 16> {
-        PRO_DRAM_HL_W::new(self)
+    pub fn pro_dram_hl(&mut self) -> PRO_DRAM_HL_W<PRO_CACHE_CTRL_SPEC> {
+        PRO_DRAM_HL_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

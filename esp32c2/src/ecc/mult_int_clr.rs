@@ -1,7 +1,7 @@
 #[doc = "Register `MULT_INT_CLR` writer"]
 pub type W = crate::W<MULT_INT_CLR_SPEC>;
 #[doc = "Field `CALC_DONE_INT_CLR` writer - Set this bit to clear the i2s_rx_done_int interrupt"]
-pub type CALC_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CALC_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MULT_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Set this bit to clear the i2s_rx_done_int interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn calc_done_int_clr(&mut self) -> CALC_DONE_INT_CLR_W<MULT_INT_CLR_SPEC, 0> {
-        CALC_DONE_INT_CLR_W::new(self)
+    pub fn calc_done_int_clr(&mut self) -> CALC_DONE_INT_CLR_W<MULT_INT_CLR_SPEC> {
+        CALC_DONE_INT_CLR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

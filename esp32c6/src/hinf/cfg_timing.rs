@@ -5,23 +5,23 @@ pub type W = crate::W<CFG_TIMING_SPEC>;
 #[doc = "Field `NCRC` reader - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
 pub type NCRC_R = crate::FieldReader;
 #[doc = "Field `NCRC` writer - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
-pub type NCRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type NCRC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PST_END_CMD_LOW_VALUE` reader - configure cycles to lower cmd after voltage is changed to 1.8V."]
 pub type PST_END_CMD_LOW_VALUE_R = crate::FieldReader;
 #[doc = "Field `PST_END_CMD_LOW_VALUE` writer - configure cycles to lower cmd after voltage is changed to 1.8V."]
-pub type PST_END_CMD_LOW_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type PST_END_CMD_LOW_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PST_END_DATA_LOW_VALUE` reader - configure cycles to lower data after voltage is changed to 1.8V."]
 pub type PST_END_DATA_LOW_VALUE_R = crate::FieldReader;
 #[doc = "Field `PST_END_DATA_LOW_VALUE` writer - configure cycles to lower data after voltage is changed to 1.8V."]
-pub type PST_END_DATA_LOW_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type PST_END_DATA_LOW_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SDCLK_STOP_THRES` reader - Configure the number of cycles of module clk to judge sdclk has stopped"]
 pub type SDCLK_STOP_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `SDCLK_STOP_THRES` writer - Configure the number of cycles of module clk to judge sdclk has stopped"]
-pub type SDCLK_STOP_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SDCLK_STOP_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` reader - module clk divider to sample sdclk"]
 pub type SAMPLE_CLK_DIVIDER_R = crate::FieldReader;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` writer - module clk divider to sample sdclk"]
-pub type SAMPLE_CLK_DIVIDER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SAMPLE_CLK_DIVIDER_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:2 - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CFG_TIMING_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
     #[inline(always)]
     #[must_use]
-    pub fn ncrc(&mut self) -> NCRC_W<CFG_TIMING_SPEC, 0> {
-        NCRC_W::new(self)
+    pub fn ncrc(&mut self) -> NCRC_W<CFG_TIMING_SPEC> {
+        NCRC_W::new(self, 0)
     }
     #[doc = "Bits 3:9 - configure cycles to lower cmd after voltage is changed to 1.8V."]
     #[inline(always)]
     #[must_use]
-    pub fn pst_end_cmd_low_value(&mut self) -> PST_END_CMD_LOW_VALUE_W<CFG_TIMING_SPEC, 3> {
-        PST_END_CMD_LOW_VALUE_W::new(self)
+    pub fn pst_end_cmd_low_value(&mut self) -> PST_END_CMD_LOW_VALUE_W<CFG_TIMING_SPEC> {
+        PST_END_CMD_LOW_VALUE_W::new(self, 3)
     }
     #[doc = "Bits 10:15 - configure cycles to lower data after voltage is changed to 1.8V."]
     #[inline(always)]
     #[must_use]
-    pub fn pst_end_data_low_value(&mut self) -> PST_END_DATA_LOW_VALUE_W<CFG_TIMING_SPEC, 10> {
-        PST_END_DATA_LOW_VALUE_W::new(self)
+    pub fn pst_end_data_low_value(&mut self) -> PST_END_DATA_LOW_VALUE_W<CFG_TIMING_SPEC> {
+        PST_END_DATA_LOW_VALUE_W::new(self, 10)
     }
     #[doc = "Bits 16:26 - Configure the number of cycles of module clk to judge sdclk has stopped"]
     #[inline(always)]
     #[must_use]
-    pub fn sdclk_stop_thres(&mut self) -> SDCLK_STOP_THRES_W<CFG_TIMING_SPEC, 16> {
-        SDCLK_STOP_THRES_W::new(self)
+    pub fn sdclk_stop_thres(&mut self) -> SDCLK_STOP_THRES_W<CFG_TIMING_SPEC> {
+        SDCLK_STOP_THRES_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - module clk divider to sample sdclk"]
     #[inline(always)]
     #[must_use]
-    pub fn sample_clk_divider(&mut self) -> SAMPLE_CLK_DIVIDER_W<CFG_TIMING_SPEC, 28> {
-        SAMPLE_CLK_DIVIDER_W::new(self)
+    pub fn sample_clk_divider(&mut self) -> SAMPLE_CLK_DIVIDER_W<CFG_TIMING_SPEC> {
+        SAMPLE_CLK_DIVIDER_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<SW_STANDBY_CFG_SPEC>;
 #[doc = "Field `SW_STANDBY_EN` reader - Enable standby pin."]
 pub type SW_STANDBY_EN_R = crate::BitReader;
 #[doc = "Field `SW_STANDBY_EN` writer - Enable standby pin."]
-pub type SW_STANDBY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_STANDBY_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SW_STANDBY_CLR` reader - Clear standby pin."]
 pub type SW_STANDBY_CLR_R = crate::BitReader;
 #[doc = "Field `SW_STANDBY_CLR` writer - Clear standby pin."]
-pub type SW_STANDBY_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_STANDBY_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable standby pin."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SW_STANDBY_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable standby pin."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_standby_en(&mut self) -> SW_STANDBY_EN_W<SW_STANDBY_CFG_SPEC, 0> {
-        SW_STANDBY_EN_W::new(self)
+    pub fn sw_standby_en(&mut self) -> SW_STANDBY_EN_W<SW_STANDBY_CFG_SPEC> {
+        SW_STANDBY_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear standby pin."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_standby_clr(&mut self) -> SW_STANDBY_CLR_W<SW_STANDBY_CFG_SPEC, 1> {
-        SW_STANDBY_CLR_W::new(self)
+    pub fn sw_standby_clr(&mut self) -> SW_STANDBY_CLR_W<SW_STANDBY_CFG_SPEC> {
+        SW_STANDBY_CLR_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

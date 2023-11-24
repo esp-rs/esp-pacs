@@ -89,7 +89,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE2_AUTOLOAD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1 instruction Cache 2 autoload-operation control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache2_autoload_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

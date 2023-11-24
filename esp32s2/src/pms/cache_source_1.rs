@@ -5,27 +5,27 @@ pub type W = crate::W<CACHE_SOURCE_1_SPEC>;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IRAM1` reader - xx"]
 pub type PRO_CACHE_I_SOURCE_PRO_IRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IRAM1` writer - xx"]
-pub type PRO_CACHE_I_SOURCE_PRO_IRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_I_SOURCE_PRO_IRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IROM0` reader - xx"]
 pub type PRO_CACHE_I_SOURCE_PRO_IROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IROM0` writer - xx"]
-pub type PRO_CACHE_I_SOURCE_PRO_IROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_I_SOURCE_PRO_IROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_DROM0` reader - xx"]
 pub type PRO_CACHE_I_SOURCE_PRO_DROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_DROM0` writer - xx"]
-pub type PRO_CACHE_I_SOURCE_PRO_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_I_SOURCE_PRO_DROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DRAM0` reader - xx"]
 pub type PRO_CACHE_D_SOURCE_PRO_DRAM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DRAM0` writer - xx"]
-pub type PRO_CACHE_D_SOURCE_PRO_DRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_D_SOURCE_PRO_DRAM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DPORT` reader - xx"]
 pub type PRO_CACHE_D_SOURCE_PRO_DPORT_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DPORT` writer - xx"]
-pub type PRO_CACHE_D_SOURCE_PRO_DPORT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_D_SOURCE_PRO_DPORT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DROM0` reader - xx"]
 pub type PRO_CACHE_D_SOURCE_PRO_DROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DROM0` writer - xx"]
-pub type PRO_CACHE_D_SOURCE_PRO_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_D_SOURCE_PRO_DROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - xx"]
     #[inline(always)]
@@ -92,7 +92,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_SOURCE_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -101,48 +101,48 @@ impl W {
     #[must_use]
     pub fn pro_cache_i_source_pro_iram1(
         &mut self,
-    ) -> PRO_CACHE_I_SOURCE_PRO_IRAM1_W<CACHE_SOURCE_1_SPEC, 0> {
-        PRO_CACHE_I_SOURCE_PRO_IRAM1_W::new(self)
+    ) -> PRO_CACHE_I_SOURCE_PRO_IRAM1_W<CACHE_SOURCE_1_SPEC> {
+        PRO_CACHE_I_SOURCE_PRO_IRAM1_W::new(self, 0)
     }
     #[doc = "Bit 1 - xx"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cache_i_source_pro_irom0(
         &mut self,
-    ) -> PRO_CACHE_I_SOURCE_PRO_IROM0_W<CACHE_SOURCE_1_SPEC, 1> {
-        PRO_CACHE_I_SOURCE_PRO_IROM0_W::new(self)
+    ) -> PRO_CACHE_I_SOURCE_PRO_IROM0_W<CACHE_SOURCE_1_SPEC> {
+        PRO_CACHE_I_SOURCE_PRO_IROM0_W::new(self, 1)
     }
     #[doc = "Bit 2 - xx"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cache_i_source_pro_drom0(
         &mut self,
-    ) -> PRO_CACHE_I_SOURCE_PRO_DROM0_W<CACHE_SOURCE_1_SPEC, 2> {
-        PRO_CACHE_I_SOURCE_PRO_DROM0_W::new(self)
+    ) -> PRO_CACHE_I_SOURCE_PRO_DROM0_W<CACHE_SOURCE_1_SPEC> {
+        PRO_CACHE_I_SOURCE_PRO_DROM0_W::new(self, 2)
     }
     #[doc = "Bit 3 - xx"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cache_d_source_pro_dram0(
         &mut self,
-    ) -> PRO_CACHE_D_SOURCE_PRO_DRAM0_W<CACHE_SOURCE_1_SPEC, 3> {
-        PRO_CACHE_D_SOURCE_PRO_DRAM0_W::new(self)
+    ) -> PRO_CACHE_D_SOURCE_PRO_DRAM0_W<CACHE_SOURCE_1_SPEC> {
+        PRO_CACHE_D_SOURCE_PRO_DRAM0_W::new(self, 3)
     }
     #[doc = "Bit 4 - xx"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cache_d_source_pro_dport(
         &mut self,
-    ) -> PRO_CACHE_D_SOURCE_PRO_DPORT_W<CACHE_SOURCE_1_SPEC, 4> {
-        PRO_CACHE_D_SOURCE_PRO_DPORT_W::new(self)
+    ) -> PRO_CACHE_D_SOURCE_PRO_DPORT_W<CACHE_SOURCE_1_SPEC> {
+        PRO_CACHE_D_SOURCE_PRO_DPORT_W::new(self, 4)
     }
     #[doc = "Bit 5 - xx"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cache_d_source_pro_drom0(
         &mut self,
-    ) -> PRO_CACHE_D_SOURCE_PRO_DROM0_W<CACHE_SOURCE_1_SPEC, 5> {
-        PRO_CACHE_D_SOURCE_PRO_DROM0_W::new(self)
+    ) -> PRO_CACHE_D_SOURCE_PRO_DROM0_W<CACHE_SOURCE_1_SPEC> {
+        PRO_CACHE_D_SOURCE_PRO_DROM0_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

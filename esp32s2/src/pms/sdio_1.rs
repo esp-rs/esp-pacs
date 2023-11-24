@@ -5,7 +5,7 @@ pub type W = crate::W<SDIO_1_SPEC>;
 #[doc = "Field `SDIO_DISABLE` reader - Setting to 1 disables the SDIO function."]
 pub type SDIO_DISABLE_R = crate::BitReader;
 #[doc = "Field `SDIO_DISABLE` writer - Setting to 1 disables the SDIO function."]
-pub type SDIO_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Setting to 1 disables the SDIO function."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Setting to 1 disables the SDIO function."]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_disable(&mut self) -> SDIO_DISABLE_W<SDIO_1_SPEC, 0> {
-        SDIO_DISABLE_W::new(self)
+    pub fn sdio_disable(&mut self) -> SDIO_DISABLE_W<SDIO_1_SPEC> {
+        SDIO_DISABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

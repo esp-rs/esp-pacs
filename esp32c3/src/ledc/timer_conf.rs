@@ -5,25 +5,25 @@ pub type W = crate::W<TIMER_CONF_SPEC>;
 #[doc = "Field `DUTY_RES` reader - reg_lstimer0_duty_res."]
 pub type DUTY_RES_R = crate::FieldReader;
 #[doc = "Field `DUTY_RES` writer - reg_lstimer0_duty_res."]
-pub type DUTY_RES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DUTY_RES_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CLK_DIV` reader - reg_clk_div_lstimer0."]
 pub type CLK_DIV_R = crate::FieldReader<u32>;
 #[doc = "Field `CLK_DIV` writer - reg_clk_div_lstimer0."]
-pub type CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 #[doc = "Field `PAUSE` reader - reg_lstimer0_pause."]
 pub type PAUSE_R = crate::BitReader;
 #[doc = "Field `PAUSE` writer - reg_lstimer0_pause."]
-pub type PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST` reader - reg_lstimer0_rst."]
 pub type RST_R = crate::BitReader;
 #[doc = "Field `RST` writer - reg_lstimer0_rst."]
-pub type RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TICK_SEL` reader - reg_tick_sel_lstimer0."]
 pub type TICK_SEL_R = crate::BitReader;
 #[doc = "Field `TICK_SEL` writer - reg_tick_sel_lstimer0."]
-pub type TICK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TICK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PARA_UP` writer - reg_lstimer0_para_up."]
-pub type PARA_UP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARA_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - reg_lstimer0_duty_res."]
     #[inline(always)]
@@ -66,45 +66,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - reg_lstimer0_duty_res."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_res(&mut self) -> DUTY_RES_W<TIMER_CONF_SPEC, 0> {
-        DUTY_RES_W::new(self)
+    pub fn duty_res(&mut self) -> DUTY_RES_W<TIMER_CONF_SPEC> {
+        DUTY_RES_W::new(self, 0)
     }
     #[doc = "Bits 4:21 - reg_clk_div_lstimer0."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_div(&mut self) -> CLK_DIV_W<TIMER_CONF_SPEC, 4> {
-        CLK_DIV_W::new(self)
+    pub fn clk_div(&mut self) -> CLK_DIV_W<TIMER_CONF_SPEC> {
+        CLK_DIV_W::new(self, 4)
     }
     #[doc = "Bit 22 - reg_lstimer0_pause."]
     #[inline(always)]
     #[must_use]
-    pub fn pause(&mut self) -> PAUSE_W<TIMER_CONF_SPEC, 22> {
-        PAUSE_W::new(self)
+    pub fn pause(&mut self) -> PAUSE_W<TIMER_CONF_SPEC> {
+        PAUSE_W::new(self, 22)
     }
     #[doc = "Bit 23 - reg_lstimer0_rst."]
     #[inline(always)]
     #[must_use]
-    pub fn rst(&mut self) -> RST_W<TIMER_CONF_SPEC, 23> {
-        RST_W::new(self)
+    pub fn rst(&mut self) -> RST_W<TIMER_CONF_SPEC> {
+        RST_W::new(self, 23)
     }
     #[doc = "Bit 24 - reg_tick_sel_lstimer0."]
     #[inline(always)]
     #[must_use]
-    pub fn tick_sel(&mut self) -> TICK_SEL_W<TIMER_CONF_SPEC, 24> {
-        TICK_SEL_W::new(self)
+    pub fn tick_sel(&mut self) -> TICK_SEL_W<TIMER_CONF_SPEC> {
+        TICK_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - reg_lstimer0_para_up."]
     #[inline(always)]
     #[must_use]
-    pub fn para_up(&mut self) -> PARA_UP_W<TIMER_CONF_SPEC, 25> {
-        PARA_UP_W::new(self)
+    pub fn para_up(&mut self) -> PARA_UP_W<TIMER_CONF_SPEC> {
+        PARA_UP_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

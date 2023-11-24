@@ -5,11 +5,11 @@ pub type W = crate::W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC>;
 #[doc = "Field `PRO_CACHE_FLASH_WRAP_AROUND` reader - The bit is used to enable wrap around mode when read data from flash."]
 pub type PRO_CACHE_FLASH_WRAP_AROUND_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_FLASH_WRAP_AROUND` writer - The bit is used to enable wrap around mode when read data from flash."]
-pub type PRO_CACHE_FLASH_WRAP_AROUND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_FLASH_WRAP_AROUND_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_SRAM_RD_WRAP_AROUND` reader - The bit is used to enable wrap around mode when read data from spiram."]
 pub type PRO_CACHE_SRAM_RD_WRAP_AROUND_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_SRAM_RD_WRAP_AROUND` writer - The bit is used to enable wrap around mode when read data from spiram."]
-pub type PRO_CACHE_SRAM_RD_WRAP_AROUND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_SRAM_RD_WRAP_AROUND_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_WRAP_AROUND_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn pro_cache_flash_wrap_around(
         &mut self,
-    ) -> PRO_CACHE_FLASH_WRAP_AROUND_W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC, 0> {
-        PRO_CACHE_FLASH_WRAP_AROUND_W::new(self)
+    ) -> PRO_CACHE_FLASH_WRAP_AROUND_W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC> {
+        PRO_CACHE_FLASH_WRAP_AROUND_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable wrap around mode when read data from spiram."]
     #[inline(always)]
     #[must_use]
     pub fn pro_cache_sram_rd_wrap_around(
         &mut self,
-    ) -> PRO_CACHE_SRAM_RD_WRAP_AROUND_W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC, 1> {
-        PRO_CACHE_SRAM_RD_WRAP_AROUND_W::new(self)
+    ) -> PRO_CACHE_SRAM_RD_WRAP_AROUND_W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC> {
+        PRO_CACHE_SRAM_RD_WRAP_AROUND_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

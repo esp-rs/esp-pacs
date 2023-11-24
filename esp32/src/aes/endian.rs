@@ -5,7 +5,7 @@ pub type W = crate::W<ENDIAN_SPEC>;
 #[doc = "Field `ENDIAN` reader - Endianness selection register. See Table 22-2 for details."]
 pub type ENDIAN_R = crate::FieldReader;
 #[doc = "Field `ENDIAN` writer - Endianness selection register. See Table 22-2 for details."]
-pub type ENDIAN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ENDIAN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Endianness selection register. See Table 22-2 for details."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENDIAN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Endianness selection register. See Table 22-2 for details."]
     #[inline(always)]
     #[must_use]
-    pub fn endian(&mut self) -> ENDIAN_W<ENDIAN_SPEC, 0> {
-        ENDIAN_W::new(self)
+    pub fn endian(&mut self) -> ENDIAN_W<ENDIAN_SPEC> {
+        ENDIAN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

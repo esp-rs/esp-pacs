@@ -5,19 +5,19 @@ pub type W = crate::W<SPI_USER1_SPEC>;
 #[doc = "Field `reg_usr_dummy_cyclelen` reader - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
 pub type REG_USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `reg_usr_dummy_cyclelen` writer - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
-pub type REG_USR_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type REG_USR_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `reg_usr_miso_bitlen` reader - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_MISO_BITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `reg_usr_miso_bitlen` writer - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_MISO_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type REG_USR_MISO_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `reg_usr_mosi_bitlen` reader - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_MOSI_BITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `reg_usr_mosi_bitlen` writer - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_MOSI_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type REG_USR_MOSI_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `reg_usr_addr_bitlen` reader - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `reg_usr_addr_bitlen` writer - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_ADDR_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type REG_USR_ADDR_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
     #[inline(always)]
@@ -66,35 +66,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_USER1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_usr_dummy_cyclelen(&mut self) -> REG_USR_DUMMY_CYCLELEN_W<SPI_USER1_SPEC, 0> {
-        REG_USR_DUMMY_CYCLELEN_W::new(self)
+    pub fn reg_usr_dummy_cyclelen(&mut self) -> REG_USR_DUMMY_CYCLELEN_W<SPI_USER1_SPEC> {
+        REG_USR_DUMMY_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bits 8:16 - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_usr_miso_bitlen(&mut self) -> REG_USR_MISO_BITLEN_W<SPI_USER1_SPEC, 8> {
-        REG_USR_MISO_BITLEN_W::new(self)
+    pub fn reg_usr_miso_bitlen(&mut self) -> REG_USR_MISO_BITLEN_W<SPI_USER1_SPEC> {
+        REG_USR_MISO_BITLEN_W::new(self, 8)
     }
     #[doc = "Bits 17:25 - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_usr_mosi_bitlen(&mut self) -> REG_USR_MOSI_BITLEN_W<SPI_USER1_SPEC, 17> {
-        REG_USR_MOSI_BITLEN_W::new(self)
+    pub fn reg_usr_mosi_bitlen(&mut self) -> REG_USR_MOSI_BITLEN_W<SPI_USER1_SPEC> {
+        REG_USR_MOSI_BITLEN_W::new(self, 17)
     }
     #[doc = "Bits 26:31 - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_usr_addr_bitlen(&mut self) -> REG_USR_ADDR_BITLEN_W<SPI_USER1_SPEC, 26> {
-        REG_USR_ADDR_BITLEN_W::new(self)
+    pub fn reg_usr_addr_bitlen(&mut self) -> REG_USR_ADDR_BITLEN_W<SPI_USER1_SPEC> {
+        REG_USR_ADDR_BITLEN_W::new(self, 26)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

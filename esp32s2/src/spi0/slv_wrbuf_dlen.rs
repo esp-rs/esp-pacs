@@ -5,11 +5,11 @@ pub type W = crate::W<SLV_WRBUF_DLEN_SPEC>;
 #[doc = "Field `SLV_WR_BUF_DONE` reader - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
 pub type SLV_WR_BUF_DONE_R = crate::BitReader;
 #[doc = "Field `SLV_WR_BUF_DONE` writer - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_WR_BUF_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_WR_BUF_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONF_BASE_BITLEN` reader - The basic spi_clk cycles of CONF state. The real cycle length of CONF state, if SPI_USR_CONF is enabled, is SPI_CONF_BASE_BITLEN\\[6:0\\] + SPI_CONF_BITLEN\\[23:0\\]."]
 pub type CONF_BASE_BITLEN_R = crate::FieldReader;
 #[doc = "Field `CONF_BASE_BITLEN` writer - The basic spi_clk cycles of CONF state. The real cycle length of CONF state, if SPI_USR_CONF is enabled, is SPI_CONF_BASE_BITLEN\\[6:0\\] + SPI_CONF_BITLEN\\[23:0\\]."]
-pub type CONF_BASE_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type CONF_BASE_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bit 24 - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLV_WRBUF_DLEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 24 - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<SLV_WRBUF_DLEN_SPEC, 24> {
-        SLV_WR_BUF_DONE_W::new(self)
+    pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<SLV_WRBUF_DLEN_SPEC> {
+        SLV_WR_BUF_DONE_W::new(self, 24)
     }
     #[doc = "Bits 25:31 - The basic spi_clk cycles of CONF state. The real cycle length of CONF state, if SPI_USR_CONF is enabled, is SPI_CONF_BASE_BITLEN\\[6:0\\] + SPI_CONF_BITLEN\\[23:0\\]."]
     #[inline(always)]
     #[must_use]
-    pub fn conf_base_bitlen(&mut self) -> CONF_BASE_BITLEN_W<SLV_WRBUF_DLEN_SPEC, 25> {
-        CONF_BASE_BITLEN_W::new(self)
+    pub fn conf_base_bitlen(&mut self) -> CONF_BASE_BITLEN_W<SLV_WRBUF_DLEN_SPEC> {
+        CONF_BASE_BITLEN_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

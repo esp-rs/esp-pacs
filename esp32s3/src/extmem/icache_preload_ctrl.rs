@@ -5,13 +5,13 @@ pub type W = crate::W<ICACHE_PRELOAD_CTRL_SPEC>;
 #[doc = "Field `ICACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
 pub type ICACHE_PRELOAD_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub type ICACHE_PRELOAD_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_PRELOAD_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_PRELOAD_DONE` reader - The bit is used to indicate preload operation is finished."]
 pub type ICACHE_PRELOAD_DONE_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_ORDER` reader - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
 pub type ICACHE_PRELOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_ORDER` writer - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
-pub type ICACHE_PRELOAD_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_PRELOAD_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
@@ -51,21 +51,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_PRELOAD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_preload_ena(&mut self) -> ICACHE_PRELOAD_ENA_W<ICACHE_PRELOAD_CTRL_SPEC, 0> {
-        ICACHE_PRELOAD_ENA_W::new(self)
+    pub fn icache_preload_ena(&mut self) -> ICACHE_PRELOAD_ENA_W<ICACHE_PRELOAD_CTRL_SPEC> {
+        ICACHE_PRELOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_preload_order(&mut self) -> ICACHE_PRELOAD_ORDER_W<ICACHE_PRELOAD_CTRL_SPEC, 2> {
-        ICACHE_PRELOAD_ORDER_W::new(self)
+    pub fn icache_preload_order(&mut self) -> ICACHE_PRELOAD_ORDER_W<ICACHE_PRELOAD_CTRL_SPEC> {
+        ICACHE_PRELOAD_ORDER_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

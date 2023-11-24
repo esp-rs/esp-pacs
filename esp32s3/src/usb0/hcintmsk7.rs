@@ -5,55 +5,55 @@ pub type W = crate::W<HCINTMSK7_SPEC>;
 #[doc = "Field `H_XFERCOMPLMSK7` reader - "]
 pub type H_XFERCOMPLMSK7_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPLMSK7` writer - "]
-pub type H_XFERCOMPLMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XFERCOMPLMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_CHHLTDMSK7` reader - "]
 pub type H_CHHLTDMSK7_R = crate::BitReader;
 #[doc = "Field `H_CHHLTDMSK7` writer - "]
-pub type H_CHHLTDMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_CHHLTDMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_AHBERRMSK7` reader - "]
 pub type H_AHBERRMSK7_R = crate::BitReader;
 #[doc = "Field `H_AHBERRMSK7` writer - "]
-pub type H_AHBERRMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_AHBERRMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_STALLMSK7` reader - "]
 pub type H_STALLMSK7_R = crate::BitReader;
 #[doc = "Field `H_STALLMSK7` writer - "]
-pub type H_STALLMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_STALLMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_NAKMSK7` reader - "]
 pub type H_NAKMSK7_R = crate::BitReader;
 #[doc = "Field `H_NAKMSK7` writer - "]
-pub type H_NAKMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_NAKMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_ACKMSK7` reader - "]
 pub type H_ACKMSK7_R = crate::BitReader;
 #[doc = "Field `H_ACKMSK7` writer - "]
-pub type H_ACKMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_ACKMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_NYETMSK7` reader - "]
 pub type H_NYETMSK7_R = crate::BitReader;
 #[doc = "Field `H_NYETMSK7` writer - "]
-pub type H_NYETMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_NYETMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_XACTERRMSK7` reader - "]
 pub type H_XACTERRMSK7_R = crate::BitReader;
 #[doc = "Field `H_XACTERRMSK7` writer - "]
-pub type H_XACTERRMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XACTERRMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_BBLERRMSK7` reader - "]
 pub type H_BBLERRMSK7_R = crate::BitReader;
 #[doc = "Field `H_BBLERRMSK7` writer - "]
-pub type H_BBLERRMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_BBLERRMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_FRMOVRUNMSK7` reader - "]
 pub type H_FRMOVRUNMSK7_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUNMSK7` writer - "]
-pub type H_FRMOVRUNMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_FRMOVRUNMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DATATGLERRMSK7` reader - "]
 pub type H_DATATGLERRMSK7_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERRMSK7` writer - "]
-pub type H_DATATGLERRMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DATATGLERRMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_BNAINTRMSK7` reader - "]
 pub type H_BNAINTRMSK7_R = crate::BitReader;
 #[doc = "Field `H_BNAINTRMSK7` writer - "]
-pub type H_BNAINTRMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_BNAINTRMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DESC_LST_ROLLINTRMSK7` reader - "]
 pub type H_DESC_LST_ROLLINTRMSK7_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTRMSK7` writer - "]
-pub type H_DESC_LST_ROLLINTRMSK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DESC_LST_ROLLINTRMSK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -171,87 +171,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HCINTMSK7_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xfercomplmsk7(&mut self) -> H_XFERCOMPLMSK7_W<HCINTMSK7_SPEC, 0> {
-        H_XFERCOMPLMSK7_W::new(self)
+    pub fn h_xfercomplmsk7(&mut self) -> H_XFERCOMPLMSK7_W<HCINTMSK7_SPEC> {
+        H_XFERCOMPLMSK7_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chhltdmsk7(&mut self) -> H_CHHLTDMSK7_W<HCINTMSK7_SPEC, 1> {
-        H_CHHLTDMSK7_W::new(self)
+    pub fn h_chhltdmsk7(&mut self) -> H_CHHLTDMSK7_W<HCINTMSK7_SPEC> {
+        H_CHHLTDMSK7_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ahberrmsk7(&mut self) -> H_AHBERRMSK7_W<HCINTMSK7_SPEC, 2> {
-        H_AHBERRMSK7_W::new(self)
+    pub fn h_ahberrmsk7(&mut self) -> H_AHBERRMSK7_W<HCINTMSK7_SPEC> {
+        H_AHBERRMSK7_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn h_stallmsk7(&mut self) -> H_STALLMSK7_W<HCINTMSK7_SPEC, 3> {
-        H_STALLMSK7_W::new(self)
+    pub fn h_stallmsk7(&mut self) -> H_STALLMSK7_W<HCINTMSK7_SPEC> {
+        H_STALLMSK7_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nakmsk7(&mut self) -> H_NAKMSK7_W<HCINTMSK7_SPEC, 4> {
-        H_NAKMSK7_W::new(self)
+    pub fn h_nakmsk7(&mut self) -> H_NAKMSK7_W<HCINTMSK7_SPEC> {
+        H_NAKMSK7_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ackmsk7(&mut self) -> H_ACKMSK7_W<HCINTMSK7_SPEC, 5> {
-        H_ACKMSK7_W::new(self)
+    pub fn h_ackmsk7(&mut self) -> H_ACKMSK7_W<HCINTMSK7_SPEC> {
+        H_ACKMSK7_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nyetmsk7(&mut self) -> H_NYETMSK7_W<HCINTMSK7_SPEC, 6> {
-        H_NYETMSK7_W::new(self)
+    pub fn h_nyetmsk7(&mut self) -> H_NYETMSK7_W<HCINTMSK7_SPEC> {
+        H_NYETMSK7_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xacterrmsk7(&mut self) -> H_XACTERRMSK7_W<HCINTMSK7_SPEC, 7> {
-        H_XACTERRMSK7_W::new(self)
+    pub fn h_xacterrmsk7(&mut self) -> H_XACTERRMSK7_W<HCINTMSK7_SPEC> {
+        H_XACTERRMSK7_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bblerrmsk7(&mut self) -> H_BBLERRMSK7_W<HCINTMSK7_SPEC, 8> {
-        H_BBLERRMSK7_W::new(self)
+    pub fn h_bblerrmsk7(&mut self) -> H_BBLERRMSK7_W<HCINTMSK7_SPEC> {
+        H_BBLERRMSK7_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frmovrunmsk7(&mut self) -> H_FRMOVRUNMSK7_W<HCINTMSK7_SPEC, 9> {
-        H_FRMOVRUNMSK7_W::new(self)
+    pub fn h_frmovrunmsk7(&mut self) -> H_FRMOVRUNMSK7_W<HCINTMSK7_SPEC> {
+        H_FRMOVRUNMSK7_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn h_datatglerrmsk7(&mut self) -> H_DATATGLERRMSK7_W<HCINTMSK7_SPEC, 10> {
-        H_DATATGLERRMSK7_W::new(self)
+    pub fn h_datatglerrmsk7(&mut self) -> H_DATATGLERRMSK7_W<HCINTMSK7_SPEC> {
+        H_DATATGLERRMSK7_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bnaintrmsk7(&mut self) -> H_BNAINTRMSK7_W<HCINTMSK7_SPEC, 11> {
-        H_BNAINTRMSK7_W::new(self)
+    pub fn h_bnaintrmsk7(&mut self) -> H_BNAINTRMSK7_W<HCINTMSK7_SPEC> {
+        H_BNAINTRMSK7_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn h_desc_lst_rollintrmsk7(&mut self) -> H_DESC_LST_ROLLINTRMSK7_W<HCINTMSK7_SPEC, 13> {
-        H_DESC_LST_ROLLINTRMSK7_W::new(self)
+    pub fn h_desc_lst_rollintrmsk7(&mut self) -> H_DESC_LST_ROLLINTRMSK7_W<HCINTMSK7_SPEC> {
+        H_DESC_LST_ROLLINTRMSK7_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

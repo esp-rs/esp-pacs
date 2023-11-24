@@ -7,21 +7,19 @@ pub type VDDBAT_CHARGE_UNDERVOLTAGE_FLAG_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_CHARGER` reader - need_des"]
 pub type VDDBAT_CHARGE_CHARGER_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_CHARGER` writer - need_des"]
-pub type VDDBAT_CHARGE_CHARGER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDDBAT_CHARGE_CHARGER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VDDBAT_CHARGE_CNT_CLR` reader - need_des"]
 pub type VDDBAT_CHARGE_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_CNT_CLR` writer - need_des"]
-pub type VDDBAT_CHARGE_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDDBAT_CHARGE_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VDDBAT_CHARGE_UPVOLTAGE_TARGET` reader - need_des"]
 pub type VDDBAT_CHARGE_UPVOLTAGE_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `VDDBAT_CHARGE_UPVOLTAGE_TARGET` writer - need_des"]
-pub type VDDBAT_CHARGE_UPVOLTAGE_TARGET_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type VDDBAT_CHARGE_UPVOLTAGE_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `VDDBAT_CHARGE_UNDERVOLTAGE_TARGET` reader - need_des"]
 pub type VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `VDDBAT_CHARGE_UNDERVOLTAGE_TARGET` writer - need_des"]
-pub type VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -79,41 +77,37 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<VDDBAT_CHARGE_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vddbat_charge_charger(
-        &mut self,
-    ) -> VDDBAT_CHARGE_CHARGER_W<VDDBAT_CHARGE_CNTL_SPEC, 10> {
-        VDDBAT_CHARGE_CHARGER_W::new(self)
+    pub fn vddbat_charge_charger(&mut self) -> VDDBAT_CHARGE_CHARGER_W<VDDBAT_CHARGE_CNTL_SPEC> {
+        VDDBAT_CHARGE_CHARGER_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vddbat_charge_cnt_clr(
-        &mut self,
-    ) -> VDDBAT_CHARGE_CNT_CLR_W<VDDBAT_CHARGE_CNTL_SPEC, 11> {
-        VDDBAT_CHARGE_CNT_CLR_W::new(self)
+    pub fn vddbat_charge_cnt_clr(&mut self) -> VDDBAT_CHARGE_CNT_CLR_W<VDDBAT_CHARGE_CNTL_SPEC> {
+        VDDBAT_CHARGE_CNT_CLR_W::new(self, 11)
     }
     #[doc = "Bits 12:21 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn vddbat_charge_upvoltage_target(
         &mut self,
-    ) -> VDDBAT_CHARGE_UPVOLTAGE_TARGET_W<VDDBAT_CHARGE_CNTL_SPEC, 12> {
-        VDDBAT_CHARGE_UPVOLTAGE_TARGET_W::new(self)
+    ) -> VDDBAT_CHARGE_UPVOLTAGE_TARGET_W<VDDBAT_CHARGE_CNTL_SPEC> {
+        VDDBAT_CHARGE_UPVOLTAGE_TARGET_W::new(self, 12)
     }
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn vddbat_charge_undervoltage_target(
         &mut self,
-    ) -> VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_W<VDDBAT_CHARGE_CNTL_SPEC, 22> {
-        VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_W::new(self)
+    ) -> VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_W<VDDBAT_CHARGE_CNTL_SPEC> {
+        VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<THRES0_CTRL_SPEC>;
 #[doc = "Field `APB_SARADC_THRES0_CHANNEL` reader - configure thres0 to adc channel"]
 pub type APB_SARADC_THRES0_CHANNEL_R = crate::FieldReader;
 #[doc = "Field `APB_SARADC_THRES0_CHANNEL` writer - configure thres0 to adc channel"]
-pub type APB_SARADC_THRES0_CHANNEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type APB_SARADC_THRES0_CHANNEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `APB_SARADC_THRES0_HIGH` reader - saradc thres0 monitor thres"]
 pub type APB_SARADC_THRES0_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_SARADC_THRES0_HIGH` writer - saradc thres0 monitor thres"]
-pub type APB_SARADC_THRES0_HIGH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type APB_SARADC_THRES0_HIGH_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 #[doc = "Field `APB_SARADC_THRES0_LOW` reader - saradc thres0 monitor thres"]
 pub type APB_SARADC_THRES0_LOW_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_SARADC_THRES0_LOW` writer - saradc thres0 monitor thres"]
-pub type APB_SARADC_THRES0_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type APB_SARADC_THRES0_LOW_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 0:3 - configure thres0 to adc channel"]
     #[inline(always)]
@@ -53,29 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<THRES0_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - configure thres0 to adc channel"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_channel(
-        &mut self,
-    ) -> APB_SARADC_THRES0_CHANNEL_W<THRES0_CTRL_SPEC, 0> {
-        APB_SARADC_THRES0_CHANNEL_W::new(self)
+    pub fn apb_saradc_thres0_channel(&mut self) -> APB_SARADC_THRES0_CHANNEL_W<THRES0_CTRL_SPEC> {
+        APB_SARADC_THRES0_CHANNEL_W::new(self, 0)
     }
     #[doc = "Bits 5:17 - saradc thres0 monitor thres"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_high(&mut self) -> APB_SARADC_THRES0_HIGH_W<THRES0_CTRL_SPEC, 5> {
-        APB_SARADC_THRES0_HIGH_W::new(self)
+    pub fn apb_saradc_thres0_high(&mut self) -> APB_SARADC_THRES0_HIGH_W<THRES0_CTRL_SPEC> {
+        APB_SARADC_THRES0_HIGH_W::new(self, 5)
     }
     #[doc = "Bits 18:30 - saradc thres0 monitor thres"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_low(&mut self) -> APB_SARADC_THRES0_LOW_W<THRES0_CTRL_SPEC, 18> {
-        APB_SARADC_THRES0_LOW_W::new(self)
+    pub fn apb_saradc_thres0_low(&mut self) -> APB_SARADC_THRES0_LOW_W<THRES0_CTRL_SPEC> {
+        APB_SARADC_THRES0_LOW_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

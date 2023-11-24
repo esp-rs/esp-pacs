@@ -5,19 +5,19 @@ pub type W = crate::W<CLK_TO_HP_SPEC>;
 #[doc = "Field `ICG_HP_XTAL32K` reader - need_des"]
 pub type ICG_HP_XTAL32K_R = crate::BitReader;
 #[doc = "Field `ICG_HP_XTAL32K` writer - need_des"]
-pub type ICG_HP_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICG_HP_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICG_HP_SOSC` reader - need_des"]
 pub type ICG_HP_SOSC_R = crate::BitReader;
 #[doc = "Field `ICG_HP_SOSC` writer - need_des"]
-pub type ICG_HP_SOSC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICG_HP_SOSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICG_HP_OSC32K` reader - need_des"]
 pub type ICG_HP_OSC32K_R = crate::BitReader;
 #[doc = "Field `ICG_HP_OSC32K` writer - need_des"]
-pub type ICG_HP_OSC32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICG_HP_OSC32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICG_HP_FOSC` reader - need_des"]
 pub type ICG_HP_FOSC_R = crate::BitReader;
 #[doc = "Field `ICG_HP_FOSC` writer - need_des"]
-pub type ICG_HP_FOSC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICG_HP_FOSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_TO_HP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn icg_hp_xtal32k(&mut self) -> ICG_HP_XTAL32K_W<CLK_TO_HP_SPEC, 28> {
-        ICG_HP_XTAL32K_W::new(self)
+    pub fn icg_hp_xtal32k(&mut self) -> ICG_HP_XTAL32K_W<CLK_TO_HP_SPEC> {
+        ICG_HP_XTAL32K_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn icg_hp_sosc(&mut self) -> ICG_HP_SOSC_W<CLK_TO_HP_SPEC, 29> {
-        ICG_HP_SOSC_W::new(self)
+    pub fn icg_hp_sosc(&mut self) -> ICG_HP_SOSC_W<CLK_TO_HP_SPEC> {
+        ICG_HP_SOSC_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn icg_hp_osc32k(&mut self) -> ICG_HP_OSC32K_W<CLK_TO_HP_SPEC, 30> {
-        ICG_HP_OSC32K_W::new(self)
+    pub fn icg_hp_osc32k(&mut self) -> ICG_HP_OSC32K_W<CLK_TO_HP_SPEC> {
+        ICG_HP_OSC32K_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn icg_hp_fosc(&mut self) -> ICG_HP_FOSC_W<CLK_TO_HP_SPEC, 31> {
-        ICG_HP_FOSC_W::new(self)
+    pub fn icg_hp_fosc(&mut self) -> ICG_HP_FOSC_W<CLK_TO_HP_SPEC> {
+        ICG_HP_FOSC_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

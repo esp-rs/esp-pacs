@@ -5,11 +5,11 @@ pub type W = crate::W<SAR_SLAVE_ADDR4_SPEC>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR7` reader - configure i2c slave address7"]
 pub type SAR_I2C_SLAVE_ADDR7_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR7` writer - configure i2c slave address7"]
-pub type SAR_I2C_SLAVE_ADDR7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SAR_I2C_SLAVE_ADDR7_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR6` reader - configure i2c slave address6"]
 pub type SAR_I2C_SLAVE_ADDR6_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR6` writer - configure i2c slave address6"]
-pub type SAR_I2C_SLAVE_ADDR6_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SAR_I2C_SLAVE_ADDR6_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 impl R {
     #[doc = "Bits 0:10 - configure i2c slave address7"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_SLAVE_ADDR4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10 - configure i2c slave address7"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_slave_addr7(&mut self) -> SAR_I2C_SLAVE_ADDR7_W<SAR_SLAVE_ADDR4_SPEC, 0> {
-        SAR_I2C_SLAVE_ADDR7_W::new(self)
+    pub fn sar_i2c_slave_addr7(&mut self) -> SAR_I2C_SLAVE_ADDR7_W<SAR_SLAVE_ADDR4_SPEC> {
+        SAR_I2C_SLAVE_ADDR7_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - configure i2c slave address6"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_slave_addr6(&mut self) -> SAR_I2C_SLAVE_ADDR6_W<SAR_SLAVE_ADDR4_SPEC, 11> {
-        SAR_I2C_SLAVE_ADDR6_W::new(self)
+    pub fn sar_i2c_slave_addr6(&mut self) -> SAR_I2C_SLAVE_ADDR6_W<SAR_SLAVE_ADDR4_SPEC> {
+        SAR_I2C_SLAVE_ADDR6_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

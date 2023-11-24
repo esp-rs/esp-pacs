@@ -5,23 +5,23 @@ pub type W = crate::W<COEX_LP_CLK_CONF_SPEC>;
 #[doc = "Field `CLK_COEX_LP_SEL_OSC_SLOW` reader - "]
 pub type CLK_COEX_LP_SEL_OSC_SLOW_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_LP_SEL_OSC_SLOW` writer - "]
-pub type CLK_COEX_LP_SEL_OSC_SLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_COEX_LP_SEL_OSC_SLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_COEX_LP_SEL_OSC_FAST` reader - "]
 pub type CLK_COEX_LP_SEL_OSC_FAST_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_LP_SEL_OSC_FAST` writer - "]
-pub type CLK_COEX_LP_SEL_OSC_FAST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_COEX_LP_SEL_OSC_FAST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_COEX_LP_SEL_XTAL` reader - "]
 pub type CLK_COEX_LP_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_LP_SEL_XTAL` writer - "]
-pub type CLK_COEX_LP_SEL_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_COEX_LP_SEL_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_COEX_LP_SEL_XTAL32K` reader - "]
 pub type CLK_COEX_LP_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_LP_SEL_XTAL32K` writer - "]
-pub type CLK_COEX_LP_SEL_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_COEX_LP_SEL_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_COEX_LP_DIV_NUM` reader - "]
 pub type CLK_COEX_LP_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `CLK_COEX_LP_DIV_NUM` writer - "]
-pub type CLK_COEX_LP_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type CLK_COEX_LP_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -79,7 +79,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<COEX_LP_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -88,36 +88,34 @@ impl W {
     #[must_use]
     pub fn clk_coex_lp_sel_osc_slow(
         &mut self,
-    ) -> CLK_COEX_LP_SEL_OSC_SLOW_W<COEX_LP_CLK_CONF_SPEC, 0> {
-        CLK_COEX_LP_SEL_OSC_SLOW_W::new(self)
+    ) -> CLK_COEX_LP_SEL_OSC_SLOW_W<COEX_LP_CLK_CONF_SPEC> {
+        CLK_COEX_LP_SEL_OSC_SLOW_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
     pub fn clk_coex_lp_sel_osc_fast(
         &mut self,
-    ) -> CLK_COEX_LP_SEL_OSC_FAST_W<COEX_LP_CLK_CONF_SPEC, 1> {
-        CLK_COEX_LP_SEL_OSC_FAST_W::new(self)
+    ) -> CLK_COEX_LP_SEL_OSC_FAST_W<COEX_LP_CLK_CONF_SPEC> {
+        CLK_COEX_LP_SEL_OSC_FAST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_coex_lp_sel_xtal(&mut self) -> CLK_COEX_LP_SEL_XTAL_W<COEX_LP_CLK_CONF_SPEC, 2> {
-        CLK_COEX_LP_SEL_XTAL_W::new(self)
+    pub fn clk_coex_lp_sel_xtal(&mut self) -> CLK_COEX_LP_SEL_XTAL_W<COEX_LP_CLK_CONF_SPEC> {
+        CLK_COEX_LP_SEL_XTAL_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_coex_lp_sel_xtal32k(
-        &mut self,
-    ) -> CLK_COEX_LP_SEL_XTAL32K_W<COEX_LP_CLK_CONF_SPEC, 3> {
-        CLK_COEX_LP_SEL_XTAL32K_W::new(self)
+    pub fn clk_coex_lp_sel_xtal32k(&mut self) -> CLK_COEX_LP_SEL_XTAL32K_W<COEX_LP_CLK_CONF_SPEC> {
+        CLK_COEX_LP_SEL_XTAL32K_W::new(self, 3)
     }
     #[doc = "Bits 4:15"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_coex_lp_div_num(&mut self) -> CLK_COEX_LP_DIV_NUM_W<COEX_LP_CLK_CONF_SPEC, 4> {
-        CLK_COEX_LP_DIV_NUM_W::new(self)
+    pub fn clk_coex_lp_div_num(&mut self) -> CLK_COEX_LP_DIV_NUM_W<COEX_LP_CLK_CONF_SPEC> {
+        CLK_COEX_LP_DIV_NUM_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

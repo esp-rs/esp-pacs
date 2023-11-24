@@ -5,17 +5,17 @@ pub type W = crate::W<WR_TIM_CONF0_RS_BYPASS_SPEC>;
 #[doc = "Field `BYPASS_RS_CORRECTION` reader - Set this bit to bypass reed solomon correction step."]
 pub type BYPASS_RS_CORRECTION_R = crate::BitReader;
 #[doc = "Field `BYPASS_RS_CORRECTION` writer - Set this bit to bypass reed solomon correction step."]
-pub type BYPASS_RS_CORRECTION_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BYPASS_RS_CORRECTION_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BYPASS_RS_BLK_NUM` reader - Configures block number of programming twice operation."]
 pub type BYPASS_RS_BLK_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `BYPASS_RS_BLK_NUM` writer - Configures block number of programming twice operation."]
-pub type BYPASS_RS_BLK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type BYPASS_RS_BLK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `UPDATE` writer - Set this bit to update multi-bit register signals."]
-pub type UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TPGM_INACTIVE` reader - Configures the inactive programming time."]
 pub type TPGM_INACTIVE_R = crate::FieldReader;
 #[doc = "Field `TPGM_INACTIVE` writer - Configures the inactive programming time."]
-pub type TPGM_INACTIVE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TPGM_INACTIVE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - Set this bit to bypass reed solomon correction step."]
     #[inline(always)]
@@ -55,35 +55,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WR_TIM_CONF0_RS_BYPASS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to bypass reed solomon correction step."]
     #[inline(always)]
     #[must_use]
-    pub fn bypass_rs_correction(
-        &mut self,
-    ) -> BYPASS_RS_CORRECTION_W<WR_TIM_CONF0_RS_BYPASS_SPEC, 0> {
-        BYPASS_RS_CORRECTION_W::new(self)
+    pub fn bypass_rs_correction(&mut self) -> BYPASS_RS_CORRECTION_W<WR_TIM_CONF0_RS_BYPASS_SPEC> {
+        BYPASS_RS_CORRECTION_W::new(self, 0)
     }
     #[doc = "Bits 1:11 - Configures block number of programming twice operation."]
     #[inline(always)]
     #[must_use]
-    pub fn bypass_rs_blk_num(&mut self) -> BYPASS_RS_BLK_NUM_W<WR_TIM_CONF0_RS_BYPASS_SPEC, 1> {
-        BYPASS_RS_BLK_NUM_W::new(self)
+    pub fn bypass_rs_blk_num(&mut self) -> BYPASS_RS_BLK_NUM_W<WR_TIM_CONF0_RS_BYPASS_SPEC> {
+        BYPASS_RS_BLK_NUM_W::new(self, 1)
     }
     #[doc = "Bit 12 - Set this bit to update multi-bit register signals."]
     #[inline(always)]
     #[must_use]
-    pub fn update(&mut self) -> UPDATE_W<WR_TIM_CONF0_RS_BYPASS_SPEC, 12> {
-        UPDATE_W::new(self)
+    pub fn update(&mut self) -> UPDATE_W<WR_TIM_CONF0_RS_BYPASS_SPEC> {
+        UPDATE_W::new(self, 12)
     }
     #[doc = "Bits 13:20 - Configures the inactive programming time."]
     #[inline(always)]
     #[must_use]
-    pub fn tpgm_inactive(&mut self) -> TPGM_INACTIVE_W<WR_TIM_CONF0_RS_BYPASS_SPEC, 13> {
-        TPGM_INACTIVE_W::new(self)
+    pub fn tpgm_inactive(&mut self) -> TPGM_INACTIVE_W<WR_TIM_CONF0_RS_BYPASS_SPEC> {
+        TPGM_INACTIVE_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

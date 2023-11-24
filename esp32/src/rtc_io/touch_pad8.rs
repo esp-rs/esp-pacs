@@ -5,23 +5,23 @@ pub type W = crate::W<TOUCH_PAD8_SPEC>;
 #[doc = "Field `TO_GPIO` reader - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
 pub type TO_GPIO_R = crate::BitReader;
 #[doc = "Field `TO_GPIO` writer - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
-pub type TO_GPIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TO_GPIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XPD` reader - touch sensor power on."]
 pub type XPD_R = crate::BitReader;
 #[doc = "Field `XPD` writer - touch sensor power on."]
-pub type XPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIE_OPT` reader - default touch sensor tie option. 0: tie low 1: tie high."]
 pub type TIE_OPT_R = crate::BitReader;
 #[doc = "Field `TIE_OPT` writer - default touch sensor tie option. 0: tie low 1: tie high."]
-pub type TIE_OPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_OPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `START` reader - start touch sensor."]
 pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - start touch sensor."]
-pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC` reader - touch sensor slope control. 3-bit for each touch panel default 100."]
 pub type DAC_R = crate::FieldReader;
 #[doc = "Field `DAC` writer - touch sensor slope control. 3-bit for each touch panel default 100."]
-pub type DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 19 - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
     #[inline(always)]
@@ -64,39 +64,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_PAD8_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 19 - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
     #[inline(always)]
     #[must_use]
-    pub fn to_gpio(&mut self) -> TO_GPIO_W<TOUCH_PAD8_SPEC, 19> {
-        TO_GPIO_W::new(self)
+    pub fn to_gpio(&mut self) -> TO_GPIO_W<TOUCH_PAD8_SPEC> {
+        TO_GPIO_W::new(self, 19)
     }
     #[doc = "Bit 20 - touch sensor power on."]
     #[inline(always)]
     #[must_use]
-    pub fn xpd(&mut self) -> XPD_W<TOUCH_PAD8_SPEC, 20> {
-        XPD_W::new(self)
+    pub fn xpd(&mut self) -> XPD_W<TOUCH_PAD8_SPEC> {
+        XPD_W::new(self, 20)
     }
     #[doc = "Bit 21 - default touch sensor tie option. 0: tie low 1: tie high."]
     #[inline(always)]
     #[must_use]
-    pub fn tie_opt(&mut self) -> TIE_OPT_W<TOUCH_PAD8_SPEC, 21> {
-        TIE_OPT_W::new(self)
+    pub fn tie_opt(&mut self) -> TIE_OPT_W<TOUCH_PAD8_SPEC> {
+        TIE_OPT_W::new(self, 21)
     }
     #[doc = "Bit 22 - start touch sensor."]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<TOUCH_PAD8_SPEC, 22> {
-        START_W::new(self)
+    pub fn start(&mut self) -> START_W<TOUCH_PAD8_SPEC> {
+        START_W::new(self, 22)
     }
     #[doc = "Bits 23:25 - touch sensor slope control. 3-bit for each touch panel default 100."]
     #[inline(always)]
     #[must_use]
-    pub fn dac(&mut self) -> DAC_W<TOUCH_PAD8_SPEC, 23> {
-        DAC_W::new(self)
+    pub fn dac(&mut self) -> DAC_W<TOUCH_PAD8_SPEC> {
+        DAC_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

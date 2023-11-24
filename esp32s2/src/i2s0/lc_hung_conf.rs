@@ -5,15 +5,15 @@ pub type W = crate::W<LC_HUNG_CONF_SPEC>;
 #[doc = "Field `LC_FIFO_TIMEOUT` reader - I2S_TX_HUNG_INT interrupt or I2S_RX_HUNG_INT interrupt will be triggered when FIFO hung counter is equal to this value."]
 pub type LC_FIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `LC_FIFO_TIMEOUT` writer - I2S_TX_HUNG_INT interrupt or I2S_RX_HUNG_INT interrupt will be triggered when FIFO hung counter is equal to this value."]
-pub type LC_FIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LC_FIFO_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `LC_FIFO_TIMEOUT_SHIFT` reader - The bits are used to set the tick counter threshold. The tick counter is clocked by APB_CLK. The tick counter threshold is 88000/2^I2S_LC_FIFO_TIMEOUT_SHIFT. The tick counter is reset when it reaches the threshold."]
 pub type LC_FIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `LC_FIFO_TIMEOUT_SHIFT` writer - The bits are used to set the tick counter threshold. The tick counter is clocked by APB_CLK. The tick counter threshold is 88000/2^I2S_LC_FIFO_TIMEOUT_SHIFT. The tick counter is reset when it reaches the threshold."]
-pub type LC_FIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LC_FIFO_TIMEOUT_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LC_FIFO_TIMEOUT_ENA` reader - The enable bit for FIFO timeout."]
 pub type LC_FIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `LC_FIFO_TIMEOUT_ENA` writer - The enable bit for FIFO timeout."]
-pub type LC_FIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LC_FIFO_TIMEOUT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - I2S_TX_HUNG_INT interrupt or I2S_RX_HUNG_INT interrupt will be triggered when FIFO hung counter is equal to this value."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LC_HUNG_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - I2S_TX_HUNG_INT interrupt or I2S_RX_HUNG_INT interrupt will be triggered when FIFO hung counter is equal to this value."]
     #[inline(always)]
     #[must_use]
-    pub fn lc_fifo_timeout(&mut self) -> LC_FIFO_TIMEOUT_W<LC_HUNG_CONF_SPEC, 0> {
-        LC_FIFO_TIMEOUT_W::new(self)
+    pub fn lc_fifo_timeout(&mut self) -> LC_FIFO_TIMEOUT_W<LC_HUNG_CONF_SPEC> {
+        LC_FIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - The bits are used to set the tick counter threshold. The tick counter is clocked by APB_CLK. The tick counter threshold is 88000/2^I2S_LC_FIFO_TIMEOUT_SHIFT. The tick counter is reset when it reaches the threshold."]
     #[inline(always)]
     #[must_use]
-    pub fn lc_fifo_timeout_shift(&mut self) -> LC_FIFO_TIMEOUT_SHIFT_W<LC_HUNG_CONF_SPEC, 8> {
-        LC_FIFO_TIMEOUT_SHIFT_W::new(self)
+    pub fn lc_fifo_timeout_shift(&mut self) -> LC_FIFO_TIMEOUT_SHIFT_W<LC_HUNG_CONF_SPEC> {
+        LC_FIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - The enable bit for FIFO timeout."]
     #[inline(always)]
     #[must_use]
-    pub fn lc_fifo_timeout_ena(&mut self) -> LC_FIFO_TIMEOUT_ENA_W<LC_HUNG_CONF_SPEC, 11> {
-        LC_FIFO_TIMEOUT_ENA_W::new(self)
+    pub fn lc_fifo_timeout_ena(&mut self) -> LC_FIFO_TIMEOUT_ENA_W<LC_HUNG_CONF_SPEC> {
+        LC_FIFO_TIMEOUT_ENA_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

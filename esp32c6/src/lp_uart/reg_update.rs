@@ -5,7 +5,7 @@ pub type W = crate::W<REG_UPDATE_SPEC>;
 #[doc = "Field `REG_UPDATE` reader - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
 pub type REG_UPDATE_R = crate::BitReader;
 #[doc = "Field `REG_UPDATE` writer - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
-pub type REG_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REG_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REG_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
     #[inline(always)]
     #[must_use]
-    pub fn reg_update(&mut self) -> REG_UPDATE_W<REG_UPDATE_SPEC, 0> {
-        REG_UPDATE_W::new(self)
+    pub fn reg_update(&mut self) -> REG_UPDATE_W<REG_UPDATE_SPEC> {
+        REG_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

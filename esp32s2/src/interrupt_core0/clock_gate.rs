@@ -5,11 +5,11 @@ pub type W = crate::W<CLOCK_GATE_SPEC>;
 #[doc = "Field `CLK_EN` reader - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_NMI_MASK_HW` reader - This bit is used to disable all NMI interrupt signals to CPU."]
 pub type PRO_NMI_MASK_HW_R = crate::BitReader;
 #[doc = "Field `PRO_NMI_MASK_HW` writer - This bit is used to disable all NMI interrupt signals to CPU."]
-pub type PRO_NMI_MASK_HW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_NMI_MASK_HW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLOCK_GATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CLOCK_GATE_SPEC, 0> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CLOCK_GATE_SPEC> {
+        CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - This bit is used to disable all NMI interrupt signals to CPU."]
     #[inline(always)]
     #[must_use]
-    pub fn pro_nmi_mask_hw(&mut self) -> PRO_NMI_MASK_HW_W<CLOCK_GATE_SPEC, 1> {
-        PRO_NMI_MASK_HW_W::new(self)
+    pub fn pro_nmi_mask_hw(&mut self) -> PRO_NMI_MASK_HW_W<CLOCK_GATE_SPEC> {
+        PRO_NMI_MASK_HW_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

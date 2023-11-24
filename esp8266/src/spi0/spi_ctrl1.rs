@@ -5,15 +5,15 @@ pub type W = crate::W<SPI_CTRL1_SPEC>;
 #[doc = "Field `status` reader - In the slave mode, it is the status for master to read out."]
 pub type STATUS_R = crate::FieldReader<u16>;
 #[doc = "Field `status` writer - In the slave mode, it is the status for master to read out."]
-pub type STATUS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type STATUS_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `wb_mode` reader - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
 pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `wb_mode` writer - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
-pub type WB_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WB_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `status_ext` reader - In the slave mode,it is the status for master to read out."]
 pub type STATUS_EXT_R = crate::FieldReader;
 #[doc = "Field `status_ext` writer - In the slave mode,it is the status for master to read out."]
-pub type STATUS_EXT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type STATUS_EXT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:15 - In the slave mode, it is the status for master to read out."]
     #[inline(always)]
@@ -44,29 +44,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - In the slave mode, it is the status for master to read out."]
     #[inline(always)]
     #[must_use]
-    pub fn status(&mut self) -> STATUS_W<SPI_CTRL1_SPEC, 0> {
-        STATUS_W::new(self)
+    pub fn status(&mut self) -> STATUS_W<SPI_CTRL1_SPEC> {
+        STATUS_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
     #[inline(always)]
     #[must_use]
-    pub fn wb_mode(&mut self) -> WB_MODE_W<SPI_CTRL1_SPEC, 16> {
-        WB_MODE_W::new(self)
+    pub fn wb_mode(&mut self) -> WB_MODE_W<SPI_CTRL1_SPEC> {
+        WB_MODE_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - In the slave mode,it is the status for master to read out."]
     #[inline(always)]
     #[must_use]
-    pub fn status_ext(&mut self) -> STATUS_EXT_W<SPI_CTRL1_SPEC, 24> {
-        STATUS_EXT_W::new(self)
+    pub fn status_ext(&mut self) -> STATUS_EXT_W<SPI_CTRL1_SPEC> {
+        STATUS_EXT_W::new(self, 24)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -5,19 +5,19 @@ pub type W = crate::W<XTAL32K_SPEC>;
 #[doc = "Field `DRES_XTAL32K` reader - need_des"]
 pub type DRES_XTAL32K_R = crate::FieldReader;
 #[doc = "Field `DRES_XTAL32K` writer - need_des"]
-pub type DRES_XTAL32K_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DRES_XTAL32K_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `DGM_XTAL32K` reader - need_des"]
 pub type DGM_XTAL32K_R = crate::FieldReader;
 #[doc = "Field `DGM_XTAL32K` writer - need_des"]
-pub type DGM_XTAL32K_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DGM_XTAL32K_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `DBUF_XTAL32K` reader - need_des"]
 pub type DBUF_XTAL32K_R = crate::BitReader;
 #[doc = "Field `DBUF_XTAL32K` writer - need_des"]
-pub type DBUF_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBUF_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC_XTAL32K` reader - need_des"]
 pub type DAC_XTAL32K_R = crate::FieldReader;
 #[doc = "Field `DAC_XTAL32K` writer - need_des"]
-pub type DAC_XTAL32K_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DAC_XTAL32K_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
@@ -66,35 +66,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<XTAL32K_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn dres_xtal32k(&mut self) -> DRES_XTAL32K_W<XTAL32K_SPEC, 22> {
-        DRES_XTAL32K_W::new(self)
+    pub fn dres_xtal32k(&mut self) -> DRES_XTAL32K_W<XTAL32K_SPEC> {
+        DRES_XTAL32K_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn dgm_xtal32k(&mut self) -> DGM_XTAL32K_W<XTAL32K_SPEC, 25> {
-        DGM_XTAL32K_W::new(self)
+    pub fn dgm_xtal32k(&mut self) -> DGM_XTAL32K_W<XTAL32K_SPEC> {
+        DGM_XTAL32K_W::new(self, 25)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn dbuf_xtal32k(&mut self) -> DBUF_XTAL32K_W<XTAL32K_SPEC, 28> {
-        DBUF_XTAL32K_W::new(self)
+    pub fn dbuf_xtal32k(&mut self) -> DBUF_XTAL32K_W<XTAL32K_SPEC> {
+        DBUF_XTAL32K_W::new(self, 28)
     }
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_xtal32k(&mut self) -> DAC_XTAL32K_W<XTAL32K_SPEC, 29> {
-        DAC_XTAL32K_W::new(self)
+    pub fn dac_xtal32k(&mut self) -> DAC_XTAL32K_W<XTAL32K_SPEC> {
+        DAC_XTAL32K_W::new(self, 29)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

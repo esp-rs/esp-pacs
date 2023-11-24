@@ -5,19 +5,19 @@ pub type W = crate::W<CPU_RESET_SPEC>;
 #[doc = "Field `RTC_WDT_CPU_RESET_LENGTH` reader - need_des"]
 pub type RTC_WDT_CPU_RESET_LENGTH_R = crate::FieldReader;
 #[doc = "Field `RTC_WDT_CPU_RESET_LENGTH` writer - need_des"]
-pub type RTC_WDT_CPU_RESET_LENGTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RTC_WDT_CPU_RESET_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RTC_WDT_CPU_RESET_EN` reader - need_des"]
 pub type RTC_WDT_CPU_RESET_EN_R = crate::BitReader;
 #[doc = "Field `RTC_WDT_CPU_RESET_EN` writer - need_des"]
-pub type RTC_WDT_CPU_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_WDT_CPU_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPU_STALL_WAIT` reader - need_des"]
 pub type CPU_STALL_WAIT_R = crate::FieldReader;
 #[doc = "Field `CPU_STALL_WAIT` writer - need_des"]
-pub type CPU_STALL_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CPU_STALL_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CPU_STALL_EN` reader - need_des"]
 pub type CPU_STALL_EN_R = crate::BitReader;
 #[doc = "Field `CPU_STALL_EN` writer - need_des"]
-pub type CPU_STALL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
@@ -66,35 +66,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_RESET_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_wdt_cpu_reset_length(&mut self) -> RTC_WDT_CPU_RESET_LENGTH_W<CPU_RESET_SPEC, 22> {
-        RTC_WDT_CPU_RESET_LENGTH_W::new(self)
+    pub fn rtc_wdt_cpu_reset_length(&mut self) -> RTC_WDT_CPU_RESET_LENGTH_W<CPU_RESET_SPEC> {
+        RTC_WDT_CPU_RESET_LENGTH_W::new(self, 22)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_wdt_cpu_reset_en(&mut self) -> RTC_WDT_CPU_RESET_EN_W<CPU_RESET_SPEC, 25> {
-        RTC_WDT_CPU_RESET_EN_W::new(self)
+    pub fn rtc_wdt_cpu_reset_en(&mut self) -> RTC_WDT_CPU_RESET_EN_W<CPU_RESET_SPEC> {
+        RTC_WDT_CPU_RESET_EN_W::new(self, 25)
     }
     #[doc = "Bits 26:30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<CPU_RESET_SPEC, 26> {
-        CPU_STALL_WAIT_W::new(self)
+    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<CPU_RESET_SPEC> {
+        CPU_STALL_WAIT_W::new(self, 26)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<CPU_RESET_SPEC, 31> {
-        CPU_STALL_EN_W::new(self)
+    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<CPU_RESET_SPEC> {
+        CPU_STALL_EN_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

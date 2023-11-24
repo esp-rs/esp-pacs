@@ -7,29 +7,29 @@ pub type FLOW_ERR_R = crate::FieldReader;
 #[doc = "Field `ADDR_MAP_MODE` reader - x"]
 pub type ADDR_MAP_MODE_R = crate::BitReader;
 #[doc = "Field `ADDR_MAP_MODE` writer - x"]
-pub type ADDR_MAP_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDR_MAP_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BURST_LIMIT` reader - x"]
 pub type BURST_LIMIT_R = crate::FieldReader;
 #[doc = "Field `BURST_LIMIT` writer - x"]
-pub type BURST_LIMIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type BURST_LIMIT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `TOUT_THRES` reader - x"]
 pub type TOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUT_THRES` writer - x"]
-pub type TOUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `SIZE` reader - x"]
 pub type SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `SIZE` writer - x"]
-pub type SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `START` writer - x"]
-pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TO_MEM` reader - x"]
 pub type TO_MEM_R = crate::BitReader;
 #[doc = "Field `TO_MEM` writer - x"]
-pub type TO_MEM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TO_MEM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENA` reader - x"]
 pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - x"]
-pub type ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - x"]
     #[inline(always)]
@@ -90,51 +90,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn addr_map_mode(&mut self) -> ADDR_MAP_MODE_W<CONFIG_SPEC, 3> {
-        ADDR_MAP_MODE_W::new(self)
+    pub fn addr_map_mode(&mut self) -> ADDR_MAP_MODE_W<CONFIG_SPEC> {
+        ADDR_MAP_MODE_W::new(self, 3)
     }
     #[doc = "Bits 4:8 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn burst_limit(&mut self) -> BURST_LIMIT_W<CONFIG_SPEC, 4> {
-        BURST_LIMIT_W::new(self)
+    pub fn burst_limit(&mut self) -> BURST_LIMIT_W<CONFIG_SPEC> {
+        BURST_LIMIT_W::new(self, 4)
     }
     #[doc = "Bits 9:18 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn tout_thres(&mut self) -> TOUT_THRES_W<CONFIG_SPEC, 9> {
-        TOUT_THRES_W::new(self)
+    pub fn tout_thres(&mut self) -> TOUT_THRES_W<CONFIG_SPEC> {
+        TOUT_THRES_W::new(self, 9)
     }
     #[doc = "Bits 19:28 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn size(&mut self) -> SIZE_W<CONFIG_SPEC, 19> {
-        SIZE_W::new(self)
+    pub fn size(&mut self) -> SIZE_W<CONFIG_SPEC> {
+        SIZE_W::new(self, 19)
     }
     #[doc = "Bit 29 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<CONFIG_SPEC, 29> {
-        START_W::new(self)
+    pub fn start(&mut self) -> START_W<CONFIG_SPEC> {
+        START_W::new(self, 29)
     }
     #[doc = "Bit 30 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn to_mem(&mut self) -> TO_MEM_W<CONFIG_SPEC, 30> {
-        TO_MEM_W::new(self)
+    pub fn to_mem(&mut self) -> TO_MEM_W<CONFIG_SPEC> {
+        TO_MEM_W::new(self, 30)
     }
     #[doc = "Bit 31 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn ena(&mut self) -> ENA_W<CONFIG_SPEC, 31> {
-        ENA_W::new(self)
+    pub fn ena(&mut self) -> ENA_W<CONFIG_SPEC> {
+        ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

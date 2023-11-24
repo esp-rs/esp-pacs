@@ -5,7 +5,7 @@ pub type W = crate::W<STATUS1_SPEC>;
 #[doc = "Field `INTERRUPT` reader - GPIO interrupt status register for GPIO32-34"]
 pub type INTERRUPT_R = crate::FieldReader;
 #[doc = "Field `INTERRUPT` writer - GPIO interrupt status register for GPIO32-34"]
-pub type INTERRUPT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type INTERRUPT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - GPIO interrupt status register for GPIO32-34"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<STATUS1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - GPIO interrupt status register for GPIO32-34"]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt(&mut self) -> INTERRUPT_W<STATUS1_SPEC, 0> {
-        INTERRUPT_W::new(self)
+    pub fn interrupt(&mut self) -> INTERRUPT_W<STATUS1_SPEC> {
+        INTERRUPT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

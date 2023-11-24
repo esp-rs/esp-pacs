@@ -5,47 +5,47 @@ pub type W = crate::W<LP_CLK_PO_EN_SPEC>;
 #[doc = "Field `AON_SLOW_OEN` reader - need_des"]
 pub type AON_SLOW_OEN_R = crate::BitReader;
 #[doc = "Field `AON_SLOW_OEN` writer - need_des"]
-pub type AON_SLOW_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AON_SLOW_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AON_FAST_OEN` reader - need_des"]
 pub type AON_FAST_OEN_R = crate::BitReader;
 #[doc = "Field `AON_FAST_OEN` writer - need_des"]
-pub type AON_FAST_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AON_FAST_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOSC_OEN` reader - need_des"]
 pub type SOSC_OEN_R = crate::BitReader;
 #[doc = "Field `SOSC_OEN` writer - need_des"]
-pub type SOSC_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOSC_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FOSC_OEN` reader - need_des"]
 pub type FOSC_OEN_R = crate::BitReader;
 #[doc = "Field `FOSC_OEN` writer - need_des"]
-pub type FOSC_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FOSC_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OSC32K_OEN` reader - need_des"]
 pub type OSC32K_OEN_R = crate::BitReader;
 #[doc = "Field `OSC32K_OEN` writer - need_des"]
-pub type OSC32K_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OSC32K_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XTAL32K_OEN` reader - need_des"]
 pub type XTAL32K_OEN_R = crate::BitReader;
 #[doc = "Field `XTAL32K_OEN` writer - need_des"]
-pub type XTAL32K_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XTAL32K_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE_EFUSE_OEN` reader - need_des"]
 pub type CORE_EFUSE_OEN_R = crate::BitReader;
 #[doc = "Field `CORE_EFUSE_OEN` writer - need_des"]
-pub type CORE_EFUSE_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_EFUSE_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOW_OEN` reader - need_des"]
 pub type SLOW_OEN_R = crate::BitReader;
 #[doc = "Field `SLOW_OEN` writer - need_des"]
-pub type SLOW_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOW_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FAST_OEN` reader - need_des"]
 pub type FAST_OEN_R = crate::BitReader;
 #[doc = "Field `FAST_OEN` writer - need_des"]
-pub type FAST_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FAST_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RNG_OEN` reader - need_des"]
 pub type RNG_OEN_R = crate::BitReader;
 #[doc = "Field `RNG_OEN` writer - need_des"]
-pub type RNG_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RNG_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPBUS_OEN` reader - need_des"]
 pub type LPBUS_OEN_R = crate::BitReader;
 #[doc = "Field `LPBUS_OEN` writer - need_des"]
-pub type LPBUS_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPBUS_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -133,75 +133,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_CLK_PO_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn aon_slow_oen(&mut self) -> AON_SLOW_OEN_W<LP_CLK_PO_EN_SPEC, 0> {
-        AON_SLOW_OEN_W::new(self)
+    pub fn aon_slow_oen(&mut self) -> AON_SLOW_OEN_W<LP_CLK_PO_EN_SPEC> {
+        AON_SLOW_OEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn aon_fast_oen(&mut self) -> AON_FAST_OEN_W<LP_CLK_PO_EN_SPEC, 1> {
-        AON_FAST_OEN_W::new(self)
+    pub fn aon_fast_oen(&mut self) -> AON_FAST_OEN_W<LP_CLK_PO_EN_SPEC> {
+        AON_FAST_OEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sosc_oen(&mut self) -> SOSC_OEN_W<LP_CLK_PO_EN_SPEC, 2> {
-        SOSC_OEN_W::new(self)
+    pub fn sosc_oen(&mut self) -> SOSC_OEN_W<LP_CLK_PO_EN_SPEC> {
+        SOSC_OEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn fosc_oen(&mut self) -> FOSC_OEN_W<LP_CLK_PO_EN_SPEC, 3> {
-        FOSC_OEN_W::new(self)
+    pub fn fosc_oen(&mut self) -> FOSC_OEN_W<LP_CLK_PO_EN_SPEC> {
+        FOSC_OEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn osc32k_oen(&mut self) -> OSC32K_OEN_W<LP_CLK_PO_EN_SPEC, 4> {
-        OSC32K_OEN_W::new(self)
+    pub fn osc32k_oen(&mut self) -> OSC32K_OEN_W<LP_CLK_PO_EN_SPEC> {
+        OSC32K_OEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn xtal32k_oen(&mut self) -> XTAL32K_OEN_W<LP_CLK_PO_EN_SPEC, 5> {
-        XTAL32K_OEN_W::new(self)
+    pub fn xtal32k_oen(&mut self) -> XTAL32K_OEN_W<LP_CLK_PO_EN_SPEC> {
+        XTAL32K_OEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn core_efuse_oen(&mut self) -> CORE_EFUSE_OEN_W<LP_CLK_PO_EN_SPEC, 6> {
-        CORE_EFUSE_OEN_W::new(self)
+    pub fn core_efuse_oen(&mut self) -> CORE_EFUSE_OEN_W<LP_CLK_PO_EN_SPEC> {
+        CORE_EFUSE_OEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn slow_oen(&mut self) -> SLOW_OEN_W<LP_CLK_PO_EN_SPEC, 7> {
-        SLOW_OEN_W::new(self)
+    pub fn slow_oen(&mut self) -> SLOW_OEN_W<LP_CLK_PO_EN_SPEC> {
+        SLOW_OEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn fast_oen(&mut self) -> FAST_OEN_W<LP_CLK_PO_EN_SPEC, 8> {
-        FAST_OEN_W::new(self)
+    pub fn fast_oen(&mut self) -> FAST_OEN_W<LP_CLK_PO_EN_SPEC> {
+        FAST_OEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn rng_oen(&mut self) -> RNG_OEN_W<LP_CLK_PO_EN_SPEC, 9> {
-        RNG_OEN_W::new(self)
+    pub fn rng_oen(&mut self) -> RNG_OEN_W<LP_CLK_PO_EN_SPEC> {
+        RNG_OEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lpbus_oen(&mut self) -> LPBUS_OEN_W<LP_CLK_PO_EN_SPEC, 10> {
-        LPBUS_OEN_W::new(self)
+    pub fn lpbus_oen(&mut self) -> LPBUS_OEN_W<LP_CLK_PO_EN_SPEC> {
+        LPBUS_OEN_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

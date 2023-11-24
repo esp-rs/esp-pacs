@@ -5,7 +5,7 @@ pub type W = crate::W<PRIVILEGE_MODE_SEL_SPEC>;
 #[doc = "Field `PRIVILEGE_MODE_SEL` reader - privilege_mode_sel"]
 pub type PRIVILEGE_MODE_SEL_R = crate::BitReader;
 #[doc = "Field `PRIVILEGE_MODE_SEL` writer - privilege_mode_sel"]
-pub type PRIVILEGE_MODE_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRIVILEGE_MODE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - privilege_mode_sel"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRIVILEGE_MODE_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - privilege_mode_sel"]
     #[inline(always)]
     #[must_use]
-    pub fn privilege_mode_sel(&mut self) -> PRIVILEGE_MODE_SEL_W<PRIVILEGE_MODE_SEL_SPEC, 0> {
-        PRIVILEGE_MODE_SEL_W::new(self)
+    pub fn privilege_mode_sel(&mut self) -> PRIVILEGE_MODE_SEL_W<PRIVILEGE_MODE_SEL_SPEC> {
+        PRIVILEGE_MODE_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

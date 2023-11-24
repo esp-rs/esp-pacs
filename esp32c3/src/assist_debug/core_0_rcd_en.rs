@@ -5,11 +5,11 @@ pub type W = crate::W<CORE_0_RCD_EN_SPEC>;
 #[doc = "Field `CORE_0_RCD_RECORDEN` reader - reg_core_0_rcd_recorden"]
 pub type CORE_0_RCD_RECORDEN_R = crate::BitReader;
 #[doc = "Field `CORE_0_RCD_RECORDEN` writer - reg_core_0_rcd_recorden"]
-pub type CORE_0_RCD_RECORDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_RCD_RECORDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE_0_RCD_PDEBUGEN` reader - reg_core_0_rcd_pdebugen"]
 pub type CORE_0_RCD_PDEBUGEN_R = crate::BitReader;
 #[doc = "Field `CORE_0_RCD_PDEBUGEN` writer - reg_core_0_rcd_pdebugen"]
-pub type CORE_0_RCD_PDEBUGEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_RCD_PDEBUGEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_core_0_rcd_recorden"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_RCD_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_core_0_rcd_recorden"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_rcd_recorden(&mut self) -> CORE_0_RCD_RECORDEN_W<CORE_0_RCD_EN_SPEC, 0> {
-        CORE_0_RCD_RECORDEN_W::new(self)
+    pub fn core_0_rcd_recorden(&mut self) -> CORE_0_RCD_RECORDEN_W<CORE_0_RCD_EN_SPEC> {
+        CORE_0_RCD_RECORDEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_core_0_rcd_pdebugen"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_rcd_pdebugen(&mut self) -> CORE_0_RCD_PDEBUGEN_W<CORE_0_RCD_EN_SPEC, 1> {
-        CORE_0_RCD_PDEBUGEN_W::new(self)
+    pub fn core_0_rcd_pdebugen(&mut self) -> CORE_0_RCD_PDEBUGEN_W<CORE_0_RCD_EN_SPEC> {
+        CORE_0_RCD_PDEBUGEN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

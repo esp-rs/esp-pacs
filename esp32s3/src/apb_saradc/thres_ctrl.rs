@@ -5,23 +5,23 @@ pub type W = crate::W<THRES_CTRL_SPEC>;
 #[doc = "Field `THRES_ALL_EN` reader - enable thres0 to monitor all channel"]
 pub type THRES_ALL_EN_R = crate::BitReader;
 #[doc = "Field `THRES_ALL_EN` writer - enable thres0 to monitor all channel"]
-pub type THRES_ALL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES_ALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES3_EN` reader - no public"]
 pub type THRES3_EN_R = crate::BitReader;
 #[doc = "Field `THRES3_EN` writer - no public"]
-pub type THRES3_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES3_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES2_EN` reader - no public"]
 pub type THRES2_EN_R = crate::BitReader;
 #[doc = "Field `THRES2_EN` writer - no public"]
-pub type THRES2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES1_EN` reader - enable thres1"]
 pub type THRES1_EN_R = crate::BitReader;
 #[doc = "Field `THRES1_EN` writer - enable thres1"]
-pub type THRES1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES0_EN` reader - enable thres0"]
 pub type THRES0_EN_R = crate::BitReader;
 #[doc = "Field `THRES0_EN` writer - enable thres0"]
-pub type THRES0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - enable thres0 to monitor all channel"]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<THRES_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 27 - enable thres0 to monitor all channel"]
     #[inline(always)]
     #[must_use]
-    pub fn thres_all_en(&mut self) -> THRES_ALL_EN_W<THRES_CTRL_SPEC, 27> {
-        THRES_ALL_EN_W::new(self)
+    pub fn thres_all_en(&mut self) -> THRES_ALL_EN_W<THRES_CTRL_SPEC> {
+        THRES_ALL_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn thres3_en(&mut self) -> THRES3_EN_W<THRES_CTRL_SPEC, 28> {
-        THRES3_EN_W::new(self)
+    pub fn thres3_en(&mut self) -> THRES3_EN_W<THRES_CTRL_SPEC> {
+        THRES3_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn thres2_en(&mut self) -> THRES2_EN_W<THRES_CTRL_SPEC, 29> {
-        THRES2_EN_W::new(self)
+    pub fn thres2_en(&mut self) -> THRES2_EN_W<THRES_CTRL_SPEC> {
+        THRES2_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable thres1"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_en(&mut self) -> THRES1_EN_W<THRES_CTRL_SPEC, 30> {
-        THRES1_EN_W::new(self)
+    pub fn thres1_en(&mut self) -> THRES1_EN_W<THRES_CTRL_SPEC> {
+        THRES1_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable thres0"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0_en(&mut self) -> THRES0_EN_W<THRES_CTRL_SPEC, 31> {
-        THRES0_EN_W::new(self)
+    pub fn thres0_en(&mut self) -> THRES0_EN_W<THRES_CTRL_SPEC> {
+        THRES0_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

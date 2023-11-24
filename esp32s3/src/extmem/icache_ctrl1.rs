@@ -5,11 +5,11 @@ pub type W = crate::W<ICACHE_CTRL1_SPEC>;
 #[doc = "Field `ICACHE_SHUT_CORE0_BUS` reader - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
 pub type ICACHE_SHUT_CORE0_BUS_R = crate::BitReader;
 #[doc = "Field `ICACHE_SHUT_CORE0_BUS` writer - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
-pub type ICACHE_SHUT_CORE0_BUS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_SHUT_CORE0_BUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_SHUT_CORE1_BUS` reader - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
 pub type ICACHE_SHUT_CORE1_BUS_R = crate::BitReader;
 #[doc = "Field `ICACHE_SHUT_CORE1_BUS` writer - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
-pub type ICACHE_SHUT_CORE1_BUS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_SHUT_CORE1_BUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn icache_shut_core0_bus(&mut self) -> ICACHE_SHUT_CORE0_BUS_W<ICACHE_CTRL1_SPEC, 0> {
-        ICACHE_SHUT_CORE0_BUS_W::new(self)
+    pub fn icache_shut_core0_bus(&mut self) -> ICACHE_SHUT_CORE0_BUS_W<ICACHE_CTRL1_SPEC> {
+        ICACHE_SHUT_CORE0_BUS_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn icache_shut_core1_bus(&mut self) -> ICACHE_SHUT_CORE1_BUS_W<ICACHE_CTRL1_SPEC, 1> {
-        ICACHE_SHUT_CORE1_BUS_W::new(self)
+    pub fn icache_shut_core1_bus(&mut self) -> ICACHE_SHUT_CORE1_BUS_W<ICACHE_CTRL1_SPEC> {
+        ICACHE_SHUT_CORE1_BUS_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

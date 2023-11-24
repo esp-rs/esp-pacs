@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_TRACE_1_SPEC>;
 #[doc = "Field `PRO_TRACE_DISABLE` reader - Setting to 1 disables the trace memory function."]
 pub type PRO_TRACE_DISABLE_R = crate::BitReader;
 #[doc = "Field `PRO_TRACE_DISABLE` writer - Setting to 1 disables the trace memory function."]
-pub type PRO_TRACE_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_TRACE_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Setting to 1 disables the trace memory function."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_TRACE_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Setting to 1 disables the trace memory function."]
     #[inline(always)]
     #[must_use]
-    pub fn pro_trace_disable(&mut self) -> PRO_TRACE_DISABLE_W<PRO_TRACE_1_SPEC, 0> {
-        PRO_TRACE_DISABLE_W::new(self)
+    pub fn pro_trace_disable(&mut self) -> PRO_TRACE_DISABLE_W<PRO_TRACE_1_SPEC> {
+        PRO_TRACE_DISABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

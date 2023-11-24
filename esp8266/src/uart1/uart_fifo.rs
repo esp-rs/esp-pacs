@@ -7,7 +7,7 @@ pub type RXFIFO_RD_BYTE_R = crate::FieldReader;
 #[doc = "Field `rxfifo_write_byte` reader - R/W share the same address"]
 pub type RXFIFO_WRITE_BYTE_R = crate::FieldReader;
 #[doc = "Field `rxfifo_write_byte` writer - R/W share the same address"]
-pub type RXFIFO_WRITE_BYTE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RXFIFO_WRITE_BYTE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - R/W share the same address"]
     #[inline(always)]
@@ -38,17 +38,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UART_FIFO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - R/W share the same address"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_write_byte(&mut self) -> RXFIFO_WRITE_BYTE_W<UART_FIFO_SPEC, 0> {
-        RXFIFO_WRITE_BYTE_W::new(self)
+    pub fn rxfifo_write_byte(&mut self) -> RXFIFO_WRITE_BYTE_W<UART_FIFO_SPEC> {
+        RXFIFO_WRITE_BYTE_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

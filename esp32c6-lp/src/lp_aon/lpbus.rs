@@ -5,25 +5,25 @@ pub type W = crate::W<LPBUS_SPEC>;
 #[doc = "Field `FAST_MEM_WPULSE` reader - This field controls fast memory WPULSE parameter."]
 pub type FAST_MEM_WPULSE_R = crate::FieldReader;
 #[doc = "Field `FAST_MEM_WPULSE` writer - This field controls fast memory WPULSE parameter."]
-pub type FAST_MEM_WPULSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type FAST_MEM_WPULSE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FAST_MEM_WA` reader - This field controls fast memory WA parameter."]
 pub type FAST_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `FAST_MEM_WA` writer - This field controls fast memory WA parameter."]
-pub type FAST_MEM_WA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type FAST_MEM_WA_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FAST_MEM_RA` reader - This field controls fast memory RA parameter."]
 pub type FAST_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `FAST_MEM_RA` writer - This field controls fast memory RA parameter."]
-pub type FAST_MEM_RA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FAST_MEM_RA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FAST_MEM_MUX_FSM_IDLE` reader - need_des"]
 pub type FAST_MEM_MUX_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `FAST_MEM_MUX_SEL_STATUS` reader - need_des"]
 pub type FAST_MEM_MUX_SEL_STATUS_R = crate::BitReader;
 #[doc = "Field `FAST_MEM_MUX_SEL_UPDATE` writer - need_des"]
-pub type FAST_MEM_MUX_SEL_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FAST_MEM_MUX_SEL_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FAST_MEM_MUX_SEL` reader - need_des"]
 pub type FAST_MEM_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `FAST_MEM_MUX_SEL` writer - need_des"]
-pub type FAST_MEM_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FAST_MEM_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 16:18 - This field controls fast memory WPULSE parameter."]
     #[inline(always)]
@@ -90,41 +90,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LPBUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 16:18 - This field controls fast memory WPULSE parameter."]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_wpulse(&mut self) -> FAST_MEM_WPULSE_W<LPBUS_SPEC, 16> {
-        FAST_MEM_WPULSE_W::new(self)
+    pub fn fast_mem_wpulse(&mut self) -> FAST_MEM_WPULSE_W<LPBUS_SPEC> {
+        FAST_MEM_WPULSE_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - This field controls fast memory WA parameter."]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_wa(&mut self) -> FAST_MEM_WA_W<LPBUS_SPEC, 19> {
-        FAST_MEM_WA_W::new(self)
+    pub fn fast_mem_wa(&mut self) -> FAST_MEM_WA_W<LPBUS_SPEC> {
+        FAST_MEM_WA_W::new(self, 19)
     }
     #[doc = "Bits 22:23 - This field controls fast memory RA parameter."]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_ra(&mut self) -> FAST_MEM_RA_W<LPBUS_SPEC, 22> {
-        FAST_MEM_RA_W::new(self)
+    pub fn fast_mem_ra(&mut self) -> FAST_MEM_RA_W<LPBUS_SPEC> {
+        FAST_MEM_RA_W::new(self, 22)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_mux_sel_update(&mut self) -> FAST_MEM_MUX_SEL_UPDATE_W<LPBUS_SPEC, 30> {
-        FAST_MEM_MUX_SEL_UPDATE_W::new(self)
+    pub fn fast_mem_mux_sel_update(&mut self) -> FAST_MEM_MUX_SEL_UPDATE_W<LPBUS_SPEC> {
+        FAST_MEM_MUX_SEL_UPDATE_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_mux_sel(&mut self) -> FAST_MEM_MUX_SEL_W<LPBUS_SPEC, 31> {
-        FAST_MEM_MUX_SEL_W::new(self)
+    pub fn fast_mem_mux_sel(&mut self) -> FAST_MEM_MUX_SEL_W<LPBUS_SPEC> {
+        FAST_MEM_MUX_SEL_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

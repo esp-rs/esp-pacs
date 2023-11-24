@@ -5,11 +5,11 @@ pub type W = crate::W<CH_RX_CARRIER_RM_SPEC>;
 #[doc = "Field `CARRIER_LOW_THRES` reader - reg_carrier_low_thres_ch2."]
 pub type CARRIER_LOW_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_LOW_THRES` writer - reg_carrier_low_thres_ch2."]
-pub type CARRIER_LOW_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CARRIER_LOW_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `CARRIER_HIGH_THRES` reader - reg_carrier_high_thres_ch2."]
 pub type CARRIER_HIGH_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_HIGH_THRES` writer - reg_carrier_high_thres_ch2."]
-pub type CARRIER_HIGH_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CARRIER_HIGH_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - reg_carrier_low_thres_ch2."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_RX_CARRIER_RM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - reg_carrier_low_thres_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_low_thres(&mut self) -> CARRIER_LOW_THRES_W<CH_RX_CARRIER_RM_SPEC, 0> {
-        CARRIER_LOW_THRES_W::new(self)
+    pub fn carrier_low_thres(&mut self) -> CARRIER_LOW_THRES_W<CH_RX_CARRIER_RM_SPEC> {
+        CARRIER_LOW_THRES_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - reg_carrier_high_thres_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_high_thres(&mut self) -> CARRIER_HIGH_THRES_W<CH_RX_CARRIER_RM_SPEC, 16> {
-        CARRIER_HIGH_THRES_W::new(self)
+    pub fn carrier_high_thres(&mut self) -> CARRIER_HIGH_THRES_W<CH_RX_CARRIER_RM_SPEC> {
+        CARRIER_HIGH_THRES_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

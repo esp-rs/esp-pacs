@@ -5,7 +5,7 @@ pub type W = crate::W<STORE1_SPEC>;
 #[doc = "Field `SCRATCH1` reader - reserved register"]
 pub type SCRATCH1_R = crate::FieldReader<u32>;
 #[doc = "Field `SCRATCH1` writer - reserved register"]
-pub type SCRATCH1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SCRATCH1_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reserved register"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<STORE1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - reserved register"]
     #[inline(always)]
     #[must_use]
-    pub fn scratch1(&mut self) -> SCRATCH1_W<STORE1_SPEC, 0> {
-        SCRATCH1_W::new(self)
+    pub fn scratch1(&mut self) -> SCRATCH1_W<STORE1_SPEC> {
+        SCRATCH1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

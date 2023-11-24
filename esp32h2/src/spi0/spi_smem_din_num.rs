@@ -111,7 +111,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DIN_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "MSPI external RAM input timing delay number control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_din_num::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

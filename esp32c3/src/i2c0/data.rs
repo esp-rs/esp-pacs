@@ -5,7 +5,7 @@ pub type W = crate::W<DATA_SPEC>;
 #[doc = "Field `FIFO_RDATA` reader - reg_fifo_rdata"]
 pub type FIFO_RDATA_R = crate::FieldReader;
 #[doc = "Field `FIFO_RDATA` writer - reg_fifo_rdata"]
-pub type FIFO_RDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FIFO_RDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - reg_fifo_rdata"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - reg_fifo_rdata"]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_rdata(&mut self) -> FIFO_RDATA_W<DATA_SPEC, 0> {
-        FIFO_RDATA_W::new(self)
+    pub fn fifo_rdata(&mut self) -> FIFO_RDATA_W<DATA_SPEC> {
+        FIFO_RDATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

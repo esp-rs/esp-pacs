@@ -5,21 +5,21 @@ pub type W = crate::W<APB_TSENS_WAKE_SPEC>;
 #[doc = "Field `WAKEUP_TH_LOW` reader - reg_wakeup_th_low"]
 pub type WAKEUP_TH_LOW_R = crate::FieldReader;
 #[doc = "Field `WAKEUP_TH_LOW` writer - reg_wakeup_th_low"]
-pub type WAKEUP_TH_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WAKEUP_TH_LOW_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WAKEUP_TH_HIGH` reader - reg_wakeup_th_high"]
 pub type WAKEUP_TH_HIGH_R = crate::FieldReader;
 #[doc = "Field `WAKEUP_TH_HIGH` writer - reg_wakeup_th_high"]
-pub type WAKEUP_TH_HIGH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WAKEUP_TH_HIGH_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WAKEUP_OVER_UPPER_TH` reader - reg_wakeup_over_upper_th"]
 pub type WAKEUP_OVER_UPPER_TH_R = crate::BitReader;
 #[doc = "Field `WAKEUP_MODE` reader - reg_wakeup_mode"]
 pub type WAKEUP_MODE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_MODE` writer - reg_wakeup_mode"]
-pub type WAKEUP_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAKEUP_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WAKEUP_EN` reader - reg_wakeup_en"]
 pub type WAKEUP_EN_R = crate::BitReader;
 #[doc = "Field `WAKEUP_EN` writer - reg_wakeup_en"]
-pub type WAKEUP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAKEUP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - reg_wakeup_th_low"]
     #[inline(always)]
@@ -71,33 +71,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_WAKE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - reg_wakeup_th_low"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_th_low(&mut self) -> WAKEUP_TH_LOW_W<APB_TSENS_WAKE_SPEC, 0> {
-        WAKEUP_TH_LOW_W::new(self)
+    pub fn wakeup_th_low(&mut self) -> WAKEUP_TH_LOW_W<APB_TSENS_WAKE_SPEC> {
+        WAKEUP_TH_LOW_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - reg_wakeup_th_high"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_th_high(&mut self) -> WAKEUP_TH_HIGH_W<APB_TSENS_WAKE_SPEC, 8> {
-        WAKEUP_TH_HIGH_W::new(self)
+    pub fn wakeup_th_high(&mut self) -> WAKEUP_TH_HIGH_W<APB_TSENS_WAKE_SPEC> {
+        WAKEUP_TH_HIGH_W::new(self, 8)
     }
     #[doc = "Bit 17 - reg_wakeup_mode"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_mode(&mut self) -> WAKEUP_MODE_W<APB_TSENS_WAKE_SPEC, 17> {
-        WAKEUP_MODE_W::new(self)
+    pub fn wakeup_mode(&mut self) -> WAKEUP_MODE_W<APB_TSENS_WAKE_SPEC> {
+        WAKEUP_MODE_W::new(self, 17)
     }
     #[doc = "Bit 18 - reg_wakeup_en"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<APB_TSENS_WAKE_SPEC, 18> {
-        WAKEUP_EN_W::new(self)
+    pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<APB_TSENS_WAKE_SPEC> {
+        WAKEUP_EN_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

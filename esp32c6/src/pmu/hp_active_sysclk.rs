@@ -5,23 +5,23 @@ pub type W = crate::W<HP_ACTIVE_SYSCLK_SPEC>;
 #[doc = "Field `HP_ACTIVE_DIG_SYS_CLK_NO_DIV` reader - need_des"]
 pub type HP_ACTIVE_DIG_SYS_CLK_NO_DIV_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_DIG_SYS_CLK_NO_DIV` writer - need_des"]
-pub type HP_ACTIVE_DIG_SYS_CLK_NO_DIV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_DIG_SYS_CLK_NO_DIV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_ICG_SYS_CLOCK_EN` reader - need_des"]
 pub type HP_ACTIVE_ICG_SYS_CLOCK_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_ICG_SYS_CLOCK_EN` writer - need_des"]
-pub type HP_ACTIVE_ICG_SYS_CLOCK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_ICG_SYS_CLOCK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_SYS_CLK_SLP_SEL` reader - need_des"]
 pub type HP_ACTIVE_SYS_CLK_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_SYS_CLK_SLP_SEL` writer - need_des"]
-pub type HP_ACTIVE_SYS_CLK_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_SYS_CLK_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_ICG_SLP_SEL` reader - need_des"]
 pub type HP_ACTIVE_ICG_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_ICG_SLP_SEL` writer - need_des"]
-pub type HP_ACTIVE_ICG_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_ICG_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_DIG_SYS_CLK_SEL` reader - need_des"]
 pub type HP_ACTIVE_DIG_SYS_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE_DIG_SYS_CLK_SEL` writer - need_des"]
-pub type HP_ACTIVE_DIG_SYS_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HP_ACTIVE_DIG_SYS_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
@@ -79,7 +79,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_SYSCLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -88,38 +88,38 @@ impl W {
     #[must_use]
     pub fn hp_active_dig_sys_clk_no_div(
         &mut self,
-    ) -> HP_ACTIVE_DIG_SYS_CLK_NO_DIV_W<HP_ACTIVE_SYSCLK_SPEC, 26> {
-        HP_ACTIVE_DIG_SYS_CLK_NO_DIV_W::new(self)
+    ) -> HP_ACTIVE_DIG_SYS_CLK_NO_DIV_W<HP_ACTIVE_SYSCLK_SPEC> {
+        HP_ACTIVE_DIG_SYS_CLK_NO_DIV_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_icg_sys_clock_en(
         &mut self,
-    ) -> HP_ACTIVE_ICG_SYS_CLOCK_EN_W<HP_ACTIVE_SYSCLK_SPEC, 27> {
-        HP_ACTIVE_ICG_SYS_CLOCK_EN_W::new(self)
+    ) -> HP_ACTIVE_ICG_SYS_CLOCK_EN_W<HP_ACTIVE_SYSCLK_SPEC> {
+        HP_ACTIVE_ICG_SYS_CLOCK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_sys_clk_slp_sel(
         &mut self,
-    ) -> HP_ACTIVE_SYS_CLK_SLP_SEL_W<HP_ACTIVE_SYSCLK_SPEC, 28> {
-        HP_ACTIVE_SYS_CLK_SLP_SEL_W::new(self)
+    ) -> HP_ACTIVE_SYS_CLK_SLP_SEL_W<HP_ACTIVE_SYSCLK_SPEC> {
+        HP_ACTIVE_SYS_CLK_SLP_SEL_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_active_icg_slp_sel(&mut self) -> HP_ACTIVE_ICG_SLP_SEL_W<HP_ACTIVE_SYSCLK_SPEC, 29> {
-        HP_ACTIVE_ICG_SLP_SEL_W::new(self)
+    pub fn hp_active_icg_slp_sel(&mut self) -> HP_ACTIVE_ICG_SLP_SEL_W<HP_ACTIVE_SYSCLK_SPEC> {
+        HP_ACTIVE_ICG_SLP_SEL_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_dig_sys_clk_sel(
         &mut self,
-    ) -> HP_ACTIVE_DIG_SYS_CLK_SEL_W<HP_ACTIVE_SYSCLK_SPEC, 30> {
-        HP_ACTIVE_DIG_SYS_CLK_SEL_W::new(self)
+    ) -> HP_ACTIVE_DIG_SYS_CLK_SEL_W<HP_ACTIVE_SYSCLK_SPEC> {
+        HP_ACTIVE_DIG_SYS_CLK_SEL_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

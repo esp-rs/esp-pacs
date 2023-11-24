@@ -5,19 +5,19 @@ pub type W = crate::W<LSCH_CONF0_SPEC>;
 #[doc = "Field `TIMER_SEL` reader - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
 pub type TIMER_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER_SEL` writer - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
-pub type TIMER_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TIMER_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SIG_OUT_EN` reader - This is the output enable control bit for low speed channel0."]
 pub type SIG_OUT_EN_R = crate::BitReader;
 #[doc = "Field `SIG_OUT_EN` writer - This is the output enable control bit for low speed channel0."]
-pub type SIG_OUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SIG_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IDLE_LV` reader - This bit is used to control the output value when low speed channel0 is off."]
 pub type IDLE_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_LV` writer - This bit is used to control the output value when low speed channel0 is off."]
-pub type IDLE_LV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IDLE_LV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PARA_UP` reader - This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0."]
 pub type PARA_UP_R = crate::BitReader;
 #[doc = "Field `PARA_UP` writer - This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0."]
-pub type PARA_UP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARA_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
     #[inline(always)]
@@ -54,33 +54,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LSCH_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_sel(&mut self) -> TIMER_SEL_W<LSCH_CONF0_SPEC, 0> {
-        TIMER_SEL_W::new(self)
+    pub fn timer_sel(&mut self) -> TIMER_SEL_W<LSCH_CONF0_SPEC> {
+        TIMER_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - This is the output enable control bit for low speed channel0."]
     #[inline(always)]
     #[must_use]
-    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<LSCH_CONF0_SPEC, 2> {
-        SIG_OUT_EN_W::new(self)
+    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<LSCH_CONF0_SPEC> {
+        SIG_OUT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when low speed channel0 is off."]
     #[inline(always)]
     #[must_use]
-    pub fn idle_lv(&mut self) -> IDLE_LV_W<LSCH_CONF0_SPEC, 3> {
-        IDLE_LV_W::new(self)
+    pub fn idle_lv(&mut self) -> IDLE_LV_W<LSCH_CONF0_SPEC> {
+        IDLE_LV_W::new(self, 3)
     }
     #[doc = "Bit 4 - This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0."]
     #[inline(always)]
     #[must_use]
-    pub fn para_up(&mut self) -> PARA_UP_W<LSCH_CONF0_SPEC, 4> {
-        PARA_UP_W::new(self)
+    pub fn para_up(&mut self) -> PARA_UP_W<LSCH_CONF0_SPEC> {
+        PARA_UP_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

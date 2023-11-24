@@ -5,21 +5,21 @@ pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_CLR` reader - "]
 pub type SLAVE_TRANS_COMPLETE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_CLR` writer - "]
-pub type SLAVE_TRANS_COMPLETE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_TRANS_COMPLETE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` reader - "]
 pub type ARBITRATION_LOST_INT_CLR_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` writer - "]
-pub type ARBITRATION_LOST_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARBITRATION_LOST_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_CLR` reader - "]
 pub type MASTER_TRANS_COMPLETE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_CLR` writer - "]
-pub type MASTER_TRANS_COMPLETE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASTER_TRANS_COMPLETE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` reader - "]
 pub type TRANS_COMPLETE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` writer - "]
-pub type TRANS_COMPLETE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_COMPLETE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIME_OUT_INT_CLR` writer - "]
-pub type TIME_OUT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIME_OUT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 4"]
     #[inline(always)]
@@ -68,43 +68,41 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_trans_complete_int_clr(
-        &mut self,
-    ) -> SLAVE_TRANS_COMPLETE_INT_CLR_W<INT_CLR_SPEC, 4> {
-        SLAVE_TRANS_COMPLETE_INT_CLR_W::new(self)
+    pub fn slave_trans_complete_int_clr(&mut self) -> SLAVE_TRANS_COMPLETE_INT_CLR_W<INT_CLR_SPEC> {
+        SLAVE_TRANS_COMPLETE_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn arbitration_lost_int_clr(&mut self) -> ARBITRATION_LOST_INT_CLR_W<INT_CLR_SPEC, 5> {
-        ARBITRATION_LOST_INT_CLR_W::new(self)
+    pub fn arbitration_lost_int_clr(&mut self) -> ARBITRATION_LOST_INT_CLR_W<INT_CLR_SPEC> {
+        ARBITRATION_LOST_INT_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
     pub fn master_trans_complete_int_clr(
         &mut self,
-    ) -> MASTER_TRANS_COMPLETE_INT_CLR_W<INT_CLR_SPEC, 6> {
-        MASTER_TRANS_COMPLETE_INT_CLR_W::new(self)
+    ) -> MASTER_TRANS_COMPLETE_INT_CLR_W<INT_CLR_SPEC> {
+        MASTER_TRANS_COMPLETE_INT_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_complete_int_clr(&mut self) -> TRANS_COMPLETE_INT_CLR_W<INT_CLR_SPEC, 7> {
-        TRANS_COMPLETE_INT_CLR_W::new(self)
+    pub fn trans_complete_int_clr(&mut self) -> TRANS_COMPLETE_INT_CLR_W<INT_CLR_SPEC> {
+        TRANS_COMPLETE_INT_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn time_out_int_clr(&mut self) -> TIME_OUT_INT_CLR_W<INT_CLR_SPEC, 8> {
-        TIME_OUT_INT_CLR_W::new(self)
+    pub fn time_out_int_clr(&mut self) -> TIME_OUT_INT_CLR_W<INT_CLR_SPEC> {
+        TIME_OUT_INT_CLR_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

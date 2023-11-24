@@ -5,19 +5,19 @@ pub type W = crate::W<APB_TSENS_CTRL2_SPEC>;
 #[doc = "Field `REG_TSENS_XPD_WAIT` reader - Need add description"]
 pub type REG_TSENS_XPD_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `REG_TSENS_XPD_WAIT` writer - Need add description"]
-pub type REG_TSENS_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type REG_TSENS_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `REG_TSENS_XPD_FORCE` reader - Need add description"]
 pub type REG_TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `REG_TSENS_XPD_FORCE` writer - Need add description"]
-pub type REG_TSENS_XPD_FORCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type REG_TSENS_XPD_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `REG_TSENS_CLK_INV` reader - Need add description"]
 pub type REG_TSENS_CLK_INV_R = crate::BitReader;
 #[doc = "Field `REG_TSENS_CLK_INV` writer - Need add description"]
-pub type REG_TSENS_CLK_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REG_TSENS_CLK_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_SEL` reader - Need add description"]
 pub type TSENS_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_SEL` writer - Need add description"]
-pub type TSENS_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - Need add description"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_xpd_wait(&mut self) -> REG_TSENS_XPD_WAIT_W<APB_TSENS_CTRL2_SPEC, 0> {
-        REG_TSENS_XPD_WAIT_W::new(self)
+    pub fn reg_tsens_xpd_wait(&mut self) -> REG_TSENS_XPD_WAIT_W<APB_TSENS_CTRL2_SPEC> {
+        REG_TSENS_XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 12:13 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_xpd_force(&mut self) -> REG_TSENS_XPD_FORCE_W<APB_TSENS_CTRL2_SPEC, 12> {
-        REG_TSENS_XPD_FORCE_W::new(self)
+    pub fn reg_tsens_xpd_force(&mut self) -> REG_TSENS_XPD_FORCE_W<APB_TSENS_CTRL2_SPEC> {
+        REG_TSENS_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 14 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_clk_inv(&mut self) -> REG_TSENS_CLK_INV_W<APB_TSENS_CTRL2_SPEC, 14> {
-        REG_TSENS_CLK_INV_W::new(self)
+    pub fn reg_tsens_clk_inv(&mut self) -> REG_TSENS_CLK_INV_W<APB_TSENS_CTRL2_SPEC> {
+        REG_TSENS_CLK_INV_W::new(self, 14)
     }
     #[doc = "Bit 15 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_sel(&mut self) -> TSENS_CLK_SEL_W<APB_TSENS_CTRL2_SPEC, 15> {
-        TSENS_CLK_SEL_W::new(self)
+    pub fn tsens_clk_sel(&mut self) -> TSENS_CLK_SEL_W<APB_TSENS_CTRL2_SPEC> {
+        TSENS_CLK_SEL_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

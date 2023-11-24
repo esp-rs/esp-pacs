@@ -5,15 +5,15 @@ pub type W = crate::W<THRES_CTRL_SPEC>;
 #[doc = "Field `APB_SARADC_THRES_ALL_EN` reader - enable thres to all channel"]
 pub type APB_SARADC_THRES_ALL_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES_ALL_EN` writer - enable thres to all channel"]
-pub type APB_SARADC_THRES_ALL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_THRES_ALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_THRES1_EN` reader - enable thres1"]
 pub type APB_SARADC_THRES1_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES1_EN` writer - enable thres1"]
-pub type APB_SARADC_THRES1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_THRES1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_THRES0_EN` reader - enable thres0"]
 pub type APB_SARADC_THRES0_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES0_EN` writer - enable thres0"]
-pub type APB_SARADC_THRES0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_THRES0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - enable thres to all channel"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<THRES_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 27 - enable thres to all channel"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres_all_en(&mut self) -> APB_SARADC_THRES_ALL_EN_W<THRES_CTRL_SPEC, 27> {
-        APB_SARADC_THRES_ALL_EN_W::new(self)
+    pub fn apb_saradc_thres_all_en(&mut self) -> APB_SARADC_THRES_ALL_EN_W<THRES_CTRL_SPEC> {
+        APB_SARADC_THRES_ALL_EN_W::new(self, 27)
     }
     #[doc = "Bit 30 - enable thres1"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres1_en(&mut self) -> APB_SARADC_THRES1_EN_W<THRES_CTRL_SPEC, 30> {
-        APB_SARADC_THRES1_EN_W::new(self)
+    pub fn apb_saradc_thres1_en(&mut self) -> APB_SARADC_THRES1_EN_W<THRES_CTRL_SPEC> {
+        APB_SARADC_THRES1_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable thres0"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_en(&mut self) -> APB_SARADC_THRES0_EN_W<THRES_CTRL_SPEC, 31> {
-        APB_SARADC_THRES0_EN_W::new(self)
+    pub fn apb_saradc_thres0_en(&mut self) -> APB_SARADC_THRES0_EN_W<THRES_CTRL_SPEC> {
+        APB_SARADC_THRES0_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

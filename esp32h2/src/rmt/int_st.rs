@@ -15,9 +15,11 @@ pub type CH_RX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH_X_LOOP[0-1]` reader - The masked interrupt status bit for CH%s_TX_LOOP_INT."]
 pub type CH_X_LOOP_R = crate::BitReader;
 impl R {
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_END_INT."]
+    #[doc = "The masked interrupt status bit for CH[0-1]_TX_END_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
-    pub unsafe fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
+    pub fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CH_TX_END_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - The masked interrupt status bit for CH0_TX_END_INT."]
@@ -30,10 +32,12 @@ impl R {
     pub fn ch1_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH2_RX_END_INT."]
+    #[doc = "The masked interrupt status bit for CH2_RX_END_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH2_RX_END` field"]
     #[inline(always)]
-    pub unsafe fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
-        CH_RX_END_R::new(((self.bits >> (n - 2 + 2)) & 1) != 0)
+    pub fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        CH_RX_END_R::new(((self.bits >> (n + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - The masked interrupt status bit for CH2_RX_END_INT."]
     #[inline(always)]
@@ -45,9 +49,11 @@ impl R {
     pub fn ch3_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH4_ERR_INT."]
+    #[doc = "The masked interrupt status bit for CH4_ERR_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field"]
     #[inline(always)]
-    pub unsafe fn ch_tx_err(&self, n: u8) -> CH_TX_ERR_R {
+    pub fn ch_tx_err(&self, n: u8) -> CH_TX_ERR_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CH_TX_ERR_R::new(((self.bits >> (n + 4)) & 1) != 0)
     }
     #[doc = "Bit 4 - The masked interrupt status bit for CH4_ERR_INT."]
@@ -60,10 +66,12 @@ impl R {
     pub fn ch1_tx_err(&self) -> CH_TX_ERR_R {
         CH_TX_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH6_ERR_INT."]
+    #[doc = "The masked interrupt status bit for CH6_ERR_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH2_RX_ERR` field"]
     #[inline(always)]
-    pub unsafe fn ch_rx_err(&self, n: u8) -> CH_RX_ERR_R {
-        CH_RX_ERR_R::new(((self.bits >> (n - 2 + 6)) & 1) != 0)
+    pub fn ch_rx_err(&self, n: u8) -> CH_RX_ERR_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        CH_RX_ERR_R::new(((self.bits >> (n + 6)) & 1) != 0)
     }
     #[doc = "Bit 6 - The masked interrupt status bit for CH6_ERR_INT."]
     #[inline(always)]
@@ -75,9 +83,11 @@ impl R {
     pub fn ch3_rx_err(&self) -> CH_RX_ERR_R {
         CH_RX_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_THR_EVENT_INT."]
+    #[doc = "The masked interrupt status bit for CH[0-1]_TX_THR_EVENT_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
+    pub fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0)
     }
     #[doc = "Bit 8 - The masked interrupt status bit for CH0_TX_THR_EVENT_INT."]
@@ -90,10 +100,12 @@ impl R {
     pub fn ch1_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH2_RX_THR_EVENT_INT."]
+    #[doc = "The masked interrupt status bit for CH2_RX_THR_EVENT_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH2_RX_THR_EVENT` field"]
     #[inline(always)]
-    pub unsafe fn ch_rx_thr_event(&self, n: u8) -> CH_RX_THR_EVENT_R {
-        CH_RX_THR_EVENT_R::new(((self.bits >> (n - 2 + 10)) & 1) != 0)
+    pub fn ch_rx_thr_event(&self, n: u8) -> CH_RX_THR_EVENT_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        CH_RX_THR_EVENT_R::new(((self.bits >> (n + 10)) & 1) != 0)
     }
     #[doc = "Bit 10 - The masked interrupt status bit for CH2_RX_THR_EVENT_INT."]
     #[inline(always)]
@@ -105,9 +117,11 @@ impl R {
     pub fn ch3_rx_thr_event(&self) -> CH_RX_THR_EVENT_R {
         CH_RX_THR_EVENT_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_LOOP_INT."]
+    #[doc = "The masked interrupt status bit for CH[0-1]_TX_LOOP_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_X_LOOP` field"]
     #[inline(always)]
-    pub unsafe fn ch_x_loop(&self, n: u8) -> CH_X_LOOP_R {
+    pub fn ch_x_loop(&self, n: u8) -> CH_X_LOOP_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CH_X_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Bit 12 - The masked interrupt status bit for CH0_TX_LOOP_INT."]
@@ -157,7 +171,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Masked interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

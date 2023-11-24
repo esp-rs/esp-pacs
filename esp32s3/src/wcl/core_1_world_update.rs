@@ -1,7 +1,7 @@
 #[doc = "Register `Core_1_World_UPDATE` writer"]
 pub type W = crate::W<CORE_1_WORLD_UPDATE_SPEC>;
 #[doc = "Field `CORE_1_UPDATE` writer - This field is used to update configuration completed, can write any value,the hardware only checks the write operation of this register and does not case about its value"]
-pub type CORE_1_UPDATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CORE_1_UPDATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_WORLD_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - This field is used to update configuration completed, can write any value,the hardware only checks the write operation of this register and does not case about its value"]
     #[inline(always)]
     #[must_use]
-    pub fn core_1_update(&mut self) -> CORE_1_UPDATE_W<CORE_1_WORLD_UPDATE_SPEC, 0> {
-        CORE_1_UPDATE_W::new(self)
+    pub fn core_1_update(&mut self) -> CORE_1_UPDATE_W<CORE_1_WORLD_UPDATE_SPEC> {
+        CORE_1_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

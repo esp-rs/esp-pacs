@@ -5,27 +5,27 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `SDA_FORCE_OUT` reader - SDA is push-pull (1) or open-drain (0)"]
 pub type SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SDA_FORCE_OUT` writer - SDA is push-pull (1) or open-drain (0)"]
-pub type SDA_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDA_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCL_FORCE_OUT` reader - SCL is push-pull (1) or open-drain (0)"]
 pub type SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SCL_FORCE_OUT` writer - SCL is push-pull (1) or open-drain (0)"]
-pub type SCL_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCL_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MS_MODE` reader - Master (1) or slave (0)"]
 pub type MS_MODE_R = crate::BitReader;
 #[doc = "Field `MS_MODE` writer - Master (1) or slave (0)"]
-pub type MS_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_START` reader - Force to generate start condition"]
 pub type TRANS_START_R = crate::BitReader;
 #[doc = "Field `TRANS_START` writer - Force to generate start condition"]
-pub type TRANS_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_LSB_FIRST` reader - Send LSB first"]
 pub type TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST` writer - Send LSB first"]
-pub type TX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_LSB_FIRST` reader - Receive LSB first"]
 pub type RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST` writer - Receive LSB first"]
-pub type RX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SDA is push-pull (1) or open-drain (0)"]
     #[inline(always)]
@@ -86,45 +86,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - SDA is push-pull (1) or open-drain (0)"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTRL_SPEC, 0> {
-        SDA_FORCE_OUT_W::new(self)
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTRL_SPEC> {
+        SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - SCL is push-pull (1) or open-drain (0)"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTRL_SPEC, 1> {
-        SCL_FORCE_OUT_W::new(self)
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTRL_SPEC> {
+        SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 4 - Master (1) or slave (0)"]
     #[inline(always)]
     #[must_use]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<CTRL_SPEC, 4> {
-        MS_MODE_W::new(self)
+    pub fn ms_mode(&mut self) -> MS_MODE_W<CTRL_SPEC> {
+        MS_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Force to generate start condition"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_start(&mut self) -> TRANS_START_W<CTRL_SPEC, 5> {
-        TRANS_START_W::new(self)
+    pub fn trans_start(&mut self) -> TRANS_START_W<CTRL_SPEC> {
+        TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - Send LSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTRL_SPEC, 6> {
-        TX_LSB_FIRST_W::new(self)
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTRL_SPEC> {
+        TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Receive LSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTRL_SPEC, 7> {
-        RX_LSB_FIRST_W::new(self)
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTRL_SPEC> {
+        RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

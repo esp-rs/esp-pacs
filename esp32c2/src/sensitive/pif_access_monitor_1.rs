@@ -5,13 +5,11 @@ pub type W = crate::W<PIF_ACCESS_MONITOR_1_SPEC>;
 #[doc = "Field `PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR` reader - Need add description"]
 pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_R = crate::BitReader;
 #[doc = "Field `PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR` writer - Need add description"]
-pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O>;
+pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN` reader - Need add description"]
 pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_R = crate::BitReader;
 #[doc = "Field `PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN` writer - Need add description"]
-pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O>;
+pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
@@ -44,7 +42,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PIF_ACCESS_MONITOR_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -53,16 +51,16 @@ impl W {
     #[must_use]
     pub fn pif_access_monitor_nonword_violate_clr(
         &mut self,
-    ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W<PIF_ACCESS_MONITOR_1_SPEC, 0> {
-        PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W::new(self)
+    ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W<PIF_ACCESS_MONITOR_1_SPEC> {
+        PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Need add description"]
     #[inline(always)]
     #[must_use]
     pub fn pif_access_monitor_nonword_violate_en(
         &mut self,
-    ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W<PIF_ACCESS_MONITOR_1_SPEC, 1> {
-        PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W::new(self)
+    ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W<PIF_ACCESS_MONITOR_1_SPEC> {
+        PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

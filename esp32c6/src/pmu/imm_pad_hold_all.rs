@@ -1,13 +1,13 @@
 #[doc = "Register `IMM_PAD_HOLD_ALL` writer"]
 pub type W = crate::W<IMM_PAD_HOLD_ALL_SPEC>;
 #[doc = "Field `TIE_HIGH_LP_PAD_HOLD_ALL` writer - need_des"]
-pub type TIE_HIGH_LP_PAD_HOLD_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_HIGH_LP_PAD_HOLD_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIE_LOW_LP_PAD_HOLD_ALL` writer - need_des"]
-pub type TIE_LOW_LP_PAD_HOLD_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_LOW_LP_PAD_HOLD_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIE_HIGH_HP_PAD_HOLD_ALL` writer - need_des"]
-pub type TIE_HIGH_HP_PAD_HOLD_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_HIGH_HP_PAD_HOLD_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIE_LOW_HP_PAD_HOLD_ALL` writer - need_des"]
-pub type TIE_LOW_HP_PAD_HOLD_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_LOW_HP_PAD_HOLD_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IMM_PAD_HOLD_ALL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -20,32 +20,28 @@ impl W {
     #[must_use]
     pub fn tie_high_lp_pad_hold_all(
         &mut self,
-    ) -> TIE_HIGH_LP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC, 28> {
-        TIE_HIGH_LP_PAD_HOLD_ALL_W::new(self)
+    ) -> TIE_HIGH_LP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
+        TIE_HIGH_LP_PAD_HOLD_ALL_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn tie_low_lp_pad_hold_all(
-        &mut self,
-    ) -> TIE_LOW_LP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC, 29> {
-        TIE_LOW_LP_PAD_HOLD_ALL_W::new(self)
+    pub fn tie_low_lp_pad_hold_all(&mut self) -> TIE_LOW_LP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
+        TIE_LOW_LP_PAD_HOLD_ALL_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn tie_high_hp_pad_hold_all(
         &mut self,
-    ) -> TIE_HIGH_HP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC, 30> {
-        TIE_HIGH_HP_PAD_HOLD_ALL_W::new(self)
+    ) -> TIE_HIGH_HP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
+        TIE_HIGH_HP_PAD_HOLD_ALL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn tie_low_hp_pad_hold_all(
-        &mut self,
-    ) -> TIE_LOW_HP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC, 31> {
-        TIE_LOW_HP_PAD_HOLD_ALL_W::new(self)
+    pub fn tie_low_hp_pad_hold_all(&mut self) -> TIE_LOW_HP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
+        TIE_LOW_HP_PAD_HOLD_ALL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

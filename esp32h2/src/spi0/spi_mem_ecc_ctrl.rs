@@ -9,7 +9,7 @@ pub type SPI_FMEM_ECC_ERR_INT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_PAGE_SIZE` reader - Set the page size of the flash accessed by MSPI. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
 pub type SPI_FMEM_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `SPI_FMEM_PAGE_SIZE` writer - Set the page size of the flash accessed by MSPI. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub type SPI_FMEM_PAGE_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI_FMEM_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI_FMEM_ECC_ADDR_EN` reader - Set this bit to enable MSPI ECC address conversion, no matter MSPI accesses to the ECC region or non-ECC region of flash. If there is no ECC region in flash, this bit should be 0. Otherwise, this bit should be 1."]
 pub type SPI_FMEM_ECC_ADDR_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_ECC_ADDR_EN` reader - Set this bit to enable ECC address convert in SPI0/1 USR_CMD transfer."]
@@ -93,15 +93,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_ECC_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 18:19 - Set the page size of the flash accessed by MSPI. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_fmem_page_size(&mut self) -> SPI_FMEM_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC, 18> {
-        SPI_FMEM_PAGE_SIZE_W::new(self)
+    pub fn spi_fmem_page_size(&mut self) -> SPI_FMEM_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC> {
+        SPI_FMEM_PAGE_SIZE_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

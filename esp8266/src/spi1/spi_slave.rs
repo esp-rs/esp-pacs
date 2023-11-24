@@ -5,69 +5,69 @@ pub type W = crate::W<SPI_SLAVE_SPEC>;
 #[doc = "Field `slv_rd_buf_done` reader - The interrupt raw bit for the completement of \"read-buffer\" operation in the slave mode."]
 pub type SLV_RD_BUF_DONE_R = crate::BitReader;
 #[doc = "Field `slv_rd_buf_done` writer - The interrupt raw bit for the completement of \"read-buffer\" operation in the slave mode."]
-pub type SLV_RD_BUF_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_RD_BUF_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `slv_wr_buf_done` reader - The interrupt raw bit for the completement of \"write-buffer\" operation in the slave mode."]
 pub type SLV_WR_BUF_DONE_R = crate::BitReader;
 #[doc = "Field `slv_wr_buf_done` writer - The interrupt raw bit for the completement of \"write-buffer\" operation in the slave mode."]
-pub type SLV_WR_BUF_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_WR_BUF_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `slv_rd_sta_done` reader - The interrupt raw bit for the completement of \"read-status\" operation in the slave mode."]
 pub type SLV_RD_STA_DONE_R = crate::BitReader;
 #[doc = "Field `slv_rd_sta_done` writer - The interrupt raw bit for the completement of \"read-status\" operation in the slave mode."]
-pub type SLV_RD_STA_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_RD_STA_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `slv_wr_sta_done` reader - The interrupt raw bit for the completement of \"write-status\" operation in the slave mode."]
 pub type SLV_WR_STA_DONE_R = crate::BitReader;
 #[doc = "Field `slv_wr_sta_done` writer - The interrupt raw bit for the completement of \"write-status\" operation in the slave mode."]
-pub type SLV_WR_STA_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_WR_STA_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_trans_done` reader - The interrupt raw bit for the completement of any operation in both the master mode and the slave mode."]
 pub type SPI_TRANS_DONE_R = crate::BitReader;
 #[doc = "Field `spi_trans_done` writer - The interrupt raw bit for the completement of any operation in both the master mode and the slave mode."]
-pub type SPI_TRANS_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_TRANS_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_int_en` reader - Interrupt enable bits for the below 5 sources"]
 pub type SPI_INT_EN_R = crate::FieldReader;
 #[doc = "Field `spi_int_en` writer - Interrupt enable bits for the below 5 sources"]
-pub type SPI_INT_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SPI_INT_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `interrupt_rb_enable` reader - Enable buffer read interrupts"]
 pub type INTERRUPT_RB_ENABLE_R = crate::BitReader;
 #[doc = "Field `interrupt_rb_enable` writer - Enable buffer read interrupts"]
-pub type INTERRUPT_RB_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERRUPT_RB_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `interrupt_wb_enable` reader - Enable buffer write interrupts"]
 pub type INTERRUPT_WB_ENABLE_R = crate::BitReader;
 #[doc = "Field `interrupt_wb_enable` writer - Enable buffer write interrupts"]
-pub type INTERRUPT_WB_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERRUPT_WB_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `interrupt_rs_enable` reader - Enable status read interrupts"]
 pub type INTERRUPT_RS_ENABLE_R = crate::BitReader;
 #[doc = "Field `interrupt_rs_enable` writer - Enable status read interrupts"]
-pub type INTERRUPT_RS_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERRUPT_RS_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `interrupt_ws_enable` reader - Enable status write interrupts"]
 pub type INTERRUPT_WS_ENABLE_R = crate::BitReader;
 #[doc = "Field `interrupt_ws_enable` writer - Enable status write interrupts"]
-pub type INTERRUPT_WS_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERRUPT_WS_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `interrupt_trans_enable` reader - Enable TRANS interrupts"]
 pub type INTERRUPT_TRANS_ENABLE_R = crate::BitReader;
 #[doc = "Field `interrupt_trans_enable` writer - Enable TRANS interrupts"]
-pub type INTERRUPT_TRANS_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERRUPT_TRANS_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_trans_cnt` reader - The operations counter in both the master mode and the slave mode."]
 pub type SPI_TRANS_CNT_R = crate::FieldReader;
 #[doc = "Field `slv_cmd_define` reader - 1: slave mode commands are defined in SPI_SLAVE3. 0: slave mode commands are fixed as 1: \"write-status\"; 4: \"read-status\"; 2: \"write-buffer\" and 3: \"read-buffer\"."]
 pub type SLV_CMD_DEFINE_R = crate::BitReader;
 #[doc = "Field `slv_cmd_define` writer - 1: slave mode commands are defined in SPI_SLAVE3. 0: slave mode commands are fixed as 1: \"write-status\"; 4: \"read-status\"; 2: \"write-buffer\" and 3: \"read-buffer\"."]
-pub type SLV_CMD_DEFINE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD_DEFINE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sta_enable` reader - Enable read/write buffer"]
 pub type STA_ENABLE_R = crate::BitReader;
 #[doc = "Field `sta_enable` writer - Enable read/write buffer"]
-pub type STA_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STA_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_buffer_enable` reader - Enable read/write buffer"]
 pub type SPI_BUFFER_ENABLE_R = crate::BitReader;
 #[doc = "Field `spi_buffer_enable` writer - Enable read/write buffer"]
-pub type SPI_BUFFER_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_BUFFER_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_slave_mode` reader - 1: slave mode, 0: master mode."]
 pub type SPI_SLAVE_MODE_R = crate::BitReader;
 #[doc = "Field `spi_slave_mode` writer - 1: slave mode, 0: master mode."]
-pub type SPI_SLAVE_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_SLAVE_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_sync_reset` reader - It is the synchronous reset signal of the module. This bit is self-cleared by hardware."]
 pub type SPI_SYNC_RESET_R = crate::BitReader;
 #[doc = "Field `spi_sync_reset` writer - It is the synchronous reset signal of the module. This bit is self-cleared by hardware."]
-pub type SPI_SYNC_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_SYNC_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The interrupt raw bit for the completement of \"read-buffer\" operation in the slave mode."]
     #[inline(always)]
@@ -227,107 +227,111 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_SLAVE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The interrupt raw bit for the completement of \"read-buffer\" operation in the slave mode."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<SPI_SLAVE_SPEC, 0> {
-        SLV_RD_BUF_DONE_W::new(self)
+    pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<SPI_SLAVE_SPEC> {
+        SLV_RD_BUF_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt raw bit for the completement of \"write-buffer\" operation in the slave mode."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<SPI_SLAVE_SPEC, 1> {
-        SLV_WR_BUF_DONE_W::new(self)
+    pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<SPI_SLAVE_SPEC> {
+        SLV_WR_BUF_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt raw bit for the completement of \"read-status\" operation in the slave mode."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rd_sta_done(&mut self) -> SLV_RD_STA_DONE_W<SPI_SLAVE_SPEC, 2> {
-        SLV_RD_STA_DONE_W::new(self)
+    pub fn slv_rd_sta_done(&mut self) -> SLV_RD_STA_DONE_W<SPI_SLAVE_SPEC> {
+        SLV_RD_STA_DONE_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt raw bit for the completement of \"write-status\" operation in the slave mode."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wr_sta_done(&mut self) -> SLV_WR_STA_DONE_W<SPI_SLAVE_SPEC, 3> {
-        SLV_WR_STA_DONE_W::new(self)
+    pub fn slv_wr_sta_done(&mut self) -> SLV_WR_STA_DONE_W<SPI_SLAVE_SPEC> {
+        SLV_WR_STA_DONE_W::new(self, 3)
     }
     #[doc = "Bit 4 - The interrupt raw bit for the completement of any operation in both the master mode and the slave mode."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_trans_done(&mut self) -> SPI_TRANS_DONE_W<SPI_SLAVE_SPEC, 4> {
-        SPI_TRANS_DONE_W::new(self)
+    pub fn spi_trans_done(&mut self) -> SPI_TRANS_DONE_W<SPI_SLAVE_SPEC> {
+        SPI_TRANS_DONE_W::new(self, 4)
     }
     #[doc = "Bits 5:9 - Interrupt enable bits for the below 5 sources"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_int_en(&mut self) -> SPI_INT_EN_W<SPI_SLAVE_SPEC, 5> {
-        SPI_INT_EN_W::new(self)
+    pub fn spi_int_en(&mut self) -> SPI_INT_EN_W<SPI_SLAVE_SPEC> {
+        SPI_INT_EN_W::new(self, 5)
     }
     #[doc = "Bit 5 - Enable buffer read interrupts"]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_rb_enable(&mut self) -> INTERRUPT_RB_ENABLE_W<SPI_SLAVE_SPEC, 5> {
-        INTERRUPT_RB_ENABLE_W::new(self)
+    pub fn interrupt_rb_enable(&mut self) -> INTERRUPT_RB_ENABLE_W<SPI_SLAVE_SPEC> {
+        INTERRUPT_RB_ENABLE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable buffer write interrupts"]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_wb_enable(&mut self) -> INTERRUPT_WB_ENABLE_W<SPI_SLAVE_SPEC, 6> {
-        INTERRUPT_WB_ENABLE_W::new(self)
+    pub fn interrupt_wb_enable(&mut self) -> INTERRUPT_WB_ENABLE_W<SPI_SLAVE_SPEC> {
+        INTERRUPT_WB_ENABLE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable status read interrupts"]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_rs_enable(&mut self) -> INTERRUPT_RS_ENABLE_W<SPI_SLAVE_SPEC, 7> {
-        INTERRUPT_RS_ENABLE_W::new(self)
+    pub fn interrupt_rs_enable(&mut self) -> INTERRUPT_RS_ENABLE_W<SPI_SLAVE_SPEC> {
+        INTERRUPT_RS_ENABLE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable status write interrupts"]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_ws_enable(&mut self) -> INTERRUPT_WS_ENABLE_W<SPI_SLAVE_SPEC, 8> {
-        INTERRUPT_WS_ENABLE_W::new(self)
+    pub fn interrupt_ws_enable(&mut self) -> INTERRUPT_WS_ENABLE_W<SPI_SLAVE_SPEC> {
+        INTERRUPT_WS_ENABLE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Enable TRANS interrupts"]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_trans_enable(&mut self) -> INTERRUPT_TRANS_ENABLE_W<SPI_SLAVE_SPEC, 9> {
-        INTERRUPT_TRANS_ENABLE_W::new(self)
+    pub fn interrupt_trans_enable(&mut self) -> INTERRUPT_TRANS_ENABLE_W<SPI_SLAVE_SPEC> {
+        INTERRUPT_TRANS_ENABLE_W::new(self, 9)
     }
     #[doc = "Bit 27 - 1: slave mode commands are defined in SPI_SLAVE3. 0: slave mode commands are fixed as 1: \"write-status\"; 4: \"read-status\"; 2: \"write-buffer\" and 3: \"read-buffer\"."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd_define(&mut self) -> SLV_CMD_DEFINE_W<SPI_SLAVE_SPEC, 27> {
-        SLV_CMD_DEFINE_W::new(self)
+    pub fn slv_cmd_define(&mut self) -> SLV_CMD_DEFINE_W<SPI_SLAVE_SPEC> {
+        SLV_CMD_DEFINE_W::new(self, 27)
     }
     #[doc = "Bit 28 - Enable read/write buffer"]
     #[inline(always)]
     #[must_use]
-    pub fn sta_enable(&mut self) -> STA_ENABLE_W<SPI_SLAVE_SPEC, 28> {
-        STA_ENABLE_W::new(self)
+    pub fn sta_enable(&mut self) -> STA_ENABLE_W<SPI_SLAVE_SPEC> {
+        STA_ENABLE_W::new(self, 28)
     }
     #[doc = "Bit 29 - Enable read/write buffer"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_buffer_enable(&mut self) -> SPI_BUFFER_ENABLE_W<SPI_SLAVE_SPEC, 29> {
-        SPI_BUFFER_ENABLE_W::new(self)
+    pub fn spi_buffer_enable(&mut self) -> SPI_BUFFER_ENABLE_W<SPI_SLAVE_SPEC> {
+        SPI_BUFFER_ENABLE_W::new(self, 29)
     }
     #[doc = "Bit 30 - 1: slave mode, 0: master mode."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_slave_mode(&mut self) -> SPI_SLAVE_MODE_W<SPI_SLAVE_SPEC, 30> {
-        SPI_SLAVE_MODE_W::new(self)
+    pub fn spi_slave_mode(&mut self) -> SPI_SLAVE_MODE_W<SPI_SLAVE_SPEC> {
+        SPI_SLAVE_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - It is the synchronous reset signal of the module. This bit is self-cleared by hardware."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_sync_reset(&mut self) -> SPI_SYNC_RESET_W<SPI_SLAVE_SPEC, 31> {
-        SPI_SYNC_RESET_W::new(self)
+    pub fn spi_sync_reset(&mut self) -> SPI_SYNC_RESET_W<SPI_SLAVE_SPEC> {
+        SPI_SYNC_RESET_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

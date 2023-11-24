@@ -5,43 +5,43 @@ pub type W = crate::W<HCCHAR1_SPEC>;
 #[doc = "Field `H_MPS1` reader - "]
 pub type H_MPS1_R = crate::FieldReader<u16>;
 #[doc = "Field `H_MPS1` writer - "]
-pub type H_MPS1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type H_MPS1_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `H_EPNUM1` reader - "]
 pub type H_EPNUM1_R = crate::FieldReader;
 #[doc = "Field `H_EPNUM1` writer - "]
-pub type H_EPNUM1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type H_EPNUM1_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `H_EPDIR1` reader - "]
 pub type H_EPDIR1_R = crate::BitReader;
 #[doc = "Field `H_EPDIR1` writer - "]
-pub type H_EPDIR1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_EPDIR1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_LSPDDEV1` reader - "]
 pub type H_LSPDDEV1_R = crate::BitReader;
 #[doc = "Field `H_LSPDDEV1` writer - "]
-pub type H_LSPDDEV1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_LSPDDEV1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_EPTYPE1` reader - "]
 pub type H_EPTYPE1_R = crate::FieldReader;
 #[doc = "Field `H_EPTYPE1` writer - "]
-pub type H_EPTYPE1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type H_EPTYPE1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `H_EC1` reader - "]
 pub type H_EC1_R = crate::BitReader;
 #[doc = "Field `H_EC1` writer - "]
-pub type H_EC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_EC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DEVADDR1` reader - "]
 pub type H_DEVADDR1_R = crate::FieldReader;
 #[doc = "Field `H_DEVADDR1` writer - "]
-pub type H_DEVADDR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type H_DEVADDR1_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `H_ODDFRM1` reader - "]
 pub type H_ODDFRM1_R = crate::BitReader;
 #[doc = "Field `H_ODDFRM1` writer - "]
-pub type H_ODDFRM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_ODDFRM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_CHDIS1` reader - "]
 pub type H_CHDIS1_R = crate::BitReader;
 #[doc = "Field `H_CHDIS1` writer - "]
-pub type H_CHDIS1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_CHDIS1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_CHENA1` reader - "]
 pub type H_CHENA1_R = crate::BitReader;
 #[doc = "Field `H_CHENA1` writer - "]
-pub type H_CHENA1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_CHENA1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -114,69 +114,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HCCHAR1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
     #[must_use]
-    pub fn h_mps1(&mut self) -> H_MPS1_W<HCCHAR1_SPEC, 0> {
-        H_MPS1_W::new(self)
+    pub fn h_mps1(&mut self) -> H_MPS1_W<HCCHAR1_SPEC> {
+        H_MPS1_W::new(self, 0)
     }
     #[doc = "Bits 11:14"]
     #[inline(always)]
     #[must_use]
-    pub fn h_epnum1(&mut self) -> H_EPNUM1_W<HCCHAR1_SPEC, 11> {
-        H_EPNUM1_W::new(self)
+    pub fn h_epnum1(&mut self) -> H_EPNUM1_W<HCCHAR1_SPEC> {
+        H_EPNUM1_W::new(self, 11)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn h_epdir1(&mut self) -> H_EPDIR1_W<HCCHAR1_SPEC, 15> {
-        H_EPDIR1_W::new(self)
+    pub fn h_epdir1(&mut self) -> H_EPDIR1_W<HCCHAR1_SPEC> {
+        H_EPDIR1_W::new(self, 15)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn h_lspddev1(&mut self) -> H_LSPDDEV1_W<HCCHAR1_SPEC, 17> {
-        H_LSPDDEV1_W::new(self)
+    pub fn h_lspddev1(&mut self) -> H_LSPDDEV1_W<HCCHAR1_SPEC> {
+        H_LSPDDEV1_W::new(self, 17)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn h_eptype1(&mut self) -> H_EPTYPE1_W<HCCHAR1_SPEC, 18> {
-        H_EPTYPE1_W::new(self)
+    pub fn h_eptype1(&mut self) -> H_EPTYPE1_W<HCCHAR1_SPEC> {
+        H_EPTYPE1_W::new(self, 18)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ec1(&mut self) -> H_EC1_W<HCCHAR1_SPEC, 21> {
-        H_EC1_W::new(self)
+    pub fn h_ec1(&mut self) -> H_EC1_W<HCCHAR1_SPEC> {
+        H_EC1_W::new(self, 21)
     }
     #[doc = "Bits 22:28"]
     #[inline(always)]
     #[must_use]
-    pub fn h_devaddr1(&mut self) -> H_DEVADDR1_W<HCCHAR1_SPEC, 22> {
-        H_DEVADDR1_W::new(self)
+    pub fn h_devaddr1(&mut self) -> H_DEVADDR1_W<HCCHAR1_SPEC> {
+        H_DEVADDR1_W::new(self, 22)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn h_oddfrm1(&mut self) -> H_ODDFRM1_W<HCCHAR1_SPEC, 29> {
-        H_ODDFRM1_W::new(self)
+    pub fn h_oddfrm1(&mut self) -> H_ODDFRM1_W<HCCHAR1_SPEC> {
+        H_ODDFRM1_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chdis1(&mut self) -> H_CHDIS1_W<HCCHAR1_SPEC, 30> {
-        H_CHDIS1_W::new(self)
+    pub fn h_chdis1(&mut self) -> H_CHDIS1_W<HCCHAR1_SPEC> {
+        H_CHDIS1_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chena1(&mut self) -> H_CHENA1_W<HCCHAR1_SPEC, 31> {
-        H_CHENA1_W::new(self)
+    pub fn h_chena1(&mut self) -> H_CHENA1_W<HCCHAR1_SPEC> {
+        H_CHENA1_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

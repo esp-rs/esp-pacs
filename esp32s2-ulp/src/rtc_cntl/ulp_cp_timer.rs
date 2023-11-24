@@ -5,17 +5,17 @@ pub type W = crate::W<ULP_CP_TIMER_SPEC>;
 #[doc = "Field `ULP_CP_PC_INIT` reader - ULP coprocessor PC initial address"]
 pub type ULP_CP_PC_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_PC_INIT` writer - ULP coprocessor PC initial address"]
-pub type ULP_CP_PC_INIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type ULP_CP_PC_INIT_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` reader - Enable the option of ULP coprocessor woken up by RTC GPIO"]
 pub type ULP_CP_GPIO_WAKEUP_ENA_R = crate::BitReader;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` writer - Enable the option of ULP coprocessor woken up by RTC GPIO"]
-pub type ULP_CP_GPIO_WAKEUP_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_GPIO_WAKEUP_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_CLR` writer - Disable the option of ULP coprocessor woken up by RTC GPIO"]
-pub type ULP_CP_GPIO_WAKEUP_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_GPIO_WAKEUP_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` reader - ULP coprocessor timer enable bit. 0: Disable hardware Timer. 1: Enable hardware timer"]
 pub type ULP_CP_SLP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` writer - ULP coprocessor timer enable bit. 0: Disable hardware Timer. 1: Enable hardware timer"]
-pub type ULP_CP_SLP_TIMER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_SLP_TIMER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - ULP coprocessor PC initial address"]
     #[inline(always)]
@@ -55,35 +55,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ULP_CP_TIMER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10 - ULP coprocessor PC initial address"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_pc_init(&mut self) -> ULP_CP_PC_INIT_W<ULP_CP_TIMER_SPEC, 0> {
-        ULP_CP_PC_INIT_W::new(self)
+    pub fn ulp_cp_pc_init(&mut self) -> ULP_CP_PC_INIT_W<ULP_CP_TIMER_SPEC> {
+        ULP_CP_PC_INIT_W::new(self, 0)
     }
     #[doc = "Bit 29 - Enable the option of ULP coprocessor woken up by RTC GPIO"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_gpio_wakeup_ena(&mut self) -> ULP_CP_GPIO_WAKEUP_ENA_W<ULP_CP_TIMER_SPEC, 29> {
-        ULP_CP_GPIO_WAKEUP_ENA_W::new(self)
+    pub fn ulp_cp_gpio_wakeup_ena(&mut self) -> ULP_CP_GPIO_WAKEUP_ENA_W<ULP_CP_TIMER_SPEC> {
+        ULP_CP_GPIO_WAKEUP_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - Disable the option of ULP coprocessor woken up by RTC GPIO"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_gpio_wakeup_clr(&mut self) -> ULP_CP_GPIO_WAKEUP_CLR_W<ULP_CP_TIMER_SPEC, 30> {
-        ULP_CP_GPIO_WAKEUP_CLR_W::new(self)
+    pub fn ulp_cp_gpio_wakeup_clr(&mut self) -> ULP_CP_GPIO_WAKEUP_CLR_W<ULP_CP_TIMER_SPEC> {
+        ULP_CP_GPIO_WAKEUP_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - ULP coprocessor timer enable bit. 0: Disable hardware Timer. 1: Enable hardware timer"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<ULP_CP_TIMER_SPEC, 31> {
-        ULP_CP_SLP_TIMER_EN_W::new(self)
+    pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<ULP_CP_TIMER_SPEC> {
+        ULP_CP_SLP_TIMER_EN_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

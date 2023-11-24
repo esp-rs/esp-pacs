@@ -5,23 +5,23 @@ pub type W = crate::W<CH_CONF1_SPEC>;
 #[doc = "Field `DUTY_SCALE` reader - reg_duty_scale_lsch0."]
 pub type DUTY_SCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_SCALE` writer - reg_duty_scale_lsch0."]
-pub type DUTY_SCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type DUTY_SCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `DUTY_CYCLE` reader - reg_duty_cycle_lsch0."]
 pub type DUTY_CYCLE_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_CYCLE` writer - reg_duty_cycle_lsch0."]
-pub type DUTY_CYCLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type DUTY_CYCLE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `DUTY_NUM` reader - reg_duty_num_lsch0."]
 pub type DUTY_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_NUM` writer - reg_duty_num_lsch0."]
-pub type DUTY_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type DUTY_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `DUTY_INC` reader - reg_duty_inc_lsch0."]
 pub type DUTY_INC_R = crate::BitReader;
 #[doc = "Field `DUTY_INC` writer - reg_duty_inc_lsch0."]
-pub type DUTY_INC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_INC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUTY_START` reader - reg_duty_start_lsch0."]
 pub type DUTY_START_R = crate::BitReader;
 #[doc = "Field `DUTY_START` writer - reg_duty_start_lsch0."]
-pub type DUTY_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9 - reg_duty_scale_lsch0."]
     #[inline(always)]
@@ -64,39 +64,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - reg_duty_scale_lsch0."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_scale(&mut self) -> DUTY_SCALE_W<CH_CONF1_SPEC, 0> {
-        DUTY_SCALE_W::new(self)
+    pub fn duty_scale(&mut self) -> DUTY_SCALE_W<CH_CONF1_SPEC> {
+        DUTY_SCALE_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - reg_duty_cycle_lsch0."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_cycle(&mut self) -> DUTY_CYCLE_W<CH_CONF1_SPEC, 10> {
-        DUTY_CYCLE_W::new(self)
+    pub fn duty_cycle(&mut self) -> DUTY_CYCLE_W<CH_CONF1_SPEC> {
+        DUTY_CYCLE_W::new(self, 10)
     }
     #[doc = "Bits 20:29 - reg_duty_num_lsch0."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_num(&mut self) -> DUTY_NUM_W<CH_CONF1_SPEC, 20> {
-        DUTY_NUM_W::new(self)
+    pub fn duty_num(&mut self) -> DUTY_NUM_W<CH_CONF1_SPEC> {
+        DUTY_NUM_W::new(self, 20)
     }
     #[doc = "Bit 30 - reg_duty_inc_lsch0."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_inc(&mut self) -> DUTY_INC_W<CH_CONF1_SPEC, 30> {
-        DUTY_INC_W::new(self)
+    pub fn duty_inc(&mut self) -> DUTY_INC_W<CH_CONF1_SPEC> {
+        DUTY_INC_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_duty_start_lsch0."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_start(&mut self) -> DUTY_START_W<CH_CONF1_SPEC, 31> {
-        DUTY_START_W::new(self)
+    pub fn duty_start(&mut self) -> DUTY_START_W<CH_CONF1_SPEC> {
+        DUTY_START_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

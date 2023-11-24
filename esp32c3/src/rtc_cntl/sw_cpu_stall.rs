@@ -5,11 +5,11 @@ pub type W = crate::W<SW_CPU_STALL_SPEC>;
 #[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\]"]
 pub type SW_STALL_APPCPU_C1_R = crate::FieldReader;
 #[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\]"]
-pub type SW_STALL_APPCPU_C1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SW_STALL_APPCPU_C1_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SW_STALL_PROCPU_C1` reader - stall cpu by software"]
 pub type SW_STALL_PROCPU_C1_R = crate::FieldReader;
 #[doc = "Field `SW_STALL_PROCPU_C1` writer - stall cpu by software"]
-pub type SW_STALL_PROCPU_C1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SW_STALL_PROCPU_C1_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SW_CPU_STALL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<SW_CPU_STALL_SPEC, 20> {
-        SW_STALL_APPCPU_C1_W::new(self)
+    pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<SW_CPU_STALL_SPEC> {
+        SW_STALL_APPCPU_C1_W::new(self, 20)
     }
     #[doc = "Bits 26:31 - stall cpu by software"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<SW_CPU_STALL_SPEC, 26> {
-        SW_STALL_PROCPU_C1_W::new(self)
+    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<SW_CPU_STALL_SPEC> {
+        SW_STALL_PROCPU_C1_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

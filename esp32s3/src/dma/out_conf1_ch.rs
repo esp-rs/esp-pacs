@@ -5,11 +5,11 @@ pub type W = crate::W<OUT_CONF1_CH_SPEC>;
 #[doc = "Field `OUT_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
 pub type OUT_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `OUT_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type OUT_CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_CHECK_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EXT_MEM_BK_SIZE` reader - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
 pub type OUT_EXT_MEM_BK_SIZE_R = crate::FieldReader;
 #[doc = "Field `OUT_EXT_MEM_BK_SIZE` writer - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type OUT_EXT_MEM_BK_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type OUT_EXT_MEM_BK_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_CONF1_CH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<OUT_CONF1_CH_SPEC, 12> {
-        OUT_CHECK_OWNER_W::new(self)
+    pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<OUT_CONF1_CH_SPEC> {
+        OUT_CHECK_OWNER_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn out_ext_mem_bk_size(&mut self) -> OUT_EXT_MEM_BK_SIZE_W<OUT_CONF1_CH_SPEC, 13> {
-        OUT_EXT_MEM_BK_SIZE_W::new(self)
+    pub fn out_ext_mem_bk_size(&mut self) -> OUT_EXT_MEM_BK_SIZE_W<OUT_CONF1_CH_SPEC> {
+        OUT_EXT_MEM_BK_SIZE_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

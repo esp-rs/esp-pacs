@@ -23,7 +23,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIME_LOW1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC timer low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_low1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

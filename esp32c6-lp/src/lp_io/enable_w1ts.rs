@@ -1,7 +1,7 @@
 #[doc = "Register `ENABLE_W1TS` writer"]
 pub type W = crate::W<ENABLE_W1TS_SPEC>;
 #[doc = "Field `ENABLE_W1TS` writer - set one time output data"]
-pub type ENABLE_W1TS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ENABLE_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,10 +12,14 @@ impl W {
     #[doc = "Bits 0:7 - set one time output data"]
     #[inline(always)]
     #[must_use]
-    pub fn enable_w1ts(&mut self) -> ENABLE_W1TS_W<ENABLE_W1TS_SPEC, 0> {
-        ENABLE_W1TS_W::new(self)
+    pub fn enable_w1ts(&mut self) -> ENABLE_W1TS_W<ENABLE_W1TS_SPEC> {
+        ENABLE_W1TS_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

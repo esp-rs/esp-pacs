@@ -5,79 +5,79 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `FDUMMY_OUT` reader - In the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
 pub type FDUMMY_OUT_R = crate::BitReader;
 #[doc = "Field `FDUMMY_OUT` writer - In the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
-pub type FDUMMY_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDUMMY_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDOUT_OCT` reader - Set this bit to enable 8-bit-mode(8-bm) in DOUT phase."]
 pub type FDOUT_OCT_R = crate::BitReader;
 #[doc = "Field `FDOUT_OCT` writer - Set this bit to enable 8-bit-mode(8-bm) in DOUT phase."]
-pub type FDOUT_OCT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDOUT_OCT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDIN_OCT` reader - Set this bit to enable 8-bit-mode(8-bm) in DIN phase."]
 pub type FDIN_OCT_R = crate::BitReader;
 #[doc = "Field `FDIN_OCT` writer - Set this bit to enable 8-bit-mode(8-bm) in DIN phase."]
-pub type FDIN_OCT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDIN_OCT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FADDR_OCT` reader - Set this bit to enable 8-bit-mode(8-bm) in ADDR phase."]
 pub type FADDR_OCT_R = crate::BitReader;
 #[doc = "Field `FADDR_OCT` writer - Set this bit to enable 8-bit-mode(8-bm) in ADDR phase."]
-pub type FADDR_OCT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FADDR_OCT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FCMD_DUAL` reader - Set this bit to enable 2-bit-mode(2-bm) in CMD phase."]
 pub type FCMD_DUAL_R = crate::BitReader;
 #[doc = "Field `FCMD_DUAL` writer - Set this bit to enable 2-bit-mode(2-bm) in CMD phase."]
-pub type FCMD_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCMD_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FCMD_QUAD` reader - Set this bit to enable 4-bit-mode(4-bm) in CMD phase."]
 pub type FCMD_QUAD_R = crate::BitReader;
 #[doc = "Field `FCMD_QUAD` writer - Set this bit to enable 4-bit-mode(4-bm) in CMD phase."]
-pub type FCMD_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCMD_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FCMD_OCT` reader - Set this bit to enable 8-bit-mode(8-bm) in CMD phase."]
 pub type FCMD_OCT_R = crate::BitReader;
 #[doc = "Field `FCMD_OCT` writer - Set this bit to enable 8-bit-mode(8-bm) in CMD phase."]
-pub type FCMD_OCT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCMD_OCT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FCS_CRC_EN` reader - For SPI1, initialize crc32 module before writing encrypted data to flash. Active low."]
 pub type FCS_CRC_EN_R = crate::BitReader;
 #[doc = "Field `FCS_CRC_EN` writer - For SPI1, initialize crc32 module before writing encrypted data to flash. Active low."]
-pub type FCS_CRC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCS_CRC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_CRC_EN` reader - For SPI1, enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
 pub type TX_CRC_EN_R = crate::BitReader;
 #[doc = "Field `TX_CRC_EN` writer - For SPI1, enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
-pub type TX_CRC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_CRC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTRD_MODE` reader - This bit should be set when SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD or SPI_MEM_FREAD_DUAL is set."]
 pub type FASTRD_MODE_R = crate::BitReader;
 #[doc = "Field `FASTRD_MODE` writer - This bit should be set when SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD or SPI_MEM_FREAD_DUAL is set."]
-pub type FASTRD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTRD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_DUAL` reader - In hardware 0x3B read operation, DIN phase apply 2 signals. 1: enable 0: disable."]
 pub type FREAD_DUAL_R = crate::BitReader;
 #[doc = "Field `FREAD_DUAL` writer - In hardware 0x3B read operation, DIN phase apply 2 signals. 1: enable 0: disable."]
-pub type FREAD_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESANDRES` reader - The Device ID is read out to SPI_MEM_RD_STATUS register, this bit combine with spi_mem_flash_res bit. 1: enable 0: disable."]
 pub type RESANDRES_R = crate::BitReader;
 #[doc = "Field `RESANDRES` writer - The Device ID is read out to SPI_MEM_RD_STATUS register, this bit combine with spi_mem_flash_res bit. 1: enable 0: disable."]
-pub type RESANDRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESANDRES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `Q_POL` reader - The bit is used to set MISO line polarity, 1: high 0, low"]
 pub type Q_POL_R = crate::BitReader;
 #[doc = "Field `Q_POL` writer - The bit is used to set MISO line polarity, 1: high 0, low"]
-pub type Q_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type Q_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_POL` reader - The bit is used to set MOSI line polarity, 1: high 0, low"]
 pub type D_POL_R = crate::BitReader;
 #[doc = "Field `D_POL` writer - The bit is used to set MOSI line polarity, 1: high 0, low"]
-pub type D_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_QUAD` reader - In hardware 0x6B read operation, DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
 pub type FREAD_QUAD_R = crate::BitReader;
 #[doc = "Field `FREAD_QUAD` writer - In hardware 0x6B read operation, DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
-pub type FREAD_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WP` reader - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
 pub type WP_R = crate::BitReader;
 #[doc = "Field `WP` writer - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
-pub type WP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WRSR_2B` reader - Two bytes data will be written to status register when it is set. 1: enable 0: disable."]
 pub type WRSR_2B_R = crate::BitReader;
 #[doc = "Field `WRSR_2B` writer - Two bytes data will be written to status register when it is set. 1: enable 0: disable."]
-pub type WRSR_2B_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WRSR_2B_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_DIO` reader - In hardware 0xBB read operation, ADDR phase and DIN phase apply 2 signals(2-bit-mode). 1: enable 0: disable."]
 pub type FREAD_DIO_R = crate::BitReader;
 #[doc = "Field `FREAD_DIO` writer - In hardware 0xBB read operation, ADDR phase and DIN phase apply 2 signals(2-bit-mode). 1: enable 0: disable."]
-pub type FREAD_DIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_DIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_QIO` reader - In hardware 0xEB read operation, ADDR phase and DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
 pub type FREAD_QIO_R = crate::BitReader;
 #[doc = "Field `FREAD_QIO` writer - In hardware 0xEB read operation, ADDR phase and DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
-pub type FREAD_QIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_QIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - In the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
     #[inline(always)]
@@ -204,123 +204,123 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3 - In the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
     #[inline(always)]
     #[must_use]
-    pub fn fdummy_out(&mut self) -> FDUMMY_OUT_W<CTRL_SPEC, 3> {
-        FDUMMY_OUT_W::new(self)
+    pub fn fdummy_out(&mut self) -> FDUMMY_OUT_W<CTRL_SPEC> {
+        FDUMMY_OUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable 8-bit-mode(8-bm) in DOUT phase."]
     #[inline(always)]
     #[must_use]
-    pub fn fdout_oct(&mut self) -> FDOUT_OCT_W<CTRL_SPEC, 4> {
-        FDOUT_OCT_W::new(self)
+    pub fn fdout_oct(&mut self) -> FDOUT_OCT_W<CTRL_SPEC> {
+        FDOUT_OCT_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to enable 8-bit-mode(8-bm) in DIN phase."]
     #[inline(always)]
     #[must_use]
-    pub fn fdin_oct(&mut self) -> FDIN_OCT_W<CTRL_SPEC, 5> {
-        FDIN_OCT_W::new(self)
+    pub fn fdin_oct(&mut self) -> FDIN_OCT_W<CTRL_SPEC> {
+        FDIN_OCT_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable 8-bit-mode(8-bm) in ADDR phase."]
     #[inline(always)]
     #[must_use]
-    pub fn faddr_oct(&mut self) -> FADDR_OCT_W<CTRL_SPEC, 6> {
-        FADDR_OCT_W::new(self)
+    pub fn faddr_oct(&mut self) -> FADDR_OCT_W<CTRL_SPEC> {
+        FADDR_OCT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable 2-bit-mode(2-bm) in CMD phase."]
     #[inline(always)]
     #[must_use]
-    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC, 7> {
-        FCMD_DUAL_W::new(self)
+    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC> {
+        FCMD_DUAL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to enable 4-bit-mode(4-bm) in CMD phase."]
     #[inline(always)]
     #[must_use]
-    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC, 8> {
-        FCMD_QUAD_W::new(self)
+    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
+        FCMD_QUAD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to enable 8-bit-mode(8-bm) in CMD phase."]
     #[inline(always)]
     #[must_use]
-    pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<CTRL_SPEC, 9> {
-        FCMD_OCT_W::new(self)
+    pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<CTRL_SPEC> {
+        FCMD_OCT_W::new(self, 9)
     }
     #[doc = "Bit 10 - For SPI1, initialize crc32 module before writing encrypted data to flash. Active low."]
     #[inline(always)]
     #[must_use]
-    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<CTRL_SPEC, 10> {
-        FCS_CRC_EN_W::new(self)
+    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<CTRL_SPEC> {
+        FCS_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - For SPI1, enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<CTRL_SPEC, 11> {
-        TX_CRC_EN_W::new(self)
+    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<CTRL_SPEC> {
+        TX_CRC_EN_W::new(self, 11)
     }
     #[doc = "Bit 13 - This bit should be set when SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD or SPI_MEM_FREAD_DUAL is set."]
     #[inline(always)]
     #[must_use]
-    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC, 13> {
-        FASTRD_MODE_W::new(self)
+    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC> {
+        FASTRD_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - In hardware 0x3B read operation, DIN phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC, 14> {
-        FREAD_DUAL_W::new(self)
+    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
+        FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15 - The Device ID is read out to SPI_MEM_RD_STATUS register, this bit combine with spi_mem_flash_res bit. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn resandres(&mut self) -> RESANDRES_W<CTRL_SPEC, 15> {
-        RESANDRES_W::new(self)
+    pub fn resandres(&mut self) -> RESANDRES_W<CTRL_SPEC> {
+        RESANDRES_W::new(self, 15)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low"]
     #[inline(always)]
     #[must_use]
-    pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC, 18> {
-        Q_POL_W::new(self)
+    pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
+        Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low"]
     #[inline(always)]
     #[must_use]
-    pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC, 19> {
-        D_POL_W::new(self)
+    pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
+        D_POL_W::new(self, 19)
     }
     #[doc = "Bit 20 - In hardware 0x6B read operation, DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC, 20> {
-        FREAD_QUAD_W::new(self)
+    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
+        FREAD_QUAD_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
     #[inline(always)]
     #[must_use]
-    pub fn wp(&mut self) -> WP_W<CTRL_SPEC, 21> {
-        WP_W::new(self)
+    pub fn wp(&mut self) -> WP_W<CTRL_SPEC> {
+        WP_W::new(self, 21)
     }
     #[doc = "Bit 22 - Two bytes data will be written to status register when it is set. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<CTRL_SPEC, 22> {
-        WRSR_2B_W::new(self)
+    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<CTRL_SPEC> {
+        WRSR_2B_W::new(self, 22)
     }
     #[doc = "Bit 23 - In hardware 0xBB read operation, ADDR phase and DIN phase apply 2 signals(2-bit-mode). 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC, 23> {
-        FREAD_DIO_W::new(self)
+    pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC> {
+        FREAD_DIO_W::new(self, 23)
     }
     #[doc = "Bit 24 - In hardware 0xEB read operation, ADDR phase and DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC, 24> {
-        FREAD_QIO_W::new(self)
+    pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC> {
+        FREAD_QIO_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -7,11 +7,11 @@ pub type WAKEUP_CAUSE_R = crate::FieldReader<u16>;
 #[doc = "Field `WAKEUP_ENA` reader - wakeup enable bitmap"]
 pub type WAKEUP_ENA_R = crate::FieldReader<u16>;
 #[doc = "Field `WAKEUP_ENA` writer - wakeup enable bitmap"]
-pub type WAKEUP_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type WAKEUP_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `GPIO_WAKEUP_FILTER` reader - enable filter for gpio wakeup event"]
 pub type GPIO_WAKEUP_FILTER_R = crate::BitReader;
 #[doc = "Field `GPIO_WAKEUP_FILTER` writer - enable filter for gpio wakeup event"]
-pub type GPIO_WAKEUP_FILTER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_WAKEUP_FILTER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - wakeup cause"]
     #[inline(always)]
@@ -48,21 +48,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WAKEUP_STATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 11:21 - wakeup enable bitmap"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<WAKEUP_STATE_SPEC, 11> {
-        WAKEUP_ENA_W::new(self)
+    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<WAKEUP_STATE_SPEC> {
+        WAKEUP_ENA_W::new(self, 11)
     }
     #[doc = "Bit 22 - enable filter for gpio wakeup event"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W<WAKEUP_STATE_SPEC, 22> {
-        GPIO_WAKEUP_FILTER_W::new(self)
+    pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W<WAKEUP_STATE_SPEC> {
+        GPIO_WAKEUP_FILTER_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

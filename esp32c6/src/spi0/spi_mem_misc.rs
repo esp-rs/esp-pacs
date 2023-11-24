@@ -9,11 +9,11 @@ pub type SPI_MEM_SSUB_PIN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CK_IDLE_EDGE` reader - 1: SPI_CLK line is high when idle 0: spi clk line is low when idle"]
 pub type SPI_MEM_CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CK_IDLE_EDGE` writer - 1: SPI_CLK line is high when idle 0: spi clk line is low when idle"]
-pub type SPI_MEM_CK_IDLE_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_CK_IDLE_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_CS_KEEP_ACTIVE` reader - SPI_CS line keep low when the bit is set."]
 pub type SPI_MEM_CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CS_KEEP_ACTIVE` writer - SPI_CS line keep low when the bit is set."]
-pub type SPI_MEM_CS_KEEP_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_CS_KEEP_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 7 - For SPI0, flash is connected to SUBPINs."]
     #[inline(always)]
@@ -62,21 +62,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_MISC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 9 - 1: SPI_CLK line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_ck_idle_edge(&mut self) -> SPI_MEM_CK_IDLE_EDGE_W<SPI_MEM_MISC_SPEC, 9> {
-        SPI_MEM_CK_IDLE_EDGE_W::new(self)
+    pub fn spi_mem_ck_idle_edge(&mut self) -> SPI_MEM_CK_IDLE_EDGE_W<SPI_MEM_MISC_SPEC> {
+        SPI_MEM_CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_cs_keep_active(&mut self) -> SPI_MEM_CS_KEEP_ACTIVE_W<SPI_MEM_MISC_SPEC, 10> {
-        SPI_MEM_CS_KEEP_ACTIVE_W::new(self)
+    pub fn spi_mem_cs_keep_active(&mut self) -> SPI_MEM_CS_KEEP_ACTIVE_W<SPI_MEM_MISC_SPEC> {
+        SPI_MEM_CS_KEEP_ACTIVE_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

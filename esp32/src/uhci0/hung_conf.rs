@@ -5,27 +5,27 @@ pub type W = crate::W<HUNG_CONF_SPEC>;
 #[doc = "Field `TXFIFO_TIMEOUT` reader - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
 pub type TXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT` writer - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
-pub type TXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TXFIFO_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` reader - The tick count is cleared when its value >=(17'd8000>>reg_txfifo_timeout_shift)"]
 pub type TXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` writer - The tick count is cleared when its value >=(17'd8000>>reg_txfifo_timeout_shift)"]
-pub type TXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TXFIFO_TIMEOUT_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` reader - The enable bit for txfifo receive data timeout"]
 pub type TXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` writer - The enable bit for txfifo receive data timeout"]
-pub type TXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFO_TIMEOUT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFIFO_TIMEOUT` reader - This register stores the timeout value.when DMA takes more time than this register value to read a data from RAM it will produce uhci_rx_hung_int interrupt."]
 pub type RXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT` writer - This register stores the timeout value.when DMA takes more time than this register value to read a data from RAM it will produce uhci_rx_hung_int interrupt."]
-pub type RXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RXFIFO_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` reader - The tick count is cleared when its value >=(17'd8000>>reg_rxfifo_timeout_shift)"]
 pub type RXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` writer - The tick count is cleared when its value >=(17'd8000>>reg_rxfifo_timeout_shift)"]
-pub type RXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RXFIFO_TIMEOUT_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` reader - This is the enable bit for DMA send data timeout"]
 pub type RXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` writer - This is the enable bit for DMA send data timeout"]
-pub type RXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFIFO_TIMEOUT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HUNG_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 0> {
-        TXFIFO_TIMEOUT_W::new(self)
+    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - The tick count is cleared when its value >=(17'd8000>>reg_txfifo_timeout_shift)"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 8> {
-        TXFIFO_TIMEOUT_SHIFT_W::new(self)
+    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - The enable bit for txfifo receive data timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 11> {
-        TXFIFO_TIMEOUT_ENA_W::new(self)
+    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_ENA_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - This register stores the timeout value.when DMA takes more time than this register value to read a data from RAM it will produce uhci_rx_hung_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 12> {
-        RXFIFO_TIMEOUT_W::new(self)
+    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_W::new(self, 12)
     }
     #[doc = "Bits 20:22 - The tick count is cleared when its value >=(17'd8000>>reg_rxfifo_timeout_shift)"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 20> {
-        RXFIFO_TIMEOUT_SHIFT_W::new(self)
+    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_SHIFT_W::new(self, 20)
     }
     #[doc = "Bit 23 - This is the enable bit for DMA send data timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 23> {
-        RXFIFO_TIMEOUT_ENA_W::new(self)
+    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_ENA_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

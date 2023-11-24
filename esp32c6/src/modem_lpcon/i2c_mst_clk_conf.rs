@@ -5,7 +5,7 @@ pub type W = crate::W<I2C_MST_CLK_CONF_SPEC>;
 #[doc = "Field `CLK_I2C_MST_SEL_160M` reader - "]
 pub type CLK_I2C_MST_SEL_160M_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_SEL_160M` writer - "]
-pub type CLK_I2C_MST_SEL_160M_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_I2C_MST_SEL_160M_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C_MST_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_i2c_mst_sel_160m(&mut self) -> CLK_I2C_MST_SEL_160M_W<I2C_MST_CLK_CONF_SPEC, 0> {
-        CLK_I2C_MST_SEL_160M_W::new(self)
+    pub fn clk_i2c_mst_sel_160m(&mut self) -> CLK_I2C_MST_SEL_160M_W<I2C_MST_CLK_CONF_SPEC> {
+        CLK_I2C_MST_SEL_160M_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

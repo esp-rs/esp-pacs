@@ -5,31 +5,31 @@ pub type W = crate::W<CHCONF0_SPEC>;
 #[doc = "Field `DIV_CNT` reader - This register is used to configure the frequency divider's factor in channel0."]
 pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - This register is used to configure the frequency divider's factor in channel0."]
-pub type DIV_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DIV_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `IDLE_THRES` reader - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
 pub type IDLE_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `IDLE_THRES` writer - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
-pub type IDLE_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type IDLE_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `MEM_SIZE` reader - This register is used to configure the the amount of memory blocks allocated to channel0."]
 pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - This register is used to configure the the amount of memory blocks allocated to channel0."]
-pub type MEM_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MEM_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CARRIER_EN` reader - This is the carrier modulation enable control bit for channel0."]
 pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - This is the carrier modulation enable control bit for channel0."]
-pub type CARRIER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARRIER_OUT_LV` reader - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
 pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
-pub type CARRIER_OUT_LV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER_OUT_LV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_PD` reader - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
 pub type MEM_PD_R = crate::BitReader;
 #[doc = "Field `MEM_PD` writer - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
-pub type MEM_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the frequency divider's factor in channel0."]
     #[inline(always)]
@@ -87,51 +87,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CHCONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the frequency divider's factor in channel0."]
     #[inline(always)]
     #[must_use]
-    pub fn div_cnt(&mut self) -> DIV_CNT_W<CHCONF0_SPEC, 0> {
-        DIV_CNT_W::new(self)
+    pub fn div_cnt(&mut self) -> DIV_CNT_W<CHCONF0_SPEC> {
+        DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
     #[inline(always)]
     #[must_use]
-    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CHCONF0_SPEC, 8> {
-        IDLE_THRES_W::new(self)
+    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CHCONF0_SPEC> {
+        IDLE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 24:27 - This register is used to configure the the amount of memory blocks allocated to channel0."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_size(&mut self) -> MEM_SIZE_W<CHCONF0_SPEC, 24> {
-        MEM_SIZE_W::new(self)
+    pub fn mem_size(&mut self) -> MEM_SIZE_W<CHCONF0_SPEC> {
+        MEM_SIZE_W::new(self, 24)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable control bit for channel0."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CHCONF0_SPEC, 28> {
-        CARRIER_EN_W::new(self)
+    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CHCONF0_SPEC> {
+        CARRIER_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CHCONF0_SPEC, 29> {
-        CARRIER_OUT_LV_W::new(self)
+    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CHCONF0_SPEC> {
+        CARRIER_OUT_LV_W::new(self, 29)
     }
     #[doc = "Bit 30 - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_pd(&mut self) -> MEM_PD_W<CHCONF0_SPEC, 30> {
-        MEM_PD_W::new(self)
+    pub fn mem_pd(&mut self) -> MEM_PD_W<CHCONF0_SPEC> {
+        MEM_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CHCONF0_SPEC, 31> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CHCONF0_SPEC> {
+        CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

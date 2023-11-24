@@ -5,15 +5,15 @@ pub type W = crate::W<CACHE_MMU_POWER_CTRL_SPEC>;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_ON` reader - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
 pub type CACHE_MMU_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_ON` writer - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
-pub type CACHE_MMU_MEM_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_MMU_MEM_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PD` reader - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
 pub type CACHE_MMU_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PD` writer - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
-pub type CACHE_MMU_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_MMU_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PU` reader - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
 pub type CACHE_MMU_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PU` writer - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
-pub type CACHE_MMU_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_MMU_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
     #[inline(always)]
@@ -53,7 +53,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_MMU_POWER_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -62,24 +62,24 @@ impl W {
     #[must_use]
     pub fn cache_mmu_mem_force_on(
         &mut self,
-    ) -> CACHE_MMU_MEM_FORCE_ON_W<CACHE_MMU_POWER_CTRL_SPEC, 0> {
-        CACHE_MMU_MEM_FORCE_ON_W::new(self)
+    ) -> CACHE_MMU_MEM_FORCE_ON_W<CACHE_MMU_POWER_CTRL_SPEC> {
+        CACHE_MMU_MEM_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
     #[inline(always)]
     #[must_use]
     pub fn cache_mmu_mem_force_pd(
         &mut self,
-    ) -> CACHE_MMU_MEM_FORCE_PD_W<CACHE_MMU_POWER_CTRL_SPEC, 1> {
-        CACHE_MMU_MEM_FORCE_PD_W::new(self)
+    ) -> CACHE_MMU_MEM_FORCE_PD_W<CACHE_MMU_POWER_CTRL_SPEC> {
+        CACHE_MMU_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
     #[inline(always)]
     #[must_use]
     pub fn cache_mmu_mem_force_pu(
         &mut self,
-    ) -> CACHE_MMU_MEM_FORCE_PU_W<CACHE_MMU_POWER_CTRL_SPEC, 2> {
-        CACHE_MMU_MEM_FORCE_PU_W::new(self)
+    ) -> CACHE_MMU_MEM_FORCE_PU_W<CACHE_MMU_POWER_CTRL_SPEC> {
+        CACHE_MMU_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

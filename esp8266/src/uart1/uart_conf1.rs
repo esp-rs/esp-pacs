@@ -5,27 +5,27 @@ pub type W = crate::W<UART_CONF1_SPEC>;
 #[doc = "Field `rxfifo_full_thrhd` reader - The config bits for rx fifo full threshold,0-127"]
 pub type RXFIFO_FULL_THRHD_R = crate::FieldReader;
 #[doc = "Field `rxfifo_full_thrhd` writer - The config bits for rx fifo full threshold,0-127"]
-pub type RXFIFO_FULL_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RXFIFO_FULL_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `txfifo_empty_thrhd` reader - The config bits for tx fifo empty threshold,0-127"]
 pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader;
 #[doc = "Field `txfifo_empty_thrhd` writer - The config bits for tx fifo empty threshold,0-127"]
-pub type TXFIFO_EMPTY_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `rx_flow_thrhd` reader - The config bits for rx flow control threshold,0-127"]
 pub type RX_FLOW_THRHD_R = crate::FieldReader;
 #[doc = "Field `rx_flow_thrhd` writer - The config bits for rx flow control threshold,0-127"]
-pub type RX_FLOW_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RX_FLOW_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `rx_flow_en` reader - Set this bit to enable rx hardware flow control"]
 pub type RX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `rx_flow_en` writer - Set this bit to enable rx hardware flow control"]
-pub type RX_FLOW_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FLOW_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rx_tout_thrhd` reader - Config bits for rx time-out threshold,uint: byte,0-127"]
 pub type RX_TOUT_THRHD_R = crate::FieldReader;
 #[doc = "Field `rx_tout_thrhd` writer - Config bits for rx time-out threshold,uint: byte,0-127"]
-pub type RX_TOUT_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RX_TOUT_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `rx_tout_en` reader - Set this bit to enable rx time-out function"]
 pub type RX_TOUT_EN_R = crate::BitReader;
 #[doc = "Field `rx_tout_en` writer - Set this bit to enable rx time-out function"]
-pub type RX_TOUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_TOUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:6 - The config bits for rx fifo full threshold,0-127"]
     #[inline(always)]
@@ -86,47 +86,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UART_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - The config bits for rx fifo full threshold,0-127"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<UART_CONF1_SPEC, 0> {
-        RXFIFO_FULL_THRHD_W::new(self)
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<UART_CONF1_SPEC> {
+        RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 8:14 - The config bits for tx fifo empty threshold,0-127"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<UART_CONF1_SPEC, 8> {
-        TXFIFO_EMPTY_THRHD_W::new(self)
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<UART_CONF1_SPEC> {
+        TXFIFO_EMPTY_THRHD_W::new(self, 8)
     }
     #[doc = "Bits 16:22 - The config bits for rx flow control threshold,0-127"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<UART_CONF1_SPEC, 16> {
-        RX_FLOW_THRHD_W::new(self)
+    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<UART_CONF1_SPEC> {
+        RX_FLOW_THRHD_W::new(self, 16)
     }
     #[doc = "Bit 23 - Set this bit to enable rx hardware flow control"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<UART_CONF1_SPEC, 23> {
-        RX_FLOW_EN_W::new(self)
+    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<UART_CONF1_SPEC> {
+        RX_FLOW_EN_W::new(self, 23)
     }
     #[doc = "Bits 24:30 - Config bits for rx time-out threshold,uint: byte,0-127"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<UART_CONF1_SPEC, 24> {
-        RX_TOUT_THRHD_W::new(self)
+    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<UART_CONF1_SPEC> {
+        RX_TOUT_THRHD_W::new(self, 24)
     }
     #[doc = "Bit 31 - Set this bit to enable rx time-out function"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<UART_CONF1_SPEC, 31> {
-        RX_TOUT_EN_W::new(self)
+    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<UART_CONF1_SPEC> {
+        RX_TOUT_EN_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

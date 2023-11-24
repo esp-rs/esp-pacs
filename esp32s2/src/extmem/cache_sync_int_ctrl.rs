@@ -7,17 +7,17 @@ pub type PRO_ICACHE_SYNC_INT_ST_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_SYNC_INT_ENA` reader - The bit is used to enable the interrupt by icache sync done."]
 pub type PRO_ICACHE_SYNC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_SYNC_INT_ENA` writer - The bit is used to enable the interrupt by icache sync done."]
-pub type PRO_ICACHE_SYNC_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ICACHE_SYNC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_ICACHE_SYNC_INT_CLR` writer - The bit is used to clear the interrupt by icache sync done."]
-pub type PRO_ICACHE_SYNC_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ICACHE_SYNC_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_DCACHE_SYNC_INT_ST` reader - The bit is used to indicate the interrupt by dcache sync done."]
 pub type PRO_DCACHE_SYNC_INT_ST_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_SYNC_INT_ENA` reader - The bit is used to enable the interrupt by dcache sync done."]
 pub type PRO_DCACHE_SYNC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_SYNC_INT_ENA` writer - The bit is used to enable the interrupt by dcache sync done."]
-pub type PRO_DCACHE_SYNC_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DCACHE_SYNC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_DCACHE_SYNC_INT_CLR` writer - The bit is used to clear the interrupt by dcache sync done."]
-pub type PRO_DCACHE_SYNC_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DCACHE_SYNC_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate the interrupt by icache sync done."]
     #[inline(always)]
@@ -66,7 +66,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_SYNC_INT_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -75,32 +75,32 @@ impl W {
     #[must_use]
     pub fn pro_icache_sync_int_ena(
         &mut self,
-    ) -> PRO_ICACHE_SYNC_INT_ENA_W<CACHE_SYNC_INT_CTRL_SPEC, 1> {
-        PRO_ICACHE_SYNC_INT_ENA_W::new(self)
+    ) -> PRO_ICACHE_SYNC_INT_ENA_W<CACHE_SYNC_INT_CTRL_SPEC> {
+        PRO_ICACHE_SYNC_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache sync done."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_sync_int_clr(
         &mut self,
-    ) -> PRO_ICACHE_SYNC_INT_CLR_W<CACHE_SYNC_INT_CTRL_SPEC, 2> {
-        PRO_ICACHE_SYNC_INT_CLR_W::new(self)
+    ) -> PRO_ICACHE_SYNC_INT_CLR_W<CACHE_SYNC_INT_CTRL_SPEC> {
+        PRO_ICACHE_SYNC_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache sync done."]
     #[inline(always)]
     #[must_use]
     pub fn pro_dcache_sync_int_ena(
         &mut self,
-    ) -> PRO_DCACHE_SYNC_INT_ENA_W<CACHE_SYNC_INT_CTRL_SPEC, 4> {
-        PRO_DCACHE_SYNC_INT_ENA_W::new(self)
+    ) -> PRO_DCACHE_SYNC_INT_ENA_W<CACHE_SYNC_INT_CTRL_SPEC> {
+        PRO_DCACHE_SYNC_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to clear the interrupt by dcache sync done."]
     #[inline(always)]
     #[must_use]
     pub fn pro_dcache_sync_int_clr(
         &mut self,
-    ) -> PRO_DCACHE_SYNC_INT_CLR_W<CACHE_SYNC_INT_CTRL_SPEC, 5> {
-        PRO_DCACHE_SYNC_INT_CLR_W::new(self)
+    ) -> PRO_DCACHE_SYNC_INT_CLR_W<CACHE_SYNC_INT_CTRL_SPEC> {
+        PRO_DCACHE_SYNC_INT_CLR_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

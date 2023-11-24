@@ -5,19 +5,19 @@ pub type W = crate::W<REGULATOR_DRV_CTRL_SPEC>;
 #[doc = "Field `REGULATOR_DRV_B_MONITOR` reader - No public"]
 pub type REGULATOR_DRV_B_MONITOR_R = crate::FieldReader;
 #[doc = "Field `REGULATOR_DRV_B_MONITOR` writer - No public"]
-pub type REGULATOR_DRV_B_MONITOR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type REGULATOR_DRV_B_MONITOR_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `REGULATOR_DRV_B_SLP` reader - No public"]
 pub type REGULATOR_DRV_B_SLP_R = crate::FieldReader;
 #[doc = "Field `REGULATOR_DRV_B_SLP` writer - No public"]
-pub type REGULATOR_DRV_B_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type REGULATOR_DRV_B_SLP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `DG_VDD_DRV_B_SLP` reader - No public"]
 pub type DG_VDD_DRV_B_SLP_R = crate::FieldReader;
 #[doc = "Field `DG_VDD_DRV_B_SLP` writer - No public"]
-pub type DG_VDD_DRV_B_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DG_VDD_DRV_B_SLP_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DG_VDD_DRV_B_MONITOR` reader - No public"]
 pub type DG_VDD_DRV_B_MONITOR_R = crate::FieldReader;
 #[doc = "Field `DG_VDD_DRV_B_MONITOR` writer - No public"]
-pub type DG_VDD_DRV_B_MONITOR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DG_VDD_DRV_B_MONITOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:5 - No public"]
     #[inline(always)]
@@ -66,7 +66,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REGULATOR_DRV_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -75,26 +75,26 @@ impl W {
     #[must_use]
     pub fn regulator_drv_b_monitor(
         &mut self,
-    ) -> REGULATOR_DRV_B_MONITOR_W<REGULATOR_DRV_CTRL_SPEC, 0> {
-        REGULATOR_DRV_B_MONITOR_W::new(self)
+    ) -> REGULATOR_DRV_B_MONITOR_W<REGULATOR_DRV_CTRL_SPEC> {
+        REGULATOR_DRV_B_MONITOR_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn regulator_drv_b_slp(&mut self) -> REGULATOR_DRV_B_SLP_W<REGULATOR_DRV_CTRL_SPEC, 6> {
-        REGULATOR_DRV_B_SLP_W::new(self)
+    pub fn regulator_drv_b_slp(&mut self) -> REGULATOR_DRV_B_SLP_W<REGULATOR_DRV_CTRL_SPEC> {
+        REGULATOR_DRV_B_SLP_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<REGULATOR_DRV_CTRL_SPEC, 12> {
-        DG_VDD_DRV_B_SLP_W::new(self)
+    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<REGULATOR_DRV_CTRL_SPEC> {
+        DG_VDD_DRV_B_SLP_W::new(self, 12)
     }
     #[doc = "Bits 20:27 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_vdd_drv_b_monitor(&mut self) -> DG_VDD_DRV_B_MONITOR_W<REGULATOR_DRV_CTRL_SPEC, 20> {
-        DG_VDD_DRV_B_MONITOR_W::new(self)
+    pub fn dg_vdd_drv_b_monitor(&mut self) -> DG_VDD_DRV_B_MONITOR_W<REGULATOR_DRV_CTRL_SPEC> {
+        DG_VDD_DRV_B_MONITOR_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

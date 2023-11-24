@@ -5,7 +5,7 @@ pub type W = crate::W<PERI_RST_EN_SPEC>;
 #[doc = "Field `PERI_RST_EN` reader - "]
 pub type PERI_RST_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `PERI_RST_EN` writer - "]
-pub type PERI_RST_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type PERI_RST_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERI_RST_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_rst_en(&mut self) -> PERI_RST_EN_W<PERI_RST_EN_SPEC, 0> {
-        PERI_RST_EN_W::new(self)
+    pub fn peri_rst_en(&mut self) -> PERI_RST_EN_W<PERI_RST_EN_SPEC> {
+        PERI_RST_EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

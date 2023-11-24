@@ -5,19 +5,19 @@ pub type W = crate::W<HOST_SLCHOST_CONF_W4_SPEC>;
 #[doc = "Field `HOST_SLCHOST_CONF16` reader - SLC timeout value"]
 pub type HOST_SLCHOST_CONF16_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF16` writer - SLC timeout value"]
-pub type HOST_SLCHOST_CONF16_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF16_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HOST_SLCHOST_CONF17` reader - SLC timeout enable"]
 pub type HOST_SLCHOST_CONF17_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF17` writer - SLC timeout enable"]
-pub type HOST_SLCHOST_CONF17_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF17_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HOST_SLCHOST_CONF18` reader - "]
 pub type HOST_SLCHOST_CONF18_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF18` writer - "]
-pub type HOST_SLCHOST_CONF18_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF18_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HOST_SLCHOST_CONF19` reader - Interrupt to target CPU"]
 pub type HOST_SLCHOST_CONF19_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF19` writer - Interrupt to target CPU"]
-pub type HOST_SLCHOST_CONF19_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF19_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - SLC timeout value"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_CONF_W4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - SLC timeout value"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf16(&mut self) -> HOST_SLCHOST_CONF16_W<HOST_SLCHOST_CONF_W4_SPEC, 0> {
-        HOST_SLCHOST_CONF16_W::new(self)
+    pub fn host_slchost_conf16(&mut self) -> HOST_SLCHOST_CONF16_W<HOST_SLCHOST_CONF_W4_SPEC> {
+        HOST_SLCHOST_CONF16_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - SLC timeout enable"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf17(&mut self) -> HOST_SLCHOST_CONF17_W<HOST_SLCHOST_CONF_W4_SPEC, 8> {
-        HOST_SLCHOST_CONF17_W::new(self)
+    pub fn host_slchost_conf17(&mut self) -> HOST_SLCHOST_CONF17_W<HOST_SLCHOST_CONF_W4_SPEC> {
+        HOST_SLCHOST_CONF17_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf18(&mut self) -> HOST_SLCHOST_CONF18_W<HOST_SLCHOST_CONF_W4_SPEC, 16> {
-        HOST_SLCHOST_CONF18_W::new(self)
+    pub fn host_slchost_conf18(&mut self) -> HOST_SLCHOST_CONF18_W<HOST_SLCHOST_CONF_W4_SPEC> {
+        HOST_SLCHOST_CONF18_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Interrupt to target CPU"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf19(&mut self) -> HOST_SLCHOST_CONF19_W<HOST_SLCHOST_CONF_W4_SPEC, 24> {
-        HOST_SLCHOST_CONF19_W::new(self)
+    pub fn host_slchost_conf19(&mut self) -> HOST_SLCHOST_CONF19_W<HOST_SLCHOST_CONF_W4_SPEC> {
+        HOST_SLCHOST_CONF19_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

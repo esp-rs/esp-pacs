@@ -5,27 +5,27 @@ pub type W = crate::W<BT_LPCK_DIV_FRAC_SPEC>;
 #[doc = "Field `BT_LPCK_DIV_B` reader - "]
 pub type BT_LPCK_DIV_B_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_B` writer - "]
-pub type BT_LPCK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type BT_LPCK_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `BT_LPCK_DIV_A` reader - "]
 pub type BT_LPCK_DIV_A_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_A` writer - "]
-pub type BT_LPCK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type BT_LPCK_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` reader - "]
 pub type LPCLK_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` writer - "]
-pub type LPCLK_SEL_RTC_SLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_RTC_SLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPCLK_SEL_8M` reader - "]
 pub type LPCLK_SEL_8M_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_8M` writer - "]
-pub type LPCLK_SEL_8M_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_8M_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPCLK_SEL_XTAL` reader - "]
 pub type LPCLK_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL` writer - "]
-pub type LPCLK_SEL_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPCLK_SEL_XTAL32K` reader - "]
 pub type LPCLK_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL32K` writer - "]
-pub type LPCLK_SEL_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPCLK_SEL_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BT_LPCK_DIV_FRAC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<BT_LPCK_DIV_FRAC_SPEC, 0> {
-        BT_LPCK_DIV_B_W::new(self)
+    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<BT_LPCK_DIV_FRAC_SPEC> {
+        BT_LPCK_DIV_B_W::new(self, 0)
     }
     #[doc = "Bits 12:23"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<BT_LPCK_DIV_FRAC_SPEC, 12> {
-        BT_LPCK_DIV_A_W::new(self)
+    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<BT_LPCK_DIV_FRAC_SPEC> {
+        BT_LPCK_DIV_A_W::new(self, 12)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC, 24> {
-        LPCLK_SEL_RTC_SLOW_W::new(self)
+    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_RTC_SLOW_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC, 25> {
-        LPCLK_SEL_8M_W::new(self)
+    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_8M_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC, 26> {
-        LPCLK_SEL_XTAL_W::new(self)
+    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC, 27> {
-        LPCLK_SEL_XTAL32K_W::new(self)
+    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC> {
+        LPCLK_SEL_XTAL32K_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

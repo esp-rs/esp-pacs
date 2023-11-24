@@ -5,23 +5,23 @@ pub type W = crate::W<SLC_TOKEN0_SPEC>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WDATA` reader - "]
 pub type SLC_TOKEN0_LOCAL_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WDATA` writer - "]
-pub type SLC_TOKEN0_LOCAL_WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SLC_TOKEN0_LOCAL_WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WR` reader - "]
 pub type SLC_TOKEN0_LOCAL_WR_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WR` writer - "]
-pub type SLC_TOKEN0_LOCAL_WR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_TOKEN0_LOCAL_WR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC` reader - "]
 pub type SLC_TOKEN0_LOCAL_INC_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC` writer - "]
-pub type SLC_TOKEN0_LOCAL_INC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_TOKEN0_LOCAL_INC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC_MORE` reader - "]
 pub type SLC_TOKEN0_LOCAL_INC_MORE_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC_MORE` writer - "]
-pub type SLC_TOKEN0_LOCAL_INC_MORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_TOKEN0_LOCAL_INC_MORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_TOKEN0` reader - "]
 pub type SLC_TOKEN0_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TOKEN0` writer - "]
-pub type SLC_TOKEN0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SLC_TOKEN0_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -76,43 +76,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_TOKEN0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_wdata(&mut self) -> SLC_TOKEN0_LOCAL_WDATA_W<SLC_TOKEN0_SPEC, 0> {
-        SLC_TOKEN0_LOCAL_WDATA_W::new(self)
+    pub fn slc_token0_local_wdata(&mut self) -> SLC_TOKEN0_LOCAL_WDATA_W<SLC_TOKEN0_SPEC> {
+        SLC_TOKEN0_LOCAL_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_wr(&mut self) -> SLC_TOKEN0_LOCAL_WR_W<SLC_TOKEN0_SPEC, 12> {
-        SLC_TOKEN0_LOCAL_WR_W::new(self)
+    pub fn slc_token0_local_wr(&mut self) -> SLC_TOKEN0_LOCAL_WR_W<SLC_TOKEN0_SPEC> {
+        SLC_TOKEN0_LOCAL_WR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_inc(&mut self) -> SLC_TOKEN0_LOCAL_INC_W<SLC_TOKEN0_SPEC, 13> {
-        SLC_TOKEN0_LOCAL_INC_W::new(self)
+    pub fn slc_token0_local_inc(&mut self) -> SLC_TOKEN0_LOCAL_INC_W<SLC_TOKEN0_SPEC> {
+        SLC_TOKEN0_LOCAL_INC_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0_local_inc_more(
-        &mut self,
-    ) -> SLC_TOKEN0_LOCAL_INC_MORE_W<SLC_TOKEN0_SPEC, 14> {
-        SLC_TOKEN0_LOCAL_INC_MORE_W::new(self)
+    pub fn slc_token0_local_inc_more(&mut self) -> SLC_TOKEN0_LOCAL_INC_MORE_W<SLC_TOKEN0_SPEC> {
+        SLC_TOKEN0_LOCAL_INC_MORE_W::new(self, 14)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token0(&mut self) -> SLC_TOKEN0_W<SLC_TOKEN0_SPEC, 16> {
-        SLC_TOKEN0_W::new(self)
+    pub fn slc_token0(&mut self) -> SLC_TOKEN0_W<SLC_TOKEN0_SPEC> {
+        SLC_TOKEN0_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

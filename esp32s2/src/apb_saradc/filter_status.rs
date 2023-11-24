@@ -34,7 +34,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FILTER_STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Data status of DIG ADC2 filter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`filter_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

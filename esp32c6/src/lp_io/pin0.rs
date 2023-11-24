@@ -5,25 +5,25 @@ pub type W = crate::W<PIN0_SPEC>;
 #[doc = "Field `LP_GPIO0_SYNC_BYPASS` reader - need des"]
 pub type LP_GPIO0_SYNC_BYPASS_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO0_SYNC_BYPASS` writer - need des"]
-pub type LP_GPIO0_SYNC_BYPASS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LP_GPIO0_SYNC_BYPASS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LP_GPIO0_PAD_DRIVER` reader - need des"]
 pub type LP_GPIO0_PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `LP_GPIO0_PAD_DRIVER` writer - need des"]
-pub type LP_GPIO0_PAD_DRIVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO0_PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO0_EDGE_WAKEUP_CLR` writer - need des"]
-pub type LP_GPIO0_EDGE_WAKEUP_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO0_EDGE_WAKEUP_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO0_INT_TYPE` reader - need des"]
 pub type LP_GPIO0_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO0_INT_TYPE` writer - need des"]
-pub type LP_GPIO0_INT_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LP_GPIO0_INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LP_GPIO0_WAKEUP_ENABLE` reader - need des"]
 pub type LP_GPIO0_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO0_WAKEUP_ENABLE` writer - need des"]
-pub type LP_GPIO0_WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO0_WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO0_FILTER_EN` reader - need des"]
 pub type LP_GPIO0_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `LP_GPIO0_FILTER_EN` writer - need des"]
-pub type LP_GPIO0_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO0_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
@@ -81,45 +81,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PIN0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio0_sync_bypass(&mut self) -> LP_GPIO0_SYNC_BYPASS_W<PIN0_SPEC, 0> {
-        LP_GPIO0_SYNC_BYPASS_W::new(self)
+    pub fn lp_gpio0_sync_bypass(&mut self) -> LP_GPIO0_SYNC_BYPASS_W<PIN0_SPEC> {
+        LP_GPIO0_SYNC_BYPASS_W::new(self, 0)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio0_pad_driver(&mut self) -> LP_GPIO0_PAD_DRIVER_W<PIN0_SPEC, 2> {
-        LP_GPIO0_PAD_DRIVER_W::new(self)
+    pub fn lp_gpio0_pad_driver(&mut self) -> LP_GPIO0_PAD_DRIVER_W<PIN0_SPEC> {
+        LP_GPIO0_PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio0_edge_wakeup_clr(&mut self) -> LP_GPIO0_EDGE_WAKEUP_CLR_W<PIN0_SPEC, 3> {
-        LP_GPIO0_EDGE_WAKEUP_CLR_W::new(self)
+    pub fn lp_gpio0_edge_wakeup_clr(&mut self) -> LP_GPIO0_EDGE_WAKEUP_CLR_W<PIN0_SPEC> {
+        LP_GPIO0_EDGE_WAKEUP_CLR_W::new(self, 3)
     }
     #[doc = "Bits 7:9 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio0_int_type(&mut self) -> LP_GPIO0_INT_TYPE_W<PIN0_SPEC, 7> {
-        LP_GPIO0_INT_TYPE_W::new(self)
+    pub fn lp_gpio0_int_type(&mut self) -> LP_GPIO0_INT_TYPE_W<PIN0_SPEC> {
+        LP_GPIO0_INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio0_wakeup_enable(&mut self) -> LP_GPIO0_WAKEUP_ENABLE_W<PIN0_SPEC, 10> {
-        LP_GPIO0_WAKEUP_ENABLE_W::new(self)
+    pub fn lp_gpio0_wakeup_enable(&mut self) -> LP_GPIO0_WAKEUP_ENABLE_W<PIN0_SPEC> {
+        LP_GPIO0_WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio0_filter_en(&mut self) -> LP_GPIO0_FILTER_EN_W<PIN0_SPEC, 11> {
-        LP_GPIO0_FILTER_EN_W::new(self)
+    pub fn lp_gpio0_filter_en(&mut self) -> LP_GPIO0_FILTER_EN_W<PIN0_SPEC> {
+        LP_GPIO0_FILTER_EN_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

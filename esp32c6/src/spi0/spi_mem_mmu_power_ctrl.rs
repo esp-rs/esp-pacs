@@ -5,19 +5,19 @@ pub type W = crate::W<SPI_MEM_MMU_POWER_CTRL_SPEC>;
 #[doc = "Field `SPI_MMU_MEM_FORCE_ON` reader - Set this bit to enable mmu-memory clock force on"]
 pub type SPI_MMU_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `SPI_MMU_MEM_FORCE_ON` writer - Set this bit to enable mmu-memory clock force on"]
-pub type SPI_MMU_MEM_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MMU_MEM_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PD` reader - Set this bit to force mmu-memory powerdown"]
 pub type SPI_MMU_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PD` writer - Set this bit to force mmu-memory powerdown"]
-pub type SPI_MMU_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MMU_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PU` reader - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
 pub type SPI_MMU_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PU` writer - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
-pub type SPI_MMU_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MMU_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MMU_PAGE_SIZE` reader - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
 pub type SPI_MMU_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `SPI_MMU_PAGE_SIZE` writer - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
-pub type SPI_MMU_PAGE_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI_MMU_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI_MEM_AUX_CTRL` reader - MMU PSRAM aux control register"]
 pub type SPI_MEM_AUX_CTRL_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_RDN_ENA` reader - ECO register enable bit"]
@@ -99,39 +99,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_MMU_POWER_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable mmu-memory clock force on"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mmu_mem_force_on(
-        &mut self,
-    ) -> SPI_MMU_MEM_FORCE_ON_W<SPI_MEM_MMU_POWER_CTRL_SPEC, 0> {
-        SPI_MMU_MEM_FORCE_ON_W::new(self)
+    pub fn spi_mmu_mem_force_on(&mut self) -> SPI_MMU_MEM_FORCE_ON_W<SPI_MEM_MMU_POWER_CTRL_SPEC> {
+        SPI_MMU_MEM_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force mmu-memory powerdown"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mmu_mem_force_pd(
-        &mut self,
-    ) -> SPI_MMU_MEM_FORCE_PD_W<SPI_MEM_MMU_POWER_CTRL_SPEC, 1> {
-        SPI_MMU_MEM_FORCE_PD_W::new(self)
+    pub fn spi_mmu_mem_force_pd(&mut self) -> SPI_MMU_MEM_FORCE_PD_W<SPI_MEM_MMU_POWER_CTRL_SPEC> {
+        SPI_MMU_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mmu_mem_force_pu(
-        &mut self,
-    ) -> SPI_MMU_MEM_FORCE_PU_W<SPI_MEM_MMU_POWER_CTRL_SPEC, 2> {
-        SPI_MMU_MEM_FORCE_PU_W::new(self)
+    pub fn spi_mmu_mem_force_pu(&mut self) -> SPI_MMU_MEM_FORCE_PU_W<SPI_MEM_MMU_POWER_CTRL_SPEC> {
+        SPI_MMU_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mmu_page_size(&mut self) -> SPI_MMU_PAGE_SIZE_W<SPI_MEM_MMU_POWER_CTRL_SPEC, 3> {
-        SPI_MMU_PAGE_SIZE_W::new(self)
+    pub fn spi_mmu_page_size(&mut self) -> SPI_MMU_PAGE_SIZE_W<SPI_MEM_MMU_POWER_CTRL_SPEC> {
+        SPI_MMU_PAGE_SIZE_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

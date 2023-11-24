@@ -5,63 +5,63 @@ pub type W = crate::W<MODEM_RST_CONF_SPEC>;
 #[doc = "Field `RST_WIFIBB` reader - "]
 pub type RST_WIFIBB_R = crate::BitReader;
 #[doc = "Field `RST_WIFIBB` writer - "]
-pub type RST_WIFIBB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_WIFIBB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_WIFIMAC` reader - "]
 pub type RST_WIFIMAC_R = crate::BitReader;
 #[doc = "Field `RST_WIFIMAC` writer - "]
-pub type RST_WIFIMAC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_WIFIMAC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_FE` reader - "]
 pub type RST_FE_R = crate::BitReader;
 #[doc = "Field `RST_FE` writer - "]
-pub type RST_FE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_FE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_BTMAC_APB` reader - "]
 pub type RST_BTMAC_APB_R = crate::BitReader;
 #[doc = "Field `RST_BTMAC_APB` writer - "]
-pub type RST_BTMAC_APB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_BTMAC_APB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_BTMAC` reader - "]
 pub type RST_BTMAC_R = crate::BitReader;
 #[doc = "Field `RST_BTMAC` writer - "]
-pub type RST_BTMAC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_BTMAC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_BTBB_APB` reader - "]
 pub type RST_BTBB_APB_R = crate::BitReader;
 #[doc = "Field `RST_BTBB_APB` writer - "]
-pub type RST_BTBB_APB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_BTBB_APB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_BTBB` reader - "]
 pub type RST_BTBB_R = crate::BitReader;
 #[doc = "Field `RST_BTBB` writer - "]
-pub type RST_BTBB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_BTBB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_ETM` reader - "]
 pub type RST_ETM_R = crate::BitReader;
 #[doc = "Field `RST_ETM` writer - "]
-pub type RST_ETM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_ETM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_ZBMAC` reader - "]
 pub type RST_ZBMAC_R = crate::BitReader;
 #[doc = "Field `RST_ZBMAC` writer - "]
-pub type RST_ZBMAC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_ZBMAC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_MODEM_ECB` reader - "]
 pub type RST_MODEM_ECB_R = crate::BitReader;
 #[doc = "Field `RST_MODEM_ECB` writer - "]
-pub type RST_MODEM_ECB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_MODEM_ECB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_MODEM_CCM` reader - "]
 pub type RST_MODEM_CCM_R = crate::BitReader;
 #[doc = "Field `RST_MODEM_CCM` writer - "]
-pub type RST_MODEM_CCM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_MODEM_CCM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_MODEM_BAH` reader - "]
 pub type RST_MODEM_BAH_R = crate::BitReader;
 #[doc = "Field `RST_MODEM_BAH` writer - "]
-pub type RST_MODEM_BAH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_MODEM_BAH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_MODEM_SEC` reader - "]
 pub type RST_MODEM_SEC_R = crate::BitReader;
 #[doc = "Field `RST_MODEM_SEC` writer - "]
-pub type RST_MODEM_SEC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_MODEM_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_BLE_TIMER` reader - "]
 pub type RST_BLE_TIMER_R = crate::BitReader;
 #[doc = "Field `RST_BLE_TIMER` writer - "]
-pub type RST_BLE_TIMER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_BLE_TIMER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_DATA_DUMP` reader - "]
 pub type RST_DATA_DUMP_R = crate::BitReader;
 #[doc = "Field `RST_DATA_DUMP` writer - "]
-pub type RST_DATA_DUMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_DATA_DUMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
@@ -188,99 +188,99 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MODEM_RST_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_wifibb(&mut self) -> RST_WIFIBB_W<MODEM_RST_CONF_SPEC, 8> {
-        RST_WIFIBB_W::new(self)
+    pub fn rst_wifibb(&mut self) -> RST_WIFIBB_W<MODEM_RST_CONF_SPEC> {
+        RST_WIFIBB_W::new(self, 8)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_wifimac(&mut self) -> RST_WIFIMAC_W<MODEM_RST_CONF_SPEC, 10> {
-        RST_WIFIMAC_W::new(self)
+    pub fn rst_wifimac(&mut self) -> RST_WIFIMAC_W<MODEM_RST_CONF_SPEC> {
+        RST_WIFIMAC_W::new(self, 10)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_fe(&mut self) -> RST_FE_W<MODEM_RST_CONF_SPEC, 14> {
-        RST_FE_W::new(self)
+    pub fn rst_fe(&mut self) -> RST_FE_W<MODEM_RST_CONF_SPEC> {
+        RST_FE_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_btmac_apb(&mut self) -> RST_BTMAC_APB_W<MODEM_RST_CONF_SPEC, 15> {
-        RST_BTMAC_APB_W::new(self)
+    pub fn rst_btmac_apb(&mut self) -> RST_BTMAC_APB_W<MODEM_RST_CONF_SPEC> {
+        RST_BTMAC_APB_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_btmac(&mut self) -> RST_BTMAC_W<MODEM_RST_CONF_SPEC, 16> {
-        RST_BTMAC_W::new(self)
+    pub fn rst_btmac(&mut self) -> RST_BTMAC_W<MODEM_RST_CONF_SPEC> {
+        RST_BTMAC_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_btbb_apb(&mut self) -> RST_BTBB_APB_W<MODEM_RST_CONF_SPEC, 17> {
-        RST_BTBB_APB_W::new(self)
+    pub fn rst_btbb_apb(&mut self) -> RST_BTBB_APB_W<MODEM_RST_CONF_SPEC> {
+        RST_BTBB_APB_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_btbb(&mut self) -> RST_BTBB_W<MODEM_RST_CONF_SPEC, 18> {
-        RST_BTBB_W::new(self)
+    pub fn rst_btbb(&mut self) -> RST_BTBB_W<MODEM_RST_CONF_SPEC> {
+        RST_BTBB_W::new(self, 18)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_etm(&mut self) -> RST_ETM_W<MODEM_RST_CONF_SPEC, 22> {
-        RST_ETM_W::new(self)
+    pub fn rst_etm(&mut self) -> RST_ETM_W<MODEM_RST_CONF_SPEC> {
+        RST_ETM_W::new(self, 22)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_zbmac(&mut self) -> RST_ZBMAC_W<MODEM_RST_CONF_SPEC, 24> {
-        RST_ZBMAC_W::new(self)
+    pub fn rst_zbmac(&mut self) -> RST_ZBMAC_W<MODEM_RST_CONF_SPEC> {
+        RST_ZBMAC_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_modem_ecb(&mut self) -> RST_MODEM_ECB_W<MODEM_RST_CONF_SPEC, 25> {
-        RST_MODEM_ECB_W::new(self)
+    pub fn rst_modem_ecb(&mut self) -> RST_MODEM_ECB_W<MODEM_RST_CONF_SPEC> {
+        RST_MODEM_ECB_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_modem_ccm(&mut self) -> RST_MODEM_CCM_W<MODEM_RST_CONF_SPEC, 26> {
-        RST_MODEM_CCM_W::new(self)
+    pub fn rst_modem_ccm(&mut self) -> RST_MODEM_CCM_W<MODEM_RST_CONF_SPEC> {
+        RST_MODEM_CCM_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_modem_bah(&mut self) -> RST_MODEM_BAH_W<MODEM_RST_CONF_SPEC, 27> {
-        RST_MODEM_BAH_W::new(self)
+    pub fn rst_modem_bah(&mut self) -> RST_MODEM_BAH_W<MODEM_RST_CONF_SPEC> {
+        RST_MODEM_BAH_W::new(self, 27)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_modem_sec(&mut self) -> RST_MODEM_SEC_W<MODEM_RST_CONF_SPEC, 29> {
-        RST_MODEM_SEC_W::new(self)
+    pub fn rst_modem_sec(&mut self) -> RST_MODEM_SEC_W<MODEM_RST_CONF_SPEC> {
+        RST_MODEM_SEC_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_ble_timer(&mut self) -> RST_BLE_TIMER_W<MODEM_RST_CONF_SPEC, 30> {
-        RST_BLE_TIMER_W::new(self)
+    pub fn rst_ble_timer(&mut self) -> RST_BLE_TIMER_W<MODEM_RST_CONF_SPEC> {
+        RST_BLE_TIMER_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_data_dump(&mut self) -> RST_DATA_DUMP_W<MODEM_RST_CONF_SPEC, 31> {
-        RST_DATA_DUMP_W::new(self)
+    pub fn rst_data_dump(&mut self) -> RST_DATA_DUMP_W<MODEM_RST_CONF_SPEC> {
+        RST_DATA_DUMP_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

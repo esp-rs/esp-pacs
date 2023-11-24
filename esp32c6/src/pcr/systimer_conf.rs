@@ -5,11 +5,11 @@ pub type W = crate::W<SYSTIMER_CONF_SPEC>;
 #[doc = "Field `SYSTIMER_CLK_EN` reader - Set 1 to enable systimer apb clock"]
 pub type SYSTIMER_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SYSTIMER_CLK_EN` writer - Set 1 to enable systimer apb clock"]
-pub type SYSTIMER_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYSTIMER_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYSTIMER_RST_EN` reader - Set 0 to reset systimer module"]
 pub type SYSTIMER_RST_EN_R = crate::BitReader;
 #[doc = "Field `SYSTIMER_RST_EN` writer - Set 0 to reset systimer module"]
-pub type SYSTIMER_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYSTIMER_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable systimer apb clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SYSTIMER_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable systimer apb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<SYSTIMER_CONF_SPEC, 0> {
-        SYSTIMER_CLK_EN_W::new(self)
+    pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<SYSTIMER_CONF_SPEC> {
+        SYSTIMER_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset systimer module"]
     #[inline(always)]
     #[must_use]
-    pub fn systimer_rst_en(&mut self) -> SYSTIMER_RST_EN_W<SYSTIMER_CONF_SPEC, 1> {
-        SYSTIMER_RST_EN_W::new(self)
+    pub fn systimer_rst_en(&mut self) -> SYSTIMER_RST_EN_W<SYSTIMER_CONF_SPEC> {
+        SYSTIMER_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

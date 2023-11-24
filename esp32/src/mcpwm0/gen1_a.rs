@@ -5,51 +5,51 @@ pub type W = crate::W<GEN1_A_SPEC>;
 #[doc = "Field `UTEZ` reader - "]
 pub type UTEZ_R = crate::FieldReader;
 #[doc = "Field `UTEZ` writer - "]
-pub type UTEZ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type UTEZ_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `UTEP` reader - "]
 pub type UTEP_R = crate::FieldReader;
 #[doc = "Field `UTEP` writer - "]
-pub type UTEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type UTEP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `UTEA` reader - "]
 pub type UTEA_R = crate::FieldReader;
 #[doc = "Field `UTEA` writer - "]
-pub type UTEA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type UTEA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `UTEB` reader - "]
 pub type UTEB_R = crate::FieldReader;
 #[doc = "Field `UTEB` writer - "]
-pub type UTEB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type UTEB_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `UT0` reader - "]
 pub type UT0_R = crate::FieldReader;
 #[doc = "Field `UT0` writer - "]
-pub type UT0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type UT0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `UT1` reader - "]
 pub type UT1_R = crate::FieldReader;
 #[doc = "Field `UT1` writer - "]
-pub type UT1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type UT1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DTEZ` reader - "]
 pub type DTEZ_R = crate::FieldReader;
 #[doc = "Field `DTEZ` writer - "]
-pub type DTEZ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DTEZ_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DTEP` reader - "]
 pub type DTEP_R = crate::FieldReader;
 #[doc = "Field `DTEP` writer - "]
-pub type DTEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DTEP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DTEA` reader - "]
 pub type DTEA_R = crate::FieldReader;
 #[doc = "Field `DTEA` writer - "]
-pub type DTEA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DTEA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DTEB` reader - "]
 pub type DTEB_R = crate::FieldReader;
 #[doc = "Field `DTEB` writer - "]
-pub type DTEB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DTEB_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DT0` reader - "]
 pub type DT0_R = crate::FieldReader;
 #[doc = "Field `DT0` writer - "]
-pub type DT0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DT0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DT1` reader - "]
 pub type DT1_R = crate::FieldReader;
 #[doc = "Field `DT1` writer - "]
-pub type DT1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DT1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -134,81 +134,81 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GEN1_A_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn utez(&mut self) -> UTEZ_W<GEN1_A_SPEC, 0> {
-        UTEZ_W::new(self)
+    pub fn utez(&mut self) -> UTEZ_W<GEN1_A_SPEC> {
+        UTEZ_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     #[must_use]
-    pub fn utep(&mut self) -> UTEP_W<GEN1_A_SPEC, 2> {
-        UTEP_W::new(self)
+    pub fn utep(&mut self) -> UTEP_W<GEN1_A_SPEC> {
+        UTEP_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     #[must_use]
-    pub fn utea(&mut self) -> UTEA_W<GEN1_A_SPEC, 4> {
-        UTEA_W::new(self)
+    pub fn utea(&mut self) -> UTEA_W<GEN1_A_SPEC> {
+        UTEA_W::new(self, 4)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     #[must_use]
-    pub fn uteb(&mut self) -> UTEB_W<GEN1_A_SPEC, 6> {
-        UTEB_W::new(self)
+    pub fn uteb(&mut self) -> UTEB_W<GEN1_A_SPEC> {
+        UTEB_W::new(self, 6)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     #[must_use]
-    pub fn ut0(&mut self) -> UT0_W<GEN1_A_SPEC, 8> {
-        UT0_W::new(self)
+    pub fn ut0(&mut self) -> UT0_W<GEN1_A_SPEC> {
+        UT0_W::new(self, 8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     #[must_use]
-    pub fn ut1(&mut self) -> UT1_W<GEN1_A_SPEC, 10> {
-        UT1_W::new(self)
+    pub fn ut1(&mut self) -> UT1_W<GEN1_A_SPEC> {
+        UT1_W::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     #[must_use]
-    pub fn dtez(&mut self) -> DTEZ_W<GEN1_A_SPEC, 12> {
-        DTEZ_W::new(self)
+    pub fn dtez(&mut self) -> DTEZ_W<GEN1_A_SPEC> {
+        DTEZ_W::new(self, 12)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     #[must_use]
-    pub fn dtep(&mut self) -> DTEP_W<GEN1_A_SPEC, 14> {
-        DTEP_W::new(self)
+    pub fn dtep(&mut self) -> DTEP_W<GEN1_A_SPEC> {
+        DTEP_W::new(self, 14)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn dtea(&mut self) -> DTEA_W<GEN1_A_SPEC, 16> {
-        DTEA_W::new(self)
+    pub fn dtea(&mut self) -> DTEA_W<GEN1_A_SPEC> {
+        DTEA_W::new(self, 16)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn dteb(&mut self) -> DTEB_W<GEN1_A_SPEC, 18> {
-        DTEB_W::new(self)
+    pub fn dteb(&mut self) -> DTEB_W<GEN1_A_SPEC> {
+        DTEB_W::new(self, 18)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
     #[must_use]
-    pub fn dt0(&mut self) -> DT0_W<GEN1_A_SPEC, 20> {
-        DT0_W::new(self)
+    pub fn dt0(&mut self) -> DT0_W<GEN1_A_SPEC> {
+        DT0_W::new(self, 20)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     #[must_use]
-    pub fn dt1(&mut self) -> DT1_W<GEN1_A_SPEC, 22> {
-        DT1_W::new(self)
+    pub fn dt1(&mut self) -> DT1_W<GEN1_A_SPEC> {
+        DT1_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<SRAM_ACE2_ATTR_SPEC>;
 #[doc = "Field `SRAM_ACE2_ATTR` reader - "]
 pub type SRAM_ACE2_ATTR_R = crate::FieldReader;
 #[doc = "Field `SRAM_ACE2_ATTR` writer - "]
-pub type SRAM_ACE2_ATTR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SRAM_ACE2_ATTR_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_ACE2_ATTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn sram_ace2_attr(&mut self) -> SRAM_ACE2_ATTR_W<SRAM_ACE2_ATTR_SPEC, 0> {
-        SRAM_ACE2_ATTR_W::new(self)
+    pub fn sram_ace2_attr(&mut self) -> SRAM_ACE2_ATTR_W<SRAM_ACE2_ATTR_SPEC> {
+        SRAM_ACE2_ATTR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

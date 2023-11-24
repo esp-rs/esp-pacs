@@ -5,15 +5,15 @@ pub type W = crate::W<TICK_CONF_SPEC>;
 #[doc = "Field `XTAL_TICK_NUM` reader - ******* Description ***********"]
 pub type XTAL_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `XTAL_TICK_NUM` writer - ******* Description ***********"]
-pub type XTAL_TICK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XTAL_TICK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CK8M_TICK_NUM` reader - ******* Description ***********"]
 pub type CK8M_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `CK8M_TICK_NUM` writer - ******* Description ***********"]
-pub type CK8M_TICK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CK8M_TICK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TICK_ENABLE` reader - ******* Description ***********"]
 pub type TICK_ENABLE_R = crate::BitReader;
 #[doc = "Field `TICK_ENABLE` writer - ******* Description ***********"]
-pub type TICK_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TICK_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TICK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<TICK_CONF_SPEC, 0> {
-        XTAL_TICK_NUM_W::new(self)
+    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<TICK_CONF_SPEC> {
+        XTAL_TICK_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ck8m_tick_num(&mut self) -> CK8M_TICK_NUM_W<TICK_CONF_SPEC, 8> {
-        CK8M_TICK_NUM_W::new(self)
+    pub fn ck8m_tick_num(&mut self) -> CK8M_TICK_NUM_W<TICK_CONF_SPEC> {
+        CK8M_TICK_NUM_W::new(self, 8)
     }
     #[doc = "Bit 16 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn tick_enable(&mut self) -> TICK_ENABLE_W<TICK_CONF_SPEC, 16> {
-        TICK_ENABLE_W::new(self)
+    pub fn tick_enable(&mut self) -> TICK_ENABLE_W<TICK_CONF_SPEC> {
+        TICK_ENABLE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,31 +5,31 @@ pub type W = crate::W<MULT_CONF_SPEC>;
 #[doc = "Field `START` reader - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
 pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
-pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESET` writer - Write 1 to reset ECC Accelerator."]
-pub type RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KEY_LENGTH` reader - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
 pub type KEY_LENGTH_R = crate::BitReader;
 #[doc = "Field `KEY_LENGTH` writer - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
-pub type KEY_LENGTH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type KEY_LENGTH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SECURITY_MODE` reader - Reserved"]
 pub type SECURITY_MODE_R = crate::BitReader;
 #[doc = "Field `SECURITY_MODE` writer - Reserved"]
-pub type SECURITY_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SECURITY_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - Write 1 to force on register clock gate."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Write 1 to force on register clock gate."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WORK_MODE` reader - The work mode bits of ECC Accelerator. 0: Point Mult Mode. 1: Division mode. 2: Point verification mode. 3: Point Verif+mult mode. 4: Jacobian Point Mult Mode. 5: Reserved. 6: Jacobian Point Verification Mode. 7: Point Verif + Jacobian Mult Mode."]
 pub type WORK_MODE_R = crate::FieldReader;
 #[doc = "Field `WORK_MODE` writer - The work mode bits of ECC Accelerator. 0: Point Mult Mode. 1: Division mode. 2: Point verification mode. 3: Point Verif+mult mode. 4: Jacobian Point Mult Mode. 5: Reserved. 6: Jacobian Point Verification Mode. 7: Point Verif + Jacobian Mult Mode."]
-pub type WORK_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WORK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `VERIFICATION_RESULT` reader - The verification result bit of ECC Accelerator, only valid when calculation is done."]
 pub type VERIFICATION_RESULT_R = crate::BitReader;
 #[doc = "Field `MEM_CLOCK_GATE_FORCE_ON` reader - ECC memory clock gate force on register"]
 pub type MEM_CLOCK_GATE_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLOCK_GATE_FORCE_ON` writer - ECC memory clock gate force on register"]
-pub type MEM_CLOCK_GATE_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_CLOCK_GATE_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
     #[inline(always)]
@@ -93,51 +93,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MULT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<MULT_CONF_SPEC, 0> {
-        START_W::new(self)
+    pub fn start(&mut self) -> START_W<MULT_CONF_SPEC> {
+        START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to reset ECC Accelerator."]
     #[inline(always)]
     #[must_use]
-    pub fn reset(&mut self) -> RESET_W<MULT_CONF_SPEC, 1> {
-        RESET_W::new(self)
+    pub fn reset(&mut self) -> RESET_W<MULT_CONF_SPEC> {
+        RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
     #[inline(always)]
     #[must_use]
-    pub fn key_length(&mut self) -> KEY_LENGTH_W<MULT_CONF_SPEC, 2> {
-        KEY_LENGTH_W::new(self)
+    pub fn key_length(&mut self) -> KEY_LENGTH_W<MULT_CONF_SPEC> {
+        KEY_LENGTH_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn security_mode(&mut self) -> SECURITY_MODE_W<MULT_CONF_SPEC, 3> {
-        SECURITY_MODE_W::new(self)
+    pub fn security_mode(&mut self) -> SECURITY_MODE_W<MULT_CONF_SPEC> {
+        SECURITY_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to force on register clock gate."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<MULT_CONF_SPEC, 4> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<MULT_CONF_SPEC> {
+        CLK_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - The work mode bits of ECC Accelerator. 0: Point Mult Mode. 1: Division mode. 2: Point verification mode. 3: Point Verif+mult mode. 4: Jacobian Point Mult Mode. 5: Reserved. 6: Jacobian Point Verification Mode. 7: Point Verif + Jacobian Mult Mode."]
     #[inline(always)]
     #[must_use]
-    pub fn work_mode(&mut self) -> WORK_MODE_W<MULT_CONF_SPEC, 5> {
-        WORK_MODE_W::new(self)
+    pub fn work_mode(&mut self) -> WORK_MODE_W<MULT_CONF_SPEC> {
+        WORK_MODE_W::new(self, 5)
     }
     #[doc = "Bit 31 - ECC memory clock gate force on register"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_clock_gate_force_on(&mut self) -> MEM_CLOCK_GATE_FORCE_ON_W<MULT_CONF_SPEC, 31> {
-        MEM_CLOCK_GATE_FORCE_ON_W::new(self)
+    pub fn mem_clock_gate_force_on(&mut self) -> MEM_CLOCK_GATE_FORCE_ON_W<MULT_CONF_SPEC> {
+        MEM_CLOCK_GATE_FORCE_ON_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

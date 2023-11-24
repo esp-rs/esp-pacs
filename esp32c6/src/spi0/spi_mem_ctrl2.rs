@@ -5,11 +5,11 @@ pub type W = crate::W<SPI_MEM_CTRL2_SPEC>;
 #[doc = "Field `SPI_MEM_CS_SETUP_TIME` reader - (cycles-1) of prepare phase by SPI Bus clock, this bits are combined with SPI_MEM_CS_SETUP bit."]
 pub type SPI_MEM_CS_SETUP_TIME_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CS_SETUP_TIME` writer - (cycles-1) of prepare phase by SPI Bus clock, this bits are combined with SPI_MEM_CS_SETUP bit."]
-pub type SPI_MEM_CS_SETUP_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SPI_MEM_CS_SETUP_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SPI_MEM_CS_HOLD_TIME` reader - SPI CS signal is delayed to inactive by SPI bus clock, this bits are combined with SPI_MEM_CS_HOLD bit."]
 pub type SPI_MEM_CS_HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CS_HOLD_TIME` writer - SPI CS signal is delayed to inactive by SPI bus clock, this bits are combined with SPI_MEM_CS_HOLD bit."]
-pub type SPI_MEM_CS_HOLD_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SPI_MEM_CS_HOLD_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SPI_MEM_ECC_CS_HOLD_TIME` reader - SPI_MEM_CS_HOLD_TIME + SPI_MEM_ECC_CS_HOLD_TIME is the SPI0 CS hold cycle in ECC mode when accessed flash."]
 pub type SPI_MEM_ECC_CS_HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_ECC_SKIP_PAGE_CORNER` reader - 1: SPI0 and SPI1 skip page corner when accesses flash. 0: Not skip page corner when accesses flash."]
@@ -21,9 +21,9 @@ pub type SPI_MEM_SPLIT_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CS_HOLD_DELAY` reader - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
 pub type SPI_MEM_CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CS_HOLD_DELAY` writer - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub type SPI_MEM_CS_HOLD_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SPI_MEM_CS_HOLD_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SPI_MEM_SYNC_RESET` writer - The spi0_mst_st and spi0_slv_st will be reset."]
-pub type SPI_MEM_SYNC_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_SYNC_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - (cycles-1) of prepare phase by SPI Bus clock, this bits are combined with SPI_MEM_CS_SETUP bit."]
     #[inline(always)]
@@ -99,33 +99,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - (cycles-1) of prepare phase by SPI Bus clock, this bits are combined with SPI_MEM_CS_SETUP bit."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_cs_setup_time(&mut self) -> SPI_MEM_CS_SETUP_TIME_W<SPI_MEM_CTRL2_SPEC, 0> {
-        SPI_MEM_CS_SETUP_TIME_W::new(self)
+    pub fn spi_mem_cs_setup_time(&mut self) -> SPI_MEM_CS_SETUP_TIME_W<SPI_MEM_CTRL2_SPEC> {
+        SPI_MEM_CS_SETUP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - SPI CS signal is delayed to inactive by SPI bus clock, this bits are combined with SPI_MEM_CS_HOLD bit."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_cs_hold_time(&mut self) -> SPI_MEM_CS_HOLD_TIME_W<SPI_MEM_CTRL2_SPEC, 5> {
-        SPI_MEM_CS_HOLD_TIME_W::new(self)
+    pub fn spi_mem_cs_hold_time(&mut self) -> SPI_MEM_CS_HOLD_TIME_W<SPI_MEM_CTRL2_SPEC> {
+        SPI_MEM_CS_HOLD_TIME_W::new(self, 5)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_cs_hold_delay(&mut self) -> SPI_MEM_CS_HOLD_DELAY_W<SPI_MEM_CTRL2_SPEC, 25> {
-        SPI_MEM_CS_HOLD_DELAY_W::new(self)
+    pub fn spi_mem_cs_hold_delay(&mut self) -> SPI_MEM_CS_HOLD_DELAY_W<SPI_MEM_CTRL2_SPEC> {
+        SPI_MEM_CS_HOLD_DELAY_W::new(self, 25)
     }
     #[doc = "Bit 31 - The spi0_mst_st and spi0_slv_st will be reset."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_sync_reset(&mut self) -> SPI_MEM_SYNC_RESET_W<SPI_MEM_CTRL2_SPEC, 31> {
-        SPI_MEM_SYNC_RESET_W::new(self)
+    pub fn spi_mem_sync_reset(&mut self) -> SPI_MEM_SYNC_RESET_W<SPI_MEM_CTRL2_SPEC> {
+        SPI_MEM_SYNC_RESET_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

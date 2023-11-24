@@ -5,43 +5,39 @@ pub type W = crate::W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BT` reader - backup_bus_pms_constrain_bt"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_BT_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BT` writer - backup_bus_pms_constrain_bt"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_BT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_BT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0` reader - backup_bus_pms_constrain_i2c_ext0"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0` writer - backup_bus_pms_constrain_i2c_ext0"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_UHCI0` reader - backup_bus_pms_constrain_uhci0"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_UHCI0_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_UHCI0` writer - backup_bus_pms_constrain_uhci0"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RMT` reader - backup_bus_pms_constrain_rmt"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RMT_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RMT` writer - backup_bus_pms_constrain_rmt"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RMT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RMT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_LEDC` reader - backup_bus_pms_constrain_ledc"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_LEDC_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_LEDC` writer - backup_bus_pms_constrain_ledc"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BB` reader - backup_bus_pms_constrain_bb"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_BB_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BB` writer - backup_bus_pms_constrain_bb"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_BB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_BB_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP` reader - backup_bus_pms_constrain_timergroup"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP` writer - backup_bus_pms_constrain_timergroup"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1` reader - backup_bus_pms_constrain_timergroup1"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1` writer - backup_bus_pms_constrain_timergroup1"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER` reader - backup_bus_pms_constrain_systimer"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER` writer - backup_bus_pms_constrain_systimer"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - backup_bus_pms_constrain_bt"]
     #[inline(always)]
@@ -135,7 +131,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -144,72 +140,72 @@ impl W {
     #[must_use]
     pub fn backup_bus_pms_constrain_bt(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 0> {
-        BACKUP_BUS_PMS_CONSTRAIN_BT_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_BT_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_i2c_ext0"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_i2c_ext0(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 4> {
-        BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - backup_bus_pms_constrain_uhci0"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_uhci0(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 6> {
-        BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W::new(self, 6)
     }
     #[doc = "Bits 10:11 - backup_bus_pms_constrain_rmt"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_rmt(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RMT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 10> {
-        BACKUP_BUS_PMS_CONSTRAIN_RMT_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RMT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_RMT_W::new(self, 10)
     }
     #[doc = "Bits 16:17 - backup_bus_pms_constrain_ledc"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_ledc(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 16> {
-        BACKUP_BUS_PMS_CONSTRAIN_LEDC_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_LEDC_W::new(self, 16)
     }
     #[doc = "Bits 22:23 - backup_bus_pms_constrain_bb"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_bb(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_BB_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 22> {
-        BACKUP_BUS_PMS_CONSTRAIN_BB_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_BB_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_BB_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - backup_bus_pms_constrain_timergroup"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_timergroup(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 26> {
-        BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - backup_bus_pms_constrain_timergroup1"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_timergroup1(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 28> {
-        BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - backup_bus_pms_constrain_systimer"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_systimer(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 30> {
-        BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

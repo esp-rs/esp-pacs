@@ -5,7 +5,7 @@ pub type W = crate::W<AHB_MPU_TABLE_1_SPEC>;
 #[doc = "Field `AHB_ACCESS_GRANT_1` reader - "]
 pub type AHB_ACCESS_GRANT_1_R = crate::FieldReader<u16>;
 #[doc = "Field `AHB_ACCESS_GRANT_1` writer - "]
-pub type AHB_ACCESS_GRANT_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type AHB_ACCESS_GRANT_1_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<AHB_MPU_TABLE_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_access_grant_1(&mut self) -> AHB_ACCESS_GRANT_1_W<AHB_MPU_TABLE_1_SPEC, 0> {
-        AHB_ACCESS_GRANT_1_W::new(self)
+    pub fn ahb_access_grant_1(&mut self) -> AHB_ACCESS_GRANT_1_W<AHB_MPU_TABLE_1_SPEC> {
+        AHB_ACCESS_GRANT_1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

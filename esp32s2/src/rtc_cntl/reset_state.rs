@@ -9,11 +9,11 @@ pub type RESET_CAUSE_APPCPU_R = crate::FieldReader;
 #[doc = "Field `APPCPU_STAT_VECTOR_SEL` reader - APP CPU state vector sel"]
 pub type APPCPU_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `APPCPU_STAT_VECTOR_SEL` writer - APP CPU state vector sel"]
-pub type APPCPU_STAT_VECTOR_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APPCPU_STAT_VECTOR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PROCPU_STAT_VECTOR_SEL` reader - Selects the CPU state vector."]
 pub type PROCPU_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `PROCPU_STAT_VECTOR_SEL` writer - Selects the CPU state vector."]
-pub type PROCPU_STAT_VECTOR_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PROCPU_STAT_VECTOR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - Stores the CPU reset cause."]
     #[inline(always)]
@@ -62,21 +62,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RESET_STATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 12 - APP CPU state vector sel"]
     #[inline(always)]
     #[must_use]
-    pub fn appcpu_stat_vector_sel(&mut self) -> APPCPU_STAT_VECTOR_SEL_W<RESET_STATE_SPEC, 12> {
-        APPCPU_STAT_VECTOR_SEL_W::new(self)
+    pub fn appcpu_stat_vector_sel(&mut self) -> APPCPU_STAT_VECTOR_SEL_W<RESET_STATE_SPEC> {
+        APPCPU_STAT_VECTOR_SEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - Selects the CPU state vector."]
     #[inline(always)]
     #[must_use]
-    pub fn procpu_stat_vector_sel(&mut self) -> PROCPU_STAT_VECTOR_SEL_W<RESET_STATE_SPEC, 13> {
-        PROCPU_STAT_VECTOR_SEL_W::new(self)
+    pub fn procpu_stat_vector_sel(&mut self) -> PROCPU_STAT_VECTOR_SEL_W<RESET_STATE_SPEC> {
+        PROCPU_STAT_VECTOR_SEL_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

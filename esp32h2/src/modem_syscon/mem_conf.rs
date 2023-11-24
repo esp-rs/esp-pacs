@@ -5,15 +5,15 @@ pub type W = crate::W<MEM_CONF_SPEC>;
 #[doc = "Field `MODEM_MEM_WP` reader - "]
 pub type MODEM_MEM_WP_R = crate::FieldReader;
 #[doc = "Field `MODEM_MEM_WP` writer - "]
-pub type MODEM_MEM_WP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MODEM_MEM_WP_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `MODEM_MEM_WA` reader - "]
 pub type MODEM_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `MODEM_MEM_WA` writer - "]
-pub type MODEM_MEM_WA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MODEM_MEM_WA_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `MODEM_MEM_RA` reader - "]
 pub type MODEM_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `MODEM_MEM_RA` writer - "]
-pub type MODEM_MEM_RA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MODEM_MEM_RA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_mem_wp(&mut self) -> MODEM_MEM_WP_W<MEM_CONF_SPEC, 0> {
-        MODEM_MEM_WP_W::new(self)
+    pub fn modem_mem_wp(&mut self) -> MODEM_MEM_WP_W<MEM_CONF_SPEC> {
+        MODEM_MEM_WP_W::new(self, 0)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_mem_wa(&mut self) -> MODEM_MEM_WA_W<MEM_CONF_SPEC, 3> {
-        MODEM_MEM_WA_W::new(self)
+    pub fn modem_mem_wa(&mut self) -> MODEM_MEM_WA_W<MEM_CONF_SPEC> {
+        MODEM_MEM_WA_W::new(self, 3)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_mem_ra(&mut self) -> MODEM_MEM_RA_W<MEM_CONF_SPEC, 6> {
-        MODEM_MEM_RA_W::new(self)
+    pub fn modem_mem_ra(&mut self) -> MODEM_MEM_RA_W<MEM_CONF_SPEC> {
+        MODEM_MEM_RA_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

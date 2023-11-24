@@ -1,9 +1,9 @@
 #[doc = "Register `CACHE_ACS_CNT_CLR` writer"]
 pub type W = crate::W<CACHE_ACS_CNT_CLR_SPEC>;
 #[doc = "Field `DCACHE_ACS_CNT_CLR` writer - The bit is used to clear dcache counter."]
-pub type DCACHE_ACS_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_ACS_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_ACS_CNT_CLR` writer - The bit is used to clear icache counter."]
-pub type ICACHE_ACS_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_ACS_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_ACS_CNT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bit 0 - The bit is used to clear dcache counter."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_acs_cnt_clr(&mut self) -> DCACHE_ACS_CNT_CLR_W<CACHE_ACS_CNT_CLR_SPEC, 0> {
-        DCACHE_ACS_CNT_CLR_W::new(self)
+    pub fn dcache_acs_cnt_clr(&mut self) -> DCACHE_ACS_CNT_CLR_W<CACHE_ACS_CNT_CLR_SPEC> {
+        DCACHE_ACS_CNT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to clear icache counter."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_acs_cnt_clr(&mut self) -> ICACHE_ACS_CNT_CLR_W<CACHE_ACS_CNT_CLR_SPEC, 1> {
-        ICACHE_ACS_CNT_CLR_W::new(self)
+    pub fn icache_acs_cnt_clr(&mut self) -> ICACHE_ACS_CNT_CLR_W<CACHE_ACS_CNT_CLR_SPEC> {
+        ICACHE_ACS_CNT_CLR_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

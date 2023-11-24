@@ -5,27 +5,27 @@ pub type W = crate::W<MISC_SPEC>;
 #[doc = "Field `TRANS_END` reader - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
 pub type TRANS_END_R = crate::BitReader;
 #[doc = "Field `TRANS_END` writer - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
-pub type TRANS_END_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_END_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_END_INT_ENA` reader - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
 pub type TRANS_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_END_INT_ENA` writer - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
-pub type TRANS_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CSPI_ST_TRANS_END` reader - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
 pub type CSPI_ST_TRANS_END_R = crate::BitReader;
 #[doc = "Field `CSPI_ST_TRANS_END` writer - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
-pub type CSPI_ST_TRANS_END_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPI_ST_TRANS_END_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CSPI_ST_TRANS_END_INT_ENA` reader - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
 pub type CSPI_ST_TRANS_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CSPI_ST_TRANS_END_INT_ENA` writer - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
-pub type CSPI_ST_TRANS_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPI_ST_TRANS_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
 pub type CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub type CK_IDLE_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CK_IDLE_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set."]
 pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - spi cs line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS_KEEP_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MISC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_end(&mut self) -> TRANS_END_W<MISC_SPEC, 3> {
-        TRANS_END_W::new(self)
+    pub fn trans_end(&mut self) -> TRANS_END_W<MISC_SPEC> {
+        TRANS_END_W::new(self, 3)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_end_int_ena(&mut self) -> TRANS_END_INT_ENA_W<MISC_SPEC, 4> {
-        TRANS_END_INT_ENA_W::new(self)
+    pub fn trans_end_int_ena(&mut self) -> TRANS_END_INT_ENA_W<MISC_SPEC> {
+        TRANS_END_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
     #[must_use]
-    pub fn cspi_st_trans_end(&mut self) -> CSPI_ST_TRANS_END_W<MISC_SPEC, 5> {
-        CSPI_ST_TRANS_END_W::new(self)
+    pub fn cspi_st_trans_end(&mut self) -> CSPI_ST_TRANS_END_W<MISC_SPEC> {
+        CSPI_ST_TRANS_END_W::new(self, 5)
     }
     #[doc = "Bit 6 - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
     #[must_use]
-    pub fn cspi_st_trans_end_int_ena(&mut self) -> CSPI_ST_TRANS_END_INT_ENA_W<MISC_SPEC, 6> {
-        CSPI_ST_TRANS_END_INT_ENA_W::new(self)
+    pub fn cspi_st_trans_end_int_ena(&mut self) -> CSPI_ST_TRANS_END_INT_ENA_W<MISC_SPEC> {
+        CSPI_ST_TRANS_END_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 9 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
     #[must_use]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC, 9> {
-        CK_IDLE_EDGE_W::new(self)
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
+        CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - spi cs line keep low when the bit is set."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC, 10> {
-        CS_KEEP_ACTIVE_W::new(self)
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
+        CS_KEEP_ACTIVE_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

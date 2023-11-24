@@ -5,7 +5,7 @@ pub type W = crate::W<LPMEM_FORCE_SPEC>;
 #[doc = "Field `LPMEM_CLK_FORCE_ON` reader - need_des"]
 pub type LPMEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `LPMEM_CLK_FORCE_ON` writer - need_des"]
-pub type LPMEM_CLK_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPMEM_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LPMEM_FORCE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lpmem_clk_force_on(&mut self) -> LPMEM_CLK_FORCE_ON_W<LPMEM_FORCE_SPEC, 31> {
-        LPMEM_CLK_FORCE_ON_W::new(self)
+    pub fn lpmem_clk_force_on(&mut self) -> LPMEM_CLK_FORCE_ON_W<LPMEM_FORCE_SPEC> {
+        LPMEM_CLK_FORCE_ON_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

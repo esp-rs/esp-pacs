@@ -5,7 +5,7 @@ pub type W = crate::W<SCL_ST_TIME_OUT_SPEC>;
 #[doc = "Field `SCL_ST_TO_I2C` reader - reg_scl_st_to_regno more than 23"]
 pub type SCL_ST_TO_I2C_R = crate::FieldReader;
 #[doc = "Field `SCL_ST_TO_I2C` writer - reg_scl_st_to_regno more than 23"]
-pub type SCL_ST_TO_I2C_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SCL_ST_TO_I2C_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - reg_scl_st_to_regno more than 23"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCL_ST_TIME_OUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - reg_scl_st_to_regno more than 23"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_st_to_i2c(&mut self) -> SCL_ST_TO_I2C_W<SCL_ST_TIME_OUT_SPEC, 0> {
-        SCL_ST_TO_I2C_W::new(self)
+    pub fn scl_st_to_i2c(&mut self) -> SCL_ST_TO_I2C_W<SCL_ST_TIME_OUT_SPEC> {
+        SCL_ST_TO_I2C_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,47 +5,47 @@ pub type W = crate::W<PRO_CACHE_CTRL1_SPEC>;
 #[doc = "Field `PRO_CACHE_MASK_IRAM0` reader - "]
 pub type PRO_CACHE_MASK_IRAM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MASK_IRAM0` writer - "]
-pub type PRO_CACHE_MASK_IRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MASK_IRAM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_MASK_IRAM1` reader - "]
 pub type PRO_CACHE_MASK_IRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MASK_IRAM1` writer - "]
-pub type PRO_CACHE_MASK_IRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MASK_IRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_MASK_IROM0` reader - "]
 pub type PRO_CACHE_MASK_IROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MASK_IROM0` writer - "]
-pub type PRO_CACHE_MASK_IROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MASK_IROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_MASK_DRAM1` reader - "]
 pub type PRO_CACHE_MASK_DRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MASK_DRAM1` writer - "]
-pub type PRO_CACHE_MASK_DRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MASK_DRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_MASK_DROM0` reader - "]
 pub type PRO_CACHE_MASK_DROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MASK_DROM0` writer - "]
-pub type PRO_CACHE_MASK_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MASK_DROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_MASK_OPSDRAM` reader - "]
 pub type PRO_CACHE_MASK_OPSDRAM_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MASK_OPSDRAM` writer - "]
-pub type PRO_CACHE_MASK_OPSDRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MASK_OPSDRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CMMU_SRAM_PAGE_MODE` reader - "]
 pub type PRO_CMMU_SRAM_PAGE_MODE_R = crate::FieldReader;
 #[doc = "Field `PRO_CMMU_SRAM_PAGE_MODE` writer - "]
-pub type PRO_CMMU_SRAM_PAGE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PRO_CMMU_SRAM_PAGE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PRO_CMMU_FLASH_PAGE_MODE` reader - "]
 pub type PRO_CMMU_FLASH_PAGE_MODE_R = crate::FieldReader;
 #[doc = "Field `PRO_CMMU_FLASH_PAGE_MODE` writer - "]
-pub type PRO_CMMU_FLASH_PAGE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PRO_CMMU_FLASH_PAGE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PRO_CMMU_FORCE_ON` reader - "]
 pub type PRO_CMMU_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `PRO_CMMU_FORCE_ON` writer - "]
-pub type PRO_CMMU_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CMMU_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CMMU_PD` reader - "]
 pub type PRO_CMMU_PD_R = crate::BitReader;
 #[doc = "Field `PRO_CMMU_PD` writer - "]
-pub type PRO_CMMU_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CMMU_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_MMU_IA_CLR` reader - "]
 pub type PRO_CACHE_MMU_IA_CLR_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MMU_IA_CLR` writer - "]
-pub type PRO_CACHE_MMU_IA_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_MMU_IA_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -154,79 +154,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mask_iram0(&mut self) -> PRO_CACHE_MASK_IRAM0_W<PRO_CACHE_CTRL1_SPEC, 0> {
-        PRO_CACHE_MASK_IRAM0_W::new(self)
+    pub fn pro_cache_mask_iram0(&mut self) -> PRO_CACHE_MASK_IRAM0_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CACHE_MASK_IRAM0_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mask_iram1(&mut self) -> PRO_CACHE_MASK_IRAM1_W<PRO_CACHE_CTRL1_SPEC, 1> {
-        PRO_CACHE_MASK_IRAM1_W::new(self)
+    pub fn pro_cache_mask_iram1(&mut self) -> PRO_CACHE_MASK_IRAM1_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CACHE_MASK_IRAM1_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mask_irom0(&mut self) -> PRO_CACHE_MASK_IROM0_W<PRO_CACHE_CTRL1_SPEC, 2> {
-        PRO_CACHE_MASK_IROM0_W::new(self)
+    pub fn pro_cache_mask_irom0(&mut self) -> PRO_CACHE_MASK_IROM0_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CACHE_MASK_IROM0_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mask_dram1(&mut self) -> PRO_CACHE_MASK_DRAM1_W<PRO_CACHE_CTRL1_SPEC, 3> {
-        PRO_CACHE_MASK_DRAM1_W::new(self)
+    pub fn pro_cache_mask_dram1(&mut self) -> PRO_CACHE_MASK_DRAM1_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CACHE_MASK_DRAM1_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mask_drom0(&mut self) -> PRO_CACHE_MASK_DROM0_W<PRO_CACHE_CTRL1_SPEC, 4> {
-        PRO_CACHE_MASK_DROM0_W::new(self)
+    pub fn pro_cache_mask_drom0(&mut self) -> PRO_CACHE_MASK_DROM0_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CACHE_MASK_DROM0_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mask_opsdram(&mut self) -> PRO_CACHE_MASK_OPSDRAM_W<PRO_CACHE_CTRL1_SPEC, 5> {
-        PRO_CACHE_MASK_OPSDRAM_W::new(self)
+    pub fn pro_cache_mask_opsdram(&mut self) -> PRO_CACHE_MASK_OPSDRAM_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CACHE_MASK_OPSDRAM_W::new(self, 5)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cmmu_sram_page_mode(
-        &mut self,
-    ) -> PRO_CMMU_SRAM_PAGE_MODE_W<PRO_CACHE_CTRL1_SPEC, 6> {
-        PRO_CMMU_SRAM_PAGE_MODE_W::new(self)
+    pub fn pro_cmmu_sram_page_mode(&mut self) -> PRO_CMMU_SRAM_PAGE_MODE_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CMMU_SRAM_PAGE_MODE_W::new(self, 6)
     }
     #[doc = "Bits 9:10"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cmmu_flash_page_mode(
-        &mut self,
-    ) -> PRO_CMMU_FLASH_PAGE_MODE_W<PRO_CACHE_CTRL1_SPEC, 9> {
-        PRO_CMMU_FLASH_PAGE_MODE_W::new(self)
+    pub fn pro_cmmu_flash_page_mode(&mut self) -> PRO_CMMU_FLASH_PAGE_MODE_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CMMU_FLASH_PAGE_MODE_W::new(self, 9)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cmmu_force_on(&mut self) -> PRO_CMMU_FORCE_ON_W<PRO_CACHE_CTRL1_SPEC, 11> {
-        PRO_CMMU_FORCE_ON_W::new(self)
+    pub fn pro_cmmu_force_on(&mut self) -> PRO_CMMU_FORCE_ON_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CMMU_FORCE_ON_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cmmu_pd(&mut self) -> PRO_CMMU_PD_W<PRO_CACHE_CTRL1_SPEC, 12> {
-        PRO_CMMU_PD_W::new(self)
+    pub fn pro_cmmu_pd(&mut self) -> PRO_CMMU_PD_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CMMU_PD_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_mmu_ia_clr(&mut self) -> PRO_CACHE_MMU_IA_CLR_W<PRO_CACHE_CTRL1_SPEC, 13> {
-        PRO_CACHE_MMU_IA_CLR_W::new(self)
+    pub fn pro_cache_mmu_ia_clr(&mut self) -> PRO_CACHE_MMU_IA_CLR_W<PRO_CACHE_CTRL1_SPEC> {
+        PRO_CACHE_MMU_IA_CLR_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

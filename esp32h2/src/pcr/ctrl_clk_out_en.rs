@@ -5,31 +5,31 @@ pub type W = crate::W<CTRL_CLK_OUT_EN_SPEC>;
 #[doc = "Field `CLK8_OEN` reader - Set 1 to enable 8m clock"]
 pub type CLK8_OEN_R = crate::BitReader;
 #[doc = "Field `CLK8_OEN` writer - Set 1 to enable 8m clock"]
-pub type CLK8_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK8_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK16_OEN` reader - Set 1 to enable 16m clock"]
 pub type CLK16_OEN_R = crate::BitReader;
 #[doc = "Field `CLK16_OEN` writer - Set 1 to enable 16m clock"]
-pub type CLK16_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK16_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK32_OEN` reader - Set 1 to enable 32m clock"]
 pub type CLK32_OEN_R = crate::BitReader;
 #[doc = "Field `CLK32_OEN` writer - Set 1 to enable 32m clock"]
-pub type CLK32_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK32_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_ADC_INF_OEN` reader - Reserved"]
 pub type CLK_ADC_INF_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_ADC_INF_OEN` writer - Reserved"]
-pub type CLK_ADC_INF_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_ADC_INF_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_DFM_INF_OEN` reader - Reserved"]
 pub type CLK_DFM_INF_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_DFM_INF_OEN` writer - Reserved"]
-pub type CLK_DFM_INF_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_DFM_INF_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_SDM_MOD_OEN` reader - Reserved"]
 pub type CLK_SDM_MOD_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_SDM_MOD_OEN` writer - Reserved"]
-pub type CLK_SDM_MOD_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_SDM_MOD_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_XTAL_OEN` reader - Set 1 to enable xtal clock"]
 pub type CLK_XTAL_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_XTAL_OEN` writer - Set 1 to enable xtal clock"]
-pub type CLK_XTAL_OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_XTAL_OEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable 8m clock"]
     #[inline(always)]
@@ -96,51 +96,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_CLK_OUT_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable 8m clock"]
     #[inline(always)]
     #[must_use]
-    pub fn clk8_oen(&mut self) -> CLK8_OEN_W<CTRL_CLK_OUT_EN_SPEC, 0> {
-        CLK8_OEN_W::new(self)
+    pub fn clk8_oen(&mut self) -> CLK8_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
+        CLK8_OEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable 16m clock"]
     #[inline(always)]
     #[must_use]
-    pub fn clk16_oen(&mut self) -> CLK16_OEN_W<CTRL_CLK_OUT_EN_SPEC, 1> {
-        CLK16_OEN_W::new(self)
+    pub fn clk16_oen(&mut self) -> CLK16_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
+        CLK16_OEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable 32m clock"]
     #[inline(always)]
     #[must_use]
-    pub fn clk32_oen(&mut self) -> CLK32_OEN_W<CTRL_CLK_OUT_EN_SPEC, 2> {
-        CLK32_OEN_W::new(self)
+    pub fn clk32_oen(&mut self) -> CLK32_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
+        CLK32_OEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_adc_inf_oen(&mut self) -> CLK_ADC_INF_OEN_W<CTRL_CLK_OUT_EN_SPEC, 3> {
-        CLK_ADC_INF_OEN_W::new(self)
+    pub fn clk_adc_inf_oen(&mut self) -> CLK_ADC_INF_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
+        CLK_ADC_INF_OEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_dfm_inf_oen(&mut self) -> CLK_DFM_INF_OEN_W<CTRL_CLK_OUT_EN_SPEC, 4> {
-        CLK_DFM_INF_OEN_W::new(self)
+    pub fn clk_dfm_inf_oen(&mut self) -> CLK_DFM_INF_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
+        CLK_DFM_INF_OEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sdm_mod_oen(&mut self) -> CLK_SDM_MOD_OEN_W<CTRL_CLK_OUT_EN_SPEC, 5> {
-        CLK_SDM_MOD_OEN_W::new(self)
+    pub fn clk_sdm_mod_oen(&mut self) -> CLK_SDM_MOD_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
+        CLK_SDM_MOD_OEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set 1 to enable xtal clock"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_xtal_oen(&mut self) -> CLK_XTAL_OEN_W<CTRL_CLK_OUT_EN_SPEC, 6> {
-        CLK_XTAL_OEN_W::new(self)
+    pub fn clk_xtal_oen(&mut self) -> CLK_XTAL_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
+        CLK_XTAL_OEN_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

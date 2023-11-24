@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_MEM_MOSI_DLEN_SPEC>;
 #[doc = "Field `SPI_MEM_USR_MOSI_DBITLEN` reader - The length in bits of write-data. The register value shall be (bit_num-1)."]
 pub type SPI_MEM_USR_MOSI_DBITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_USR_MOSI_DBITLEN` writer - The length in bits of write-data. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_USR_MOSI_DBITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type SPI_MEM_USR_MOSI_DBITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:9 - The length in bits of write-data. The register value shall be (bit_num-1)."]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_MOSI_DLEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn spi_mem_usr_mosi_dbitlen(
         &mut self,
-    ) -> SPI_MEM_USR_MOSI_DBITLEN_W<SPI_MEM_MOSI_DLEN_SPEC, 0> {
-        SPI_MEM_USR_MOSI_DBITLEN_W::new(self)
+    ) -> SPI_MEM_USR_MOSI_DBITLEN_W<SPI_MEM_MOSI_DLEN_SPEC> {
+        SPI_MEM_USR_MOSI_DBITLEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

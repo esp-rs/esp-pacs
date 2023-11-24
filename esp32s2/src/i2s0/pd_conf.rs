@@ -5,31 +5,31 @@ pub type W = crate::W<PD_CONF_SPEC>;
 #[doc = "Field `FIFO_FORCE_PD` reader - Force FIFO power-down."]
 pub type FIFO_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PD` writer - Force FIFO power-down."]
-pub type FIFO_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FIFO_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FIFO_FORCE_PU` reader - Force FIFO power-up."]
 pub type FIFO_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PU` writer - Force FIFO power-up."]
-pub type FIFO_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FIFO_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLC_MEM_FORCE_PD` reader - Force I2S memory power-down."]
 pub type PLC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PD` writer - Force I2S memory power-down."]
-pub type PLC_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLC_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLC_MEM_FORCE_PU` reader - Force I2S memory power-up."]
 pub type PLC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PU` writer - Force I2S memory power-up."]
-pub type PLC_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLC_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RAM_FORCE_PD` reader - Force DMA FIFO power-down."]
 pub type DMA_RAM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_FORCE_PD` writer - Force DMA FIFO power-down."]
-pub type DMA_RAM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RAM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RAM_FORCE_PU` reader - Force DMA FIFO power-up."]
 pub type DMA_RAM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_FORCE_PU` writer - Force DMA FIFO power-up."]
-pub type DMA_RAM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RAM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RAM_CLK_FO` reader - Set this bit to force on DMA RAM clock."]
 pub type DMA_RAM_CLK_FO_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_CLK_FO` writer - Set this bit to force on DMA RAM clock."]
-pub type DMA_RAM_CLK_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RAM_CLK_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Force FIFO power-down."]
     #[inline(always)]
@@ -105,51 +105,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PD_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Force FIFO power-down."]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_force_pd(&mut self) -> FIFO_FORCE_PD_W<PD_CONF_SPEC, 0> {
-        FIFO_FORCE_PD_W::new(self)
+    pub fn fifo_force_pd(&mut self) -> FIFO_FORCE_PD_W<PD_CONF_SPEC> {
+        FIFO_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Force FIFO power-up."]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_force_pu(&mut self) -> FIFO_FORCE_PU_W<PD_CONF_SPEC, 1> {
-        FIFO_FORCE_PU_W::new(self)
+    pub fn fifo_force_pu(&mut self) -> FIFO_FORCE_PU_W<PD_CONF_SPEC> {
+        FIFO_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Force I2S memory power-down."]
     #[inline(always)]
     #[must_use]
-    pub fn plc_mem_force_pd(&mut self) -> PLC_MEM_FORCE_PD_W<PD_CONF_SPEC, 2> {
-        PLC_MEM_FORCE_PD_W::new(self)
+    pub fn plc_mem_force_pd(&mut self) -> PLC_MEM_FORCE_PD_W<PD_CONF_SPEC> {
+        PLC_MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Force I2S memory power-up."]
     #[inline(always)]
     #[must_use]
-    pub fn plc_mem_force_pu(&mut self) -> PLC_MEM_FORCE_PU_W<PD_CONF_SPEC, 3> {
-        PLC_MEM_FORCE_PU_W::new(self)
+    pub fn plc_mem_force_pu(&mut self) -> PLC_MEM_FORCE_PU_W<PD_CONF_SPEC> {
+        PLC_MEM_FORCE_PU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Force DMA FIFO power-down."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ram_force_pd(&mut self) -> DMA_RAM_FORCE_PD_W<PD_CONF_SPEC, 4> {
-        DMA_RAM_FORCE_PD_W::new(self)
+    pub fn dma_ram_force_pd(&mut self) -> DMA_RAM_FORCE_PD_W<PD_CONF_SPEC> {
+        DMA_RAM_FORCE_PD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Force DMA FIFO power-up."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ram_force_pu(&mut self) -> DMA_RAM_FORCE_PU_W<PD_CONF_SPEC, 5> {
-        DMA_RAM_FORCE_PU_W::new(self)
+    pub fn dma_ram_force_pu(&mut self) -> DMA_RAM_FORCE_PU_W<PD_CONF_SPEC> {
+        DMA_RAM_FORCE_PU_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to force on DMA RAM clock."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ram_clk_fo(&mut self) -> DMA_RAM_CLK_FO_W<PD_CONF_SPEC, 6> {
-        DMA_RAM_CLK_FO_W::new(self)
+    pub fn dma_ram_clk_fo(&mut self) -> DMA_RAM_CLK_FO_W<PD_CONF_SPEC> {
+        DMA_RAM_CLK_FO_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

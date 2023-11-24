@@ -5,23 +5,23 @@ pub type W = crate::W<SAR_READER1_CTRL_SPEC>;
 #[doc = "Field `SAR1_CLK_DIV` reader - Clock divider."]
 pub type SAR1_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SAR1_CLK_DIV` writer - Clock divider."]
-pub type SAR1_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR1_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR1_CLK_GATED` reader - "]
 pub type SAR1_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SAR1_CLK_GATED` writer - "]
-pub type SAR1_CLK_GATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR1_CLK_GATED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR1_SAMPLE_NUM` reader - "]
 pub type SAR1_SAMPLE_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR1_SAMPLE_NUM` writer - "]
-pub type SAR1_SAMPLE_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR1_SAMPLE_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR1_DATA_INV` reader - Invert SAR ADC1 data."]
 pub type SAR1_DATA_INV_R = crate::BitReader;
 #[doc = "Field `SAR1_DATA_INV` writer - Invert SAR ADC1 data."]
-pub type SAR1_DATA_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR1_DATA_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR1_INT_EN` reader - Enable SAR ADC1 to send out interrupt."]
 pub type SAR1_INT_EN_R = crate::BitReader;
 #[doc = "Field `SAR1_INT_EN` writer - Enable SAR ADC1 to send out interrupt."]
-pub type SAR1_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR1_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Clock divider."]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_READER1_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Clock divider."]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_clk_div(&mut self) -> SAR1_CLK_DIV_W<SAR_READER1_CTRL_SPEC, 0> {
-        SAR1_CLK_DIV_W::new(self)
+    pub fn sar1_clk_div(&mut self) -> SAR1_CLK_DIV_W<SAR_READER1_CTRL_SPEC> {
+        SAR1_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_clk_gated(&mut self) -> SAR1_CLK_GATED_W<SAR_READER1_CTRL_SPEC, 18> {
-        SAR1_CLK_GATED_W::new(self)
+    pub fn sar1_clk_gated(&mut self) -> SAR1_CLK_GATED_W<SAR_READER1_CTRL_SPEC> {
+        SAR1_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_sample_num(&mut self) -> SAR1_SAMPLE_NUM_W<SAR_READER1_CTRL_SPEC, 19> {
-        SAR1_SAMPLE_NUM_W::new(self)
+    pub fn sar1_sample_num(&mut self) -> SAR1_SAMPLE_NUM_W<SAR_READER1_CTRL_SPEC> {
+        SAR1_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bit 28 - Invert SAR ADC1 data."]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_data_inv(&mut self) -> SAR1_DATA_INV_W<SAR_READER1_CTRL_SPEC, 28> {
-        SAR1_DATA_INV_W::new(self)
+    pub fn sar1_data_inv(&mut self) -> SAR1_DATA_INV_W<SAR_READER1_CTRL_SPEC> {
+        SAR1_DATA_INV_W::new(self, 28)
     }
     #[doc = "Bit 29 - Enable SAR ADC1 to send out interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_int_en(&mut self) -> SAR1_INT_EN_W<SAR_READER1_CTRL_SPEC, 29> {
-        SAR1_INT_EN_W::new(self)
+    pub fn sar1_int_en(&mut self) -> SAR1_INT_EN_W<SAR_READER1_CTRL_SPEC> {
+        SAR1_INT_EN_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

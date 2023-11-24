@@ -5,11 +5,11 @@ pub type W = crate::W<CLKENA_SPEC>;
 #[doc = "Field `CCLK_ENABLE` reader - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
 pub type CCLK_ENABLE_R = crate::FieldReader;
 #[doc = "Field `CCLK_ENABLE` writer - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
-pub type CCLK_ENABLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CCLK_ENABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LP_ENABLE` reader - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
 pub type LP_ENABLE_R = crate::FieldReader;
 #[doc = "Field `LP_ENABLE` writer - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
-pub type LP_ENABLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LP_ENABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLKENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cclk_enable(&mut self) -> CCLK_ENABLE_W<CLKENA_SPEC, 0> {
-        CCLK_ENABLE_W::new(self)
+    pub fn cclk_enable(&mut self) -> CCLK_ENABLE_W<CLKENA_SPEC> {
+        CCLK_ENABLE_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn lp_enable(&mut self) -> LP_ENABLE_W<CLKENA_SPEC, 16> {
-        LP_ENABLE_W::new(self)
+    pub fn lp_enable(&mut self) -> LP_ENABLE_W<CLKENA_SPEC> {
+        LP_ENABLE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

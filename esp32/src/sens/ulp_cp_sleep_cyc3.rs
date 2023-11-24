@@ -5,7 +5,7 @@ pub type W = crate::W<ULP_CP_SLEEP_CYC3_SPEC>;
 #[doc = "Field `SLEEP_CYCLES_S3` reader - "]
 pub type SLEEP_CYCLES_S3_R = crate::FieldReader<u32>;
 #[doc = "Field `SLEEP_CYCLES_S3` writer - "]
-pub type SLEEP_CYCLES_S3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SLEEP_CYCLES_S3_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ULP_CP_SLEEP_CYC3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_cycles_s3(&mut self) -> SLEEP_CYCLES_S3_W<ULP_CP_SLEEP_CYC3_SPEC, 0> {
-        SLEEP_CYCLES_S3_W::new(self)
+    pub fn sleep_cycles_s3(&mut self) -> SLEEP_CYCLES_S3_W<ULP_CP_SLEEP_CYC3_SPEC> {
+        SLEEP_CYCLES_S3_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

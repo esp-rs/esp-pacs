@@ -5,27 +5,27 @@ pub type W = crate::W<EX_CLK_CTRL_SPEC>;
 #[doc = "Field `EXT_EN` reader - "]
 pub type EXT_EN_R = crate::BitReader;
 #[doc = "Field `EXT_EN` writer - "]
-pub type EXT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_EN` reader - "]
 pub type INT_EN_R = crate::BitReader;
 #[doc = "Field `INT_EN` writer - "]
-pub type INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_125_CLK_EN` reader - "]
 pub type RX_125_CLK_EN_R = crate::BitReader;
 #[doc = "Field `RX_125_CLK_EN` writer - "]
-pub type RX_125_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_125_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MII_CLK_TX_EN` reader - "]
 pub type MII_CLK_TX_EN_R = crate::BitReader;
 #[doc = "Field `MII_CLK_TX_EN` writer - "]
-pub type MII_CLK_TX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MII_CLK_TX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MII_CLK_RX_EN` reader - "]
 pub type MII_CLK_RX_EN_R = crate::BitReader;
 #[doc = "Field `MII_CLK_RX_EN` writer - "]
-pub type MII_CLK_RX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MII_CLK_RX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -83,45 +83,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EX_CLK_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_en(&mut self) -> EXT_EN_W<EX_CLK_CTRL_SPEC, 0> {
-        EXT_EN_W::new(self)
+    pub fn ext_en(&mut self) -> EXT_EN_W<EX_CLK_CTRL_SPEC> {
+        EXT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn int_en(&mut self) -> INT_EN_W<EX_CLK_CTRL_SPEC, 1> {
-        INT_EN_W::new(self)
+    pub fn int_en(&mut self) -> INT_EN_W<EX_CLK_CTRL_SPEC> {
+        INT_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_125_clk_en(&mut self) -> RX_125_CLK_EN_W<EX_CLK_CTRL_SPEC, 2> {
-        RX_125_CLK_EN_W::new(self)
+    pub fn rx_125_clk_en(&mut self) -> RX_125_CLK_EN_W<EX_CLK_CTRL_SPEC> {
+        RX_125_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn mii_clk_tx_en(&mut self) -> MII_CLK_TX_EN_W<EX_CLK_CTRL_SPEC, 3> {
-        MII_CLK_TX_EN_W::new(self)
+    pub fn mii_clk_tx_en(&mut self) -> MII_CLK_TX_EN_W<EX_CLK_CTRL_SPEC> {
+        MII_CLK_TX_EN_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn mii_clk_rx_en(&mut self) -> MII_CLK_RX_EN_W<EX_CLK_CTRL_SPEC, 4> {
-        MII_CLK_RX_EN_W::new(self)
+    pub fn mii_clk_rx_en(&mut self) -> MII_CLK_RX_EN_W<EX_CLK_CTRL_SPEC> {
+        MII_CLK_RX_EN_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<EX_CLK_CTRL_SPEC, 5> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<EX_CLK_CTRL_SPEC> {
+        CLK_EN_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

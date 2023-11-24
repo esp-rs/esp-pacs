@@ -5,7 +5,7 @@ pub type W = crate::W<FORCE_ACC_HP_SPEC>;
 #[doc = "Field `LP_AON_FORCE_ACC_HPMEM_EN` reader - need_des"]
 pub type LP_AON_FORCE_ACC_HPMEM_EN_R = crate::BitReader;
 #[doc = "Field `LP_AON_FORCE_ACC_HPMEM_EN` writer - need_des"]
-pub type LP_AON_FORCE_ACC_HPMEM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_AON_FORCE_ACC_HPMEM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -27,19 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FORCE_ACC_HP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_aon_force_acc_hpmem_en(
-        &mut self,
-    ) -> LP_AON_FORCE_ACC_HPMEM_EN_W<FORCE_ACC_HP_SPEC, 0> {
-        LP_AON_FORCE_ACC_HPMEM_EN_W::new(self)
+    pub fn lp_aon_force_acc_hpmem_en(&mut self) -> LP_AON_FORCE_ACC_HPMEM_EN_W<FORCE_ACC_HP_SPEC> {
+        LP_AON_FORCE_ACC_HPMEM_EN_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

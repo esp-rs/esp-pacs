@@ -5,19 +5,19 @@ pub type W = crate::W<CACHE_CONTROL_SPEC>;
 #[doc = "Field `ICACHE_CLK_ON` reader - reg_icache_clk_on"]
 pub type ICACHE_CLK_ON_R = crate::BitReader;
 #[doc = "Field `ICACHE_CLK_ON` writer - reg_icache_clk_on"]
-pub type ICACHE_CLK_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_CLK_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_RESET` reader - reg_icache_reset"]
 pub type ICACHE_RESET_R = crate::BitReader;
 #[doc = "Field `ICACHE_RESET` writer - reg_icache_reset"]
-pub type ICACHE_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_CLK_ON` reader - reg_dcache_clk_on"]
 pub type DCACHE_CLK_ON_R = crate::BitReader;
 #[doc = "Field `DCACHE_CLK_ON` writer - reg_dcache_clk_on"]
-pub type DCACHE_CLK_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_CLK_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_RESET` reader - reg_dcache_reset"]
 pub type DCACHE_RESET_R = crate::BitReader;
 #[doc = "Field `DCACHE_RESET` writer - reg_dcache_reset"]
-pub type DCACHE_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_icache_clk_on"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_CONTROL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_icache_clk_on"]
     #[inline(always)]
     #[must_use]
-    pub fn icache_clk_on(&mut self) -> ICACHE_CLK_ON_W<CACHE_CONTROL_SPEC, 0> {
-        ICACHE_CLK_ON_W::new(self)
+    pub fn icache_clk_on(&mut self) -> ICACHE_CLK_ON_W<CACHE_CONTROL_SPEC> {
+        ICACHE_CLK_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_icache_reset"]
     #[inline(always)]
     #[must_use]
-    pub fn icache_reset(&mut self) -> ICACHE_RESET_W<CACHE_CONTROL_SPEC, 1> {
-        ICACHE_RESET_W::new(self)
+    pub fn icache_reset(&mut self) -> ICACHE_RESET_W<CACHE_CONTROL_SPEC> {
+        ICACHE_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_dcache_clk_on"]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_clk_on(&mut self) -> DCACHE_CLK_ON_W<CACHE_CONTROL_SPEC, 2> {
-        DCACHE_CLK_ON_W::new(self)
+    pub fn dcache_clk_on(&mut self) -> DCACHE_CLK_ON_W<CACHE_CONTROL_SPEC> {
+        DCACHE_CLK_ON_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_dcache_reset"]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_reset(&mut self) -> DCACHE_RESET_W<CACHE_CONTROL_SPEC, 3> {
-        DCACHE_RESET_W::new(self)
+    pub fn dcache_reset(&mut self) -> DCACHE_RESET_W<CACHE_CONTROL_SPEC> {
+        DCACHE_RESET_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

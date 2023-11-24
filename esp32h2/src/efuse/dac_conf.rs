@@ -5,19 +5,19 @@ pub type W = crate::W<DAC_CONF_SPEC>;
 #[doc = "Field `DAC_CLK_DIV` reader - Controls the division factor of the rising clock of the programming voltage."]
 pub type DAC_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `DAC_CLK_DIV` writer - Controls the division factor of the rising clock of the programming voltage."]
-pub type DAC_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DAC_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DAC_CLK_PAD_SEL` reader - Don't care."]
 pub type DAC_CLK_PAD_SEL_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_PAD_SEL` writer - Don't care."]
-pub type DAC_CLK_PAD_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_CLK_PAD_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC_NUM` reader - Controls the rising period of the programming voltage."]
 pub type DAC_NUM_R = crate::FieldReader;
 #[doc = "Field `DAC_NUM` writer - Controls the rising period of the programming voltage."]
-pub type DAC_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DAC_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `OE_CLR` reader - Reduces the power supply of the programming voltage."]
 pub type OE_CLR_R = crate::BitReader;
 #[doc = "Field `OE_CLR` writer - Reduces the power supply of the programming voltage."]
-pub type OE_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Controls the division factor of the rising clock of the programming voltage."]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DAC_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Controls the division factor of the rising clock of the programming voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<DAC_CONF_SPEC, 0> {
-        DAC_CLK_DIV_W::new(self)
+    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<DAC_CONF_SPEC> {
+        DAC_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bit 8 - Don't care."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<DAC_CONF_SPEC, 8> {
-        DAC_CLK_PAD_SEL_W::new(self)
+    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<DAC_CONF_SPEC> {
+        DAC_CLK_PAD_SEL_W::new(self, 8)
     }
     #[doc = "Bits 9:16 - Controls the rising period of the programming voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_num(&mut self) -> DAC_NUM_W<DAC_CONF_SPEC, 9> {
-        DAC_NUM_W::new(self)
+    pub fn dac_num(&mut self) -> DAC_NUM_W<DAC_CONF_SPEC> {
+        DAC_NUM_W::new(self, 9)
     }
     #[doc = "Bit 17 - Reduces the power supply of the programming voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn oe_clr(&mut self) -> OE_CLR_W<DAC_CONF_SPEC, 17> {
-        OE_CLR_W::new(self)
+    pub fn oe_clr(&mut self) -> OE_CLR_W<DAC_CONF_SPEC> {
+        OE_CLR_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

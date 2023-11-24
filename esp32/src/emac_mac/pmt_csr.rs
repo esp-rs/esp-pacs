@@ -76,7 +76,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PMT_CSR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "PMT Control and Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pmt_csr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

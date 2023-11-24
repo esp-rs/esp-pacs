@@ -5,7 +5,7 @@ pub type W = crate::W<FLASH_ACE0_ATTR_SPEC>;
 #[doc = "Field `FLASH_ACE0_ATTR` reader - reg_flash_ace0_attr"]
 pub type FLASH_ACE0_ATTR_R = crate::FieldReader;
 #[doc = "Field `FLASH_ACE0_ATTR` writer - reg_flash_ace0_attr"]
-pub type FLASH_ACE0_ATTR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FLASH_ACE0_ATTR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - reg_flash_ace0_attr"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FLASH_ACE0_ATTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - reg_flash_ace0_attr"]
     #[inline(always)]
     #[must_use]
-    pub fn flash_ace0_attr(&mut self) -> FLASH_ACE0_ATTR_W<FLASH_ACE0_ATTR_SPEC, 0> {
-        FLASH_ACE0_ATTR_W::new(self)
+    pub fn flash_ace0_attr(&mut self) -> FLASH_ACE0_ATTR_W<FLASH_ACE0_ATTR_SPEC> {
+        FLASH_ACE0_ATTR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

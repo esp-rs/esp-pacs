@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_ICACHE_MEM_SYNC1_SPEC>;
 #[doc = "Field `PRO_ICACHE_MEMSYNC_SIZE` reader - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC0."]
 pub type PRO_ICACHE_MEMSYNC_SIZE_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_ICACHE_MEMSYNC_SIZE` writer - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC0."]
-pub type PRO_ICACHE_MEMSYNC_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 19, O, u32>;
+pub type PRO_ICACHE_MEMSYNC_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
 impl R {
     #[doc = "Bits 0:18 - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC0."]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_MEM_SYNC1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn pro_icache_memsync_size(
         &mut self,
-    ) -> PRO_ICACHE_MEMSYNC_SIZE_W<PRO_ICACHE_MEM_SYNC1_SPEC, 0> {
-        PRO_ICACHE_MEMSYNC_SIZE_W::new(self)
+    ) -> PRO_ICACHE_MEMSYNC_SIZE_W<PRO_ICACHE_MEM_SYNC1_SPEC> {
+        PRO_ICACHE_MEMSYNC_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

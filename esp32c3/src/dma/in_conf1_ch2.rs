@@ -5,7 +5,7 @@ pub type W = crate::W<IN_CONF1_CH2_SPEC>;
 #[doc = "Field `IN_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
 pub type IN_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `IN_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type IN_CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_CHECK_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IN_CONF1_CH2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<IN_CONF1_CH2_SPEC, 12> {
-        IN_CHECK_OWNER_W::new(self)
+    pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<IN_CONF1_CH2_SPEC> {
+        IN_CHECK_OWNER_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -1,7 +1,7 @@
 #[doc = "Register `LOAD` writer"]
 pub type W = crate::W<LOAD_SPEC>;
 #[doc = "Field `TIMER_LOAD` writer - Set this bit to 1, the value stored in SYSTIMER_TIMER_LOAD_HI and in SYSTIMER_TIMER_LOAD_LO will be loaded to system timer"]
-pub type TIMER_LOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER_LOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 31 - Set this bit to 1, the value stored in SYSTIMER_TIMER_LOAD_HI and in SYSTIMER_TIMER_LOAD_LO will be loaded to system timer"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_load(&mut self) -> TIMER_LOAD_W<LOAD_SPEC, 31> {
-        TIMER_LOAD_W::new(self)
+    pub fn timer_load(&mut self) -> TIMER_LOAD_W<LOAD_SPEC> {
+        TIMER_LOAD_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

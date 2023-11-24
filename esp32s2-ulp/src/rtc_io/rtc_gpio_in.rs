@@ -23,7 +23,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_IN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC GPIO input register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_in::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

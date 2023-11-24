@@ -5,7 +5,7 @@ pub type W = crate::W<L1_CACHE_VADDR_SPEC>;
 #[doc = "Field `L1_CACHE_VADDR` reader - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
 pub type L1_CACHE_VADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `L1_CACHE_VADDR` writer - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
-pub type L1_CACHE_VADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type L1_CACHE_VADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_VADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_vaddr(&mut self) -> L1_CACHE_VADDR_W<L1_CACHE_VADDR_SPEC, 0> {
-        L1_CACHE_VADDR_W::new(self)
+    pub fn l1_cache_vaddr(&mut self) -> L1_CACHE_VADDR_W<L1_CACHE_VADDR_SPEC> {
+        L1_CACHE_VADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

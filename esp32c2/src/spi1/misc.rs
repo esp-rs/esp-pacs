@@ -5,19 +5,19 @@ pub type W = crate::W<MISC_SPEC>;
 #[doc = "Field `CS0_DIS` reader - SPI_CS0 pin enable, 1: disable SPI_CS0, 0: SPI_CS0 pin is active to select SPI device, such as flash, external RAM and so on."]
 pub type CS0_DIS_R = crate::BitReader;
 #[doc = "Field `CS0_DIS` writer - SPI_CS0 pin enable, 1: disable SPI_CS0, 0: SPI_CS0 pin is active to select SPI device, such as flash, external RAM and so on."]
-pub type CS0_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS0_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS1_DIS` reader - SPI_CS1 pin enable, 1: disable SPI_CS1, 0: SPI_CS1 pin is active to select SPI device, such as flash, external RAM and so on."]
 pub type CS1_DIS_R = crate::BitReader;
 #[doc = "Field `CS1_DIS` writer - SPI_CS1 pin enable, 1: disable SPI_CS1, 0: SPI_CS1 pin is active to select SPI device, such as flash, external RAM and so on."]
-pub type CS1_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS1_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
 pub type CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub type CK_IDLE_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CK_IDLE_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set."]
 pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - spi cs line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS_KEEP_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SPI_CS0 pin enable, 1: disable SPI_CS0, 0: SPI_CS0 pin is active to select SPI device, such as flash, external RAM and so on."]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MISC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - SPI_CS0 pin enable, 1: disable SPI_CS0, 0: SPI_CS0 pin is active to select SPI device, such as flash, external RAM and so on."]
     #[inline(always)]
     #[must_use]
-    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC, 0> {
-        CS0_DIS_W::new(self)
+    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC> {
+        CS0_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - SPI_CS1 pin enable, 1: disable SPI_CS1, 0: SPI_CS1 pin is active to select SPI device, such as flash, external RAM and so on."]
     #[inline(always)]
     #[must_use]
-    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC, 1> {
-        CS1_DIS_W::new(self)
+    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC> {
+        CS1_DIS_W::new(self, 1)
     }
     #[doc = "Bit 9 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
     #[must_use]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC, 9> {
-        CK_IDLE_EDGE_W::new(self)
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
+        CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - spi cs line keep low when the bit is set."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC, 10> {
-        CS_KEEP_ACTIVE_W::new(self)
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
+        CS_KEEP_ACTIVE_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

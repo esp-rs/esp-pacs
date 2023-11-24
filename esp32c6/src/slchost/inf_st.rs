@@ -11,19 +11,19 @@ pub type SDIO_QUICK_IN_R = crate::FieldReader;
 #[doc = "Field `DLL_ON_SW` reader - dll is controlled by software"]
 pub type DLL_ON_SW_R = crate::BitReader;
 #[doc = "Field `DLL_ON_SW` writer - dll is controlled by software"]
-pub type DLL_ON_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DLL_ON_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DLL_ON` reader - Software dll on"]
 pub type DLL_ON_R = crate::BitReader;
 #[doc = "Field `DLL_ON` writer - Software dll on"]
-pub type DLL_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DLL_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_MODE_SW` reader - dll clock mode is controlled by software"]
 pub type CLK_MODE_SW_R = crate::BitReader;
 #[doc = "Field `CLK_MODE_SW` writer - dll clock mode is controlled by software"]
-pub type CLK_MODE_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_MODE_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_MODE` reader - Software set clock mode"]
 pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - Software set clock mode"]
-pub type CLK_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:4 - *******Description***********"]
     #[inline(always)]
@@ -87,33 +87,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INF_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 15 - dll is controlled by software"]
     #[inline(always)]
     #[must_use]
-    pub fn dll_on_sw(&mut self) -> DLL_ON_SW_W<INF_ST_SPEC, 15> {
-        DLL_ON_SW_W::new(self)
+    pub fn dll_on_sw(&mut self) -> DLL_ON_SW_W<INF_ST_SPEC> {
+        DLL_ON_SW_W::new(self, 15)
     }
     #[doc = "Bit 16 - Software dll on"]
     #[inline(always)]
     #[must_use]
-    pub fn dll_on(&mut self) -> DLL_ON_W<INF_ST_SPEC, 16> {
-        DLL_ON_W::new(self)
+    pub fn dll_on(&mut self) -> DLL_ON_W<INF_ST_SPEC> {
+        DLL_ON_W::new(self, 16)
     }
     #[doc = "Bit 17 - dll clock mode is controlled by software"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_mode_sw(&mut self) -> CLK_MODE_SW_W<INF_ST_SPEC, 17> {
-        CLK_MODE_SW_W::new(self)
+    pub fn clk_mode_sw(&mut self) -> CLK_MODE_SW_W<INF_ST_SPEC> {
+        CLK_MODE_SW_W::new(self, 17)
     }
     #[doc = "Bits 18:19 - Software set clock mode"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_mode(&mut self) -> CLK_MODE_W<INF_ST_SPEC, 18> {
-        CLK_MODE_W::new(self)
+    pub fn clk_mode(&mut self) -> CLK_MODE_W<INF_ST_SPEC> {
+        CLK_MODE_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

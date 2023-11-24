@@ -5,7 +5,7 @@ pub type W = crate::W<SDIO_SELECT_SPEC>;
 #[doc = "Field `SDIO_SEL` reader - SDIO PADS on/off control from outside"]
 pub type SDIO_SEL_R = crate::FieldReader;
 #[doc = "Field `SDIO_SEL` writer - SDIO PADS on/off control from outside"]
-pub type SDIO_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SDIO_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - SDIO PADS on/off control from outside"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_SELECT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - SDIO PADS on/off control from outside"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_sel(&mut self) -> SDIO_SEL_W<SDIO_SELECT_SPEC, 0> {
-        SDIO_SEL_W::new(self)
+    pub fn sdio_sel(&mut self) -> SDIO_SEL_W<SDIO_SELECT_SPEC> {
+        SDIO_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

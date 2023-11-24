@@ -5,7 +5,7 @@ pub type W = crate::W<CACHE_SYNC_ADDR_SPEC>;
 #[doc = "Field `CACHE_SYNC_ADDR` reader - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
 pub type CACHE_SYNC_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_SYNC_ADDR` writer - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
-pub type CACHE_SYNC_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CACHE_SYNC_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_SYNC_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_sync_addr(&mut self) -> CACHE_SYNC_ADDR_W<CACHE_SYNC_ADDR_SPEC, 0> {
-        CACHE_SYNC_ADDR_W::new(self)
+    pub fn cache_sync_addr(&mut self) -> CACHE_SYNC_ADDR_W<CACHE_SYNC_ADDR_SPEC> {
+        CACHE_SYNC_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

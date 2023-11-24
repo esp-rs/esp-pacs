@@ -5,19 +5,19 @@ pub type W = crate::W<SLP_REJECT_CONF_SPEC>;
 #[doc = "Field `GPIO_REJECT_EN` reader - enable GPIO reject"]
 pub type GPIO_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `GPIO_REJECT_EN` writer - enable GPIO reject"]
-pub type GPIO_REJECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_REJECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_REJECT_EN` reader - enable SDIO reject"]
 pub type SDIO_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_REJECT_EN` writer - enable SDIO reject"]
-pub type SDIO_REJECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_REJECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - enable reject for light sleep"]
 pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` writer - enable reject for light sleep"]
-pub type LIGHT_SLP_REJECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LIGHT_SLP_REJECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEEP_SLP_REJECT_EN` reader - enable reject for deep sleep"]
 pub type DEEP_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `DEEP_SLP_REJECT_EN` writer - enable reject for deep sleep"]
-pub type DEEP_SLP_REJECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEEP_SLP_REJECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REJECT_CAUSE` reader - sleep reject cause"]
 pub type REJECT_CAUSE_R = crate::FieldReader;
 impl R {
@@ -77,33 +77,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_REJECT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 24 - enable GPIO reject"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_reject_en(&mut self) -> GPIO_REJECT_EN_W<SLP_REJECT_CONF_SPEC, 24> {
-        GPIO_REJECT_EN_W::new(self)
+    pub fn gpio_reject_en(&mut self) -> GPIO_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+        GPIO_REJECT_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - enable SDIO reject"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_reject_en(&mut self) -> SDIO_REJECT_EN_W<SLP_REJECT_CONF_SPEC, 25> {
-        SDIO_REJECT_EN_W::new(self)
+    pub fn sdio_reject_en(&mut self) -> SDIO_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+        SDIO_REJECT_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - enable reject for light sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC, 26> {
-        LIGHT_SLP_REJECT_EN_W::new(self)
+    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+        LIGHT_SLP_REJECT_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - enable reject for deep sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC, 27> {
-        DEEP_SLP_REJECT_EN_W::new(self)
+    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+        DEEP_SLP_REJECT_EN_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

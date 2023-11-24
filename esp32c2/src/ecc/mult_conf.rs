@@ -5,25 +5,25 @@ pub type W = crate::W<MULT_CONF_SPEC>;
 #[doc = "Field `START` reader - Set this bit to reset receiver"]
 pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - Set this bit to reset receiver"]
-pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESET` writer - Set this bit to reset Rx AFIFO"]
-pub type RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KEY_LENGTH` reader - Set this bit to start receiving data"]
 pub type KEY_LENGTH_R = crate::BitReader;
 #[doc = "Field `KEY_LENGTH` writer - Set this bit to start receiving data"]
-pub type KEY_LENGTH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type KEY_LENGTH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SECURITY_MODE` reader - Set this bit to enable slave receiver mode"]
 pub type SECURITY_MODE_R = crate::BitReader;
 #[doc = "Field `SECURITY_MODE` writer - Set this bit to enable slave receiver mode"]
-pub type SECURITY_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SECURITY_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - clk gate"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - clk gate"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WORK_MODE` reader - Reserved"]
 pub type WORK_MODE_R = crate::FieldReader;
 #[doc = "Field `WORK_MODE` writer - Reserved"]
-pub type WORK_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WORK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `VERIFICATION_RESULT` reader - Reserve"]
 pub type VERIFICATION_RESULT_R = crate::BitReader;
 impl R {
@@ -80,45 +80,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MULT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to reset receiver"]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<MULT_CONF_SPEC, 0> {
-        START_W::new(self)
+    pub fn start(&mut self) -> START_W<MULT_CONF_SPEC> {
+        START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset Rx AFIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn reset(&mut self) -> RESET_W<MULT_CONF_SPEC, 1> {
-        RESET_W::new(self)
+    pub fn reset(&mut self) -> RESET_W<MULT_CONF_SPEC> {
+        RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to start receiving data"]
     #[inline(always)]
     #[must_use]
-    pub fn key_length(&mut self) -> KEY_LENGTH_W<MULT_CONF_SPEC, 2> {
-        KEY_LENGTH_W::new(self)
+    pub fn key_length(&mut self) -> KEY_LENGTH_W<MULT_CONF_SPEC> {
+        KEY_LENGTH_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable slave receiver mode"]
     #[inline(always)]
     #[must_use]
-    pub fn security_mode(&mut self) -> SECURITY_MODE_W<MULT_CONF_SPEC, 3> {
-        SECURITY_MODE_W::new(self)
+    pub fn security_mode(&mut self) -> SECURITY_MODE_W<MULT_CONF_SPEC> {
+        SECURITY_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - clk gate"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<MULT_CONF_SPEC, 4> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<MULT_CONF_SPEC> {
+        CLK_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn work_mode(&mut self) -> WORK_MODE_W<MULT_CONF_SPEC, 5> {
-        WORK_MODE_W::new(self)
+    pub fn work_mode(&mut self) -> WORK_MODE_W<MULT_CONF_SPEC> {
+        WORK_MODE_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

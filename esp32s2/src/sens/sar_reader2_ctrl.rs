@@ -5,27 +5,27 @@ pub type W = crate::W<SAR_READER2_CTRL_SPEC>;
 #[doc = "Field `SAR2_CLK_DIV` reader - clock divider"]
 pub type SAR2_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SAR2_CLK_DIV` writer - clock divider"]
-pub type SAR2_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR2_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR2_WAIT_ARB_CYCLE` reader - wait arbit stable after sar_done"]
 pub type SAR2_WAIT_ARB_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SAR2_WAIT_ARB_CYCLE` writer - wait arbit stable after sar_done"]
-pub type SAR2_WAIT_ARB_CYCLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SAR2_WAIT_ARB_CYCLE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SAR2_CLK_GATED` reader - "]
 pub type SAR2_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SAR2_CLK_GATED` writer - "]
-pub type SAR2_CLK_GATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_CLK_GATED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_SAMPLE_NUM` reader - "]
 pub type SAR2_SAMPLE_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR2_SAMPLE_NUM` writer - "]
-pub type SAR2_SAMPLE_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR2_SAMPLE_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR2_DATA_INV` reader - Invert SAR ADC2 data"]
 pub type SAR2_DATA_INV_R = crate::BitReader;
 #[doc = "Field `SAR2_DATA_INV` writer - Invert SAR ADC2 data"]
-pub type SAR2_DATA_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_DATA_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_INT_EN` reader - enable saradc2 to send out interrupt"]
 pub type SAR2_INT_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_INT_EN` writer - enable saradc2 to send out interrupt"]
-pub type SAR2_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_READER2_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_clk_div(&mut self) -> SAR2_CLK_DIV_W<SAR_READER2_CTRL_SPEC, 0> {
-        SAR2_CLK_DIV_W::new(self)
+    pub fn sar2_clk_div(&mut self) -> SAR2_CLK_DIV_W<SAR_READER2_CTRL_SPEC> {
+        SAR2_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - wait arbit stable after sar_done"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_wait_arb_cycle(&mut self) -> SAR2_WAIT_ARB_CYCLE_W<SAR_READER2_CTRL_SPEC, 16> {
-        SAR2_WAIT_ARB_CYCLE_W::new(self)
+    pub fn sar2_wait_arb_cycle(&mut self) -> SAR2_WAIT_ARB_CYCLE_W<SAR_READER2_CTRL_SPEC> {
+        SAR2_WAIT_ARB_CYCLE_W::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_clk_gated(&mut self) -> SAR2_CLK_GATED_W<SAR_READER2_CTRL_SPEC, 18> {
-        SAR2_CLK_GATED_W::new(self)
+    pub fn sar2_clk_gated(&mut self) -> SAR2_CLK_GATED_W<SAR_READER2_CTRL_SPEC> {
+        SAR2_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_sample_num(&mut self) -> SAR2_SAMPLE_NUM_W<SAR_READER2_CTRL_SPEC, 19> {
-        SAR2_SAMPLE_NUM_W::new(self)
+    pub fn sar2_sample_num(&mut self) -> SAR2_SAMPLE_NUM_W<SAR_READER2_CTRL_SPEC> {
+        SAR2_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bit 29 - Invert SAR ADC2 data"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_data_inv(&mut self) -> SAR2_DATA_INV_W<SAR_READER2_CTRL_SPEC, 29> {
-        SAR2_DATA_INV_W::new(self)
+    pub fn sar2_data_inv(&mut self) -> SAR2_DATA_INV_W<SAR_READER2_CTRL_SPEC> {
+        SAR2_DATA_INV_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable saradc2 to send out interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_int_en(&mut self) -> SAR2_INT_EN_W<SAR_READER2_CTRL_SPEC, 30> {
-        SAR2_INT_EN_W::new(self)
+    pub fn sar2_int_en(&mut self) -> SAR2_INT_EN_W<SAR_READER2_CTRL_SPEC> {
+        SAR2_INT_EN_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<DMA_BLOCK_NUM_SPEC>;
 #[doc = "Field `DMA_BLOCK_NUM` reader - Defines the DMA-SHA block number."]
 pub type DMA_BLOCK_NUM_R = crate::FieldReader;
 #[doc = "Field `DMA_BLOCK_NUM` writer - Defines the DMA-SHA block number."]
-pub type DMA_BLOCK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type DMA_BLOCK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - Defines the DMA-SHA block number."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_BLOCK_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - Defines the DMA-SHA block number."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_block_num(&mut self) -> DMA_BLOCK_NUM_W<DMA_BLOCK_NUM_SPEC, 0> {
-        DMA_BLOCK_NUM_W::new(self)
+    pub fn dma_block_num(&mut self) -> DMA_BLOCK_NUM_W<DMA_BLOCK_NUM_SPEC> {
+        DMA_BLOCK_NUM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

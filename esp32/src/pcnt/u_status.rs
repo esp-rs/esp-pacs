@@ -7,27 +7,27 @@ pub type CORE_STATUS_U0_R = crate::FieldReader<u32>;
 #[doc = "Field `ZERO_MODE` reader - "]
 pub type ZERO_MODE_R = crate::FieldReader;
 #[doc = "Field `ZERO_MODE` writer - "]
-pub type ZERO_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ZERO_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `THRES1` reader - "]
 pub type THRES1_R = crate::BitReader;
 #[doc = "Field `THRES1` writer - "]
-pub type THRES1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES0` reader - "]
 pub type THRES0_R = crate::BitReader;
 #[doc = "Field `THRES0` writer - "]
-pub type THRES0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L_LIM` reader - "]
 pub type L_LIM_R = crate::BitReader;
 #[doc = "Field `L_LIM` writer - "]
-pub type L_LIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L_LIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_LIM` reader - "]
 pub type H_LIM_R = crate::BitReader;
 #[doc = "Field `H_LIM` writer - "]
-pub type H_LIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_LIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ZERO` reader - "]
 pub type ZERO_R = crate::BitReader;
 #[doc = "Field `ZERO` writer - "]
-pub type ZERO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ZERO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -85,45 +85,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<U_STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn zero_mode(&mut self) -> ZERO_MODE_W<U_STATUS_SPEC, 0> {
-        ZERO_MODE_W::new(self)
+    pub fn zero_mode(&mut self) -> ZERO_MODE_W<U_STATUS_SPEC> {
+        ZERO_MODE_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1(&mut self) -> THRES1_W<U_STATUS_SPEC, 2> {
-        THRES1_W::new(self)
+    pub fn thres1(&mut self) -> THRES1_W<U_STATUS_SPEC> {
+        THRES1_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0(&mut self) -> THRES0_W<U_STATUS_SPEC, 3> {
-        THRES0_W::new(self)
+    pub fn thres0(&mut self) -> THRES0_W<U_STATUS_SPEC> {
+        THRES0_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn l_lim(&mut self) -> L_LIM_W<U_STATUS_SPEC, 4> {
-        L_LIM_W::new(self)
+    pub fn l_lim(&mut self) -> L_LIM_W<U_STATUS_SPEC> {
+        L_LIM_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn h_lim(&mut self) -> H_LIM_W<U_STATUS_SPEC, 5> {
-        H_LIM_W::new(self)
+    pub fn h_lim(&mut self) -> H_LIM_W<U_STATUS_SPEC> {
+        H_LIM_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn zero(&mut self) -> ZERO_W<U_STATUS_SPEC, 6> {
-        ZERO_W::new(self)
+    pub fn zero(&mut self) -> ZERO_W<U_STATUS_SPEC> {
+        ZERO_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

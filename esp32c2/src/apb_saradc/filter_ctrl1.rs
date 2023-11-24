@@ -5,11 +5,11 @@ pub type W = crate::W<FILTER_CTRL1_SPEC>;
 #[doc = "Field `FILTER_FACTOR1` reader - Need add description"]
 pub type FILTER_FACTOR1_R = crate::FieldReader;
 #[doc = "Field `FILTER_FACTOR1` writer - Need add description"]
-pub type FILTER_FACTOR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type FILTER_FACTOR1_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FILTER_FACTOR0` reader - Need add description"]
 pub type FILTER_FACTOR0_R = crate::FieldReader;
 #[doc = "Field `FILTER_FACTOR0` writer - Need add description"]
-pub type FILTER_FACTOR0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type FILTER_FACTOR0_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 26:28 - Need add description"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 26:28 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn filter_factor1(&mut self) -> FILTER_FACTOR1_W<FILTER_CTRL1_SPEC, 26> {
-        FILTER_FACTOR1_W::new(self)
+    pub fn filter_factor1(&mut self) -> FILTER_FACTOR1_W<FILTER_CTRL1_SPEC> {
+        FILTER_FACTOR1_W::new(self, 26)
     }
     #[doc = "Bits 29:31 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn filter_factor0(&mut self) -> FILTER_FACTOR0_W<FILTER_CTRL1_SPEC, 29> {
-        FILTER_FACTOR0_W::new(self)
+    pub fn filter_factor0(&mut self) -> FILTER_FACTOR0_W<FILTER_CTRL1_SPEC> {
+        FILTER_FACTOR0_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

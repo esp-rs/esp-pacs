@@ -5,31 +5,31 @@ pub type W = crate::W<IOSWAP_SPEC>;
 #[doc = "Field `uart` reader - Swap UART"]
 pub type UART_R = crate::BitReader;
 #[doc = "Field `uart` writer - Swap UART"]
-pub type UART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi` reader - Swap SPI"]
 pub type SPI_R = crate::BitReader;
 #[doc = "Field `spi` writer - Swap SPI"]
-pub type SPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart0` reader - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
 pub type UART0_R = crate::BitReader;
 #[doc = "Field `uart0` writer - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
-pub type UART0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart1` reader - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
 pub type UART1_R = crate::BitReader;
 #[doc = "Field `uart1` writer - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
-pub type UART1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `hspi` reader - Set HSPI with higher priority"]
 pub type HSPI_R = crate::BitReader;
 #[doc = "Field `hspi` writer - Set HSPI with higher priority"]
-pub type HSPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSPI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `double_hspi` reader - Set two SPI masters on HSPI"]
 pub type DOUBLE_HSPI_R = crate::BitReader;
 #[doc = "Field `double_hspi` writer - Set two SPI masters on HSPI"]
-pub type DOUBLE_HSPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUBLE_HSPI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `double_cspi` reader - Set two SPI masters on CSPI"]
 pub type DOUBLE_CSPI_R = crate::BitReader;
 #[doc = "Field `double_cspi` writer - Set two SPI masters on CSPI"]
-pub type DOUBLE_CSPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUBLE_CSPI_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Swap UART"]
     #[inline(always)]
@@ -84,53 +84,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IOSWAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Swap UART"]
     #[inline(always)]
     #[must_use]
-    pub fn uart(&mut self) -> UART_W<IOSWAP_SPEC, 0> {
-        UART_W::new(self)
+    pub fn uart(&mut self) -> UART_W<IOSWAP_SPEC> {
+        UART_W::new(self, 0)
     }
     #[doc = "Bit 1 - Swap SPI"]
     #[inline(always)]
     #[must_use]
-    pub fn spi(&mut self) -> SPI_W<IOSWAP_SPEC, 1> {
-        SPI_W::new(self)
+    pub fn spi(&mut self) -> SPI_W<IOSWAP_SPEC> {
+        SPI_W::new(self, 1)
     }
     #[doc = "Bit 2 - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
     #[inline(always)]
     #[must_use]
-    pub fn uart0(&mut self) -> UART0_W<IOSWAP_SPEC, 2> {
-        UART0_W::new(self)
+    pub fn uart0(&mut self) -> UART0_W<IOSWAP_SPEC> {
+        UART0_W::new(self, 2)
     }
     #[doc = "Bit 3 - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1(&mut self) -> UART1_W<IOSWAP_SPEC, 3> {
-        UART1_W::new(self)
+    pub fn uart1(&mut self) -> UART1_W<IOSWAP_SPEC> {
+        UART1_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set HSPI with higher priority"]
     #[inline(always)]
     #[must_use]
-    pub fn hspi(&mut self) -> HSPI_W<IOSWAP_SPEC, 5> {
-        HSPI_W::new(self)
+    pub fn hspi(&mut self) -> HSPI_W<IOSWAP_SPEC> {
+        HSPI_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set two SPI masters on HSPI"]
     #[inline(always)]
     #[must_use]
-    pub fn double_hspi(&mut self) -> DOUBLE_HSPI_W<IOSWAP_SPEC, 6> {
-        DOUBLE_HSPI_W::new(self)
+    pub fn double_hspi(&mut self) -> DOUBLE_HSPI_W<IOSWAP_SPEC> {
+        DOUBLE_HSPI_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set two SPI masters on CSPI"]
     #[inline(always)]
     #[must_use]
-    pub fn double_cspi(&mut self) -> DOUBLE_CSPI_W<IOSWAP_SPEC, 7> {
-        DOUBLE_CSPI_W::new(self)
+    pub fn double_cspi(&mut self) -> DOUBLE_CSPI_W<IOSWAP_SPEC> {
+        DOUBLE_CSPI_W::new(self, 7)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

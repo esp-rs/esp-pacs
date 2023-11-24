@@ -5,11 +5,11 @@ pub type W = crate::W<SLC1HOST_TOKEN_WDATA_SPEC>;
 #[doc = "Field `SLC1HOST_TOKEN0_WD` reader - *******Description***********"]
 pub type SLC1HOST_TOKEN0_WD_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC1HOST_TOKEN0_WD` writer - *******Description***********"]
-pub type SLC1HOST_TOKEN0_WD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SLC1HOST_TOKEN0_WD_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `SLC1HOST_TOKEN1_WD` reader - *******Description***********"]
 pub type SLC1HOST_TOKEN1_WD_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC1HOST_TOKEN1_WD` writer - *******Description***********"]
-pub type SLC1HOST_TOKEN1_WD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SLC1HOST_TOKEN1_WD_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - *******Description***********"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC1HOST_TOKEN_WDATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1host_token0_wd(&mut self) -> SLC1HOST_TOKEN0_WD_W<SLC1HOST_TOKEN_WDATA_SPEC, 0> {
-        SLC1HOST_TOKEN0_WD_W::new(self)
+    pub fn slc1host_token0_wd(&mut self) -> SLC1HOST_TOKEN0_WD_W<SLC1HOST_TOKEN_WDATA_SPEC> {
+        SLC1HOST_TOKEN0_WD_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1host_token1_wd(&mut self) -> SLC1HOST_TOKEN1_WD_W<SLC1HOST_TOKEN_WDATA_SPEC, 16> {
-        SLC1HOST_TOKEN1_WD_W::new(self)
+    pub fn slc1host_token1_wd(&mut self) -> SLC1HOST_TOKEN1_WD_W<SLC1HOST_TOKEN_WDATA_SPEC> {
+        SLC1HOST_TOKEN1_WD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

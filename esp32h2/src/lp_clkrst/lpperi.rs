@@ -5,35 +5,35 @@ pub type W = crate::W<LPPERI_SPEC>;
 #[doc = "Field `LP_BLETIMER_DIV_NUM` reader - need_des"]
 pub type LP_BLETIMER_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_BLETIMER_DIV_NUM` writer - need_des"]
-pub type LP_BLETIMER_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type LP_BLETIMER_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `LP_BLETIMER_32K_SEL` reader - need_des"]
 pub type LP_BLETIMER_32K_SEL_R = crate::FieldReader;
 #[doc = "Field `LP_BLETIMER_32K_SEL` writer - need_des"]
-pub type LP_BLETIMER_32K_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LP_BLETIMER_32K_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LP_SEL_OSC_SLOW` reader - need_des"]
 pub type LP_SEL_OSC_SLOW_R = crate::BitReader;
 #[doc = "Field `LP_SEL_OSC_SLOW` writer - need_des"]
-pub type LP_SEL_OSC_SLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_SEL_OSC_SLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_SEL_OSC_FAST` reader - need_des"]
 pub type LP_SEL_OSC_FAST_R = crate::BitReader;
 #[doc = "Field `LP_SEL_OSC_FAST` writer - need_des"]
-pub type LP_SEL_OSC_FAST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_SEL_OSC_FAST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_SEL_XTAL` reader - need_des"]
 pub type LP_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LP_SEL_XTAL` writer - need_des"]
-pub type LP_SEL_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_SEL_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_SEL_XTAL32K` reader - need_des"]
 pub type LP_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LP_SEL_XTAL32K` writer - need_des"]
-pub type LP_SEL_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_SEL_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_I2C_CLK_SEL` reader - need_des"]
 pub type LP_I2C_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LP_I2C_CLK_SEL` writer - need_des"]
-pub type LP_I2C_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_I2C_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_UART_CLK_SEL` reader - need_des"]
 pub type LP_UART_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LP_UART_CLK_SEL` writer - need_des"]
-pub type LP_UART_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_UART_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 12:23 - need_des"]
     #[inline(always)]
@@ -115,57 +115,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LPPERI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 12:23 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_bletimer_div_num(&mut self) -> LP_BLETIMER_DIV_NUM_W<LPPERI_SPEC, 12> {
-        LP_BLETIMER_DIV_NUM_W::new(self)
+    pub fn lp_bletimer_div_num(&mut self) -> LP_BLETIMER_DIV_NUM_W<LPPERI_SPEC> {
+        LP_BLETIMER_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 24:25 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_bletimer_32k_sel(&mut self) -> LP_BLETIMER_32K_SEL_W<LPPERI_SPEC, 24> {
-        LP_BLETIMER_32K_SEL_W::new(self)
+    pub fn lp_bletimer_32k_sel(&mut self) -> LP_BLETIMER_32K_SEL_W<LPPERI_SPEC> {
+        LP_BLETIMER_32K_SEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_sel_osc_slow(&mut self) -> LP_SEL_OSC_SLOW_W<LPPERI_SPEC, 26> {
-        LP_SEL_OSC_SLOW_W::new(self)
+    pub fn lp_sel_osc_slow(&mut self) -> LP_SEL_OSC_SLOW_W<LPPERI_SPEC> {
+        LP_SEL_OSC_SLOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_sel_osc_fast(&mut self) -> LP_SEL_OSC_FAST_W<LPPERI_SPEC, 27> {
-        LP_SEL_OSC_FAST_W::new(self)
+    pub fn lp_sel_osc_fast(&mut self) -> LP_SEL_OSC_FAST_W<LPPERI_SPEC> {
+        LP_SEL_OSC_FAST_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_sel_xtal(&mut self) -> LP_SEL_XTAL_W<LPPERI_SPEC, 28> {
-        LP_SEL_XTAL_W::new(self)
+    pub fn lp_sel_xtal(&mut self) -> LP_SEL_XTAL_W<LPPERI_SPEC> {
+        LP_SEL_XTAL_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_sel_xtal32k(&mut self) -> LP_SEL_XTAL32K_W<LPPERI_SPEC, 29> {
-        LP_SEL_XTAL32K_W::new(self)
+    pub fn lp_sel_xtal32k(&mut self) -> LP_SEL_XTAL32K_W<LPPERI_SPEC> {
+        LP_SEL_XTAL32K_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<LPPERI_SPEC, 30> {
-        LP_I2C_CLK_SEL_W::new(self)
+    pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<LPPERI_SPEC> {
+        LP_I2C_CLK_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<LPPERI_SPEC, 31> {
-        LP_UART_CLK_SEL_W::new(self)
+    pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<LPPERI_SPEC> {
+        LP_UART_CLK_SEL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

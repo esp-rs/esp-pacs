@@ -5,7 +5,7 @@ pub type W = crate::W<HOST_INF_SEL_SPEC>;
 #[doc = "Field `PERI_IO_SWAP` reader - ******* Description ***********"]
 pub type PERI_IO_SWAP_R = crate::FieldReader;
 #[doc = "Field `PERI_IO_SWAP` writer - ******* Description ***********"]
-pub type PERI_IO_SWAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PERI_IO_SWAP_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HOST_INF_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_io_swap(&mut self) -> PERI_IO_SWAP_W<HOST_INF_SEL_SPEC, 0> {
-        PERI_IO_SWAP_W::new(self)
+    pub fn peri_io_swap(&mut self) -> PERI_IO_SWAP_W<HOST_INF_SEL_SPEC> {
+        PERI_IO_SWAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,51 +5,51 @@ pub type W = crate::W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>;
 #[doc = "Field `L1_ICACHE0_PLD_DONE_INT_RAW` reader - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation is done."]
 pub type L1_ICACHE0_PLD_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE0_PLD_DONE_INT_RAW` writer - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation is done."]
-pub type L1_ICACHE0_PLD_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE0_PLD_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE1_PLD_DONE_INT_RAW` reader - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation is done."]
 pub type L1_ICACHE1_PLD_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_DONE_INT_RAW` writer - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation is done."]
-pub type L1_ICACHE1_PLD_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE1_PLD_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE2_PLD_DONE_INT_RAW` reader - Reserved"]
 pub type L1_ICACHE2_PLD_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_PLD_DONE_INT_RAW` writer - Reserved"]
-pub type L1_ICACHE2_PLD_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE2_PLD_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE3_PLD_DONE_INT_RAW` reader - Reserved"]
 pub type L1_ICACHE3_PLD_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PLD_DONE_INT_RAW` writer - Reserved"]
-pub type L1_ICACHE3_PLD_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE3_PLD_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_PLD_DONE_INT_RAW` reader - The raw bit of the interrupt that occurs only when L1-Cache preload-operation is done."]
 pub type L1_CACHE_PLD_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_DONE_INT_RAW` writer - The raw bit of the interrupt that occurs only when L1-Cache preload-operation is done."]
-pub type L1_CACHE_PLD_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_PLD_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_SYNC_DONE_INT_RAW` reader - The raw bit of the interrupt that occurs only when Cache sync-operation is done."]
 pub type CACHE_SYNC_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CACHE_SYNC_DONE_INT_RAW` writer - The raw bit of the interrupt that occurs only when Cache sync-operation is done."]
-pub type CACHE_SYNC_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_SYNC_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE0_PLD_ERR_INT_RAW` reader - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation error occurs."]
 pub type L1_ICACHE0_PLD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE0_PLD_ERR_INT_RAW` writer - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation error occurs."]
-pub type L1_ICACHE0_PLD_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE0_PLD_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE1_PLD_ERR_INT_RAW` reader - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation error occurs."]
 pub type L1_ICACHE1_PLD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_ERR_INT_RAW` writer - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation error occurs."]
-pub type L1_ICACHE1_PLD_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE1_PLD_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE2_PLD_ERR_INT_RAW` reader - Reserved"]
 pub type L1_ICACHE2_PLD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_PLD_ERR_INT_RAW` writer - Reserved"]
-pub type L1_ICACHE2_PLD_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE2_PLD_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE3_PLD_ERR_INT_RAW` reader - Reserved"]
 pub type L1_ICACHE3_PLD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PLD_ERR_INT_RAW` writer - Reserved"]
-pub type L1_ICACHE3_PLD_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_ICACHE3_PLD_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_PLD_ERR_INT_RAW` reader - The raw bit of the interrupt that occurs only when L1-Cache preload-operation error occurs."]
 pub type L1_CACHE_PLD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_ERR_INT_RAW` writer - The raw bit of the interrupt that occurs only when L1-Cache preload-operation error occurs."]
-pub type L1_CACHE_PLD_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_PLD_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_SYNC_ERR_INT_RAW` reader - The raw bit of the interrupt that occurs only when Cache sync-operation error occurs."]
 pub type CACHE_SYNC_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CACHE_SYNC_ERR_INT_RAW` writer - The raw bit of the interrupt that occurs only when Cache sync-operation error occurs."]
-pub type CACHE_SYNC_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_SYNC_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation is done."]
     #[inline(always)]
@@ -170,7 +170,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -179,96 +179,96 @@ impl W {
     #[must_use]
     pub fn l1_icache0_pld_done_int_raw(
         &mut self,
-    ) -> L1_ICACHE0_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 0> {
-        L1_ICACHE0_PLD_DONE_INT_RAW_W::new(self)
+    ) -> L1_ICACHE0_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE0_PLD_DONE_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation is done."]
     #[inline(always)]
     #[must_use]
     pub fn l1_icache1_pld_done_int_raw(
         &mut self,
-    ) -> L1_ICACHE1_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 1> {
-        L1_ICACHE1_PLD_DONE_INT_RAW_W::new(self)
+    ) -> L1_ICACHE1_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE1_PLD_DONE_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     #[must_use]
     pub fn l1_icache2_pld_done_int_raw(
         &mut self,
-    ) -> L1_ICACHE2_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 2> {
-        L1_ICACHE2_PLD_DONE_INT_RAW_W::new(self)
+    ) -> L1_ICACHE2_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE2_PLD_DONE_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     #[must_use]
     pub fn l1_icache3_pld_done_int_raw(
         &mut self,
-    ) -> L1_ICACHE3_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 3> {
-        L1_ICACHE3_PLD_DONE_INT_RAW_W::new(self)
+    ) -> L1_ICACHE3_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE3_PLD_DONE_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw bit of the interrupt that occurs only when L1-Cache preload-operation is done."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_pld_done_int_raw(
         &mut self,
-    ) -> L1_CACHE_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 4> {
-        L1_CACHE_PLD_DONE_INT_RAW_W::new(self)
+    ) -> L1_CACHE_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_CACHE_PLD_DONE_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 6 - The raw bit of the interrupt that occurs only when Cache sync-operation is done."]
     #[inline(always)]
     #[must_use]
     pub fn cache_sync_done_int_raw(
         &mut self,
-    ) -> CACHE_SYNC_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 6> {
-        CACHE_SYNC_DONE_INT_RAW_W::new(self)
+    ) -> CACHE_SYNC_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        CACHE_SYNC_DONE_INT_RAW_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation error occurs."]
     #[inline(always)]
     #[must_use]
     pub fn l1_icache0_pld_err_int_raw(
         &mut self,
-    ) -> L1_ICACHE0_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 7> {
-        L1_ICACHE0_PLD_ERR_INT_RAW_W::new(self)
+    ) -> L1_ICACHE0_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE0_PLD_ERR_INT_RAW_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation error occurs."]
     #[inline(always)]
     #[must_use]
     pub fn l1_icache1_pld_err_int_raw(
         &mut self,
-    ) -> L1_ICACHE1_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 8> {
-        L1_ICACHE1_PLD_ERR_INT_RAW_W::new(self)
+    ) -> L1_ICACHE1_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE1_PLD_ERR_INT_RAW_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
     #[must_use]
     pub fn l1_icache2_pld_err_int_raw(
         &mut self,
-    ) -> L1_ICACHE2_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 9> {
-        L1_ICACHE2_PLD_ERR_INT_RAW_W::new(self)
+    ) -> L1_ICACHE2_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE2_PLD_ERR_INT_RAW_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
     #[must_use]
     pub fn l1_icache3_pld_err_int_raw(
         &mut self,
-    ) -> L1_ICACHE3_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 10> {
-        L1_ICACHE3_PLD_ERR_INT_RAW_W::new(self)
+    ) -> L1_ICACHE3_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_ICACHE3_PLD_ERR_INT_RAW_W::new(self, 10)
     }
     #[doc = "Bit 11 - The raw bit of the interrupt that occurs only when L1-Cache preload-operation error occurs."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_pld_err_int_raw(
         &mut self,
-    ) -> L1_CACHE_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 11> {
-        L1_CACHE_PLD_ERR_INT_RAW_W::new(self)
+    ) -> L1_CACHE_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L1_CACHE_PLD_ERR_INT_RAW_W::new(self, 11)
     }
     #[doc = "Bit 13 - The raw bit of the interrupt that occurs only when Cache sync-operation error occurs."]
     #[inline(always)]
     #[must_use]
     pub fn cache_sync_err_int_raw(
         &mut self,
-    ) -> CACHE_SYNC_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 13> {
-        CACHE_SYNC_ERR_INT_RAW_W::new(self)
+    ) -> CACHE_SYNC_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        CACHE_SYNC_ERR_INT_RAW_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

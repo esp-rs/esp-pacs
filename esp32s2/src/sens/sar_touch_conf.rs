@@ -5,13 +5,13 @@ pub type W = crate::W<SAR_TOUCH_CONF_SPEC>;
 #[doc = "Field `TOUCH_OUTEN` reader - Enable touch controller output."]
 pub type TOUCH_OUTEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_OUTEN` writer - Enable touch controller output."]
-pub type TOUCH_OUTEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type TOUCH_OUTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `TOUCH_STATUS_CLR` writer - Clear all touch active status."]
-pub type TOUCH_STATUS_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_STATUS_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_DATA_SEL` reader - 0 and 1: touch_raw_data; 2: base_line; 3: touch_smooth_data."]
 pub type TOUCH_DATA_SEL_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DATA_SEL` writer - 0 and 1: touch_raw_data; 2: base_line; 3: touch_smooth_data."]
-pub type TOUCH_DATA_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DATA_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_DENOISE_END` reader - Touch denoise done."]
 pub type TOUCH_DENOISE_END_R = crate::BitReader;
 #[doc = "Field `TOUCH_UNIT_END` reader - Indicate the completion of sampling."]
@@ -19,15 +19,15 @@ pub type TOUCH_UNIT_END_R = crate::BitReader;
 #[doc = "Field `TOUCH_APPROACH_PAD2` reader - Indicate which pad is selected as proximity pad2"]
 pub type TOUCH_APPROACH_PAD2_R = crate::FieldReader;
 #[doc = "Field `TOUCH_APPROACH_PAD2` writer - Indicate which pad is selected as proximity pad2"]
-pub type TOUCH_APPROACH_PAD2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TOUCH_APPROACH_PAD2_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TOUCH_APPROACH_PAD1` reader - Indicate which pad is selected as proximity pad1"]
 pub type TOUCH_APPROACH_PAD1_R = crate::FieldReader;
 #[doc = "Field `TOUCH_APPROACH_PAD1` writer - Indicate which pad is selected as proximity pad1"]
-pub type TOUCH_APPROACH_PAD1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TOUCH_APPROACH_PAD1_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TOUCH_APPROACH_PAD0` reader - Indicate which pad is selected as proximity pad0"]
 pub type TOUCH_APPROACH_PAD0_R = crate::FieldReader;
 #[doc = "Field `TOUCH_APPROACH_PAD0` writer - Indicate which pad is selected as proximity pad0"]
-pub type TOUCH_APPROACH_PAD0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TOUCH_APPROACH_PAD0_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:14 - Enable touch controller output."]
     #[inline(always)]
@@ -103,45 +103,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:14 - Enable touch controller output."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_outen(&mut self) -> TOUCH_OUTEN_W<SAR_TOUCH_CONF_SPEC, 0> {
-        TOUCH_OUTEN_W::new(self)
+    pub fn touch_outen(&mut self) -> TOUCH_OUTEN_W<SAR_TOUCH_CONF_SPEC> {
+        TOUCH_OUTEN_W::new(self, 0)
     }
     #[doc = "Bit 15 - Clear all touch active status."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_status_clr(&mut self) -> TOUCH_STATUS_CLR_W<SAR_TOUCH_CONF_SPEC, 15> {
-        TOUCH_STATUS_CLR_W::new(self)
+    pub fn touch_status_clr(&mut self) -> TOUCH_STATUS_CLR_W<SAR_TOUCH_CONF_SPEC> {
+        TOUCH_STATUS_CLR_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - 0 and 1: touch_raw_data; 2: base_line; 3: touch_smooth_data."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_data_sel(&mut self) -> TOUCH_DATA_SEL_W<SAR_TOUCH_CONF_SPEC, 16> {
-        TOUCH_DATA_SEL_W::new(self)
+    pub fn touch_data_sel(&mut self) -> TOUCH_DATA_SEL_W<SAR_TOUCH_CONF_SPEC> {
+        TOUCH_DATA_SEL_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Indicate which pad is selected as proximity pad2"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_approach_pad2(&mut self) -> TOUCH_APPROACH_PAD2_W<SAR_TOUCH_CONF_SPEC, 20> {
-        TOUCH_APPROACH_PAD2_W::new(self)
+    pub fn touch_approach_pad2(&mut self) -> TOUCH_APPROACH_PAD2_W<SAR_TOUCH_CONF_SPEC> {
+        TOUCH_APPROACH_PAD2_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - Indicate which pad is selected as proximity pad1"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_approach_pad1(&mut self) -> TOUCH_APPROACH_PAD1_W<SAR_TOUCH_CONF_SPEC, 24> {
-        TOUCH_APPROACH_PAD1_W::new(self)
+    pub fn touch_approach_pad1(&mut self) -> TOUCH_APPROACH_PAD1_W<SAR_TOUCH_CONF_SPEC> {
+        TOUCH_APPROACH_PAD1_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - Indicate which pad is selected as proximity pad0"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_approach_pad0(&mut self) -> TOUCH_APPROACH_PAD0_W<SAR_TOUCH_CONF_SPEC, 28> {
-        TOUCH_APPROACH_PAD0_W::new(self)
+    pub fn touch_approach_pad0(&mut self) -> TOUCH_APPROACH_PAD0_W<SAR_TOUCH_CONF_SPEC> {
+        TOUCH_APPROACH_PAD0_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

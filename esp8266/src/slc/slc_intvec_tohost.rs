@@ -5,7 +5,7 @@ pub type W = crate::W<SLC_INTVEC_TOHOST_SPEC>;
 #[doc = "Field `SLC_TOHOST_INTVEC` reader - "]
 pub type SLC_TOHOST_INTVEC_R = crate::FieldReader;
 #[doc = "Field `SLC_TOHOST_INTVEC` writer - "]
-pub type SLC_TOHOST_INTVEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLC_TOHOST_INTVEC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_INTVEC_TOHOST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tohost_intvec(&mut self) -> SLC_TOHOST_INTVEC_W<SLC_INTVEC_TOHOST_SPEC, 0> {
-        SLC_TOHOST_INTVEC_W::new(self)
+    pub fn slc_tohost_intvec(&mut self) -> SLC_TOHOST_INTVEC_W<SLC_INTVEC_TOHOST_SPEC> {
+        SLC_TOHOST_INTVEC_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

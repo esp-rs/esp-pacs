@@ -5,7 +5,7 @@ pub type W = crate::W<WDTCONFIG1_SPEC>;
 #[doc = "Field `WDT_CLK_PRESCALE` reader - SWDT clock prescale value. Period = 12.5ns * value stored in this register"]
 pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `WDT_CLK_PRESCALE` writer - SWDT clock prescale value. Period = 12.5ns * value stored in this register"]
-pub type WDT_CLK_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type WDT_CLK_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 16:31 - SWDT clock prescale value. Period = 12.5ns * value stored in this register"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDTCONFIG1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 16:31 - SWDT clock prescale value. Period = 12.5ns * value stored in this register"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<WDTCONFIG1_SPEC, 16> {
-        WDT_CLK_PRESCALE_W::new(self)
+    pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<WDTCONFIG1_SPEC> {
+        WDT_CLK_PRESCALE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

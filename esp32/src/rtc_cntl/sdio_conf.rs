@@ -5,33 +5,33 @@ pub type W = crate::W<SDIO_CONF_SPEC>;
 #[doc = "Field `SDIO_PD_EN` reader - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
 pub type SDIO_PD_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_PD_EN` writer - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
-pub type SDIO_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_FORCE` reader - 1: use SW option to control SDIO_REG 0: use state machine"]
 pub type SDIO_FORCE_R = crate::BitReader;
 #[doc = "Field `SDIO_FORCE` writer - 1: use SW option to control SDIO_REG 0: use state machine"]
-pub type SDIO_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_TIEH` reader - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
 pub type SDIO_TIEH_R = crate::BitReader;
 #[doc = "Field `SDIO_TIEH` writer - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
-pub type SDIO_TIEH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_TIEH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REG1P8_READY` reader - read only register for REG1P8_READY"]
 pub type REG1P8_READY_R = crate::BitReader;
 #[doc = "Field `DREFL_SDIO` reader - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
 pub type DREFL_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFL_SDIO` writer - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFL_SDIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DREFL_SDIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DREFM_SDIO` reader - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
 pub type DREFM_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFM_SDIO` writer - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFM_SDIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DREFM_SDIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DREFH_SDIO` reader - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
 pub type DREFH_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFH_SDIO` writer - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFH_SDIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DREFH_SDIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `XPD_SDIO` reader - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
 pub type XPD_SDIO_R = crate::BitReader;
 #[doc = "Field `XPD_SDIO` writer - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
-pub type XPD_SDIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_SDIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
@@ -95,51 +95,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_pd_en(&mut self) -> SDIO_PD_EN_W<SDIO_CONF_SPEC, 21> {
-        SDIO_PD_EN_W::new(self)
+    pub fn sdio_pd_en(&mut self) -> SDIO_PD_EN_W<SDIO_CONF_SPEC> {
+        SDIO_PD_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: use SW option to control SDIO_REG 0: use state machine"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<SDIO_CONF_SPEC, 22> {
-        SDIO_FORCE_W::new(self)
+    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<SDIO_CONF_SPEC> {
+        SDIO_FORCE_W::new(self, 22)
     }
     #[doc = "Bit 23 - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<SDIO_CONF_SPEC, 23> {
-        SDIO_TIEH_W::new(self)
+    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<SDIO_CONF_SPEC> {
+        SDIO_TIEH_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<SDIO_CONF_SPEC, 25> {
-        DREFL_SDIO_W::new(self)
+    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<SDIO_CONF_SPEC> {
+        DREFL_SDIO_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<SDIO_CONF_SPEC, 27> {
-        DREFM_SDIO_W::new(self)
+    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<SDIO_CONF_SPEC> {
+        DREFM_SDIO_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<SDIO_CONF_SPEC, 29> {
-        DREFH_SDIO_W::new(self)
+    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<SDIO_CONF_SPEC> {
+        DREFH_SDIO_W::new(self, 29)
     }
     #[doc = "Bit 31 - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<SDIO_CONF_SPEC, 31> {
-        XPD_SDIO_W::new(self)
+    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<SDIO_CONF_SPEC> {
+        XPD_SDIO_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

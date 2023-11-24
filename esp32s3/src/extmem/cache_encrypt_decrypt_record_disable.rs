@@ -5,11 +5,11 @@ pub type W = crate::W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC>;
 #[doc = "Field `RECORD_DISABLE_DB_ENCRYPT` reader - Reserved"]
 pub type RECORD_DISABLE_DB_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `RECORD_DISABLE_DB_ENCRYPT` writer - Reserved"]
-pub type RECORD_DISABLE_DB_ENCRYPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_DISABLE_DB_ENCRYPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_DISABLE_G0CB_DECRYPT` reader - Reserved"]
 pub type RECORD_DISABLE_G0CB_DECRYPT_R = crate::BitReader;
 #[doc = "Field `RECORD_DISABLE_G0CB_DECRYPT` writer - Reserved"]
-pub type RECORD_DISABLE_G0CB_DECRYPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_DISABLE_G0CB_DECRYPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn record_disable_db_encrypt(
         &mut self,
-    ) -> RECORD_DISABLE_DB_ENCRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC, 0> {
-        RECORD_DISABLE_DB_ENCRYPT_W::new(self)
+    ) -> RECORD_DISABLE_DB_ENCRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
+        RECORD_DISABLE_DB_ENCRYPT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
     #[must_use]
     pub fn record_disable_g0cb_decrypt(
         &mut self,
-    ) -> RECORD_DISABLE_G0CB_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC, 1> {
-        RECORD_DISABLE_G0CB_DECRYPT_W::new(self)
+    ) -> RECORD_DISABLE_G0CB_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
+        RECORD_DISABLE_G0CB_DECRYPT_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

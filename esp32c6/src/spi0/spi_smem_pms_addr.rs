@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_SMEM_PMS_ADDR_SPEC>;
 #[doc = "Field `S` reader - SPI1 external RAM ACE section %s start address value"]
 pub type S_R = crate::FieldReader<u32>;
 #[doc = "Field `S` writer - SPI1 external RAM ACE section %s start address value"]
-pub type S_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 26, O, u32>;
+pub type S_W<'a, REG> = crate::FieldWriter<'a, REG, 26, u32>;
 impl R {
     #[doc = "Bits 0:25 - SPI1 external RAM ACE section %s start address value"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_PMS_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:25 - SPI1 external RAM ACE section %s start address value"]
     #[inline(always)]
     #[must_use]
-    pub fn s(&mut self) -> S_W<SPI_SMEM_PMS_ADDR_SPEC, 0> {
-        S_W::new(self)
+    pub fn s(&mut self) -> S_W<SPI_SMEM_PMS_ADDR_SPEC> {
+        S_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

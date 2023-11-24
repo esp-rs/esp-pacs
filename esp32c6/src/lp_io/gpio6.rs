@@ -5,47 +5,47 @@ pub type W = crate::W<GPIO6_SPEC>;
 #[doc = "Field `LP_GPIO6_MCU_OE` reader - need des"]
 pub type LP_GPIO6_MCU_OE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_MCU_OE` writer - need des"]
-pub type LP_GPIO6_MCU_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_MCU_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_SLP_SEL` reader - need des"]
 pub type LP_GPIO6_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_SLP_SEL` writer - need des"]
-pub type LP_GPIO6_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_MCU_WPD` reader - need des"]
 pub type LP_GPIO6_MCU_WPD_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_MCU_WPD` writer - need des"]
-pub type LP_GPIO6_MCU_WPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_MCU_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_MCU_WPU` reader - need des"]
 pub type LP_GPIO6_MCU_WPU_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_MCU_WPU` writer - need des"]
-pub type LP_GPIO6_MCU_WPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_MCU_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_MCU_IE` reader - need des"]
 pub type LP_GPIO6_MCU_IE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_MCU_IE` writer - need des"]
-pub type LP_GPIO6_MCU_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_MCU_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_MCU_DRV` reader - need des"]
 pub type LP_GPIO6_MCU_DRV_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO6_MCU_DRV` writer - need des"]
-pub type LP_GPIO6_MCU_DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LP_GPIO6_MCU_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LP_GPIO6_FUN_WPD` reader - need des"]
 pub type LP_GPIO6_FUN_WPD_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_FUN_WPD` writer - need des"]
-pub type LP_GPIO6_FUN_WPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_FUN_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_FUN_WPU` reader - need des"]
 pub type LP_GPIO6_FUN_WPU_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_FUN_WPU` writer - need des"]
-pub type LP_GPIO6_FUN_WPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_FUN_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_FUN_IE` reader - need des"]
 pub type LP_GPIO6_FUN_IE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO6_FUN_IE` writer - need des"]
-pub type LP_GPIO6_FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_GPIO6_FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_GPIO6_FUN_DRV` reader - need des"]
 pub type LP_GPIO6_FUN_DRV_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO6_FUN_DRV` writer - need des"]
-pub type LP_GPIO6_FUN_DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LP_GPIO6_FUN_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LP_GPIO6_MCU_SEL` reader - need des"]
 pub type LP_GPIO6_MCU_SEL_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO6_MCU_SEL` writer - need des"]
-pub type LP_GPIO6_MCU_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LP_GPIO6_MCU_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
@@ -157,75 +157,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_mcu_oe(&mut self) -> LP_GPIO6_MCU_OE_W<GPIO6_SPEC, 0> {
-        LP_GPIO6_MCU_OE_W::new(self)
+    pub fn lp_gpio6_mcu_oe(&mut self) -> LP_GPIO6_MCU_OE_W<GPIO6_SPEC> {
+        LP_GPIO6_MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_slp_sel(&mut self) -> LP_GPIO6_SLP_SEL_W<GPIO6_SPEC, 1> {
-        LP_GPIO6_SLP_SEL_W::new(self)
+    pub fn lp_gpio6_slp_sel(&mut self) -> LP_GPIO6_SLP_SEL_W<GPIO6_SPEC> {
+        LP_GPIO6_SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_mcu_wpd(&mut self) -> LP_GPIO6_MCU_WPD_W<GPIO6_SPEC, 2> {
-        LP_GPIO6_MCU_WPD_W::new(self)
+    pub fn lp_gpio6_mcu_wpd(&mut self) -> LP_GPIO6_MCU_WPD_W<GPIO6_SPEC> {
+        LP_GPIO6_MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_mcu_wpu(&mut self) -> LP_GPIO6_MCU_WPU_W<GPIO6_SPEC, 3> {
-        LP_GPIO6_MCU_WPU_W::new(self)
+    pub fn lp_gpio6_mcu_wpu(&mut self) -> LP_GPIO6_MCU_WPU_W<GPIO6_SPEC> {
+        LP_GPIO6_MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_mcu_ie(&mut self) -> LP_GPIO6_MCU_IE_W<GPIO6_SPEC, 4> {
-        LP_GPIO6_MCU_IE_W::new(self)
+    pub fn lp_gpio6_mcu_ie(&mut self) -> LP_GPIO6_MCU_IE_W<GPIO6_SPEC> {
+        LP_GPIO6_MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_mcu_drv(&mut self) -> LP_GPIO6_MCU_DRV_W<GPIO6_SPEC, 5> {
-        LP_GPIO6_MCU_DRV_W::new(self)
+    pub fn lp_gpio6_mcu_drv(&mut self) -> LP_GPIO6_MCU_DRV_W<GPIO6_SPEC> {
+        LP_GPIO6_MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_fun_wpd(&mut self) -> LP_GPIO6_FUN_WPD_W<GPIO6_SPEC, 7> {
-        LP_GPIO6_FUN_WPD_W::new(self)
+    pub fn lp_gpio6_fun_wpd(&mut self) -> LP_GPIO6_FUN_WPD_W<GPIO6_SPEC> {
+        LP_GPIO6_FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_fun_wpu(&mut self) -> LP_GPIO6_FUN_WPU_W<GPIO6_SPEC, 8> {
-        LP_GPIO6_FUN_WPU_W::new(self)
+    pub fn lp_gpio6_fun_wpu(&mut self) -> LP_GPIO6_FUN_WPU_W<GPIO6_SPEC> {
+        LP_GPIO6_FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_fun_ie(&mut self) -> LP_GPIO6_FUN_IE_W<GPIO6_SPEC, 9> {
-        LP_GPIO6_FUN_IE_W::new(self)
+    pub fn lp_gpio6_fun_ie(&mut self) -> LP_GPIO6_FUN_IE_W<GPIO6_SPEC> {
+        LP_GPIO6_FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_fun_drv(&mut self) -> LP_GPIO6_FUN_DRV_W<GPIO6_SPEC, 10> {
-        LP_GPIO6_FUN_DRV_W::new(self)
+    pub fn lp_gpio6_fun_drv(&mut self) -> LP_GPIO6_FUN_DRV_W<GPIO6_SPEC> {
+        LP_GPIO6_FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio6_mcu_sel(&mut self) -> LP_GPIO6_MCU_SEL_W<GPIO6_SPEC, 12> {
-        LP_GPIO6_MCU_SEL_W::new(self)
+    pub fn lp_gpio6_mcu_sel(&mut self) -> LP_GPIO6_MCU_SEL_W<GPIO6_SPEC> {
+        LP_GPIO6_MCU_SEL_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

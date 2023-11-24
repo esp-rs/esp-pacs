@@ -5,11 +5,11 @@ pub type W = crate::W<CTRL1_SPEC>;
 #[doc = "Field `CS_HOLD_DELAY_RES` reader - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
 pub type CS_HOLD_DELAY_RES_R = crate::FieldReader<u16>;
 #[doc = "Field `CS_HOLD_DELAY_RES` writer - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
-pub type CS_HOLD_DELAY_RES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type CS_HOLD_DELAY_RES_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `CS_HOLD_DELAY` reader - SPI cs signal is delayed by spi clock cycles"]
 pub type CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_DELAY` writer - SPI cs signal is delayed by spi clock cycles"]
-pub type CS_HOLD_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CS_HOLD_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 16:27 - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 16:27 - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_hold_delay_res(&mut self) -> CS_HOLD_DELAY_RES_W<CTRL1_SPEC, 16> {
-        CS_HOLD_DELAY_RES_W::new(self)
+    pub fn cs_hold_delay_res(&mut self) -> CS_HOLD_DELAY_RES_W<CTRL1_SPEC> {
+        CS_HOLD_DELAY_RES_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - SPI cs signal is delayed by spi clock cycles"]
     #[inline(always)]
     #[must_use]
-    pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<CTRL1_SPEC, 28> {
-        CS_HOLD_DELAY_W::new(self)
+    pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<CTRL1_SPEC> {
+        CS_HOLD_DELAY_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

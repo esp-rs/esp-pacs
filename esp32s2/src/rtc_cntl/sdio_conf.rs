@@ -5,65 +5,65 @@ pub type W = crate::W<SDIO_CONF_SPEC>;
 #[doc = "Field `SDIO_TIMER_TARGET` reader - timer count to apply reg_sdio_dcap after sdio power on"]
 pub type SDIO_TIMER_TARGET_R = crate::FieldReader;
 #[doc = "Field `SDIO_TIMER_TARGET` writer - timer count to apply reg_sdio_dcap after sdio power on"]
-pub type SDIO_TIMER_TARGET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SDIO_TIMER_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SDIO_DTHDRV` reader - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current set to 3 after several us."]
 pub type SDIO_DTHDRV_R = crate::FieldReader;
 #[doc = "Field `SDIO_DTHDRV` writer - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current set to 3 after several us."]
-pub type SDIO_DTHDRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SDIO_DTHDRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SDIO_DCAP` reader - ability to prevent LDO from overshoot"]
 pub type SDIO_DCAP_R = crate::FieldReader;
 #[doc = "Field `SDIO_DCAP` writer - ability to prevent LDO from overshoot"]
-pub type SDIO_DCAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SDIO_DCAP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SDIO_INITI` reader - add resistor from ldo output to ground. 0: no res 1: 6k 2: 4k 3: 2k"]
 pub type SDIO_INITI_R = crate::FieldReader;
 #[doc = "Field `SDIO_INITI` writer - add resistor from ldo output to ground. 0: no res 1: 6k 2: 4k 3: 2k"]
-pub type SDIO_INITI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SDIO_INITI_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SDIO_EN_INITI` reader - 0 to set init\\[1:0\\]=0"]
 pub type SDIO_EN_INITI_R = crate::BitReader;
 #[doc = "Field `SDIO_EN_INITI` writer - 0 to set init\\[1:0\\]=0"]
-pub type SDIO_EN_INITI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_EN_INITI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_DCURLIM` reader - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
 pub type SDIO_DCURLIM_R = crate::FieldReader;
 #[doc = "Field `SDIO_DCURLIM` writer - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
-pub type SDIO_DCURLIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SDIO_DCURLIM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SDIO_MODECURLIM` reader - select current limit mode"]
 pub type SDIO_MODECURLIM_R = crate::BitReader;
 #[doc = "Field `SDIO_MODECURLIM` writer - select current limit mode"]
-pub type SDIO_MODECURLIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_MODECURLIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_ENCURLIM` reader - enable current limit"]
 pub type SDIO_ENCURLIM_R = crate::BitReader;
 #[doc = "Field `SDIO_ENCURLIM` writer - enable current limit"]
-pub type SDIO_ENCURLIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_ENCURLIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_REG_PD_EN` reader - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
 pub type SDIO_REG_PD_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_REG_PD_EN` writer - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
-pub type SDIO_REG_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_REG_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_FORCE` reader - 1: use SW option to control SDIO_REG 0: use state machine"]
 pub type SDIO_FORCE_R = crate::BitReader;
 #[doc = "Field `SDIO_FORCE` writer - 1: use SW option to control SDIO_REG 0: use state machine"]
-pub type SDIO_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_TIEH` reader - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
 pub type SDIO_TIEH_R = crate::BitReader;
 #[doc = "Field `SDIO_TIEH` writer - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
-pub type SDIO_TIEH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_TIEH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REG1P8_READY` reader - read only register for REG1P8_READY"]
 pub type REG1P8_READY_R = crate::BitReader;
 #[doc = "Field `DREFL_SDIO` reader - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
 pub type DREFL_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFL_SDIO` writer - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFL_SDIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DREFL_SDIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DREFM_SDIO` reader - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
 pub type DREFM_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFM_SDIO` writer - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFM_SDIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DREFM_SDIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DREFH_SDIO` reader - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
 pub type DREFH_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFH_SDIO` writer - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFH_SDIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DREFH_SDIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `XPD_SDIO` reader - SW option for XPD_VOOSDIO. Only active when reg_sdio_force = 1"]
 pub type XPD_SDIO_R = crate::BitReader;
 #[doc = "Field `XPD_SDIO` writer - SW option for XPD_VOOSDIO. Only active when reg_sdio_force = 1"]
-pub type XPD_SDIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_SDIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - timer count to apply reg_sdio_dcap after sdio power on"]
     #[inline(always)]
@@ -196,99 +196,99 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - timer count to apply reg_sdio_dcap after sdio power on"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_timer_target(&mut self) -> SDIO_TIMER_TARGET_W<SDIO_CONF_SPEC, 0> {
-        SDIO_TIMER_TARGET_W::new(self)
+    pub fn sdio_timer_target(&mut self) -> SDIO_TIMER_TARGET_W<SDIO_CONF_SPEC> {
+        SDIO_TIMER_TARGET_W::new(self, 0)
     }
     #[doc = "Bits 9:10 - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current set to 3 after several us."]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_dthdrv(&mut self) -> SDIO_DTHDRV_W<SDIO_CONF_SPEC, 9> {
-        SDIO_DTHDRV_W::new(self)
+    pub fn sdio_dthdrv(&mut self) -> SDIO_DTHDRV_W<SDIO_CONF_SPEC> {
+        SDIO_DTHDRV_W::new(self, 9)
     }
     #[doc = "Bits 11:12 - ability to prevent LDO from overshoot"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_dcap(&mut self) -> SDIO_DCAP_W<SDIO_CONF_SPEC, 11> {
-        SDIO_DCAP_W::new(self)
+    pub fn sdio_dcap(&mut self) -> SDIO_DCAP_W<SDIO_CONF_SPEC> {
+        SDIO_DCAP_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - add resistor from ldo output to ground. 0: no res 1: 6k 2: 4k 3: 2k"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_initi(&mut self) -> SDIO_INITI_W<SDIO_CONF_SPEC, 13> {
-        SDIO_INITI_W::new(self)
+    pub fn sdio_initi(&mut self) -> SDIO_INITI_W<SDIO_CONF_SPEC> {
+        SDIO_INITI_W::new(self, 13)
     }
     #[doc = "Bit 15 - 0 to set init\\[1:0\\]=0"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_en_initi(&mut self) -> SDIO_EN_INITI_W<SDIO_CONF_SPEC, 15> {
-        SDIO_EN_INITI_W::new(self)
+    pub fn sdio_en_initi(&mut self) -> SDIO_EN_INITI_W<SDIO_CONF_SPEC> {
+        SDIO_EN_INITI_W::new(self, 15)
     }
     #[doc = "Bits 16:18 - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_dcurlim(&mut self) -> SDIO_DCURLIM_W<SDIO_CONF_SPEC, 16> {
-        SDIO_DCURLIM_W::new(self)
+    pub fn sdio_dcurlim(&mut self) -> SDIO_DCURLIM_W<SDIO_CONF_SPEC> {
+        SDIO_DCURLIM_W::new(self, 16)
     }
     #[doc = "Bit 19 - select current limit mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_modecurlim(&mut self) -> SDIO_MODECURLIM_W<SDIO_CONF_SPEC, 19> {
-        SDIO_MODECURLIM_W::new(self)
+    pub fn sdio_modecurlim(&mut self) -> SDIO_MODECURLIM_W<SDIO_CONF_SPEC> {
+        SDIO_MODECURLIM_W::new(self, 19)
     }
     #[doc = "Bit 20 - enable current limit"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_encurlim(&mut self) -> SDIO_ENCURLIM_W<SDIO_CONF_SPEC, 20> {
-        SDIO_ENCURLIM_W::new(self)
+    pub fn sdio_encurlim(&mut self) -> SDIO_ENCURLIM_W<SDIO_CONF_SPEC> {
+        SDIO_ENCURLIM_W::new(self, 20)
     }
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_reg_pd_en(&mut self) -> SDIO_REG_PD_EN_W<SDIO_CONF_SPEC, 21> {
-        SDIO_REG_PD_EN_W::new(self)
+    pub fn sdio_reg_pd_en(&mut self) -> SDIO_REG_PD_EN_W<SDIO_CONF_SPEC> {
+        SDIO_REG_PD_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: use SW option to control SDIO_REG 0: use state machine"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<SDIO_CONF_SPEC, 22> {
-        SDIO_FORCE_W::new(self)
+    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<SDIO_CONF_SPEC> {
+        SDIO_FORCE_W::new(self, 22)
     }
     #[doc = "Bit 23 - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<SDIO_CONF_SPEC, 23> {
-        SDIO_TIEH_W::new(self)
+    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<SDIO_CONF_SPEC> {
+        SDIO_TIEH_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<SDIO_CONF_SPEC, 25> {
-        DREFL_SDIO_W::new(self)
+    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<SDIO_CONF_SPEC> {
+        DREFL_SDIO_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<SDIO_CONF_SPEC, 27> {
-        DREFM_SDIO_W::new(self)
+    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<SDIO_CONF_SPEC> {
+        DREFM_SDIO_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<SDIO_CONF_SPEC, 29> {
-        DREFH_SDIO_W::new(self)
+    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<SDIO_CONF_SPEC> {
+        DREFH_SDIO_W::new(self, 29)
     }
     #[doc = "Bit 31 - SW option for XPD_VOOSDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<SDIO_CONF_SPEC, 31> {
-        XPD_SDIO_W::new(self)
+    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<SDIO_CONF_SPEC> {
+        XPD_SDIO_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

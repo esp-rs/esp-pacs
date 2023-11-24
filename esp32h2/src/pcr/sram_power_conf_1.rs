@@ -5,15 +5,15 @@ pub type W = crate::W<SRAM_POWER_CONF_1_SPEC>;
 #[doc = "Field `SRAM_FORCE_PU` reader - Set this bit to force power up SRAM"]
 pub type SRAM_FORCE_PU_R = crate::FieldReader;
 #[doc = "Field `SRAM_FORCE_PU` writer - Set this bit to force power up SRAM"]
-pub type SRAM_FORCE_PU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SRAM_FORCE_PU_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SRAM_FORCE_PD` reader - Set this bit to force power down SRAM."]
 pub type SRAM_FORCE_PD_R = crate::FieldReader;
 #[doc = "Field `SRAM_FORCE_PD` writer - Set this bit to force power down SRAM."]
-pub type SRAM_FORCE_PD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SRAM_FORCE_PD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` reader - 1: Force to open the clock and bypass the gate-clock when accessing the SRAM. 0: A gate-clock will be used when accessing the SRAM."]
 pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` writer - 1: Force to open the clock and bypass the gate-clock when accessing the SRAM. 0: A gate-clock will be used when accessing the SRAM."]
-pub type SRAM_CLKGATE_FORCE_ON_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SRAM_CLKGATE_FORCE_ON_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - Set this bit to force power up SRAM"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_POWER_CONF_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - Set this bit to force power up SRAM"]
     #[inline(always)]
     #[must_use]
-    pub fn sram_force_pu(&mut self) -> SRAM_FORCE_PU_W<SRAM_POWER_CONF_1_SPEC, 0> {
-        SRAM_FORCE_PU_W::new(self)
+    pub fn sram_force_pu(&mut self) -> SRAM_FORCE_PU_W<SRAM_POWER_CONF_1_SPEC> {
+        SRAM_FORCE_PU_W::new(self, 0)
     }
     #[doc = "Bits 10:14 - Set this bit to force power down SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W<SRAM_POWER_CONF_1_SPEC, 10> {
-        SRAM_FORCE_PD_W::new(self)
+    pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W<SRAM_POWER_CONF_1_SPEC> {
+        SRAM_FORCE_PD_W::new(self, 10)
     }
     #[doc = "Bits 25:29 - 1: Force to open the clock and bypass the gate-clock when accessing the SRAM. 0: A gate-clock will be used when accessing the SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<SRAM_POWER_CONF_1_SPEC, 25> {
-        SRAM_CLKGATE_FORCE_ON_W::new(self)
+    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<SRAM_POWER_CONF_1_SPEC> {
+        SRAM_CLKGATE_FORCE_ON_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<SLP_TIMER1_SPEC>;
 #[doc = "Field `SLP_VAL_HI` reader - RTC sleep timer high 16 bits"]
 pub type SLP_VAL_HI_R = crate::FieldReader<u16>;
 #[doc = "Field `SLP_VAL_HI` writer - RTC sleep timer high 16 bits"]
-pub type SLP_VAL_HI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SLP_VAL_HI_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `MAIN_TIMER_ALARM_EN` reader - timer alarm enable bit"]
 pub type MAIN_TIMER_ALARM_EN_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_ALARM_EN` writer - timer alarm enable bit"]
-pub type MAIN_TIMER_ALARM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_ALARM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - RTC sleep timer high 16 bits"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_TIMER1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - RTC sleep timer high 16 bits"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_val_hi(&mut self) -> SLP_VAL_HI_W<SLP_TIMER1_SPEC, 0> {
-        SLP_VAL_HI_W::new(self)
+    pub fn slp_val_hi(&mut self) -> SLP_VAL_HI_W<SLP_TIMER1_SPEC> {
+        SLP_VAL_HI_W::new(self, 0)
     }
     #[doc = "Bit 16 - timer alarm enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_alarm_en(&mut self) -> MAIN_TIMER_ALARM_EN_W<SLP_TIMER1_SPEC, 16> {
-        MAIN_TIMER_ALARM_EN_W::new(self)
+    pub fn main_timer_alarm_en(&mut self) -> MAIN_TIMER_ALARM_EN_W<SLP_TIMER1_SPEC> {
+        MAIN_TIMER_ALARM_EN_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

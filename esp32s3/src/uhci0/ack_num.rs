@@ -5,9 +5,9 @@ pub type W = crate::W<ACK_NUM_SPEC>;
 #[doc = "Field `ACK_NUM` reader - This ACK number used in software flow control."]
 pub type ACK_NUM_R = crate::FieldReader;
 #[doc = "Field `ACK_NUM` writer - This ACK number used in software flow control."]
-pub type ACK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ACK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LOAD` writer - Set this bit to 1, the value configured by UHCI_ACK_NUM would be loaded."]
-pub type LOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - This ACK number used in software flow control."]
     #[inline(always)]
@@ -26,21 +26,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ACK_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - This ACK number used in software flow control."]
     #[inline(always)]
     #[must_use]
-    pub fn ack_num(&mut self) -> ACK_NUM_W<ACK_NUM_SPEC, 0> {
-        ACK_NUM_W::new(self)
+    pub fn ack_num(&mut self) -> ACK_NUM_W<ACK_NUM_SPEC> {
+        ACK_NUM_W::new(self, 0)
     }
     #[doc = "Bit 3 - Set this bit to 1, the value configured by UHCI_ACK_NUM would be loaded."]
     #[inline(always)]
     #[must_use]
-    pub fn load(&mut self) -> LOAD_W<ACK_NUM_SPEC, 3> {
-        LOAD_W::new(self)
+    pub fn load(&mut self) -> LOAD_W<ACK_NUM_SPEC> {
+        LOAD_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

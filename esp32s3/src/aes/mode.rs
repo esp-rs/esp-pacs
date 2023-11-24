@@ -5,7 +5,7 @@ pub type W = crate::W<MODE_SPEC>;
 #[doc = "Field `MODE` reader - Defines the key length and the encryption/decryption of the AES accelerator."]
 pub type MODE_R = crate::FieldReader;
 #[doc = "Field `MODE` writer - Defines the key length and the encryption/decryption of the AES accelerator."]
-pub type MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Defines the key length and the encryption/decryption of the AES accelerator."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Defines the key length and the encryption/decryption of the AES accelerator."]
     #[inline(always)]
     #[must_use]
-    pub fn mode(&mut self) -> MODE_W<MODE_SPEC, 0> {
-        MODE_W::new(self)
+    pub fn mode(&mut self) -> MODE_W<MODE_SPEC> {
+        MODE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

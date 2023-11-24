@@ -5,7 +5,7 @@ pub type W = crate::W<CORE_1_WORLD_IRAM0_SPEC>;
 #[doc = "Field `CORE_1_WORLD_IRAM0` reader - this field is used to read current world of Iram0 bus"]
 pub type CORE_1_WORLD_IRAM0_R = crate::FieldReader;
 #[doc = "Field `CORE_1_WORLD_IRAM0` writer - this field is used to read current world of Iram0 bus"]
-pub type CORE_1_WORLD_IRAM0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_1_WORLD_IRAM0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - this field is used to read current world of Iram0 bus"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_WORLD_IRAM0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - this field is used to read current world of Iram0 bus"]
     #[inline(always)]
     #[must_use]
-    pub fn core_1_world_iram0(&mut self) -> CORE_1_WORLD_IRAM0_W<CORE_1_WORLD_IRAM0_SPEC, 0> {
-        CORE_1_WORLD_IRAM0_W::new(self)
+    pub fn core_1_world_iram0(&mut self) -> CORE_1_WORLD_IRAM0_W<CORE_1_WORLD_IRAM0_SPEC> {
+        CORE_1_WORLD_IRAM0_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

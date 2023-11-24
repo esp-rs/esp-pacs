@@ -5,27 +5,27 @@ pub type W = crate::W<POWER_PD_MEM_MASK_SPEC>;
 #[doc = "Field `PD_HP_MEM2_PD_MASK` reader - need_des"]
 pub type PD_HP_MEM2_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM2_PD_MASK` writer - need_des"]
-pub type PD_HP_MEM2_PD_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_MEM2_PD_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PD_HP_MEM1_PD_MASK` reader - need_des"]
 pub type PD_HP_MEM1_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM1_PD_MASK` writer - need_des"]
-pub type PD_HP_MEM1_PD_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_MEM1_PD_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PD_HP_MEM0_PD_MASK` reader - need_des"]
 pub type PD_HP_MEM0_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM0_PD_MASK` writer - need_des"]
-pub type PD_HP_MEM0_PD_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_MEM0_PD_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PD_HP_MEM2_MASK` reader - need_des"]
 pub type PD_HP_MEM2_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM2_MASK` writer - need_des"]
-pub type PD_HP_MEM2_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_MEM2_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PD_HP_MEM1_MASK` reader - need_des"]
 pub type PD_HP_MEM1_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM1_MASK` writer - need_des"]
-pub type PD_HP_MEM1_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_MEM1_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PD_HP_MEM0_MASK` reader - need_des"]
 pub type PD_HP_MEM0_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM0_MASK` writer - need_des"]
-pub type PD_HP_MEM0_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_MEM0_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_PD_MEM_MASK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_mem2_pd_mask(&mut self) -> PD_HP_MEM2_PD_MASK_W<POWER_PD_MEM_MASK_SPEC, 0> {
-        PD_HP_MEM2_PD_MASK_W::new(self)
+    pub fn pd_hp_mem2_pd_mask(&mut self) -> PD_HP_MEM2_PD_MASK_W<POWER_PD_MEM_MASK_SPEC> {
+        PD_HP_MEM2_PD_MASK_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_mem1_pd_mask(&mut self) -> PD_HP_MEM1_PD_MASK_W<POWER_PD_MEM_MASK_SPEC, 5> {
-        PD_HP_MEM1_PD_MASK_W::new(self)
+    pub fn pd_hp_mem1_pd_mask(&mut self) -> PD_HP_MEM1_PD_MASK_W<POWER_PD_MEM_MASK_SPEC> {
+        PD_HP_MEM1_PD_MASK_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_mem0_pd_mask(&mut self) -> PD_HP_MEM0_PD_MASK_W<POWER_PD_MEM_MASK_SPEC, 10> {
-        PD_HP_MEM0_PD_MASK_W::new(self)
+    pub fn pd_hp_mem0_pd_mask(&mut self) -> PD_HP_MEM0_PD_MASK_W<POWER_PD_MEM_MASK_SPEC> {
+        PD_HP_MEM0_PD_MASK_W::new(self, 10)
     }
     #[doc = "Bits 17:21 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_mem2_mask(&mut self) -> PD_HP_MEM2_MASK_W<POWER_PD_MEM_MASK_SPEC, 17> {
-        PD_HP_MEM2_MASK_W::new(self)
+    pub fn pd_hp_mem2_mask(&mut self) -> PD_HP_MEM2_MASK_W<POWER_PD_MEM_MASK_SPEC> {
+        PD_HP_MEM2_MASK_W::new(self, 17)
     }
     #[doc = "Bits 22:26 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_mem1_mask(&mut self) -> PD_HP_MEM1_MASK_W<POWER_PD_MEM_MASK_SPEC, 22> {
-        PD_HP_MEM1_MASK_W::new(self)
+    pub fn pd_hp_mem1_mask(&mut self) -> PD_HP_MEM1_MASK_W<POWER_PD_MEM_MASK_SPEC> {
+        PD_HP_MEM1_MASK_W::new(self, 22)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_mem0_mask(&mut self) -> PD_HP_MEM0_MASK_W<POWER_PD_MEM_MASK_SPEC, 27> {
-        PD_HP_MEM0_MASK_W::new(self)
+    pub fn pd_hp_mem0_mask(&mut self) -> PD_HP_MEM0_MASK_W<POWER_PD_MEM_MASK_SPEC> {
+        PD_HP_MEM0_MASK_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

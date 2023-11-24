@@ -5,23 +5,23 @@ pub type W = crate::W<CH_RX_CONF0_SPEC>;
 #[doc = "Field `DIV_CNT` reader - This register is used to configure the divider for clock of CHANNEL%s."]
 pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - This register is used to configure the divider for clock of CHANNEL%s."]
-pub type DIV_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DIV_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `IDLE_THRES` reader - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
 pub type IDLE_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `IDLE_THRES` writer - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
-pub type IDLE_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type IDLE_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `MEM_SIZE` reader - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
 pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
-pub type MEM_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MEM_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CARRIER_EN` reader - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
 pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
-pub type CARRIER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARRIER_OUT_LV` reader - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
 pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
-pub type CARRIER_OUT_LV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER_OUT_LV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the divider for clock of CHANNEL%s."]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_RX_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the divider for clock of CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn div_cnt(&mut self) -> DIV_CNT_W<CH_RX_CONF0_SPEC, 0> {
-        DIV_CNT_W::new(self)
+    pub fn div_cnt(&mut self) -> DIV_CNT_W<CH_RX_CONF0_SPEC> {
+        DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bits 8:22 - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
     #[inline(always)]
     #[must_use]
-    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CH_RX_CONF0_SPEC, 8> {
-        IDLE_THRES_W::new(self)
+    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CH_RX_CONF0_SPEC> {
+        IDLE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 24:27 - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_size(&mut self) -> MEM_SIZE_W<CH_RX_CONF0_SPEC, 24> {
-        MEM_SIZE_W::new(self)
+    pub fn mem_size(&mut self) -> MEM_SIZE_W<CH_RX_CONF0_SPEC> {
+        MEM_SIZE_W::new(self, 24)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CH_RX_CONF0_SPEC, 28> {
-        CARRIER_EN_W::new(self)
+    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CH_RX_CONF0_SPEC> {
+        CARRIER_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CH_RX_CONF0_SPEC, 29> {
-        CARRIER_OUT_LV_W::new(self)
+    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CH_RX_CONF0_SPEC> {
+        CARRIER_OUT_LV_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

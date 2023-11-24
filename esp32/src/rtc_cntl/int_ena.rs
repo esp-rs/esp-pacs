@@ -5,39 +5,39 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `SLP_WAKEUP_INT_ENA` reader - enable sleep wakeup interrupt"]
 pub type SLP_WAKEUP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP_INT_ENA` writer - enable sleep wakeup interrupt"]
-pub type SLP_WAKEUP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_WAKEUP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLP_REJECT_INT_ENA` reader - enable sleep reject interrupt"]
 pub type SLP_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_ENA` writer - enable sleep reject interrupt"]
-pub type SLP_REJECT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_REJECT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_IDLE_INT_ENA` reader - enable SDIO idle interrupt"]
 pub type SDIO_IDLE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_ENA` writer - enable SDIO idle interrupt"]
-pub type SDIO_IDLE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_IDLE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_INT_ENA` reader - enable RTC WDT interrupt"]
 pub type WDT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ENA` writer - enable RTC WDT interrupt"]
-pub type WDT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIME_VALID_INT_ENA` reader - enable RTC time valid interrupt"]
 pub type TIME_VALID_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIME_VALID_INT_ENA` writer - enable RTC time valid interrupt"]
-pub type TIME_VALID_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIME_VALID_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_INT_ENA` reader - enable ULP-coprocessor interrupt"]
 pub type ULP_CP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ULP_CP_INT_ENA` writer - enable ULP-coprocessor interrupt"]
-pub type ULP_CP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_INT_ENA` reader - enable touch interrupt"]
 pub type TOUCH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TOUCH_INT_ENA` writer - enable touch interrupt"]
-pub type TOUCH_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BROWN_OUT_INT_ENA` reader - enable brown out interrupt"]
 pub type BROWN_OUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_ENA` writer - enable brown out interrupt"]
-pub type BROWN_OUT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BROWN_OUT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAIN_TIMER_INT_ENA` reader - enable RTC main timer interrupt"]
 pub type MAIN_TIMER_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_ENA` writer - enable RTC main timer interrupt"]
-pub type MAIN_TIMER_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
@@ -128,63 +128,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_wakeup_int_ena(&mut self) -> SLP_WAKEUP_INT_ENA_W<INT_ENA_SPEC, 0> {
-        SLP_WAKEUP_INT_ENA_W::new(self)
+    pub fn slp_wakeup_int_ena(&mut self) -> SLP_WAKEUP_INT_ENA_W<INT_ENA_SPEC> {
+        SLP_WAKEUP_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - enable sleep reject interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_reject_int_ena(&mut self) -> SLP_REJECT_INT_ENA_W<INT_ENA_SPEC, 1> {
-        SLP_REJECT_INT_ENA_W::new(self)
+    pub fn slp_reject_int_ena(&mut self) -> SLP_REJECT_INT_ENA_W<INT_ENA_SPEC> {
+        SLP_REJECT_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - enable SDIO idle interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_idle_int_ena(&mut self) -> SDIO_IDLE_INT_ENA_W<INT_ENA_SPEC, 2> {
-        SDIO_IDLE_INT_ENA_W::new(self)
+    pub fn sdio_idle_int_ena(&mut self) -> SDIO_IDLE_INT_ENA_W<INT_ENA_SPEC> {
+        SDIO_IDLE_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_SPEC, 3> {
-        WDT_INT_ENA_W::new(self)
+    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_SPEC> {
+        WDT_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - enable RTC time valid interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn time_valid_int_ena(&mut self) -> TIME_VALID_INT_ENA_W<INT_ENA_SPEC, 4> {
-        TIME_VALID_INT_ENA_W::new(self)
+    pub fn time_valid_int_ena(&mut self) -> TIME_VALID_INT_ENA_W<INT_ENA_SPEC> {
+        TIME_VALID_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - enable ULP-coprocessor interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_int_ena(&mut self) -> ULP_CP_INT_ENA_W<INT_ENA_SPEC, 5> {
-        ULP_CP_INT_ENA_W::new(self)
+    pub fn ulp_cp_int_ena(&mut self) -> ULP_CP_INT_ENA_W<INT_ENA_SPEC> {
+        ULP_CP_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - enable touch interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_int_ena(&mut self) -> TOUCH_INT_ENA_W<INT_ENA_SPEC, 6> {
-        TOUCH_INT_ENA_W::new(self)
+    pub fn touch_int_ena(&mut self) -> TOUCH_INT_ENA_W<INT_ENA_SPEC> {
+        TOUCH_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - enable brown out interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W<INT_ENA_SPEC, 7> {
-        BROWN_OUT_INT_ENA_W::new(self)
+    pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W<INT_ENA_SPEC> {
+        BROWN_OUT_INT_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - enable RTC main timer interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_int_ena(&mut self) -> MAIN_TIMER_INT_ENA_W<INT_ENA_SPEC, 8> {
-        MAIN_TIMER_INT_ENA_W::new(self)
+    pub fn main_timer_int_ena(&mut self) -> MAIN_TIMER_INT_ENA_W<INT_ENA_SPEC> {
+        MAIN_TIMER_INT_ENA_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

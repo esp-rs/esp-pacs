@@ -5,7 +5,7 @@ pub type W = crate::W<REDCY_SIG1_SPEC>;
 #[doc = "Field `REDCY_SIG1` reader - "]
 pub type REDCY_SIG1_R = crate::FieldReader<u32>;
 #[doc = "Field `REDCY_SIG1` writer - "]
-pub type REDCY_SIG1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 31, O, u32>;
+pub type REDCY_SIG1_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
 #[doc = "Field `REDCY_NANDOR` reader - "]
 pub type REDCY_NANDOR_R = crate::BitReader;
 impl R {
@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REDCY_SIG1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:30"]
     #[inline(always)]
     #[must_use]
-    pub fn redcy_sig1(&mut self) -> REDCY_SIG1_W<REDCY_SIG1_SPEC, 0> {
-        REDCY_SIG1_W::new(self)
+    pub fn redcy_sig1(&mut self) -> REDCY_SIG1_W<REDCY_SIG1_SPEC> {
+        REDCY_SIG1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

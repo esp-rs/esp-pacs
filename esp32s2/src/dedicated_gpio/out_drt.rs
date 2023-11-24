@@ -1,7 +1,7 @@
 #[doc = "Register `OUT_DRT` writer"]
 pub type W = crate::W<OUT_DRT_SPEC>;
 #[doc = "Field `VLAUE` writer - This register is used to configure directive output value of 8-channel dedicated GPIO."]
-pub type VLAUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type VLAUE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_DRT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:7 - This register is used to configure directive output value of 8-channel dedicated GPIO."]
     #[inline(always)]
     #[must_use]
-    pub fn vlaue(&mut self) -> VLAUE_W<OUT_DRT_SPEC, 0> {
-        VLAUE_W::new(self)
+    pub fn vlaue(&mut self) -> VLAUE_W<OUT_DRT_SPEC> {
+        VLAUE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

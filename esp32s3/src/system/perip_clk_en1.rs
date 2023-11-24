@@ -5,47 +5,47 @@ pub type W = crate::W<PERIP_CLK_EN1_SPEC>;
 #[doc = "Field `PERI_BACKUP_CLK_EN` reader - Set 1 to enable BACKUP clock"]
 pub type PERI_BACKUP_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PERI_BACKUP_CLK_EN` writer - Set 1 to enable BACKUP clock"]
-pub type PERI_BACKUP_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERI_BACKUP_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_AES_CLK_EN` reader - Set 1 to enable AES clock"]
 pub type CRYPTO_AES_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_AES_CLK_EN` writer - Set 1 to enable AES clock"]
-pub type CRYPTO_AES_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_AES_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` reader - Set 1 to enable SHA clock"]
 pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` writer - Set 1 to enable SHA clock"]
-pub type CRYPTO_SHA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_SHA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` reader - Set 1 to enable RSA clock"]
 pub type CRYPTO_RSA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` writer - Set 1 to enable RSA clock"]
-pub type CRYPTO_RSA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_RSA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_DS_CLK_EN` reader - Set 1 to enable DS clock"]
 pub type CRYPTO_DS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DS_CLK_EN` writer - Set 1 to enable DS clock"]
-pub type CRYPTO_DS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_DS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` reader - Set 1 to enable HMAC clock"]
 pub type CRYPTO_HMAC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` writer - Set 1 to enable HMAC clock"]
-pub type CRYPTO_HMAC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_HMAC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_CLK_EN` reader - Set 1 to enable DMA clock"]
 pub type DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `DMA_CLK_EN` writer - Set 1 to enable DMA clock"]
-pub type DMA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_HOST_CLK_EN` reader - Set 1 to enable SDIO_HOST clock"]
 pub type SDIO_HOST_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_HOST_CLK_EN` writer - Set 1 to enable SDIO_HOST clock"]
-pub type SDIO_HOST_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_HOST_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_CAM_CLK_EN` reader - Set 1 to enable LCD_CAM clock"]
 pub type LCD_CAM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LCD_CAM_CLK_EN` writer - Set 1 to enable LCD_CAM clock"]
-pub type LCD_CAM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCD_CAM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART2_CLK_EN` reader - Set 1 to enable UART2 clock"]
 pub type UART2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART2_CLK_EN` writer - Set 1 to enable UART2 clock"]
-pub type UART2_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART2_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_DEVICE_CLK_EN` reader - Set 1 to enable USB_DEVICE clock"]
 pub type USB_DEVICE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `USB_DEVICE_CLK_EN` writer - Set 1 to enable USB_DEVICE clock"]
-pub type USB_DEVICE_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_DEVICE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable BACKUP clock"]
     #[inline(always)]
@@ -154,75 +154,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable BACKUP clock"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_clk_en(&mut self) -> PERI_BACKUP_CLK_EN_W<PERIP_CLK_EN1_SPEC, 0> {
-        PERI_BACKUP_CLK_EN_W::new(self)
+    pub fn peri_backup_clk_en(&mut self) -> PERI_BACKUP_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        PERI_BACKUP_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable AES clock"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERIP_CLK_EN1_SPEC, 1> {
-        CRYPTO_AES_CLK_EN_W::new(self)
+    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_AES_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable SHA clock"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 2> {
-        CRYPTO_SHA_CLK_EN_W::new(self)
+    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_SHA_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set 1 to enable RSA clock"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 3> {
-        CRYPTO_RSA_CLK_EN_W::new(self)
+    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_RSA_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set 1 to enable DS clock"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERIP_CLK_EN1_SPEC, 4> {
-        CRYPTO_DS_CLK_EN_W::new(self)
+    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_DS_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set 1 to enable HMAC clock"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERIP_CLK_EN1_SPEC, 5> {
-        CRYPTO_HMAC_CLK_EN_W::new(self)
+    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_HMAC_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set 1 to enable DMA clock"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 6> {
-        DMA_CLK_EN_W::new(self)
+    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        DMA_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set 1 to enable SDIO_HOST clock"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<PERIP_CLK_EN1_SPEC, 7> {
-        SDIO_HOST_CLK_EN_W::new(self)
+    pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        SDIO_HOST_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set 1 to enable LCD_CAM clock"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<PERIP_CLK_EN1_SPEC, 8> {
-        LCD_CAM_CLK_EN_W::new(self)
+    pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        LCD_CAM_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set 1 to enable UART2 clock"]
     #[inline(always)]
     #[must_use]
-    pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<PERIP_CLK_EN1_SPEC, 9> {
-        UART2_CLK_EN_W::new(self)
+    pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        UART2_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set 1 to enable USB_DEVICE clock"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<PERIP_CLK_EN1_SPEC, 10> {
-        USB_DEVICE_CLK_EN_W::new(self)
+    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        USB_DEVICE_CLK_EN_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

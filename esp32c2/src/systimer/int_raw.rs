@@ -5,15 +5,15 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `TARGET0_INT_RAW` reader - interupt0 raw"]
 pub type TARGET0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TARGET0_INT_RAW` writer - interupt0 raw"]
-pub type TARGET0_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET0_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TARGET1_INT_RAW` reader - interupt1 raw"]
 pub type TARGET1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TARGET1_INT_RAW` writer - interupt1 raw"]
-pub type TARGET1_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET1_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TARGET2_INT_RAW` reader - interupt2 raw"]
 pub type TARGET2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TARGET2_INT_RAW` writer - interupt2 raw"]
-pub type TARGET2_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET2_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - interupt0 raw"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - interupt0 raw"]
     #[inline(always)]
     #[must_use]
-    pub fn target0_int_raw(&mut self) -> TARGET0_INT_RAW_W<INT_RAW_SPEC, 0> {
-        TARGET0_INT_RAW_W::new(self)
+    pub fn target0_int_raw(&mut self) -> TARGET0_INT_RAW_W<INT_RAW_SPEC> {
+        TARGET0_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - interupt1 raw"]
     #[inline(always)]
     #[must_use]
-    pub fn target1_int_raw(&mut self) -> TARGET1_INT_RAW_W<INT_RAW_SPEC, 1> {
-        TARGET1_INT_RAW_W::new(self)
+    pub fn target1_int_raw(&mut self) -> TARGET1_INT_RAW_W<INT_RAW_SPEC> {
+        TARGET1_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - interupt2 raw"]
     #[inline(always)]
     #[must_use]
-    pub fn target2_int_raw(&mut self) -> TARGET2_INT_RAW_W<INT_RAW_SPEC, 2> {
-        TARGET2_INT_RAW_W::new(self)
+    pub fn target2_int_raw(&mut self) -> TARGET2_INT_RAW_W<INT_RAW_SPEC> {
+        TARGET2_INT_RAW_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,99 +5,99 @@ pub type W = crate::W<CLK_CONF1_FORCE_ON_SPEC>;
 #[doc = "Field `CLK_WIFIBB_22M_FO` reader - "]
 pub type CLK_WIFIBB_22M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_22M_FO` writer - "]
-pub type CLK_WIFIBB_22M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_22M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_40M_FO` reader - "]
 pub type CLK_WIFIBB_40M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_40M_FO` writer - "]
-pub type CLK_WIFIBB_40M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_40M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_44M_FO` reader - "]
 pub type CLK_WIFIBB_44M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_44M_FO` writer - "]
-pub type CLK_WIFIBB_44M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_44M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_80M_FO` reader - "]
 pub type CLK_WIFIBB_80M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_80M_FO` writer - "]
-pub type CLK_WIFIBB_80M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_80M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_40X_FO` reader - "]
 pub type CLK_WIFIBB_40X_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_40X_FO` writer - "]
-pub type CLK_WIFIBB_40X_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_40X_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_80X_FO` reader - "]
 pub type CLK_WIFIBB_80X_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_80X_FO` writer - "]
-pub type CLK_WIFIBB_80X_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_80X_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_40X1_FO` reader - "]
 pub type CLK_WIFIBB_40X1_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_40X1_FO` writer - "]
-pub type CLK_WIFIBB_40X1_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_40X1_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_80X1_FO` reader - "]
 pub type CLK_WIFIBB_80X1_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_80X1_FO` writer - "]
-pub type CLK_WIFIBB_80X1_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_80X1_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_160X1_FO` reader - "]
 pub type CLK_WIFIBB_160X1_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_160X1_FO` writer - "]
-pub type CLK_WIFIBB_160X1_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_160X1_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIMAC_FO` reader - "]
 pub type CLK_WIFIMAC_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIMAC_FO` writer - "]
-pub type CLK_WIFIMAC_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIMAC_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFI_APB_FO` reader - "]
 pub type CLK_WIFI_APB_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFI_APB_FO` writer - "]
-pub type CLK_WIFI_APB_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFI_APB_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_20M_FO` reader - "]
 pub type CLK_FE_20M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_20M_FO` writer - "]
-pub type CLK_FE_20M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_20M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_40M_FO` reader - "]
 pub type CLK_FE_40M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_40M_FO` writer - "]
-pub type CLK_FE_40M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_40M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_80M_FO` reader - "]
 pub type CLK_FE_80M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_80M_FO` writer - "]
-pub type CLK_FE_80M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_80M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_160M_FO` reader - "]
 pub type CLK_FE_160M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_160M_FO` writer - "]
-pub type CLK_FE_160M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_160M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_CAL_160M_FO` reader - "]
 pub type CLK_FE_CAL_160M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_CAL_160M_FO` writer - "]
-pub type CLK_FE_CAL_160M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_CAL_160M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_APB_FO` reader - "]
 pub type CLK_FE_APB_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_APB_FO` writer - "]
-pub type CLK_FE_APB_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_APB_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BT_APB_FO` reader - "]
 pub type CLK_BT_APB_FO_R = crate::BitReader;
 #[doc = "Field `CLK_BT_APB_FO` writer - "]
-pub type CLK_BT_APB_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BT_APB_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BT_FO` reader - "]
 pub type CLK_BT_FO_R = crate::BitReader;
 #[doc = "Field `CLK_BT_FO` writer - "]
-pub type CLK_BT_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BT_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_WIFIBB_480M_FO` reader - "]
 pub type CLK_WIFIBB_480M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_480M_FO` writer - "]
-pub type CLK_WIFIBB_480M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIBB_480M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_480M_FO` reader - "]
 pub type CLK_FE_480M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_480M_FO` writer - "]
-pub type CLK_FE_480M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_480M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_ANAMODE_40M_FO` reader - "]
 pub type CLK_FE_ANAMODE_40M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ANAMODE_40M_FO` writer - "]
-pub type CLK_FE_ANAMODE_40M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_ANAMODE_40M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_ANAMODE_80M_FO` reader - "]
 pub type CLK_FE_ANAMODE_80M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ANAMODE_80M_FO` writer - "]
-pub type CLK_FE_ANAMODE_80M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_ANAMODE_80M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_ANAMODE_160M_FO` reader - "]
 pub type CLK_FE_ANAMODE_160M_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ANAMODE_160M_FO` writer - "]
-pub type CLK_FE_ANAMODE_160M_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_ANAMODE_160M_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -323,159 +323,153 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_FORCE_ON_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_22m_fo(&mut self) -> CLK_WIFIBB_22M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 0> {
-        CLK_WIFIBB_22M_FO_W::new(self)
+    pub fn clk_wifibb_22m_fo(&mut self) -> CLK_WIFIBB_22M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_22M_FO_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_40m_fo(&mut self) -> CLK_WIFIBB_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 1> {
-        CLK_WIFIBB_40M_FO_W::new(self)
+    pub fn clk_wifibb_40m_fo(&mut self) -> CLK_WIFIBB_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_40M_FO_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_44m_fo(&mut self) -> CLK_WIFIBB_44M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 2> {
-        CLK_WIFIBB_44M_FO_W::new(self)
+    pub fn clk_wifibb_44m_fo(&mut self) -> CLK_WIFIBB_44M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_44M_FO_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_80m_fo(&mut self) -> CLK_WIFIBB_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 3> {
-        CLK_WIFIBB_80M_FO_W::new(self)
+    pub fn clk_wifibb_80m_fo(&mut self) -> CLK_WIFIBB_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_80M_FO_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_40x_fo(&mut self) -> CLK_WIFIBB_40X_FO_W<CLK_CONF1_FORCE_ON_SPEC, 4> {
-        CLK_WIFIBB_40X_FO_W::new(self)
+    pub fn clk_wifibb_40x_fo(&mut self) -> CLK_WIFIBB_40X_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_40X_FO_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_80x_fo(&mut self) -> CLK_WIFIBB_80X_FO_W<CLK_CONF1_FORCE_ON_SPEC, 5> {
-        CLK_WIFIBB_80X_FO_W::new(self)
+    pub fn clk_wifibb_80x_fo(&mut self) -> CLK_WIFIBB_80X_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_80X_FO_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_40x1_fo(&mut self) -> CLK_WIFIBB_40X1_FO_W<CLK_CONF1_FORCE_ON_SPEC, 6> {
-        CLK_WIFIBB_40X1_FO_W::new(self)
+    pub fn clk_wifibb_40x1_fo(&mut self) -> CLK_WIFIBB_40X1_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_40X1_FO_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_80x1_fo(&mut self) -> CLK_WIFIBB_80X1_FO_W<CLK_CONF1_FORCE_ON_SPEC, 7> {
-        CLK_WIFIBB_80X1_FO_W::new(self)
+    pub fn clk_wifibb_80x1_fo(&mut self) -> CLK_WIFIBB_80X1_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_80X1_FO_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_160x1_fo(&mut self) -> CLK_WIFIBB_160X1_FO_W<CLK_CONF1_FORCE_ON_SPEC, 8> {
-        CLK_WIFIBB_160X1_FO_W::new(self)
+    pub fn clk_wifibb_160x1_fo(&mut self) -> CLK_WIFIBB_160X1_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_160X1_FO_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifimac_fo(&mut self) -> CLK_WIFIMAC_FO_W<CLK_CONF1_FORCE_ON_SPEC, 9> {
-        CLK_WIFIMAC_FO_W::new(self)
+    pub fn clk_wifimac_fo(&mut self) -> CLK_WIFIMAC_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIMAC_FO_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifi_apb_fo(&mut self) -> CLK_WIFI_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC, 10> {
-        CLK_WIFI_APB_FO_W::new(self)
+    pub fn clk_wifi_apb_fo(&mut self) -> CLK_WIFI_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFI_APB_FO_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_20m_fo(&mut self) -> CLK_FE_20M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 11> {
-        CLK_FE_20M_FO_W::new(self)
+    pub fn clk_fe_20m_fo(&mut self) -> CLK_FE_20M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_20M_FO_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_40m_fo(&mut self) -> CLK_FE_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 12> {
-        CLK_FE_40M_FO_W::new(self)
+    pub fn clk_fe_40m_fo(&mut self) -> CLK_FE_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_40M_FO_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_80m_fo(&mut self) -> CLK_FE_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 13> {
-        CLK_FE_80M_FO_W::new(self)
+    pub fn clk_fe_80m_fo(&mut self) -> CLK_FE_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_80M_FO_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_160m_fo(&mut self) -> CLK_FE_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 14> {
-        CLK_FE_160M_FO_W::new(self)
+    pub fn clk_fe_160m_fo(&mut self) -> CLK_FE_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_160M_FO_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_cal_160m_fo(&mut self) -> CLK_FE_CAL_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 15> {
-        CLK_FE_CAL_160M_FO_W::new(self)
+    pub fn clk_fe_cal_160m_fo(&mut self) -> CLK_FE_CAL_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_CAL_160M_FO_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_apb_fo(&mut self) -> CLK_FE_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC, 16> {
-        CLK_FE_APB_FO_W::new(self)
+    pub fn clk_fe_apb_fo(&mut self) -> CLK_FE_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_APB_FO_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_bt_apb_fo(&mut self) -> CLK_BT_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC, 17> {
-        CLK_BT_APB_FO_W::new(self)
+    pub fn clk_bt_apb_fo(&mut self) -> CLK_BT_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_BT_APB_FO_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<CLK_CONF1_FORCE_ON_SPEC, 18> {
-        CLK_BT_FO_W::new(self)
+    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_BT_FO_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifibb_480m_fo(&mut self) -> CLK_WIFIBB_480M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 19> {
-        CLK_WIFIBB_480M_FO_W::new(self)
+    pub fn clk_wifibb_480m_fo(&mut self) -> CLK_WIFIBB_480M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_WIFIBB_480M_FO_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_480m_fo(&mut self) -> CLK_FE_480M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 20> {
-        CLK_FE_480M_FO_W::new(self)
+    pub fn clk_fe_480m_fo(&mut self) -> CLK_FE_480M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_480M_FO_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_anamode_40m_fo(
-        &mut self,
-    ) -> CLK_FE_ANAMODE_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 21> {
-        CLK_FE_ANAMODE_40M_FO_W::new(self)
+    pub fn clk_fe_anamode_40m_fo(&mut self) -> CLK_FE_ANAMODE_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_ANAMODE_40M_FO_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_anamode_80m_fo(
-        &mut self,
-    ) -> CLK_FE_ANAMODE_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 22> {
-        CLK_FE_ANAMODE_80M_FO_W::new(self)
+    pub fn clk_fe_anamode_80m_fo(&mut self) -> CLK_FE_ANAMODE_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_ANAMODE_80M_FO_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_anamode_160m_fo(
-        &mut self,
-    ) -> CLK_FE_ANAMODE_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC, 23> {
-        CLK_FE_ANAMODE_160M_FO_W::new(self)
+    pub fn clk_fe_anamode_160m_fo(&mut self) -> CLK_FE_ANAMODE_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_ANAMODE_160M_FO_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

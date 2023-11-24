@@ -5,11 +5,11 @@ pub type W = crate::W<TIMERGROUP1_CONF_SPEC>;
 #[doc = "Field `TG1_CLK_EN` reader - Set 1 to enable timer_group1 apb clock"]
 pub type TG1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TG1_CLK_EN` writer - Set 1 to enable timer_group1 apb clock"]
-pub type TG1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TG1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TG1_RST_EN` reader - Set 0 to reset timer_group1 module"]
 pub type TG1_RST_EN_R = crate::BitReader;
 #[doc = "Field `TG1_RST_EN` writer - Set 0 to reset timer_group1 module"]
-pub type TG1_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TG1_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable timer_group1 apb clock"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMERGROUP1_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable timer_group1 apb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn tg1_clk_en(&mut self) -> TG1_CLK_EN_W<TIMERGROUP1_CONF_SPEC, 0> {
-        TG1_CLK_EN_W::new(self)
+    pub fn tg1_clk_en(&mut self) -> TG1_CLK_EN_W<TIMERGROUP1_CONF_SPEC> {
+        TG1_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset timer_group1 module"]
     #[inline(always)]
     #[must_use]
-    pub fn tg1_rst_en(&mut self) -> TG1_RST_EN_W<TIMERGROUP1_CONF_SPEC, 1> {
-        TG1_RST_EN_W::new(self)
+    pub fn tg1_rst_en(&mut self) -> TG1_RST_EN_W<TIMERGROUP1_CONF_SPEC> {
+        TG1_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<INTERNAL_SRAM_USAGE_1_SPEC>;
 #[doc = "Field `INTERNAL_SRAM_ICACHE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
 pub type INTERNAL_SRAM_ICACHE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_ICACHE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
-pub type INTERNAL_SRAM_ICACHE_USAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type INTERNAL_SRAM_ICACHE_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `INTERNAL_SRAM_DCACHE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
 pub type INTERNAL_SRAM_DCACHE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_DCACHE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
-pub type INTERNAL_SRAM_DCACHE_USAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type INTERNAL_SRAM_DCACHE_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `INTERNAL_SRAM_CPU_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
 pub type INTERNAL_SRAM_CPU_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CPU_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
-pub type INTERNAL_SRAM_CPU_USAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type INTERNAL_SRAM_CPU_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:1 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
     #[inline(always)]
@@ -53,7 +53,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -62,24 +62,24 @@ impl W {
     #[must_use]
     pub fn internal_sram_icache_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_ICACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC, 0> {
-        INTERNAL_SRAM_ICACHE_USAGE_W::new(self)
+    ) -> INTERNAL_SRAM_ICACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+        INTERNAL_SRAM_ICACHE_USAGE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
     #[inline(always)]
     #[must_use]
     pub fn internal_sram_dcache_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_DCACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC, 2> {
-        INTERNAL_SRAM_DCACHE_USAGE_W::new(self)
+    ) -> INTERNAL_SRAM_DCACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+        INTERNAL_SRAM_DCACHE_USAGE_W::new(self, 2)
     }
     #[doc = "Bits 4:10 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
     #[inline(always)]
     #[must_use]
     pub fn internal_sram_cpu_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_CPU_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC, 4> {
-        INTERNAL_SRAM_CPU_USAGE_W::new(self)
+    ) -> INTERNAL_SRAM_CPU_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+        INTERNAL_SRAM_CPU_USAGE_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -7,128 +7,127 @@ pub type RECORD_PRO_PDEBUGDATA_R = crate::FieldReader<u32>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_OTHER` reader - "]
 pub type RECORD_PDEBUGDATA_DEP_OTHER_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_OTHER` writer - "]
-pub type RECORD_PDEBUGDATA_DEP_OTHER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_DEP_OTHER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCVEC` reader - "]
 pub type RECORD_PDEBUGDATA_EXCVEC_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCVEC` writer - "]
-pub type RECORD_PDEBUGDATA_EXCVEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RECORD_PDEBUGDATA_EXCVEC_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_SR` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_SR_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_SR` writer - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_SR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_SR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RER` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_RER_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RER` writer - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_RER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_RER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFF` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_BUFF_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFF` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_BUFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_BUFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WER` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_WER_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WER` writer - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_WER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_WER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFFCONFL` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFFCONFL` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_ER` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_ER_R = crate::FieldReader<u16>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_ER` writer - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_ER_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_ER_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_DCM` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_DCM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_DCM` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_DCM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_DCM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSU` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_LSU_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSU` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_LSU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_LSU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ICM` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_ICM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ICM` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_ICM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_ICM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IRAMBUSY` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_IRAMBUSY_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IRAMBUSY` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_IRAMBUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_IRAMBUSY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_LSU` reader - "]
 pub type RECORD_PDEBUGDATA_DEP_LSU_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_LSU` writer - "]
-pub type RECORD_PDEBUGDATA_DEP_LSU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_DEP_LSU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IPIF` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_IPIF_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IPIF` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_IPIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_IPIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RSR` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_RSR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RSR` writer - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_RSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_RSR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_TIE` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_TIE_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_TIE` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_TIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_TIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WSR` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_WSR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WSR` writer - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_WSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_WSR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_RUN` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_RUN_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_RUN` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_RUN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_RUN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_XSR` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_XSR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_XSR` writer - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_XSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_XSR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_STR` reader - "]
 pub type RECORD_PDEBUGDATA_DEP_STR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_STR` writer - "]
-pub type RECORD_PDEBUGDATA_DEP_STR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_DEP_STR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP` reader - "]
 pub type RECORD_PDEBUGDATA_DEP_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP` writer - "]
-pub type RECORD_PDEBUGDATA_DEP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_DEP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPIFETCH` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_BPIFETCH_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPIFETCH` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_BPIFETCH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_BPIFETCH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_L32R` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_L32R_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_L32R` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_L32R_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_L32R_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSPROC` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_LSPROC_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSPROC` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_LSPROC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_LSPROC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPLOAD` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_BPLOAD_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPLOAD` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_BPLOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_BPLOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_MEMW` reader - "]
 pub type RECORD_PDEBUGDATA_DEP_MEMW_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_MEMW` writer - "]
-pub type RECORD_PDEBUGDATA_DEP_MEMW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_DEP_MEMW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCCAUSE` reader - "]
 pub type RECORD_PDEBUGDATA_EXCCAUSE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCCAUSE` writer - "]
-pub type RECORD_PDEBUGDATA_EXCCAUSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RECORD_PDEBUGDATA_EXCCAUSE_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BANKCONFL` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_BANKCONFL_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BANKCONFL` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_BANKCONFL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_BANKCONFL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_HALT` reader - "]
 pub type RECORD_PDEBUGDATA_DEP_HALT_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_HALT` writer - "]
-pub type RECORD_PDEBUGDATA_DEP_HALT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_DEP_HALT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERMUL` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_ITERMUL_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERMUL` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_ITERMUL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_ITERMUL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERDIV` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_ITERDIV_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERDIV` writer - "]
-pub type RECORD_PDEBUGDATA_STALL_ITERDIV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGDATA_STALL_ITERDIV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -429,7 +428,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -438,248 +437,248 @@ impl W {
     #[must_use]
     pub fn record_pdebugdata_dep_other(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_DEP_OTHER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 0> {
-        RECORD_PDEBUGDATA_DEP_OTHER_W::new(self)
+    ) -> RECORD_PDEBUGDATA_DEP_OTHER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_DEP_OTHER_W::new(self, 0)
     }
     #[doc = "Bits 0:4"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_excvec(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_EXCVEC_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 0> {
-        RECORD_PDEBUGDATA_EXCVEC_W::new(self)
+    ) -> RECORD_PDEBUGDATA_EXCVEC_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_EXCVEC_W::new(self, 0)
     }
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_insntype_sr(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_INSNTYPE_SR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 0> {
-        RECORD_PDEBUGDATA_INSNTYPE_SR_W::new(self)
+    ) -> RECORD_PDEBUGDATA_INSNTYPE_SR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_INSNTYPE_SR_W::new(self, 0)
     }
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_insntype_rer(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_INSNTYPE_RER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 0> {
-        RECORD_PDEBUGDATA_INSNTYPE_RER_W::new(self)
+    ) -> RECORD_PDEBUGDATA_INSNTYPE_RER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_INSNTYPE_RER_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_buff(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_BUFF_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 1> {
-        RECORD_PDEBUGDATA_STALL_BUFF_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_BUFF_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_BUFF_W::new(self, 1)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_insntype_wer(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_INSNTYPE_WER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 1> {
-        RECORD_PDEBUGDATA_INSNTYPE_WER_W::new(self)
+    ) -> RECORD_PDEBUGDATA_INSNTYPE_WER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_INSNTYPE_WER_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_buffconfl(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_BUFFCONFL_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 2> {
-        RECORD_PDEBUGDATA_STALL_BUFFCONFL_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_BUFFCONFL_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_BUFFCONFL_W::new(self, 2)
     }
     #[doc = "Bits 2:13"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_insntype_er(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_INSNTYPE_ER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 2> {
-        RECORD_PDEBUGDATA_INSNTYPE_ER_W::new(self)
+    ) -> RECORD_PDEBUGDATA_INSNTYPE_ER_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_INSNTYPE_ER_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_dcm(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_DCM_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 3> {
-        RECORD_PDEBUGDATA_STALL_DCM_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_DCM_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_DCM_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_lsu(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_LSU_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 4> {
-        RECORD_PDEBUGDATA_STALL_LSU_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_LSU_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_LSU_W::new(self, 4)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_icm(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_ICM_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 6> {
-        RECORD_PDEBUGDATA_STALL_ICM_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_ICM_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_ICM_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_irambusy(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_IRAMBUSY_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 7> {
-        RECORD_PDEBUGDATA_STALL_IRAMBUSY_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_IRAMBUSY_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_IRAMBUSY_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_dep_lsu(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_DEP_LSU_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 8> {
-        RECORD_PDEBUGDATA_DEP_LSU_W::new(self)
+    ) -> RECORD_PDEBUGDATA_DEP_LSU_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_DEP_LSU_W::new(self, 8)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_ipif(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_IPIF_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 8> {
-        RECORD_PDEBUGDATA_STALL_IPIF_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_IPIF_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_IPIF_W::new(self, 8)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_insntype_rsr(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_INSNTYPE_RSR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 8> {
-        RECORD_PDEBUGDATA_INSNTYPE_RSR_W::new(self)
+    ) -> RECORD_PDEBUGDATA_INSNTYPE_RSR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_INSNTYPE_RSR_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_tie(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_TIE_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 9> {
-        RECORD_PDEBUGDATA_STALL_TIE_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_TIE_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_TIE_W::new(self, 9)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_insntype_wsr(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_INSNTYPE_WSR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 9> {
-        RECORD_PDEBUGDATA_INSNTYPE_WSR_W::new(self)
+    ) -> RECORD_PDEBUGDATA_INSNTYPE_WSR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_INSNTYPE_WSR_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_run(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_RUN_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 10> {
-        RECORD_PDEBUGDATA_STALL_RUN_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_RUN_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_RUN_W::new(self, 10)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_insntype_xsr(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_INSNTYPE_XSR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 10> {
-        RECORD_PDEBUGDATA_INSNTYPE_XSR_W::new(self)
+    ) -> RECORD_PDEBUGDATA_INSNTYPE_XSR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_INSNTYPE_XSR_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_dep_str(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_DEP_STR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 11> {
-        RECORD_PDEBUGDATA_DEP_STR_W::new(self)
+    ) -> RECORD_PDEBUGDATA_DEP_STR_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_DEP_STR_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_dep(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_DEP_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 12> {
-        RECORD_PDEBUGDATA_DEP_W::new(self)
+    ) -> RECORD_PDEBUGDATA_DEP_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_DEP_W::new(self, 12)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_bpifetch(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_BPIFETCH_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 12> {
-        RECORD_PDEBUGDATA_STALL_BPIFETCH_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_BPIFETCH_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_BPIFETCH_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_l32r(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_L32R_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 13> {
-        RECORD_PDEBUGDATA_STALL_L32R_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_L32R_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_L32R_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_lsproc(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_LSPROC_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 14> {
-        RECORD_PDEBUGDATA_STALL_LSPROC_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_LSPROC_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_LSPROC_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_bpload(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_BPLOAD_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 15> {
-        RECORD_PDEBUGDATA_STALL_BPLOAD_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_BPLOAD_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_BPLOAD_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_dep_memw(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_DEP_MEMW_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 16> {
-        RECORD_PDEBUGDATA_DEP_MEMW_W::new(self)
+    ) -> RECORD_PDEBUGDATA_DEP_MEMW_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_DEP_MEMW_W::new(self, 16)
     }
     #[doc = "Bits 16:21"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_exccause(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_EXCCAUSE_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 16> {
-        RECORD_PDEBUGDATA_EXCCAUSE_W::new(self)
+    ) -> RECORD_PDEBUGDATA_EXCCAUSE_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_EXCCAUSE_W::new(self, 16)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_bankconfl(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_BANKCONFL_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 16> {
-        RECORD_PDEBUGDATA_STALL_BANKCONFL_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_BANKCONFL_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_BANKCONFL_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_dep_halt(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_DEP_HALT_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 17> {
-        RECORD_PDEBUGDATA_DEP_HALT_W::new(self)
+    ) -> RECORD_PDEBUGDATA_DEP_HALT_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_DEP_HALT_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_itermul(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_ITERMUL_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 18> {
-        RECORD_PDEBUGDATA_STALL_ITERMUL_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_ITERMUL_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_ITERMUL_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugdata_stall_iterdiv(
         &mut self,
-    ) -> RECORD_PDEBUGDATA_STALL_ITERDIV_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC, 19> {
-        RECORD_PDEBUGDATA_STALL_ITERDIV_W::new(self)
+    ) -> RECORD_PDEBUGDATA_STALL_ITERDIV_W<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+        RECORD_PDEBUGDATA_STALL_ITERDIV_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

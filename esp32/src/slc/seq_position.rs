@@ -5,11 +5,11 @@ pub type W = crate::W<SEQ_POSITION_SPEC>;
 #[doc = "Field `SLC0_SEQ_POSITION` reader - "]
 pub type SLC0_SEQ_POSITION_R = crate::FieldReader;
 #[doc = "Field `SLC0_SEQ_POSITION` writer - "]
-pub type SLC0_SEQ_POSITION_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLC0_SEQ_POSITION_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLC1_SEQ_POSITION` reader - "]
 pub type SLC1_SEQ_POSITION_R = crate::FieldReader;
 #[doc = "Field `SLC1_SEQ_POSITION` writer - "]
-pub type SLC1_SEQ_POSITION_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLC1_SEQ_POSITION_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SEQ_POSITION_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_seq_position(&mut self) -> SLC0_SEQ_POSITION_W<SEQ_POSITION_SPEC, 0> {
-        SLC0_SEQ_POSITION_W::new(self)
+    pub fn slc0_seq_position(&mut self) -> SLC0_SEQ_POSITION_W<SEQ_POSITION_SPEC> {
+        SLC0_SEQ_POSITION_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_seq_position(&mut self) -> SLC1_SEQ_POSITION_W<SEQ_POSITION_SPEC, 8> {
-        SLC1_SEQ_POSITION_W::new(self)
+    pub fn slc1_seq_position(&mut self) -> SLC1_SEQ_POSITION_W<SEQ_POSITION_SPEC> {
+        SLC1_SEQ_POSITION_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

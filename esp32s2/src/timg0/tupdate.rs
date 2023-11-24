@@ -5,7 +5,7 @@ pub type W = crate::W<TUPDATE_SPEC>;
 #[doc = "Field `UPDATE` reader - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
 pub type UPDATE_R = crate::BitReader;
 #[doc = "Field `UPDATE` writer - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
-pub type UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TUPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
     #[inline(always)]
     #[must_use]
-    pub fn update(&mut self) -> UPDATE_W<TUPDATE_SPEC, 31> {
-        UPDATE_W::new(self)
+    pub fn update(&mut self) -> UPDATE_W<TUPDATE_SPEC> {
+        UPDATE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

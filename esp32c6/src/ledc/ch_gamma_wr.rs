@@ -5,19 +5,19 @@ pub type W = crate::W<CH_GAMMA_WR_SPEC>;
 #[doc = "Field `CH_GAMMA_DUTY_INC` reader - Ledc ch%s gamma duty inc of current ram write address.This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase 0: Decrease."]
 pub type CH_GAMMA_DUTY_INC_R = crate::BitReader;
 #[doc = "Field `CH_GAMMA_DUTY_INC` writer - Ledc ch%s gamma duty inc of current ram write address.This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase 0: Decrease."]
-pub type CH_GAMMA_DUTY_INC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_GAMMA_DUTY_INC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_GAMMA_DUTY_CYCLE` reader - Ledc ch%s gamma duty cycle of current ram write address.The duty will change every LEDC_CH%s_GAMMA_DUTY_CYCLE on channel %s."]
 pub type CH_GAMMA_DUTY_CYCLE_R = crate::FieldReader<u16>;
 #[doc = "Field `CH_GAMMA_DUTY_CYCLE` writer - Ledc ch%s gamma duty cycle of current ram write address.The duty will change every LEDC_CH%s_GAMMA_DUTY_CYCLE on channel %s."]
-pub type CH_GAMMA_DUTY_CYCLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type CH_GAMMA_DUTY_CYCLE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `CH_GAMMA_SCALE` reader - Ledc ch%s gamma scale of current ram write address.This register is used to configure the changing step scale of duty on channel %s."]
 pub type CH_GAMMA_SCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `CH_GAMMA_SCALE` writer - Ledc ch%s gamma scale of current ram write address.This register is used to configure the changing step scale of duty on channel %s."]
-pub type CH_GAMMA_SCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type CH_GAMMA_SCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `CH_GAMMA_DUTY_NUM` reader - Ledc ch%s gamma duty num of current ram write address.This register is used to control the number of times the duty cycle will be changed."]
 pub type CH_GAMMA_DUTY_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `CH_GAMMA_DUTY_NUM` writer - Ledc ch%s gamma duty num of current ram write address.This register is used to control the number of times the duty cycle will be changed."]
-pub type CH_GAMMA_DUTY_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type CH_GAMMA_DUTY_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bit 0 - Ledc ch%s gamma duty inc of current ram write address.This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase 0: Decrease."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_GAMMA_WR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Ledc ch%s gamma duty inc of current ram write address.This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase 0: Decrease."]
     #[inline(always)]
     #[must_use]
-    pub fn ch_gamma_duty_inc(&mut self) -> CH_GAMMA_DUTY_INC_W<CH_GAMMA_WR_SPEC, 0> {
-        CH_GAMMA_DUTY_INC_W::new(self)
+    pub fn ch_gamma_duty_inc(&mut self) -> CH_GAMMA_DUTY_INC_W<CH_GAMMA_WR_SPEC> {
+        CH_GAMMA_DUTY_INC_W::new(self, 0)
     }
     #[doc = "Bits 1:10 - Ledc ch%s gamma duty cycle of current ram write address.The duty will change every LEDC_CH%s_GAMMA_DUTY_CYCLE on channel %s."]
     #[inline(always)]
     #[must_use]
-    pub fn ch_gamma_duty_cycle(&mut self) -> CH_GAMMA_DUTY_CYCLE_W<CH_GAMMA_WR_SPEC, 1> {
-        CH_GAMMA_DUTY_CYCLE_W::new(self)
+    pub fn ch_gamma_duty_cycle(&mut self) -> CH_GAMMA_DUTY_CYCLE_W<CH_GAMMA_WR_SPEC> {
+        CH_GAMMA_DUTY_CYCLE_W::new(self, 1)
     }
     #[doc = "Bits 11:20 - Ledc ch%s gamma scale of current ram write address.This register is used to configure the changing step scale of duty on channel %s."]
     #[inline(always)]
     #[must_use]
-    pub fn ch_gamma_scale(&mut self) -> CH_GAMMA_SCALE_W<CH_GAMMA_WR_SPEC, 11> {
-        CH_GAMMA_SCALE_W::new(self)
+    pub fn ch_gamma_scale(&mut self) -> CH_GAMMA_SCALE_W<CH_GAMMA_WR_SPEC> {
+        CH_GAMMA_SCALE_W::new(self, 11)
     }
     #[doc = "Bits 21:30 - Ledc ch%s gamma duty num of current ram write address.This register is used to control the number of times the duty cycle will be changed."]
     #[inline(always)]
     #[must_use]
-    pub fn ch_gamma_duty_num(&mut self) -> CH_GAMMA_DUTY_NUM_W<CH_GAMMA_WR_SPEC, 21> {
-        CH_GAMMA_DUTY_NUM_W::new(self)
+    pub fn ch_gamma_duty_num(&mut self) -> CH_GAMMA_DUTY_NUM_W<CH_GAMMA_WR_SPEC> {
+        CH_GAMMA_DUTY_NUM_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

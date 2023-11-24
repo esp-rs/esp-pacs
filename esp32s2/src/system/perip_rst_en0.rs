@@ -5,131 +5,131 @@ pub type W = crate::W<PERIP_RST_EN0_SPEC>;
 #[doc = "Field `TIMERS_RST` reader - Set this bit to reset timers."]
 pub type TIMERS_RST_R = crate::BitReader;
 #[doc = "Field `TIMERS_RST` writer - Set this bit to reset timers."]
-pub type TIMERS_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERS_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI01_RST` reader - Set this bit to reset SPI0 and SPI1."]
 pub type SPI01_RST_R = crate::BitReader;
 #[doc = "Field `SPI01_RST` writer - Set this bit to reset SPI0 and SPI1."]
-pub type SPI01_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI01_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_RST` reader - Set this bit to reset UART0."]
 pub type UART_RST_R = crate::BitReader;
 #[doc = "Field `UART_RST` writer - Set this bit to reset UART0."]
-pub type UART_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDG_RST` reader - Set this bit to reset WDG."]
 pub type WDG_RST_R = crate::BitReader;
 #[doc = "Field `WDG_RST` writer - Set this bit to reset WDG."]
-pub type WDG_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDG_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S0_RST` reader - Set this bit to reset I2S0."]
 pub type I2S0_RST_R = crate::BitReader;
 #[doc = "Field `I2S0_RST` writer - Set this bit to reset I2S0."]
-pub type I2S0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1_RST` reader - Set this bit to reset UART1."]
 pub type UART1_RST_R = crate::BitReader;
 #[doc = "Field `UART1_RST` writer - Set this bit to reset UART1."]
-pub type UART1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2_RST` reader - Set this bit to reset SPI2."]
 pub type SPI2_RST_R = crate::BitReader;
 #[doc = "Field `SPI2_RST` writer - Set this bit to reset SPI2."]
-pub type SPI2_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_EXT0_RST` reader - Set this bit to reset I2C EXT0."]
 pub type I2C_EXT0_RST_R = crate::BitReader;
 #[doc = "Field `I2C_EXT0_RST` writer - Set this bit to reset I2C EXT0."]
-pub type I2C_EXT0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_EXT0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI0_RST` reader - Set this bit to reset UHCI0."]
 pub type UHCI0_RST_R = crate::BitReader;
 #[doc = "Field `UHCI0_RST` writer - Set this bit to reset UHCI0."]
-pub type UHCI0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RMT_RST` reader - Set this bit to reset remote controller."]
 pub type RMT_RST_R = crate::BitReader;
 #[doc = "Field `RMT_RST` writer - Set this bit to reset remote controller."]
-pub type RMT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RMT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCNT_RST` reader - Set this bit to reset pulse count."]
 pub type PCNT_RST_R = crate::BitReader;
 #[doc = "Field `PCNT_RST` writer - Set this bit to reset pulse count."]
-pub type PCNT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCNT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEDC_RST` reader - Set this bit to reset LED PWM."]
 pub type LEDC_RST_R = crate::BitReader;
 #[doc = "Field `LEDC_RST` writer - Set this bit to reset LED PWM."]
-pub type LEDC_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEDC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI1_RST` reader - Set this bit to reset UHCI1."]
 pub type UHCI1_RST_R = crate::BitReader;
 #[doc = "Field `UHCI1_RST` writer - Set this bit to reset UHCI1."]
-pub type UHCI1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMERGROUP_RST` reader - Set this bit to reset timer group0."]
 pub type TIMERGROUP_RST_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP_RST` writer - Set this bit to reset timer group0."]
-pub type TIMERGROUP_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERGROUP_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EFUSE_RST` reader - Set this bit to reset eFuse."]
 pub type EFUSE_RST_R = crate::BitReader;
 #[doc = "Field `EFUSE_RST` writer - Set this bit to reset eFuse."]
-pub type EFUSE_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EFUSE_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMERGROUP1_RST` reader - Set this bit to reset timer group1."]
 pub type TIMERGROUP1_RST_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP1_RST` writer - Set this bit to reset timer group1."]
-pub type TIMERGROUP1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERGROUP1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI3_RST` reader - Set this bit to reset SPI3."]
 pub type SPI3_RST_R = crate::BitReader;
 #[doc = "Field `SPI3_RST` writer - Set this bit to reset SPI3."]
-pub type SPI3_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI3_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM0_RST` reader - Set this bit to reset PWM0."]
 pub type PWM0_RST_R = crate::BitReader;
 #[doc = "Field `PWM0_RST` writer - Set this bit to reset PWM0."]
-pub type PWM0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_EXT1_RST` reader - Set this bit to reset I2C EXT1."]
 pub type I2C_EXT1_RST_R = crate::BitReader;
 #[doc = "Field `I2C_EXT1_RST` writer - Set this bit to reset I2C EXT1."]
-pub type I2C_EXT1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_EXT1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TWAI_RST` reader - Set this bit to reset CAN."]
 pub type TWAI_RST_R = crate::BitReader;
 #[doc = "Field `TWAI_RST` writer - Set this bit to reset CAN."]
-pub type TWAI_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWAI_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM1_RST` reader - Set this bit to reset PWM1."]
 pub type PWM1_RST_R = crate::BitReader;
 #[doc = "Field `PWM1_RST` writer - Set this bit to reset PWM1."]
-pub type PWM1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S1_RST` reader - Set this bit to reset I2S1."]
 pub type I2S1_RST_R = crate::BitReader;
 #[doc = "Field `I2S1_RST` writer - Set this bit to reset I2S1."]
-pub type I2S1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2_DMA_RST` reader - Set this bit to reset SPI2 DMA."]
 pub type SPI2_DMA_RST_R = crate::BitReader;
 #[doc = "Field `SPI2_DMA_RST` writer - Set this bit to reset SPI2 DMA."]
-pub type SPI2_DMA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2_DMA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_RST` reader - Set this bit to reset USB."]
 pub type USB_RST_R = crate::BitReader;
 #[doc = "Field `USB_RST` writer - Set this bit to reset USB."]
-pub type USB_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_MEM_RST` reader - Set this bit to reset UART memory."]
 pub type UART_MEM_RST_R = crate::BitReader;
 #[doc = "Field `UART_MEM_RST` writer - Set this bit to reset UART memory."]
-pub type UART_MEM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_MEM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM2_RST` reader - Set this bit to reset PWM2."]
 pub type PWM2_RST_R = crate::BitReader;
 #[doc = "Field `PWM2_RST` writer - Set this bit to reset PWM2."]
-pub type PWM2_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM2_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM3_RST` reader - Set this bit to reset PWM3."]
 pub type PWM3_RST_R = crate::BitReader;
 #[doc = "Field `PWM3_RST` writer - Set this bit to reset PWM3."]
-pub type PWM3_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM3_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI3_DMA_RST` reader - Set this bit to reset SPI3 DMA."]
 pub type SPI3_DMA_RST_R = crate::BitReader;
 #[doc = "Field `SPI3_DMA_RST` writer - Set this bit to reset SPI3 DMA."]
-pub type SPI3_DMA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI3_DMA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_RST` reader - Set this bit to reset SAR ADC."]
 pub type APB_SARADC_RST_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_RST` writer - Set this bit to reset SAR ADC."]
-pub type APB_SARADC_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYSTIMER_RST` reader - Set this bit to reset system timer."]
 pub type SYSTIMER_RST_R = crate::BitReader;
 #[doc = "Field `SYSTIMER_RST` writer - Set this bit to reset system timer."]
-pub type SYSTIMER_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYSTIMER_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_ARB_RST` reader - Set this bit to reset aribiter of ADC2."]
 pub type ADC2_ARB_RST_R = crate::BitReader;
 #[doc = "Field `ADC2_ARB_RST` writer - Set this bit to reset aribiter of ADC2."]
-pub type ADC2_ARB_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_ARB_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI4_RST` reader - Set this bit to reset SPI4."]
 pub type SPI4_RST_R = crate::BitReader;
 #[doc = "Field `SPI4_RST` writer - Set this bit to reset SPI4."]
-pub type SPI4_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI4_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to reset timers."]
     #[inline(always)]
@@ -364,201 +364,201 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to reset timers."]
     #[inline(always)]
     #[must_use]
-    pub fn timers_rst(&mut self) -> TIMERS_RST_W<PERIP_RST_EN0_SPEC, 0> {
-        TIMERS_RST_W::new(self)
+    pub fn timers_rst(&mut self) -> TIMERS_RST_W<PERIP_RST_EN0_SPEC> {
+        TIMERS_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset SPI0 and SPI1."]
     #[inline(always)]
     #[must_use]
-    pub fn spi01_rst(&mut self) -> SPI01_RST_W<PERIP_RST_EN0_SPEC, 1> {
-        SPI01_RST_W::new(self)
+    pub fn spi01_rst(&mut self) -> SPI01_RST_W<PERIP_RST_EN0_SPEC> {
+        SPI01_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset UART0."]
     #[inline(always)]
     #[must_use]
-    pub fn uart_rst(&mut self) -> UART_RST_W<PERIP_RST_EN0_SPEC, 2> {
-        UART_RST_W::new(self)
+    pub fn uart_rst(&mut self) -> UART_RST_W<PERIP_RST_EN0_SPEC> {
+        UART_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset WDG."]
     #[inline(always)]
     #[must_use]
-    pub fn wdg_rst(&mut self) -> WDG_RST_W<PERIP_RST_EN0_SPEC, 3> {
-        WDG_RST_W::new(self)
+    pub fn wdg_rst(&mut self) -> WDG_RST_W<PERIP_RST_EN0_SPEC> {
+        WDG_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to reset I2S0."]
     #[inline(always)]
     #[must_use]
-    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN0_SPEC, 4> {
-        I2S0_RST_W::new(self)
+    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN0_SPEC> {
+        I2S0_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to reset UART1."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_rst(&mut self) -> UART1_RST_W<PERIP_RST_EN0_SPEC, 5> {
-        UART1_RST_W::new(self)
+    pub fn uart1_rst(&mut self) -> UART1_RST_W<PERIP_RST_EN0_SPEC> {
+        UART1_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to reset SPI2."]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_rst(&mut self) -> SPI2_RST_W<PERIP_RST_EN0_SPEC, 6> {
-        SPI2_RST_W::new(self)
+    pub fn spi2_rst(&mut self) -> SPI2_RST_W<PERIP_RST_EN0_SPEC> {
+        SPI2_RST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to reset I2C EXT0."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<PERIP_RST_EN0_SPEC, 7> {
-        I2C_EXT0_RST_W::new(self)
+    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<PERIP_RST_EN0_SPEC> {
+        I2C_EXT0_RST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to reset UHCI0."]
     #[inline(always)]
     #[must_use]
-    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<PERIP_RST_EN0_SPEC, 8> {
-        UHCI0_RST_W::new(self)
+    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<PERIP_RST_EN0_SPEC> {
+        UHCI0_RST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to reset remote controller."]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_rst(&mut self) -> RMT_RST_W<PERIP_RST_EN0_SPEC, 9> {
-        RMT_RST_W::new(self)
+    pub fn rmt_rst(&mut self) -> RMT_RST_W<PERIP_RST_EN0_SPEC> {
+        RMT_RST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to reset pulse count."]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<PERIP_RST_EN0_SPEC, 10> {
-        PCNT_RST_W::new(self)
+    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<PERIP_RST_EN0_SPEC> {
+        PCNT_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to reset LED PWM."]
     #[inline(always)]
     #[must_use]
-    pub fn ledc_rst(&mut self) -> LEDC_RST_W<PERIP_RST_EN0_SPEC, 11> {
-        LEDC_RST_W::new(self)
+    pub fn ledc_rst(&mut self) -> LEDC_RST_W<PERIP_RST_EN0_SPEC> {
+        LEDC_RST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to reset UHCI1."]
     #[inline(always)]
     #[must_use]
-    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<PERIP_RST_EN0_SPEC, 12> {
-        UHCI1_RST_W::new(self)
+    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<PERIP_RST_EN0_SPEC> {
+        UHCI1_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to reset timer group0."]
     #[inline(always)]
     #[must_use]
-    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<PERIP_RST_EN0_SPEC, 13> {
-        TIMERGROUP_RST_W::new(self)
+    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<PERIP_RST_EN0_SPEC> {
+        TIMERGROUP_RST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to reset eFuse."]
     #[inline(always)]
     #[must_use]
-    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<PERIP_RST_EN0_SPEC, 14> {
-        EFUSE_RST_W::new(self)
+    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<PERIP_RST_EN0_SPEC> {
+        EFUSE_RST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to reset timer group1."]
     #[inline(always)]
     #[must_use]
-    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<PERIP_RST_EN0_SPEC, 15> {
-        TIMERGROUP1_RST_W::new(self)
+    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<PERIP_RST_EN0_SPEC> {
+        TIMERGROUP1_RST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to reset SPI3."]
     #[inline(always)]
     #[must_use]
-    pub fn spi3_rst(&mut self) -> SPI3_RST_W<PERIP_RST_EN0_SPEC, 16> {
-        SPI3_RST_W::new(self)
+    pub fn spi3_rst(&mut self) -> SPI3_RST_W<PERIP_RST_EN0_SPEC> {
+        SPI3_RST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to reset PWM0."]
     #[inline(always)]
     #[must_use]
-    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<PERIP_RST_EN0_SPEC, 17> {
-        PWM0_RST_W::new(self)
+    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<PERIP_RST_EN0_SPEC> {
+        PWM0_RST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to reset I2C EXT1."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<PERIP_RST_EN0_SPEC, 18> {
-        I2C_EXT1_RST_W::new(self)
+    pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<PERIP_RST_EN0_SPEC> {
+        I2C_EXT1_RST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to reset CAN."]
     #[inline(always)]
     #[must_use]
-    pub fn twai_rst(&mut self) -> TWAI_RST_W<PERIP_RST_EN0_SPEC, 19> {
-        TWAI_RST_W::new(self)
+    pub fn twai_rst(&mut self) -> TWAI_RST_W<PERIP_RST_EN0_SPEC> {
+        TWAI_RST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Set this bit to reset PWM1."]
     #[inline(always)]
     #[must_use]
-    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<PERIP_RST_EN0_SPEC, 20> {
-        PWM1_RST_W::new(self)
+    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<PERIP_RST_EN0_SPEC> {
+        PWM1_RST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to reset I2S1."]
     #[inline(always)]
     #[must_use]
-    pub fn i2s1_rst(&mut self) -> I2S1_RST_W<PERIP_RST_EN0_SPEC, 21> {
-        I2S1_RST_W::new(self)
+    pub fn i2s1_rst(&mut self) -> I2S1_RST_W<PERIP_RST_EN0_SPEC> {
+        I2S1_RST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to reset SPI2 DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<PERIP_RST_EN0_SPEC, 22> {
-        SPI2_DMA_RST_W::new(self)
+    pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<PERIP_RST_EN0_SPEC> {
+        SPI2_DMA_RST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set this bit to reset USB."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_rst(&mut self) -> USB_RST_W<PERIP_RST_EN0_SPEC, 23> {
-        USB_RST_W::new(self)
+    pub fn usb_rst(&mut self) -> USB_RST_W<PERIP_RST_EN0_SPEC> {
+        USB_RST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set this bit to reset UART memory."]
     #[inline(always)]
     #[must_use]
-    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<PERIP_RST_EN0_SPEC, 24> {
-        UART_MEM_RST_W::new(self)
+    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<PERIP_RST_EN0_SPEC> {
+        UART_MEM_RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to reset PWM2."]
     #[inline(always)]
     #[must_use]
-    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<PERIP_RST_EN0_SPEC, 25> {
-        PWM2_RST_W::new(self)
+    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<PERIP_RST_EN0_SPEC> {
+        PWM2_RST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to reset PWM3."]
     #[inline(always)]
     #[must_use]
-    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<PERIP_RST_EN0_SPEC, 26> {
-        PWM3_RST_W::new(self)
+    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<PERIP_RST_EN0_SPEC> {
+        PWM3_RST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to reset SPI3 DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<PERIP_RST_EN0_SPEC, 27> {
-        SPI3_DMA_RST_W::new(self)
+    pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<PERIP_RST_EN0_SPEC> {
+        SPI3_DMA_RST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set this bit to reset SAR ADC."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<PERIP_RST_EN0_SPEC, 28> {
-        APB_SARADC_RST_W::new(self)
+    pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<PERIP_RST_EN0_SPEC> {
+        APB_SARADC_RST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to reset system timer."]
     #[inline(always)]
     #[must_use]
-    pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<PERIP_RST_EN0_SPEC, 29> {
-        SYSTIMER_RST_W::new(self)
+    pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<PERIP_RST_EN0_SPEC> {
+        SYSTIMER_RST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to reset aribiter of ADC2."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<PERIP_RST_EN0_SPEC, 30> {
-        ADC2_ARB_RST_W::new(self)
+    pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<PERIP_RST_EN0_SPEC> {
+        ADC2_ARB_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to reset SPI4."]
     #[inline(always)]
     #[must_use]
-    pub fn spi4_rst(&mut self) -> SPI4_RST_W<PERIP_RST_EN0_SPEC, 31> {
-        SPI4_RST_W::new(self)
+    pub fn spi4_rst(&mut self) -> SPI4_RST_W<PERIP_RST_EN0_SPEC> {
+        SPI4_RST_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

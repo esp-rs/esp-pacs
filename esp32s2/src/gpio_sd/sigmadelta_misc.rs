@@ -5,11 +5,11 @@ pub type W = crate::W<SIGMADELTA_MISC_SPEC>;
 #[doc = "Field `FUNCTION_CLK_EN` reader - Clock enable bit of sigma delta modulation."]
 pub type FUNCTION_CLK_EN_R = crate::BitReader;
 #[doc = "Field `FUNCTION_CLK_EN` writer - Clock enable bit of sigma delta modulation."]
-pub type FUNCTION_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FUNCTION_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_SWAP` reader - Reserved."]
 pub type SPI_SWAP_R = crate::BitReader;
 #[doc = "Field `SPI_SWAP` writer - Reserved."]
-pub type SPI_SWAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_SWAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SIGMADELTA_MISC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
     #[must_use]
-    pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W<SIGMADELTA_MISC_SPEC, 30> {
-        FUNCTION_CLK_EN_W::new(self)
+    pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W<SIGMADELTA_MISC_SPEC> {
+        FUNCTION_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_swap(&mut self) -> SPI_SWAP_W<SIGMADELTA_MISC_SPEC, 31> {
-        SPI_SWAP_W::new(self)
+    pub fn spi_swap(&mut self) -> SPI_SWAP_W<SIGMADELTA_MISC_SPEC> {
+        SPI_SWAP_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

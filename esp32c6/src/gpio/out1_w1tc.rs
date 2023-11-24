@@ -1,7 +1,7 @@
 #[doc = "Register `OUT1_W1TC` writer"]
 pub type W = crate::W<OUT1_W1TC_SPEC>;
 #[doc = "Field `OUT1_W1TC` writer - GPIO output clear register for GPIO32-34"]
-pub type OUT1_W1TC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type OUT1_W1TC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT1_W1TC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:2 - GPIO output clear register for GPIO32-34"]
     #[inline(always)]
     #[must_use]
-    pub fn out1_w1tc(&mut self) -> OUT1_W1TC_W<OUT1_W1TC_SPEC, 0> {
-        OUT1_W1TC_W::new(self)
+    pub fn out1_w1tc(&mut self) -> OUT1_W1TC_W<OUT1_W1TC_SPEC> {
+        OUT1_W1TC_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

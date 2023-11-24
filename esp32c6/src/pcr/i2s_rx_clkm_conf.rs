@@ -5,19 +5,19 @@ pub type W = crate::W<I2S_RX_CLKM_CONF_SPEC>;
 #[doc = "Field `I2S_RX_CLKM_DIV_NUM` reader - Integral I2S clock divider value"]
 pub type I2S_RX_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `I2S_RX_CLKM_DIV_NUM` writer - Integral I2S clock divider value"]
-pub type I2S_RX_CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type I2S_RX_CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `I2S_RX_CLKM_SEL` reader - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
 pub type I2S_RX_CLKM_SEL_R = crate::FieldReader;
 #[doc = "Field `I2S_RX_CLKM_SEL` writer - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
-pub type I2S_RX_CLKM_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_RX_CLKM_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_RX_CLKM_EN` reader - Set 1 to enable i2s_rx function clock"]
 pub type I2S_RX_CLKM_EN_R = crate::BitReader;
 #[doc = "Field `I2S_RX_CLKM_EN` writer - Set 1 to enable i2s_rx function clock"]
-pub type I2S_RX_CLKM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_RX_CLKM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S_MCLK_SEL` reader - This field is used to select master-clock. 0(default): clk_i2s_rx, 1: clk_i2s_tx"]
 pub type I2S_MCLK_SEL_R = crate::BitReader;
 #[doc = "Field `I2S_MCLK_SEL` writer - This field is used to select master-clock. 0(default): clk_i2s_rx, 1: clk_i2s_tx"]
-pub type I2S_MCLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_MCLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 12:19 - Integral I2S clock divider value"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2S_RX_CLKM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 12:19 - Integral I2S clock divider value"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rx_clkm_div_num(&mut self) -> I2S_RX_CLKM_DIV_NUM_W<I2S_RX_CLKM_CONF_SPEC, 12> {
-        I2S_RX_CLKM_DIV_NUM_W::new(self)
+    pub fn i2s_rx_clkm_div_num(&mut self) -> I2S_RX_CLKM_DIV_NUM_W<I2S_RX_CLKM_CONF_SPEC> {
+        I2S_RX_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rx_clkm_sel(&mut self) -> I2S_RX_CLKM_SEL_W<I2S_RX_CLKM_CONF_SPEC, 20> {
-        I2S_RX_CLKM_SEL_W::new(self)
+    pub fn i2s_rx_clkm_sel(&mut self) -> I2S_RX_CLKM_SEL_W<I2S_RX_CLKM_CONF_SPEC> {
+        I2S_RX_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable i2s_rx function clock"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rx_clkm_en(&mut self) -> I2S_RX_CLKM_EN_W<I2S_RX_CLKM_CONF_SPEC, 22> {
-        I2S_RX_CLKM_EN_W::new(self)
+    pub fn i2s_rx_clkm_en(&mut self) -> I2S_RX_CLKM_EN_W<I2S_RX_CLKM_CONF_SPEC> {
+        I2S_RX_CLKM_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - This field is used to select master-clock. 0(default): clk_i2s_rx, 1: clk_i2s_tx"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_mclk_sel(&mut self) -> I2S_MCLK_SEL_W<I2S_RX_CLKM_CONF_SPEC, 23> {
-        I2S_MCLK_SEL_W::new(self)
+    pub fn i2s_mclk_sel(&mut self) -> I2S_MCLK_SEL_W<I2S_RX_CLKM_CONF_SPEC> {
+        I2S_MCLK_SEL_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

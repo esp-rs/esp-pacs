@@ -5,8 +5,7 @@ pub type W = crate::W<PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT1_ADDR` reader - The bits are used to configure the start virtual address of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
 pub type PRO_ICACHE_AUTOLOAD_SCT1_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT1_ADDR` writer - The bits are used to configure the start virtual address of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
-pub type PRO_ICACHE_AUTOLOAD_SCT1_ADDR_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type PRO_ICACHE_AUTOLOAD_SCT1_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn pro_icache_autoload_sct1_addr(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_SCT1_ADDR_W<PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC, 0> {
-        PRO_ICACHE_AUTOLOAD_SCT1_ADDR_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_SCT1_ADDR_W<PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC> {
+        PRO_ICACHE_AUTOLOAD_SCT1_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

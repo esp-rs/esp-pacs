@@ -5,15 +5,15 @@ pub type W = crate::W<FLASH_SUS_CTRL_SPEC>;
 #[doc = "Field `FLASH_PES_EN` reader - Set this bit to enable auto-suspend function."]
 pub type FLASH_PES_EN_R = crate::BitReader;
 #[doc = "Field `FLASH_PES_EN` writer - Set this bit to enable auto-suspend function."]
-pub type FLASH_PES_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASH_PES_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASH_PER_COMMAND` reader - Program/Erase resume command value."]
 pub type FLASH_PER_COMMAND_R = crate::FieldReader;
 #[doc = "Field `FLASH_PER_COMMAND` writer - Program/Erase resume command value."]
-pub type FLASH_PER_COMMAND_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FLASH_PER_COMMAND_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `FLASH_PES_COMMAND` reader - Program/Erase suspend command value."]
 pub type FLASH_PES_COMMAND_R = crate::FieldReader;
 #[doc = "Field `FLASH_PES_COMMAND` writer - Program/Erase suspend command value."]
-pub type FLASH_PES_COMMAND_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FLASH_PES_COMMAND_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable auto-suspend function."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FLASH_SUS_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable auto-suspend function."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W<FLASH_SUS_CTRL_SPEC, 0> {
-        FLASH_PES_EN_W::new(self)
+    pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W<FLASH_SUS_CTRL_SPEC> {
+        FLASH_PES_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - Program/Erase resume command value."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<FLASH_SUS_CTRL_SPEC, 1> {
-        FLASH_PER_COMMAND_W::new(self)
+    pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<FLASH_SUS_CTRL_SPEC> {
+        FLASH_PER_COMMAND_W::new(self, 1)
     }
     #[doc = "Bits 9:16 - Program/Erase suspend command value."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_pes_command(&mut self) -> FLASH_PES_COMMAND_W<FLASH_SUS_CTRL_SPEC, 9> {
-        FLASH_PES_COMMAND_W::new(self)
+    pub fn flash_pes_command(&mut self) -> FLASH_PES_COMMAND_W<FLASH_SUS_CTRL_SPEC> {
+        FLASH_PES_COMMAND_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

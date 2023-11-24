@@ -5,11 +5,11 @@ pub type W = crate::W<RESYNC_PROLONGED_SPEC>;
 #[doc = "Field `RESYNC_PROLONGED` reader - count number, when count to this value, send a sync package"]
 pub type RESYNC_PROLONGED_R = crate::FieldReader<u32>;
 #[doc = "Field `RESYNC_PROLONGED` writer - count number, when count to this value, send a sync package"]
-pub type RESYNC_PROLONGED_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 24, O, u32>;
+pub type RESYNC_PROLONGED_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 #[doc = "Field `RESYNC_MODE` reader - resyc mode sel: 0: default, cycle count 1: package num count"]
 pub type RESYNC_MODE_R = crate::BitReader;
 #[doc = "Field `RESYNC_MODE` writer - resyc mode sel: 0: default, cycle count 1: package num count"]
-pub type RESYNC_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESYNC_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:23 - count number, when count to this value, send a sync package"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RESYNC_PROLONGED_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - count number, when count to this value, send a sync package"]
     #[inline(always)]
     #[must_use]
-    pub fn resync_prolonged(&mut self) -> RESYNC_PROLONGED_W<RESYNC_PROLONGED_SPEC, 0> {
-        RESYNC_PROLONGED_W::new(self)
+    pub fn resync_prolonged(&mut self) -> RESYNC_PROLONGED_W<RESYNC_PROLONGED_SPEC> {
+        RESYNC_PROLONGED_W::new(self, 0)
     }
     #[doc = "Bit 24 - resyc mode sel: 0: default, cycle count 1: package num count"]
     #[inline(always)]
     #[must_use]
-    pub fn resync_mode(&mut self) -> RESYNC_MODE_W<RESYNC_PROLONGED_SPEC, 24> {
-        RESYNC_MODE_W::new(self)
+    pub fn resync_mode(&mut self) -> RESYNC_MODE_W<RESYNC_PROLONGED_SPEC> {
+        RESYNC_MODE_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

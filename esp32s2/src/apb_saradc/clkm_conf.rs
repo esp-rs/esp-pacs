@@ -5,19 +5,19 @@ pub type W = crate::W<CLKM_CONF_SPEC>;
 #[doc = "Field `CLKM_DIV_NUM` reader - Integral DIG_ADC clock divider value"]
 pub type CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_NUM` writer - Integral DIG_ADC clock divider value"]
-pub type CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLKM_DIV_B` reader - Fractional clock divider numerator value"]
 pub type CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_B` writer - Fractional clock divider numerator value"]
-pub type CLKM_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CLKM_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `CLKM_DIV_A` reader - Fractional clock divider denominator value"]
 pub type CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_A` writer - Fractional clock divider denominator value"]
-pub type CLKM_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CLKM_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `CLK_SEL` reader - 1: select APLL. 2: select APB_CLK. Other values: disable clock."]
 pub type CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `CLK_SEL` writer - 1: select APLL. 2: select APB_CLK. Other values: disable clock."]
-pub type CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:7 - Integral DIG_ADC clock divider value"]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLKM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Integral DIG_ADC clock divider value"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<CLKM_CONF_SPEC, 0> {
-        CLKM_DIV_NUM_W::new(self)
+    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<CLKM_CONF_SPEC> {
+        CLKM_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - Fractional clock divider numerator value"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<CLKM_CONF_SPEC, 8> {
-        CLKM_DIV_B_W::new(self)
+    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<CLKM_CONF_SPEC> {
+        CLKM_DIV_B_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - Fractional clock divider denominator value"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<CLKM_CONF_SPEC, 14> {
-        CLKM_DIV_A_W::new(self)
+    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<CLKM_CONF_SPEC> {
+        CLKM_DIV_A_W::new(self, 14)
     }
     #[doc = "Bits 21:22 - 1: select APLL. 2: select APB_CLK. Other values: disable clock."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sel(&mut self) -> CLK_SEL_W<CLKM_CONF_SPEC, 21> {
-        CLK_SEL_W::new(self)
+    pub fn clk_sel(&mut self) -> CLK_SEL_W<CLKM_CONF_SPEC> {
+        CLK_SEL_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

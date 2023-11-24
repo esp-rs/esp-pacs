@@ -5,7 +5,7 @@ pub type W = crate::W<ROM_MPU_TABLE1_SPEC>;
 #[doc = "Field `ROM_MPU_TABLE1` reader - "]
 pub type ROM_MPU_TABLE1_R = crate::FieldReader;
 #[doc = "Field `ROM_MPU_TABLE1` writer - "]
-pub type ROM_MPU_TABLE1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_MPU_TABLE1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ROM_MPU_TABLE1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn rom_mpu_table1(&mut self) -> ROM_MPU_TABLE1_W<ROM_MPU_TABLE1_SPEC, 0> {
-        ROM_MPU_TABLE1_W::new(self)
+    pub fn rom_mpu_table1(&mut self) -> ROM_MPU_TABLE1_W<ROM_MPU_TABLE1_SPEC> {
+        ROM_MPU_TABLE1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

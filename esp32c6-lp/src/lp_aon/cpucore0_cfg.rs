@@ -5,21 +5,21 @@ pub type W = crate::W<CPUCORE0_CFG_SPEC>;
 #[doc = "Field `CPU_CORE0_SW_STALL` reader - need_des"]
 pub type CPU_CORE0_SW_STALL_R = crate::FieldReader;
 #[doc = "Field `CPU_CORE0_SW_STALL` writer - need_des"]
-pub type CPU_CORE0_SW_STALL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CPU_CORE0_SW_STALL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CPU_CORE0_SW_RESET` writer - need_des"]
-pub type CPU_CORE0_SW_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_CORE0_SW_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPU_CORE0_OCD_HALT_ON_RESET` reader - need_des"]
 pub type CPU_CORE0_OCD_HALT_ON_RESET_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_OCD_HALT_ON_RESET` writer - need_des"]
-pub type CPU_CORE0_OCD_HALT_ON_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_CORE0_OCD_HALT_ON_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPU_CORE0_STAT_VECTOR_SEL` reader - need_des"]
 pub type CPU_CORE0_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_STAT_VECTOR_SEL` writer - need_des"]
-pub type CPU_CORE0_STAT_VECTOR_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_CORE0_STAT_VECTOR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPU_CORE0_DRESET_MASK` reader - need_des"]
 pub type CPU_CORE0_DRESET_MASK_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_DRESET_MASK` writer - need_des"]
-pub type CPU_CORE0_DRESET_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_CORE0_DRESET_MASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -68,45 +68,47 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPUCORE0_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<CPUCORE0_CFG_SPEC, 0> {
-        CPU_CORE0_SW_STALL_W::new(self)
+    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<CPUCORE0_CFG_SPEC> {
+        CPU_CORE0_SW_STALL_W::new(self, 0)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<CPUCORE0_CFG_SPEC, 28> {
-        CPU_CORE0_SW_RESET_W::new(self)
+    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<CPUCORE0_CFG_SPEC> {
+        CPU_CORE0_SW_RESET_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn cpu_core0_ocd_halt_on_reset(
         &mut self,
-    ) -> CPU_CORE0_OCD_HALT_ON_RESET_W<CPUCORE0_CFG_SPEC, 29> {
-        CPU_CORE0_OCD_HALT_ON_RESET_W::new(self)
+    ) -> CPU_CORE0_OCD_HALT_ON_RESET_W<CPUCORE0_CFG_SPEC> {
+        CPU_CORE0_OCD_HALT_ON_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_stat_vector_sel(
-        &mut self,
-    ) -> CPU_CORE0_STAT_VECTOR_SEL_W<CPUCORE0_CFG_SPEC, 30> {
-        CPU_CORE0_STAT_VECTOR_SEL_W::new(self)
+    pub fn cpu_core0_stat_vector_sel(&mut self) -> CPU_CORE0_STAT_VECTOR_SEL_W<CPUCORE0_CFG_SPEC> {
+        CPU_CORE0_STAT_VECTOR_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<CPUCORE0_CFG_SPEC, 31> {
-        CPU_CORE0_DRESET_MASK_W::new(self)
+    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<CPUCORE0_CFG_SPEC> {
+        CPU_CORE0_DRESET_MASK_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

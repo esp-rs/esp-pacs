@@ -5,27 +5,27 @@ pub type W = crate::W<HP_ACTIVE_HP_SYS_CNTL_SPEC>;
 #[doc = "Field `HP_ACTIVE_UART_WAKEUP_EN` reader - need_des"]
 pub type HP_ACTIVE_UART_WAKEUP_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_UART_WAKEUP_EN` writer - need_des"]
-pub type HP_ACTIVE_UART_WAKEUP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_UART_WAKEUP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_LP_PAD_HOLD_ALL` reader - need_des"]
 pub type HP_ACTIVE_LP_PAD_HOLD_ALL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_LP_PAD_HOLD_ALL` writer - need_des"]
-pub type HP_ACTIVE_LP_PAD_HOLD_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_LP_PAD_HOLD_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_HP_PAD_HOLD_ALL` reader - need_des"]
 pub type HP_ACTIVE_HP_PAD_HOLD_ALL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_HP_PAD_HOLD_ALL` writer - need_des"]
-pub type HP_ACTIVE_HP_PAD_HOLD_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_HP_PAD_HOLD_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_DIG_PAD_SLP_SEL` reader - need_des"]
 pub type HP_ACTIVE_DIG_PAD_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_DIG_PAD_SLP_SEL` writer - need_des"]
-pub type HP_ACTIVE_DIG_PAD_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_DIG_PAD_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_DIG_PAUSE_WDT` reader - need_des"]
 pub type HP_ACTIVE_DIG_PAUSE_WDT_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_DIG_PAUSE_WDT` writer - need_des"]
-pub type HP_ACTIVE_DIG_PAUSE_WDT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_DIG_PAUSE_WDT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_ACTIVE_DIG_CPU_STALL` reader - need_des"]
 pub type HP_ACTIVE_DIG_CPU_STALL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_DIG_CPU_STALL` writer - need_des"]
-pub type HP_ACTIVE_DIG_CPU_STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_ACTIVE_DIG_CPU_STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
@@ -92,7 +92,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_HP_SYS_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -101,48 +101,48 @@ impl W {
     #[must_use]
     pub fn hp_active_uart_wakeup_en(
         &mut self,
-    ) -> HP_ACTIVE_UART_WAKEUP_EN_W<HP_ACTIVE_HP_SYS_CNTL_SPEC, 24> {
-        HP_ACTIVE_UART_WAKEUP_EN_W::new(self)
+    ) -> HP_ACTIVE_UART_WAKEUP_EN_W<HP_ACTIVE_HP_SYS_CNTL_SPEC> {
+        HP_ACTIVE_UART_WAKEUP_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_lp_pad_hold_all(
         &mut self,
-    ) -> HP_ACTIVE_LP_PAD_HOLD_ALL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC, 25> {
-        HP_ACTIVE_LP_PAD_HOLD_ALL_W::new(self)
+    ) -> HP_ACTIVE_LP_PAD_HOLD_ALL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC> {
+        HP_ACTIVE_LP_PAD_HOLD_ALL_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_hp_pad_hold_all(
         &mut self,
-    ) -> HP_ACTIVE_HP_PAD_HOLD_ALL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC, 26> {
-        HP_ACTIVE_HP_PAD_HOLD_ALL_W::new(self)
+    ) -> HP_ACTIVE_HP_PAD_HOLD_ALL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC> {
+        HP_ACTIVE_HP_PAD_HOLD_ALL_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_dig_pad_slp_sel(
         &mut self,
-    ) -> HP_ACTIVE_DIG_PAD_SLP_SEL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC, 27> {
-        HP_ACTIVE_DIG_PAD_SLP_SEL_W::new(self)
+    ) -> HP_ACTIVE_DIG_PAD_SLP_SEL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC> {
+        HP_ACTIVE_DIG_PAD_SLP_SEL_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_dig_pause_wdt(
         &mut self,
-    ) -> HP_ACTIVE_DIG_PAUSE_WDT_W<HP_ACTIVE_HP_SYS_CNTL_SPEC, 28> {
-        HP_ACTIVE_DIG_PAUSE_WDT_W::new(self)
+    ) -> HP_ACTIVE_DIG_PAUSE_WDT_W<HP_ACTIVE_HP_SYS_CNTL_SPEC> {
+        HP_ACTIVE_DIG_PAUSE_WDT_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_active_dig_cpu_stall(
         &mut self,
-    ) -> HP_ACTIVE_DIG_CPU_STALL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC, 29> {
-        HP_ACTIVE_DIG_CPU_STALL_W::new(self)
+    ) -> HP_ACTIVE_DIG_CPU_STALL_W<HP_ACTIVE_HP_SYS_CNTL_SPEC> {
+        HP_ACTIVE_DIG_CPU_STALL_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<SWFC_CONF1_SPEC>;
 #[doc = "Field `XON_THRESHOLD` reader - When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1 it will send a Xon char."]
 pub type XON_THRESHOLD_R = crate::FieldReader;
 #[doc = "Field `XON_THRESHOLD` writer - When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1 it will send a Xon char."]
-pub type XON_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type XON_THRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `XOFF_THRESHOLD` reader - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1 it will send a Xoff char."]
 pub type XOFF_THRESHOLD_R = crate::FieldReader;
 #[doc = "Field `XOFF_THRESHOLD` writer - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1 it will send a Xoff char."]
-pub type XOFF_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type XOFF_THRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 3:7 - When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1 it will send a Xon char."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SWFC_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 3:7 - When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1 it will send a Xon char."]
     #[inline(always)]
     #[must_use]
-    pub fn xon_threshold(&mut self) -> XON_THRESHOLD_W<SWFC_CONF1_SPEC, 3> {
-        XON_THRESHOLD_W::new(self)
+    pub fn xon_threshold(&mut self) -> XON_THRESHOLD_W<SWFC_CONF1_SPEC> {
+        XON_THRESHOLD_W::new(self, 3)
     }
     #[doc = "Bits 11:15 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1 it will send a Xoff char."]
     #[inline(always)]
     #[must_use]
-    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF1_SPEC, 11> {
-        XOFF_THRESHOLD_W::new(self)
+    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF1_SPEC> {
+        XOFF_THRESHOLD_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

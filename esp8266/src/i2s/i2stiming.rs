@@ -5,55 +5,55 @@ pub type W = crate::W<I2STIMING_SPEC>;
 #[doc = "Field `I2S_TRANS_BCK_IN_DELAY` reader - "]
 pub type I2S_TRANS_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_BCK_IN_DELAY` writer - "]
-pub type I2S_TRANS_BCK_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_TRANS_BCK_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_TRANS_WS_IN_DELAY` reader - "]
 pub type I2S_TRANS_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_WS_IN_DELAY` writer - "]
-pub type I2S_TRANS_WS_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_TRANS_WS_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_RECE_BCK_IN_DELAY` reader - "]
 pub type I2S_RECE_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_BCK_IN_DELAY` writer - "]
-pub type I2S_RECE_BCK_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_RECE_BCK_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_RECE_WS_IN_DELAY` reader - "]
 pub type I2S_RECE_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_WS_IN_DELAY` writer - "]
-pub type I2S_RECE_WS_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_RECE_WS_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_RECE_SD_IN_DELAY` reader - "]
 pub type I2S_RECE_SD_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_SD_IN_DELAY` writer - "]
-pub type I2S_RECE_SD_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_RECE_SD_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_TRANS_BCK_OUT_DELAY` reader - "]
 pub type I2S_TRANS_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_BCK_OUT_DELAY` writer - "]
-pub type I2S_TRANS_BCK_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_TRANS_BCK_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_TRANS_WS_OUT_DELAY` reader - "]
 pub type I2S_TRANS_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_WS_OUT_DELAY` writer - "]
-pub type I2S_TRANS_WS_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_TRANS_WS_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_TRANS_SD_OUT_DELAY` reader - "]
 pub type I2S_TRANS_SD_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_SD_OUT_DELAY` writer - "]
-pub type I2S_TRANS_SD_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_TRANS_SD_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_RECE_WS_OUT_DELAY` reader - "]
 pub type I2S_RECE_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_WS_OUT_DELAY` writer - "]
-pub type I2S_RECE_WS_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_RECE_WS_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_RECE_BCK_OUT_DELAY` reader - "]
 pub type I2S_RECE_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_BCK_OUT_DELAY` writer - "]
-pub type I2S_RECE_BCK_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_RECE_BCK_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2S_TRANS_DSYNC_SW` reader - "]
 pub type I2S_TRANS_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `I2S_TRANS_DSYNC_SW` writer - "]
-pub type I2S_TRANS_DSYNC_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_TRANS_DSYNC_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S_RECE_DSYNC_SW` reader - "]
 pub type I2S_RECE_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `I2S_RECE_DSYNC_SW` writer - "]
-pub type I2S_RECE_DSYNC_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_RECE_DSYNC_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S_TRANS_BCK_IN_INV` reader - "]
 pub type I2S_TRANS_BCK_IN_INV_R = crate::BitReader;
 #[doc = "Field `I2S_TRANS_BCK_IN_INV` writer - "]
-pub type I2S_TRANS_BCK_IN_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_TRANS_BCK_IN_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -183,89 +183,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2STIMING_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_trans_bck_in_delay(&mut self) -> I2S_TRANS_BCK_IN_DELAY_W<I2STIMING_SPEC, 0> {
-        I2S_TRANS_BCK_IN_DELAY_W::new(self)
+    pub fn i2s_trans_bck_in_delay(&mut self) -> I2S_TRANS_BCK_IN_DELAY_W<I2STIMING_SPEC> {
+        I2S_TRANS_BCK_IN_DELAY_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_trans_ws_in_delay(&mut self) -> I2S_TRANS_WS_IN_DELAY_W<I2STIMING_SPEC, 2> {
-        I2S_TRANS_WS_IN_DELAY_W::new(self)
+    pub fn i2s_trans_ws_in_delay(&mut self) -> I2S_TRANS_WS_IN_DELAY_W<I2STIMING_SPEC> {
+        I2S_TRANS_WS_IN_DELAY_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rece_bck_in_delay(&mut self) -> I2S_RECE_BCK_IN_DELAY_W<I2STIMING_SPEC, 4> {
-        I2S_RECE_BCK_IN_DELAY_W::new(self)
+    pub fn i2s_rece_bck_in_delay(&mut self) -> I2S_RECE_BCK_IN_DELAY_W<I2STIMING_SPEC> {
+        I2S_RECE_BCK_IN_DELAY_W::new(self, 4)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rece_ws_in_delay(&mut self) -> I2S_RECE_WS_IN_DELAY_W<I2STIMING_SPEC, 6> {
-        I2S_RECE_WS_IN_DELAY_W::new(self)
+    pub fn i2s_rece_ws_in_delay(&mut self) -> I2S_RECE_WS_IN_DELAY_W<I2STIMING_SPEC> {
+        I2S_RECE_WS_IN_DELAY_W::new(self, 6)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rece_sd_in_delay(&mut self) -> I2S_RECE_SD_IN_DELAY_W<I2STIMING_SPEC, 8> {
-        I2S_RECE_SD_IN_DELAY_W::new(self)
+    pub fn i2s_rece_sd_in_delay(&mut self) -> I2S_RECE_SD_IN_DELAY_W<I2STIMING_SPEC> {
+        I2S_RECE_SD_IN_DELAY_W::new(self, 8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_trans_bck_out_delay(&mut self) -> I2S_TRANS_BCK_OUT_DELAY_W<I2STIMING_SPEC, 10> {
-        I2S_TRANS_BCK_OUT_DELAY_W::new(self)
+    pub fn i2s_trans_bck_out_delay(&mut self) -> I2S_TRANS_BCK_OUT_DELAY_W<I2STIMING_SPEC> {
+        I2S_TRANS_BCK_OUT_DELAY_W::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_trans_ws_out_delay(&mut self) -> I2S_TRANS_WS_OUT_DELAY_W<I2STIMING_SPEC, 12> {
-        I2S_TRANS_WS_OUT_DELAY_W::new(self)
+    pub fn i2s_trans_ws_out_delay(&mut self) -> I2S_TRANS_WS_OUT_DELAY_W<I2STIMING_SPEC> {
+        I2S_TRANS_WS_OUT_DELAY_W::new(self, 12)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_trans_sd_out_delay(&mut self) -> I2S_TRANS_SD_OUT_DELAY_W<I2STIMING_SPEC, 14> {
-        I2S_TRANS_SD_OUT_DELAY_W::new(self)
+    pub fn i2s_trans_sd_out_delay(&mut self) -> I2S_TRANS_SD_OUT_DELAY_W<I2STIMING_SPEC> {
+        I2S_TRANS_SD_OUT_DELAY_W::new(self, 14)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rece_ws_out_delay(&mut self) -> I2S_RECE_WS_OUT_DELAY_W<I2STIMING_SPEC, 16> {
-        I2S_RECE_WS_OUT_DELAY_W::new(self)
+    pub fn i2s_rece_ws_out_delay(&mut self) -> I2S_RECE_WS_OUT_DELAY_W<I2STIMING_SPEC> {
+        I2S_RECE_WS_OUT_DELAY_W::new(self, 16)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rece_bck_out_delay(&mut self) -> I2S_RECE_BCK_OUT_DELAY_W<I2STIMING_SPEC, 18> {
-        I2S_RECE_BCK_OUT_DELAY_W::new(self)
+    pub fn i2s_rece_bck_out_delay(&mut self) -> I2S_RECE_BCK_OUT_DELAY_W<I2STIMING_SPEC> {
+        I2S_RECE_BCK_OUT_DELAY_W::new(self, 18)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_trans_dsync_sw(&mut self) -> I2S_TRANS_DSYNC_SW_W<I2STIMING_SPEC, 20> {
-        I2S_TRANS_DSYNC_SW_W::new(self)
+    pub fn i2s_trans_dsync_sw(&mut self) -> I2S_TRANS_DSYNC_SW_W<I2STIMING_SPEC> {
+        I2S_TRANS_DSYNC_SW_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rece_dsync_sw(&mut self) -> I2S_RECE_DSYNC_SW_W<I2STIMING_SPEC, 21> {
-        I2S_RECE_DSYNC_SW_W::new(self)
+    pub fn i2s_rece_dsync_sw(&mut self) -> I2S_RECE_DSYNC_SW_W<I2STIMING_SPEC> {
+        I2S_RECE_DSYNC_SW_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_trans_bck_in_inv(&mut self) -> I2S_TRANS_BCK_IN_INV_W<I2STIMING_SPEC, 22> {
-        I2S_TRANS_BCK_IN_INV_W::new(self)
+    pub fn i2s_trans_bck_in_inv(&mut self) -> I2S_TRANS_BCK_IN_INV_W<I2STIMING_SPEC> {
+        I2S_TRANS_BCK_IN_INV_W::new(self, 22)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

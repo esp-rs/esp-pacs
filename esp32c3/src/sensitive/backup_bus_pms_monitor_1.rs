@@ -5,11 +5,11 @@ pub type W = crate::W<BACKUP_BUS_PMS_MONITOR_1_SPEC>;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR` reader - backup_bus_pms_monitor_violate_clr"]
 pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_R = crate::BitReader;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR` writer - backup_bus_pms_monitor_violate_clr"]
-pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_EN` reader - backup_bus_pms_monitor_violate_en"]
 pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_R = crate::BitReader;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_EN` writer - backup_bus_pms_monitor_violate_en"]
-pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - backup_bus_pms_monitor_violate_clr"]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_MONITOR_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn backup_bus_pms_monitor_violate_clr(
         &mut self,
-    ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_W<BACKUP_BUS_PMS_MONITOR_1_SPEC, 0> {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_W::new(self)
+    ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_W<BACKUP_BUS_PMS_MONITOR_1_SPEC> {
+        BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - backup_bus_pms_monitor_violate_en"]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_monitor_violate_en(
         &mut self,
-    ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_W<BACKUP_BUS_PMS_MONITOR_1_SPEC, 1> {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_W::new(self)
+    ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_W<BACKUP_BUS_PMS_MONITOR_1_SPEC> {
+        BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

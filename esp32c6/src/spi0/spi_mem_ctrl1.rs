@@ -5,21 +5,21 @@ pub type W = crate::W<SPI_MEM_CTRL1_SPEC>;
 #[doc = "Field `SPI_MEM_CLK_MODE` reader - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
 pub type SPI_MEM_CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CLK_MODE` writer - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
-pub type SPI_MEM_CLK_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI_MEM_CLK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI_AR_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
 pub type SPI_AR_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_AR_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AR_SIZE0_1_SUPPORT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_AR_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_AW_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
 pub type SPI_AW_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_AW_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AW_SIZE0_1_SUPPORT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_AW_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_AXI_RDATA_BACK_FAST` reader - 1: Reply AXI read data to AXI bus when one AXI read beat data is available. 0: Reply AXI read data to AXI bus when all the read data is available."]
 pub type SPI_AXI_RDATA_BACK_FAST_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RRESP_ECC_ERR_EN` reader - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
 pub type SPI_MEM_RRESP_ECC_ERR_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RRESP_ECC_ERR_EN` writer - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
-pub type SPI_MEM_RRESP_ECC_ERR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_RRESP_ECC_ERR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_AR_SPLICE_EN` reader - Set this bit to enable AXI Read Splice-transfer."]
 pub type SPI_MEM_AR_SPLICE_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AW_SPLICE_EN` reader - Set this bit to enable AXI Write Splice-transfer."]
@@ -31,11 +31,11 @@ pub type SPI_MEM_DUAL_RAM_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FAST_WRITE_EN` reader - Set this bit to write data faster, do not wait write data has been stored in tx_bus_fifo_l2. It will wait 4*T_clk_ctrl to insure the write data has been stored in tx_bus_fifo_l2."]
 pub type SPI_MEM_FAST_WRITE_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FAST_WRITE_EN` writer - Set this bit to write data faster, do not wait write data has been stored in tx_bus_fifo_l2. It will wait 4*T_clk_ctrl to insure the write data has been stored in tx_bus_fifo_l2."]
-pub type SPI_MEM_FAST_WRITE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FAST_WRITE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_RXFIFO_RST` writer - The synchronous reset signal for SPI0 RX AFIFO and all the AES_MSPI SYNC FIFO to receive signals from AXI. Set this bit to reset these FIFO."]
-pub type SPI_MEM_RXFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_RXFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_TXFIFO_RST` writer - The synchronous reset signal for SPI0 TX AFIFO and all the AES_MSPI SYNC FIFO to send signals to AXI. Set this bit to reset these FIFO."]
-pub type SPI_MEM_TXFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_TXFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
@@ -138,57 +138,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_clk_mode(&mut self) -> SPI_MEM_CLK_MODE_W<SPI_MEM_CTRL1_SPEC, 0> {
-        SPI_MEM_CLK_MODE_W::new(self)
+    pub fn spi_mem_clk_mode(&mut self) -> SPI_MEM_CLK_MODE_W<SPI_MEM_CTRL1_SPEC> {
+        SPI_MEM_CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bit 21 - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_ar_size0_1_support_en(
-        &mut self,
-    ) -> SPI_AR_SIZE0_1_SUPPORT_EN_W<SPI_MEM_CTRL1_SPEC, 21> {
-        SPI_AR_SIZE0_1_SUPPORT_EN_W::new(self)
+    pub fn spi_ar_size0_1_support_en(&mut self) -> SPI_AR_SIZE0_1_SUPPORT_EN_W<SPI_MEM_CTRL1_SPEC> {
+        SPI_AR_SIZE0_1_SUPPORT_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_aw_size0_1_support_en(
-        &mut self,
-    ) -> SPI_AW_SIZE0_1_SUPPORT_EN_W<SPI_MEM_CTRL1_SPEC, 22> {
-        SPI_AW_SIZE0_1_SUPPORT_EN_W::new(self)
+    pub fn spi_aw_size0_1_support_en(&mut self) -> SPI_AW_SIZE0_1_SUPPORT_EN_W<SPI_MEM_CTRL1_SPEC> {
+        SPI_AW_SIZE0_1_SUPPORT_EN_W::new(self, 22)
     }
     #[doc = "Bit 24 - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_rresp_ecc_err_en(
-        &mut self,
-    ) -> SPI_MEM_RRESP_ECC_ERR_EN_W<SPI_MEM_CTRL1_SPEC, 24> {
-        SPI_MEM_RRESP_ECC_ERR_EN_W::new(self)
+    pub fn spi_mem_rresp_ecc_err_en(&mut self) -> SPI_MEM_RRESP_ECC_ERR_EN_W<SPI_MEM_CTRL1_SPEC> {
+        SPI_MEM_RRESP_ECC_ERR_EN_W::new(self, 24)
     }
     #[doc = "Bit 29 - Set this bit to write data faster, do not wait write data has been stored in tx_bus_fifo_l2. It will wait 4*T_clk_ctrl to insure the write data has been stored in tx_bus_fifo_l2."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_fast_write_en(&mut self) -> SPI_MEM_FAST_WRITE_EN_W<SPI_MEM_CTRL1_SPEC, 29> {
-        SPI_MEM_FAST_WRITE_EN_W::new(self)
+    pub fn spi_mem_fast_write_en(&mut self) -> SPI_MEM_FAST_WRITE_EN_W<SPI_MEM_CTRL1_SPEC> {
+        SPI_MEM_FAST_WRITE_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - The synchronous reset signal for SPI0 RX AFIFO and all the AES_MSPI SYNC FIFO to receive signals from AXI. Set this bit to reset these FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_rxfifo_rst(&mut self) -> SPI_MEM_RXFIFO_RST_W<SPI_MEM_CTRL1_SPEC, 30> {
-        SPI_MEM_RXFIFO_RST_W::new(self)
+    pub fn spi_mem_rxfifo_rst(&mut self) -> SPI_MEM_RXFIFO_RST_W<SPI_MEM_CTRL1_SPEC> {
+        SPI_MEM_RXFIFO_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - The synchronous reset signal for SPI0 TX AFIFO and all the AES_MSPI SYNC FIFO to send signals to AXI. Set this bit to reset these FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_txfifo_rst(&mut self) -> SPI_MEM_TXFIFO_RST_W<SPI_MEM_CTRL1_SPEC, 31> {
-        SPI_MEM_TXFIFO_RST_W::new(self)
+    pub fn spi_mem_txfifo_rst(&mut self) -> SPI_MEM_TXFIFO_RST_W<SPI_MEM_CTRL1_SPEC> {
+        SPI_MEM_TXFIFO_RST_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,43 +5,43 @@ pub type W = crate::W<BLK0_WDATA6_SPEC>;
 #[doc = "Field `CODING_SCHEME` reader - "]
 pub type CODING_SCHEME_R = crate::FieldReader;
 #[doc = "Field `CODING_SCHEME` writer - "]
-pub type CODING_SCHEME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CODING_SCHEME_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CONSOLE_DEBUG_DISABLE` reader - "]
 pub type CONSOLE_DEBUG_DISABLE_R = crate::BitReader;
 #[doc = "Field `CONSOLE_DEBUG_DISABLE` writer - "]
-pub type CONSOLE_DEBUG_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONSOLE_DEBUG_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISABLE_SDIO_HOST` reader - "]
 pub type DISABLE_SDIO_HOST_R = crate::BitReader;
 #[doc = "Field `DISABLE_SDIO_HOST` writer - "]
-pub type DISABLE_SDIO_HOST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISABLE_SDIO_HOST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ABS_DONE_0` reader - "]
 pub type ABS_DONE_0_R = crate::BitReader;
 #[doc = "Field `ABS_DONE_0` writer - "]
-pub type ABS_DONE_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ABS_DONE_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ABS_DONE_1` reader - "]
 pub type ABS_DONE_1_R = crate::BitReader;
 #[doc = "Field `ABS_DONE_1` writer - "]
-pub type ABS_DONE_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ABS_DONE_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISABLE_JTAG` reader - "]
 pub type DISABLE_JTAG_R = crate::BitReader;
 #[doc = "Field `DISABLE_JTAG` writer - "]
-pub type DISABLE_JTAG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISABLE_JTAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISABLE_DL_ENCRYPT` reader - "]
 pub type DISABLE_DL_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `DISABLE_DL_ENCRYPT` writer - "]
-pub type DISABLE_DL_ENCRYPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISABLE_DL_ENCRYPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISABLE_DL_DECRYPT` reader - "]
 pub type DISABLE_DL_DECRYPT_R = crate::BitReader;
 #[doc = "Field `DISABLE_DL_DECRYPT` writer - "]
-pub type DISABLE_DL_DECRYPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISABLE_DL_DECRYPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISABLE_DL_CACHE` reader - "]
 pub type DISABLE_DL_CACHE_R = crate::BitReader;
 #[doc = "Field `DISABLE_DL_CACHE` writer - "]
-pub type DISABLE_DL_CACHE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISABLE_DL_CACHE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KEY_STATUS` reader - "]
 pub type KEY_STATUS_R = crate::BitReader;
 #[doc = "Field `KEY_STATUS` writer - "]
-pub type KEY_STATUS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type KEY_STATUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -135,69 +135,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn coding_scheme(&mut self) -> CODING_SCHEME_W<BLK0_WDATA6_SPEC, 0> {
-        CODING_SCHEME_W::new(self)
+    pub fn coding_scheme(&mut self) -> CODING_SCHEME_W<BLK0_WDATA6_SPEC> {
+        CODING_SCHEME_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn console_debug_disable(&mut self) -> CONSOLE_DEBUG_DISABLE_W<BLK0_WDATA6_SPEC, 2> {
-        CONSOLE_DEBUG_DISABLE_W::new(self)
+    pub fn console_debug_disable(&mut self) -> CONSOLE_DEBUG_DISABLE_W<BLK0_WDATA6_SPEC> {
+        CONSOLE_DEBUG_DISABLE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn disable_sdio_host(&mut self) -> DISABLE_SDIO_HOST_W<BLK0_WDATA6_SPEC, 3> {
-        DISABLE_SDIO_HOST_W::new(self)
+    pub fn disable_sdio_host(&mut self) -> DISABLE_SDIO_HOST_W<BLK0_WDATA6_SPEC> {
+        DISABLE_SDIO_HOST_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn abs_done_0(&mut self) -> ABS_DONE_0_W<BLK0_WDATA6_SPEC, 4> {
-        ABS_DONE_0_W::new(self)
+    pub fn abs_done_0(&mut self) -> ABS_DONE_0_W<BLK0_WDATA6_SPEC> {
+        ABS_DONE_0_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn abs_done_1(&mut self) -> ABS_DONE_1_W<BLK0_WDATA6_SPEC, 5> {
-        ABS_DONE_1_W::new(self)
+    pub fn abs_done_1(&mut self) -> ABS_DONE_1_W<BLK0_WDATA6_SPEC> {
+        ABS_DONE_1_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn disable_jtag(&mut self) -> DISABLE_JTAG_W<BLK0_WDATA6_SPEC, 6> {
-        DISABLE_JTAG_W::new(self)
+    pub fn disable_jtag(&mut self) -> DISABLE_JTAG_W<BLK0_WDATA6_SPEC> {
+        DISABLE_JTAG_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn disable_dl_encrypt(&mut self) -> DISABLE_DL_ENCRYPT_W<BLK0_WDATA6_SPEC, 7> {
-        DISABLE_DL_ENCRYPT_W::new(self)
+    pub fn disable_dl_encrypt(&mut self) -> DISABLE_DL_ENCRYPT_W<BLK0_WDATA6_SPEC> {
+        DISABLE_DL_ENCRYPT_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn disable_dl_decrypt(&mut self) -> DISABLE_DL_DECRYPT_W<BLK0_WDATA6_SPEC, 8> {
-        DISABLE_DL_DECRYPT_W::new(self)
+    pub fn disable_dl_decrypt(&mut self) -> DISABLE_DL_DECRYPT_W<BLK0_WDATA6_SPEC> {
+        DISABLE_DL_DECRYPT_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn disable_dl_cache(&mut self) -> DISABLE_DL_CACHE_W<BLK0_WDATA6_SPEC, 9> {
-        DISABLE_DL_CACHE_W::new(self)
+    pub fn disable_dl_cache(&mut self) -> DISABLE_DL_CACHE_W<BLK0_WDATA6_SPEC> {
+        DISABLE_DL_CACHE_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn key_status(&mut self) -> KEY_STATUS_W<BLK0_WDATA6_SPEC, 10> {
-        KEY_STATUS_W::new(self)
+    pub fn key_status(&mut self) -> KEY_STATUS_W<BLK0_WDATA6_SPEC> {
+        KEY_STATUS_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

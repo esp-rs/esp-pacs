@@ -1,7 +1,7 @@
 #[doc = "Register `SHA256_LOAD` writer"]
 pub type W = crate::W<SHA256_LOAD_SPEC>;
 #[doc = "Field `SHA256_LOAD` writer - Write 1 to finish the SHA-256 operation to calculate the final message hash."]
-pub type SHA256_LOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SHA256_LOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SHA256_LOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Write 1 to finish the SHA-256 operation to calculate the final message hash."]
     #[inline(always)]
     #[must_use]
-    pub fn sha256_load(&mut self) -> SHA256_LOAD_W<SHA256_LOAD_SPEC, 0> {
-        SHA256_LOAD_W::new(self)
+    pub fn sha256_load(&mut self) -> SHA256_LOAD_W<SHA256_LOAD_SPEC> {
+        SHA256_LOAD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

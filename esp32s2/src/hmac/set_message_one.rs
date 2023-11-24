@@ -1,7 +1,7 @@
 #[doc = "Register `SET_MESSAGE_ONE` writer"]
 pub type W = crate::W<SET_MESSAGE_ONE_SPEC>;
 #[doc = "Field `SET_TEXT_ONE` writer - Call SHA to calculate one message block."]
-pub type SET_TEXT_ONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SET_TEXT_ONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ONE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Call SHA to calculate one message block."]
     #[inline(always)]
     #[must_use]
-    pub fn set_text_one(&mut self) -> SET_TEXT_ONE_W<SET_MESSAGE_ONE_SPEC, 0> {
-        SET_TEXT_ONE_W::new(self)
+    pub fn set_text_one(&mut self) -> SET_TEXT_ONE_W<SET_MESSAGE_ONE_SPEC> {
+        SET_TEXT_ONE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,8 +5,7 @@ pub type W = crate::W<I2C0_CTRL_SPEC>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_CTRL` reader - need_des"]
 pub type LP_I2C_ANA_MAST_I2C0_CTRL_R = crate::FieldReader<u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_CTRL` writer - need_des"]
-pub type LP_I2C_ANA_MAST_I2C0_CTRL_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 25, O, u32>;
+pub type LP_I2C_ANA_MAST_I2C0_CTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 25, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_BUSY` reader - need_des"]
 pub type LP_I2C_ANA_MAST_I2C0_BUSY_R = crate::BitReader;
 impl R {
@@ -39,17 +38,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C0_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:24 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_i2c_ana_mast_i2c0_ctrl(&mut self) -> LP_I2C_ANA_MAST_I2C0_CTRL_W<I2C0_CTRL_SPEC, 0> {
-        LP_I2C_ANA_MAST_I2C0_CTRL_W::new(self)
+    pub fn lp_i2c_ana_mast_i2c0_ctrl(&mut self) -> LP_I2C_ANA_MAST_I2C0_CTRL_W<I2C0_CTRL_SPEC> {
+        LP_I2C_ANA_MAST_I2C0_CTRL_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

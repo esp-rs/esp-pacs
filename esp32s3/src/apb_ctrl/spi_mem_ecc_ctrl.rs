@@ -5,11 +5,11 @@ pub type W = crate::W<SPI_MEM_ECC_CTRL_SPEC>;
 #[doc = "Field `FLASH_PAGE_SIZE` reader - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
 pub type FLASH_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `FLASH_PAGE_SIZE` writer - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub type FLASH_PAGE_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FLASH_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SRAM_PAGE_SIZE` reader - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
 pub type SRAM_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `SRAM_PAGE_SIZE` writer - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub type SRAM_PAGE_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SRAM_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_ECC_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_page_size(&mut self) -> FLASH_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC, 18> {
-        FLASH_PAGE_SIZE_W::new(self)
+    pub fn flash_page_size(&mut self) -> FLASH_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC> {
+        FLASH_PAGE_SIZE_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_page_size(&mut self) -> SRAM_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC, 20> {
-        SRAM_PAGE_SIZE_W::new(self)
+    pub fn sram_page_size(&mut self) -> SRAM_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC> {
+        SRAM_PAGE_SIZE_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,27 +5,27 @@ pub type W = crate::W<RTC_DEBUG_SEL_SPEC>;
 #[doc = "Field `RTC_DEBUG_SEL0` reader - "]
 pub type RTC_DEBUG_SEL0_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL0` writer - "]
-pub type RTC_DEBUG_SEL0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RTC_DEBUG_SEL0_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RTC_DEBUG_SEL1` reader - "]
 pub type RTC_DEBUG_SEL1_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL1` writer - "]
-pub type RTC_DEBUG_SEL1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RTC_DEBUG_SEL1_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RTC_DEBUG_SEL2` reader - "]
 pub type RTC_DEBUG_SEL2_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL2` writer - "]
-pub type RTC_DEBUG_SEL2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RTC_DEBUG_SEL2_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RTC_DEBUG_SEL3` reader - "]
 pub type RTC_DEBUG_SEL3_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL3` writer - "]
-pub type RTC_DEBUG_SEL3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RTC_DEBUG_SEL3_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RTC_DEBUG_SEL4` reader - "]
 pub type RTC_DEBUG_SEL4_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL4` writer - "]
-pub type RTC_DEBUG_SEL4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RTC_DEBUG_SEL4_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RTC_DEBUG_12M_NO_GATING` reader - "]
 pub type RTC_DEBUG_12M_NO_GATING_R = crate::BitReader;
 #[doc = "Field `RTC_DEBUG_12M_NO_GATING` writer - "]
-pub type RTC_DEBUG_12M_NO_GATING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_DEBUG_12M_NO_GATING_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -92,47 +92,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_DEBUG_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_debug_sel0(&mut self) -> RTC_DEBUG_SEL0_W<RTC_DEBUG_SEL_SPEC, 0> {
-        RTC_DEBUG_SEL0_W::new(self)
+    pub fn rtc_debug_sel0(&mut self) -> RTC_DEBUG_SEL0_W<RTC_DEBUG_SEL_SPEC> {
+        RTC_DEBUG_SEL0_W::new(self, 0)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_debug_sel1(&mut self) -> RTC_DEBUG_SEL1_W<RTC_DEBUG_SEL_SPEC, 5> {
-        RTC_DEBUG_SEL1_W::new(self)
+    pub fn rtc_debug_sel1(&mut self) -> RTC_DEBUG_SEL1_W<RTC_DEBUG_SEL_SPEC> {
+        RTC_DEBUG_SEL1_W::new(self, 5)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_debug_sel2(&mut self) -> RTC_DEBUG_SEL2_W<RTC_DEBUG_SEL_SPEC, 10> {
-        RTC_DEBUG_SEL2_W::new(self)
+    pub fn rtc_debug_sel2(&mut self) -> RTC_DEBUG_SEL2_W<RTC_DEBUG_SEL_SPEC> {
+        RTC_DEBUG_SEL2_W::new(self, 10)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_debug_sel3(&mut self) -> RTC_DEBUG_SEL3_W<RTC_DEBUG_SEL_SPEC, 15> {
-        RTC_DEBUG_SEL3_W::new(self)
+    pub fn rtc_debug_sel3(&mut self) -> RTC_DEBUG_SEL3_W<RTC_DEBUG_SEL_SPEC> {
+        RTC_DEBUG_SEL3_W::new(self, 15)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_debug_sel4(&mut self) -> RTC_DEBUG_SEL4_W<RTC_DEBUG_SEL_SPEC, 20> {
-        RTC_DEBUG_SEL4_W::new(self)
+    pub fn rtc_debug_sel4(&mut self) -> RTC_DEBUG_SEL4_W<RTC_DEBUG_SEL_SPEC> {
+        RTC_DEBUG_SEL4_W::new(self, 20)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_debug_12m_no_gating(&mut self) -> RTC_DEBUG_12M_NO_GATING_W<RTC_DEBUG_SEL_SPEC, 25> {
-        RTC_DEBUG_12M_NO_GATING_W::new(self)
+    pub fn rtc_debug_12m_no_gating(&mut self) -> RTC_DEBUG_12M_NO_GATING_W<RTC_DEBUG_SEL_SPEC> {
+        RTC_DEBUG_12M_NO_GATING_W::new(self, 25)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

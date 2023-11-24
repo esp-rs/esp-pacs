@@ -5,23 +5,23 @@ pub type W = crate::W<RETENTION_CTRL_SPEC>;
 #[doc = "Field `RETENTION_CLK_SEL` reader - Retention clk sel"]
 pub type RETENTION_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `RETENTION_CLK_SEL` writer - Retention clk sel"]
-pub type RETENTION_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RETENTION_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RETENTION_DONE_WAIT` reader - Retention done wait time"]
 pub type RETENTION_DONE_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_DONE_WAIT` writer - Retention done wait time"]
-pub type RETENTION_DONE_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RETENTION_DONE_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` reader - Retention clkoff wait time"]
 pub type RETENTION_CLKOFF_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` writer - Retention clkoff wait time"]
-pub type RETENTION_CLKOFF_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RETENTION_CLKOFF_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `RETENTION_EN` reader - enable cpu retention when light sleep"]
 pub type RETENTION_EN_R = crate::BitReader;
 #[doc = "Field `RETENTION_EN` writer - enable cpu retention when light sleep"]
-pub type RETENTION_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RETENTION_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RETENTION_WAIT` reader - wait cycles for rention operation"]
 pub type RETENTION_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_WAIT` writer - wait cycles for rention operation"]
-pub type RETENTION_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RETENTION_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bit 18 - Retention clk sel"]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 18 - Retention clk sel"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W<RETENTION_CTRL_SPEC, 18> {
-        RETENTION_CLK_SEL_W::new(self)
+    pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W<RETENTION_CTRL_SPEC> {
+        RETENTION_CLK_SEL_W::new(self, 18)
     }
     #[doc = "Bits 19:21 - Retention done wait time"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W<RETENTION_CTRL_SPEC, 19> {
-        RETENTION_DONE_WAIT_W::new(self)
+    pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W<RETENTION_CTRL_SPEC> {
+        RETENTION_DONE_WAIT_W::new(self, 19)
     }
     #[doc = "Bits 22:25 - Retention clkoff wait time"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W<RETENTION_CTRL_SPEC, 22> {
-        RETENTION_CLKOFF_WAIT_W::new(self)
+    pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W<RETENTION_CTRL_SPEC> {
+        RETENTION_CLKOFF_WAIT_W::new(self, 22)
     }
     #[doc = "Bit 26 - enable cpu retention when light sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_en(&mut self) -> RETENTION_EN_W<RETENTION_CTRL_SPEC, 26> {
-        RETENTION_EN_W::new(self)
+    pub fn retention_en(&mut self) -> RETENTION_EN_W<RETENTION_CTRL_SPEC> {
+        RETENTION_EN_W::new(self, 26)
     }
     #[doc = "Bits 27:31 - wait cycles for rention operation"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_wait(&mut self) -> RETENTION_WAIT_W<RETENTION_CTRL_SPEC, 27> {
-        RETENTION_WAIT_W::new(self)
+    pub fn retention_wait(&mut self) -> RETENTION_WAIT_W<RETENTION_CTRL_SPEC> {
+        RETENTION_WAIT_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

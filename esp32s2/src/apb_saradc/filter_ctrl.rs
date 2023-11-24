@@ -5,27 +5,27 @@ pub type W = crate::W<FILTER_CTRL_SPEC>;
 #[doc = "Field `ADC2_FILTER_RESET` reader - Reset ADC2 filter."]
 pub type ADC2_FILTER_RESET_R = crate::BitReader;
 #[doc = "Field `ADC2_FILTER_RESET` writer - Reset ADC2 filter."]
-pub type ADC2_FILTER_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_FILTER_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_FILTER_RESET` reader - Reset ADC1 filter."]
 pub type ADC1_FILTER_RESET_R = crate::BitReader;
 #[doc = "Field `ADC1_FILTER_RESET` writer - Reset ADC1 filter."]
-pub type ADC1_FILTER_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_FILTER_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_FILTER_FACTOR` reader - Set filter factor for DIG ADC2 CRTL."]
 pub type ADC2_FILTER_FACTOR_R = crate::FieldReader;
 #[doc = "Field `ADC2_FILTER_FACTOR` writer - Set filter factor for DIG ADC2 CRTL."]
-pub type ADC2_FILTER_FACTOR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type ADC2_FILTER_FACTOR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `ADC1_FILTER_FACTOR` reader - Set filter factor for DIG ADC1 CRTL."]
 pub type ADC1_FILTER_FACTOR_R = crate::FieldReader;
 #[doc = "Field `ADC1_FILTER_FACTOR` writer - Set filter factor for DIG ADC1 CRTL."]
-pub type ADC1_FILTER_FACTOR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type ADC1_FILTER_FACTOR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `ADC2_FILTER_EN` reader - Enable DIG ADC2 CRTL filter."]
 pub type ADC2_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `ADC2_FILTER_EN` writer - Enable DIG ADC2 CRTL filter."]
-pub type ADC2_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_FILTER_EN` reader - Enable DIG ADC1 CRTL filter."]
 pub type ADC1_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `ADC1_FILTER_EN` writer - Enable DIG ADC1 CRTL filter."]
-pub type ADC1_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reset ADC2 filter."]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Reset ADC2 filter."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_filter_reset(&mut self) -> ADC2_FILTER_RESET_W<FILTER_CTRL_SPEC, 0> {
-        ADC2_FILTER_RESET_W::new(self)
+    pub fn adc2_filter_reset(&mut self) -> ADC2_FILTER_RESET_W<FILTER_CTRL_SPEC> {
+        ADC2_FILTER_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reset ADC1 filter."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_filter_reset(&mut self) -> ADC1_FILTER_RESET_W<FILTER_CTRL_SPEC, 1> {
-        ADC1_FILTER_RESET_W::new(self)
+    pub fn adc1_filter_reset(&mut self) -> ADC1_FILTER_RESET_W<FILTER_CTRL_SPEC> {
+        ADC1_FILTER_RESET_W::new(self, 1)
     }
     #[doc = "Bits 16:22 - Set filter factor for DIG ADC2 CRTL."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_filter_factor(&mut self) -> ADC2_FILTER_FACTOR_W<FILTER_CTRL_SPEC, 16> {
-        ADC2_FILTER_FACTOR_W::new(self)
+    pub fn adc2_filter_factor(&mut self) -> ADC2_FILTER_FACTOR_W<FILTER_CTRL_SPEC> {
+        ADC2_FILTER_FACTOR_W::new(self, 16)
     }
     #[doc = "Bits 23:29 - Set filter factor for DIG ADC1 CRTL."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_filter_factor(&mut self) -> ADC1_FILTER_FACTOR_W<FILTER_CTRL_SPEC, 23> {
-        ADC1_FILTER_FACTOR_W::new(self)
+    pub fn adc1_filter_factor(&mut self) -> ADC1_FILTER_FACTOR_W<FILTER_CTRL_SPEC> {
+        ADC1_FILTER_FACTOR_W::new(self, 23)
     }
     #[doc = "Bit 30 - Enable DIG ADC2 CRTL filter."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_filter_en(&mut self) -> ADC2_FILTER_EN_W<FILTER_CTRL_SPEC, 30> {
-        ADC2_FILTER_EN_W::new(self)
+    pub fn adc2_filter_en(&mut self) -> ADC2_FILTER_EN_W<FILTER_CTRL_SPEC> {
+        ADC2_FILTER_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enable DIG ADC1 CRTL filter."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_filter_en(&mut self) -> ADC1_FILTER_EN_W<FILTER_CTRL_SPEC, 31> {
-        ADC1_FILTER_EN_W::new(self)
+    pub fn adc1_filter_en(&mut self) -> ADC1_FILTER_EN_W<FILTER_CTRL_SPEC> {
+        ADC1_FILTER_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

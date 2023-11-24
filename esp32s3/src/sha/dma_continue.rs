@@ -1,7 +1,7 @@
 #[doc = "Register `DMA_CONTINUE` writer"]
 pub type W = crate::W<DMA_CONTINUE_SPEC>;
 #[doc = "Field `DMA_CONTINUE` writer - continue dma-sha"]
-pub type DMA_CONTINUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_CONTINUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_CONTINUE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - continue dma-sha"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<DMA_CONTINUE_SPEC, 0> {
-        DMA_CONTINUE_W::new(self)
+    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<DMA_CONTINUE_SPEC> {
+        DMA_CONTINUE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

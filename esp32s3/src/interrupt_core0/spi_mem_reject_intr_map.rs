@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_MEM_REJECT_INTR_MAP_SPEC>;
 #[doc = "Field `SPI_MEM_REJECT_INTR_MAP` reader - this register used to map spi_mem_reject interrupt to one of core0's external interrupt"]
 pub type SPI_MEM_REJECT_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_REJECT_INTR_MAP` writer - this register used to map spi_mem_reject interrupt to one of core0's external interrupt"]
-pub type SPI_MEM_REJECT_INTR_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SPI_MEM_REJECT_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map spi_mem_reject interrupt to one of core0's external interrupt"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_REJECT_INTR_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn spi_mem_reject_intr_map(
         &mut self,
-    ) -> SPI_MEM_REJECT_INTR_MAP_W<SPI_MEM_REJECT_INTR_MAP_SPEC, 0> {
-        SPI_MEM_REJECT_INTR_MAP_W::new(self)
+    ) -> SPI_MEM_REJECT_INTR_MAP_W<SPI_MEM_REJECT_INTR_MAP_SPEC> {
+        SPI_MEM_REJECT_INTR_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

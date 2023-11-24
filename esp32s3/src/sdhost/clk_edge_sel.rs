@@ -5,39 +5,39 @@ pub type W = crate::W<CLK_EDGE_SEL_SPEC>;
 #[doc = "Field `CCLKIN_EDGE_DRV_SEL` reader - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
 pub type CCLKIN_EDGE_DRV_SEL_R = crate::FieldReader;
 #[doc = "Field `CCLKIN_EDGE_DRV_SEL` writer - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_DRV_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CCLKIN_EDGE_DRV_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CCLKIN_EDGE_SAM_SEL` reader - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
 pub type CCLKIN_EDGE_SAM_SEL_R = crate::FieldReader;
 #[doc = "Field `CCLKIN_EDGE_SAM_SEL` writer - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_SAM_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CCLKIN_EDGE_SAM_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CCLKIN_EDGE_SLF_SEL` reader - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
 pub type CCLKIN_EDGE_SLF_SEL_R = crate::FieldReader;
 #[doc = "Field `CCLKIN_EDGE_SLF_SEL` writer - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_SLF_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CCLKIN_EDGE_SLF_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CCLLKIN_EDGE_H` reader - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
 pub type CCLLKIN_EDGE_H_R = crate::FieldReader;
 #[doc = "Field `CCLLKIN_EDGE_H` writer - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
-pub type CCLLKIN_EDGE_H_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CCLLKIN_EDGE_H_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CCLLKIN_EDGE_L` reader - The low level of the divider clock. The value should be larger than CCLKIN_EDGE_H."]
 pub type CCLLKIN_EDGE_L_R = crate::FieldReader;
 #[doc = "Field `CCLLKIN_EDGE_L` writer - The low level of the divider clock. The value should be larger than CCLKIN_EDGE_H."]
-pub type CCLLKIN_EDGE_L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CCLLKIN_EDGE_L_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CCLLKIN_EDGE_N` reader - The clock division of cclk_in."]
 pub type CCLLKIN_EDGE_N_R = crate::FieldReader;
 #[doc = "Field `CCLLKIN_EDGE_N` writer - The clock division of cclk_in."]
-pub type CCLLKIN_EDGE_N_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CCLLKIN_EDGE_N_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ESDIO_MODE` reader - Enable esdio mode."]
 pub type ESDIO_MODE_R = crate::BitReader;
 #[doc = "Field `ESDIO_MODE` writer - Enable esdio mode."]
-pub type ESDIO_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ESDIO_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESD_MODE` reader - Enable esd mode."]
 pub type ESD_MODE_R = crate::BitReader;
 #[doc = "Field `ESD_MODE` writer - Enable esd mode."]
-pub type ESD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ESD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CCLK_EN` reader - Sdio clock enable."]
 pub type CCLK_EN_R = crate::BitReader;
 #[doc = "Field `CCLK_EN` writer - Sdio clock enable."]
-pub type CCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
@@ -122,63 +122,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_EDGE_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
     #[must_use]
-    pub fn cclkin_edge_drv_sel(&mut self) -> CCLKIN_EDGE_DRV_SEL_W<CLK_EDGE_SEL_SPEC, 0> {
-        CCLKIN_EDGE_DRV_SEL_W::new(self)
+    pub fn cclkin_edge_drv_sel(&mut self) -> CCLKIN_EDGE_DRV_SEL_W<CLK_EDGE_SEL_SPEC> {
+        CCLKIN_EDGE_DRV_SEL_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
     #[must_use]
-    pub fn cclkin_edge_sam_sel(&mut self) -> CCLKIN_EDGE_SAM_SEL_W<CLK_EDGE_SEL_SPEC, 3> {
-        CCLKIN_EDGE_SAM_SEL_W::new(self)
+    pub fn cclkin_edge_sam_sel(&mut self) -> CCLKIN_EDGE_SAM_SEL_W<CLK_EDGE_SEL_SPEC> {
+        CCLKIN_EDGE_SAM_SEL_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
     #[must_use]
-    pub fn cclkin_edge_slf_sel(&mut self) -> CCLKIN_EDGE_SLF_SEL_W<CLK_EDGE_SEL_SPEC, 6> {
-        CCLKIN_EDGE_SLF_SEL_W::new(self)
+    pub fn cclkin_edge_slf_sel(&mut self) -> CCLKIN_EDGE_SLF_SEL_W<CLK_EDGE_SEL_SPEC> {
+        CCLKIN_EDGE_SLF_SEL_W::new(self, 6)
     }
     #[doc = "Bits 9:12 - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
     #[inline(always)]
     #[must_use]
-    pub fn ccllkin_edge_h(&mut self) -> CCLLKIN_EDGE_H_W<CLK_EDGE_SEL_SPEC, 9> {
-        CCLLKIN_EDGE_H_W::new(self)
+    pub fn ccllkin_edge_h(&mut self) -> CCLLKIN_EDGE_H_W<CLK_EDGE_SEL_SPEC> {
+        CCLLKIN_EDGE_H_W::new(self, 9)
     }
     #[doc = "Bits 13:16 - The low level of the divider clock. The value should be larger than CCLKIN_EDGE_H."]
     #[inline(always)]
     #[must_use]
-    pub fn ccllkin_edge_l(&mut self) -> CCLLKIN_EDGE_L_W<CLK_EDGE_SEL_SPEC, 13> {
-        CCLLKIN_EDGE_L_W::new(self)
+    pub fn ccllkin_edge_l(&mut self) -> CCLLKIN_EDGE_L_W<CLK_EDGE_SEL_SPEC> {
+        CCLLKIN_EDGE_L_W::new(self, 13)
     }
     #[doc = "Bits 17:20 - The clock division of cclk_in."]
     #[inline(always)]
     #[must_use]
-    pub fn ccllkin_edge_n(&mut self) -> CCLLKIN_EDGE_N_W<CLK_EDGE_SEL_SPEC, 17> {
-        CCLLKIN_EDGE_N_W::new(self)
+    pub fn ccllkin_edge_n(&mut self) -> CCLLKIN_EDGE_N_W<CLK_EDGE_SEL_SPEC> {
+        CCLLKIN_EDGE_N_W::new(self, 17)
     }
     #[doc = "Bit 21 - Enable esdio mode."]
     #[inline(always)]
     #[must_use]
-    pub fn esdio_mode(&mut self) -> ESDIO_MODE_W<CLK_EDGE_SEL_SPEC, 21> {
-        ESDIO_MODE_W::new(self)
+    pub fn esdio_mode(&mut self) -> ESDIO_MODE_W<CLK_EDGE_SEL_SPEC> {
+        ESDIO_MODE_W::new(self, 21)
     }
     #[doc = "Bit 22 - Enable esd mode."]
     #[inline(always)]
     #[must_use]
-    pub fn esd_mode(&mut self) -> ESD_MODE_W<CLK_EDGE_SEL_SPEC, 22> {
-        ESD_MODE_W::new(self)
+    pub fn esd_mode(&mut self) -> ESD_MODE_W<CLK_EDGE_SEL_SPEC> {
+        ESD_MODE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Sdio clock enable."]
     #[inline(always)]
     #[must_use]
-    pub fn cclk_en(&mut self) -> CCLK_EN_W<CLK_EDGE_SEL_SPEC, 23> {
-        CCLK_EN_W::new(self)
+    pub fn cclk_en(&mut self) -> CCLK_EN_W<CLK_EDGE_SEL_SPEC> {
+        CCLK_EN_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

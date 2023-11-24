@@ -1,7 +1,7 @@
 #[doc = "Register `LACTUPDATE` writer"]
 pub type W = crate::W<LACTUPDATE_SPEC>;
 #[doc = "Field `LACT_UPDATE` writer - Reserved."]
-pub type LACT_UPDATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type LACT_UPDATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LACTUPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_update(&mut self) -> LACT_UPDATE_W<LACTUPDATE_SPEC, 0> {
-        LACT_UPDATE_W::new(self)
+    pub fn lact_update(&mut self) -> LACT_UPDATE_W<LACTUPDATE_SPEC> {
+        LACT_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

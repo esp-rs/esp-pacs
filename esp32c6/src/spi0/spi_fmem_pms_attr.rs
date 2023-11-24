@@ -5,15 +5,15 @@ pub type W = crate::W<SPI_FMEM_PMS_ATTR_SPEC>;
 #[doc = "Field `SPI_FMEM_PMS_RD_ATTR` reader - 1: SPI1 flash ACE section %s read accessible. 0: Not allowed."]
 pub type SPI_FMEM_PMS_RD_ATTR_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_PMS_RD_ATTR` writer - 1: SPI1 flash ACE section %s read accessible. 0: Not allowed."]
-pub type SPI_FMEM_PMS_RD_ATTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_FMEM_PMS_RD_ATTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_FMEM_PMS_WR_ATTR` reader - 1: SPI1 flash ACE section %s write accessible. 0: Not allowed."]
 pub type SPI_FMEM_PMS_WR_ATTR_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_PMS_WR_ATTR` writer - 1: SPI1 flash ACE section %s write accessible. 0: Not allowed."]
-pub type SPI_FMEM_PMS_WR_ATTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_FMEM_PMS_WR_ATTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_FMEM_PMS_ECC` reader - SPI1 flash ACE section %s ECC mode, 1: enable ECC mode. 0: Disable it. The flash ACE section %s is configured by registers SPI_FMEM_PMS%s_ADDR_REG and SPI_FMEM_PMS%s_SIZE_REG."]
 pub type SPI_FMEM_PMS_ECC_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_PMS_ECC` writer - SPI1 flash ACE section %s ECC mode, 1: enable ECC mode. 0: Disable it. The flash ACE section %s is configured by registers SPI_FMEM_PMS%s_ADDR_REG and SPI_FMEM_PMS%s_SIZE_REG."]
-pub type SPI_FMEM_PMS_ECC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_FMEM_PMS_ECC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: SPI1 flash ACE section %s read accessible. 0: Not allowed."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_FMEM_PMS_ATTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1: SPI1 flash ACE section %s read accessible. 0: Not allowed."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_fmem_pms_rd_attr(&mut self) -> SPI_FMEM_PMS_RD_ATTR_W<SPI_FMEM_PMS_ATTR_SPEC, 0> {
-        SPI_FMEM_PMS_RD_ATTR_W::new(self)
+    pub fn spi_fmem_pms_rd_attr(&mut self) -> SPI_FMEM_PMS_RD_ATTR_W<SPI_FMEM_PMS_ATTR_SPEC> {
+        SPI_FMEM_PMS_RD_ATTR_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: SPI1 flash ACE section %s write accessible. 0: Not allowed."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_fmem_pms_wr_attr(&mut self) -> SPI_FMEM_PMS_WR_ATTR_W<SPI_FMEM_PMS_ATTR_SPEC, 1> {
-        SPI_FMEM_PMS_WR_ATTR_W::new(self)
+    pub fn spi_fmem_pms_wr_attr(&mut self) -> SPI_FMEM_PMS_WR_ATTR_W<SPI_FMEM_PMS_ATTR_SPEC> {
+        SPI_FMEM_PMS_WR_ATTR_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI1 flash ACE section %s ECC mode, 1: enable ECC mode. 0: Disable it. The flash ACE section %s is configured by registers SPI_FMEM_PMS%s_ADDR_REG and SPI_FMEM_PMS%s_SIZE_REG."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_fmem_pms_ecc(&mut self) -> SPI_FMEM_PMS_ECC_W<SPI_FMEM_PMS_ATTR_SPEC, 2> {
-        SPI_FMEM_PMS_ECC_W::new(self)
+    pub fn spi_fmem_pms_ecc(&mut self) -> SPI_FMEM_PMS_ECC_W<SPI_FMEM_PMS_ATTR_SPEC> {
+        SPI_FMEM_PMS_ECC_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

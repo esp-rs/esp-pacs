@@ -5,19 +5,19 @@ pub type W = crate::W<PD_CONF_SPEC>;
 #[doc = "Field `FIFO_FORCE_PD` reader - "]
 pub type FIFO_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PD` writer - "]
-pub type FIFO_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FIFO_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FIFO_FORCE_PU` reader - "]
 pub type FIFO_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PU` writer - "]
-pub type FIFO_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FIFO_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLC_MEM_FORCE_PD` reader - "]
 pub type PLC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PD` writer - "]
-pub type PLC_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLC_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLC_MEM_FORCE_PU` reader - "]
 pub type PLC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PU` writer - "]
-pub type PLC_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLC_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PD_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_force_pd(&mut self) -> FIFO_FORCE_PD_W<PD_CONF_SPEC, 0> {
-        FIFO_FORCE_PD_W::new(self)
+    pub fn fifo_force_pd(&mut self) -> FIFO_FORCE_PD_W<PD_CONF_SPEC> {
+        FIFO_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_force_pu(&mut self) -> FIFO_FORCE_PU_W<PD_CONF_SPEC, 1> {
-        FIFO_FORCE_PU_W::new(self)
+    pub fn fifo_force_pu(&mut self) -> FIFO_FORCE_PU_W<PD_CONF_SPEC> {
+        FIFO_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn plc_mem_force_pd(&mut self) -> PLC_MEM_FORCE_PD_W<PD_CONF_SPEC, 2> {
-        PLC_MEM_FORCE_PD_W::new(self)
+    pub fn plc_mem_force_pd(&mut self) -> PLC_MEM_FORCE_PD_W<PD_CONF_SPEC> {
+        PLC_MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn plc_mem_force_pu(&mut self) -> PLC_MEM_FORCE_PU_W<PD_CONF_SPEC, 3> {
-        PLC_MEM_FORCE_PU_W::new(self)
+    pub fn plc_mem_force_pu(&mut self) -> PLC_MEM_FORCE_PU_W<PD_CONF_SPEC> {
+        PLC_MEM_FORCE_PU_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

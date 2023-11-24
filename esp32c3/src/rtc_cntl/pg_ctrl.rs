@@ -5,23 +5,23 @@ pub type W = crate::W<PG_CTRL_SPEC>;
 #[doc = "Field `POWER_GLITCH_DSENSE` reader - power glitch desense"]
 pub type POWER_GLITCH_DSENSE_R = crate::FieldReader;
 #[doc = "Field `POWER_GLITCH_DSENSE` writer - power glitch desense"]
-pub type POWER_GLITCH_DSENSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type POWER_GLITCH_DSENSE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `POWER_GLITCH_FORCE_PD` reader - force disable power glitch"]
 pub type POWER_GLITCH_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_FORCE_PD` writer - force disable power glitch"]
-pub type POWER_GLITCH_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POWER_GLITCH_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POWER_GLITCH_FORCE_PU` reader - force enable power glitch"]
 pub type POWER_GLITCH_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_FORCE_PU` writer - force enable power glitch"]
-pub type POWER_GLITCH_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POWER_GLITCH_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POWER_GLITCH_EFUSE_SEL` reader - use efuse value control power glitch enable"]
 pub type POWER_GLITCH_EFUSE_SEL_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_EFUSE_SEL` writer - use efuse value control power glitch enable"]
-pub type POWER_GLITCH_EFUSE_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POWER_GLITCH_EFUSE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POWER_GLITCH_EN` reader - enable power glitch"]
 pub type POWER_GLITCH_EN_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_EN` writer - enable power glitch"]
-pub type POWER_GLITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POWER_GLITCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 26:27 - power glitch desense"]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PG_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 26:27 - power glitch desense"]
     #[inline(always)]
     #[must_use]
-    pub fn power_glitch_dsense(&mut self) -> POWER_GLITCH_DSENSE_W<PG_CTRL_SPEC, 26> {
-        POWER_GLITCH_DSENSE_W::new(self)
+    pub fn power_glitch_dsense(&mut self) -> POWER_GLITCH_DSENSE_W<PG_CTRL_SPEC> {
+        POWER_GLITCH_DSENSE_W::new(self, 26)
     }
     #[doc = "Bit 28 - force disable power glitch"]
     #[inline(always)]
     #[must_use]
-    pub fn power_glitch_force_pd(&mut self) -> POWER_GLITCH_FORCE_PD_W<PG_CTRL_SPEC, 28> {
-        POWER_GLITCH_FORCE_PD_W::new(self)
+    pub fn power_glitch_force_pd(&mut self) -> POWER_GLITCH_FORCE_PD_W<PG_CTRL_SPEC> {
+        POWER_GLITCH_FORCE_PD_W::new(self, 28)
     }
     #[doc = "Bit 29 - force enable power glitch"]
     #[inline(always)]
     #[must_use]
-    pub fn power_glitch_force_pu(&mut self) -> POWER_GLITCH_FORCE_PU_W<PG_CTRL_SPEC, 29> {
-        POWER_GLITCH_FORCE_PU_W::new(self)
+    pub fn power_glitch_force_pu(&mut self) -> POWER_GLITCH_FORCE_PU_W<PG_CTRL_SPEC> {
+        POWER_GLITCH_FORCE_PU_W::new(self, 29)
     }
     #[doc = "Bit 30 - use efuse value control power glitch enable"]
     #[inline(always)]
     #[must_use]
-    pub fn power_glitch_efuse_sel(&mut self) -> POWER_GLITCH_EFUSE_SEL_W<PG_CTRL_SPEC, 30> {
-        POWER_GLITCH_EFUSE_SEL_W::new(self)
+    pub fn power_glitch_efuse_sel(&mut self) -> POWER_GLITCH_EFUSE_SEL_W<PG_CTRL_SPEC> {
+        POWER_GLITCH_EFUSE_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable power glitch"]
     #[inline(always)]
     #[must_use]
-    pub fn power_glitch_en(&mut self) -> POWER_GLITCH_EN_W<PG_CTRL_SPEC, 31> {
-        POWER_GLITCH_EN_W::new(self)
+    pub fn power_glitch_en(&mut self) -> POWER_GLITCH_EN_W<PG_CTRL_SPEC> {
+        POWER_GLITCH_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

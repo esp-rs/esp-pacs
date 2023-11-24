@@ -5,7 +5,7 @@ pub type W = crate::W<APP_INTRUSION_CTRL_SPEC>;
 #[doc = "Field `APP_INTRUSION_RECORD_RESET_N` reader - "]
 pub type APP_INTRUSION_RECORD_RESET_N_R = crate::BitReader;
 #[doc = "Field `APP_INTRUSION_RECORD_RESET_N` writer - "]
-pub type APP_INTRUSION_RECORD_RESET_N_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_INTRUSION_RECORD_RESET_N_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APP_INTRUSION_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn app_intrusion_record_reset_n(
         &mut self,
-    ) -> APP_INTRUSION_RECORD_RESET_N_W<APP_INTRUSION_CTRL_SPEC, 0> {
-        APP_INTRUSION_RECORD_RESET_N_W::new(self)
+    ) -> APP_INTRUSION_RECORD_RESET_N_W<APP_INTRUSION_CTRL_SPEC> {
+        APP_INTRUSION_RECORD_RESET_N_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

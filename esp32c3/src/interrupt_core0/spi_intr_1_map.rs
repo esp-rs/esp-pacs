@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_INTR_1_MAP_SPEC>;
 #[doc = "Field `SPI_INTR_1_MAP` reader - reg_core0_spi_intr_1_map"]
 pub type SPI_INTR_1_MAP_R = crate::FieldReader;
 #[doc = "Field `SPI_INTR_1_MAP` writer - reg_core0_spi_intr_1_map"]
-pub type SPI_INTR_1_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SPI_INTR_1_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_spi_intr_1_map"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_INTR_1_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - reg_core0_spi_intr_1_map"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_intr_1_map(&mut self) -> SPI_INTR_1_MAP_W<SPI_INTR_1_MAP_SPEC, 0> {
-        SPI_INTR_1_MAP_W::new(self)
+    pub fn spi_intr_1_map(&mut self) -> SPI_INTR_1_MAP_W<SPI_INTR_1_MAP_SPEC> {
+        SPI_INTR_1_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

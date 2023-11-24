@@ -5,11 +5,11 @@ pub type W = crate::W<AUTOBAUD_SPEC>;
 #[doc = "Field `EN` reader - This is the enable bit for detecting baudrate."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - This is the enable bit for detecting baudrate."]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GLITCH_FILT` reader - when input pulse width is lower then this value igore this pulse.this register is used in autobaud detect process."]
 pub type GLITCH_FILT_R = crate::FieldReader;
 #[doc = "Field `GLITCH_FILT` writer - when input pulse width is lower then this value igore this pulse.this register is used in autobaud detect process."]
-pub type GLITCH_FILT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GLITCH_FILT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - This is the enable bit for detecting baudrate."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<AUTOBAUD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This is the enable bit for detecting baudrate."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<AUTOBAUD_SPEC, 0> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<AUTOBAUD_SPEC> {
+        EN_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - when input pulse width is lower then this value igore this pulse.this register is used in autobaud detect process."]
     #[inline(always)]
     #[must_use]
-    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<AUTOBAUD_SPEC, 8> {
-        GLITCH_FILT_W::new(self)
+    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<AUTOBAUD_SPEC> {
+        GLITCH_FILT_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

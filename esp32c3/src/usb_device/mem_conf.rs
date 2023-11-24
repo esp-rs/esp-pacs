@@ -5,11 +5,11 @@ pub type W = crate::W<MEM_CONF_SPEC>;
 #[doc = "Field `USB_MEM_PD` reader - 1: power down usb memory."]
 pub type USB_MEM_PD_R = crate::BitReader;
 #[doc = "Field `USB_MEM_PD` writer - 1: power down usb memory."]
-pub type USB_MEM_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_MEM_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_MEM_CLK_EN` reader - 1: Force clock on for usb memory."]
 pub type USB_MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `USB_MEM_CLK_EN` writer - 1: Force clock on for usb memory."]
-pub type USB_MEM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_MEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_mem_pd(&mut self) -> USB_MEM_PD_W<MEM_CONF_SPEC, 0> {
-        USB_MEM_PD_W::new(self)
+    pub fn usb_mem_pd(&mut self) -> USB_MEM_PD_W<MEM_CONF_SPEC> {
+        USB_MEM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Force clock on for usb memory."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_mem_clk_en(&mut self) -> USB_MEM_CLK_EN_W<MEM_CONF_SPEC, 1> {
-        USB_MEM_CLK_EN_W::new(self)
+    pub fn usb_mem_clk_en(&mut self) -> USB_MEM_CLK_EN_W<MEM_CONF_SPEC> {
+        USB_MEM_CLK_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

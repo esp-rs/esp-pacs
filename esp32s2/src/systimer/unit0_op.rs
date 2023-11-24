@@ -5,7 +5,7 @@ pub type W = crate::W<UNIT0_OP_SPEC>;
 #[doc = "Field `TIMER_UNIT0_VALUE_VALID` reader - Check if it is valid to read out timer value from registers. 0: Not ready to read timer value from registers; 1: Ready to read timer value from registers"]
 pub type TIMER_UNIT0_VALUE_VALID_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT0_UPDATE` writer - Update system timer value to registers."]
-pub type TIMER_UNIT0_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER_UNIT0_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - Check if it is valid to read out timer value from registers. 0: Not ready to read timer value from registers; 1: Ready to read timer value from registers"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UNIT0_OP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - Update system timer value to registers."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_unit0_update(&mut self) -> TIMER_UNIT0_UPDATE_W<UNIT0_OP_SPEC, 31> {
-        TIMER_UNIT0_UPDATE_W::new(self)
+    pub fn timer_unit0_update(&mut self) -> TIMER_UNIT0_UPDATE_W<UNIT0_OP_SPEC> {
+        TIMER_UNIT0_UPDATE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

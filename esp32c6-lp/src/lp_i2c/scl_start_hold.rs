@@ -5,7 +5,7 @@ pub type W = crate::W<SCL_START_HOLD_SPEC>;
 #[doc = "Field `TIME` reader - This register is used to configure the time between the negative edge of SDA and the negative edge of SCL for a START condition, in I2C module clock cycles."]
 pub type TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `TIME` writer - This register is used to configure the time between the negative edge of SDA and the negative edge of SCL for a START condition, in I2C module clock cycles."]
-pub type TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure the time between the negative edge of SDA and the negative edge of SCL for a START condition, in I2C module clock cycles."]
     #[inline(always)]
@@ -24,17 +24,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCL_START_HOLD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure the time between the negative edge of SDA and the negative edge of SCL for a START condition, in I2C module clock cycles."]
     #[inline(always)]
     #[must_use]
-    pub fn time(&mut self) -> TIME_W<SCL_START_HOLD_SPEC, 0> {
-        TIME_W::new(self)
+    pub fn time(&mut self) -> TIME_W<SCL_START_HOLD_SPEC> {
+        TIME_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

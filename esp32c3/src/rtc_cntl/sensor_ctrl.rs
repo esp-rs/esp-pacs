@@ -5,11 +5,11 @@ pub type W = crate::W<SENSOR_CTRL_SPEC>;
 #[doc = "Field `SAR2_PWDET_CCT` reader - reg_sar2_pwdet_cct"]
 pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - reg_sar2_pwdet_cct"]
-pub type SAR2_PWDET_CCT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FORCE_XPD_SAR` reader - force power up SAR"]
 pub type FORCE_XPD_SAR_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_SAR` writer - force power up SAR"]
-pub type FORCE_XPD_SAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FORCE_XPD_SAR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 27:29 - reg_sar2_pwdet_cct"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SENSOR_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 27:29 - reg_sar2_pwdet_cct"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SENSOR_CTRL_SPEC, 27> {
-        SAR2_PWDET_CCT_W::new(self)
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SENSOR_CTRL_SPEC> {
+        SAR2_PWDET_CCT_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - force power up SAR"]
     #[inline(always)]
     #[must_use]
-    pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<SENSOR_CTRL_SPEC, 30> {
-        FORCE_XPD_SAR_W::new(self)
+    pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<SENSOR_CTRL_SPEC> {
+        FORCE_XPD_SAR_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

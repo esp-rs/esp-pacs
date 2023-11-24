@@ -5,23 +5,23 @@ pub type W = crate::W<CH_RX_CONF0_SPEC>;
 #[doc = "Field `DIV_CNT` reader - reg_div_cnt_ch2."]
 pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - reg_div_cnt_ch2."]
-pub type DIV_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DIV_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `IDLE_THRES` reader - reg_idle_thres_ch2."]
 pub type IDLE_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `IDLE_THRES` writer - reg_idle_thres_ch2."]
-pub type IDLE_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type IDLE_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `MEM_SIZE` reader - reg_mem_size_ch2."]
 pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - reg_mem_size_ch2."]
-pub type MEM_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MEM_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CARRIER_EN` reader - reg_carrier_en_ch2."]
 pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - reg_carrier_en_ch2."]
-pub type CARRIER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARRIER_OUT_LV` reader - reg_carrier_out_lv_ch2."]
 pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - reg_carrier_out_lv_ch2."]
-pub type CARRIER_OUT_LV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER_OUT_LV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - reg_div_cnt_ch2."]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_RX_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - reg_div_cnt_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn div_cnt(&mut self) -> DIV_CNT_W<CH_RX_CONF0_SPEC, 0> {
-        DIV_CNT_W::new(self)
+    pub fn div_cnt(&mut self) -> DIV_CNT_W<CH_RX_CONF0_SPEC> {
+        DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bits 8:22 - reg_idle_thres_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CH_RX_CONF0_SPEC, 8> {
-        IDLE_THRES_W::new(self)
+    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CH_RX_CONF0_SPEC> {
+        IDLE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 23:25 - reg_mem_size_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_size(&mut self) -> MEM_SIZE_W<CH_RX_CONF0_SPEC, 23> {
-        MEM_SIZE_W::new(self)
+    pub fn mem_size(&mut self) -> MEM_SIZE_W<CH_RX_CONF0_SPEC> {
+        MEM_SIZE_W::new(self, 23)
     }
     #[doc = "Bit 28 - reg_carrier_en_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CH_RX_CONF0_SPEC, 28> {
-        CARRIER_EN_W::new(self)
+    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CH_RX_CONF0_SPEC> {
+        CARRIER_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - reg_carrier_out_lv_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CH_RX_CONF0_SPEC, 29> {
-        CARRIER_OUT_LV_W::new(self)
+    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CH_RX_CONF0_SPEC> {
+        CARRIER_OUT_LV_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<HOST_SLCHOST_CONF_W13_SPEC>;
 #[doc = "Field `HOST_SLCHOST_CONF52` reader - "]
 pub type HOST_SLCHOST_CONF52_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF52` writer - "]
-pub type HOST_SLCHOST_CONF52_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF52_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HOST_SLCHOST_CONF53` reader - "]
 pub type HOST_SLCHOST_CONF53_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF53` writer - "]
-pub type HOST_SLCHOST_CONF53_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF53_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HOST_SLCHOST_CONF54` reader - "]
 pub type HOST_SLCHOST_CONF54_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF54` writer - "]
-pub type HOST_SLCHOST_CONF54_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF54_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HOST_SLCHOST_CONF55` reader - "]
 pub type HOST_SLCHOST_CONF55_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF55` writer - "]
-pub type HOST_SLCHOST_CONF55_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HOST_SLCHOST_CONF55_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_CONF_W13_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf52(&mut self) -> HOST_SLCHOST_CONF52_W<HOST_SLCHOST_CONF_W13_SPEC, 0> {
-        HOST_SLCHOST_CONF52_W::new(self)
+    pub fn host_slchost_conf52(&mut self) -> HOST_SLCHOST_CONF52_W<HOST_SLCHOST_CONF_W13_SPEC> {
+        HOST_SLCHOST_CONF52_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf53(&mut self) -> HOST_SLCHOST_CONF53_W<HOST_SLCHOST_CONF_W13_SPEC, 8> {
-        HOST_SLCHOST_CONF53_W::new(self)
+    pub fn host_slchost_conf53(&mut self) -> HOST_SLCHOST_CONF53_W<HOST_SLCHOST_CONF_W13_SPEC> {
+        HOST_SLCHOST_CONF53_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf54(&mut self) -> HOST_SLCHOST_CONF54_W<HOST_SLCHOST_CONF_W13_SPEC, 16> {
-        HOST_SLCHOST_CONF54_W::new(self)
+    pub fn host_slchost_conf54(&mut self) -> HOST_SLCHOST_CONF54_W<HOST_SLCHOST_CONF_W13_SPEC> {
+        HOST_SLCHOST_CONF54_W::new(self, 16)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
     #[must_use]
-    pub fn host_slchost_conf55(&mut self) -> HOST_SLCHOST_CONF55_W<HOST_SLCHOST_CONF_W13_SPEC, 24> {
-        HOST_SLCHOST_CONF55_W::new(self)
+    pub fn host_slchost_conf55(&mut self) -> HOST_SLCHOST_CONF55_W<HOST_SLCHOST_CONF_W13_SPEC> {
+        HOST_SLCHOST_CONF55_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

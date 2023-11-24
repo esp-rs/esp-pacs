@@ -5,7 +5,7 @@ pub type W = crate::W<DIEPCTL0_SPEC>;
 #[doc = "Field `D_MPS0` reader - "]
 pub type D_MPS0_R = crate::FieldReader;
 #[doc = "Field `D_MPS0` writer - "]
-pub type D_MPS0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type D_MPS0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `D_USBACTEP0` reader - "]
 pub type D_USBACTEP0_R = crate::BitReader;
 #[doc = "Field `D_NAKSTS0` reader - "]
@@ -15,23 +15,23 @@ pub type D_EPTYPE0_R = crate::FieldReader;
 #[doc = "Field `D_STALL0` reader - "]
 pub type D_STALL0_R = crate::BitReader;
 #[doc = "Field `D_STALL0` writer - "]
-pub type D_STALL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_STALL0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_TXFNUM0` reader - "]
 pub type D_TXFNUM0_R = crate::FieldReader;
 #[doc = "Field `D_TXFNUM0` writer - "]
-pub type D_TXFNUM0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type D_TXFNUM0_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `D_CNAK0` writer - "]
-pub type D_CNAK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_CNAK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_SNAK0` writer - "]
-pub type DI_SNAK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_SNAK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_EPDIS0` reader - "]
 pub type D_EPDIS0_R = crate::BitReader;
 #[doc = "Field `D_EPDIS0` writer - "]
-pub type D_EPDIS0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_EPDIS0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_EPENA0` reader - "]
 pub type D_EPENA0_R = crate::BitReader;
 #[doc = "Field `D_EPENA0` writer - "]
-pub type D_EPENA0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_EPENA0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -92,51 +92,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIEPCTL0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn d_mps0(&mut self) -> D_MPS0_W<DIEPCTL0_SPEC, 0> {
-        D_MPS0_W::new(self)
+    pub fn d_mps0(&mut self) -> D_MPS0_W<DIEPCTL0_SPEC> {
+        D_MPS0_W::new(self, 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn d_stall0(&mut self) -> D_STALL0_W<DIEPCTL0_SPEC, 21> {
-        D_STALL0_W::new(self)
+    pub fn d_stall0(&mut self) -> D_STALL0_W<DIEPCTL0_SPEC> {
+        D_STALL0_W::new(self, 21)
     }
     #[doc = "Bits 22:25"]
     #[inline(always)]
     #[must_use]
-    pub fn d_txfnum0(&mut self) -> D_TXFNUM0_W<DIEPCTL0_SPEC, 22> {
-        D_TXFNUM0_W::new(self)
+    pub fn d_txfnum0(&mut self) -> D_TXFNUM0_W<DIEPCTL0_SPEC> {
+        D_TXFNUM0_W::new(self, 22)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn d_cnak0(&mut self) -> D_CNAK0_W<DIEPCTL0_SPEC, 26> {
-        D_CNAK0_W::new(self)
+    pub fn d_cnak0(&mut self) -> D_CNAK0_W<DIEPCTL0_SPEC> {
+        D_CNAK0_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn di_snak0(&mut self) -> DI_SNAK0_W<DIEPCTL0_SPEC, 27> {
-        DI_SNAK0_W::new(self)
+    pub fn di_snak0(&mut self) -> DI_SNAK0_W<DIEPCTL0_SPEC> {
+        DI_SNAK0_W::new(self, 27)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn d_epdis0(&mut self) -> D_EPDIS0_W<DIEPCTL0_SPEC, 30> {
-        D_EPDIS0_W::new(self)
+    pub fn d_epdis0(&mut self) -> D_EPDIS0_W<DIEPCTL0_SPEC> {
+        D_EPDIS0_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn d_epena0(&mut self) -> D_EPENA0_W<DIEPCTL0_SPEC, 31> {
-        D_EPENA0_W::new(self)
+    pub fn d_epena0(&mut self) -> D_EPENA0_W<DIEPCTL0_SPEC> {
+        D_EPENA0_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

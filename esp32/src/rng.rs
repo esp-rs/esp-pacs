@@ -3,10 +3,16 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x0144],
-    #[doc = "0x144 - Random number data"]
-    pub data: DATA,
+    data: DATA,
 }
-#[doc = "DATA (r) register accessor: Random number data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`data`] module"]
+impl RegisterBlock {
+    #[doc = "0x144 - Random number data"]
+    #[inline(always)]
+    pub const fn data(&self) -> &DATA {
+        &self.data
+    }
+}
+#[doc = "DATA (r) register accessor: Random number data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data`] module"]
 pub type DATA = crate::Reg<data::DATA_SPEC>;
 #[doc = "Random number data"]
 pub mod data;

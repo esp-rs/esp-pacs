@@ -5,19 +5,19 @@ pub type W = crate::W<LCD_CTRL_SPEC>;
 #[doc = "Field `LCD_HB_FRONT` reader - It is the horizontal blank front porch of a frame."]
 pub type LCD_HB_FRONT_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_HB_FRONT` writer - It is the horizontal blank front porch of a frame."]
-pub type LCD_HB_FRONT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type LCD_HB_FRONT_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `LCD_VA_HEIGHT` reader - It is the vertical active height of a frame."]
 pub type LCD_VA_HEIGHT_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_VA_HEIGHT` writer - It is the vertical active height of a frame."]
-pub type LCD_VA_HEIGHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type LCD_VA_HEIGHT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `LCD_VT_HEIGHT` reader - It is the vertical total height of a frame."]
 pub type LCD_VT_HEIGHT_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_VT_HEIGHT` writer - It is the vertical total height of a frame."]
-pub type LCD_VT_HEIGHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type LCD_VT_HEIGHT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `LCD_RGB_MODE_EN` reader - 1: Enable reg mode input vsync, hsync, de. 0: Disable."]
 pub type LCD_RGB_MODE_EN_R = crate::BitReader;
 #[doc = "Field `LCD_RGB_MODE_EN` writer - 1: Enable reg mode input vsync, hsync, de. 0: Disable."]
-pub type LCD_RGB_MODE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCD_RGB_MODE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - It is the horizontal blank front porch of a frame."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10 - It is the horizontal blank front porch of a frame."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_hb_front(&mut self) -> LCD_HB_FRONT_W<LCD_CTRL_SPEC, 0> {
-        LCD_HB_FRONT_W::new(self)
+    pub fn lcd_hb_front(&mut self) -> LCD_HB_FRONT_W<LCD_CTRL_SPEC> {
+        LCD_HB_FRONT_W::new(self, 0)
     }
     #[doc = "Bits 11:20 - It is the vertical active height of a frame."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_va_height(&mut self) -> LCD_VA_HEIGHT_W<LCD_CTRL_SPEC, 11> {
-        LCD_VA_HEIGHT_W::new(self)
+    pub fn lcd_va_height(&mut self) -> LCD_VA_HEIGHT_W<LCD_CTRL_SPEC> {
+        LCD_VA_HEIGHT_W::new(self, 11)
     }
     #[doc = "Bits 21:30 - It is the vertical total height of a frame."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_vt_height(&mut self) -> LCD_VT_HEIGHT_W<LCD_CTRL_SPEC, 21> {
-        LCD_VT_HEIGHT_W::new(self)
+    pub fn lcd_vt_height(&mut self) -> LCD_VT_HEIGHT_W<LCD_CTRL_SPEC> {
+        LCD_VT_HEIGHT_W::new(self, 21)
     }
     #[doc = "Bit 31 - 1: Enable reg mode input vsync, hsync, de. 0: Disable."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_rgb_mode_en(&mut self) -> LCD_RGB_MODE_EN_W<LCD_CTRL_SPEC, 31> {
-        LCD_RGB_MODE_EN_W::new(self)
+    pub fn lcd_rgb_mode_en(&mut self) -> LCD_RGB_MODE_EN_W<LCD_CTRL_SPEC> {
+        LCD_RGB_MODE_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

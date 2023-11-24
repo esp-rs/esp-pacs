@@ -1,9 +1,9 @@
 #[doc = "Register `INTVEC_TOHOST` writer"]
 pub type W = crate::W<INTVEC_TOHOST_SPEC>;
 #[doc = "Field `SLC0_TOHOST_INTVEC` writer - "]
-pub type SLC0_TOHOST_INTVEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLC0_TOHOST_INTVEC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLC1_TOHOST_INTVEC` writer - "]
-pub type SLC1_TOHOST_INTVEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLC1_TOHOST_INTVEC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTVEC_TOHOST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tohost_intvec(&mut self) -> SLC0_TOHOST_INTVEC_W<INTVEC_TOHOST_SPEC, 0> {
-        SLC0_TOHOST_INTVEC_W::new(self)
+    pub fn slc0_tohost_intvec(&mut self) -> SLC0_TOHOST_INTVEC_W<INTVEC_TOHOST_SPEC> {
+        SLC0_TOHOST_INTVEC_W::new(self, 0)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tohost_intvec(&mut self) -> SLC1_TOHOST_INTVEC_W<INTVEC_TOHOST_SPEC, 16> {
-        SLC1_TOHOST_INTVEC_W::new(self)
+    pub fn slc1_tohost_intvec(&mut self) -> SLC1_TOHOST_INTVEC_W<INTVEC_TOHOST_SPEC> {
+        SLC1_TOHOST_INTVEC_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,83 +5,83 @@ pub type W = crate::W<DMASTATUS_SPEC>;
 #[doc = "Field `TRANS_INT` reader - This bit indicates that the frame transmission is complete. When transmission is complete Bit\\[31\\] (OWN) of TDES0 is reset and the specific frame status information is updated in the Descriptor."]
 pub type TRANS_INT_R = crate::BitReader;
 #[doc = "Field `TRANS_INT` writer - This bit indicates that the frame transmission is complete. When transmission is complete Bit\\[31\\] (OWN) of TDES0 is reset and the specific frame status information is updated in the Descriptor."]
-pub type TRANS_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_PROC_STOP` reader - This bit is set when the transmission is stopped."]
 pub type TRANS_PROC_STOP_R = crate::BitReader;
 #[doc = "Field `TRANS_PROC_STOP` writer - This bit is set when the transmission is stopped."]
-pub type TRANS_PROC_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_PROC_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_BUF_UNAVAIL` reader - This bit indicates that the host owns the Next Descriptor in the Transmit List and the DMA cannot acquire it. Transmission is suspended. Bits\\[22:20\\] explain the Transmit Process state transitions. To resume processing Transmit descriptors the host should change the ownership of the descriptor by setting TDES0\\[31\\] and then issue a Transmit Poll Demand Command."]
 pub type TRANS_BUF_UNAVAIL_R = crate::BitReader;
 #[doc = "Field `TRANS_BUF_UNAVAIL` writer - This bit indicates that the host owns the Next Descriptor in the Transmit List and the DMA cannot acquire it. Transmission is suspended. Bits\\[22:20\\] explain the Transmit Process state transitions. To resume processing Transmit descriptors the host should change the ownership of the descriptor by setting TDES0\\[31\\] and then issue a Transmit Poll Demand Command."]
-pub type TRANS_BUF_UNAVAIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_BUF_UNAVAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_JABBER_TO` reader - This bit indicates that the Transmit Jabber Timer expired which happens when the frame size exceeds 2 048 (10 240 bytes when the Jumbo frame is enabled). When the Jabber Timeout occurs the transmission process is aborted and placed in the Stopped state. This causes the Transmit Jabber Timeout TDES0\\[14\\] flag to assert."]
 pub type TRANS_JABBER_TO_R = crate::BitReader;
 #[doc = "Field `TRANS_JABBER_TO` writer - This bit indicates that the Transmit Jabber Timer expired which happens when the frame size exceeds 2 048 (10 240 bytes when the Jumbo frame is enabled). When the Jabber Timeout occurs the transmission process is aborted and placed in the Stopped state. This causes the Transmit Jabber Timeout TDES0\\[14\\] flag to assert."]
-pub type TRANS_JABBER_TO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_JABBER_TO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECV_OVFLOW` reader - This bit indicates that the Receive Buffer had an Overflow during frame reception. If the partial frame is transferred to the application the overflow status is set in RDES0\\[11\\]."]
 pub type RECV_OVFLOW_R = crate::BitReader;
 #[doc = "Field `RECV_OVFLOW` writer - This bit indicates that the Receive Buffer had an Overflow during frame reception. If the partial frame is transferred to the application the overflow status is set in RDES0\\[11\\]."]
-pub type RECV_OVFLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECV_OVFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_UNDFLOW` reader - This bit indicates that the Transmit Buffer had an Underflow during frame transmission. Transmission is suspended and an Underflow Error TDES0\\[1\\] is set."]
 pub type TRANS_UNDFLOW_R = crate::BitReader;
 #[doc = "Field `TRANS_UNDFLOW` writer - This bit indicates that the Transmit Buffer had an Underflow during frame transmission. Transmission is suspended and an Underflow Error TDES0\\[1\\] is set."]
-pub type TRANS_UNDFLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_UNDFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECV_INT` reader - This bit indicates that the frame reception is complete. When reception is complete the Bit\\[31\\] of RDES1 (Disable Interrupt on Completion) is reset in the last Descriptor and the specific frame status information is updated in the descriptor. The reception remains in the Running state."]
 pub type RECV_INT_R = crate::BitReader;
 #[doc = "Field `RECV_INT` writer - This bit indicates that the frame reception is complete. When reception is complete the Bit\\[31\\] of RDES1 (Disable Interrupt on Completion) is reset in the last Descriptor and the specific frame status information is updated in the descriptor. The reception remains in the Running state."]
-pub type RECV_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECV_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECV_BUF_UNAVAIL` reader - This bit indicates that the host owns the Next Descriptor in the Receive List and the DMA cannot acquire it. The Receive Process is suspended. To resume processing Receive descriptors the host should change the ownership of the descriptor and issue a Receive Poll Demand command. If no Receive Poll Demand is issued the Receive Process resumes when the next recognized incoming frame is received. This bit is set only when the previous Receive Descriptor is owned by the DMA."]
 pub type RECV_BUF_UNAVAIL_R = crate::BitReader;
 #[doc = "Field `RECV_BUF_UNAVAIL` writer - This bit indicates that the host owns the Next Descriptor in the Receive List and the DMA cannot acquire it. The Receive Process is suspended. To resume processing Receive descriptors the host should change the ownership of the descriptor and issue a Receive Poll Demand command. If no Receive Poll Demand is issued the Receive Process resumes when the next recognized incoming frame is received. This bit is set only when the previous Receive Descriptor is owned by the DMA."]
-pub type RECV_BUF_UNAVAIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECV_BUF_UNAVAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECV_PROC_STOP` reader - This bit is asserted when the Receive Process enters the Stopped state."]
 pub type RECV_PROC_STOP_R = crate::BitReader;
 #[doc = "Field `RECV_PROC_STOP` writer - This bit is asserted when the Receive Process enters the Stopped state."]
-pub type RECV_PROC_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECV_PROC_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECV_WDT_TO` reader - When set this bit indicates that the Receive Watchdog Timer expired while receiving the current frame and the current frame is truncated after the watchdog timeout."]
 pub type RECV_WDT_TO_R = crate::BitReader;
 #[doc = "Field `RECV_WDT_TO` writer - When set this bit indicates that the Receive Watchdog Timer expired while receiving the current frame and the current frame is truncated after the watchdog timeout."]
-pub type RECV_WDT_TO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECV_WDT_TO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EARLY_TRANS_INT` reader - This bit indicates that the frame to be transmitted is fully transferred to the MTL Transmit FIFO."]
 pub type EARLY_TRANS_INT_R = crate::BitReader;
 #[doc = "Field `EARLY_TRANS_INT` writer - This bit indicates that the frame to be transmitted is fully transferred to the MTL Transmit FIFO."]
-pub type EARLY_TRANS_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EARLY_TRANS_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FATAL_BUS_ERR_INT` reader - This bit indicates that a bus error occurred as described in Bits \\[25:23\\]. When this bit is set the corresponding DMA engine disables all of its bus accesses."]
 pub type FATAL_BUS_ERR_INT_R = crate::BitReader;
 #[doc = "Field `FATAL_BUS_ERR_INT` writer - This bit indicates that a bus error occurred as described in Bits \\[25:23\\]. When this bit is set the corresponding DMA engine disables all of its bus accesses."]
-pub type FATAL_BUS_ERR_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FATAL_BUS_ERR_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EARLY_RECV_INT` reader - This bit indicates that the DMA filled the first data buffer of the packet. This bit is cleared when the software writes 1 to this bit or when Bit\\[6\\] (RI) of this register is set (whichever occurs earlier)."]
 pub type EARLY_RECV_INT_R = crate::BitReader;
 #[doc = "Field `EARLY_RECV_INT` writer - This bit indicates that the DMA filled the first data buffer of the packet. This bit is cleared when the software writes 1 to this bit or when Bit\\[6\\] (RI) of this register is set (whichever occurs earlier)."]
-pub type EARLY_RECV_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EARLY_RECV_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ABN_INT_SUMM` reader - Abnormal Interrupt Summary bit value is the logical OR of the following when the corresponding interrupt bits are enabled in Interrupt Enable Register: Bit\\[1\\]: Transmit Process Stopped. Bit\\[3\\]: Transmit Jabber Timeout. Bit\\[4\\]: Receive FIFO Overflow. Bit\\[5\\]: Transmit Underflow. Bit\\[7\\]: Receive Buffer Unavailable. Bit\\[8\\]: Receive Process Stopped. Bit\\[9\\]: Receive Watchdog Timeout. Bit\\[10\\]: Early Transmit Interrupt. Bit\\[13\\]: Fatal Bus Error. Only unmasked bits affect the Abnormal Interrupt Summary bit. This is a sticky bit and must be cleared (by writing 1 to this bit) each time a corresponding bit which causes AIS to be set is cleared."]
 pub type ABN_INT_SUMM_R = crate::BitReader;
 #[doc = "Field `ABN_INT_SUMM` writer - Abnormal Interrupt Summary bit value is the logical OR of the following when the corresponding interrupt bits are enabled in Interrupt Enable Register: Bit\\[1\\]: Transmit Process Stopped. Bit\\[3\\]: Transmit Jabber Timeout. Bit\\[4\\]: Receive FIFO Overflow. Bit\\[5\\]: Transmit Underflow. Bit\\[7\\]: Receive Buffer Unavailable. Bit\\[8\\]: Receive Process Stopped. Bit\\[9\\]: Receive Watchdog Timeout. Bit\\[10\\]: Early Transmit Interrupt. Bit\\[13\\]: Fatal Bus Error. Only unmasked bits affect the Abnormal Interrupt Summary bit. This is a sticky bit and must be cleared (by writing 1 to this bit) each time a corresponding bit which causes AIS to be set is cleared."]
-pub type ABN_INT_SUMM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ABN_INT_SUMM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NORM_INT_SUMM` reader - Normal Interrupt Summary bit value is the logical OR of the following bits when the corresponding interrupt bits are enabled in Interrupt Enable Register: Bit\\[0\\]: Transmit Interrupt. Bit\\[2\\]: Transmit Buffer Unavailable. Bit\\[6\\]: Receive Interrupt. Bit\\[14\\]: Early Receive Interrupt. Only unmasked bits affect the Normal Interrupt Summary bit.This is a sticky bit and must be cleared (by writing 1 to this bit) each time a corresponding bit which causes NIS to be set is cleared."]
 pub type NORM_INT_SUMM_R = crate::BitReader;
 #[doc = "Field `NORM_INT_SUMM` writer - Normal Interrupt Summary bit value is the logical OR of the following bits when the corresponding interrupt bits are enabled in Interrupt Enable Register: Bit\\[0\\]: Transmit Interrupt. Bit\\[2\\]: Transmit Buffer Unavailable. Bit\\[6\\]: Receive Interrupt. Bit\\[14\\]: Early Receive Interrupt. Only unmasked bits affect the Normal Interrupt Summary bit.This is a sticky bit and must be cleared (by writing 1 to this bit) each time a corresponding bit which causes NIS to be set is cleared."]
-pub type NORM_INT_SUMM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NORM_INT_SUMM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECV_PROC_STATE` reader - This field indicates the Receive DMA FSM state. This field does not generate an interrupt. 3'b000: Stopped. Reset or Stop Receive Command issued. 3'b001: Running. Fetching Receive Transfer Descriptor. 3'b010: Reserved for future use. 3'b011: Running. Waiting for RX packets. 3'b100: Suspended. Receive Descriptor Unavailable. 3'b101: Running. Closing Receive Descriptor. 3'b110: TIME_STAMP write state. 3'b111: Running. Transferring the TX packets data from receive buffer to host memory."]
 pub type RECV_PROC_STATE_R = crate::FieldReader;
 #[doc = "Field `RECV_PROC_STATE` writer - This field indicates the Receive DMA FSM state. This field does not generate an interrupt. 3'b000: Stopped. Reset or Stop Receive Command issued. 3'b001: Running. Fetching Receive Transfer Descriptor. 3'b010: Reserved for future use. 3'b011: Running. Waiting for RX packets. 3'b100: Suspended. Receive Descriptor Unavailable. 3'b101: Running. Closing Receive Descriptor. 3'b110: TIME_STAMP write state. 3'b111: Running. Transferring the TX packets data from receive buffer to host memory."]
-pub type RECV_PROC_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RECV_PROC_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TRANS_PROC_STATE` reader - This field indicates the Transmit DMA FSM state. This field does not generate an interrupt. 3'b000: Stopped. Reset or Stop Transmit Command issued. 3'b001: Running. Fetching Transmit Transfer Descriptor. 3'b010: Reserved for future use. 3'b011: Running. Waiting for TX packets. 3'b100: Suspended. Receive Descriptor Unavailable. 3'b101: Running. Closing Transmit Descriptor. 3'b110: TIME_STAMP write state. 3'b111: Running. Transferring the TX packets data from transmit buffer to host memory."]
 pub type TRANS_PROC_STATE_R = crate::FieldReader;
 #[doc = "Field `TRANS_PROC_STATE` writer - This field indicates the Transmit DMA FSM state. This field does not generate an interrupt. 3'b000: Stopped. Reset or Stop Transmit Command issued. 3'b001: Running. Fetching Transmit Transfer Descriptor. 3'b010: Reserved for future use. 3'b011: Running. Waiting for TX packets. 3'b100: Suspended. Receive Descriptor Unavailable. 3'b101: Running. Closing Transmit Descriptor. 3'b110: TIME_STAMP write state. 3'b111: Running. Transferring the TX packets data from transmit buffer to host memory."]
-pub type TRANS_PROC_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TRANS_PROC_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ERROR_BITS` reader - This field indicates the type of error that caused a Bus Error for example error response on the AHB interface. This field is valid only when Bit\\[13\\] (FBI) is set. This field does not generate an interrupt. 3'b000: Error during Rx DMA Write Data Transfer. 3'b011: Error during Tx DMA Read Data Transfer. 3'b100: Error during Rx DMA Descriptor Write Access. 3'b101: Error during Tx DMA Descriptor Write Access. 3'b110: Error during Rx DMA Descriptor Read Access. 3'b111: Error during Tx DMA Descriptor Read Access."]
 pub type ERROR_BITS_R = crate::FieldReader;
 #[doc = "Field `ERROR_BITS` writer - This field indicates the type of error that caused a Bus Error for example error response on the AHB interface. This field is valid only when Bit\\[13\\] (FBI) is set. This field does not generate an interrupt. 3'b000: Error during Rx DMA Write Data Transfer. 3'b011: Error during Tx DMA Read Data Transfer. 3'b100: Error during Rx DMA Descriptor Write Access. 3'b101: Error during Tx DMA Descriptor Write Access. 3'b110: Error during Rx DMA Descriptor Read Access. 3'b111: Error during Tx DMA Descriptor Read Access."]
-pub type ERROR_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ERROR_BITS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PMT_INT` reader - This bit indicates an interrupt event in the PMT module of the ETH_MAC. The software must read the PMT Control and Status Register in the MAC to get the exact cause of interrupt and clear its source to reset this bit to 1'b0."]
 pub type PMT_INT_R = crate::BitReader;
 #[doc = "Field `PMT_INT` writer - This bit indicates an interrupt event in the PMT module of the ETH_MAC. The software must read the PMT Control and Status Register in the MAC to get the exact cause of interrupt and clear its source to reset this bit to 1'b0."]
-pub type PMT_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PMT_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TS_TRI_INT` reader - This bit indicates an interrupt event in the Timestamp Generator block of the ETH_MAC.The software must read the corresponding registers in the ETH_MAC to get the exact cause of the interrupt and clear its source to reset this bit to 1'b0."]
 pub type TS_TRI_INT_R = crate::BitReader;
 #[doc = "Field `TS_TRI_INT` writer - This bit indicates an interrupt event in the Timestamp Generator block of the ETH_MAC.The software must read the corresponding registers in the ETH_MAC to get the exact cause of the interrupt and clear its source to reset this bit to 1'b0."]
-pub type TS_TRI_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TS_TRI_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This bit indicates that the frame transmission is complete. When transmission is complete Bit\\[31\\] (OWN) of TDES0 is reset and the specific frame status information is updated in the Descriptor."]
     #[inline(always)]
@@ -253,129 +253,129 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMASTATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit indicates that the frame transmission is complete. When transmission is complete Bit\\[31\\] (OWN) of TDES0 is reset and the specific frame status information is updated in the Descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_int(&mut self) -> TRANS_INT_W<DMASTATUS_SPEC, 0> {
-        TRANS_INT_W::new(self)
+    pub fn trans_int(&mut self) -> TRANS_INT_W<DMASTATUS_SPEC> {
+        TRANS_INT_W::new(self, 0)
     }
     #[doc = "Bit 1 - This bit is set when the transmission is stopped."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_proc_stop(&mut self) -> TRANS_PROC_STOP_W<DMASTATUS_SPEC, 1> {
-        TRANS_PROC_STOP_W::new(self)
+    pub fn trans_proc_stop(&mut self) -> TRANS_PROC_STOP_W<DMASTATUS_SPEC> {
+        TRANS_PROC_STOP_W::new(self, 1)
     }
     #[doc = "Bit 2 - This bit indicates that the host owns the Next Descriptor in the Transmit List and the DMA cannot acquire it. Transmission is suspended. Bits\\[22:20\\] explain the Transmit Process state transitions. To resume processing Transmit descriptors the host should change the ownership of the descriptor by setting TDES0\\[31\\] and then issue a Transmit Poll Demand Command."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_buf_unavail(&mut self) -> TRANS_BUF_UNAVAIL_W<DMASTATUS_SPEC, 2> {
-        TRANS_BUF_UNAVAIL_W::new(self)
+    pub fn trans_buf_unavail(&mut self) -> TRANS_BUF_UNAVAIL_W<DMASTATUS_SPEC> {
+        TRANS_BUF_UNAVAIL_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit indicates that the Transmit Jabber Timer expired which happens when the frame size exceeds 2 048 (10 240 bytes when the Jumbo frame is enabled). When the Jabber Timeout occurs the transmission process is aborted and placed in the Stopped state. This causes the Transmit Jabber Timeout TDES0\\[14\\] flag to assert."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_jabber_to(&mut self) -> TRANS_JABBER_TO_W<DMASTATUS_SPEC, 3> {
-        TRANS_JABBER_TO_W::new(self)
+    pub fn trans_jabber_to(&mut self) -> TRANS_JABBER_TO_W<DMASTATUS_SPEC> {
+        TRANS_JABBER_TO_W::new(self, 3)
     }
     #[doc = "Bit 4 - This bit indicates that the Receive Buffer had an Overflow during frame reception. If the partial frame is transferred to the application the overflow status is set in RDES0\\[11\\]."]
     #[inline(always)]
     #[must_use]
-    pub fn recv_ovflow(&mut self) -> RECV_OVFLOW_W<DMASTATUS_SPEC, 4> {
-        RECV_OVFLOW_W::new(self)
+    pub fn recv_ovflow(&mut self) -> RECV_OVFLOW_W<DMASTATUS_SPEC> {
+        RECV_OVFLOW_W::new(self, 4)
     }
     #[doc = "Bit 5 - This bit indicates that the Transmit Buffer had an Underflow during frame transmission. Transmission is suspended and an Underflow Error TDES0\\[1\\] is set."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_undflow(&mut self) -> TRANS_UNDFLOW_W<DMASTATUS_SPEC, 5> {
-        TRANS_UNDFLOW_W::new(self)
+    pub fn trans_undflow(&mut self) -> TRANS_UNDFLOW_W<DMASTATUS_SPEC> {
+        TRANS_UNDFLOW_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit indicates that the frame reception is complete. When reception is complete the Bit\\[31\\] of RDES1 (Disable Interrupt on Completion) is reset in the last Descriptor and the specific frame status information is updated in the descriptor. The reception remains in the Running state."]
     #[inline(always)]
     #[must_use]
-    pub fn recv_int(&mut self) -> RECV_INT_W<DMASTATUS_SPEC, 6> {
-        RECV_INT_W::new(self)
+    pub fn recv_int(&mut self) -> RECV_INT_W<DMASTATUS_SPEC> {
+        RECV_INT_W::new(self, 6)
     }
     #[doc = "Bit 7 - This bit indicates that the host owns the Next Descriptor in the Receive List and the DMA cannot acquire it. The Receive Process is suspended. To resume processing Receive descriptors the host should change the ownership of the descriptor and issue a Receive Poll Demand command. If no Receive Poll Demand is issued the Receive Process resumes when the next recognized incoming frame is received. This bit is set only when the previous Receive Descriptor is owned by the DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn recv_buf_unavail(&mut self) -> RECV_BUF_UNAVAIL_W<DMASTATUS_SPEC, 7> {
-        RECV_BUF_UNAVAIL_W::new(self)
+    pub fn recv_buf_unavail(&mut self) -> RECV_BUF_UNAVAIL_W<DMASTATUS_SPEC> {
+        RECV_BUF_UNAVAIL_W::new(self, 7)
     }
     #[doc = "Bit 8 - This bit is asserted when the Receive Process enters the Stopped state."]
     #[inline(always)]
     #[must_use]
-    pub fn recv_proc_stop(&mut self) -> RECV_PROC_STOP_W<DMASTATUS_SPEC, 8> {
-        RECV_PROC_STOP_W::new(self)
+    pub fn recv_proc_stop(&mut self) -> RECV_PROC_STOP_W<DMASTATUS_SPEC> {
+        RECV_PROC_STOP_W::new(self, 8)
     }
     #[doc = "Bit 9 - When set this bit indicates that the Receive Watchdog Timer expired while receiving the current frame and the current frame is truncated after the watchdog timeout."]
     #[inline(always)]
     #[must_use]
-    pub fn recv_wdt_to(&mut self) -> RECV_WDT_TO_W<DMASTATUS_SPEC, 9> {
-        RECV_WDT_TO_W::new(self)
+    pub fn recv_wdt_to(&mut self) -> RECV_WDT_TO_W<DMASTATUS_SPEC> {
+        RECV_WDT_TO_W::new(self, 9)
     }
     #[doc = "Bit 10 - This bit indicates that the frame to be transmitted is fully transferred to the MTL Transmit FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn early_trans_int(&mut self) -> EARLY_TRANS_INT_W<DMASTATUS_SPEC, 10> {
-        EARLY_TRANS_INT_W::new(self)
+    pub fn early_trans_int(&mut self) -> EARLY_TRANS_INT_W<DMASTATUS_SPEC> {
+        EARLY_TRANS_INT_W::new(self, 10)
     }
     #[doc = "Bit 13 - This bit indicates that a bus error occurred as described in Bits \\[25:23\\]. When this bit is set the corresponding DMA engine disables all of its bus accesses."]
     #[inline(always)]
     #[must_use]
-    pub fn fatal_bus_err_int(&mut self) -> FATAL_BUS_ERR_INT_W<DMASTATUS_SPEC, 13> {
-        FATAL_BUS_ERR_INT_W::new(self)
+    pub fn fatal_bus_err_int(&mut self) -> FATAL_BUS_ERR_INT_W<DMASTATUS_SPEC> {
+        FATAL_BUS_ERR_INT_W::new(self, 13)
     }
     #[doc = "Bit 14 - This bit indicates that the DMA filled the first data buffer of the packet. This bit is cleared when the software writes 1 to this bit or when Bit\\[6\\] (RI) of this register is set (whichever occurs earlier)."]
     #[inline(always)]
     #[must_use]
-    pub fn early_recv_int(&mut self) -> EARLY_RECV_INT_W<DMASTATUS_SPEC, 14> {
-        EARLY_RECV_INT_W::new(self)
+    pub fn early_recv_int(&mut self) -> EARLY_RECV_INT_W<DMASTATUS_SPEC> {
+        EARLY_RECV_INT_W::new(self, 14)
     }
     #[doc = "Bit 15 - Abnormal Interrupt Summary bit value is the logical OR of the following when the corresponding interrupt bits are enabled in Interrupt Enable Register: Bit\\[1\\]: Transmit Process Stopped. Bit\\[3\\]: Transmit Jabber Timeout. Bit\\[4\\]: Receive FIFO Overflow. Bit\\[5\\]: Transmit Underflow. Bit\\[7\\]: Receive Buffer Unavailable. Bit\\[8\\]: Receive Process Stopped. Bit\\[9\\]: Receive Watchdog Timeout. Bit\\[10\\]: Early Transmit Interrupt. Bit\\[13\\]: Fatal Bus Error. Only unmasked bits affect the Abnormal Interrupt Summary bit. This is a sticky bit and must be cleared (by writing 1 to this bit) each time a corresponding bit which causes AIS to be set is cleared."]
     #[inline(always)]
     #[must_use]
-    pub fn abn_int_summ(&mut self) -> ABN_INT_SUMM_W<DMASTATUS_SPEC, 15> {
-        ABN_INT_SUMM_W::new(self)
+    pub fn abn_int_summ(&mut self) -> ABN_INT_SUMM_W<DMASTATUS_SPEC> {
+        ABN_INT_SUMM_W::new(self, 15)
     }
     #[doc = "Bit 16 - Normal Interrupt Summary bit value is the logical OR of the following bits when the corresponding interrupt bits are enabled in Interrupt Enable Register: Bit\\[0\\]: Transmit Interrupt. Bit\\[2\\]: Transmit Buffer Unavailable. Bit\\[6\\]: Receive Interrupt. Bit\\[14\\]: Early Receive Interrupt. Only unmasked bits affect the Normal Interrupt Summary bit.This is a sticky bit and must be cleared (by writing 1 to this bit) each time a corresponding bit which causes NIS to be set is cleared."]
     #[inline(always)]
     #[must_use]
-    pub fn norm_int_summ(&mut self) -> NORM_INT_SUMM_W<DMASTATUS_SPEC, 16> {
-        NORM_INT_SUMM_W::new(self)
+    pub fn norm_int_summ(&mut self) -> NORM_INT_SUMM_W<DMASTATUS_SPEC> {
+        NORM_INT_SUMM_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - This field indicates the Receive DMA FSM state. This field does not generate an interrupt. 3'b000: Stopped. Reset or Stop Receive Command issued. 3'b001: Running. Fetching Receive Transfer Descriptor. 3'b010: Reserved for future use. 3'b011: Running. Waiting for RX packets. 3'b100: Suspended. Receive Descriptor Unavailable. 3'b101: Running. Closing Receive Descriptor. 3'b110: TIME_STAMP write state. 3'b111: Running. Transferring the TX packets data from receive buffer to host memory."]
     #[inline(always)]
     #[must_use]
-    pub fn recv_proc_state(&mut self) -> RECV_PROC_STATE_W<DMASTATUS_SPEC, 17> {
-        RECV_PROC_STATE_W::new(self)
+    pub fn recv_proc_state(&mut self) -> RECV_PROC_STATE_W<DMASTATUS_SPEC> {
+        RECV_PROC_STATE_W::new(self, 17)
     }
     #[doc = "Bits 20:22 - This field indicates the Transmit DMA FSM state. This field does not generate an interrupt. 3'b000: Stopped. Reset or Stop Transmit Command issued. 3'b001: Running. Fetching Transmit Transfer Descriptor. 3'b010: Reserved for future use. 3'b011: Running. Waiting for TX packets. 3'b100: Suspended. Receive Descriptor Unavailable. 3'b101: Running. Closing Transmit Descriptor. 3'b110: TIME_STAMP write state. 3'b111: Running. Transferring the TX packets data from transmit buffer to host memory."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_proc_state(&mut self) -> TRANS_PROC_STATE_W<DMASTATUS_SPEC, 20> {
-        TRANS_PROC_STATE_W::new(self)
+    pub fn trans_proc_state(&mut self) -> TRANS_PROC_STATE_W<DMASTATUS_SPEC> {
+        TRANS_PROC_STATE_W::new(self, 20)
     }
     #[doc = "Bits 23:25 - This field indicates the type of error that caused a Bus Error for example error response on the AHB interface. This field is valid only when Bit\\[13\\] (FBI) is set. This field does not generate an interrupt. 3'b000: Error during Rx DMA Write Data Transfer. 3'b011: Error during Tx DMA Read Data Transfer. 3'b100: Error during Rx DMA Descriptor Write Access. 3'b101: Error during Tx DMA Descriptor Write Access. 3'b110: Error during Rx DMA Descriptor Read Access. 3'b111: Error during Tx DMA Descriptor Read Access."]
     #[inline(always)]
     #[must_use]
-    pub fn error_bits(&mut self) -> ERROR_BITS_W<DMASTATUS_SPEC, 23> {
-        ERROR_BITS_W::new(self)
+    pub fn error_bits(&mut self) -> ERROR_BITS_W<DMASTATUS_SPEC> {
+        ERROR_BITS_W::new(self, 23)
     }
     #[doc = "Bit 28 - This bit indicates an interrupt event in the PMT module of the ETH_MAC. The software must read the PMT Control and Status Register in the MAC to get the exact cause of interrupt and clear its source to reset this bit to 1'b0."]
     #[inline(always)]
     #[must_use]
-    pub fn pmt_int(&mut self) -> PMT_INT_W<DMASTATUS_SPEC, 28> {
-        PMT_INT_W::new(self)
+    pub fn pmt_int(&mut self) -> PMT_INT_W<DMASTATUS_SPEC> {
+        PMT_INT_W::new(self, 28)
     }
     #[doc = "Bit 29 - This bit indicates an interrupt event in the Timestamp Generator block of the ETH_MAC.The software must read the corresponding registers in the ETH_MAC to get the exact cause of the interrupt and clear its source to reset this bit to 1'b0."]
     #[inline(always)]
     #[must_use]
-    pub fn ts_tri_int(&mut self) -> TS_TRI_INT_W<DMASTATUS_SPEC, 29> {
-        TS_TRI_INT_W::new(self)
+    pub fn ts_tri_int(&mut self) -> TS_TRI_INT_W<DMASTATUS_SPEC> {
+        TS_TRI_INT_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

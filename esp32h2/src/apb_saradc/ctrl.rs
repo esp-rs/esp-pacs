@@ -5,39 +5,39 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `SARADC_START_FORCE` reader - select software enable saradc sample"]
 pub type SARADC_START_FORCE_R = crate::BitReader;
 #[doc = "Field `SARADC_START_FORCE` writer - select software enable saradc sample"]
-pub type SARADC_START_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_START_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_START` reader - software enable saradc sample"]
 pub type SARADC_START_R = crate::BitReader;
 #[doc = "Field `SARADC_START` writer - software enable saradc sample"]
-pub type SARADC_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_SAR_CLK_GATED` reader - SAR clock gated"]
 pub type SARADC_SAR_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR_CLK_GATED` writer - SAR clock gated"]
-pub type SARADC_SAR_CLK_GATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_SAR_CLK_GATED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_SAR_CLK_DIV` reader - SAR clock divider"]
 pub type SARADC_SAR_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SARADC_SAR_CLK_DIV` writer - SAR clock divider"]
-pub type SARADC_SAR_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SARADC_SAR_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SARADC_SAR_PATT_LEN` reader - 0 ~ 15 means length 1 ~ 16"]
 pub type SARADC_SAR_PATT_LEN_R = crate::FieldReader;
 #[doc = "Field `SARADC_SAR_PATT_LEN` writer - 0 ~ 15 means length 1 ~ 16"]
-pub type SARADC_SAR_PATT_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SARADC_SAR_PATT_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SARADC_SAR_PATT_P_CLEAR` reader - clear the pointer of pattern table for DIG ADC1 CTRL"]
 pub type SARADC_SAR_PATT_P_CLEAR_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR_PATT_P_CLEAR` writer - clear the pointer of pattern table for DIG ADC1 CTRL"]
-pub type SARADC_SAR_PATT_P_CLEAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_SAR_PATT_P_CLEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_XPD_SAR_FORCE` reader - force option to xpd sar blocks"]
 pub type SARADC_XPD_SAR_FORCE_R = crate::FieldReader;
 #[doc = "Field `SARADC_XPD_SAR_FORCE` writer - force option to xpd sar blocks"]
-pub type SARADC_XPD_SAR_FORCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SARADC_XPD_SAR_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SARADC2_PWDET_DRV` reader - enable saradc2 power detect driven func."]
 pub type SARADC2_PWDET_DRV_R = crate::BitReader;
 #[doc = "Field `SARADC2_PWDET_DRV` writer - enable saradc2 power detect driven func."]
-pub type SARADC2_PWDET_DRV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC2_PWDET_DRV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_WAIT_ARB_CYCLE` reader - wait arbit signal stable after sar_done"]
 pub type SARADC_WAIT_ARB_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SARADC_WAIT_ARB_CYCLE` writer - wait arbit signal stable after sar_done"]
-pub type SARADC_WAIT_ARB_CYCLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SARADC_WAIT_ARB_CYCLE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - select software enable saradc sample"]
     #[inline(always)]
@@ -131,63 +131,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - select software enable saradc sample"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_start_force(&mut self) -> SARADC_START_FORCE_W<CTRL_SPEC, 0> {
-        SARADC_START_FORCE_W::new(self)
+    pub fn saradc_start_force(&mut self) -> SARADC_START_FORCE_W<CTRL_SPEC> {
+        SARADC_START_FORCE_W::new(self, 0)
     }
     #[doc = "Bit 1 - software enable saradc sample"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_start(&mut self) -> SARADC_START_W<CTRL_SPEC, 1> {
-        SARADC_START_W::new(self)
+    pub fn saradc_start(&mut self) -> SARADC_START_W<CTRL_SPEC> {
+        SARADC_START_W::new(self, 1)
     }
     #[doc = "Bit 6 - SAR clock gated"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sar_clk_gated(&mut self) -> SARADC_SAR_CLK_GATED_W<CTRL_SPEC, 6> {
-        SARADC_SAR_CLK_GATED_W::new(self)
+    pub fn saradc_sar_clk_gated(&mut self) -> SARADC_SAR_CLK_GATED_W<CTRL_SPEC> {
+        SARADC_SAR_CLK_GATED_W::new(self, 6)
     }
     #[doc = "Bits 7:14 - SAR clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sar_clk_div(&mut self) -> SARADC_SAR_CLK_DIV_W<CTRL_SPEC, 7> {
-        SARADC_SAR_CLK_DIV_W::new(self)
+    pub fn saradc_sar_clk_div(&mut self) -> SARADC_SAR_CLK_DIV_W<CTRL_SPEC> {
+        SARADC_SAR_CLK_DIV_W::new(self, 7)
     }
     #[doc = "Bits 15:17 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sar_patt_len(&mut self) -> SARADC_SAR_PATT_LEN_W<CTRL_SPEC, 15> {
-        SARADC_SAR_PATT_LEN_W::new(self)
+    pub fn saradc_sar_patt_len(&mut self) -> SARADC_SAR_PATT_LEN_W<CTRL_SPEC> {
+        SARADC_SAR_PATT_LEN_W::new(self, 15)
     }
     #[doc = "Bit 23 - clear the pointer of pattern table for DIG ADC1 CTRL"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sar_patt_p_clear(&mut self) -> SARADC_SAR_PATT_P_CLEAR_W<CTRL_SPEC, 23> {
-        SARADC_SAR_PATT_P_CLEAR_W::new(self)
+    pub fn saradc_sar_patt_p_clear(&mut self) -> SARADC_SAR_PATT_P_CLEAR_W<CTRL_SPEC> {
+        SARADC_SAR_PATT_P_CLEAR_W::new(self, 23)
     }
     #[doc = "Bits 27:28 - force option to xpd sar blocks"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_xpd_sar_force(&mut self) -> SARADC_XPD_SAR_FORCE_W<CTRL_SPEC, 27> {
-        SARADC_XPD_SAR_FORCE_W::new(self)
+    pub fn saradc_xpd_sar_force(&mut self) -> SARADC_XPD_SAR_FORCE_W<CTRL_SPEC> {
+        SARADC_XPD_SAR_FORCE_W::new(self, 27)
     }
     #[doc = "Bit 29 - enable saradc2 power detect driven func."]
     #[inline(always)]
     #[must_use]
-    pub fn saradc2_pwdet_drv(&mut self) -> SARADC2_PWDET_DRV_W<CTRL_SPEC, 29> {
-        SARADC2_PWDET_DRV_W::new(self)
+    pub fn saradc2_pwdet_drv(&mut self) -> SARADC2_PWDET_DRV_W<CTRL_SPEC> {
+        SARADC2_PWDET_DRV_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - wait arbit signal stable after sar_done"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_wait_arb_cycle(&mut self) -> SARADC_WAIT_ARB_CYCLE_W<CTRL_SPEC, 30> {
-        SARADC_WAIT_ARB_CYCLE_W::new(self)
+    pub fn saradc_wait_arb_cycle(&mut self) -> SARADC_WAIT_ARB_CYCLE_W<CTRL_SPEC> {
+        SARADC_WAIT_ARB_CYCLE_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

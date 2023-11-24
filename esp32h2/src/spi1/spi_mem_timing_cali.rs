@@ -5,11 +5,11 @@ pub type W = crate::W<SPI_MEM_TIMING_CALI_SPEC>;
 #[doc = "Field `SPI_MEM_TIMING_CALI` reader - The bit is used to enable timing auto-calibration for all reading operations."]
 pub type SPI_MEM_TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_TIMING_CALI` writer - The bit is used to enable timing auto-calibration for all reading operations."]
-pub type SPI_MEM_TIMING_CALI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_TIMING_CALI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_EXTRA_DUMMY_CYCLELEN` reader - add extra dummy spi clock cycle length for spi clock calibration."]
 pub type SPI_MEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_EXTRA_DUMMY_CYCLELEN` writer - add extra dummy spi clock cycle length for spi clock calibration."]
-pub type SPI_MEM_EXTRA_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPI_MEM_EXTRA_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
@@ -40,23 +40,23 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_TIMING_CALI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_timing_cali(&mut self) -> SPI_MEM_TIMING_CALI_W<SPI_MEM_TIMING_CALI_SPEC, 1> {
-        SPI_MEM_TIMING_CALI_W::new(self)
+    pub fn spi_mem_timing_cali(&mut self) -> SPI_MEM_TIMING_CALI_W<SPI_MEM_TIMING_CALI_SPEC> {
+        SPI_MEM_TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_extra_dummy_cyclelen(
         &mut self,
-    ) -> SPI_MEM_EXTRA_DUMMY_CYCLELEN_W<SPI_MEM_TIMING_CALI_SPEC, 2> {
-        SPI_MEM_EXTRA_DUMMY_CYCLELEN_W::new(self)
+    ) -> SPI_MEM_EXTRA_DUMMY_CYCLELEN_W<SPI_MEM_TIMING_CALI_SPEC> {
+        SPI_MEM_EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

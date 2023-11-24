@@ -5,15 +5,15 @@ pub type W = crate::W<TOUCH_SLP_THRES_SPEC>;
 #[doc = "Field `TOUCH_SLP_TH` reader - the threshold for sleep touch pad"]
 pub type TOUCH_SLP_TH_R = crate::FieldReader<u32>;
 #[doc = "Field `TOUCH_SLP_TH` writer - the threshold for sleep touch pad"]
-pub type TOUCH_SLP_TH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type TOUCH_SLP_TH_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` reader - sleep pad approach function enable"]
 pub type TOUCH_SLP_APPROACH_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` writer - sleep pad approach function enable"]
-pub type TOUCH_SLP_APPROACH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_SLP_APPROACH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_SLP_PAD` reader - configure which pad as slp pad"]
 pub type TOUCH_SLP_PAD_R = crate::FieldReader;
 #[doc = "Field `TOUCH_SLP_PAD` writer - configure which pad as slp pad"]
-pub type TOUCH_SLP_PAD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TOUCH_SLP_PAD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:21 - the threshold for sleep touch pad"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_SLP_THRES_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - the threshold for sleep touch pad"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_th(&mut self) -> TOUCH_SLP_TH_W<TOUCH_SLP_THRES_SPEC, 0> {
-        TOUCH_SLP_TH_W::new(self)
+    pub fn touch_slp_th(&mut self) -> TOUCH_SLP_TH_W<TOUCH_SLP_THRES_SPEC> {
+        TOUCH_SLP_TH_W::new(self, 0)
     }
     #[doc = "Bit 26 - sleep pad approach function enable"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<TOUCH_SLP_THRES_SPEC, 26> {
-        TOUCH_SLP_APPROACH_EN_W::new(self)
+    pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<TOUCH_SLP_THRES_SPEC> {
+        TOUCH_SLP_APPROACH_EN_W::new(self, 26)
     }
     #[doc = "Bits 27:31 - configure which pad as slp pad"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<TOUCH_SLP_THRES_SPEC, 27> {
-        TOUCH_SLP_PAD_W::new(self)
+    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<TOUCH_SLP_THRES_SPEC> {
+        TOUCH_SLP_PAD_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

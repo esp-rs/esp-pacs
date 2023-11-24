@@ -5,23 +5,23 @@ pub type W = crate::W<MODEM_LP_TIMER_CONF_SPEC>;
 #[doc = "Field `LP_TIMER_SEL_RTC_SLOW` reader - ."]
 pub type LP_TIMER_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_RTC_SLOW` writer - ."]
-pub type LP_TIMER_SEL_RTC_SLOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_TIMER_SEL_RTC_SLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_TIMER_SEL_8M` reader - ."]
 pub type LP_TIMER_SEL_8M_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_8M` writer - ."]
-pub type LP_TIMER_SEL_8M_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_TIMER_SEL_8M_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_TIMER_SEL_XTAL` reader - ."]
 pub type LP_TIMER_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_XTAL` writer - ."]
-pub type LP_TIMER_SEL_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_TIMER_SEL_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_TIMER_SEL_XTAL32K` reader - ."]
 pub type LP_TIMER_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_XTAL32K` writer - ."]
-pub type LP_TIMER_SEL_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_TIMER_SEL_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_TIMER_CLK_DIV_NUM` reader - ."]
 pub type LP_TIMER_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `LP_TIMER_CLK_DIV_NUM` writer - ."]
-pub type LP_TIMER_CLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LP_TIMER_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
@@ -79,41 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MODEM_LP_TIMER_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
     #[must_use]
-    pub fn lp_timer_sel_rtc_slow(
-        &mut self,
-    ) -> LP_TIMER_SEL_RTC_SLOW_W<MODEM_LP_TIMER_CONF_SPEC, 0> {
-        LP_TIMER_SEL_RTC_SLOW_W::new(self)
+    pub fn lp_timer_sel_rtc_slow(&mut self) -> LP_TIMER_SEL_RTC_SLOW_W<MODEM_LP_TIMER_CONF_SPEC> {
+        LP_TIMER_SEL_RTC_SLOW_W::new(self, 0)
     }
     #[doc = "Bit 1 - ."]
     #[inline(always)]
     #[must_use]
-    pub fn lp_timer_sel_8m(&mut self) -> LP_TIMER_SEL_8M_W<MODEM_LP_TIMER_CONF_SPEC, 1> {
-        LP_TIMER_SEL_8M_W::new(self)
+    pub fn lp_timer_sel_8m(&mut self) -> LP_TIMER_SEL_8M_W<MODEM_LP_TIMER_CONF_SPEC> {
+        LP_TIMER_SEL_8M_W::new(self, 1)
     }
     #[doc = "Bit 2 - ."]
     #[inline(always)]
     #[must_use]
-    pub fn lp_timer_sel_xtal(&mut self) -> LP_TIMER_SEL_XTAL_W<MODEM_LP_TIMER_CONF_SPEC, 2> {
-        LP_TIMER_SEL_XTAL_W::new(self)
+    pub fn lp_timer_sel_xtal(&mut self) -> LP_TIMER_SEL_XTAL_W<MODEM_LP_TIMER_CONF_SPEC> {
+        LP_TIMER_SEL_XTAL_W::new(self, 2)
     }
     #[doc = "Bit 3 - ."]
     #[inline(always)]
     #[must_use]
-    pub fn lp_timer_sel_xtal32k(&mut self) -> LP_TIMER_SEL_XTAL32K_W<MODEM_LP_TIMER_CONF_SPEC, 3> {
-        LP_TIMER_SEL_XTAL32K_W::new(self)
+    pub fn lp_timer_sel_xtal32k(&mut self) -> LP_TIMER_SEL_XTAL32K_W<MODEM_LP_TIMER_CONF_SPEC> {
+        LP_TIMER_SEL_XTAL32K_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - ."]
     #[inline(always)]
     #[must_use]
-    pub fn lp_timer_clk_div_num(&mut self) -> LP_TIMER_CLK_DIV_NUM_W<MODEM_LP_TIMER_CONF_SPEC, 4> {
-        LP_TIMER_CLK_DIV_NUM_W::new(self)
+    pub fn lp_timer_clk_div_num(&mut self) -> LP_TIMER_CLK_DIV_NUM_W<MODEM_LP_TIMER_CONF_SPEC> {
+        LP_TIMER_CLK_DIV_NUM_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

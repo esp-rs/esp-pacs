@@ -7,7 +7,7 @@ pub type I2C_RDATA_R = crate::FieldReader;
 #[doc = "Field `SLAVE_TX_DATA` reader - data sent by slave"]
 pub type SLAVE_TX_DATA_R = crate::FieldReader;
 #[doc = "Field `SLAVE_TX_DATA` writer - data sent by slave"]
-pub type SLAVE_TX_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLAVE_TX_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `I2C_DONE` reader - i2c done"]
 pub type I2C_DONE_R = crate::BitReader;
 impl R {
@@ -43,17 +43,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 8:15 - data sent by slave"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_tx_data(&mut self) -> SLAVE_TX_DATA_W<DATA_SPEC, 8> {
-        SLAVE_TX_DATA_W::new(self)
+    pub fn slave_tx_data(&mut self) -> SLAVE_TX_DATA_W<DATA_SPEC> {
+        SLAVE_TX_DATA_W::new(self, 8)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

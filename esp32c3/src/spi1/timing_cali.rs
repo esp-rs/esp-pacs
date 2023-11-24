@@ -5,11 +5,11 @@ pub type W = crate::W<TIMING_CALI_SPEC>;
 #[doc = "Field `TIMING_CALI` reader - The bit is used to enable timing auto-calibration for all reading operations."]
 pub type TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `TIMING_CALI` writer - The bit is used to enable timing auto-calibration for all reading operations."]
-pub type TIMING_CALI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMING_CALI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` reader - add extra dummy spi clock cycle length for spi clock calibration."]
 pub type EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` writer - add extra dummy spi clock cycle length for spi clock calibration."]
-pub type EXTRA_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type EXTRA_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMING_CALI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
     #[must_use]
-    pub fn timing_cali(&mut self) -> TIMING_CALI_W<TIMING_CALI_SPEC, 1> {
-        TIMING_CALI_W::new(self)
+    pub fn timing_cali(&mut self) -> TIMING_CALI_W<TIMING_CALI_SPEC> {
+        TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
     #[must_use]
-    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<TIMING_CALI_SPEC, 2> {
-        EXTRA_DUMMY_CYCLELEN_W::new(self)
+    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<TIMING_CALI_SPEC> {
+        EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

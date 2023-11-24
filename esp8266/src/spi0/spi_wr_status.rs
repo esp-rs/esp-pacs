@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_WR_STATUS_SPEC>;
 #[doc = "Field `slv_wr_status` reader - In the slave mode, this register are the status register for the master to write into."]
 pub type SLV_WR_STATUS_R = crate::FieldReader<u32>;
 #[doc = "Field `slv_wr_status` writer - In the slave mode, this register are the status register for the master to write into."]
-pub type SLV_WR_STATUS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SLV_WR_STATUS_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - In the slave mode, this register are the status register for the master to write into."]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_WR_STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - In the slave mode, this register are the status register for the master to write into."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wr_status(&mut self) -> SLV_WR_STATUS_W<SPI_WR_STATUS_SPEC, 0> {
-        SLV_WR_STATUS_W::new(self)
+    pub fn slv_wr_status(&mut self) -> SLV_WR_STATUS_W<SPI_WR_STATUS_SPEC> {
+        SLV_WR_STATUS_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

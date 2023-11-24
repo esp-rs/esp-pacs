@@ -5,27 +5,27 @@ pub type W = crate::W<APB_DAC_CTRL_SPEC>;
 #[doc = "Field `DAC_TIMER_TARGET` reader - Set DAC timer target."]
 pub type DAC_TIMER_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `DAC_TIMER_TARGET` writer - Set DAC timer target."]
-pub type DAC_TIMER_TARGET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type DAC_TIMER_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `DAC_TIMER_EN` reader - Enable read dac data."]
 pub type DAC_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `DAC_TIMER_EN` writer - Enable read dac data."]
-pub type DAC_TIMER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_TIMER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_DAC_ALTER_MODE` reader - Enable DAC alter mode."]
 pub type APB_DAC_ALTER_MODE_R = crate::BitReader;
 #[doc = "Field `APB_DAC_ALTER_MODE` writer - Enable DAC alter mode."]
-pub type APB_DAC_ALTER_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_DAC_ALTER_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_DAC_TRANS` reader - Enable DMA_DAC."]
 pub type APB_DAC_TRANS_R = crate::BitReader;
 #[doc = "Field `APB_DAC_TRANS` writer - Enable DMA_DAC."]
-pub type APB_DAC_TRANS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_DAC_TRANS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC_RESET_FIFO` reader - Reset DIG DAC FIFO."]
 pub type DAC_RESET_FIFO_R = crate::BitReader;
 #[doc = "Field `DAC_RESET_FIFO` writer - Reset DIG DAC FIFO."]
-pub type DAC_RESET_FIFO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_RESET_FIFO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_DAC_RST` reader - Reset DIG DAC by software."]
 pub type APB_DAC_RST_R = crate::BitReader;
 #[doc = "Field `APB_DAC_RST` writer - Reset DIG DAC by software."]
-pub type APB_DAC_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_DAC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - Set DAC timer target."]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_DAC_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - Set DAC timer target."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_timer_target(&mut self) -> DAC_TIMER_TARGET_W<APB_DAC_CTRL_SPEC, 0> {
-        DAC_TIMER_TARGET_W::new(self)
+    pub fn dac_timer_target(&mut self) -> DAC_TIMER_TARGET_W<APB_DAC_CTRL_SPEC> {
+        DAC_TIMER_TARGET_W::new(self, 0)
     }
     #[doc = "Bit 12 - Enable read dac data."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_timer_en(&mut self) -> DAC_TIMER_EN_W<APB_DAC_CTRL_SPEC, 12> {
-        DAC_TIMER_EN_W::new(self)
+    pub fn dac_timer_en(&mut self) -> DAC_TIMER_EN_W<APB_DAC_CTRL_SPEC> {
+        DAC_TIMER_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Enable DAC alter mode."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_dac_alter_mode(&mut self) -> APB_DAC_ALTER_MODE_W<APB_DAC_CTRL_SPEC, 13> {
-        APB_DAC_ALTER_MODE_W::new(self)
+    pub fn apb_dac_alter_mode(&mut self) -> APB_DAC_ALTER_MODE_W<APB_DAC_CTRL_SPEC> {
+        APB_DAC_ALTER_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable DMA_DAC."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_dac_trans(&mut self) -> APB_DAC_TRANS_W<APB_DAC_CTRL_SPEC, 14> {
-        APB_DAC_TRANS_W::new(self)
+    pub fn apb_dac_trans(&mut self) -> APB_DAC_TRANS_W<APB_DAC_CTRL_SPEC> {
+        APB_DAC_TRANS_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reset DIG DAC FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_reset_fifo(&mut self) -> DAC_RESET_FIFO_W<APB_DAC_CTRL_SPEC, 15> {
-        DAC_RESET_FIFO_W::new(self)
+    pub fn dac_reset_fifo(&mut self) -> DAC_RESET_FIFO_W<APB_DAC_CTRL_SPEC> {
+        DAC_RESET_FIFO_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reset DIG DAC by software."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_dac_rst(&mut self) -> APB_DAC_RST_W<APB_DAC_CTRL_SPEC, 16> {
-        APB_DAC_RST_W::new(self)
+    pub fn apb_dac_rst(&mut self) -> APB_DAC_RST_W<APB_DAC_CTRL_SPEC> {
+        APB_DAC_RST_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

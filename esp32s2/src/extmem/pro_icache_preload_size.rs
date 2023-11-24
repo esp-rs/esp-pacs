@@ -5,11 +5,11 @@ pub type W = crate::W<PRO_ICACHE_PRELOAD_SIZE_SPEC>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_SIZE` reader - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
 pub type PRO_ICACHE_PRELOAD_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_SIZE` writer - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
-pub type PRO_ICACHE_PRELOAD_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type PRO_ICACHE_PRELOAD_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_ORDER` reader - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
 pub type PRO_ICACHE_PRELOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_PRELOAD_ORDER` writer - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
-pub type PRO_ICACHE_PRELOAD_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ICACHE_PRELOAD_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9 - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_PRELOAD_SIZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn pro_icache_preload_size(
         &mut self,
-    ) -> PRO_ICACHE_PRELOAD_SIZE_W<PRO_ICACHE_PRELOAD_SIZE_SPEC, 0> {
-        PRO_ICACHE_PRELOAD_SIZE_W::new(self)
+    ) -> PRO_ICACHE_PRELOAD_SIZE_W<PRO_ICACHE_PRELOAD_SIZE_SPEC> {
+        PRO_ICACHE_PRELOAD_SIZE_W::new(self, 0)
     }
     #[doc = "Bit 10 - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_preload_order(
         &mut self,
-    ) -> PRO_ICACHE_PRELOAD_ORDER_W<PRO_ICACHE_PRELOAD_SIZE_SPEC, 10> {
-        PRO_ICACHE_PRELOAD_ORDER_W::new(self)
+    ) -> PRO_ICACHE_PRELOAD_ORDER_W<PRO_ICACHE_PRELOAD_SIZE_SPEC> {
+        PRO_ICACHE_PRELOAD_ORDER_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<MSPI_CONF_SPEC>;
 #[doc = "Field `MSPI_CLK_EN` reader - Set 1 to enable mspi clock, include mspi pll clock"]
 pub type MSPI_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MSPI_CLK_EN` writer - Set 1 to enable mspi clock, include mspi pll clock"]
-pub type MSPI_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MSPI_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MSPI_RST_EN` reader - Set 0 to reset mspi module"]
 pub type MSPI_RST_EN_R = crate::BitReader;
 #[doc = "Field `MSPI_RST_EN` writer - Set 0 to reset mspi module"]
-pub type MSPI_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MSPI_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MSPI_PLL_CLK_EN` reader - Set 1 to enable mspi pll clock"]
 pub type MSPI_PLL_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MSPI_PLL_CLK_EN` writer - Set 1 to enable mspi pll clock"]
-pub type MSPI_PLL_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MSPI_PLL_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MSPI_CLK_SEL` reader - set this field to select clock-source."]
 pub type MSPI_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `MSPI_CLK_SEL` writer - set this field to select clock-source."]
-pub type MSPI_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MSPI_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MSPI_READY` reader - Query this field after reset mspi module"]
 pub type MSPI_READY_R = crate::BitReader;
 impl R {
@@ -68,33 +68,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MSPI_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable mspi clock, include mspi pll clock"]
     #[inline(always)]
     #[must_use]
-    pub fn mspi_clk_en(&mut self) -> MSPI_CLK_EN_W<MSPI_CONF_SPEC, 0> {
-        MSPI_CLK_EN_W::new(self)
+    pub fn mspi_clk_en(&mut self) -> MSPI_CLK_EN_W<MSPI_CONF_SPEC> {
+        MSPI_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset mspi module"]
     #[inline(always)]
     #[must_use]
-    pub fn mspi_rst_en(&mut self) -> MSPI_RST_EN_W<MSPI_CONF_SPEC, 1> {
-        MSPI_RST_EN_W::new(self)
+    pub fn mspi_rst_en(&mut self) -> MSPI_RST_EN_W<MSPI_CONF_SPEC> {
+        MSPI_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable mspi pll clock"]
     #[inline(always)]
     #[must_use]
-    pub fn mspi_pll_clk_en(&mut self) -> MSPI_PLL_CLK_EN_W<MSPI_CONF_SPEC, 2> {
-        MSPI_PLL_CLK_EN_W::new(self)
+    pub fn mspi_pll_clk_en(&mut self) -> MSPI_PLL_CLK_EN_W<MSPI_CONF_SPEC> {
+        MSPI_PLL_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - set this field to select clock-source."]
     #[inline(always)]
     #[must_use]
-    pub fn mspi_clk_sel(&mut self) -> MSPI_CLK_SEL_W<MSPI_CONF_SPEC, 3> {
-        MSPI_CLK_SEL_W::new(self)
+    pub fn mspi_clk_sel(&mut self) -> MSPI_CLK_SEL_W<MSPI_CONF_SPEC> {
+        MSPI_CLK_SEL_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

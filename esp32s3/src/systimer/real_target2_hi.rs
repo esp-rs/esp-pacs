@@ -23,7 +23,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REAL_TARGET2_HI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "system timer comp2 actual target value high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`real_target2_hi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

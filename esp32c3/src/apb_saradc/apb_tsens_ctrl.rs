@@ -7,15 +7,15 @@ pub type TSENS_OUT_R = crate::FieldReader;
 #[doc = "Field `TSENS_IN_INV` reader - invert temperature sensor data"]
 pub type TSENS_IN_INV_R = crate::BitReader;
 #[doc = "Field `TSENS_IN_INV` writer - invert temperature sensor data"]
-pub type TSENS_IN_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_IN_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_DIV` reader - temperature sensor clock divider"]
 pub type TSENS_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `TSENS_CLK_DIV` writer - temperature sensor clock divider"]
-pub type TSENS_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TSENS_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TSENS_PU` reader - temperature sensor power up"]
 pub type TSENS_PU_R = crate::BitReader;
 #[doc = "Field `TSENS_PU` writer - temperature sensor power up"]
-pub type TSENS_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - temperature sensor data out"]
     #[inline(always)]
@@ -58,27 +58,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 13 - invert temperature sensor data"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<APB_TSENS_CTRL_SPEC, 13> {
-        TSENS_IN_INV_W::new(self)
+    pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<APB_TSENS_CTRL_SPEC> {
+        TSENS_IN_INV_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - temperature sensor clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<APB_TSENS_CTRL_SPEC, 14> {
-        TSENS_CLK_DIV_W::new(self)
+    pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<APB_TSENS_CTRL_SPEC> {
+        TSENS_CLK_DIV_W::new(self, 14)
     }
     #[doc = "Bit 22 - temperature sensor power up"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_pu(&mut self) -> TSENS_PU_W<APB_TSENS_CTRL_SPEC, 22> {
-        TSENS_PU_W::new(self)
+    pub fn tsens_pu(&mut self) -> TSENS_PU_W<APB_TSENS_CTRL_SPEC> {
+        TSENS_PU_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

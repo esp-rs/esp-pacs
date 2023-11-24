@@ -5,11 +5,11 @@ pub type W = crate::W<POWER_CK_WAIT_CNTL_SPEC>;
 #[doc = "Field `WAIT_XTL_STABLE` reader - need_des"]
 pub type WAIT_XTL_STABLE_R = crate::FieldReader<u16>;
 #[doc = "Field `WAIT_XTL_STABLE` writer - need_des"]
-pub type WAIT_XTL_STABLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type WAIT_XTL_STABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `WAIT_PLL_STABLE` reader - need_des"]
 pub type WAIT_PLL_STABLE_R = crate::FieldReader<u16>;
 #[doc = "Field `WAIT_PLL_STABLE` writer - need_des"]
-pub type WAIT_PLL_STABLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type WAIT_PLL_STABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_CK_WAIT_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wait_xtl_stable(&mut self) -> WAIT_XTL_STABLE_W<POWER_CK_WAIT_CNTL_SPEC, 0> {
-        WAIT_XTL_STABLE_W::new(self)
+    pub fn wait_xtl_stable(&mut self) -> WAIT_XTL_STABLE_W<POWER_CK_WAIT_CNTL_SPEC> {
+        WAIT_XTL_STABLE_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wait_pll_stable(&mut self) -> WAIT_PLL_STABLE_W<POWER_CK_WAIT_CNTL_SPEC, 16> {
-        WAIT_PLL_STABLE_W::new(self)
+    pub fn wait_pll_stable(&mut self) -> WAIT_PLL_STABLE_W<POWER_CK_WAIT_CNTL_SPEC> {
+        WAIT_PLL_STABLE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

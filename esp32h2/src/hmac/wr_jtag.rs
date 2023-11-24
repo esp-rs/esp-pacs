@@ -1,7 +1,7 @@
 #[doc = "Register `WR_JTAG` writer"]
 pub type W = crate::W<WR_JTAG_SPEC>;
 #[doc = "Field `WR_JTAG` writer - 32-bit of key to be compared."]
-pub type WR_JTAG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type WR_JTAG_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WR_JTAG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - 32-bit of key to be compared."]
     #[inline(always)]
     #[must_use]
-    pub fn wr_jtag(&mut self) -> WR_JTAG_W<WR_JTAG_SPEC, 0> {
-        WR_JTAG_W::new(self)
+    pub fn wr_jtag(&mut self) -> WR_JTAG_W<WR_JTAG_SPEC> {
+        WR_JTAG_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

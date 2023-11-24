@@ -5,11 +5,11 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `DONE_INT_ENA` reader - backup done flag"]
 pub type DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DONE_INT_ENA` writer - backup done flag"]
-pub type DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERROR_INT_ENA` reader - error flag"]
 pub type ERROR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ERROR_INT_ENA` writer - error flag"]
-pub type ERROR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERROR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - backup done flag"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - backup done flag"]
     #[inline(always)]
     #[must_use]
-    pub fn done_int_ena(&mut self) -> DONE_INT_ENA_W<INT_ENA_SPEC, 0> {
-        DONE_INT_ENA_W::new(self)
+    pub fn done_int_ena(&mut self) -> DONE_INT_ENA_W<INT_ENA_SPEC> {
+        DONE_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - error flag"]
     #[inline(always)]
     #[must_use]
-    pub fn error_int_ena(&mut self) -> ERROR_INT_ENA_W<INT_ENA_SPEC, 1> {
-        ERROR_INT_ENA_W::new(self)
+    pub fn error_int_ena(&mut self) -> ERROR_INT_ENA_W<INT_ENA_SPEC> {
+        ERROR_INT_ENA_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

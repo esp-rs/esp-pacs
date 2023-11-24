@@ -5,27 +5,27 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `SARADC_MEAS_NUM_LIMIT` reader - enable max meas num"]
 pub type SARADC_MEAS_NUM_LIMIT_R = crate::BitReader;
 #[doc = "Field `SARADC_MEAS_NUM_LIMIT` writer - enable max meas num"]
-pub type SARADC_MEAS_NUM_LIMIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_MEAS_NUM_LIMIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_MAX_MEAS_NUM` reader - max conversion number"]
 pub type SARADC_MAX_MEAS_NUM_R = crate::FieldReader;
 #[doc = "Field `SARADC_MAX_MEAS_NUM` writer - max conversion number"]
-pub type SARADC_MAX_MEAS_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SARADC_MAX_MEAS_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SARADC_SAR1_INV` reader - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
 pub type SARADC_SAR1_INV_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR1_INV` writer - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
-pub type SARADC_SAR1_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_SAR1_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_SAR2_INV` reader - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
 pub type SARADC_SAR2_INV_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR2_INV` writer - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
-pub type SARADC_SAR2_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_SAR2_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_TIMER_TARGET` reader - to set saradc timer target"]
 pub type SARADC_TIMER_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `SARADC_TIMER_TARGET` writer - to set saradc timer target"]
-pub type SARADC_TIMER_TARGET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SARADC_TIMER_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `SARADC_TIMER_EN` reader - to enable saradc timer trigger"]
 pub type SARADC_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_TIMER_EN` writer - to enable saradc timer trigger"]
-pub type SARADC_TIMER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_TIMER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - enable max meas num"]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - enable max meas num"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_meas_num_limit(&mut self) -> SARADC_MEAS_NUM_LIMIT_W<CTRL2_SPEC, 0> {
-        SARADC_MEAS_NUM_LIMIT_W::new(self)
+    pub fn saradc_meas_num_limit(&mut self) -> SARADC_MEAS_NUM_LIMIT_W<CTRL2_SPEC> {
+        SARADC_MEAS_NUM_LIMIT_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - max conversion number"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_max_meas_num(&mut self) -> SARADC_MAX_MEAS_NUM_W<CTRL2_SPEC, 1> {
-        SARADC_MAX_MEAS_NUM_W::new(self)
+    pub fn saradc_max_meas_num(&mut self) -> SARADC_MAX_MEAS_NUM_W<CTRL2_SPEC> {
+        SARADC_MAX_MEAS_NUM_W::new(self, 1)
     }
     #[doc = "Bit 9 - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sar1_inv(&mut self) -> SARADC_SAR1_INV_W<CTRL2_SPEC, 9> {
-        SARADC_SAR1_INV_W::new(self)
+    pub fn saradc_sar1_inv(&mut self) -> SARADC_SAR1_INV_W<CTRL2_SPEC> {
+        SARADC_SAR1_INV_W::new(self, 9)
     }
     #[doc = "Bit 10 - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sar2_inv(&mut self) -> SARADC_SAR2_INV_W<CTRL2_SPEC, 10> {
-        SARADC_SAR2_INV_W::new(self)
+    pub fn saradc_sar2_inv(&mut self) -> SARADC_SAR2_INV_W<CTRL2_SPEC> {
+        SARADC_SAR2_INV_W::new(self, 10)
     }
     #[doc = "Bits 12:23 - to set saradc timer target"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_timer_target(&mut self) -> SARADC_TIMER_TARGET_W<CTRL2_SPEC, 12> {
-        SARADC_TIMER_TARGET_W::new(self)
+    pub fn saradc_timer_target(&mut self) -> SARADC_TIMER_TARGET_W<CTRL2_SPEC> {
+        SARADC_TIMER_TARGET_W::new(self, 12)
     }
     #[doc = "Bit 24 - to enable saradc timer trigger"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_timer_en(&mut self) -> SARADC_TIMER_EN_W<CTRL2_SPEC, 24> {
-        SARADC_TIMER_EN_W::new(self)
+    pub fn saradc_timer_en(&mut self) -> SARADC_TIMER_EN_W<CTRL2_SPEC> {
+        SARADC_TIMER_EN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

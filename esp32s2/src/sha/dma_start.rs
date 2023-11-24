@@ -1,7 +1,7 @@
 #[doc = "Register `DMA_START` writer"]
 pub type W = crate::W<DMA_START_SPEC>;
 #[doc = "Field `DMA_START` writer - Write 1 to start DMA-SHA calculation."]
-pub type DMA_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_START_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Write 1 to start DMA-SHA calculation."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_start(&mut self) -> DMA_START_W<DMA_START_SPEC, 0> {
-        DMA_START_W::new(self)
+    pub fn dma_start(&mut self) -> DMA_START_W<DMA_START_SPEC> {
+        DMA_START_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

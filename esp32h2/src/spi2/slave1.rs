@@ -5,15 +5,15 @@ pub type W = crate::W<SLAVE1_SPEC>;
 #[doc = "Field `SLV_DATA_BITLEN` reader - The transferred data bit length in SPI slave FD and HD mode."]
 pub type SLV_DATA_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_DATA_BITLEN` writer - The transferred data bit length in SPI slave FD and HD mode."]
-pub type SLV_DATA_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type SLV_DATA_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 #[doc = "Field `SLV_LAST_COMMAND` reader - In the slave mode it is the value of command."]
 pub type SLV_LAST_COMMAND_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_COMMAND` writer - In the slave mode it is the value of command."]
-pub type SLV_LAST_COMMAND_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLV_LAST_COMMAND_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLV_LAST_ADDR` reader - In the slave mode it is the value of address."]
 pub type SLV_LAST_ADDR_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_ADDR` writer - In the slave mode it is the value of address."]
-pub type SLV_LAST_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SLV_LAST_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLAVE1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_data_bitlen(&mut self) -> SLV_DATA_BITLEN_W<SLAVE1_SPEC, 0> {
-        SLV_DATA_BITLEN_W::new(self)
+    pub fn slv_data_bitlen(&mut self) -> SLV_DATA_BITLEN_W<SLAVE1_SPEC> {
+        SLV_DATA_BITLEN_W::new(self, 0)
     }
     #[doc = "Bits 18:25 - In the slave mode it is the value of command."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<SLAVE1_SPEC, 18> {
-        SLV_LAST_COMMAND_W::new(self)
+    pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<SLAVE1_SPEC> {
+        SLV_LAST_COMMAND_W::new(self, 18)
     }
     #[doc = "Bits 26:31 - In the slave mode it is the value of address."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<SLAVE1_SPEC, 26> {
-        SLV_LAST_ADDR_W::new(self)
+    pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<SLAVE1_SPEC> {
+        SLV_LAST_ADDR_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

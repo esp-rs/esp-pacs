@@ -5,13 +5,13 @@ pub type W = crate::W<SPI_MEM_USER1_SPEC>;
 #[doc = "Field `SPI_MEM_USR_DUMMY_CYCLELEN` reader - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
 pub type SPI_MEM_USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_DUMMY_CYCLELEN` writer - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
-pub type SPI_MEM_USR_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SPI_MEM_USR_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SPI_MEM_USR_DBYTELEN` reader - SPI0 USR_CMD read or write data byte length -1"]
 pub type SPI_MEM_USR_DBYTELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_ADDR_BITLEN` reader - The length in bits of address phase. The register value shall be (bit_num-1)."]
 pub type SPI_MEM_USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_ADDR_BITLEN` writer - The length in bits of address phase. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_USR_ADDR_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SPI_MEM_USR_ADDR_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
     #[inline(always)]
@@ -51,7 +51,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_USER1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -60,14 +60,14 @@ impl W {
     #[must_use]
     pub fn spi_mem_usr_dummy_cyclelen(
         &mut self,
-    ) -> SPI_MEM_USR_DUMMY_CYCLELEN_W<SPI_MEM_USER1_SPEC, 0> {
-        SPI_MEM_USR_DUMMY_CYCLELEN_W::new(self)
+    ) -> SPI_MEM_USR_DUMMY_CYCLELEN_W<SPI_MEM_USER1_SPEC> {
+        SPI_MEM_USR_DUMMY_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bits 26:31 - The length in bits of address phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_usr_addr_bitlen(&mut self) -> SPI_MEM_USR_ADDR_BITLEN_W<SPI_MEM_USER1_SPEC, 26> {
-        SPI_MEM_USR_ADDR_BITLEN_W::new(self)
+    pub fn spi_mem_usr_addr_bitlen(&mut self) -> SPI_MEM_USR_ADDR_BITLEN_W<SPI_MEM_USER1_SPEC> {
+        SPI_MEM_USR_ADDR_BITLEN_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

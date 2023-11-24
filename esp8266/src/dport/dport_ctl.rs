@@ -5,7 +5,7 @@ pub type W = crate::W<DPORT_CTL_SPEC>;
 #[doc = "Field `DPORT_CTL_DOUBLE_CLK` reader - "]
 pub type DPORT_CTL_DOUBLE_CLK_R = crate::BitReader;
 #[doc = "Field `DPORT_CTL_DOUBLE_CLK` writer - "]
-pub type DPORT_CTL_DOUBLE_CLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DPORT_CTL_DOUBLE_CLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DPORT_CTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dport_ctl_double_clk(&mut self) -> DPORT_CTL_DOUBLE_CLK_W<DPORT_CTL_SPEC, 0> {
-        DPORT_CTL_DOUBLE_CLK_W::new(self)
+    pub fn dport_ctl_double_clk(&mut self) -> DPORT_CTL_DOUBLE_CLK_W<DPORT_CTL_SPEC> {
+        DPORT_CTL_DOUBLE_CLK_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

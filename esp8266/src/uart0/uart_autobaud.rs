@@ -5,11 +5,11 @@ pub type W = crate::W<UART_AUTOBAUD_SPEC>;
 #[doc = "Field `autobaud_en` reader - Set this bit to enable baudrate detect"]
 pub type AUTOBAUD_EN_R = crate::BitReader;
 #[doc = "Field `autobaud_en` writer - Set this bit to enable baudrate detect"]
-pub type AUTOBAUD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AUTOBAUD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `glitch_filt` reader - "]
 pub type GLITCH_FILT_R = crate::FieldReader;
 #[doc = "Field `glitch_filt` writer - "]
-pub type GLITCH_FILT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GLITCH_FILT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable baudrate detect"]
     #[inline(always)]
@@ -37,23 +37,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UART_AUTOBAUD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable baudrate detect"]
     #[inline(always)]
     #[must_use]
-    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<UART_AUTOBAUD_SPEC, 0> {
-        AUTOBAUD_EN_W::new(self)
+    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<UART_AUTOBAUD_SPEC> {
+        AUTOBAUD_EN_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<UART_AUTOBAUD_SPEC, 8> {
-        GLITCH_FILT_W::new(self)
+    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<UART_AUTOBAUD_SPEC> {
+        GLITCH_FILT_W::new(self, 8)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

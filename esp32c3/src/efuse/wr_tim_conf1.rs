@@ -5,7 +5,7 @@ pub type W = crate::W<WR_TIM_CONF1_SPEC>;
 #[doc = "Field `PWR_ON_NUM` reader - Configures the power up time for VDDQ."]
 pub type PWR_ON_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `PWR_ON_NUM` writer - Configures the power up time for VDDQ."]
-pub type PWR_ON_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PWR_ON_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WR_TIM_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]
     #[must_use]
-    pub fn pwr_on_num(&mut self) -> PWR_ON_NUM_W<WR_TIM_CONF1_SPEC, 8> {
-        PWR_ON_NUM_W::new(self)
+    pub fn pwr_on_num(&mut self) -> PWR_ON_NUM_W<WR_TIM_CONF1_SPEC> {
+        PWR_ON_NUM_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

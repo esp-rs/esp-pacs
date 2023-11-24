@@ -5,27 +5,27 @@ pub type W = crate::W<SAR_TOUCH_CTRL1_SPEC>;
 #[doc = "Field `TOUCH_MEAS_DELAY` reader - the meas length (in 8MHz)"]
 pub type TOUCH_MEAS_DELAY_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_DELAY` writer - the meas length (in 8MHz)"]
-pub type TOUCH_MEAS_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TOUCH_MEAS_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `TOUCH_XPD_WAIT` reader - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
 pub type TOUCH_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_XPD_WAIT` writer - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
-pub type TOUCH_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TOUCH_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TOUCH_OUT_SEL` reader - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
 pub type TOUCH_OUT_SEL_R = crate::BitReader;
 #[doc = "Field `TOUCH_OUT_SEL` writer - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
-pub type TOUCH_OUT_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_OUT_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_OUT_1EN` reader - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
 pub type TOUCH_OUT_1EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_OUT_1EN` writer - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
-pub type TOUCH_OUT_1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_OUT_1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
 pub type XPD_HALL_FORCE_R = crate::BitReader;
 #[doc = "Field `XPD_HALL_FORCE` writer - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub type XPD_HALL_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_HALL_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HALL_PHASE_FORCE` reader - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
 pub type HALL_PHASE_FORCE_R = crate::BitReader;
 #[doc = "Field `HALL_PHASE_FORCE` writer - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub type HALL_PHASE_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HALL_PHASE_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W<SAR_TOUCH_CTRL1_SPEC, 0> {
-        TOUCH_MEAS_DELAY_W::new(self)
+    pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W<SAR_TOUCH_CTRL1_SPEC> {
+        TOUCH_MEAS_DELAY_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<SAR_TOUCH_CTRL1_SPEC, 16> {
-        TOUCH_XPD_WAIT_W::new(self)
+    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<SAR_TOUCH_CTRL1_SPEC> {
+        TOUCH_XPD_WAIT_W::new(self, 16)
     }
     #[doc = "Bit 24 - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
     #[inline(always)]
     #[must_use]
-    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<SAR_TOUCH_CTRL1_SPEC, 24> {
-        TOUCH_OUT_SEL_W::new(self)
+    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<SAR_TOUCH_CTRL1_SPEC> {
+        TOUCH_OUT_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
     #[inline(always)]
     #[must_use]
-    pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<SAR_TOUCH_CTRL1_SPEC, 25> {
-        TOUCH_OUT_1EN_W::new(self)
+    pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<SAR_TOUCH_CTRL1_SPEC> {
+        TOUCH_OUT_1EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<SAR_TOUCH_CTRL1_SPEC, 26> {
-        XPD_HALL_FORCE_W::new(self)
+    pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<SAR_TOUCH_CTRL1_SPEC> {
+        XPD_HALL_FORCE_W::new(self, 26)
     }
     #[doc = "Bit 27 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     #[must_use]
-    pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<SAR_TOUCH_CTRL1_SPEC, 27> {
-        HALL_PHASE_FORCE_W::new(self)
+    pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<SAR_TOUCH_CTRL1_SPEC> {
+        HALL_PHASE_FORCE_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

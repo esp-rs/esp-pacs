@@ -5,7 +5,7 @@ pub type W = crate::W<INTERNAL_SRAM_USAGE_0_SPEC>;
 #[doc = "Field `INTERNAL_SRAM_USAGE_LOCK` reader - Set 1 to lock internal SRAM Configuration Register."]
 pub type INTERNAL_SRAM_USAGE_LOCK_R = crate::BitReader;
 #[doc = "Field `INTERNAL_SRAM_USAGE_LOCK` writer - Set 1 to lock internal SRAM Configuration Register."]
-pub type INTERNAL_SRAM_USAGE_LOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERNAL_SRAM_USAGE_LOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock internal SRAM Configuration Register."]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn internal_sram_usage_lock(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_LOCK_W<INTERNAL_SRAM_USAGE_0_SPEC, 0> {
-        INTERNAL_SRAM_USAGE_LOCK_W::new(self)
+    ) -> INTERNAL_SRAM_USAGE_LOCK_W<INTERNAL_SRAM_USAGE_0_SPEC> {
+        INTERNAL_SRAM_USAGE_LOCK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

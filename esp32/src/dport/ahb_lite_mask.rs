@@ -5,27 +5,27 @@ pub type W = crate::W<AHB_LITE_MASK_SPEC>;
 #[doc = "Field `PRO` reader - "]
 pub type PRO_R = crate::BitReader;
 #[doc = "Field `PRO` writer - "]
-pub type PRO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP` reader - "]
 pub type APP_R = crate::BitReader;
 #[doc = "Field `APP` writer - "]
-pub type APP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO` reader - "]
 pub type SDIO_R = crate::BitReader;
 #[doc = "Field `SDIO` writer - "]
-pub type SDIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRODPORT` reader - "]
 pub type PRODPORT_R = crate::BitReader;
 #[doc = "Field `PRODPORT` writer - "]
-pub type PRODPORT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRODPORT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APPDPORT` reader - "]
 pub type APPDPORT_R = crate::BitReader;
 #[doc = "Field `APPDPORT` writer - "]
-pub type APPDPORT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APPDPORT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHB_LITE_SDHOST_PID` reader - "]
 pub type AHB_LITE_SDHOST_PID_R = crate::FieldReader;
 #[doc = "Field `AHB_LITE_SDHOST_PID` writer - "]
-pub type AHB_LITE_SDHOST_PID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type AHB_LITE_SDHOST_PID_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -77,45 +77,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<AHB_LITE_MASK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pro(&mut self) -> PRO_W<AHB_LITE_MASK_SPEC, 0> {
-        PRO_W::new(self)
+    pub fn pro(&mut self) -> PRO_W<AHB_LITE_MASK_SPEC> {
+        PRO_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn app(&mut self) -> APP_W<AHB_LITE_MASK_SPEC, 4> {
-        APP_W::new(self)
+    pub fn app(&mut self) -> APP_W<AHB_LITE_MASK_SPEC> {
+        APP_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio(&mut self) -> SDIO_W<AHB_LITE_MASK_SPEC, 8> {
-        SDIO_W::new(self)
+    pub fn sdio(&mut self) -> SDIO_W<AHB_LITE_MASK_SPEC> {
+        SDIO_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn prodport(&mut self) -> PRODPORT_W<AHB_LITE_MASK_SPEC, 9> {
-        PRODPORT_W::new(self)
+    pub fn prodport(&mut self) -> PRODPORT_W<AHB_LITE_MASK_SPEC> {
+        PRODPORT_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn appdport(&mut self) -> APPDPORT_W<AHB_LITE_MASK_SPEC, 10> {
-        APPDPORT_W::new(self)
+    pub fn appdport(&mut self) -> APPDPORT_W<AHB_LITE_MASK_SPEC> {
+        APPDPORT_W::new(self, 10)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_lite_sdhost_pid(&mut self) -> AHB_LITE_SDHOST_PID_W<AHB_LITE_MASK_SPEC, 11> {
-        AHB_LITE_SDHOST_PID_W::new(self)
+    pub fn ahb_lite_sdhost_pid(&mut self) -> AHB_LITE_SDHOST_PID_W<AHB_LITE_MASK_SPEC> {
+        AHB_LITE_SDHOST_PID_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

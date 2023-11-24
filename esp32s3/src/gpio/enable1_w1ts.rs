@@ -1,7 +1,7 @@
 #[doc = "Register `ENABLE1_W1TS` writer"]
 pub type W = crate::W<ENABLE1_W1TS_SPEC>;
 #[doc = "Field `ENABLE1_W1TS` writer - GPIO output enable set register for GPIO32-53"]
-pub type ENABLE1_W1TS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type ENABLE1_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENABLE1_W1TS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:21 - GPIO output enable set register for GPIO32-53"]
     #[inline(always)]
     #[must_use]
-    pub fn enable1_w1ts(&mut self) -> ENABLE1_W1TS_W<ENABLE1_W1TS_SPEC, 0> {
-        ENABLE1_W1TS_W::new(self)
+    pub fn enable1_w1ts(&mut self) -> ENABLE1_W1TS_W<ENABLE1_W1TS_SPEC> {
+        ENABLE1_W1TS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

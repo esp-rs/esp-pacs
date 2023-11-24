@@ -5,11 +5,11 @@ pub type W = crate::W<CH_GAMMA_CONF_SPEC>;
 #[doc = "Field `CH_GAMMA_ENTRY_NUM` reader - Ledc ch%s gamma entry num."]
 pub type CH_GAMMA_ENTRY_NUM_R = crate::FieldReader;
 #[doc = "Field `CH_GAMMA_ENTRY_NUM` writer - Ledc ch%s gamma entry num."]
-pub type CH_GAMMA_ENTRY_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CH_GAMMA_ENTRY_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CH_GAMMA_PAUSE` writer - Ledc ch%s gamma pause, write 1 to pause."]
-pub type CH_GAMMA_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_GAMMA_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_GAMMA_RESUME` writer - Ledc ch%s gamma resume, write 1 to resume."]
-pub type CH_GAMMA_RESUME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_GAMMA_RESUME_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - Ledc ch%s gamma entry num."]
     #[inline(always)]
@@ -31,27 +31,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_GAMMA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - Ledc ch%s gamma entry num."]
     #[inline(always)]
     #[must_use]
-    pub fn ch_gamma_entry_num(&mut self) -> CH_GAMMA_ENTRY_NUM_W<CH_GAMMA_CONF_SPEC, 0> {
-        CH_GAMMA_ENTRY_NUM_W::new(self)
+    pub fn ch_gamma_entry_num(&mut self) -> CH_GAMMA_ENTRY_NUM_W<CH_GAMMA_CONF_SPEC> {
+        CH_GAMMA_ENTRY_NUM_W::new(self, 0)
     }
     #[doc = "Bit 5 - Ledc ch%s gamma pause, write 1 to pause."]
     #[inline(always)]
     #[must_use]
-    pub fn ch_gamma_pause(&mut self) -> CH_GAMMA_PAUSE_W<CH_GAMMA_CONF_SPEC, 5> {
-        CH_GAMMA_PAUSE_W::new(self)
+    pub fn ch_gamma_pause(&mut self) -> CH_GAMMA_PAUSE_W<CH_GAMMA_CONF_SPEC> {
+        CH_GAMMA_PAUSE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Ledc ch%s gamma resume, write 1 to resume."]
     #[inline(always)]
     #[must_use]
-    pub fn ch_gamma_resume(&mut self) -> CH_GAMMA_RESUME_W<CH_GAMMA_CONF_SPEC, 6> {
-        CH_GAMMA_RESUME_W::new(self)
+    pub fn ch_gamma_resume(&mut self) -> CH_GAMMA_RESUME_W<CH_GAMMA_CONF_SPEC> {
+        CH_GAMMA_RESUME_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

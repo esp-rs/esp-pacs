@@ -5,11 +5,11 @@ pub type W = crate::W<CPU_PERIOD_CONF_SPEC>;
 #[doc = "Field `CPUSEL_CONF` reader - CPU sel option"]
 pub type CPUSEL_CONF_R = crate::BitReader;
 #[doc = "Field `CPUSEL_CONF` writer - CPU sel option"]
-pub type CPUSEL_CONF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPUSEL_CONF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPUPERIOD_SEL` reader - Need add desc"]
 pub type CPUPERIOD_SEL_R = crate::FieldReader;
 #[doc = "Field `CPUPERIOD_SEL` writer - Need add desc"]
-pub type CPUPERIOD_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CPUPERIOD_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_PERIOD_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
     #[must_use]
-    pub fn cpusel_conf(&mut self) -> CPUSEL_CONF_W<CPU_PERIOD_CONF_SPEC, 29> {
-        CPUSEL_CONF_W::new(self)
+    pub fn cpusel_conf(&mut self) -> CPUSEL_CONF_W<CPU_PERIOD_CONF_SPEC> {
+        CPUSEL_CONF_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PERIOD_CONF_SPEC, 30> {
-        CPUPERIOD_SEL_W::new(self)
+    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PERIOD_CONF_SPEC> {
+        CPUPERIOD_SEL_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

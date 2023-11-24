@@ -5,15 +5,15 @@ pub type W = crate::W<VDD_SOURCE_CNTL_SPEC>;
 #[doc = "Field `DETMODE_SEL` reader - need_des"]
 pub type DETMODE_SEL_R = crate::FieldReader;
 #[doc = "Field `DETMODE_SEL` writer - need_des"]
-pub type DETMODE_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DETMODE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `VGOOD_EVENT_RECORD` reader - need_des"]
 pub type VGOOD_EVENT_RECORD_R = crate::FieldReader;
 #[doc = "Field `VBAT_EVENT_RECORD_CLR` writer - need_des"]
-pub type VBAT_EVENT_RECORD_CLR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type VBAT_EVENT_RECORD_CLR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `BOD_SOURCE_ENA` reader - need_des"]
 pub type BOD_SOURCE_ENA_R = crate::FieldReader;
 #[doc = "Field `BOD_SOURCE_ENA` writer - need_des"]
-pub type BOD_SOURCE_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BOD_SOURCE_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<VDD_SOURCE_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn detmode_sel(&mut self) -> DETMODE_SEL_W<VDD_SOURCE_CNTL_SPEC, 0> {
-        DETMODE_SEL_W::new(self)
+    pub fn detmode_sel(&mut self) -> DETMODE_SEL_W<VDD_SOURCE_CNTL_SPEC> {
+        DETMODE_SEL_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vbat_event_record_clr(&mut self) -> VBAT_EVENT_RECORD_CLR_W<VDD_SOURCE_CNTL_SPEC, 16> {
-        VBAT_EVENT_RECORD_CLR_W::new(self)
+    pub fn vbat_event_record_clr(&mut self) -> VBAT_EVENT_RECORD_CLR_W<VDD_SOURCE_CNTL_SPEC> {
+        VBAT_EVENT_RECORD_CLR_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_source_ena(&mut self) -> BOD_SOURCE_ENA_W<VDD_SOURCE_CNTL_SPEC, 24> {
-        BOD_SOURCE_ENA_W::new(self)
+    pub fn bod_source_ena(&mut self) -> BOD_SOURCE_ENA_W<VDD_SOURCE_CNTL_SPEC> {
+        BOD_SOURCE_ENA_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

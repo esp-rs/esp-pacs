@@ -1,7 +1,7 @@
 #[doc = "Register `CFG_UPDATE` writer"]
 pub type W = crate::W<CFG_UPDATE_SPEC>;
 #[doc = "Field `CONF_UPDATE` writer - update the timing configurations"]
-pub type CONF_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONF_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CFG_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - update the timing configurations"]
     #[inline(always)]
     #[must_use]
-    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CFG_UPDATE_SPEC, 0> {
-        CONF_UPDATE_W::new(self)
+    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CFG_UPDATE_SPEC> {
+        CONF_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

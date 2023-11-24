@@ -5,7 +5,7 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `INTERRUPT_ENA` reader - Enables DMA-SHA interrupt."]
 pub type INTERRUPT_ENA_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ENA` writer - Enables DMA-SHA interrupt."]
-pub type INTERRUPT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERRUPT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enables DMA-SHA interrupt."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enables DMA-SHA interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<INT_ENA_SPEC, 0> {
-        INTERRUPT_ENA_W::new(self)
+    pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<INT_ENA_SPEC> {
+        INTERRUPT_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<TX_DATA_CFG_SPEC>;
 #[doc = "Field `TX_BITLEN` reader - Configures expected byte number of sent data."]
 pub type TX_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `TX_BITLEN` writer - Configures expected byte number of sent data."]
-pub type TX_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 19, O, u32>;
+pub type TX_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
 #[doc = "Field `TX_DATA_ORDER_INV` reader - Set this bit to invert bit order of one byte sent from TX_FIFO to IO data."]
 pub type TX_DATA_ORDER_INV_R = crate::BitReader;
 #[doc = "Field `TX_DATA_ORDER_INV` writer - Set this bit to invert bit order of one byte sent from TX_FIFO to IO data."]
-pub type TX_DATA_ORDER_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_DATA_ORDER_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_BUS_WID_SEL` reader - Configures the txd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
 pub type TX_BUS_WID_SEL_R = crate::FieldReader;
 #[doc = "Field `TX_BUS_WID_SEL` writer - Configures the txd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
-pub type TX_BUS_WID_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TX_BUS_WID_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 9:27 - Configures expected byte number of sent data."]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_DATA_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 9:27 - Configures expected byte number of sent data."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_bitlen(&mut self) -> TX_BITLEN_W<TX_DATA_CFG_SPEC, 9> {
-        TX_BITLEN_W::new(self)
+    pub fn tx_bitlen(&mut self) -> TX_BITLEN_W<TX_DATA_CFG_SPEC> {
+        TX_BITLEN_W::new(self, 9)
     }
     #[doc = "Bit 28 - Set this bit to invert bit order of one byte sent from TX_FIFO to IO data."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_data_order_inv(&mut self) -> TX_DATA_ORDER_INV_W<TX_DATA_CFG_SPEC, 28> {
-        TX_DATA_ORDER_INV_W::new(self)
+    pub fn tx_data_order_inv(&mut self) -> TX_DATA_ORDER_INV_W<TX_DATA_CFG_SPEC> {
+        TX_DATA_ORDER_INV_W::new(self, 28)
     }
     #[doc = "Bits 29:31 - Configures the txd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_bus_wid_sel(&mut self) -> TX_BUS_WID_SEL_W<TX_DATA_CFG_SPEC, 29> {
-        TX_BUS_WID_SEL_W::new(self)
+    pub fn tx_bus_wid_sel(&mut self) -> TX_BUS_WID_SEL_W<TX_DATA_CFG_SPEC> {
+        TX_BUS_WID_SEL_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

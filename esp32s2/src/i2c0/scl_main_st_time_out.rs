@@ -5,7 +5,7 @@ pub type W = crate::W<SCL_MAIN_ST_TIME_OUT_SPEC>;
 #[doc = "Field `SCL_MAIN_ST_TO` reader - The threshold value of SCL_MAIN_FSM state unchanged period."]
 pub type SCL_MAIN_ST_TO_R = crate::FieldReader<u32>;
 #[doc = "Field `SCL_MAIN_ST_TO` writer - The threshold value of SCL_MAIN_FSM state unchanged period."]
-pub type SCL_MAIN_ST_TO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 24, O, u32>;
+pub type SCL_MAIN_ST_TO_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 impl R {
     #[doc = "Bits 0:23 - The threshold value of SCL_MAIN_FSM state unchanged period."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCL_MAIN_ST_TIME_OUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - The threshold value of SCL_MAIN_FSM state unchanged period."]
     #[inline(always)]
     #[must_use]
-    pub fn scl_main_st_to(&mut self) -> SCL_MAIN_ST_TO_W<SCL_MAIN_ST_TIME_OUT_SPEC, 0> {
-        SCL_MAIN_ST_TO_W::new(self)
+    pub fn scl_main_st_to(&mut self) -> SCL_MAIN_ST_TO_W<SCL_MAIN_ST_TIME_OUT_SPEC> {
+        SCL_MAIN_ST_TO_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

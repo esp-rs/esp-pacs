@@ -1,7 +1,7 @@
 #[doc = "Register `RTC_GPIO_STATUS_W1TS` writer"]
 pub type W = crate::W<RTC_GPIO_STATUS_W1TS_SPEC>;
 #[doc = "Field `GPIO_STATUS_INT_W1TS` writer - GPIO0 ~ 21 interrupt set register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_GPIO_STATUS_INT will be set to 1. Recommended operation: use this register to set RTCIO_GPIO_STATUS_INT."]
-pub type GPIO_STATUS_INT_W1TS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type GPIO_STATUS_INT_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_STATUS_W1TS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,10 +12,8 @@ impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 interrupt set register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_GPIO_STATUS_INT will be set to 1. Recommended operation: use this register to set RTCIO_GPIO_STATUS_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_status_int_w1ts(
-        &mut self,
-    ) -> GPIO_STATUS_INT_W1TS_W<RTC_GPIO_STATUS_W1TS_SPEC, 10> {
-        GPIO_STATUS_INT_W1TS_W::new(self)
+    pub fn gpio_status_int_w1ts(&mut self) -> GPIO_STATUS_INT_W1TS_W<RTC_GPIO_STATUS_W1TS_SPEC> {
+        GPIO_STATUS_INT_W1TS_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

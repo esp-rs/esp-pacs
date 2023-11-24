@@ -5,11 +5,11 @@ pub type W = crate::W<DCTL_SPEC>;
 #[doc = "Field `RMTWKUPSIG` reader - "]
 pub type RMTWKUPSIG_R = crate::BitReader;
 #[doc = "Field `RMTWKUPSIG` writer - "]
-pub type RMTWKUPSIG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RMTWKUPSIG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SFTDISCON` reader - "]
 pub type SFTDISCON_R = crate::BitReader;
 #[doc = "Field `SFTDISCON` writer - "]
-pub type SFTDISCON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SFTDISCON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GNPINNAKSTS` reader - "]
 pub type GNPINNAKSTS_R = crate::BitReader;
 #[doc = "Field `GOUTNAKSTS` reader - "]
@@ -17,39 +17,39 @@ pub type GOUTNAKSTS_R = crate::BitReader;
 #[doc = "Field `TSTCTL` reader - "]
 pub type TSTCTL_R = crate::FieldReader;
 #[doc = "Field `TSTCTL` writer - "]
-pub type TSTCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TSTCTL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SGNPINNAK` writer - "]
-pub type SGNPINNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SGNPINNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CGNPINNAK` writer - "]
-pub type CGNPINNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CGNPINNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SGOUTNAK` writer - "]
-pub type SGOUTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SGOUTNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CGOUTNAK` writer - "]
-pub type CGOUTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CGOUTNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWRONPRGDONE` reader - "]
 pub type PWRONPRGDONE_R = crate::BitReader;
 #[doc = "Field `PWRONPRGDONE` writer - "]
-pub type PWRONPRGDONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWRONPRGDONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GMC` reader - "]
 pub type GMC_R = crate::FieldReader;
 #[doc = "Field `GMC` writer - "]
-pub type GMC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GMC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `IGNRFRMNUM` reader - "]
 pub type IGNRFRMNUM_R = crate::BitReader;
 #[doc = "Field `IGNRFRMNUM` writer - "]
-pub type IGNRFRMNUM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IGNRFRMNUM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAKONBBLE` reader - "]
 pub type NAKONBBLE_R = crate::BitReader;
 #[doc = "Field `NAKONBBLE` writer - "]
-pub type NAKONBBLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NAKONBBLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENCOUNTONBNA` reader - "]
 pub type ENCOUNTONBNA_R = crate::BitReader;
 #[doc = "Field `ENCOUNTONBNA` writer - "]
-pub type ENCOUNTONBNA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENCOUNTONBNA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEEPSLEEPBESLREJECT` reader - "]
 pub type DEEPSLEEPBESLREJECT_R = crate::BitReader;
 #[doc = "Field `DEEPSLEEPBESLREJECT` writer - "]
-pub type DEEPSLEEPBESLREJECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEEPSLEEPBESLREJECT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -137,87 +137,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn rmtwkupsig(&mut self) -> RMTWKUPSIG_W<DCTL_SPEC, 0> {
-        RMTWKUPSIG_W::new(self)
+    pub fn rmtwkupsig(&mut self) -> RMTWKUPSIG_W<DCTL_SPEC> {
+        RMTWKUPSIG_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sftdiscon(&mut self) -> SFTDISCON_W<DCTL_SPEC, 1> {
-        SFTDISCON_W::new(self)
+    pub fn sftdiscon(&mut self) -> SFTDISCON_W<DCTL_SPEC> {
+        SFTDISCON_W::new(self, 1)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
     #[must_use]
-    pub fn tstctl(&mut self) -> TSTCTL_W<DCTL_SPEC, 4> {
-        TSTCTL_W::new(self)
+    pub fn tstctl(&mut self) -> TSTCTL_W<DCTL_SPEC> {
+        TSTCTL_W::new(self, 4)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<DCTL_SPEC, 7> {
-        SGNPINNAK_W::new(self)
+    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<DCTL_SPEC> {
+        SGNPINNAK_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<DCTL_SPEC, 8> {
-        CGNPINNAK_W::new(self)
+    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<DCTL_SPEC> {
+        CGNPINNAK_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<DCTL_SPEC, 9> {
-        SGOUTNAK_W::new(self)
+    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<DCTL_SPEC> {
+        SGOUTNAK_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<DCTL_SPEC, 10> {
-        CGOUTNAK_W::new(self)
+    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<DCTL_SPEC> {
+        CGOUTNAK_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn pwronprgdone(&mut self) -> PWRONPRGDONE_W<DCTL_SPEC, 11> {
-        PWRONPRGDONE_W::new(self)
+    pub fn pwronprgdone(&mut self) -> PWRONPRGDONE_W<DCTL_SPEC> {
+        PWRONPRGDONE_W::new(self, 11)
     }
     #[doc = "Bits 13:14"]
     #[inline(always)]
     #[must_use]
-    pub fn gmc(&mut self) -> GMC_W<DCTL_SPEC, 13> {
-        GMC_W::new(self)
+    pub fn gmc(&mut self) -> GMC_W<DCTL_SPEC> {
+        GMC_W::new(self, 13)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn ignrfrmnum(&mut self) -> IGNRFRMNUM_W<DCTL_SPEC, 15> {
-        IGNRFRMNUM_W::new(self)
+    pub fn ignrfrmnum(&mut self) -> IGNRFRMNUM_W<DCTL_SPEC> {
+        IGNRFRMNUM_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn nakonbble(&mut self) -> NAKONBBLE_W<DCTL_SPEC, 16> {
-        NAKONBBLE_W::new(self)
+    pub fn nakonbble(&mut self) -> NAKONBBLE_W<DCTL_SPEC> {
+        NAKONBBLE_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn encountonbna(&mut self) -> ENCOUNTONBNA_W<DCTL_SPEC, 17> {
-        ENCOUNTONBNA_W::new(self)
+    pub fn encountonbna(&mut self) -> ENCOUNTONBNA_W<DCTL_SPEC> {
+        ENCOUNTONBNA_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn deepsleepbeslreject(&mut self) -> DEEPSLEEPBESLREJECT_W<DCTL_SPEC, 18> {
-        DEEPSLEEPBESLREJECT_W::new(self)
+    pub fn deepsleepbeslreject(&mut self) -> DEEPSLEEPBESLREJECT_W<DCTL_SPEC> {
+        DEEPSLEEPBESLREJECT_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

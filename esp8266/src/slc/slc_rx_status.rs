@@ -5,11 +5,11 @@ pub type W = crate::W<SLC_RX_STATUS_SPEC>;
 #[doc = "Field `SLC_RX_FULL` reader - "]
 pub type SLC_RX_FULL_R = crate::BitReader;
 #[doc = "Field `SLC_RX_FULL` writer - "]
-pub type SLC_RX_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_RX_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_RX_EMPTY` reader - "]
 pub type SLC_RX_EMPTY_R = crate::BitReader;
 #[doc = "Field `SLC_RX_EMPTY` writer - "]
-pub type SLC_RX_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_RX_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -37,23 +37,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_RX_STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rx_full(&mut self) -> SLC_RX_FULL_W<SLC_RX_STATUS_SPEC, 0> {
-        SLC_RX_FULL_W::new(self)
+    pub fn slc_rx_full(&mut self) -> SLC_RX_FULL_W<SLC_RX_STATUS_SPEC> {
+        SLC_RX_FULL_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rx_empty(&mut self) -> SLC_RX_EMPTY_W<SLC_RX_STATUS_SPEC, 1> {
-        SLC_RX_EMPTY_W::new(self)
+    pub fn slc_rx_empty(&mut self) -> SLC_RX_EMPTY_W<SLC_RX_STATUS_SPEC> {
+        SLC_RX_EMPTY_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

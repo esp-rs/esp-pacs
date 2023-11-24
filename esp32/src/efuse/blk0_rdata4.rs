@@ -7,11 +7,11 @@ pub type RD_CLK8M_FREQ_R = crate::FieldReader;
 #[doc = "Field `RD_ADC_VREF` reader - "]
 pub type RD_ADC_VREF_R = crate::FieldReader;
 #[doc = "Field `RD_ADC_VREF` writer - "]
-pub type RD_ADC_VREF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RD_ADC_VREF_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `RD_RESERVE_0_141` reader - "]
 pub type RD_RESERVE_0_141_R = crate::BitReader;
 #[doc = "Field `RD_RESERVE_0_141` writer - "]
-pub type RD_RESERVE_0_141_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RD_RESERVE_0_141_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RD_XPD_SDIO` reader - "]
 pub type RD_XPD_SDIO_R = crate::BitReader;
 #[doc = "Field `RD_XPD_SDIO_TIEH` reader - "]
@@ -21,7 +21,7 @@ pub type RD_XPD_SDIO_FORCE_R = crate::BitReader;
 #[doc = "Field `RD_RESERVE_0_145` reader - "]
 pub type RD_RESERVE_0_145_R = crate::FieldReader<u16>;
 #[doc = "Field `RD_RESERVE_0_145` writer - "]
-pub type RD_RESERVE_0_145_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type RD_RESERVE_0_145_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -94,27 +94,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 8:12"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_adc_vref(&mut self) -> RD_ADC_VREF_W<BLK0_RDATA4_SPEC, 8> {
-        RD_ADC_VREF_W::new(self)
+    pub fn rd_adc_vref(&mut self) -> RD_ADC_VREF_W<BLK0_RDATA4_SPEC> {
+        RD_ADC_VREF_W::new(self, 8)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_reserve_0_141(&mut self) -> RD_RESERVE_0_141_W<BLK0_RDATA4_SPEC, 13> {
-        RD_RESERVE_0_141_W::new(self)
+    pub fn rd_reserve_0_141(&mut self) -> RD_RESERVE_0_141_W<BLK0_RDATA4_SPEC> {
+        RD_RESERVE_0_141_W::new(self, 13)
     }
     #[doc = "Bits 17:31"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_reserve_0_145(&mut self) -> RD_RESERVE_0_145_W<BLK0_RDATA4_SPEC, 17> {
-        RD_RESERVE_0_145_W::new(self)
+    pub fn rd_reserve_0_145(&mut self) -> RD_RESERVE_0_145_W<BLK0_RDATA4_SPEC> {
+        RD_RESERVE_0_145_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

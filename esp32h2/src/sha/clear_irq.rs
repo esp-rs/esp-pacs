@@ -1,7 +1,7 @@
 #[doc = "Register `CLEAR_IRQ` writer"]
 pub type W = crate::W<CLEAR_IRQ_SPEC>;
 #[doc = "Field `CLEAR_INTERRUPT` writer - Clear sha interrupt."]
-pub type CLEAR_INTERRUPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLEAR_INTERRUPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLEAR_IRQ_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Clear sha interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn clear_interrupt(&mut self) -> CLEAR_INTERRUPT_W<CLEAR_IRQ_SPEC, 0> {
-        CLEAR_INTERRUPT_W::new(self)
+    pub fn clear_interrupt(&mut self) -> CLEAR_INTERRUPT_W<CLEAR_IRQ_SPEC> {
+        CLEAR_INTERRUPT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

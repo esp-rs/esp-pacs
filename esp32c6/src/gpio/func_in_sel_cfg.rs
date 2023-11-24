@@ -5,15 +5,15 @@ pub type W = crate::W<FUNC_IN_SEL_CFG_SPEC>;
 #[doc = "Field `IN_SEL` reader - set this value: s=0-34: connect GPIO\\[s\\] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level."]
 pub type IN_SEL_R = crate::FieldReader;
 #[doc = "Field `IN_SEL` writer - set this value: s=0-34: connect GPIO\\[s\\] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level."]
-pub type IN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type IN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `IN_INV_SEL` reader - set this bit to invert input signal. 1:invert. 0:not invert."]
 pub type IN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `IN_INV_SEL` writer - set this bit to invert input signal. 1:invert. 0:not invert."]
-pub type IN_INV_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEL` reader - set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."]
 pub type SEL_R = crate::BitReader;
 #[doc = "Field `SEL` writer - set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."]
-pub type SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - set this value: s=0-34: connect GPIO\\[s\\] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FUNC_IN_SEL_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - set this value: s=0-34: connect GPIO\\[s\\] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level."]
     #[inline(always)]
     #[must_use]
-    pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC, 0> {
-        IN_SEL_W::new(self)
+    pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+        IN_SEL_W::new(self, 0)
     }
     #[doc = "Bit 6 - set this bit to invert input signal. 1:invert. 0:not invert."]
     #[inline(always)]
     #[must_use]
-    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC, 6> {
-        IN_INV_SEL_W::new(self)
+    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+        IN_INV_SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."]
     #[inline(always)]
     #[must_use]
-    pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC, 7> {
-        SEL_W::new(self)
+    pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+        SEL_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

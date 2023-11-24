@@ -5,59 +5,59 @@ pub type W = crate::W<DAINTMSK_SPEC>;
 #[doc = "Field `INEPMSK0` reader - "]
 pub type INEPMSK0_R = crate::BitReader;
 #[doc = "Field `INEPMSK0` writer - "]
-pub type INEPMSK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPMSK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPMSK1` reader - "]
 pub type INEPMSK1_R = crate::BitReader;
 #[doc = "Field `INEPMSK1` writer - "]
-pub type INEPMSK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPMSK1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPMSK2` reader - "]
 pub type INEPMSK2_R = crate::BitReader;
 #[doc = "Field `INEPMSK2` writer - "]
-pub type INEPMSK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPMSK2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPMSK3` reader - "]
 pub type INEPMSK3_R = crate::BitReader;
 #[doc = "Field `INEPMSK3` writer - "]
-pub type INEPMSK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPMSK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPMSK4` reader - "]
 pub type INEPMSK4_R = crate::BitReader;
 #[doc = "Field `INEPMSK4` writer - "]
-pub type INEPMSK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPMSK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPMSK5` reader - "]
 pub type INEPMSK5_R = crate::BitReader;
 #[doc = "Field `INEPMSK5` writer - "]
-pub type INEPMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPMSK5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPMSK6` reader - "]
 pub type INEPMSK6_R = crate::BitReader;
 #[doc = "Field `INEPMSK6` writer - "]
-pub type INEPMSK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPMSK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTEPMSK0` reader - "]
 pub type OUTEPMSK0_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK0` writer - "]
-pub type OUTEPMSK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEPMSK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTEPMSK1` reader - "]
 pub type OUTEPMSK1_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK1` writer - "]
-pub type OUTEPMSK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEPMSK1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTEPMSK2` reader - "]
 pub type OUTEPMSK2_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK2` writer - "]
-pub type OUTEPMSK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEPMSK2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTEPMSK3` reader - "]
 pub type OUTEPMSK3_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK3` writer - "]
-pub type OUTEPMSK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEPMSK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTEPMSK4` reader - "]
 pub type OUTEPMSK4_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK4` writer - "]
-pub type OUTEPMSK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEPMSK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTEPMSK5` reader - "]
 pub type OUTEPMSK5_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK5` writer - "]
-pub type OUTEPMSK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEPMSK5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTEPMSK6` reader - "]
 pub type OUTEPMSK6_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK6` writer - "]
-pub type OUTEPMSK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEPMSK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -154,93 +154,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DAINTMSK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn inepmsk0(&mut self) -> INEPMSK0_W<DAINTMSK_SPEC, 0> {
-        INEPMSK0_W::new(self)
+    pub fn inepmsk0(&mut self) -> INEPMSK0_W<DAINTMSK_SPEC> {
+        INEPMSK0_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn inepmsk1(&mut self) -> INEPMSK1_W<DAINTMSK_SPEC, 1> {
-        INEPMSK1_W::new(self)
+    pub fn inepmsk1(&mut self) -> INEPMSK1_W<DAINTMSK_SPEC> {
+        INEPMSK1_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn inepmsk2(&mut self) -> INEPMSK2_W<DAINTMSK_SPEC, 2> {
-        INEPMSK2_W::new(self)
+    pub fn inepmsk2(&mut self) -> INEPMSK2_W<DAINTMSK_SPEC> {
+        INEPMSK2_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn inepmsk3(&mut self) -> INEPMSK3_W<DAINTMSK_SPEC, 3> {
-        INEPMSK3_W::new(self)
+    pub fn inepmsk3(&mut self) -> INEPMSK3_W<DAINTMSK_SPEC> {
+        INEPMSK3_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn inepmsk4(&mut self) -> INEPMSK4_W<DAINTMSK_SPEC, 4> {
-        INEPMSK4_W::new(self)
+    pub fn inepmsk4(&mut self) -> INEPMSK4_W<DAINTMSK_SPEC> {
+        INEPMSK4_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn inepmsk5(&mut self) -> INEPMSK5_W<DAINTMSK_SPEC, 5> {
-        INEPMSK5_W::new(self)
+    pub fn inepmsk5(&mut self) -> INEPMSK5_W<DAINTMSK_SPEC> {
+        INEPMSK5_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn inepmsk6(&mut self) -> INEPMSK6_W<DAINTMSK_SPEC, 6> {
-        INEPMSK6_W::new(self)
+    pub fn inepmsk6(&mut self) -> INEPMSK6_W<DAINTMSK_SPEC> {
+        INEPMSK6_W::new(self, 6)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn outepmsk0(&mut self) -> OUTEPMSK0_W<DAINTMSK_SPEC, 16> {
-        OUTEPMSK0_W::new(self)
+    pub fn outepmsk0(&mut self) -> OUTEPMSK0_W<DAINTMSK_SPEC> {
+        OUTEPMSK0_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn outepmsk1(&mut self) -> OUTEPMSK1_W<DAINTMSK_SPEC, 17> {
-        OUTEPMSK1_W::new(self)
+    pub fn outepmsk1(&mut self) -> OUTEPMSK1_W<DAINTMSK_SPEC> {
+        OUTEPMSK1_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn outepmsk2(&mut self) -> OUTEPMSK2_W<DAINTMSK_SPEC, 18> {
-        OUTEPMSK2_W::new(self)
+    pub fn outepmsk2(&mut self) -> OUTEPMSK2_W<DAINTMSK_SPEC> {
+        OUTEPMSK2_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn outepmsk3(&mut self) -> OUTEPMSK3_W<DAINTMSK_SPEC, 19> {
-        OUTEPMSK3_W::new(self)
+    pub fn outepmsk3(&mut self) -> OUTEPMSK3_W<DAINTMSK_SPEC> {
+        OUTEPMSK3_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn outepmsk4(&mut self) -> OUTEPMSK4_W<DAINTMSK_SPEC, 20> {
-        OUTEPMSK4_W::new(self)
+    pub fn outepmsk4(&mut self) -> OUTEPMSK4_W<DAINTMSK_SPEC> {
+        OUTEPMSK4_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn outepmsk5(&mut self) -> OUTEPMSK5_W<DAINTMSK_SPEC, 21> {
-        OUTEPMSK5_W::new(self)
+    pub fn outepmsk5(&mut self) -> OUTEPMSK5_W<DAINTMSK_SPEC> {
+        OUTEPMSK5_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn outepmsk6(&mut self) -> OUTEPMSK6_W<DAINTMSK_SPEC, 22> {
-        OUTEPMSK6_W::new(self)
+    pub fn outepmsk6(&mut self) -> OUTEPMSK6_W<DAINTMSK_SPEC> {
+        OUTEPMSK6_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

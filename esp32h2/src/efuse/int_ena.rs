@@ -5,11 +5,11 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `READ_DONE_INT_ENA` reader - The enable signal for read_done interrupt."]
 pub type READ_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `READ_DONE_INT_ENA` writer - The enable signal for read_done interrupt."]
-pub type READ_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READ_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PGM_DONE_INT_ENA` reader - The enable signal for pgm_done interrupt."]
 pub type PGM_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PGM_DONE_INT_ENA` writer - The enable signal for pgm_done interrupt."]
-pub type PGM_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PGM_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The enable signal for read_done interrupt."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The enable signal for read_done interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn read_done_int_ena(&mut self) -> READ_DONE_INT_ENA_W<INT_ENA_SPEC, 0> {
-        READ_DONE_INT_ENA_W::new(self)
+    pub fn read_done_int_ena(&mut self) -> READ_DONE_INT_ENA_W<INT_ENA_SPEC> {
+        READ_DONE_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for pgm_done interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn pgm_done_int_ena(&mut self) -> PGM_DONE_INT_ENA_W<INT_ENA_SPEC, 1> {
-        PGM_DONE_INT_ENA_W::new(self)
+    pub fn pgm_done_int_ena(&mut self) -> PGM_DONE_INT_ENA_W<INT_ENA_SPEC> {
+        PGM_DONE_INT_ENA_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

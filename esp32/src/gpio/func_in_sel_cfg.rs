@@ -5,15 +5,15 @@ pub type W = crate::W<FUNC_IN_SEL_CFG_SPEC>;
 #[doc = "Field `IN_SEL` reader - select one of the 256 inputs"]
 pub type IN_SEL_R = crate::FieldReader;
 #[doc = "Field `IN_SEL` writer - select one of the 256 inputs"]
-pub type IN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type IN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `IN_INV_SEL` reader - revert the value of the input if you want to revert please set the value to 1"]
 pub type IN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `IN_INV_SEL` writer - revert the value of the input if you want to revert please set the value to 1"]
-pub type IN_INV_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEL` reader - if the slow signal bypass the io matrix or not if you want setting the value to 1"]
 pub type SEL_R = crate::BitReader;
 #[doc = "Field `SEL` writer - if the slow signal bypass the io matrix or not if you want setting the value to 1"]
-pub type SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - select one of the 256 inputs"]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FUNC_IN_SEL_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - select one of the 256 inputs"]
     #[inline(always)]
     #[must_use]
-    pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC, 0> {
-        IN_SEL_W::new(self)
+    pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+        IN_SEL_W::new(self, 0)
     }
     #[doc = "Bit 6 - revert the value of the input if you want to revert please set the value to 1"]
     #[inline(always)]
     #[must_use]
-    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC, 6> {
-        IN_INV_SEL_W::new(self)
+    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+        IN_INV_SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - if the slow signal bypass the io matrix or not if you want setting the value to 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC, 7> {
-        SEL_W::new(self)
+    pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+        SEL_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

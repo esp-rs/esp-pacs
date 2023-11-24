@@ -5,23 +5,23 @@ pub type W = crate::W<CORE1_ACS_CACHE_INT_ENA_SPEC>;
 #[doc = "Field `CORE1_IBUS_ACS_MSK_IC_INT_ENA` reader - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
 pub type CORE1_IBUS_ACS_MSK_IC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CORE1_IBUS_ACS_MSK_IC_INT_ENA` writer - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
-pub type CORE1_IBUS_ACS_MSK_IC_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE1_IBUS_ACS_MSK_IC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE1_IBUS_WR_IC_INT_ENA` reader - The bit is used to enable interrupt by ibus trying to write icache"]
 pub type CORE1_IBUS_WR_IC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CORE1_IBUS_WR_IC_INT_ENA` writer - The bit is used to enable interrupt by ibus trying to write icache"]
-pub type CORE1_IBUS_WR_IC_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE1_IBUS_WR_IC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE1_IBUS_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
 pub type CORE1_IBUS_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CORE1_IBUS_REJECT_INT_ENA` writer - The bit is used to enable interrupt by authentication fail."]
-pub type CORE1_IBUS_REJECT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE1_IBUS_REJECT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE1_DBUS_ACS_MSK_DC_INT_ENA` reader - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
 pub type CORE1_DBUS_ACS_MSK_DC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CORE1_DBUS_ACS_MSK_DC_INT_ENA` writer - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
-pub type CORE1_DBUS_ACS_MSK_DC_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE1_DBUS_ACS_MSK_DC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE1_DBUS_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
 pub type CORE1_DBUS_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CORE1_DBUS_REJECT_INT_ENA` writer - The bit is used to enable interrupt by authentication fail."]
-pub type CORE1_DBUS_REJECT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE1_DBUS_REJECT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
     #[inline(always)]
@@ -79,7 +79,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE1_ACS_CACHE_INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -88,40 +88,40 @@ impl W {
     #[must_use]
     pub fn core1_ibus_acs_msk_ic_int_ena(
         &mut self,
-    ) -> CORE1_IBUS_ACS_MSK_IC_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC, 0> {
-        CORE1_IBUS_ACS_MSK_IC_INT_ENA_W::new(self)
+    ) -> CORE1_IBUS_ACS_MSK_IC_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC> {
+        CORE1_IBUS_ACS_MSK_IC_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable interrupt by ibus trying to write icache"]
     #[inline(always)]
     #[must_use]
     pub fn core1_ibus_wr_ic_int_ena(
         &mut self,
-    ) -> CORE1_IBUS_WR_IC_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC, 1> {
-        CORE1_IBUS_WR_IC_INT_ENA_W::new(self)
+    ) -> CORE1_IBUS_WR_IC_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC> {
+        CORE1_IBUS_WR_IC_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
     #[must_use]
     pub fn core1_ibus_reject_int_ena(
         &mut self,
-    ) -> CORE1_IBUS_REJECT_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC, 2> {
-        CORE1_IBUS_REJECT_INT_ENA_W::new(self)
+    ) -> CORE1_IBUS_REJECT_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC> {
+        CORE1_IBUS_REJECT_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
     #[inline(always)]
     #[must_use]
     pub fn core1_dbus_acs_msk_dc_int_ena(
         &mut self,
-    ) -> CORE1_DBUS_ACS_MSK_DC_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC, 3> {
-        CORE1_DBUS_ACS_MSK_DC_INT_ENA_W::new(self)
+    ) -> CORE1_DBUS_ACS_MSK_DC_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC> {
+        CORE1_DBUS_ACS_MSK_DC_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
     #[must_use]
     pub fn core1_dbus_reject_int_ena(
         &mut self,
-    ) -> CORE1_DBUS_REJECT_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC, 4> {
-        CORE1_DBUS_REJECT_INT_ENA_W::new(self)
+    ) -> CORE1_DBUS_REJECT_INT_ENA_W<CORE1_ACS_CACHE_INT_ENA_SPEC> {
+        CORE1_DBUS_REJECT_INT_ENA_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

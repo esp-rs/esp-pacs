@@ -5,11 +5,11 @@ pub type W = crate::W<PDM_FREQ_CONF_SPEC>;
 #[doc = "Field `TX_PDM_FS` reader - "]
 pub type TX_PDM_FS_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FS` writer - "]
-pub type TX_PDM_FS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TX_PDM_FS_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TX_PDM_FP` reader - "]
 pub type TX_PDM_FP_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FP` writer - "]
-pub type TX_PDM_FP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TX_PDM_FP_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PDM_FREQ_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<PDM_FREQ_CONF_SPEC, 0> {
-        TX_PDM_FS_W::new(self)
+    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<PDM_FREQ_CONF_SPEC> {
+        TX_PDM_FS_W::new(self, 0)
     }
     #[doc = "Bits 10:19"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<PDM_FREQ_CONF_SPEC, 10> {
-        TX_PDM_FP_W::new(self)
+    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<PDM_FREQ_CONF_SPEC> {
+        TX_PDM_FP_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

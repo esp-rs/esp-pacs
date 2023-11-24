@@ -13,25 +13,25 @@ pub type EPTYPE4_R = crate::FieldReader;
 #[doc = "Field `SNP4` reader - "]
 pub type SNP4_R = crate::BitReader;
 #[doc = "Field `SNP4` writer - "]
-pub type SNP4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SNP4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL4` reader - "]
 pub type STALL4_R = crate::BitReader;
 #[doc = "Field `STALL4` writer - "]
-pub type STALL4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNAK4` writer - "]
-pub type CNAK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNAK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DO_SNAK4` writer - "]
-pub type DO_SNAK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DO_SNAK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DO_SETD0PID4` writer - "]
-pub type DO_SETD0PID4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DO_SETD0PID4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DO_SETD1PID4` writer - "]
-pub type DO_SETD1PID4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DO_SETD1PID4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDIS4` reader - "]
 pub type EPDIS4_R = crate::BitReader;
 #[doc = "Field `EPENA4` reader - "]
 pub type EPENA4_R = crate::BitReader;
 #[doc = "Field `EPENA4` writer - "]
-pub type EPENA4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPENA4_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -92,51 +92,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DOEPCTL4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn snp4(&mut self) -> SNP4_W<DOEPCTL4_SPEC, 20> {
-        SNP4_W::new(self)
+    pub fn snp4(&mut self) -> SNP4_W<DOEPCTL4_SPEC> {
+        SNP4_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn stall4(&mut self) -> STALL4_W<DOEPCTL4_SPEC, 21> {
-        STALL4_W::new(self)
+    pub fn stall4(&mut self) -> STALL4_W<DOEPCTL4_SPEC> {
+        STALL4_W::new(self, 21)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak4(&mut self) -> CNAK4_W<DOEPCTL4_SPEC, 26> {
-        CNAK4_W::new(self)
+    pub fn cnak4(&mut self) -> CNAK4_W<DOEPCTL4_SPEC> {
+        CNAK4_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn do_snak4(&mut self) -> DO_SNAK4_W<DOEPCTL4_SPEC, 27> {
-        DO_SNAK4_W::new(self)
+    pub fn do_snak4(&mut self) -> DO_SNAK4_W<DOEPCTL4_SPEC> {
+        DO_SNAK4_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn do_setd0pid4(&mut self) -> DO_SETD0PID4_W<DOEPCTL4_SPEC, 28> {
-        DO_SETD0PID4_W::new(self)
+    pub fn do_setd0pid4(&mut self) -> DO_SETD0PID4_W<DOEPCTL4_SPEC> {
+        DO_SETD0PID4_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn do_setd1pid4(&mut self) -> DO_SETD1PID4_W<DOEPCTL4_SPEC, 29> {
-        DO_SETD1PID4_W::new(self)
+    pub fn do_setd1pid4(&mut self) -> DO_SETD1PID4_W<DOEPCTL4_SPEC> {
+        DO_SETD1PID4_W::new(self, 29)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn epena4(&mut self) -> EPENA4_W<DOEPCTL4_SPEC, 31> {
-        EPENA4_W::new(self)
+    pub fn epena4(&mut self) -> EPENA4_W<DOEPCTL4_SPEC> {
+        EPENA4_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

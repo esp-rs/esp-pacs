@@ -5,35 +5,35 @@ pub type W = crate::W<ESCAPE_CONF_SPEC>;
 #[doc = "Field `TX_C0_ESC_EN` reader - a"]
 pub type TX_C0_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_C0_ESC_EN` writer - a"]
-pub type TX_C0_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_C0_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_DB_ESC_EN` reader - a"]
 pub type TX_DB_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_DB_ESC_EN` writer - a"]
-pub type TX_DB_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_DB_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_11_ESC_EN` reader - a"]
 pub type TX_11_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_11_ESC_EN` writer - a"]
-pub type TX_11_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_11_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_13_ESC_EN` reader - a"]
 pub type TX_13_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_13_ESC_EN` writer - a"]
-pub type TX_13_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_13_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_C0_ESC_EN` reader - a"]
 pub type RX_C0_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_C0_ESC_EN` writer - a"]
-pub type RX_C0_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_C0_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_DB_ESC_EN` reader - a"]
 pub type RX_DB_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_DB_ESC_EN` writer - a"]
-pub type RX_DB_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_DB_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_11_ESC_EN` reader - a"]
 pub type RX_11_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_11_ESC_EN` writer - a"]
-pub type RX_11_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_11_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_13_ESC_EN` reader - a"]
 pub type RX_13_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_13_ESC_EN` writer - a"]
-pub type RX_13_ESC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_13_ESC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
@@ -118,57 +118,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ESCAPE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_c0_esc_en(&mut self) -> TX_C0_ESC_EN_W<ESCAPE_CONF_SPEC, 0> {
-        TX_C0_ESC_EN_W::new(self)
+    pub fn tx_c0_esc_en(&mut self) -> TX_C0_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        TX_C0_ESC_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_db_esc_en(&mut self) -> TX_DB_ESC_EN_W<ESCAPE_CONF_SPEC, 1> {
-        TX_DB_ESC_EN_W::new(self)
+    pub fn tx_db_esc_en(&mut self) -> TX_DB_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        TX_DB_ESC_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_11_esc_en(&mut self) -> TX_11_ESC_EN_W<ESCAPE_CONF_SPEC, 2> {
-        TX_11_ESC_EN_W::new(self)
+    pub fn tx_11_esc_en(&mut self) -> TX_11_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        TX_11_ESC_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_13_esc_en(&mut self) -> TX_13_ESC_EN_W<ESCAPE_CONF_SPEC, 3> {
-        TX_13_ESC_EN_W::new(self)
+    pub fn tx_13_esc_en(&mut self) -> TX_13_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        TX_13_ESC_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_c0_esc_en(&mut self) -> RX_C0_ESC_EN_W<ESCAPE_CONF_SPEC, 4> {
-        RX_C0_ESC_EN_W::new(self)
+    pub fn rx_c0_esc_en(&mut self) -> RX_C0_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        RX_C0_ESC_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_db_esc_en(&mut self) -> RX_DB_ESC_EN_W<ESCAPE_CONF_SPEC, 5> {
-        RX_DB_ESC_EN_W::new(self)
+    pub fn rx_db_esc_en(&mut self) -> RX_DB_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        RX_DB_ESC_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_11_esc_en(&mut self) -> RX_11_ESC_EN_W<ESCAPE_CONF_SPEC, 6> {
-        RX_11_ESC_EN_W::new(self)
+    pub fn rx_11_esc_en(&mut self) -> RX_11_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        RX_11_ESC_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_13_esc_en(&mut self) -> RX_13_ESC_EN_W<ESCAPE_CONF_SPEC, 7> {
-        RX_13_ESC_EN_W::new(self)
+    pub fn rx_13_esc_en(&mut self) -> RX_13_ESC_EN_W<ESCAPE_CONF_SPEC> {
+        RX_13_ESC_EN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

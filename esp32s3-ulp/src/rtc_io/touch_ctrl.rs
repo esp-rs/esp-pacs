@@ -5,11 +5,11 @@ pub type W = crate::W<TOUCH_CTRL_SPEC>;
 #[doc = "Field `IO_TOUCH_BUFSEL` reader - BUF_SEL when touch work without fsm"]
 pub type IO_TOUCH_BUFSEL_R = crate::FieldReader;
 #[doc = "Field `IO_TOUCH_BUFSEL` writer - BUF_SEL when touch work without fsm"]
-pub type IO_TOUCH_BUFSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type IO_TOUCH_BUFSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `IO_TOUCH_BUFMODE` reader - BUF_MODE when touch work without fsm"]
 pub type IO_TOUCH_BUFMODE_R = crate::BitReader;
 #[doc = "Field `IO_TOUCH_BUFMODE` writer - BUF_MODE when touch work without fsm"]
-pub type IO_TOUCH_BUFMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IO_TOUCH_BUFMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - BUF_SEL when touch work without fsm"]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - BUF_SEL when touch work without fsm"]
     #[inline(always)]
     #[must_use]
-    pub fn io_touch_bufsel(&mut self) -> IO_TOUCH_BUFSEL_W<TOUCH_CTRL_SPEC, 0> {
-        IO_TOUCH_BUFSEL_W::new(self)
+    pub fn io_touch_bufsel(&mut self) -> IO_TOUCH_BUFSEL_W<TOUCH_CTRL_SPEC> {
+        IO_TOUCH_BUFSEL_W::new(self, 0)
     }
     #[doc = "Bit 4 - BUF_MODE when touch work without fsm"]
     #[inline(always)]
     #[must_use]
-    pub fn io_touch_bufmode(&mut self) -> IO_TOUCH_BUFMODE_W<TOUCH_CTRL_SPEC, 4> {
-        IO_TOUCH_BUFMODE_W::new(self)
+    pub fn io_touch_bufmode(&mut self) -> IO_TOUCH_BUFMODE_W<TOUCH_CTRL_SPEC> {
+        IO_TOUCH_BUFMODE_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

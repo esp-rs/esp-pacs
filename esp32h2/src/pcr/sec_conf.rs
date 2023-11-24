@@ -5,7 +5,7 @@ pub type W = crate::W<SEC_CONF_SPEC>;
 #[doc = "Field `SEC_CLK_SEL` reader - xxxx"]
 pub type SEC_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SEC_CLK_SEL` writer - xxxx"]
-pub type SEC_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SEC_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - xxxx"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SEC_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn sec_clk_sel(&mut self) -> SEC_CLK_SEL_W<SEC_CONF_SPEC, 0> {
-        SEC_CLK_SEL_W::new(self)
+    pub fn sec_clk_sel(&mut self) -> SEC_CLK_SEL_W<SEC_CONF_SPEC> {
+        SEC_CLK_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

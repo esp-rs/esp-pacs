@@ -5,19 +5,19 @@ pub type W = crate::W<SLC_BRIDGE_CONF_SPEC>;
 #[doc = "Field `SLC_TXEOF_ENA` reader - "]
 pub type SLC_TXEOF_ENA_R = crate::FieldReader;
 #[doc = "Field `SLC_TXEOF_ENA` writer - "]
-pub type SLC_TXEOF_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SLC_TXEOF_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SLC_FIFO_MAP_ENA` reader - "]
 pub type SLC_FIFO_MAP_ENA_R = crate::FieldReader;
 #[doc = "Field `SLC_FIFO_MAP_ENA` writer - "]
-pub type SLC_FIFO_MAP_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SLC_FIFO_MAP_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SLC_TX_DUMMY_MODE` reader - "]
 pub type SLC_TX_DUMMY_MODE_R = crate::BitReader;
 #[doc = "Field `SLC_TX_DUMMY_MODE` writer - "]
-pub type SLC_TX_DUMMY_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_TX_DUMMY_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_TX_PUSH_IDLE_NUM` reader - "]
 pub type SLC_TX_PUSH_IDLE_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TX_PUSH_IDLE_NUM` writer - "]
-pub type SLC_TX_PUSH_IDLE_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SLC_TX_PUSH_IDLE_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -66,35 +66,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_BRIDGE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_txeof_ena(&mut self) -> SLC_TXEOF_ENA_W<SLC_BRIDGE_CONF_SPEC, 0> {
-        SLC_TXEOF_ENA_W::new(self)
+    pub fn slc_txeof_ena(&mut self) -> SLC_TXEOF_ENA_W<SLC_BRIDGE_CONF_SPEC> {
+        SLC_TXEOF_ENA_W::new(self, 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_fifo_map_ena(&mut self) -> SLC_FIFO_MAP_ENA_W<SLC_BRIDGE_CONF_SPEC, 8> {
-        SLC_FIFO_MAP_ENA_W::new(self)
+    pub fn slc_fifo_map_ena(&mut self) -> SLC_FIFO_MAP_ENA_W<SLC_BRIDGE_CONF_SPEC> {
+        SLC_FIFO_MAP_ENA_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_dummy_mode(&mut self) -> SLC_TX_DUMMY_MODE_W<SLC_BRIDGE_CONF_SPEC, 12> {
-        SLC_TX_DUMMY_MODE_W::new(self)
+    pub fn slc_tx_dummy_mode(&mut self) -> SLC_TX_DUMMY_MODE_W<SLC_BRIDGE_CONF_SPEC> {
+        SLC_TX_DUMMY_MODE_W::new(self, 12)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_tx_push_idle_num(&mut self) -> SLC_TX_PUSH_IDLE_NUM_W<SLC_BRIDGE_CONF_SPEC, 16> {
-        SLC_TX_PUSH_IDLE_NUM_W::new(self)
+    pub fn slc_tx_push_idle_num(&mut self) -> SLC_TX_PUSH_IDLE_NUM_W<SLC_BRIDGE_CONF_SPEC> {
+        SLC_TX_PUSH_IDLE_NUM_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

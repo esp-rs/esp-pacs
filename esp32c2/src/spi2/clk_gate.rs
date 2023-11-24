@@ -5,15 +5,15 @@ pub type W = crate::W<CLK_GATE_SPEC>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MST_CLK_ACTIVE` reader - Set this bit to power on the SPI module clock."]
 pub type MST_CLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `MST_CLK_ACTIVE` writer - Set this bit to power on the SPI module clock."]
-pub type MST_CLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MST_CLK_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MST_CLK_SEL` reader - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
 pub type MST_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `MST_CLK_SEL` writer - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
-pub type MST_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MST_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_GATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CLK_GATE_SPEC, 0> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CLK_GATE_SPEC> {
+        CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to power on the SPI module clock."]
     #[inline(always)]
     #[must_use]
-    pub fn mst_clk_active(&mut self) -> MST_CLK_ACTIVE_W<CLK_GATE_SPEC, 1> {
-        MST_CLK_ACTIVE_W::new(self)
+    pub fn mst_clk_active(&mut self) -> MST_CLK_ACTIVE_W<CLK_GATE_SPEC> {
+        MST_CLK_ACTIVE_W::new(self, 1)
     }
     #[doc = "Bit 2 - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
     #[inline(always)]
     #[must_use]
-    pub fn mst_clk_sel(&mut self) -> MST_CLK_SEL_W<CLK_GATE_SPEC, 2> {
-        MST_CLK_SEL_W::new(self)
+    pub fn mst_clk_sel(&mut self) -> MST_CLK_SEL_W<CLK_GATE_SPEC> {
+        MST_CLK_SEL_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

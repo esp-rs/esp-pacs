@@ -5,27 +5,27 @@ pub type W = crate::W<IRAM_DRAM_AHB_SEL_SPEC>;
 #[doc = "Field `MASK_PRO_IRAM` reader - "]
 pub type MASK_PRO_IRAM_R = crate::BitReader;
 #[doc = "Field `MASK_PRO_IRAM` writer - "]
-pub type MASK_PRO_IRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK_PRO_IRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASK_APP_IRAM` reader - "]
 pub type MASK_APP_IRAM_R = crate::BitReader;
 #[doc = "Field `MASK_APP_IRAM` writer - "]
-pub type MASK_APP_IRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK_APP_IRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASK_PRO_DRAM` reader - "]
 pub type MASK_PRO_DRAM_R = crate::BitReader;
 #[doc = "Field `MASK_PRO_DRAM` writer - "]
-pub type MASK_PRO_DRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK_PRO_DRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASK_APP_DRAM` reader - "]
 pub type MASK_APP_DRAM_R = crate::BitReader;
 #[doc = "Field `MASK_APP_DRAM` writer - "]
-pub type MASK_APP_DRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK_APP_DRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASK_AHB` reader - "]
 pub type MASK_AHB_R = crate::BitReader;
 #[doc = "Field `MASK_AHB` writer - "]
-pub type MASK_AHB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK_AHB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAC_DUMP_MODE` reader - "]
 pub type MAC_DUMP_MODE_R = crate::FieldReader;
 #[doc = "Field `MAC_DUMP_MODE` writer - "]
-pub type MAC_DUMP_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MAC_DUMP_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IRAM_DRAM_AHB_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn mask_pro_iram(&mut self) -> MASK_PRO_IRAM_W<IRAM_DRAM_AHB_SEL_SPEC, 0> {
-        MASK_PRO_IRAM_W::new(self)
+    pub fn mask_pro_iram(&mut self) -> MASK_PRO_IRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+        MASK_PRO_IRAM_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn mask_app_iram(&mut self) -> MASK_APP_IRAM_W<IRAM_DRAM_AHB_SEL_SPEC, 1> {
-        MASK_APP_IRAM_W::new(self)
+    pub fn mask_app_iram(&mut self) -> MASK_APP_IRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+        MASK_APP_IRAM_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn mask_pro_dram(&mut self) -> MASK_PRO_DRAM_W<IRAM_DRAM_AHB_SEL_SPEC, 2> {
-        MASK_PRO_DRAM_W::new(self)
+    pub fn mask_pro_dram(&mut self) -> MASK_PRO_DRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+        MASK_PRO_DRAM_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn mask_app_dram(&mut self) -> MASK_APP_DRAM_W<IRAM_DRAM_AHB_SEL_SPEC, 3> {
-        MASK_APP_DRAM_W::new(self)
+    pub fn mask_app_dram(&mut self) -> MASK_APP_DRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+        MASK_APP_DRAM_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn mask_ahb(&mut self) -> MASK_AHB_W<IRAM_DRAM_AHB_SEL_SPEC, 4> {
-        MASK_AHB_W::new(self)
+    pub fn mask_ahb(&mut self) -> MASK_AHB_W<IRAM_DRAM_AHB_SEL_SPEC> {
+        MASK_AHB_W::new(self, 4)
     }
     #[doc = "Bits 5:6"]
     #[inline(always)]
     #[must_use]
-    pub fn mac_dump_mode(&mut self) -> MAC_DUMP_MODE_W<IRAM_DRAM_AHB_SEL_SPEC, 5> {
-        MAC_DUMP_MODE_W::new(self)
+    pub fn mac_dump_mode(&mut self) -> MAC_DUMP_MODE_W<IRAM_DRAM_AHB_SEL_SPEC> {
+        MAC_DUMP_MODE_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

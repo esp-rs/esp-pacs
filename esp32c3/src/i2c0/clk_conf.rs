@@ -5,23 +5,23 @@ pub type W = crate::W<CLK_CONF_SPEC>;
 #[doc = "Field `SCLK_DIV_NUM` reader - reg_sclk_div_num"]
 pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - reg_sclk_div_num"]
-pub type SCLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SCLK_DIV_A` reader - reg_sclk_div_a"]
 pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - reg_sclk_div_a"]
-pub type SCLK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SCLK_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SCLK_DIV_B` reader - reg_sclk_div_b"]
 pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - reg_sclk_div_b"]
-pub type SCLK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SCLK_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SCLK_SEL` reader - reg_sclk_sel"]
 pub type SCLK_SEL_R = crate::BitReader;
 #[doc = "Field `SCLK_SEL` writer - reg_sclk_sel"]
-pub type SCLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCLK_ACTIVE` reader - reg_sclk_active"]
 pub type SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `SCLK_ACTIVE` writer - reg_sclk_active"]
-pub type SCLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCLK_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC, 0> {
-        SCLK_DIV_NUM_W::new(self)
+    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC> {
+        SCLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - reg_sclk_div_a"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC, 8> {
-        SCLK_DIV_A_W::new(self)
+    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC> {
+        SCLK_DIV_A_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - reg_sclk_div_b"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC, 14> {
-        SCLK_DIV_B_W::new(self)
+    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC> {
+        SCLK_DIV_B_W::new(self, 14)
     }
     #[doc = "Bit 20 - reg_sclk_sel"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC, 20> {
-        SCLK_SEL_W::new(self)
+    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC> {
+        SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - reg_sclk_active"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<CLK_CONF_SPEC, 21> {
-        SCLK_ACTIVE_W::new(self)
+    pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<CLK_CONF_SPEC> {
+        SCLK_ACTIVE_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

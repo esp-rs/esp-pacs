@@ -5,19 +5,19 @@ pub type W = crate::W<RETENTION_CTRL3_SPEC>;
 #[doc = "Field `RET_DCACHE_SIZE` reader - ******* Description ***********"]
 pub type RET_DCACHE_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_SIZE` writer - ******* Description ***********"]
-pub type RET_DCACHE_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RET_DCACHE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` reader - ******* Description ***********"]
 pub type RET_DCACHE_VLD_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` writer - ******* Description ***********"]
-pub type RET_DCACHE_VLD_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RET_DCACHE_VLD_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` reader - ******* Description ***********"]
 pub type RET_DCACHE_START_POINT_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` writer - ******* Description ***********"]
-pub type RET_DCACHE_START_POINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RET_DCACHE_START_POINT_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RET_DCACHE_ENABLE` reader - ******* Description ***********"]
 pub type RET_DCACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `RET_DCACHE_ENABLE` writer - ******* Description ***********"]
-pub type RET_DCACHE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RET_DCACHE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_size(&mut self) -> RET_DCACHE_SIZE_W<RETENTION_CTRL3_SPEC, 4> {
-        RET_DCACHE_SIZE_W::new(self)
+    pub fn ret_dcache_size(&mut self) -> RET_DCACHE_SIZE_W<RETENTION_CTRL3_SPEC> {
+        RET_DCACHE_SIZE_W::new(self, 4)
     }
     #[doc = "Bits 13:21 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_vld_size(&mut self) -> RET_DCACHE_VLD_SIZE_W<RETENTION_CTRL3_SPEC, 13> {
-        RET_DCACHE_VLD_SIZE_W::new(self)
+    pub fn ret_dcache_vld_size(&mut self) -> RET_DCACHE_VLD_SIZE_W<RETENTION_CTRL3_SPEC> {
+        RET_DCACHE_VLD_SIZE_W::new(self, 13)
     }
     #[doc = "Bits 22:30 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_start_point(&mut self) -> RET_DCACHE_START_POINT_W<RETENTION_CTRL3_SPEC, 22> {
-        RET_DCACHE_START_POINT_W::new(self)
+    pub fn ret_dcache_start_point(&mut self) -> RET_DCACHE_START_POINT_W<RETENTION_CTRL3_SPEC> {
+        RET_DCACHE_START_POINT_W::new(self, 22)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_dcache_enable(&mut self) -> RET_DCACHE_ENABLE_W<RETENTION_CTRL3_SPEC, 31> {
-        RET_DCACHE_ENABLE_W::new(self)
+    pub fn ret_dcache_enable(&mut self) -> RET_DCACHE_ENABLE_W<RETENTION_CTRL3_SPEC> {
+        RET_DCACHE_ENABLE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

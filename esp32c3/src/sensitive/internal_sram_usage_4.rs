@@ -5,7 +5,7 @@ pub type W = crate::W<INTERNAL_SRAM_USAGE_4_SPEC>;
 #[doc = "Field `INTERNAL_SRAM_USAGE_LOG_SRAM` reader - internal_sram_usage_log_sram"]
 pub type INTERNAL_SRAM_USAGE_LOG_SRAM_R = crate::BitReader;
 #[doc = "Field `INTERNAL_SRAM_USAGE_LOG_SRAM` writer - internal_sram_usage_log_sram"]
-pub type INTERNAL_SRAM_USAGE_LOG_SRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERNAL_SRAM_USAGE_LOG_SRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - internal_sram_usage_log_sram"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn internal_sram_usage_log_sram(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_LOG_SRAM_W<INTERNAL_SRAM_USAGE_4_SPEC, 0> {
-        INTERNAL_SRAM_USAGE_LOG_SRAM_W::new(self)
+    ) -> INTERNAL_SRAM_USAGE_LOG_SRAM_W<INTERNAL_SRAM_USAGE_4_SPEC> {
+        INTERNAL_SRAM_USAGE_LOG_SRAM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

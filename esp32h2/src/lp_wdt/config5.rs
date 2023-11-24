@@ -5,15 +5,15 @@ pub type W = crate::W<CONFIG5_SPEC>;
 #[doc = "Field `CHIP_RESET_TARGET` reader - need_des"]
 pub type CHIP_RESET_TARGET_R = crate::FieldReader;
 #[doc = "Field `CHIP_RESET_TARGET` writer - need_des"]
-pub type CHIP_RESET_TARGET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CHIP_RESET_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CHIP_RESET_EN` reader - need_des"]
 pub type CHIP_RESET_EN_R = crate::BitReader;
 #[doc = "Field `CHIP_RESET_EN` writer - need_des"]
-pub type CHIP_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHIP_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHIP_RESET_KEY` reader - need_des"]
 pub type CHIP_RESET_KEY_R = crate::FieldReader;
 #[doc = "Field `CHIP_RESET_KEY` writer - need_des"]
-pub type CHIP_RESET_KEY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CHIP_RESET_KEY_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONFIG5_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_reset_target(&mut self) -> CHIP_RESET_TARGET_W<CONFIG5_SPEC, 0> {
-        CHIP_RESET_TARGET_W::new(self)
+    pub fn chip_reset_target(&mut self) -> CHIP_RESET_TARGET_W<CONFIG5_SPEC> {
+        CHIP_RESET_TARGET_W::new(self, 0)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_reset_en(&mut self) -> CHIP_RESET_EN_W<CONFIG5_SPEC, 8> {
-        CHIP_RESET_EN_W::new(self)
+    pub fn chip_reset_en(&mut self) -> CHIP_RESET_EN_W<CONFIG5_SPEC> {
+        CHIP_RESET_EN_W::new(self, 8)
     }
     #[doc = "Bits 9:16 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_reset_key(&mut self) -> CHIP_RESET_KEY_W<CONFIG5_SPEC, 9> {
-        CHIP_RESET_KEY_W::new(self)
+    pub fn chip_reset_key(&mut self) -> CHIP_RESET_KEY_W<CONFIG5_SPEC> {
+        CHIP_RESET_KEY_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

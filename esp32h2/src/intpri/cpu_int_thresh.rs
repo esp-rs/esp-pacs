@@ -5,7 +5,7 @@ pub type W = crate::W<CPU_INT_THRESH_SPEC>;
 #[doc = "Field `CPU_INT_THRESH` reader - Need add description"]
 pub type CPU_INT_THRESH_R = crate::FieldReader;
 #[doc = "Field `CPU_INT_THRESH` writer - Need add description"]
-pub type CPU_INT_THRESH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CPU_INT_THRESH_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_INT_THRESH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_int_thresh(&mut self) -> CPU_INT_THRESH_W<CPU_INT_THRESH_SPEC, 0> {
-        CPU_INT_THRESH_W::new(self)
+    pub fn cpu_int_thresh(&mut self) -> CPU_INT_THRESH_W<CPU_INT_THRESH_SPEC> {
+        CPU_INT_THRESH_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

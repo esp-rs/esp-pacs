@@ -5,11 +5,11 @@ pub type W = crate::W<ICACHE_LOCK_CTRL_SPEC>;
 #[doc = "Field `ICACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
 pub type ICACHE_LOCK_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_LOCK_ENA` writer - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub type ICACHE_LOCK_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_LOCK_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
 pub type ICACHE_UNLOCK_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_UNLOCK_ENA` writer - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub type ICACHE_UNLOCK_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_UNLOCK_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_LOCK_DONE` reader - The bit is used to indicate unlock/lock operation is finished."]
 pub type ICACHE_LOCK_DONE_R = crate::BitReader;
 impl R {
@@ -51,21 +51,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_LOCK_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_lock_ena(&mut self) -> ICACHE_LOCK_ENA_W<ICACHE_LOCK_CTRL_SPEC, 0> {
-        ICACHE_LOCK_ENA_W::new(self)
+    pub fn icache_lock_ena(&mut self) -> ICACHE_LOCK_ENA_W<ICACHE_LOCK_CTRL_SPEC> {
+        ICACHE_LOCK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_unlock_ena(&mut self) -> ICACHE_UNLOCK_ENA_W<ICACHE_LOCK_CTRL_SPEC, 1> {
-        ICACHE_UNLOCK_ENA_W::new(self)
+    pub fn icache_unlock_ena(&mut self) -> ICACHE_UNLOCK_ENA_W<ICACHE_LOCK_CTRL_SPEC> {
+        ICACHE_UNLOCK_ENA_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

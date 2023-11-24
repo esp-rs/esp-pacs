@@ -5,35 +5,35 @@ pub type W = crate::W<INTR_RLS_SPEC>;
 #[doc = "Field `GPIO0_INT_ENA` reader - The enable bit for DEDIC_GPIO0_INT_ST register."]
 pub type GPIO0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO0_INT_ENA` writer - The enable bit for DEDIC_GPIO0_INT_ST register."]
-pub type GPIO0_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO0_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO1_INT_ENA` reader - The enable bit for DEDIC_GPIO1_INT_ST register."]
 pub type GPIO1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO1_INT_ENA` writer - The enable bit for DEDIC_GPIO1_INT_ST register."]
-pub type GPIO1_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO1_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO2_INT_ENA` reader - The enable bit for DEDIC_GPIO2_INT_ST register."]
 pub type GPIO2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO2_INT_ENA` writer - The enable bit for DEDIC_GPIO2_INT_ST register."]
-pub type GPIO2_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO2_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO3_INT_ENA` reader - The enable bit for DEDIC_GPIO3_INT_ST register."]
 pub type GPIO3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO3_INT_ENA` writer - The enable bit for DEDIC_GPIO3_INT_ST register."]
-pub type GPIO3_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO3_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO4_INT_ENA` reader - The enable bit for DEDIC_GPIO4_INT_ST register."]
 pub type GPIO4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO4_INT_ENA` writer - The enable bit for DEDIC_GPIO4_INT_ST register."]
-pub type GPIO4_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO4_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO5_INT_ENA` reader - The enable bit for DEDIC_GPIO5_INT_ST register."]
 pub type GPIO5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO5_INT_ENA` writer - The enable bit for DEDIC_GPIO5_INT_ST register."]
-pub type GPIO5_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO5_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO6_INT_ENA` reader - The enable bit for DEDIC_GPIO6_INT_ST register."]
 pub type GPIO6_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO6_INT_ENA` writer - The enable bit for DEDIC_GPIO6_INT_ST register."]
-pub type GPIO6_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO6_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO7_INT_ENA` reader - The enable bit for DEDIC_GPIO7_INT_ST register."]
 pub type GPIO7_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO7_INT_ENA` writer - The enable bit for DEDIC_GPIO7_INT_ST register."]
-pub type GPIO7_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO7_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
@@ -118,57 +118,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTR_RLS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio0_int_ena(&mut self) -> GPIO0_INT_ENA_W<INTR_RLS_SPEC, 0> {
-        GPIO0_INT_ENA_W::new(self)
+    pub fn gpio0_int_ena(&mut self) -> GPIO0_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO0_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for DEDIC_GPIO1_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio1_int_ena(&mut self) -> GPIO1_INT_ENA_W<INTR_RLS_SPEC, 1> {
-        GPIO1_INT_ENA_W::new(self)
+    pub fn gpio1_int_ena(&mut self) -> GPIO1_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO1_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for DEDIC_GPIO2_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio2_int_ena(&mut self) -> GPIO2_INT_ENA_W<INTR_RLS_SPEC, 2> {
-        GPIO2_INT_ENA_W::new(self)
+    pub fn gpio2_int_ena(&mut self) -> GPIO2_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO2_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for DEDIC_GPIO3_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio3_int_ena(&mut self) -> GPIO3_INT_ENA_W<INTR_RLS_SPEC, 3> {
-        GPIO3_INT_ENA_W::new(self)
+    pub fn gpio3_int_ena(&mut self) -> GPIO3_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO3_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for DEDIC_GPIO4_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio4_int_ena(&mut self) -> GPIO4_INT_ENA_W<INTR_RLS_SPEC, 4> {
-        GPIO4_INT_ENA_W::new(self)
+    pub fn gpio4_int_ena(&mut self) -> GPIO4_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO4_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The enable bit for DEDIC_GPIO5_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio5_int_ena(&mut self) -> GPIO5_INT_ENA_W<INTR_RLS_SPEC, 5> {
-        GPIO5_INT_ENA_W::new(self)
+    pub fn gpio5_int_ena(&mut self) -> GPIO5_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO5_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - The enable bit for DEDIC_GPIO6_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio6_int_ena(&mut self) -> GPIO6_INT_ENA_W<INTR_RLS_SPEC, 6> {
-        GPIO6_INT_ENA_W::new(self)
+    pub fn gpio6_int_ena(&mut self) -> GPIO6_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO6_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - The enable bit for DEDIC_GPIO7_INT_ST register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio7_int_ena(&mut self) -> GPIO7_INT_ENA_W<INTR_RLS_SPEC, 7> {
-        GPIO7_INT_ENA_W::new(self)
+    pub fn gpio7_int_ena(&mut self) -> GPIO7_INT_ENA_W<INTR_RLS_SPEC> {
+        GPIO7_INT_ENA_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

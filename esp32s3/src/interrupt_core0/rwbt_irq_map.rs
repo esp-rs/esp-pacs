@@ -5,7 +5,7 @@ pub type W = crate::W<RWBT_IRQ_MAP_SPEC>;
 #[doc = "Field `RWBT_IRQ_MAP` reader - this register used to map rwbt_irq interrupt to one of core0's external interrupt"]
 pub type RWBT_IRQ_MAP_R = crate::FieldReader;
 #[doc = "Field `RWBT_IRQ_MAP` writer - this register used to map rwbt_irq interrupt to one of core0's external interrupt"]
-pub type RWBT_IRQ_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type RWBT_IRQ_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map rwbt_irq interrupt to one of core0's external interrupt"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RWBT_IRQ_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - this register used to map rwbt_irq interrupt to one of core0's external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn rwbt_irq_map(&mut self) -> RWBT_IRQ_MAP_W<RWBT_IRQ_MAP_SPEC, 0> {
-        RWBT_IRQ_MAP_W::new(self)
+    pub fn rwbt_irq_map(&mut self) -> RWBT_IRQ_MAP_W<RWBT_IRQ_MAP_SPEC> {
+        RWBT_IRQ_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,39 +5,39 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `CNT_RST_U0` reader - Set this bit to clear unit 0's counter."]
 pub type CNT_RST_U0_R = crate::BitReader;
 #[doc = "Field `CNT_RST_U0` writer - Set this bit to clear unit 0's counter."]
-pub type CNT_RST_U0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_RST_U0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_PAUSE_U0` reader - Set this bit to freeze unit 1's counter."]
 pub type CNT_PAUSE_U0_R = crate::BitReader;
 #[doc = "Field `CNT_PAUSE_U0` writer - Set this bit to freeze unit 1's counter."]
-pub type CNT_PAUSE_U0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_PAUSE_U0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_RST_U1` reader - Set this bit to clear unit 2's counter."]
 pub type CNT_RST_U1_R = crate::BitReader;
 #[doc = "Field `CNT_RST_U1` writer - Set this bit to clear unit 2's counter."]
-pub type CNT_RST_U1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_RST_U1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_PAUSE_U1` reader - Set this bit to freeze unit 3's counter."]
 pub type CNT_PAUSE_U1_R = crate::BitReader;
 #[doc = "Field `CNT_PAUSE_U1` writer - Set this bit to freeze unit 3's counter."]
-pub type CNT_PAUSE_U1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_PAUSE_U1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_RST_U2` reader - Set this bit to clear unit 4's counter."]
 pub type CNT_RST_U2_R = crate::BitReader;
 #[doc = "Field `CNT_RST_U2` writer - Set this bit to clear unit 4's counter."]
-pub type CNT_RST_U2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_RST_U2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_PAUSE_U2` reader - Set this bit to freeze unit 5's counter."]
 pub type CNT_PAUSE_U2_R = crate::BitReader;
 #[doc = "Field `CNT_PAUSE_U2` writer - Set this bit to freeze unit 5's counter."]
-pub type CNT_PAUSE_U2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_PAUSE_U2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_RST_U3` reader - Set this bit to clear unit 6's counter."]
 pub type CNT_RST_U3_R = crate::BitReader;
 #[doc = "Field `CNT_RST_U3` writer - Set this bit to clear unit 6's counter."]
-pub type CNT_RST_U3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_RST_U3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_PAUSE_U3` reader - Set this bit to freeze unit 7's counter."]
 pub type CNT_PAUSE_U3_R = crate::BitReader;
 #[doc = "Field `CNT_PAUSE_U3` writer - Set this bit to freeze unit 7's counter."]
-pub type CNT_PAUSE_U3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_PAUSE_U3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to clear unit 0's counter."]
     #[inline(always)]
@@ -116,63 +116,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to clear unit 0's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_rst_u0(&mut self) -> CNT_RST_U0_W<CTRL_SPEC, 0> {
-        CNT_RST_U0_W::new(self)
+    pub fn cnt_rst_u0(&mut self) -> CNT_RST_U0_W<CTRL_SPEC> {
+        CNT_RST_U0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to freeze unit 1's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_pause_u0(&mut self) -> CNT_PAUSE_U0_W<CTRL_SPEC, 1> {
-        CNT_PAUSE_U0_W::new(self)
+    pub fn cnt_pause_u0(&mut self) -> CNT_PAUSE_U0_W<CTRL_SPEC> {
+        CNT_PAUSE_U0_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear unit 2's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_rst_u1(&mut self) -> CNT_RST_U1_W<CTRL_SPEC, 2> {
-        CNT_RST_U1_W::new(self)
+    pub fn cnt_rst_u1(&mut self) -> CNT_RST_U1_W<CTRL_SPEC> {
+        CNT_RST_U1_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to freeze unit 3's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_pause_u1(&mut self) -> CNT_PAUSE_U1_W<CTRL_SPEC, 3> {
-        CNT_PAUSE_U1_W::new(self)
+    pub fn cnt_pause_u1(&mut self) -> CNT_PAUSE_U1_W<CTRL_SPEC> {
+        CNT_PAUSE_U1_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear unit 4's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_rst_u2(&mut self) -> CNT_RST_U2_W<CTRL_SPEC, 4> {
-        CNT_RST_U2_W::new(self)
+    pub fn cnt_rst_u2(&mut self) -> CNT_RST_U2_W<CTRL_SPEC> {
+        CNT_RST_U2_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to freeze unit 5's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_pause_u2(&mut self) -> CNT_PAUSE_U2_W<CTRL_SPEC, 5> {
-        CNT_PAUSE_U2_W::new(self)
+    pub fn cnt_pause_u2(&mut self) -> CNT_PAUSE_U2_W<CTRL_SPEC> {
+        CNT_PAUSE_U2_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear unit 6's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_rst_u3(&mut self) -> CNT_RST_U3_W<CTRL_SPEC, 6> {
-        CNT_RST_U3_W::new(self)
+    pub fn cnt_rst_u3(&mut self) -> CNT_RST_U3_W<CTRL_SPEC> {
+        CNT_RST_U3_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to freeze unit 7's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_pause_u3(&mut self) -> CNT_PAUSE_U3_W<CTRL_SPEC, 7> {
-        CNT_PAUSE_U3_W::new(self)
+    pub fn cnt_pause_u3(&mut self) -> CNT_PAUSE_U3_W<CTRL_SPEC> {
+        CNT_PAUSE_U3_W::new(self, 7)
     }
     #[doc = "Bit 16 - The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CTRL_SPEC, 16> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CTRL_SPEC> {
+        CLK_EN_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

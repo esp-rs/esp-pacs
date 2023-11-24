@@ -5,7 +5,7 @@ pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `OP_CODE` reader - 0x5A5A: Operate programming command 0x5AA5: Operate read command."]
 pub type OP_CODE_R = crate::FieldReader<u16>;
 #[doc = "Field `OP_CODE` writer - 0x5A5A: Operate programming command 0x5AA5: Operate read command."]
-pub type OP_CODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type OP_CODE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - 0x5A5A: Operate programming command 0x5AA5: Operate read command."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - 0x5A5A: Operate programming command 0x5AA5: Operate read command."]
     #[inline(always)]
     #[must_use]
-    pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC, 0> {
-        OP_CODE_W::new(self)
+    pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC> {
+        OP_CODE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

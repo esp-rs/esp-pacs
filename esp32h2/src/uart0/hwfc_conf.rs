@@ -5,11 +5,11 @@ pub type W = crate::W<HWFC_CONF_SPEC>;
 #[doc = "Field `RX_FLOW_THRHD` reader - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
 pub type RX_FLOW_THRHD_R = crate::FieldReader;
 #[doc = "Field `RX_FLOW_THRHD` writer - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
-pub type RX_FLOW_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RX_FLOW_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RX_FLOW_EN` reader - This is the flow enable bit for UART receiver."]
 pub type RX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `RX_FLOW_EN` writer - This is the flow enable bit for UART receiver."]
-pub type RX_FLOW_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FLOW_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HWFC_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<HWFC_CONF_SPEC, 0> {
-        RX_FLOW_THRHD_W::new(self)
+    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<HWFC_CONF_SPEC> {
+        RX_FLOW_THRHD_W::new(self, 0)
     }
     #[doc = "Bit 8 - This is the flow enable bit for UART receiver."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<HWFC_CONF_SPEC, 8> {
-        RX_FLOW_EN_W::new(self)
+    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<HWFC_CONF_SPEC> {
+        RX_FLOW_EN_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

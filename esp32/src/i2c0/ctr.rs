@@ -5,35 +5,35 @@ pub type W = crate::W<CTR_SPEC>;
 #[doc = "Field `SDA_FORCE_OUT` reader - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
 pub type SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SDA_FORCE_OUT` writer - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
-pub type SDA_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDA_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCL_FORCE_OUT` reader - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
 pub type SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SCL_FORCE_OUT` writer - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
-pub type SCL_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCL_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAMPLE_SCL_LEVEL` reader - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
 pub type SAMPLE_SCL_LEVEL_R = crate::BitReader;
 #[doc = "Field `SAMPLE_SCL_LEVEL` writer - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
-pub type SAMPLE_SCL_LEVEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAMPLE_SCL_LEVEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MS_MODE` reader - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
 pub type MS_MODE_R = crate::BitReader;
 #[doc = "Field `MS_MODE` writer - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
-pub type MS_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_START` reader - Set this bit to start sending data in txfifo."]
 pub type TRANS_START_R = crate::BitReader;
 #[doc = "Field `TRANS_START` writer - Set this bit to start sending data in txfifo."]
-pub type TRANS_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_LSB_FIRST` reader - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
 pub type TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST` writer - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub type TX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_LSB_FIRST` reader - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
 pub type RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST` writer - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub type RX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - This is the clock gating control bit for reading or writing registers."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - This is the clock gating control bit for reading or writing registers."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
     #[inline(always)]
@@ -109,57 +109,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC, 0> {
-        SDA_FORCE_OUT_W::new(self)
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC> {
+        SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC, 1> {
-        SCL_FORCE_OUT_W::new(self)
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC> {
+        SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
     #[inline(always)]
     #[must_use]
-    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC, 2> {
-        SAMPLE_SCL_LEVEL_W::new(self)
+    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC> {
+        SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 4 - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
     #[inline(always)]
     #[must_use]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<CTR_SPEC, 4> {
-        MS_MODE_W::new(self)
+    pub fn ms_mode(&mut self) -> MS_MODE_W<CTR_SPEC> {
+        MS_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to start sending data in txfifo."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC, 5> {
-        TRANS_START_W::new(self)
+    pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC> {
+        TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC, 6> {
-        TX_LSB_FIRST_W::new(self)
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC> {
+        TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC, 7> {
-        RX_LSB_FIRST_W::new(self)
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC> {
+        RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - This is the clock gating control bit for reading or writing registers."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC, 8> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC> {
+        CLK_EN_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

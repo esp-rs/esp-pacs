@@ -5,7 +5,7 @@ pub type W = crate::W<PAD_COMP_FILTER_SPEC>;
 #[doc = "Field `ZERO_DET_FILTER_CNT` reader - Zero Detect filter cycle length"]
 pub type ZERO_DET_FILTER_CNT_R = crate::FieldReader<u32>;
 #[doc = "Field `ZERO_DET_FILTER_CNT` writer - Zero Detect filter cycle length"]
-pub type ZERO_DET_FILTER_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type ZERO_DET_FILTER_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Zero Detect filter cycle length"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PAD_COMP_FILTER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Zero Detect filter cycle length"]
     #[inline(always)]
     #[must_use]
-    pub fn zero_det_filter_cnt(&mut self) -> ZERO_DET_FILTER_CNT_W<PAD_COMP_FILTER_SPEC, 0> {
-        ZERO_DET_FILTER_CNT_W::new(self)
+    pub fn zero_det_filter_cnt(&mut self) -> ZERO_DET_FILTER_CNT_W<PAD_COMP_FILTER_SPEC> {
+        ZERO_DET_FILTER_CNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

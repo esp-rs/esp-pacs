@@ -5,7 +5,7 @@ pub type W = crate::W<LP_INT_RAW_SPEC>;
 #[doc = "Field `BOD_MODE0_LP_INT_RAW` reader - need_des"]
 pub type BOD_MODE0_LP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_LP_INT_RAW` writer - need_des"]
-pub type BOD_MODE0_LP_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_LP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_lp_int_raw(&mut self) -> BOD_MODE0_LP_INT_RAW_W<LP_INT_RAW_SPEC, 31> {
-        BOD_MODE0_LP_INT_RAW_W::new(self)
+    pub fn bod_mode0_lp_int_raw(&mut self) -> BOD_MODE0_LP_INT_RAW_W<LP_INT_RAW_SPEC> {
+        BOD_MODE0_LP_INT_RAW_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

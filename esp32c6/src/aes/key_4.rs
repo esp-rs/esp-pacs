@@ -5,7 +5,7 @@ pub type W = crate::W<KEY_4_SPEC>;
 #[doc = "Field `KEY_4` reader - This bits stores key_4 that is a part of key material."]
 pub type KEY_4_R = crate::FieldReader<u32>;
 #[doc = "Field `KEY_4` writer - This bits stores key_4 that is a part of key material."]
-pub type KEY_4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type KEY_4_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores key_4 that is a part of key material."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<KEY_4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - This bits stores key_4 that is a part of key material."]
     #[inline(always)]
     #[must_use]
-    pub fn key_4(&mut self) -> KEY_4_W<KEY_4_SPEC, 0> {
-        KEY_4_W::new(self)
+    pub fn key_4(&mut self) -> KEY_4_W<KEY_4_SPEC> {
+        KEY_4_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

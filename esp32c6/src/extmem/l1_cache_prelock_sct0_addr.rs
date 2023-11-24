@@ -5,8 +5,7 @@ pub type W = crate::W<L1_CACHE_PRELOCK_SCT0_ADDR_SPEC>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_ADDR` reader - Those bits are used to configure the start virtual address of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_SIZE_REG"]
 pub type L1_CACHE_PRELOCK_SCT0_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_ADDR` writer - Those bits are used to configure the start virtual address of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_SIZE_REG"]
-pub type L1_CACHE_PRELOCK_SCT0_ADDR_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type L1_CACHE_PRELOCK_SCT0_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_SIZE_REG"]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_PRELOCK_SCT0_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn l1_cache_prelock_sct0_addr(
         &mut self,
-    ) -> L1_CACHE_PRELOCK_SCT0_ADDR_W<L1_CACHE_PRELOCK_SCT0_ADDR_SPEC, 0> {
-        L1_CACHE_PRELOCK_SCT0_ADDR_W::new(self)
+    ) -> L1_CACHE_PRELOCK_SCT0_ADDR_W<L1_CACHE_PRELOCK_SCT0_ADDR_SPEC> {
+        L1_CACHE_PRELOCK_SCT0_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

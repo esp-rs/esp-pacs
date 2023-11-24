@@ -5,8 +5,7 @@ pub type W = crate::W<DCACHE_AUTOLOAD_SCT0_ADDR_SPEC>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ADDR` reader - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
 pub type DCACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ADDR` writer - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
-pub type DCACHE_AUTOLOAD_SCT0_ADDR_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type DCACHE_AUTOLOAD_SCT0_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCACHE_AUTOLOAD_SCT0_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn dcache_autoload_sct0_addr(
         &mut self,
-    ) -> DCACHE_AUTOLOAD_SCT0_ADDR_W<DCACHE_AUTOLOAD_SCT0_ADDR_SPEC, 0> {
-        DCACHE_AUTOLOAD_SCT0_ADDR_W::new(self)
+    ) -> DCACHE_AUTOLOAD_SCT0_ADDR_W<DCACHE_AUTOLOAD_SCT0_ADDR_SPEC> {
+        DCACHE_AUTOLOAD_SCT0_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

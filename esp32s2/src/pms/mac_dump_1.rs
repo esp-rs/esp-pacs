@@ -5,7 +5,7 @@ pub type W = crate::W<MAC_DUMP_1_SPEC>;
 #[doc = "Field `MAC_DUMP_CONNECT` reader - Configure MAC dump connection."]
 pub type MAC_DUMP_CONNECT_R = crate::FieldReader<u16>;
 #[doc = "Field `MAC_DUMP_CONNECT` writer - Configure MAC dump connection."]
-pub type MAC_DUMP_CONNECT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type MAC_DUMP_CONNECT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MAC_DUMP_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]
     #[must_use]
-    pub fn mac_dump_connect(&mut self) -> MAC_DUMP_CONNECT_W<MAC_DUMP_1_SPEC, 0> {
-        MAC_DUMP_CONNECT_W::new(self)
+    pub fn mac_dump_connect(&mut self) -> MAC_DUMP_CONNECT_W<MAC_DUMP_1_SPEC> {
+        MAC_DUMP_CONNECT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

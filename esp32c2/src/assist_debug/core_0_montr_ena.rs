@@ -5,11 +5,11 @@ pub type W = crate::W<CORE_0_MONTR_ENA_SPEC>;
 #[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` reader - enbale sp underlow monitor"]
 pub type CORE_0_SP_SPILL_MIN_ENA_R = crate::BitReader;
 #[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` writer - enbale sp underlow monitor"]
-pub type CORE_0_SP_SPILL_MIN_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_SP_SPILL_MIN_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` reader - enbale sp overflow monitor"]
 pub type CORE_0_SP_SPILL_MAX_ENA_R = crate::BitReader;
 #[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` writer - enbale sp overflow monitor"]
-pub type CORE_0_SP_SPILL_MAX_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_SP_SPILL_MAX_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - enbale sp underlow monitor"]
     #[inline(always)]
@@ -40,25 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_MONTR_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - enbale sp underlow monitor"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_sp_spill_min_ena(
-        &mut self,
-    ) -> CORE_0_SP_SPILL_MIN_ENA_W<CORE_0_MONTR_ENA_SPEC, 0> {
-        CORE_0_SP_SPILL_MIN_ENA_W::new(self)
+    pub fn core_0_sp_spill_min_ena(&mut self) -> CORE_0_SP_SPILL_MIN_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+        CORE_0_SP_SPILL_MIN_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - enbale sp overflow monitor"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_sp_spill_max_ena(
-        &mut self,
-    ) -> CORE_0_SP_SPILL_MAX_ENA_W<CORE_0_MONTR_ENA_SPEC, 1> {
-        CORE_0_SP_SPILL_MAX_ENA_W::new(self)
+    pub fn core_0_sp_spill_max_ena(&mut self) -> CORE_0_SP_SPILL_MAX_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+        CORE_0_SP_SPILL_MAX_ENA_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

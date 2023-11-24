@@ -5,7 +5,7 @@ pub type W = crate::W<SLC0HOST_LEN_WD_SPEC>;
 #[doc = "Field `SLC0HOST_LEN_WD` reader - *******Description***********"]
 pub type SLC0HOST_LEN_WD_R = crate::FieldReader<u32>;
 #[doc = "Field `SLC0HOST_LEN_WD` writer - *******Description***********"]
-pub type SLC0HOST_LEN_WD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SLC0HOST_LEN_WD_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC0HOST_LEN_WD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0host_len_wd(&mut self) -> SLC0HOST_LEN_WD_W<SLC0HOST_LEN_WD_SPEC, 0> {
-        SLC0HOST_LEN_WD_W::new(self)
+    pub fn slc0host_len_wd(&mut self) -> SLC0HOST_LEN_WD_W<SLC0HOST_LEN_WD_SPEC> {
+        SLC0HOST_LEN_WD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

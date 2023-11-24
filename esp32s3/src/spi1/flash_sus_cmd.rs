@@ -5,27 +5,27 @@ pub type W = crate::W<FLASH_SUS_CMD_SPEC>;
 #[doc = "Field `FLASH_PER` reader - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type FLASH_PER_R = crate::BitReader;
 #[doc = "Field `FLASH_PER` writer - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_PER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASH_PER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASH_PES` reader - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type FLASH_PES_R = crate::BitReader;
 #[doc = "Field `FLASH_PES` writer - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_PES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASH_PES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASH_PER_WAIT_EN` reader - Set this bit to add delay time after program erase resume(PER) is sent."]
 pub type FLASH_PER_WAIT_EN_R = crate::BitReader;
 #[doc = "Field `FLASH_PER_WAIT_EN` writer - Set this bit to add delay time after program erase resume(PER) is sent."]
-pub type FLASH_PER_WAIT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASH_PER_WAIT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASH_PES_WAIT_EN` reader - Set this bit to add delay time after program erase suspend(PES) command is sent."]
 pub type FLASH_PES_WAIT_EN_R = crate::BitReader;
 #[doc = "Field `FLASH_PES_WAIT_EN` writer - Set this bit to add delay time after program erase suspend(PES) command is sent."]
-pub type FLASH_PES_WAIT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASH_PES_WAIT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PES_PER_EN` reader - Set this bit to enable PES transfer trigger PES transfer option."]
 pub type PES_PER_EN_R = crate::BitReader;
 #[doc = "Field `PES_PER_EN` writer - Set this bit to enable PES transfer trigger PES transfer option."]
-pub type PES_PER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PES_PER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PESR_IDLE_EN` reader - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
 pub type PESR_IDLE_EN_R = crate::BitReader;
 #[doc = "Field `PESR_IDLE_EN` writer - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
-pub type PESR_IDLE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PESR_IDLE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
@@ -83,45 +83,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FLASH_SUS_CMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_per(&mut self) -> FLASH_PER_W<FLASH_SUS_CMD_SPEC, 0> {
-        FLASH_PER_W::new(self)
+    pub fn flash_per(&mut self) -> FLASH_PER_W<FLASH_SUS_CMD_SPEC> {
+        FLASH_PER_W::new(self, 0)
     }
     #[doc = "Bit 1 - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_pes(&mut self) -> FLASH_PES_W<FLASH_SUS_CMD_SPEC, 1> {
-        FLASH_PES_W::new(self)
+    pub fn flash_pes(&mut self) -> FLASH_PES_W<FLASH_SUS_CMD_SPEC> {
+        FLASH_PES_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to add delay time after program erase resume(PER) is sent."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W<FLASH_SUS_CMD_SPEC, 2> {
-        FLASH_PER_WAIT_EN_W::new(self)
+    pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W<FLASH_SUS_CMD_SPEC> {
+        FLASH_PER_WAIT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to add delay time after program erase suspend(PES) command is sent."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W<FLASH_SUS_CMD_SPEC, 3> {
-        FLASH_PES_WAIT_EN_W::new(self)
+    pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W<FLASH_SUS_CMD_SPEC> {
+        FLASH_PES_WAIT_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable PES transfer trigger PES transfer option."]
     #[inline(always)]
     #[must_use]
-    pub fn pes_per_en(&mut self) -> PES_PER_EN_W<FLASH_SUS_CMD_SPEC, 4> {
-        PES_PER_EN_W::new(self)
+    pub fn pes_per_en(&mut self) -> PES_PER_EN_W<FLASH_SUS_CMD_SPEC> {
+        PES_PER_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
     #[inline(always)]
     #[must_use]
-    pub fn pesr_idle_en(&mut self) -> PESR_IDLE_EN_W<FLASH_SUS_CMD_SPEC, 5> {
-        PESR_IDLE_EN_W::new(self)
+    pub fn pesr_idle_en(&mut self) -> PESR_IDLE_EN_W<FLASH_SUS_CMD_SPEC> {
+        PESR_IDLE_EN_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

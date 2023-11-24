@@ -5,31 +5,31 @@ pub type W = crate::W<CH_RX_CONF1_SPEC>;
 #[doc = "Field `RX_EN` reader - reg_rx_en_ch2."]
 pub type RX_EN_R = crate::BitReader;
 #[doc = "Field `RX_EN` writer - reg_rx_en_ch2."]
-pub type RX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_WR_RST` writer - reg_mem_wr_rst_ch2."]
-pub type MEM_WR_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_WR_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_MEM_RST` writer - reg_apb_mem_rst_ch2."]
-pub type APB_MEM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_MEM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_OWNER` reader - reg_mem_owner_ch2."]
 pub type MEM_OWNER_R = crate::BitReader;
 #[doc = "Field `MEM_OWNER` writer - reg_mem_owner_ch2."]
-pub type MEM_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FILTER_EN` reader - reg_rx_filter_en_ch2."]
 pub type RX_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `RX_FILTER_EN` writer - reg_rx_filter_en_ch2."]
-pub type RX_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FILTER_THRES` reader - reg_rx_filter_thres_ch2."]
 pub type RX_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `RX_FILTER_THRES` writer - reg_rx_filter_thres_ch2."]
-pub type RX_FILTER_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RX_FILTER_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `MEM_RX_WRAP_EN` reader - reg_mem_rx_wrap_en_ch2."]
 pub type MEM_RX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_RX_WRAP_EN` writer - reg_mem_rx_wrap_en_ch2."]
-pub type MEM_RX_WRAP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_RX_WRAP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFIFO_RST` writer - reg_afifo_rst_ch2."]
-pub type AFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONF_UPDATE` writer - reg_conf_update_ch2."]
-pub type CONF_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONF_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_rx_en_ch2."]
     #[inline(always)]
@@ -81,63 +81,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_RX_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_rx_en_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_en(&mut self) -> RX_EN_W<CH_RX_CONF1_SPEC, 0> {
-        RX_EN_W::new(self)
+    pub fn rx_en(&mut self) -> RX_EN_W<CH_RX_CONF1_SPEC> {
+        RX_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_mem_wr_rst_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<CH_RX_CONF1_SPEC, 1> {
-        MEM_WR_RST_W::new(self)
+    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<CH_RX_CONF1_SPEC> {
+        MEM_WR_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_apb_mem_rst_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<CH_RX_CONF1_SPEC, 2> {
-        APB_MEM_RST_W::new(self)
+    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<CH_RX_CONF1_SPEC> {
+        APB_MEM_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_mem_owner_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_owner(&mut self) -> MEM_OWNER_W<CH_RX_CONF1_SPEC, 3> {
-        MEM_OWNER_W::new(self)
+    pub fn mem_owner(&mut self) -> MEM_OWNER_W<CH_RX_CONF1_SPEC> {
+        MEM_OWNER_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_rx_filter_en_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<CH_RX_CONF1_SPEC, 4> {
-        RX_FILTER_EN_W::new(self)
+    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<CH_RX_CONF1_SPEC> {
+        RX_FILTER_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:12 - reg_rx_filter_thres_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<CH_RX_CONF1_SPEC, 5> {
-        RX_FILTER_THRES_W::new(self)
+    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<CH_RX_CONF1_SPEC> {
+        RX_FILTER_THRES_W::new(self, 5)
     }
     #[doc = "Bit 13 - reg_mem_rx_wrap_en_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W<CH_RX_CONF1_SPEC, 13> {
-        MEM_RX_WRAP_EN_W::new(self)
+    pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W<CH_RX_CONF1_SPEC> {
+        MEM_RX_WRAP_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_afifo_rst_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<CH_RX_CONF1_SPEC, 14> {
-        AFIFO_RST_W::new(self)
+    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<CH_RX_CONF1_SPEC> {
+        AFIFO_RST_W::new(self, 14)
     }
     #[doc = "Bit 15 - reg_conf_update_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CH_RX_CONF1_SPEC, 15> {
-        CONF_UPDATE_W::new(self)
+    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CH_RX_CONF1_SPEC> {
+        CONF_UPDATE_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

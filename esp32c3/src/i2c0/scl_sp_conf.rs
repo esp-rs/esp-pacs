@@ -5,19 +5,19 @@ pub type W = crate::W<SCL_SP_CONF_SPEC>;
 #[doc = "Field `SCL_RST_SLV_EN` reader - reg_scl_rst_slv_en"]
 pub type SCL_RST_SLV_EN_R = crate::BitReader;
 #[doc = "Field `SCL_RST_SLV_EN` writer - reg_scl_rst_slv_en"]
-pub type SCL_RST_SLV_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCL_RST_SLV_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCL_RST_SLV_NUM` reader - reg_scl_rst_slv_num"]
 pub type SCL_RST_SLV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCL_RST_SLV_NUM` writer - reg_scl_rst_slv_num"]
-pub type SCL_RST_SLV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SCL_RST_SLV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SCL_PD_EN` reader - reg_scl_pd_en"]
 pub type SCL_PD_EN_R = crate::BitReader;
 #[doc = "Field `SCL_PD_EN` writer - reg_scl_pd_en"]
-pub type SCL_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCL_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDA_PD_EN` reader - reg_sda_pd_en"]
 pub type SDA_PD_EN_R = crate::BitReader;
 #[doc = "Field `SDA_PD_EN` writer - reg_sda_pd_en"]
-pub type SDA_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDA_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_scl_rst_slv_en"]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCL_SP_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_scl_rst_slv_en"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W<SCL_SP_CONF_SPEC, 0> {
-        SCL_RST_SLV_EN_W::new(self)
+    pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W<SCL_SP_CONF_SPEC> {
+        SCL_RST_SLV_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:5 - reg_scl_rst_slv_num"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W<SCL_SP_CONF_SPEC, 1> {
-        SCL_RST_SLV_NUM_W::new(self)
+    pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W<SCL_SP_CONF_SPEC> {
+        SCL_RST_SLV_NUM_W::new(self, 1)
     }
     #[doc = "Bit 6 - reg_scl_pd_en"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W<SCL_SP_CONF_SPEC, 6> {
-        SCL_PD_EN_W::new(self)
+    pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W<SCL_SP_CONF_SPEC> {
+        SCL_PD_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_sda_pd_en"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W<SCL_SP_CONF_SPEC, 7> {
-        SDA_PD_EN_W::new(self)
+    pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W<SCL_SP_CONF_SPEC> {
+        SDA_PD_EN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

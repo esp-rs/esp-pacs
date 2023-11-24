@@ -5,19 +5,19 @@ pub type W = crate::W<HP_SLEEP_LP_DIG_POWER_SPEC>;
 #[doc = "Field `HP_SLEEP_BOD_SOURCE_SEL` reader - need_des"]
 pub type HP_SLEEP_BOD_SOURCE_SEL_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_BOD_SOURCE_SEL` writer - need_des"]
-pub type HP_SLEEP_BOD_SOURCE_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_BOD_SOURCE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_VDDBAT_MODE` reader - need_des"]
 pub type HP_SLEEP_VDDBAT_MODE_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_VDDBAT_MODE` writer - need_des"]
-pub type HP_SLEEP_VDDBAT_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HP_SLEEP_VDDBAT_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `HP_SLEEP_LP_MEM_DSLP` reader - need_des"]
 pub type HP_SLEEP_LP_MEM_DSLP_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_LP_MEM_DSLP` writer - need_des"]
-pub type HP_SLEEP_LP_MEM_DSLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_LP_MEM_DSLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_PD_LP_PERI_PD_EN` reader - need_des"]
 pub type HP_SLEEP_PD_LP_PERI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_LP_PERI_PD_EN` writer - need_des"]
-pub type HP_SLEEP_PD_LP_PERI_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_PD_LP_PERI_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -66,7 +66,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_DIG_POWER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -75,32 +75,28 @@ impl W {
     #[must_use]
     pub fn hp_sleep_bod_source_sel(
         &mut self,
-    ) -> HP_SLEEP_BOD_SOURCE_SEL_W<HP_SLEEP_LP_DIG_POWER_SPEC, 27> {
-        HP_SLEEP_BOD_SOURCE_SEL_W::new(self)
+    ) -> HP_SLEEP_BOD_SOURCE_SEL_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
+        HP_SLEEP_BOD_SOURCE_SEL_W::new(self, 27)
     }
     #[doc = "Bits 28:29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_vddbat_mode(
-        &mut self,
-    ) -> HP_SLEEP_VDDBAT_MODE_W<HP_SLEEP_LP_DIG_POWER_SPEC, 28> {
-        HP_SLEEP_VDDBAT_MODE_W::new(self)
+    pub fn hp_sleep_vddbat_mode(&mut self) -> HP_SLEEP_VDDBAT_MODE_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
+        HP_SLEEP_VDDBAT_MODE_W::new(self, 28)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_lp_mem_dslp(
-        &mut self,
-    ) -> HP_SLEEP_LP_MEM_DSLP_W<HP_SLEEP_LP_DIG_POWER_SPEC, 30> {
-        HP_SLEEP_LP_MEM_DSLP_W::new(self)
+    pub fn hp_sleep_lp_mem_dslp(&mut self) -> HP_SLEEP_LP_MEM_DSLP_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
+        HP_SLEEP_LP_MEM_DSLP_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_sleep_pd_lp_peri_pd_en(
         &mut self,
-    ) -> HP_SLEEP_PD_LP_PERI_PD_EN_W<HP_SLEEP_LP_DIG_POWER_SPEC, 31> {
-        HP_SLEEP_PD_LP_PERI_PD_EN_W::new(self)
+    ) -> HP_SLEEP_PD_LP_PERI_PD_EN_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
+        HP_SLEEP_PD_LP_PERI_PD_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

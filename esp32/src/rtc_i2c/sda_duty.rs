@@ -5,7 +5,7 @@ pub type W = crate::W<SDA_DUTY_SPEC>;
 #[doc = "Field `SDA_DUTY` reader - Number of FAST_CLK cycles SDA will switch after falling edge of SCL"]
 pub type SDA_DUTY_R = crate::FieldReader<u32>;
 #[doc = "Field `SDA_DUTY` writer - Number of FAST_CLK cycles SDA will switch after falling edge of SCL"]
-pub type SDA_DUTY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type SDA_DUTY_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 impl R {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles SDA will switch after falling edge of SCL"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDA_DUTY_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles SDA will switch after falling edge of SCL"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_duty(&mut self) -> SDA_DUTY_W<SDA_DUTY_SPEC, 0> {
-        SDA_DUTY_W::new(self)
+    pub fn sda_duty(&mut self) -> SDA_DUTY_W<SDA_DUTY_SPEC> {
+        SDA_DUTY_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

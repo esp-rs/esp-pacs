@@ -5,17 +5,17 @@ pub type W = crate::W<CAP_TIMER_CFG_SPEC>;
 #[doc = "Field `CAP_TIMER_EN` reader - "]
 pub type CAP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `CAP_TIMER_EN` writer - "]
-pub type CAP_TIMER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAP_TIMER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAP_SYNCI_EN` reader - "]
 pub type CAP_SYNCI_EN_R = crate::BitReader;
 #[doc = "Field `CAP_SYNCI_EN` writer - "]
-pub type CAP_SYNCI_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAP_SYNCI_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAP_SYNCI_SEL` reader - "]
 pub type CAP_SYNCI_SEL_R = crate::FieldReader;
 #[doc = "Field `CAP_SYNCI_SEL` writer - "]
-pub type CAP_SYNCI_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CAP_SYNCI_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CAP_SYNC_SW` writer - "]
-pub type CAP_SYNC_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAP_SYNC_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -55,33 +55,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CAP_TIMER_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<CAP_TIMER_CFG_SPEC, 0> {
-        CAP_TIMER_EN_W::new(self)
+    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<CAP_TIMER_CFG_SPEC> {
+        CAP_TIMER_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<CAP_TIMER_CFG_SPEC, 1> {
-        CAP_SYNCI_EN_W::new(self)
+    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<CAP_TIMER_CFG_SPEC> {
+        CAP_SYNCI_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:4"]
     #[inline(always)]
     #[must_use]
-    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<CAP_TIMER_CFG_SPEC, 2> {
-        CAP_SYNCI_SEL_W::new(self)
+    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<CAP_TIMER_CFG_SPEC> {
+        CAP_SYNCI_SEL_W::new(self, 2)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<CAP_TIMER_CFG_SPEC, 5> {
-        CAP_SYNC_SW_W::new(self)
+    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<CAP_TIMER_CFG_SPEC> {
+        CAP_SYNC_SW_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

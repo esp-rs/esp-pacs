@@ -5,23 +5,23 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `LP_CPU_EXC_INT_RAW` reader - need_des"]
 pub type LP_CPU_EXC_INT_RAW_R = crate::BitReader;
 #[doc = "Field `LP_CPU_EXC_INT_RAW` writer - need_des"]
-pub type LP_CPU_EXC_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_CPU_EXC_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_IDLE_INT_RAW` reader - need_des"]
 pub type SDIO_IDLE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_RAW` writer - need_des"]
-pub type SDIO_IDLE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_IDLE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SW_INT_RAW` reader - need_des"]
 pub type SW_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SW_INT_RAW` writer - need_des"]
-pub type SW_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOC_SLEEP_REJECT_INT_RAW` reader - need_des"]
 pub type SOC_SLEEP_REJECT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SOC_SLEEP_REJECT_INT_RAW` writer - need_des"]
-pub type SOC_SLEEP_REJECT_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOC_SLEEP_REJECT_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOC_WAKEUP_INT_RAW` reader - need_des"]
 pub type SOC_WAKEUP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SOC_WAKEUP_INT_RAW` writer - need_des"]
-pub type SOC_WAKEUP_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOC_WAKEUP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_cpu_exc_int_raw(&mut self) -> LP_CPU_EXC_INT_RAW_W<INT_RAW_SPEC, 27> {
-        LP_CPU_EXC_INT_RAW_W::new(self)
+    pub fn lp_cpu_exc_int_raw(&mut self) -> LP_CPU_EXC_INT_RAW_W<INT_RAW_SPEC> {
+        LP_CPU_EXC_INT_RAW_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_idle_int_raw(&mut self) -> SDIO_IDLE_INT_RAW_W<INT_RAW_SPEC, 28> {
-        SDIO_IDLE_INT_RAW_W::new(self)
+    pub fn sdio_idle_int_raw(&mut self) -> SDIO_IDLE_INT_RAW_W<INT_RAW_SPEC> {
+        SDIO_IDLE_INT_RAW_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_int_raw(&mut self) -> SW_INT_RAW_W<INT_RAW_SPEC, 29> {
-        SW_INT_RAW_W::new(self)
+    pub fn sw_int_raw(&mut self) -> SW_INT_RAW_W<INT_RAW_SPEC> {
+        SW_INT_RAW_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn soc_sleep_reject_int_raw(&mut self) -> SOC_SLEEP_REJECT_INT_RAW_W<INT_RAW_SPEC, 30> {
-        SOC_SLEEP_REJECT_INT_RAW_W::new(self)
+    pub fn soc_sleep_reject_int_raw(&mut self) -> SOC_SLEEP_REJECT_INT_RAW_W<INT_RAW_SPEC> {
+        SOC_SLEEP_REJECT_INT_RAW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn soc_wakeup_int_raw(&mut self) -> SOC_WAKEUP_INT_RAW_W<INT_RAW_SPEC, 31> {
-        SOC_WAKEUP_INT_RAW_W::new(self)
+    pub fn soc_wakeup_int_raw(&mut self) -> SOC_WAKEUP_INT_RAW_W<INT_RAW_SPEC> {
+        SOC_WAKEUP_INT_RAW_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

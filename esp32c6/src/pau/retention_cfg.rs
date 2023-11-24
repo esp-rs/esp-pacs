@@ -5,7 +5,7 @@ pub type W = crate::W<RETENTION_CFG_SPEC>;
 #[doc = "Field `RET_INV_CFG` reader - retention inv scan out"]
 pub type RET_INV_CFG_R = crate::FieldReader<u32>;
 #[doc = "Field `RET_INV_CFG` writer - retention inv scan out"]
-pub type RET_INV_CFG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type RET_INV_CFG_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - retention inv scan out"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RETENTION_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - retention inv scan out"]
     #[inline(always)]
     #[must_use]
-    pub fn ret_inv_cfg(&mut self) -> RET_INV_CFG_W<RETENTION_CFG_SPEC, 0> {
-        RET_INV_CFG_W::new(self)
+    pub fn ret_inv_cfg(&mut self) -> RET_INV_CFG_W<RETENTION_CFG_SPEC> {
+        RET_INV_CFG_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,23 +5,23 @@ pub type W = crate::W<SAR_TSENS_CTRL2_SPEC>;
 #[doc = "Field `TSENS_XPD_WAIT` reader - "]
 pub type TSENS_XPD_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `TSENS_XPD_WAIT` writer - "]
-pub type TSENS_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type TSENS_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `TSENS_XPD_FORCE` reader - "]
 pub type TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `TSENS_XPD_FORCE` writer - "]
-pub type TSENS_XPD_FORCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TSENS_XPD_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TSENS_CLK_INV` reader - "]
 pub type TSENS_CLK_INV_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_INV` writer - "]
-pub type TSENS_CLK_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLK_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLKGATE_EN` reader - Enable temperature sensor clock."]
 pub type TSENS_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_CLKGATE_EN` writer - Enable temperature sensor clock."]
-pub type TSENS_CLKGATE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLKGATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_RESET` reader - Reset temperature sensor."]
 pub type TSENS_RESET_R = crate::BitReader;
 #[doc = "Field `TSENS_RESET` writer - Reset temperature sensor."]
-pub type TSENS_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_TSENS_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<SAR_TSENS_CTRL2_SPEC, 0> {
-        TSENS_XPD_WAIT_W::new(self)
+    pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<SAR_TSENS_CTRL2_SPEC> {
+        TSENS_XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<SAR_TSENS_CTRL2_SPEC, 12> {
-        TSENS_XPD_FORCE_W::new(self)
+    pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<SAR_TSENS_CTRL2_SPEC> {
+        TSENS_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<SAR_TSENS_CTRL2_SPEC, 14> {
-        TSENS_CLK_INV_W::new(self)
+    pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<SAR_TSENS_CTRL2_SPEC> {
+        TSENS_CLK_INV_W::new(self, 14)
     }
     #[doc = "Bit 15 - Enable temperature sensor clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clkgate_en(&mut self) -> TSENS_CLKGATE_EN_W<SAR_TSENS_CTRL2_SPEC, 15> {
-        TSENS_CLKGATE_EN_W::new(self)
+    pub fn tsens_clkgate_en(&mut self) -> TSENS_CLKGATE_EN_W<SAR_TSENS_CTRL2_SPEC> {
+        TSENS_CLKGATE_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reset temperature sensor."]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_reset(&mut self) -> TSENS_RESET_W<SAR_TSENS_CTRL2_SPEC, 16> {
-        TSENS_RESET_W::new(self)
+    pub fn tsens_reset(&mut self) -> TSENS_RESET_W<SAR_TSENS_CTRL2_SPEC> {
+        TSENS_RESET_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

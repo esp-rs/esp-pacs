@@ -5,49 +5,49 @@ pub type W = crate::W<SLAVE_SPEC>;
 #[doc = "Field `TRANS_DONE` reader - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
 pub type TRANS_DONE_R = crate::BitReader;
 #[doc = "Field `TRANS_DONE` writer - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
-pub type TRANS_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_RD_BUF_DONE_EN` reader - SPI_SLV_RD_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
 pub type INT_RD_BUF_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_RD_BUF_DONE_EN` writer - SPI_SLV_RD_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_RD_BUF_DONE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_RD_BUF_DONE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_WR_BUF_DONE_EN` reader - SPI_SLV_WR_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
 pub type INT_WR_BUF_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_WR_BUF_DONE_EN` writer - SPI_SLV_WR_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_WR_BUF_DONE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_WR_BUF_DONE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_RD_DMA_DONE_EN` reader - SPI_SLV_RD_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
 pub type INT_RD_DMA_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_RD_DMA_DONE_EN` writer - SPI_SLV_RD_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_RD_DMA_DONE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_RD_DMA_DONE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_WR_DMA_DONE_EN` reader - SPI_SLV_WR_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
 pub type INT_WR_DMA_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_WR_DMA_DONE_EN` writer - SPI_SLV_WR_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_WR_DMA_DONE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_WR_DMA_DONE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_TRANS_DONE_EN` reader - SPI_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
 pub type INT_TRANS_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_TRANS_DONE_EN` writer - SPI_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_TRANS_DONE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_TRANS_DONE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_DMA_SEG_TRANS_EN` reader - SPI_DMA_SEG_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
 pub type INT_DMA_SEG_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `INT_DMA_SEG_TRANS_EN` writer - SPI_DMA_SEG_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_DMA_SEG_TRANS_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_DMA_SEG_TRANS_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEG_MAGIC_ERR_INT_EN` reader - 1: Enable seg magic value error interrupt. 0: Others. Can be configured in CONF state."]
 pub type SEG_MAGIC_ERR_INT_EN_R = crate::BitReader;
 #[doc = "Field `SEG_MAGIC_ERR_INT_EN` writer - 1: Enable seg magic value error interrupt. 0: Others. Can be configured in CONF state."]
-pub type SEG_MAGIC_ERR_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEG_MAGIC_ERR_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_CNT` reader - The operations counter in both the master mode and the slave mode."]
 pub type TRANS_CNT_R = crate::FieldReader;
 #[doc = "Field `TRANS_DONE_AUTO_CLR_EN` reader - SPI_TRANS_DONE auto clear enable, clear it 3 apb cycles after the pos edge of SPI_TRANS_DONE. 0:disable. 1: enable. Can be configured in CONF state."]
 pub type TRANS_DONE_AUTO_CLR_EN_R = crate::BitReader;
 #[doc = "Field `TRANS_DONE_AUTO_CLR_EN` writer - SPI_TRANS_DONE auto clear enable, clear it 3 apb cycles after the pos edge of SPI_TRANS_DONE. 0:disable. 1: enable. Can be configured in CONF state."]
-pub type TRANS_DONE_AUTO_CLR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_DONE_AUTO_CLR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MODE` reader - Set SPI work mode. 1: slave mode 0: master mode."]
 pub type MODE_R = crate::BitReader;
 #[doc = "Field `MODE` writer - Set SPI work mode. 1: slave mode 0: master mode."]
-pub type MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOFT_RESET` reader - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
 pub type SOFT_RESET_R = crate::BitReader;
 #[doc = "Field `SOFT_RESET` writer - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
-pub type SOFT_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOFT_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 4 - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
@@ -156,75 +156,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 4 - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_done(&mut self) -> TRANS_DONE_W<SLAVE_SPEC, 4> {
-        TRANS_DONE_W::new(self)
+    pub fn trans_done(&mut self) -> TRANS_DONE_W<SLAVE_SPEC> {
+        TRANS_DONE_W::new(self, 4)
     }
     #[doc = "Bit 5 - SPI_SLV_RD_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn int_rd_buf_done_en(&mut self) -> INT_RD_BUF_DONE_EN_W<SLAVE_SPEC, 5> {
-        INT_RD_BUF_DONE_EN_W::new(self)
+    pub fn int_rd_buf_done_en(&mut self) -> INT_RD_BUF_DONE_EN_W<SLAVE_SPEC> {
+        INT_RD_BUF_DONE_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - SPI_SLV_WR_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn int_wr_buf_done_en(&mut self) -> INT_WR_BUF_DONE_EN_W<SLAVE_SPEC, 6> {
-        INT_WR_BUF_DONE_EN_W::new(self)
+    pub fn int_wr_buf_done_en(&mut self) -> INT_WR_BUF_DONE_EN_W<SLAVE_SPEC> {
+        INT_WR_BUF_DONE_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - SPI_SLV_RD_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn int_rd_dma_done_en(&mut self) -> INT_RD_DMA_DONE_EN_W<SLAVE_SPEC, 7> {
-        INT_RD_DMA_DONE_EN_W::new(self)
+    pub fn int_rd_dma_done_en(&mut self) -> INT_RD_DMA_DONE_EN_W<SLAVE_SPEC> {
+        INT_RD_DMA_DONE_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - SPI_SLV_WR_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn int_wr_dma_done_en(&mut self) -> INT_WR_DMA_DONE_EN_W<SLAVE_SPEC, 8> {
-        INT_WR_DMA_DONE_EN_W::new(self)
+    pub fn int_wr_dma_done_en(&mut self) -> INT_WR_DMA_DONE_EN_W<SLAVE_SPEC> {
+        INT_WR_DMA_DONE_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - SPI_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn int_trans_done_en(&mut self) -> INT_TRANS_DONE_EN_W<SLAVE_SPEC, 9> {
-        INT_TRANS_DONE_EN_W::new(self)
+    pub fn int_trans_done_en(&mut self) -> INT_TRANS_DONE_EN_W<SLAVE_SPEC> {
+        INT_TRANS_DONE_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - SPI_DMA_SEG_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn int_dma_seg_trans_en(&mut self) -> INT_DMA_SEG_TRANS_EN_W<SLAVE_SPEC, 10> {
-        INT_DMA_SEG_TRANS_EN_W::new(self)
+    pub fn int_dma_seg_trans_en(&mut self) -> INT_DMA_SEG_TRANS_EN_W<SLAVE_SPEC> {
+        INT_DMA_SEG_TRANS_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1: Enable seg magic value error interrupt. 0: Others. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn seg_magic_err_int_en(&mut self) -> SEG_MAGIC_ERR_INT_EN_W<SLAVE_SPEC, 11> {
-        SEG_MAGIC_ERR_INT_EN_W::new(self)
+    pub fn seg_magic_err_int_en(&mut self) -> SEG_MAGIC_ERR_INT_EN_W<SLAVE_SPEC> {
+        SEG_MAGIC_ERR_INT_EN_W::new(self, 11)
     }
     #[doc = "Bit 29 - SPI_TRANS_DONE auto clear enable, clear it 3 apb cycles after the pos edge of SPI_TRANS_DONE. 0:disable. 1: enable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_done_auto_clr_en(&mut self) -> TRANS_DONE_AUTO_CLR_EN_W<SLAVE_SPEC, 29> {
-        TRANS_DONE_AUTO_CLR_EN_W::new(self)
+    pub fn trans_done_auto_clr_en(&mut self) -> TRANS_DONE_AUTO_CLR_EN_W<SLAVE_SPEC> {
+        TRANS_DONE_AUTO_CLR_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set SPI work mode. 1: slave mode 0: master mode."]
     #[inline(always)]
     #[must_use]
-    pub fn mode(&mut self) -> MODE_W<SLAVE_SPEC, 30> {
-        MODE_W::new(self)
+    pub fn mode(&mut self) -> MODE_W<SLAVE_SPEC> {
+        MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn soft_reset(&mut self) -> SOFT_RESET_W<SLAVE_SPEC, 31> {
-        SOFT_RESET_W::new(self)
+    pub fn soft_reset(&mut self) -> SOFT_RESET_W<SLAVE_SPEC> {
+        SOFT_RESET_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

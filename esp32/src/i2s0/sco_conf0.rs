@@ -5,19 +5,19 @@ pub type W = crate::W<SCO_CONF0_SPEC>;
 #[doc = "Field `SCO_WITH_I2S_EN` reader - "]
 pub type SCO_WITH_I2S_EN_R = crate::BitReader;
 #[doc = "Field `SCO_WITH_I2S_EN` writer - "]
-pub type SCO_WITH_I2S_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCO_WITH_I2S_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCO_NO_I2S_EN` reader - "]
 pub type SCO_NO_I2S_EN_R = crate::BitReader;
 #[doc = "Field `SCO_NO_I2S_EN` writer - "]
-pub type SCO_NO_I2S_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCO_NO_I2S_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CVSD_ENC_START` reader - "]
 pub type CVSD_ENC_START_R = crate::BitReader;
 #[doc = "Field `CVSD_ENC_START` writer - "]
-pub type CVSD_ENC_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CVSD_ENC_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CVSD_ENC_RESET` reader - "]
 pub type CVSD_ENC_RESET_R = crate::BitReader;
 #[doc = "Field `CVSD_ENC_RESET` writer - "]
-pub type CVSD_ENC_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CVSD_ENC_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCO_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn sco_with_i2s_en(&mut self) -> SCO_WITH_I2S_EN_W<SCO_CONF0_SPEC, 0> {
-        SCO_WITH_I2S_EN_W::new(self)
+    pub fn sco_with_i2s_en(&mut self) -> SCO_WITH_I2S_EN_W<SCO_CONF0_SPEC> {
+        SCO_WITH_I2S_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sco_no_i2s_en(&mut self) -> SCO_NO_I2S_EN_W<SCO_CONF0_SPEC, 1> {
-        SCO_NO_I2S_EN_W::new(self)
+    pub fn sco_no_i2s_en(&mut self) -> SCO_NO_I2S_EN_W<SCO_CONF0_SPEC> {
+        SCO_NO_I2S_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn cvsd_enc_start(&mut self) -> CVSD_ENC_START_W<SCO_CONF0_SPEC, 2> {
-        CVSD_ENC_START_W::new(self)
+    pub fn cvsd_enc_start(&mut self) -> CVSD_ENC_START_W<SCO_CONF0_SPEC> {
+        CVSD_ENC_START_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn cvsd_enc_reset(&mut self) -> CVSD_ENC_RESET_W<SCO_CONF0_SPEC, 3> {
-        CVSD_ENC_RESET_W::new(self)
+    pub fn cvsd_enc_reset(&mut self) -> CVSD_ENC_RESET_W<SCO_CONF0_SPEC> {
+        CVSD_ENC_RESET_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

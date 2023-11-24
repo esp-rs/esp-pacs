@@ -5,7 +5,7 @@ pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `USB_WRAP_DATE` reader - Date register"]
 pub type USB_WRAP_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `USB_WRAP_DATE` writer - Date register"]
-pub type USB_WRAP_DATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type USB_WRAP_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Date register"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Date register"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_wrap_date(&mut self) -> USB_WRAP_DATE_W<DATE_SPEC, 0> {
-        USB_WRAP_DATE_W::new(self)
+    pub fn usb_wrap_date(&mut self) -> USB_WRAP_DATE_W<DATE_SPEC> {
+        USB_WRAP_DATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

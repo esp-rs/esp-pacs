@@ -5,15 +5,15 @@ pub type W = crate::W<SLP_REJECT_CONF_SPEC>;
 #[doc = "Field `SLEEP_REJECT_ENA` reader - Set this bit to enable reject-to-sleep."]
 pub type SLEEP_REJECT_ENA_R = crate::FieldReader<u32>;
 #[doc = "Field `SLEEP_REJECT_ENA` writer - Set this bit to enable reject-to-sleep."]
-pub type SLEEP_REJECT_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 17, O, u32>;
+pub type SLEEP_REJECT_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 17, u32>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - Set this bit to enable reject-to-light-sleep."]
 pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` writer - Set this bit to enable reject-to-light-sleep."]
-pub type LIGHT_SLP_REJECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LIGHT_SLP_REJECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEEP_SLP_REJECT_EN` reader - Set this bit to enable reject-to-deep-sleep."]
 pub type DEEP_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `DEEP_SLP_REJECT_EN` writer - Set this bit to enable reject-to-deep-sleep."]
-pub type DEEP_SLP_REJECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEEP_SLP_REJECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 13:29 - Set this bit to enable reject-to-sleep."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_REJECT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 13:29 - Set this bit to enable reject-to-sleep."]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<SLP_REJECT_CONF_SPEC, 13> {
-        SLEEP_REJECT_ENA_W::new(self)
+    pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<SLP_REJECT_CONF_SPEC> {
+        SLEEP_REJECT_ENA_W::new(self, 13)
     }
     #[doc = "Bit 30 - Set this bit to enable reject-to-light-sleep."]
     #[inline(always)]
     #[must_use]
-    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC, 30> {
-        LIGHT_SLP_REJECT_EN_W::new(self)
+    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+        LIGHT_SLP_REJECT_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to enable reject-to-deep-sleep."]
     #[inline(always)]
     #[must_use]
-    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC, 31> {
-        DEEP_SLP_REJECT_EN_W::new(self)
+    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+        DEEP_SLP_REJECT_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

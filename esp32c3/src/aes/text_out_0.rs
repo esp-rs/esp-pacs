@@ -5,7 +5,7 @@ pub type W = crate::W<TEXT_OUT_0_SPEC>;
 #[doc = "Field `TEXT_OUT_0` reader - This bits stores text_out_0 that is a part of result text material."]
 pub type TEXT_OUT_0_R = crate::FieldReader<u32>;
 #[doc = "Field `TEXT_OUT_0` writer - This bits stores text_out_0 that is a part of result text material."]
-pub type TEXT_OUT_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TEXT_OUT_0_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores text_out_0 that is a part of result text material."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TEXT_OUT_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - This bits stores text_out_0 that is a part of result text material."]
     #[inline(always)]
     #[must_use]
-    pub fn text_out_0(&mut self) -> TEXT_OUT_0_W<TEXT_OUT_0_SPEC, 0> {
-        TEXT_OUT_0_W::new(self)
+    pub fn text_out_0(&mut self) -> TEXT_OUT_0_W<TEXT_OUT_0_SPEC> {
+        TEXT_OUT_0_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

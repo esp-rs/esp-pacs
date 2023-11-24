@@ -5,19 +5,19 @@ pub type W = crate::W<SRAM_CLK_SPEC>;
 #[doc = "Field `SCLKCNT_L` reader - It must equal to the value of SPI_MEM_SCLKCNT_N."]
 pub type SCLKCNT_L_R = crate::FieldReader;
 #[doc = "Field `SCLKCNT_L` writer - It must equal to the value of SPI_MEM_SCLKCNT_N."]
-pub type SCLKCNT_L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SCLKCNT_L_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SCLKCNT_H` reader - It must be a floor value of ((SPI_MEM_SCLKCNT_N+1)/2-1)."]
 pub type SCLKCNT_H_R = crate::FieldReader;
 #[doc = "Field `SCLKCNT_H` writer - It must be a floor value of ((SPI_MEM_SCLKCNT_N+1)/2-1)."]
-pub type SCLKCNT_H_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SCLKCNT_H_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SCLKCNT_N` reader - When SPI0 accesses to Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_SCLKCNT_N+1)"]
 pub type SCLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `SCLKCNT_N` writer - When SPI0 accesses to Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_SCLKCNT_N+1)"]
-pub type SCLKCNT_N_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SCLKCNT_N_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SCLK_EQU_SYSCLK` reader - When SPI0 accesses to Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
 pub type SCLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `SCLK_EQU_SYSCLK` writer - When SPI0 accesses to Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
-pub type SCLK_EQU_SYSCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCLK_EQU_SYSCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - It must equal to the value of SPI_MEM_SCLKCNT_N."]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_CLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - It must equal to the value of SPI_MEM_SCLKCNT_N."]
     #[inline(always)]
     #[must_use]
-    pub fn sclkcnt_l(&mut self) -> SCLKCNT_L_W<SRAM_CLK_SPEC, 0> {
-        SCLKCNT_L_W::new(self)
+    pub fn sclkcnt_l(&mut self) -> SCLKCNT_L_W<SRAM_CLK_SPEC> {
+        SCLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - It must be a floor value of ((SPI_MEM_SCLKCNT_N+1)/2-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn sclkcnt_h(&mut self) -> SCLKCNT_H_W<SRAM_CLK_SPEC, 8> {
-        SCLKCNT_H_W::new(self)
+    pub fn sclkcnt_h(&mut self) -> SCLKCNT_H_W<SRAM_CLK_SPEC> {
+        SCLKCNT_H_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - When SPI0 accesses to Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_SCLKCNT_N+1)"]
     #[inline(always)]
     #[must_use]
-    pub fn sclkcnt_n(&mut self) -> SCLKCNT_N_W<SRAM_CLK_SPEC, 16> {
-        SCLKCNT_N_W::new(self)
+    pub fn sclkcnt_n(&mut self) -> SCLKCNT_N_W<SRAM_CLK_SPEC> {
+        SCLKCNT_N_W::new(self, 16)
     }
     #[doc = "Bit 31 - When SPI0 accesses to Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_equ_sysclk(&mut self) -> SCLK_EQU_SYSCLK_W<SRAM_CLK_SPEC, 31> {
-        SCLK_EQU_SYSCLK_W::new(self)
+    pub fn sclk_equ_sysclk(&mut self) -> SCLK_EQU_SYSCLK_W<SRAM_CLK_SPEC> {
+        SCLK_EQU_SYSCLK_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

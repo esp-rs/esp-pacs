@@ -5,7 +5,7 @@ pub type W = crate::W<ICACHE_CTRL_SPEC>;
 #[doc = "Field `ICACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
 pub type ICACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `ICACHE_ENABLE` writer - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type ICACHE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
     #[must_use]
-    pub fn icache_enable(&mut self) -> ICACHE_ENABLE_W<ICACHE_CTRL_SPEC, 0> {
-        ICACHE_ENABLE_W::new(self)
+    pub fn icache_enable(&mut self) -> ICACHE_ENABLE_W<ICACHE_CTRL_SPEC> {
+        ICACHE_ENABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

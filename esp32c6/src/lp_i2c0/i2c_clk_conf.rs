@@ -5,23 +5,23 @@ pub type W = crate::W<I2C_CLK_CONF_SPEC>;
 #[doc = "Field `I2C_SCLK_DIV_NUM` reader - the integral part of the fractional divisor for i2c module"]
 pub type I2C_SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `I2C_SCLK_DIV_NUM` writer - the integral part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type I2C_SCLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `I2C_SCLK_DIV_A` reader - the numerator of the fractional part of the fractional divisor for i2c module"]
 pub type I2C_SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `I2C_SCLK_DIV_A` writer - the numerator of the fractional part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type I2C_SCLK_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `I2C_SCLK_DIV_B` reader - the denominator of the fractional part of the fractional divisor for i2c module"]
 pub type I2C_SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `I2C_SCLK_DIV_B` writer - the denominator of the fractional part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type I2C_SCLK_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `I2C_SCLK_SEL` reader - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
 pub type I2C_SCLK_SEL_R = crate::BitReader;
 #[doc = "Field `I2C_SCLK_SEL` writer - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
-pub type I2C_SCLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SCLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_SCLK_ACTIVE` reader - The clock switch for i2c module"]
 pub type I2C_SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `I2C_SCLK_ACTIVE` writer - The clock switch for i2c module"]
-pub type I2C_SCLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SCLK_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sclk_div_num(&mut self) -> I2C_SCLK_DIV_NUM_W<I2C_CLK_CONF_SPEC, 0> {
-        I2C_SCLK_DIV_NUM_W::new(self)
+    pub fn i2c_sclk_div_num(&mut self) -> I2C_SCLK_DIV_NUM_W<I2C_CLK_CONF_SPEC> {
+        I2C_SCLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - the numerator of the fractional part of the fractional divisor for i2c module"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sclk_div_a(&mut self) -> I2C_SCLK_DIV_A_W<I2C_CLK_CONF_SPEC, 8> {
-        I2C_SCLK_DIV_A_W::new(self)
+    pub fn i2c_sclk_div_a(&mut self) -> I2C_SCLK_DIV_A_W<I2C_CLK_CONF_SPEC> {
+        I2C_SCLK_DIV_A_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - the denominator of the fractional part of the fractional divisor for i2c module"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sclk_div_b(&mut self) -> I2C_SCLK_DIV_B_W<I2C_CLK_CONF_SPEC, 14> {
-        I2C_SCLK_DIV_B_W::new(self)
+    pub fn i2c_sclk_div_b(&mut self) -> I2C_SCLK_DIV_B_W<I2C_CLK_CONF_SPEC> {
+        I2C_SCLK_DIV_B_W::new(self, 14)
     }
     #[doc = "Bit 20 - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sclk_sel(&mut self) -> I2C_SCLK_SEL_W<I2C_CLK_CONF_SPEC, 20> {
-        I2C_SCLK_SEL_W::new(self)
+    pub fn i2c_sclk_sel(&mut self) -> I2C_SCLK_SEL_W<I2C_CLK_CONF_SPEC> {
+        I2C_SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - The clock switch for i2c module"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sclk_active(&mut self) -> I2C_SCLK_ACTIVE_W<I2C_CLK_CONF_SPEC, 21> {
-        I2C_SCLK_ACTIVE_W::new(self)
+    pub fn i2c_sclk_active(&mut self) -> I2C_SCLK_ACTIVE_W<I2C_CLK_CONF_SPEC> {
+        I2C_SCLK_ACTIVE_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

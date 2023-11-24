@@ -5,19 +5,19 @@ pub type W = crate::W<LP_RST_EN_SPEC>;
 #[doc = "Field `AON_EFUSE_CORE_RESET_EN` reader - need_des"]
 pub type AON_EFUSE_CORE_RESET_EN_R = crate::BitReader;
 #[doc = "Field `AON_EFUSE_CORE_RESET_EN` writer - need_des"]
-pub type AON_EFUSE_CORE_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AON_EFUSE_CORE_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_TIMER_RESET_EN` reader - need_des"]
 pub type LP_TIMER_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_RESET_EN` writer - need_des"]
-pub type LP_TIMER_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_TIMER_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_RESET_EN` reader - need_des"]
 pub type WDT_RESET_EN_R = crate::BitReader;
 #[doc = "Field `WDT_RESET_EN` writer - need_des"]
-pub type WDT_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ANA_PERI_RESET_EN` reader - need_des"]
 pub type ANA_PERI_RESET_EN_R = crate::BitReader;
 #[doc = "Field `ANA_PERI_RESET_EN` writer - need_des"]
-pub type ANA_PERI_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ANA_PERI_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
@@ -66,35 +66,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_RST_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn aon_efuse_core_reset_en(&mut self) -> AON_EFUSE_CORE_RESET_EN_W<LP_RST_EN_SPEC, 28> {
-        AON_EFUSE_CORE_RESET_EN_W::new(self)
+    pub fn aon_efuse_core_reset_en(&mut self) -> AON_EFUSE_CORE_RESET_EN_W<LP_RST_EN_SPEC> {
+        AON_EFUSE_CORE_RESET_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_timer_reset_en(&mut self) -> LP_TIMER_RESET_EN_W<LP_RST_EN_SPEC, 29> {
-        LP_TIMER_RESET_EN_W::new(self)
+    pub fn lp_timer_reset_en(&mut self) -> LP_TIMER_RESET_EN_W<LP_RST_EN_SPEC> {
+        LP_TIMER_RESET_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_reset_en(&mut self) -> WDT_RESET_EN_W<LP_RST_EN_SPEC, 30> {
-        WDT_RESET_EN_W::new(self)
+    pub fn wdt_reset_en(&mut self) -> WDT_RESET_EN_W<LP_RST_EN_SPEC> {
+        WDT_RESET_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn ana_peri_reset_en(&mut self) -> ANA_PERI_RESET_EN_W<LP_RST_EN_SPEC, 31> {
-        ANA_PERI_RESET_EN_W::new(self)
+    pub fn ana_peri_reset_en(&mut self) -> ANA_PERI_RESET_EN_W<LP_RST_EN_SPEC> {
+        ANA_PERI_RESET_EN_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

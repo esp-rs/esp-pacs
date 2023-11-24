@@ -5,35 +5,35 @@ pub type W = crate::W<FRONT_END_MEM_PD_SPEC>;
 #[doc = "Field `AGC_MEM_FORCE_PU` reader - reg_agc_mem_force_pu"]
 pub type AGC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `AGC_MEM_FORCE_PU` writer - reg_agc_mem_force_pu"]
-pub type AGC_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AGC_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AGC_MEM_FORCE_PD` reader - reg_agc_mem_force_pd"]
 pub type AGC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `AGC_MEM_FORCE_PD` writer - reg_agc_mem_force_pd"]
-pub type AGC_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AGC_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBUS_MEM_FORCE_PU` reader - reg_pbus_mem_force_pu"]
 pub type PBUS_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PBUS_MEM_FORCE_PU` writer - reg_pbus_mem_force_pu"]
-pub type PBUS_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBUS_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBUS_MEM_FORCE_PD` reader - reg_pbus_mem_force_pd"]
 pub type PBUS_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PBUS_MEM_FORCE_PD` writer - reg_pbus_mem_force_pd"]
-pub type PBUS_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBUS_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DC_MEM_FORCE_PU` reader - reg_dc_mem_force_pu"]
 pub type DC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DC_MEM_FORCE_PU` writer - reg_dc_mem_force_pu"]
-pub type DC_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DC_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DC_MEM_FORCE_PD` reader - reg_dc_mem_force_pd"]
 pub type DC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DC_MEM_FORCE_PD` writer - reg_dc_mem_force_pd"]
-pub type DC_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DC_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREQ_MEM_FORCE_PU` reader - reg_freq_mem_force_pu"]
 pub type FREQ_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FREQ_MEM_FORCE_PU` writer - reg_freq_mem_force_pu"]
-pub type FREQ_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREQ_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREQ_MEM_FORCE_PD` reader - reg_freq_mem_force_pd"]
 pub type FREQ_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FREQ_MEM_FORCE_PD` writer - reg_freq_mem_force_pd"]
-pub type FREQ_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREQ_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_agc_mem_force_pu"]
     #[inline(always)]
@@ -118,57 +118,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FRONT_END_MEM_PD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_agc_mem_force_pu"]
     #[inline(always)]
     #[must_use]
-    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC, 0> {
-        AGC_MEM_FORCE_PU_W::new(self)
+    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
+        AGC_MEM_FORCE_PU_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_agc_mem_force_pd"]
     #[inline(always)]
     #[must_use]
-    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC, 1> {
-        AGC_MEM_FORCE_PD_W::new(self)
+    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
+        AGC_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_pbus_mem_force_pu"]
     #[inline(always)]
     #[must_use]
-    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC, 2> {
-        PBUS_MEM_FORCE_PU_W::new(self)
+    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
+        PBUS_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_pbus_mem_force_pd"]
     #[inline(always)]
     #[must_use]
-    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC, 3> {
-        PBUS_MEM_FORCE_PD_W::new(self)
+    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
+        PBUS_MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_dc_mem_force_pu"]
     #[inline(always)]
     #[must_use]
-    pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC, 4> {
-        DC_MEM_FORCE_PU_W::new(self)
+    pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
+        DC_MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_dc_mem_force_pd"]
     #[inline(always)]
     #[must_use]
-    pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC, 5> {
-        DC_MEM_FORCE_PD_W::new(self)
+    pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
+        DC_MEM_FORCE_PD_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_freq_mem_force_pu"]
     #[inline(always)]
     #[must_use]
-    pub fn freq_mem_force_pu(&mut self) -> FREQ_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC, 6> {
-        FREQ_MEM_FORCE_PU_W::new(self)
+    pub fn freq_mem_force_pu(&mut self) -> FREQ_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
+        FREQ_MEM_FORCE_PU_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_freq_mem_force_pd"]
     #[inline(always)]
     #[must_use]
-    pub fn freq_mem_force_pd(&mut self) -> FREQ_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC, 7> {
-        FREQ_MEM_FORCE_PD_W::new(self)
+    pub fn freq_mem_force_pd(&mut self) -> FREQ_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
+        FREQ_MEM_FORCE_PD_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

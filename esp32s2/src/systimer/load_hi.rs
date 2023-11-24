@@ -5,7 +5,7 @@ pub type W = crate::W<LOAD_HI_SPEC>;
 #[doc = "Field `TIMER_LOAD_HI` reader - The value to be loaded into system timer, high 32 bits."]
 pub type TIMER_LOAD_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMER_LOAD_HI` writer - The value to be loaded into system timer, high 32 bits."]
-pub type TIMER_LOAD_HI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TIMER_LOAD_HI_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The value to be loaded into system timer, high 32 bits."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOAD_HI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - The value to be loaded into system timer, high 32 bits."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_load_hi(&mut self) -> TIMER_LOAD_HI_W<LOAD_HI_SPEC, 0> {
-        TIMER_LOAD_HI_W::new(self)
+    pub fn timer_load_hi(&mut self) -> TIMER_LOAD_HI_W<LOAD_HI_SPEC> {
+        TIMER_LOAD_HI_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

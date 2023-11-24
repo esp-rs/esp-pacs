@@ -5,91 +5,91 @@ pub type W = crate::W<CONF0_SPEC>;
 #[doc = "Field `PARITY` reader - This register is used to configure the parity check mode."]
 pub type PARITY_R = crate::BitReader;
 #[doc = "Field `PARITY` writer - This register is used to configure the parity check mode."]
-pub type PARITY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARITY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PARITY_EN` reader - Set this bit to enable uart parity check."]
 pub type PARITY_EN_R = crate::BitReader;
 #[doc = "Field `PARITY_EN` writer - Set this bit to enable uart parity check."]
-pub type PARITY_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARITY_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BIT_NUM` reader - This register is used to set the length of data."]
 pub type BIT_NUM_R = crate::FieldReader;
 #[doc = "Field `BIT_NUM` writer - This register is used to set the length of data."]
-pub type BIT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BIT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `STOP_BIT_NUM` reader - This register is used to set the length of stop bit."]
 pub type STOP_BIT_NUM_R = crate::FieldReader;
 #[doc = "Field `STOP_BIT_NUM` writer - This register is used to set the length of stop bit."]
-pub type STOP_BIT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type STOP_BIT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TXD_BRK` reader - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
 pub type TXD_BRK_R = crate::BitReader;
 #[doc = "Field `TXD_BRK` writer - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
-pub type TXD_BRK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXD_BRK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDA_DPLX` reader - Set this bit to enable IrDA loopback mode."]
 pub type IRDA_DPLX_R = crate::BitReader;
 #[doc = "Field `IRDA_DPLX` writer - Set this bit to enable IrDA loopback mode."]
-pub type IRDA_DPLX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDA_DPLX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDA_TX_EN` reader - This is the start enable bit for IrDA transmitter."]
 pub type IRDA_TX_EN_R = crate::BitReader;
 #[doc = "Field `IRDA_TX_EN` writer - This is the start enable bit for IrDA transmitter."]
-pub type IRDA_TX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDA_TX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDA_WCTL` reader - 1'h1: The IrDA transmitter's 11th bit is the same as 10th bit. 1'h0: Set IrDA transmitter's 11th bit to 0."]
 pub type IRDA_WCTL_R = crate::BitReader;
 #[doc = "Field `IRDA_WCTL` writer - 1'h1: The IrDA transmitter's 11th bit is the same as 10th bit. 1'h0: Set IrDA transmitter's 11th bit to 0."]
-pub type IRDA_WCTL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDA_WCTL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDA_TX_INV` reader - Set this bit to invert the level of IrDA transmitter."]
 pub type IRDA_TX_INV_R = crate::BitReader;
 #[doc = "Field `IRDA_TX_INV` writer - Set this bit to invert the level of IrDA transmitter."]
-pub type IRDA_TX_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDA_TX_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDA_RX_INV` reader - Set this bit to invert the level of IrDA receiver."]
 pub type IRDA_RX_INV_R = crate::BitReader;
 #[doc = "Field `IRDA_RX_INV` writer - Set this bit to invert the level of IrDA receiver."]
-pub type IRDA_RX_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDA_RX_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LOOPBACK` reader - Set this bit to enable uart loopback test mode."]
 pub type LOOPBACK_R = crate::BitReader;
 #[doc = "Field `LOOPBACK` writer - Set this bit to enable uart loopback test mode."]
-pub type LOOPBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOOPBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_FLOW_EN` reader - Set this bit to enable flow control function for transmitter."]
 pub type TX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `TX_FLOW_EN` writer - Set this bit to enable flow control function for transmitter."]
-pub type TX_FLOW_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FLOW_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDA_EN` reader - Set this bit to enable IrDA protocol."]
 pub type IRDA_EN_R = crate::BitReader;
 #[doc = "Field `IRDA_EN` writer - Set this bit to enable IrDA protocol."]
-pub type IRDA_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDA_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXD_INV` reader - Set this bit to inverse the level value of uart rxd signal."]
 pub type RXD_INV_R = crate::BitReader;
 #[doc = "Field `RXD_INV` writer - Set this bit to inverse the level value of uart rxd signal."]
-pub type RXD_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXD_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXD_INV` reader - Set this bit to inverse the level value of uart txd signal."]
 pub type TXD_INV_R = crate::BitReader;
 #[doc = "Field `TXD_INV` writer - Set this bit to inverse the level value of uart txd signal."]
-pub type TXD_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXD_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIS_RX_DAT_OVF` reader - Disable UART Rx data overflow detect."]
 pub type DIS_RX_DAT_OVF_R = crate::BitReader;
 #[doc = "Field `DIS_RX_DAT_OVF` writer - Disable UART Rx data overflow detect."]
-pub type DIS_RX_DAT_OVF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIS_RX_DAT_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERR_WR_MASK` reader - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
 pub type ERR_WR_MASK_R = crate::BitReader;
 #[doc = "Field `ERR_WR_MASK` writer - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
-pub type ERR_WR_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERR_WR_MASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AUTOBAUD_EN` reader - This is the enable bit for detecting baudrate."]
 pub type AUTOBAUD_EN_R = crate::BitReader;
 #[doc = "Field `AUTOBAUD_EN` writer - This is the enable bit for detecting baudrate."]
-pub type AUTOBAUD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AUTOBAUD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_CLK_EN` reader - UART memory clock gate enable signal."]
 pub type MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_EN` writer - UART memory clock gate enable signal."]
-pub type MEM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SW_RTS` reader - This register is used to configure the software rts signal which is used in software flow control."]
 pub type SW_RTS_R = crate::BitReader;
 #[doc = "Field `SW_RTS` writer - This register is used to configure the software rts signal which is used in software flow control."]
-pub type SW_RTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_RTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFIFO_RST` reader - Set this bit to reset the uart receive-FIFO."]
 pub type RXFIFO_RST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_RST` writer - Set this bit to reset the uart receive-FIFO."]
-pub type RXFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFIFO_RST` reader - Set this bit to reset the uart transmit-FIFO."]
 pub type TXFIFO_RST_R = crate::BitReader;
 #[doc = "Field `TXFIFO_RST` writer - Set this bit to reset the uart transmit-FIFO."]
-pub type TXFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This register is used to configure the parity check mode."]
     #[inline(always)]
@@ -240,141 +240,141 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This register is used to configure the parity check mode."]
     #[inline(always)]
     #[must_use]
-    pub fn parity(&mut self) -> PARITY_W<CONF0_SPEC, 0> {
-        PARITY_W::new(self)
+    pub fn parity(&mut self) -> PARITY_W<CONF0_SPEC> {
+        PARITY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable uart parity check."]
     #[inline(always)]
     #[must_use]
-    pub fn parity_en(&mut self) -> PARITY_EN_W<CONF0_SPEC, 1> {
-        PARITY_EN_W::new(self)
+    pub fn parity_en(&mut self) -> PARITY_EN_W<CONF0_SPEC> {
+        PARITY_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - This register is used to set the length of data."]
     #[inline(always)]
     #[must_use]
-    pub fn bit_num(&mut self) -> BIT_NUM_W<CONF0_SPEC, 2> {
-        BIT_NUM_W::new(self)
+    pub fn bit_num(&mut self) -> BIT_NUM_W<CONF0_SPEC> {
+        BIT_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - This register is used to set the length of stop bit."]
     #[inline(always)]
     #[must_use]
-    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<CONF0_SPEC, 4> {
-        STOP_BIT_NUM_W::new(self)
+    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<CONF0_SPEC> {
+        STOP_BIT_NUM_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
     #[inline(always)]
     #[must_use]
-    pub fn txd_brk(&mut self) -> TXD_BRK_W<CONF0_SPEC, 6> {
-        TXD_BRK_W::new(self)
+    pub fn txd_brk(&mut self) -> TXD_BRK_W<CONF0_SPEC> {
+        TXD_BRK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable IrDA loopback mode."]
     #[inline(always)]
     #[must_use]
-    pub fn irda_dplx(&mut self) -> IRDA_DPLX_W<CONF0_SPEC, 7> {
-        IRDA_DPLX_W::new(self)
+    pub fn irda_dplx(&mut self) -> IRDA_DPLX_W<CONF0_SPEC> {
+        IRDA_DPLX_W::new(self, 7)
     }
     #[doc = "Bit 8 - This is the start enable bit for IrDA transmitter."]
     #[inline(always)]
     #[must_use]
-    pub fn irda_tx_en(&mut self) -> IRDA_TX_EN_W<CONF0_SPEC, 8> {
-        IRDA_TX_EN_W::new(self)
+    pub fn irda_tx_en(&mut self) -> IRDA_TX_EN_W<CONF0_SPEC> {
+        IRDA_TX_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1'h1: The IrDA transmitter's 11th bit is the same as 10th bit. 1'h0: Set IrDA transmitter's 11th bit to 0."]
     #[inline(always)]
     #[must_use]
-    pub fn irda_wctl(&mut self) -> IRDA_WCTL_W<CONF0_SPEC, 9> {
-        IRDA_WCTL_W::new(self)
+    pub fn irda_wctl(&mut self) -> IRDA_WCTL_W<CONF0_SPEC> {
+        IRDA_WCTL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to invert the level of IrDA transmitter."]
     #[inline(always)]
     #[must_use]
-    pub fn irda_tx_inv(&mut self) -> IRDA_TX_INV_W<CONF0_SPEC, 10> {
-        IRDA_TX_INV_W::new(self)
+    pub fn irda_tx_inv(&mut self) -> IRDA_TX_INV_W<CONF0_SPEC> {
+        IRDA_TX_INV_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to invert the level of IrDA receiver."]
     #[inline(always)]
     #[must_use]
-    pub fn irda_rx_inv(&mut self) -> IRDA_RX_INV_W<CONF0_SPEC, 11> {
-        IRDA_RX_INV_W::new(self)
+    pub fn irda_rx_inv(&mut self) -> IRDA_RX_INV_W<CONF0_SPEC> {
+        IRDA_RX_INV_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to enable uart loopback test mode."]
     #[inline(always)]
     #[must_use]
-    pub fn loopback(&mut self) -> LOOPBACK_W<CONF0_SPEC, 12> {
-        LOOPBACK_W::new(self)
+    pub fn loopback(&mut self) -> LOOPBACK_W<CONF0_SPEC> {
+        LOOPBACK_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to enable flow control function for transmitter."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<CONF0_SPEC, 13> {
-        TX_FLOW_EN_W::new(self)
+    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<CONF0_SPEC> {
+        TX_FLOW_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to enable IrDA protocol."]
     #[inline(always)]
     #[must_use]
-    pub fn irda_en(&mut self) -> IRDA_EN_W<CONF0_SPEC, 14> {
-        IRDA_EN_W::new(self)
+    pub fn irda_en(&mut self) -> IRDA_EN_W<CONF0_SPEC> {
+        IRDA_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to inverse the level value of uart rxd signal."]
     #[inline(always)]
     #[must_use]
-    pub fn rxd_inv(&mut self) -> RXD_INV_W<CONF0_SPEC, 15> {
-        RXD_INV_W::new(self)
+    pub fn rxd_inv(&mut self) -> RXD_INV_W<CONF0_SPEC> {
+        RXD_INV_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to inverse the level value of uart txd signal."]
     #[inline(always)]
     #[must_use]
-    pub fn txd_inv(&mut self) -> TXD_INV_W<CONF0_SPEC, 16> {
-        TXD_INV_W::new(self)
+    pub fn txd_inv(&mut self) -> TXD_INV_W<CONF0_SPEC> {
+        TXD_INV_W::new(self, 16)
     }
     #[doc = "Bit 17 - Disable UART Rx data overflow detect."]
     #[inline(always)]
     #[must_use]
-    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<CONF0_SPEC, 17> {
-        DIS_RX_DAT_OVF_W::new(self)
+    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<CONF0_SPEC> {
+        DIS_RX_DAT_OVF_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
     #[inline(always)]
     #[must_use]
-    pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<CONF0_SPEC, 18> {
-        ERR_WR_MASK_W::new(self)
+    pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<CONF0_SPEC> {
+        ERR_WR_MASK_W::new(self, 18)
     }
     #[doc = "Bit 19 - This is the enable bit for detecting baudrate."]
     #[inline(always)]
     #[must_use]
-    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<CONF0_SPEC, 19> {
-        AUTOBAUD_EN_W::new(self)
+    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<CONF0_SPEC> {
+        AUTOBAUD_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - UART memory clock gate enable signal."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<CONF0_SPEC, 20> {
-        MEM_CLK_EN_W::new(self)
+    pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<CONF0_SPEC> {
+        MEM_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - This register is used to configure the software rts signal which is used in software flow control."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_rts(&mut self) -> SW_RTS_W<CONF0_SPEC, 21> {
-        SW_RTS_W::new(self)
+    pub fn sw_rts(&mut self) -> SW_RTS_W<CONF0_SPEC> {
+        SW_RTS_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to reset the uart receive-FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CONF0_SPEC, 22> {
-        RXFIFO_RST_W::new(self)
+    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CONF0_SPEC> {
+        RXFIFO_RST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set this bit to reset the uart transmit-FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<CONF0_SPEC, 23> {
-        TXFIFO_RST_W::new(self)
+    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<CONF0_SPEC> {
+        TXFIFO_RST_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

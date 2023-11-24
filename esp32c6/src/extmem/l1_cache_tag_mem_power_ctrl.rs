@@ -29,15 +29,15 @@ pub type L1_ICACHE3_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of L1-Cache tag memory. 1: close gating, 0: open clock gating."]
 pub type L1_CACHE_TAG_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_ON` writer - The bit is used to close clock gating of L1-Cache tag memory. 1: close gating, 0: open clock gating."]
-pub type L1_CACHE_TAG_MEM_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_TAG_MEM_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PD` reader - The bit is used to power L1-Cache tag memory down. 0: follow rtc_lslp, 1: power down"]
 pub type L1_CACHE_TAG_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PD` writer - The bit is used to power L1-Cache tag memory down. 0: follow rtc_lslp, 1: power down"]
-pub type L1_CACHE_TAG_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_TAG_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PU` reader - The bit is used to power L1-Cache tag memory up. 0: follow rtc_lslp, 1: power up"]
 pub type L1_CACHE_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PU` writer - The bit is used to power L1-Cache tag memory up. 0: follow rtc_lslp, 1: power up"]
-pub type L1_CACHE_TAG_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_TAG_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to close clock gating of L1-ICache0 tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
@@ -185,7 +185,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -194,24 +194,24 @@ impl W {
     #[must_use]
     pub fn l1_cache_tag_mem_force_on(
         &mut self,
-    ) -> L1_CACHE_TAG_MEM_FORCE_ON_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, 16> {
-        L1_CACHE_TAG_MEM_FORCE_ON_W::new(self)
+    ) -> L1_CACHE_TAG_MEM_FORCE_ON_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
+        L1_CACHE_TAG_MEM_FORCE_ON_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to power L1-Cache tag memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_tag_mem_force_pd(
         &mut self,
-    ) -> L1_CACHE_TAG_MEM_FORCE_PD_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, 17> {
-        L1_CACHE_TAG_MEM_FORCE_PD_W::new(self)
+    ) -> L1_CACHE_TAG_MEM_FORCE_PD_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
+        L1_CACHE_TAG_MEM_FORCE_PD_W::new(self, 17)
     }
     #[doc = "Bit 18 - The bit is used to power L1-Cache tag memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_tag_mem_force_pu(
         &mut self,
-    ) -> L1_CACHE_TAG_MEM_FORCE_PU_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, 18> {
-        L1_CACHE_TAG_MEM_FORCE_PU_W::new(self)
+    ) -> L1_CACHE_TAG_MEM_FORCE_PU_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
+        L1_CACHE_TAG_MEM_FORCE_PU_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

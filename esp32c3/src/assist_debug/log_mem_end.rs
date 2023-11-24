@@ -5,7 +5,7 @@ pub type W = crate::W<LOG_MEM_END_SPEC>;
 #[doc = "Field `LOG_MEM_END` reader - reg_log_mem_end"]
 pub type LOG_MEM_END_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_MEM_END` writer - reg_log_mem_end"]
-pub type LOG_MEM_END_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type LOG_MEM_END_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_log_mem_end"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOG_MEM_END_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - reg_log_mem_end"]
     #[inline(always)]
     #[must_use]
-    pub fn log_mem_end(&mut self) -> LOG_MEM_END_W<LOG_MEM_END_SPEC, 0> {
-        LOG_MEM_END_W::new(self)
+    pub fn log_mem_end(&mut self) -> LOG_MEM_END_W<LOG_MEM_END_SPEC> {
+        LOG_MEM_END_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

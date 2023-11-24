@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_CPU_INTR_FROM_CPU_1_MAP_SPEC>;
 #[doc = "Field `PRO_CPU_INTR_FROM_CPU_1_MAP` reader - "]
 pub type PRO_CPU_INTR_FROM_CPU_1_MAP_R = crate::FieldReader;
 #[doc = "Field `PRO_CPU_INTR_FROM_CPU_1_MAP` writer - "]
-pub type PRO_CPU_INTR_FROM_CPU_1_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PRO_CPU_INTR_FROM_CPU_1_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_INTR_FROM_CPU_1_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn pro_cpu_intr_from_cpu_1_map(
         &mut self,
-    ) -> PRO_CPU_INTR_FROM_CPU_1_MAP_W<PRO_CPU_INTR_FROM_CPU_1_MAP_SPEC, 0> {
-        PRO_CPU_INTR_FROM_CPU_1_MAP_W::new(self)
+    ) -> PRO_CPU_INTR_FROM_CPU_1_MAP_W<PRO_CPU_INTR_FROM_CPU_1_MAP_SPEC> {
+        PRO_CPU_INTR_FROM_CPU_1_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

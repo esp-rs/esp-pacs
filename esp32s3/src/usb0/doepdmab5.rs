@@ -5,7 +5,7 @@ pub type W = crate::W<DOEPDMAB5_SPEC>;
 #[doc = "Field `DMABUFFERADDR5` reader - "]
 pub type DMABUFFERADDR5_R = crate::FieldReader<u32>;
 #[doc = "Field `DMABUFFERADDR5` writer - "]
-pub type DMABUFFERADDR5_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type DMABUFFERADDR5_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DOEPDMAB5_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn dmabufferaddr5(&mut self) -> DMABUFFERADDR5_W<DOEPDMAB5_SPEC, 0> {
-        DMABUFFERADDR5_W::new(self)
+    pub fn dmabufferaddr5(&mut self) -> DMABUFFERADDR5_W<DOEPDMAB5_SPEC> {
+        DMABUFFERADDR5_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

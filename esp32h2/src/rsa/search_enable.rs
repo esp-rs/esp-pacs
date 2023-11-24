@@ -5,7 +5,7 @@ pub type W = crate::W<SEARCH_ENABLE_SPEC>;
 #[doc = "Field `SEARCH_ENABLE` reader - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
 pub type SEARCH_ENABLE_R = crate::BitReader;
 #[doc = "Field `SEARCH_ENABLE` writer - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
-pub type SEARCH_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEARCH_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SEARCH_ENABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
     #[inline(always)]
     #[must_use]
-    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<SEARCH_ENABLE_SPEC, 0> {
-        SEARCH_ENABLE_W::new(self)
+    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<SEARCH_ENABLE_SPEC> {
+        SEARCH_ENABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

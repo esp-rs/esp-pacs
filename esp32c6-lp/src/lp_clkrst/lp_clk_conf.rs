@@ -5,15 +5,15 @@ pub type W = crate::W<LP_CLK_CONF_SPEC>;
 #[doc = "Field `SLOW_CLK_SEL` reader - need_des"]
 pub type SLOW_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SLOW_CLK_SEL` writer - need_des"]
-pub type SLOW_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SLOW_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FAST_CLK_SEL` reader - need_des"]
 pub type FAST_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `FAST_CLK_SEL` writer - need_des"]
-pub type FAST_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FAST_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_PERI_DIV_NUM` reader - need_des"]
 pub type LP_PERI_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `LP_PERI_DIV_NUM` writer - need_des"]
-pub type LP_PERI_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LP_PERI_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
@@ -53,29 +53,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn slow_clk_sel(&mut self) -> SLOW_CLK_SEL_W<LP_CLK_CONF_SPEC, 0> {
-        SLOW_CLK_SEL_W::new(self)
+    pub fn slow_clk_sel(&mut self) -> SLOW_CLK_SEL_W<LP_CLK_CONF_SPEC> {
+        SLOW_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn fast_clk_sel(&mut self) -> FAST_CLK_SEL_W<LP_CLK_CONF_SPEC, 2> {
-        FAST_CLK_SEL_W::new(self)
+    pub fn fast_clk_sel(&mut self) -> FAST_CLK_SEL_W<LP_CLK_CONF_SPEC> {
+        FAST_CLK_SEL_W::new(self, 2)
     }
     #[doc = "Bits 3:10 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_peri_div_num(&mut self) -> LP_PERI_DIV_NUM_W<LP_CLK_CONF_SPEC, 3> {
-        LP_PERI_DIV_NUM_W::new(self)
+    pub fn lp_peri_div_num(&mut self) -> LP_PERI_DIV_NUM_W<LP_CLK_CONF_SPEC> {
+        LP_PERI_DIV_NUM_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -3,13 +3,13 @@ pub type R = crate::R<_0TOKEN1_SPEC>;
 #[doc = "Register `_0TOKEN1` writer"]
 pub type W = crate::W<_0TOKEN1_SPEC>;
 #[doc = "Field `SLC0_TOKEN1_WDATA` writer - "]
-pub type SLC0_TOKEN1_WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SLC0_TOKEN1_WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `SLC0_TOKEN1_WR` writer - "]
-pub type SLC0_TOKEN1_WR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TOKEN1_WR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TOKEN1_INC` writer - "]
-pub type SLC0_TOKEN1_INC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TOKEN1_INC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TOKEN1_INC_MORE` writer - "]
-pub type SLC0_TOKEN1_INC_MORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TOKEN1_INC_MORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TOKEN1` reader - "]
 pub type SLC0_TOKEN1_R = crate::FieldReader<u16>;
 impl R {
@@ -33,33 +33,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<_0TOKEN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_token1_wdata(&mut self) -> SLC0_TOKEN1_WDATA_W<_0TOKEN1_SPEC, 0> {
-        SLC0_TOKEN1_WDATA_W::new(self)
+    pub fn slc0_token1_wdata(&mut self) -> SLC0_TOKEN1_WDATA_W<_0TOKEN1_SPEC> {
+        SLC0_TOKEN1_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_token1_wr(&mut self) -> SLC0_TOKEN1_WR_W<_0TOKEN1_SPEC, 12> {
-        SLC0_TOKEN1_WR_W::new(self)
+    pub fn slc0_token1_wr(&mut self) -> SLC0_TOKEN1_WR_W<_0TOKEN1_SPEC> {
+        SLC0_TOKEN1_WR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_token1_inc(&mut self) -> SLC0_TOKEN1_INC_W<_0TOKEN1_SPEC, 13> {
-        SLC0_TOKEN1_INC_W::new(self)
+    pub fn slc0_token1_inc(&mut self) -> SLC0_TOKEN1_INC_W<_0TOKEN1_SPEC> {
+        SLC0_TOKEN1_INC_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_token1_inc_more(&mut self) -> SLC0_TOKEN1_INC_MORE_W<_0TOKEN1_SPEC, 14> {
-        SLC0_TOKEN1_INC_MORE_W::new(self)
+    pub fn slc0_token1_inc_more(&mut self) -> SLC0_TOKEN1_INC_MORE_W<_0TOKEN1_SPEC> {
+        SLC0_TOKEN1_INC_MORE_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

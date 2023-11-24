@@ -5,7 +5,7 @@ pub type W = crate::W<CH_HPOINT_SPEC>;
 #[doc = "Field `HPOINT` reader - The output value changes to high when the selected timers has reached the value specified by this register."]
 pub type HPOINT_R = crate::FieldReader<u16>;
 #[doc = "Field `HPOINT` writer - The output value changes to high when the selected timers has reached the value specified by this register."]
-pub type HPOINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type HPOINT_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
     #[doc = "Bits 0:13 - The output value changes to high when the selected timers has reached the value specified by this register."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_HPOINT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - The output value changes to high when the selected timers has reached the value specified by this register."]
     #[inline(always)]
     #[must_use]
-    pub fn hpoint(&mut self) -> HPOINT_W<CH_HPOINT_SPEC, 0> {
-        HPOINT_W::new(self)
+    pub fn hpoint(&mut self) -> HPOINT_W<CH_HPOINT_SPEC> {
+        HPOINT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

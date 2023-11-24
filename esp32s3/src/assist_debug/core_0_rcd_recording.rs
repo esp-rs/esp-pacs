@@ -5,7 +5,7 @@ pub type W = crate::W<CORE_0_RCD_RECORDING_SPEC>;
 #[doc = "Field `CORE_0_RCD_RECORDING` reader - Pdebug record enable,set 1 to record core0 pdebug interface signal"]
 pub type CORE_0_RCD_RECORDING_R = crate::BitReader;
 #[doc = "Field `CORE_0_RCD_RECORDING` writer - Pdebug record enable,set 1 to record core0 pdebug interface signal"]
-pub type CORE_0_RCD_RECORDING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_RCD_RECORDING_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Pdebug record enable,set 1 to record core0 pdebug interface signal"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_RCD_RECORDING_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Pdebug record enable,set 1 to record core0 pdebug interface signal"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_rcd_recording(&mut self) -> CORE_0_RCD_RECORDING_W<CORE_0_RCD_RECORDING_SPEC, 0> {
-        CORE_0_RCD_RECORDING_W::new(self)
+    pub fn core_0_rcd_recording(&mut self) -> CORE_0_RCD_RECORDING_W<CORE_0_RCD_RECORDING_SPEC> {
+        CORE_0_RCD_RECORDING_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

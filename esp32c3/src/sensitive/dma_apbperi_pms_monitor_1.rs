@@ -5,11 +5,11 @@ pub type W = crate::W<DMA_APBPERI_PMS_MONITOR_1_SPEC>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR` reader - dma_apbperi_pms_monitor_violate_clr"]
 pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R = crate::BitReader;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR` writer - dma_apbperi_pms_monitor_violate_clr"]
-pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_EN` reader - dma_apbperi_pms_monitor_violate_en"]
 pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R = crate::BitReader;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_EN` writer - dma_apbperi_pms_monitor_violate_en"]
-pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - dma_apbperi_pms_monitor_violate_clr"]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_PMS_MONITOR_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn dma_apbperi_pms_monitor_violate_clr(
         &mut self,
-    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<DMA_APBPERI_PMS_MONITOR_1_SPEC, 0> {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W::new(self)
+    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<DMA_APBPERI_PMS_MONITOR_1_SPEC> {
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - dma_apbperi_pms_monitor_violate_en"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_pms_monitor_violate_en(
         &mut self,
-    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<DMA_APBPERI_PMS_MONITOR_1_SPEC, 1> {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W::new(self)
+    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<DMA_APBPERI_PMS_MONITOR_1_SPEC> {
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

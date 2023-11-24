@@ -5,7 +5,7 @@ pub type W = crate::W<GPIO_STATUS_SPEC>;
 #[doc = "Field `GPIO_STATUS_INTERRUPT` reader - Interrupt enable register."]
 pub type GPIO_STATUS_INTERRUPT_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_STATUS_INTERRUPT` writer - Interrupt enable register."]
-pub type GPIO_STATUS_INTERRUPT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type GPIO_STATUS_INTERRUPT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Interrupt enable register."]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Interrupt enable register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_status_interrupt(&mut self) -> GPIO_STATUS_INTERRUPT_W<GPIO_STATUS_SPEC, 0> {
-        GPIO_STATUS_INTERRUPT_W::new(self)
+    pub fn gpio_status_interrupt(&mut self) -> GPIO_STATUS_INTERRUPT_W<GPIO_STATUS_SPEC> {
+        GPIO_STATUS_INTERRUPT_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

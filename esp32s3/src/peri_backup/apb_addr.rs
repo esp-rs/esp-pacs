@@ -5,7 +5,7 @@ pub type W = crate::W<APB_ADDR_SPEC>;
 #[doc = "Field `APB_START_ADDR` reader - x"]
 pub type APB_START_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `APB_START_ADDR` writer - x"]
-pub type APB_START_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type APB_START_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_start_addr(&mut self) -> APB_START_ADDR_W<APB_ADDR_SPEC, 0> {
-        APB_START_ADDR_W::new(self)
+    pub fn apb_start_addr(&mut self) -> APB_START_ADDR_W<APB_ADDR_SPEC> {
+        APB_START_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

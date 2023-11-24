@@ -5,19 +5,19 @@ pub type W = crate::W<GEN1_STMP_CFG_SPEC>;
 #[doc = "Field `GEN1_A_UPMETHOD` reader - "]
 pub type GEN1_A_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN1_A_UPMETHOD` writer - "]
-pub type GEN1_A_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GEN1_A_UPMETHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GEN1_B_UPMETHOD` reader - "]
 pub type GEN1_B_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN1_B_UPMETHOD` writer - "]
-pub type GEN1_B_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GEN1_B_UPMETHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GEN1_A_SHDW_FULL` reader - "]
 pub type GEN1_A_SHDW_FULL_R = crate::BitReader;
 #[doc = "Field `GEN1_A_SHDW_FULL` writer - "]
-pub type GEN1_A_SHDW_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GEN1_A_SHDW_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GEN1_B_SHDW_FULL` reader - "]
 pub type GEN1_B_SHDW_FULL_R = crate::BitReader;
 #[doc = "Field `GEN1_B_SHDW_FULL` writer - "]
-pub type GEN1_B_SHDW_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GEN1_B_SHDW_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GEN1_STMP_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
     #[must_use]
-    pub fn gen1_a_upmethod(&mut self) -> GEN1_A_UPMETHOD_W<GEN1_STMP_CFG_SPEC, 0> {
-        GEN1_A_UPMETHOD_W::new(self)
+    pub fn gen1_a_upmethod(&mut self) -> GEN1_A_UPMETHOD_W<GEN1_STMP_CFG_SPEC> {
+        GEN1_A_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     #[must_use]
-    pub fn gen1_b_upmethod(&mut self) -> GEN1_B_UPMETHOD_W<GEN1_STMP_CFG_SPEC, 4> {
-        GEN1_B_UPMETHOD_W::new(self)
+    pub fn gen1_b_upmethod(&mut self) -> GEN1_B_UPMETHOD_W<GEN1_STMP_CFG_SPEC> {
+        GEN1_B_UPMETHOD_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn gen1_a_shdw_full(&mut self) -> GEN1_A_SHDW_FULL_W<GEN1_STMP_CFG_SPEC, 8> {
-        GEN1_A_SHDW_FULL_W::new(self)
+    pub fn gen1_a_shdw_full(&mut self) -> GEN1_A_SHDW_FULL_W<GEN1_STMP_CFG_SPEC> {
+        GEN1_A_SHDW_FULL_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn gen1_b_shdw_full(&mut self) -> GEN1_B_SHDW_FULL_W<GEN1_STMP_CFG_SPEC, 9> {
-        GEN1_B_SHDW_FULL_W::new(self)
+    pub fn gen1_b_shdw_full(&mut self) -> GEN1_B_SHDW_FULL_W<GEN1_STMP_CFG_SPEC> {
+        GEN1_B_SHDW_FULL_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

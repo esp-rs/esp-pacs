@@ -5,35 +5,35 @@ pub type W = crate::W<PIN_SPEC>;
 #[doc = "Field `CS0_DIS` reader - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin"]
 pub type CS0_DIS_R = crate::BitReader;
 #[doc = "Field `CS0_DIS` writer - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin"]
-pub type CS0_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS0_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS1_DIS` reader - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin"]
 pub type CS1_DIS_R = crate::BitReader;
 #[doc = "Field `CS1_DIS` writer - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin"]
-pub type CS1_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS1_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS2_DIS` reader - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin"]
 pub type CS2_DIS_R = crate::BitReader;
 #[doc = "Field `CS2_DIS` writer - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin"]
-pub type CS2_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS2_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CK_DIS` reader - 1: spi clk out disable 0: spi clk out enable"]
 pub type CK_DIS_R = crate::BitReader;
 #[doc = "Field `CK_DIS` writer - 1: spi clk out disable 0: spi clk out enable"]
-pub type CK_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CK_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASTER_CS_POL` reader - In the master mode the bits are the polarity of spi cs line the value is equivalent to spi_cs ^ spi_master_cs_pol."]
 pub type MASTER_CS_POL_R = crate::FieldReader;
 #[doc = "Field `MASTER_CS_POL` writer - In the master mode the bits are the polarity of spi cs line the value is equivalent to spi_cs ^ spi_master_cs_pol."]
-pub type MASTER_CS_POL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MASTER_CS_POL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `MASTER_CK_SEL` reader - In the master mode spi cs line is enable as spi clk it is combined with spi_cs0_dis spi_cs1_dis spi_cs2_dis."]
 pub type MASTER_CK_SEL_R = crate::FieldReader;
 #[doc = "Field `MASTER_CK_SEL` writer - In the master mode spi cs line is enable as spi clk it is combined with spi_cs0_dis spi_cs1_dis spi_cs2_dis."]
-pub type MASTER_CK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MASTER_CK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
 pub type CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub type CK_IDLE_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CK_IDLE_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set."]
 pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - spi cs line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS_KEEP_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin"]
     #[inline(always)]
@@ -106,57 +106,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PIN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin"]
     #[inline(always)]
     #[must_use]
-    pub fn cs0_dis(&mut self) -> CS0_DIS_W<PIN_SPEC, 0> {
-        CS0_DIS_W::new(self)
+    pub fn cs0_dis(&mut self) -> CS0_DIS_W<PIN_SPEC> {
+        CS0_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin"]
     #[inline(always)]
     #[must_use]
-    pub fn cs1_dis(&mut self) -> CS1_DIS_W<PIN_SPEC, 1> {
-        CS1_DIS_W::new(self)
+    pub fn cs1_dis(&mut self) -> CS1_DIS_W<PIN_SPEC> {
+        CS1_DIS_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin"]
     #[inline(always)]
     #[must_use]
-    pub fn cs2_dis(&mut self) -> CS2_DIS_W<PIN_SPEC, 2> {
-        CS2_DIS_W::new(self)
+    pub fn cs2_dis(&mut self) -> CS2_DIS_W<PIN_SPEC> {
+        CS2_DIS_W::new(self, 2)
     }
     #[doc = "Bit 5 - 1: spi clk out disable 0: spi clk out enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ck_dis(&mut self) -> CK_DIS_W<PIN_SPEC, 5> {
-        CK_DIS_W::new(self)
+    pub fn ck_dis(&mut self) -> CK_DIS_W<PIN_SPEC> {
+        CK_DIS_W::new(self, 5)
     }
     #[doc = "Bits 6:8 - In the master mode the bits are the polarity of spi cs line the value is equivalent to spi_cs ^ spi_master_cs_pol."]
     #[inline(always)]
     #[must_use]
-    pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<PIN_SPEC, 6> {
-        MASTER_CS_POL_W::new(self)
+    pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<PIN_SPEC> {
+        MASTER_CS_POL_W::new(self, 6)
     }
     #[doc = "Bits 11:13 - In the master mode spi cs line is enable as spi clk it is combined with spi_cs0_dis spi_cs1_dis spi_cs2_dis."]
     #[inline(always)]
     #[must_use]
-    pub fn master_ck_sel(&mut self) -> MASTER_CK_SEL_W<PIN_SPEC, 11> {
-        MASTER_CK_SEL_W::new(self)
+    pub fn master_ck_sel(&mut self) -> MASTER_CK_SEL_W<PIN_SPEC> {
+        MASTER_CK_SEL_W::new(self, 11)
     }
     #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
     #[must_use]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<PIN_SPEC, 29> {
-        CK_IDLE_EDGE_W::new(self)
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<PIN_SPEC> {
+        CK_IDLE_EDGE_W::new(self, 29)
     }
     #[doc = "Bit 30 - spi cs line keep low when the bit is set."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<PIN_SPEC, 30> {
-        CS_KEEP_ACTIVE_W::new(self)
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<PIN_SPEC> {
+        CS_KEEP_ACTIVE_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

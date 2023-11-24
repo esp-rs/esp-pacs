@@ -5,15 +5,15 @@ pub type W = crate::W<SPI_DMA_CHAN_SEL_SPEC>;
 #[doc = "Field `SPI1_DMA_CHAN_SEL` reader - "]
 pub type SPI1_DMA_CHAN_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI1_DMA_CHAN_SEL` writer - "]
-pub type SPI1_DMA_CHAN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI1_DMA_CHAN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI2_DMA_CHAN_SEL` reader - "]
 pub type SPI2_DMA_CHAN_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI2_DMA_CHAN_SEL` writer - "]
-pub type SPI2_DMA_CHAN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI2_DMA_CHAN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI3_DMA_CHAN_SEL` reader - "]
 pub type SPI3_DMA_CHAN_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI3_DMA_CHAN_SEL` writer - "]
-pub type SPI3_DMA_CHAN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI3_DMA_CHAN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_DMA_CHAN_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1_dma_chan_sel(&mut self) -> SPI1_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC, 0> {
-        SPI1_DMA_CHAN_SEL_W::new(self)
+    pub fn spi1_dma_chan_sel(&mut self) -> SPI1_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC> {
+        SPI1_DMA_CHAN_SEL_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_dma_chan_sel(&mut self) -> SPI2_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC, 2> {
-        SPI2_DMA_CHAN_SEL_W::new(self)
+    pub fn spi2_dma_chan_sel(&mut self) -> SPI2_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC> {
+        SPI2_DMA_CHAN_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     #[must_use]
-    pub fn spi3_dma_chan_sel(&mut self) -> SPI3_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC, 4> {
-        SPI3_DMA_CHAN_SEL_W::new(self)
+    pub fn spi3_dma_chan_sel(&mut self) -> SPI3_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC> {
+        SPI3_DMA_CHAN_SEL_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

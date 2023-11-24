@@ -5,11 +5,11 @@ pub type W = crate::W<APB_CONF_SPEC>;
 #[doc = "Field `APB_FIFO_MASK` reader - Set this bit to disable apb fifo access"]
 pub type APB_FIFO_MASK_R = crate::BitReader;
 #[doc = "Field `APB_FIFO_MASK` writer - Set this bit to disable apb fifo access"]
-pub type APB_FIFO_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_FIFO_MASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
 pub type MEM_TX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
-pub type MEM_TX_WRAP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_TX_WRAP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to disable apb fifo access"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to disable apb fifo access"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<APB_CONF_SPEC, 0> {
-        APB_FIFO_MASK_W::new(self)
+    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<APB_CONF_SPEC> {
+        APB_FIFO_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<APB_CONF_SPEC, 1> {
-        MEM_TX_WRAP_EN_W::new(self)
+    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<APB_CONF_SPEC> {
+        MEM_TX_WRAP_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<PRO_CPU_RECORD_CTRL_SPEC>;
 #[doc = "Field `PRO_CPU_RECORD_ENABLE` reader - "]
 pub type PRO_CPU_RECORD_ENABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_RECORD_ENABLE` writer - "]
-pub type PRO_CPU_RECORD_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_RECORD_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CPU_RECORD_DISABLE` reader - "]
 pub type PRO_CPU_RECORD_DISABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_RECORD_DISABLE` writer - "]
-pub type PRO_CPU_RECORD_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_RECORD_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CPU_PDEBUG_ENABLE` reader - "]
 pub type PRO_CPU_PDEBUG_ENABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_PDEBUG_ENABLE` writer - "]
-pub type PRO_CPU_PDEBUG_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_PDEBUG_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -53,33 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_record_enable(
-        &mut self,
-    ) -> PRO_CPU_RECORD_ENABLE_W<PRO_CPU_RECORD_CTRL_SPEC, 0> {
-        PRO_CPU_RECORD_ENABLE_W::new(self)
+    pub fn pro_cpu_record_enable(&mut self) -> PRO_CPU_RECORD_ENABLE_W<PRO_CPU_RECORD_CTRL_SPEC> {
+        PRO_CPU_RECORD_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_record_disable(
-        &mut self,
-    ) -> PRO_CPU_RECORD_DISABLE_W<PRO_CPU_RECORD_CTRL_SPEC, 4> {
-        PRO_CPU_RECORD_DISABLE_W::new(self)
+    pub fn pro_cpu_record_disable(&mut self) -> PRO_CPU_RECORD_DISABLE_W<PRO_CPU_RECORD_CTRL_SPEC> {
+        PRO_CPU_RECORD_DISABLE_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cpu_pdebug_enable(
-        &mut self,
-    ) -> PRO_CPU_PDEBUG_ENABLE_W<PRO_CPU_RECORD_CTRL_SPEC, 8> {
-        PRO_CPU_PDEBUG_ENABLE_W::new(self)
+    pub fn pro_cpu_pdebug_enable(&mut self) -> PRO_CPU_PDEBUG_ENABLE_W<PRO_CPU_RECORD_CTRL_SPEC> {
+        PRO_CPU_PDEBUG_ENABLE_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

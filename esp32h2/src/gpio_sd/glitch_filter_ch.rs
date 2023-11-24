@@ -5,19 +5,19 @@ pub type W = crate::W<GLITCH_FILTER_CH_SPEC>;
 #[doc = "Field `FILTER_CH0_EN` reader - Glitch Filter channel enable bit."]
 pub type FILTER_CH0_EN_R = crate::BitReader;
 #[doc = "Field `FILTER_CH0_EN` writer - Glitch Filter channel enable bit."]
-pub type FILTER_CH0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FILTER_CH0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FILTER_CH0_INPUT_IO_NUM` reader - Glitch Filter input io number."]
 pub type FILTER_CH0_INPUT_IO_NUM_R = crate::FieldReader;
 #[doc = "Field `FILTER_CH0_INPUT_IO_NUM` writer - Glitch Filter input io number."]
-pub type FILTER_CH0_INPUT_IO_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type FILTER_CH0_INPUT_IO_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `FILTER_CH0_WINDOW_THRES` reader - Glitch Filter window threshold."]
 pub type FILTER_CH0_WINDOW_THRES_R = crate::FieldReader;
 #[doc = "Field `FILTER_CH0_WINDOW_THRES` writer - Glitch Filter window threshold."]
-pub type FILTER_CH0_WINDOW_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type FILTER_CH0_WINDOW_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `FILTER_CH0_WINDOW_WIDTH` reader - Glitch Filter window width."]
 pub type FILTER_CH0_WINDOW_WIDTH_R = crate::FieldReader;
 #[doc = "Field `FILTER_CH0_WINDOW_WIDTH` writer - Glitch Filter window width."]
-pub type FILTER_CH0_WINDOW_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type FILTER_CH0_WINDOW_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bit 0 - Glitch Filter channel enable bit."]
     #[inline(always)]
@@ -66,39 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GLITCH_FILTER_CH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Glitch Filter channel enable bit."]
     #[inline(always)]
     #[must_use]
-    pub fn filter_ch0_en(&mut self) -> FILTER_CH0_EN_W<GLITCH_FILTER_CH_SPEC, 0> {
-        FILTER_CH0_EN_W::new(self)
+    pub fn filter_ch0_en(&mut self) -> FILTER_CH0_EN_W<GLITCH_FILTER_CH_SPEC> {
+        FILTER_CH0_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:6 - Glitch Filter input io number."]
     #[inline(always)]
     #[must_use]
-    pub fn filter_ch0_input_io_num(
-        &mut self,
-    ) -> FILTER_CH0_INPUT_IO_NUM_W<GLITCH_FILTER_CH_SPEC, 1> {
-        FILTER_CH0_INPUT_IO_NUM_W::new(self)
+    pub fn filter_ch0_input_io_num(&mut self) -> FILTER_CH0_INPUT_IO_NUM_W<GLITCH_FILTER_CH_SPEC> {
+        FILTER_CH0_INPUT_IO_NUM_W::new(self, 1)
     }
     #[doc = "Bits 7:12 - Glitch Filter window threshold."]
     #[inline(always)]
     #[must_use]
-    pub fn filter_ch0_window_thres(
-        &mut self,
-    ) -> FILTER_CH0_WINDOW_THRES_W<GLITCH_FILTER_CH_SPEC, 7> {
-        FILTER_CH0_WINDOW_THRES_W::new(self)
+    pub fn filter_ch0_window_thres(&mut self) -> FILTER_CH0_WINDOW_THRES_W<GLITCH_FILTER_CH_SPEC> {
+        FILTER_CH0_WINDOW_THRES_W::new(self, 7)
     }
     #[doc = "Bits 13:18 - Glitch Filter window width."]
     #[inline(always)]
     #[must_use]
-    pub fn filter_ch0_window_width(
-        &mut self,
-    ) -> FILTER_CH0_WINDOW_WIDTH_W<GLITCH_FILTER_CH_SPEC, 13> {
-        FILTER_CH0_WINDOW_WIDTH_W::new(self)
+    pub fn filter_ch0_window_width(&mut self) -> FILTER_CH0_WINDOW_WIDTH_W<GLITCH_FILTER_CH_SPEC> {
+        FILTER_CH0_WINDOW_WIDTH_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<REDUNDANT_ECO_CTRL_SPEC>;
 #[doc = "Field `REDUNDANT_ECO_DRIVE` reader - reg_redundant_eco_drive"]
 pub type REDUNDANT_ECO_DRIVE_R = crate::BitReader;
 #[doc = "Field `REDUNDANT_ECO_DRIVE` writer - reg_redundant_eco_drive"]
-pub type REDUNDANT_ECO_DRIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REDUNDANT_ECO_DRIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REDUNDANT_ECO_RESULT` reader - reg_redundant_eco_result"]
 pub type REDUNDANT_ECO_RESULT_R = crate::BitReader;
 impl R {
@@ -38,15 +38,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REDUNDANT_ECO_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_redundant_eco_drive"]
     #[inline(always)]
     #[must_use]
-    pub fn redundant_eco_drive(&mut self) -> REDUNDANT_ECO_DRIVE_W<REDUNDANT_ECO_CTRL_SPEC, 0> {
-        REDUNDANT_ECO_DRIVE_W::new(self)
+    pub fn redundant_eco_drive(&mut self) -> REDUNDANT_ECO_DRIVE_W<REDUNDANT_ECO_CTRL_SPEC> {
+        REDUNDANT_ECO_DRIVE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<LR_VALUE_SPEC>;
 #[doc = "Field `GLOABLE_LR_VALUE` reader - backup gloable value"]
 pub type GLOABLE_LR_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `GLOABLE_LR_VALUE` writer - backup gloable value"]
-pub type GLOABLE_LR_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type GLOABLE_LR_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - backup gloable value"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LR_VALUE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - backup gloable value"]
     #[inline(always)]
     #[must_use]
-    pub fn gloable_lr_value(&mut self) -> GLOABLE_LR_VALUE_W<LR_VALUE_SPEC, 0> {
-        GLOABLE_LR_VALUE_W::new(self)
+    pub fn gloable_lr_value(&mut self) -> GLOABLE_LR_VALUE_W<LR_VALUE_SPEC> {
+        GLOABLE_LR_VALUE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

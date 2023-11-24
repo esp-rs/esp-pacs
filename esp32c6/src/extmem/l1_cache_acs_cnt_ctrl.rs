@@ -13,11 +13,11 @@ pub type L1_IBUS3_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_BUS0_CNT_ENA` reader - The bit is used to enable dbus0 counter in L1-DCache."]
 pub type L1_BUS0_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_BUS0_CNT_ENA` writer - The bit is used to enable dbus0 counter in L1-DCache."]
-pub type L1_BUS0_CNT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_BUS0_CNT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_BUS1_CNT_ENA` reader - The bit is used to enable dbus1 counter in L1-DCache."]
 pub type L1_BUS1_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_BUS1_CNT_ENA` writer - The bit is used to enable dbus1 counter in L1-DCache."]
-pub type L1_BUS1_CNT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_BUS1_CNT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_DBUS2_CNT_ENA` reader - Reserved"]
 pub type L1_DBUS2_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_DBUS3_CNT_ENA` reader - Reserved"]
@@ -31,9 +31,9 @@ pub type L1_IBUS2_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_IBUS3_CNT_CLR` reader - Reserved"]
 pub type L1_IBUS3_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_BUS0_CNT_CLR` writer - The bit is used to clear dbus0 counter in L1-DCache."]
-pub type L1_BUS0_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_BUS0_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_BUS1_CNT_CLR` writer - The bit is used to clear dbus1 counter in L1-DCache."]
-pub type L1_BUS1_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_BUS1_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_DBUS2_CNT_CLR` reader - Reserved"]
 pub type L1_DBUS2_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_DBUS3_CNT_CLR` reader - Reserved"]
@@ -176,33 +176,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_CNT_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 4 - The bit is used to enable dbus0 counter in L1-DCache."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_bus0_cnt_ena(&mut self) -> L1_BUS0_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC, 4> {
-        L1_BUS0_CNT_ENA_W::new(self)
+    pub fn l1_bus0_cnt_ena(&mut self) -> L1_BUS0_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+        L1_BUS0_CNT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to enable dbus1 counter in L1-DCache."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_bus1_cnt_ena(&mut self) -> L1_BUS1_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC, 5> {
-        L1_BUS1_CNT_ENA_W::new(self)
+    pub fn l1_bus1_cnt_ena(&mut self) -> L1_BUS1_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+        L1_BUS1_CNT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 20 - The bit is used to clear dbus0 counter in L1-DCache."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_bus0_cnt_clr(&mut self) -> L1_BUS0_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC, 20> {
-        L1_BUS0_CNT_CLR_W::new(self)
+    pub fn l1_bus0_cnt_clr(&mut self) -> L1_BUS0_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+        L1_BUS0_CNT_CLR_W::new(self, 20)
     }
     #[doc = "Bit 21 - The bit is used to clear dbus1 counter in L1-DCache."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_bus1_cnt_clr(&mut self) -> L1_BUS1_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC, 21> {
-        L1_BUS1_CNT_CLR_W::new(self)
+    pub fn l1_bus1_cnt_clr(&mut self) -> L1_BUS1_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+        L1_BUS1_CNT_CLR_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

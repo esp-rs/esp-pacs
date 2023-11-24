@@ -5,15 +5,15 @@ pub type W = crate::W<RTC_GPIO_PIN20_SPEC>;
 #[doc = "Field `PAD_DRIVER` reader - if set to 0: normal output, if set to 1: open drain"]
 pub type PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `PAD_DRIVER` writer - if set to 0: normal output, if set to 1: open drain"]
-pub type PAD_DRIVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_TYPE` reader - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
 pub type INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `INT_TYPE` writer - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
-pub type INT_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WAKEUP_ENABLE` reader - RTC GPIO wakeup enable bit"]
 pub type WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_ENABLE` writer - RTC GPIO wakeup enable bit"]
-pub type WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - if set to 0: normal output, if set to 1: open drain"]
     #[inline(always)]
@@ -47,29 +47,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_PIN20_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - if set to 0: normal output, if set to 1: open drain"]
     #[inline(always)]
     #[must_use]
-    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<RTC_GPIO_PIN20_SPEC, 2> {
-        PAD_DRIVER_W::new(self)
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<RTC_GPIO_PIN20_SPEC> {
+        PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9 - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
     #[inline(always)]
     #[must_use]
-    pub fn int_type(&mut self) -> INT_TYPE_W<RTC_GPIO_PIN20_SPEC, 7> {
-        INT_TYPE_W::new(self)
+    pub fn int_type(&mut self) -> INT_TYPE_W<RTC_GPIO_PIN20_SPEC> {
+        INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - RTC GPIO wakeup enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<RTC_GPIO_PIN20_SPEC, 10> {
-        WAKEUP_ENABLE_W::new(self)
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<RTC_GPIO_PIN20_SPEC> {
+        WAKEUP_ENABLE_W::new(self, 10)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -5,12 +5,11 @@ pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` reader - need_des"]
 pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` writer - need_des"]
-pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 28, O, u32>;
+pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` reader - need_des"]
 pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` writer - need_des"]
-pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:27 - need_des"]
     #[inline(always)]
@@ -41,23 +40,23 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_i2c_ana_mast_i2c_mat_date(&mut self) -> LP_I2C_ANA_MAST_I2C_MAT_DATE_W<DATE_SPEC, 0> {
-        LP_I2C_ANA_MAST_I2C_MAT_DATE_W::new(self)
+    pub fn lp_i2c_ana_mast_i2c_mat_date(&mut self) -> LP_I2C_ANA_MAST_I2C_MAT_DATE_W<DATE_SPEC> {
+        LP_I2C_ANA_MAST_I2C_MAT_DATE_W::new(self, 0)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn lp_i2c_ana_mast_i2c_mat_clk_en(
         &mut self,
-    ) -> LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<DATE_SPEC, 28> {
-        LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W::new(self)
+    ) -> LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<DATE_SPEC> {
+        LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

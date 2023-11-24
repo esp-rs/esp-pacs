@@ -5,19 +5,19 @@ pub type W = crate::W<HCTSIZ4_SPEC>;
 #[doc = "Field `H_XFERSIZE4` reader - "]
 pub type H_XFERSIZE4_R = crate::FieldReader<u32>;
 #[doc = "Field `H_XFERSIZE4` writer - "]
-pub type H_XFERSIZE4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 19, O, u32>;
+pub type H_XFERSIZE4_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
 #[doc = "Field `H_PKTCNT4` reader - "]
 pub type H_PKTCNT4_R = crate::FieldReader<u16>;
 #[doc = "Field `H_PKTCNT4` writer - "]
-pub type H_PKTCNT4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type H_PKTCNT4_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `H_PID4` reader - "]
 pub type H_PID4_R = crate::FieldReader;
 #[doc = "Field `H_PID4` writer - "]
-pub type H_PID4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type H_PID4_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `H_DOPNG4` reader - "]
 pub type H_DOPNG4_R = crate::BitReader;
 #[doc = "Field `H_DOPNG4` writer - "]
-pub type H_DOPNG4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DOPNG4_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:18"]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HCTSIZ4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:18"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xfersize4(&mut self) -> H_XFERSIZE4_W<HCTSIZ4_SPEC, 0> {
-        H_XFERSIZE4_W::new(self)
+    pub fn h_xfersize4(&mut self) -> H_XFERSIZE4_W<HCTSIZ4_SPEC> {
+        H_XFERSIZE4_W::new(self, 0)
     }
     #[doc = "Bits 19:28"]
     #[inline(always)]
     #[must_use]
-    pub fn h_pktcnt4(&mut self) -> H_PKTCNT4_W<HCTSIZ4_SPEC, 19> {
-        H_PKTCNT4_W::new(self)
+    pub fn h_pktcnt4(&mut self) -> H_PKTCNT4_W<HCTSIZ4_SPEC> {
+        H_PKTCNT4_W::new(self, 19)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
     #[must_use]
-    pub fn h_pid4(&mut self) -> H_PID4_W<HCTSIZ4_SPEC, 29> {
-        H_PID4_W::new(self)
+    pub fn h_pid4(&mut self) -> H_PID4_W<HCTSIZ4_SPEC> {
+        H_PID4_W::new(self, 29)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn h_dopng4(&mut self) -> H_DOPNG4_W<HCTSIZ4_SPEC, 31> {
-        H_DOPNG4_W::new(self)
+    pub fn h_dopng4(&mut self) -> H_DOPNG4_W<HCTSIZ4_SPEC> {
+        H_DOPNG4_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

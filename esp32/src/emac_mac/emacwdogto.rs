@@ -5,11 +5,11 @@ pub type W = crate::W<EMACWDOGTO_SPEC>;
 #[doc = "Field `WDOGTO` reader - When Bit\\[16\\] (PWE) is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset this field is used as watchdog timeout for a received frame. If the length of a received frame exceeds the value of this field such frame is terminated and declared as an error frame."]
 pub type WDOGTO_R = crate::FieldReader<u16>;
 #[doc = "Field `WDOGTO` writer - When Bit\\[16\\] (PWE) is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset this field is used as watchdog timeout for a received frame. If the length of a received frame exceeds the value of this field such frame is terminated and declared as an error frame."]
-pub type WDOGTO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type WDOGTO_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `PWDOGEN` reader - When this bit is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset the WTO field (Bits\\[13:0\\]) is used as watchdog timeout for a received frame. When this bit is cleared the watchdog timeout for a received frame is controlled by the setting of Bit\\[23\\] (WD) and Bit\\[20\\] (JE) in EMACCONFIG_REG."]
 pub type PWDOGEN_R = crate::BitReader;
 #[doc = "Field `PWDOGEN` writer - When this bit is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset the WTO field (Bits\\[13:0\\]) is used as watchdog timeout for a received frame. When this bit is cleared the watchdog timeout for a received frame is controlled by the setting of Bit\\[23\\] (WD) and Bit\\[20\\] (JE) in EMACCONFIG_REG."]
-pub type PWDOGEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWDOGEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:13 - When Bit\\[16\\] (PWE) is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset this field is used as watchdog timeout for a received frame. If the length of a received frame exceeds the value of this field such frame is terminated and declared as an error frame."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EMACWDOGTO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - When Bit\\[16\\] (PWE) is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset this field is used as watchdog timeout for a received frame. If the length of a received frame exceeds the value of this field such frame is terminated and declared as an error frame."]
     #[inline(always)]
     #[must_use]
-    pub fn wdogto(&mut self) -> WDOGTO_W<EMACWDOGTO_SPEC, 0> {
-        WDOGTO_W::new(self)
+    pub fn wdogto(&mut self) -> WDOGTO_W<EMACWDOGTO_SPEC> {
+        WDOGTO_W::new(self, 0)
     }
     #[doc = "Bit 16 - When this bit is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset the WTO field (Bits\\[13:0\\]) is used as watchdog timeout for a received frame. When this bit is cleared the watchdog timeout for a received frame is controlled by the setting of Bit\\[23\\] (WD) and Bit\\[20\\] (JE) in EMACCONFIG_REG."]
     #[inline(always)]
     #[must_use]
-    pub fn pwdogen(&mut self) -> PWDOGEN_W<EMACWDOGTO_SPEC, 16> {
-        PWDOGEN_W::new(self)
+    pub fn pwdogen(&mut self) -> PWDOGEN_W<EMACWDOGTO_SPEC> {
+        PWDOGEN_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

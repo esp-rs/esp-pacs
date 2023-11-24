@@ -5,11 +5,11 @@ pub type W = crate::W<SPI2_CLKM_CONF_SPEC>;
 #[doc = "Field `SPI2_CLKM_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
 pub type SPI2_CLKM_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI2_CLKM_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
-pub type SPI2_CLKM_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI2_CLKM_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI2_CLKM_EN` reader - Set 1 to enable spi2 function clock"]
 pub type SPI2_CLKM_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_CLKM_EN` writer - Set 1 to enable spi2 function clock"]
-pub type SPI2_CLKM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2_CLKM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI2_CLKM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_clkm_sel(&mut self) -> SPI2_CLKM_SEL_W<SPI2_CLKM_CONF_SPEC, 20> {
-        SPI2_CLKM_SEL_W::new(self)
+    pub fn spi2_clkm_sel(&mut self) -> SPI2_CLKM_SEL_W<SPI2_CLKM_CONF_SPEC> {
+        SPI2_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable spi2 function clock"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_clkm_en(&mut self) -> SPI2_CLKM_EN_W<SPI2_CLKM_CONF_SPEC, 22> {
-        SPI2_CLKM_EN_W::new(self)
+    pub fn spi2_clkm_en(&mut self) -> SPI2_CLKM_EN_W<SPI2_CLKM_CONF_SPEC> {
+        SPI2_CLKM_EN_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

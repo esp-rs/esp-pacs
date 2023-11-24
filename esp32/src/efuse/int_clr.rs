@@ -1,9 +1,9 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `READ_DONE_INT_CLR` writer - "]
-pub type READ_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READ_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PGM_DONE_INT_CLR` writer - "]
-pub type PGM_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PGM_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn read_done_int_clr(&mut self) -> READ_DONE_INT_CLR_W<INT_CLR_SPEC, 0> {
-        READ_DONE_INT_CLR_W::new(self)
+    pub fn read_done_int_clr(&mut self) -> READ_DONE_INT_CLR_W<INT_CLR_SPEC> {
+        READ_DONE_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn pgm_done_int_clr(&mut self) -> PGM_DONE_INT_CLR_W<INT_CLR_SPEC, 1> {
-        PGM_DONE_INT_CLR_W::new(self)
+    pub fn pgm_done_int_clr(&mut self) -> PGM_DONE_INT_CLR_W<INT_CLR_SPEC> {
+        PGM_DONE_INT_CLR_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

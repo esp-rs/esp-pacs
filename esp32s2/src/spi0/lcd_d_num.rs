@@ -5,23 +5,23 @@ pub type W = crate::W<LCD_D_NUM_SPEC>;
 #[doc = "Field `D_DQS_NUM` reader - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type D_DQS_NUM_R = crate::FieldReader;
 #[doc = "Field `D_DQS_NUM` writer - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_DQS_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type D_DQS_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `D_CD_NUM` reader - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type D_CD_NUM_R = crate::FieldReader;
 #[doc = "Field `D_CD_NUM` writer - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_CD_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type D_CD_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `D_DE_NUM` reader - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type D_DE_NUM_R = crate::FieldReader;
 #[doc = "Field `D_DE_NUM` writer - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_DE_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type D_DE_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `D_HSYNC_NUM` reader - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type D_HSYNC_NUM_R = crate::FieldReader;
 #[doc = "Field `D_HSYNC_NUM` writer - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_HSYNC_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type D_HSYNC_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `D_VSYNC_NUM` reader - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type D_VSYNC_NUM_R = crate::FieldReader;
 #[doc = "Field `D_VSYNC_NUM` writer - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_VSYNC_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type D_VSYNC_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
@@ -70,39 +70,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LCD_D_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn d_dqs_num(&mut self) -> D_DQS_NUM_W<LCD_D_NUM_SPEC, 0> {
-        D_DQS_NUM_W::new(self)
+    pub fn d_dqs_num(&mut self) -> D_DQS_NUM_W<LCD_D_NUM_SPEC> {
+        D_DQS_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn d_cd_num(&mut self) -> D_CD_NUM_W<LCD_D_NUM_SPEC, 2> {
-        D_CD_NUM_W::new(self)
+    pub fn d_cd_num(&mut self) -> D_CD_NUM_W<LCD_D_NUM_SPEC> {
+        D_CD_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn d_de_num(&mut self) -> D_DE_NUM_W<LCD_D_NUM_SPEC, 4> {
-        D_DE_NUM_W::new(self)
+    pub fn d_de_num(&mut self) -> D_DE_NUM_W<LCD_D_NUM_SPEC> {
+        D_DE_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn d_hsync_num(&mut self) -> D_HSYNC_NUM_W<LCD_D_NUM_SPEC, 6> {
-        D_HSYNC_NUM_W::new(self)
+    pub fn d_hsync_num(&mut self) -> D_HSYNC_NUM_W<LCD_D_NUM_SPEC> {
+        D_HSYNC_NUM_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn d_vsync_num(&mut self) -> D_VSYNC_NUM_W<LCD_D_NUM_SPEC, 8> {
-        D_VSYNC_NUM_W::new(self)
+    pub fn d_vsync_num(&mut self) -> D_VSYNC_NUM_W<LCD_D_NUM_SPEC> {
+        D_VSYNC_NUM_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

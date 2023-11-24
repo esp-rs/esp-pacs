@@ -5,73 +5,63 @@ pub type W = crate::W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - core0/core1's permission of data region0 of SRAM in world0."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` writer - core0/core1's permission of data region0 of SRAM in world0."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - core0/core1's permission of data region1 of SRAM in world0."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` writer - core0/core1's permission of data region1 of SRAM in world0."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - core0/core1's permission of data region2 of SRAM in world0."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` writer - core0/core1's permission of data region2 of SRAM in world0."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - core0/core1's permission of data region3 of SRAM in world0."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` writer - core0/core1's permission of data region3 of SRAM in world0."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0` reader - core0/core1's permission of dcache data sram block0 in world0."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0` writer - core0/core1's permission of dcache data sram block0 in world0."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1` reader - core0/core1's permission of dcache data sram block1 in world0."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1` writer - core0/core1's permission of dcache data sram block1 in world0."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` reader - core0/core1's permission of data region0 of SRAM in world1."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` writer - core0/core1's permission of data region0 of SRAM in world1."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` reader - core0/core1's permission of data region1 of SRAM in world1."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` writer - core0/core1's permission of data region1 of SRAM in world1."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` reader - core0/core1's permission of data region2 of SRAM in world1."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` writer - core0/core1's permission of data region2 of SRAM in world1."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` reader - core0/core1's permission of data region3 of SRAM in world1."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` writer - core0/core1's permission of data region3 of SRAM in world1."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0` reader - core0/core1's permission of dcache data sram block0 in world1."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0` writer - core0/core1's permission of dcache data sram block0 in world1."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1` reader - core0/core1's permission of dcache data sram block1 in world1."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1` writer - core0/core1's permission of dcache data sram block1 in world1."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` reader - core0/core1's permission(sotre,load) of rom in world0."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` writer - core0/core1's permission(sotre,load) of rom in world0."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS` reader - core0/core1's permission(sotre,load) of rom in world1."]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS` writer - core0/core1's permission(sotre,load) of rom in world1."]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - core0/core1's permission of data region0 of SRAM in world0."]
     #[inline(always)]
@@ -292,7 +282,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -301,32 +291,32 @@ impl W {
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_0(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 0> {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - core0/core1's permission of data region1 of SRAM in world0."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_1(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2> {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - core0/core1's permission of data region2 of SRAM in world0."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_2(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 4> {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - core0/core1's permission of data region3 of SRAM in world0."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_3(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 6> {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - core0/core1's permission of dcache data sram block0 in world0."]
     #[inline(always)]
@@ -335,9 +325,8 @@ impl W {
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
-        8,
     > {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W::new(self)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - core0/core1's permission of dcache data sram block1 in world0."]
     #[inline(always)]
@@ -346,45 +335,40 @@ impl W {
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W<
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
-        10,
     > {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W::new(self)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - core0/core1's permission of data region0 of SRAM in world1."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_0(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 12>
-    {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - core0/core1's permission of data region1 of SRAM in world1."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_1(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 14>
-    {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - core0/core1's permission of data region2 of SRAM in world1."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_2(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 16>
-    {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - core0/core1's permission of data region3 of SRAM in world1."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_3(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 18>
-    {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - core0/core1's permission of dcache data sram block0 in world1."]
     #[inline(always)]
@@ -393,9 +377,8 @@ impl W {
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
-        20,
     > {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W::new(self)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - core0/core1's permission of dcache data sram block1 in world1."]
     #[inline(always)]
@@ -404,25 +387,24 @@ impl W {
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W<
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
-        22,
     > {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W::new(self)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - core0/core1's permission(sotre,load) of rom in world0."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_rom_world_0_pms(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 24> {
-        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - core0/core1's permission(sotre,load) of rom in world1."]
     #[inline(always)]
     #[must_use]
     pub fn core_x_dram0_pms_constrain_rom_world_1_pms(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 26> {
-        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W::new(self)
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,35 +5,35 @@ pub type W = crate::W<L2_CACHE_ACS_CNT_INT_RAW_SPEC>;
 #[doc = "Field `L2_IBUS0_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-ICache0."]
 pub type L2_IBUS0_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS0_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-ICache0."]
-pub type L2_IBUS0_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_IBUS0_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_IBUS1_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-ICache1."]
 pub type L2_IBUS1_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS1_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-ICache1."]
-pub type L2_IBUS1_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_IBUS1_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_IBUS2_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-ICache2."]
 pub type L2_IBUS2_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS2_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-ICache2."]
-pub type L2_IBUS2_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_IBUS2_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_IBUS3_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-ICache3."]
 pub type L2_IBUS3_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS3_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-ICache3."]
-pub type L2_IBUS3_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_IBUS3_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_DBUS0_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-DCache."]
 pub type L2_DBUS0_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS0_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-DCache."]
-pub type L2_DBUS0_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_DBUS0_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_DBUS1_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-DCache."]
 pub type L2_DBUS1_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS1_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-DCache."]
-pub type L2_DBUS1_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_DBUS1_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_DBUS2_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-DCache."]
 pub type L2_DBUS2_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS2_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-DCache."]
-pub type L2_DBUS2_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_DBUS2_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_DBUS3_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-DCache."]
 pub type L2_DBUS3_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS3_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-DCache."]
-pub type L2_DBUS3_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_DBUS3_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 8 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-ICache0."]
     #[inline(always)]
@@ -118,7 +118,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -127,64 +127,64 @@ impl W {
     #[must_use]
     pub fn l2_ibus0_ovf_int_raw(
         &mut self,
-    ) -> L2_IBUS0_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 8> {
-        L2_IBUS0_OVF_INT_RAW_W::new(self)
+    ) -> L2_IBUS0_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_IBUS0_OVF_INT_RAW_W::new(self, 8)
     }
     #[doc = "Bit 9 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-ICache1."]
     #[inline(always)]
     #[must_use]
     pub fn l2_ibus1_ovf_int_raw(
         &mut self,
-    ) -> L2_IBUS1_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 9> {
-        L2_IBUS1_OVF_INT_RAW_W::new(self)
+    ) -> L2_IBUS1_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_IBUS1_OVF_INT_RAW_W::new(self, 9)
     }
     #[doc = "Bit 10 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-ICache2."]
     #[inline(always)]
     #[must_use]
     pub fn l2_ibus2_ovf_int_raw(
         &mut self,
-    ) -> L2_IBUS2_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 10> {
-        L2_IBUS2_OVF_INT_RAW_W::new(self)
+    ) -> L2_IBUS2_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_IBUS2_OVF_INT_RAW_W::new(self, 10)
     }
     #[doc = "Bit 11 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-ICache3."]
     #[inline(always)]
     #[must_use]
     pub fn l2_ibus3_ovf_int_raw(
         &mut self,
-    ) -> L2_IBUS3_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 11> {
-        L2_IBUS3_OVF_INT_RAW_W::new(self)
+    ) -> L2_IBUS3_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_IBUS3_OVF_INT_RAW_W::new(self, 11)
     }
     #[doc = "Bit 12 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-DCache."]
     #[inline(always)]
     #[must_use]
     pub fn l2_dbus0_ovf_int_raw(
         &mut self,
-    ) -> L2_DBUS0_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 12> {
-        L2_DBUS0_OVF_INT_RAW_W::new(self)
+    ) -> L2_DBUS0_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_DBUS0_OVF_INT_RAW_W::new(self, 12)
     }
     #[doc = "Bit 13 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-DCache."]
     #[inline(always)]
     #[must_use]
     pub fn l2_dbus1_ovf_int_raw(
         &mut self,
-    ) -> L2_DBUS1_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 13> {
-        L2_DBUS1_OVF_INT_RAW_W::new(self)
+    ) -> L2_DBUS1_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_DBUS1_OVF_INT_RAW_W::new(self, 13)
     }
     #[doc = "Bit 14 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-DCache."]
     #[inline(always)]
     #[must_use]
     pub fn l2_dbus2_ovf_int_raw(
         &mut self,
-    ) -> L2_DBUS2_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 14> {
-        L2_DBUS2_OVF_INT_RAW_W::new(self)
+    ) -> L2_DBUS2_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_DBUS2_OVF_INT_RAW_W::new(self, 14)
     }
     #[doc = "Bit 15 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-DCache."]
     #[inline(always)]
     #[must_use]
     pub fn l2_dbus3_ovf_int_raw(
         &mut self,
-    ) -> L2_DBUS3_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC, 15> {
-        L2_DBUS3_OVF_INT_RAW_W::new(self)
+    ) -> L2_DBUS3_OVF_INT_RAW_W<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+        L2_DBUS3_OVF_INT_RAW_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

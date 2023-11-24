@@ -1,7 +1,7 @@
 #[doc = "Register `MEM_ADDR_UPDATE` writer"]
 pub type W = crate::W<MEM_ADDR_UPDATE_SPEC>;
 #[doc = "Field `MEM_CURRENT_ADDR_UPDATE` writer - when set this reg, the current_mem_addr will update to start_addr"]
-pub type MEM_CURRENT_ADDR_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_CURRENT_ADDR_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_ADDR_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,10 +12,8 @@ impl W {
     #[doc = "Bit 0 - when set this reg, the current_mem_addr will update to start_addr"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_current_addr_update(
-        &mut self,
-    ) -> MEM_CURRENT_ADDR_UPDATE_W<MEM_ADDR_UPDATE_SPEC, 0> {
-        MEM_CURRENT_ADDR_UPDATE_W::new(self)
+    pub fn mem_current_addr_update(&mut self) -> MEM_CURRENT_ADDR_UPDATE_W<MEM_ADDR_UPDATE_SPEC> {
+        MEM_CURRENT_ADDR_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

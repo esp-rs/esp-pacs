@@ -5,47 +5,47 @@ pub type W = crate::W<EX_PHYINF_CONF_SPEC>;
 #[doc = "Field `INT_REVMII_RX_CLK_SEL` reader - "]
 pub type INT_REVMII_RX_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `INT_REVMII_RX_CLK_SEL` writer - "]
-pub type INT_REVMII_RX_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_REVMII_RX_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXT_REVMII_RX_CLK_SEL` reader - "]
 pub type EXT_REVMII_RX_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `EXT_REVMII_RX_CLK_SEL` writer - "]
-pub type EXT_REVMII_RX_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_REVMII_RX_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SBD_FLOWCTRL` reader - "]
 pub type SBD_FLOWCTRL_R = crate::BitReader;
 #[doc = "Field `SBD_FLOWCTRL` writer - "]
-pub type SBD_FLOWCTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SBD_FLOWCTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE_PHY_ADDR` reader - "]
 pub type CORE_PHY_ADDR_R = crate::FieldReader;
 #[doc = "Field `CORE_PHY_ADDR` writer - "]
-pub type CORE_PHY_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CORE_PHY_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `REVMII_PHY_ADDR` reader - "]
 pub type REVMII_PHY_ADDR_R = crate::FieldReader;
 #[doc = "Field `REVMII_PHY_ADDR` writer - "]
-pub type REVMII_PHY_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type REVMII_PHY_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PHY_INTF_SEL` reader - "]
 pub type PHY_INTF_SEL_R = crate::FieldReader;
 #[doc = "Field `PHY_INTF_SEL` writer - "]
-pub type PHY_INTF_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PHY_INTF_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SS_MODE` reader - "]
 pub type SS_MODE_R = crate::BitReader;
 #[doc = "Field `SS_MODE` writer - "]
-pub type SS_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SBD_CLK_GATING_EN` reader - "]
 pub type SBD_CLK_GATING_EN_R = crate::BitReader;
 #[doc = "Field `SBD_CLK_GATING_EN` writer - "]
-pub type SBD_CLK_GATING_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SBD_CLK_GATING_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PMT_CTRL_EN` reader - "]
 pub type PMT_CTRL_EN_R = crate::BitReader;
 #[doc = "Field `PMT_CTRL_EN` writer - "]
-pub type PMT_CTRL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PMT_CTRL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCR_SMI_DLY_RX_SYNC` reader - "]
 pub type SCR_SMI_DLY_RX_SYNC_R = crate::BitReader;
 #[doc = "Field `SCR_SMI_DLY_RX_SYNC` writer - "]
-pub type SCR_SMI_DLY_RX_SYNC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCR_SMI_DLY_RX_SYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_ERR_OUT_EN` reader - "]
 pub type TX_ERR_OUT_EN_R = crate::BitReader;
 #[doc = "Field `TX_ERR_OUT_EN` writer - "]
-pub type TX_ERR_OUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_ERR_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -151,75 +151,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EX_PHYINF_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn int_revmii_rx_clk_sel(&mut self) -> INT_REVMII_RX_CLK_SEL_W<EX_PHYINF_CONF_SPEC, 0> {
-        INT_REVMII_RX_CLK_SEL_W::new(self)
+    pub fn int_revmii_rx_clk_sel(&mut self) -> INT_REVMII_RX_CLK_SEL_W<EX_PHYINF_CONF_SPEC> {
+        INT_REVMII_RX_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_revmii_rx_clk_sel(&mut self) -> EXT_REVMII_RX_CLK_SEL_W<EX_PHYINF_CONF_SPEC, 1> {
-        EXT_REVMII_RX_CLK_SEL_W::new(self)
+    pub fn ext_revmii_rx_clk_sel(&mut self) -> EXT_REVMII_RX_CLK_SEL_W<EX_PHYINF_CONF_SPEC> {
+        EXT_REVMII_RX_CLK_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn sbd_flowctrl(&mut self) -> SBD_FLOWCTRL_W<EX_PHYINF_CONF_SPEC, 2> {
-        SBD_FLOWCTRL_W::new(self)
+    pub fn sbd_flowctrl(&mut self) -> SBD_FLOWCTRL_W<EX_PHYINF_CONF_SPEC> {
+        SBD_FLOWCTRL_W::new(self, 2)
     }
     #[doc = "Bits 3:7"]
     #[inline(always)]
     #[must_use]
-    pub fn core_phy_addr(&mut self) -> CORE_PHY_ADDR_W<EX_PHYINF_CONF_SPEC, 3> {
-        CORE_PHY_ADDR_W::new(self)
+    pub fn core_phy_addr(&mut self) -> CORE_PHY_ADDR_W<EX_PHYINF_CONF_SPEC> {
+        CORE_PHY_ADDR_W::new(self, 3)
     }
     #[doc = "Bits 8:12"]
     #[inline(always)]
     #[must_use]
-    pub fn revmii_phy_addr(&mut self) -> REVMII_PHY_ADDR_W<EX_PHYINF_CONF_SPEC, 8> {
-        REVMII_PHY_ADDR_W::new(self)
+    pub fn revmii_phy_addr(&mut self) -> REVMII_PHY_ADDR_W<EX_PHYINF_CONF_SPEC> {
+        REVMII_PHY_ADDR_W::new(self, 8)
     }
     #[doc = "Bits 13:15"]
     #[inline(always)]
     #[must_use]
-    pub fn phy_intf_sel(&mut self) -> PHY_INTF_SEL_W<EX_PHYINF_CONF_SPEC, 13> {
-        PHY_INTF_SEL_W::new(self)
+    pub fn phy_intf_sel(&mut self) -> PHY_INTF_SEL_W<EX_PHYINF_CONF_SPEC> {
+        PHY_INTF_SEL_W::new(self, 13)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn ss_mode(&mut self) -> SS_MODE_W<EX_PHYINF_CONF_SPEC, 16> {
-        SS_MODE_W::new(self)
+    pub fn ss_mode(&mut self) -> SS_MODE_W<EX_PHYINF_CONF_SPEC> {
+        SS_MODE_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn sbd_clk_gating_en(&mut self) -> SBD_CLK_GATING_EN_W<EX_PHYINF_CONF_SPEC, 17> {
-        SBD_CLK_GATING_EN_W::new(self)
+    pub fn sbd_clk_gating_en(&mut self) -> SBD_CLK_GATING_EN_W<EX_PHYINF_CONF_SPEC> {
+        SBD_CLK_GATING_EN_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn pmt_ctrl_en(&mut self) -> PMT_CTRL_EN_W<EX_PHYINF_CONF_SPEC, 18> {
-        PMT_CTRL_EN_W::new(self)
+    pub fn pmt_ctrl_en(&mut self) -> PMT_CTRL_EN_W<EX_PHYINF_CONF_SPEC> {
+        PMT_CTRL_EN_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn scr_smi_dly_rx_sync(&mut self) -> SCR_SMI_DLY_RX_SYNC_W<EX_PHYINF_CONF_SPEC, 19> {
-        SCR_SMI_DLY_RX_SYNC_W::new(self)
+    pub fn scr_smi_dly_rx_sync(&mut self) -> SCR_SMI_DLY_RX_SYNC_W<EX_PHYINF_CONF_SPEC> {
+        SCR_SMI_DLY_RX_SYNC_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_err_out_en(&mut self) -> TX_ERR_OUT_EN_W<EX_PHYINF_CONF_SPEC, 20> {
-        TX_ERR_OUT_EN_W::new(self)
+    pub fn tx_err_out_en(&mut self) -> TX_ERR_OUT_EN_W<EX_PHYINF_CONF_SPEC> {
+        TX_ERR_OUT_EN_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

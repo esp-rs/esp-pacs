@@ -5,15 +5,15 @@ pub type W = crate::W<GPIO_RTC_CALIB_VALUE_SPEC>;
 #[doc = "Field `RTC_CALIB_VALUE` reader - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
 pub type RTC_CALIB_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `RTC_CALIB_VALUE` writer - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
-pub type RTC_CALIB_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type RTC_CALIB_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 #[doc = "Field `RTC_CALIB_RDY_REAL` reader - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
 pub type RTC_CALIB_RDY_REAL_R = crate::BitReader;
 #[doc = "Field `RTC_CALIB_RDY_REAL` writer - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
-pub type RTC_CALIB_RDY_REAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_CALIB_RDY_REAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTC_CALIB_RDY` reader - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
 pub type RTC_CALIB_RDY_R = crate::BitReader;
 #[doc = "Field `RTC_CALIB_RDY` writer - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
-pub type RTC_CALIB_RDY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_CALIB_RDY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:19 - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
     #[inline(always)]
@@ -53,29 +53,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_RTC_CALIB_VALUE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_calib_value(&mut self) -> RTC_CALIB_VALUE_W<GPIO_RTC_CALIB_VALUE_SPEC, 0> {
-        RTC_CALIB_VALUE_W::new(self)
+    pub fn rtc_calib_value(&mut self) -> RTC_CALIB_VALUE_W<GPIO_RTC_CALIB_VALUE_SPEC> {
+        RTC_CALIB_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 30 - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_calib_rdy_real(&mut self) -> RTC_CALIB_RDY_REAL_W<GPIO_RTC_CALIB_VALUE_SPEC, 30> {
-        RTC_CALIB_RDY_REAL_W::new(self)
+    pub fn rtc_calib_rdy_real(&mut self) -> RTC_CALIB_RDY_REAL_W<GPIO_RTC_CALIB_VALUE_SPEC> {
+        RTC_CALIB_RDY_REAL_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_calib_rdy(&mut self) -> RTC_CALIB_RDY_W<GPIO_RTC_CALIB_VALUE_SPEC, 31> {
-        RTC_CALIB_RDY_W::new(self)
+    pub fn rtc_calib_rdy(&mut self) -> RTC_CALIB_RDY_W<GPIO_RTC_CALIB_VALUE_SPEC> {
+        RTC_CALIB_RDY_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

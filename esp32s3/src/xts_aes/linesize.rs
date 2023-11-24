@@ -5,7 +5,7 @@ pub type W = crate::W<LINESIZE_SPEC>;
 #[doc = "Field `LINESIZE` reader - Configures the data size of one encryption."]
 pub type LINESIZE_R = crate::BitReader;
 #[doc = "Field `LINESIZE` writer - Configures the data size of one encryption."]
-pub type LINESIZE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LINESIZE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Configures the data size of one encryption."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LINESIZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Configures the data size of one encryption."]
     #[inline(always)]
     #[must_use]
-    pub fn linesize(&mut self) -> LINESIZE_W<LINESIZE_SPEC, 0> {
-        LINESIZE_W::new(self)
+    pub fn linesize(&mut self) -> LINESIZE_W<LINESIZE_SPEC> {
+        LINESIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

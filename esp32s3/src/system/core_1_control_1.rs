@@ -5,7 +5,7 @@ pub type W = crate::W<CORE_1_CONTROL_1_SPEC>;
 #[doc = "Field `CONTROL_CORE_1_MESSAGE` reader - it's only a R/W register, no function, software can write any value"]
 pub type CONTROL_CORE_1_MESSAGE_R = crate::FieldReader<u32>;
 #[doc = "Field `CONTROL_CORE_1_MESSAGE` writer - it's only a R/W register, no function, software can write any value"]
-pub type CONTROL_CORE_1_MESSAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CONTROL_CORE_1_MESSAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_CONTROL_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]
     #[must_use]
-    pub fn control_core_1_message(&mut self) -> CONTROL_CORE_1_MESSAGE_W<CORE_1_CONTROL_1_SPEC, 0> {
-        CONTROL_CORE_1_MESSAGE_W::new(self)
+    pub fn control_core_1_message(&mut self) -> CONTROL_CORE_1_MESSAGE_W<CORE_1_CONTROL_1_SPEC> {
+        CONTROL_CORE_1_MESSAGE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

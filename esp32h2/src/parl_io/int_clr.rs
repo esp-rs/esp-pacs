@@ -1,11 +1,11 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `TX_FIFO_REMPTY_INT_CLR` writer - Set this bit to clear TX_FIFO_REMPTY_INT."]
-pub type TX_FIFO_REMPTY_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FIFO_REMPTY_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_WOVF_INT_CLR` writer - Set this bit to clear RX_FIFO_WOVF_INT."]
-pub type RX_FIFO_WOVF_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FIFO_WOVF_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_EOF_INT_CLR` writer - Set this bit to clear TX_EOF_INT."]
-pub type TX_EOF_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_EOF_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -16,20 +16,20 @@ impl W {
     #[doc = "Bit 0 - Set this bit to clear TX_FIFO_REMPTY_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_rempty_int_clr(&mut self) -> TX_FIFO_REMPTY_INT_CLR_W<INT_CLR_SPEC, 0> {
-        TX_FIFO_REMPTY_INT_CLR_W::new(self)
+    pub fn tx_fifo_rempty_int_clr(&mut self) -> TX_FIFO_REMPTY_INT_CLR_W<INT_CLR_SPEC> {
+        TX_FIFO_REMPTY_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear RX_FIFO_WOVF_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_wovf_int_clr(&mut self) -> RX_FIFO_WOVF_INT_CLR_W<INT_CLR_SPEC, 1> {
-        RX_FIFO_WOVF_INT_CLR_W::new(self)
+    pub fn rx_fifo_wovf_int_clr(&mut self) -> RX_FIFO_WOVF_INT_CLR_W<INT_CLR_SPEC> {
+        RX_FIFO_WOVF_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear TX_EOF_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_eof_int_clr(&mut self) -> TX_EOF_INT_CLR_W<INT_CLR_SPEC, 2> {
-        TX_EOF_INT_CLR_W::new(self)
+    pub fn tx_eof_int_clr(&mut self) -> TX_EOF_INT_CLR_W<INT_CLR_SPEC> {
+        TX_EOF_INT_CLR_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<DESTINATION_SPEC>;
 #[doc = "Field `DESTINATION` reader - This bit stores the destination. 0: flash(default). 1: reserved."]
 pub type DESTINATION_R = crate::BitReader;
 #[doc = "Field `DESTINATION` writer - This bit stores the destination. 0: flash(default). 1: reserved."]
-pub type DESTINATION_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DESTINATION_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This bit stores the destination. 0: flash(default). 1: reserved."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DESTINATION_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit stores the destination. 0: flash(default). 1: reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn destination(&mut self) -> DESTINATION_W<DESTINATION_SPEC, 0> {
-        DESTINATION_W::new(self)
+    pub fn destination(&mut self) -> DESTINATION_W<DESTINATION_SPEC> {
+        DESTINATION_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

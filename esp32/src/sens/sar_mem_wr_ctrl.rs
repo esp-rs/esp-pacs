@@ -5,13 +5,13 @@ pub type W = crate::W<SAR_MEM_WR_CTRL_SPEC>;
 #[doc = "Field `MEM_WR_ADDR_INIT` reader - "]
 pub type MEM_WR_ADDR_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `MEM_WR_ADDR_INIT` writer - "]
-pub type MEM_WR_ADDR_INIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type MEM_WR_ADDR_INIT_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `MEM_WR_ADDR_SIZE` reader - "]
 pub type MEM_WR_ADDR_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `MEM_WR_ADDR_SIZE` writer - "]
-pub type MEM_WR_ADDR_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type MEM_WR_ADDR_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `RTC_MEM_WR_OFFST_CLR` writer - "]
-pub type RTC_MEM_WR_OFFST_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_MEM_WR_OFFST_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -42,27 +42,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_MEM_WR_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_wr_addr_init(&mut self) -> MEM_WR_ADDR_INIT_W<SAR_MEM_WR_CTRL_SPEC, 0> {
-        MEM_WR_ADDR_INIT_W::new(self)
+    pub fn mem_wr_addr_init(&mut self) -> MEM_WR_ADDR_INIT_W<SAR_MEM_WR_CTRL_SPEC> {
+        MEM_WR_ADDR_INIT_W::new(self, 0)
     }
     #[doc = "Bits 11:21"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_wr_addr_size(&mut self) -> MEM_WR_ADDR_SIZE_W<SAR_MEM_WR_CTRL_SPEC, 11> {
-        MEM_WR_ADDR_SIZE_W::new(self)
+    pub fn mem_wr_addr_size(&mut self) -> MEM_WR_ADDR_SIZE_W<SAR_MEM_WR_CTRL_SPEC> {
+        MEM_WR_ADDR_SIZE_W::new(self, 11)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_wr_offst_clr(&mut self) -> RTC_MEM_WR_OFFST_CLR_W<SAR_MEM_WR_CTRL_SPEC, 22> {
-        RTC_MEM_WR_OFFST_CLR_W::new(self)
+    pub fn rtc_mem_wr_offst_clr(&mut self) -> RTC_MEM_WR_OFFST_CLR_W<SAR_MEM_WR_CTRL_SPEC> {
+        RTC_MEM_WR_OFFST_CLR_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

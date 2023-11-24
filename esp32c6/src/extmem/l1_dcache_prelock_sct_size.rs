@@ -5,13 +5,11 @@ pub type W = crate::W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_SIZE` reader - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
 pub type L1_CACHE_PRELOCK_SCT0_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_SIZE` writer - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
-pub type L1_CACHE_PRELOCK_SCT0_SIZE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type L1_CACHE_PRELOCK_SCT0_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_SIZE` reader - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
 pub type L1_CACHE_PRELOCK_SCT1_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_SIZE` writer - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
-pub type L1_CACHE_PRELOCK_SCT1_SIZE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type L1_CACHE_PRELOCK_SCT1_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
     #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
@@ -42,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -51,16 +49,16 @@ impl W {
     #[must_use]
     pub fn l1_cache_prelock_sct0_size(
         &mut self,
-    ) -> L1_CACHE_PRELOCK_SCT0_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC, 0> {
-        L1_CACHE_PRELOCK_SCT0_SIZE_W::new(self)
+    ) -> L1_CACHE_PRELOCK_SCT0_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC> {
+        L1_CACHE_PRELOCK_SCT0_SIZE_W::new(self, 0)
     }
     #[doc = "Bits 16:29 - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_prelock_sct1_size(
         &mut self,
-    ) -> L1_CACHE_PRELOCK_SCT1_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC, 16> {
-        L1_CACHE_PRELOCK_SCT1_SIZE_W::new(self)
+    ) -> L1_CACHE_PRELOCK_SCT1_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC> {
+        L1_CACHE_PRELOCK_SCT1_SIZE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

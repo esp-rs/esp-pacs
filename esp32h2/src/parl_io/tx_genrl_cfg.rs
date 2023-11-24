@@ -5,15 +5,15 @@ pub type W = crate::W<TX_GENRL_CFG_SPEC>;
 #[doc = "Field `TX_IDLE_VALUE` reader - Configures bus value of transmitter in IDLE state."]
 pub type TX_IDLE_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_IDLE_VALUE` writer - Configures bus value of transmitter in IDLE state."]
-pub type TX_IDLE_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TX_IDLE_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `TX_GATING_EN` reader - Set this bit to enable the clock gating of output tx clock."]
 pub type TX_GATING_EN_R = crate::BitReader;
 #[doc = "Field `TX_GATING_EN` writer - Set this bit to enable the clock gating of output tx clock."]
-pub type TX_GATING_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_GATING_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_VALID_OUTPUT_EN` reader - Set this bit to enable the output of tx data valid signal."]
 pub type TX_VALID_OUTPUT_EN_R = crate::BitReader;
 #[doc = "Field `TX_VALID_OUTPUT_EN` writer - Set this bit to enable the output of tx data valid signal."]
-pub type TX_VALID_OUTPUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_VALID_OUTPUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 14:29 - Configures bus value of transmitter in IDLE state."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_GENRL_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 14:29 - Configures bus value of transmitter in IDLE state."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_idle_value(&mut self) -> TX_IDLE_VALUE_W<TX_GENRL_CFG_SPEC, 14> {
-        TX_IDLE_VALUE_W::new(self)
+    pub fn tx_idle_value(&mut self) -> TX_IDLE_VALUE_W<TX_GENRL_CFG_SPEC> {
+        TX_IDLE_VALUE_W::new(self, 14)
     }
     #[doc = "Bit 30 - Set this bit to enable the clock gating of output tx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<TX_GENRL_CFG_SPEC, 30> {
-        TX_GATING_EN_W::new(self)
+    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<TX_GENRL_CFG_SPEC> {
+        TX_GATING_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to enable the output of tx data valid signal."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_valid_output_en(&mut self) -> TX_VALID_OUTPUT_EN_W<TX_GENRL_CFG_SPEC, 31> {
-        TX_VALID_OUTPUT_EN_W::new(self)
+    pub fn tx_valid_output_en(&mut self) -> TX_VALID_OUTPUT_EN_W<TX_GENRL_CFG_SPEC> {
+        TX_VALID_OUTPUT_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

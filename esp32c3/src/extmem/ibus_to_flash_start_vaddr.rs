@@ -5,8 +5,7 @@ pub type W = crate::W<IBUS_TO_FLASH_START_VADDR_SPEC>;
 #[doc = "Field `IBUS_TO_FLASH_START_VADDR` reader - The bits are used to configure the start virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
 pub type IBUS_TO_FLASH_START_VADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `IBUS_TO_FLASH_START_VADDR` writer - The bits are used to configure the start virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
-pub type IBUS_TO_FLASH_START_VADDR_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type IBUS_TO_FLASH_START_VADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IBUS_TO_FLASH_START_VADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn ibus_to_flash_start_vaddr(
         &mut self,
-    ) -> IBUS_TO_FLASH_START_VADDR_W<IBUS_TO_FLASH_START_VADDR_SPEC, 0> {
-        IBUS_TO_FLASH_START_VADDR_W::new(self)
+    ) -> IBUS_TO_FLASH_START_VADDR_W<IBUS_TO_FLASH_START_VADDR_SPEC> {
+        IBUS_TO_FLASH_START_VADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

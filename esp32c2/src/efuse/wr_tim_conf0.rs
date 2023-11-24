@@ -5,15 +5,15 @@ pub type W = crate::W<WR_TIM_CONF0_SPEC>;
 #[doc = "Field `THP_A` reader - Configures hold time for efuse program."]
 pub type THP_A_R = crate::FieldReader;
 #[doc = "Field `THP_A` writer - Configures hold time for efuse program."]
-pub type THP_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type THP_A_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TPGM_INACTIVE` reader - Configures pulse time for burning '0' bit."]
 pub type TPGM_INACTIVE_R = crate::FieldReader;
 #[doc = "Field `TPGM_INACTIVE` writer - Configures pulse time for burning '0' bit."]
-pub type TPGM_INACTIVE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TPGM_INACTIVE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TPGM` reader - Configures pulse time for burning '1' bit."]
 pub type TPGM_R = crate::FieldReader<u16>;
 #[doc = "Field `TPGM` writer - Configures pulse time for burning '1' bit."]
-pub type TPGM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TPGM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:7 - Configures hold time for efuse program."]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WR_TIM_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Configures hold time for efuse program."]
     #[inline(always)]
     #[must_use]
-    pub fn thp_a(&mut self) -> THP_A_W<WR_TIM_CONF0_SPEC, 0> {
-        THP_A_W::new(self)
+    pub fn thp_a(&mut self) -> THP_A_W<WR_TIM_CONF0_SPEC> {
+        THP_A_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures pulse time for burning '0' bit."]
     #[inline(always)]
     #[must_use]
-    pub fn tpgm_inactive(&mut self) -> TPGM_INACTIVE_W<WR_TIM_CONF0_SPEC, 8> {
-        TPGM_INACTIVE_W::new(self)
+    pub fn tpgm_inactive(&mut self) -> TPGM_INACTIVE_W<WR_TIM_CONF0_SPEC> {
+        TPGM_INACTIVE_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - Configures pulse time for burning '1' bit."]
     #[inline(always)]
     #[must_use]
-    pub fn tpgm(&mut self) -> TPGM_W<WR_TIM_CONF0_SPEC, 16> {
-        TPGM_W::new(self)
+    pub fn tpgm(&mut self) -> TPGM_W<WR_TIM_CONF0_SPEC> {
+        TPGM_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

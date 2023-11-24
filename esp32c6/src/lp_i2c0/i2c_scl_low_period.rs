@@ -5,7 +5,7 @@ pub type W = crate::W<I2C_SCL_LOW_PERIOD_SPEC>;
 #[doc = "Field `I2C_SCL_LOW_PERIOD` reader - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
 pub type I2C_SCL_LOW_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_SCL_LOW_PERIOD` writer - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
-pub type I2C_SCL_LOW_PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type I2C_SCL_LOW_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C_SCL_LOW_PERIOD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_scl_low_period(&mut self) -> I2C_SCL_LOW_PERIOD_W<I2C_SCL_LOW_PERIOD_SPEC, 0> {
-        I2C_SCL_LOW_PERIOD_W::new(self)
+    pub fn i2c_scl_low_period(&mut self) -> I2C_SCL_LOW_PERIOD_W<I2C_SCL_LOW_PERIOD_SPEC> {
+        I2C_SCL_LOW_PERIOD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

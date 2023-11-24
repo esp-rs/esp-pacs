@@ -7,17 +7,17 @@ pub type ICACHE_PRELOAD_INT_ST_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_INT_ENA` reader - The bit is used to enable the interrupt by icache pre-load done."]
 pub type ICACHE_PRELOAD_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_INT_ENA` writer - The bit is used to enable the interrupt by icache pre-load done."]
-pub type ICACHE_PRELOAD_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_PRELOAD_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_PRELOAD_INT_CLR` writer - The bit is used to clear the interrupt by icache pre-load done."]
-pub type ICACHE_PRELOAD_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_PRELOAD_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_PRELOAD_INT_ST` reader - The bit is used to indicate the interrupt by dcache pre-load done."]
 pub type DCACHE_PRELOAD_INT_ST_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_INT_ENA` reader - The bit is used to enable the interrupt by dcache pre-load done."]
 pub type DCACHE_PRELOAD_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_INT_ENA` writer - The bit is used to enable the interrupt by dcache pre-load done."]
-pub type DCACHE_PRELOAD_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_PRELOAD_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_PRELOAD_INT_CLR` writer - The bit is used to clear the interrupt by dcache pre-load done."]
-pub type DCACHE_PRELOAD_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_PRELOAD_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate the interrupt by icache pre-load done."]
     #[inline(always)]
@@ -66,7 +66,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_PRELOAD_INT_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -75,32 +75,32 @@ impl W {
     #[must_use]
     pub fn icache_preload_int_ena(
         &mut self,
-    ) -> ICACHE_PRELOAD_INT_ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC, 1> {
-        ICACHE_PRELOAD_INT_ENA_W::new(self)
+    ) -> ICACHE_PRELOAD_INT_ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+        ICACHE_PRELOAD_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache pre-load done."]
     #[inline(always)]
     #[must_use]
     pub fn icache_preload_int_clr(
         &mut self,
-    ) -> ICACHE_PRELOAD_INT_CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC, 2> {
-        ICACHE_PRELOAD_INT_CLR_W::new(self)
+    ) -> ICACHE_PRELOAD_INT_CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+        ICACHE_PRELOAD_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache pre-load done."]
     #[inline(always)]
     #[must_use]
     pub fn dcache_preload_int_ena(
         &mut self,
-    ) -> DCACHE_PRELOAD_INT_ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC, 4> {
-        DCACHE_PRELOAD_INT_ENA_W::new(self)
+    ) -> DCACHE_PRELOAD_INT_ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+        DCACHE_PRELOAD_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to clear the interrupt by dcache pre-load done."]
     #[inline(always)]
     #[must_use]
     pub fn dcache_preload_int_clr(
         &mut self,
-    ) -> DCACHE_PRELOAD_INT_CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC, 5> {
-        DCACHE_PRELOAD_INT_CLR_W::new(self)
+    ) -> DCACHE_PRELOAD_INT_CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+        DCACHE_PRELOAD_INT_CLR_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

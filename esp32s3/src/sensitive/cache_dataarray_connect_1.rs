@@ -5,8 +5,7 @@ pub type W = crate::W<CACHE_DATAARRAY_CONNECT_1_SPEC>;
 #[doc = "Field `CACHE_DATAARRAY_CONNECT_FLATTEN` reader - Cache data array connection configuration."]
 pub type CACHE_DATAARRAY_CONNECT_FLATTEN_R = crate::FieldReader;
 #[doc = "Field `CACHE_DATAARRAY_CONNECT_FLATTEN` writer - Cache data array connection configuration."]
-pub type CACHE_DATAARRAY_CONNECT_FLATTEN_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 8, O>;
+pub type CACHE_DATAARRAY_CONNECT_FLATTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Cache data array connection configuration."]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_DATAARRAY_CONNECT_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn cache_dataarray_connect_flatten(
         &mut self,
-    ) -> CACHE_DATAARRAY_CONNECT_FLATTEN_W<CACHE_DATAARRAY_CONNECT_1_SPEC, 0> {
-        CACHE_DATAARRAY_CONNECT_FLATTEN_W::new(self)
+    ) -> CACHE_DATAARRAY_CONNECT_FLATTEN_W<CACHE_DATAARRAY_CONNECT_1_SPEC> {
+        CACHE_DATAARRAY_CONNECT_FLATTEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

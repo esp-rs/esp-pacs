@@ -5,7 +5,7 @@ pub type W = crate::W<SDIO_ACT_CONF_SPEC>;
 #[doc = "Field `SDIO_ACT_DNUM` reader - "]
 pub type SDIO_ACT_DNUM_R = crate::FieldReader<u16>;
 #[doc = "Field `SDIO_ACT_DNUM` writer - "]
-pub type SDIO_ACT_DNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type SDIO_ACT_DNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 22:31"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_ACT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 22:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_act_dnum(&mut self) -> SDIO_ACT_DNUM_W<SDIO_ACT_CONF_SPEC, 22> {
-        SDIO_ACT_DNUM_W::new(self)
+    pub fn sdio_act_dnum(&mut self) -> SDIO_ACT_DNUM_W<SDIO_ACT_CONF_SPEC> {
+        SDIO_ACT_DNUM_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

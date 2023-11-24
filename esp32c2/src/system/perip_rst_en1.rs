@@ -5,19 +5,19 @@ pub type W = crate::W<PERIP_RST_EN1_SPEC>;
 #[doc = "Field `CRYPTO_ECC_RST` reader - Set 1 to let CRYPTO_ECC reset"]
 pub type CRYPTO_ECC_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_ECC_RST` writer - Set 1 to let CRYPTO_ECC reset"]
-pub type CRYPTO_ECC_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_ECC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_SHA_RST` reader - Set 1 to let CRYPTO_SHA reset"]
 pub type CRYPTO_SHA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_RST` writer - Set 1 to let CRYPTO_SHA reset"]
-pub type CRYPTO_SHA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_SHA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RST` reader - Set 1 to let DMA reset"]
 pub type DMA_RST_R = crate::BitReader;
 #[doc = "Field `DMA_RST` writer - Set 1 to let DMA reset"]
-pub type DMA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_RST` reader - Set 1 to let TSENS reset"]
 pub type TSENS_RST_R = crate::BitReader;
 #[doc = "Field `TSENS_RST` writer - Set 1 to let TSENS reset"]
-pub type TSENS_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Set 1 to let CRYPTO_ECC reset"]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Set 1 to let CRYPTO_ECC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_ecc_rst(&mut self) -> CRYPTO_ECC_RST_W<PERIP_RST_EN1_SPEC, 1> {
-        CRYPTO_ECC_RST_W::new(self)
+    pub fn crypto_ecc_rst(&mut self) -> CRYPTO_ECC_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_ECC_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to let CRYPTO_SHA reset"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERIP_RST_EN1_SPEC, 2> {
-        CRYPTO_SHA_RST_W::new(self)
+    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_SHA_RST_W::new(self, 2)
     }
     #[doc = "Bit 6 - Set 1 to let DMA reset"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_rst(&mut self) -> DMA_RST_W<PERIP_RST_EN1_SPEC, 6> {
-        DMA_RST_W::new(self)
+    pub fn dma_rst(&mut self) -> DMA_RST_W<PERIP_RST_EN1_SPEC> {
+        DMA_RST_W::new(self, 6)
     }
     #[doc = "Bit 10 - Set 1 to let TSENS reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_rst(&mut self) -> TSENS_RST_W<PERIP_RST_EN1_SPEC, 10> {
-        TSENS_RST_W::new(self)
+    pub fn tsens_rst(&mut self) -> TSENS_RST_W<PERIP_RST_EN1_SPEC> {
+        TSENS_RST_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

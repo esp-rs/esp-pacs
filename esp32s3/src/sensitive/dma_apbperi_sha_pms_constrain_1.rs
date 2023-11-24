@@ -5,33 +5,29 @@ pub type W = crate::W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0` reader - sha's permission(store,load) in data region0 of SRAM"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0` writer - sha's permission(store,load) in data region0 of SRAM"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1` reader - sha's permission(store,load) in data region1 of SRAM"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1` writer - sha's permission(store,load) in data region1 of SRAM"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2` reader - sha's permission(store,load) in data region2 of SRAM"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2` writer - sha's permission(store,load) in data region2 of SRAM"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3` reader - sha's permission(store,load) in data region3 of SRAM"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3` writer - sha's permission(store,load) in data region3 of SRAM"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0` reader - sha's permission(store,load) in dcache data sram block0"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0` writer - sha's permission(store,load) in dcache data sram block0"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1` reader - sha's permission(store,load) in dcache data sram block1"]
 pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1` writer - sha's permission(store,load) in dcache data sram block1"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - sha's permission(store,load) in data region0 of SRAM"]
     #[inline(always)]
@@ -120,7 +116,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -129,32 +125,32 @@ impl W {
     #[must_use]
     pub fn dma_apbperi_sha_pms_constrain_sram_pms_0(
         &mut self,
-    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC, 0> {
-        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0_W::new(self)
+    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC> {
+        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - sha's permission(store,load) in data region1 of SRAM"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_sha_pms_constrain_sram_pms_1(
         &mut self,
-    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC, 2> {
-        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1_W::new(self)
+    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC> {
+        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - sha's permission(store,load) in data region2 of SRAM"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_sha_pms_constrain_sram_pms_2(
         &mut self,
-    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC, 4> {
-        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2_W::new(self)
+    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC> {
+        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - sha's permission(store,load) in data region3 of SRAM"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_sha_pms_constrain_sram_pms_3(
         &mut self,
-    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC, 6> {
-        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3_W::new(self)
+    ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3_W<DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC> {
+        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_PMS_3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - sha's permission(store,load) in dcache data sram block0"]
     #[inline(always)]
@@ -163,9 +159,8 @@ impl W {
         &mut self,
     ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<
         DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC,
-        8,
     > {
-        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W::new(self)
+        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - sha's permission(store,load) in dcache data sram block1"]
     #[inline(always)]
@@ -174,9 +169,8 @@ impl W {
         &mut self,
     ) -> DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<
         DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC,
-        10,
     > {
-        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W::new(self)
+        DMA_APBPERI_SHA_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

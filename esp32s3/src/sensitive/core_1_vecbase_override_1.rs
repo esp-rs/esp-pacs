@@ -5,12 +5,11 @@ pub type W = crate::W<CORE_1_VECBASE_OVERRIDE_1_SPEC>;
 #[doc = "Field `CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE` reader - world0 vecbase_override register, when core1 in world0 use this register to override vecbase register."]
 pub type CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE` writer - world0 vecbase_override register, when core1 in world0 use this register to override vecbase register."]
-pub type CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 #[doc = "Field `CORE_1_VECBASE_OVERRIDE_SEL` reader - Set 0x3 to sel vecbase_override to override vecbase register."]
 pub type CORE_1_VECBASE_OVERRIDE_SEL_R = crate::FieldReader;
 #[doc = "Field `CORE_1_VECBASE_OVERRIDE_SEL` writer - Set 0x3 to sel vecbase_override to override vecbase register."]
-pub type CORE_1_VECBASE_OVERRIDE_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_1_VECBASE_OVERRIDE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:21 - world0 vecbase_override register, when core1 in world0 use this register to override vecbase register."]
     #[inline(always)]
@@ -41,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_VECBASE_OVERRIDE_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -50,16 +49,16 @@ impl W {
     #[must_use]
     pub fn core_1_vecbase_override_world0_value(
         &mut self,
-    ) -> CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W<CORE_1_VECBASE_OVERRIDE_1_SPEC, 0> {
-        CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W::new(self)
+    ) -> CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W<CORE_1_VECBASE_OVERRIDE_1_SPEC> {
+        CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 22:23 - Set 0x3 to sel vecbase_override to override vecbase register."]
     #[inline(always)]
     #[must_use]
     pub fn core_1_vecbase_override_sel(
         &mut self,
-    ) -> CORE_1_VECBASE_OVERRIDE_SEL_W<CORE_1_VECBASE_OVERRIDE_1_SPEC, 22> {
-        CORE_1_VECBASE_OVERRIDE_SEL_W::new(self)
+    ) -> CORE_1_VECBASE_OVERRIDE_SEL_W<CORE_1_VECBASE_OVERRIDE_1_SPEC> {
+        CORE_1_VECBASE_OVERRIDE_SEL_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

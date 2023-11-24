@@ -5,7 +5,7 @@ pub type W = crate::W<SAR_TOUCH_THRES8_SPEC>;
 #[doc = "Field `TOUCH_OUT_TH8` reader - Finger threshold for touch pad 8"]
 pub type TOUCH_OUT_TH8_R = crate::FieldReader<u32>;
 #[doc = "Field `TOUCH_OUT_TH8` writer - Finger threshold for touch pad 8"]
-pub type TOUCH_OUT_TH8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type TOUCH_OUT_TH8_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 impl R {
     #[doc = "Bits 0:21 - Finger threshold for touch pad 8"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_THRES8_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - Finger threshold for touch pad 8"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_out_th8(&mut self) -> TOUCH_OUT_TH8_W<SAR_TOUCH_THRES8_SPEC, 0> {
-        TOUCH_OUT_TH8_W::new(self)
+    pub fn touch_out_th8(&mut self) -> TOUCH_OUT_TH8_W<SAR_TOUCH_THRES8_SPEC> {
+        TOUCH_OUT_TH8_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

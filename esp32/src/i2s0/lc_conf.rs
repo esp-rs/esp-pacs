@@ -5,59 +5,59 @@ pub type W = crate::W<LC_CONF_SPEC>;
 #[doc = "Field `IN_RST` reader - "]
 pub type IN_RST_R = crate::BitReader;
 #[doc = "Field `IN_RST` writer - "]
-pub type IN_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_RST` reader - "]
 pub type OUT_RST_R = crate::BitReader;
 #[doc = "Field `OUT_RST` writer - "]
-pub type OUT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBM_FIFO_RST` reader - "]
 pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - "]
-pub type AHBM_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBM_FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBM_RST` reader - "]
 pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - "]
-pub type AHBM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_LOOP_TEST` reader - "]
 pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - "]
-pub type OUT_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_LOOP_TEST` reader - "]
 pub type IN_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `IN_LOOP_TEST` writer - "]
-pub type IN_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - "]
 pub type OUT_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - "]
-pub type OUT_AUTO_WRBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_AUTO_WRBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_NO_RESTART_CLR` reader - "]
 pub type OUT_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `OUT_NO_RESTART_CLR` writer - "]
-pub type OUT_NO_RESTART_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_NO_RESTART_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EOF_MODE` reader - "]
 pub type OUT_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_MODE` writer - "]
-pub type OUT_EOF_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_EOF_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - "]
 pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - "]
-pub type OUTDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INDSCR_BURST_EN` reader - "]
 pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - "]
-pub type INDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - "]
 pub type OUT_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - "]
-pub type OUT_DATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_DATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHECK_OWNER` reader - "]
 pub type CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `CHECK_OWNER` writer - "]
-pub type CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHECK_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_TRANS_EN` reader - "]
 pub type MEM_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TRANS_EN` writer - "]
-pub type MEM_TRANS_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_TRANS_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -184,93 +184,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LC_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn in_rst(&mut self) -> IN_RST_W<LC_CONF_SPEC, 0> {
-        IN_RST_W::new(self)
+    pub fn in_rst(&mut self) -> IN_RST_W<LC_CONF_SPEC> {
+        IN_RST_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn out_rst(&mut self) -> OUT_RST_W<LC_CONF_SPEC, 1> {
-        OUT_RST_W::new(self)
+    pub fn out_rst(&mut self) -> OUT_RST_W<LC_CONF_SPEC> {
+        OUT_RST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<LC_CONF_SPEC, 2> {
-        AHBM_FIFO_RST_W::new(self)
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<LC_CONF_SPEC> {
+        AHBM_FIFO_RST_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<LC_CONF_SPEC, 3> {
-        AHBM_RST_W::new(self)
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<LC_CONF_SPEC> {
+        AHBM_RST_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<LC_CONF_SPEC, 4> {
-        OUT_LOOP_TEST_W::new(self)
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<LC_CONF_SPEC> {
+        OUT_LOOP_TEST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<LC_CONF_SPEC, 5> {
-        IN_LOOP_TEST_W::new(self)
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<LC_CONF_SPEC> {
+        IN_LOOP_TEST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<LC_CONF_SPEC, 6> {
-        OUT_AUTO_WRBACK_W::new(self)
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<LC_CONF_SPEC> {
+        OUT_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<LC_CONF_SPEC, 7> {
-        OUT_NO_RESTART_CLR_W::new(self)
+    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<LC_CONF_SPEC> {
+        OUT_NO_RESTART_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<LC_CONF_SPEC, 8> {
-        OUT_EOF_MODE_W::new(self)
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<LC_CONF_SPEC> {
+        OUT_EOF_MODE_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<LC_CONF_SPEC, 9> {
-        OUTDSCR_BURST_EN_W::new(self)
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<LC_CONF_SPEC> {
+        OUTDSCR_BURST_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<LC_CONF_SPEC, 10> {
-        INDSCR_BURST_EN_W::new(self)
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<LC_CONF_SPEC> {
+        INDSCR_BURST_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<LC_CONF_SPEC, 11> {
-        OUT_DATA_BURST_EN_W::new(self)
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<LC_CONF_SPEC> {
+        OUT_DATA_BURST_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn check_owner(&mut self) -> CHECK_OWNER_W<LC_CONF_SPEC, 12> {
-        CHECK_OWNER_W::new(self)
+    pub fn check_owner(&mut self) -> CHECK_OWNER_W<LC_CONF_SPEC> {
+        CHECK_OWNER_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<LC_CONF_SPEC, 13> {
-        MEM_TRANS_EN_W::new(self)
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<LC_CONF_SPEC> {
+        MEM_TRANS_EN_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

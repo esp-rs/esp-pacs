@@ -5,19 +5,19 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `ADC2_THRES_INT_ENA` reader - Enable bit of APB_SARADC_ADC2_THRES_INT interrupt."]
 pub type ADC2_THRES_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ADC2_THRES_INT_ENA` writer - Enable bit of APB_SARADC_ADC2_THRES_INT interrupt."]
-pub type ADC2_THRES_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_THRES_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_THRES_INT_ENA` reader - Enable bit of APB_SARADC_ADC1_THRES_INT interrupt."]
 pub type ADC1_THRES_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ADC1_THRES_INT_ENA` writer - Enable bit of APB_SARADC_ADC1_THRES_INT interrupt."]
-pub type ADC1_THRES_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_THRES_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_DONE_INT_ENA` reader - Enable bit of APB_SARADC_ADC2_DONE_INT interrupt."]
 pub type ADC2_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ADC2_DONE_INT_ENA` writer - Enable bit of APB_SARADC_ADC2_DONE_INT interrupt."]
-pub type ADC2_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_DONE_INT_ENA` reader - Enable bit of APB_SARADC_ADC1_DONE_INT interrupt."]
 pub type ADC1_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ADC1_DONE_INT_ENA` writer - Enable bit of APB_SARADC_ADC1_DONE_INT interrupt."]
-pub type ADC1_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 28 - Enable bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 28 - Enable bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_thres_int_ena(&mut self) -> ADC2_THRES_INT_ENA_W<INT_ENA_SPEC, 28> {
-        ADC2_THRES_INT_ENA_W::new(self)
+    pub fn adc2_thres_int_ena(&mut self) -> ADC2_THRES_INT_ENA_W<INT_ENA_SPEC> {
+        ADC2_THRES_INT_ENA_W::new(self, 28)
     }
     #[doc = "Bit 29 - Enable bit of APB_SARADC_ADC1_THRES_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_thres_int_ena(&mut self) -> ADC1_THRES_INT_ENA_W<INT_ENA_SPEC, 29> {
-        ADC1_THRES_INT_ENA_W::new(self)
+    pub fn adc1_thres_int_ena(&mut self) -> ADC1_THRES_INT_ENA_W<INT_ENA_SPEC> {
+        ADC1_THRES_INT_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - Enable bit of APB_SARADC_ADC2_DONE_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_done_int_ena(&mut self) -> ADC2_DONE_INT_ENA_W<INT_ENA_SPEC, 30> {
-        ADC2_DONE_INT_ENA_W::new(self)
+    pub fn adc2_done_int_ena(&mut self) -> ADC2_DONE_INT_ENA_W<INT_ENA_SPEC> {
+        ADC2_DONE_INT_ENA_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enable bit of APB_SARADC_ADC1_DONE_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_done_int_ena(&mut self) -> ADC1_DONE_INT_ENA_W<INT_ENA_SPEC, 31> {
-        ADC1_DONE_INT_ENA_W::new(self)
+    pub fn adc1_done_int_ena(&mut self) -> ADC1_DONE_INT_ENA_W<INT_ENA_SPEC> {
+        ADC1_DONE_INT_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

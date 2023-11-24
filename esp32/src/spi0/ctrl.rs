@@ -5,55 +5,55 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `FCS_CRC_EN` reader - For SPI1 initialize crc32 module before writing encrypted data to flash. Active low."]
 pub type FCS_CRC_EN_R = crate::BitReader;
 #[doc = "Field `FCS_CRC_EN` writer - For SPI1 initialize crc32 module before writing encrypted data to flash. Active low."]
-pub type FCS_CRC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCS_CRC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_CRC_EN` reader - For SPI1 enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
 pub type TX_CRC_EN_R = crate::BitReader;
 #[doc = "Field `TX_CRC_EN` writer - For SPI1 enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
-pub type TX_CRC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_CRC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WAIT_FLASH_IDLE_EN` reader - wait flash idle when program flash or erase flash. 1: enable 0: disable."]
 pub type WAIT_FLASH_IDLE_EN_R = crate::BitReader;
 #[doc = "Field `WAIT_FLASH_IDLE_EN` writer - wait flash idle when program flash or erase flash. 1: enable 0: disable."]
-pub type WAIT_FLASH_IDLE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAIT_FLASH_IDLE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTRD_MODE` reader - This bit enable the bits: spi_fread_qio spi_fread_dio spi_fread_qout and spi_fread_dout. 1: enable 0: disable."]
 pub type FASTRD_MODE_R = crate::BitReader;
 #[doc = "Field `FASTRD_MODE` writer - This bit enable the bits: spi_fread_qio spi_fread_dio spi_fread_qout and spi_fread_dout. 1: enable 0: disable."]
-pub type FASTRD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTRD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_DUAL` reader - In the read operations read-data phase apply 2 signals. 1: enable 0: disable."]
 pub type FREAD_DUAL_R = crate::BitReader;
 #[doc = "Field `FREAD_DUAL` writer - In the read operations read-data phase apply 2 signals. 1: enable 0: disable."]
-pub type FREAD_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESANDRES` reader - The Device ID is read out to SPI_RD_STATUS register, this bit combine with spi_flash_res bit. 1: enable 0: disable."]
 pub type RESANDRES_R = crate::BitReader;
 #[doc = "Field `RESANDRES` writer - The Device ID is read out to SPI_RD_STATUS register, this bit combine with spi_flash_res bit. 1: enable 0: disable."]
-pub type RESANDRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESANDRES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_QUAD` reader - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
 pub type FREAD_QUAD_R = crate::BitReader;
 #[doc = "Field `FREAD_QUAD` writer - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
-pub type FREAD_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WP` reader - Write protect signal output when SPI is idle. 1: output high 0: output low."]
 pub type WP_R = crate::BitReader;
 #[doc = "Field `WP` writer - Write protect signal output when SPI is idle. 1: output high 0: output low."]
-pub type WP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WRSR_2B` reader - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
 pub type WRSR_2B_R = crate::BitReader;
 #[doc = "Field `WRSR_2B` writer - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
-pub type WRSR_2B_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WRSR_2B_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_DIO` reader - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
 pub type FREAD_DIO_R = crate::BitReader;
 #[doc = "Field `FREAD_DIO` writer - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
-pub type FREAD_DIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_DIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_QIO` reader - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
 pub type FREAD_QIO_R = crate::BitReader;
 #[doc = "Field `FREAD_QIO` writer - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
-pub type FREAD_QIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_QIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RD_BIT_ORDER` reader - In read-data (MISO) phase 1: LSB first 0: MSB first"]
 pub type RD_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `RD_BIT_ORDER` writer - In read-data (MISO) phase 1: LSB first 0: MSB first"]
-pub type RD_BIT_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RD_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WR_BIT_ORDER` reader - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first"]
 pub type WR_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `WR_BIT_ORDER` writer - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first"]
-pub type WR_BIT_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WR_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 10 - For SPI1 initialize crc32 module before writing encrypted data to flash. Active low."]
     #[inline(always)]
@@ -153,87 +153,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 10 - For SPI1 initialize crc32 module before writing encrypted data to flash. Active low."]
     #[inline(always)]
     #[must_use]
-    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<CTRL_SPEC, 10> {
-        FCS_CRC_EN_W::new(self)
+    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<CTRL_SPEC> {
+        FCS_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - For SPI1 enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<CTRL_SPEC, 11> {
-        TX_CRC_EN_W::new(self)
+    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<CTRL_SPEC> {
+        TX_CRC_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - wait flash idle when program flash or erase flash. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn wait_flash_idle_en(&mut self) -> WAIT_FLASH_IDLE_EN_W<CTRL_SPEC, 12> {
-        WAIT_FLASH_IDLE_EN_W::new(self)
+    pub fn wait_flash_idle_en(&mut self) -> WAIT_FLASH_IDLE_EN_W<CTRL_SPEC> {
+        WAIT_FLASH_IDLE_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - This bit enable the bits: spi_fread_qio spi_fread_dio spi_fread_qout and spi_fread_dout. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC, 13> {
-        FASTRD_MODE_W::new(self)
+    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC> {
+        FASTRD_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - In the read operations read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC, 14> {
-        FREAD_DUAL_W::new(self)
+    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
+        FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15 - The Device ID is read out to SPI_RD_STATUS register, this bit combine with spi_flash_res bit. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn resandres(&mut self) -> RESANDRES_W<CTRL_SPEC, 15> {
-        RESANDRES_W::new(self)
+    pub fn resandres(&mut self) -> RESANDRES_W<CTRL_SPEC> {
+        RESANDRES_W::new(self, 15)
     }
     #[doc = "Bit 20 - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC, 20> {
-        FREAD_QUAD_W::new(self)
+    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
+        FREAD_QUAD_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high 0: output low."]
     #[inline(always)]
     #[must_use]
-    pub fn wp(&mut self) -> WP_W<CTRL_SPEC, 21> {
-        WP_W::new(self)
+    pub fn wp(&mut self) -> WP_W<CTRL_SPEC> {
+        WP_W::new(self, 21)
     }
     #[doc = "Bit 22 - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<CTRL_SPEC, 22> {
-        WRSR_2B_W::new(self)
+    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<CTRL_SPEC> {
+        WRSR_2B_W::new(self, 22)
     }
     #[doc = "Bit 23 - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC, 23> {
-        FREAD_DIO_W::new(self)
+    pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC> {
+        FREAD_DIO_W::new(self, 23)
     }
     #[doc = "Bit 24 - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC, 24> {
-        FREAD_QIO_W::new(self)
+    pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC> {
+        FREAD_QIO_W::new(self, 24)
     }
     #[doc = "Bit 25 - In read-data (MISO) phase 1: LSB first 0: MSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<CTRL_SPEC, 25> {
-        RD_BIT_ORDER_W::new(self)
+    pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<CTRL_SPEC> {
+        RD_BIT_ORDER_W::new(self, 25)
     }
     #[doc = "Bit 26 - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<CTRL_SPEC, 26> {
-        WR_BIT_ORDER_W::new(self)
+    pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<CTRL_SPEC> {
+        WR_BIT_ORDER_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

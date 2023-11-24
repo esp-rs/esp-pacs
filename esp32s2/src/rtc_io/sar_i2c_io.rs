@@ -5,15 +5,15 @@ pub type W = crate::W<SAR_I2C_IO_SPEC>;
 #[doc = "Field `SAR_DEBUG_BIT_SEL` reader - "]
 pub type SAR_DEBUG_BIT_SEL_R = crate::FieldReader;
 #[doc = "Field `SAR_DEBUG_BIT_SEL` writer - "]
-pub type SAR_DEBUG_BIT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SAR_DEBUG_BIT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SAR_I2C_SCL_SEL` reader - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
 pub type SAR_I2C_SCL_SEL_R = crate::FieldReader;
 #[doc = "Field `SAR_I2C_SCL_SEL` writer - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
-pub type SAR_I2C_SCL_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SAR_I2C_SCL_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SAR_I2C_SDA_SEL` reader - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
 pub type SAR_I2C_SDA_SEL_R = crate::FieldReader;
 #[doc = "Field `SAR_I2C_SDA_SEL` writer - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
-pub type SAR_I2C_SDA_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SAR_I2C_SDA_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 23:27"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_I2C_IO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 23:27"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<SAR_I2C_IO_SPEC, 23> {
-        SAR_DEBUG_BIT_SEL_W::new(self)
+    pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<SAR_I2C_IO_SPEC> {
+        SAR_DEBUG_BIT_SEL_W::new(self, 23)
     }
     #[doc = "Bits 28:29 - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W<SAR_I2C_IO_SPEC, 28> {
-        SAR_I2C_SCL_SEL_W::new(self)
+    pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W<SAR_I2C_IO_SPEC> {
+        SAR_I2C_SCL_SEL_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W<SAR_I2C_IO_SPEC, 30> {
-        SAR_I2C_SDA_SEL_W::new(self)
+    pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W<SAR_I2C_IO_SPEC> {
+        SAR_I2C_SDA_SEL_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

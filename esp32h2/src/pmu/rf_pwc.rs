@@ -5,23 +5,23 @@ pub type W = crate::W<RF_PWC_SPEC>;
 #[doc = "Field `XPD_PERIF_I2C` reader - need_des"]
 pub type XPD_PERIF_I2C_R = crate::BitReader;
 #[doc = "Field `XPD_PERIF_I2C` writer - need_des"]
-pub type XPD_PERIF_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_PERIF_I2C_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XPD_RFTX_I2C` reader - need_des"]
 pub type XPD_RFTX_I2C_R = crate::BitReader;
 #[doc = "Field `XPD_RFTX_I2C` writer - need_des"]
-pub type XPD_RFTX_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_RFTX_I2C_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XPD_RFRX_I2C` reader - need_des"]
 pub type XPD_RFRX_I2C_R = crate::BitReader;
 #[doc = "Field `XPD_RFRX_I2C` writer - need_des"]
-pub type XPD_RFRX_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_RFRX_I2C_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XPD_RFPLL` reader - need_des"]
 pub type XPD_RFPLL_R = crate::BitReader;
 #[doc = "Field `XPD_RFPLL` writer - need_des"]
-pub type XPD_RFPLL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_RFPLL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XPD_FORCE_RFPLL` reader - need_des"]
 pub type XPD_FORCE_RFPLL_R = crate::BitReader;
 #[doc = "Field `XPD_FORCE_RFPLL` writer - need_des"]
-pub type XPD_FORCE_RFPLL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_FORCE_RFPLL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RF_PWC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_perif_i2c(&mut self) -> XPD_PERIF_I2C_W<RF_PWC_SPEC, 27> {
-        XPD_PERIF_I2C_W::new(self)
+    pub fn xpd_perif_i2c(&mut self) -> XPD_PERIF_I2C_W<RF_PWC_SPEC> {
+        XPD_PERIF_I2C_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_rftx_i2c(&mut self) -> XPD_RFTX_I2C_W<RF_PWC_SPEC, 28> {
-        XPD_RFTX_I2C_W::new(self)
+    pub fn xpd_rftx_i2c(&mut self) -> XPD_RFTX_I2C_W<RF_PWC_SPEC> {
+        XPD_RFTX_I2C_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_rfrx_i2c(&mut self) -> XPD_RFRX_I2C_W<RF_PWC_SPEC, 29> {
-        XPD_RFRX_I2C_W::new(self)
+    pub fn xpd_rfrx_i2c(&mut self) -> XPD_RFRX_I2C_W<RF_PWC_SPEC> {
+        XPD_RFRX_I2C_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_rfpll(&mut self) -> XPD_RFPLL_W<RF_PWC_SPEC, 30> {
-        XPD_RFPLL_W::new(self)
+    pub fn xpd_rfpll(&mut self) -> XPD_RFPLL_W<RF_PWC_SPEC> {
+        XPD_RFPLL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_force_rfpll(&mut self) -> XPD_FORCE_RFPLL_W<RF_PWC_SPEC, 31> {
-        XPD_FORCE_RFPLL_W::new(self)
+    pub fn xpd_force_rfpll(&mut self) -> XPD_FORCE_RFPLL_W<RF_PWC_SPEC> {
+        XPD_FORCE_RFPLL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

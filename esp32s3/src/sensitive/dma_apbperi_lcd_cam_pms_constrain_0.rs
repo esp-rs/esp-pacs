@@ -5,8 +5,7 @@ pub type W = crate::W<DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0_SPEC>;
 #[doc = "Field `DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK` reader - Set 1 to lock lcd_cam dma permission Configuration Register."]
 pub type DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK_R = crate::BitReader;
 #[doc = "Field `DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK` writer - Set 1 to lock lcd_cam dma permission Configuration Register."]
-pub type DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O>;
+pub type DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock lcd_cam dma permission Configuration Register."]
     #[inline(always)]
@@ -30,7 +29,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -39,8 +38,8 @@ impl W {
     #[must_use]
     pub fn dma_apbperi_lcd_cam_pms_constrain_lock(
         &mut self,
-    ) -> DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK_W<DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0_SPEC, 0> {
-        DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK_W::new(self)
+    ) -> DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK_W<DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0_SPEC> {
+        DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_LOCK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

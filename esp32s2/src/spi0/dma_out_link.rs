@@ -5,23 +5,23 @@ pub type W = crate::W<DMA_OUT_LINK_SPEC>;
 #[doc = "Field `OUTLINK_ADDR` reader - The address of the first outlink descriptor."]
 pub type OUTLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - The address of the first outlink descriptor."]
-pub type OUTLINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type OUTLINK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 #[doc = "Field `OUTLINK_STOP` reader - Set the bit to stop to use outlink descriptor."]
 pub type OUTLINK_STOP_R = crate::BitReader;
 #[doc = "Field `OUTLINK_STOP` writer - Set the bit to stop to use outlink descriptor."]
-pub type OUTLINK_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_START` reader - Set the bit to start to use outlink descriptor."]
 pub type OUTLINK_START_R = crate::BitReader;
 #[doc = "Field `OUTLINK_START` writer - Set the bit to start to use outlink descriptor."]
-pub type OUTLINK_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_RESTART` reader - Set the bit to mount on new outlink descriptors."]
 pub type OUTLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `OUTLINK_RESTART` writer - Set the bit to mount on new outlink descriptors."]
-pub type OUTLINK_RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_RESTART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_TX_ENA` reader - spi dma write data status bit."]
 pub type DMA_TX_ENA_R = crate::BitReader;
 #[doc = "Field `DMA_TX_ENA` writer - spi dma write data status bit."]
-pub type DMA_TX_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_TX_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:19 - The address of the first outlink descriptor."]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_OUT_LINK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - The address of the first outlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<DMA_OUT_LINK_SPEC, 0> {
-        OUTLINK_ADDR_W::new(self)
+    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<DMA_OUT_LINK_SPEC> {
+        OUTLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28 - Set the bit to stop to use outlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<DMA_OUT_LINK_SPEC, 28> {
-        OUTLINK_STOP_W::new(self)
+    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<DMA_OUT_LINK_SPEC> {
+        OUTLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set the bit to start to use outlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_start(&mut self) -> OUTLINK_START_W<DMA_OUT_LINK_SPEC, 29> {
-        OUTLINK_START_W::new(self)
+    pub fn outlink_start(&mut self) -> OUTLINK_START_W<DMA_OUT_LINK_SPEC> {
+        OUTLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set the bit to mount on new outlink descriptors."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<DMA_OUT_LINK_SPEC, 30> {
-        OUTLINK_RESTART_W::new(self)
+    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<DMA_OUT_LINK_SPEC> {
+        OUTLINK_RESTART_W::new(self, 30)
     }
     #[doc = "Bit 31 - spi dma write data status bit."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_tx_ena(&mut self) -> DMA_TX_ENA_W<DMA_OUT_LINK_SPEC, 31> {
-        DMA_TX_ENA_W::new(self)
+    pub fn dma_tx_ena(&mut self) -> DMA_TX_ENA_W<DMA_OUT_LINK_SPEC> {
+        DMA_TX_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

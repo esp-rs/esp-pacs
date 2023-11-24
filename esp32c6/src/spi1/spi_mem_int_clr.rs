@@ -1,17 +1,17 @@
 #[doc = "Register `SPI_MEM_INT_CLR` writer"]
 pub type W = crate::W<SPI_MEM_INT_CLR_SPEC>;
 #[doc = "Field `SPI_MEM_PER_END_INT_CLR` writer - The clear bit for SPI_MEM_PER_END_INT interrupt."]
-pub type SPI_MEM_PER_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_PER_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_PES_END_INT_CLR` writer - The clear bit for SPI_MEM_PES_END_INT interrupt."]
-pub type SPI_MEM_PES_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_PES_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_WPE_END_INT_CLR` writer - The clear bit for SPI_MEM_WPE_END_INT interrupt."]
-pub type SPI_MEM_WPE_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_WPE_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_CLR` writer - The clear bit for SPI_MEM_SLV_ST_END_INT interrupt."]
-pub type SPI_MEM_SLV_ST_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_SLV_ST_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_CLR` writer - The clear bit for SPI_MEM_MST_ST_END_INT interrupt."]
-pub type SPI_MEM_MST_ST_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_MST_ST_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_BROWN_OUT_INT_CLR` writer - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub type SPI_MEM_BROWN_OUT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_BROWN_OUT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -22,50 +22,44 @@ impl W {
     #[doc = "Bit 0 - The clear bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_per_end_int_clr(
-        &mut self,
-    ) -> SPI_MEM_PER_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 0> {
-        SPI_MEM_PER_END_INT_CLR_W::new(self)
+    pub fn spi_mem_per_end_int_clr(&mut self) -> SPI_MEM_PER_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_PER_END_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The clear bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_pes_end_int_clr(
-        &mut self,
-    ) -> SPI_MEM_PES_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 1> {
-        SPI_MEM_PES_END_INT_CLR_W::new(self)
+    pub fn spi_mem_pes_end_int_clr(&mut self) -> SPI_MEM_PES_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_PES_END_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The clear bit for SPI_MEM_WPE_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_wpe_end_int_clr(
-        &mut self,
-    ) -> SPI_MEM_WPE_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 2> {
-        SPI_MEM_WPE_END_INT_CLR_W::new(self)
+    pub fn spi_mem_wpe_end_int_clr(&mut self) -> SPI_MEM_WPE_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_WPE_END_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The clear bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_slv_st_end_int_clr(
         &mut self,
-    ) -> SPI_MEM_SLV_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 3> {
-        SPI_MEM_SLV_ST_END_INT_CLR_W::new(self)
+    ) -> SPI_MEM_SLV_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_SLV_ST_END_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - The clear bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_mst_st_end_int_clr(
         &mut self,
-    ) -> SPI_MEM_MST_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 4> {
-        SPI_MEM_MST_ST_END_INT_CLR_W::new(self)
+    ) -> SPI_MEM_MST_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_MST_ST_END_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 10 - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_brown_out_int_clr(
         &mut self,
-    ) -> SPI_MEM_BROWN_OUT_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 10> {
-        SPI_MEM_BROWN_OUT_INT_CLR_W::new(self)
+    ) -> SPI_MEM_BROWN_OUT_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_BROWN_OUT_INT_CLR_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,27 +5,27 @@ pub type W = crate::W<GRSTCTL_SPEC>;
 #[doc = "Field `CSFTRST` reader - "]
 pub type CSFTRST_R = crate::BitReader;
 #[doc = "Field `CSFTRST` writer - "]
-pub type CSFTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSFTRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIUFSSFTRST` reader - "]
 pub type PIUFSSFTRST_R = crate::BitReader;
 #[doc = "Field `PIUFSSFTRST` writer - "]
-pub type PIUFSSFTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIUFSSFTRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FRMCNTRRST` reader - "]
 pub type FRMCNTRRST_R = crate::BitReader;
 #[doc = "Field `FRMCNTRRST` writer - "]
-pub type FRMCNTRRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FRMCNTRRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFFLSH` reader - "]
 pub type RXFFLSH_R = crate::BitReader;
 #[doc = "Field `RXFFLSH` writer - "]
-pub type RXFFLSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFFLSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFFLSH` reader - "]
 pub type TXFFLSH_R = crate::BitReader;
 #[doc = "Field `TXFFLSH` writer - "]
-pub type TXFFLSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFFLSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFNUM` reader - "]
 pub type TXFNUM_R = crate::FieldReader;
 #[doc = "Field `TXFNUM` writer - "]
-pub type TXFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TXFNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `DMAREQ` reader - "]
 pub type DMAREQ_R = crate::BitReader;
 #[doc = "Field `AHBIDLE` reader - "]
@@ -90,45 +90,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GRSTCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn csftrst(&mut self) -> CSFTRST_W<GRSTCTL_SPEC, 0> {
-        CSFTRST_W::new(self)
+    pub fn csftrst(&mut self) -> CSFTRST_W<GRSTCTL_SPEC> {
+        CSFTRST_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn piufssftrst(&mut self) -> PIUFSSFTRST_W<GRSTCTL_SPEC, 1> {
-        PIUFSSFTRST_W::new(self)
+    pub fn piufssftrst(&mut self) -> PIUFSSFTRST_W<GRSTCTL_SPEC> {
+        PIUFSSFTRST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn frmcntrrst(&mut self) -> FRMCNTRRST_W<GRSTCTL_SPEC, 2> {
-        FRMCNTRRST_W::new(self)
+    pub fn frmcntrrst(&mut self) -> FRMCNTRRST_W<GRSTCTL_SPEC> {
+        FRMCNTRRST_W::new(self, 2)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfflsh(&mut self) -> RXFFLSH_W<GRSTCTL_SPEC, 4> {
-        RXFFLSH_W::new(self)
+    pub fn rxfflsh(&mut self) -> RXFFLSH_W<GRSTCTL_SPEC> {
+        RXFFLSH_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn txfflsh(&mut self) -> TXFFLSH_W<GRSTCTL_SPEC, 5> {
-        TXFFLSH_W::new(self)
+    pub fn txfflsh(&mut self) -> TXFFLSH_W<GRSTCTL_SPEC> {
+        TXFFLSH_W::new(self, 5)
     }
     #[doc = "Bits 6:10"]
     #[inline(always)]
     #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC, 6> {
-        TXFNUM_W::new(self)
+    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC> {
+        TXFNUM_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<CLKGATE_FORCE_ON_SPEC>;
 #[doc = "Field `ROM_CLKGATE_FORCE_ON` reader - ******* Description ***********"]
 pub type ROM_CLKGATE_FORCE_ON_R = crate::FieldReader;
 #[doc = "Field `ROM_CLKGATE_FORCE_ON` writer - ******* Description ***********"]
-pub type ROM_CLKGATE_FORCE_ON_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ROM_CLKGATE_FORCE_ON_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` reader - ******* Description ***********"]
 pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader<u16>;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` writer - ******* Description ***********"]
-pub type SRAM_CLKGATE_FORCE_ON_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SRAM_CLKGATE_FORCE_ON_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 impl R {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLKGATE_FORCE_ON_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC, 0> {
-        ROM_CLKGATE_FORCE_ON_W::new(self)
+    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC> {
+        ROM_CLKGATE_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bits 3:13 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC, 3> {
-        SRAM_CLKGATE_FORCE_ON_W::new(self)
+    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC> {
+        SRAM_CLKGATE_FORCE_ON_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<SRAM_USAGE_CONF_SPEC>;
 #[doc = "Field `SRAM_USAGE` reader - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
 pub type SRAM_USAGE_R = crate::FieldReader;
 #[doc = "Field `SRAM_USAGE` writer - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
-pub type SRAM_USAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SRAM_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `MAC_DUMP_ALLOC` reader - reserved."]
 pub type MAC_DUMP_ALLOC_R = crate::FieldReader;
 #[doc = "Field `MAC_DUMP_ALLOC` writer - reserved."]
-pub type MAC_DUMP_ALLOC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type MAC_DUMP_ALLOC_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CACHE_USAGE` reader - reserved"]
 pub type CACHE_USAGE_R = crate::BitReader;
 impl R {
@@ -45,21 +45,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_USAGE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 10:14 - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<SRAM_USAGE_CONF_SPEC, 10> {
-        SRAM_USAGE_W::new(self)
+    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<SRAM_USAGE_CONF_SPEC> {
+        SRAM_USAGE_W::new(self, 10)
     }
     #[doc = "Bits 20:24 - reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<SRAM_USAGE_CONF_SPEC, 20> {
-        MAC_DUMP_ALLOC_W::new(self)
+    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<SRAM_USAGE_CONF_SPEC> {
+        MAC_DUMP_ALLOC_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

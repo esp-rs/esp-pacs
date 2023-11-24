@@ -5,7 +5,7 @@ pub type W = crate::W<TIMER_INT2_MAP_SPEC>;
 #[doc = "Field `TIMER_INT2_MAP` reader - this register used to map timer_int2 interrupt to one of core0's external interrupt"]
 pub type TIMER_INT2_MAP_R = crate::FieldReader;
 #[doc = "Field `TIMER_INT2_MAP` writer - this register used to map timer_int2 interrupt to one of core0's external interrupt"]
-pub type TIMER_INT2_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TIMER_INT2_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map timer_int2 interrupt to one of core0's external interrupt"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER_INT2_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - this register used to map timer_int2 interrupt to one of core0's external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_int2_map(&mut self) -> TIMER_INT2_MAP_W<TIMER_INT2_MAP_SPEC, 0> {
-        TIMER_INT2_MAP_W::new(self)
+    pub fn timer_int2_map(&mut self) -> TIMER_INT2_MAP_W<TIMER_INT2_MAP_SPEC> {
+        TIMER_INT2_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

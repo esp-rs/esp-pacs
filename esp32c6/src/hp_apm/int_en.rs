@@ -5,19 +5,19 @@ pub type W = crate::W<INT_EN_SPEC>;
 #[doc = "Field `M0_APM_INT_EN` reader - APM M0 interrupt enable"]
 pub type M0_APM_INT_EN_R = crate::BitReader;
 #[doc = "Field `M0_APM_INT_EN` writer - APM M0 interrupt enable"]
-pub type M0_APM_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M0_APM_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `M1_APM_INT_EN` reader - APM M1 interrupt enable"]
 pub type M1_APM_INT_EN_R = crate::BitReader;
 #[doc = "Field `M1_APM_INT_EN` writer - APM M1 interrupt enable"]
-pub type M1_APM_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M1_APM_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `M2_APM_INT_EN` reader - APM M2 interrupt enable"]
 pub type M2_APM_INT_EN_R = crate::BitReader;
 #[doc = "Field `M2_APM_INT_EN` writer - APM M2 interrupt enable"]
-pub type M2_APM_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M2_APM_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `M3_APM_INT_EN` reader - APM M3 interrupt enable"]
 pub type M3_APM_INT_EN_R = crate::BitReader;
 #[doc = "Field `M3_APM_INT_EN` writer - APM M3 interrupt enable"]
-pub type M3_APM_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M3_APM_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - APM M0 interrupt enable"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - APM M0 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn m0_apm_int_en(&mut self) -> M0_APM_INT_EN_W<INT_EN_SPEC, 0> {
-        M0_APM_INT_EN_W::new(self)
+    pub fn m0_apm_int_en(&mut self) -> M0_APM_INT_EN_W<INT_EN_SPEC> {
+        M0_APM_INT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - APM M1 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn m1_apm_int_en(&mut self) -> M1_APM_INT_EN_W<INT_EN_SPEC, 1> {
-        M1_APM_INT_EN_W::new(self)
+    pub fn m1_apm_int_en(&mut self) -> M1_APM_INT_EN_W<INT_EN_SPEC> {
+        M1_APM_INT_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - APM M2 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn m2_apm_int_en(&mut self) -> M2_APM_INT_EN_W<INT_EN_SPEC, 2> {
-        M2_APM_INT_EN_W::new(self)
+    pub fn m2_apm_int_en(&mut self) -> M2_APM_INT_EN_W<INT_EN_SPEC> {
+        M2_APM_INT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - APM M3 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn m3_apm_int_en(&mut self) -> M3_APM_INT_EN_W<INT_EN_SPEC, 3> {
-        M3_APM_INT_EN_W::new(self)
+    pub fn m3_apm_int_en(&mut self) -> M3_APM_INT_EN_W<INT_EN_SPEC> {
+        M3_APM_INT_EN_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

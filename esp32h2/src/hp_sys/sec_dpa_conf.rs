@@ -5,11 +5,11 @@ pub type W = crate::W<SEC_DPA_CONF_SPEC>;
 #[doc = "Field `SEC_DPA_LEVEL` reader - 0: anti-DPA disable. 1~3: anti-DPA enable with different security level. The larger the number, the stronger the ability to resist DPA attacks and the higher the security level, but it will increase the computational overhead of the hardware crypto-accelerators. Only avaliable if HP_SYS_SEC_DPA_CFG_SEL is 0."]
 pub type SEC_DPA_LEVEL_R = crate::FieldReader;
 #[doc = "Field `SEC_DPA_LEVEL` writer - 0: anti-DPA disable. 1~3: anti-DPA enable with different security level. The larger the number, the stronger the ability to resist DPA attacks and the higher the security level, but it will increase the computational overhead of the hardware crypto-accelerators. Only avaliable if HP_SYS_SEC_DPA_CFG_SEL is 0."]
-pub type SEC_DPA_LEVEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SEC_DPA_LEVEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SEC_DPA_CFG_SEL` reader - This field is used to select either HP_SYS_SEC_DPA_LEVEL or EFUSE_SEC_DPA_LEVEL (from efuse) to control dpa_level. 0: EFUSE_SEC_DPA_LEVEL, 1: HP_SYS_SEC_DPA_LEVEL."]
 pub type SEC_DPA_CFG_SEL_R = crate::BitReader;
 #[doc = "Field `SEC_DPA_CFG_SEL` writer - This field is used to select either HP_SYS_SEC_DPA_LEVEL or EFUSE_SEC_DPA_LEVEL (from efuse) to control dpa_level. 0: EFUSE_SEC_DPA_LEVEL, 1: HP_SYS_SEC_DPA_LEVEL."]
-pub type SEC_DPA_CFG_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEC_DPA_CFG_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - 0: anti-DPA disable. 1~3: anti-DPA enable with different security level. The larger the number, the stronger the ability to resist DPA attacks and the higher the security level, but it will increase the computational overhead of the hardware crypto-accelerators. Only avaliable if HP_SYS_SEC_DPA_CFG_SEL is 0."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SEC_DPA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - 0: anti-DPA disable. 1~3: anti-DPA enable with different security level. The larger the number, the stronger the ability to resist DPA attacks and the higher the security level, but it will increase the computational overhead of the hardware crypto-accelerators. Only avaliable if HP_SYS_SEC_DPA_CFG_SEL is 0."]
     #[inline(always)]
     #[must_use]
-    pub fn sec_dpa_level(&mut self) -> SEC_DPA_LEVEL_W<SEC_DPA_CONF_SPEC, 0> {
-        SEC_DPA_LEVEL_W::new(self)
+    pub fn sec_dpa_level(&mut self) -> SEC_DPA_LEVEL_W<SEC_DPA_CONF_SPEC> {
+        SEC_DPA_LEVEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - This field is used to select either HP_SYS_SEC_DPA_LEVEL or EFUSE_SEC_DPA_LEVEL (from efuse) to control dpa_level. 0: EFUSE_SEC_DPA_LEVEL, 1: HP_SYS_SEC_DPA_LEVEL."]
     #[inline(always)]
     #[must_use]
-    pub fn sec_dpa_cfg_sel(&mut self) -> SEC_DPA_CFG_SEL_W<SEC_DPA_CONF_SPEC, 2> {
-        SEC_DPA_CFG_SEL_W::new(self)
+    pub fn sec_dpa_cfg_sel(&mut self) -> SEC_DPA_CFG_SEL_W<SEC_DPA_CONF_SPEC> {
+        SEC_DPA_CFG_SEL_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

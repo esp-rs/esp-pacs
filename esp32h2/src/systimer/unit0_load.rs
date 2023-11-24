@@ -1,7 +1,7 @@
 #[doc = "Register `UNIT0_LOAD` writer"]
 pub type W = crate::W<UNIT0_LOAD_SPEC>;
 #[doc = "Field `TIMER_UNIT0_LOAD` writer - timer unit0 sync enable signal"]
-pub type TIMER_UNIT0_LOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER_UNIT0_LOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UNIT0_LOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - timer unit0 sync enable signal"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_unit0_load(&mut self) -> TIMER_UNIT0_LOAD_W<UNIT0_LOAD_SPEC, 0> {
-        TIMER_UNIT0_LOAD_W::new(self)
+    pub fn timer_unit0_load(&mut self) -> TIMER_UNIT0_LOAD_W<UNIT0_LOAD_SPEC> {
+        TIMER_UNIT0_LOAD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

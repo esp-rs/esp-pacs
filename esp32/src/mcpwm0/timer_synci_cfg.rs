@@ -5,27 +5,27 @@ pub type W = crate::W<TIMER_SYNCI_CFG_SPEC>;
 #[doc = "Field `TIMER0_SYNCISEL` reader - "]
 pub type TIMER0_SYNCISEL_R = crate::FieldReader;
 #[doc = "Field `TIMER0_SYNCISEL` writer - "]
-pub type TIMER0_SYNCISEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TIMER0_SYNCISEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TIMER1_SYNCISEL` reader - "]
 pub type TIMER1_SYNCISEL_R = crate::FieldReader;
 #[doc = "Field `TIMER1_SYNCISEL` writer - "]
-pub type TIMER1_SYNCISEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TIMER1_SYNCISEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TIMER2_SYNCISEL` reader - "]
 pub type TIMER2_SYNCISEL_R = crate::FieldReader;
 #[doc = "Field `TIMER2_SYNCISEL` writer - "]
-pub type TIMER2_SYNCISEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TIMER2_SYNCISEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `EXTERNAL_SYNCI0_INVERT` reader - "]
 pub type EXTERNAL_SYNCI0_INVERT_R = crate::BitReader;
 #[doc = "Field `EXTERNAL_SYNCI0_INVERT` writer - "]
-pub type EXTERNAL_SYNCI0_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTERNAL_SYNCI0_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXTERNAL_SYNCI1_INVERT` reader - "]
 pub type EXTERNAL_SYNCI1_INVERT_R = crate::BitReader;
 #[doc = "Field `EXTERNAL_SYNCI1_INVERT` writer - "]
-pub type EXTERNAL_SYNCI1_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTERNAL_SYNCI1_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXTERNAL_SYNCI2_INVERT` reader - "]
 pub type EXTERNAL_SYNCI2_INVERT_R = crate::BitReader;
 #[doc = "Field `EXTERNAL_SYNCI2_INVERT` writer - "]
-pub type EXTERNAL_SYNCI2_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTERNAL_SYNCI2_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER_SYNCI_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn timer0_syncisel(&mut self) -> TIMER0_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC, 0> {
-        TIMER0_SYNCISEL_W::new(self)
+    pub fn timer0_syncisel(&mut self) -> TIMER0_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC> {
+        TIMER0_SYNCISEL_W::new(self, 0)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_syncisel(&mut self) -> TIMER1_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC, 3> {
-        TIMER1_SYNCISEL_W::new(self)
+    pub fn timer1_syncisel(&mut self) -> TIMER1_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC> {
+        TIMER1_SYNCISEL_W::new(self, 3)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
     #[must_use]
-    pub fn timer2_syncisel(&mut self) -> TIMER2_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC, 6> {
-        TIMER2_SYNCISEL_W::new(self)
+    pub fn timer2_syncisel(&mut self) -> TIMER2_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC> {
+        TIMER2_SYNCISEL_W::new(self, 6)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn external_synci0_invert(&mut self) -> EXTERNAL_SYNCI0_INVERT_W<TIMER_SYNCI_CFG_SPEC, 9> {
-        EXTERNAL_SYNCI0_INVERT_W::new(self)
+    pub fn external_synci0_invert(&mut self) -> EXTERNAL_SYNCI0_INVERT_W<TIMER_SYNCI_CFG_SPEC> {
+        EXTERNAL_SYNCI0_INVERT_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn external_synci1_invert(&mut self) -> EXTERNAL_SYNCI1_INVERT_W<TIMER_SYNCI_CFG_SPEC, 10> {
-        EXTERNAL_SYNCI1_INVERT_W::new(self)
+    pub fn external_synci1_invert(&mut self) -> EXTERNAL_SYNCI1_INVERT_W<TIMER_SYNCI_CFG_SPEC> {
+        EXTERNAL_SYNCI1_INVERT_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn external_synci2_invert(&mut self) -> EXTERNAL_SYNCI2_INVERT_W<TIMER_SYNCI_CFG_SPEC, 11> {
-        EXTERNAL_SYNCI2_INVERT_W::new(self)
+    pub fn external_synci2_invert(&mut self) -> EXTERNAL_SYNCI2_INVERT_W<TIMER_SYNCI_CFG_SPEC> {
+        EXTERNAL_SYNCI2_INVERT_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<RETENTION_CTRL1_SPEC>;
 #[doc = "Field `RETENTION_TAG_LINK_ADDR` reader - ******* Description ***********"]
 pub type RETENTION_TAG_LINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `RETENTION_TAG_LINK_ADDR` writer - ******* Description ***********"]
-pub type RETENTION_TAG_LINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 27, O, u32>;
+pub type RETENTION_TAG_LINK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 27, u32>;
 impl R {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
@@ -27,17 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_tag_link_addr(
-        &mut self,
-    ) -> RETENTION_TAG_LINK_ADDR_W<RETENTION_CTRL1_SPEC, 0> {
-        RETENTION_TAG_LINK_ADDR_W::new(self)
+    pub fn retention_tag_link_addr(&mut self) -> RETENTION_TAG_LINK_ADDR_W<RETENTION_CTRL1_SPEC> {
+        RETENTION_TAG_LINK_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

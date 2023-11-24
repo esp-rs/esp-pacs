@@ -5,39 +5,39 @@ pub type W = crate::W<RTC_PAD19_SPEC>;
 #[doc = "Field `FUN_IE` reader - input enable in work mode"]
 pub type FUN_IE_R = crate::BitReader;
 #[doc = "Field `FUN_IE` writer - input enable in work mode"]
-pub type FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLP_OE` reader - output enable in sleep mode"]
 pub type SLP_OE_R = crate::BitReader;
 #[doc = "Field `SLP_OE` writer - output enable in sleep mode"]
-pub type SLP_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLP_IE` reader - input enable in sleep mode"]
 pub type SLP_IE_R = crate::BitReader;
 #[doc = "Field `SLP_IE` writer - input enable in sleep mode"]
-pub type SLP_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLP_SEL` reader - 1: enable sleep mode during sleep,0: no sleep mode"]
 pub type SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SLP_SEL` writer - 1: enable sleep mode during sleep,0: no sleep mode"]
-pub type SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FUN_SEL` reader - function sel"]
 pub type FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `FUN_SEL` writer - function sel"]
-pub type FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MUX_SEL` reader - 1: use RTC GPIO,0: use digital GPIO"]
 pub type MUX_SEL_R = crate::BitReader;
 #[doc = "Field `MUX_SEL` writer - 1: use RTC GPIO,0: use digital GPIO"]
-pub type MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RUE` reader - RUE"]
 pub type RUE_R = crate::BitReader;
 #[doc = "Field `RUE` writer - RUE"]
-pub type RUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RDE` reader - RDE"]
 pub type RDE_R = crate::BitReader;
 #[doc = "Field `RDE` writer - RDE"]
-pub type RDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DRV` reader - DRV"]
 pub type DRV_R = crate::FieldReader;
 #[doc = "Field `DRV` writer - DRV"]
-pub type DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
@@ -104,65 +104,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_PAD19_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_ie(&mut self) -> FUN_IE_W<RTC_PAD19_SPEC, 13> {
-        FUN_IE_W::new(self)
+    pub fn fun_ie(&mut self) -> FUN_IE_W<RTC_PAD19_SPEC> {
+        FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_oe(&mut self) -> SLP_OE_W<RTC_PAD19_SPEC, 14> {
-        SLP_OE_W::new(self)
+    pub fn slp_oe(&mut self) -> SLP_OE_W<RTC_PAD19_SPEC> {
+        SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_ie(&mut self) -> SLP_IE_W<RTC_PAD19_SPEC, 15> {
-        SLP_IE_W::new(self)
+    pub fn slp_ie(&mut self) -> SLP_IE_W<RTC_PAD19_SPEC> {
+        SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_sel(&mut self) -> SLP_SEL_W<RTC_PAD19_SPEC, 16> {
-        SLP_SEL_W::new(self)
+    pub fn slp_sel(&mut self) -> SLP_SEL_W<RTC_PAD19_SPEC> {
+        SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - function sel"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_sel(&mut self) -> FUN_SEL_W<RTC_PAD19_SPEC, 17> {
-        FUN_SEL_W::new(self)
+    pub fn fun_sel(&mut self) -> FUN_SEL_W<RTC_PAD19_SPEC> {
+        FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
     #[must_use]
-    pub fn mux_sel(&mut self) -> MUX_SEL_W<RTC_PAD19_SPEC, 19> {
-        MUX_SEL_W::new(self)
+    pub fn mux_sel(&mut self) -> MUX_SEL_W<RTC_PAD19_SPEC> {
+        MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 27 - RUE"]
     #[inline(always)]
     #[must_use]
-    pub fn rue(&mut self) -> RUE_W<RTC_PAD19_SPEC, 27> {
-        RUE_W::new(self)
+    pub fn rue(&mut self) -> RUE_W<RTC_PAD19_SPEC> {
+        RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - RDE"]
     #[inline(always)]
     #[must_use]
-    pub fn rde(&mut self) -> RDE_W<RTC_PAD19_SPEC, 28> {
-        RDE_W::new(self)
+    pub fn rde(&mut self) -> RDE_W<RTC_PAD19_SPEC> {
+        RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - DRV"]
     #[inline(always)]
     #[must_use]
-    pub fn drv(&mut self) -> DRV_W<RTC_PAD19_SPEC, 29> {
-        DRV_W::new(self)
+    pub fn drv(&mut self) -> DRV_W<RTC_PAD19_SPEC> {
+        DRV_W::new(self, 29)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

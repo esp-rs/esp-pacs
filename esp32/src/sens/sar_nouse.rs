@@ -5,7 +5,7 @@ pub type W = crate::W<SAR_NOUSE_SPEC>;
 #[doc = "Field `SAR_NOUSE` reader - "]
 pub type SAR_NOUSE_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR_NOUSE` writer - "]
-pub type SAR_NOUSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SAR_NOUSE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_NOUSE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_nouse(&mut self) -> SAR_NOUSE_W<SAR_NOUSE_SPEC, 0> {
-        SAR_NOUSE_W::new(self)
+    pub fn sar_nouse(&mut self) -> SAR_NOUSE_W<SAR_NOUSE_SPEC> {
+        SAR_NOUSE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

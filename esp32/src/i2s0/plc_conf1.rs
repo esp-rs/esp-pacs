@@ -5,23 +5,23 @@ pub type W = crate::W<PLC_CONF1_SPEC>;
 #[doc = "Field `BAD_CEF_ATTEN_PARA` reader - "]
 pub type BAD_CEF_ATTEN_PARA_R = crate::FieldReader;
 #[doc = "Field `BAD_CEF_ATTEN_PARA` writer - "]
-pub type BAD_CEF_ATTEN_PARA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BAD_CEF_ATTEN_PARA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `BAD_CEF_ATTEN_PARA_SHIFT` reader - "]
 pub type BAD_CEF_ATTEN_PARA_SHIFT_R = crate::FieldReader;
 #[doc = "Field `BAD_CEF_ATTEN_PARA_SHIFT` writer - "]
-pub type BAD_CEF_ATTEN_PARA_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type BAD_CEF_ATTEN_PARA_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `BAD_OLA_WIN2_PARA_SHIFT` reader - "]
 pub type BAD_OLA_WIN2_PARA_SHIFT_R = crate::FieldReader;
 #[doc = "Field `BAD_OLA_WIN2_PARA_SHIFT` writer - "]
-pub type BAD_OLA_WIN2_PARA_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type BAD_OLA_WIN2_PARA_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `BAD_OLA_WIN2_PARA` reader - "]
 pub type BAD_OLA_WIN2_PARA_R = crate::FieldReader;
 #[doc = "Field `BAD_OLA_WIN2_PARA` writer - "]
-pub type BAD_OLA_WIN2_PARA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BAD_OLA_WIN2_PARA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLIDE_WIN_LEN` reader - "]
 pub type SLIDE_WIN_LEN_R = crate::FieldReader;
 #[doc = "Field `SLIDE_WIN_LEN` writer - "]
-pub type SLIDE_WIN_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLIDE_WIN_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PLC_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn bad_cef_atten_para(&mut self) -> BAD_CEF_ATTEN_PARA_W<PLC_CONF1_SPEC, 0> {
-        BAD_CEF_ATTEN_PARA_W::new(self)
+    pub fn bad_cef_atten_para(&mut self) -> BAD_CEF_ATTEN_PARA_W<PLC_CONF1_SPEC> {
+        BAD_CEF_ATTEN_PARA_W::new(self, 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     #[must_use]
-    pub fn bad_cef_atten_para_shift(&mut self) -> BAD_CEF_ATTEN_PARA_SHIFT_W<PLC_CONF1_SPEC, 8> {
-        BAD_CEF_ATTEN_PARA_SHIFT_W::new(self)
+    pub fn bad_cef_atten_para_shift(&mut self) -> BAD_CEF_ATTEN_PARA_SHIFT_W<PLC_CONF1_SPEC> {
+        BAD_CEF_ATTEN_PARA_SHIFT_W::new(self, 8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
     #[must_use]
-    pub fn bad_ola_win2_para_shift(&mut self) -> BAD_OLA_WIN2_PARA_SHIFT_W<PLC_CONF1_SPEC, 12> {
-        BAD_OLA_WIN2_PARA_SHIFT_W::new(self)
+    pub fn bad_ola_win2_para_shift(&mut self) -> BAD_OLA_WIN2_PARA_SHIFT_W<PLC_CONF1_SPEC> {
+        BAD_OLA_WIN2_PARA_SHIFT_W::new(self, 12)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     #[must_use]
-    pub fn bad_ola_win2_para(&mut self) -> BAD_OLA_WIN2_PARA_W<PLC_CONF1_SPEC, 16> {
-        BAD_OLA_WIN2_PARA_W::new(self)
+    pub fn bad_ola_win2_para(&mut self) -> BAD_OLA_WIN2_PARA_W<PLC_CONF1_SPEC> {
+        BAD_OLA_WIN2_PARA_W::new(self, 16)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
     #[must_use]
-    pub fn slide_win_len(&mut self) -> SLIDE_WIN_LEN_W<PLC_CONF1_SPEC, 24> {
-        SLIDE_WIN_LEN_W::new(self)
+    pub fn slide_win_len(&mut self) -> SLIDE_WIN_LEN_W<PLC_CONF1_SPEC> {
+        SLIDE_WIN_LEN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

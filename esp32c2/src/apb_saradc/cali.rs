@@ -5,7 +5,7 @@ pub type W = crate::W<CALI_SPEC>;
 #[doc = "Field `CFG` reader - Need add description"]
 pub type CFG_R = crate::FieldReader<u32>;
 #[doc = "Field `CFG` writer - Need add description"]
-pub type CFG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 17, O, u32>;
+pub type CFG_W<'a, REG> = crate::FieldWriter<'a, REG, 17, u32>;
 impl R {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CALI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn cfg(&mut self) -> CFG_W<CALI_SPEC, 0> {
-        CFG_W::new(self)
+    pub fn cfg(&mut self) -> CFG_W<CALI_SPEC> {
+        CFG_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

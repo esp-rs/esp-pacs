@@ -1,7 +1,7 @@
 #[doc = "Register `SET_START` writer"]
 pub type W = crate::W<SET_START_SPEC>;
 #[doc = "Field `SET_START` writer - Write 1 to this register to activate the DS peripheral."]
-pub type SET_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SET_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_START_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Write 1 to this register to activate the DS peripheral."]
     #[inline(always)]
     #[must_use]
-    pub fn set_start(&mut self) -> SET_START_W<SET_START_SPEC, 0> {
-        SET_START_W::new(self)
+    pub fn set_start(&mut self) -> SET_START_W<SET_START_SPEC> {
+        SET_START_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

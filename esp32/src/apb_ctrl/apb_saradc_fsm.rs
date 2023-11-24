@@ -5,19 +5,19 @@ pub type W = crate::W<APB_SARADC_FSM_SPEC>;
 #[doc = "Field `SARADC_RSTB_WAIT` reader - "]
 pub type SARADC_RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_RSTB_WAIT` writer - "]
-pub type SARADC_RSTB_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SARADC_RSTB_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SARADC_STANDBY_WAIT` reader - "]
 pub type SARADC_STANDBY_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_STANDBY_WAIT` writer - "]
-pub type SARADC_STANDBY_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SARADC_STANDBY_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SARADC_START_WAIT` reader - "]
 pub type SARADC_START_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_START_WAIT` writer - "]
-pub type SARADC_START_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SARADC_START_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SARADC_SAMPLE_CYCLE` reader - sample cycles"]
 pub type SARADC_SAMPLE_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SARADC_SAMPLE_CYCLE` writer - sample cycles"]
-pub type SARADC_SAMPLE_CYCLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SARADC_SAMPLE_CYCLE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_SARADC_FSM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W<APB_SARADC_FSM_SPEC, 0> {
-        SARADC_RSTB_WAIT_W::new(self)
+    pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W<APB_SARADC_FSM_SPEC> {
+        SARADC_RSTB_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W<APB_SARADC_FSM_SPEC, 8> {
-        SARADC_STANDBY_WAIT_W::new(self)
+    pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W<APB_SARADC_FSM_SPEC> {
+        SARADC_STANDBY_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_start_wait(&mut self) -> SARADC_START_WAIT_W<APB_SARADC_FSM_SPEC, 16> {
-        SARADC_START_WAIT_W::new(self)
+    pub fn saradc_start_wait(&mut self) -> SARADC_START_WAIT_W<APB_SARADC_FSM_SPEC> {
+        SARADC_START_WAIT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - sample cycles"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sample_cycle(&mut self) -> SARADC_SAMPLE_CYCLE_W<APB_SARADC_FSM_SPEC, 24> {
-        SARADC_SAMPLE_CYCLE_W::new(self)
+    pub fn saradc_sample_cycle(&mut self) -> SARADC_SAMPLE_CYCLE_W<APB_SARADC_FSM_SPEC> {
+        SARADC_SAMPLE_CYCLE_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

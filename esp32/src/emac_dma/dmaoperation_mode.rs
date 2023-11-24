@@ -5,55 +5,55 @@ pub type W = crate::W<DMAOPERATION_MODE_SPEC>;
 #[doc = "Field `START_STOP_RX` reader - When this bit is set the Receive process is placed in the Running state. The DMA attempts to acquire the descriptor from the Receive list and processes the incoming frames.When this bit is cleared the Rx DMA operation is stopped after the transfer of the current frame."]
 pub type START_STOP_RX_R = crate::BitReader;
 #[doc = "Field `START_STOP_RX` writer - When this bit is set the Receive process is placed in the Running state. The DMA attempts to acquire the descriptor from the Receive list and processes the incoming frames.When this bit is cleared the Rx DMA operation is stopped after the transfer of the current frame."]
-pub type START_STOP_RX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_STOP_RX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OPT_SECOND_FRAME` reader - When this bit is set it instructs the DMA to process the second frame of the Transmit data even before the status for the first frame is obtained."]
 pub type OPT_SECOND_FRAME_R = crate::BitReader;
 #[doc = "Field `OPT_SECOND_FRAME` writer - When this bit is set it instructs the DMA to process the second frame of the Transmit data even before the status for the first frame is obtained."]
-pub type OPT_SECOND_FRAME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OPT_SECOND_FRAME_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_THRESH_CTRL` reader - These two bits control the threshold level of the MTL Receive FIFO. Transfer (request) to DMA starts when the frame size within the MTL Receive FIFO is larger than the threshold. 2'b00: 64， 2'b01: 32， 2'b10: 96， 2'b11: 128 ."]
 pub type RX_THRESH_CTRL_R = crate::FieldReader;
 #[doc = "Field `RX_THRESH_CTRL` writer - These two bits control the threshold level of the MTL Receive FIFO. Transfer (request) to DMA starts when the frame size within the MTL Receive FIFO is larger than the threshold. 2'b00: 64， 2'b01: 32， 2'b10: 96， 2'b11: 128 ."]
-pub type RX_THRESH_CTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_THRESH_CTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DROP_GFRM` reader - When set the MAC drops the received giant frames in the Rx FIFO that is frames that are larger than the computed giant frame limit."]
 pub type DROP_GFRM_R = crate::BitReader;
 #[doc = "Field `DROP_GFRM` writer - When set the MAC drops the received giant frames in the Rx FIFO that is frames that are larger than the computed giant frame limit."]
-pub type DROP_GFRM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DROP_GFRM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FWD_UNDER_GF` reader - When set the Rx FIFO forwards Undersized frames (that is frames with no Error and length less than 64 bytes) including pad-bytes and CRC."]
 pub type FWD_UNDER_GF_R = crate::BitReader;
 #[doc = "Field `FWD_UNDER_GF` writer - When set the Rx FIFO forwards Undersized frames (that is frames with no Error and length less than 64 bytes) including pad-bytes and CRC."]
-pub type FWD_UNDER_GF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FWD_UNDER_GF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FWD_ERR_FRAME` reader - When this bit is reset the Rx FIFO drops frames with error status (CRC error collision error giant frame watchdog timeout or overflow)."]
 pub type FWD_ERR_FRAME_R = crate::BitReader;
 #[doc = "Field `FWD_ERR_FRAME` writer - When this bit is reset the Rx FIFO drops frames with error status (CRC error collision error giant frame watchdog timeout or overflow)."]
-pub type FWD_ERR_FRAME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FWD_ERR_FRAME_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `START_STOP_TRANSMISSION_COMMAND` reader - When this bit is set transmission is placed in the Running state and the DMA checks the Transmit List at the current position for a frame to be transmitted.When this bit is reset the transmission process is placed in the Stopped state after completing the transmission of the current frame."]
 pub type START_STOP_TRANSMISSION_COMMAND_R = crate::BitReader;
 #[doc = "Field `START_STOP_TRANSMISSION_COMMAND` writer - When this bit is set transmission is placed in the Running state and the DMA checks the Transmit List at the current position for a frame to be transmitted.When this bit is reset the transmission process is placed in the Stopped state after completing the transmission of the current frame."]
-pub type START_STOP_TRANSMISSION_COMMAND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_STOP_TRANSMISSION_COMMAND_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_THRESH_CTRL` reader - These bits control the threshold level of the MTL Transmit FIFO. Transmission starts when the frame size within the MTL Transmit FIFO is larger than the threshold. In addition full frames with a length less than the threshold are also transmitted. These bits are used only when Tx_Str_fwd is reset. 3'b000: 64 3'b001: 128 3'b010: 192 3'b011: 256 3'b100: 40 3'b101: 32 3'b110: 24 3'b111: 16 ."]
 pub type TX_THRESH_CTRL_R = crate::FieldReader;
 #[doc = "Field `TX_THRESH_CTRL` writer - These bits control the threshold level of the MTL Transmit FIFO. Transmission starts when the frame size within the MTL Transmit FIFO is larger than the threshold. In addition full frames with a length less than the threshold are also transmitted. These bits are used only when Tx_Str_fwd is reset. 3'b000: 64 3'b001: 128 3'b010: 192 3'b011: 256 3'b100: 40 3'b101: 32 3'b110: 24 3'b111: 16 ."]
-pub type TX_THRESH_CTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TX_THRESH_CTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FLUSH_TX_FIFO` reader - When this bit is set the transmit FIFO controller logic is reset to its default values and thus all data in the Tx FIFO is lost or flushed. This bit is cleared internally when the flushing operation is complete."]
 pub type FLUSH_TX_FIFO_R = crate::BitReader;
 #[doc = "Field `FLUSH_TX_FIFO` writer - When this bit is set the transmit FIFO controller logic is reset to its default values and thus all data in the Tx FIFO is lost or flushed. This bit is cleared internally when the flushing operation is complete."]
-pub type FLUSH_TX_FIFO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLUSH_TX_FIFO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_STR_FWD` reader - When this bit is set transmission starts when a full frame resides in the MTL Transmit FIFO. When this bit is set the Tx_Thresh_Ctrl values specified in Tx_Thresh_Ctrl are ignored."]
 pub type TX_STR_FWD_R = crate::BitReader;
 #[doc = "Field `TX_STR_FWD` writer - When this bit is set transmission starts when a full frame resides in the MTL Transmit FIFO. When this bit is set the Tx_Thresh_Ctrl values specified in Tx_Thresh_Ctrl are ignored."]
-pub type TX_STR_FWD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_STR_FWD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIS_FLUSH_RECV_FRAMES` reader - When this bit is set the Rx DMA does not flush any frames because of the unavailability of receive descriptors or buffers."]
 pub type DIS_FLUSH_RECV_FRAMES_R = crate::BitReader;
 #[doc = "Field `DIS_FLUSH_RECV_FRAMES` writer - When this bit is set the Rx DMA does not flush any frames because of the unavailability of receive descriptors or buffers."]
-pub type DIS_FLUSH_RECV_FRAMES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIS_FLUSH_RECV_FRAMES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_STORE_FORWARD` reader - When this bit is set the MTL reads a frame from the Rx FIFO only after the complete frame has been written to it."]
 pub type RX_STORE_FORWARD_R = crate::BitReader;
 #[doc = "Field `RX_STORE_FORWARD` writer - When this bit is set the MTL reads a frame from the Rx FIFO only after the complete frame has been written to it."]
-pub type RX_STORE_FORWARD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_STORE_FORWARD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIS_DROP_TCPIP_ERR_FRAM` reader - When this bit is set the MAC does not drop the frames which only have errors detected by the Receive Checksum engine.When this bit is reset all error frames are dropped if the Fwd_Err_Frame bit is reset."]
 pub type DIS_DROP_TCPIP_ERR_FRAM_R = crate::BitReader;
 #[doc = "Field `DIS_DROP_TCPIP_ERR_FRAM` writer - When this bit is set the MAC does not drop the frames which only have errors detected by the Receive Checksum engine.When this bit is reset all error frames are dropped if the Fwd_Err_Frame bit is reset."]
-pub type DIS_DROP_TCPIP_ERR_FRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIS_DROP_TCPIP_ERR_FRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - When this bit is set the Receive process is placed in the Running state. The DMA attempts to acquire the descriptor from the Receive list and processes the incoming frames.When this bit is cleared the Rx DMA operation is stopped after the transfer of the current frame."]
     #[inline(always)]
@@ -177,91 +177,89 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMAOPERATION_MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - When this bit is set the Receive process is placed in the Running state. The DMA attempts to acquire the descriptor from the Receive list and processes the incoming frames.When this bit is cleared the Rx DMA operation is stopped after the transfer of the current frame."]
     #[inline(always)]
     #[must_use]
-    pub fn start_stop_rx(&mut self) -> START_STOP_RX_W<DMAOPERATION_MODE_SPEC, 1> {
-        START_STOP_RX_W::new(self)
+    pub fn start_stop_rx(&mut self) -> START_STOP_RX_W<DMAOPERATION_MODE_SPEC> {
+        START_STOP_RX_W::new(self, 1)
     }
     #[doc = "Bit 2 - When this bit is set it instructs the DMA to process the second frame of the Transmit data even before the status for the first frame is obtained."]
     #[inline(always)]
     #[must_use]
-    pub fn opt_second_frame(&mut self) -> OPT_SECOND_FRAME_W<DMAOPERATION_MODE_SPEC, 2> {
-        OPT_SECOND_FRAME_W::new(self)
+    pub fn opt_second_frame(&mut self) -> OPT_SECOND_FRAME_W<DMAOPERATION_MODE_SPEC> {
+        OPT_SECOND_FRAME_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - These two bits control the threshold level of the MTL Receive FIFO. Transfer (request) to DMA starts when the frame size within the MTL Receive FIFO is larger than the threshold. 2'b00: 64， 2'b01: 32， 2'b10: 96， 2'b11: 128 ."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_thresh_ctrl(&mut self) -> RX_THRESH_CTRL_W<DMAOPERATION_MODE_SPEC, 3> {
-        RX_THRESH_CTRL_W::new(self)
+    pub fn rx_thresh_ctrl(&mut self) -> RX_THRESH_CTRL_W<DMAOPERATION_MODE_SPEC> {
+        RX_THRESH_CTRL_W::new(self, 3)
     }
     #[doc = "Bit 5 - When set the MAC drops the received giant frames in the Rx FIFO that is frames that are larger than the computed giant frame limit."]
     #[inline(always)]
     #[must_use]
-    pub fn drop_gfrm(&mut self) -> DROP_GFRM_W<DMAOPERATION_MODE_SPEC, 5> {
-        DROP_GFRM_W::new(self)
+    pub fn drop_gfrm(&mut self) -> DROP_GFRM_W<DMAOPERATION_MODE_SPEC> {
+        DROP_GFRM_W::new(self, 5)
     }
     #[doc = "Bit 6 - When set the Rx FIFO forwards Undersized frames (that is frames with no Error and length less than 64 bytes) including pad-bytes and CRC."]
     #[inline(always)]
     #[must_use]
-    pub fn fwd_under_gf(&mut self) -> FWD_UNDER_GF_W<DMAOPERATION_MODE_SPEC, 6> {
-        FWD_UNDER_GF_W::new(self)
+    pub fn fwd_under_gf(&mut self) -> FWD_UNDER_GF_W<DMAOPERATION_MODE_SPEC> {
+        FWD_UNDER_GF_W::new(self, 6)
     }
     #[doc = "Bit 7 - When this bit is reset the Rx FIFO drops frames with error status (CRC error collision error giant frame watchdog timeout or overflow)."]
     #[inline(always)]
     #[must_use]
-    pub fn fwd_err_frame(&mut self) -> FWD_ERR_FRAME_W<DMAOPERATION_MODE_SPEC, 7> {
-        FWD_ERR_FRAME_W::new(self)
+    pub fn fwd_err_frame(&mut self) -> FWD_ERR_FRAME_W<DMAOPERATION_MODE_SPEC> {
+        FWD_ERR_FRAME_W::new(self, 7)
     }
     #[doc = "Bit 13 - When this bit is set transmission is placed in the Running state and the DMA checks the Transmit List at the current position for a frame to be transmitted.When this bit is reset the transmission process is placed in the Stopped state after completing the transmission of the current frame."]
     #[inline(always)]
     #[must_use]
     pub fn start_stop_transmission_command(
         &mut self,
-    ) -> START_STOP_TRANSMISSION_COMMAND_W<DMAOPERATION_MODE_SPEC, 13> {
-        START_STOP_TRANSMISSION_COMMAND_W::new(self)
+    ) -> START_STOP_TRANSMISSION_COMMAND_W<DMAOPERATION_MODE_SPEC> {
+        START_STOP_TRANSMISSION_COMMAND_W::new(self, 13)
     }
     #[doc = "Bits 14:16 - These bits control the threshold level of the MTL Transmit FIFO. Transmission starts when the frame size within the MTL Transmit FIFO is larger than the threshold. In addition full frames with a length less than the threshold are also transmitted. These bits are used only when Tx_Str_fwd is reset. 3'b000: 64 3'b001: 128 3'b010: 192 3'b011: 256 3'b100: 40 3'b101: 32 3'b110: 24 3'b111: 16 ."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_thresh_ctrl(&mut self) -> TX_THRESH_CTRL_W<DMAOPERATION_MODE_SPEC, 14> {
-        TX_THRESH_CTRL_W::new(self)
+    pub fn tx_thresh_ctrl(&mut self) -> TX_THRESH_CTRL_W<DMAOPERATION_MODE_SPEC> {
+        TX_THRESH_CTRL_W::new(self, 14)
     }
     #[doc = "Bit 20 - When this bit is set the transmit FIFO controller logic is reset to its default values and thus all data in the Tx FIFO is lost or flushed. This bit is cleared internally when the flushing operation is complete."]
     #[inline(always)]
     #[must_use]
-    pub fn flush_tx_fifo(&mut self) -> FLUSH_TX_FIFO_W<DMAOPERATION_MODE_SPEC, 20> {
-        FLUSH_TX_FIFO_W::new(self)
+    pub fn flush_tx_fifo(&mut self) -> FLUSH_TX_FIFO_W<DMAOPERATION_MODE_SPEC> {
+        FLUSH_TX_FIFO_W::new(self, 20)
     }
     #[doc = "Bit 21 - When this bit is set transmission starts when a full frame resides in the MTL Transmit FIFO. When this bit is set the Tx_Thresh_Ctrl values specified in Tx_Thresh_Ctrl are ignored."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_str_fwd(&mut self) -> TX_STR_FWD_W<DMAOPERATION_MODE_SPEC, 21> {
-        TX_STR_FWD_W::new(self)
+    pub fn tx_str_fwd(&mut self) -> TX_STR_FWD_W<DMAOPERATION_MODE_SPEC> {
+        TX_STR_FWD_W::new(self, 21)
     }
     #[doc = "Bit 24 - When this bit is set the Rx DMA does not flush any frames because of the unavailability of receive descriptors or buffers."]
     #[inline(always)]
     #[must_use]
-    pub fn dis_flush_recv_frames(&mut self) -> DIS_FLUSH_RECV_FRAMES_W<DMAOPERATION_MODE_SPEC, 24> {
-        DIS_FLUSH_RECV_FRAMES_W::new(self)
+    pub fn dis_flush_recv_frames(&mut self) -> DIS_FLUSH_RECV_FRAMES_W<DMAOPERATION_MODE_SPEC> {
+        DIS_FLUSH_RECV_FRAMES_W::new(self, 24)
     }
     #[doc = "Bit 25 - When this bit is set the MTL reads a frame from the Rx FIFO only after the complete frame has been written to it."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_store_forward(&mut self) -> RX_STORE_FORWARD_W<DMAOPERATION_MODE_SPEC, 25> {
-        RX_STORE_FORWARD_W::new(self)
+    pub fn rx_store_forward(&mut self) -> RX_STORE_FORWARD_W<DMAOPERATION_MODE_SPEC> {
+        RX_STORE_FORWARD_W::new(self, 25)
     }
     #[doc = "Bit 26 - When this bit is set the MAC does not drop the frames which only have errors detected by the Receive Checksum engine.When this bit is reset all error frames are dropped if the Fwd_Err_Frame bit is reset."]
     #[inline(always)]
     #[must_use]
-    pub fn dis_drop_tcpip_err_fram(
-        &mut self,
-    ) -> DIS_DROP_TCPIP_ERR_FRAM_W<DMAOPERATION_MODE_SPEC, 26> {
-        DIS_DROP_TCPIP_ERR_FRAM_W::new(self)
+    pub fn dis_drop_tcpip_err_fram(&mut self) -> DIS_DROP_TCPIP_ERR_FRAM_W<DMAOPERATION_MODE_SPEC> {
+        DIS_DROP_TCPIP_ERR_FRAM_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

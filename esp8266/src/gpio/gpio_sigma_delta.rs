@@ -5,15 +5,15 @@ pub type W = crate::W<GPIO_SIGMA_DELTA_SPEC>;
 #[doc = "Field `SIGMA_DELTA_TARGET` reader - target level of the sigma-delta. It is a signed byte."]
 pub type SIGMA_DELTA_TARGET_R = crate::FieldReader;
 #[doc = "Field `SIGMA_DELTA_TARGET` writer - target level of the sigma-delta. It is a signed byte."]
-pub type SIGMA_DELTA_TARGET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SIGMA_DELTA_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SIGMA_DELTA_PRESCALAR` reader - Clock pre-divider for sigma-delta."]
 pub type SIGMA_DELTA_PRESCALAR_R = crate::FieldReader;
 #[doc = "Field `SIGMA_DELTA_PRESCALAR` writer - Clock pre-divider for sigma-delta."]
-pub type SIGMA_DELTA_PRESCALAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SIGMA_DELTA_PRESCALAR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SIGMA_DELTA_ENABLE` reader - 1: enable sigma-delta; 0: disable"]
 pub type SIGMA_DELTA_ENABLE_R = crate::BitReader;
 #[doc = "Field `SIGMA_DELTA_ENABLE` writer - 1: enable sigma-delta; 0: disable"]
-pub type SIGMA_DELTA_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SIGMA_DELTA_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - target level of the sigma-delta. It is a signed byte."]
     #[inline(always)]
@@ -53,29 +53,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_SIGMA_DELTA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - target level of the sigma-delta. It is a signed byte."]
     #[inline(always)]
     #[must_use]
-    pub fn sigma_delta_target(&mut self) -> SIGMA_DELTA_TARGET_W<GPIO_SIGMA_DELTA_SPEC, 0> {
-        SIGMA_DELTA_TARGET_W::new(self)
+    pub fn sigma_delta_target(&mut self) -> SIGMA_DELTA_TARGET_W<GPIO_SIGMA_DELTA_SPEC> {
+        SIGMA_DELTA_TARGET_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Clock pre-divider for sigma-delta."]
     #[inline(always)]
     #[must_use]
-    pub fn sigma_delta_prescalar(&mut self) -> SIGMA_DELTA_PRESCALAR_W<GPIO_SIGMA_DELTA_SPEC, 8> {
-        SIGMA_DELTA_PRESCALAR_W::new(self)
+    pub fn sigma_delta_prescalar(&mut self) -> SIGMA_DELTA_PRESCALAR_W<GPIO_SIGMA_DELTA_SPEC> {
+        SIGMA_DELTA_PRESCALAR_W::new(self, 8)
     }
     #[doc = "Bit 16 - 1: enable sigma-delta; 0: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn sigma_delta_enable(&mut self) -> SIGMA_DELTA_ENABLE_W<GPIO_SIGMA_DELTA_SPEC, 16> {
-        SIGMA_DELTA_ENABLE_W::new(self)
+    pub fn sigma_delta_enable(&mut self) -> SIGMA_DELTA_ENABLE_W<GPIO_SIGMA_DELTA_SPEC> {
+        SIGMA_DELTA_ENABLE_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

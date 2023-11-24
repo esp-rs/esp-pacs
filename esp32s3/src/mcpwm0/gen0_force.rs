@@ -5,31 +5,31 @@ pub type W = crate::W<GEN0_FORCE_SPEC>;
 #[doc = "Field `GEN0_CNTUFORCE_UPMETHOD` reader - Updating method for continuous software force of PWM generator0. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
 pub type GEN0_CNTUFORCE_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN0_CNTUFORCE_UPMETHOD` writer - Updating method for continuous software force of PWM generator0. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
-pub type GEN0_CNTUFORCE_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type GEN0_CNTUFORCE_UPMETHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `GEN0_A_CNTUFORCE_MODE` reader - Continuous software force mode for PWM0A. 0: disabled, 1: low, 2: high, 3: disabled"]
 pub type GEN0_A_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_A_CNTUFORCE_MODE` writer - Continuous software force mode for PWM0A. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub type GEN0_A_CNTUFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_A_CNTUFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `GEN0_B_CNTUFORCE_MODE` reader - Continuous software force mode for PWM0B. 0: disabled, 1: low, 2: high, 3: disabled"]
 pub type GEN0_B_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_B_CNTUFORCE_MODE` writer - Continuous software force mode for PWM0B. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub type GEN0_B_CNTUFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_B_CNTUFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `GEN0_A_NCIFORCE` reader - Trigger of non-continuous immediate software-force event for PWM0A, a toggle will trigger a force event."]
 pub type GEN0_A_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN0_A_NCIFORCE` writer - Trigger of non-continuous immediate software-force event for PWM0A, a toggle will trigger a force event."]
-pub type GEN0_A_NCIFORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GEN0_A_NCIFORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GEN0_A_NCIFORCE_MODE` reader - non-continuous immediate software force mode for PWM0A, 0: disabled, 1: low, 2: high, 3: disabled"]
 pub type GEN0_A_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_A_NCIFORCE_MODE` writer - non-continuous immediate software force mode for PWM0A, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub type GEN0_A_NCIFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_A_NCIFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `GEN0_B_NCIFORCE` reader - Trigger of non-continuous immediate software-force event for PWM0B, a toggle will trigger a force event."]
 pub type GEN0_B_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN0_B_NCIFORCE` writer - Trigger of non-continuous immediate software-force event for PWM0B, a toggle will trigger a force event."]
-pub type GEN0_B_NCIFORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GEN0_B_NCIFORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GEN0_B_NCIFORCE_MODE` reader - non-continuous immediate software force mode for PWM0B, 0: disabled, 1: low, 2: high, 3: disabled"]
 pub type GEN0_B_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_B_NCIFORCE_MODE` writer - non-continuous immediate software force mode for PWM0B, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub type GEN0_B_NCIFORCE_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GEN0_B_NCIFORCE_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:5 - Updating method for continuous software force of PWM generator0. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
     #[inline(always)]
@@ -105,51 +105,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GEN0_FORCE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - Updating method for continuous software force of PWM generator0. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_cntuforce_upmethod(&mut self) -> GEN0_CNTUFORCE_UPMETHOD_W<GEN0_FORCE_SPEC, 0> {
-        GEN0_CNTUFORCE_UPMETHOD_W::new(self)
+    pub fn gen0_cntuforce_upmethod(&mut self) -> GEN0_CNTUFORCE_UPMETHOD_W<GEN0_FORCE_SPEC> {
+        GEN0_CNTUFORCE_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - Continuous software force mode for PWM0A. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_a_cntuforce_mode(&mut self) -> GEN0_A_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC, 6> {
-        GEN0_A_CNTUFORCE_MODE_W::new(self)
+    pub fn gen0_a_cntuforce_mode(&mut self) -> GEN0_A_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_A_CNTUFORCE_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Continuous software force mode for PWM0B. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_b_cntuforce_mode(&mut self) -> GEN0_B_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC, 8> {
-        GEN0_B_CNTUFORCE_MODE_W::new(self)
+    pub fn gen0_b_cntuforce_mode(&mut self) -> GEN0_B_CNTUFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_B_CNTUFORCE_MODE_W::new(self, 8)
     }
     #[doc = "Bit 10 - Trigger of non-continuous immediate software-force event for PWM0A, a toggle will trigger a force event."]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_a_nciforce(&mut self) -> GEN0_A_NCIFORCE_W<GEN0_FORCE_SPEC, 10> {
-        GEN0_A_NCIFORCE_W::new(self)
+    pub fn gen0_a_nciforce(&mut self) -> GEN0_A_NCIFORCE_W<GEN0_FORCE_SPEC> {
+        GEN0_A_NCIFORCE_W::new(self, 10)
     }
     #[doc = "Bits 11:12 - non-continuous immediate software force mode for PWM0A, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_a_nciforce_mode(&mut self) -> GEN0_A_NCIFORCE_MODE_W<GEN0_FORCE_SPEC, 11> {
-        GEN0_A_NCIFORCE_MODE_W::new(self)
+    pub fn gen0_a_nciforce_mode(&mut self) -> GEN0_A_NCIFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_A_NCIFORCE_MODE_W::new(self, 11)
     }
     #[doc = "Bit 13 - Trigger of non-continuous immediate software-force event for PWM0B, a toggle will trigger a force event."]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_b_nciforce(&mut self) -> GEN0_B_NCIFORCE_W<GEN0_FORCE_SPEC, 13> {
-        GEN0_B_NCIFORCE_W::new(self)
+    pub fn gen0_b_nciforce(&mut self) -> GEN0_B_NCIFORCE_W<GEN0_FORCE_SPEC> {
+        GEN0_B_NCIFORCE_W::new(self, 13)
     }
     #[doc = "Bits 14:15 - non-continuous immediate software force mode for PWM0B, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_b_nciforce_mode(&mut self) -> GEN0_B_NCIFORCE_MODE_W<GEN0_FORCE_SPEC, 14> {
-        GEN0_B_NCIFORCE_MODE_W::new(self)
+    pub fn gen0_b_nciforce_mode(&mut self) -> GEN0_B_NCIFORCE_MODE_W<GEN0_FORCE_SPEC> {
+        GEN0_B_NCIFORCE_MODE_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

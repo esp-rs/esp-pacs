@@ -5,27 +5,27 @@ pub type W = crate::W<HUNG_CONF_SPEC>;
 #[doc = "Field `TXFIFO_TIMEOUT` reader - Stores the timeout value. DMA generates UHCI_TX_HUNG_INT for timeout when receiving data."]
 pub type TXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT` writer - Stores the timeout value. DMA generates UHCI_TX_HUNG_INT for timeout when receiving data."]
-pub type TXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TXFIFO_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` reader - Configures the maximum counter value."]
 pub type TXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` writer - Configures the maximum counter value."]
-pub type TXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TXFIFO_TIMEOUT_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` reader - Set this bit to enable TX FIFO timeout when receiving."]
 pub type TXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` writer - Set this bit to enable TX FIFO timeout when receiving."]
-pub type TXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFO_TIMEOUT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFIFO_TIMEOUT` reader - Stores the timeout value. DMA generates UHCI_TX_HUNG_INT for timeout when reading RAM data."]
 pub type RXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT` writer - Stores the timeout value. DMA generates UHCI_TX_HUNG_INT for timeout when reading RAM data."]
-pub type RXFIFO_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RXFIFO_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` reader - Configures the maximum counter value."]
 pub type RXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` writer - Configures the maximum counter value."]
-pub type RXFIFO_TIMEOUT_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RXFIFO_TIMEOUT_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` reader - Set this bit to enable TX FIFO timeout when DMA sending data."]
 pub type RXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` writer - Set this bit to enable TX FIFO timeout when DMA sending data."]
-pub type RXFIFO_TIMEOUT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFIFO_TIMEOUT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Stores the timeout value. DMA generates UHCI_TX_HUNG_INT for timeout when receiving data."]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HUNG_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Stores the timeout value. DMA generates UHCI_TX_HUNG_INT for timeout when receiving data."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 0> {
-        TXFIFO_TIMEOUT_W::new(self)
+    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - Configures the maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 8> {
-        TXFIFO_TIMEOUT_SHIFT_W::new(self)
+    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - Set this bit to enable TX FIFO timeout when receiving."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 11> {
-        TXFIFO_TIMEOUT_ENA_W::new(self)
+    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+        TXFIFO_TIMEOUT_ENA_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - Stores the timeout value. DMA generates UHCI_TX_HUNG_INT for timeout when reading RAM data."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC, 12> {
-        RXFIFO_TIMEOUT_W::new(self)
+    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_W::new(self, 12)
     }
     #[doc = "Bits 20:22 - Configures the maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC, 20> {
-        RXFIFO_TIMEOUT_SHIFT_W::new(self)
+    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_SHIFT_W::new(self, 20)
     }
     #[doc = "Bit 23 - Set this bit to enable TX FIFO timeout when DMA sending data."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC, 23> {
-        RXFIFO_TIMEOUT_ENA_W::new(self)
+    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+        RXFIFO_TIMEOUT_ENA_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

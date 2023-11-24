@@ -5,11 +5,11 @@ pub type W = crate::W<MODEM_APB_CONF_SPEC>;
 #[doc = "Field `MODEM_APB_CLK_EN` reader - This field indicates if modem_apb clock is enable. 0: disable, 1: enable(default)."]
 pub type MODEM_APB_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MODEM_APB_CLK_EN` writer - This field indicates if modem_apb clock is enable. 0: disable, 1: enable(default)."]
-pub type MODEM_APB_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODEM_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MODEM_RST_EN` reader - Set this file as 1 to reset modem-subsystem."]
 pub type MODEM_RST_EN_R = crate::BitReader;
 #[doc = "Field `MODEM_RST_EN` writer - Set this file as 1 to reset modem-subsystem."]
-pub type MODEM_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODEM_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This field indicates if modem_apb clock is enable. 0: disable, 1: enable(default)."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MODEM_APB_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This field indicates if modem_apb clock is enable. 0: disable, 1: enable(default)."]
     #[inline(always)]
     #[must_use]
-    pub fn modem_apb_clk_en(&mut self) -> MODEM_APB_CLK_EN_W<MODEM_APB_CONF_SPEC, 0> {
-        MODEM_APB_CLK_EN_W::new(self)
+    pub fn modem_apb_clk_en(&mut self) -> MODEM_APB_CLK_EN_W<MODEM_APB_CONF_SPEC> {
+        MODEM_APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this file as 1 to reset modem-subsystem."]
     #[inline(always)]
     #[must_use]
-    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<MODEM_APB_CONF_SPEC, 1> {
-        MODEM_RST_EN_W::new(self)
+    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<MODEM_APB_CONF_SPEC> {
+        MODEM_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

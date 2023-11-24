@@ -1,7 +1,7 @@
 #[doc = "Register `WDTFEED` writer"]
 pub type W = crate::W<WDTFEED_SPEC>;
 #[doc = "Field `RTC_WDT_FEED` writer - need_des"]
-pub type RTC_WDT_FEED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_WDT_FEED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_wdt_feed(&mut self) -> RTC_WDT_FEED_W<WDTFEED_SPEC, 31> {
-        RTC_WDT_FEED_W::new(self)
+    pub fn rtc_wdt_feed(&mut self) -> RTC_WDT_FEED_W<WDTFEED_SPEC> {
+        RTC_WDT_FEED_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,57 +5,57 @@ pub type W = crate::W<CTR_SPEC>;
 #[doc = "Field `SDA_FORCE_OUT` reader - reg_sda_force_out"]
 pub type SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SDA_FORCE_OUT` writer - reg_sda_force_out"]
-pub type SDA_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDA_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCL_FORCE_OUT` reader - reg_scl_force_out"]
 pub type SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SCL_FORCE_OUT` writer - reg_scl_force_out"]
-pub type SCL_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCL_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAMPLE_SCL_LEVEL` reader - reg_sample_scl_level"]
 pub type SAMPLE_SCL_LEVEL_R = crate::BitReader;
 #[doc = "Field `SAMPLE_SCL_LEVEL` writer - reg_sample_scl_level"]
-pub type SAMPLE_SCL_LEVEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAMPLE_SCL_LEVEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FULL_ACK_LEVEL` reader - reg_rx_full_ack_level"]
 pub type RX_FULL_ACK_LEVEL_R = crate::BitReader;
 #[doc = "Field `RX_FULL_ACK_LEVEL` writer - reg_rx_full_ack_level"]
-pub type RX_FULL_ACK_LEVEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FULL_ACK_LEVEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MS_MODE` reader - reg_ms_mode"]
 pub type MS_MODE_R = crate::BitReader;
 #[doc = "Field `MS_MODE` writer - reg_ms_mode"]
-pub type MS_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_START` writer - reg_trans_start"]
-pub type TRANS_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_LSB_FIRST` reader - reg_tx_lsb_first"]
 pub type TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST` writer - reg_tx_lsb_first"]
-pub type TX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_LSB_FIRST` reader - reg_rx_lsb_first"]
 pub type RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST` writer - reg_rx_lsb_first"]
-pub type RX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - reg_clk_en"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - reg_clk_en"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARBITRATION_EN` reader - reg_arbitration_en"]
 pub type ARBITRATION_EN_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_EN` writer - reg_arbitration_en"]
-pub type ARBITRATION_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARBITRATION_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FSM_RST` writer - reg_fsm_rst"]
-pub type FSM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FSM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONF_UPGATE` writer - reg_conf_upgate"]
-pub type CONF_UPGATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONF_UPGATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_TX_AUTO_START_EN` reader - reg_slv_tx_auto_start_en"]
 pub type SLV_TX_AUTO_START_EN_R = crate::BitReader;
 #[doc = "Field `SLV_TX_AUTO_START_EN` writer - reg_slv_tx_auto_start_en"]
-pub type SLV_TX_AUTO_START_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_TX_AUTO_START_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADDR_10BIT_RW_CHECK_EN` reader - reg_addr_10bit_rw_check_en"]
 pub type ADDR_10BIT_RW_CHECK_EN_R = crate::BitReader;
 #[doc = "Field `ADDR_10BIT_RW_CHECK_EN` writer - reg_addr_10bit_rw_check_en"]
-pub type ADDR_10BIT_RW_CHECK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDR_10BIT_RW_CHECK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADDR_BROADCASTING_EN` reader - reg_addr_broadcasting_en"]
 pub type ADDR_BROADCASTING_EN_R = crate::BitReader;
 #[doc = "Field `ADDR_BROADCASTING_EN` writer - reg_addr_broadcasting_en"]
-pub type ADDR_BROADCASTING_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDR_BROADCASTING_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_sda_force_out"]
     #[inline(always)]
@@ -170,99 +170,99 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_sda_force_out"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC, 0> {
-        SDA_FORCE_OUT_W::new(self)
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC> {
+        SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_scl_force_out"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC, 1> {
-        SCL_FORCE_OUT_W::new(self)
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC> {
+        SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_sample_scl_level"]
     #[inline(always)]
     #[must_use]
-    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC, 2> {
-        SAMPLE_SCL_LEVEL_W::new(self)
+    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC> {
+        SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_rx_full_ack_level"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<CTR_SPEC, 3> {
-        RX_FULL_ACK_LEVEL_W::new(self)
+    pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<CTR_SPEC> {
+        RX_FULL_ACK_LEVEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_ms_mode"]
     #[inline(always)]
     #[must_use]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<CTR_SPEC, 4> {
-        MS_MODE_W::new(self)
+    pub fn ms_mode(&mut self) -> MS_MODE_W<CTR_SPEC> {
+        MS_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_trans_start"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC, 5> {
-        TRANS_START_W::new(self)
+    pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC> {
+        TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_tx_lsb_first"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC, 6> {
-        TX_LSB_FIRST_W::new(self)
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC> {
+        TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_rx_lsb_first"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC, 7> {
-        RX_LSB_FIRST_W::new(self)
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC> {
+        RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - reg_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC, 8> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC> {
+        CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_arbitration_en"]
     #[inline(always)]
     #[must_use]
-    pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<CTR_SPEC, 9> {
-        ARBITRATION_EN_W::new(self)
+    pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<CTR_SPEC> {
+        ARBITRATION_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_fsm_rst"]
     #[inline(always)]
     #[must_use]
-    pub fn fsm_rst(&mut self) -> FSM_RST_W<CTR_SPEC, 10> {
-        FSM_RST_W::new(self)
+    pub fn fsm_rst(&mut self) -> FSM_RST_W<CTR_SPEC> {
+        FSM_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_conf_upgate"]
     #[inline(always)]
     #[must_use]
-    pub fn conf_upgate(&mut self) -> CONF_UPGATE_W<CTR_SPEC, 11> {
-        CONF_UPGATE_W::new(self)
+    pub fn conf_upgate(&mut self) -> CONF_UPGATE_W<CTR_SPEC> {
+        CONF_UPGATE_W::new(self, 11)
     }
     #[doc = "Bit 12 - reg_slv_tx_auto_start_en"]
     #[inline(always)]
     #[must_use]
-    pub fn slv_tx_auto_start_en(&mut self) -> SLV_TX_AUTO_START_EN_W<CTR_SPEC, 12> {
-        SLV_TX_AUTO_START_EN_W::new(self)
+    pub fn slv_tx_auto_start_en(&mut self) -> SLV_TX_AUTO_START_EN_W<CTR_SPEC> {
+        SLV_TX_AUTO_START_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_addr_10bit_rw_check_en"]
     #[inline(always)]
     #[must_use]
-    pub fn addr_10bit_rw_check_en(&mut self) -> ADDR_10BIT_RW_CHECK_EN_W<CTR_SPEC, 13> {
-        ADDR_10BIT_RW_CHECK_EN_W::new(self)
+    pub fn addr_10bit_rw_check_en(&mut self) -> ADDR_10BIT_RW_CHECK_EN_W<CTR_SPEC> {
+        ADDR_10BIT_RW_CHECK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_addr_broadcasting_en"]
     #[inline(always)]
     #[must_use]
-    pub fn addr_broadcasting_en(&mut self) -> ADDR_BROADCASTING_EN_W<CTR_SPEC, 14> {
-        ADDR_BROADCASTING_EN_W::new(self)
+    pub fn addr_broadcasting_en(&mut self) -> ADDR_BROADCASTING_EN_W<CTR_SPEC> {
+        ADDR_BROADCASTING_EN_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

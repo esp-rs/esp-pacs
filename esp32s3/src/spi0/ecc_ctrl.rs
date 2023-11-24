@@ -5,11 +5,11 @@ pub type W = crate::W<ECC_CTRL_SPEC>;
 #[doc = "Field `ECC_ERR_INT_NUM` reader - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
 pub type ECC_ERR_INT_NUM_R = crate::FieldReader;
 #[doc = "Field `ECC_ERR_INT_NUM` writer - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
-pub type ECC_ERR_INT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ECC_ERR_INT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SPI_FMEM_ECC_ERR_INT_EN` reader - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
 pub type SPI_FMEM_ECC_ERR_INT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_ECC_ERR_INT_EN` writer - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
-pub type SPI_FMEM_ECC_ERR_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_FMEM_ECC_ERR_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ECC_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ecc_err_int_num(&mut self) -> ECC_ERR_INT_NUM_W<ECC_CTRL_SPEC, 0> {
-        ECC_ERR_INT_NUM_W::new(self)
+    pub fn ecc_err_int_num(&mut self) -> ECC_ERR_INT_NUM_W<ECC_CTRL_SPEC> {
+        ECC_ERR_INT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_fmem_ecc_err_int_en(&mut self) -> SPI_FMEM_ECC_ERR_INT_EN_W<ECC_CTRL_SPEC, 8> {
-        SPI_FMEM_ECC_ERR_INT_EN_W::new(self)
+    pub fn spi_fmem_ecc_err_int_en(&mut self) -> SPI_FMEM_ECC_ERR_INT_EN_W<ECC_CTRL_SPEC> {
+        SPI_FMEM_ECC_ERR_INT_EN_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

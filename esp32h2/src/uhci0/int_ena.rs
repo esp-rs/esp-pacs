@@ -5,39 +5,39 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `RX_START_INT_ENA` reader - a"]
 pub type RX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_START_INT_ENA` writer - a"]
-pub type RX_START_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_START_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_START_INT_ENA` reader - a"]
 pub type TX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_ENA` writer - a"]
-pub type TX_START_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_START_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_HUNG_INT_ENA` reader - a"]
 pub type RX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_ENA` writer - a"]
-pub type RX_HUNG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_HUNG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_HUNG_INT_ENA` reader - a"]
 pub type TX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_ENA` writer - a"]
-pub type TX_HUNG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_HUNG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_S_REG_Q_INT_ENA` reader - a"]
 pub type SEND_S_REG_Q_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_ENA` writer - a"]
-pub type SEND_S_REG_Q_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_S_REG_Q_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_A_REG_Q_INT_ENA` reader - a"]
 pub type SEND_A_REG_Q_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_ENA` writer - a"]
-pub type SEND_A_REG_Q_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_A_REG_Q_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ENA` reader - a"]
 pub type OUTLINK_EOF_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ENA` writer - a"]
-pub type OUTLINK_EOF_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_EOF_ERR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CTRL0_INT_ENA` reader - a"]
 pub type APP_CTRL0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APP_CTRL0_INT_ENA` writer - a"]
-pub type APP_CTRL0_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CTRL0_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CTRL1_INT_ENA` reader - a"]
 pub type APP_CTRL1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APP_CTRL1_INT_ENA` writer - a"]
-pub type APP_CTRL1_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CTRL1_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
@@ -131,63 +131,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_start_int_ena(&mut self) -> RX_START_INT_ENA_W<INT_ENA_SPEC, 0> {
-        RX_START_INT_ENA_W::new(self)
+    pub fn rx_start_int_ena(&mut self) -> RX_START_INT_ENA_W<INT_ENA_SPEC> {
+        RX_START_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_start_int_ena(&mut self) -> TX_START_INT_ENA_W<INT_ENA_SPEC, 1> {
-        TX_START_INT_ENA_W::new(self)
+    pub fn tx_start_int_ena(&mut self) -> TX_START_INT_ENA_W<INT_ENA_SPEC> {
+        TX_START_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_hung_int_ena(&mut self) -> RX_HUNG_INT_ENA_W<INT_ENA_SPEC, 2> {
-        RX_HUNG_INT_ENA_W::new(self)
+    pub fn rx_hung_int_ena(&mut self) -> RX_HUNG_INT_ENA_W<INT_ENA_SPEC> {
+        RX_HUNG_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_hung_int_ena(&mut self) -> TX_HUNG_INT_ENA_W<INT_ENA_SPEC, 3> {
-        TX_HUNG_INT_ENA_W::new(self)
+    pub fn tx_hung_int_ena(&mut self) -> TX_HUNG_INT_ENA_W<INT_ENA_SPEC> {
+        TX_HUNG_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn send_s_reg_q_int_ena(&mut self) -> SEND_S_REG_Q_INT_ENA_W<INT_ENA_SPEC, 4> {
-        SEND_S_REG_Q_INT_ENA_W::new(self)
+    pub fn send_s_reg_q_int_ena(&mut self) -> SEND_S_REG_Q_INT_ENA_W<INT_ENA_SPEC> {
+        SEND_S_REG_Q_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn send_a_reg_q_int_ena(&mut self) -> SEND_A_REG_Q_INT_ENA_W<INT_ENA_SPEC, 5> {
-        SEND_A_REG_Q_INT_ENA_W::new(self)
+    pub fn send_a_reg_q_int_ena(&mut self) -> SEND_A_REG_Q_INT_ENA_W<INT_ENA_SPEC> {
+        SEND_A_REG_Q_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_eof_err_int_ena(&mut self) -> OUTLINK_EOF_ERR_INT_ENA_W<INT_ENA_SPEC, 6> {
-        OUTLINK_EOF_ERR_INT_ENA_W::new(self)
+    pub fn outlink_eof_err_int_ena(&mut self) -> OUTLINK_EOF_ERR_INT_ENA_W<INT_ENA_SPEC> {
+        OUTLINK_EOF_ERR_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn app_ctrl0_int_ena(&mut self) -> APP_CTRL0_INT_ENA_W<INT_ENA_SPEC, 7> {
-        APP_CTRL0_INT_ENA_W::new(self)
+    pub fn app_ctrl0_int_ena(&mut self) -> APP_CTRL0_INT_ENA_W<INT_ENA_SPEC> {
+        APP_CTRL0_INT_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - a"]
     #[inline(always)]
     #[must_use]
-    pub fn app_ctrl1_int_ena(&mut self) -> APP_CTRL1_INT_ENA_W<INT_ENA_SPEC, 8> {
-        APP_CTRL1_INT_ENA_W::new(self)
+    pub fn app_ctrl1_int_ena(&mut self) -> APP_CTRL1_INT_ENA_W<INT_ENA_SPEC> {
+        APP_CTRL1_INT_ENA_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<TXBRK_CONF_SPEC>;
 #[doc = "Field `TX_BRK_NUM` reader - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when txd_brk is set to 1."]
 pub type TX_BRK_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_BRK_NUM` writer - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when txd_brk is set to 1."]
-pub type TX_BRK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TX_BRK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when txd_brk is set to 1."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TXBRK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when txd_brk is set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<TXBRK_CONF_SPEC, 0> {
-        TX_BRK_NUM_W::new(self)
+    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<TXBRK_CONF_SPEC> {
+        TX_BRK_NUM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

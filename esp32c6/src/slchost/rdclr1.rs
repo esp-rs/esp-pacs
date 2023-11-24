@@ -5,11 +5,11 @@ pub type W = crate::W<RDCLR1_SPEC>;
 #[doc = "Field `SLCHOST_SLC1_BIT7_CLRADDR` reader - *******Description***********"]
 pub type SLCHOST_SLC1_BIT7_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SLCHOST_SLC1_BIT7_CLRADDR` writer - *******Description***********"]
-pub type SLCHOST_SLC1_BIT7_CLRADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type SLCHOST_SLC1_BIT7_CLRADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `SLCHOST_SLC1_BIT6_CLRADDR` reader - *******Description***********"]
 pub type SLCHOST_SLC1_BIT6_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SLCHOST_SLC1_BIT6_CLRADDR` writer - *******Description***********"]
-pub type SLCHOST_SLC1_BIT6_CLRADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type SLCHOST_SLC1_BIT6_CLRADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - *******Description***********"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RDCLR1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slchost_slc1_bit7_clraddr(&mut self) -> SLCHOST_SLC1_BIT7_CLRADDR_W<RDCLR1_SPEC, 0> {
-        SLCHOST_SLC1_BIT7_CLRADDR_W::new(self)
+    pub fn slchost_slc1_bit7_clraddr(&mut self) -> SLCHOST_SLC1_BIT7_CLRADDR_W<RDCLR1_SPEC> {
+        SLCHOST_SLC1_BIT7_CLRADDR_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slchost_slc1_bit6_clraddr(&mut self) -> SLCHOST_SLC1_BIT6_CLRADDR_W<RDCLR1_SPEC, 9> {
-        SLCHOST_SLC1_BIT6_CLRADDR_W::new(self)
+    pub fn slchost_slc1_bit6_clraddr(&mut self) -> SLCHOST_SLC1_BIT6_CLRADDR_W<RDCLR1_SPEC> {
+        SLCHOST_SLC1_BIT6_CLRADDR_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

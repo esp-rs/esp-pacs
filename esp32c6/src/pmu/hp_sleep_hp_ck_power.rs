@@ -5,23 +5,23 @@ pub type W = crate::W<HP_SLEEP_HP_CK_POWER_SPEC>;
 #[doc = "Field `HP_SLEEP_I2C_ISO_EN` reader - need_des"]
 pub type HP_SLEEP_I2C_ISO_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_I2C_ISO_EN` writer - need_des"]
-pub type HP_SLEEP_I2C_ISO_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_I2C_ISO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_I2C_RETENTION` reader - need_des"]
 pub type HP_SLEEP_I2C_RETENTION_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_I2C_RETENTION` writer - need_des"]
-pub type HP_SLEEP_I2C_RETENTION_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_I2C_RETENTION_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_XPD_BB_I2C` reader - need_des"]
 pub type HP_SLEEP_XPD_BB_I2C_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_BB_I2C` writer - need_des"]
-pub type HP_SLEEP_XPD_BB_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_BB_I2C_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_XPD_BBPLL_I2C` reader - need_des"]
 pub type HP_SLEEP_XPD_BBPLL_I2C_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_BBPLL_I2C` writer - need_des"]
-pub type HP_SLEEP_XPD_BBPLL_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_BBPLL_I2C_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_XPD_BBPLL` reader - need_des"]
 pub type HP_SLEEP_XPD_BBPLL_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_BBPLL` writer - need_des"]
-pub type HP_SLEEP_XPD_BBPLL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_BBPLL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
@@ -79,43 +79,43 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_HP_CK_POWER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_i2c_iso_en(&mut self) -> HP_SLEEP_I2C_ISO_EN_W<HP_SLEEP_HP_CK_POWER_SPEC, 26> {
-        HP_SLEEP_I2C_ISO_EN_W::new(self)
+    pub fn hp_sleep_i2c_iso_en(&mut self) -> HP_SLEEP_I2C_ISO_EN_W<HP_SLEEP_HP_CK_POWER_SPEC> {
+        HP_SLEEP_I2C_ISO_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_sleep_i2c_retention(
         &mut self,
-    ) -> HP_SLEEP_I2C_RETENTION_W<HP_SLEEP_HP_CK_POWER_SPEC, 27> {
-        HP_SLEEP_I2C_RETENTION_W::new(self)
+    ) -> HP_SLEEP_I2C_RETENTION_W<HP_SLEEP_HP_CK_POWER_SPEC> {
+        HP_SLEEP_I2C_RETENTION_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_xpd_bb_i2c(&mut self) -> HP_SLEEP_XPD_BB_I2C_W<HP_SLEEP_HP_CK_POWER_SPEC, 28> {
-        HP_SLEEP_XPD_BB_I2C_W::new(self)
+    pub fn hp_sleep_xpd_bb_i2c(&mut self) -> HP_SLEEP_XPD_BB_I2C_W<HP_SLEEP_HP_CK_POWER_SPEC> {
+        HP_SLEEP_XPD_BB_I2C_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn hp_sleep_xpd_bbpll_i2c(
         &mut self,
-    ) -> HP_SLEEP_XPD_BBPLL_I2C_W<HP_SLEEP_HP_CK_POWER_SPEC, 29> {
-        HP_SLEEP_XPD_BBPLL_I2C_W::new(self)
+    ) -> HP_SLEEP_XPD_BBPLL_I2C_W<HP_SLEEP_HP_CK_POWER_SPEC> {
+        HP_SLEEP_XPD_BBPLL_I2C_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_xpd_bbpll(&mut self) -> HP_SLEEP_XPD_BBPLL_W<HP_SLEEP_HP_CK_POWER_SPEC, 30> {
-        HP_SLEEP_XPD_BBPLL_W::new(self)
+    pub fn hp_sleep_xpd_bbpll(&mut self) -> HP_SLEEP_XPD_BBPLL_W<HP_SLEEP_HP_CK_POWER_SPEC> {
+        HP_SLEEP_XPD_BBPLL_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

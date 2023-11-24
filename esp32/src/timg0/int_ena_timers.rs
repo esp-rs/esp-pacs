@@ -5,19 +5,19 @@ pub type W = crate::W<INT_ENA_TIMERS_SPEC>;
 #[doc = "Field `T0_INT_ENA` reader - interrupt when timer0 alarm"]
 pub type T0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `T0_INT_ENA` writer - interrupt when timer0 alarm"]
-pub type T0_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type T0_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `T1_INT_ENA` reader - interrupt when timer1 alarm"]
 pub type T1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `T1_INT_ENA` writer - interrupt when timer1 alarm"]
-pub type T1_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type T1_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_INT_ENA` reader - Interrupt when an interrupt stage timeout"]
 pub type WDT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ENA` writer - Interrupt when an interrupt stage timeout"]
-pub type WDT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_INT_ENA` reader - "]
 pub type LACT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LACT_INT_ENA` writer - "]
-pub type LACT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - interrupt when timer0 alarm"]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_TIMERS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - interrupt when timer0 alarm"]
     #[inline(always)]
     #[must_use]
-    pub fn t0_int_ena(&mut self) -> T0_INT_ENA_W<INT_ENA_TIMERS_SPEC, 0> {
-        T0_INT_ENA_W::new(self)
+    pub fn t0_int_ena(&mut self) -> T0_INT_ENA_W<INT_ENA_TIMERS_SPEC> {
+        T0_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - interrupt when timer1 alarm"]
     #[inline(always)]
     #[must_use]
-    pub fn t1_int_ena(&mut self) -> T1_INT_ENA_W<INT_ENA_TIMERS_SPEC, 1> {
-        T1_INT_ENA_W::new(self)
+    pub fn t1_int_ena(&mut self) -> T1_INT_ENA_W<INT_ENA_TIMERS_SPEC> {
+        T1_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt when an interrupt stage timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_TIMERS_SPEC, 2> {
-        WDT_INT_ENA_W::new(self)
+    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_TIMERS_SPEC> {
+        WDT_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn lact_int_ena(&mut self) -> LACT_INT_ENA_W<INT_ENA_TIMERS_SPEC, 3> {
-        LACT_INT_ENA_W::new(self)
+    pub fn lact_int_ena(&mut self) -> LACT_INT_ENA_W<INT_ENA_TIMERS_SPEC> {
+        LACT_INT_ENA_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

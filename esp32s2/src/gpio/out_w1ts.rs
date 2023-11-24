@@ -1,7 +1,7 @@
 #[doc = "Register `OUT_W1TS` writer"]
 pub type W = crate::W<OUT_W1TS_SPEC>;
 #[doc = "Field `OUT_W1TS` writer - GPIO0 ~ 31 output set register. If the value 1 is written to a bit here, the corre- sponding bit in GPIO_OUT_REG will be set to 1. Recommended operation: use this register to set GPIO_OUT_REG."]
-pub type OUT_W1TS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type OUT_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_W1TS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - GPIO0 ~ 31 output set register. If the value 1 is written to a bit here, the corre- sponding bit in GPIO_OUT_REG will be set to 1. Recommended operation: use this register to set GPIO_OUT_REG."]
     #[inline(always)]
     #[must_use]
-    pub fn out_w1ts(&mut self) -> OUT_W1TS_W<OUT_W1TS_SPEC, 0> {
-        OUT_W1TS_W::new(self)
+    pub fn out_w1ts(&mut self) -> OUT_W1TS_W<OUT_W1TS_SPEC> {
+        OUT_W1TS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

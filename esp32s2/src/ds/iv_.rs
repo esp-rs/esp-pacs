@@ -1,7 +1,7 @@
 #[doc = "Register `IV_%s` writer"]
 pub type W = crate::W<IV__SPEC>;
 #[doc = "Field `IV` writer - IV block data."]
-pub type IV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type IV_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IV__SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - IV block data."]
     #[inline(always)]
     #[must_use]
-    pub fn iv(&mut self) -> IV_W<IV__SPEC, 0> {
-        IV_W::new(self)
+    pub fn iv(&mut self) -> IV_W<IV__SPEC> {
+        IV_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

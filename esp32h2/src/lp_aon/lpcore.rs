@@ -3,15 +3,15 @@ pub type R = crate::R<LPCORE_SPEC>;
 #[doc = "Register `LPCORE` writer"]
 pub type W = crate::W<LPCORE_SPEC>;
 #[doc = "Field `ETM_WAKEUP_FLAG_CLR` writer - need_des"]
-pub type ETM_WAKEUP_FLAG_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETM_WAKEUP_FLAG_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETM_WAKEUP_FLAG` reader - need_des"]
 pub type ETM_WAKEUP_FLAG_R = crate::BitReader;
 #[doc = "Field `ETM_WAKEUP_FLAG` writer - need_des"]
-pub type ETM_WAKEUP_FLAG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETM_WAKEUP_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISABLE` reader - need_des"]
 pub type DISABLE_R = crate::BitReader;
 #[doc = "Field `DISABLE` writer - need_des"]
-pub type DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
@@ -39,27 +39,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LPCORE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn etm_wakeup_flag_clr(&mut self) -> ETM_WAKEUP_FLAG_CLR_W<LPCORE_SPEC, 0> {
-        ETM_WAKEUP_FLAG_CLR_W::new(self)
+    pub fn etm_wakeup_flag_clr(&mut self) -> ETM_WAKEUP_FLAG_CLR_W<LPCORE_SPEC> {
+        ETM_WAKEUP_FLAG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn etm_wakeup_flag(&mut self) -> ETM_WAKEUP_FLAG_W<LPCORE_SPEC, 1> {
-        ETM_WAKEUP_FLAG_W::new(self)
+    pub fn etm_wakeup_flag(&mut self) -> ETM_WAKEUP_FLAG_W<LPCORE_SPEC> {
+        ETM_WAKEUP_FLAG_W::new(self, 1)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn disable(&mut self) -> DISABLE_W<LPCORE_SPEC, 31> {
-        DISABLE_W::new(self)
+    pub fn disable(&mut self) -> DISABLE_W<LPCORE_SPEC> {
+        DISABLE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

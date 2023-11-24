@@ -25,7 +25,7 @@ pub type RD_KEY_STATUS_R = crate::BitReader;
 #[doc = "Field `RD_RESERVE_0_203` reader - "]
 pub type RD_RESERVE_0_203_R = crate::FieldReader<u32>;
 #[doc = "Field `RD_RESERVE_0_203` writer - "]
-pub type RD_RESERVE_0_203_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 21, O, u32>;
+pub type RD_RESERVE_0_203_W<'a, REG> = crate::FieldWriter<'a, REG, 21, u32>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -137,15 +137,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 11:31"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_reserve_0_203(&mut self) -> RD_RESERVE_0_203_W<BLK0_RDATA6_SPEC, 11> {
-        RD_RESERVE_0_203_W::new(self)
+    pub fn rd_reserve_0_203(&mut self) -> RD_RESERVE_0_203_W<BLK0_RDATA6_SPEC> {
+        RD_RESERVE_0_203_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

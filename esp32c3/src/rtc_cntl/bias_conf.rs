@@ -5,51 +5,51 @@ pub type W = crate::W<BIAS_CONF_SPEC>;
 #[doc = "Field `DG_VDD_DRV_B_SLP` reader - "]
 pub type DG_VDD_DRV_B_SLP_R = crate::FieldReader;
 #[doc = "Field `DG_VDD_DRV_B_SLP` writer - "]
-pub type DG_VDD_DRV_B_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DG_VDD_DRV_B_SLP_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DG_VDD_DRV_B_SLP_EN` reader - "]
 pub type DG_VDD_DRV_B_SLP_EN_R = crate::BitReader;
 #[doc = "Field `DG_VDD_DRV_B_SLP_EN` writer - "]
-pub type DG_VDD_DRV_B_SLP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DG_VDD_DRV_B_SLP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BIAS_BUF_IDLE` reader - bias buf when rtc in normal work state"]
 pub type BIAS_BUF_IDLE_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_IDLE` writer - bias buf when rtc in normal work state"]
-pub type BIAS_BUF_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BIAS_BUF_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BIAS_BUF_WAKE` reader - bias buf when rtc in wakeup state"]
 pub type BIAS_BUF_WAKE_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_WAKE` writer - bias buf when rtc in wakeup state"]
-pub type BIAS_BUF_WAKE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BIAS_BUF_WAKE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BIAS_BUF_DEEP_SLP` reader - bias buf when rtc in sleep state"]
 pub type BIAS_BUF_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_DEEP_SLP` writer - bias buf when rtc in sleep state"]
-pub type BIAS_BUF_DEEP_SLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BIAS_BUF_DEEP_SLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BIAS_BUF_MONITOR` reader - bias buf when rtc in monitor state"]
 pub type BIAS_BUF_MONITOR_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_MONITOR` writer - bias buf when rtc in monitor state"]
-pub type BIAS_BUF_MONITOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BIAS_BUF_MONITOR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PD_CUR_DEEP_SLP` reader - xpd cur when rtc in sleep_state"]
 pub type PD_CUR_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `PD_CUR_DEEP_SLP` writer - xpd cur when rtc in sleep_state"]
-pub type PD_CUR_DEEP_SLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD_CUR_DEEP_SLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PD_CUR_MONITOR` reader - xpd cur when rtc in monitor state"]
 pub type PD_CUR_MONITOR_R = crate::BitReader;
 #[doc = "Field `PD_CUR_MONITOR` writer - xpd cur when rtc in monitor state"]
-pub type PD_CUR_MONITOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD_CUR_MONITOR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BIAS_SLEEP_DEEP_SLP` reader - bias_sleep when rtc in sleep_state"]
 pub type BIAS_SLEEP_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `BIAS_SLEEP_DEEP_SLP` writer - bias_sleep when rtc in sleep_state"]
-pub type BIAS_SLEEP_DEEP_SLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BIAS_SLEEP_DEEP_SLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BIAS_SLEEP_MONITOR` reader - bias_sleep when rtc in monitor state"]
 pub type BIAS_SLEEP_MONITOR_R = crate::BitReader;
 #[doc = "Field `BIAS_SLEEP_MONITOR` writer - bias_sleep when rtc in monitor state"]
-pub type BIAS_SLEEP_MONITOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BIAS_SLEEP_MONITOR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBG_ATTEN_DEEP_SLP` reader - DBG_ATTEN when rtc in sleep state"]
 pub type DBG_ATTEN_DEEP_SLP_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN_DEEP_SLP` writer - DBG_ATTEN when rtc in sleep state"]
-pub type DBG_ATTEN_DEEP_SLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DBG_ATTEN_DEEP_SLP_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `DBG_ATTEN_MONITOR` reader - DBG_ATTEN when rtc in monitor state"]
 pub type DBG_ATTEN_MONITOR_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN_MONITOR` writer - DBG_ATTEN when rtc in monitor state"]
-pub type DBG_ATTEN_MONITOR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DBG_ATTEN_MONITOR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -170,81 +170,81 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BIAS_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<BIAS_CONF_SPEC, 0> {
-        DG_VDD_DRV_B_SLP_W::new(self)
+    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<BIAS_CONF_SPEC> {
+        DG_VDD_DRV_B_SLP_W::new(self, 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_vdd_drv_b_slp_en(&mut self) -> DG_VDD_DRV_B_SLP_EN_W<BIAS_CONF_SPEC, 8> {
-        DG_VDD_DRV_B_SLP_EN_W::new(self)
+    pub fn dg_vdd_drv_b_slp_en(&mut self) -> DG_VDD_DRV_B_SLP_EN_W<BIAS_CONF_SPEC> {
+        DG_VDD_DRV_B_SLP_EN_W::new(self, 8)
     }
     #[doc = "Bit 10 - bias buf when rtc in normal work state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_idle(&mut self) -> BIAS_BUF_IDLE_W<BIAS_CONF_SPEC, 10> {
-        BIAS_BUF_IDLE_W::new(self)
+    pub fn bias_buf_idle(&mut self) -> BIAS_BUF_IDLE_W<BIAS_CONF_SPEC> {
+        BIAS_BUF_IDLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - bias buf when rtc in wakeup state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_wake(&mut self) -> BIAS_BUF_WAKE_W<BIAS_CONF_SPEC, 11> {
-        BIAS_BUF_WAKE_W::new(self)
+    pub fn bias_buf_wake(&mut self) -> BIAS_BUF_WAKE_W<BIAS_CONF_SPEC> {
+        BIAS_BUF_WAKE_W::new(self, 11)
     }
     #[doc = "Bit 12 - bias buf when rtc in sleep state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_deep_slp(&mut self) -> BIAS_BUF_DEEP_SLP_W<BIAS_CONF_SPEC, 12> {
-        BIAS_BUF_DEEP_SLP_W::new(self)
+    pub fn bias_buf_deep_slp(&mut self) -> BIAS_BUF_DEEP_SLP_W<BIAS_CONF_SPEC> {
+        BIAS_BUF_DEEP_SLP_W::new(self, 12)
     }
     #[doc = "Bit 13 - bias buf when rtc in monitor state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_buf_monitor(&mut self) -> BIAS_BUF_MONITOR_W<BIAS_CONF_SPEC, 13> {
-        BIAS_BUF_MONITOR_W::new(self)
+    pub fn bias_buf_monitor(&mut self) -> BIAS_BUF_MONITOR_W<BIAS_CONF_SPEC> {
+        BIAS_BUF_MONITOR_W::new(self, 13)
     }
     #[doc = "Bit 14 - xpd cur when rtc in sleep_state"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_cur_deep_slp(&mut self) -> PD_CUR_DEEP_SLP_W<BIAS_CONF_SPEC, 14> {
-        PD_CUR_DEEP_SLP_W::new(self)
+    pub fn pd_cur_deep_slp(&mut self) -> PD_CUR_DEEP_SLP_W<BIAS_CONF_SPEC> {
+        PD_CUR_DEEP_SLP_W::new(self, 14)
     }
     #[doc = "Bit 15 - xpd cur when rtc in monitor state"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_cur_monitor(&mut self) -> PD_CUR_MONITOR_W<BIAS_CONF_SPEC, 15> {
-        PD_CUR_MONITOR_W::new(self)
+    pub fn pd_cur_monitor(&mut self) -> PD_CUR_MONITOR_W<BIAS_CONF_SPEC> {
+        PD_CUR_MONITOR_W::new(self, 15)
     }
     #[doc = "Bit 16 - bias_sleep when rtc in sleep_state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_sleep_deep_slp(&mut self) -> BIAS_SLEEP_DEEP_SLP_W<BIAS_CONF_SPEC, 16> {
-        BIAS_SLEEP_DEEP_SLP_W::new(self)
+    pub fn bias_sleep_deep_slp(&mut self) -> BIAS_SLEEP_DEEP_SLP_W<BIAS_CONF_SPEC> {
+        BIAS_SLEEP_DEEP_SLP_W::new(self, 16)
     }
     #[doc = "Bit 17 - bias_sleep when rtc in monitor state"]
     #[inline(always)]
     #[must_use]
-    pub fn bias_sleep_monitor(&mut self) -> BIAS_SLEEP_MONITOR_W<BIAS_CONF_SPEC, 17> {
-        BIAS_SLEEP_MONITOR_W::new(self)
+    pub fn bias_sleep_monitor(&mut self) -> BIAS_SLEEP_MONITOR_W<BIAS_CONF_SPEC> {
+        BIAS_SLEEP_MONITOR_W::new(self, 17)
     }
     #[doc = "Bits 18:21 - DBG_ATTEN when rtc in sleep state"]
     #[inline(always)]
     #[must_use]
-    pub fn dbg_atten_deep_slp(&mut self) -> DBG_ATTEN_DEEP_SLP_W<BIAS_CONF_SPEC, 18> {
-        DBG_ATTEN_DEEP_SLP_W::new(self)
+    pub fn dbg_atten_deep_slp(&mut self) -> DBG_ATTEN_DEEP_SLP_W<BIAS_CONF_SPEC> {
+        DBG_ATTEN_DEEP_SLP_W::new(self, 18)
     }
     #[doc = "Bits 22:25 - DBG_ATTEN when rtc in monitor state"]
     #[inline(always)]
     #[must_use]
-    pub fn dbg_atten_monitor(&mut self) -> DBG_ATTEN_MONITOR_W<BIAS_CONF_SPEC, 22> {
-        DBG_ATTEN_MONITOR_W::new(self)
+    pub fn dbg_atten_monitor(&mut self) -> DBG_ATTEN_MONITOR_W<BIAS_CONF_SPEC> {
+        DBG_ATTEN_MONITOR_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

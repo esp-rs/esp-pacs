@@ -5,23 +5,23 @@ pub type W = crate::W<LCD_CTRL2_SPEC>;
 #[doc = "Field `LCD_VSYNC_WIDTH` reader - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
 pub type LCD_VSYNC_WIDTH_R = crate::FieldReader;
 #[doc = "Field `LCD_VSYNC_WIDTH` writer - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_VSYNC_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type LCD_VSYNC_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `VSYNC_IDLE_POL` reader - It is the idle value of spi_vsync. Can be configured in CONF state."]
 pub type VSYNC_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `VSYNC_IDLE_POL` writer - It is the idle value of spi_vsync. Can be configured in CONF state."]
-pub type VSYNC_IDLE_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VSYNC_IDLE_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_HSYNC_WIDTH` reader - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
 pub type LCD_HSYNC_WIDTH_R = crate::FieldReader;
 #[doc = "Field `LCD_HSYNC_WIDTH` writer - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_HSYNC_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type LCD_HSYNC_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `HSYNC_IDLE_POL` reader - It is the idle value of spi_hsync. Can be configured in CONF state."]
 pub type HSYNC_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `HSYNC_IDLE_POL` writer - It is the idle value of spi_hsync. Can be configured in CONF state."]
-pub type HSYNC_IDLE_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSYNC_IDLE_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_HSYNC_POSITION` reader - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
 pub type LCD_HSYNC_POSITION_R = crate::FieldReader;
 #[doc = "Field `LCD_HSYNC_POSITION` writer - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_HSYNC_POSITION_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LCD_HSYNC_POSITION_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:6 - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<LCD_CTRL2_SPEC, 0> {
-        LCD_VSYNC_WIDTH_W::new(self)
+    pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<LCD_CTRL2_SPEC> {
+        LCD_VSYNC_WIDTH_W::new(self, 0)
     }
     #[doc = "Bit 7 - It is the idle value of spi_vsync. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn vsync_idle_pol(&mut self) -> VSYNC_IDLE_POL_W<LCD_CTRL2_SPEC, 7> {
-        VSYNC_IDLE_POL_W::new(self)
+    pub fn vsync_idle_pol(&mut self) -> VSYNC_IDLE_POL_W<LCD_CTRL2_SPEC> {
+        VSYNC_IDLE_POL_W::new(self, 7)
     }
     #[doc = "Bits 16:22 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<LCD_CTRL2_SPEC, 16> {
-        LCD_HSYNC_WIDTH_W::new(self)
+    pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<LCD_CTRL2_SPEC> {
+        LCD_HSYNC_WIDTH_W::new(self, 16)
     }
     #[doc = "Bit 23 - It is the idle value of spi_hsync. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn hsync_idle_pol(&mut self) -> HSYNC_IDLE_POL_W<LCD_CTRL2_SPEC, 23> {
-        HSYNC_IDLE_POL_W::new(self)
+    pub fn hsync_idle_pol(&mut self) -> HSYNC_IDLE_POL_W<LCD_CTRL2_SPEC> {
+        HSYNC_IDLE_POL_W::new(self, 23)
     }
     #[doc = "Bits 24:31 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<LCD_CTRL2_SPEC, 24> {
-        LCD_HSYNC_POSITION_W::new(self)
+    pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<LCD_CTRL2_SPEC> {
+        LCD_HSYNC_POSITION_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

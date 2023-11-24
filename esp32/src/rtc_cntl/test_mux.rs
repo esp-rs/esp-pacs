@@ -5,11 +5,11 @@ pub type W = crate::W<TEST_MUX_SPEC>;
 #[doc = "Field `ENT_RTC` reader - ENT_RTC"]
 pub type ENT_RTC_R = crate::BitReader;
 #[doc = "Field `ENT_RTC` writer - ENT_RTC"]
-pub type ENT_RTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENT_RTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTEST_RTC` reader - DTEST_RTC"]
 pub type DTEST_RTC_R = crate::FieldReader;
 #[doc = "Field `DTEST_RTC` writer - DTEST_RTC"]
-pub type DTEST_RTC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DTEST_RTC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 29 - ENT_RTC"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TEST_MUX_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 29 - ENT_RTC"]
     #[inline(always)]
     #[must_use]
-    pub fn ent_rtc(&mut self) -> ENT_RTC_W<TEST_MUX_SPEC, 29> {
-        ENT_RTC_W::new(self)
+    pub fn ent_rtc(&mut self) -> ENT_RTC_W<TEST_MUX_SPEC> {
+        ENT_RTC_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - DTEST_RTC"]
     #[inline(always)]
     #[must_use]
-    pub fn dtest_rtc(&mut self) -> DTEST_RTC_W<TEST_MUX_SPEC, 30> {
-        DTEST_RTC_W::new(self)
+    pub fn dtest_rtc(&mut self) -> DTEST_RTC_W<TEST_MUX_SPEC> {
+        DTEST_RTC_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

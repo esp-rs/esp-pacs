@@ -5,8 +5,7 @@ pub type W = crate::W<CORE_1_STATUSTABLE_CURRENT_SPEC>;
 #[doc = "Field `CORE_1_STATUSTABLE_CURRENT` reader - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1"]
 pub type CORE_1_STATUSTABLE_CURRENT_R = crate::FieldReader<u16>;
 #[doc = "Field `CORE_1_STATUSTABLE_CURRENT` writer - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1"]
-pub type CORE_1_STATUSTABLE_CURRENT_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type CORE_1_STATUSTABLE_CURRENT_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 1:13 - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1"]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_STATUSTABLE_CURRENT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn core_1_statustable_current(
         &mut self,
-    ) -> CORE_1_STATUSTABLE_CURRENT_W<CORE_1_STATUSTABLE_CURRENT_SPEC, 1> {
-        CORE_1_STATUSTABLE_CURRENT_W::new(self)
+    ) -> CORE_1_STATUSTABLE_CURRENT_W<CORE_1_STATUSTABLE_CURRENT_SPEC> {
+        CORE_1_STATUSTABLE_CURRENT_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

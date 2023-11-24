@@ -5,35 +5,35 @@ pub type W = crate::W<POWER_PD_HPAON_CNTL_SPEC>;
 #[doc = "Field `FORCE_HP_AON_RESET` reader - need_des"]
 pub type FORCE_HP_AON_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_AON_RESET` writer - need_des"]
-pub type FORCE_HP_AON_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_AON_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_HP_AON_ISO` reader - need_des"]
 pub type FORCE_HP_AON_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_AON_ISO` writer - need_des"]
-pub type FORCE_HP_AON_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_AON_ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_HP_AON_PU` reader - need_des"]
 pub type FORCE_HP_AON_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_AON_PU` writer - need_des"]
-pub type FORCE_HP_AON_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_AON_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_HP_AON_NO_RESET` reader - need_des"]
 pub type FORCE_HP_AON_NO_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_AON_NO_RESET` writer - need_des"]
-pub type FORCE_HP_AON_NO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_AON_NO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_HP_AON_NO_ISO` reader - need_des"]
 pub type FORCE_HP_AON_NO_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_AON_NO_ISO` writer - need_des"]
-pub type FORCE_HP_AON_NO_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_AON_NO_ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_HP_AON_PD` reader - need_des"]
 pub type FORCE_HP_AON_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_AON_PD` writer - need_des"]
-pub type FORCE_HP_AON_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_AON_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PD_HP_AON_MASK` reader - need_des"]
 pub type PD_HP_AON_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_AON_MASK` writer - need_des"]
-pub type PD_HP_AON_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_AON_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PD_HP_AON_PD_MASK` reader - need_des"]
 pub type PD_HP_AON_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_AON_PD_MASK` writer - need_des"]
-pub type PD_HP_AON_PD_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PD_HP_AON_PD_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -118,59 +118,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_PD_HPAON_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_aon_reset(&mut self) -> FORCE_HP_AON_RESET_W<POWER_PD_HPAON_CNTL_SPEC, 0> {
-        FORCE_HP_AON_RESET_W::new(self)
+    pub fn force_hp_aon_reset(&mut self) -> FORCE_HP_AON_RESET_W<POWER_PD_HPAON_CNTL_SPEC> {
+        FORCE_HP_AON_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_aon_iso(&mut self) -> FORCE_HP_AON_ISO_W<POWER_PD_HPAON_CNTL_SPEC, 1> {
-        FORCE_HP_AON_ISO_W::new(self)
+    pub fn force_hp_aon_iso(&mut self) -> FORCE_HP_AON_ISO_W<POWER_PD_HPAON_CNTL_SPEC> {
+        FORCE_HP_AON_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_aon_pu(&mut self) -> FORCE_HP_AON_PU_W<POWER_PD_HPAON_CNTL_SPEC, 2> {
-        FORCE_HP_AON_PU_W::new(self)
+    pub fn force_hp_aon_pu(&mut self) -> FORCE_HP_AON_PU_W<POWER_PD_HPAON_CNTL_SPEC> {
+        FORCE_HP_AON_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_aon_no_reset(
-        &mut self,
-    ) -> FORCE_HP_AON_NO_RESET_W<POWER_PD_HPAON_CNTL_SPEC, 3> {
-        FORCE_HP_AON_NO_RESET_W::new(self)
+    pub fn force_hp_aon_no_reset(&mut self) -> FORCE_HP_AON_NO_RESET_W<POWER_PD_HPAON_CNTL_SPEC> {
+        FORCE_HP_AON_NO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_aon_no_iso(&mut self) -> FORCE_HP_AON_NO_ISO_W<POWER_PD_HPAON_CNTL_SPEC, 4> {
-        FORCE_HP_AON_NO_ISO_W::new(self)
+    pub fn force_hp_aon_no_iso(&mut self) -> FORCE_HP_AON_NO_ISO_W<POWER_PD_HPAON_CNTL_SPEC> {
+        FORCE_HP_AON_NO_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_aon_pd(&mut self) -> FORCE_HP_AON_PD_W<POWER_PD_HPAON_CNTL_SPEC, 5> {
-        FORCE_HP_AON_PD_W::new(self)
+    pub fn force_hp_aon_pd(&mut self) -> FORCE_HP_AON_PD_W<POWER_PD_HPAON_CNTL_SPEC> {
+        FORCE_HP_AON_PD_W::new(self, 5)
     }
     #[doc = "Bits 6:10 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_aon_mask(&mut self) -> PD_HP_AON_MASK_W<POWER_PD_HPAON_CNTL_SPEC, 6> {
-        PD_HP_AON_MASK_W::new(self)
+    pub fn pd_hp_aon_mask(&mut self) -> PD_HP_AON_MASK_W<POWER_PD_HPAON_CNTL_SPEC> {
+        PD_HP_AON_MASK_W::new(self, 6)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_hp_aon_pd_mask(&mut self) -> PD_HP_AON_PD_MASK_W<POWER_PD_HPAON_CNTL_SPEC, 27> {
-        PD_HP_AON_PD_MASK_W::new(self)
+    pub fn pd_hp_aon_pd_mask(&mut self) -> PD_HP_AON_PD_MASK_W<POWER_PD_HPAON_CNTL_SPEC> {
+        PD_HP_AON_PD_MASK_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<TIMER3_SPEC>;
 #[doc = "Field `WIFI_WAIT_TIMER` reader - "]
 pub type WIFI_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `WIFI_WAIT_TIMER` writer - "]
-pub type WIFI_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type WIFI_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `WIFI_POWERUP_TIMER` reader - "]
 pub type WIFI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `WIFI_POWERUP_TIMER` writer - "]
-pub type WIFI_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type WIFI_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `ROM_RAM_WAIT_TIMER` reader - "]
 pub type ROM_RAM_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `ROM_RAM_WAIT_TIMER` writer - "]
-pub type ROM_RAM_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type ROM_RAM_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `ROM_RAM_POWERUP_TIMER` reader - "]
 pub type ROM_RAM_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `ROM_RAM_POWERUP_TIMER` writer - "]
-pub type ROM_RAM_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type ROM_RAM_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_wait_timer(&mut self) -> WIFI_WAIT_TIMER_W<TIMER3_SPEC, 0> {
-        WIFI_WAIT_TIMER_W::new(self)
+    pub fn wifi_wait_timer(&mut self) -> WIFI_WAIT_TIMER_W<TIMER3_SPEC> {
+        WIFI_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_powerup_timer(&mut self) -> WIFI_POWERUP_TIMER_W<TIMER3_SPEC, 9> {
-        WIFI_POWERUP_TIMER_W::new(self)
+    pub fn wifi_powerup_timer(&mut self) -> WIFI_POWERUP_TIMER_W<TIMER3_SPEC> {
+        WIFI_POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
     #[must_use]
-    pub fn rom_ram_wait_timer(&mut self) -> ROM_RAM_WAIT_TIMER_W<TIMER3_SPEC, 16> {
-        ROM_RAM_WAIT_TIMER_W::new(self)
+    pub fn rom_ram_wait_timer(&mut self) -> ROM_RAM_WAIT_TIMER_W<TIMER3_SPEC> {
+        ROM_RAM_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
     #[must_use]
-    pub fn rom_ram_powerup_timer(&mut self) -> ROM_RAM_POWERUP_TIMER_W<TIMER3_SPEC, 25> {
-        ROM_RAM_POWERUP_TIMER_W::new(self)
+    pub fn rom_ram_powerup_timer(&mut self) -> ROM_RAM_POWERUP_TIMER_W<TIMER3_SPEC> {
+        ROM_RAM_POWERUP_TIMER_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

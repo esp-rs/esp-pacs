@@ -5,11 +5,11 @@ pub type W = crate::W<ICACHE_FREEZE_SPEC>;
 #[doc = "Field `ENA` reader - The bit is used to enable icache freeze mode"]
 pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - The bit is used to enable icache freeze mode"]
-pub type ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MODE` reader - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
 pub type MODE_R = crate::BitReader;
 #[doc = "Field `MODE` writer - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
-pub type MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DONE` reader - The bit is used to indicate icache freeze success"]
 pub type DONE_R = crate::BitReader;
 impl R {
@@ -42,21 +42,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_FREEZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable icache freeze mode"]
     #[inline(always)]
     #[must_use]
-    pub fn ena(&mut self) -> ENA_W<ICACHE_FREEZE_SPEC, 0> {
-        ENA_W::new(self)
+    pub fn ena(&mut self) -> ENA_W<ICACHE_FREEZE_SPEC> {
+        ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
     #[inline(always)]
     #[must_use]
-    pub fn mode(&mut self) -> MODE_W<ICACHE_FREEZE_SPEC, 1> {
-        MODE_W::new(self)
+    pub fn mode(&mut self) -> MODE_W<ICACHE_FREEZE_SPEC> {
+        MODE_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

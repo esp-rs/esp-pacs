@@ -5,7 +5,7 @@ pub type W = crate::W<CONF_SIGLE_DATA_SPEC>;
 #[doc = "Field `SIGLE_DATA` reader - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
 pub type SIGLE_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `SIGLE_DATA` writer - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
-pub type SIGLE_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SIGLE_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SIGLE_DATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
     #[inline(always)]
     #[must_use]
-    pub fn sigle_data(&mut self) -> SIGLE_DATA_W<CONF_SIGLE_DATA_SPEC, 0> {
-        SIGLE_DATA_W::new(self)
+    pub fn sigle_data(&mut self) -> SIGLE_DATA_W<CONF_SIGLE_DATA_SPEC> {
+        SIGLE_DATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

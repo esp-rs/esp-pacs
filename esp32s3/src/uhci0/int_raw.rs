@@ -5,39 +5,39 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `RX_START_INT_RAW` reader - This is the interrupt raw bit. Triggered when a separator char has been sent."]
 pub type RX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_START_INT_RAW` writer - This is the interrupt raw bit. Triggered when a separator char has been sent."]
-pub type RX_START_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_START_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_START_INT_RAW` reader - This is the interrupt raw bit. Triggered when UHCI detects a separator char."]
 pub type TX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_RAW` writer - This is the interrupt raw bit. Triggered when UHCI detects a separator char."]
-pub type TX_START_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_START_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_HUNG_INT_RAW` reader - This is the interrupt raw bit. Triggered when UHCI takes more time to receive data than configure value."]
 pub type RX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_RAW` writer - This is the interrupt raw bit. Triggered when UHCI takes more time to receive data than configure value."]
-pub type RX_HUNG_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_HUNG_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_HUNG_INT_RAW` reader - This is the interrupt raw bit. Triggered when UHCI takes more time to read data from RAM than the configured value."]
 pub type TX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_RAW` writer - This is the interrupt raw bit. Triggered when UHCI takes more time to read data from RAM than the configured value."]
-pub type TX_HUNG_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_HUNG_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` reader - This is the interrupt raw bit. Triggered when UHCI has sent out a short packet using single_send registers."]
 pub type SEND_S_REG_Q_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` writer - This is the interrupt raw bit. Triggered when UHCI has sent out a short packet using single_send registers."]
-pub type SEND_S_REG_Q_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_S_REG_Q_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` reader - This is the interrupt raw bit. Triggered when UHCI has sent out a short packet using always_send registers."]
 pub type SEND_A_REG_Q_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` writer - This is the interrupt raw bit. Triggered when UHCI has sent out a short packet using always_send registers."]
-pub type SEND_A_REG_Q_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_A_REG_Q_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - This is the interrupt raw bit. Triggered when there are some errors in EOF in the transmit data."]
 pub type OUT_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_RAW` writer - This is the interrupt raw bit. Triggered when there are some errors in EOF in the transmit data."]
-pub type OUT_EOF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_EOF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CTRL0_INT_RAW` reader - This is the interrupt raw bit. Triggered when set UHCI_APP_CTRL0_IN_SET."]
 pub type APP_CTRL0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP_CTRL0_INT_RAW` writer - This is the interrupt raw bit. Triggered when set UHCI_APP_CTRL0_IN_SET."]
-pub type APP_CTRL0_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CTRL0_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CTRL1_INT_RAW` reader - This is the interrupt raw bit. Triggered when set UHCI_APP_CTRL1_IN_SET."]
 pub type APP_CTRL1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP_CTRL1_INT_RAW` writer - This is the interrupt raw bit. Triggered when set UHCI_APP_CTRL1_IN_SET."]
-pub type APP_CTRL1_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CTRL1_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This is the interrupt raw bit. Triggered when a separator char has been sent."]
     #[inline(always)]
@@ -131,63 +131,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This is the interrupt raw bit. Triggered when a separator char has been sent."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_start_int_raw(&mut self) -> RX_START_INT_RAW_W<INT_RAW_SPEC, 0> {
-        RX_START_INT_RAW_W::new(self)
+    pub fn rx_start_int_raw(&mut self) -> RX_START_INT_RAW_W<INT_RAW_SPEC> {
+        RX_START_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the interrupt raw bit. Triggered when UHCI detects a separator char."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_start_int_raw(&mut self) -> TX_START_INT_RAW_W<INT_RAW_SPEC, 1> {
-        TX_START_INT_RAW_W::new(self)
+    pub fn tx_start_int_raw(&mut self) -> TX_START_INT_RAW_W<INT_RAW_SPEC> {
+        TX_START_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - This is the interrupt raw bit. Triggered when UHCI takes more time to receive data than configure value."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_hung_int_raw(&mut self) -> RX_HUNG_INT_RAW_W<INT_RAW_SPEC, 2> {
-        RX_HUNG_INT_RAW_W::new(self)
+    pub fn rx_hung_int_raw(&mut self) -> RX_HUNG_INT_RAW_W<INT_RAW_SPEC> {
+        RX_HUNG_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - This is the interrupt raw bit. Triggered when UHCI takes more time to read data from RAM than the configured value."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_hung_int_raw(&mut self) -> TX_HUNG_INT_RAW_W<INT_RAW_SPEC, 3> {
-        TX_HUNG_INT_RAW_W::new(self)
+    pub fn tx_hung_int_raw(&mut self) -> TX_HUNG_INT_RAW_W<INT_RAW_SPEC> {
+        TX_HUNG_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is the interrupt raw bit. Triggered when UHCI has sent out a short packet using single_send registers."]
     #[inline(always)]
     #[must_use]
-    pub fn send_s_reg_q_int_raw(&mut self) -> SEND_S_REG_Q_INT_RAW_W<INT_RAW_SPEC, 4> {
-        SEND_S_REG_Q_INT_RAW_W::new(self)
+    pub fn send_s_reg_q_int_raw(&mut self) -> SEND_S_REG_Q_INT_RAW_W<INT_RAW_SPEC> {
+        SEND_S_REG_Q_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 5 - This is the interrupt raw bit. Triggered when UHCI has sent out a short packet using always_send registers."]
     #[inline(always)]
     #[must_use]
-    pub fn send_a_reg_q_int_raw(&mut self) -> SEND_A_REG_Q_INT_RAW_W<INT_RAW_SPEC, 5> {
-        SEND_A_REG_Q_INT_RAW_W::new(self)
+    pub fn send_a_reg_q_int_raw(&mut self) -> SEND_A_REG_Q_INT_RAW_W<INT_RAW_SPEC> {
+        SEND_A_REG_Q_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 6 - This is the interrupt raw bit. Triggered when there are some errors in EOF in the transmit data."]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof_int_raw(&mut self) -> OUT_EOF_INT_RAW_W<INT_RAW_SPEC, 6> {
-        OUT_EOF_INT_RAW_W::new(self)
+    pub fn out_eof_int_raw(&mut self) -> OUT_EOF_INT_RAW_W<INT_RAW_SPEC> {
+        OUT_EOF_INT_RAW_W::new(self, 6)
     }
     #[doc = "Bit 7 - This is the interrupt raw bit. Triggered when set UHCI_APP_CTRL0_IN_SET."]
     #[inline(always)]
     #[must_use]
-    pub fn app_ctrl0_int_raw(&mut self) -> APP_CTRL0_INT_RAW_W<INT_RAW_SPEC, 7> {
-        APP_CTRL0_INT_RAW_W::new(self)
+    pub fn app_ctrl0_int_raw(&mut self) -> APP_CTRL0_INT_RAW_W<INT_RAW_SPEC> {
+        APP_CTRL0_INT_RAW_W::new(self, 7)
     }
     #[doc = "Bit 8 - This is the interrupt raw bit. Triggered when set UHCI_APP_CTRL1_IN_SET."]
     #[inline(always)]
     #[must_use]
-    pub fn app_ctrl1_int_raw(&mut self) -> APP_CTRL1_INT_RAW_W<INT_RAW_SPEC, 8> {
-        APP_CTRL1_INT_RAW_W::new(self)
+    pub fn app_ctrl1_int_raw(&mut self) -> APP_CTRL1_INT_RAW_W<INT_RAW_SPEC> {
+        APP_CTRL1_INT_RAW_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

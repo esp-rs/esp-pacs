@@ -1,9 +1,9 @@
 #[doc = "Register `INT_CLR_RTC` writer"]
 pub type W = crate::W<INT_CLR_RTC_SPEC>;
 #[doc = "Field `SUPER_WDT_INT_CLR` writer - need_des"]
-pub type SUPER_WDT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SUPER_WDT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_INT_CLR` writer - need_des"]
-pub type WDT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_RTC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn super_wdt_int_clr(&mut self) -> SUPER_WDT_INT_CLR_W<INT_CLR_RTC_SPEC, 30> {
-        SUPER_WDT_INT_CLR_W::new(self)
+    pub fn super_wdt_int_clr(&mut self) -> SUPER_WDT_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        SUPER_WDT_INT_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<INT_CLR_RTC_SPEC, 31> {
-        WDT_INT_CLR_W::new(self)
+    pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        WDT_INT_CLR_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

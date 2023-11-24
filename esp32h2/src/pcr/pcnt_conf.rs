@@ -5,11 +5,11 @@ pub type W = crate::W<PCNT_CONF_SPEC>;
 #[doc = "Field `PCNT_CLK_EN` reader - Set 1 to enable pcnt clock"]
 pub type PCNT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PCNT_CLK_EN` writer - Set 1 to enable pcnt clock"]
-pub type PCNT_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCNT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCNT_RST_EN` reader - Set 0 to reset pcnt module"]
 pub type PCNT_RST_EN_R = crate::BitReader;
 #[doc = "Field `PCNT_RST_EN` writer - Set 0 to reset pcnt module"]
-pub type PCNT_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCNT_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCNT_READY` reader - Query this field after reset pcnt module"]
 pub type PCNT_READY_R = crate::BitReader;
 impl R {
@@ -42,21 +42,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PCNT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable pcnt clock"]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt_clk_en(&mut self) -> PCNT_CLK_EN_W<PCNT_CONF_SPEC, 0> {
-        PCNT_CLK_EN_W::new(self)
+    pub fn pcnt_clk_en(&mut self) -> PCNT_CLK_EN_W<PCNT_CONF_SPEC> {
+        PCNT_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset pcnt module"]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt_rst_en(&mut self) -> PCNT_RST_EN_W<PCNT_CONF_SPEC, 1> {
-        PCNT_RST_EN_W::new(self)
+    pub fn pcnt_rst_en(&mut self) -> PCNT_RST_EN_W<PCNT_CONF_SPEC> {
+        PCNT_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

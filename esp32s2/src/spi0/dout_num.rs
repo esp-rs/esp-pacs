@@ -5,35 +5,35 @@ pub type W = crate::W<DOUT_NUM_SPEC>;
 #[doc = "Field `DOUT0_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT0_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT0_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT0_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT0_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOUT1_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT1_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT1_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT1_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT1_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOUT2_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT2_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT2_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT2_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT2_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOUT3_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT3_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT3_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT3_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT3_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOUT4_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT4_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT4_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT4_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT4_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOUT5_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT5_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT5_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT5_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT5_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOUT6_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT6_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT6_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT6_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT6_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOUT7_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
 pub type DOUT7_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT7_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT7_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DOUT7_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
@@ -94,57 +94,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DOUT_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout0_num(&mut self) -> DOUT0_NUM_W<DOUT_NUM_SPEC, 0> {
-        DOUT0_NUM_W::new(self)
+    pub fn dout0_num(&mut self) -> DOUT0_NUM_W<DOUT_NUM_SPEC> {
+        DOUT0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout1_num(&mut self) -> DOUT1_NUM_W<DOUT_NUM_SPEC, 2> {
-        DOUT1_NUM_W::new(self)
+    pub fn dout1_num(&mut self) -> DOUT1_NUM_W<DOUT_NUM_SPEC> {
+        DOUT1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout2_num(&mut self) -> DOUT2_NUM_W<DOUT_NUM_SPEC, 4> {
-        DOUT2_NUM_W::new(self)
+    pub fn dout2_num(&mut self) -> DOUT2_NUM_W<DOUT_NUM_SPEC> {
+        DOUT2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout3_num(&mut self) -> DOUT3_NUM_W<DOUT_NUM_SPEC, 6> {
-        DOUT3_NUM_W::new(self)
+    pub fn dout3_num(&mut self) -> DOUT3_NUM_W<DOUT_NUM_SPEC> {
+        DOUT3_NUM_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout4_num(&mut self) -> DOUT4_NUM_W<DOUT_NUM_SPEC, 8> {
-        DOUT4_NUM_W::new(self)
+    pub fn dout4_num(&mut self) -> DOUT4_NUM_W<DOUT_NUM_SPEC> {
+        DOUT4_NUM_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout5_num(&mut self) -> DOUT5_NUM_W<DOUT_NUM_SPEC, 10> {
-        DOUT5_NUM_W::new(self)
+    pub fn dout5_num(&mut self) -> DOUT5_NUM_W<DOUT_NUM_SPEC> {
+        DOUT5_NUM_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout6_num(&mut self) -> DOUT6_NUM_W<DOUT_NUM_SPEC, 12> {
-        DOUT6_NUM_W::new(self)
+    pub fn dout6_num(&mut self) -> DOUT6_NUM_W<DOUT_NUM_SPEC> {
+        DOUT6_NUM_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dout7_num(&mut self) -> DOUT7_NUM_W<DOUT_NUM_SPEC, 14> {
-        DOUT7_NUM_W::new(self)
+    pub fn dout7_num(&mut self) -> DOUT7_NUM_W<DOUT_NUM_SPEC> {
+        DOUT7_NUM_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

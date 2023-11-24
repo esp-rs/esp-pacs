@@ -5,15 +5,15 @@ pub type W = crate::W<DOEPTSIZ4_SPEC>;
 #[doc = "Field `XFERSIZE4` reader - "]
 pub type XFERSIZE4_R = crate::FieldReader;
 #[doc = "Field `XFERSIZE4` writer - "]
-pub type XFERSIZE4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type XFERSIZE4_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PKTCNT4` reader - "]
 pub type PKTCNT4_R = crate::BitReader;
 #[doc = "Field `PKTCNT4` writer - "]
-pub type PKTCNT4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PKTCNT4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SUPCNT4` reader - "]
 pub type SUPCNT4_R = crate::FieldReader;
 #[doc = "Field `SUPCNT4` writer - "]
-pub type SUPCNT4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SUPCNT4_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DOEPTSIZ4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     #[must_use]
-    pub fn xfersize4(&mut self) -> XFERSIZE4_W<DOEPTSIZ4_SPEC, 0> {
-        XFERSIZE4_W::new(self)
+    pub fn xfersize4(&mut self) -> XFERSIZE4_W<DOEPTSIZ4_SPEC> {
+        XFERSIZE4_W::new(self, 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn pktcnt4(&mut self) -> PKTCNT4_W<DOEPTSIZ4_SPEC, 19> {
-        PKTCNT4_W::new(self)
+    pub fn pktcnt4(&mut self) -> PKTCNT4_W<DOEPTSIZ4_SPEC> {
+        PKTCNT4_W::new(self, 19)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
     #[must_use]
-    pub fn supcnt4(&mut self) -> SUPCNT4_W<DOEPTSIZ4_SPEC, 29> {
-        SUPCNT4_W::new(self)
+    pub fn supcnt4(&mut self) -> SUPCNT4_W<DOEPTSIZ4_SPEC> {
+        SUPCNT4_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

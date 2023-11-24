@@ -7,31 +7,31 @@ pub type SAR2_CNTL_STATE_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CAL_EN` reader - rtc control pwdet enable"]
 pub type SAR2_PWDET_CAL_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_PWDET_CAL_EN` writer - rtc control pwdet enable"]
-pub type SAR2_PWDET_CAL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_PWDET_CAL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_PKDET_CAL_EN` reader - rtc control pkdet enable"]
 pub type SAR2_PKDET_CAL_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_PKDET_CAL_EN` writer - rtc control pkdet enable"]
-pub type SAR2_PKDET_CAL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_PKDET_CAL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST"]
 pub type SAR2_EN_TEST_R = crate::BitReader;
 #[doc = "Field `SAR2_EN_TEST` writer - SAR2_EN_TEST"]
-pub type SAR2_EN_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_EN_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_RSTB_FORCE` reader - "]
 pub type SAR2_RSTB_FORCE_R = crate::FieldReader;
 #[doc = "Field `SAR2_RSTB_FORCE` writer - "]
-pub type SAR2_RSTB_FORCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SAR2_RSTB_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SAR2_STANDBY_WAIT` reader - "]
 pub type SAR2_STANDBY_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_STANDBY_WAIT` writer - "]
-pub type SAR2_STANDBY_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR2_STANDBY_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR2_RSTB_WAIT` reader - "]
 pub type SAR2_RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_RSTB_WAIT` writer - "]
-pub type SAR2_RSTB_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR2_RSTB_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR2_XPD_WAIT` reader - "]
 pub type SAR2_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_XPD_WAIT` writer - "]
-pub type SAR2_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR2_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:2 - saradc2_cntl_fsm"]
     #[inline(always)]
@@ -116,51 +116,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS2_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3 - rtc control pwdet enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pwdet_cal_en(&mut self) -> SAR2_PWDET_CAL_EN_W<SAR_MEAS2_CTRL1_SPEC, 3> {
-        SAR2_PWDET_CAL_EN_W::new(self)
+    pub fn sar2_pwdet_cal_en(&mut self) -> SAR2_PWDET_CAL_EN_W<SAR_MEAS2_CTRL1_SPEC> {
+        SAR2_PWDET_CAL_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - rtc control pkdet enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pkdet_cal_en(&mut self) -> SAR2_PKDET_CAL_EN_W<SAR_MEAS2_CTRL1_SPEC, 4> {
-        SAR2_PKDET_CAL_EN_W::new(self)
+    pub fn sar2_pkdet_cal_en(&mut self) -> SAR2_PKDET_CAL_EN_W<SAR_MEAS2_CTRL1_SPEC> {
+        SAR2_PKDET_CAL_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - SAR2_EN_TEST"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<SAR_MEAS2_CTRL1_SPEC, 5> {
-        SAR2_EN_TEST_W::new(self)
+    pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<SAR_MEAS2_CTRL1_SPEC> {
+        SAR2_EN_TEST_W::new(self, 5)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_rstb_force(&mut self) -> SAR2_RSTB_FORCE_W<SAR_MEAS2_CTRL1_SPEC, 6> {
-        SAR2_RSTB_FORCE_W::new(self)
+    pub fn sar2_rstb_force(&mut self) -> SAR2_RSTB_FORCE_W<SAR_MEAS2_CTRL1_SPEC> {
+        SAR2_RSTB_FORCE_W::new(self, 6)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_standby_wait(&mut self) -> SAR2_STANDBY_WAIT_W<SAR_MEAS2_CTRL1_SPEC, 8> {
-        SAR2_STANDBY_WAIT_W::new(self)
+    pub fn sar2_standby_wait(&mut self) -> SAR2_STANDBY_WAIT_W<SAR_MEAS2_CTRL1_SPEC> {
+        SAR2_STANDBY_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_rstb_wait(&mut self) -> SAR2_RSTB_WAIT_W<SAR_MEAS2_CTRL1_SPEC, 16> {
-        SAR2_RSTB_WAIT_W::new(self)
+    pub fn sar2_rstb_wait(&mut self) -> SAR2_RSTB_WAIT_W<SAR_MEAS2_CTRL1_SPEC> {
+        SAR2_RSTB_WAIT_W::new(self, 16)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W<SAR_MEAS2_CTRL1_SPEC, 24> {
-        SAR2_XPD_WAIT_W::new(self)
+    pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W<SAR_MEAS2_CTRL1_SPEC> {
+        SAR2_XPD_WAIT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

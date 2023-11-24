@@ -5,131 +5,131 @@ pub type W = crate::W<PERIP_CLK_EN0_SPEC>;
 #[doc = "Field `TIMERS_CLK_EN` reader - reg_timers_clk_en"]
 pub type TIMERS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TIMERS_CLK_EN` writer - reg_timers_clk_en"]
-pub type TIMERS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI01_CLK_EN` reader - reg_spi01_clk_en"]
 pub type SPI01_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI01_CLK_EN` writer - reg_spi01_clk_en"]
-pub type SPI01_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI01_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_CLK_EN` reader - reg_uart_clk_en"]
 pub type UART_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART_CLK_EN` writer - reg_uart_clk_en"]
-pub type UART_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDG_CLK_EN` reader - reg_wdg_clk_en"]
 pub type WDG_CLK_EN_R = crate::BitReader;
 #[doc = "Field `WDG_CLK_EN` writer - reg_wdg_clk_en"]
-pub type WDG_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDG_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S0_CLK_EN` reader - reg_i2s0_clk_en"]
 pub type I2S0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2S0_CLK_EN` writer - reg_i2s0_clk_en"]
-pub type I2S0_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1_CLK_EN` reader - reg_uart1_clk_en"]
 pub type UART1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART1_CLK_EN` writer - reg_uart1_clk_en"]
-pub type UART1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2_CLK_EN` reader - reg_spi2_clk_en"]
 pub type SPI2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_CLK_EN` writer - reg_spi2_clk_en"]
-pub type SPI2_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_EXT0_CLK_EN` reader - reg_ext0_clk_en"]
 pub type I2C_EXT0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2C_EXT0_CLK_EN` writer - reg_ext0_clk_en"]
-pub type I2C_EXT0_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_EXT0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI0_CLK_EN` reader - reg_uhci0_clk_en"]
 pub type UHCI0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UHCI0_CLK_EN` writer - reg_uhci0_clk_en"]
-pub type UHCI0_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RMT_CLK_EN` reader - reg_rmt_clk_en"]
 pub type RMT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `RMT_CLK_EN` writer - reg_rmt_clk_en"]
-pub type RMT_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RMT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCNT_CLK_EN` reader - reg_pcnt_clk_en"]
 pub type PCNT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PCNT_CLK_EN` writer - reg_pcnt_clk_en"]
-pub type PCNT_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCNT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEDC_CLK_EN` reader - reg_ledc_clk_en"]
 pub type LEDC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LEDC_CLK_EN` writer - reg_ledc_clk_en"]
-pub type LEDC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEDC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI1_CLK_EN` reader - reg_uhci1_clk_en"]
 pub type UHCI1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UHCI1_CLK_EN` writer - reg_uhci1_clk_en"]
-pub type UHCI1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMERGROUP_CLK_EN` reader - reg_timergroup_clk_en"]
 pub type TIMERGROUP_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP_CLK_EN` writer - reg_timergroup_clk_en"]
-pub type TIMERGROUP_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERGROUP_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EFUSE_CLK_EN` reader - reg_efuse_clk_en"]
 pub type EFUSE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `EFUSE_CLK_EN` writer - reg_efuse_clk_en"]
-pub type EFUSE_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EFUSE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMERGROUP1_CLK_EN` reader - reg_timergroup1_clk_en"]
 pub type TIMERGROUP1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP1_CLK_EN` writer - reg_timergroup1_clk_en"]
-pub type TIMERGROUP1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERGROUP1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI3_CLK_EN` reader - reg_spi3_clk_en"]
 pub type SPI3_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI3_CLK_EN` writer - reg_spi3_clk_en"]
-pub type SPI3_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI3_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM0_CLK_EN` reader - reg_pwm0_clk_en"]
 pub type PWM0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM0_CLK_EN` writer - reg_pwm0_clk_en"]
-pub type PWM0_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXT1_CLK_EN` reader - reg_ext1_clk_en"]
 pub type EXT1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `EXT1_CLK_EN` writer - reg_ext1_clk_en"]
-pub type EXT1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TWAI_CLK_EN` reader - reg_can_clk_en"]
 pub type TWAI_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TWAI_CLK_EN` writer - reg_can_clk_en"]
-pub type TWAI_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWAI_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM1_CLK_EN` reader - reg_pwm1_clk_en"]
 pub type PWM1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM1_CLK_EN` writer - reg_pwm1_clk_en"]
-pub type PWM1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S1_CLK_EN` reader - reg_i2s1_clk_en"]
 pub type I2S1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2S1_CLK_EN` writer - reg_i2s1_clk_en"]
-pub type I2S1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2_DMA_CLK_EN` reader - reg_spi2_dma_clk_en"]
 pub type SPI2_DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_DMA_CLK_EN` writer - reg_spi2_dma_clk_en"]
-pub type SPI2_DMA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2_DMA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_DEVICE_CLK_EN` reader - reg_usb_device_clk_en"]
 pub type USB_DEVICE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `USB_DEVICE_CLK_EN` writer - reg_usb_device_clk_en"]
-pub type USB_DEVICE_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_DEVICE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_MEM_CLK_EN` reader - reg_uart_mem_clk_en"]
 pub type UART_MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART_MEM_CLK_EN` writer - reg_uart_mem_clk_en"]
-pub type UART_MEM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_MEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM2_CLK_EN` reader - reg_pwm2_clk_en"]
 pub type PWM2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM2_CLK_EN` writer - reg_pwm2_clk_en"]
-pub type PWM2_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM2_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM3_CLK_EN` reader - reg_pwm3_clk_en"]
 pub type PWM3_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM3_CLK_EN` writer - reg_pwm3_clk_en"]
-pub type PWM3_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM3_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI3_DMA_CLK_EN` reader - reg_spi3_dma_clk_en"]
 pub type SPI3_DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI3_DMA_CLK_EN` writer - reg_spi3_dma_clk_en"]
-pub type SPI3_DMA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI3_DMA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_CLK_EN` reader - reg_apb_saradc_clk_en"]
 pub type APB_SARADC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_CLK_EN` writer - reg_apb_saradc_clk_en"]
-pub type APB_SARADC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYSTIMER_CLK_EN` reader - reg_systimer_clk_en"]
 pub type SYSTIMER_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SYSTIMER_CLK_EN` writer - reg_systimer_clk_en"]
-pub type SYSTIMER_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYSTIMER_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_ARB_CLK_EN` reader - reg_adc2_arb_clk_en"]
 pub type ADC2_ARB_CLK_EN_R = crate::BitReader;
 #[doc = "Field `ADC2_ARB_CLK_EN` writer - reg_adc2_arb_clk_en"]
-pub type ADC2_ARB_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_ARB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI4_CLK_EN` reader - reg_spi4_clk_en"]
 pub type SPI4_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI4_CLK_EN` writer - reg_spi4_clk_en"]
-pub type SPI4_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI4_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_timers_clk_en"]
     #[inline(always)]
@@ -382,201 +382,201 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_timers_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn timers_clk_en(&mut self) -> TIMERS_CLK_EN_W<PERIP_CLK_EN0_SPEC, 0> {
-        TIMERS_CLK_EN_W::new(self)
+    pub fn timers_clk_en(&mut self) -> TIMERS_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        TIMERS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_spi01_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<PERIP_CLK_EN0_SPEC, 1> {
-        SPI01_CLK_EN_W::new(self)
+    pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        SPI01_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_uart_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<PERIP_CLK_EN0_SPEC, 2> {
-        UART_CLK_EN_W::new(self)
+    pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        UART_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_wdg_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn wdg_clk_en(&mut self) -> WDG_CLK_EN_W<PERIP_CLK_EN0_SPEC, 3> {
-        WDG_CLK_EN_W::new(self)
+    pub fn wdg_clk_en(&mut self) -> WDG_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        WDG_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_i2s0_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s0_clk_en(&mut self) -> I2S0_CLK_EN_W<PERIP_CLK_EN0_SPEC, 4> {
-        I2S0_CLK_EN_W::new(self)
+    pub fn i2s0_clk_en(&mut self) -> I2S0_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        I2S0_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_uart1_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<PERIP_CLK_EN0_SPEC, 5> {
-        UART1_CLK_EN_W::new(self)
+    pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        UART1_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_spi2_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<PERIP_CLK_EN0_SPEC, 6> {
-        SPI2_CLK_EN_W::new(self)
+    pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        SPI2_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_ext0_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W<PERIP_CLK_EN0_SPEC, 7> {
-        I2C_EXT0_CLK_EN_W::new(self)
+    pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        I2C_EXT0_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - reg_uhci0_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn uhci0_clk_en(&mut self) -> UHCI0_CLK_EN_W<PERIP_CLK_EN0_SPEC, 8> {
-        UHCI0_CLK_EN_W::new(self)
+    pub fn uhci0_clk_en(&mut self) -> UHCI0_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        UHCI0_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_rmt_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_clk_en(&mut self) -> RMT_CLK_EN_W<PERIP_CLK_EN0_SPEC, 9> {
-        RMT_CLK_EN_W::new(self)
+    pub fn rmt_clk_en(&mut self) -> RMT_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        RMT_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_pcnt_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt_clk_en(&mut self) -> PCNT_CLK_EN_W<PERIP_CLK_EN0_SPEC, 10> {
-        PCNT_CLK_EN_W::new(self)
+    pub fn pcnt_clk_en(&mut self) -> PCNT_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        PCNT_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_ledc_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<PERIP_CLK_EN0_SPEC, 11> {
-        LEDC_CLK_EN_W::new(self)
+    pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        LEDC_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - reg_uhci1_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn uhci1_clk_en(&mut self) -> UHCI1_CLK_EN_W<PERIP_CLK_EN0_SPEC, 12> {
-        UHCI1_CLK_EN_W::new(self)
+    pub fn uhci1_clk_en(&mut self) -> UHCI1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        UHCI1_CLK_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_timergroup_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<PERIP_CLK_EN0_SPEC, 13> {
-        TIMERGROUP_CLK_EN_W::new(self)
+    pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        TIMERGROUP_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_efuse_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn efuse_clk_en(&mut self) -> EFUSE_CLK_EN_W<PERIP_CLK_EN0_SPEC, 14> {
-        EFUSE_CLK_EN_W::new(self)
+    pub fn efuse_clk_en(&mut self) -> EFUSE_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        EFUSE_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - reg_timergroup1_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn timergroup1_clk_en(&mut self) -> TIMERGROUP1_CLK_EN_W<PERIP_CLK_EN0_SPEC, 15> {
-        TIMERGROUP1_CLK_EN_W::new(self)
+    pub fn timergroup1_clk_en(&mut self) -> TIMERGROUP1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        TIMERGROUP1_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - reg_spi3_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn spi3_clk_en(&mut self) -> SPI3_CLK_EN_W<PERIP_CLK_EN0_SPEC, 16> {
-        SPI3_CLK_EN_W::new(self)
+    pub fn spi3_clk_en(&mut self) -> SPI3_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        SPI3_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - reg_pwm0_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm0_clk_en(&mut self) -> PWM0_CLK_EN_W<PERIP_CLK_EN0_SPEC, 17> {
-        PWM0_CLK_EN_W::new(self)
+    pub fn pwm0_clk_en(&mut self) -> PWM0_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        PWM0_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - reg_ext1_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn ext1_clk_en(&mut self) -> EXT1_CLK_EN_W<PERIP_CLK_EN0_SPEC, 18> {
-        EXT1_CLK_EN_W::new(self)
+    pub fn ext1_clk_en(&mut self) -> EXT1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        EXT1_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - reg_can_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn twai_clk_en(&mut self) -> TWAI_CLK_EN_W<PERIP_CLK_EN0_SPEC, 19> {
-        TWAI_CLK_EN_W::new(self)
+    pub fn twai_clk_en(&mut self) -> TWAI_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        TWAI_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - reg_pwm1_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm1_clk_en(&mut self) -> PWM1_CLK_EN_W<PERIP_CLK_EN0_SPEC, 20> {
-        PWM1_CLK_EN_W::new(self)
+    pub fn pwm1_clk_en(&mut self) -> PWM1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        PWM1_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - reg_i2s1_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s1_clk_en(&mut self) -> I2S1_CLK_EN_W<PERIP_CLK_EN0_SPEC, 21> {
-        I2S1_CLK_EN_W::new(self)
+    pub fn i2s1_clk_en(&mut self) -> I2S1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        I2S1_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - reg_spi2_dma_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_dma_clk_en(&mut self) -> SPI2_DMA_CLK_EN_W<PERIP_CLK_EN0_SPEC, 22> {
-        SPI2_DMA_CLK_EN_W::new(self)
+    pub fn spi2_dma_clk_en(&mut self) -> SPI2_DMA_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        SPI2_DMA_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - reg_usb_device_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<PERIP_CLK_EN0_SPEC, 23> {
-        USB_DEVICE_CLK_EN_W::new(self)
+    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        USB_DEVICE_CLK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - reg_uart_mem_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<PERIP_CLK_EN0_SPEC, 24> {
-        UART_MEM_CLK_EN_W::new(self)
+    pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        UART_MEM_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - reg_pwm2_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm2_clk_en(&mut self) -> PWM2_CLK_EN_W<PERIP_CLK_EN0_SPEC, 25> {
-        PWM2_CLK_EN_W::new(self)
+    pub fn pwm2_clk_en(&mut self) -> PWM2_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        PWM2_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - reg_pwm3_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm3_clk_en(&mut self) -> PWM3_CLK_EN_W<PERIP_CLK_EN0_SPEC, 26> {
-        PWM3_CLK_EN_W::new(self)
+    pub fn pwm3_clk_en(&mut self) -> PWM3_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        PWM3_CLK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - reg_spi3_dma_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn spi3_dma_clk_en(&mut self) -> SPI3_DMA_CLK_EN_W<PERIP_CLK_EN0_SPEC, 27> {
-        SPI3_DMA_CLK_EN_W::new(self)
+    pub fn spi3_dma_clk_en(&mut self) -> SPI3_DMA_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        SPI3_DMA_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - reg_apb_saradc_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_clk_en(&mut self) -> APB_SARADC_CLK_EN_W<PERIP_CLK_EN0_SPEC, 28> {
-        APB_SARADC_CLK_EN_W::new(self)
+    pub fn apb_saradc_clk_en(&mut self) -> APB_SARADC_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        APB_SARADC_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - reg_systimer_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<PERIP_CLK_EN0_SPEC, 29> {
-        SYSTIMER_CLK_EN_W::new(self)
+    pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        SYSTIMER_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_adc2_arb_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_arb_clk_en(&mut self) -> ADC2_ARB_CLK_EN_W<PERIP_CLK_EN0_SPEC, 30> {
-        ADC2_ARB_CLK_EN_W::new(self)
+    pub fn adc2_arb_clk_en(&mut self) -> ADC2_ARB_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        ADC2_ARB_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_spi4_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn spi4_clk_en(&mut self) -> SPI4_CLK_EN_W<PERIP_CLK_EN0_SPEC, 31> {
-        SPI4_CLK_EN_W::new(self)
+    pub fn spi4_clk_en(&mut self) -> SPI4_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        SPI4_CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

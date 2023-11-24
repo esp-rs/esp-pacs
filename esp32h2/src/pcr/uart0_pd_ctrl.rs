@@ -5,11 +5,11 @@ pub type W = crate::W<UART0_PD_CTRL_SPEC>;
 #[doc = "Field `UART0_MEM_FORCE_PU` reader - Set this bit to force power down UART0 memory."]
 pub type UART0_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `UART0_MEM_FORCE_PU` writer - Set this bit to force power down UART0 memory."]
-pub type UART0_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART0_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART0_MEM_FORCE_PD` reader - Set this bit to force power up UART0 memory."]
 pub type UART0_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `UART0_MEM_FORCE_PD` writer - Set this bit to force power up UART0 memory."]
-pub type UART0_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART0_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Set this bit to force power down UART0 memory."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UART0_PD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Set this bit to force power down UART0 memory."]
     #[inline(always)]
     #[must_use]
-    pub fn uart0_mem_force_pu(&mut self) -> UART0_MEM_FORCE_PU_W<UART0_PD_CTRL_SPEC, 1> {
-        UART0_MEM_FORCE_PU_W::new(self)
+    pub fn uart0_mem_force_pu(&mut self) -> UART0_MEM_FORCE_PU_W<UART0_PD_CTRL_SPEC> {
+        UART0_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force power up UART0 memory."]
     #[inline(always)]
     #[must_use]
-    pub fn uart0_mem_force_pd(&mut self) -> UART0_MEM_FORCE_PD_W<UART0_PD_CTRL_SPEC, 2> {
-        UART0_MEM_FORCE_PD_W::new(self)
+    pub fn uart0_mem_force_pd(&mut self) -> UART0_MEM_FORCE_PD_W<UART0_PD_CTRL_SPEC> {
+        UART0_MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

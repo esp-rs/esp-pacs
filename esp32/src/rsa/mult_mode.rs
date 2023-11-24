@@ -5,7 +5,7 @@ pub type W = crate::W<MULT_MODE_SPEC>;
 #[doc = "Field `MULT_MODE` reader - This register contains the mode of modular multiplication and multiplication."]
 pub type MULT_MODE_R = crate::FieldReader;
 #[doc = "Field `MULT_MODE` writer - This register contains the mode of modular multiplication and multiplication."]
-pub type MULT_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MULT_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - This register contains the mode of modular multiplication and multiplication."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MULT_MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - This register contains the mode of modular multiplication and multiplication."]
     #[inline(always)]
     #[must_use]
-    pub fn mult_mode(&mut self) -> MULT_MODE_W<MULT_MODE_SPEC, 0> {
-        MULT_MODE_W::new(self)
+    pub fn mult_mode(&mut self) -> MULT_MODE_W<MULT_MODE_SPEC> {
+        MULT_MODE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

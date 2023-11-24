@@ -5,19 +5,19 @@ pub type W = crate::W<REGDMA_BKP_CONF_SPEC>;
 #[doc = "Field `READ_INTERVAL` reader - Link read_interval"]
 pub type READ_INTERVAL_R = crate::FieldReader;
 #[doc = "Field `READ_INTERVAL` writer - Link read_interval"]
-pub type READ_INTERVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type READ_INTERVAL_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `LINK_TOUT_THRES` reader - link wait timeout threshold"]
 pub type LINK_TOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `LINK_TOUT_THRES` writer - link wait timeout threshold"]
-pub type LINK_TOUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type LINK_TOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `BURST_LIMIT` reader - burst limit"]
 pub type BURST_LIMIT_R = crate::FieldReader;
 #[doc = "Field `BURST_LIMIT` writer - burst limit"]
-pub type BURST_LIMIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type BURST_LIMIT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `BACKUP_TOUT_THRES` reader - Backup timeout threshold"]
 pub type BACKUP_TOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `BACKUP_TOUT_THRES` writer - Backup timeout threshold"]
-pub type BACKUP_TOUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type BACKUP_TOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:6 - Link read_interval"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REGDMA_BKP_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - Link read_interval"]
     #[inline(always)]
     #[must_use]
-    pub fn read_interval(&mut self) -> READ_INTERVAL_W<REGDMA_BKP_CONF_SPEC, 0> {
-        READ_INTERVAL_W::new(self)
+    pub fn read_interval(&mut self) -> READ_INTERVAL_W<REGDMA_BKP_CONF_SPEC> {
+        READ_INTERVAL_W::new(self, 0)
     }
     #[doc = "Bits 7:16 - link wait timeout threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn link_tout_thres(&mut self) -> LINK_TOUT_THRES_W<REGDMA_BKP_CONF_SPEC, 7> {
-        LINK_TOUT_THRES_W::new(self)
+    pub fn link_tout_thres(&mut self) -> LINK_TOUT_THRES_W<REGDMA_BKP_CONF_SPEC> {
+        LINK_TOUT_THRES_W::new(self, 7)
     }
     #[doc = "Bits 17:21 - burst limit"]
     #[inline(always)]
     #[must_use]
-    pub fn burst_limit(&mut self) -> BURST_LIMIT_W<REGDMA_BKP_CONF_SPEC, 17> {
-        BURST_LIMIT_W::new(self)
+    pub fn burst_limit(&mut self) -> BURST_LIMIT_W<REGDMA_BKP_CONF_SPEC> {
+        BURST_LIMIT_W::new(self, 17)
     }
     #[doc = "Bits 22:31 - Backup timeout threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn backup_tout_thres(&mut self) -> BACKUP_TOUT_THRES_W<REGDMA_BKP_CONF_SPEC, 22> {
-        BACKUP_TOUT_THRES_W::new(self)
+    pub fn backup_tout_thres(&mut self) -> BACKUP_TOUT_THRES_W<REGDMA_BKP_CONF_SPEC> {
+        BACKUP_TOUT_THRES_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

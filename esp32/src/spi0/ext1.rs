@@ -5,15 +5,15 @@ pub type W = crate::W<EXT1_SPEC>;
 #[doc = "Field `T_ERASE_TIME` reader - erase flash delay time by system clock."]
 pub type T_ERASE_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `T_ERASE_TIME` writer - erase flash delay time by system clock."]
-pub type T_ERASE_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type T_ERASE_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `T_ERASE_SHIFT` reader - erase flash delay time shift."]
 pub type T_ERASE_SHIFT_R = crate::FieldReader;
 #[doc = "Field `T_ERASE_SHIFT` writer - erase flash delay time shift."]
-pub type T_ERASE_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type T_ERASE_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `T_ERASE_ENA` reader - erase flash delay enable."]
 pub type T_ERASE_ENA_R = crate::BitReader;
 #[doc = "Field `T_ERASE_ENA` writer - erase flash delay enable."]
-pub type T_ERASE_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type T_ERASE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - erase flash delay time by system clock."]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXT1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - erase flash delay time by system clock."]
     #[inline(always)]
     #[must_use]
-    pub fn t_erase_time(&mut self) -> T_ERASE_TIME_W<EXT1_SPEC, 0> {
-        T_ERASE_TIME_W::new(self)
+    pub fn t_erase_time(&mut self) -> T_ERASE_TIME_W<EXT1_SPEC> {
+        T_ERASE_TIME_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - erase flash delay time shift."]
     #[inline(always)]
     #[must_use]
-    pub fn t_erase_shift(&mut self) -> T_ERASE_SHIFT_W<EXT1_SPEC, 16> {
-        T_ERASE_SHIFT_W::new(self)
+    pub fn t_erase_shift(&mut self) -> T_ERASE_SHIFT_W<EXT1_SPEC> {
+        T_ERASE_SHIFT_W::new(self, 16)
     }
     #[doc = "Bit 31 - erase flash delay enable."]
     #[inline(always)]
     #[must_use]
-    pub fn t_erase_ena(&mut self) -> T_ERASE_ENA_W<EXT1_SPEC, 31> {
-        T_ERASE_ENA_W::new(self)
+    pub fn t_erase_ena(&mut self) -> T_ERASE_ENA_W<EXT1_SPEC> {
+        T_ERASE_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

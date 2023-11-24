@@ -5,57 +5,57 @@ pub type W = crate::W<DIEPINT0_SPEC>;
 #[doc = "Field `D_XFERCOMPL0` reader - "]
 pub type D_XFERCOMPL0_R = crate::BitReader;
 #[doc = "Field `D_XFERCOMPL0` writer - "]
-pub type D_XFERCOMPL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_XFERCOMPL0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_EPDISBLD0` reader - "]
 pub type D_EPDISBLD0_R = crate::BitReader;
 #[doc = "Field `D_EPDISBLD0` writer - "]
-pub type D_EPDISBLD0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_EPDISBLD0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_AHBERR0` reader - "]
 pub type D_AHBERR0_R = crate::BitReader;
 #[doc = "Field `D_AHBERR0` writer - "]
-pub type D_AHBERR0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_AHBERR0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_TIMEOUT0` reader - "]
 pub type D_TIMEOUT0_R = crate::BitReader;
 #[doc = "Field `D_TIMEOUT0` writer - "]
-pub type D_TIMEOUT0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_TIMEOUT0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_INTKNTXFEMP0` reader - "]
 pub type D_INTKNTXFEMP0_R = crate::BitReader;
 #[doc = "Field `D_INTKNTXFEMP0` writer - "]
-pub type D_INTKNTXFEMP0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_INTKNTXFEMP0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_INTKNEPMIS0` reader - "]
 pub type D_INTKNEPMIS0_R = crate::BitReader;
 #[doc = "Field `D_INTKNEPMIS0` writer - "]
-pub type D_INTKNEPMIS0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_INTKNEPMIS0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_INEPNAKEFF0` reader - "]
 pub type D_INEPNAKEFF0_R = crate::BitReader;
 #[doc = "Field `D_INEPNAKEFF0` writer - "]
-pub type D_INEPNAKEFF0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_INEPNAKEFF0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_TXFEMP0` reader - "]
 pub type D_TXFEMP0_R = crate::BitReader;
 #[doc = "Field `D_TXFIFOUNDRN0` reader - "]
 pub type D_TXFIFOUNDRN0_R = crate::BitReader;
 #[doc = "Field `D_TXFIFOUNDRN0` writer - "]
-pub type D_TXFIFOUNDRN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_TXFIFOUNDRN0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_BNAINTR0` reader - "]
 pub type D_BNAINTR0_R = crate::BitReader;
 #[doc = "Field `D_BNAINTR0` writer - "]
-pub type D_BNAINTR0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_BNAINTR0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_PKTDRPSTS0` reader - "]
 pub type D_PKTDRPSTS0_R = crate::BitReader;
 #[doc = "Field `D_PKTDRPSTS0` writer - "]
-pub type D_PKTDRPSTS0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_PKTDRPSTS0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_BBLEERR0` reader - "]
 pub type D_BBLEERR0_R = crate::BitReader;
 #[doc = "Field `D_BBLEERR0` writer - "]
-pub type D_BBLEERR0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_BBLEERR0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_NAKINTRPT0` reader - "]
 pub type D_NAKINTRPT0_R = crate::BitReader;
 #[doc = "Field `D_NAKINTRPT0` writer - "]
-pub type D_NAKINTRPT0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_NAKINTRPT0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_NYETINTRPT0` reader - "]
 pub type D_NYETINTRPT0_R = crate::BitReader;
 #[doc = "Field `D_NYETINTRPT0` writer - "]
-pub type D_NYETINTRPT0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_NYETINTRPT0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -176,87 +176,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIEPINT0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn d_xfercompl0(&mut self) -> D_XFERCOMPL0_W<DIEPINT0_SPEC, 0> {
-        D_XFERCOMPL0_W::new(self)
+    pub fn d_xfercompl0(&mut self) -> D_XFERCOMPL0_W<DIEPINT0_SPEC> {
+        D_XFERCOMPL0_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn d_epdisbld0(&mut self) -> D_EPDISBLD0_W<DIEPINT0_SPEC, 1> {
-        D_EPDISBLD0_W::new(self)
+    pub fn d_epdisbld0(&mut self) -> D_EPDISBLD0_W<DIEPINT0_SPEC> {
+        D_EPDISBLD0_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn d_ahberr0(&mut self) -> D_AHBERR0_W<DIEPINT0_SPEC, 2> {
-        D_AHBERR0_W::new(self)
+    pub fn d_ahberr0(&mut self) -> D_AHBERR0_W<DIEPINT0_SPEC> {
+        D_AHBERR0_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn d_timeout0(&mut self) -> D_TIMEOUT0_W<DIEPINT0_SPEC, 3> {
-        D_TIMEOUT0_W::new(self)
+    pub fn d_timeout0(&mut self) -> D_TIMEOUT0_W<DIEPINT0_SPEC> {
+        D_TIMEOUT0_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn d_intkntxfemp0(&mut self) -> D_INTKNTXFEMP0_W<DIEPINT0_SPEC, 4> {
-        D_INTKNTXFEMP0_W::new(self)
+    pub fn d_intkntxfemp0(&mut self) -> D_INTKNTXFEMP0_W<DIEPINT0_SPEC> {
+        D_INTKNTXFEMP0_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn d_intknepmis0(&mut self) -> D_INTKNEPMIS0_W<DIEPINT0_SPEC, 5> {
-        D_INTKNEPMIS0_W::new(self)
+    pub fn d_intknepmis0(&mut self) -> D_INTKNEPMIS0_W<DIEPINT0_SPEC> {
+        D_INTKNEPMIS0_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn d_inepnakeff0(&mut self) -> D_INEPNAKEFF0_W<DIEPINT0_SPEC, 6> {
-        D_INEPNAKEFF0_W::new(self)
+    pub fn d_inepnakeff0(&mut self) -> D_INEPNAKEFF0_W<DIEPINT0_SPEC> {
+        D_INEPNAKEFF0_W::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn d_txfifoundrn0(&mut self) -> D_TXFIFOUNDRN0_W<DIEPINT0_SPEC, 8> {
-        D_TXFIFOUNDRN0_W::new(self)
+    pub fn d_txfifoundrn0(&mut self) -> D_TXFIFOUNDRN0_W<DIEPINT0_SPEC> {
+        D_TXFIFOUNDRN0_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn d_bnaintr0(&mut self) -> D_BNAINTR0_W<DIEPINT0_SPEC, 9> {
-        D_BNAINTR0_W::new(self)
+    pub fn d_bnaintr0(&mut self) -> D_BNAINTR0_W<DIEPINT0_SPEC> {
+        D_BNAINTR0_W::new(self, 9)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn d_pktdrpsts0(&mut self) -> D_PKTDRPSTS0_W<DIEPINT0_SPEC, 11> {
-        D_PKTDRPSTS0_W::new(self)
+    pub fn d_pktdrpsts0(&mut self) -> D_PKTDRPSTS0_W<DIEPINT0_SPEC> {
+        D_PKTDRPSTS0_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn d_bbleerr0(&mut self) -> D_BBLEERR0_W<DIEPINT0_SPEC, 12> {
-        D_BBLEERR0_W::new(self)
+    pub fn d_bbleerr0(&mut self) -> D_BBLEERR0_W<DIEPINT0_SPEC> {
+        D_BBLEERR0_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn d_nakintrpt0(&mut self) -> D_NAKINTRPT0_W<DIEPINT0_SPEC, 13> {
-        D_NAKINTRPT0_W::new(self)
+    pub fn d_nakintrpt0(&mut self) -> D_NAKINTRPT0_W<DIEPINT0_SPEC> {
+        D_NAKINTRPT0_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn d_nyetintrpt0(&mut self) -> D_NYETINTRPT0_W<DIEPINT0_SPEC, 14> {
-        D_NYETINTRPT0_W::new(self)
+    pub fn d_nyetintrpt0(&mut self) -> D_NYETINTRPT0_W<DIEPINT0_SPEC> {
+        D_NYETINTRPT0_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

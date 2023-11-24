@@ -5,11 +5,11 @@ pub type W = crate::W<SAR_MEAS_WAIT1_SPEC>;
 #[doc = "Field `SAR_AMP_WAIT1` reader - "]
 pub type SAR_AMP_WAIT1_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT1` writer - "]
-pub type SAR_AMP_WAIT1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SAR_AMP_WAIT1_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `SAR_AMP_WAIT2` reader - "]
 pub type SAR_AMP_WAIT2_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT2` writer - "]
-pub type SAR_AMP_WAIT2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SAR_AMP_WAIT2_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS_WAIT1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_amp_wait1(&mut self) -> SAR_AMP_WAIT1_W<SAR_MEAS_WAIT1_SPEC, 0> {
-        SAR_AMP_WAIT1_W::new(self)
+    pub fn sar_amp_wait1(&mut self) -> SAR_AMP_WAIT1_W<SAR_MEAS_WAIT1_SPEC> {
+        SAR_AMP_WAIT1_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_amp_wait2(&mut self) -> SAR_AMP_WAIT2_W<SAR_MEAS_WAIT1_SPEC, 16> {
-        SAR_AMP_WAIT2_W::new(self)
+    pub fn sar_amp_wait2(&mut self) -> SAR_AMP_WAIT2_W<SAR_MEAS_WAIT1_SPEC> {
+        SAR_AMP_WAIT2_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

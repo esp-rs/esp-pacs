@@ -5,15 +5,15 @@ pub type W = crate::W<FSM_WAIT_SPEC>;
 #[doc = "Field `XPD_WAIT` reader - xpd wait"]
 pub type XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `XPD_WAIT` writer - xpd wait"]
-pub type XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RSTB_WAIT` reader - reset time"]
 pub type RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `RSTB_WAIT` writer - reset time"]
-pub type RSTB_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RSTB_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `STANDBY_WAIT` reader - standby wait"]
 pub type STANDBY_WAIT_R = crate::FieldReader;
 #[doc = "Field `STANDBY_WAIT` writer - standby wait"]
-pub type STANDBY_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type STANDBY_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - xpd wait"]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FSM_WAIT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - xpd wait"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_wait(&mut self) -> XPD_WAIT_W<FSM_WAIT_SPEC, 0> {
-        XPD_WAIT_W::new(self)
+    pub fn xpd_wait(&mut self) -> XPD_WAIT_W<FSM_WAIT_SPEC> {
+        XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - reset time"]
     #[inline(always)]
     #[must_use]
-    pub fn rstb_wait(&mut self) -> RSTB_WAIT_W<FSM_WAIT_SPEC, 8> {
-        RSTB_WAIT_W::new(self)
+    pub fn rstb_wait(&mut self) -> RSTB_WAIT_W<FSM_WAIT_SPEC> {
+        RSTB_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - standby wait"]
     #[inline(always)]
     #[must_use]
-    pub fn standby_wait(&mut self) -> STANDBY_WAIT_W<FSM_WAIT_SPEC, 16> {
-        STANDBY_WAIT_W::new(self)
+    pub fn standby_wait(&mut self) -> STANDBY_WAIT_W<FSM_WAIT_SPEC> {
+        STANDBY_WAIT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

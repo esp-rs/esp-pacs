@@ -5,7 +5,7 @@ pub type W = crate::W<NTIMG_DATE_SPEC>;
 #[doc = "Field `NTIMGS_DATE` reader - reg_ntimers_date."]
 pub type NTIMGS_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `NTIMGS_DATE` writer - reg_ntimers_date."]
-pub type NTIMGS_DATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 28, O, u32>;
+pub type NTIMGS_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 impl R {
     #[doc = "Bits 0:27 - reg_ntimers_date."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<NTIMG_DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - reg_ntimers_date."]
     #[inline(always)]
     #[must_use]
-    pub fn ntimgs_date(&mut self) -> NTIMGS_DATE_W<NTIMG_DATE_SPEC, 0> {
-        NTIMGS_DATE_W::new(self)
+    pub fn ntimgs_date(&mut self) -> NTIMGS_DATE_W<NTIMG_DATE_SPEC> {
+        NTIMGS_DATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

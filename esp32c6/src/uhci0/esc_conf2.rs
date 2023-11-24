@@ -5,15 +5,15 @@ pub type W = crate::W<ESC_CONF2_SPEC>;
 #[doc = "Field `ESC_SEQ1` reader - Configures the char needing encoding, which is 0x11 as flow control char by default."]
 pub type ESC_SEQ1_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ1` writer - Configures the char needing encoding, which is 0x11 as flow control char by default."]
-pub type ESC_SEQ1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ESC_SEQ1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ESC_SEQ1_CHAR0` reader - Configures the first char of SLIP escape character, default value is 0xDB."]
 pub type ESC_SEQ1_CHAR0_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ1_CHAR0` writer - Configures the first char of SLIP escape character, default value is 0xDB."]
-pub type ESC_SEQ1_CHAR0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ESC_SEQ1_CHAR0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ESC_SEQ1_CHAR1` reader - Configures the second char of SLIP escape character, default value is 0xDE."]
 pub type ESC_SEQ1_CHAR1_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ1_CHAR1` writer - Configures the second char of SLIP escape character, default value is 0xDE."]
-pub type ESC_SEQ1_CHAR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ESC_SEQ1_CHAR1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Configures the char needing encoding, which is 0x11 as flow control char by default."]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ESC_CONF2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Configures the char needing encoding, which is 0x11 as flow control char by default."]
     #[inline(always)]
     #[must_use]
-    pub fn esc_seq1(&mut self) -> ESC_SEQ1_W<ESC_CONF2_SPEC, 0> {
-        ESC_SEQ1_W::new(self)
+    pub fn esc_seq1(&mut self) -> ESC_SEQ1_W<ESC_CONF2_SPEC> {
+        ESC_SEQ1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the first char of SLIP escape character, default value is 0xDB."]
     #[inline(always)]
     #[must_use]
-    pub fn esc_seq1_char0(&mut self) -> ESC_SEQ1_CHAR0_W<ESC_CONF2_SPEC, 8> {
-        ESC_SEQ1_CHAR0_W::new(self)
+    pub fn esc_seq1_char0(&mut self) -> ESC_SEQ1_CHAR0_W<ESC_CONF2_SPEC> {
+        ESC_SEQ1_CHAR0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures the second char of SLIP escape character, default value is 0xDE."]
     #[inline(always)]
     #[must_use]
-    pub fn esc_seq1_char1(&mut self) -> ESC_SEQ1_CHAR1_W<ESC_CONF2_SPEC, 16> {
-        ESC_SEQ1_CHAR1_W::new(self)
+    pub fn esc_seq1_char1(&mut self) -> ESC_SEQ1_CHAR1_W<ESC_CONF2_SPEC> {
+        ESC_SEQ1_CHAR1_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

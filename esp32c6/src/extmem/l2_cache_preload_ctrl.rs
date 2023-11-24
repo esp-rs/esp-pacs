@@ -5,7 +5,7 @@ pub type W = crate::W<L2_CACHE_PRELOAD_CTRL_SPEC>;
 #[doc = "Field `L2_CACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
 pub type L2_CACHE_PRELOAD_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
-pub type L2_CACHE_PRELOAD_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_CACHE_PRELOAD_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_CACHE_PRELOAD_DONE` reader - The bit is used to indicate whether preload operation is finished or not. 0: not finished. 1: finished."]
 pub type L2_CACHE_PRELOAD_DONE_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PRELOAD_ORDER` reader - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
@@ -60,17 +60,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_PRELOAD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
     #[must_use]
-    pub fn l2_cache_preload_ena(
-        &mut self,
-    ) -> L2_CACHE_PRELOAD_ENA_W<L2_CACHE_PRELOAD_CTRL_SPEC, 0> {
-        L2_CACHE_PRELOAD_ENA_W::new(self)
+    pub fn l2_cache_preload_ena(&mut self) -> L2_CACHE_PRELOAD_ENA_W<L2_CACHE_PRELOAD_CTRL_SPEC> {
+        L2_CACHE_PRELOAD_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

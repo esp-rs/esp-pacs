@@ -5,23 +5,23 @@ pub type W = crate::W<SYSCLK_CONF_SPEC>;
 #[doc = "Field `PRE_DIV_CNT` reader - "]
 pub type PRE_DIV_CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PRE_DIV_CNT` writer - "]
-pub type PRE_DIV_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type PRE_DIV_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `CLK_320M_EN` reader - "]
 pub type CLK_320M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_320M_EN` writer - "]
-pub type CLK_320M_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_320M_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_TICK_CNT` reader - "]
 pub type RST_TICK_CNT_R = crate::BitReader;
 #[doc = "Field `RST_TICK_CNT` writer - "]
-pub type RST_TICK_CNT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_TICK_CNT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `QUICK_CLK_CHNG` reader - "]
 pub type QUICK_CLK_CHNG_R = crate::BitReader;
 #[doc = "Field `QUICK_CLK_CHNG` writer - "]
-pub type QUICK_CLK_CHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type QUICK_CLK_CHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -73,39 +73,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SYSCLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
     #[must_use]
-    pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W<SYSCLK_CONF_SPEC, 0> {
-        PRE_DIV_CNT_W::new(self)
+    pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W<SYSCLK_CONF_SPEC> {
+        PRE_DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_320m_en(&mut self) -> CLK_320M_EN_W<SYSCLK_CONF_SPEC, 10> {
-        CLK_320M_EN_W::new(self)
+    pub fn clk_320m_en(&mut self) -> CLK_320M_EN_W<SYSCLK_CONF_SPEC> {
+        CLK_320M_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<SYSCLK_CONF_SPEC, 11> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<SYSCLK_CONF_SPEC> {
+        CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<SYSCLK_CONF_SPEC, 12> {
-        RST_TICK_CNT_W::new(self)
+    pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<SYSCLK_CONF_SPEC> {
+        RST_TICK_CNT_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn quick_clk_chng(&mut self) -> QUICK_CLK_CHNG_W<SYSCLK_CONF_SPEC, 13> {
-        QUICK_CLK_CHNG_W::new(self)
+    pub fn quick_clk_chng(&mut self) -> QUICK_CLK_CHNG_W<SYSCLK_CONF_SPEC> {
+        QUICK_CLK_CHNG_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

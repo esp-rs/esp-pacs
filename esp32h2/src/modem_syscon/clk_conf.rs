@@ -5,47 +5,47 @@ pub type W = crate::W<CLK_CONF_SPEC>;
 #[doc = "Field `CLK_ETM_EN` reader - "]
 pub type CLK_ETM_EN_R = crate::BitReader;
 #[doc = "Field `CLK_ETM_EN` writer - "]
-pub type CLK_ETM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_ETM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_ZB_APB_EN` reader - "]
 pub type CLK_ZB_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_ZB_APB_EN` writer - "]
-pub type CLK_ZB_APB_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_ZB_APB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_ZB_MAC_EN` reader - "]
 pub type CLK_ZB_MAC_EN_R = crate::BitReader;
 #[doc = "Field `CLK_ZB_MAC_EN` writer - "]
-pub type CLK_ZB_MAC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_ZB_MAC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_MODEM_SEC_ECB_EN` reader - "]
 pub type CLK_MODEM_SEC_ECB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_ECB_EN` writer - "]
-pub type CLK_MODEM_SEC_ECB_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_MODEM_SEC_ECB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_MODEM_SEC_CCM_EN` reader - "]
 pub type CLK_MODEM_SEC_CCM_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_CCM_EN` writer - "]
-pub type CLK_MODEM_SEC_CCM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_MODEM_SEC_CCM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_MODEM_SEC_BAH_EN` reader - "]
 pub type CLK_MODEM_SEC_BAH_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_BAH_EN` writer - "]
-pub type CLK_MODEM_SEC_BAH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_MODEM_SEC_BAH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_MODEM_SEC_APB_EN` reader - "]
 pub type CLK_MODEM_SEC_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_APB_EN` writer - "]
-pub type CLK_MODEM_SEC_APB_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_MODEM_SEC_APB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_MODEM_SEC_EN` reader - "]
 pub type CLK_MODEM_SEC_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_EN` writer - "]
-pub type CLK_MODEM_SEC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_MODEM_SEC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BLE_TIMER_APB_EN` reader - "]
 pub type CLK_BLE_TIMER_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BLE_TIMER_APB_EN` writer - "]
-pub type CLK_BLE_TIMER_APB_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BLE_TIMER_APB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BLE_TIMER_EN` reader - "]
 pub type CLK_BLE_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BLE_TIMER_EN` writer - "]
-pub type CLK_BLE_TIMER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BLE_TIMER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_DATA_DUMP_EN` reader - "]
 pub type CLK_DATA_DUMP_EN_R = crate::BitReader;
 #[doc = "Field `CLK_DATA_DUMP_EN` writer - "]
-pub type CLK_DATA_DUMP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_DATA_DUMP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 21"]
     #[inline(always)]
@@ -154,75 +154,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_etm_en(&mut self) -> CLK_ETM_EN_W<CLK_CONF_SPEC, 21> {
-        CLK_ETM_EN_W::new(self)
+    pub fn clk_etm_en(&mut self) -> CLK_ETM_EN_W<CLK_CONF_SPEC> {
+        CLK_ETM_EN_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_zb_apb_en(&mut self) -> CLK_ZB_APB_EN_W<CLK_CONF_SPEC, 22> {
-        CLK_ZB_APB_EN_W::new(self)
+    pub fn clk_zb_apb_en(&mut self) -> CLK_ZB_APB_EN_W<CLK_CONF_SPEC> {
+        CLK_ZB_APB_EN_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_zb_mac_en(&mut self) -> CLK_ZB_MAC_EN_W<CLK_CONF_SPEC, 23> {
-        CLK_ZB_MAC_EN_W::new(self)
+    pub fn clk_zb_mac_en(&mut self) -> CLK_ZB_MAC_EN_W<CLK_CONF_SPEC> {
+        CLK_ZB_MAC_EN_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_modem_sec_ecb_en(&mut self) -> CLK_MODEM_SEC_ECB_EN_W<CLK_CONF_SPEC, 24> {
-        CLK_MODEM_SEC_ECB_EN_W::new(self)
+    pub fn clk_modem_sec_ecb_en(&mut self) -> CLK_MODEM_SEC_ECB_EN_W<CLK_CONF_SPEC> {
+        CLK_MODEM_SEC_ECB_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_modem_sec_ccm_en(&mut self) -> CLK_MODEM_SEC_CCM_EN_W<CLK_CONF_SPEC, 25> {
-        CLK_MODEM_SEC_CCM_EN_W::new(self)
+    pub fn clk_modem_sec_ccm_en(&mut self) -> CLK_MODEM_SEC_CCM_EN_W<CLK_CONF_SPEC> {
+        CLK_MODEM_SEC_CCM_EN_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_modem_sec_bah_en(&mut self) -> CLK_MODEM_SEC_BAH_EN_W<CLK_CONF_SPEC, 26> {
-        CLK_MODEM_SEC_BAH_EN_W::new(self)
+    pub fn clk_modem_sec_bah_en(&mut self) -> CLK_MODEM_SEC_BAH_EN_W<CLK_CONF_SPEC> {
+        CLK_MODEM_SEC_BAH_EN_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_modem_sec_apb_en(&mut self) -> CLK_MODEM_SEC_APB_EN_W<CLK_CONF_SPEC, 27> {
-        CLK_MODEM_SEC_APB_EN_W::new(self)
+    pub fn clk_modem_sec_apb_en(&mut self) -> CLK_MODEM_SEC_APB_EN_W<CLK_CONF_SPEC> {
+        CLK_MODEM_SEC_APB_EN_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_modem_sec_en(&mut self) -> CLK_MODEM_SEC_EN_W<CLK_CONF_SPEC, 28> {
-        CLK_MODEM_SEC_EN_W::new(self)
+    pub fn clk_modem_sec_en(&mut self) -> CLK_MODEM_SEC_EN_W<CLK_CONF_SPEC> {
+        CLK_MODEM_SEC_EN_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_ble_timer_apb_en(&mut self) -> CLK_BLE_TIMER_APB_EN_W<CLK_CONF_SPEC, 29> {
-        CLK_BLE_TIMER_APB_EN_W::new(self)
+    pub fn clk_ble_timer_apb_en(&mut self) -> CLK_BLE_TIMER_APB_EN_W<CLK_CONF_SPEC> {
+        CLK_BLE_TIMER_APB_EN_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_ble_timer_en(&mut self) -> CLK_BLE_TIMER_EN_W<CLK_CONF_SPEC, 30> {
-        CLK_BLE_TIMER_EN_W::new(self)
+    pub fn clk_ble_timer_en(&mut self) -> CLK_BLE_TIMER_EN_W<CLK_CONF_SPEC> {
+        CLK_BLE_TIMER_EN_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_data_dump_en(&mut self) -> CLK_DATA_DUMP_EN_W<CLK_CONF_SPEC, 31> {
-        CLK_DATA_DUMP_EN_W::new(self)
+    pub fn clk_data_dump_en(&mut self) -> CLK_DATA_DUMP_EN_W<CLK_CONF_SPEC> {
+        CLK_DATA_DUMP_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

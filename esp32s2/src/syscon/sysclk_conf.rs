@@ -5,15 +5,15 @@ pub type W = crate::W<SYSCLK_CONF_SPEC>;
 #[doc = "Field `CLK_320M_EN` reader - "]
 pub type CLK_320M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_320M_EN` writer - "]
-pub type CLK_320M_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_320M_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_TICK_CNT` reader - "]
 pub type RST_TICK_CNT_R = crate::BitReader;
 #[doc = "Field `RST_TICK_CNT` writer - "]
-pub type RST_TICK_CNT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_TICK_CNT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 10"]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SYSCLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_320m_en(&mut self) -> CLK_320M_EN_W<SYSCLK_CONF_SPEC, 10> {
-        CLK_320M_EN_W::new(self)
+    pub fn clk_320m_en(&mut self) -> CLK_320M_EN_W<SYSCLK_CONF_SPEC> {
+        CLK_320M_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<SYSCLK_CONF_SPEC, 11> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<SYSCLK_CONF_SPEC> {
+        CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<SYSCLK_CONF_SPEC, 12> {
-        RST_TICK_CNT_W::new(self)
+    pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<SYSCLK_CONF_SPEC> {
+        RST_TICK_CNT_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<INTERNAL_SRAM_USAGE_3_SPEC>;
 #[doc = "Field `INTERNAL_SRAM_MAC_DUMP_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by mac dump."]
 pub type INTERNAL_SRAM_MAC_DUMP_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_MAC_DUMP_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by mac dump."]
-pub type INTERNAL_SRAM_MAC_DUMP_USAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type INTERNAL_SRAM_MAC_DUMP_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by mac dump."]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn internal_sram_mac_dump_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_MAC_DUMP_USAGE_W<INTERNAL_SRAM_USAGE_3_SPEC, 0> {
-        INTERNAL_SRAM_MAC_DUMP_USAGE_W::new(self)
+    ) -> INTERNAL_SRAM_MAC_DUMP_USAGE_W<INTERNAL_SRAM_USAGE_3_SPEC> {
+        INTERNAL_SRAM_MAC_DUMP_USAGE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

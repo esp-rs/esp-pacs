@@ -5,7 +5,7 @@ pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `APB_CLK_SEL` reader - This bit is used to set the frequency of slow_clk. 1'b1:80mhz 1'b0:8mhz"]
 pub type APB_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `APB_CLK_SEL` writer - This bit is used to set the frequency of slow_clk. 1'b1:80mhz 1'b0:8mhz"]
-pub type APB_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This bit is used to set the frequency of slow_clk. 1'b1:80mhz 1'b0:8mhz"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit is used to set the frequency of slow_clk. 1'b1:80mhz 1'b0:8mhz"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<CONF_SPEC, 0> {
-        APB_CLK_SEL_W::new(self)
+    pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<CONF_SPEC> {
+        APB_CLK_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

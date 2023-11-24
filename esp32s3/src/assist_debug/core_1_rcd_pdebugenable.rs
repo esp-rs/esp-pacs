@@ -5,7 +5,7 @@ pub type W = crate::W<CORE_1_RCD_PDEBUGENABLE_SPEC>;
 #[doc = "Field `CORE_1_RCD_PDEBUGENABLE` reader - Core1 Pdebugenable,set 1 to open Core1 Pdebug interface, then can get Core1 PC"]
 pub type CORE_1_RCD_PDEBUGENABLE_R = crate::BitReader;
 #[doc = "Field `CORE_1_RCD_PDEBUGENABLE` writer - Core1 Pdebugenable,set 1 to open Core1 Pdebug interface, then can get Core1 PC"]
-pub type CORE_1_RCD_PDEBUGENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_1_RCD_PDEBUGENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Core1 Pdebugenable,set 1 to open Core1 Pdebug interface, then can get Core1 PC"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_RCD_PDEBUGENABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn core_1_rcd_pdebugenable(
         &mut self,
-    ) -> CORE_1_RCD_PDEBUGENABLE_W<CORE_1_RCD_PDEBUGENABLE_SPEC, 0> {
-        CORE_1_RCD_PDEBUGENABLE_W::new(self)
+    ) -> CORE_1_RCD_PDEBUGENABLE_W<CORE_1_RCD_PDEBUGENABLE_SPEC> {
+        CORE_1_RCD_PDEBUGENABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

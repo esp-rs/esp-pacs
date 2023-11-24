@@ -5,19 +5,19 @@ pub type W = crate::W<PARL_CLK_RX_CONF_SPEC>;
 #[doc = "Field `PARL_CLK_RX_DIV_NUM` reader - The integral part of the frequency divider factor of the parl rx clock."]
 pub type PARL_CLK_RX_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `PARL_CLK_RX_DIV_NUM` writer - The integral part of the frequency divider factor of the parl rx clock."]
-pub type PARL_CLK_RX_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PARL_CLK_RX_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `PARL_CLK_RX_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]
 pub type PARL_CLK_RX_SEL_R = crate::FieldReader;
 #[doc = "Field `PARL_CLK_RX_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]
-pub type PARL_CLK_RX_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PARL_CLK_RX_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PARL_CLK_RX_EN` reader - Set 1 to enable parl rx clock"]
 pub type PARL_CLK_RX_EN_R = crate::BitReader;
 #[doc = "Field `PARL_CLK_RX_EN` writer - Set 1 to enable parl rx clock"]
-pub type PARL_CLK_RX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARL_CLK_RX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PARL_RX_RST_EN` reader - Set 0 to reset parl rx module"]
 pub type PARL_RX_RST_EN_R = crate::BitReader;
 #[doc = "Field `PARL_RX_RST_EN` writer - Set 0 to reset parl rx module"]
-pub type PARL_RX_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARL_RX_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - The integral part of the frequency divider factor of the parl rx clock."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PARL_CLK_RX_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - The integral part of the frequency divider factor of the parl rx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn parl_clk_rx_div_num(&mut self) -> PARL_CLK_RX_DIV_NUM_W<PARL_CLK_RX_CONF_SPEC, 0> {
-        PARL_CLK_RX_DIV_NUM_W::new(self)
+    pub fn parl_clk_rx_div_num(&mut self) -> PARL_CLK_RX_DIV_NUM_W<PARL_CLK_RX_CONF_SPEC> {
+        PARL_CLK_RX_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]
     #[inline(always)]
     #[must_use]
-    pub fn parl_clk_rx_sel(&mut self) -> PARL_CLK_RX_SEL_W<PARL_CLK_RX_CONF_SPEC, 16> {
-        PARL_CLK_RX_SEL_W::new(self)
+    pub fn parl_clk_rx_sel(&mut self) -> PARL_CLK_RX_SEL_W<PARL_CLK_RX_CONF_SPEC> {
+        PARL_CLK_RX_SEL_W::new(self, 16)
     }
     #[doc = "Bit 18 - Set 1 to enable parl rx clock"]
     #[inline(always)]
     #[must_use]
-    pub fn parl_clk_rx_en(&mut self) -> PARL_CLK_RX_EN_W<PARL_CLK_RX_CONF_SPEC, 18> {
-        PARL_CLK_RX_EN_W::new(self)
+    pub fn parl_clk_rx_en(&mut self) -> PARL_CLK_RX_EN_W<PARL_CLK_RX_CONF_SPEC> {
+        PARL_CLK_RX_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set 0 to reset parl rx module"]
     #[inline(always)]
     #[must_use]
-    pub fn parl_rx_rst_en(&mut self) -> PARL_RX_RST_EN_W<PARL_CLK_RX_CONF_SPEC, 19> {
-        PARL_RX_RST_EN_W::new(self)
+    pub fn parl_rx_rst_en(&mut self) -> PARL_RX_RST_EN_W<PARL_CLK_RX_CONF_SPEC> {
+        PARL_RX_RST_EN_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

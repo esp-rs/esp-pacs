@@ -5,7 +5,7 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `PAD_COMP_INT_ENA` reader - Pad compare interrupt enable"]
 pub type PAD_COMP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PAD_COMP_INT_ENA` writer - Pad compare interrupt enable"]
-pub type PAD_COMP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD_COMP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Pad compare interrupt enable"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Pad compare interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pad_comp_int_ena(&mut self) -> PAD_COMP_INT_ENA_W<INT_ENA_SPEC, 0> {
-        PAD_COMP_INT_ENA_W::new(self)
+    pub fn pad_comp_int_ena(&mut self) -> PAD_COMP_INT_ENA_W<INT_ENA_SPEC> {
+        PAD_COMP_INT_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<TIMER0_CFG0_SPEC>;
 #[doc = "Field `TIMER0_PRESCALE` reader - period of PT0_clk = Period of PWM_clk * (PWM_TIMER0_PRESCALE + 1)"]
 pub type TIMER0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `TIMER0_PRESCALE` writer - period of PT0_clk = Period of PWM_clk * (PWM_TIMER0_PRESCALE + 1)"]
-pub type TIMER0_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER0_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TIMER0_PERIOD` reader - period shadow register of PWM timer0"]
 pub type TIMER0_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER0_PERIOD` writer - period shadow register of PWM timer0"]
-pub type TIMER0_PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TIMER0_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `TIMER0_PERIOD_UPMETHOD` reader - Update method for active register of PWM timer0 period, 0: immediate, 1: TEZ, 2: sync, 3: TEZ | sync. TEZ here and below means timer equal zero event"]
 pub type TIMER0_PERIOD_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `TIMER0_PERIOD_UPMETHOD` writer - Update method for active register of PWM timer0 period, 0: immediate, 1: TEZ, 2: sync, 3: TEZ | sync. TEZ here and below means timer equal zero event"]
-pub type TIMER0_PERIOD_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TIMER0_PERIOD_UPMETHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:7 - period of PT0_clk = Period of PWM_clk * (PWM_TIMER0_PRESCALE + 1)"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER0_CFG0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - period of PT0_clk = Period of PWM_clk * (PWM_TIMER0_PRESCALE + 1)"]
     #[inline(always)]
     #[must_use]
-    pub fn timer0_prescale(&mut self) -> TIMER0_PRESCALE_W<TIMER0_CFG0_SPEC, 0> {
-        TIMER0_PRESCALE_W::new(self)
+    pub fn timer0_prescale(&mut self) -> TIMER0_PRESCALE_W<TIMER0_CFG0_SPEC> {
+        TIMER0_PRESCALE_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - period shadow register of PWM timer0"]
     #[inline(always)]
     #[must_use]
-    pub fn timer0_period(&mut self) -> TIMER0_PERIOD_W<TIMER0_CFG0_SPEC, 8> {
-        TIMER0_PERIOD_W::new(self)
+    pub fn timer0_period(&mut self) -> TIMER0_PERIOD_W<TIMER0_CFG0_SPEC> {
+        TIMER0_PERIOD_W::new(self, 8)
     }
     #[doc = "Bits 24:25 - Update method for active register of PWM timer0 period, 0: immediate, 1: TEZ, 2: sync, 3: TEZ | sync. TEZ here and below means timer equal zero event"]
     #[inline(always)]
     #[must_use]
-    pub fn timer0_period_upmethod(&mut self) -> TIMER0_PERIOD_UPMETHOD_W<TIMER0_CFG0_SPEC, 24> {
-        TIMER0_PERIOD_UPMETHOD_W::new(self)
+    pub fn timer0_period_upmethod(&mut self) -> TIMER0_PERIOD_UPMETHOD_W<TIMER0_CFG0_SPEC> {
+        TIMER0_PERIOD_UPMETHOD_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

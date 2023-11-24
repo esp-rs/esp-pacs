@@ -5,7 +5,7 @@ pub type W = crate::W<ICACHE_SYNC_CTRL_SPEC>;
 #[doc = "Field `ICACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
 pub type ICACHE_INVALIDATE_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_INVALIDATE_ENA` writer - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub type ICACHE_INVALIDATE_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_INVALIDATE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_SYNC_DONE` reader - The bit is used to indicate invalidate operation is finished."]
 pub type ICACHE_SYNC_DONE_R = crate::BitReader;
 impl R {
@@ -38,15 +38,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_SYNC_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_invalidate_ena(&mut self) -> ICACHE_INVALIDATE_ENA_W<ICACHE_SYNC_CTRL_SPEC, 0> {
-        ICACHE_INVALIDATE_ENA_W::new(self)
+    pub fn icache_invalidate_ena(&mut self) -> ICACHE_INVALIDATE_ENA_W<ICACHE_SYNC_CTRL_SPEC> {
+        ICACHE_INVALIDATE_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

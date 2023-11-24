@@ -5,15 +5,15 @@ pub type W = crate::W<IDLE_CONF_SPEC>;
 #[doc = "Field `RX_IDLE_THRHD` reader - when receiver takes more time than this register value to receive a byte data. it will produce frame end signal for uhci to stop receiving data."]
 pub type RX_IDLE_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_IDLE_THRHD` writer - when receiver takes more time than this register value to receive a byte data. it will produce frame end signal for uhci to stop receiving data."]
-pub type RX_IDLE_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type RX_IDLE_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TX_IDLE_NUM` reader - This register is used to configure the duration time between transfers."]
 pub type TX_IDLE_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_IDLE_NUM` writer - This register is used to configure the duration time between transfers."]
-pub type TX_IDLE_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TX_IDLE_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TX_BRK_NUM` reader - This register is used to configure the num of 0 send after the process of sending data is done. it is active when txd_brk is set to 1."]
 pub type TX_BRK_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_BRK_NUM` writer - This register is used to configure the num of 0 send after the process of sending data is done. it is active when txd_brk is set to 1."]
-pub type TX_BRK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TX_BRK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:9 - when receiver takes more time than this register value to receive a byte data. it will produce frame end signal for uhci to stop receiving data."]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IDLE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - when receiver takes more time than this register value to receive a byte data. it will produce frame end signal for uhci to stop receiving data."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_idle_thrhd(&mut self) -> RX_IDLE_THRHD_W<IDLE_CONF_SPEC, 0> {
-        RX_IDLE_THRHD_W::new(self)
+    pub fn rx_idle_thrhd(&mut self) -> RX_IDLE_THRHD_W<IDLE_CONF_SPEC> {
+        RX_IDLE_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - This register is used to configure the duration time between transfers."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_idle_num(&mut self) -> TX_IDLE_NUM_W<IDLE_CONF_SPEC, 10> {
-        TX_IDLE_NUM_W::new(self)
+    pub fn tx_idle_num(&mut self) -> TX_IDLE_NUM_W<IDLE_CONF_SPEC> {
+        TX_IDLE_NUM_W::new(self, 10)
     }
     #[doc = "Bits 20:27 - This register is used to configure the num of 0 send after the process of sending data is done. it is active when txd_brk is set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<IDLE_CONF_SPEC, 20> {
-        TX_BRK_NUM_W::new(self)
+    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<IDLE_CONF_SPEC> {
+        TX_BRK_NUM_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

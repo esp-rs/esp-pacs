@@ -5,7 +5,7 @@ pub type W = crate::W<DIEPCTL3_SPEC>;
 #[doc = "Field `DI_MPS3` reader - "]
 pub type DI_MPS3_R = crate::FieldReader;
 #[doc = "Field `DI_MPS3` writer - "]
-pub type DI_MPS3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DI_MPS3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DI_USBACTEP3` reader - "]
 pub type DI_USBACTEP3_R = crate::BitReader;
 #[doc = "Field `DI_NAKSTS3` reader - "]
@@ -15,27 +15,27 @@ pub type DI_EPTYPE3_R = crate::FieldReader;
 #[doc = "Field `DI_STALL3` reader - "]
 pub type DI_STALL3_R = crate::BitReader;
 #[doc = "Field `DI_STALL3` writer - "]
-pub type DI_STALL3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_STALL3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_TXFNUM3` reader - "]
 pub type DI_TXFNUM3_R = crate::FieldReader;
 #[doc = "Field `DI_TXFNUM3` writer - "]
-pub type DI_TXFNUM3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DI_TXFNUM3_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `DI_CNAK3` writer - "]
-pub type DI_CNAK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_CNAK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_SNAK3` writer - "]
-pub type DI_SNAK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_SNAK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_SETD0PID3` writer - "]
-pub type DI_SETD0PID3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_SETD0PID3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_SETD1PID3` writer - "]
-pub type DI_SETD1PID3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_SETD1PID3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_EPDIS3` reader - "]
 pub type DI_EPDIS3_R = crate::BitReader;
 #[doc = "Field `DI_EPDIS3` writer - "]
-pub type DI_EPDIS3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_EPDIS3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_EPENA3` reader - "]
 pub type DI_EPENA3_R = crate::BitReader;
 #[doc = "Field `DI_EPENA3` writer - "]
-pub type DI_EPENA3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_EPENA3_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -99,63 +99,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIEPCTL3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn di_mps3(&mut self) -> DI_MPS3_W<DIEPCTL3_SPEC, 0> {
-        DI_MPS3_W::new(self)
+    pub fn di_mps3(&mut self) -> DI_MPS3_W<DIEPCTL3_SPEC> {
+        DI_MPS3_W::new(self, 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn di_stall3(&mut self) -> DI_STALL3_W<DIEPCTL3_SPEC, 21> {
-        DI_STALL3_W::new(self)
+    pub fn di_stall3(&mut self) -> DI_STALL3_W<DIEPCTL3_SPEC> {
+        DI_STALL3_W::new(self, 21)
     }
     #[doc = "Bits 22:25"]
     #[inline(always)]
     #[must_use]
-    pub fn di_txfnum3(&mut self) -> DI_TXFNUM3_W<DIEPCTL3_SPEC, 22> {
-        DI_TXFNUM3_W::new(self)
+    pub fn di_txfnum3(&mut self) -> DI_TXFNUM3_W<DIEPCTL3_SPEC> {
+        DI_TXFNUM3_W::new(self, 22)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn di_cnak3(&mut self) -> DI_CNAK3_W<DIEPCTL3_SPEC, 26> {
-        DI_CNAK3_W::new(self)
+    pub fn di_cnak3(&mut self) -> DI_CNAK3_W<DIEPCTL3_SPEC> {
+        DI_CNAK3_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn di_snak3(&mut self) -> DI_SNAK3_W<DIEPCTL3_SPEC, 27> {
-        DI_SNAK3_W::new(self)
+    pub fn di_snak3(&mut self) -> DI_SNAK3_W<DIEPCTL3_SPEC> {
+        DI_SNAK3_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn di_setd0pid3(&mut self) -> DI_SETD0PID3_W<DIEPCTL3_SPEC, 28> {
-        DI_SETD0PID3_W::new(self)
+    pub fn di_setd0pid3(&mut self) -> DI_SETD0PID3_W<DIEPCTL3_SPEC> {
+        DI_SETD0PID3_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn di_setd1pid3(&mut self) -> DI_SETD1PID3_W<DIEPCTL3_SPEC, 29> {
-        DI_SETD1PID3_W::new(self)
+    pub fn di_setd1pid3(&mut self) -> DI_SETD1PID3_W<DIEPCTL3_SPEC> {
+        DI_SETD1PID3_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn di_epdis3(&mut self) -> DI_EPDIS3_W<DIEPCTL3_SPEC, 30> {
-        DI_EPDIS3_W::new(self)
+    pub fn di_epdis3(&mut self) -> DI_EPDIS3_W<DIEPCTL3_SPEC> {
+        DI_EPDIS3_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn di_epena3(&mut self) -> DI_EPENA3_W<DIEPCTL3_SPEC, 31> {
-        DI_EPENA3_W::new(self)
+    pub fn di_epena3(&mut self) -> DI_EPENA3_W<DIEPCTL3_SPEC> {
+        DI_EPENA3_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

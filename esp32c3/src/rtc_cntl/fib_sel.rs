@@ -5,7 +5,7 @@ pub type W = crate::W<FIB_SEL_SPEC>;
 #[doc = "Field `FIB_SEL` reader - select use analog fib signal"]
 pub type FIB_SEL_R = crate::FieldReader;
 #[doc = "Field `FIB_SEL` writer - select use analog fib signal"]
-pub type FIB_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type FIB_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FIB_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
     #[must_use]
-    pub fn fib_sel(&mut self) -> FIB_SEL_W<FIB_SEL_SPEC, 0> {
-        FIB_SEL_W::new(self)
+    pub fn fib_sel(&mut self) -> FIB_SEL_W<FIB_SEL_SPEC> {
+        FIB_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

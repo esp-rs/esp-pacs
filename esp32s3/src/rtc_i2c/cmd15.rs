@@ -5,7 +5,7 @@ pub type W = crate::W<CMD15_SPEC>;
 #[doc = "Field `COMMAND15` reader - command15"]
 pub type COMMAND15_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND15` writer - command15"]
-pub type COMMAND15_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type COMMAND15_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `COMMAND15_DONE` reader - command15_done"]
 pub type COMMAND15_DONE_R = crate::BitReader;
 impl R {
@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CMD15_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - command15"]
     #[inline(always)]
     #[must_use]
-    pub fn command15(&mut self) -> COMMAND15_W<CMD15_SPEC, 0> {
-        COMMAND15_W::new(self)
+    pub fn command15(&mut self) -> COMMAND15_W<CMD15_SPEC> {
+        COMMAND15_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

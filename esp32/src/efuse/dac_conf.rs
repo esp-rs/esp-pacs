@@ -5,11 +5,11 @@ pub type W = crate::W<DAC_CONF_SPEC>;
 #[doc = "Field `DAC_CLK_DIV` reader - "]
 pub type DAC_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `DAC_CLK_DIV` writer - "]
-pub type DAC_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DAC_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DAC_CLK_PAD_SEL` reader - "]
 pub type DAC_CLK_PAD_SEL_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_PAD_SEL` writer - "]
-pub type DAC_CLK_PAD_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_CLK_PAD_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DAC_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<DAC_CONF_SPEC, 0> {
-        DAC_CLK_DIV_W::new(self)
+    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<DAC_CONF_SPEC> {
+        DAC_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<DAC_CONF_SPEC, 8> {
-        DAC_CLK_PAD_SEL_W::new(self)
+    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<DAC_CONF_SPEC> {
+        DAC_CLK_PAD_SEL_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

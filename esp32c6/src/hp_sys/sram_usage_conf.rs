@@ -7,11 +7,11 @@ pub type CACHE_USAGE_R = crate::BitReader;
 #[doc = "Field `SRAM_USAGE` reader - 0: cpu use hp-memory. 1:mac-dump accessing hp-memory."]
 pub type SRAM_USAGE_R = crate::FieldReader;
 #[doc = "Field `SRAM_USAGE` writer - 0: cpu use hp-memory. 1:mac-dump accessing hp-memory."]
-pub type SRAM_USAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SRAM_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `MAC_DUMP_ALLOC` reader - Set this bit as 1 to add an offset (64KB) when mac-dump accessing hp-memory."]
 pub type MAC_DUMP_ALLOC_R = crate::BitReader;
 #[doc = "Field `MAC_DUMP_ALLOC` writer - Set this bit as 1 to add an offset (64KB) when mac-dump accessing hp-memory."]
-pub type MAC_DUMP_ALLOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAC_DUMP_ALLOC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reserved"]
     #[inline(always)]
@@ -45,21 +45,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_USAGE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 8:11 - 0: cpu use hp-memory. 1:mac-dump accessing hp-memory."]
     #[inline(always)]
     #[must_use]
-    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<SRAM_USAGE_CONF_SPEC, 8> {
-        SRAM_USAGE_W::new(self)
+    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<SRAM_USAGE_CONF_SPEC> {
+        SRAM_USAGE_W::new(self, 8)
     }
     #[doc = "Bit 16 - Set this bit as 1 to add an offset (64KB) when mac-dump accessing hp-memory."]
     #[inline(always)]
     #[must_use]
-    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<SRAM_USAGE_CONF_SPEC, 16> {
-        MAC_DUMP_ALLOC_W::new(self)
+    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<SRAM_USAGE_CONF_SPEC> {
+        MAC_DUMP_ALLOC_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<COMD_SPEC>;
 #[doc = "Field `COMMAND` reader - This is the content of command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
 pub type COMMAND_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND` writer - This is the content of command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
-pub type COMMAND_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type COMMAND_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `COMMAND_DONE` reader - When command 0 is done in I2C Master mode, this bit changes to high level."]
 pub type COMMAND_DONE_R = crate::BitReader;
 #[doc = "Field `COMMAND_DONE` writer - When command 0 is done in I2C Master mode, this bit changes to high level."]
-pub type COMMAND_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COMMAND_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:13 - This is the content of command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<COMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - This is the content of command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
     #[inline(always)]
     #[must_use]
-    pub fn command(&mut self) -> COMMAND_W<COMD_SPEC, 0> {
-        COMMAND_W::new(self)
+    pub fn command(&mut self) -> COMMAND_W<COMD_SPEC> {
+        COMMAND_W::new(self, 0)
     }
     #[doc = "Bit 31 - When command 0 is done in I2C Master mode, this bit changes to high level."]
     #[inline(always)]
     #[must_use]
-    pub fn command_done(&mut self) -> COMMAND_DONE_W<COMD_SPEC, 31> {
-        COMMAND_DONE_W::new(self)
+    pub fn command_done(&mut self) -> COMMAND_DONE_W<COMD_SPEC> {
+        COMMAND_DONE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

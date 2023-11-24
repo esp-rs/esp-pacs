@@ -5,51 +5,51 @@ pub type W = crate::W<PAD_DAC2_SPEC>;
 #[doc = "Field `PDAC2_DAC` reader - PDAC2_DAC"]
 pub type PDAC2_DAC_R = crate::FieldReader;
 #[doc = "Field `PDAC2_DAC` writer - PDAC2_DAC"]
-pub type PDAC2_DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PDAC2_DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `PDAC2_XPD_DAC` reader - PDAC2_XPD_DAC"]
 pub type PDAC2_XPD_DAC_R = crate::BitReader;
 #[doc = "Field `PDAC2_XPD_DAC` writer - PDAC2_XPD_DAC"]
-pub type PDAC2_XPD_DAC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_XPD_DAC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_DAC_XPD_FORCE` reader - 1: use reg_pdac2_xpd_dac to control PDAC2_XPD_DAC,0: use SAR ADC FSM to control PDAC2_XPD_DAC"]
 pub type PDAC2_DAC_XPD_FORCE_R = crate::BitReader;
 #[doc = "Field `PDAC2_DAC_XPD_FORCE` writer - 1: use reg_pdac2_xpd_dac to control PDAC2_XPD_DAC,0: use SAR ADC FSM to control PDAC2_XPD_DAC"]
-pub type PDAC2_DAC_XPD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_DAC_XPD_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_FUN_IE` reader - input enable in work mode"]
 pub type PDAC2_FUN_IE_R = crate::BitReader;
 #[doc = "Field `PDAC2_FUN_IE` writer - input enable in work mode"]
-pub type PDAC2_FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_SLP_OE` reader - output enable in sleep mode"]
 pub type PDAC2_SLP_OE_R = crate::BitReader;
 #[doc = "Field `PDAC2_SLP_OE` writer - output enable in sleep mode"]
-pub type PDAC2_SLP_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_SLP_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_SLP_IE` reader - input enable in sleep mode"]
 pub type PDAC2_SLP_IE_R = crate::BitReader;
 #[doc = "Field `PDAC2_SLP_IE` writer - input enable in sleep mode"]
-pub type PDAC2_SLP_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_SLP_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_SLP_SEL` reader - 1: enable sleep mode during sleep,0: no sleep mode"]
 pub type PDAC2_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `PDAC2_SLP_SEL` writer - 1: enable sleep mode during sleep,0: no sleep mode"]
-pub type PDAC2_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_FUN_SEL` reader - PDAC1 function sel"]
 pub type PDAC2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `PDAC2_FUN_SEL` writer - PDAC1 function sel"]
-pub type PDAC2_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PDAC2_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PDAC2_MUX_SEL` reader - 1: use RTC GPIO,0: use digital GPIO"]
 pub type PDAC2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `PDAC2_MUX_SEL` writer - 1: use RTC GPIO,0: use digital GPIO"]
-pub type PDAC2_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_RUE` reader - PDAC2_RUE"]
 pub type PDAC2_RUE_R = crate::BitReader;
 #[doc = "Field `PDAC2_RUE` writer - PDAC2_RUE"]
-pub type PDAC2_RUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_RUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_RDE` reader - PDAC2_RDE"]
 pub type PDAC2_RDE_R = crate::BitReader;
 #[doc = "Field `PDAC2_RDE` writer - PDAC2_RDE"]
-pub type PDAC2_RDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_RDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_DRV` reader - PDAC2_DRV"]
 pub type PDAC2_DRV_R = crate::FieldReader;
 #[doc = "Field `PDAC2_DRV` writer - PDAC2_DRV"]
-pub type PDAC2_DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PDAC2_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 3:10 - PDAC2_DAC"]
     #[inline(always)]
@@ -158,81 +158,81 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PAD_DAC2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 3:10 - PDAC2_DAC"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_dac(&mut self) -> PDAC2_DAC_W<PAD_DAC2_SPEC, 3> {
-        PDAC2_DAC_W::new(self)
+    pub fn pdac2_dac(&mut self) -> PDAC2_DAC_W<PAD_DAC2_SPEC> {
+        PDAC2_DAC_W::new(self, 3)
     }
     #[doc = "Bit 11 - PDAC2_XPD_DAC"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_xpd_dac(&mut self) -> PDAC2_XPD_DAC_W<PAD_DAC2_SPEC, 11> {
-        PDAC2_XPD_DAC_W::new(self)
+    pub fn pdac2_xpd_dac(&mut self) -> PDAC2_XPD_DAC_W<PAD_DAC2_SPEC> {
+        PDAC2_XPD_DAC_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: use reg_pdac2_xpd_dac to control PDAC2_XPD_DAC,0: use SAR ADC FSM to control PDAC2_XPD_DAC"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_dac_xpd_force(&mut self) -> PDAC2_DAC_XPD_FORCE_W<PAD_DAC2_SPEC, 12> {
-        PDAC2_DAC_XPD_FORCE_W::new(self)
+    pub fn pdac2_dac_xpd_force(&mut self) -> PDAC2_DAC_XPD_FORCE_W<PAD_DAC2_SPEC> {
+        PDAC2_DAC_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_fun_ie(&mut self) -> PDAC2_FUN_IE_W<PAD_DAC2_SPEC, 13> {
-        PDAC2_FUN_IE_W::new(self)
+    pub fn pdac2_fun_ie(&mut self) -> PDAC2_FUN_IE_W<PAD_DAC2_SPEC> {
+        PDAC2_FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_slp_oe(&mut self) -> PDAC2_SLP_OE_W<PAD_DAC2_SPEC, 14> {
-        PDAC2_SLP_OE_W::new(self)
+    pub fn pdac2_slp_oe(&mut self) -> PDAC2_SLP_OE_W<PAD_DAC2_SPEC> {
+        PDAC2_SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_slp_ie(&mut self) -> PDAC2_SLP_IE_W<PAD_DAC2_SPEC, 15> {
-        PDAC2_SLP_IE_W::new(self)
+    pub fn pdac2_slp_ie(&mut self) -> PDAC2_SLP_IE_W<PAD_DAC2_SPEC> {
+        PDAC2_SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_slp_sel(&mut self) -> PDAC2_SLP_SEL_W<PAD_DAC2_SPEC, 16> {
-        PDAC2_SLP_SEL_W::new(self)
+    pub fn pdac2_slp_sel(&mut self) -> PDAC2_SLP_SEL_W<PAD_DAC2_SPEC> {
+        PDAC2_SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - PDAC1 function sel"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_fun_sel(&mut self) -> PDAC2_FUN_SEL_W<PAD_DAC2_SPEC, 17> {
-        PDAC2_FUN_SEL_W::new(self)
+    pub fn pdac2_fun_sel(&mut self) -> PDAC2_FUN_SEL_W<PAD_DAC2_SPEC> {
+        PDAC2_FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_mux_sel(&mut self) -> PDAC2_MUX_SEL_W<PAD_DAC2_SPEC, 19> {
-        PDAC2_MUX_SEL_W::new(self)
+    pub fn pdac2_mux_sel(&mut self) -> PDAC2_MUX_SEL_W<PAD_DAC2_SPEC> {
+        PDAC2_MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 27 - PDAC2_RUE"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_rue(&mut self) -> PDAC2_RUE_W<PAD_DAC2_SPEC, 27> {
-        PDAC2_RUE_W::new(self)
+    pub fn pdac2_rue(&mut self) -> PDAC2_RUE_W<PAD_DAC2_SPEC> {
+        PDAC2_RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - PDAC2_RDE"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_rde(&mut self) -> PDAC2_RDE_W<PAD_DAC2_SPEC, 28> {
-        PDAC2_RDE_W::new(self)
+    pub fn pdac2_rde(&mut self) -> PDAC2_RDE_W<PAD_DAC2_SPEC> {
+        PDAC2_RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - PDAC2_DRV"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_drv(&mut self) -> PDAC2_DRV_W<PAD_DAC2_SPEC, 29> {
-        PDAC2_DRV_W::new(self)
+    pub fn pdac2_drv(&mut self) -> PDAC2_DRV_W<PAD_DAC2_SPEC> {
+        PDAC2_DRV_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

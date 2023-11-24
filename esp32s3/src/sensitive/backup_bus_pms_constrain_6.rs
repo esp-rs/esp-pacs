@@ -5,13 +5,11 @@ pub type W = crate::W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L` reader - BackUp access rtcfast_l permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L` writer - BackUp access rtcfast_l permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H` reader - BackUp access rtcfast_h permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H` writer - BackUp access rtcfast_h permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - BackUp access rtcfast_l permission."]
     #[inline(always)]
@@ -42,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -51,16 +49,16 @@ impl W {
     #[must_use]
     pub fn backup_bus_pms_constrain_rtcfast_l(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, 0> {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - BackUp access rtcfast_h permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_rtcfast_h(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, 3> {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

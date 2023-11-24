@@ -1,7 +1,7 @@
 #[doc = "Register `Core_1_NMI_MASK_DISABLE` writer"]
 pub type W = crate::W<CORE_1_NMI_MASK_DISABLE_SPEC>;
 #[doc = "Field `CORE_1_NMI_MASK_DISABLE` writer - this field is used to disable NMI mask, it will not take effect immediately,only when the CPU executes to the trigger address will it start to cancel NMI mask"]
-pub type CORE_1_NMI_MASK_DISABLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CORE_1_NMI_MASK_DISABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_NMI_MASK_DISABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,8 +14,8 @@ impl W {
     #[must_use]
     pub fn core_1_nmi_mask_disable(
         &mut self,
-    ) -> CORE_1_NMI_MASK_DISABLE_W<CORE_1_NMI_MASK_DISABLE_SPEC, 0> {
-        CORE_1_NMI_MASK_DISABLE_W::new(self)
+    ) -> CORE_1_NMI_MASK_DISABLE_W<CORE_1_NMI_MASK_DISABLE_SPEC> {
+        CORE_1_NMI_MASK_DISABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

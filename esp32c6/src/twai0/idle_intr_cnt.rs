@@ -5,7 +5,7 @@ pub type W = crate::W<IDLE_INTR_CNT_SPEC>;
 #[doc = "Field `IDLE_INTR_CNT` reader - Configure the number of cycles before triggering idle interrupt."]
 pub type IDLE_INTR_CNT_R = crate::FieldReader<u32>;
 #[doc = "Field `IDLE_INTR_CNT` writer - Configure the number of cycles before triggering idle interrupt."]
-pub type IDLE_INTR_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type IDLE_INTR_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configure the number of cycles before triggering idle interrupt."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IDLE_INTR_CNT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Configure the number of cycles before triggering idle interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn idle_intr_cnt(&mut self) -> IDLE_INTR_CNT_W<IDLE_INTR_CNT_SPEC, 0> {
-        IDLE_INTR_CNT_W::new(self)
+    pub fn idle_intr_cnt(&mut self) -> IDLE_INTR_CNT_W<IDLE_INTR_CNT_SPEC> {
+        IDLE_INTR_CNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

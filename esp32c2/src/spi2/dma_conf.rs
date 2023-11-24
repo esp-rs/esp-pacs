@@ -9,33 +9,33 @@ pub type DMA_INFIFO_FULL_R = crate::BitReader;
 #[doc = "Field `DMA_SLV_SEG_TRANS_EN` reader - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
 pub type DMA_SLV_SEG_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `DMA_SLV_SEG_TRANS_EN` writer - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
-pub type DMA_SLV_SEG_TRANS_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_SLV_SEG_TRANS_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_RX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_infifo_full_vld is cleared by spi slave cmd 5. 0: spi_dma_infifo_full_vld is cleared by spi_trans_done."]
 pub type SLV_RX_SEG_TRANS_CLR_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RX_SEG_TRANS_CLR_EN` writer - 1: spi_dma_infifo_full_vld is cleared by spi slave cmd 5. 0: spi_dma_infifo_full_vld is cleared by spi_trans_done."]
-pub type SLV_RX_SEG_TRANS_CLR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_RX_SEG_TRANS_CLR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_TX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_outfifo_empty_vld is cleared by spi slave cmd 6. 0: spi_dma_outfifo_empty_vld is cleared by spi_trans_done."]
 pub type SLV_TX_SEG_TRANS_CLR_EN_R = crate::BitReader;
 #[doc = "Field `SLV_TX_SEG_TRANS_CLR_EN` writer - 1: spi_dma_outfifo_empty_vld is cleared by spi slave cmd 6. 0: spi_dma_outfifo_empty_vld is cleared by spi_trans_done."]
-pub type SLV_TX_SEG_TRANS_CLR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_TX_SEG_TRANS_CLR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_EOF_EN` reader - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
 pub type RX_EOF_EN_R = crate::BitReader;
 #[doc = "Field `RX_EOF_EN` writer - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
-pub type RX_EOF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_EOF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RX_ENA` reader - Set this bit to enable SPI DMA controlled receive data mode."]
 pub type DMA_RX_ENA_R = crate::BitReader;
 #[doc = "Field `DMA_RX_ENA` writer - Set this bit to enable SPI DMA controlled receive data mode."]
-pub type DMA_RX_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RX_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_TX_ENA` reader - Set this bit to enable SPI DMA controlled send data mode."]
 pub type DMA_TX_ENA_R = crate::BitReader;
 #[doc = "Field `DMA_TX_ENA` writer - Set this bit to enable SPI DMA controlled send data mode."]
-pub type DMA_TX_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_TX_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_AFIFO_RST` writer - Set this bit to reset RX AFIFO, which is used to receive data in SPI master and slave mode transfer."]
-pub type RX_AFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_AFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUF_AFIFO_RST` writer - Set this bit to reset BUF TX AFIFO, which is used send data out in SPI slave CPU controlled mode transfer and master mode transfer."]
-pub type BUF_AFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUF_AFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_AFIFO_RST` writer - Set this bit to reset DMA TX AFIFO, which is used to send data out in SPI slave DMA controlled mode transfer."]
-pub type DMA_AFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_AFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Records the status of DMA TX FIFO. 1: DMA TX FIFO is not ready for sending data. 0: DMA TX FIFO is ready for sending data."]
     #[inline(always)]
@@ -111,63 +111,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 18 - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_slv_seg_trans_en(&mut self) -> DMA_SLV_SEG_TRANS_EN_W<DMA_CONF_SPEC, 18> {
-        DMA_SLV_SEG_TRANS_EN_W::new(self)
+    pub fn dma_slv_seg_trans_en(&mut self) -> DMA_SLV_SEG_TRANS_EN_W<DMA_CONF_SPEC> {
+        DMA_SLV_SEG_TRANS_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - 1: spi_dma_infifo_full_vld is cleared by spi slave cmd 5. 0: spi_dma_infifo_full_vld is cleared by spi_trans_done."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rx_seg_trans_clr_en(&mut self) -> SLV_RX_SEG_TRANS_CLR_EN_W<DMA_CONF_SPEC, 19> {
-        SLV_RX_SEG_TRANS_CLR_EN_W::new(self)
+    pub fn slv_rx_seg_trans_clr_en(&mut self) -> SLV_RX_SEG_TRANS_CLR_EN_W<DMA_CONF_SPEC> {
+        SLV_RX_SEG_TRANS_CLR_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - 1: spi_dma_outfifo_empty_vld is cleared by spi slave cmd 6. 0: spi_dma_outfifo_empty_vld is cleared by spi_trans_done."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_tx_seg_trans_clr_en(&mut self) -> SLV_TX_SEG_TRANS_CLR_EN_W<DMA_CONF_SPEC, 20> {
-        SLV_TX_SEG_TRANS_CLR_EN_W::new(self)
+    pub fn slv_tx_seg_trans_clr_en(&mut self) -> SLV_TX_SEG_TRANS_CLR_EN_W<DMA_CONF_SPEC> {
+        SLV_TX_SEG_TRANS_CLR_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_eof_en(&mut self) -> RX_EOF_EN_W<DMA_CONF_SPEC, 21> {
-        RX_EOF_EN_W::new(self)
+    pub fn rx_eof_en(&mut self) -> RX_EOF_EN_W<DMA_CONF_SPEC> {
+        RX_EOF_EN_W::new(self, 21)
     }
     #[doc = "Bit 27 - Set this bit to enable SPI DMA controlled receive data mode."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_rx_ena(&mut self) -> DMA_RX_ENA_W<DMA_CONF_SPEC, 27> {
-        DMA_RX_ENA_W::new(self)
+    pub fn dma_rx_ena(&mut self) -> DMA_RX_ENA_W<DMA_CONF_SPEC> {
+        DMA_RX_ENA_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set this bit to enable SPI DMA controlled send data mode."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_tx_ena(&mut self) -> DMA_TX_ENA_W<DMA_CONF_SPEC, 28> {
-        DMA_TX_ENA_W::new(self)
+    pub fn dma_tx_ena(&mut self) -> DMA_TX_ENA_W<DMA_CONF_SPEC> {
+        DMA_TX_ENA_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to reset RX AFIFO, which is used to receive data in SPI master and slave mode transfer."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_afifo_rst(&mut self) -> RX_AFIFO_RST_W<DMA_CONF_SPEC, 29> {
-        RX_AFIFO_RST_W::new(self)
+    pub fn rx_afifo_rst(&mut self) -> RX_AFIFO_RST_W<DMA_CONF_SPEC> {
+        RX_AFIFO_RST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to reset BUF TX AFIFO, which is used send data out in SPI slave CPU controlled mode transfer and master mode transfer."]
     #[inline(always)]
     #[must_use]
-    pub fn buf_afifo_rst(&mut self) -> BUF_AFIFO_RST_W<DMA_CONF_SPEC, 30> {
-        BUF_AFIFO_RST_W::new(self)
+    pub fn buf_afifo_rst(&mut self) -> BUF_AFIFO_RST_W<DMA_CONF_SPEC> {
+        BUF_AFIFO_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to reset DMA TX AFIFO, which is used to send data out in SPI slave DMA controlled mode transfer."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_afifo_rst(&mut self) -> DMA_AFIFO_RST_W<DMA_CONF_SPEC, 31> {
-        DMA_AFIFO_RST_W::new(self)
+    pub fn dma_afifo_rst(&mut self) -> DMA_AFIFO_RST_W<DMA_CONF_SPEC> {
+        DMA_AFIFO_RST_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

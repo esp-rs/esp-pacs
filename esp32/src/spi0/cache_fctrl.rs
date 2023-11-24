@@ -5,19 +5,19 @@ pub type W = crate::W<CACHE_FCTRL_SPEC>;
 #[doc = "Field `CACHE_REQ_EN` reader - For SPI0 Cache access enable 1: enable 0:disable."]
 pub type CACHE_REQ_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_REQ_EN` writer - For SPI0 Cache access enable 1: enable 0:disable."]
-pub type CACHE_REQ_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_REQ_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` reader - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
 pub type CACHE_USR_CMD_4BYTE_R = crate::BitReader;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` writer - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
-pub type CACHE_USR_CMD_4BYTE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_USR_CMD_4BYTE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_FLASH_USR_CMD` reader - For SPI0 cache read flash for user define command 1: enable 0:disable."]
 pub type CACHE_FLASH_USR_CMD_R = crate::BitReader;
 #[doc = "Field `CACHE_FLASH_USR_CMD` writer - For SPI0 cache read flash for user define command 1: enable 0:disable."]
-pub type CACHE_FLASH_USR_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_FLASH_USR_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_FLASH_PES_EN` reader - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
 pub type CACHE_FLASH_PES_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_FLASH_PES_EN` writer - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
-pub type CACHE_FLASH_PES_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_FLASH_PES_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_FCTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<CACHE_FCTRL_SPEC, 0> {
-        CACHE_REQ_EN_W::new(self)
+    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<CACHE_FCTRL_SPEC> {
+        CACHE_REQ_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<CACHE_FCTRL_SPEC, 1> {
-        CACHE_USR_CMD_4BYTE_W::new(self)
+    pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<CACHE_FCTRL_SPEC> {
+        CACHE_USR_CMD_4BYTE_W::new(self, 1)
     }
     #[doc = "Bit 2 - For SPI0 cache read flash for user define command 1: enable 0:disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<CACHE_FCTRL_SPEC, 2> {
-        CACHE_FLASH_USR_CMD_W::new(self)
+    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<CACHE_FCTRL_SPEC> {
+        CACHE_FLASH_USR_CMD_W::new(self, 2)
     }
     #[doc = "Bit 3 - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_flash_pes_en(&mut self) -> CACHE_FLASH_PES_EN_W<CACHE_FCTRL_SPEC, 3> {
-        CACHE_FLASH_PES_EN_W::new(self)
+    pub fn cache_flash_pes_en(&mut self) -> CACHE_FLASH_PES_EN_W<CACHE_FCTRL_SPEC> {
+        CACHE_FLASH_PES_EN_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

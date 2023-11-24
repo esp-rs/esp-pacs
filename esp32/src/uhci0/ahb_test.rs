@@ -5,11 +5,11 @@ pub type W = crate::W<AHB_TEST_SPEC>;
 #[doc = "Field `AHB_TESTMODE` reader - bit2 is ahb bus test enable ,bit1 is used to choose wrtie(1) or read(0) mode. bit0 is used to choose test only once(1) or continue(0)"]
 pub type AHB_TESTMODE_R = crate::FieldReader;
 #[doc = "Field `AHB_TESTMODE` writer - bit2 is ahb bus test enable ,bit1 is used to choose wrtie(1) or read(0) mode. bit0 is used to choose test only once(1) or continue(0)"]
-pub type AHB_TESTMODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type AHB_TESTMODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `AHB_TESTADDR` reader - The two bits represent ahb bus address bit\\[20:19\\]"]
 pub type AHB_TESTADDR_R = crate::FieldReader;
 #[doc = "Field `AHB_TESTADDR` writer - The two bits represent ahb bus address bit\\[20:19\\]"]
-pub type AHB_TESTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AHB_TESTADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:2 - bit2 is ahb bus test enable ,bit1 is used to choose wrtie(1) or read(0) mode. bit0 is used to choose test only once(1) or continue(0)"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<AHB_TEST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - bit2 is ahb bus test enable ,bit1 is used to choose wrtie(1) or read(0) mode. bit0 is used to choose test only once(1) or continue(0)"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_testmode(&mut self) -> AHB_TESTMODE_W<AHB_TEST_SPEC, 0> {
-        AHB_TESTMODE_W::new(self)
+    pub fn ahb_testmode(&mut self) -> AHB_TESTMODE_W<AHB_TEST_SPEC> {
+        AHB_TESTMODE_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - The two bits represent ahb bus address bit\\[20:19\\]"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_testaddr(&mut self) -> AHB_TESTADDR_W<AHB_TEST_SPEC, 4> {
-        AHB_TESTADDR_W::new(self)
+    pub fn ahb_testaddr(&mut self) -> AHB_TESTADDR_W<AHB_TEST_SPEC> {
+        AHB_TESTADDR_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<APB_FREQ_CONF_SPEC>;
 #[doc = "Field `APB_DECREASE_DIV_NUM` reader - If this field's value is grater than PCR_APB_DIV_NUM, the clk_apb will be automatically down to clk_apb_decrease only when no access is on apb-bus, and will recover to the previous frequency when a new access appears on apb-bus. Set as one within (0,1,3) to set clk_apb_decrease as div1/div2/div4(default) of clk_ahb. Note that enable this function will reduce performance. Users can set this field as zero to disable the auto-decrease-apb-freq function. By default, this function is disable."]
 pub type APB_DECREASE_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `APB_DECREASE_DIV_NUM` writer - If this field's value is grater than PCR_APB_DIV_NUM, the clk_apb will be automatically down to clk_apb_decrease only when no access is on apb-bus, and will recover to the previous frequency when a new access appears on apb-bus. Set as one within (0,1,3) to set clk_apb_decrease as div1/div2/div4(default) of clk_ahb. Note that enable this function will reduce performance. Users can set this field as zero to disable the auto-decrease-apb-freq function. By default, this function is disable."]
-pub type APB_DECREASE_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type APB_DECREASE_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `APB_DIV_NUM` reader - Set as one within (0,1,3) to generate clk_apb drived by clk_ahb. The clk_apb is div1(default)/div2/div4 of clk_ahb."]
 pub type APB_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `APB_DIV_NUM` writer - Set as one within (0,1,3) to generate clk_apb drived by clk_ahb. The clk_apb is div1(default)/div2/div4 of clk_ahb."]
-pub type APB_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type APB_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - If this field's value is grater than PCR_APB_DIV_NUM, the clk_apb will be automatically down to clk_apb_decrease only when no access is on apb-bus, and will recover to the previous frequency when a new access appears on apb-bus. Set as one within (0,1,3) to set clk_apb_decrease as div1/div2/div4(default) of clk_ahb. Note that enable this function will reduce performance. Users can set this field as zero to disable the auto-decrease-apb-freq function. By default, this function is disable."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_FREQ_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - If this field's value is grater than PCR_APB_DIV_NUM, the clk_apb will be automatically down to clk_apb_decrease only when no access is on apb-bus, and will recover to the previous frequency when a new access appears on apb-bus. Set as one within (0,1,3) to set clk_apb_decrease as div1/div2/div4(default) of clk_ahb. Note that enable this function will reduce performance. Users can set this field as zero to disable the auto-decrease-apb-freq function. By default, this function is disable."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_decrease_div_num(&mut self) -> APB_DECREASE_DIV_NUM_W<APB_FREQ_CONF_SPEC, 0> {
-        APB_DECREASE_DIV_NUM_W::new(self)
+    pub fn apb_decrease_div_num(&mut self) -> APB_DECREASE_DIV_NUM_W<APB_FREQ_CONF_SPEC> {
+        APB_DECREASE_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Set as one within (0,1,3) to generate clk_apb drived by clk_ahb. The clk_apb is div1(default)/div2/div4 of clk_ahb."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_div_num(&mut self) -> APB_DIV_NUM_W<APB_FREQ_CONF_SPEC, 8> {
-        APB_DIV_NUM_W::new(self)
+    pub fn apb_div_num(&mut self) -> APB_DIV_NUM_W<APB_FREQ_CONF_SPEC> {
+        APB_DIV_NUM_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

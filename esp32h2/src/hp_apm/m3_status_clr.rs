@@ -1,7 +1,7 @@
 #[doc = "Register `M3_STATUS_CLR` writer"]
 pub type W = crate::W<M3_STATUS_CLR_SPEC>;
 #[doc = "Field `M3_REGION_STATUS_CLR` writer - Clear exception status"]
-pub type M3_REGION_STATUS_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M3_REGION_STATUS_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<M3_STATUS_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Clear exception status"]
     #[inline(always)]
     #[must_use]
-    pub fn m3_region_status_clr(&mut self) -> M3_REGION_STATUS_CLR_W<M3_STATUS_CLR_SPEC, 0> {
-        M3_REGION_STATUS_CLR_W::new(self)
+    pub fn m3_region_status_clr(&mut self) -> M3_REGION_STATUS_CLR_W<M3_STATUS_CLR_SPEC> {
+        M3_REGION_STATUS_CLR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

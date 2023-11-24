@@ -5,27 +5,27 @@ pub type W = crate::W<RTC_CNTL_SPEC>;
 #[doc = "Field `DIG_REG_CAL_EN` reader - software enable digital regulator cali"]
 pub type DIG_REG_CAL_EN_R = crate::BitReader;
 #[doc = "Field `DIG_REG_CAL_EN` writer - software enable digital regulator cali"]
-pub type DIG_REG_CAL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIG_REG_CAL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCK_DCAP` reader - SCK_DCAP"]
 pub type SCK_DCAP_R = crate::FieldReader;
 #[doc = "Field `SCK_DCAP` writer - SCK_DCAP"]
-pub type SCK_DCAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SCK_DCAP_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
 pub type DBOOST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PD` writer - RTC_DBOOST force power down"]
-pub type DBOOST_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBOOST_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
 pub type DBOOST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PU` writer - RTC_DBOOST force power up"]
-pub type DBOOST_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBOOST_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGULATOR_FORCE_PD` reader - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
 pub type REGULATOR_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `REGULATOR_FORCE_PD` writer - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub type REGULATOR_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGULATOR_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REGULATOR_FORCE_PU` reader - RTC_REG force power up"]
 pub type REGULATOR_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `REGULATOR_FORCE_PU` writer - RTC_REG force power up"]
-pub type REGULATOR_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REGULATOR_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 7 - software enable digital regulator cali"]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 7 - software enable digital regulator cali"]
     #[inline(always)]
     #[must_use]
-    pub fn dig_reg_cal_en(&mut self) -> DIG_REG_CAL_EN_W<RTC_CNTL_SPEC, 7> {
-        DIG_REG_CAL_EN_W::new(self)
+    pub fn dig_reg_cal_en(&mut self) -> DIG_REG_CAL_EN_W<RTC_CNTL_SPEC> {
+        DIG_REG_CAL_EN_W::new(self, 7)
     }
     #[doc = "Bits 14:21 - SCK_DCAP"]
     #[inline(always)]
     #[must_use]
-    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<RTC_CNTL_SPEC, 14> {
-        SCK_DCAP_W::new(self)
+    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<RTC_CNTL_SPEC> {
+        SCK_DCAP_W::new(self, 14)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
     #[must_use]
-    pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<RTC_CNTL_SPEC, 28> {
-        DBOOST_FORCE_PD_W::new(self)
+    pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<RTC_CNTL_SPEC> {
+        DBOOST_FORCE_PD_W::new(self, 28)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<RTC_CNTL_SPEC, 29> {
-        DBOOST_FORCE_PU_W::new(self)
+    pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<RTC_CNTL_SPEC> {
+        DBOOST_FORCE_PU_W::new(self, 29)
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
     #[must_use]
-    pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<RTC_CNTL_SPEC, 30> {
-        REGULATOR_FORCE_PD_W::new(self)
+    pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<RTC_CNTL_SPEC> {
+        REGULATOR_FORCE_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - RTC_REG force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<RTC_CNTL_SPEC, 31> {
-        REGULATOR_FORCE_PU_W::new(self)
+    pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<RTC_CNTL_SPEC> {
+        REGULATOR_FORCE_PU_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -1,7 +1,7 @@
 #[doc = "Register `WR_MESSAGE_%s` writer"]
 pub type W = crate::W<WR_MESSAGE__SPEC>;
 #[doc = "Field `WDATA` writer - Store the %sth 32-bit of message."]
-pub type WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WR_MESSAGE__SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - Store the %sth 32-bit of message."]
     #[inline(always)]
     #[must_use]
-    pub fn wdata(&mut self) -> WDATA_W<WR_MESSAGE__SPEC, 0> {
-        WDATA_W::new(self)
+    pub fn wdata(&mut self) -> WDATA_W<WR_MESSAGE__SPEC> {
+        WDATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

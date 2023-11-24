@@ -5,19 +5,19 @@ pub type W = crate::W<TIMER6_SPEC>;
 #[doc = "Field `CPU_TOP_WAIT_TIMER` reader - No public"]
 pub type CPU_TOP_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `CPU_TOP_WAIT_TIMER` writer - No public"]
-pub type CPU_TOP_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type CPU_TOP_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `CPU_TOP_POWERUP_TIMER` reader - No public"]
 pub type CPU_TOP_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `CPU_TOP_POWERUP_TIMER` writer - No public"]
-pub type CPU_TOP_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type CPU_TOP_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` reader - No public"]
 pub type DG_PERI_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` writer - No public"]
-pub type DG_PERI_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type DG_PERI_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` reader - No public"]
 pub type DG_PERI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` writer - No public"]
-pub type DG_PERI_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type DG_PERI_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_top_wait_timer(&mut self) -> CPU_TOP_WAIT_TIMER_W<TIMER6_SPEC, 0> {
-        CPU_TOP_WAIT_TIMER_W::new(self)
+    pub fn cpu_top_wait_timer(&mut self) -> CPU_TOP_WAIT_TIMER_W<TIMER6_SPEC> {
+        CPU_TOP_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_top_powerup_timer(&mut self) -> CPU_TOP_POWERUP_TIMER_W<TIMER6_SPEC, 9> {
-        CPU_TOP_POWERUP_TIMER_W::new(self)
+    pub fn cpu_top_powerup_timer(&mut self) -> CPU_TOP_POWERUP_TIMER_W<TIMER6_SPEC> {
+        CPU_TOP_POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<TIMER6_SPEC, 16> {
-        DG_PERI_WAIT_TIMER_W::new(self)
+    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<TIMER6_SPEC> {
+        DG_PERI_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<TIMER6_SPEC, 25> {
-        DG_PERI_POWERUP_TIMER_W::new(self)
+    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<TIMER6_SPEC> {
+        DG_PERI_POWERUP_TIMER_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
