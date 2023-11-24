@@ -5,11 +5,11 @@ pub type W = crate::W<GDMA_CONF_SPEC>;
 #[doc = "Field `GDMA_CLK_EN` reader - Set 1 to enable gdma clock"]
 pub type GDMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `GDMA_CLK_EN` writer - Set 1 to enable gdma clock"]
-pub type GDMA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GDMA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GDMA_RST_EN` reader - Set 0 to reset gdma module"]
 pub type GDMA_RST_EN_R = crate::BitReader;
 #[doc = "Field `GDMA_RST_EN` writer - Set 0 to reset gdma module"]
-pub type GDMA_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GDMA_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable gdma clock"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GDMA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable gdma clock"]
     #[inline(always)]
     #[must_use]
-    pub fn gdma_clk_en(&mut self) -> GDMA_CLK_EN_W<GDMA_CONF_SPEC, 0> {
-        GDMA_CLK_EN_W::new(self)
+    pub fn gdma_clk_en(&mut self) -> GDMA_CLK_EN_W<GDMA_CONF_SPEC> {
+        GDMA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset gdma module"]
     #[inline(always)]
     #[must_use]
-    pub fn gdma_rst_en(&mut self) -> GDMA_RST_EN_W<GDMA_CONF_SPEC, 1> {
-        GDMA_RST_EN_W::new(self)
+    pub fn gdma_rst_en(&mut self) -> GDMA_RST_EN_W<GDMA_CONF_SPEC> {
+        GDMA_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

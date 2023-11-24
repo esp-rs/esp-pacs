@@ -5,11 +5,11 @@ pub type W = crate::W<USB_DEVICE_CONF_SPEC>;
 #[doc = "Field `USB_DEVICE_CLK_EN` reader - Set 1 to enable usb_device clock"]
 pub type USB_DEVICE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `USB_DEVICE_CLK_EN` writer - Set 1 to enable usb_device clock"]
-pub type USB_DEVICE_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_DEVICE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_DEVICE_RST_EN` reader - Set 0 to reset usb_device module"]
 pub type USB_DEVICE_RST_EN_R = crate::BitReader;
 #[doc = "Field `USB_DEVICE_RST_EN` writer - Set 0 to reset usb_device module"]
-pub type USB_DEVICE_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_DEVICE_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_DEVICE_READY` reader - Query this field after reset usb_device module"]
 pub type USB_DEVICE_READY_R = crate::BitReader;
 impl R {
@@ -51,21 +51,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<USB_DEVICE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable usb_device clock"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<USB_DEVICE_CONF_SPEC, 0> {
-        USB_DEVICE_CLK_EN_W::new(self)
+    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<USB_DEVICE_CONF_SPEC> {
+        USB_DEVICE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset usb_device module"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_device_rst_en(&mut self) -> USB_DEVICE_RST_EN_W<USB_DEVICE_CONF_SPEC, 1> {
-        USB_DEVICE_RST_EN_W::new(self)
+    pub fn usb_device_rst_en(&mut self) -> USB_DEVICE_RST_EN_W<USB_DEVICE_CONF_SPEC> {
+        USB_DEVICE_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<WDTFEED_SPEC>;
 #[doc = "Field `WDT_FEED` reader - Need add desc"]
 pub type WDT_FEED_R = crate::BitReader;
 #[doc = "Field `WDT_FEED` writer - Need add desc"]
-pub type WDT_FEED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_FEED_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_feed(&mut self) -> WDT_FEED_W<WDTFEED_SPEC, 31> {
-        WDT_FEED_W::new(self)
+    pub fn wdt_feed(&mut self) -> WDT_FEED_W<WDTFEED_SPEC> {
+        WDT_FEED_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

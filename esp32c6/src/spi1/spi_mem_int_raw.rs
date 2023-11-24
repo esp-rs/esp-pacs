@@ -5,27 +5,27 @@ pub type W = crate::W<SPI_MEM_INT_RAW_SPEC>;
 #[doc = "Field `SPI_MEM_PER_END_INT_RAW` reader - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
 pub type SPI_MEM_PER_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PER_END_INT_RAW` writer - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
-pub type SPI_MEM_PER_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_PER_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_PES_END_INT_RAW` reader - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
 pub type SPI_MEM_PES_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PES_END_INT_RAW` writer - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
-pub type SPI_MEM_PES_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_PES_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_WPE_END_INT_RAW` reader - The raw bit for SPI_MEM_WPE_END_INT interrupt. 1: Triggered when WRSR/PP/SE/BE/CE is sent and flash is already idle. 0: Others."]
 pub type SPI_MEM_WPE_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WPE_END_INT_RAW` writer - The raw bit for SPI_MEM_WPE_END_INT interrupt. 1: Triggered when WRSR/PP/SE/BE/CE is sent and flash is already idle. 0: Others."]
-pub type SPI_MEM_WPE_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_WPE_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_RAW` reader - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi1_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
 pub type SPI_MEM_SLV_ST_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_RAW` writer - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi1_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
-pub type SPI_MEM_SLV_ST_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_SLV_ST_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_RAW` reader - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi1_mst_st is changed from non idle state to idle state. 0: Others."]
 pub type SPI_MEM_MST_ST_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_RAW` writer - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi1_mst_st is changed from non idle state to idle state. 0: Others."]
-pub type SPI_MEM_MST_ST_END_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_MST_ST_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_BROWN_OUT_INT_RAW` reader - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
 pub type SPI_MEM_BROWN_OUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_BROWN_OUT_INT_RAW` writer - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
-pub type SPI_MEM_BROWN_OUT_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_BROWN_OUT_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
     #[inline(always)]
@@ -92,57 +92,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_per_end_int_raw(
-        &mut self,
-    ) -> SPI_MEM_PER_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC, 0> {
-        SPI_MEM_PER_END_INT_RAW_W::new(self)
+    pub fn spi_mem_per_end_int_raw(&mut self) -> SPI_MEM_PER_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC> {
+        SPI_MEM_PER_END_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_pes_end_int_raw(
-        &mut self,
-    ) -> SPI_MEM_PES_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC, 1> {
-        SPI_MEM_PES_END_INT_RAW_W::new(self)
+    pub fn spi_mem_pes_end_int_raw(&mut self) -> SPI_MEM_PES_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC> {
+        SPI_MEM_PES_END_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw bit for SPI_MEM_WPE_END_INT interrupt. 1: Triggered when WRSR/PP/SE/BE/CE is sent and flash is already idle. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_wpe_end_int_raw(
-        &mut self,
-    ) -> SPI_MEM_WPE_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC, 2> {
-        SPI_MEM_WPE_END_INT_RAW_W::new(self)
+    pub fn spi_mem_wpe_end_int_raw(&mut self) -> SPI_MEM_WPE_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC> {
+        SPI_MEM_WPE_END_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi1_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_slv_st_end_int_raw(
         &mut self,
-    ) -> SPI_MEM_SLV_ST_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC, 3> {
-        SPI_MEM_SLV_ST_END_INT_RAW_W::new(self)
+    ) -> SPI_MEM_SLV_ST_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC> {
+        SPI_MEM_SLV_ST_END_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi1_mst_st is changed from non idle state to idle state. 0: Others."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_mst_st_end_int_raw(
         &mut self,
-    ) -> SPI_MEM_MST_ST_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC, 4> {
-        SPI_MEM_MST_ST_END_INT_RAW_W::new(self)
+    ) -> SPI_MEM_MST_ST_END_INT_RAW_W<SPI_MEM_INT_RAW_SPEC> {
+        SPI_MEM_MST_ST_END_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 10 - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_brown_out_int_raw(
         &mut self,
-    ) -> SPI_MEM_BROWN_OUT_INT_RAW_W<SPI_MEM_INT_RAW_SPEC, 10> {
-        SPI_MEM_BROWN_OUT_INT_RAW_W::new(self)
+    ) -> SPI_MEM_BROWN_OUT_INT_RAW_W<SPI_MEM_INT_RAW_SPEC> {
+        SPI_MEM_BROWN_OUT_INT_RAW_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

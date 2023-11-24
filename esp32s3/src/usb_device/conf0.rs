@@ -5,63 +5,63 @@ pub type W = crate::W<CONF0_SPEC>;
 #[doc = "Field `PHY_SEL` reader - Select internal/external PHY"]
 pub type PHY_SEL_R = crate::BitReader;
 #[doc = "Field `PHY_SEL` writer - Select internal/external PHY"]
-pub type PHY_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PHY_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXCHG_PINS_OVERRIDE` reader - Enable software control USB D+ D- exchange"]
 pub type EXCHG_PINS_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `EXCHG_PINS_OVERRIDE` writer - Enable software control USB D+ D- exchange"]
-pub type EXCHG_PINS_OVERRIDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXCHG_PINS_OVERRIDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXCHG_PINS` reader - USB D+ D- exchange"]
 pub type EXCHG_PINS_R = crate::BitReader;
 #[doc = "Field `EXCHG_PINS` writer - USB D+ D- exchange"]
-pub type EXCHG_PINS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXCHG_PINS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VREFH` reader - Control single-end input high threshold,1.76V to 2V, step 80mV"]
 pub type VREFH_R = crate::FieldReader;
 #[doc = "Field `VREFH` writer - Control single-end input high threshold,1.76V to 2V, step 80mV"]
-pub type VREFH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type VREFH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `VREFL` reader - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
 pub type VREFL_R = crate::FieldReader;
 #[doc = "Field `VREFL` writer - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
-pub type VREFL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type VREFL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `VREF_OVERRIDE` reader - Enable software control input threshold"]
 pub type VREF_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `VREF_OVERRIDE` writer - Enable software control input threshold"]
-pub type VREF_OVERRIDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VREF_OVERRIDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD_PULL_OVERRIDE` reader - Enable software control USB D+ D- pullup pulldown"]
 pub type PAD_PULL_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `PAD_PULL_OVERRIDE` writer - Enable software control USB D+ D- pullup pulldown"]
-pub type PAD_PULL_OVERRIDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD_PULL_OVERRIDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DP_PULLUP` reader - Control USB D+ pull up."]
 pub type DP_PULLUP_R = crate::BitReader;
 #[doc = "Field `DP_PULLUP` writer - Control USB D+ pull up."]
-pub type DP_PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DP_PULLUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DP_PULLDOWN` reader - Control USB D+ pull down."]
 pub type DP_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `DP_PULLDOWN` writer - Control USB D+ pull down."]
-pub type DP_PULLDOWN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DP_PULLDOWN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DM_PULLUP` reader - Control USB D- pull up."]
 pub type DM_PULLUP_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP` writer - Control USB D- pull up."]
-pub type DM_PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DM_PULLUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DM_PULLDOWN` reader - Control USB D- pull down."]
 pub type DM_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `DM_PULLDOWN` writer - Control USB D- pull down."]
-pub type DM_PULLDOWN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DM_PULLDOWN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PULLUP_VALUE` reader - Control pull up value."]
 pub type PULLUP_VALUE_R = crate::BitReader;
 #[doc = "Field `PULLUP_VALUE` writer - Control pull up value."]
-pub type PULLUP_VALUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PULLUP_VALUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_PAD_ENABLE` reader - Enable USB pad function."]
 pub type USB_PAD_ENABLE_R = crate::BitReader;
 #[doc = "Field `USB_PAD_ENABLE` writer - Enable USB pad function."]
-pub type USB_PAD_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_PAD_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PHY_TX_EDGE_SEL` reader - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
 pub type PHY_TX_EDGE_SEL_R = crate::BitReader;
 #[doc = "Field `PHY_TX_EDGE_SEL` writer - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
-pub type PHY_TX_EDGE_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PHY_TX_EDGE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB_JTAG_BRIDGE_EN` reader - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
 pub type USB_JTAG_BRIDGE_EN_R = crate::BitReader;
 #[doc = "Field `USB_JTAG_BRIDGE_EN` writer - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
-pub type USB_JTAG_BRIDGE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_JTAG_BRIDGE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Select internal/external PHY"]
     #[inline(always)]
@@ -185,99 +185,99 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Select internal/external PHY"]
     #[inline(always)]
     #[must_use]
-    pub fn phy_sel(&mut self) -> PHY_SEL_W<CONF0_SPEC, 0> {
-        PHY_SEL_W::new(self)
+    pub fn phy_sel(&mut self) -> PHY_SEL_W<CONF0_SPEC> {
+        PHY_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable software control USB D+ D- exchange"]
     #[inline(always)]
     #[must_use]
-    pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<CONF0_SPEC, 1> {
-        EXCHG_PINS_OVERRIDE_W::new(self)
+    pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<CONF0_SPEC> {
+        EXCHG_PINS_OVERRIDE_W::new(self, 1)
     }
     #[doc = "Bit 2 - USB D+ D- exchange"]
     #[inline(always)]
     #[must_use]
-    pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<CONF0_SPEC, 2> {
-        EXCHG_PINS_W::new(self)
+    pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<CONF0_SPEC> {
+        EXCHG_PINS_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
     #[inline(always)]
     #[must_use]
-    pub fn vrefh(&mut self) -> VREFH_W<CONF0_SPEC, 3> {
-        VREFH_W::new(self)
+    pub fn vrefh(&mut self) -> VREFH_W<CONF0_SPEC> {
+        VREFH_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
     #[inline(always)]
     #[must_use]
-    pub fn vrefl(&mut self) -> VREFL_W<CONF0_SPEC, 5> {
-        VREFL_W::new(self)
+    pub fn vrefl(&mut self) -> VREFL_W<CONF0_SPEC> {
+        VREFL_W::new(self, 5)
     }
     #[doc = "Bit 7 - Enable software control input threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<CONF0_SPEC, 7> {
-        VREF_OVERRIDE_W::new(self)
+    pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<CONF0_SPEC> {
+        VREF_OVERRIDE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable software control USB D+ D- pullup pulldown"]
     #[inline(always)]
     #[must_use]
-    pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<CONF0_SPEC, 8> {
-        PAD_PULL_OVERRIDE_W::new(self)
+    pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<CONF0_SPEC> {
+        PAD_PULL_OVERRIDE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Control USB D+ pull up."]
     #[inline(always)]
     #[must_use]
-    pub fn dp_pullup(&mut self) -> DP_PULLUP_W<CONF0_SPEC, 9> {
-        DP_PULLUP_W::new(self)
+    pub fn dp_pullup(&mut self) -> DP_PULLUP_W<CONF0_SPEC> {
+        DP_PULLUP_W::new(self, 9)
     }
     #[doc = "Bit 10 - Control USB D+ pull down."]
     #[inline(always)]
     #[must_use]
-    pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<CONF0_SPEC, 10> {
-        DP_PULLDOWN_W::new(self)
+    pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<CONF0_SPEC> {
+        DP_PULLDOWN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Control USB D- pull up."]
     #[inline(always)]
     #[must_use]
-    pub fn dm_pullup(&mut self) -> DM_PULLUP_W<CONF0_SPEC, 11> {
-        DM_PULLUP_W::new(self)
+    pub fn dm_pullup(&mut self) -> DM_PULLUP_W<CONF0_SPEC> {
+        DM_PULLUP_W::new(self, 11)
     }
     #[doc = "Bit 12 - Control USB D- pull down."]
     #[inline(always)]
     #[must_use]
-    pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<CONF0_SPEC, 12> {
-        DM_PULLDOWN_W::new(self)
+    pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<CONF0_SPEC> {
+        DM_PULLDOWN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Control pull up value."]
     #[inline(always)]
     #[must_use]
-    pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<CONF0_SPEC, 13> {
-        PULLUP_VALUE_W::new(self)
+    pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<CONF0_SPEC> {
+        PULLUP_VALUE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable USB pad function."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<CONF0_SPEC, 14> {
-        USB_PAD_ENABLE_W::new(self)
+    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<CONF0_SPEC> {
+        USB_PAD_ENABLE_W::new(self, 14)
     }
     #[doc = "Bit 15 - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
     #[inline(always)]
     #[must_use]
-    pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<CONF0_SPEC, 15> {
-        PHY_TX_EDGE_SEL_W::new(self)
+    pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<CONF0_SPEC> {
+        PHY_TX_EDGE_SEL_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_jtag_bridge_en(&mut self) -> USB_JTAG_BRIDGE_EN_W<CONF0_SPEC, 16> {
-        USB_JTAG_BRIDGE_EN_W::new(self)
+    pub fn usb_jtag_bridge_en(&mut self) -> USB_JTAG_BRIDGE_EN_W<CONF0_SPEC> {
+        USB_JTAG_BRIDGE_EN_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

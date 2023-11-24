@@ -5,7 +5,7 @@ pub type W = crate::W<DMA_CH0_INT_MAP_SPEC>;
 #[doc = "Field `DMA_CH0_INT_MAP` reader - reg_core0_dma_ch0_int_map"]
 pub type DMA_CH0_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `DMA_CH0_INT_MAP` writer - reg_core0_dma_ch0_int_map"]
-pub type DMA_CH0_INT_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type DMA_CH0_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_dma_ch0_int_map"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_CH0_INT_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - reg_core0_dma_ch0_int_map"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ch0_int_map(&mut self) -> DMA_CH0_INT_MAP_W<DMA_CH0_INT_MAP_SPEC, 0> {
-        DMA_CH0_INT_MAP_W::new(self)
+    pub fn dma_ch0_int_map(&mut self) -> DMA_CH0_INT_MAP_W<DMA_CH0_INT_MAP_SPEC> {
+        DMA_CH0_INT_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

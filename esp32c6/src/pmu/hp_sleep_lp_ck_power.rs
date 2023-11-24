@@ -5,19 +5,19 @@ pub type W = crate::W<HP_SLEEP_LP_CK_POWER_SPEC>;
 #[doc = "Field `HP_SLEEP_XPD_XTAL32K` reader - need_des"]
 pub type HP_SLEEP_XPD_XTAL32K_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_XTAL32K` writer - need_des"]
-pub type HP_SLEEP_XPD_XTAL32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_XTAL32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_XPD_RC32K` reader - need_des"]
 pub type HP_SLEEP_XPD_RC32K_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_RC32K` writer - need_des"]
-pub type HP_SLEEP_XPD_RC32K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_RC32K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_XPD_FOSC_CLK` reader - need_des"]
 pub type HP_SLEEP_XPD_FOSC_CLK_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_FOSC_CLK` writer - need_des"]
-pub type HP_SLEEP_XPD_FOSC_CLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_FOSC_CLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_PD_OSC_CLK` reader - need_des"]
 pub type HP_SLEEP_PD_OSC_CLK_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_OSC_CLK` writer - need_des"]
-pub type HP_SLEEP_PD_OSC_CLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_PD_OSC_CLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
@@ -66,37 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_CK_POWER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_xpd_xtal32k(
-        &mut self,
-    ) -> HP_SLEEP_XPD_XTAL32K_W<HP_SLEEP_LP_CK_POWER_SPEC, 28> {
-        HP_SLEEP_XPD_XTAL32K_W::new(self)
+    pub fn hp_sleep_xpd_xtal32k(&mut self) -> HP_SLEEP_XPD_XTAL32K_W<HP_SLEEP_LP_CK_POWER_SPEC> {
+        HP_SLEEP_XPD_XTAL32K_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_xpd_rc32k(&mut self) -> HP_SLEEP_XPD_RC32K_W<HP_SLEEP_LP_CK_POWER_SPEC, 29> {
-        HP_SLEEP_XPD_RC32K_W::new(self)
+    pub fn hp_sleep_xpd_rc32k(&mut self) -> HP_SLEEP_XPD_RC32K_W<HP_SLEEP_LP_CK_POWER_SPEC> {
+        HP_SLEEP_XPD_RC32K_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_xpd_fosc_clk(
-        &mut self,
-    ) -> HP_SLEEP_XPD_FOSC_CLK_W<HP_SLEEP_LP_CK_POWER_SPEC, 30> {
-        HP_SLEEP_XPD_FOSC_CLK_W::new(self)
+    pub fn hp_sleep_xpd_fosc_clk(&mut self) -> HP_SLEEP_XPD_FOSC_CLK_W<HP_SLEEP_LP_CK_POWER_SPEC> {
+        HP_SLEEP_XPD_FOSC_CLK_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_pd_osc_clk(&mut self) -> HP_SLEEP_PD_OSC_CLK_W<HP_SLEEP_LP_CK_POWER_SPEC, 31> {
-        HP_SLEEP_PD_OSC_CLK_W::new(self)
+    pub fn hp_sleep_pd_osc_clk(&mut self) -> HP_SLEEP_PD_OSC_CLK_W<HP_SLEEP_LP_CK_POWER_SPEC> {
+        HP_SLEEP_PD_OSC_CLK_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

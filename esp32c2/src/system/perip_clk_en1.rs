@@ -5,19 +5,19 @@ pub type W = crate::W<PERIP_CLK_EN1_SPEC>;
 #[doc = "Field `CRYPTO_ECC_CLK_EN` reader - Set 1 to enable ECC clock"]
 pub type CRYPTO_ECC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_ECC_CLK_EN` writer - Set 1 to enable ECC clock"]
-pub type CRYPTO_ECC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_ECC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` reader - Set 1 to enable SHA clock"]
 pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` writer - Set 1 to enable SHA clock"]
-pub type CRYPTO_SHA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_SHA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_CLK_EN` reader - Set 1 to enable DMA clock"]
 pub type DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `DMA_CLK_EN` writer - Set 1 to enable DMA clock"]
-pub type DMA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_EN` reader - Set 1 to enable TSENS clock"]
 pub type TSENS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_EN` writer - Set 1 to enable TSENS clock"]
-pub type TSENS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Set 1 to enable ECC clock"]
     #[inline(always)]
@@ -63,33 +63,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Set 1 to enable ECC clock"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_ecc_clk_en(&mut self) -> CRYPTO_ECC_CLK_EN_W<PERIP_CLK_EN1_SPEC, 1> {
-        CRYPTO_ECC_CLK_EN_W::new(self)
+    pub fn crypto_ecc_clk_en(&mut self) -> CRYPTO_ECC_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_ECC_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable SHA clock"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 2> {
-        CRYPTO_SHA_CLK_EN_W::new(self)
+    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_SHA_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 6 - Set 1 to enable DMA clock"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 6> {
-        DMA_CLK_EN_W::new(self)
+    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        DMA_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 10 - Set 1 to enable TSENS clock"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<PERIP_CLK_EN1_SPEC, 10> {
-        TSENS_CLK_EN_W::new(self)
+    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        TSENS_CLK_EN_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

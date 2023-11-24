@@ -5,15 +5,15 @@ pub type W = crate::W<PIN_SPEC>;
 #[doc = "Field `PAD_DRIVER` reader - Pad driver selection. 0: normal output. 1: open drain."]
 pub type PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `PAD_DRIVER` writer - Pad driver selection. 0: normal output. 1: open drain."]
-pub type PAD_DRIVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN_INT_TYPE` reader - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
 pub type GPIO_PIN_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN_INT_TYPE` writer - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
-pub type GPIO_PIN_INT_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type GPIO_PIN_INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `GPIO_PIN_WAKEUP_ENABLE` reader - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
 pub type GPIO_PIN_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN_WAKEUP_ENABLE` writer - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
-pub type GPIO_PIN_WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN_WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - Pad driver selection. 0: normal output. 1: open drain."]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PIN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - Pad driver selection. 0: normal output. 1: open drain."]
     #[inline(always)]
     #[must_use]
-    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN_SPEC, 2> {
-        PAD_DRIVER_W::new(self)
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN_SPEC> {
+        PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9 - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin_int_type(&mut self) -> GPIO_PIN_INT_TYPE_W<PIN_SPEC, 7> {
-        GPIO_PIN_INT_TYPE_W::new(self)
+    pub fn gpio_pin_int_type(&mut self) -> GPIO_PIN_INT_TYPE_W<PIN_SPEC> {
+        GPIO_PIN_INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin_wakeup_enable(&mut self) -> GPIO_PIN_WAKEUP_ENABLE_W<PIN_SPEC, 10> {
-        GPIO_PIN_WAKEUP_ENABLE_W::new(self)
+    pub fn gpio_pin_wakeup_enable(&mut self) -> GPIO_PIN_WAKEUP_ENABLE_W<PIN_SPEC> {
+        GPIO_PIN_WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

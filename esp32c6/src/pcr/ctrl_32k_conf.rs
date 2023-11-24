@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL_32K_CONF_SPEC>;
 #[doc = "Field `CLK_32K_SEL` reader - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM and timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
 pub type CLK_32K_SEL_R = crate::FieldReader;
 #[doc = "Field `CLK_32K_SEL` writer - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM and timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
-pub type CLK_32K_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLK_32K_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM and timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_32K_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM and timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_32k_sel(&mut self) -> CLK_32K_SEL_W<CTRL_32K_CONF_SPEC, 0> {
-        CLK_32K_SEL_W::new(self)
+    pub fn clk_32k_sel(&mut self) -> CLK_32K_SEL_W<CTRL_32K_CONF_SPEC> {
+        CLK_32K_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_CACHE_1_SPEC>;
 #[doc = "Field `PRO_CACHE_CONNECT` reader - Configure which SRAM Block will be occupied by Icache or Dcache."]
 pub type PRO_CACHE_CONNECT_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_CACHE_CONNECT` writer - Configure which SRAM Block will be occupied by Icache or Dcache."]
-pub type PRO_CACHE_CONNECT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PRO_CACHE_CONNECT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Configure which SRAM Block will be occupied by Icache or Dcache."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Configure which SRAM Block will be occupied by Icache or Dcache."]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_connect(&mut self) -> PRO_CACHE_CONNECT_W<PRO_CACHE_1_SPEC, 0> {
-        PRO_CACHE_CONNECT_W::new(self)
+    pub fn pro_cache_connect(&mut self) -> PRO_CACHE_CONNECT_W<PRO_CACHE_1_SPEC> {
+        PRO_CACHE_CONNECT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

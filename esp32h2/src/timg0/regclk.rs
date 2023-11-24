@@ -5,19 +5,19 @@ pub type W = crate::W<REGCLK_SPEC>;
 #[doc = "Field `ETM_EN` reader - enable timer's etm task and event"]
 pub type ETM_EN_R = crate::BitReader;
 #[doc = "Field `ETM_EN` writer - enable timer's etm task and event"]
-pub type ETM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_CLK_IS_ACTIVE` reader - enable WDT's clock"]
 pub type WDT_CLK_IS_ACTIVE_R = crate::BitReader;
 #[doc = "Field `WDT_CLK_IS_ACTIVE` writer - enable WDT's clock"]
-pub type WDT_CLK_IS_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_CLK_IS_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER_CLK_IS_ACTIVE` reader - enable Timer 30's clock"]
 pub type TIMER_CLK_IS_ACTIVE_R = crate::BitReader;
 #[doc = "Field `TIMER_CLK_IS_ACTIVE` writer - enable Timer 30's clock"]
-pub type TIMER_CLK_IS_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER_CLK_IS_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - Register clock gate signal. 1: Registers can be read and written to by software. 0: Registers can not be read or written to by software."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Register clock gate signal. 1: Registers can be read and written to by software. 0: Registers can not be read or written to by software."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 28 - enable timer's etm task and event"]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REGCLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 28 - enable timer's etm task and event"]
     #[inline(always)]
     #[must_use]
-    pub fn etm_en(&mut self) -> ETM_EN_W<REGCLK_SPEC, 28> {
-        ETM_EN_W::new(self)
+    pub fn etm_en(&mut self) -> ETM_EN_W<REGCLK_SPEC> {
+        ETM_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - enable WDT's clock"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_clk_is_active(&mut self) -> WDT_CLK_IS_ACTIVE_W<REGCLK_SPEC, 29> {
-        WDT_CLK_IS_ACTIVE_W::new(self)
+    pub fn wdt_clk_is_active(&mut self) -> WDT_CLK_IS_ACTIVE_W<REGCLK_SPEC> {
+        WDT_CLK_IS_ACTIVE_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable Timer 30's clock"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_clk_is_active(&mut self) -> TIMER_CLK_IS_ACTIVE_W<REGCLK_SPEC, 30> {
-        TIMER_CLK_IS_ACTIVE_W::new(self)
+    pub fn timer_clk_is_active(&mut self) -> TIMER_CLK_IS_ACTIVE_W<REGCLK_SPEC> {
+        TIMER_CLK_IS_ACTIVE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Register clock gate signal. 1: Registers can be read and written to by software. 0: Registers can not be read or written to by software."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC, 31> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC> {
+        CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

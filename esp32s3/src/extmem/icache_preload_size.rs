@@ -5,7 +5,7 @@ pub type W = crate::W<ICACHE_PRELOAD_SIZE_SPEC>;
 #[doc = "Field `ICACHE_PRELOAD_SIZE` reader - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
 pub type ICACHE_PRELOAD_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `ICACHE_PRELOAD_SIZE` writer - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
-pub type ICACHE_PRELOAD_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type ICACHE_PRELOAD_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_PRELOAD_SIZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_preload_size(&mut self) -> ICACHE_PRELOAD_SIZE_W<ICACHE_PRELOAD_SIZE_SPEC, 0> {
-        ICACHE_PRELOAD_SIZE_W::new(self)
+    pub fn icache_preload_size(&mut self) -> ICACHE_PRELOAD_SIZE_W<ICACHE_PRELOAD_SIZE_SPEC> {
+        ICACHE_PRELOAD_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

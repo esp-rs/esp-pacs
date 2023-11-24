@@ -21,11 +21,11 @@ pub type L1_ICACHE3_DATA_MEM_WR_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_DATA_MEM_RD_EN` reader - The bit is used to enable config-bus read L1-Cache data memoryory. 0: disable, 1: enable."]
 pub type L1_CACHE_DATA_MEM_RD_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_DATA_MEM_RD_EN` writer - The bit is used to enable config-bus read L1-Cache data memoryory. 0: disable, 1: enable."]
-pub type L1_CACHE_DATA_MEM_RD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_DATA_MEM_RD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_DATA_MEM_WR_EN` reader - The bit is used to enable config-bus write L1-Cache data memoryory. 0: disable, 1: enable."]
 pub type L1_CACHE_DATA_MEM_WR_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_DATA_MEM_WR_EN` writer - The bit is used to enable config-bus write L1-Cache data memoryory. 0: disable, 1: enable."]
-pub type L1_CACHE_DATA_MEM_WR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_DATA_MEM_WR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable config-bus read L1-ICache0 data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
@@ -128,7 +128,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -137,16 +137,16 @@ impl W {
     #[must_use]
     pub fn l1_cache_data_mem_rd_en(
         &mut self,
-    ) -> L1_CACHE_DATA_MEM_RD_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC, 16> {
-        L1_CACHE_DATA_MEM_RD_EN_W::new(self)
+    ) -> L1_CACHE_DATA_MEM_RD_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
+        L1_CACHE_DATA_MEM_RD_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to enable config-bus write L1-Cache data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_data_mem_wr_en(
         &mut self,
-    ) -> L1_CACHE_DATA_MEM_WR_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC, 17> {
-        L1_CACHE_DATA_MEM_WR_EN_W::new(self)
+    ) -> L1_CACHE_DATA_MEM_WR_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
+        L1_CACHE_DATA_MEM_WR_EN_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

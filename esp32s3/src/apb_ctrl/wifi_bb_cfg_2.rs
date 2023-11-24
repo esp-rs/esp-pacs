@@ -5,7 +5,7 @@ pub type W = crate::W<WIFI_BB_CFG_2_SPEC>;
 #[doc = "Field `WIFI_BB_CFG_2` reader - ******* Description ***********"]
 pub type WIFI_BB_CFG_2_R = crate::FieldReader<u32>;
 #[doc = "Field `WIFI_BB_CFG_2` writer - ******* Description ***********"]
-pub type WIFI_BB_CFG_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type WIFI_BB_CFG_2_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WIFI_BB_CFG_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_bb_cfg_2(&mut self) -> WIFI_BB_CFG_2_W<WIFI_BB_CFG_2_SPEC, 0> {
-        WIFI_BB_CFG_2_W::new(self)
+    pub fn wifi_bb_cfg_2(&mut self) -> WIFI_BB_CFG_2_W<WIFI_BB_CFG_2_SPEC> {
+        WIFI_BB_CFG_2_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

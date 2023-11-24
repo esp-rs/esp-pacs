@@ -1,9 +1,9 @@
 #[doc = "Register `HP_LP_CPU_COMM` writer"]
 pub type W = crate::W<HP_LP_CPU_COMM_SPEC>;
 #[doc = "Field `LP_TRIGGER_HP` writer - need_des"]
-pub type LP_TRIGGER_HP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_TRIGGER_HP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_TRIGGER_LP` writer - need_des"]
-pub type HP_TRIGGER_LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_TRIGGER_LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_LP_CPU_COMM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_trigger_hp(&mut self) -> LP_TRIGGER_HP_W<HP_LP_CPU_COMM_SPEC, 30> {
-        LP_TRIGGER_HP_W::new(self)
+    pub fn lp_trigger_hp(&mut self) -> LP_TRIGGER_HP_W<HP_LP_CPU_COMM_SPEC> {
+        LP_TRIGGER_HP_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_trigger_lp(&mut self) -> HP_TRIGGER_LP_W<HP_LP_CPU_COMM_SPEC, 31> {
-        HP_TRIGGER_LP_W::new(self)
+    pub fn hp_trigger_lp(&mut self) -> HP_TRIGGER_LP_W<HP_LP_CPU_COMM_SPEC> {
+        HP_TRIGGER_LP_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<BLK3_WDATA2_SPEC>;
 #[doc = "Field `BLK3_DIN2` reader - "]
 pub type BLK3_DIN2_R = crate::FieldReader<u32>;
 #[doc = "Field `BLK3_DIN2` writer - "]
-pub type BLK3_DIN2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type BLK3_DIN2_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK3_WDATA2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn blk3_din2(&mut self) -> BLK3_DIN2_W<BLK3_WDATA2_SPEC, 0> {
-        BLK3_DIN2_W::new(self)
+    pub fn blk3_din2(&mut self) -> BLK3_DIN2_W<BLK3_WDATA2_SPEC> {
+        BLK3_DIN2_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

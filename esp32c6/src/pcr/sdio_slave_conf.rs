@@ -5,11 +5,11 @@ pub type W = crate::W<SDIO_SLAVE_CONF_SPEC>;
 #[doc = "Field `SDIO_SLAVE_CLK_EN` reader - Set 1 to enable sdio_slave clock"]
 pub type SDIO_SLAVE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_CLK_EN` writer - Set 1 to enable sdio_slave clock"]
-pub type SDIO_SLAVE_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_SLAVE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_SLAVE_RST_EN` reader - Set 0 to reset sdio_slave module"]
 pub type SDIO_SLAVE_RST_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_RST_EN` writer - Set 0 to reset sdio_slave module"]
-pub type SDIO_SLAVE_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_SLAVE_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable sdio_slave clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable sdio_slave clock"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_slave_clk_en(&mut self) -> SDIO_SLAVE_CLK_EN_W<SDIO_SLAVE_CONF_SPEC, 0> {
-        SDIO_SLAVE_CLK_EN_W::new(self)
+    pub fn sdio_slave_clk_en(&mut self) -> SDIO_SLAVE_CLK_EN_W<SDIO_SLAVE_CONF_SPEC> {
+        SDIO_SLAVE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset sdio_slave module"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_slave_rst_en(&mut self) -> SDIO_SLAVE_RST_EN_W<SDIO_SLAVE_CONF_SPEC, 1> {
-        SDIO_SLAVE_RST_EN_W::new(self)
+    pub fn sdio_slave_rst_en(&mut self) -> SDIO_SLAVE_RST_EN_W<SDIO_SLAVE_CONF_SPEC> {
+        SDIO_SLAVE_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

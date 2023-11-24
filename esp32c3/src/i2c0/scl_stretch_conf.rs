@@ -5,21 +5,21 @@ pub type W = crate::W<SCL_STRETCH_CONF_SPEC>;
 #[doc = "Field `STRETCH_PROTECT_NUM` reader - reg_stretch_protect_num"]
 pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `STRETCH_PROTECT_NUM` writer - reg_stretch_protect_num"]
-pub type STRETCH_PROTECT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type STRETCH_PROTECT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - reg_slave_scl_stretch_en"]
 pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` writer - reg_slave_scl_stretch_en"]
-pub type SLAVE_SCL_STRETCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_SCL_STRETCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_SCL_STRETCH_CLR` writer - reg_slave_scl_stretch_clr"]
-pub type SLAVE_SCL_STRETCH_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_SCL_STRETCH_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` reader - reg_slave_byte_ack_ctl_en"]
 pub type SLAVE_BYTE_ACK_CTL_EN_R = crate::BitReader;
 #[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` writer - reg_slave_byte_ack_ctl_en"]
-pub type SLAVE_BYTE_ACK_CTL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_BYTE_ACK_CTL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_BYTE_ACK_LVL` reader - reg_slave_byte_ack_lvl"]
 pub type SLAVE_BYTE_ACK_LVL_R = crate::BitReader;
 #[doc = "Field `SLAVE_BYTE_ACK_LVL` writer - reg_slave_byte_ack_lvl"]
-pub type SLAVE_BYTE_ACK_LVL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_BYTE_ACK_LVL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9 - reg_stretch_protect_num"]
     #[inline(always)]
@@ -68,39 +68,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCL_STRETCH_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - reg_stretch_protect_num"]
     #[inline(always)]
     #[must_use]
-    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<SCL_STRETCH_CONF_SPEC, 0> {
-        STRETCH_PROTECT_NUM_W::new(self)
+    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<SCL_STRETCH_CONF_SPEC> {
+        STRETCH_PROTECT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 10 - reg_slave_scl_stretch_en"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<SCL_STRETCH_CONF_SPEC, 10> {
-        SLAVE_SCL_STRETCH_EN_W::new(self)
+    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<SCL_STRETCH_CONF_SPEC> {
+        SLAVE_SCL_STRETCH_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_slave_scl_stretch_clr"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<SCL_STRETCH_CONF_SPEC, 11> {
-        SLAVE_SCL_STRETCH_CLR_W::new(self)
+    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<SCL_STRETCH_CONF_SPEC> {
+        SLAVE_SCL_STRETCH_CLR_W::new(self, 11)
     }
     #[doc = "Bit 12 - reg_slave_byte_ack_ctl_en"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<SCL_STRETCH_CONF_SPEC, 12> {
-        SLAVE_BYTE_ACK_CTL_EN_W::new(self)
+    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<SCL_STRETCH_CONF_SPEC> {
+        SLAVE_BYTE_ACK_CTL_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_slave_byte_ack_lvl"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<SCL_STRETCH_CONF_SPEC, 13> {
-        SLAVE_BYTE_ACK_LVL_W::new(self)
+    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<SCL_STRETCH_CONF_SPEC> {
+        SLAVE_BYTE_ACK_LVL_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

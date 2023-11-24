@@ -5,59 +5,59 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `START_FORCE` reader - 0: select FSM to start SAR ADC. 1: select software to start SAR ADC."]
 pub type START_FORCE_R = crate::BitReader;
 #[doc = "Field `START_FORCE` writer - 0: select FSM to start SAR ADC. 1: select software to start SAR ADC."]
-pub type START_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `START` reader - Start SAR ADC by software."]
 pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - Start SAR ADC by software."]
-pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WORK_MODE` reader - 0: single-channel scan mode. 1: double-channel scan mode. 2: alternate-channel scan mode."]
 pub type WORK_MODE_R = crate::FieldReader;
 #[doc = "Field `WORK_MODE` writer - 0: single-channel scan mode. 1: double-channel scan mode. 2: alternate-channel scan mode."]
-pub type WORK_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type WORK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SAR_SEL` reader - 0: select SAR ADC1. 1: select SAR ADC2, only work for single-channel scan mode."]
 pub type SAR_SEL_R = crate::BitReader;
 #[doc = "Field `SAR_SEL` writer - 0: select SAR ADC1. 1: select SAR ADC2, only work for single-channel scan mode."]
-pub type SAR_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_CLK_GATED` reader - SAR clock gate enable bit."]
 pub type SAR_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SAR_CLK_GATED` writer - SAR clock gate enable bit."]
-pub type SAR_CLK_GATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_CLK_GATED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_CLK_DIV` reader - SAR clock divider"]
 pub type SAR_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SAR_CLK_DIV` writer - SAR clock divider"]
-pub type SAR_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR1_PATT_LEN` reader - 0 ~ 15 means length 1 ~ 16"]
 pub type SAR1_PATT_LEN_R = crate::FieldReader;
 #[doc = "Field `SAR1_PATT_LEN` writer - 0 ~ 15 means length 1 ~ 16"]
-pub type SAR1_PATT_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SAR1_PATT_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SAR2_PATT_LEN` reader - 0 ~ 15 means length 1 ~ 16"]
 pub type SAR2_PATT_LEN_R = crate::FieldReader;
 #[doc = "Field `SAR2_PATT_LEN` writer - 0 ~ 15 means length 1 ~ 16"]
-pub type SAR2_PATT_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SAR2_PATT_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SAR1_PATT_P_CLEAR` reader - Clear the pointer of pattern table for DIG ADC1 CTRL."]
 pub type SAR1_PATT_P_CLEAR_R = crate::BitReader;
 #[doc = "Field `SAR1_PATT_P_CLEAR` writer - Clear the pointer of pattern table for DIG ADC1 CTRL."]
-pub type SAR1_PATT_P_CLEAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR1_PATT_P_CLEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_PATT_P_CLEAR` reader - Clear the pointer of pattern table for DIG ADC2 CTRL."]
 pub type SAR2_PATT_P_CLEAR_R = crate::BitReader;
 #[doc = "Field `SAR2_PATT_P_CLEAR` writer - Clear the pointer of pattern table for DIG ADC2 CTRL."]
-pub type SAR2_PATT_P_CLEAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_PATT_P_CLEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_SAR_SEL` reader - 1: sar_sel will be coded to the MSB of the 16-bit output data, in this case the resolution should not be larger than 11 bits."]
 pub type DATA_SAR_SEL_R = crate::BitReader;
 #[doc = "Field `DATA_SAR_SEL` writer - 1: sar_sel will be coded to the MSB of the 16-bit output data, in this case the resolution should not be larger than 11 bits."]
-pub type DATA_SAR_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_SAR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_TO_I2S` reader - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
 pub type DATA_TO_I2S_R = crate::BitReader;
 #[doc = "Field `DATA_TO_I2S` writer - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
-pub type DATA_TO_I2S_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_TO_I2S_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XPD_SAR_FORCE` reader - Force option to xpd sar blocks."]
 pub type XPD_SAR_FORCE_R = crate::FieldReader;
 #[doc = "Field `XPD_SAR_FORCE` writer - Force option to xpd sar blocks."]
-pub type XPD_SAR_FORCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type XPD_SAR_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `WAIT_ARB_CYCLE` reader - Wait arbit signal stable after sar_done."]
 pub type WAIT_ARB_CYCLE_R = crate::FieldReader;
 #[doc = "Field `WAIT_ARB_CYCLE` writer - Wait arbit signal stable after sar_done."]
-pub type WAIT_ARB_CYCLE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type WAIT_ARB_CYCLE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - 0: select FSM to start SAR ADC. 1: select software to start SAR ADC."]
     #[inline(always)]
@@ -181,93 +181,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 0: select FSM to start SAR ADC. 1: select software to start SAR ADC."]
     #[inline(always)]
     #[must_use]
-    pub fn start_force(&mut self) -> START_FORCE_W<CTRL_SPEC, 0> {
-        START_FORCE_W::new(self)
+    pub fn start_force(&mut self) -> START_FORCE_W<CTRL_SPEC> {
+        START_FORCE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Start SAR ADC by software."]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<CTRL_SPEC, 1> {
-        START_W::new(self)
+    pub fn start(&mut self) -> START_W<CTRL_SPEC> {
+        START_W::new(self, 1)
     }
     #[doc = "Bits 3:4 - 0: single-channel scan mode. 1: double-channel scan mode. 2: alternate-channel scan mode."]
     #[inline(always)]
     #[must_use]
-    pub fn work_mode(&mut self) -> WORK_MODE_W<CTRL_SPEC, 3> {
-        WORK_MODE_W::new(self)
+    pub fn work_mode(&mut self) -> WORK_MODE_W<CTRL_SPEC> {
+        WORK_MODE_W::new(self, 3)
     }
     #[doc = "Bit 5 - 0: select SAR ADC1. 1: select SAR ADC2, only work for single-channel scan mode."]
     #[inline(always)]
     #[must_use]
-    pub fn sar_sel(&mut self) -> SAR_SEL_W<CTRL_SPEC, 5> {
-        SAR_SEL_W::new(self)
+    pub fn sar_sel(&mut self) -> SAR_SEL_W<CTRL_SPEC> {
+        SAR_SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - SAR clock gate enable bit."]
     #[inline(always)]
     #[must_use]
-    pub fn sar_clk_gated(&mut self) -> SAR_CLK_GATED_W<CTRL_SPEC, 6> {
-        SAR_CLK_GATED_W::new(self)
+    pub fn sar_clk_gated(&mut self) -> SAR_CLK_GATED_W<CTRL_SPEC> {
+        SAR_CLK_GATED_W::new(self, 6)
     }
     #[doc = "Bits 7:14 - SAR clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_clk_div(&mut self) -> SAR_CLK_DIV_W<CTRL_SPEC, 7> {
-        SAR_CLK_DIV_W::new(self)
+    pub fn sar_clk_div(&mut self) -> SAR_CLK_DIV_W<CTRL_SPEC> {
+        SAR_CLK_DIV_W::new(self, 7)
     }
     #[doc = "Bits 15:18 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_patt_len(&mut self) -> SAR1_PATT_LEN_W<CTRL_SPEC, 15> {
-        SAR1_PATT_LEN_W::new(self)
+    pub fn sar1_patt_len(&mut self) -> SAR1_PATT_LEN_W<CTRL_SPEC> {
+        SAR1_PATT_LEN_W::new(self, 15)
     }
     #[doc = "Bits 19:22 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_patt_len(&mut self) -> SAR2_PATT_LEN_W<CTRL_SPEC, 19> {
-        SAR2_PATT_LEN_W::new(self)
+    pub fn sar2_patt_len(&mut self) -> SAR2_PATT_LEN_W<CTRL_SPEC> {
+        SAR2_PATT_LEN_W::new(self, 19)
     }
     #[doc = "Bit 23 - Clear the pointer of pattern table for DIG ADC1 CTRL."]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_patt_p_clear(&mut self) -> SAR1_PATT_P_CLEAR_W<CTRL_SPEC, 23> {
-        SAR1_PATT_P_CLEAR_W::new(self)
+    pub fn sar1_patt_p_clear(&mut self) -> SAR1_PATT_P_CLEAR_W<CTRL_SPEC> {
+        SAR1_PATT_P_CLEAR_W::new(self, 23)
     }
     #[doc = "Bit 24 - Clear the pointer of pattern table for DIG ADC2 CTRL."]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_patt_p_clear(&mut self) -> SAR2_PATT_P_CLEAR_W<CTRL_SPEC, 24> {
-        SAR2_PATT_P_CLEAR_W::new(self)
+    pub fn sar2_patt_p_clear(&mut self) -> SAR2_PATT_P_CLEAR_W<CTRL_SPEC> {
+        SAR2_PATT_P_CLEAR_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: sar_sel will be coded to the MSB of the 16-bit output data, in this case the resolution should not be larger than 11 bits."]
     #[inline(always)]
     #[must_use]
-    pub fn data_sar_sel(&mut self) -> DATA_SAR_SEL_W<CTRL_SPEC, 25> {
-        DATA_SAR_SEL_W::new(self)
+    pub fn data_sar_sel(&mut self) -> DATA_SAR_SEL_W<CTRL_SPEC> {
+        DATA_SAR_SEL_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
     #[inline(always)]
     #[must_use]
-    pub fn data_to_i2s(&mut self) -> DATA_TO_I2S_W<CTRL_SPEC, 26> {
-        DATA_TO_I2S_W::new(self)
+    pub fn data_to_i2s(&mut self) -> DATA_TO_I2S_W<CTRL_SPEC> {
+        DATA_TO_I2S_W::new(self, 26)
     }
     #[doc = "Bits 27:28 - Force option to xpd sar blocks."]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_sar_force(&mut self) -> XPD_SAR_FORCE_W<CTRL_SPEC, 27> {
-        XPD_SAR_FORCE_W::new(self)
+    pub fn xpd_sar_force(&mut self) -> XPD_SAR_FORCE_W<CTRL_SPEC> {
+        XPD_SAR_FORCE_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - Wait arbit signal stable after sar_done."]
     #[inline(always)]
     #[must_use]
-    pub fn wait_arb_cycle(&mut self) -> WAIT_ARB_CYCLE_W<CTRL_SPEC, 30> {
-        WAIT_ARB_CYCLE_W::new(self)
+    pub fn wait_arb_cycle(&mut self) -> WAIT_ARB_CYCLE_W<CTRL_SPEC> {
+        WAIT_ARB_CYCLE_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

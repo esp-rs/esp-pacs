@@ -5,11 +5,11 @@ pub type W = crate::W<OUTFIFO_PUSH_SPEC>;
 #[doc = "Field `OUTFIFO_WDATA` reader - APB out FIFO write data."]
 pub type OUTFIFO_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `OUTFIFO_WDATA` writer - APB out FIFO write data."]
-pub type OUTFIFO_WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type OUTFIFO_WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `OUTFIFO_PUSH` reader - APB out FIFO push."]
 pub type OUTFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_PUSH` writer - APB out FIFO push."]
-pub type OUTFIFO_PUSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTFIFO_PUSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - APB out FIFO write data."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUTFIFO_PUSH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - APB out FIFO write data."]
     #[inline(always)]
     #[must_use]
-    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<OUTFIFO_PUSH_SPEC, 0> {
-        OUTFIFO_WDATA_W::new(self)
+    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<OUTFIFO_PUSH_SPEC> {
+        OUTFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 16 - APB out FIFO push."]
     #[inline(always)]
     #[must_use]
-    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<OUTFIFO_PUSH_SPEC, 16> {
-        OUTFIFO_PUSH_W::new(self)
+    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<OUTFIFO_PUSH_SPEC> {
+        OUTFIFO_PUSH_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

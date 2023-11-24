@@ -5,11 +5,11 @@ pub type W = crate::W<AT_CMD_CHAR_SYNC_SPEC>;
 #[doc = "Field `AT_CMD_CHAR` reader - This register is used to configure the content of at_cmd char."]
 pub type AT_CMD_CHAR_R = crate::FieldReader;
 #[doc = "Field `AT_CMD_CHAR` writer - This register is used to configure the content of at_cmd char."]
-pub type AT_CMD_CHAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type AT_CMD_CHAR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CHAR_NUM` reader - This register is used to configure the num of continuous at_cmd chars received by receiver."]
 pub type CHAR_NUM_R = crate::FieldReader;
 #[doc = "Field `CHAR_NUM` writer - This register is used to configure the num of continuous at_cmd chars received by receiver."]
-pub type CHAR_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CHAR_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the content of at_cmd char."]
     #[inline(always)]
@@ -37,23 +37,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<AT_CMD_CHAR_SYNC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the content of at_cmd char."]
     #[inline(always)]
     #[must_use]
-    pub fn at_cmd_char(&mut self) -> AT_CMD_CHAR_W<AT_CMD_CHAR_SYNC_SPEC, 0> {
-        AT_CMD_CHAR_W::new(self)
+    pub fn at_cmd_char(&mut self) -> AT_CMD_CHAR_W<AT_CMD_CHAR_SYNC_SPEC> {
+        AT_CMD_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register is used to configure the num of continuous at_cmd chars received by receiver."]
     #[inline(always)]
     #[must_use]
-    pub fn char_num(&mut self) -> CHAR_NUM_W<AT_CMD_CHAR_SYNC_SPEC, 8> {
-        CHAR_NUM_W::new(self)
+    pub fn char_num(&mut self) -> CHAR_NUM_W<AT_CMD_CHAR_SYNC_SPEC> {
+        CHAR_NUM_W::new(self, 8)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

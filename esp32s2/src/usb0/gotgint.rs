@@ -5,27 +5,27 @@ pub type W = crate::W<GOTGINT_SPEC>;
 #[doc = "Field `SESENDDET` reader - "]
 pub type SESENDDET_R = crate::BitReader;
 #[doc = "Field `SESENDDET` writer - "]
-pub type SESENDDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SESENDDET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SESREQSUCSTSCHNG` reader - "]
 pub type SESREQSUCSTSCHNG_R = crate::BitReader;
 #[doc = "Field `SESREQSUCSTSCHNG` writer - "]
-pub type SESREQSUCSTSCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SESREQSUCSTSCHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSTNEGSUCSTSCHNG` reader - "]
 pub type HSTNEGSUCSTSCHNG_R = crate::BitReader;
 #[doc = "Field `HSTNEGSUCSTSCHNG` writer - "]
-pub type HSTNEGSUCSTSCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSTNEGSUCSTSCHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSTNEGDET` reader - "]
 pub type HSTNEGDET_R = crate::BitReader;
 #[doc = "Field `HSTNEGDET` writer - "]
-pub type HSTNEGDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSTNEGDET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADEVTOUTCHG` reader - "]
 pub type ADEVTOUTCHG_R = crate::BitReader;
 #[doc = "Field `ADEVTOUTCHG` writer - "]
-pub type ADEVTOUTCHG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADEVTOUTCHG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBNCEDONE` reader - "]
 pub type DBNCEDONE_R = crate::BitReader;
 #[doc = "Field `DBNCEDONE` writer - "]
-pub type DBNCEDONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBNCEDONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -80,45 +80,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GOTGINT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC, 2> {
-        SESENDDET_W::new(self)
+    pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC> {
+        SESENDDET_W::new(self, 2)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<GOTGINT_SPEC, 8> {
-        SESREQSUCSTSCHNG_W::new(self)
+    pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<GOTGINT_SPEC> {
+        SESREQSUCSTSCHNG_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<GOTGINT_SPEC, 9> {
-        HSTNEGSUCSTSCHNG_W::new(self)
+    pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<GOTGINT_SPEC> {
+        HSTNEGSUCSTSCHNG_W::new(self, 9)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn hstnegdet(&mut self) -> HSTNEGDET_W<GOTGINT_SPEC, 17> {
-        HSTNEGDET_W::new(self)
+    pub fn hstnegdet(&mut self) -> HSTNEGDET_W<GOTGINT_SPEC> {
+        HSTNEGDET_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<GOTGINT_SPEC, 18> {
-        ADEVTOUTCHG_W::new(self)
+    pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<GOTGINT_SPEC> {
+        ADEVTOUTCHG_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn dbncedone(&mut self) -> DBNCEDONE_W<GOTGINT_SPEC, 19> {
-        DBNCEDONE_W::new(self)
+    pub fn dbncedone(&mut self) -> DBNCEDONE_W<GOTGINT_SPEC> {
+        DBNCEDONE_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

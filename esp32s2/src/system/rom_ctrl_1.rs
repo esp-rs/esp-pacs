@@ -5,11 +5,11 @@ pub type W = crate::W<ROM_CTRL_1_SPEC>;
 #[doc = "Field `ROM_FORCE_PD` reader - This field is used to power down internal ROM."]
 pub type ROM_FORCE_PD_R = crate::FieldReader;
 #[doc = "Field `ROM_FORCE_PD` writer - This field is used to power down internal ROM."]
-pub type ROM_FORCE_PD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_FORCE_PD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ROM_FORCE_PU` reader - This field is used to power up internal ROM."]
 pub type ROM_FORCE_PU_R = crate::FieldReader;
 #[doc = "Field `ROM_FORCE_PU` writer - This field is used to power up internal ROM."]
-pub type ROM_FORCE_PU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_FORCE_PU_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to power down internal ROM."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ROM_CTRL_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - This field is used to power down internal ROM."]
     #[inline(always)]
     #[must_use]
-    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<ROM_CTRL_1_SPEC, 0> {
-        ROM_FORCE_PD_W::new(self)
+    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<ROM_CTRL_1_SPEC> {
+        ROM_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - This field is used to power up internal ROM."]
     #[inline(always)]
     #[must_use]
-    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<ROM_CTRL_1_SPEC, 2> {
-        ROM_FORCE_PU_W::new(self)
+    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<ROM_CTRL_1_SPEC> {
+        ROM_FORCE_PU_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

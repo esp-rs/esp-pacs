@@ -5,7 +5,7 @@ pub type W = crate::W<PARL_IO_INTR_MAP_SPEC>;
 #[doc = "Field `PARL_IO_INTR_MAP` reader - Need add description"]
 pub type PARL_IO_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `PARL_IO_INTR_MAP` writer - Need add description"]
-pub type PARL_IO_INTR_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PARL_IO_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PARL_IO_INTR_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn parl_io_intr_map(&mut self) -> PARL_IO_INTR_MAP_W<PARL_IO_INTR_MAP_SPEC, 0> {
-        PARL_IO_INTR_MAP_W::new(self)
+    pub fn parl_io_intr_map(&mut self) -> PARL_IO_INTR_MAP_W<PARL_IO_INTR_MAP_SPEC> {
+        PARL_IO_INTR_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

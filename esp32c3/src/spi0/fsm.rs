@@ -9,7 +9,7 @@ pub type EM_ST_R = crate::FieldReader;
 #[doc = "Field `CSPI_LOCK_DELAY_TIME` reader - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
 pub type CSPI_LOCK_DELAY_TIME_R = crate::FieldReader;
 #[doc = "Field `CSPI_LOCK_DELAY_TIME` writer - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
-pub type CSPI_LOCK_DELAY_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CSPI_LOCK_DELAY_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:3 - The current status of SPI0 slave FSM: spi0_slv_st. 0: idle state, 1: preparation state, 2: send command state, 3: send address state, 4: wait state, 5: read data state, 6:write data state, 7: done state, 8: read data end state."]
     #[inline(always)]
@@ -43,15 +43,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FSM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 7:11 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
     #[inline(always)]
     #[must_use]
-    pub fn cspi_lock_delay_time(&mut self) -> CSPI_LOCK_DELAY_TIME_W<FSM_SPEC, 7> {
-        CSPI_LOCK_DELAY_TIME_W::new(self)
+    pub fn cspi_lock_delay_time(&mut self) -> CSPI_LOCK_DELAY_TIME_W<FSM_SPEC> {
+        CSPI_LOCK_DELAY_TIME_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,43 +5,43 @@ pub type W = crate::W<DIEPMSK_SPEC>;
 #[doc = "Field `DI_XFERCOMPLMSK` reader - "]
 pub type DI_XFERCOMPLMSK_R = crate::BitReader;
 #[doc = "Field `DI_XFERCOMPLMSK` writer - "]
-pub type DI_XFERCOMPLMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_XFERCOMPLMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_EPDISBLDMSK` reader - "]
 pub type DI_EPDISBLDMSK_R = crate::BitReader;
 #[doc = "Field `DI_EPDISBLDMSK` writer - "]
-pub type DI_EPDISBLDMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_EPDISBLDMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_AHBERMSK` reader - "]
 pub type DI_AHBERMSK_R = crate::BitReader;
 #[doc = "Field `DI_AHBERMSK` writer - "]
-pub type DI_AHBERMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_AHBERMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMEOUTMSK` reader - "]
 pub type TIMEOUTMSK_R = crate::BitReader;
 #[doc = "Field `TIMEOUTMSK` writer - "]
-pub type TIMEOUTMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMEOUTMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTKNTXFEMPMSK` reader - "]
 pub type INTKNTXFEMPMSK_R = crate::BitReader;
 #[doc = "Field `INTKNTXFEMPMSK` writer - "]
-pub type INTKNTXFEMPMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTKNTXFEMPMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTKNEPMISMSK` reader - "]
 pub type INTKNEPMISMSK_R = crate::BitReader;
 #[doc = "Field `INTKNEPMISMSK` writer - "]
-pub type INTKNEPMISMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTKNEPMISMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPNAKEFFMSK` reader - "]
 pub type INEPNAKEFFMSK_R = crate::BitReader;
 #[doc = "Field `INEPNAKEFFMSK` writer - "]
-pub type INEPNAKEFFMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPNAKEFFMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFIFOUNDRNMSK` reader - "]
 pub type TXFIFOUNDRNMSK_R = crate::BitReader;
 #[doc = "Field `TXFIFOUNDRNMSK` writer - "]
-pub type TXFIFOUNDRNMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFOUNDRNMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BNAININTRMSK` reader - "]
 pub type BNAININTRMSK_R = crate::BitReader;
 #[doc = "Field `BNAININTRMSK` writer - "]
-pub type BNAININTRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BNAININTRMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DI_NAKMSK` reader - "]
 pub type DI_NAKMSK_R = crate::BitReader;
 #[doc = "Field `DI_NAKMSK` writer - "]
-pub type DI_NAKMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DI_NAKMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -135,69 +135,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIEPMSK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn di_xfercomplmsk(&mut self) -> DI_XFERCOMPLMSK_W<DIEPMSK_SPEC, 0> {
-        DI_XFERCOMPLMSK_W::new(self)
+    pub fn di_xfercomplmsk(&mut self) -> DI_XFERCOMPLMSK_W<DIEPMSK_SPEC> {
+        DI_XFERCOMPLMSK_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn di_epdisbldmsk(&mut self) -> DI_EPDISBLDMSK_W<DIEPMSK_SPEC, 1> {
-        DI_EPDISBLDMSK_W::new(self)
+    pub fn di_epdisbldmsk(&mut self) -> DI_EPDISBLDMSK_W<DIEPMSK_SPEC> {
+        DI_EPDISBLDMSK_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn di_ahbermsk(&mut self) -> DI_AHBERMSK_W<DIEPMSK_SPEC, 2> {
-        DI_AHBERMSK_W::new(self)
+    pub fn di_ahbermsk(&mut self) -> DI_AHBERMSK_W<DIEPMSK_SPEC> {
+        DI_AHBERMSK_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<DIEPMSK_SPEC, 3> {
-        TIMEOUTMSK_W::new(self)
+    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<DIEPMSK_SPEC> {
+        TIMEOUTMSK_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<DIEPMSK_SPEC, 4> {
-        INTKNTXFEMPMSK_W::new(self)
+    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<DIEPMSK_SPEC> {
+        INTKNTXFEMPMSK_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn intknepmismsk(&mut self) -> INTKNEPMISMSK_W<DIEPMSK_SPEC, 5> {
-        INTKNEPMISMSK_W::new(self)
+    pub fn intknepmismsk(&mut self) -> INTKNEPMISMSK_W<DIEPMSK_SPEC> {
+        INTKNEPMISMSK_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn inepnakeffmsk(&mut self) -> INEPNAKEFFMSK_W<DIEPMSK_SPEC, 6> {
-        INEPNAKEFFMSK_W::new(self)
+    pub fn inepnakeffmsk(&mut self) -> INEPNAKEFFMSK_W<DIEPMSK_SPEC> {
+        INEPNAKEFFMSK_W::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifoundrnmsk(&mut self) -> TXFIFOUNDRNMSK_W<DIEPMSK_SPEC, 8> {
-        TXFIFOUNDRNMSK_W::new(self)
+    pub fn txfifoundrnmsk(&mut self) -> TXFIFOUNDRNMSK_W<DIEPMSK_SPEC> {
+        TXFIFOUNDRNMSK_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn bnainintrmsk(&mut self) -> BNAININTRMSK_W<DIEPMSK_SPEC, 9> {
-        BNAININTRMSK_W::new(self)
+    pub fn bnainintrmsk(&mut self) -> BNAININTRMSK_W<DIEPMSK_SPEC> {
+        BNAININTRMSK_W::new(self, 9)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn di_nakmsk(&mut self) -> DI_NAKMSK_W<DIEPMSK_SPEC, 13> {
-        DI_NAKMSK_W::new(self)
+    pub fn di_nakmsk(&mut self) -> DI_NAKMSK_W<DIEPMSK_SPEC> {
+        DI_NAKMSK_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

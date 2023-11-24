@@ -5,19 +5,19 @@ pub type W = crate::W<MEM_PVT_SPEC>;
 #[doc = "Field `MEM_PATH_LEN` reader - reg_mem_path_len"]
 pub type MEM_PATH_LEN_R = crate::FieldReader;
 #[doc = "Field `MEM_PATH_LEN` writer - reg_mem_path_len"]
-pub type MEM_PATH_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MEM_PATH_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `MEM_ERR_CNT_CLR` writer - reg_mem_err_cnt_clr"]
-pub type MEM_ERR_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_ERR_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MONITOR_EN` reader - reg_mem_pvt_monitor_en"]
 pub type MONITOR_EN_R = crate::BitReader;
 #[doc = "Field `MONITOR_EN` writer - reg_mem_pvt_monitor_en"]
-pub type MONITOR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MONITOR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_TIMING_ERR_CNT` reader - reg_mem_timing_err_cnt"]
 pub type MEM_TIMING_ERR_CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `MEM_VT_SEL` reader - reg_mem_vt_sel"]
 pub type MEM_VT_SEL_R = crate::FieldReader;
 #[doc = "Field `MEM_VT_SEL` writer - reg_mem_vt_sel"]
-pub type MEM_VT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MEM_VT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:3 - reg_mem_path_len"]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_PVT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - reg_mem_path_len"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_path_len(&mut self) -> MEM_PATH_LEN_W<MEM_PVT_SPEC, 0> {
-        MEM_PATH_LEN_W::new(self)
+    pub fn mem_path_len(&mut self) -> MEM_PATH_LEN_W<MEM_PVT_SPEC> {
+        MEM_PATH_LEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - reg_mem_err_cnt_clr"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_err_cnt_clr(&mut self) -> MEM_ERR_CNT_CLR_W<MEM_PVT_SPEC, 4> {
-        MEM_ERR_CNT_CLR_W::new(self)
+    pub fn mem_err_cnt_clr(&mut self) -> MEM_ERR_CNT_CLR_W<MEM_PVT_SPEC> {
+        MEM_ERR_CNT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_mem_pvt_monitor_en"]
     #[inline(always)]
     #[must_use]
-    pub fn monitor_en(&mut self) -> MONITOR_EN_W<MEM_PVT_SPEC, 5> {
-        MONITOR_EN_W::new(self)
+    pub fn monitor_en(&mut self) -> MONITOR_EN_W<MEM_PVT_SPEC> {
+        MONITOR_EN_W::new(self, 5)
     }
     #[doc = "Bits 22:23 - reg_mem_vt_sel"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_vt_sel(&mut self) -> MEM_VT_SEL_W<MEM_PVT_SPEC, 22> {
-        MEM_VT_SEL_W::new(self)
+    pub fn mem_vt_sel(&mut self) -> MEM_VT_SEL_W<MEM_PVT_SPEC> {
+        MEM_VT_SEL_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

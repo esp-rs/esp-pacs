@@ -5,23 +5,23 @@ pub type W = crate::W<RX_MODE_CFG_SPEC>;
 #[doc = "Field `RX_EXT_EN_SEL` reader - Configures rx external enable signal selection from IO PAD."]
 pub type RX_EXT_EN_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_EXT_EN_SEL` writer - Configures rx external enable signal selection from IO PAD."]
-pub type RX_EXT_EN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RX_EXT_EN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `RX_SW_EN` reader - Set this bit to enable data sampling by software."]
 pub type RX_SW_EN_R = crate::BitReader;
 #[doc = "Field `RX_SW_EN` writer - Set this bit to enable data sampling by software."]
-pub type RX_SW_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_SW_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_EXT_EN_INV` reader - Set this bit to invert the external enable signal."]
 pub type RX_EXT_EN_INV_R = crate::BitReader;
 #[doc = "Field `RX_EXT_EN_INV` writer - Set this bit to invert the external enable signal."]
-pub type RX_EXT_EN_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_EXT_EN_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_PULSE_SUBMODE_SEL` reader - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
 pub type RX_PULSE_SUBMODE_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_PULSE_SUBMODE_SEL` writer - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
-pub type RX_PULSE_SUBMODE_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RX_PULSE_SUBMODE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RX_SMP_MODE_SEL` reader - Configures the rxd sampling mode. 2'b00: external level enable mode 2'b01: external pulse enable mode 2'b10: internal software enable mode"]
 pub type RX_SMP_MODE_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_SMP_MODE_SEL` writer - Configures the rxd sampling mode. 2'b00: external level enable mode 2'b01: external pulse enable mode 2'b10: internal software enable mode"]
-pub type RX_SMP_MODE_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_SMP_MODE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 21:24 - Configures rx external enable signal selection from IO PAD."]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RX_MODE_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 21:24 - Configures rx external enable signal selection from IO PAD."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<RX_MODE_CFG_SPEC, 21> {
-        RX_EXT_EN_SEL_W::new(self)
+    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<RX_MODE_CFG_SPEC> {
+        RX_EXT_EN_SEL_W::new(self, 21)
     }
     #[doc = "Bit 25 - Set this bit to enable data sampling by software."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_sw_en(&mut self) -> RX_SW_EN_W<RX_MODE_CFG_SPEC, 25> {
-        RX_SW_EN_W::new(self)
+    pub fn rx_sw_en(&mut self) -> RX_SW_EN_W<RX_MODE_CFG_SPEC> {
+        RX_SW_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to invert the external enable signal."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ext_en_inv(&mut self) -> RX_EXT_EN_INV_W<RX_MODE_CFG_SPEC, 26> {
-        RX_EXT_EN_INV_W::new(self)
+    pub fn rx_ext_en_inv(&mut self) -> RX_EXT_EN_INV_W<RX_MODE_CFG_SPEC> {
+        RX_EXT_EN_INV_W::new(self, 26)
     }
     #[doc = "Bits 27:29 - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pulse_submode_sel(&mut self) -> RX_PULSE_SUBMODE_SEL_W<RX_MODE_CFG_SPEC, 27> {
-        RX_PULSE_SUBMODE_SEL_W::new(self)
+    pub fn rx_pulse_submode_sel(&mut self) -> RX_PULSE_SUBMODE_SEL_W<RX_MODE_CFG_SPEC> {
+        RX_PULSE_SUBMODE_SEL_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - Configures the rxd sampling mode. 2'b00: external level enable mode 2'b01: external pulse enable mode 2'b10: internal software enable mode"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_smp_mode_sel(&mut self) -> RX_SMP_MODE_SEL_W<RX_MODE_CFG_SPEC, 30> {
-        RX_SMP_MODE_SEL_W::new(self)
+    pub fn rx_smp_mode_sel(&mut self) -> RX_SMP_MODE_SEL_W<RX_MODE_CFG_SPEC> {
+        RX_SMP_MODE_SEL_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,9 +5,9 @@ pub type W = crate::W<LP_CPU_PWR1_SPEC>;
 #[doc = "Field `LP_CPU_WAKEUP_EN` reader - need_des"]
 pub type LP_CPU_WAKEUP_EN_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_CPU_WAKEUP_EN` writer - need_des"]
-pub type LP_CPU_WAKEUP_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type LP_CPU_WAKEUP_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `LP_CPU_SLEEP_REQ` writer - need_des"]
-pub type LP_CPU_SLEEP_REQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_CPU_SLEEP_REQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
@@ -29,21 +29,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_CPU_PWR1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_cpu_wakeup_en(&mut self) -> LP_CPU_WAKEUP_EN_W<LP_CPU_PWR1_SPEC, 0> {
-        LP_CPU_WAKEUP_EN_W::new(self)
+    pub fn lp_cpu_wakeup_en(&mut self) -> LP_CPU_WAKEUP_EN_W<LP_CPU_PWR1_SPEC> {
+        LP_CPU_WAKEUP_EN_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_cpu_sleep_req(&mut self) -> LP_CPU_SLEEP_REQ_W<LP_CPU_PWR1_SPEC, 31> {
-        LP_CPU_SLEEP_REQ_W::new(self)
+    pub fn lp_cpu_sleep_req(&mut self) -> LP_CPU_SLEEP_REQ_W<LP_CPU_PWR1_SPEC> {
+        LP_CPU_SLEEP_REQ_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

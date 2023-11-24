@@ -5,35 +5,35 @@ pub type W = crate::W<SAR_DAC_CTRL2_SPEC>;
 #[doc = "Field `DAC_DC1` reader - DC offset for DAC1 CW generator."]
 pub type DAC_DC1_R = crate::FieldReader;
 #[doc = "Field `DAC_DC1` writer - DC offset for DAC1 CW generator."]
-pub type DAC_DC1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DAC_DC1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DAC_DC2` reader - DC offset for DAC2 CW generator."]
 pub type DAC_DC2_R = crate::FieldReader;
 #[doc = "Field `DAC_DC2` writer - DC offset for DAC2 CW generator."]
-pub type DAC_DC2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DAC_DC2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DAC_SCALE1` reader - DAC1 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
 pub type DAC_SCALE1_R = crate::FieldReader;
 #[doc = "Field `DAC_SCALE1` writer - DAC1 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
-pub type DAC_SCALE1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DAC_SCALE1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DAC_SCALE2` reader - DAC2 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
 pub type DAC_SCALE2_R = crate::FieldReader;
 #[doc = "Field `DAC_SCALE2` writer - DAC2 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
-pub type DAC_SCALE2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DAC_SCALE2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DAC_INV1` reader - Invert DAC1. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
 pub type DAC_INV1_R = crate::FieldReader;
 #[doc = "Field `DAC_INV1` writer - Invert DAC1. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
-pub type DAC_INV1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DAC_INV1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DAC_INV2` reader - Invert DAC2. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
 pub type DAC_INV2_R = crate::FieldReader;
 #[doc = "Field `DAC_INV2` writer - Invert DAC2. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
-pub type DAC_INV2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DAC_INV2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DAC_CW_EN1` reader - 1: select CW generator as source for PDAC1_DAC. 0: select register RT- CIO_PDAC1_DAC as source for PDAC1_DAC."]
 pub type DAC_CW_EN1_R = crate::BitReader;
 #[doc = "Field `DAC_CW_EN1` writer - 1: select CW generator as source for PDAC1_DAC. 0: select register RT- CIO_PDAC1_DAC as source for PDAC1_DAC."]
-pub type DAC_CW_EN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_CW_EN1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC_CW_EN2` reader - 1: select CW generator as source for PDAC2_DAC. 0: select register RT- CIO_PDAC2_DAC as source for PDAC2_DAC."]
 pub type DAC_CW_EN2_R = crate::BitReader;
 #[doc = "Field `DAC_CW_EN2` writer - 1: select CW generator as source for PDAC2_DAC. 0: select register RT- CIO_PDAC2_DAC as source for PDAC2_DAC."]
-pub type DAC_CW_EN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_CW_EN2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - DC offset for DAC1 CW generator."]
     #[inline(always)]
@@ -94,57 +94,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_DAC_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - DC offset for DAC1 CW generator."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_dc1(&mut self) -> DAC_DC1_W<SAR_DAC_CTRL2_SPEC, 0> {
-        DAC_DC1_W::new(self)
+    pub fn dac_dc1(&mut self) -> DAC_DC1_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_DC1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DC offset for DAC2 CW generator."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_dc2(&mut self) -> DAC_DC2_W<SAR_DAC_CTRL2_SPEC, 8> {
-        DAC_DC2_W::new(self)
+    pub fn dac_dc2(&mut self) -> DAC_DC2_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_DC2_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - DAC1 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_scale1(&mut self) -> DAC_SCALE1_W<SAR_DAC_CTRL2_SPEC, 16> {
-        DAC_SCALE1_W::new(self)
+    pub fn dac_scale1(&mut self) -> DAC_SCALE1_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_SCALE1_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - DAC2 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_scale2(&mut self) -> DAC_SCALE2_W<SAR_DAC_CTRL2_SPEC, 18> {
-        DAC_SCALE2_W::new(self)
+    pub fn dac_scale2(&mut self) -> DAC_SCALE2_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_SCALE2_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - Invert DAC1. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_inv1(&mut self) -> DAC_INV1_W<SAR_DAC_CTRL2_SPEC, 20> {
-        DAC_INV1_W::new(self)
+    pub fn dac_inv1(&mut self) -> DAC_INV1_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_INV1_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - Invert DAC2. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_inv2(&mut self) -> DAC_INV2_W<SAR_DAC_CTRL2_SPEC, 22> {
-        DAC_INV2_W::new(self)
+    pub fn dac_inv2(&mut self) -> DAC_INV2_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_INV2_W::new(self, 22)
     }
     #[doc = "Bit 24 - 1: select CW generator as source for PDAC1_DAC. 0: select register RT- CIO_PDAC1_DAC as source for PDAC1_DAC."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_cw_en1(&mut self) -> DAC_CW_EN1_W<SAR_DAC_CTRL2_SPEC, 24> {
-        DAC_CW_EN1_W::new(self)
+    pub fn dac_cw_en1(&mut self) -> DAC_CW_EN1_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_CW_EN1_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: select CW generator as source for PDAC2_DAC. 0: select register RT- CIO_PDAC2_DAC as source for PDAC2_DAC."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_cw_en2(&mut self) -> DAC_CW_EN2_W<SAR_DAC_CTRL2_SPEC, 25> {
-        DAC_CW_EN2_W::new(self)
+    pub fn dac_cw_en2(&mut self) -> DAC_CW_EN2_W<SAR_DAC_CTRL2_SPEC> {
+        DAC_CW_EN2_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<FUNC_OUT_SEL_CFG_SPEC>;
 #[doc = "Field `OUT_SEL` reader - select one of the 256 output to 40 GPIO"]
 pub type OUT_SEL_R = crate::FieldReader<u16>;
 #[doc = "Field `OUT_SEL` writer - select one of the 256 output to 40 GPIO"]
-pub type OUT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type OUT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `INV_SEL` reader - invert the output value if you want to revert the output value setting the value to 1"]
 pub type INV_SEL_R = crate::BitReader;
 #[doc = "Field `INV_SEL` writer - invert the output value if you want to revert the output value setting the value to 1"]
-pub type INV_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OEN_SEL` reader - weather using the logical oen signal or not using the value setting by the register"]
 pub type OEN_SEL_R = crate::BitReader;
 #[doc = "Field `OEN_SEL` writer - weather using the logical oen signal or not using the value setting by the register"]
-pub type OEN_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OEN_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OEN_INV_SEL` reader - invert the output enable value if you want to revert the output enable value setting the value to 1"]
 pub type OEN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `OEN_INV_SEL` writer - invert the output enable value if you want to revert the output enable value setting the value to 1"]
-pub type OEN_INV_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OEN_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - select one of the 256 output to 40 GPIO"]
     #[inline(always)]
@@ -54,33 +54,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FUNC_OUT_SEL_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - select one of the 256 output to 40 GPIO"]
     #[inline(always)]
     #[must_use]
-    pub fn out_sel(&mut self) -> OUT_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 0> {
-        OUT_SEL_W::new(self)
+    pub fn out_sel(&mut self) -> OUT_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+        OUT_SEL_W::new(self, 0)
     }
     #[doc = "Bit 9 - invert the output value if you want to revert the output value setting the value to 1"]
     #[inline(always)]
     #[must_use]
-    pub fn inv_sel(&mut self) -> INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 9> {
-        INV_SEL_W::new(self)
+    pub fn inv_sel(&mut self) -> INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+        INV_SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - weather using the logical oen signal or not using the value setting by the register"]
     #[inline(always)]
     #[must_use]
-    pub fn oen_sel(&mut self) -> OEN_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 10> {
-        OEN_SEL_W::new(self)
+    pub fn oen_sel(&mut self) -> OEN_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+        OEN_SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - invert the output enable value if you want to revert the output enable value setting the value to 1"]
     #[inline(always)]
     #[must_use]
-    pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC, 11> {
-        OEN_INV_SEL_W::new(self)
+    pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+        OEN_INV_SEL_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

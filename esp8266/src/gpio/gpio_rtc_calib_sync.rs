@@ -5,11 +5,11 @@ pub type W = crate::W<GPIO_RTC_CALIB_SYNC_SPEC>;
 #[doc = "Field `RTC_PERIOD_NUM` reader - The cycle number of RTC-clock during RTC-clock-calibration"]
 pub type RTC_PERIOD_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_PERIOD_NUM` writer - The cycle number of RTC-clock during RTC-clock-calibration"]
-pub type RTC_PERIOD_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type RTC_PERIOD_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `RTC_CALIB_START` reader - Positvie edge of this bit will trigger the RTC-clock-calibration process."]
 pub type RTC_CALIB_START_R = crate::BitReader;
 #[doc = "Field `RTC_CALIB_START` writer - Positvie edge of this bit will trigger the RTC-clock-calibration process."]
-pub type RTC_CALIB_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_CALIB_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9 - The cycle number of RTC-clock during RTC-clock-calibration"]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_RTC_CALIB_SYNC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - The cycle number of RTC-clock during RTC-clock-calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_period_num(&mut self) -> RTC_PERIOD_NUM_W<GPIO_RTC_CALIB_SYNC_SPEC, 0> {
-        RTC_PERIOD_NUM_W::new(self)
+    pub fn rtc_period_num(&mut self) -> RTC_PERIOD_NUM_W<GPIO_RTC_CALIB_SYNC_SPEC> {
+        RTC_PERIOD_NUM_W::new(self, 0)
     }
     #[doc = "Bit 31 - Positvie edge of this bit will trigger the RTC-clock-calibration process."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_calib_start(&mut self) -> RTC_CALIB_START_W<GPIO_RTC_CALIB_SYNC_SPEC, 31> {
-        RTC_CALIB_START_W::new(self)
+    pub fn rtc_calib_start(&mut self) -> RTC_CALIB_START_W<GPIO_RTC_CALIB_SYNC_SPEC> {
+        RTC_CALIB_START_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

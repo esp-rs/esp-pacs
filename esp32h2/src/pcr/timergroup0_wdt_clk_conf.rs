@@ -5,11 +5,11 @@ pub type W = crate::W<TIMERGROUP0_WDT_CLK_CONF_SPEC>;
 #[doc = "Field `TG0_WDT_CLK_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
 pub type TG0_WDT_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `TG0_WDT_CLK_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
-pub type TG0_WDT_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TG0_WDT_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TG0_WDT_CLK_EN` reader - Set 1 to enable timer_group0 wdt clock"]
 pub type TG0_WDT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TG0_WDT_CLK_EN` writer - Set 1 to enable timer_group0 wdt clock"]
-pub type TG0_WDT_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TG0_WDT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMERGROUP0_WDT_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn tg0_wdt_clk_sel(&mut self) -> TG0_WDT_CLK_SEL_W<TIMERGROUP0_WDT_CLK_CONF_SPEC, 20> {
-        TG0_WDT_CLK_SEL_W::new(self)
+    pub fn tg0_wdt_clk_sel(&mut self) -> TG0_WDT_CLK_SEL_W<TIMERGROUP0_WDT_CLK_CONF_SPEC> {
+        TG0_WDT_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable timer_group0 wdt clock"]
     #[inline(always)]
     #[must_use]
-    pub fn tg0_wdt_clk_en(&mut self) -> TG0_WDT_CLK_EN_W<TIMERGROUP0_WDT_CLK_CONF_SPEC, 22> {
-        TG0_WDT_CLK_EN_W::new(self)
+    pub fn tg0_wdt_clk_en(&mut self) -> TG0_WDT_CLK_EN_W<TIMERGROUP0_WDT_CLK_CONF_SPEC> {
+        TG0_WDT_CLK_EN_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

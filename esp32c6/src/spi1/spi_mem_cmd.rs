@@ -9,63 +9,63 @@ pub type SPI_MEM_SLV_ST_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_FLASH_PE` reader - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_PE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PE` writer - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_PE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_USR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR` writer - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_USR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_USR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_HPM` reader - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_HPM_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_HPM` writer - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_HPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_HPM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_RES` reader - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_RES_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_RES` writer - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_RES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_DP` reader - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_DP_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_DP` writer - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_DP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_DP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_CE` reader - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_CE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_CE` writer - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_CE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_CE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_BE` reader - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_BE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_BE` writer - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_BE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_BE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_SE` reader - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_SE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_SE` writer - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_SE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_SE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_PP` reader - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
 pub type SPI_MEM_FLASH_PP_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PP` writer - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_PP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_WRSR` reader - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_WRSR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_WRSR` writer - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WRSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_WRSR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_RDSR` reader - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_RDSR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_RDSR` writer - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RDSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_RDSR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_RDID` reader - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
 pub type SPI_MEM_FLASH_RDID_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_RDID` writer - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RDID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_RDID_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_WRDI` reader - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
 pub type SPI_MEM_FLASH_WRDI_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_WRDI` writer - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WRDI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_WRDI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_WREN` reader - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
 pub type SPI_MEM_FLASH_WREN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_WREN` writer - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_WREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FLASH_READ` reader - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
 pub type SPI_MEM_FLASH_READ_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_READ` writer - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_READ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FLASH_READ_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - The current status of SPI1 master FSM."]
     #[inline(always)]
@@ -228,99 +228,99 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 17 - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_pe(&mut self) -> SPI_MEM_FLASH_PE_W<SPI_MEM_CMD_SPEC, 17> {
-        SPI_MEM_FLASH_PE_W::new(self)
+    pub fn spi_mem_flash_pe(&mut self) -> SPI_MEM_FLASH_PE_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_PE_W::new(self, 17)
     }
     #[doc = "Bit 18 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_usr(&mut self) -> SPI_MEM_USR_W<SPI_MEM_CMD_SPEC, 18> {
-        SPI_MEM_USR_W::new(self)
+    pub fn spi_mem_usr(&mut self) -> SPI_MEM_USR_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_USR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_hpm(&mut self) -> SPI_MEM_FLASH_HPM_W<SPI_MEM_CMD_SPEC, 19> {
-        SPI_MEM_FLASH_HPM_W::new(self)
+    pub fn spi_mem_flash_hpm(&mut self) -> SPI_MEM_FLASH_HPM_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_HPM_W::new(self, 19)
     }
     #[doc = "Bit 20 - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_res(&mut self) -> SPI_MEM_FLASH_RES_W<SPI_MEM_CMD_SPEC, 20> {
-        SPI_MEM_FLASH_RES_W::new(self)
+    pub fn spi_mem_flash_res(&mut self) -> SPI_MEM_FLASH_RES_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_RES_W::new(self, 20)
     }
     #[doc = "Bit 21 - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_dp(&mut self) -> SPI_MEM_FLASH_DP_W<SPI_MEM_CMD_SPEC, 21> {
-        SPI_MEM_FLASH_DP_W::new(self)
+    pub fn spi_mem_flash_dp(&mut self) -> SPI_MEM_FLASH_DP_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_DP_W::new(self, 21)
     }
     #[doc = "Bit 22 - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_ce(&mut self) -> SPI_MEM_FLASH_CE_W<SPI_MEM_CMD_SPEC, 22> {
-        SPI_MEM_FLASH_CE_W::new(self)
+    pub fn spi_mem_flash_ce(&mut self) -> SPI_MEM_FLASH_CE_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_CE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_be(&mut self) -> SPI_MEM_FLASH_BE_W<SPI_MEM_CMD_SPEC, 23> {
-        SPI_MEM_FLASH_BE_W::new(self)
+    pub fn spi_mem_flash_be(&mut self) -> SPI_MEM_FLASH_BE_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_BE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_se(&mut self) -> SPI_MEM_FLASH_SE_W<SPI_MEM_CMD_SPEC, 24> {
-        SPI_MEM_FLASH_SE_W::new(self)
+    pub fn spi_mem_flash_se(&mut self) -> SPI_MEM_FLASH_SE_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_SE_W::new(self, 24)
     }
     #[doc = "Bit 25 - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_pp(&mut self) -> SPI_MEM_FLASH_PP_W<SPI_MEM_CMD_SPEC, 25> {
-        SPI_MEM_FLASH_PP_W::new(self)
+    pub fn spi_mem_flash_pp(&mut self) -> SPI_MEM_FLASH_PP_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_PP_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_wrsr(&mut self) -> SPI_MEM_FLASH_WRSR_W<SPI_MEM_CMD_SPEC, 26> {
-        SPI_MEM_FLASH_WRSR_W::new(self)
+    pub fn spi_mem_flash_wrsr(&mut self) -> SPI_MEM_FLASH_WRSR_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_WRSR_W::new(self, 26)
     }
     #[doc = "Bit 27 - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_rdsr(&mut self) -> SPI_MEM_FLASH_RDSR_W<SPI_MEM_CMD_SPEC, 27> {
-        SPI_MEM_FLASH_RDSR_W::new(self)
+    pub fn spi_mem_flash_rdsr(&mut self) -> SPI_MEM_FLASH_RDSR_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_RDSR_W::new(self, 27)
     }
     #[doc = "Bit 28 - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_rdid(&mut self) -> SPI_MEM_FLASH_RDID_W<SPI_MEM_CMD_SPEC, 28> {
-        SPI_MEM_FLASH_RDID_W::new(self)
+    pub fn spi_mem_flash_rdid(&mut self) -> SPI_MEM_FLASH_RDID_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_RDID_W::new(self, 28)
     }
     #[doc = "Bit 29 - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_wrdi(&mut self) -> SPI_MEM_FLASH_WRDI_W<SPI_MEM_CMD_SPEC, 29> {
-        SPI_MEM_FLASH_WRDI_W::new(self)
+    pub fn spi_mem_flash_wrdi(&mut self) -> SPI_MEM_FLASH_WRDI_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_WRDI_W::new(self, 29)
     }
     #[doc = "Bit 30 - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_wren(&mut self) -> SPI_MEM_FLASH_WREN_W<SPI_MEM_CMD_SPEC, 30> {
-        SPI_MEM_FLASH_WREN_W::new(self)
+    pub fn spi_mem_flash_wren(&mut self) -> SPI_MEM_FLASH_WREN_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_WREN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_flash_read(&mut self) -> SPI_MEM_FLASH_READ_W<SPI_MEM_CMD_SPEC, 31> {
-        SPI_MEM_FLASH_READ_W::new(self)
+    pub fn spi_mem_flash_read(&mut self) -> SPI_MEM_FLASH_READ_W<SPI_MEM_CMD_SPEC> {
+        SPI_MEM_FLASH_READ_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -3,17 +3,17 @@ pub type R = crate::R<TRIGGER_SPEC>;
 #[doc = "Register `TRIGGER` writer"]
 pub type W = crate::W<TRIGGER_SPEC>;
 #[doc = "Field `ON` writer - 0\\] set 1 start trace."]
-pub type ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OFF` writer - set 1 stop trace."]
-pub type OFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_LOOP` reader - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
 pub type MEM_LOOP_R = crate::BitReader;
 #[doc = "Field `MEM_LOOP` writer - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
-pub type MEM_LOOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESTART_ENA` reader - enable encoder auto-restart, when lost package, the encoder will end, if enable auto-restart, when fifo empty, encoder will restart and send a sync package."]
 pub type RESTART_ENA_R = crate::BitReader;
 #[doc = "Field `RESTART_ENA` writer - enable encoder auto-restart, when lost package, the encoder will end, if enable auto-restart, when fifo empty, encoder will restart and send a sync package."]
-pub type RESTART_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESTART_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
     #[inline(always)]
@@ -38,33 +38,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TRIGGER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 0\\] set 1 start trace."]
     #[inline(always)]
     #[must_use]
-    pub fn on(&mut self) -> ON_W<TRIGGER_SPEC, 0> {
-        ON_W::new(self)
+    pub fn on(&mut self) -> ON_W<TRIGGER_SPEC> {
+        ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - set 1 stop trace."]
     #[inline(always)]
     #[must_use]
-    pub fn off(&mut self) -> OFF_W<TRIGGER_SPEC, 1> {
-        OFF_W::new(self)
+    pub fn off(&mut self) -> OFF_W<TRIGGER_SPEC> {
+        OFF_W::new(self, 1)
     }
     #[doc = "Bit 2 - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_loop(&mut self) -> MEM_LOOP_W<TRIGGER_SPEC, 2> {
-        MEM_LOOP_W::new(self)
+    pub fn mem_loop(&mut self) -> MEM_LOOP_W<TRIGGER_SPEC> {
+        MEM_LOOP_W::new(self, 2)
     }
     #[doc = "Bit 3 - enable encoder auto-restart, when lost package, the encoder will end, if enable auto-restart, when fifo empty, encoder will restart and send a sync package."]
     #[inline(always)]
     #[must_use]
-    pub fn restart_ena(&mut self) -> RESTART_ENA_W<TRIGGER_SPEC, 3> {
-        RESTART_ENA_W::new(self)
+    pub fn restart_ena(&mut self) -> RESTART_ENA_W<TRIGGER_SPEC> {
+        RESTART_ENA_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

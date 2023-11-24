@@ -17,11 +17,11 @@ pub type OUT_FIFO_FULL_R = crate::BitReader;
 #[doc = "Field `IN_FIFO_RESET` reader - Write 1 to reset JTAG in fifo."]
 pub type IN_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `IN_FIFO_RESET` writer - Write 1 to reset JTAG in fifo."]
-pub type IN_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_FIFO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_FIFO_RESET` reader - Write 1 to reset JTAG out fifo."]
 pub type OUT_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `OUT_FIFO_RESET` writer - Write 1 to reset JTAG out fifo."]
-pub type OUT_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_FIFO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - JTAT in fifo counter."]
     #[inline(always)]
@@ -106,21 +106,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<JFIFO_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 8 - Write 1 to reset JTAG in fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn in_fifo_reset(&mut self) -> IN_FIFO_RESET_W<JFIFO_ST_SPEC, 8> {
-        IN_FIFO_RESET_W::new(self)
+    pub fn in_fifo_reset(&mut self) -> IN_FIFO_RESET_W<JFIFO_ST_SPEC> {
+        IN_FIFO_RESET_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to reset JTAG out fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn out_fifo_reset(&mut self) -> OUT_FIFO_RESET_W<JFIFO_ST_SPEC, 9> {
-        OUT_FIFO_RESET_W::new(self)
+    pub fn out_fifo_reset(&mut self) -> OUT_FIFO_RESET_W<JFIFO_ST_SPEC> {
+        OUT_FIFO_RESET_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

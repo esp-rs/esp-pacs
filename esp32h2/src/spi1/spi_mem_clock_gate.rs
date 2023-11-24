@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_MEM_CLOCK_GATE_SPEC>;
 #[doc = "Field `SPI_MEM_CLK_EN` reader - Register clock gate enable signal. 1: Enable. 0: Disable."]
 pub type SPI_MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CLK_EN` writer - Register clock gate enable signal. 1: Enable. 0: Disable."]
-pub type SPI_MEM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0: Disable."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CLOCK_GATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0: Disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_clk_en(&mut self) -> SPI_MEM_CLK_EN_W<SPI_MEM_CLOCK_GATE_SPEC, 0> {
-        SPI_MEM_CLK_EN_W::new(self)
+    pub fn spi_mem_clk_en(&mut self) -> SPI_MEM_CLK_EN_W<SPI_MEM_CLOCK_GATE_SPEC> {
+        SPI_MEM_CLK_EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

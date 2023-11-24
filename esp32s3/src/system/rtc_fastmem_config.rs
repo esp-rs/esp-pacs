@@ -5,15 +5,15 @@ pub type W = crate::W<RTC_FASTMEM_CONFIG_SPEC>;
 #[doc = "Field `RTC_MEM_CRC_START` reader - Set 1 to start the CRC of RTC memory"]
 pub type RTC_MEM_CRC_START_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_START` writer - Set 1 to start the CRC of RTC memory"]
-pub type RTC_MEM_CRC_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_MEM_CRC_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - This field is used to set address of RTC memory for CRC."]
 pub type RTC_MEM_CRC_ADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` writer - This field is used to set address of RTC memory for CRC."]
-pub type RTC_MEM_CRC_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type RTC_MEM_CRC_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - This field is used to set length of RTC memory for CRC based on start address."]
 pub type RTC_MEM_CRC_LEN_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` writer - This field is used to set length of RTC memory for CRC based on start address."]
-pub type RTC_MEM_CRC_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type RTC_MEM_CRC_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - This bit stores the status of RTC memory CRC.1 means finished."]
 pub type RTC_MEM_CRC_FINISH_R = crate::BitReader;
 impl R {
@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_FASTMEM_CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 8 - Set 1 to start the CRC of RTC memory"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<RTC_FASTMEM_CONFIG_SPEC, 8> {
-        RTC_MEM_CRC_START_W::new(self)
+    pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<RTC_FASTMEM_CONFIG_SPEC> {
+        RTC_MEM_CRC_START_W::new(self, 8)
     }
     #[doc = "Bits 9:19 - This field is used to set address of RTC memory for CRC."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<RTC_FASTMEM_CONFIG_SPEC, 9> {
-        RTC_MEM_CRC_ADDR_W::new(self)
+    pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<RTC_FASTMEM_CONFIG_SPEC> {
+        RTC_MEM_CRC_ADDR_W::new(self, 9)
     }
     #[doc = "Bits 20:30 - This field is used to set length of RTC memory for CRC based on start address."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<RTC_FASTMEM_CONFIG_SPEC, 20> {
-        RTC_MEM_CRC_LEN_W::new(self)
+    pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<RTC_FASTMEM_CONFIG_SPEC> {
+        RTC_MEM_CRC_LEN_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

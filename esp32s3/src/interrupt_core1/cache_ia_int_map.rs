@@ -5,7 +5,7 @@ pub type W = crate::W<CACHE_IA_INT_MAP_SPEC>;
 #[doc = "Field `CACHE_IA_INT_MAP` reader - this register used to map cache_ia interrupt to one of core1's external interrupt"]
 pub type CACHE_IA_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `CACHE_IA_INT_MAP` writer - this register used to map cache_ia interrupt to one of core1's external interrupt"]
-pub type CACHE_IA_INT_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CACHE_IA_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map cache_ia interrupt to one of core1's external interrupt"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_IA_INT_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - this register used to map cache_ia interrupt to one of core1's external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_map(&mut self) -> CACHE_IA_INT_MAP_W<CACHE_IA_INT_MAP_SPEC, 0> {
-        CACHE_IA_INT_MAP_W::new(self)
+    pub fn cache_ia_int_map(&mut self) -> CACHE_IA_INT_MAP_W<CACHE_IA_INT_MAP_SPEC> {
+        CACHE_IA_INT_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

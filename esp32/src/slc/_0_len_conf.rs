@@ -3,25 +3,25 @@ pub type R = crate::R<_0_LEN_CONF_SPEC>;
 #[doc = "Register `_0_LEN_CONF` writer"]
 pub type W = crate::W<_0_LEN_CONF_SPEC>;
 #[doc = "Field `SLC0_LEN_WDATA` writer - "]
-pub type SLC0_LEN_WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type SLC0_LEN_WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 #[doc = "Field `SLC0_LEN_WR` writer - "]
-pub type SLC0_LEN_WR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_LEN_WR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_LEN_INC` writer - "]
-pub type SLC0_LEN_INC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_LEN_INC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_LEN_INC_MORE` writer - "]
-pub type SLC0_LEN_INC_MORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_LEN_INC_MORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_PACKET_LOAD_EN` reader - "]
 pub type SLC0_RX_PACKET_LOAD_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_PACKET_LOAD_EN` writer - "]
-pub type SLC0_RX_PACKET_LOAD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_PACKET_LOAD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TX_PACKET_LOAD_EN` reader - "]
 pub type SLC0_TX_PACKET_LOAD_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_PACKET_LOAD_EN` writer - "]
-pub type SLC0_TX_PACKET_LOAD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TX_PACKET_LOAD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_GET_USED_DSCR` writer - "]
-pub type SLC0_RX_GET_USED_DSCR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_GET_USED_DSCR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TX_GET_USED_DSCR` writer - "]
-pub type SLC0_TX_GET_USED_DSCR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TX_GET_USED_DSCR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_NEW_PKT_IND` reader - "]
 pub type SLC0_RX_NEW_PKT_IND_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_NEW_PKT_IND` reader - "]
@@ -74,57 +74,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<_0_LEN_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_len_wdata(&mut self) -> SLC0_LEN_WDATA_W<_0_LEN_CONF_SPEC, 0> {
-        SLC0_LEN_WDATA_W::new(self)
+    pub fn slc0_len_wdata(&mut self) -> SLC0_LEN_WDATA_W<_0_LEN_CONF_SPEC> {
+        SLC0_LEN_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_len_wr(&mut self) -> SLC0_LEN_WR_W<_0_LEN_CONF_SPEC, 20> {
-        SLC0_LEN_WR_W::new(self)
+    pub fn slc0_len_wr(&mut self) -> SLC0_LEN_WR_W<_0_LEN_CONF_SPEC> {
+        SLC0_LEN_WR_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_len_inc(&mut self) -> SLC0_LEN_INC_W<_0_LEN_CONF_SPEC, 21> {
-        SLC0_LEN_INC_W::new(self)
+    pub fn slc0_len_inc(&mut self) -> SLC0_LEN_INC_W<_0_LEN_CONF_SPEC> {
+        SLC0_LEN_INC_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_len_inc_more(&mut self) -> SLC0_LEN_INC_MORE_W<_0_LEN_CONF_SPEC, 22> {
-        SLC0_LEN_INC_MORE_W::new(self)
+    pub fn slc0_len_inc_more(&mut self) -> SLC0_LEN_INC_MORE_W<_0_LEN_CONF_SPEC> {
+        SLC0_LEN_INC_MORE_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_packet_load_en(&mut self) -> SLC0_RX_PACKET_LOAD_EN_W<_0_LEN_CONF_SPEC, 23> {
-        SLC0_RX_PACKET_LOAD_EN_W::new(self)
+    pub fn slc0_rx_packet_load_en(&mut self) -> SLC0_RX_PACKET_LOAD_EN_W<_0_LEN_CONF_SPEC> {
+        SLC0_RX_PACKET_LOAD_EN_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_packet_load_en(&mut self) -> SLC0_TX_PACKET_LOAD_EN_W<_0_LEN_CONF_SPEC, 24> {
-        SLC0_TX_PACKET_LOAD_EN_W::new(self)
+    pub fn slc0_tx_packet_load_en(&mut self) -> SLC0_TX_PACKET_LOAD_EN_W<_0_LEN_CONF_SPEC> {
+        SLC0_TX_PACKET_LOAD_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_get_used_dscr(&mut self) -> SLC0_RX_GET_USED_DSCR_W<_0_LEN_CONF_SPEC, 25> {
-        SLC0_RX_GET_USED_DSCR_W::new(self)
+    pub fn slc0_rx_get_used_dscr(&mut self) -> SLC0_RX_GET_USED_DSCR_W<_0_LEN_CONF_SPEC> {
+        SLC0_RX_GET_USED_DSCR_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_get_used_dscr(&mut self) -> SLC0_TX_GET_USED_DSCR_W<_0_LEN_CONF_SPEC, 26> {
-        SLC0_TX_GET_USED_DSCR_W::new(self)
+    pub fn slc0_tx_get_used_dscr(&mut self) -> SLC0_TX_GET_USED_DSCR_W<_0_LEN_CONF_SPEC> {
+        SLC0_TX_GET_USED_DSCR_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

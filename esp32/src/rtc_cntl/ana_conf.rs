@@ -5,35 +5,35 @@ pub type W = crate::W<ANA_CONF_SPEC>;
 #[doc = "Field `PLLA_FORCE_PD` reader - PLLA force power down"]
 pub type PLLA_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PLLA_FORCE_PD` writer - PLLA force power down"]
-pub type PLLA_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLA_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLA_FORCE_PU` reader - PLLA force power up"]
 pub type PLLA_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PLLA_FORCE_PU` writer - PLLA force power up"]
-pub type PLLA_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLA_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBPLL_CAL_SLP_START` reader - start BBPLL calibration during sleep"]
 pub type BBPLL_CAL_SLP_START_R = crate::BitReader;
 #[doc = "Field `BBPLL_CAL_SLP_START` writer - start BBPLL calibration during sleep"]
-pub type BBPLL_CAL_SLP_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BBPLL_CAL_SLP_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVTMON_PU` reader - 1: PVTMON power up otherwise power down"]
 pub type PVTMON_PU_R = crate::BitReader;
 #[doc = "Field `PVTMON_PU` writer - 1: PVTMON power up otherwise power down"]
-pub type PVTMON_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVTMON_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXRF_I2C_PU` reader - 1: TXRF_I2C power up otherwise power down"]
 pub type TXRF_I2C_PU_R = crate::BitReader;
 #[doc = "Field `TXRF_I2C_PU` writer - 1: TXRF_I2C power up otherwise power down"]
-pub type TXRF_I2C_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXRF_I2C_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFRX_PBUS_PU` reader - 1: RFRX_PBUS power up otherwise power down"]
 pub type RFRX_PBUS_PU_R = crate::BitReader;
 #[doc = "Field `RFRX_PBUS_PU` writer - 1: RFRX_PBUS power up otherwise power down"]
-pub type RFRX_PBUS_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFRX_PBUS_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CKGEN_I2C_PU` reader - 1: CKGEN_I2C power up otherwise power down"]
 pub type CKGEN_I2C_PU_R = crate::BitReader;
 #[doc = "Field `CKGEN_I2C_PU` writer - 1: CKGEN_I2C power up otherwise power down"]
-pub type CKGEN_I2C_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CKGEN_I2C_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLL_I2C_PU` reader - 1: PLL_I2C power up otherwise power down"]
 pub type PLL_I2C_PU_R = crate::BitReader;
 #[doc = "Field `PLL_I2C_PU` writer - 1: PLL_I2C power up otherwise power down"]
-pub type PLL_I2C_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLL_I2C_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
@@ -109,57 +109,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ANA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
     #[must_use]
-    pub fn plla_force_pd(&mut self) -> PLLA_FORCE_PD_W<ANA_CONF_SPEC, 23> {
-        PLLA_FORCE_PD_W::new(self)
+    pub fn plla_force_pd(&mut self) -> PLLA_FORCE_PD_W<ANA_CONF_SPEC> {
+        PLLA_FORCE_PD_W::new(self, 23)
     }
     #[doc = "Bit 24 - PLLA force power up"]
     #[inline(always)]
     #[must_use]
-    pub fn plla_force_pu(&mut self) -> PLLA_FORCE_PU_W<ANA_CONF_SPEC, 24> {
-        PLLA_FORCE_PU_W::new(self)
+    pub fn plla_force_pu(&mut self) -> PLLA_FORCE_PU_W<ANA_CONF_SPEC> {
+        PLLA_FORCE_PU_W::new(self, 24)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn bbpll_cal_slp_start(&mut self) -> BBPLL_CAL_SLP_START_W<ANA_CONF_SPEC, 25> {
-        BBPLL_CAL_SLP_START_W::new(self)
+    pub fn bbpll_cal_slp_start(&mut self) -> BBPLL_CAL_SLP_START_W<ANA_CONF_SPEC> {
+        BBPLL_CAL_SLP_START_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: PVTMON power up otherwise power down"]
     #[inline(always)]
     #[must_use]
-    pub fn pvtmon_pu(&mut self) -> PVTMON_PU_W<ANA_CONF_SPEC, 26> {
-        PVTMON_PU_W::new(self)
+    pub fn pvtmon_pu(&mut self) -> PVTMON_PU_W<ANA_CONF_SPEC> {
+        PVTMON_PU_W::new(self, 26)
     }
     #[doc = "Bit 27 - 1: TXRF_I2C power up otherwise power down"]
     #[inline(always)]
     #[must_use]
-    pub fn txrf_i2c_pu(&mut self) -> TXRF_I2C_PU_W<ANA_CONF_SPEC, 27> {
-        TXRF_I2C_PU_W::new(self)
+    pub fn txrf_i2c_pu(&mut self) -> TXRF_I2C_PU_W<ANA_CONF_SPEC> {
+        TXRF_I2C_PU_W::new(self, 27)
     }
     #[doc = "Bit 28 - 1: RFRX_PBUS power up otherwise power down"]
     #[inline(always)]
     #[must_use]
-    pub fn rfrx_pbus_pu(&mut self) -> RFRX_PBUS_PU_W<ANA_CONF_SPEC, 28> {
-        RFRX_PBUS_PU_W::new(self)
+    pub fn rfrx_pbus_pu(&mut self) -> RFRX_PBUS_PU_W<ANA_CONF_SPEC> {
+        RFRX_PBUS_PU_W::new(self, 28)
     }
     #[doc = "Bit 30 - 1: CKGEN_I2C power up otherwise power down"]
     #[inline(always)]
     #[must_use]
-    pub fn ckgen_i2c_pu(&mut self) -> CKGEN_I2C_PU_W<ANA_CONF_SPEC, 30> {
-        CKGEN_I2C_PU_W::new(self)
+    pub fn ckgen_i2c_pu(&mut self) -> CKGEN_I2C_PU_W<ANA_CONF_SPEC> {
+        CKGEN_I2C_PU_W::new(self, 30)
     }
     #[doc = "Bit 31 - 1: PLL_I2C power up otherwise power down"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_i2c_pu(&mut self) -> PLL_I2C_PU_W<ANA_CONF_SPEC, 31> {
-        PLL_I2C_PU_W::new(self)
+    pub fn pll_i2c_pu(&mut self) -> PLL_I2C_PU_W<ANA_CONF_SPEC> {
+        PLL_I2C_PU_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

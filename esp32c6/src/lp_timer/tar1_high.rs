@@ -5,9 +5,9 @@ pub type W = crate::W<TAR1_HIGH_SPEC>;
 #[doc = "Field `MAIN_TIMER_TAR_HIGH1` reader - need_des"]
 pub type MAIN_TIMER_TAR_HIGH1_R = crate::FieldReader<u16>;
 #[doc = "Field `MAIN_TIMER_TAR_HIGH1` writer - need_des"]
-pub type MAIN_TIMER_TAR_HIGH1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type MAIN_TIMER_TAR_HIGH1_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `MAIN_TIMER_TAR_EN1` writer - need_des"]
-pub type MAIN_TIMER_TAR_EN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_TAR_EN1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
@@ -29,21 +29,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TAR1_HIGH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_tar_high1(&mut self) -> MAIN_TIMER_TAR_HIGH1_W<TAR1_HIGH_SPEC, 0> {
-        MAIN_TIMER_TAR_HIGH1_W::new(self)
+    pub fn main_timer_tar_high1(&mut self) -> MAIN_TIMER_TAR_HIGH1_W<TAR1_HIGH_SPEC> {
+        MAIN_TIMER_TAR_HIGH1_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_tar_en1(&mut self) -> MAIN_TIMER_TAR_EN1_W<TAR1_HIGH_SPEC, 31> {
-        MAIN_TIMER_TAR_EN1_W::new(self)
+    pub fn main_timer_tar_en1(&mut self) -> MAIN_TIMER_TAR_EN1_W<TAR1_HIGH_SPEC> {
+        MAIN_TIMER_TAR_EN1_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

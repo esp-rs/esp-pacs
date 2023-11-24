@@ -1,7 +1,7 @@
 #[doc = "Register `CONFIG_UPDATE` writer"]
 pub type W = crate::W<CONFIG_UPDATE_SPEC>;
 #[doc = "Field `CONFIG_UPDATE` writer - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
-pub type CONFIG_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONFIG_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONFIG_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
     #[inline(always)]
     #[must_use]
-    pub fn config_update(&mut self) -> CONFIG_UPDATE_W<CONFIG_UPDATE_SPEC, 0> {
-        CONFIG_UPDATE_W::new(self)
+    pub fn config_update(&mut self) -> CONFIG_UPDATE_W<CONFIG_UPDATE_SPEC> {
+        CONFIG_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

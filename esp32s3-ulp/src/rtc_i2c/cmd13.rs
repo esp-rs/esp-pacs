@@ -5,7 +5,7 @@ pub type W = crate::W<CMD13_SPEC>;
 #[doc = "Field `COMMAND13` reader - command13"]
 pub type COMMAND13_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND13` writer - command13"]
-pub type COMMAND13_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type COMMAND13_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `COMMAND13_DONE` reader - command13_done"]
 pub type COMMAND13_DONE_R = crate::BitReader;
 impl R {
@@ -35,17 +35,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CMD13_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - command13"]
     #[inline(always)]
     #[must_use]
-    pub fn command13(&mut self) -> COMMAND13_W<CMD13_SPEC, 0> {
-        COMMAND13_W::new(self)
+    pub fn command13(&mut self) -> COMMAND13_W<CMD13_SPEC> {
+        COMMAND13_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

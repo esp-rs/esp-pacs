@@ -5,15 +5,15 @@ pub type W = crate::W<CORE_0_STATUSTABLE1_SPEC>;
 #[doc = "Field `CORE_0_FROM_WORLD_1` reader - This bit is used to confirm world before enter entry 1"]
 pub type CORE_0_FROM_WORLD_1_R = crate::BitReader;
 #[doc = "Field `CORE_0_FROM_WORLD_1` writer - This bit is used to confirm world before enter entry 1"]
-pub type CORE_0_FROM_WORLD_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_FROM_WORLD_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE_0_FROM_ENTRY_1` reader - This filed is used to confirm in which entry before enter entry 1"]
 pub type CORE_0_FROM_ENTRY_1_R = crate::FieldReader;
 #[doc = "Field `CORE_0_FROM_ENTRY_1` writer - This filed is used to confirm in which entry before enter entry 1"]
-pub type CORE_0_FROM_ENTRY_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CORE_0_FROM_ENTRY_1_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CORE_0_CURRENT_1` reader - This bit is used to confirm whether the current state is in entry 1"]
 pub type CORE_0_CURRENT_1_R = crate::BitReader;
 #[doc = "Field `CORE_0_CURRENT_1` writer - This bit is used to confirm whether the current state is in entry 1"]
-pub type CORE_0_CURRENT_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE_0_CURRENT_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 1"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_STATUSTABLE1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 1"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_from_world_1(&mut self) -> CORE_0_FROM_WORLD_1_W<CORE_0_STATUSTABLE1_SPEC, 0> {
-        CORE_0_FROM_WORLD_1_W::new(self)
+    pub fn core_0_from_world_1(&mut self) -> CORE_0_FROM_WORLD_1_W<CORE_0_STATUSTABLE1_SPEC> {
+        CORE_0_FROM_WORLD_1_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - This filed is used to confirm in which entry before enter entry 1"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_from_entry_1(&mut self) -> CORE_0_FROM_ENTRY_1_W<CORE_0_STATUSTABLE1_SPEC, 1> {
-        CORE_0_FROM_ENTRY_1_W::new(self)
+    pub fn core_0_from_entry_1(&mut self) -> CORE_0_FROM_ENTRY_1_W<CORE_0_STATUSTABLE1_SPEC> {
+        CORE_0_FROM_ENTRY_1_W::new(self, 1)
     }
     #[doc = "Bit 5 - This bit is used to confirm whether the current state is in entry 1"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_current_1(&mut self) -> CORE_0_CURRENT_1_W<CORE_0_STATUSTABLE1_SPEC, 5> {
-        CORE_0_CURRENT_1_W::new(self)
+    pub fn core_0_current_1(&mut self) -> CORE_0_CURRENT_1_W<CORE_0_STATUSTABLE1_SPEC> {
+        CORE_0_CURRENT_1_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

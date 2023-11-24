@@ -5,11 +5,11 @@ pub type W = crate::W<CFG_DATA0_SPEC>;
 #[doc = "Field `DEVICE_ID_FN1` reader - configure device id of function1 in cis"]
 pub type DEVICE_ID_FN1_R = crate::FieldReader<u16>;
 #[doc = "Field `DEVICE_ID_FN1` writer - configure device id of function1 in cis"]
-pub type DEVICE_ID_FN1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type DEVICE_ID_FN1_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `USER_ID_FN1` reader - configure user id of function1 in cis"]
 pub type USER_ID_FN1_R = crate::FieldReader<u16>;
 #[doc = "Field `USER_ID_FN1` writer - configure user id of function1 in cis"]
-pub type USER_ID_FN1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type USER_ID_FN1_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - configure device id of function1 in cis"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CFG_DATA0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - configure device id of function1 in cis"]
     #[inline(always)]
     #[must_use]
-    pub fn device_id_fn1(&mut self) -> DEVICE_ID_FN1_W<CFG_DATA0_SPEC, 0> {
-        DEVICE_ID_FN1_W::new(self)
+    pub fn device_id_fn1(&mut self) -> DEVICE_ID_FN1_W<CFG_DATA0_SPEC> {
+        DEVICE_ID_FN1_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - configure user id of function1 in cis"]
     #[inline(always)]
     #[must_use]
-    pub fn user_id_fn1(&mut self) -> USER_ID_FN1_W<CFG_DATA0_SPEC, 16> {
-        USER_ID_FN1_W::new(self)
+    pub fn user_id_fn1(&mut self) -> USER_ID_FN1_W<CFG_DATA0_SPEC> {
+        USER_ID_FN1_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

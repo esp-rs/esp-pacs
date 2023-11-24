@@ -5,7 +5,7 @@ pub type W = crate::W<SLV_RDBUF_DLEN_SPEC>;
 #[doc = "Field `SLV_RDBUF_DBITLEN` reader - In the slave mode it is the length in bits for read-buffer operations. The register value shall be (bit_num-1)."]
 pub type SLV_RDBUF_DBITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_RDBUF_DBITLEN` writer - In the slave mode it is the length in bits for read-buffer operations. The register value shall be (bit_num-1)."]
-pub type SLV_RDBUF_DBITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 24, O, u32>;
+pub type SLV_RDBUF_DBITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 impl R {
     #[doc = "Bits 0:23 - In the slave mode it is the length in bits for read-buffer operations. The register value shall be (bit_num-1)."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLV_RDBUF_DLEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - In the slave mode it is the length in bits for read-buffer operations. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_rdbuf_dbitlen(&mut self) -> SLV_RDBUF_DBITLEN_W<SLV_RDBUF_DLEN_SPEC, 0> {
-        SLV_RDBUF_DBITLEN_W::new(self)
+    pub fn slv_rdbuf_dbitlen(&mut self) -> SLV_RDBUF_DBITLEN_W<SLV_RDBUF_DLEN_SPEC> {
+        SLV_RDBUF_DBITLEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

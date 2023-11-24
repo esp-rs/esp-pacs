@@ -5,27 +5,27 @@ pub type W = crate::W<PAD_HOLD_SPEC>;
 #[doc = "Field `GPIO_PIN0_HOLD` reader - the hold configure of rtc gpio0"]
 pub type GPIO_PIN0_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN0_HOLD` writer - the hold configure of rtc gpio0"]
-pub type GPIO_PIN0_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN0_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN1_HOLD` reader - the hold configure of rtc gpio1"]
 pub type GPIO_PIN1_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN1_HOLD` writer - the hold configure of rtc gpio1"]
-pub type GPIO_PIN1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN2_HOLD` reader - the hold configure of rtc gpio2"]
 pub type GPIO_PIN2_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_HOLD` writer - the hold configure of rtc gpio2"]
-pub type GPIO_PIN2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN3_HOLD` reader - the hold configure of rtc gpio3"]
 pub type GPIO_PIN3_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN3_HOLD` writer - the hold configure of rtc gpio3"]
-pub type GPIO_PIN3_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN3_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN4_HOLD` reader - the hold configure of rtc gpio4"]
 pub type GPIO_PIN4_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN4_HOLD` writer - the hold configure of rtc gpio4"]
-pub type GPIO_PIN4_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN4_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN5_HOLD` reader - the hold configure of rtc gpio5"]
 pub type GPIO_PIN5_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN5_HOLD` writer - the hold configure of rtc gpio5"]
-pub type GPIO_PIN5_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN5_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - the hold configure of rtc gpio0"]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PAD_HOLD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - the hold configure of rtc gpio0"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin0_hold(&mut self) -> GPIO_PIN0_HOLD_W<PAD_HOLD_SPEC, 0> {
-        GPIO_PIN0_HOLD_W::new(self)
+    pub fn gpio_pin0_hold(&mut self) -> GPIO_PIN0_HOLD_W<PAD_HOLD_SPEC> {
+        GPIO_PIN0_HOLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - the hold configure of rtc gpio1"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin1_hold(&mut self) -> GPIO_PIN1_HOLD_W<PAD_HOLD_SPEC, 1> {
-        GPIO_PIN1_HOLD_W::new(self)
+    pub fn gpio_pin1_hold(&mut self) -> GPIO_PIN1_HOLD_W<PAD_HOLD_SPEC> {
+        GPIO_PIN1_HOLD_W::new(self, 1)
     }
     #[doc = "Bit 2 - the hold configure of rtc gpio2"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_hold(&mut self) -> GPIO_PIN2_HOLD_W<PAD_HOLD_SPEC, 2> {
-        GPIO_PIN2_HOLD_W::new(self)
+    pub fn gpio_pin2_hold(&mut self) -> GPIO_PIN2_HOLD_W<PAD_HOLD_SPEC> {
+        GPIO_PIN2_HOLD_W::new(self, 2)
     }
     #[doc = "Bit 3 - the hold configure of rtc gpio3"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin3_hold(&mut self) -> GPIO_PIN3_HOLD_W<PAD_HOLD_SPEC, 3> {
-        GPIO_PIN3_HOLD_W::new(self)
+    pub fn gpio_pin3_hold(&mut self) -> GPIO_PIN3_HOLD_W<PAD_HOLD_SPEC> {
+        GPIO_PIN3_HOLD_W::new(self, 3)
     }
     #[doc = "Bit 4 - the hold configure of rtc gpio4"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin4_hold(&mut self) -> GPIO_PIN4_HOLD_W<PAD_HOLD_SPEC, 4> {
-        GPIO_PIN4_HOLD_W::new(self)
+    pub fn gpio_pin4_hold(&mut self) -> GPIO_PIN4_HOLD_W<PAD_HOLD_SPEC> {
+        GPIO_PIN4_HOLD_W::new(self, 4)
     }
     #[doc = "Bit 5 - the hold configure of rtc gpio5"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin5_hold(&mut self) -> GPIO_PIN5_HOLD_W<PAD_HOLD_SPEC, 5> {
-        GPIO_PIN5_HOLD_W::new(self)
+    pub fn gpio_pin5_hold(&mut self) -> GPIO_PIN5_HOLD_W<PAD_HOLD_SPEC> {
+        GPIO_PIN5_HOLD_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

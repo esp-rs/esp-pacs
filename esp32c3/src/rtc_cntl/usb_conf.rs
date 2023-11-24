@@ -5,7 +5,7 @@ pub type W = crate::W<USB_CONF_SPEC>;
 #[doc = "Field `IO_MUX_RESET_DISABLE` reader - disable io_mux reset"]
 pub type IO_MUX_RESET_DISABLE_R = crate::BitReader;
 #[doc = "Field `IO_MUX_RESET_DISABLE` writer - disable io_mux reset"]
-pub type IO_MUX_RESET_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IO_MUX_RESET_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 18 - disable io_mux reset"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<USB_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 18 - disable io_mux reset"]
     #[inline(always)]
     #[must_use]
-    pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<USB_CONF_SPEC, 18> {
-        IO_MUX_RESET_DISABLE_W::new(self)
+    pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<USB_CONF_SPEC> {
+        IO_MUX_RESET_DISABLE_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

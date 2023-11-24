@@ -5,51 +5,51 @@ pub type W = crate::W<ADC_PAD_SPEC>;
 #[doc = "Field `ADC2_FUN_IE` reader - the input enable of the pad"]
 pub type ADC2_FUN_IE_R = crate::BitReader;
 #[doc = "Field `ADC2_FUN_IE` writer - the input enable of the pad"]
-pub type ADC2_FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_SLP_IE` reader - the input enable of the pad in sleep status"]
 pub type ADC2_SLP_IE_R = crate::BitReader;
 #[doc = "Field `ADC2_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type ADC2_SLP_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_SLP_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_SLP_SEL` reader - the sleep status selection signal of the pad"]
 pub type ADC2_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `ADC2_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type ADC2_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_FUN_SEL` reader - the functional selection signal of the pad"]
 pub type ADC2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `ADC2_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type ADC2_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADC2_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADC1_FUN_IE` reader - the input enable of the pad"]
 pub type ADC1_FUN_IE_R = crate::BitReader;
 #[doc = "Field `ADC1_FUN_IE` writer - the input enable of the pad"]
-pub type ADC1_FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_SLP_IE` reader - the input enable of the pad in sleep status"]
 pub type ADC1_SLP_IE_R = crate::BitReader;
 #[doc = "Field `ADC1_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type ADC1_SLP_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_SLP_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_SLP_SEL` reader - the sleep status selection signal of the pad"]
 pub type ADC1_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `ADC1_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type ADC1_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_FUN_SEL` reader - the functional selection signal of the pad"]
 pub type ADC1_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `ADC1_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type ADC1_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADC1_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADC2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
 pub type ADC2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `ADC2_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type ADC2_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
 pub type ADC1_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `ADC1_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type ADC1_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
 pub type ADC2_HOLD_R = crate::BitReader;
 #[doc = "Field `ADC2_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type ADC2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
 pub type ADC1_HOLD_R = crate::BitReader;
 #[doc = "Field `ADC1_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type ADC1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 18 - the input enable of the pad"]
     #[inline(always)]
@@ -152,81 +152,81 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ADC_PAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 18 - the input enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_fun_ie(&mut self) -> ADC2_FUN_IE_W<ADC_PAD_SPEC, 18> {
-        ADC2_FUN_IE_W::new(self)
+    pub fn adc2_fun_ie(&mut self) -> ADC2_FUN_IE_W<ADC_PAD_SPEC> {
+        ADC2_FUN_IE_W::new(self, 18)
     }
     #[doc = "Bit 19 - the input enable of the pad in sleep status"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_slp_ie(&mut self) -> ADC2_SLP_IE_W<ADC_PAD_SPEC, 19> {
-        ADC2_SLP_IE_W::new(self)
+    pub fn adc2_slp_ie(&mut self) -> ADC2_SLP_IE_W<ADC_PAD_SPEC> {
+        ADC2_SLP_IE_W::new(self, 19)
     }
     #[doc = "Bit 20 - the sleep status selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_slp_sel(&mut self) -> ADC2_SLP_SEL_W<ADC_PAD_SPEC, 20> {
-        ADC2_SLP_SEL_W::new(self)
+    pub fn adc2_slp_sel(&mut self) -> ADC2_SLP_SEL_W<ADC_PAD_SPEC> {
+        ADC2_SLP_SEL_W::new(self, 20)
     }
     #[doc = "Bits 21:22 - the functional selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_fun_sel(&mut self) -> ADC2_FUN_SEL_W<ADC_PAD_SPEC, 21> {
-        ADC2_FUN_SEL_W::new(self)
+    pub fn adc2_fun_sel(&mut self) -> ADC2_FUN_SEL_W<ADC_PAD_SPEC> {
+        ADC2_FUN_SEL_W::new(self, 21)
     }
     #[doc = "Bit 23 - the input enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_fun_ie(&mut self) -> ADC1_FUN_IE_W<ADC_PAD_SPEC, 23> {
-        ADC1_FUN_IE_W::new(self)
+    pub fn adc1_fun_ie(&mut self) -> ADC1_FUN_IE_W<ADC_PAD_SPEC> {
+        ADC1_FUN_IE_W::new(self, 23)
     }
     #[doc = "Bit 24 - the input enable of the pad in sleep status"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_slp_ie(&mut self) -> ADC1_SLP_IE_W<ADC_PAD_SPEC, 24> {
-        ADC1_SLP_IE_W::new(self)
+    pub fn adc1_slp_ie(&mut self) -> ADC1_SLP_IE_W<ADC_PAD_SPEC> {
+        ADC1_SLP_IE_W::new(self, 24)
     }
     #[doc = "Bit 25 - the sleep status selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_slp_sel(&mut self) -> ADC1_SLP_SEL_W<ADC_PAD_SPEC, 25> {
-        ADC1_SLP_SEL_W::new(self)
+    pub fn adc1_slp_sel(&mut self) -> ADC1_SLP_SEL_W<ADC_PAD_SPEC> {
+        ADC1_SLP_SEL_W::new(self, 25)
     }
     #[doc = "Bits 26:27 - the functional selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_fun_sel(&mut self) -> ADC1_FUN_SEL_W<ADC_PAD_SPEC, 26> {
-        ADC1_FUN_SEL_W::new(self)
+    pub fn adc1_fun_sel(&mut self) -> ADC1_FUN_SEL_W<ADC_PAD_SPEC> {
+        ADC1_FUN_SEL_W::new(self, 26)
     }
     #[doc = "Bit 28 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_mux_sel(&mut self) -> ADC2_MUX_SEL_W<ADC_PAD_SPEC, 28> {
-        ADC2_MUX_SEL_W::new(self)
+    pub fn adc2_mux_sel(&mut self) -> ADC2_MUX_SEL_W<ADC_PAD_SPEC> {
+        ADC2_MUX_SEL_W::new(self, 28)
     }
     #[doc = "Bit 29 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_mux_sel(&mut self) -> ADC1_MUX_SEL_W<ADC_PAD_SPEC, 29> {
-        ADC1_MUX_SEL_W::new(self)
+    pub fn adc1_mux_sel(&mut self) -> ADC1_MUX_SEL_W<ADC_PAD_SPEC> {
+        ADC1_MUX_SEL_W::new(self, 29)
     }
     #[doc = "Bit 30 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_hold(&mut self) -> ADC2_HOLD_W<ADC_PAD_SPEC, 30> {
-        ADC2_HOLD_W::new(self)
+    pub fn adc2_hold(&mut self) -> ADC2_HOLD_W<ADC_PAD_SPEC> {
+        ADC2_HOLD_W::new(self, 30)
     }
     #[doc = "Bit 31 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_hold(&mut self) -> ADC1_HOLD_W<ADC_PAD_SPEC, 31> {
-        ADC1_HOLD_W::new(self)
+    pub fn adc1_hold(&mut self) -> ADC1_HOLD_W<ADC_PAD_SPEC> {
+        ADC1_HOLD_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

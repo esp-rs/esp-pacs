@@ -5,11 +5,11 @@ pub type W = crate::W<CPU_PERI_CLK_EN_SPEC>;
 #[doc = "Field `CLK_EN_ASSIST_DEBUG` reader - reg_clk_en_assist_debug"]
 pub type CLK_EN_ASSIST_DEBUG_R = crate::BitReader;
 #[doc = "Field `CLK_EN_ASSIST_DEBUG` writer - reg_clk_en_assist_debug"]
-pub type CLK_EN_ASSIST_DEBUG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_ASSIST_DEBUG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN_DEDICATED_GPIO` reader - reg_clk_en_dedicated_gpio"]
 pub type CLK_EN_DEDICATED_GPIO_R = crate::BitReader;
 #[doc = "Field `CLK_EN_DEDICATED_GPIO` writer - reg_clk_en_dedicated_gpio"]
-pub type CLK_EN_DEDICATED_GPIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_DEDICATED_GPIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 6 - reg_clk_en_assist_debug"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_PERI_CLK_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 6 - reg_clk_en_assist_debug"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en_assist_debug(&mut self) -> CLK_EN_ASSIST_DEBUG_W<CPU_PERI_CLK_EN_SPEC, 6> {
-        CLK_EN_ASSIST_DEBUG_W::new(self)
+    pub fn clk_en_assist_debug(&mut self) -> CLK_EN_ASSIST_DEBUG_W<CPU_PERI_CLK_EN_SPEC> {
+        CLK_EN_ASSIST_DEBUG_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_clk_en_dedicated_gpio"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en_dedicated_gpio(&mut self) -> CLK_EN_DEDICATED_GPIO_W<CPU_PERI_CLK_EN_SPEC, 7> {
-        CLK_EN_DEDICATED_GPIO_W::new(self)
+    pub fn clk_en_dedicated_gpio(&mut self) -> CLK_EN_DEDICATED_GPIO_W<CPU_PERI_CLK_EN_SPEC> {
+        CLK_EN_DEDICATED_GPIO_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -3,19 +3,19 @@ pub type R = crate::R<UPDATE_SPEC>;
 #[doc = "Register `UPDATE` writer"]
 pub type W = crate::W<UPDATE_SPEC>;
 #[doc = "Field `MAIN_TIMER_UPDATE` writer - need_des"]
-pub type MAIN_TIMER_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAIN_TIMER_XTAL_OFF` reader - need_des"]
 pub type MAIN_TIMER_XTAL_OFF_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_XTAL_OFF` writer - need_des"]
-pub type MAIN_TIMER_XTAL_OFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_XTAL_OFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAIN_TIMER_SYS_STALL` reader - need_des"]
 pub type MAIN_TIMER_SYS_STALL_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_SYS_STALL` writer - need_des"]
-pub type MAIN_TIMER_SYS_STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_SYS_STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAIN_TIMER_SYS_RST` reader - need_des"]
 pub type MAIN_TIMER_SYS_RST_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_SYS_RST` writer - need_des"]
-pub type MAIN_TIMER_SYS_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_SYS_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
@@ -55,33 +55,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_update(&mut self) -> MAIN_TIMER_UPDATE_W<UPDATE_SPEC, 28> {
-        MAIN_TIMER_UPDATE_W::new(self)
+    pub fn main_timer_update(&mut self) -> MAIN_TIMER_UPDATE_W<UPDATE_SPEC> {
+        MAIN_TIMER_UPDATE_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_xtal_off(&mut self) -> MAIN_TIMER_XTAL_OFF_W<UPDATE_SPEC, 29> {
-        MAIN_TIMER_XTAL_OFF_W::new(self)
+    pub fn main_timer_xtal_off(&mut self) -> MAIN_TIMER_XTAL_OFF_W<UPDATE_SPEC> {
+        MAIN_TIMER_XTAL_OFF_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_sys_stall(&mut self) -> MAIN_TIMER_SYS_STALL_W<UPDATE_SPEC, 30> {
-        MAIN_TIMER_SYS_STALL_W::new(self)
+    pub fn main_timer_sys_stall(&mut self) -> MAIN_TIMER_SYS_STALL_W<UPDATE_SPEC> {
+        MAIN_TIMER_SYS_STALL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_sys_rst(&mut self) -> MAIN_TIMER_SYS_RST_W<UPDATE_SPEC, 31> {
-        MAIN_TIMER_SYS_RST_W::new(self)
+    pub fn main_timer_sys_rst(&mut self) -> MAIN_TIMER_SYS_RST_W<UPDATE_SPEC> {
+        MAIN_TIMER_SYS_RST_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

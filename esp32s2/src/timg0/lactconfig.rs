@@ -5,47 +5,47 @@ pub type W = crate::W<LACTCONFIG_SPEC>;
 #[doc = "Field `LACT_USE_REFTICK` reader - Reserved."]
 pub type LACT_USE_REFTICK_R = crate::BitReader;
 #[doc = "Field `LACT_USE_REFTICK` writer - Reserved."]
-pub type LACT_USE_REFTICK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_USE_REFTICK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_RTC_ONLY` reader - Reserved."]
 pub type LACT_RTC_ONLY_R = crate::BitReader;
 #[doc = "Field `LACT_RTC_ONLY` writer - Reserved."]
-pub type LACT_RTC_ONLY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_RTC_ONLY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_CPST_EN` reader - Reserved."]
 pub type LACT_CPST_EN_R = crate::BitReader;
 #[doc = "Field `LACT_CPST_EN` writer - Reserved."]
-pub type LACT_CPST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_CPST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_LAC_EN` reader - Reserved."]
 pub type LACT_LAC_EN_R = crate::BitReader;
 #[doc = "Field `LACT_LAC_EN` writer - Reserved."]
-pub type LACT_LAC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_LAC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_ALARM_EN` reader - Reserved."]
 pub type LACT_ALARM_EN_R = crate::BitReader;
 #[doc = "Field `LACT_ALARM_EN` writer - Reserved."]
-pub type LACT_ALARM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_ALARM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_LEVEL_INT_EN` reader - Reserved."]
 pub type LACT_LEVEL_INT_EN_R = crate::BitReader;
 #[doc = "Field `LACT_LEVEL_INT_EN` writer - Reserved."]
-pub type LACT_LEVEL_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_LEVEL_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_EDGE_INT_EN` reader - Reserved."]
 pub type LACT_EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `LACT_EDGE_INT_EN` writer - Reserved."]
-pub type LACT_EDGE_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_EDGE_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_DIVIDER` reader - Reserved."]
 pub type LACT_DIVIDER_R = crate::FieldReader<u16>;
 #[doc = "Field `LACT_DIVIDER` writer - Reserved."]
-pub type LACT_DIVIDER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type LACT_DIVIDER_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `LACT_AUTORELOAD` reader - Reserved."]
 pub type LACT_AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `LACT_AUTORELOAD` writer - Reserved."]
-pub type LACT_AUTORELOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_AUTORELOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_INCREASE` reader - Reserved."]
 pub type LACT_INCREASE_R = crate::BitReader;
 #[doc = "Field `LACT_INCREASE` writer - Reserved."]
-pub type LACT_INCREASE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_INCREASE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LACT_EN` reader - Reserved."]
 pub type LACT_EN_R = crate::BitReader;
 #[doc = "Field `LACT_EN` writer - Reserved."]
-pub type LACT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LACT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 6 - Reserved."]
     #[inline(always)]
@@ -151,75 +151,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LACTCONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 6 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_use_reftick(&mut self) -> LACT_USE_REFTICK_W<LACTCONFIG_SPEC, 6> {
-        LACT_USE_REFTICK_W::new(self)
+    pub fn lact_use_reftick(&mut self) -> LACT_USE_REFTICK_W<LACTCONFIG_SPEC> {
+        LACT_USE_REFTICK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_rtc_only(&mut self) -> LACT_RTC_ONLY_W<LACTCONFIG_SPEC, 7> {
-        LACT_RTC_ONLY_W::new(self)
+    pub fn lact_rtc_only(&mut self) -> LACT_RTC_ONLY_W<LACTCONFIG_SPEC> {
+        LACT_RTC_ONLY_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_cpst_en(&mut self) -> LACT_CPST_EN_W<LACTCONFIG_SPEC, 8> {
-        LACT_CPST_EN_W::new(self)
+    pub fn lact_cpst_en(&mut self) -> LACT_CPST_EN_W<LACTCONFIG_SPEC> {
+        LACT_CPST_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_lac_en(&mut self) -> LACT_LAC_EN_W<LACTCONFIG_SPEC, 9> {
-        LACT_LAC_EN_W::new(self)
+    pub fn lact_lac_en(&mut self) -> LACT_LAC_EN_W<LACTCONFIG_SPEC> {
+        LACT_LAC_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_alarm_en(&mut self) -> LACT_ALARM_EN_W<LACTCONFIG_SPEC, 10> {
-        LACT_ALARM_EN_W::new(self)
+    pub fn lact_alarm_en(&mut self) -> LACT_ALARM_EN_W<LACTCONFIG_SPEC> {
+        LACT_ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_level_int_en(&mut self) -> LACT_LEVEL_INT_EN_W<LACTCONFIG_SPEC, 11> {
-        LACT_LEVEL_INT_EN_W::new(self)
+    pub fn lact_level_int_en(&mut self) -> LACT_LEVEL_INT_EN_W<LACTCONFIG_SPEC> {
+        LACT_LEVEL_INT_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_edge_int_en(&mut self) -> LACT_EDGE_INT_EN_W<LACTCONFIG_SPEC, 12> {
-        LACT_EDGE_INT_EN_W::new(self)
+    pub fn lact_edge_int_en(&mut self) -> LACT_EDGE_INT_EN_W<LACTCONFIG_SPEC> {
+        LACT_EDGE_INT_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:28 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_divider(&mut self) -> LACT_DIVIDER_W<LACTCONFIG_SPEC, 13> {
-        LACT_DIVIDER_W::new(self)
+    pub fn lact_divider(&mut self) -> LACT_DIVIDER_W<LACTCONFIG_SPEC> {
+        LACT_DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_autoreload(&mut self) -> LACT_AUTORELOAD_W<LACTCONFIG_SPEC, 29> {
-        LACT_AUTORELOAD_W::new(self)
+    pub fn lact_autoreload(&mut self) -> LACT_AUTORELOAD_W<LACTCONFIG_SPEC> {
+        LACT_AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_increase(&mut self) -> LACT_INCREASE_W<LACTCONFIG_SPEC, 30> {
-        LACT_INCREASE_W::new(self)
+    pub fn lact_increase(&mut self) -> LACT_INCREASE_W<LACTCONFIG_SPEC> {
+        LACT_INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_en(&mut self) -> LACT_EN_W<LACTCONFIG_SPEC, 31> {
-        LACT_EN_W::new(self)
+    pub fn lact_en(&mut self) -> LACT_EN_W<LACTCONFIG_SPEC> {
+        LACT_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

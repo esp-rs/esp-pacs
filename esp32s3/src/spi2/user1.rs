@@ -5,23 +5,23 @@ pub type W = crate::W<USER1_SPEC>;
 #[doc = "Field `USR_DUMMY_CYCLELEN` reader - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
 pub type USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `USR_DUMMY_CYCLELEN` writer - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
-pub type USR_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type USR_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `MST_WFULL_ERR_END_EN` reader - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
 pub type MST_WFULL_ERR_END_EN_R = crate::BitReader;
 #[doc = "Field `MST_WFULL_ERR_END_EN` writer - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
-pub type MST_WFULL_ERR_END_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MST_WFULL_ERR_END_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS_SETUP_TIME` reader - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
 pub type CS_SETUP_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_SETUP_TIME` writer - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
-pub type CS_SETUP_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CS_SETUP_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CS_HOLD_TIME` reader - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
 pub type CS_HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_TIME` writer - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
-pub type CS_HOLD_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CS_HOLD_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `USR_ADDR_BITLEN` reader - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
 pub type USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `USR_ADDR_BITLEN` writer - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type USR_ADDR_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type USR_ADDR_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<USER1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<USER1_SPEC, 0> {
-        USR_DUMMY_CYCLELEN_W::new(self)
+    pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<USER1_SPEC> {
+        USR_DUMMY_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bit 16 - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
     #[inline(always)]
     #[must_use]
-    pub fn mst_wfull_err_end_en(&mut self) -> MST_WFULL_ERR_END_EN_W<USER1_SPEC, 16> {
-        MST_WFULL_ERR_END_EN_W::new(self)
+    pub fn mst_wfull_err_end_en(&mut self) -> MST_WFULL_ERR_END_EN_W<USER1_SPEC> {
+        MST_WFULL_ERR_END_EN_W::new(self, 16)
     }
     #[doc = "Bits 17:21 - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<USER1_SPEC, 17> {
-        CS_SETUP_TIME_W::new(self)
+    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<USER1_SPEC> {
+        CS_SETUP_TIME_W::new(self, 17)
     }
     #[doc = "Bits 22:26 - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<USER1_SPEC, 22> {
-        CS_HOLD_TIME_W::new(self)
+    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<USER1_SPEC> {
+        CS_HOLD_TIME_W::new(self, 22)
     }
     #[doc = "Bits 27:31 - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<USER1_SPEC, 27> {
-        USR_ADDR_BITLEN_W::new(self)
+    pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<USER1_SPEC> {
+        USR_ADDR_BITLEN_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<DCACHE_OCCUPY_ADDR_SPEC>;
 #[doc = "Field `DCACHE_OCCUPY_ADDR` reader - The bits are used to configure the start virtual address for occupy operation. It should be combined with DCACHE_OCCUPY_SIZE_REG."]
 pub type DCACHE_OCCUPY_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DCACHE_OCCUPY_ADDR` writer - The bits are used to configure the start virtual address for occupy operation. It should be combined with DCACHE_OCCUPY_SIZE_REG."]
-pub type DCACHE_OCCUPY_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type DCACHE_OCCUPY_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for occupy operation. It should be combined with DCACHE_OCCUPY_SIZE_REG."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCACHE_OCCUPY_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for occupy operation. It should be combined with DCACHE_OCCUPY_SIZE_REG."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_occupy_addr(&mut self) -> DCACHE_OCCUPY_ADDR_W<DCACHE_OCCUPY_ADDR_SPEC, 0> {
-        DCACHE_OCCUPY_ADDR_W::new(self)
+    pub fn dcache_occupy_addr(&mut self) -> DCACHE_OCCUPY_ADDR_W<DCACHE_OCCUPY_ADDR_SPEC> {
+        DCACHE_OCCUPY_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

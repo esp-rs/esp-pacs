@@ -5,35 +5,35 @@ pub type W = crate::W<BOD_MODE0_CNTL_SPEC>;
 #[doc = "Field `BOD_MODE0_CLOSE_FLASH_ENA` reader - need_des"]
 pub type BOD_MODE0_CLOSE_FLASH_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_CLOSE_FLASH_ENA` writer - need_des"]
-pub type BOD_MODE0_CLOSE_FLASH_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_CLOSE_FLASH_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOD_MODE0_PD_RF_ENA` reader - need_des"]
 pub type BOD_MODE0_PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_PD_RF_ENA` writer - need_des"]
-pub type BOD_MODE0_PD_RF_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_PD_RF_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOD_MODE0_INTR_WAIT` reader - need_des"]
 pub type BOD_MODE0_INTR_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `BOD_MODE0_INTR_WAIT` writer - need_des"]
-pub type BOD_MODE0_INTR_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type BOD_MODE0_INTR_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `BOD_MODE0_RESET_WAIT` reader - need_des"]
 pub type BOD_MODE0_RESET_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `BOD_MODE0_RESET_WAIT` writer - need_des"]
-pub type BOD_MODE0_RESET_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type BOD_MODE0_RESET_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `BOD_MODE0_CNT_CLR` reader - need_des"]
 pub type BOD_MODE0_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_CNT_CLR` writer - need_des"]
-pub type BOD_MODE0_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOD_MODE0_INTR_ENA` reader - need_des"]
 pub type BOD_MODE0_INTR_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_INTR_ENA` writer - need_des"]
-pub type BOD_MODE0_INTR_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_INTR_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOD_MODE0_RESET_SEL` reader - need_des"]
 pub type BOD_MODE0_RESET_SEL_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_RESET_SEL` writer - need_des"]
-pub type BOD_MODE0_RESET_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_RESET_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOD_MODE0_RESET_ENA` reader - need_des"]
 pub type BOD_MODE0_RESET_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_RESET_ENA` writer - need_des"]
-pub type BOD_MODE0_RESET_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_RESET_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
@@ -118,7 +118,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BOD_MODE0_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -127,50 +127,50 @@ impl W {
     #[must_use]
     pub fn bod_mode0_close_flash_ena(
         &mut self,
-    ) -> BOD_MODE0_CLOSE_FLASH_ENA_W<BOD_MODE0_CNTL_SPEC, 6> {
-        BOD_MODE0_CLOSE_FLASH_ENA_W::new(self)
+    ) -> BOD_MODE0_CLOSE_FLASH_ENA_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_CLOSE_FLASH_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_pd_rf_ena(&mut self) -> BOD_MODE0_PD_RF_ENA_W<BOD_MODE0_CNTL_SPEC, 7> {
-        BOD_MODE0_PD_RF_ENA_W::new(self)
+    pub fn bod_mode0_pd_rf_ena(&mut self) -> BOD_MODE0_PD_RF_ENA_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_PD_RF_ENA_W::new(self, 7)
     }
     #[doc = "Bits 8:17 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_intr_wait(&mut self) -> BOD_MODE0_INTR_WAIT_W<BOD_MODE0_CNTL_SPEC, 8> {
-        BOD_MODE0_INTR_WAIT_W::new(self)
+    pub fn bod_mode0_intr_wait(&mut self) -> BOD_MODE0_INTR_WAIT_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_INTR_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 18:27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_reset_wait(&mut self) -> BOD_MODE0_RESET_WAIT_W<BOD_MODE0_CNTL_SPEC, 18> {
-        BOD_MODE0_RESET_WAIT_W::new(self)
+    pub fn bod_mode0_reset_wait(&mut self) -> BOD_MODE0_RESET_WAIT_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_RESET_WAIT_W::new(self, 18)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_cnt_clr(&mut self) -> BOD_MODE0_CNT_CLR_W<BOD_MODE0_CNTL_SPEC, 28> {
-        BOD_MODE0_CNT_CLR_W::new(self)
+    pub fn bod_mode0_cnt_clr(&mut self) -> BOD_MODE0_CNT_CLR_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_CNT_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_intr_ena(&mut self) -> BOD_MODE0_INTR_ENA_W<BOD_MODE0_CNTL_SPEC, 29> {
-        BOD_MODE0_INTR_ENA_W::new(self)
+    pub fn bod_mode0_intr_ena(&mut self) -> BOD_MODE0_INTR_ENA_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_INTR_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_reset_sel(&mut self) -> BOD_MODE0_RESET_SEL_W<BOD_MODE0_CNTL_SPEC, 30> {
-        BOD_MODE0_RESET_SEL_W::new(self)
+    pub fn bod_mode0_reset_sel(&mut self) -> BOD_MODE0_RESET_SEL_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_RESET_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_reset_ena(&mut self) -> BOD_MODE0_RESET_ENA_W<BOD_MODE0_CNTL_SPEC, 31> {
-        BOD_MODE0_RESET_ENA_W::new(self)
+    pub fn bod_mode0_reset_ena(&mut self) -> BOD_MODE0_RESET_ENA_W<BOD_MODE0_CNTL_SPEC> {
+        BOD_MODE0_RESET_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

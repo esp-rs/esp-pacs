@@ -5,8 +5,7 @@ pub type W = crate::W<CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC>;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP` reader - reg_core0_core_0_iram0_pms_monitor_violate_intr_map"]
 pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP` writer - reg_core0_core_0_iram0_pms_monitor_violate_intr_map"]
-pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 5, O>;
+pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_core_0_iram0_pms_monitor_violate_intr_map"]
     #[inline(always)]
@@ -33,7 +32,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -42,11 +41,9 @@ impl W {
     #[must_use]
     pub fn core_0_iram0_pms_monitor_violate_intr_map(
         &mut self,
-    ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_W<
-        CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC,
-        0,
-    > {
-        CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_W::new(self)
+    ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_W<CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC>
+    {
+        CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

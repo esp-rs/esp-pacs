@@ -1,13 +1,13 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `PER_END_INT_CLR` writer - The clear bit for SPI_MEM_PER_END_INT interrupt."]
-pub type PER_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PER_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PES_END_INT_CLR` writer - The clear bit for SPI_MEM_PES_END_INT interrupt."]
-pub type PES_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PES_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOTAL_TRANS_END_INT_CLR` writer - The clear bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
-pub type TOTAL_TRANS_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOTAL_TRANS_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BROWN_OUT_INT_CLR` writer - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub type BROWN_OUT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BROWN_OUT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -18,26 +18,26 @@ impl W {
     #[doc = "Bit 0 - The clear bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn per_end_int_clr(&mut self) -> PER_END_INT_CLR_W<INT_CLR_SPEC, 0> {
-        PER_END_INT_CLR_W::new(self)
+    pub fn per_end_int_clr(&mut self) -> PER_END_INT_CLR_W<INT_CLR_SPEC> {
+        PER_END_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The clear bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn pes_end_int_clr(&mut self) -> PES_END_INT_CLR_W<INT_CLR_SPEC, 1> {
-        PES_END_INT_CLR_W::new(self)
+    pub fn pes_end_int_clr(&mut self) -> PES_END_INT_CLR_W<INT_CLR_SPEC> {
+        PES_END_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The clear bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn total_trans_end_int_clr(&mut self) -> TOTAL_TRANS_END_INT_CLR_W<INT_CLR_SPEC, 2> {
-        TOTAL_TRANS_END_INT_CLR_W::new(self)
+    pub fn total_trans_end_int_clr(&mut self) -> TOTAL_TRANS_END_INT_CLR_W<INT_CLR_SPEC> {
+        TOTAL_TRANS_END_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<INT_CLR_SPEC, 3> {
-        BROWN_OUT_INT_CLR_W::new(self)
+    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<INT_CLR_SPEC> {
+        BROWN_OUT_INT_CLR_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

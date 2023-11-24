@@ -5,39 +5,39 @@ pub type W = crate::W<SAR_TSENS_CTRL_SPEC>;
 #[doc = "Field `TSENS_XPD_WAIT` reader - "]
 pub type TSENS_XPD_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `TSENS_XPD_WAIT` writer - "]
-pub type TSENS_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type TSENS_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `TSENS_XPD_FORCE` reader - "]
 pub type TSENS_XPD_FORCE_R = crate::BitReader;
 #[doc = "Field `TSENS_XPD_FORCE` writer - "]
-pub type TSENS_XPD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_XPD_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_INV` reader - "]
 pub type TSENS_CLK_INV_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_INV` writer - "]
-pub type TSENS_CLK_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLK_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_GATED` reader - "]
 pub type TSENS_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_GATED` writer - "]
-pub type TSENS_CLK_GATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLK_GATED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_IN_INV` reader - invert temperature sensor data"]
 pub type TSENS_IN_INV_R = crate::BitReader;
 #[doc = "Field `TSENS_IN_INV` writer - invert temperature sensor data"]
-pub type TSENS_IN_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_IN_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_DIV` reader - temperature sensor clock divider"]
 pub type TSENS_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `TSENS_CLK_DIV` writer - temperature sensor clock divider"]
-pub type TSENS_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TSENS_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TSENS_POWER_UP` reader - temperature sensor power up"]
 pub type TSENS_POWER_UP_R = crate::BitReader;
 #[doc = "Field `TSENS_POWER_UP` writer - temperature sensor power up"]
-pub type TSENS_POWER_UP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_POWER_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_POWER_UP_FORCE` reader - 1: dump out &amp; power up controlled by SW 0: by FSM"]
 pub type TSENS_POWER_UP_FORCE_R = crate::BitReader;
 #[doc = "Field `TSENS_POWER_UP_FORCE` writer - 1: dump out &amp; power up controlled by SW 0: by FSM"]
-pub type TSENS_POWER_UP_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_POWER_UP_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_DUMP_OUT` reader - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
 pub type TSENS_DUMP_OUT_R = crate::BitReader;
 #[doc = "Field `TSENS_DUMP_OUT` writer - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
-pub type TSENS_DUMP_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_DUMP_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -131,63 +131,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_TSENS_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<SAR_TSENS_CTRL_SPEC, 0> {
-        TSENS_XPD_WAIT_W::new(self)
+    pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<SAR_TSENS_CTRL_SPEC, 12> {
-        TSENS_XPD_FORCE_W::new(self)
+    pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<SAR_TSENS_CTRL_SPEC, 13> {
-        TSENS_CLK_INV_W::new(self)
+    pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_CLK_INV_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_gated(&mut self) -> TSENS_CLK_GATED_W<SAR_TSENS_CTRL_SPEC, 14> {
-        TSENS_CLK_GATED_W::new(self)
+    pub fn tsens_clk_gated(&mut self) -> TSENS_CLK_GATED_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_CLK_GATED_W::new(self, 14)
     }
     #[doc = "Bit 15 - invert temperature sensor data"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<SAR_TSENS_CTRL_SPEC, 15> {
-        TSENS_IN_INV_W::new(self)
+    pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_IN_INV_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - temperature sensor clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<SAR_TSENS_CTRL_SPEC, 16> {
-        TSENS_CLK_DIV_W::new(self)
+    pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_CLK_DIV_W::new(self, 16)
     }
     #[doc = "Bit 24 - temperature sensor power up"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<SAR_TSENS_CTRL_SPEC, 24> {
-        TSENS_POWER_UP_W::new(self)
+    pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_POWER_UP_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: dump out &amp; power up controlled by SW 0: by FSM"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<SAR_TSENS_CTRL_SPEC, 25> {
-        TSENS_POWER_UP_FORCE_W::new(self)
+    pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_POWER_UP_FORCE_W::new(self, 25)
     }
     #[doc = "Bit 26 - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<SAR_TSENS_CTRL_SPEC, 26> {
-        TSENS_DUMP_OUT_W::new(self)
+    pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<SAR_TSENS_CTRL_SPEC> {
+        TSENS_DUMP_OUT_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

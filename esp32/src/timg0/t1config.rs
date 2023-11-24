@@ -5,31 +5,31 @@ pub type W = crate::W<T1CONFIG_SPEC>;
 #[doc = "Field `ALARM_EN` reader - When set alarm is enabled"]
 pub type ALARM_EN_R = crate::BitReader;
 #[doc = "Field `ALARM_EN` writer - When set alarm is enabled"]
-pub type ALARM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALARM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEVEL_INT_EN` reader - When set level type interrupt will be generated during alarm"]
 pub type LEVEL_INT_EN_R = crate::BitReader;
 #[doc = "Field `LEVEL_INT_EN` writer - When set level type interrupt will be generated during alarm"]
-pub type LEVEL_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEVEL_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EDGE_INT_EN` reader - When set edge type interrupt will be generated during alarm"]
 pub type EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `EDGE_INT_EN` writer - When set edge type interrupt will be generated during alarm"]
-pub type EDGE_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EDGE_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIVIDER` reader - Timer 1 clock (T1_clk) prescale value."]
 pub type DIVIDER_R = crate::FieldReader<u16>;
 #[doc = "Field `DIVIDER` writer - Timer 1 clock (T1_clk) prescale value."]
-pub type DIVIDER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type DIVIDER_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `AUTORELOAD` reader - When set timer 1 auto-reload at alarming is enabled"]
 pub type AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `AUTORELOAD` writer - When set timer 1 auto-reload at alarming is enabled"]
-pub type AUTORELOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AUTORELOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INCREASE` reader - When set timer 1 time-base counter increment. When cleared timer 1 time-base counter decrement."]
 pub type INCREASE_R = crate::BitReader;
 #[doc = "Field `INCREASE` writer - When set timer 1 time-base counter increment. When cleared timer 1 time-base counter decrement."]
-pub type INCREASE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INCREASE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EN` reader - When set timer 1 time-base counter is enabled"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - When set timer 1 time-base counter is enabled"]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
@@ -87,51 +87,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<T1CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_en(&mut self) -> ALARM_EN_W<T1CONFIG_SPEC, 10> {
-        ALARM_EN_W::new(self)
+    pub fn alarm_en(&mut self) -> ALARM_EN_W<T1CONFIG_SPEC> {
+        ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - When set level type interrupt will be generated during alarm"]
     #[inline(always)]
     #[must_use]
-    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<T1CONFIG_SPEC, 11> {
-        LEVEL_INT_EN_W::new(self)
+    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<T1CONFIG_SPEC> {
+        LEVEL_INT_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - When set edge type interrupt will be generated during alarm"]
     #[inline(always)]
     #[must_use]
-    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<T1CONFIG_SPEC, 12> {
-        EDGE_INT_EN_W::new(self)
+    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<T1CONFIG_SPEC> {
+        EDGE_INT_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:28 - Timer 1 clock (T1_clk) prescale value."]
     #[inline(always)]
     #[must_use]
-    pub fn divider(&mut self) -> DIVIDER_W<T1CONFIG_SPEC, 13> {
-        DIVIDER_W::new(self)
+    pub fn divider(&mut self) -> DIVIDER_W<T1CONFIG_SPEC> {
+        DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29 - When set timer 1 auto-reload at alarming is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn autoreload(&mut self) -> AUTORELOAD_W<T1CONFIG_SPEC, 29> {
-        AUTORELOAD_W::new(self)
+    pub fn autoreload(&mut self) -> AUTORELOAD_W<T1CONFIG_SPEC> {
+        AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30 - When set timer 1 time-base counter increment. When cleared timer 1 time-base counter decrement."]
     #[inline(always)]
     #[must_use]
-    pub fn increase(&mut self) -> INCREASE_W<T1CONFIG_SPEC, 30> {
-        INCREASE_W::new(self)
+    pub fn increase(&mut self) -> INCREASE_W<T1CONFIG_SPEC> {
+        INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - When set timer 1 time-base counter is enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<T1CONFIG_SPEC, 31> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<T1CONFIG_SPEC> {
+        EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

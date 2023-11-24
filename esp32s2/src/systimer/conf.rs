@@ -5,11 +5,11 @@ pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `CLK_FO` reader - System timer clock force enable."]
 pub type CLK_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FO` writer - System timer clock force enable."]
-pub type CLK_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - Register clock enable."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Register clock enable."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - System timer clock force enable."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - System timer clock force enable."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fo(&mut self) -> CLK_FO_W<CONF_SPEC, 0> {
-        CLK_FO_W::new(self)
+    pub fn clk_fo(&mut self) -> CLK_FO_W<CONF_SPEC> {
+        CLK_FO_W::new(self, 0)
     }
     #[doc = "Bit 31 - Register clock enable."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC, 31> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+        CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

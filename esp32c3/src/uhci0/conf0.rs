@@ -5,51 +5,51 @@ pub type W = crate::W<CONF0_SPEC>;
 #[doc = "Field `TX_RST` reader - Write 1, then write 0 to this bit to reset decode state machine."]
 pub type TX_RST_R = crate::BitReader;
 #[doc = "Field `TX_RST` writer - Write 1, then write 0 to this bit to reset decode state machine."]
-pub type TX_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_RST` reader - Write 1, then write 0 to this bit to reset encode state machine."]
 pub type RX_RST_R = crate::BitReader;
 #[doc = "Field `RX_RST` writer - Write 1, then write 0 to this bit to reset encode state machine."]
-pub type RX_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART0_CE` reader - Set this bit to link up HCI and UART0."]
 pub type UART0_CE_R = crate::BitReader;
 #[doc = "Field `UART0_CE` writer - Set this bit to link up HCI and UART0."]
-pub type UART0_CE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART0_CE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1_CE` reader - Set this bit to link up HCI and UART1."]
 pub type UART1_CE_R = crate::BitReader;
 #[doc = "Field `UART1_CE` writer - Set this bit to link up HCI and UART1."]
-pub type UART1_CE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART1_CE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEPER_EN` reader - Set this bit to separate the data frame using a special char."]
 pub type SEPER_EN_R = crate::BitReader;
 #[doc = "Field `SEPER_EN` writer - Set this bit to separate the data frame using a special char."]
-pub type SEPER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEPER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEAD_EN` reader - Set this bit to encode the data packet with a formatting header."]
 pub type HEAD_EN_R = crate::BitReader;
 #[doc = "Field `HEAD_EN` writer - Set this bit to encode the data packet with a formatting header."]
-pub type HEAD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEAD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRC_REC_EN` reader - Set this bit to enable UHCI to receive the 16 bit CRC."]
 pub type CRC_REC_EN_R = crate::BitReader;
 #[doc = "Field `CRC_REC_EN` writer - Set this bit to enable UHCI to receive the 16 bit CRC."]
-pub type CRC_REC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRC_REC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_IDLE_EOF_EN` reader - If this bit is set to 1, UHCI will end the payload receiving process when UART has been in idle state."]
 pub type UART_IDLE_EOF_EN_R = crate::BitReader;
 #[doc = "Field `UART_IDLE_EOF_EN` writer - If this bit is set to 1, UHCI will end the payload receiving process when UART has been in idle state."]
-pub type UART_IDLE_EOF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_IDLE_EOF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN_EOF_EN` reader - If this bit is set to 1, UHCI decoder receiving payload data is end when the receiving byte count has reached the specified value. The value is payload length indicated by UHCI packet header when UHCI_HEAD_EN is 1 or the value is configuration value when UHCI_HEAD_EN is 0. If this bit is set to 0, UHCI decoder receiving payload data is end when 0xc0 is received."]
 pub type LEN_EOF_EN_R = crate::BitReader;
 #[doc = "Field `LEN_EOF_EN` writer - If this bit is set to 1, UHCI decoder receiving payload data is end when the receiving byte count has reached the specified value. The value is payload length indicated by UHCI packet header when UHCI_HEAD_EN is 1 or the value is configuration value when UHCI_HEAD_EN is 0. If this bit is set to 0, UHCI decoder receiving payload data is end when 0xc0 is received."]
-pub type LEN_EOF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN_EOF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENCODE_CRC_EN` reader - Set this bit to enable data integrity checking by appending a 16 bit CCITT-CRC to end of the payload."]
 pub type ENCODE_CRC_EN_R = crate::BitReader;
 #[doc = "Field `ENCODE_CRC_EN` writer - Set this bit to enable data integrity checking by appending a 16 bit CCITT-CRC to end of the payload."]
-pub type ENCODE_CRC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENCODE_CRC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - 1'b1: Force clock on for register. 1'b0: Support clock only when application writes registers."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - 1'b1: Force clock on for register. 1'b0: Support clock only when application writes registers."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_RX_BRK_EOF_EN` reader - If this bit is set to 1, UHCI will end payload receive process when NULL frame is received by UART."]
 pub type UART_RX_BRK_EOF_EN_R = crate::BitReader;
 #[doc = "Field `UART_RX_BRK_EOF_EN` writer - If this bit is set to 1, UHCI will end payload receive process when NULL frame is received by UART."]
-pub type UART_RX_BRK_EOF_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_RX_BRK_EOF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Write 1, then write 0 to this bit to reset decode state machine."]
     #[inline(always)]
@@ -143,81 +143,81 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Write 1, then write 0 to this bit to reset decode state machine."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_rst(&mut self) -> TX_RST_W<CONF0_SPEC, 0> {
-        TX_RST_W::new(self)
+    pub fn tx_rst(&mut self) -> TX_RST_W<CONF0_SPEC> {
+        TX_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1, then write 0 to this bit to reset encode state machine."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_rst(&mut self) -> RX_RST_W<CONF0_SPEC, 1> {
-        RX_RST_W::new(self)
+    pub fn rx_rst(&mut self) -> RX_RST_W<CONF0_SPEC> {
+        RX_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to link up HCI and UART0."]
     #[inline(always)]
     #[must_use]
-    pub fn uart0_ce(&mut self) -> UART0_CE_W<CONF0_SPEC, 2> {
-        UART0_CE_W::new(self)
+    pub fn uart0_ce(&mut self) -> UART0_CE_W<CONF0_SPEC> {
+        UART0_CE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to link up HCI and UART1."]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_ce(&mut self) -> UART1_CE_W<CONF0_SPEC, 3> {
-        UART1_CE_W::new(self)
+    pub fn uart1_ce(&mut self) -> UART1_CE_W<CONF0_SPEC> {
+        UART1_CE_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set this bit to separate the data frame using a special char."]
     #[inline(always)]
     #[must_use]
-    pub fn seper_en(&mut self) -> SEPER_EN_W<CONF0_SPEC, 5> {
-        SEPER_EN_W::new(self)
+    pub fn seper_en(&mut self) -> SEPER_EN_W<CONF0_SPEC> {
+        SEPER_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to encode the data packet with a formatting header."]
     #[inline(always)]
     #[must_use]
-    pub fn head_en(&mut self) -> HEAD_EN_W<CONF0_SPEC, 6> {
-        HEAD_EN_W::new(self)
+    pub fn head_en(&mut self) -> HEAD_EN_W<CONF0_SPEC> {
+        HEAD_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable UHCI to receive the 16 bit CRC."]
     #[inline(always)]
     #[must_use]
-    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<CONF0_SPEC, 7> {
-        CRC_REC_EN_W::new(self)
+    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<CONF0_SPEC> {
+        CRC_REC_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - If this bit is set to 1, UHCI will end the payload receiving process when UART has been in idle state."]
     #[inline(always)]
     #[must_use]
-    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<CONF0_SPEC, 8> {
-        UART_IDLE_EOF_EN_W::new(self)
+    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<CONF0_SPEC> {
+        UART_IDLE_EOF_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - If this bit is set to 1, UHCI decoder receiving payload data is end when the receiving byte count has reached the specified value. The value is payload length indicated by UHCI packet header when UHCI_HEAD_EN is 1 or the value is configuration value when UHCI_HEAD_EN is 0. If this bit is set to 0, UHCI decoder receiving payload data is end when 0xc0 is received."]
     #[inline(always)]
     #[must_use]
-    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<CONF0_SPEC, 9> {
-        LEN_EOF_EN_W::new(self)
+    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<CONF0_SPEC> {
+        LEN_EOF_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to enable data integrity checking by appending a 16 bit CCITT-CRC to end of the payload."]
     #[inline(always)]
     #[must_use]
-    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<CONF0_SPEC, 10> {
-        ENCODE_CRC_EN_W::new(self)
+    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<CONF0_SPEC> {
+        ENCODE_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1'b1: Force clock on for register. 1'b0: Support clock only when application writes registers."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF0_SPEC, 11> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CONF0_SPEC> {
+        CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - If this bit is set to 1, UHCI will end payload receive process when NULL frame is received by UART."]
     #[inline(always)]
     #[must_use]
-    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<CONF0_SPEC, 12> {
-        UART_RX_BRK_EOF_EN_W::new(self)
+    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<CONF0_SPEC> {
+        UART_RX_BRK_EOF_EN_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,31 +5,31 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `APB_SARADC_TSENS_INT_ENA` reader - tsens low interrupt enable"]
 pub type APB_SARADC_TSENS_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_TSENS_INT_ENA` writer - tsens low interrupt enable"]
-pub type APB_SARADC_TSENS_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_TSENS_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_ENA` reader - saradc thres1 low interrupt enable"]
 pub type APB_SARADC_THRES1_LOW_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_ENA` writer - saradc thres1 low interrupt enable"]
-pub type APB_SARADC_THRES1_LOW_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_THRES1_LOW_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_ENA` reader - saradc thres0 low interrupt enable"]
 pub type APB_SARADC_THRES0_LOW_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_ENA` writer - saradc thres0 low interrupt enable"]
-pub type APB_SARADC_THRES0_LOW_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_THRES0_LOW_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_ENA` reader - saradc thres1 high interrupt enable"]
 pub type APB_SARADC_THRES1_HIGH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_ENA` writer - saradc thres1 high interrupt enable"]
-pub type APB_SARADC_THRES1_HIGH_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_THRES1_HIGH_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_ENA` reader - saradc thres0 high interrupt enable"]
 pub type APB_SARADC_THRES0_HIGH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_ENA` writer - saradc thres0 high interrupt enable"]
-pub type APB_SARADC_THRES0_HIGH_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC_THRES0_HIGH_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC2_DONE_INT_ENA` reader - saradc2 done interrupt enable"]
 pub type APB_SARADC2_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC2_DONE_INT_ENA` writer - saradc2 done interrupt enable"]
-pub type APB_SARADC2_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC2_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC1_DONE_INT_ENA` reader - saradc1 done interrupt enable"]
 pub type APB_SARADC1_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC1_DONE_INT_ENA` writer - saradc1 done interrupt enable"]
-pub type APB_SARADC1_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC1_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 25 - tsens low interrupt enable"]
     #[inline(always)]
@@ -105,59 +105,59 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 25 - tsens low interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_tsens_int_ena(&mut self) -> APB_SARADC_TSENS_INT_ENA_W<INT_ENA_SPEC, 25> {
-        APB_SARADC_TSENS_INT_ENA_W::new(self)
+    pub fn apb_saradc_tsens_int_ena(&mut self) -> APB_SARADC_TSENS_INT_ENA_W<INT_ENA_SPEC> {
+        APB_SARADC_TSENS_INT_ENA_W::new(self, 25)
     }
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
     #[must_use]
     pub fn apb_saradc_thres1_low_int_ena(
         &mut self,
-    ) -> APB_SARADC_THRES1_LOW_INT_ENA_W<INT_ENA_SPEC, 26> {
-        APB_SARADC_THRES1_LOW_INT_ENA_W::new(self)
+    ) -> APB_SARADC_THRES1_LOW_INT_ENA_W<INT_ENA_SPEC> {
+        APB_SARADC_THRES1_LOW_INT_ENA_W::new(self, 26)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt enable"]
     #[inline(always)]
     #[must_use]
     pub fn apb_saradc_thres0_low_int_ena(
         &mut self,
-    ) -> APB_SARADC_THRES0_LOW_INT_ENA_W<INT_ENA_SPEC, 27> {
-        APB_SARADC_THRES0_LOW_INT_ENA_W::new(self)
+    ) -> APB_SARADC_THRES0_LOW_INT_ENA_W<INT_ENA_SPEC> {
+        APB_SARADC_THRES0_LOW_INT_ENA_W::new(self, 27)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt enable"]
     #[inline(always)]
     #[must_use]
     pub fn apb_saradc_thres1_high_int_ena(
         &mut self,
-    ) -> APB_SARADC_THRES1_HIGH_INT_ENA_W<INT_ENA_SPEC, 28> {
-        APB_SARADC_THRES1_HIGH_INT_ENA_W::new(self)
+    ) -> APB_SARADC_THRES1_HIGH_INT_ENA_W<INT_ENA_SPEC> {
+        APB_SARADC_THRES1_HIGH_INT_ENA_W::new(self, 28)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt enable"]
     #[inline(always)]
     #[must_use]
     pub fn apb_saradc_thres0_high_int_ena(
         &mut self,
-    ) -> APB_SARADC_THRES0_HIGH_INT_ENA_W<INT_ENA_SPEC, 29> {
-        APB_SARADC_THRES0_HIGH_INT_ENA_W::new(self)
+    ) -> APB_SARADC_THRES0_HIGH_INT_ENA_W<INT_ENA_SPEC> {
+        APB_SARADC_THRES0_HIGH_INT_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc2_done_int_ena(&mut self) -> APB_SARADC2_DONE_INT_ENA_W<INT_ENA_SPEC, 30> {
-        APB_SARADC2_DONE_INT_ENA_W::new(self)
+    pub fn apb_saradc2_done_int_ena(&mut self) -> APB_SARADC2_DONE_INT_ENA_W<INT_ENA_SPEC> {
+        APB_SARADC2_DONE_INT_ENA_W::new(self, 30)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc1_done_int_ena(&mut self) -> APB_SARADC1_DONE_INT_ENA_W<INT_ENA_SPEC, 31> {
-        APB_SARADC1_DONE_INT_ENA_W::new(self)
+    pub fn apb_saradc1_done_int_ena(&mut self) -> APB_SARADC1_DONE_INT_ENA_W<INT_ENA_SPEC> {
+        APB_SARADC1_DONE_INT_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

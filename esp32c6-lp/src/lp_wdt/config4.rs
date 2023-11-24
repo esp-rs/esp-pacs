@@ -5,7 +5,7 @@ pub type W = crate::W<CONFIG4_SPEC>;
 #[doc = "Field `WDT_STG3_HOLD` reader - need_des"]
 pub type WDT_STG3_HOLD_R = crate::FieldReader<u32>;
 #[doc = "Field `WDT_STG3_HOLD` writer - need_des"]
-pub type WDT_STG3_HOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type WDT_STG3_HOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONFIG4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg3_hold(&mut self) -> WDT_STG3_HOLD_W<CONFIG4_SPEC, 0> {
-        WDT_STG3_HOLD_W::new(self)
+    pub fn wdt_stg3_hold(&mut self) -> WDT_STG3_HOLD_W<CONFIG4_SPEC> {
+        WDT_STG3_HOLD_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

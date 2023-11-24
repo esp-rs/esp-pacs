@@ -1,7 +1,7 @@
 #[doc = "Register `LACTLOAD` writer"]
 pub type W = crate::W<LACTLOAD_SPEC>;
 #[doc = "Field `LACT_LOAD` writer - "]
-pub type LACT_LOAD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type LACT_LOAD_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LACTLOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn lact_load(&mut self) -> LACT_LOAD_W<LACTLOAD_SPEC, 0> {
-        LACT_LOAD_W::new(self)
+    pub fn lact_load(&mut self) -> LACT_LOAD_W<LACTLOAD_SPEC> {
+        LACT_LOAD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<SAR_MEAS2_MUX_SPEC>;
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
 pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
-pub type SAR2_PWDET_CCT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SAR2_RTC_FORCE` reader - In sleep, force to use RTC to control ADC."]
 pub type SAR2_RTC_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR2_RTC_FORCE` writer - In sleep, force to use RTC to control ADC."]
-pub type SAR2_RTC_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_RTC_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS2_MUX_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_MEAS2_MUX_SPEC, 28> {
-        SAR2_PWDET_CCT_W::new(self)
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_MEAS2_MUX_SPEC> {
+        SAR2_PWDET_CCT_W::new(self, 28)
     }
     #[doc = "Bit 31 - In sleep, force to use RTC to control ADC."]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W<SAR_MEAS2_MUX_SPEC, 31> {
-        SAR2_RTC_FORCE_W::new(self)
+    pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W<SAR_MEAS2_MUX_SPEC> {
+        SAR2_RTC_FORCE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

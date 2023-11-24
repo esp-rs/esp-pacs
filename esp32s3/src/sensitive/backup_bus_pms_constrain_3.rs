@@ -5,55 +5,51 @@ pub type W = crate::W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SPI_2` reader - BackUp access spi_2 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SPI_2` writer - BackUp access spi_2 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SPI_3` reader - BackUp access spi_3 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_3_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SPI_3` writer - BackUp access spi_3 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL` reader - BackUp access apb_ctrl permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL` writer - BackUp access apb_ctrl permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1` reader - BackUp access i2c_ext1 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1` writer - BackUp access i2c_ext1 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST` reader - BackUp access sdio_host permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST` writer - BackUp access sdio_host permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CAN` reader - BackUp access can permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_CAN_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CAN` writer - BackUp access can permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_CAN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_CAN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWM1` reader - BackUp access pwm1 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_PWM1_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWM1` writer - BackUp access pwm1 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_PWM1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_PWM1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2S1` reader - BackUp access i2s1 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_I2S1_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2S1` writer - BackUp access i2s1 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_UART2` reader - BackUp access uart2 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_UART2_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_UART2` writer - BackUp access uart2 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_UART2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_UART2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RWBT` reader - BackUp access rwbt permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RWBT_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RWBT` writer - BackUp access rwbt permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC` reader - BackUp access wifimac permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC` writer - BackUp access wifimac permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWR` reader - BackUp access pwr permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_PWR_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWR` writer - BackUp access pwr permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_PWR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_PWR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - BackUp access spi_2 permission."]
     #[inline(always)]
@@ -174,7 +170,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -183,96 +179,96 @@ impl W {
     #[must_use]
     pub fn backup_bus_pms_constrain_spi_2(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 0> {
-        BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - BackUp access spi_3 permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_spi_3(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_3_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 2> {
-        BACKUP_BUS_PMS_CONSTRAIN_SPI_3_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_3_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_SPI_3_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - BackUp access apb_ctrl permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_apb_ctrl(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 4> {
-        BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - BackUp access i2c_ext1 permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_i2c_ext1(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 6> {
-        BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - BackUp access sdio_host permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_sdio_host(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 8> {
-        BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - BackUp access can permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_can(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_CAN_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 10> {
-        BACKUP_BUS_PMS_CONSTRAIN_CAN_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_CAN_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_CAN_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - BackUp access pwm1 permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_pwm1(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_PWM1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 12> {
-        BACKUP_BUS_PMS_CONSTRAIN_PWM1_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_PWM1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_PWM1_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - BackUp access i2s1 permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_i2s1(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 14> {
-        BACKUP_BUS_PMS_CONSTRAIN_I2S1_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_I2S1_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - BackUp access uart2 permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_uart2(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_UART2_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 16> {
-        BACKUP_BUS_PMS_CONSTRAIN_UART2_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_UART2_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_UART2_W::new(self, 16)
     }
     #[doc = "Bits 22:23 - BackUp access rwbt permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_rwbt(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 22> {
-        BACKUP_BUS_PMS_CONSTRAIN_RWBT_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_RWBT_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - BackUp access wifimac permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_wifimac(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 26> {
-        BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - BackUp access pwr permission."]
     #[inline(always)]
     #[must_use]
     pub fn backup_bus_pms_constrain_pwr(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_PWR_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, 28> {
-        BACKUP_BUS_PMS_CONSTRAIN_PWR_W::new(self)
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_PWR_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
+        BACKUP_BUS_PMS_CONSTRAIN_PWR_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

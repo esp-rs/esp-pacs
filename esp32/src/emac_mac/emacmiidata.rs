@@ -5,7 +5,7 @@ pub type W = crate::W<EMACMIIDATA_SPEC>;
 #[doc = "Field `MII_DATA` reader - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
 pub type MII_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `MII_DATA` writer - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
-pub type MII_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type MII_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EMACMIIDATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
     #[inline(always)]
     #[must_use]
-    pub fn mii_data(&mut self) -> MII_DATA_W<EMACMIIDATA_SPEC, 0> {
-        MII_DATA_W::new(self)
+    pub fn mii_data(&mut self) -> MII_DATA_W<EMACMIIDATA_SPEC> {
+        MII_DATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

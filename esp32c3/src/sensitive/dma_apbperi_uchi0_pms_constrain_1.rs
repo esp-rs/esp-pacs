@@ -5,43 +5,43 @@ pub type W = crate::W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_0"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` writer - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_0"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_1"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` writer - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_1"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_2"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` writer - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_2"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_3"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` writer - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_3"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` reader - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_0"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` writer - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_0"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` reader - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_1"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` writer - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_1"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` reader - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_2"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` writer - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_2"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` reader - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_3"]
 pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` writer - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_3"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
@@ -174,7 +174,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -183,88 +183,72 @@ impl W {
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_0(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        0,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_1(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        2,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_2(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        4,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_0_pms_3(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        6,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self, 6)
     }
     #[doc = "Bits 12:13 - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_0(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        12,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_1(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        14,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_2(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        16,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_sram_world_1_pms_3(
         &mut self,
-    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC,
-        18,
-    > {
-        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self)
+    ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>
+    {
+        DMA_APBPERI_UCHI0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

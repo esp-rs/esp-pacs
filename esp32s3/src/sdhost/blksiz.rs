@@ -5,7 +5,7 @@ pub type W = crate::W<BLKSIZ_SPEC>;
 #[doc = "Field `BLOCK_SIZE` reader - Block size."]
 pub type BLOCK_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `BLOCK_SIZE` writer - Block size."]
-pub type BLOCK_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type BLOCK_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Block size."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLKSIZ_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Block size."]
     #[inline(always)]
     #[must_use]
-    pub fn block_size(&mut self) -> BLOCK_SIZE_W<BLKSIZ_SPEC, 0> {
-        BLOCK_SIZE_W::new(self)
+    pub fn block_size(&mut self) -> BLOCK_SIZE_W<BLKSIZ_SPEC> {
+        BLOCK_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

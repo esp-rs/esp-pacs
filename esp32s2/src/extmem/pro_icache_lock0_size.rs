@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_ICACHE_LOCK0_SIZE_SPEC>;
 #[doc = "Field `PRO_ICACHE_LOCK0_SIZE` reader - The bits are used to configure the first length of data locking, which is combined with PRO_ICACHE_LOCK0_ADDR_REG"]
 pub type PRO_ICACHE_LOCK0_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_ICACHE_LOCK0_SIZE` writer - The bits are used to configure the first length of data locking, which is combined with PRO_ICACHE_LOCK0_ADDR_REG"]
-pub type PRO_ICACHE_LOCK0_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PRO_ICACHE_LOCK0_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the first length of data locking, which is combined with PRO_ICACHE_LOCK0_ADDR_REG"]
     #[inline(always)]
@@ -27,17 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_LOCK0_SIZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the first length of data locking, which is combined with PRO_ICACHE_LOCK0_ADDR_REG"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_icache_lock0_size(
-        &mut self,
-    ) -> PRO_ICACHE_LOCK0_SIZE_W<PRO_ICACHE_LOCK0_SIZE_SPEC, 0> {
-        PRO_ICACHE_LOCK0_SIZE_W::new(self)
+    pub fn pro_icache_lock0_size(&mut self) -> PRO_ICACHE_LOCK0_SIZE_W<PRO_ICACHE_LOCK0_SIZE_SPEC> {
+        PRO_ICACHE_LOCK0_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

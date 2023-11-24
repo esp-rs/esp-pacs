@@ -5,7 +5,7 @@ pub type W = crate::W<LP_SLEEP_XTAL_SPEC>;
 #[doc = "Field `LP_SLEEP_XPD_XTAL` reader - need_des"]
 pub type LP_SLEEP_XPD_XTAL_R = crate::BitReader;
 #[doc = "Field `LP_SLEEP_XPD_XTAL` writer - need_des"]
-pub type LP_SLEEP_XPD_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_SLEEP_XPD_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_SLEEP_XTAL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_sleep_xpd_xtal(&mut self) -> LP_SLEEP_XPD_XTAL_W<LP_SLEEP_XTAL_SPEC, 31> {
-        LP_SLEEP_XPD_XTAL_W::new(self)
+    pub fn lp_sleep_xpd_xtal(&mut self) -> LP_SLEEP_XPD_XTAL_W<LP_SLEEP_XTAL_SPEC> {
+        LP_SLEEP_XPD_XTAL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

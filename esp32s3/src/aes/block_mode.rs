@@ -5,7 +5,7 @@ pub type W = crate::W<BLOCK_MODE_SPEC>;
 #[doc = "Field `BLOCK_MODE` reader - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
 pub type BLOCK_MODE_R = crate::FieldReader;
 #[doc = "Field `BLOCK_MODE` writer - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
-pub type BLOCK_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type BLOCK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLOCK_MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn block_mode(&mut self) -> BLOCK_MODE_W<BLOCK_MODE_SPEC, 0> {
-        BLOCK_MODE_W::new(self)
+    pub fn block_mode(&mut self) -> BLOCK_MODE_W<BLOCK_MODE_SPEC> {
+        BLOCK_MODE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

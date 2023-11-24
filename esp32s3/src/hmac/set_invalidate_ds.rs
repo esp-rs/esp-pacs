@@ -1,7 +1,7 @@
 #[doc = "Register `SET_INVALIDATE_DS` writer"]
 pub type W = crate::W<SET_INVALIDATE_DS_SPEC>;
 #[doc = "Field `SET_INVALIDATE_DS` writer - Clear result from hmac downstream DS."]
-pub type SET_INVALIDATE_DS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SET_INVALIDATE_DS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_INVALIDATE_DS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Clear result from hmac downstream DS."]
     #[inline(always)]
     #[must_use]
-    pub fn set_invalidate_ds(&mut self) -> SET_INVALIDATE_DS_W<SET_INVALIDATE_DS_SPEC, 0> {
-        SET_INVALIDATE_DS_W::new(self)
+    pub fn set_invalidate_ds(&mut self) -> SET_INVALIDATE_DS_W<SET_INVALIDATE_DS_SPEC> {
+        SET_INVALIDATE_DS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

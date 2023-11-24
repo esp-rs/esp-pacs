@@ -5,23 +5,23 @@ pub type W = crate::W<SPI_MEM_USER_SPEC>;
 #[doc = "Field `SPI_MEM_CS_HOLD` reader - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
 pub type SPI_MEM_CS_HOLD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CS_HOLD` writer - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
-pub type SPI_MEM_CS_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_CS_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_CS_SETUP` reader - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
 pub type SPI_MEM_CS_SETUP_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CS_SETUP` writer - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
-pub type SPI_MEM_CS_SETUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_CS_SETUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_CK_OUT_EDGE` reader - The bit combined with SPI_MEM_CK_IDLE_EDGE bit to control SPI clock mode 0~3."]
 pub type SPI_MEM_CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CK_OUT_EDGE` writer - The bit combined with SPI_MEM_CK_IDLE_EDGE bit to control SPI clock mode 0~3."]
-pub type SPI_MEM_CK_OUT_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_CK_OUT_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_USR_DUMMY_IDLE` reader - spi clock is disable in dummy phase when the bit is enable."]
 pub type SPI_MEM_USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_DUMMY_IDLE` writer - spi clock is disable in dummy phase when the bit is enable."]
-pub type SPI_MEM_USR_DUMMY_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_USR_DUMMY_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
 pub type SPI_MEM_USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_DUMMY` writer - This bit enable the dummy phase of an operation."]
-pub type SPI_MEM_USR_DUMMY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_USR_DUMMY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_USER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_cs_hold(&mut self) -> SPI_MEM_CS_HOLD_W<SPI_MEM_USER_SPEC, 6> {
-        SPI_MEM_CS_HOLD_W::new(self)
+    pub fn spi_mem_cs_hold(&mut self) -> SPI_MEM_CS_HOLD_W<SPI_MEM_USER_SPEC> {
+        SPI_MEM_CS_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_cs_setup(&mut self) -> SPI_MEM_CS_SETUP_W<SPI_MEM_USER_SPEC, 7> {
-        SPI_MEM_CS_SETUP_W::new(self)
+    pub fn spi_mem_cs_setup(&mut self) -> SPI_MEM_CS_SETUP_W<SPI_MEM_USER_SPEC> {
+        SPI_MEM_CS_SETUP_W::new(self, 7)
     }
     #[doc = "Bit 9 - The bit combined with SPI_MEM_CK_IDLE_EDGE bit to control SPI clock mode 0~3."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_ck_out_edge(&mut self) -> SPI_MEM_CK_OUT_EDGE_W<SPI_MEM_USER_SPEC, 9> {
-        SPI_MEM_CK_OUT_EDGE_W::new(self)
+    pub fn spi_mem_ck_out_edge(&mut self) -> SPI_MEM_CK_OUT_EDGE_W<SPI_MEM_USER_SPEC> {
+        SPI_MEM_CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_usr_dummy_idle(&mut self) -> SPI_MEM_USR_DUMMY_IDLE_W<SPI_MEM_USER_SPEC, 26> {
-        SPI_MEM_USR_DUMMY_IDLE_W::new(self)
+    pub fn spi_mem_usr_dummy_idle(&mut self) -> SPI_MEM_USR_DUMMY_IDLE_W<SPI_MEM_USER_SPEC> {
+        SPI_MEM_USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_usr_dummy(&mut self) -> SPI_MEM_USR_DUMMY_W<SPI_MEM_USER_SPEC, 29> {
-        SPI_MEM_USR_DUMMY_W::new(self)
+    pub fn spi_mem_usr_dummy(&mut self) -> SPI_MEM_USR_DUMMY_W<SPI_MEM_USER_SPEC> {
+        SPI_MEM_USR_DUMMY_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -1,7 +1,7 @@
 #[doc = "Register `SET_PARA_PURPOSE` writer"]
 pub type W = crate::W<SET_PARA_PURPOSE_SPEC>;
 #[doc = "Field `PURPOSE_SET` writer - Set hmac purpose."]
-pub type PURPOSE_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PURPOSE_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_PARA_PURPOSE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:3 - Set hmac purpose."]
     #[inline(always)]
     #[must_use]
-    pub fn purpose_set(&mut self) -> PURPOSE_SET_W<SET_PARA_PURPOSE_SPEC, 0> {
-        PURPOSE_SET_W::new(self)
+    pub fn purpose_set(&mut self) -> PURPOSE_SET_W<SET_PARA_PURPOSE_SPEC> {
+        PURPOSE_SET_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

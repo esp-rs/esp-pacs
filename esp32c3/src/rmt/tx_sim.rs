@@ -5,15 +5,15 @@ pub type W = crate::W<TX_SIM_SPEC>;
 #[doc = "Field `TX_SIM_CH0` reader - reg_rmt_tx_sim_ch0."]
 pub type TX_SIM_CH0_R = crate::BitReader;
 #[doc = "Field `TX_SIM_CH0` writer - reg_rmt_tx_sim_ch0."]
-pub type TX_SIM_CH0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SIM_CH0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_SIM_CH1` reader - reg_rmt_tx_sim_ch1."]
 pub type TX_SIM_CH1_R = crate::BitReader;
 #[doc = "Field `TX_SIM_CH1` writer - reg_rmt_tx_sim_ch1."]
-pub type TX_SIM_CH1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SIM_CH1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_SIM_EN` reader - reg_rmt_tx_sim_en."]
 pub type TX_SIM_EN_R = crate::BitReader;
 #[doc = "Field `TX_SIM_EN` writer - reg_rmt_tx_sim_en."]
-pub type TX_SIM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SIM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_rmt_tx_sim_ch0."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_SIM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_rmt_tx_sim_ch0."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_sim_ch0(&mut self) -> TX_SIM_CH0_W<TX_SIM_SPEC, 0> {
-        TX_SIM_CH0_W::new(self)
+    pub fn tx_sim_ch0(&mut self) -> TX_SIM_CH0_W<TX_SIM_SPEC> {
+        TX_SIM_CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_rmt_tx_sim_ch1."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_sim_ch1(&mut self) -> TX_SIM_CH1_W<TX_SIM_SPEC, 1> {
-        TX_SIM_CH1_W::new(self)
+    pub fn tx_sim_ch1(&mut self) -> TX_SIM_CH1_W<TX_SIM_SPEC> {
+        TX_SIM_CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_rmt_tx_sim_en."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_sim_en(&mut self) -> TX_SIM_EN_W<TX_SIM_SPEC, 2> {
-        TX_SIM_EN_W::new(self)
+    pub fn tx_sim_en(&mut self) -> TX_SIM_EN_W<TX_SIM_SPEC> {
+        TX_SIM_EN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

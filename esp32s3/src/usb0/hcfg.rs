@@ -5,31 +5,31 @@ pub type W = crate::W<HCFG_SPEC>;
 #[doc = "Field `H_FSLSPCLKSEL` reader - "]
 pub type H_FSLSPCLKSEL_R = crate::FieldReader;
 #[doc = "Field `H_FSLSPCLKSEL` writer - "]
-pub type H_FSLSPCLKSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type H_FSLSPCLKSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `H_FSLSSUPP` reader - "]
 pub type H_FSLSSUPP_R = crate::BitReader;
 #[doc = "Field `H_FSLSSUPP` writer - "]
-pub type H_FSLSSUPP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_FSLSSUPP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_ENA32KHZS` reader - "]
 pub type H_ENA32KHZS_R = crate::BitReader;
 #[doc = "Field `H_ENA32KHZS` writer - "]
-pub type H_ENA32KHZS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_ENA32KHZS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DESCDMA` reader - "]
 pub type H_DESCDMA_R = crate::BitReader;
 #[doc = "Field `H_DESCDMA` writer - "]
-pub type H_DESCDMA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DESCDMA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_FRLISTEN` reader - "]
 pub type H_FRLISTEN_R = crate::FieldReader;
 #[doc = "Field `H_FRLISTEN` writer - "]
-pub type H_FRLISTEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type H_FRLISTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `H_PERSCHEDENA` reader - "]
 pub type H_PERSCHEDENA_R = crate::BitReader;
 #[doc = "Field `H_PERSCHEDENA` writer - "]
-pub type H_PERSCHEDENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_PERSCHEDENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_MODECHTIMEN` reader - "]
 pub type H_MODECHTIMEN_R = crate::BitReader;
 #[doc = "Field `H_MODECHTIMEN` writer - "]
-pub type H_MODECHTIMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_MODECHTIMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -93,51 +93,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_fslspclksel(&mut self) -> H_FSLSPCLKSEL_W<HCFG_SPEC, 0> {
-        H_FSLSPCLKSEL_W::new(self)
+    pub fn h_fslspclksel(&mut self) -> H_FSLSPCLKSEL_W<HCFG_SPEC> {
+        H_FSLSPCLKSEL_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_fslssupp(&mut self) -> H_FSLSSUPP_W<HCFG_SPEC, 2> {
-        H_FSLSSUPP_W::new(self)
+    pub fn h_fslssupp(&mut self) -> H_FSLSSUPP_W<HCFG_SPEC> {
+        H_FSLSSUPP_W::new(self, 2)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ena32khzs(&mut self) -> H_ENA32KHZS_W<HCFG_SPEC, 7> {
-        H_ENA32KHZS_W::new(self)
+    pub fn h_ena32khzs(&mut self) -> H_ENA32KHZS_W<HCFG_SPEC> {
+        H_ENA32KHZS_W::new(self, 7)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn h_descdma(&mut self) -> H_DESCDMA_W<HCFG_SPEC, 23> {
-        H_DESCDMA_W::new(self)
+    pub fn h_descdma(&mut self) -> H_DESCDMA_W<HCFG_SPEC> {
+        H_DESCDMA_W::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frlisten(&mut self) -> H_FRLISTEN_W<HCFG_SPEC, 24> {
-        H_FRLISTEN_W::new(self)
+    pub fn h_frlisten(&mut self) -> H_FRLISTEN_W<HCFG_SPEC> {
+        H_FRLISTEN_W::new(self, 24)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn h_perschedena(&mut self) -> H_PERSCHEDENA_W<HCFG_SPEC, 26> {
-        H_PERSCHEDENA_W::new(self)
+    pub fn h_perschedena(&mut self) -> H_PERSCHEDENA_W<HCFG_SPEC> {
+        H_PERSCHEDENA_W::new(self, 26)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn h_modechtimen(&mut self) -> H_MODECHTIMEN_W<HCFG_SPEC, 31> {
-        H_MODECHTIMEN_W::new(self)
+    pub fn h_modechtimen(&mut self) -> H_MODECHTIMEN_W<HCFG_SPEC> {
+        H_MODECHTIMEN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

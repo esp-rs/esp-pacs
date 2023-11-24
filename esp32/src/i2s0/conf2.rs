@@ -5,35 +5,35 @@ pub type W = crate::W<CONF2_SPEC>;
 #[doc = "Field `CAMERA_EN` reader - "]
 pub type CAMERA_EN_R = crate::BitReader;
 #[doc = "Field `CAMERA_EN` writer - "]
-pub type CAMERA_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAMERA_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_TX_WRX2_EN` reader - "]
 pub type LCD_TX_WRX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_WRX2_EN` writer - "]
-pub type LCD_TX_WRX2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCD_TX_WRX2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_TX_SDX2_EN` reader - "]
 pub type LCD_TX_SDX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_SDX2_EN` writer - "]
-pub type LCD_TX_SDX2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCD_TX_SDX2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_ENABLE_TEST_EN` reader - "]
 pub type DATA_ENABLE_TEST_EN_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE_TEST_EN` writer - "]
-pub type DATA_ENABLE_TEST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_ENABLE_TEST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_ENABLE` reader - "]
 pub type DATA_ENABLE_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE` writer - "]
-pub type DATA_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_EN` reader - "]
 pub type LCD_EN_R = crate::BitReader;
 #[doc = "Field `LCD_EN` writer - "]
-pub type LCD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXT_ADC_START_EN` reader - "]
 pub type EXT_ADC_START_EN_R = crate::BitReader;
 #[doc = "Field `EXT_ADC_START_EN` writer - "]
-pub type EXT_ADC_START_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_ADC_START_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTER_VALID_EN` reader - "]
 pub type INTER_VALID_EN_R = crate::BitReader;
 #[doc = "Field `INTER_VALID_EN` writer - "]
-pub type INTER_VALID_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTER_VALID_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -109,57 +109,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_en(&mut self) -> CAMERA_EN_W<CONF2_SPEC, 0> {
-        CAMERA_EN_W::new(self)
+    pub fn camera_en(&mut self) -> CAMERA_EN_W<CONF2_SPEC> {
+        CAMERA_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<CONF2_SPEC, 1> {
-        LCD_TX_WRX2_EN_W::new(self)
+    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<CONF2_SPEC> {
+        LCD_TX_WRX2_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<CONF2_SPEC, 2> {
-        LCD_TX_SDX2_EN_W::new(self)
+    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<CONF2_SPEC> {
+        LCD_TX_SDX2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<CONF2_SPEC, 3> {
-        DATA_ENABLE_TEST_EN_W::new(self)
+    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<CONF2_SPEC> {
+        DATA_ENABLE_TEST_EN_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn data_enable(&mut self) -> DATA_ENABLE_W<CONF2_SPEC, 4> {
-        DATA_ENABLE_W::new(self)
+    pub fn data_enable(&mut self) -> DATA_ENABLE_W<CONF2_SPEC> {
+        DATA_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_en(&mut self) -> LCD_EN_W<CONF2_SPEC, 5> {
-        LCD_EN_W::new(self)
+    pub fn lcd_en(&mut self) -> LCD_EN_W<CONF2_SPEC> {
+        LCD_EN_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<CONF2_SPEC, 6> {
-        EXT_ADC_START_EN_W::new(self)
+    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<CONF2_SPEC> {
+        EXT_ADC_START_EN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<CONF2_SPEC, 7> {
-        INTER_VALID_EN_W::new(self)
+    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<CONF2_SPEC> {
+        INTER_VALID_EN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

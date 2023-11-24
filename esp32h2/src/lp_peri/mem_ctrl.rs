@@ -3,23 +3,23 @@ pub type R = crate::R<MEM_CTRL_SPEC>;
 #[doc = "Register `MEM_CTRL` writer"]
 pub type W = crate::W<MEM_CTRL_SPEC>;
 #[doc = "Field `UART_WAKEUP_FLAG_CLR` writer - need_des"]
-pub type UART_WAKEUP_FLAG_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_WAKEUP_FLAG_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_WAKEUP_FLAG` reader - need_des"]
 pub type UART_WAKEUP_FLAG_R = crate::BitReader;
 #[doc = "Field `UART_WAKEUP_FLAG` writer - need_des"]
-pub type UART_WAKEUP_FLAG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_WAKEUP_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_WAKEUP_EN` reader - need_des"]
 pub type UART_WAKEUP_EN_R = crate::BitReader;
 #[doc = "Field `UART_WAKEUP_EN` writer - need_des"]
-pub type UART_WAKEUP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_WAKEUP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_MEM_FORCE_PD` reader - need_des"]
 pub type UART_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `UART_MEM_FORCE_PD` writer - need_des"]
-pub type UART_MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_MEM_FORCE_PU` reader - need_des"]
 pub type UART_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `UART_MEM_FORCE_PU` writer - need_des"]
-pub type UART_MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
@@ -68,39 +68,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_wakeup_flag_clr(&mut self) -> UART_WAKEUP_FLAG_CLR_W<MEM_CTRL_SPEC, 0> {
-        UART_WAKEUP_FLAG_CLR_W::new(self)
+    pub fn uart_wakeup_flag_clr(&mut self) -> UART_WAKEUP_FLAG_CLR_W<MEM_CTRL_SPEC> {
+        UART_WAKEUP_FLAG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_wakeup_flag(&mut self) -> UART_WAKEUP_FLAG_W<MEM_CTRL_SPEC, 1> {
-        UART_WAKEUP_FLAG_W::new(self)
+    pub fn uart_wakeup_flag(&mut self) -> UART_WAKEUP_FLAG_W<MEM_CTRL_SPEC> {
+        UART_WAKEUP_FLAG_W::new(self, 1)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_wakeup_en(&mut self) -> UART_WAKEUP_EN_W<MEM_CTRL_SPEC, 29> {
-        UART_WAKEUP_EN_W::new(self)
+    pub fn uart_wakeup_en(&mut self) -> UART_WAKEUP_EN_W<MEM_CTRL_SPEC> {
+        UART_WAKEUP_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_mem_force_pd(&mut self) -> UART_MEM_FORCE_PD_W<MEM_CTRL_SPEC, 30> {
-        UART_MEM_FORCE_PD_W::new(self)
+    pub fn uart_mem_force_pd(&mut self) -> UART_MEM_FORCE_PD_W<MEM_CTRL_SPEC> {
+        UART_MEM_FORCE_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_mem_force_pu(&mut self) -> UART_MEM_FORCE_PU_W<MEM_CTRL_SPEC, 31> {
-        UART_MEM_FORCE_PU_W::new(self)
+    pub fn uart_mem_force_pu(&mut self) -> UART_MEM_FORCE_PU_W<MEM_CTRL_SPEC> {
+        UART_MEM_FORCE_PU_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

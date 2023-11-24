@@ -78,7 +78,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_BLOCKSIZE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L2 Cache BlockSize mode configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_blocksize_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

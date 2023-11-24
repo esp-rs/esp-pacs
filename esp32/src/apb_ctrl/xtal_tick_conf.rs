@@ -5,7 +5,7 @@ pub type W = crate::W<XTAL_TICK_CONF_SPEC>;
 #[doc = "Field `XTAL_TICK_NUM` reader - "]
 pub type XTAL_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `XTAL_TICK_NUM` writer - "]
-pub type XTAL_TICK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XTAL_TICK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<XTAL_TICK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<XTAL_TICK_CONF_SPEC, 0> {
-        XTAL_TICK_NUM_W::new(self)
+    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<XTAL_TICK_CONF_SPEC> {
+        XTAL_TICK_NUM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

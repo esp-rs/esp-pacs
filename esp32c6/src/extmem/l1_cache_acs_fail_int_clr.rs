@@ -11,7 +11,7 @@ pub type L1_ICACHE2_FAIL_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_FAIL_INT_CLR` reader - Reserved"]
 pub type L1_ICACHE3_FAIL_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FAIL_INT_CLR` writer - The bit is used to clear interrupt of access fail that occurs in L1-DCache due to cpu accesses L1-DCache."]
-pub type L1_CACHE_FAIL_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_FAIL_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to clear interrupt of access fail that occurs in L1-ICache0 due to cpu accesses L1-ICache0."]
     #[inline(always)]
@@ -60,7 +60,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_FAIL_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -69,8 +69,8 @@ impl W {
     #[must_use]
     pub fn l1_cache_fail_int_clr(
         &mut self,
-    ) -> L1_CACHE_FAIL_INT_CLR_W<L1_CACHE_ACS_FAIL_INT_CLR_SPEC, 4> {
-        L1_CACHE_FAIL_INT_CLR_W::new(self)
+    ) -> L1_CACHE_FAIL_INT_CLR_W<L1_CACHE_ACS_FAIL_INT_CLR_SPEC> {
+        L1_CACHE_FAIL_INT_CLR_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

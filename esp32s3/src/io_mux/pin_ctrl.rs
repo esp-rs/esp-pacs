@@ -5,15 +5,15 @@ pub type W = crate::W<PIN_CTRL_SPEC>;
 #[doc = "Field `CLK_OUT1` reader - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
 pub type CLK_OUT1_R = crate::FieldReader;
 #[doc = "Field `CLK_OUT1` writer - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
-pub type CLK_OUT1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLK_OUT1_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CLK_OUT2` reader - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
 pub type CLK_OUT2_R = crate::FieldReader;
 #[doc = "Field `CLK_OUT2` writer - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
-pub type CLK_OUT2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLK_OUT2_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CLK_OUT3` reader - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
 pub type CLK_OUT3_R = crate::FieldReader;
 #[doc = "Field `CLK_OUT3` writer - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
-pub type CLK_OUT3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLK_OUT3_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PIN_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_out1(&mut self) -> CLK_OUT1_W<PIN_CTRL_SPEC, 0> {
-        CLK_OUT1_W::new(self)
+    pub fn clk_out1(&mut self) -> CLK_OUT1_W<PIN_CTRL_SPEC> {
+        CLK_OUT1_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_out2(&mut self) -> CLK_OUT2_W<PIN_CTRL_SPEC, 4> {
-        CLK_OUT2_W::new(self)
+    pub fn clk_out2(&mut self) -> CLK_OUT2_W<PIN_CTRL_SPEC> {
+        CLK_OUT2_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_out3(&mut self) -> CLK_OUT3_W<PIN_CTRL_SPEC, 8> {
-        CLK_OUT3_W::new(self)
+    pub fn clk_out3(&mut self) -> CLK_OUT3_W<PIN_CTRL_SPEC> {
+        CLK_OUT3_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

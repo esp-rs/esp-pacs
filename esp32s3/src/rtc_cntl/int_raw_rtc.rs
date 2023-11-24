@@ -45,7 +45,7 @@ pub type GLITCH_DET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_RAW` reader - touch approach mode loop interrupt raw"]
 pub type TOUCH_APPROACH_LOOP_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_RAW` writer - touch approach mode loop interrupt raw"]
-pub type TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt raw"]
     #[inline(always)]
@@ -241,7 +241,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_RTC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -250,8 +250,8 @@ impl W {
     #[must_use]
     pub fn touch_approach_loop_done_int_raw(
         &mut self,
-    ) -> TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<INT_RAW_RTC_SPEC, 20> {
-        TOUCH_APPROACH_LOOP_DONE_INT_RAW_W::new(self)
+    ) -> TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<INT_RAW_RTC_SPEC> {
+        TOUCH_APPROACH_LOOP_DONE_INT_RAW_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

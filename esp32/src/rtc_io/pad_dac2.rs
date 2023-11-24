@@ -5,55 +5,55 @@ pub type W = crate::W<PAD_DAC2_SPEC>;
 #[doc = "Field `PDAC2_DAC_XPD_FORCE` reader - Power on DAC2. Usually we need to tristate PDAC2 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
 pub type PDAC2_DAC_XPD_FORCE_R = crate::BitReader;
 #[doc = "Field `PDAC2_DAC_XPD_FORCE` writer - Power on DAC2. Usually we need to tristate PDAC2 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub type PDAC2_DAC_XPD_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_DAC_XPD_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_FUN_IE` reader - the input enable of the pad"]
 pub type PDAC2_FUN_IE_R = crate::BitReader;
 #[doc = "Field `PDAC2_FUN_IE` writer - the input enable of the pad"]
-pub type PDAC2_FUN_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_SLP_OE` reader - the output enable of the pad in sleep status"]
 pub type PDAC2_SLP_OE_R = crate::BitReader;
 #[doc = "Field `PDAC2_SLP_OE` writer - the output enable of the pad in sleep status"]
-pub type PDAC2_SLP_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_SLP_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_SLP_IE` reader - the input enable of the pad in sleep status"]
 pub type PDAC2_SLP_IE_R = crate::BitReader;
 #[doc = "Field `PDAC2_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type PDAC2_SLP_IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_SLP_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_SLP_SEL` reader - the sleep status selection signal of the pad"]
 pub type PDAC2_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `PDAC2_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type PDAC2_SLP_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_FUN_SEL` reader - the functional selection signal of the pad"]
 pub type PDAC2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `PDAC2_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type PDAC2_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PDAC2_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PDAC2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
 pub type PDAC2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `PDAC2_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type PDAC2_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_XPD_DAC` reader - Power on DAC2. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
 pub type PDAC2_XPD_DAC_R = crate::BitReader;
 #[doc = "Field `PDAC2_XPD_DAC` writer - Power on DAC2. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub type PDAC2_XPD_DAC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_XPD_DAC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_DAC` reader - PAD DAC2 control code."]
 pub type PDAC2_DAC_R = crate::FieldReader;
 #[doc = "Field `PDAC2_DAC` writer - PAD DAC2 control code."]
-pub type PDAC2_DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PDAC2_DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `PDAC2_RUE` reader - the pull up enable of the pad"]
 pub type PDAC2_RUE_R = crate::BitReader;
 #[doc = "Field `PDAC2_RUE` writer - the pull up enable of the pad"]
-pub type PDAC2_RUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_RUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_RDE` reader - the pull down enable of the pad"]
 pub type PDAC2_RDE_R = crate::BitReader;
 #[doc = "Field `PDAC2_RDE` writer - the pull down enable of the pad"]
-pub type PDAC2_RDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_RDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
 pub type PDAC2_HOLD_R = crate::BitReader;
 #[doc = "Field `PDAC2_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type PDAC2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_DRV` reader - the driver strength of the pad"]
 pub type PDAC2_DRV_R = crate::FieldReader;
 #[doc = "Field `PDAC2_DRV` writer - the driver strength of the pad"]
-pub type PDAC2_DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PDAC2_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 10 - Power on DAC2. Usually we need to tristate PDAC2 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
@@ -168,87 +168,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PAD_DAC2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 10 - Power on DAC2. Usually we need to tristate PDAC2 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_dac_xpd_force(&mut self) -> PDAC2_DAC_XPD_FORCE_W<PAD_DAC2_SPEC, 10> {
-        PDAC2_DAC_XPD_FORCE_W::new(self)
+    pub fn pdac2_dac_xpd_force(&mut self) -> PDAC2_DAC_XPD_FORCE_W<PAD_DAC2_SPEC> {
+        PDAC2_DAC_XPD_FORCE_W::new(self, 10)
     }
     #[doc = "Bit 11 - the input enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_fun_ie(&mut self) -> PDAC2_FUN_IE_W<PAD_DAC2_SPEC, 11> {
-        PDAC2_FUN_IE_W::new(self)
+    pub fn pdac2_fun_ie(&mut self) -> PDAC2_FUN_IE_W<PAD_DAC2_SPEC> {
+        PDAC2_FUN_IE_W::new(self, 11)
     }
     #[doc = "Bit 12 - the output enable of the pad in sleep status"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_slp_oe(&mut self) -> PDAC2_SLP_OE_W<PAD_DAC2_SPEC, 12> {
-        PDAC2_SLP_OE_W::new(self)
+    pub fn pdac2_slp_oe(&mut self) -> PDAC2_SLP_OE_W<PAD_DAC2_SPEC> {
+        PDAC2_SLP_OE_W::new(self, 12)
     }
     #[doc = "Bit 13 - the input enable of the pad in sleep status"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_slp_ie(&mut self) -> PDAC2_SLP_IE_W<PAD_DAC2_SPEC, 13> {
-        PDAC2_SLP_IE_W::new(self)
+    pub fn pdac2_slp_ie(&mut self) -> PDAC2_SLP_IE_W<PAD_DAC2_SPEC> {
+        PDAC2_SLP_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - the sleep status selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_slp_sel(&mut self) -> PDAC2_SLP_SEL_W<PAD_DAC2_SPEC, 14> {
-        PDAC2_SLP_SEL_W::new(self)
+    pub fn pdac2_slp_sel(&mut self) -> PDAC2_SLP_SEL_W<PAD_DAC2_SPEC> {
+        PDAC2_SLP_SEL_W::new(self, 14)
     }
     #[doc = "Bits 15:16 - the functional selection signal of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_fun_sel(&mut self) -> PDAC2_FUN_SEL_W<PAD_DAC2_SPEC, 15> {
-        PDAC2_FUN_SEL_W::new(self)
+    pub fn pdac2_fun_sel(&mut self) -> PDAC2_FUN_SEL_W<PAD_DAC2_SPEC> {
+        PDAC2_FUN_SEL_W::new(self, 15)
     }
     #[doc = "Bit 17 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_mux_sel(&mut self) -> PDAC2_MUX_SEL_W<PAD_DAC2_SPEC, 17> {
-        PDAC2_MUX_SEL_W::new(self)
+    pub fn pdac2_mux_sel(&mut self) -> PDAC2_MUX_SEL_W<PAD_DAC2_SPEC> {
+        PDAC2_MUX_SEL_W::new(self, 17)
     }
     #[doc = "Bit 18 - Power on DAC2. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_xpd_dac(&mut self) -> PDAC2_XPD_DAC_W<PAD_DAC2_SPEC, 18> {
-        PDAC2_XPD_DAC_W::new(self)
+    pub fn pdac2_xpd_dac(&mut self) -> PDAC2_XPD_DAC_W<PAD_DAC2_SPEC> {
+        PDAC2_XPD_DAC_W::new(self, 18)
     }
     #[doc = "Bits 19:26 - PAD DAC2 control code."]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_dac(&mut self) -> PDAC2_DAC_W<PAD_DAC2_SPEC, 19> {
-        PDAC2_DAC_W::new(self)
+    pub fn pdac2_dac(&mut self) -> PDAC2_DAC_W<PAD_DAC2_SPEC> {
+        PDAC2_DAC_W::new(self, 19)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_rue(&mut self) -> PDAC2_RUE_W<PAD_DAC2_SPEC, 27> {
-        PDAC2_RUE_W::new(self)
+    pub fn pdac2_rue(&mut self) -> PDAC2_RUE_W<PAD_DAC2_SPEC> {
+        PDAC2_RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_rde(&mut self) -> PDAC2_RDE_W<PAD_DAC2_SPEC, 28> {
-        PDAC2_RDE_W::new(self)
+    pub fn pdac2_rde(&mut self) -> PDAC2_RDE_W<PAD_DAC2_SPEC> {
+        PDAC2_RDE_W::new(self, 28)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<PAD_DAC2_SPEC, 29> {
-        PDAC2_HOLD_W::new(self)
+    pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<PAD_DAC2_SPEC> {
+        PDAC2_HOLD_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - the driver strength of the pad"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_drv(&mut self) -> PDAC2_DRV_W<PAD_DAC2_SPEC, 30> {
-        PDAC2_DRV_W::new(self)
+    pub fn pdac2_drv(&mut self) -> PDAC2_DRV_W<PAD_DAC2_SPEC> {
+        PDAC2_DRV_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

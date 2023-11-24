@@ -5,19 +5,19 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `PER_END_INT_ENA` reader - The enable bit for SPI_MEM_PER_END_INT interrupt."]
 pub type PER_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PER_END_INT_ENA` writer - The enable bit for SPI_MEM_PER_END_INT interrupt."]
-pub type PER_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PER_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PES_END_INT_ENA` reader - The enable bit for SPI_MEM_PES_END_INT interrupt."]
 pub type PES_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PES_END_INT_ENA` writer - The enable bit for SPI_MEM_PES_END_INT interrupt."]
-pub type PES_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PES_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOTAL_TRANS_END_INT_ENA` reader - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
 pub type TOTAL_TRANS_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TOTAL_TRANS_END_INT_ENA` writer - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
-pub type TOTAL_TRANS_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOTAL_TRANS_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BROWN_OUT_INT_ENA` reader - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
 pub type BROWN_OUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_ENA` writer - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub type BROWN_OUT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BROWN_OUT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn per_end_int_ena(&mut self) -> PER_END_INT_ENA_W<INT_ENA_SPEC, 0> {
-        PER_END_INT_ENA_W::new(self)
+    pub fn per_end_int_ena(&mut self) -> PER_END_INT_ENA_W<INT_ENA_SPEC> {
+        PER_END_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn pes_end_int_ena(&mut self) -> PES_END_INT_ENA_W<INT_ENA_SPEC, 1> {
-        PES_END_INT_ENA_W::new(self)
+    pub fn pes_end_int_ena(&mut self) -> PES_END_INT_ENA_W<INT_ENA_SPEC> {
+        PES_END_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn total_trans_end_int_ena(&mut self) -> TOTAL_TRANS_END_INT_ENA_W<INT_ENA_SPEC, 2> {
-        TOTAL_TRANS_END_INT_ENA_W::new(self)
+    pub fn total_trans_end_int_ena(&mut self) -> TOTAL_TRANS_END_INT_ENA_W<INT_ENA_SPEC> {
+        TOTAL_TRANS_END_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W<INT_ENA_SPEC, 3> {
-        BROWN_OUT_INT_ENA_W::new(self)
+    pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W<INT_ENA_SPEC> {
+        BROWN_OUT_INT_ENA_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

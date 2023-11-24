@@ -5,7 +5,7 @@ pub type W = crate::W<APPCPU_CTRL_C_SPEC>;
 #[doc = "Field `APPCPU_RUNSTALL` reader - "]
 pub type APPCPU_RUNSTALL_R = crate::BitReader;
 #[doc = "Field `APPCPU_RUNSTALL` writer - "]
-pub type APPCPU_RUNSTALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APPCPU_RUNSTALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APPCPU_CTRL_C_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn appcpu_runstall(&mut self) -> APPCPU_RUNSTALL_W<APPCPU_CTRL_C_SPEC, 0> {
-        APPCPU_RUNSTALL_W::new(self)
+    pub fn appcpu_runstall(&mut self) -> APPCPU_RUNSTALL_W<APPCPU_CTRL_C_SPEC> {
+        APPCPU_RUNSTALL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

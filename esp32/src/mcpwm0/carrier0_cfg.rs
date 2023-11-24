@@ -5,27 +5,27 @@ pub type W = crate::W<CARRIER0_CFG_SPEC>;
 #[doc = "Field `CARRIER0_EN` reader - "]
 pub type CARRIER0_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER0_EN` writer - "]
-pub type CARRIER0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARRIER0_PRESCALE` reader - "]
 pub type CARRIER0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CARRIER0_PRESCALE` writer - "]
-pub type CARRIER0_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CARRIER0_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CARRIER0_DUTY` reader - "]
 pub type CARRIER0_DUTY_R = crate::FieldReader;
 #[doc = "Field `CARRIER0_DUTY` writer - "]
-pub type CARRIER0_DUTY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CARRIER0_DUTY_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CARRIER0_OSHTWTH` reader - "]
 pub type CARRIER0_OSHTWTH_R = crate::FieldReader;
 #[doc = "Field `CARRIER0_OSHTWTH` writer - "]
-pub type CARRIER0_OSHTWTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CARRIER0_OSHTWTH_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CARRIER0_OUT_INVERT` reader - "]
 pub type CARRIER0_OUT_INVERT_R = crate::BitReader;
 #[doc = "Field `CARRIER0_OUT_INVERT` writer - "]
-pub type CARRIER0_OUT_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER0_OUT_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARRIER0_IN_INVERT` reader - "]
 pub type CARRIER0_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CARRIER0_IN_INVERT` writer - "]
-pub type CARRIER0_IN_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARRIER0_IN_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CARRIER0_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_en(&mut self) -> CARRIER0_EN_W<CARRIER0_CFG_SPEC, 0> {
-        CARRIER0_EN_W::new(self)
+    pub fn carrier0_en(&mut self) -> CARRIER0_EN_W<CARRIER0_CFG_SPEC> {
+        CARRIER0_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_prescale(&mut self) -> CARRIER0_PRESCALE_W<CARRIER0_CFG_SPEC, 1> {
-        CARRIER0_PRESCALE_W::new(self)
+    pub fn carrier0_prescale(&mut self) -> CARRIER0_PRESCALE_W<CARRIER0_CFG_SPEC> {
+        CARRIER0_PRESCALE_W::new(self, 1)
     }
     #[doc = "Bits 5:7"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_duty(&mut self) -> CARRIER0_DUTY_W<CARRIER0_CFG_SPEC, 5> {
-        CARRIER0_DUTY_W::new(self)
+    pub fn carrier0_duty(&mut self) -> CARRIER0_DUTY_W<CARRIER0_CFG_SPEC> {
+        CARRIER0_DUTY_W::new(self, 5)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_oshtwth(&mut self) -> CARRIER0_OSHTWTH_W<CARRIER0_CFG_SPEC, 8> {
-        CARRIER0_OSHTWTH_W::new(self)
+    pub fn carrier0_oshtwth(&mut self) -> CARRIER0_OSHTWTH_W<CARRIER0_CFG_SPEC> {
+        CARRIER0_OSHTWTH_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_out_invert(&mut self) -> CARRIER0_OUT_INVERT_W<CARRIER0_CFG_SPEC, 12> {
-        CARRIER0_OUT_INVERT_W::new(self)
+    pub fn carrier0_out_invert(&mut self) -> CARRIER0_OUT_INVERT_W<CARRIER0_CFG_SPEC> {
+        CARRIER0_OUT_INVERT_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn carrier0_in_invert(&mut self) -> CARRIER0_IN_INVERT_W<CARRIER0_CFG_SPEC, 13> {
-        CARRIER0_IN_INVERT_W::new(self)
+    pub fn carrier0_in_invert(&mut self) -> CARRIER0_IN_INVERT_W<CARRIER0_CFG_SPEC> {
+        CARRIER0_IN_INVERT_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

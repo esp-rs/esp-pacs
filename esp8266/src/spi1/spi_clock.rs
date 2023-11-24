@@ -5,23 +5,23 @@ pub type W = crate::W<SPI_CLOCK_SPEC>;
 #[doc = "Field `spi_clkcnt_L` reader - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
 pub type SPI_CLKCNT_L_R = crate::FieldReader;
 #[doc = "Field `spi_clkcnt_L` writer - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
-pub type SPI_CLKCNT_L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SPI_CLKCNT_L_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `spi_clkcnt_H` reader - In the master mode, it must be floor((spi_clkcnt_N+1)/2-1). In the slave mode, it must be 0."]
 pub type SPI_CLKCNT_H_R = crate::FieldReader;
 #[doc = "Field `spi_clkcnt_H` writer - In the master mode, it must be floor((spi_clkcnt_N+1)/2-1). In the slave mode, it must be 0."]
-pub type SPI_CLKCNT_H_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SPI_CLKCNT_H_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `spi_clkcnt_N` reader - In the master mode, it is the divider of spi_clk. So spi_clk frequency is 80MHz/(spi_clkdiv_pre+1)/(spi_clkcnt_N+1)"]
 pub type SPI_CLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `spi_clkcnt_N` writer - In the master mode, it is the divider of spi_clk. So spi_clk frequency is 80MHz/(spi_clkdiv_pre+1)/(spi_clkcnt_N+1)"]
-pub type SPI_CLKCNT_N_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SPI_CLKCNT_N_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `spi_clkdiv_pre` reader - In the master mode, it is pre-divider of spi_clk."]
 pub type SPI_CLKDIV_PRE_R = crate::FieldReader<u16>;
 #[doc = "Field `spi_clkdiv_pre` writer - In the master mode, it is pre-divider of spi_clk."]
-pub type SPI_CLKDIV_PRE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type SPI_CLKDIV_PRE_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 #[doc = "Field `spi_clk_equ_sysclk` reader - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]
 pub type SPI_CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `spi_clk_equ_sysclk` writer - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]
-pub type SPI_CLK_EQU_SYSCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_CLK_EQU_SYSCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
     #[inline(always)]
@@ -79,41 +79,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_CLOCK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_clkcnt_l(&mut self) -> SPI_CLKCNT_L_W<SPI_CLOCK_SPEC, 0> {
-        SPI_CLKCNT_L_W::new(self)
+    pub fn spi_clkcnt_l(&mut self) -> SPI_CLKCNT_L_W<SPI_CLOCK_SPEC> {
+        SPI_CLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - In the master mode, it must be floor((spi_clkcnt_N+1)/2-1). In the slave mode, it must be 0."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_clkcnt_h(&mut self) -> SPI_CLKCNT_H_W<SPI_CLOCK_SPEC, 6> {
-        SPI_CLKCNT_H_W::new(self)
+    pub fn spi_clkcnt_h(&mut self) -> SPI_CLKCNT_H_W<SPI_CLOCK_SPEC> {
+        SPI_CLKCNT_H_W::new(self, 6)
     }
     #[doc = "Bits 12:17 - In the master mode, it is the divider of spi_clk. So spi_clk frequency is 80MHz/(spi_clkdiv_pre+1)/(spi_clkcnt_N+1)"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_clkcnt_n(&mut self) -> SPI_CLKCNT_N_W<SPI_CLOCK_SPEC, 12> {
-        SPI_CLKCNT_N_W::new(self)
+    pub fn spi_clkcnt_n(&mut self) -> SPI_CLKCNT_N_W<SPI_CLOCK_SPEC> {
+        SPI_CLKCNT_N_W::new(self, 12)
     }
     #[doc = "Bits 18:30 - In the master mode, it is pre-divider of spi_clk."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_clkdiv_pre(&mut self) -> SPI_CLKDIV_PRE_W<SPI_CLOCK_SPEC, 18> {
-        SPI_CLKDIV_PRE_W::new(self)
+    pub fn spi_clkdiv_pre(&mut self) -> SPI_CLKDIV_PRE_W<SPI_CLOCK_SPEC> {
+        SPI_CLKDIV_PRE_W::new(self, 18)
     }
     #[doc = "Bit 31 - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_clk_equ_sysclk(&mut self) -> SPI_CLK_EQU_SYSCLK_W<SPI_CLOCK_SPEC, 31> {
-        SPI_CLK_EQU_SYSCLK_W::new(self)
+    pub fn spi_clk_equ_sysclk(&mut self) -> SPI_CLK_EQU_SYSCLK_W<SPI_CLOCK_SPEC> {
+        SPI_CLK_EQU_SYSCLK_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -5,11 +5,11 @@ pub type W = crate::W<SW_CPU_STALL_SPEC>;
 #[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
 pub type SW_STALL_APPCPU_C1_R = crate::FieldReader;
 #[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
-pub type SW_STALL_APPCPU_C1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SW_STALL_APPCPU_C1_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SW_STALL_PROCPU_C1` reader - Set this bit to allow the SW to be able to send the CPU into stalling."]
 pub type SW_STALL_PROCPU_C1_R = crate::FieldReader;
 #[doc = "Field `SW_STALL_PROCPU_C1` writer - Set this bit to allow the SW to be able to send the CPU into stalling."]
-pub type SW_STALL_PROCPU_C1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SW_STALL_PROCPU_C1_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SW_CPU_STALL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<SW_CPU_STALL_SPEC, 20> {
-        SW_STALL_APPCPU_C1_W::new(self)
+    pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<SW_CPU_STALL_SPEC> {
+        SW_STALL_APPCPU_C1_W::new(self, 20)
     }
     #[doc = "Bits 26:31 - Set this bit to allow the SW to be able to send the CPU into stalling."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<SW_CPU_STALL_SPEC, 26> {
-        SW_STALL_PROCPU_C1_W::new(self)
+    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<SW_CPU_STALL_SPEC> {
+        SW_STALL_PROCPU_C1_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

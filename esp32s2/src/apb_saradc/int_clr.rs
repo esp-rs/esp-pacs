@@ -1,13 +1,13 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `ADC2_THRES_INT_CLR` writer - Clear bit of APB_SARADC_ADC2_THRES_INT interrupt."]
-pub type ADC2_THRES_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_THRES_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_THRES_INT_CLR` writer - Clear bit of APB_SARADC_ADC1_THRES_INT interrupt."]
-pub type ADC1_THRES_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_THRES_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_DONE_INT_CLR` writer - Clear bit of APB_SARADC_ADC2_DONE_INT interrupt."]
-pub type ADC2_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_DONE_INT_CLR` writer - Clear bit of APB_SARADC_ADC1_DONE_INT interrupt."]
-pub type ADC1_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -18,26 +18,26 @@ impl W {
     #[doc = "Bit 28 - Clear bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_thres_int_clr(&mut self) -> ADC2_THRES_INT_CLR_W<INT_CLR_SPEC, 28> {
-        ADC2_THRES_INT_CLR_W::new(self)
+    pub fn adc2_thres_int_clr(&mut self) -> ADC2_THRES_INT_CLR_W<INT_CLR_SPEC> {
+        ADC2_THRES_INT_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - Clear bit of APB_SARADC_ADC1_THRES_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_thres_int_clr(&mut self) -> ADC1_THRES_INT_CLR_W<INT_CLR_SPEC, 29> {
-        ADC1_THRES_INT_CLR_W::new(self)
+    pub fn adc1_thres_int_clr(&mut self) -> ADC1_THRES_INT_CLR_W<INT_CLR_SPEC> {
+        ADC1_THRES_INT_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - Clear bit of APB_SARADC_ADC2_DONE_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_done_int_clr(&mut self) -> ADC2_DONE_INT_CLR_W<INT_CLR_SPEC, 30> {
-        ADC2_DONE_INT_CLR_W::new(self)
+    pub fn adc2_done_int_clr(&mut self) -> ADC2_DONE_INT_CLR_W<INT_CLR_SPEC> {
+        ADC2_DONE_INT_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - Clear bit of APB_SARADC_ADC1_DONE_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_done_int_clr(&mut self) -> ADC1_DONE_INT_CLR_W<INT_CLR_SPEC, 31> {
-        ADC1_DONE_INT_CLR_W::new(self)
+    pub fn adc1_done_int_clr(&mut self) -> ADC1_DONE_INT_CLR_W<INT_CLR_SPEC> {
+        ADC1_DONE_INT_CLR_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

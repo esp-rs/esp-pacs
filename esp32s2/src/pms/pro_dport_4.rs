@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_DPORT_4_SPEC>;
 #[doc = "Field `PRO_DPORT_RESERVE_FIFO_2` reader - Configure read-protection address 2."]
 pub type PRO_DPORT_RESERVE_FIFO_2_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_DPORT_RESERVE_FIFO_2` writer - Configure read-protection address 2."]
-pub type PRO_DPORT_RESERVE_FIFO_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type PRO_DPORT_RESERVE_FIFO_2_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 impl R {
     #[doc = "Bits 0:17 - Configure read-protection address 2."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_DPORT_4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:17 - Configure read-protection address 2."]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dport_reserve_fifo_2(&mut self) -> PRO_DPORT_RESERVE_FIFO_2_W<PRO_DPORT_4_SPEC, 0> {
-        PRO_DPORT_RESERVE_FIFO_2_W::new(self)
+    pub fn pro_dport_reserve_fifo_2(&mut self) -> PRO_DPORT_RESERVE_FIFO_2_W<PRO_DPORT_4_SPEC> {
+        PRO_DPORT_RESERVE_FIFO_2_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

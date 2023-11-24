@@ -5,11 +5,11 @@ pub type W = crate::W<ASSIST_CONF_SPEC>;
 #[doc = "Field `ASSIST_CLK_EN` reader - Set 1 to enable assist clock"]
 pub type ASSIST_CLK_EN_R = crate::BitReader;
 #[doc = "Field `ASSIST_CLK_EN` writer - Set 1 to enable assist clock"]
-pub type ASSIST_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ASSIST_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ASSIST_RST_EN` reader - Set 0 to reset assist module"]
 pub type ASSIST_RST_EN_R = crate::BitReader;
 #[doc = "Field `ASSIST_RST_EN` writer - Set 0 to reset assist module"]
-pub type ASSIST_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ASSIST_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable assist clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ASSIST_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable assist clock"]
     #[inline(always)]
     #[must_use]
-    pub fn assist_clk_en(&mut self) -> ASSIST_CLK_EN_W<ASSIST_CONF_SPEC, 0> {
-        ASSIST_CLK_EN_W::new(self)
+    pub fn assist_clk_en(&mut self) -> ASSIST_CLK_EN_W<ASSIST_CONF_SPEC> {
+        ASSIST_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset assist module"]
     #[inline(always)]
     #[must_use]
-    pub fn assist_rst_en(&mut self) -> ASSIST_RST_EN_W<ASSIST_CONF_SPEC, 1> {
-        ASSIST_RST_EN_W::new(self)
+    pub fn assist_rst_en(&mut self) -> ASSIST_RST_EN_W<ASSIST_CONF_SPEC> {
+        ASSIST_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

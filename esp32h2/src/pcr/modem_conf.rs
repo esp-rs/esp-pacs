@@ -5,15 +5,15 @@ pub type W = crate::W<MODEM_CONF_SPEC>;
 #[doc = "Field `MODEM_CLK_SEL` reader - xxxx"]
 pub type MODEM_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `MODEM_CLK_SEL` writer - xxxx"]
-pub type MODEM_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODEM_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MODEM_CLK_EN` reader - xxxx"]
 pub type MODEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MODEM_CLK_EN` writer - xxxx"]
-pub type MODEM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MODEM_RST_EN` reader - Set this file as 1 to reset modem-subsystem."]
 pub type MODEM_RST_EN_R = crate::BitReader;
 #[doc = "Field `MODEM_RST_EN` writer - Set this file as 1 to reset modem-subsystem."]
-pub type MODEM_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODEM_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MODEM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_clk_sel(&mut self) -> MODEM_CLK_SEL_W<MODEM_CONF_SPEC, 0> {
-        MODEM_CLK_SEL_W::new(self)
+    pub fn modem_clk_sel(&mut self) -> MODEM_CLK_SEL_W<MODEM_CONF_SPEC> {
+        MODEM_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn modem_clk_en(&mut self) -> MODEM_CLK_EN_W<MODEM_CONF_SPEC, 1> {
-        MODEM_CLK_EN_W::new(self)
+    pub fn modem_clk_en(&mut self) -> MODEM_CLK_EN_W<MODEM_CONF_SPEC> {
+        MODEM_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this file as 1 to reset modem-subsystem."]
     #[inline(always)]
     #[must_use]
-    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<MODEM_CONF_SPEC, 2> {
-        MODEM_RST_EN_W::new(self)
+    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<MODEM_CONF_SPEC> {
+        MODEM_RST_EN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

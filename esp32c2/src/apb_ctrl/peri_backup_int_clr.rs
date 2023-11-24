@@ -1,9 +1,9 @@
 #[doc = "Register `PERI_BACKUP_INT_CLR` writer"]
 pub type W = crate::W<PERI_BACKUP_INT_CLR_SPEC>;
 #[doc = "Field `PERI_BACKUP_DONE_INT_CLR` writer - reg_peri_backup_done_int_clr"]
-pub type PERI_BACKUP_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERI_BACKUP_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PERI_BACKUP_ERR_INT_CLR` writer - reg_peri_backup_err_int_clr"]
-pub type PERI_BACKUP_ERR_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERI_BACKUP_ERR_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -16,16 +16,16 @@ impl W {
     #[must_use]
     pub fn peri_backup_done_int_clr(
         &mut self,
-    ) -> PERI_BACKUP_DONE_INT_CLR_W<PERI_BACKUP_INT_CLR_SPEC, 0> {
-        PERI_BACKUP_DONE_INT_CLR_W::new(self)
+    ) -> PERI_BACKUP_DONE_INT_CLR_W<PERI_BACKUP_INT_CLR_SPEC> {
+        PERI_BACKUP_DONE_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_peri_backup_err_int_clr"]
     #[inline(always)]
     #[must_use]
     pub fn peri_backup_err_int_clr(
         &mut self,
-    ) -> PERI_BACKUP_ERR_INT_CLR_W<PERI_BACKUP_INT_CLR_SPEC, 1> {
-        PERI_BACKUP_ERR_INT_CLR_W::new(self)
+    ) -> PERI_BACKUP_ERR_INT_CLR_W<PERI_BACKUP_INT_CLR_SPEC> {
+        PERI_BACKUP_ERR_INT_CLR_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

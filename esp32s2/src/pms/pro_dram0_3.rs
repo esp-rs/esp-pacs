@@ -5,11 +5,11 @@ pub type W = crate::W<PRO_DRAM0_3_SPEC>;
 #[doc = "Field `PRO_DRAM0_ILG_CLR` reader - The clear signal for DBUS0 access interrupt."]
 pub type PRO_DRAM0_ILG_CLR_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM0_ILG_CLR` writer - The clear signal for DBUS0 access interrupt."]
-pub type PRO_DRAM0_ILG_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DRAM0_ILG_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_DRAM0_ILG_EN` reader - The enable signal for DBUS0 access interrupt."]
 pub type PRO_DRAM0_ILG_EN_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM0_ILG_EN` writer - The enable signal for DBUS0 access interrupt."]
-pub type PRO_DRAM0_ILG_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_DRAM0_ILG_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_DRAM0_ILG_INTR` reader - DBUS0 access interrupt signal."]
 pub type PRO_DRAM0_ILG_INTR_R = crate::BitReader;
 impl R {
@@ -51,21 +51,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_DRAM0_3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The clear signal for DBUS0 access interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dram0_ilg_clr(&mut self) -> PRO_DRAM0_ILG_CLR_W<PRO_DRAM0_3_SPEC, 0> {
-        PRO_DRAM0_ILG_CLR_W::new(self)
+    pub fn pro_dram0_ilg_clr(&mut self) -> PRO_DRAM0_ILG_CLR_W<PRO_DRAM0_3_SPEC> {
+        PRO_DRAM0_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for DBUS0 access interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn pro_dram0_ilg_en(&mut self) -> PRO_DRAM0_ILG_EN_W<PRO_DRAM0_3_SPEC, 1> {
-        PRO_DRAM0_ILG_EN_W::new(self)
+    pub fn pro_dram0_ilg_en(&mut self) -> PRO_DRAM0_ILG_EN_W<PRO_DRAM0_3_SPEC> {
+        PRO_DRAM0_ILG_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

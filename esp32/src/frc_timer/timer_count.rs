@@ -5,7 +5,7 @@ pub type W = crate::W<TIMER_COUNT_SPEC>;
 #[doc = "Field `TIMER_COUNT` reader - "]
 pub type TIMER_COUNT_R = crate::FieldReader;
 #[doc = "Field `TIMER_COUNT` writer - "]
-pub type TIMER_COUNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER_COUNT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER_COUNT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_count(&mut self) -> TIMER_COUNT_W<TIMER_COUNT_SPEC, 0> {
-        TIMER_COUNT_W::new(self)
+    pub fn timer_count(&mut self) -> TIMER_COUNT_W<TIMER_COUNT_SPEC> {
+        TIMER_COUNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

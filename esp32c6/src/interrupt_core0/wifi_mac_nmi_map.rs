@@ -5,7 +5,7 @@ pub type W = crate::W<WIFI_MAC_NMI_MAP_SPEC>;
 #[doc = "Field `WIFI_MAC_NMI_MAP` reader - Need add description"]
 pub type WIFI_MAC_NMI_MAP_R = crate::FieldReader;
 #[doc = "Field `WIFI_MAC_NMI_MAP` writer - Need add description"]
-pub type WIFI_MAC_NMI_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type WIFI_MAC_NMI_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WIFI_MAC_NMI_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_mac_nmi_map(&mut self) -> WIFI_MAC_NMI_MAP_W<WIFI_MAC_NMI_MAP_SPEC, 0> {
-        WIFI_MAC_NMI_MAP_W::new(self)
+    pub fn wifi_mac_nmi_map(&mut self) -> WIFI_MAC_NMI_MAP_W<WIFI_MAC_NMI_MAP_SPEC> {
+        WIFI_MAC_NMI_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

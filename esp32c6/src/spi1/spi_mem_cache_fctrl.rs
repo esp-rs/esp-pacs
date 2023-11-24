@@ -5,31 +5,31 @@ pub type W = crate::W<SPI_MEM_CACHE_FCTRL_SPEC>;
 #[doc = "Field `SPI_MEM_CACHE_USR_ADDR_4BYTE` reader - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
 pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CACHE_USR_ADDR_4BYTE` writer - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
-pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FDIN_DUAL` reader - For SPI1, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
 pub type SPI_MEM_FDIN_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDIN_DUAL` writer - For SPI1, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDIN_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FDIN_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FDOUT_DUAL` reader - For SPI1, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
 pub type SPI_MEM_FDOUT_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDOUT_DUAL` writer - For SPI1, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDOUT_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FDOUT_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FADDR_DUAL` reader - For SPI1, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
 pub type SPI_MEM_FADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FADDR_DUAL` writer - For SPI1, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FADDR_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FADDR_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FDIN_QUAD` reader - For SPI1, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type SPI_MEM_FDIN_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDIN_QUAD` writer - For SPI1, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDIN_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FDIN_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FDOUT_QUAD` reader - For SPI1, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type SPI_MEM_FDOUT_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDOUT_QUAD` writer - For SPI1, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDOUT_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FDOUT_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_FADDR_QUAD` reader - For SPI1, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type SPI_MEM_FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FADDR_QUAD` writer - For SPI1, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FADDR_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_FADDR_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
     #[inline(always)]
@@ -105,7 +105,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CACHE_FCTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -114,44 +114,44 @@ impl W {
     #[must_use]
     pub fn spi_mem_cache_usr_addr_4byte(
         &mut self,
-    ) -> SPI_MEM_CACHE_USR_ADDR_4BYTE_W<SPI_MEM_CACHE_FCTRL_SPEC, 1> {
-        SPI_MEM_CACHE_USR_ADDR_4BYTE_W::new(self)
+    ) -> SPI_MEM_CACHE_USR_ADDR_4BYTE_W<SPI_MEM_CACHE_FCTRL_SPEC> {
+        SPI_MEM_CACHE_USR_ADDR_4BYTE_W::new(self, 1)
     }
     #[doc = "Bit 3 - For SPI1, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_fdin_dual(&mut self) -> SPI_MEM_FDIN_DUAL_W<SPI_MEM_CACHE_FCTRL_SPEC, 3> {
-        SPI_MEM_FDIN_DUAL_W::new(self)
+    pub fn spi_mem_fdin_dual(&mut self) -> SPI_MEM_FDIN_DUAL_W<SPI_MEM_CACHE_FCTRL_SPEC> {
+        SPI_MEM_FDIN_DUAL_W::new(self, 3)
     }
     #[doc = "Bit 4 - For SPI1, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_fdout_dual(&mut self) -> SPI_MEM_FDOUT_DUAL_W<SPI_MEM_CACHE_FCTRL_SPEC, 4> {
-        SPI_MEM_FDOUT_DUAL_W::new(self)
+    pub fn spi_mem_fdout_dual(&mut self) -> SPI_MEM_FDOUT_DUAL_W<SPI_MEM_CACHE_FCTRL_SPEC> {
+        SPI_MEM_FDOUT_DUAL_W::new(self, 4)
     }
     #[doc = "Bit 5 - For SPI1, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_faddr_dual(&mut self) -> SPI_MEM_FADDR_DUAL_W<SPI_MEM_CACHE_FCTRL_SPEC, 5> {
-        SPI_MEM_FADDR_DUAL_W::new(self)
+    pub fn spi_mem_faddr_dual(&mut self) -> SPI_MEM_FADDR_DUAL_W<SPI_MEM_CACHE_FCTRL_SPEC> {
+        SPI_MEM_FADDR_DUAL_W::new(self, 5)
     }
     #[doc = "Bit 6 - For SPI1, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_fdin_quad(&mut self) -> SPI_MEM_FDIN_QUAD_W<SPI_MEM_CACHE_FCTRL_SPEC, 6> {
-        SPI_MEM_FDIN_QUAD_W::new(self)
+    pub fn spi_mem_fdin_quad(&mut self) -> SPI_MEM_FDIN_QUAD_W<SPI_MEM_CACHE_FCTRL_SPEC> {
+        SPI_MEM_FDIN_QUAD_W::new(self, 6)
     }
     #[doc = "Bit 7 - For SPI1, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_fdout_quad(&mut self) -> SPI_MEM_FDOUT_QUAD_W<SPI_MEM_CACHE_FCTRL_SPEC, 7> {
-        SPI_MEM_FDOUT_QUAD_W::new(self)
+    pub fn spi_mem_fdout_quad(&mut self) -> SPI_MEM_FDOUT_QUAD_W<SPI_MEM_CACHE_FCTRL_SPEC> {
+        SPI_MEM_FDOUT_QUAD_W::new(self, 7)
     }
     #[doc = "Bit 8 - For SPI1, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_faddr_quad(&mut self) -> SPI_MEM_FADDR_QUAD_W<SPI_MEM_CACHE_FCTRL_SPEC, 8> {
-        SPI_MEM_FADDR_QUAD_W::new(self)
+    pub fn spi_mem_faddr_quad(&mut self) -> SPI_MEM_FADDR_QUAD_W<SPI_MEM_CACHE_FCTRL_SPEC> {
+        SPI_MEM_FADDR_QUAD_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

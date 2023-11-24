@@ -5,31 +5,31 @@ pub type W = crate::W<DTHRCTL_SPEC>;
 #[doc = "Field `NONISOTHREN` reader - "]
 pub type NONISOTHREN_R = crate::BitReader;
 #[doc = "Field `NONISOTHREN` writer - "]
-pub type NONISOTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NONISOTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ISOTHREN` reader - "]
 pub type ISOTHREN_R = crate::BitReader;
 #[doc = "Field `ISOTHREN` writer - "]
-pub type ISOTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ISOTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXTHRLEN` reader - "]
 pub type TXTHRLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TXTHRLEN` writer - "]
-pub type TXTHRLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TXTHRLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `AHBTHRRATIO` reader - "]
 pub type AHBTHRRATIO_R = crate::FieldReader;
 #[doc = "Field `AHBTHRRATIO` writer - "]
-pub type AHBTHRRATIO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AHBTHRRATIO_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RXTHREN` reader - "]
 pub type RXTHREN_R = crate::BitReader;
 #[doc = "Field `RXTHREN` writer - "]
-pub type RXTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXTHRLEN` reader - "]
 pub type RXTHRLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `RXTHRLEN` writer - "]
-pub type RXTHRLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RXTHRLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `ARBPRKEN` reader - "]
 pub type ARBPRKEN_R = crate::BitReader;
 #[doc = "Field `ARBPRKEN` writer - "]
-pub type ARBPRKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARBPRKEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -87,51 +87,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DTHRCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn nonisothren(&mut self) -> NONISOTHREN_W<DTHRCTL_SPEC, 0> {
-        NONISOTHREN_W::new(self)
+    pub fn nonisothren(&mut self) -> NONISOTHREN_W<DTHRCTL_SPEC> {
+        NONISOTHREN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn isothren(&mut self) -> ISOTHREN_W<DTHRCTL_SPEC, 1> {
-        ISOTHREN_W::new(self)
+    pub fn isothren(&mut self) -> ISOTHREN_W<DTHRCTL_SPEC> {
+        ISOTHREN_W::new(self, 1)
     }
     #[doc = "Bits 2:10"]
     #[inline(always)]
     #[must_use]
-    pub fn txthrlen(&mut self) -> TXTHRLEN_W<DTHRCTL_SPEC, 2> {
-        TXTHRLEN_W::new(self)
+    pub fn txthrlen(&mut self) -> TXTHRLEN_W<DTHRCTL_SPEC> {
+        TXTHRLEN_W::new(self, 2)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W<DTHRCTL_SPEC, 11> {
-        AHBTHRRATIO_W::new(self)
+    pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W<DTHRCTL_SPEC> {
+        AHBTHRRATIO_W::new(self, 11)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn rxthren(&mut self) -> RXTHREN_W<DTHRCTL_SPEC, 16> {
-        RXTHREN_W::new(self)
+    pub fn rxthren(&mut self) -> RXTHREN_W<DTHRCTL_SPEC> {
+        RXTHREN_W::new(self, 16)
     }
     #[doc = "Bits 17:25"]
     #[inline(always)]
     #[must_use]
-    pub fn rxthrlen(&mut self) -> RXTHRLEN_W<DTHRCTL_SPEC, 17> {
-        RXTHRLEN_W::new(self)
+    pub fn rxthrlen(&mut self) -> RXTHRLEN_W<DTHRCTL_SPEC> {
+        RXTHRLEN_W::new(self, 17)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn arbprken(&mut self) -> ARBPRKEN_W<DTHRCTL_SPEC, 27> {
-        ARBPRKEN_W::new(self)
+    pub fn arbprken(&mut self) -> ARBPRKEN_W<DTHRCTL_SPEC> {
+        ARBPRKEN_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

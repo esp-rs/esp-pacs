@@ -42,7 +42,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IN_STATE_CH1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "DMA_IN_STATE_CH1_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_state_ch1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

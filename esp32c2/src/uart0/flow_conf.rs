@@ -5,27 +5,27 @@ pub type W = crate::W<FLOW_CONF_SPEC>;
 #[doc = "Field `SW_FLOW_CON_EN` reader - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
 pub type SW_FLOW_CON_EN_R = crate::BitReader;
 #[doc = "Field `SW_FLOW_CON_EN` writer - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
-pub type SW_FLOW_CON_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_FLOW_CON_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XONOFF_DEL` reader - Set this bit to remove flow control char from the received data."]
 pub type XONOFF_DEL_R = crate::BitReader;
 #[doc = "Field `XONOFF_DEL` writer - Set this bit to remove flow control char from the received data."]
-pub type XONOFF_DEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XONOFF_DEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_XON` reader - Set this bit to enable the transmitter to go on sending data."]
 pub type FORCE_XON_R = crate::BitReader;
 #[doc = "Field `FORCE_XON` writer - Set this bit to enable the transmitter to go on sending data."]
-pub type FORCE_XON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_XON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_XOFF` reader - Set this bit to stop the transmitter from sending data."]
 pub type FORCE_XOFF_R = crate::BitReader;
 #[doc = "Field `FORCE_XOFF` writer - Set this bit to stop the transmitter from sending data."]
-pub type FORCE_XOFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_XOFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_XON` reader - Set this bit to send Xon char. It is cleared by hardware automatically."]
 pub type SEND_XON_R = crate::BitReader;
 #[doc = "Field `SEND_XON` writer - Set this bit to send Xon char. It is cleared by hardware automatically."]
-pub type SEND_XON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_XON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_XOFF` reader - Set this bit to send Xoff char. It is cleared by hardware automatically."]
 pub type SEND_XOFF_R = crate::BitReader;
 #[doc = "Field `SEND_XOFF` writer - Set this bit to send Xoff char. It is cleared by hardware automatically."]
-pub type SEND_XOFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_XOFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
     #[inline(always)]
@@ -77,45 +77,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FLOW_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<FLOW_CONF_SPEC, 0> {
-        SW_FLOW_CON_EN_W::new(self)
+    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<FLOW_CONF_SPEC> {
+        SW_FLOW_CON_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to remove flow control char from the received data."]
     #[inline(always)]
     #[must_use]
-    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<FLOW_CONF_SPEC, 1> {
-        XONOFF_DEL_W::new(self)
+    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<FLOW_CONF_SPEC> {
+        XONOFF_DEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable the transmitter to go on sending data."]
     #[inline(always)]
     #[must_use]
-    pub fn force_xon(&mut self) -> FORCE_XON_W<FLOW_CONF_SPEC, 2> {
-        FORCE_XON_W::new(self)
+    pub fn force_xon(&mut self) -> FORCE_XON_W<FLOW_CONF_SPEC> {
+        FORCE_XON_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to stop the transmitter from sending data."]
     #[inline(always)]
     #[must_use]
-    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<FLOW_CONF_SPEC, 3> {
-        FORCE_XOFF_W::new(self)
+    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<FLOW_CONF_SPEC> {
+        FORCE_XOFF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to send Xon char. It is cleared by hardware automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn send_xon(&mut self) -> SEND_XON_W<FLOW_CONF_SPEC, 4> {
-        SEND_XON_W::new(self)
+    pub fn send_xon(&mut self) -> SEND_XON_W<FLOW_CONF_SPEC> {
+        SEND_XON_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to send Xoff char. It is cleared by hardware automatically."]
     #[inline(always)]
     #[must_use]
-    pub fn send_xoff(&mut self) -> SEND_XOFF_W<FLOW_CONF_SPEC, 5> {
-        SEND_XOFF_W::new(self)
+    pub fn send_xoff(&mut self) -> SEND_XOFF_W<FLOW_CONF_SPEC> {
+        SEND_XOFF_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

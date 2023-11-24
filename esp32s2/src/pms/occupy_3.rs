@@ -5,7 +5,7 @@ pub type W = crate::W<OCCUPY_3_SPEC>;
 #[doc = "Field `OCCUPY_PRO_TRACE` reader - Configure one block of SRAM Block 4-21 is used as trace memory."]
 pub type OCCUPY_PRO_TRACE_R = crate::FieldReader<u32>;
 #[doc = "Field `OCCUPY_PRO_TRACE` writer - Configure one block of SRAM Block 4-21 is used as trace memory."]
-pub type OCCUPY_PRO_TRACE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type OCCUPY_PRO_TRACE_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 impl R {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OCCUPY_3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
     #[must_use]
-    pub fn occupy_pro_trace(&mut self) -> OCCUPY_PRO_TRACE_W<OCCUPY_3_SPEC, 0> {
-        OCCUPY_PRO_TRACE_W::new(self)
+    pub fn occupy_pro_trace(&mut self) -> OCCUPY_PRO_TRACE_W<OCCUPY_3_SPEC> {
+        OCCUPY_PRO_TRACE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

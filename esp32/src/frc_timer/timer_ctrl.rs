@@ -5,7 +5,7 @@ pub type W = crate::W<TIMER_CTRL_SPEC>;
 #[doc = "Field `TIMER_PRESCALER` reader - "]
 pub type TIMER_PRESCALER_R = crate::FieldReader;
 #[doc = "Field `TIMER_PRESCALER` writer - "]
-pub type TIMER_PRESCALER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER_PRESCALER_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 1:8"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 1:8"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_prescaler(&mut self) -> TIMER_PRESCALER_W<TIMER_CTRL_SPEC, 1> {
-        TIMER_PRESCALER_W::new(self)
+    pub fn timer_prescaler(&mut self) -> TIMER_PRESCALER_W<TIMER_CTRL_SPEC> {
+        TIMER_PRESCALER_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

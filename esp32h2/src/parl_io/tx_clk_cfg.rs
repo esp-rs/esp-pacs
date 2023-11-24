@@ -5,11 +5,11 @@ pub type W = crate::W<TX_CLK_CFG_SPEC>;
 #[doc = "Field `TX_CLK_I_INV` reader - Set this bit to invert the input Tx core clock."]
 pub type TX_CLK_I_INV_R = crate::BitReader;
 #[doc = "Field `TX_CLK_I_INV` writer - Set this bit to invert the input Tx core clock."]
-pub type TX_CLK_I_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_CLK_I_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_CLK_O_INV` reader - Set this bit to invert the output Tx core clock."]
 pub type TX_CLK_O_INV_R = crate::BitReader;
 #[doc = "Field `TX_CLK_O_INV` writer - Set this bit to invert the output Tx core clock."]
-pub type TX_CLK_O_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_CLK_O_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - Set this bit to invert the input Tx core clock."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_CLK_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - Set this bit to invert the input Tx core clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_i_inv(&mut self) -> TX_CLK_I_INV_W<TX_CLK_CFG_SPEC, 30> {
-        TX_CLK_I_INV_W::new(self)
+    pub fn tx_clk_i_inv(&mut self) -> TX_CLK_I_INV_W<TX_CLK_CFG_SPEC> {
+        TX_CLK_I_INV_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to invert the output Tx core clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_clk_o_inv(&mut self) -> TX_CLK_O_INV_W<TX_CLK_CFG_SPEC, 31> {
-        TX_CLK_O_INV_W::new(self)
+    pub fn tx_clk_o_inv(&mut self) -> TX_CLK_O_INV_W<TX_CLK_CFG_SPEC> {
+        TX_CLK_O_INV_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

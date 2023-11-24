@@ -5,27 +5,27 @@ pub type W = crate::W<POWER_PD_LPPERI_CNTL_SPEC>;
 #[doc = "Field `FORCE_LP_PERI_RESET` reader - need_des"]
 pub type FORCE_LP_PERI_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_RESET` writer - need_des"]
-pub type FORCE_LP_PERI_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_LP_PERI_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_LP_PERI_ISO` reader - need_des"]
 pub type FORCE_LP_PERI_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_ISO` writer - need_des"]
-pub type FORCE_LP_PERI_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_LP_PERI_ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_LP_PERI_PU` reader - need_des"]
 pub type FORCE_LP_PERI_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_PU` writer - need_des"]
-pub type FORCE_LP_PERI_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_LP_PERI_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_LP_PERI_NO_RESET` reader - need_des"]
 pub type FORCE_LP_PERI_NO_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_NO_RESET` writer - need_des"]
-pub type FORCE_LP_PERI_NO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_LP_PERI_NO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_LP_PERI_NO_ISO` reader - need_des"]
 pub type FORCE_LP_PERI_NO_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_NO_ISO` writer - need_des"]
-pub type FORCE_LP_PERI_NO_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_LP_PERI_NO_ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_LP_PERI_PD` reader - need_des"]
 pub type FORCE_LP_PERI_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_PD` writer - need_des"]
-pub type FORCE_LP_PERI_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_LP_PERI_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -92,47 +92,47 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_PD_LPPERI_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_lp_peri_reset(&mut self) -> FORCE_LP_PERI_RESET_W<POWER_PD_LPPERI_CNTL_SPEC, 0> {
-        FORCE_LP_PERI_RESET_W::new(self)
+    pub fn force_lp_peri_reset(&mut self) -> FORCE_LP_PERI_RESET_W<POWER_PD_LPPERI_CNTL_SPEC> {
+        FORCE_LP_PERI_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_lp_peri_iso(&mut self) -> FORCE_LP_PERI_ISO_W<POWER_PD_LPPERI_CNTL_SPEC, 1> {
-        FORCE_LP_PERI_ISO_W::new(self)
+    pub fn force_lp_peri_iso(&mut self) -> FORCE_LP_PERI_ISO_W<POWER_PD_LPPERI_CNTL_SPEC> {
+        FORCE_LP_PERI_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_lp_peri_pu(&mut self) -> FORCE_LP_PERI_PU_W<POWER_PD_LPPERI_CNTL_SPEC, 2> {
-        FORCE_LP_PERI_PU_W::new(self)
+    pub fn force_lp_peri_pu(&mut self) -> FORCE_LP_PERI_PU_W<POWER_PD_LPPERI_CNTL_SPEC> {
+        FORCE_LP_PERI_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn force_lp_peri_no_reset(
         &mut self,
-    ) -> FORCE_LP_PERI_NO_RESET_W<POWER_PD_LPPERI_CNTL_SPEC, 3> {
-        FORCE_LP_PERI_NO_RESET_W::new(self)
+    ) -> FORCE_LP_PERI_NO_RESET_W<POWER_PD_LPPERI_CNTL_SPEC> {
+        FORCE_LP_PERI_NO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_lp_peri_no_iso(&mut self) -> FORCE_LP_PERI_NO_ISO_W<POWER_PD_LPPERI_CNTL_SPEC, 4> {
-        FORCE_LP_PERI_NO_ISO_W::new(self)
+    pub fn force_lp_peri_no_iso(&mut self) -> FORCE_LP_PERI_NO_ISO_W<POWER_PD_LPPERI_CNTL_SPEC> {
+        FORCE_LP_PERI_NO_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_lp_peri_pd(&mut self) -> FORCE_LP_PERI_PD_W<POWER_PD_LPPERI_CNTL_SPEC, 5> {
-        FORCE_LP_PERI_PD_W::new(self)
+    pub fn force_lp_peri_pd(&mut self) -> FORCE_LP_PERI_PD_W<POWER_PD_LPPERI_CNTL_SPEC> {
+        FORCE_LP_PERI_PD_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

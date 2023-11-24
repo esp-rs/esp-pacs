@@ -5,12 +5,11 @@ pub type W = crate::W<SRAM_DRD_CMD_SPEC>;
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_VALUE` reader - For SPI0 When cache mode is enable it is the read command value of command phase for SRAM."]
 pub type CACHE_SRAM_USR_RD_CMD_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_VALUE` writer - For SPI0 When cache mode is enable it is the read command value of command phase for SRAM."]
-pub type CACHE_SRAM_USR_RD_CMD_VALUE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CACHE_SRAM_USR_RD_CMD_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_BITLEN` reader - For SPI0 When cache mode is enable it is the length in bits of command phase for SRAM. The register value shall be (bit_num-1)."]
 pub type CACHE_SRAM_USR_RD_CMD_BITLEN_R = crate::FieldReader;
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_BITLEN` writer - For SPI0 When cache mode is enable it is the length in bits of command phase for SRAM. The register value shall be (bit_num-1)."]
-pub type CACHE_SRAM_USR_RD_CMD_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CACHE_SRAM_USR_RD_CMD_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:15 - For SPI0 When cache mode is enable it is the read command value of command phase for SRAM."]
     #[inline(always)]
@@ -41,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_DRD_CMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -50,16 +49,16 @@ impl W {
     #[must_use]
     pub fn cache_sram_usr_rd_cmd_value(
         &mut self,
-    ) -> CACHE_SRAM_USR_RD_CMD_VALUE_W<SRAM_DRD_CMD_SPEC, 0> {
-        CACHE_SRAM_USR_RD_CMD_VALUE_W::new(self)
+    ) -> CACHE_SRAM_USR_RD_CMD_VALUE_W<SRAM_DRD_CMD_SPEC> {
+        CACHE_SRAM_USR_RD_CMD_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 28:31 - For SPI0 When cache mode is enable it is the length in bits of command phase for SRAM. The register value shall be (bit_num-1)."]
     #[inline(always)]
     #[must_use]
     pub fn cache_sram_usr_rd_cmd_bitlen(
         &mut self,
-    ) -> CACHE_SRAM_USR_RD_CMD_BITLEN_W<SRAM_DRD_CMD_SPEC, 28> {
-        CACHE_SRAM_USR_RD_CMD_BITLEN_W::new(self)
+    ) -> CACHE_SRAM_USR_RD_CMD_BITLEN_W<SRAM_DRD_CMD_SPEC> {
+        CACHE_SRAM_USR_RD_CMD_BITLEN_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

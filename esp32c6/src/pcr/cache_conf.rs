@@ -5,11 +5,11 @@ pub type W = crate::W<CACHE_CONF_SPEC>;
 #[doc = "Field `CACHE_CLK_EN` reader - Set 1 to enable cache clock"]
 pub type CACHE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_CLK_EN` writer - Set 1 to enable cache clock"]
-pub type CACHE_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_RST_EN` reader - Set 0 to reset cache module"]
 pub type CACHE_RST_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_RST_EN` writer - Set 0 to reset cache module"]
-pub type CACHE_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable cache clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable cache clock"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_clk_en(&mut self) -> CACHE_CLK_EN_W<CACHE_CONF_SPEC, 0> {
-        CACHE_CLK_EN_W::new(self)
+    pub fn cache_clk_en(&mut self) -> CACHE_CLK_EN_W<CACHE_CONF_SPEC> {
+        CACHE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset cache module"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_rst_en(&mut self) -> CACHE_RST_EN_W<CACHE_CONF_SPEC, 1> {
-        CACHE_RST_EN_W::new(self)
+    pub fn cache_rst_en(&mut self) -> CACHE_RST_EN_W<CACHE_CONF_SPEC> {
+        CACHE_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

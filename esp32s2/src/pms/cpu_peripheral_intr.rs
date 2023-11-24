@@ -5,11 +5,11 @@ pub type W = crate::W<CPU_PERIPHERAL_INTR_SPEC>;
 #[doc = "Field `CPU_PERI_BYTE_ERROR_CLR` reader - The clear signal for CPU peripheral access interrupt."]
 pub type CPU_PERI_BYTE_ERROR_CLR_R = crate::BitReader;
 #[doc = "Field `CPU_PERI_BYTE_ERROR_CLR` writer - The clear signal for CPU peripheral access interrupt."]
-pub type CPU_PERI_BYTE_ERROR_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_PERI_BYTE_ERROR_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPU_PERI_BYTE_ERROR_EN` reader - The enable signal for CPU peripheral access interrupt."]
 pub type CPU_PERI_BYTE_ERROR_EN_R = crate::BitReader;
 #[doc = "Field `CPU_PERI_BYTE_ERROR_EN` writer - The enable signal for CPU peripheral access interrupt."]
-pub type CPU_PERI_BYTE_ERROR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_PERI_BYTE_ERROR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPU_PERI_BYTE_ERROR_INTR` reader - CPU peripheral access interrupt signal."]
 pub type CPU_PERI_BYTE_ERROR_INTR_R = crate::BitReader;
 impl R {
@@ -51,7 +51,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_PERIPHERAL_INTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -60,16 +60,14 @@ impl W {
     #[must_use]
     pub fn cpu_peri_byte_error_clr(
         &mut self,
-    ) -> CPU_PERI_BYTE_ERROR_CLR_W<CPU_PERIPHERAL_INTR_SPEC, 0> {
-        CPU_PERI_BYTE_ERROR_CLR_W::new(self)
+    ) -> CPU_PERI_BYTE_ERROR_CLR_W<CPU_PERIPHERAL_INTR_SPEC> {
+        CPU_PERI_BYTE_ERROR_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for CPU peripheral access interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_peri_byte_error_en(
-        &mut self,
-    ) -> CPU_PERI_BYTE_ERROR_EN_W<CPU_PERIPHERAL_INTR_SPEC, 1> {
-        CPU_PERI_BYTE_ERROR_EN_W::new(self)
+    pub fn cpu_peri_byte_error_en(&mut self) -> CPU_PERI_BYTE_ERROR_EN_W<CPU_PERIPHERAL_INTR_SPEC> {
+        CPU_PERI_BYTE_ERROR_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

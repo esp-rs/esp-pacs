@@ -5,11 +5,11 @@ pub type W = crate::W<SLAVE_ADDR_SPEC>;
 #[doc = "Field `SLAVE_ADDR` reader - reg_slave_addr"]
 pub type SLAVE_ADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SLAVE_ADDR` writer - reg_slave_addr"]
-pub type SLAVE_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type SLAVE_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `ADDR_10BIT_EN` reader - reg_addr_10bit_en"]
 pub type ADDR_10BIT_EN_R = crate::BitReader;
 #[doc = "Field `ADDR_10BIT_EN` writer - reg_addr_10bit_en"]
-pub type ADDR_10BIT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDR_10BIT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:14 - reg_slave_addr"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLAVE_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:14 - reg_slave_addr"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<SLAVE_ADDR_SPEC, 0> {
-        SLAVE_ADDR_W::new(self)
+    pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<SLAVE_ADDR_SPEC> {
+        SLAVE_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 31 - reg_addr_10bit_en"]
     #[inline(always)]
     #[must_use]
-    pub fn addr_10bit_en(&mut self) -> ADDR_10BIT_EN_W<SLAVE_ADDR_SPEC, 31> {
-        ADDR_10BIT_EN_W::new(self)
+    pub fn addr_10bit_en(&mut self) -> ADDR_10BIT_EN_W<SLAVE_ADDR_SPEC> {
+        ADDR_10BIT_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

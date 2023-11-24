@@ -5,7 +5,7 @@ pub type W = crate::W<TX_START_CFG_SPEC>;
 #[doc = "Field `TX_START` reader - Set this bit to start tx data transmit."]
 pub type TX_START_R = crate::BitReader;
 #[doc = "Field `TX_START` writer - Set this bit to start tx data transmit."]
-pub type TX_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - Set this bit to start tx data transmit."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_START_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - Set this bit to start tx data transmit."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_start(&mut self) -> TX_START_W<TX_START_CFG_SPEC, 31> {
-        TX_START_W::new(self)
+    pub fn tx_start(&mut self) -> TX_START_W<TX_START_CFG_SPEC> {
+        TX_START_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

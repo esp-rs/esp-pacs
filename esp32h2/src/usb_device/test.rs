@@ -5,19 +5,19 @@ pub type W = crate::W<TEST_SPEC>;
 #[doc = "Field `TEST_ENABLE` reader - Enable test of the USB pad"]
 pub type TEST_ENABLE_R = crate::BitReader;
 #[doc = "Field `TEST_ENABLE` writer - Enable test of the USB pad"]
-pub type TEST_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TEST_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TEST_USB_OE` reader - USB pad oen in test"]
 pub type TEST_USB_OE_R = crate::BitReader;
 #[doc = "Field `TEST_USB_OE` writer - USB pad oen in test"]
-pub type TEST_USB_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TEST_USB_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TEST_TX_DP` reader - USB D+ tx value in test"]
 pub type TEST_TX_DP_R = crate::BitReader;
 #[doc = "Field `TEST_TX_DP` writer - USB D+ tx value in test"]
-pub type TEST_TX_DP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TEST_TX_DP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TEST_TX_DM` reader - USB D- tx value in test"]
 pub type TEST_TX_DM_R = crate::BitReader;
 #[doc = "Field `TEST_TX_DM` writer - USB D- tx value in test"]
-pub type TEST_TX_DM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TEST_TX_DM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TEST_RX_RCV` reader - USB RCV value in test"]
 pub type TEST_RX_RCV_R = crate::BitReader;
 #[doc = "Field `TEST_RX_DP` reader - USB D+ rx value in test"]
@@ -78,33 +78,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TEST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
     #[must_use]
-    pub fn test_enable(&mut self) -> TEST_ENABLE_W<TEST_SPEC, 0> {
-        TEST_ENABLE_W::new(self)
+    pub fn test_enable(&mut self) -> TEST_ENABLE_W<TEST_SPEC> {
+        TEST_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - USB pad oen in test"]
     #[inline(always)]
     #[must_use]
-    pub fn test_usb_oe(&mut self) -> TEST_USB_OE_W<TEST_SPEC, 1> {
-        TEST_USB_OE_W::new(self)
+    pub fn test_usb_oe(&mut self) -> TEST_USB_OE_W<TEST_SPEC> {
+        TEST_USB_OE_W::new(self, 1)
     }
     #[doc = "Bit 2 - USB D+ tx value in test"]
     #[inline(always)]
     #[must_use]
-    pub fn test_tx_dp(&mut self) -> TEST_TX_DP_W<TEST_SPEC, 2> {
-        TEST_TX_DP_W::new(self)
+    pub fn test_tx_dp(&mut self) -> TEST_TX_DP_W<TEST_SPEC> {
+        TEST_TX_DP_W::new(self, 2)
     }
     #[doc = "Bit 3 - USB D- tx value in test"]
     #[inline(always)]
     #[must_use]
-    pub fn test_tx_dm(&mut self) -> TEST_TX_DM_W<TEST_SPEC, 3> {
-        TEST_TX_DM_W::new(self)
+    pub fn test_tx_dm(&mut self) -> TEST_TX_DM_W<TEST_SPEC> {
+        TEST_TX_DM_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -1,7 +1,7 @@
 #[doc = "Register `SET_PARA_KEY` writer"]
 pub type W = crate::W<SET_PARA_KEY_SPEC>;
 #[doc = "Field `KEY_SET` writer - Set hmac parameter key."]
-pub type KEY_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type KEY_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_PARA_KEY_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:2 - Set hmac parameter key."]
     #[inline(always)]
     #[must_use]
-    pub fn key_set(&mut self) -> KEY_SET_W<SET_PARA_KEY_SPEC, 0> {
-        KEY_SET_W::new(self)
+    pub fn key_set(&mut self) -> KEY_SET_W<SET_PARA_KEY_SPEC> {
+        KEY_SET_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

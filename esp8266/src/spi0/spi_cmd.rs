@@ -5,59 +5,59 @@ pub type W = crate::W<SPI_CMD_SPEC>;
 #[doc = "Field `spi_usr` reader - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
 pub type SPI_USR_R = crate::BitReader;
 #[doc = "Field `spi_usr` writer - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
-pub type SPI_USR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_USR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_hpm` reader - "]
 pub type SPI_HPM_R = crate::BitReader;
 #[doc = "Field `spi_hpm` writer - "]
-pub type SPI_HPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_HPM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_res` reader - "]
 pub type SPI_RES_R = crate::BitReader;
 #[doc = "Field `spi_res` writer - "]
-pub type SPI_RES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_RES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_dp` reader - "]
 pub type SPI_DP_R = crate::BitReader;
 #[doc = "Field `spi_dp` writer - "]
-pub type SPI_DP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_DP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_ce` reader - "]
 pub type SPI_CE_R = crate::BitReader;
 #[doc = "Field `spi_ce` writer - "]
-pub type SPI_CE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_CE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_be` reader - "]
 pub type SPI_BE_R = crate::BitReader;
 #[doc = "Field `spi_be` writer - "]
-pub type SPI_BE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_BE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_se` reader - "]
 pub type SPI_SE_R = crate::BitReader;
 #[doc = "Field `spi_se` writer - "]
-pub type SPI_SE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_SE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_pp` reader - "]
 pub type SPI_PP_R = crate::BitReader;
 #[doc = "Field `spi_pp` writer - "]
-pub type SPI_PP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_PP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_write_sr` reader - "]
 pub type SPI_WRITE_SR_R = crate::BitReader;
 #[doc = "Field `spi_write_sr` writer - "]
-pub type SPI_WRITE_SR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_WRITE_SR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_read_sr` reader - "]
 pub type SPI_READ_SR_R = crate::BitReader;
 #[doc = "Field `spi_read_sr` writer - "]
-pub type SPI_READ_SR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_READ_SR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_read_id` reader - "]
 pub type SPI_READ_ID_R = crate::BitReader;
 #[doc = "Field `spi_read_id` writer - "]
-pub type SPI_READ_ID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_READ_ID_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_write_disable` reader - "]
 pub type SPI_WRITE_DISABLE_R = crate::BitReader;
 #[doc = "Field `spi_write_disable` writer - "]
-pub type SPI_WRITE_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_WRITE_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_write_enable` reader - "]
 pub type SPI_WRITE_ENABLE_R = crate::BitReader;
 #[doc = "Field `spi_write_enable` writer - "]
-pub type SPI_WRITE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_WRITE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_read` reader - "]
 pub type SPI_READ_R = crate::BitReader;
 #[doc = "Field `spi_read` writer - "]
-pub type SPI_READ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_READ_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 18 - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
     #[inline(always)]
@@ -163,95 +163,99 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_CMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 18 - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_usr(&mut self) -> SPI_USR_W<SPI_CMD_SPEC, 18> {
-        SPI_USR_W::new(self)
+    pub fn spi_usr(&mut self) -> SPI_USR_W<SPI_CMD_SPEC> {
+        SPI_USR_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_hpm(&mut self) -> SPI_HPM_W<SPI_CMD_SPEC, 19> {
-        SPI_HPM_W::new(self)
+    pub fn spi_hpm(&mut self) -> SPI_HPM_W<SPI_CMD_SPEC> {
+        SPI_HPM_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_res(&mut self) -> SPI_RES_W<SPI_CMD_SPEC, 20> {
-        SPI_RES_W::new(self)
+    pub fn spi_res(&mut self) -> SPI_RES_W<SPI_CMD_SPEC> {
+        SPI_RES_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_dp(&mut self) -> SPI_DP_W<SPI_CMD_SPEC, 21> {
-        SPI_DP_W::new(self)
+    pub fn spi_dp(&mut self) -> SPI_DP_W<SPI_CMD_SPEC> {
+        SPI_DP_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_ce(&mut self) -> SPI_CE_W<SPI_CMD_SPEC, 22> {
-        SPI_CE_W::new(self)
+    pub fn spi_ce(&mut self) -> SPI_CE_W<SPI_CMD_SPEC> {
+        SPI_CE_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_be(&mut self) -> SPI_BE_W<SPI_CMD_SPEC, 23> {
-        SPI_BE_W::new(self)
+    pub fn spi_be(&mut self) -> SPI_BE_W<SPI_CMD_SPEC> {
+        SPI_BE_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_se(&mut self) -> SPI_SE_W<SPI_CMD_SPEC, 24> {
-        SPI_SE_W::new(self)
+    pub fn spi_se(&mut self) -> SPI_SE_W<SPI_CMD_SPEC> {
+        SPI_SE_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_pp(&mut self) -> SPI_PP_W<SPI_CMD_SPEC, 25> {
-        SPI_PP_W::new(self)
+    pub fn spi_pp(&mut self) -> SPI_PP_W<SPI_CMD_SPEC> {
+        SPI_PP_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_write_sr(&mut self) -> SPI_WRITE_SR_W<SPI_CMD_SPEC, 26> {
-        SPI_WRITE_SR_W::new(self)
+    pub fn spi_write_sr(&mut self) -> SPI_WRITE_SR_W<SPI_CMD_SPEC> {
+        SPI_WRITE_SR_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_read_sr(&mut self) -> SPI_READ_SR_W<SPI_CMD_SPEC, 27> {
-        SPI_READ_SR_W::new(self)
+    pub fn spi_read_sr(&mut self) -> SPI_READ_SR_W<SPI_CMD_SPEC> {
+        SPI_READ_SR_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_read_id(&mut self) -> SPI_READ_ID_W<SPI_CMD_SPEC, 28> {
-        SPI_READ_ID_W::new(self)
+    pub fn spi_read_id(&mut self) -> SPI_READ_ID_W<SPI_CMD_SPEC> {
+        SPI_READ_ID_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_write_disable(&mut self) -> SPI_WRITE_DISABLE_W<SPI_CMD_SPEC, 29> {
-        SPI_WRITE_DISABLE_W::new(self)
+    pub fn spi_write_disable(&mut self) -> SPI_WRITE_DISABLE_W<SPI_CMD_SPEC> {
+        SPI_WRITE_DISABLE_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_write_enable(&mut self) -> SPI_WRITE_ENABLE_W<SPI_CMD_SPEC, 30> {
-        SPI_WRITE_ENABLE_W::new(self)
+    pub fn spi_write_enable(&mut self) -> SPI_WRITE_ENABLE_W<SPI_CMD_SPEC> {
+        SPI_WRITE_ENABLE_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_read(&mut self) -> SPI_READ_W<SPI_CMD_SPEC, 31> {
-        SPI_READ_W::new(self)
+    pub fn spi_read(&mut self) -> SPI_READ_W<SPI_CMD_SPEC> {
+        SPI_READ_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

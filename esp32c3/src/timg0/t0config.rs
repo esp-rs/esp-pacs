@@ -5,29 +5,29 @@ pub type W = crate::W<T0CONFIG_SPEC>;
 #[doc = "Field `USE_XTAL` reader - reg_t0_use_xtal."]
 pub type USE_XTAL_R = crate::BitReader;
 #[doc = "Field `USE_XTAL` writer - reg_t0_use_xtal."]
-pub type USE_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USE_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALARM_EN` reader - reg_t0_alarm_en."]
 pub type ALARM_EN_R = crate::BitReader;
 #[doc = "Field `ALARM_EN` writer - reg_t0_alarm_en."]
-pub type ALARM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALARM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIVCNT_RST` writer - reg_t0_divcnt_rst."]
-pub type DIVCNT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIVCNT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIVIDER` reader - reg_t0_divider."]
 pub type DIVIDER_R = crate::FieldReader<u16>;
 #[doc = "Field `DIVIDER` writer - reg_t0_divider."]
-pub type DIVIDER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type DIVIDER_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `AUTORELOAD` reader - reg_t0_autoreload."]
 pub type AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `AUTORELOAD` writer - reg_t0_autoreload."]
-pub type AUTORELOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AUTORELOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INCREASE` reader - reg_t0_increase."]
 pub type INCREASE_R = crate::BitReader;
 #[doc = "Field `INCREASE` writer - reg_t0_increase."]
-pub type INCREASE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INCREASE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EN` reader - reg_t0_en."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - reg_t0_en."]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 9 - reg_t0_use_xtal."]
     #[inline(always)]
@@ -76,51 +76,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<T0CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 9 - reg_t0_use_xtal."]
     #[inline(always)]
     #[must_use]
-    pub fn use_xtal(&mut self) -> USE_XTAL_W<T0CONFIG_SPEC, 9> {
-        USE_XTAL_W::new(self)
+    pub fn use_xtal(&mut self) -> USE_XTAL_W<T0CONFIG_SPEC> {
+        USE_XTAL_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_t0_alarm_en."]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_en(&mut self) -> ALARM_EN_W<T0CONFIG_SPEC, 10> {
-        ALARM_EN_W::new(self)
+    pub fn alarm_en(&mut self) -> ALARM_EN_W<T0CONFIG_SPEC> {
+        ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 12 - reg_t0_divcnt_rst."]
     #[inline(always)]
     #[must_use]
-    pub fn divcnt_rst(&mut self) -> DIVCNT_RST_W<T0CONFIG_SPEC, 12> {
-        DIVCNT_RST_W::new(self)
+    pub fn divcnt_rst(&mut self) -> DIVCNT_RST_W<T0CONFIG_SPEC> {
+        DIVCNT_RST_W::new(self, 12)
     }
     #[doc = "Bits 13:28 - reg_t0_divider."]
     #[inline(always)]
     #[must_use]
-    pub fn divider(&mut self) -> DIVIDER_W<T0CONFIG_SPEC, 13> {
-        DIVIDER_W::new(self)
+    pub fn divider(&mut self) -> DIVIDER_W<T0CONFIG_SPEC> {
+        DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29 - reg_t0_autoreload."]
     #[inline(always)]
     #[must_use]
-    pub fn autoreload(&mut self) -> AUTORELOAD_W<T0CONFIG_SPEC, 29> {
-        AUTORELOAD_W::new(self)
+    pub fn autoreload(&mut self) -> AUTORELOAD_W<T0CONFIG_SPEC> {
+        AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_t0_increase."]
     #[inline(always)]
     #[must_use]
-    pub fn increase(&mut self) -> INCREASE_W<T0CONFIG_SPEC, 30> {
-        INCREASE_W::new(self)
+    pub fn increase(&mut self) -> INCREASE_W<T0CONFIG_SPEC> {
+        INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_t0_en."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<T0CONFIG_SPEC, 31> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<T0CONFIG_SPEC> {
+        EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

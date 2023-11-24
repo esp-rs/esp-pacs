@@ -5,79 +5,79 @@ pub type W = crate::W<CACHE_DBG_INT_ENA_SPEC>;
 #[doc = "Field `CACHE_DBG_EN` reader - The bit is used to activate the cache track function. 1: enable, 0: disable."]
 pub type CACHE_DBG_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_DBG_EN` writer - The bit is used to activate the cache track function. 1: enable, 0: disable."]
-pub type CACHE_DBG_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_DBG_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IBUS_ACS_MSK_IC_INT_ENA` reader - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
 pub type IBUS_ACS_MSK_IC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IBUS_ACS_MSK_IC_INT_ENA` writer - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
-pub type IBUS_ACS_MSK_IC_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IBUS_ACS_MSK_IC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IBUS_CNT_OVF_INT_ENA` reader - The bit is used to enable interrupt by ibus counter overflow."]
 pub type IBUS_CNT_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IBUS_CNT_OVF_INT_ENA` writer - The bit is used to enable interrupt by ibus counter overflow."]
-pub type IBUS_CNT_OVF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IBUS_CNT_OVF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IC_SYNC_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual sync configurations fault."]
 pub type IC_SYNC_SIZE_FAULT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IC_SYNC_SIZE_FAULT_INT_ENA` writer - The bit is used to enable interrupt by manual sync configurations fault."]
-pub type IC_SYNC_SIZE_FAULT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IC_SYNC_SIZE_FAULT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IC_PRELOAD_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual pre-load configurations fault."]
 pub type IC_PRELOAD_SIZE_FAULT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IC_PRELOAD_SIZE_FAULT_INT_ENA` writer - The bit is used to enable interrupt by manual pre-load configurations fault."]
-pub type IC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
 pub type ICACHE_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_REJECT_INT_ENA` writer - The bit is used to enable interrupt by authentication fail."]
-pub type ICACHE_REJECT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_REJECT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_SET_PRELOAD_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
 pub type ICACHE_SET_PRELOAD_ILG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_SET_PRELOAD_ILG_INT_ENA` writer - The bit is used to enable interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub type ICACHE_SET_PRELOAD_ILG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_SET_PRELOAD_ILG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_SET_SYNC_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
 pub type ICACHE_SET_SYNC_ILG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_SET_SYNC_ILG_INT_ENA` writer - The bit is used to enable interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub type ICACHE_SET_SYNC_ILG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_SET_SYNC_ILG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_SET_LOCK_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
 pub type ICACHE_SET_LOCK_ILG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_SET_LOCK_ILG_INT_ENA` writer - The bit is used to enable interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
-pub type ICACHE_SET_LOCK_ILG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_SET_LOCK_ILG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBUS_ACS_MSK_DC_INT_ENA` reader - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
 pub type DBUS_ACS_MSK_DC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DBUS_ACS_MSK_DC_INT_ENA` writer - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
-pub type DBUS_ACS_MSK_DC_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBUS_ACS_MSK_DC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBUS_CNT_OVF_INT_ENA` reader - The bit is used to enable interrupt by dbus counter overflow."]
 pub type DBUS_CNT_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DBUS_CNT_OVF_INT_ENA` writer - The bit is used to enable interrupt by dbus counter overflow."]
-pub type DBUS_CNT_OVF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBUS_CNT_OVF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DC_SYNC_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual sync configurations fault."]
 pub type DC_SYNC_SIZE_FAULT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DC_SYNC_SIZE_FAULT_INT_ENA` writer - The bit is used to enable interrupt by manual sync configurations fault."]
-pub type DC_SYNC_SIZE_FAULT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DC_SYNC_SIZE_FAULT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DC_PRELOAD_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual pre-load configurations fault."]
 pub type DC_PRELOAD_SIZE_FAULT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DC_PRELOAD_SIZE_FAULT_INT_ENA` writer - The bit is used to enable interrupt by manual pre-load configurations fault."]
-pub type DC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_WRITE_FLASH_INT_ENA` reader - The bit is used to enable interrupt by dcache trying to write flash."]
 pub type DCACHE_WRITE_FLASH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_WRITE_FLASH_INT_ENA` writer - The bit is used to enable interrupt by dcache trying to write flash."]
-pub type DCACHE_WRITE_FLASH_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_WRITE_FLASH_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
 pub type DCACHE_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_REJECT_INT_ENA` writer - The bit is used to enable interrupt by authentication fail."]
-pub type DCACHE_REJECT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_REJECT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_SET_PRELOAD_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing preload registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
 pub type DCACHE_SET_PRELOAD_ILG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_SET_PRELOAD_ILG_INT_ENA` writer - The bit is used to enable interrupt by illegal writing preload registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
-pub type DCACHE_SET_PRELOAD_ILG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_SET_PRELOAD_ILG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_SET_SYNC_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing sync registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
 pub type DCACHE_SET_SYNC_ILG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_SET_SYNC_ILG_INT_ENA` writer - The bit is used to enable interrupt by illegal writing sync registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
-pub type DCACHE_SET_SYNC_ILG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_SET_SYNC_ILG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_SET_LOCK_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing lock registers of dcache while dcache is busy to issue lock,sync or pre-load operations."]
 pub type DCACHE_SET_LOCK_ILG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_SET_LOCK_ILG_INT_ENA` writer - The bit is used to enable interrupt by illegal writing lock registers of dcache while dcache is busy to issue lock,sync or pre-load operations."]
-pub type DCACHE_SET_LOCK_ILG_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_SET_LOCK_ILG_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MMU_ENTRY_FAULT_INT_ENA` reader - The bit is used to enable interrupt by mmu entry fault."]
 pub type MMU_ENTRY_FAULT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MMU_ENTRY_FAULT_INT_ENA` writer - The bit is used to enable interrupt by mmu entry fault."]
-pub type MMU_ENTRY_FAULT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MMU_ENTRY_FAULT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the cache track function. 1: enable, 0: disable."]
     #[inline(always)]
@@ -261,151 +261,145 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_DBG_INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the cache track function. 1: enable, 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_dbg_en(&mut self) -> CACHE_DBG_EN_W<CACHE_DBG_INT_ENA_SPEC, 0> {
-        CACHE_DBG_EN_W::new(self)
+    pub fn cache_dbg_en(&mut self) -> CACHE_DBG_EN_W<CACHE_DBG_INT_ENA_SPEC> {
+        CACHE_DBG_EN_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
     #[inline(always)]
     #[must_use]
-    pub fn ibus_acs_msk_ic_int_ena(
-        &mut self,
-    ) -> IBUS_ACS_MSK_IC_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 2> {
-        IBUS_ACS_MSK_IC_INT_ENA_W::new(self)
+    pub fn ibus_acs_msk_ic_int_ena(&mut self) -> IBUS_ACS_MSK_IC_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        IBUS_ACS_MSK_IC_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to enable interrupt by ibus counter overflow."]
     #[inline(always)]
     #[must_use]
-    pub fn ibus_cnt_ovf_int_ena(&mut self) -> IBUS_CNT_OVF_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 3> {
-        IBUS_CNT_OVF_INT_ENA_W::new(self)
+    pub fn ibus_cnt_ovf_int_ena(&mut self) -> IBUS_CNT_OVF_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        IBUS_CNT_OVF_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - The bit is used to enable interrupt by manual sync configurations fault."]
     #[inline(always)]
     #[must_use]
     pub fn ic_sync_size_fault_int_ena(
         &mut self,
-    ) -> IC_SYNC_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 4> {
-        IC_SYNC_SIZE_FAULT_INT_ENA_W::new(self)
+    ) -> IC_SYNC_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        IC_SYNC_SIZE_FAULT_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to enable interrupt by manual pre-load configurations fault."]
     #[inline(always)]
     #[must_use]
     pub fn ic_preload_size_fault_int_ena(
         &mut self,
-    ) -> IC_PRELOAD_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 5> {
-        IC_PRELOAD_SIZE_FAULT_INT_ENA_W::new(self)
+    ) -> IC_PRELOAD_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        IC_PRELOAD_SIZE_FAULT_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_reject_int_ena(&mut self) -> ICACHE_REJECT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 6> {
-        ICACHE_REJECT_INT_ENA_W::new(self)
+    pub fn icache_reject_int_ena(&mut self) -> ICACHE_REJECT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        ICACHE_REJECT_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - The bit is used to enable interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     #[must_use]
     pub fn icache_set_preload_ilg_int_ena(
         &mut self,
-    ) -> ICACHE_SET_PRELOAD_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 7> {
-        ICACHE_SET_PRELOAD_ILG_INT_ENA_W::new(self)
+    ) -> ICACHE_SET_PRELOAD_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        ICACHE_SET_PRELOAD_ILG_INT_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - The bit is used to enable interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     #[must_use]
     pub fn icache_set_sync_ilg_int_ena(
         &mut self,
-    ) -> ICACHE_SET_SYNC_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 8> {
-        ICACHE_SET_SYNC_ILG_INT_ENA_W::new(self)
+    ) -> ICACHE_SET_SYNC_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        ICACHE_SET_SYNC_ILG_INT_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bit is used to enable interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
     #[inline(always)]
     #[must_use]
     pub fn icache_set_lock_ilg_int_ena(
         &mut self,
-    ) -> ICACHE_SET_LOCK_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 9> {
-        ICACHE_SET_LOCK_ILG_INT_ENA_W::new(self)
+    ) -> ICACHE_SET_LOCK_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        ICACHE_SET_LOCK_ILG_INT_ENA_W::new(self, 9)
     }
     #[doc = "Bit 10 - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
     #[inline(always)]
     #[must_use]
-    pub fn dbus_acs_msk_dc_int_ena(
-        &mut self,
-    ) -> DBUS_ACS_MSK_DC_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 10> {
-        DBUS_ACS_MSK_DC_INT_ENA_W::new(self)
+    pub fn dbus_acs_msk_dc_int_ena(&mut self) -> DBUS_ACS_MSK_DC_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DBUS_ACS_MSK_DC_INT_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - The bit is used to enable interrupt by dbus counter overflow."]
     #[inline(always)]
     #[must_use]
-    pub fn dbus_cnt_ovf_int_ena(&mut self) -> DBUS_CNT_OVF_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 11> {
-        DBUS_CNT_OVF_INT_ENA_W::new(self)
+    pub fn dbus_cnt_ovf_int_ena(&mut self) -> DBUS_CNT_OVF_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DBUS_CNT_OVF_INT_ENA_W::new(self, 11)
     }
     #[doc = "Bit 12 - The bit is used to enable interrupt by manual sync configurations fault."]
     #[inline(always)]
     #[must_use]
     pub fn dc_sync_size_fault_int_ena(
         &mut self,
-    ) -> DC_SYNC_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 12> {
-        DC_SYNC_SIZE_FAULT_INT_ENA_W::new(self)
+    ) -> DC_SYNC_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DC_SYNC_SIZE_FAULT_INT_ENA_W::new(self, 12)
     }
     #[doc = "Bit 13 - The bit is used to enable interrupt by manual pre-load configurations fault."]
     #[inline(always)]
     #[must_use]
     pub fn dc_preload_size_fault_int_ena(
         &mut self,
-    ) -> DC_PRELOAD_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 13> {
-        DC_PRELOAD_SIZE_FAULT_INT_ENA_W::new(self)
+    ) -> DC_PRELOAD_SIZE_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DC_PRELOAD_SIZE_FAULT_INT_ENA_W::new(self, 13)
     }
     #[doc = "Bit 14 - The bit is used to enable interrupt by dcache trying to write flash."]
     #[inline(always)]
     #[must_use]
     pub fn dcache_write_flash_int_ena(
         &mut self,
-    ) -> DCACHE_WRITE_FLASH_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 14> {
-        DCACHE_WRITE_FLASH_INT_ENA_W::new(self)
+    ) -> DCACHE_WRITE_FLASH_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DCACHE_WRITE_FLASH_INT_ENA_W::new(self, 14)
     }
     #[doc = "Bit 15 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_reject_int_ena(&mut self) -> DCACHE_REJECT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 15> {
-        DCACHE_REJECT_INT_ENA_W::new(self)
+    pub fn dcache_reject_int_ena(&mut self) -> DCACHE_REJECT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DCACHE_REJECT_INT_ENA_W::new(self, 15)
     }
     #[doc = "Bit 16 - The bit is used to enable interrupt by illegal writing preload registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     #[must_use]
     pub fn dcache_set_preload_ilg_int_ena(
         &mut self,
-    ) -> DCACHE_SET_PRELOAD_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 16> {
-        DCACHE_SET_PRELOAD_ILG_INT_ENA_W::new(self)
+    ) -> DCACHE_SET_PRELOAD_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DCACHE_SET_PRELOAD_ILG_INT_ENA_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to enable interrupt by illegal writing sync registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     #[must_use]
     pub fn dcache_set_sync_ilg_int_ena(
         &mut self,
-    ) -> DCACHE_SET_SYNC_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 17> {
-        DCACHE_SET_SYNC_ILG_INT_ENA_W::new(self)
+    ) -> DCACHE_SET_SYNC_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DCACHE_SET_SYNC_ILG_INT_ENA_W::new(self, 17)
     }
     #[doc = "Bit 18 - The bit is used to enable interrupt by illegal writing lock registers of dcache while dcache is busy to issue lock,sync or pre-load operations."]
     #[inline(always)]
     #[must_use]
     pub fn dcache_set_lock_ilg_int_ena(
         &mut self,
-    ) -> DCACHE_SET_LOCK_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 18> {
-        DCACHE_SET_LOCK_ILG_INT_ENA_W::new(self)
+    ) -> DCACHE_SET_LOCK_ILG_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        DCACHE_SET_LOCK_ILG_INT_ENA_W::new(self, 18)
     }
     #[doc = "Bit 19 - The bit is used to enable interrupt by mmu entry fault."]
     #[inline(always)]
     #[must_use]
-    pub fn mmu_entry_fault_int_ena(
-        &mut self,
-    ) -> MMU_ENTRY_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC, 19> {
-        MMU_ENTRY_FAULT_INT_ENA_W::new(self)
+    pub fn mmu_entry_fault_int_ena(&mut self) -> MMU_ENTRY_FAULT_INT_ENA_W<CACHE_DBG_INT_ENA_SPEC> {
+        MMU_ENTRY_FAULT_INT_ENA_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -3,19 +3,19 @@ pub type R = crate::R<RX_CFG1_SPEC>;
 #[doc = "Register `RX_CFG1` writer"]
 pub type W = crate::W<RX_CFG1_SPEC>;
 #[doc = "Field `RX_REG_UPDATE` writer - Write 1 to update rx register configuration signals."]
-pub type RX_REG_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_REG_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_TIMEOUT_EN` reader - Write 1 to enable timeout count to generate error eof."]
 pub type RX_TIMEOUT_EN_R = crate::BitReader;
 #[doc = "Field `RX_TIMEOUT_EN` writer - Write 1 to enable timeout count to generate error eof."]
-pub type RX_TIMEOUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_TIMEOUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_EXT_EN_SEL` reader - Configures rx external enable signal selection from 16 data lines."]
 pub type RX_EXT_EN_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_EXT_EN_SEL` writer - Configures rx external enable signal selection from 16 data lines."]
-pub type RX_EXT_EN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RX_EXT_EN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `RX_TIMEOUT_THRESHOLD` reader - Configures rx threshold of timeout counter."]
 pub type RX_TIMEOUT_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_TIMEOUT_THRESHOLD` writer - Configures rx threshold of timeout counter."]
-pub type RX_TIMEOUT_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type RX_TIMEOUT_THRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 3 - Write 1 to enable timeout count to generate error eof."]
     #[inline(always)]
@@ -55,33 +55,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RX_CFG1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - Write 1 to update rx register configuration signals."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_reg_update(&mut self) -> RX_REG_UPDATE_W<RX_CFG1_SPEC, 2> {
-        RX_REG_UPDATE_W::new(self)
+    pub fn rx_reg_update(&mut self) -> RX_REG_UPDATE_W<RX_CFG1_SPEC> {
+        RX_REG_UPDATE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to enable timeout count to generate error eof."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_timeout_en(&mut self) -> RX_TIMEOUT_EN_W<RX_CFG1_SPEC, 3> {
-        RX_TIMEOUT_EN_W::new(self)
+    pub fn rx_timeout_en(&mut self) -> RX_TIMEOUT_EN_W<RX_CFG1_SPEC> {
+        RX_TIMEOUT_EN_W::new(self, 3)
     }
     #[doc = "Bits 12:15 - Configures rx external enable signal selection from 16 data lines."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<RX_CFG1_SPEC, 12> {
-        RX_EXT_EN_SEL_W::new(self)
+    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<RX_CFG1_SPEC> {
+        RX_EXT_EN_SEL_W::new(self, 12)
     }
     #[doc = "Bits 16:31 - Configures rx threshold of timeout counter."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_timeout_threshold(&mut self) -> RX_TIMEOUT_THRESHOLD_W<RX_CFG1_SPEC, 16> {
-        RX_TIMEOUT_THRESHOLD_W::new(self)
+    pub fn rx_timeout_threshold(&mut self) -> RX_TIMEOUT_THRESHOLD_W<RX_CFG1_SPEC> {
+        RX_TIMEOUT_THRESHOLD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

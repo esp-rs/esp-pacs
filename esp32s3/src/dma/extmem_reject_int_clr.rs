@@ -1,7 +1,7 @@
 #[doc = "Register `EXTMEM_REJECT_INT_CLR` writer"]
 pub type W = crate::W<EXTMEM_REJECT_INT_CLR_SPEC>;
 #[doc = "Field `EXTMEM_REJECT_INT_CLR` writer - Set this bit to clear the EXTMEM_REJECT_INT interrupt."]
-pub type EXTMEM_REJECT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTMEM_REJECT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXTMEM_REJECT_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,10 +12,8 @@ impl W {
     #[doc = "Bit 0 - Set this bit to clear the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn extmem_reject_int_clr(
-        &mut self,
-    ) -> EXTMEM_REJECT_INT_CLR_W<EXTMEM_REJECT_INT_CLR_SPEC, 0> {
-        EXTMEM_REJECT_INT_CLR_W::new(self)
+    pub fn extmem_reject_int_clr(&mut self) -> EXTMEM_REJECT_INT_CLR_W<EXTMEM_REJECT_INT_CLR_SPEC> {
+        EXTMEM_REJECT_INT_CLR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,23 +5,23 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `PER_END_INT_ENA` reader - The enable bit for SPI_MEM_PER_END_INT interrupt."]
 pub type PER_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PER_END_INT_ENA` writer - The enable bit for SPI_MEM_PER_END_INT interrupt."]
-pub type PER_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PER_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PES_END_INT_ENA` reader - The enable bit for SPI_MEM_PES_END_INT interrupt."]
 pub type PES_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PES_END_INT_ENA` writer - The enable bit for SPI_MEM_PES_END_INT interrupt."]
-pub type PES_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PES_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WPE_END_INT_ENA` reader - The enable bit for SPI_MEM_WPE_END_INT interrupt."]
 pub type WPE_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `WPE_END_INT_ENA` writer - The enable bit for SPI_MEM_WPE_END_INT interrupt."]
-pub type WPE_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WPE_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_ST_END_INT_ENA` reader - The enable bit for SPI_MEM_SLV_ST_END_INT interrupt."]
 pub type SLV_ST_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLV_ST_END_INT_ENA` writer - The enable bit for SPI_MEM_SLV_ST_END_INT interrupt."]
-pub type SLV_ST_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_ST_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MST_ST_END_INT_ENA` reader - The enable bit for SPI_MEM_MST_ST_END_INT interrupt."]
 pub type MST_ST_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MST_ST_END_INT_ENA` writer - The enable bit for SPI_MEM_MST_ST_END_INT interrupt."]
-pub type MST_ST_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MST_ST_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn per_end_int_ena(&mut self) -> PER_END_INT_ENA_W<INT_ENA_SPEC, 0> {
-        PER_END_INT_ENA_W::new(self)
+    pub fn per_end_int_ena(&mut self) -> PER_END_INT_ENA_W<INT_ENA_SPEC> {
+        PER_END_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn pes_end_int_ena(&mut self) -> PES_END_INT_ENA_W<INT_ENA_SPEC, 1> {
-        PES_END_INT_ENA_W::new(self)
+    pub fn pes_end_int_ena(&mut self) -> PES_END_INT_ENA_W<INT_ENA_SPEC> {
+        PES_END_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for SPI_MEM_WPE_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn wpe_end_int_ena(&mut self) -> WPE_END_INT_ENA_W<INT_ENA_SPEC, 2> {
-        WPE_END_INT_ENA_W::new(self)
+    pub fn wpe_end_int_ena(&mut self) -> WPE_END_INT_ENA_W<INT_ENA_SPEC> {
+        WPE_END_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_st_end_int_ena(&mut self) -> SLV_ST_END_INT_ENA_W<INT_ENA_SPEC, 3> {
-        SLV_ST_END_INT_ENA_W::new(self)
+    pub fn slv_st_end_int_ena(&mut self) -> SLV_ST_END_INT_ENA_W<INT_ENA_SPEC> {
+        SLV_ST_END_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn mst_st_end_int_ena(&mut self) -> MST_ST_END_INT_ENA_W<INT_ENA_SPEC, 4> {
-        MST_ST_END_INT_ENA_W::new(self)
+    pub fn mst_st_end_int_ena(&mut self) -> MST_ST_END_INT_ENA_W<INT_ENA_SPEC> {
+        MST_ST_END_INT_ENA_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

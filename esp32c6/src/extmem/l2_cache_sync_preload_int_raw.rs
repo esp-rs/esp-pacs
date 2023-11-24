@@ -5,11 +5,11 @@ pub type W = crate::W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>;
 #[doc = "Field `L2_CACHE_PLD_DONE_INT_RAW` reader - The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done."]
 pub type L2_CACHE_PLD_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PLD_DONE_INT_RAW` writer - The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done."]
-pub type L2_CACHE_PLD_DONE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_CACHE_PLD_DONE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L2_CACHE_PLD_ERR_INT_RAW` reader - The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs."]
 pub type L2_CACHE_PLD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PLD_ERR_INT_RAW` writer - The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs."]
-pub type L2_CACHE_PLD_ERR_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L2_CACHE_PLD_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 5 - The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done."]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn l2_cache_pld_done_int_raw(
         &mut self,
-    ) -> L2_CACHE_PLD_DONE_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 5> {
-        L2_CACHE_PLD_DONE_INT_RAW_W::new(self)
+    ) -> L2_CACHE_PLD_DONE_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L2_CACHE_PLD_DONE_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 12 - The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs."]
     #[inline(always)]
     #[must_use]
     pub fn l2_cache_pld_err_int_raw(
         &mut self,
-    ) -> L2_CACHE_PLD_ERR_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, 12> {
-        L2_CACHE_PLD_ERR_INT_RAW_W::new(self)
+    ) -> L2_CACHE_PLD_ERR_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+        L2_CACHE_PLD_ERR_INT_RAW_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

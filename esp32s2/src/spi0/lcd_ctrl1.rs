@@ -5,15 +5,15 @@ pub type W = crate::W<LCD_CTRL1_SPEC>;
 #[doc = "Field `LCD_VB_FRONT` reader - It is the vertical blank front porch of a frame. Can be configured in CONF state."]
 pub type LCD_VB_FRONT_R = crate::FieldReader;
 #[doc = "Field `LCD_VB_FRONT` writer - It is the vertical blank front porch of a frame. Can be configured in CONF state."]
-pub type LCD_VB_FRONT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LCD_VB_FRONT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `LCD_HA_WIDTH` reader - It is the horizontal active width of a frame. Can be configured in CONF state."]
 pub type LCD_HA_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_HA_WIDTH` writer - It is the horizontal active width of a frame. Can be configured in CONF state."]
-pub type LCD_HA_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type LCD_HA_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `LCD_HT_WIDTH` reader - It is the horizontal total width of a frame. Can be configured in CONF state."]
 pub type LCD_HT_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_HT_WIDTH` writer - It is the horizontal total width of a frame. Can be configured in CONF state."]
-pub type LCD_HT_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type LCD_HT_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame. Can be configured in CONF state."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_vb_front(&mut self) -> LCD_VB_FRONT_W<LCD_CTRL1_SPEC, 0> {
-        LCD_VB_FRONT_W::new(self)
+    pub fn lcd_vb_front(&mut self) -> LCD_VB_FRONT_W<LCD_CTRL1_SPEC> {
+        LCD_VB_FRONT_W::new(self, 0)
     }
     #[doc = "Bits 8:19 - It is the horizontal active width of a frame. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_ha_width(&mut self) -> LCD_HA_WIDTH_W<LCD_CTRL1_SPEC, 8> {
-        LCD_HA_WIDTH_W::new(self)
+    pub fn lcd_ha_width(&mut self) -> LCD_HA_WIDTH_W<LCD_CTRL1_SPEC> {
+        LCD_HA_WIDTH_W::new(self, 8)
     }
     #[doc = "Bits 20:31 - It is the horizontal total width of a frame. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_ht_width(&mut self) -> LCD_HT_WIDTH_W<LCD_CTRL1_SPEC, 20> {
-        LCD_HT_WIDTH_W::new(self)
+    pub fn lcd_ht_width(&mut self) -> LCD_HT_WIDTH_W<LCD_CTRL1_SPEC> {
+        LCD_HT_WIDTH_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

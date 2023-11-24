@@ -3,11 +3,11 @@ pub type R = crate::R<WDTCONFIG1_SPEC>;
 #[doc = "Register `WDTCONFIG1` writer"]
 pub type W = crate::W<WDTCONFIG1_SPEC>;
 #[doc = "Field `WDT_DIVCNT_RST` writer - reg_wdt_divcnt_rst."]
-pub type WDT_DIVCNT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_DIVCNT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_CLK_PRESCALE` reader - reg_wdt_clk_prescale."]
 pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `WDT_CLK_PRESCALE` writer - reg_wdt_clk_prescale."]
-pub type WDT_CLK_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type WDT_CLK_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 16:31 - reg_wdt_clk_prescale."]
     #[inline(always)]
@@ -29,21 +29,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDTCONFIG1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_wdt_divcnt_rst."]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_divcnt_rst(&mut self) -> WDT_DIVCNT_RST_W<WDTCONFIG1_SPEC, 0> {
-        WDT_DIVCNT_RST_W::new(self)
+    pub fn wdt_divcnt_rst(&mut self) -> WDT_DIVCNT_RST_W<WDTCONFIG1_SPEC> {
+        WDT_DIVCNT_RST_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - reg_wdt_clk_prescale."]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<WDTCONFIG1_SPEC, 16> {
-        WDT_CLK_PRESCALE_W::new(self)
+    pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<WDTCONFIG1_SPEC> {
+        WDT_CLK_PRESCALE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

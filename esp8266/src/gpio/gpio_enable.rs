@@ -5,11 +5,11 @@ pub type W = crate::W<GPIO_ENABLE_SPEC>;
 #[doc = "Field `GPIO_ENABLE_DATA` reader - The output enable register."]
 pub type GPIO_ENABLE_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_ENABLE_DATA` writer - The output enable register."]
-pub type GPIO_ENABLE_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type GPIO_ENABLE_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `GPIO_SDIO_SEL` reader - SDIO-dis selection register"]
 pub type GPIO_SDIO_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_SDIO_SEL` writer - SDIO-dis selection register"]
-pub type GPIO_SDIO_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type GPIO_SDIO_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:15 - The output enable register."]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_ENABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - The output enable register."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_enable_data(&mut self) -> GPIO_ENABLE_DATA_W<GPIO_ENABLE_SPEC, 0> {
-        GPIO_ENABLE_DATA_W::new(self)
+    pub fn gpio_enable_data(&mut self) -> GPIO_ENABLE_DATA_W<GPIO_ENABLE_SPEC> {
+        GPIO_ENABLE_DATA_W::new(self, 0)
     }
     #[doc = "Bits 16:21 - SDIO-dis selection register"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_sdio_sel(&mut self) -> GPIO_SDIO_SEL_W<GPIO_ENABLE_SPEC, 16> {
-        GPIO_SDIO_SEL_W::new(self)
+    pub fn gpio_sdio_sel(&mut self) -> GPIO_SDIO_SEL_W<GPIO_ENABLE_SPEC> {
+        GPIO_SDIO_SEL_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

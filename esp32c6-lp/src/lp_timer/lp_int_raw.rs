@@ -5,11 +5,11 @@ pub type W = crate::W<LP_INT_RAW_SPEC>;
 #[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_RAW` reader - need_des"]
 pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_RAW` writer - need_des"]
-pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAIN_TIMER_LP_INT_RAW` reader - need_des"]
 pub type MAIN_TIMER_LP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_LP_INT_RAW` writer - need_des"]
-pub type MAIN_TIMER_LP_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_LP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,20 @@ impl W {
     #[must_use]
     pub fn main_timer_overflow_lp_int_raw(
         &mut self,
-    ) -> MAIN_TIMER_OVERFLOW_LP_INT_RAW_W<LP_INT_RAW_SPEC, 30> {
-        MAIN_TIMER_OVERFLOW_LP_INT_RAW_W::new(self)
+    ) -> MAIN_TIMER_OVERFLOW_LP_INT_RAW_W<LP_INT_RAW_SPEC> {
+        MAIN_TIMER_OVERFLOW_LP_INT_RAW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_lp_int_raw(&mut self) -> MAIN_TIMER_LP_INT_RAW_W<LP_INT_RAW_SPEC, 31> {
-        MAIN_TIMER_LP_INT_RAW_W::new(self)
+    pub fn main_timer_lp_int_raw(&mut self) -> MAIN_TIMER_LP_INT_RAW_W<LP_INT_RAW_SPEC> {
+        MAIN_TIMER_LP_INT_RAW_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

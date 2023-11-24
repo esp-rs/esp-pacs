@@ -5,35 +5,35 @@ pub type W = crate::W<HOST_SLCHOST_CONF_SPEC>;
 #[doc = "Field `HOST_FRC_SDIO11` reader - "]
 pub type HOST_FRC_SDIO11_R = crate::FieldReader;
 #[doc = "Field `HOST_FRC_SDIO11` writer - "]
-pub type HOST_FRC_SDIO11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type HOST_FRC_SDIO11_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `HOST_FRC_SDIO20` reader - "]
 pub type HOST_FRC_SDIO20_R = crate::FieldReader;
 #[doc = "Field `HOST_FRC_SDIO20` writer - "]
-pub type HOST_FRC_SDIO20_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type HOST_FRC_SDIO20_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `HOST_FRC_NEG_SAMP` reader - "]
 pub type HOST_FRC_NEG_SAMP_R = crate::FieldReader;
 #[doc = "Field `HOST_FRC_NEG_SAMP` writer - "]
-pub type HOST_FRC_NEG_SAMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type HOST_FRC_NEG_SAMP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `HOST_FRC_POS_SAMP` reader - "]
 pub type HOST_FRC_POS_SAMP_R = crate::FieldReader;
 #[doc = "Field `HOST_FRC_POS_SAMP` writer - "]
-pub type HOST_FRC_POS_SAMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type HOST_FRC_POS_SAMP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `HOST_FRC_QUICK_IN` reader - "]
 pub type HOST_FRC_QUICK_IN_R = crate::FieldReader;
 #[doc = "Field `HOST_FRC_QUICK_IN` writer - "]
-pub type HOST_FRC_QUICK_IN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type HOST_FRC_QUICK_IN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `HOST_SDIO20_INT_DELAY` reader - "]
 pub type HOST_SDIO20_INT_DELAY_R = crate::BitReader;
 #[doc = "Field `HOST_SDIO20_INT_DELAY` writer - "]
-pub type HOST_SDIO20_INT_DELAY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HOST_SDIO20_INT_DELAY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HOST_SDIO_PAD_PULLUP` reader - "]
 pub type HOST_SDIO_PAD_PULLUP_R = crate::BitReader;
 #[doc = "Field `HOST_SDIO_PAD_PULLUP` writer - "]
-pub type HOST_SDIO_PAD_PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HOST_SDIO_PAD_PULLUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HOST_HSPEED_CON_EN` reader - "]
 pub type HOST_HSPEED_CON_EN_R = crate::BitReader;
 #[doc = "Field `HOST_HSPEED_CON_EN` writer - "]
-pub type HOST_HSPEED_CON_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HOST_HSPEED_CON_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -118,57 +118,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
     #[must_use]
-    pub fn host_frc_sdio11(&mut self) -> HOST_FRC_SDIO11_W<HOST_SLCHOST_CONF_SPEC, 0> {
-        HOST_FRC_SDIO11_W::new(self)
+    pub fn host_frc_sdio11(&mut self) -> HOST_FRC_SDIO11_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_FRC_SDIO11_W::new(self, 0)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
     #[must_use]
-    pub fn host_frc_sdio20(&mut self) -> HOST_FRC_SDIO20_W<HOST_SLCHOST_CONF_SPEC, 5> {
-        HOST_FRC_SDIO20_W::new(self)
+    pub fn host_frc_sdio20(&mut self) -> HOST_FRC_SDIO20_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_FRC_SDIO20_W::new(self, 5)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
     #[must_use]
-    pub fn host_frc_neg_samp(&mut self) -> HOST_FRC_NEG_SAMP_W<HOST_SLCHOST_CONF_SPEC, 10> {
-        HOST_FRC_NEG_SAMP_W::new(self)
+    pub fn host_frc_neg_samp(&mut self) -> HOST_FRC_NEG_SAMP_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_FRC_NEG_SAMP_W::new(self, 10)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
     #[must_use]
-    pub fn host_frc_pos_samp(&mut self) -> HOST_FRC_POS_SAMP_W<HOST_SLCHOST_CONF_SPEC, 15> {
-        HOST_FRC_POS_SAMP_W::new(self)
+    pub fn host_frc_pos_samp(&mut self) -> HOST_FRC_POS_SAMP_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_FRC_POS_SAMP_W::new(self, 15)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
     #[must_use]
-    pub fn host_frc_quick_in(&mut self) -> HOST_FRC_QUICK_IN_W<HOST_SLCHOST_CONF_SPEC, 20> {
-        HOST_FRC_QUICK_IN_W::new(self)
+    pub fn host_frc_quick_in(&mut self) -> HOST_FRC_QUICK_IN_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_FRC_QUICK_IN_W::new(self, 20)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn host_sdio20_int_delay(&mut self) -> HOST_SDIO20_INT_DELAY_W<HOST_SLCHOST_CONF_SPEC, 25> {
-        HOST_SDIO20_INT_DELAY_W::new(self)
+    pub fn host_sdio20_int_delay(&mut self) -> HOST_SDIO20_INT_DELAY_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_SDIO20_INT_DELAY_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn host_sdio_pad_pullup(&mut self) -> HOST_SDIO_PAD_PULLUP_W<HOST_SLCHOST_CONF_SPEC, 26> {
-        HOST_SDIO_PAD_PULLUP_W::new(self)
+    pub fn host_sdio_pad_pullup(&mut self) -> HOST_SDIO_PAD_PULLUP_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_SDIO_PAD_PULLUP_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn host_hspeed_con_en(&mut self) -> HOST_HSPEED_CON_EN_W<HOST_SLCHOST_CONF_SPEC, 27> {
-        HOST_HSPEED_CON_EN_W::new(self)
+    pub fn host_hspeed_con_en(&mut self) -> HOST_HSPEED_CON_EN_W<HOST_SLCHOST_CONF_SPEC> {
+        HOST_HSPEED_CON_EN_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

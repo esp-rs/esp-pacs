@@ -5,23 +5,19 @@ pub type W = crate::W<INTERNAL_SRAM_USAGE_2_SPEC>;
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core0 trace bus."]
 pub type INTERNAL_SRAM_CORE0_TRACE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core0 trace bus."]
-pub type INTERNAL_SRAM_CORE0_TRACE_USAGE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 7, O>;
+pub type INTERNAL_SRAM_CORE0_TRACE_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core1 trace bus."]
 pub type INTERNAL_SRAM_CORE1_TRACE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core1 trace bus."]
-pub type INTERNAL_SRAM_CORE1_TRACE_USAGE_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 7, O>;
+pub type INTERNAL_SRAM_CORE1_TRACE_USAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_ALLOC` reader - Which internal SRAM bank (16KB) of 64KB can be accessed by core0 trace bus."]
 pub type INTERNAL_SRAM_CORE0_TRACE_ALLOC_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_ALLOC` writer - Which internal SRAM bank (16KB) of 64KB can be accessed by core0 trace bus."]
-pub type INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_ALLOC` reader - Which internal SRAM bank (16KB) of 64KB can be accessed by core1 trace bus."]
 pub type INTERNAL_SRAM_CORE1_TRACE_ALLOC_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_ALLOC` writer - Which internal SRAM bank (16KB) of 64KB can be accessed by core1 trace bus."]
-pub type INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:6 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core0 trace bus."]
     #[inline(always)]
@@ -70,7 +66,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -79,32 +75,32 @@ impl W {
     #[must_use]
     pub fn internal_sram_core0_trace_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE0_TRACE_USAGE_W<INTERNAL_SRAM_USAGE_2_SPEC, 0> {
-        INTERNAL_SRAM_CORE0_TRACE_USAGE_W::new(self)
+    ) -> INTERNAL_SRAM_CORE0_TRACE_USAGE_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+        INTERNAL_SRAM_CORE0_TRACE_USAGE_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core1 trace bus."]
     #[inline(always)]
     #[must_use]
     pub fn internal_sram_core1_trace_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE1_TRACE_USAGE_W<INTERNAL_SRAM_USAGE_2_SPEC, 7> {
-        INTERNAL_SRAM_CORE1_TRACE_USAGE_W::new(self)
+    ) -> INTERNAL_SRAM_CORE1_TRACE_USAGE_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+        INTERNAL_SRAM_CORE1_TRACE_USAGE_W::new(self, 7)
     }
     #[doc = "Bits 14:15 - Which internal SRAM bank (16KB) of 64KB can be accessed by core0 trace bus."]
     #[inline(always)]
     #[must_use]
     pub fn internal_sram_core0_trace_alloc(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<INTERNAL_SRAM_USAGE_2_SPEC, 14> {
-        INTERNAL_SRAM_CORE0_TRACE_ALLOC_W::new(self)
+    ) -> INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+        INTERNAL_SRAM_CORE0_TRACE_ALLOC_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Which internal SRAM bank (16KB) of 64KB can be accessed by core1 trace bus."]
     #[inline(always)]
     #[must_use]
     pub fn internal_sram_core1_trace_alloc(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<INTERNAL_SRAM_USAGE_2_SPEC, 16> {
-        INTERNAL_SRAM_CORE1_TRACE_ALLOC_W::new(self)
+    ) -> INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+        INTERNAL_SRAM_CORE1_TRACE_ALLOC_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

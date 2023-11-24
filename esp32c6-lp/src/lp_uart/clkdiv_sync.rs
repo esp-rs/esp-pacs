@@ -5,11 +5,11 @@ pub type W = crate::W<CLKDIV_SYNC_SPEC>;
 #[doc = "Field `CLKDIV` reader - The integral part of the frequency divider factor."]
 pub type CLKDIV_R = crate::FieldReader<u16>;
 #[doc = "Field `CLKDIV` writer - The integral part of the frequency divider factor."]
-pub type CLKDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type CLKDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `CLKDIV_FRAG` reader - The decimal part of the frequency divider factor."]
 pub type CLKDIV_FRAG_R = crate::FieldReader;
 #[doc = "Field `CLKDIV_FRAG` writer - The decimal part of the frequency divider factor."]
-pub type CLKDIV_FRAG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLKDIV_FRAG_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:11 - The integral part of the frequency divider factor."]
     #[inline(always)]
@@ -37,23 +37,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLKDIV_SYNC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - The integral part of the frequency divider factor."]
     #[inline(always)]
     #[must_use]
-    pub fn clkdiv(&mut self) -> CLKDIV_W<CLKDIV_SYNC_SPEC, 0> {
-        CLKDIV_W::new(self)
+    pub fn clkdiv(&mut self) -> CLKDIV_W<CLKDIV_SYNC_SPEC> {
+        CLKDIV_W::new(self, 0)
     }
     #[doc = "Bits 20:23 - The decimal part of the frequency divider factor."]
     #[inline(always)]
     #[must_use]
-    pub fn clkdiv_frag(&mut self) -> CLKDIV_FRAG_W<CLKDIV_SYNC_SPEC, 20> {
-        CLKDIV_FRAG_W::new(self)
+    pub fn clkdiv_frag(&mut self) -> CLKDIV_FRAG_W<CLKDIV_SYNC_SPEC> {
+        CLKDIV_FRAG_W::new(self, 20)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

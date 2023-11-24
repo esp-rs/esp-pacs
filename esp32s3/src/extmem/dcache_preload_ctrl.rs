@@ -5,13 +5,13 @@ pub type W = crate::W<DCACHE_PRELOAD_CTRL_SPEC>;
 #[doc = "Field `DCACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
 pub type DCACHE_PRELOAD_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub type DCACHE_PRELOAD_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_PRELOAD_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_PRELOAD_DONE` reader - The bit is used to indicate preload operation is finished."]
 pub type DCACHE_PRELOAD_DONE_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_ORDER` reader - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
 pub type DCACHE_PRELOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_ORDER` writer - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
-pub type DCACHE_PRELOAD_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_PRELOAD_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
@@ -51,21 +51,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCACHE_PRELOAD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_preload_ena(&mut self) -> DCACHE_PRELOAD_ENA_W<DCACHE_PRELOAD_CTRL_SPEC, 0> {
-        DCACHE_PRELOAD_ENA_W::new(self)
+    pub fn dcache_preload_ena(&mut self) -> DCACHE_PRELOAD_ENA_W<DCACHE_PRELOAD_CTRL_SPEC> {
+        DCACHE_PRELOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_preload_order(&mut self) -> DCACHE_PRELOAD_ORDER_W<DCACHE_PRELOAD_CTRL_SPEC, 2> {
-        DCACHE_PRELOAD_ORDER_W::new(self)
+    pub fn dcache_preload_order(&mut self) -> DCACHE_PRELOAD_ORDER_W<DCACHE_PRELOAD_CTRL_SPEC> {
+        DCACHE_PRELOAD_ORDER_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

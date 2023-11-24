@@ -5,7 +5,7 @@ pub type W = crate::W<CH_RX_LIM_SPEC>;
 #[doc = "Field `RX_LIM` reader - reg_rmt_rx_lim_ch2."]
 pub type RX_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_LIM` writer - reg_rmt_rx_lim_ch2."]
-pub type RX_LIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RX_LIM_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - reg_rmt_rx_lim_ch2."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_RX_LIM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - reg_rmt_rx_lim_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_lim(&mut self) -> RX_LIM_W<CH_RX_LIM_SPEC, 0> {
-        RX_LIM_W::new(self)
+    pub fn rx_lim(&mut self) -> RX_LIM_W<CH_RX_LIM_SPEC> {
+        RX_LIM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

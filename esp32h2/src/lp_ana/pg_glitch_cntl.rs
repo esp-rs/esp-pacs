@@ -5,7 +5,7 @@ pub type W = crate::W<PG_GLITCH_CNTL_SPEC>;
 #[doc = "Field `POWER_GLITCH_RESET_ENA` reader - need_des"]
 pub type POWER_GLITCH_RESET_ENA_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_RESET_ENA` writer - need_des"]
-pub type POWER_GLITCH_RESET_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POWER_GLITCH_RESET_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PG_GLITCH_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn power_glitch_reset_ena(&mut self) -> POWER_GLITCH_RESET_ENA_W<PG_GLITCH_CNTL_SPEC, 31> {
-        POWER_GLITCH_RESET_ENA_W::new(self)
+    pub fn power_glitch_reset_ena(&mut self) -> POWER_GLITCH_RESET_ENA_W<PG_GLITCH_CNTL_SPEC> {
+        POWER_GLITCH_RESET_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

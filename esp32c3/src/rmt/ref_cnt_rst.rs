@@ -1,13 +1,13 @@
 #[doc = "Register `REF_CNT_RST` writer"]
 pub type W = crate::W<REF_CNT_RST_SPEC>;
 #[doc = "Field `CH0` writer - reg_ref_cnt_rst_ch0."]
-pub type CH0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH1` writer - reg_ref_cnt_rst_ch1."]
-pub type CH1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH2` writer - reg_ref_cnt_rst_ch2."]
-pub type CH2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH3` writer - reg_ref_cnt_rst_ch3."]
-pub type CH3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -18,26 +18,26 @@ impl W {
     #[doc = "Bit 0 - reg_ref_cnt_rst_ch0."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0(&mut self) -> CH0_W<REF_CNT_RST_SPEC, 0> {
-        CH0_W::new(self)
+    pub fn ch0(&mut self) -> CH0_W<REF_CNT_RST_SPEC> {
+        CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_ref_cnt_rst_ch1."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1(&mut self) -> CH1_W<REF_CNT_RST_SPEC, 1> {
-        CH1_W::new(self)
+    pub fn ch1(&mut self) -> CH1_W<REF_CNT_RST_SPEC> {
+        CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_ref_cnt_rst_ch2."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2(&mut self) -> CH2_W<REF_CNT_RST_SPEC, 2> {
-        CH2_W::new(self)
+    pub fn ch2(&mut self) -> CH2_W<REF_CNT_RST_SPEC> {
+        CH2_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_ref_cnt_rst_ch3."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3(&mut self) -> CH3_W<REF_CNT_RST_SPEC, 3> {
-        CH3_W::new(self)
+    pub fn ch3(&mut self) -> CH3_W<REF_CNT_RST_SPEC> {
+        CH3_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

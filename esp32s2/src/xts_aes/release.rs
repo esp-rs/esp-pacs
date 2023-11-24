@@ -1,7 +1,7 @@
 #[doc = "Register `RELEASE` writer"]
 pub type W = crate::W<RELEASE_SPEC>;
 #[doc = "Field `RELEASE` writer - Set to grant SPI1 access to encrypted result."]
-pub type RELEASE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RELEASE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RELEASE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Set to grant SPI1 access to encrypted result."]
     #[inline(always)]
     #[must_use]
-    pub fn release(&mut self) -> RELEASE_W<RELEASE_SPEC, 0> {
-        RELEASE_W::new(self)
+    pub fn release(&mut self) -> RELEASE_W<RELEASE_SPEC> {
+        RELEASE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

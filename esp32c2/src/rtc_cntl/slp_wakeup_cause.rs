@@ -5,7 +5,7 @@ pub type W = crate::W<SLP_WAKEUP_CAUSE_SPEC>;
 #[doc = "Field `WAKEUP_CAUSE` reader - sleep wakeup cause"]
 pub type WAKEUP_CAUSE_R = crate::FieldReader<u32>;
 #[doc = "Field `WAKEUP_CAUSE` writer - sleep wakeup cause"]
-pub type WAKEUP_CAUSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 17, O, u32>;
+pub type WAKEUP_CAUSE_W<'a, REG> = crate::FieldWriter<'a, REG, 17, u32>;
 impl R {
     #[doc = "Bits 0:16 - sleep wakeup cause"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CAUSE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:16 - sleep wakeup cause"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_cause(&mut self) -> WAKEUP_CAUSE_W<SLP_WAKEUP_CAUSE_SPEC, 0> {
-        WAKEUP_CAUSE_W::new(self)
+    pub fn wakeup_cause(&mut self) -> WAKEUP_CAUSE_W<SLP_WAKEUP_CAUSE_SPEC> {
+        WAKEUP_CAUSE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

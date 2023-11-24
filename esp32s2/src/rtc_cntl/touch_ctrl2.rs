@@ -5,67 +5,67 @@ pub type W = crate::W<TOUCH_CTRL2_SPEC>;
 #[doc = "Field `TOUCH_DRANGE` reader - TOUCH attenuation."]
 pub type TOUCH_DRANGE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DRANGE` writer - TOUCH attenuation."]
-pub type TOUCH_DRANGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DRANGE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_DREFL` reader - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
 pub type TOUCH_DREFL_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFL` writer - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
-pub type TOUCH_DREFL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DREFL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_DREFH` reader - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
 pub type TOUCH_DREFH_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFH` writer - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
-pub type TOUCH_DREFH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DREFH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_XPD_BIAS` reader - TOUCH BIAS power switch."]
 pub type TOUCH_XPD_BIAS_R = crate::BitReader;
 #[doc = "Field `TOUCH_XPD_BIAS` writer - TOUCH BIAS power switch."]
-pub type TOUCH_XPD_BIAS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_XPD_BIAS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_REFC` reader - Touch pad 0 reference capacitance."]
 pub type TOUCH_REFC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_REFC` writer - Touch pad 0 reference capacitance."]
-pub type TOUCH_REFC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_REFC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TOUCH_DBIAS` reader - 0: Use bandgap bias. 1: Use self bias."]
 pub type TOUCH_DBIAS_R = crate::BitReader;
 #[doc = "Field `TOUCH_DBIAS` writer - 0: Use bandgap bias. 1: Use self bias."]
-pub type TOUCH_DBIAS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_DBIAS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_SLP_TIMER_EN` reader - Touch timer enable bit."]
 pub type TOUCH_SLP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SLP_TIMER_EN` writer - Touch timer enable bit."]
-pub type TOUCH_SLP_TIMER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_SLP_TIMER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_START_FSM_EN` reader - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
 pub type TOUCH_START_FSM_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FSM_EN` writer - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
-pub type TOUCH_START_FSM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_START_FSM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_START_EN` reader - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
 pub type TOUCH_START_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_EN` writer - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
-pub type TOUCH_START_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_START_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_START_FORCE` reader - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
 pub type TOUCH_START_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FORCE` writer - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
-pub type TOUCH_START_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_START_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_XPD_WAIT` reader - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
 pub type TOUCH_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_XPD_WAIT` writer - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
-pub type TOUCH_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TOUCH_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TOUCH_SLP_CYC_DIV` reader - When a touch pad is active, sleep cycle could be divided by this number."]
 pub type TOUCH_SLP_CYC_DIV_R = crate::FieldReader;
 #[doc = "Field `TOUCH_SLP_CYC_DIV` writer - When a touch pad is active, sleep cycle could be divided by this number."]
-pub type TOUCH_SLP_CYC_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_SLP_CYC_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_TIMER_FORCE_DONE` reader - Force touch timer done."]
 pub type TOUCH_TIMER_FORCE_DONE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_TIMER_FORCE_DONE` writer - Force touch timer done."]
-pub type TOUCH_TIMER_FORCE_DONE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_TIMER_FORCE_DONE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_RESET` reader - Reset TOUCH FSM via software."]
 pub type TOUCH_RESET_R = crate::BitReader;
 #[doc = "Field `TOUCH_RESET` writer - Reset TOUCH FSM via software."]
-pub type TOUCH_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_CLK_FO` reader - Touch clock force on."]
 pub type TOUCH_CLK_FO_R = crate::BitReader;
 #[doc = "Field `TOUCH_CLK_FO` writer - Touch clock force on."]
-pub type TOUCH_CLK_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_CLK_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_CLKGATE_EN` reader - Touch clock enable bit."]
 pub type TOUCH_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_CLKGATE_EN` writer - Touch clock enable bit."]
-pub type TOUCH_CLKGATE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_CLKGATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 2:3 - TOUCH attenuation."]
     #[inline(always)]
@@ -213,105 +213,105 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 2:3 - TOUCH attenuation."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<TOUCH_CTRL2_SPEC, 2> {
-        TOUCH_DRANGE_W::new(self)
+    pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_DRANGE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<TOUCH_CTRL2_SPEC, 4> {
-        TOUCH_DREFL_W::new(self)
+    pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_DREFL_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<TOUCH_CTRL2_SPEC, 6> {
-        TOUCH_DREFH_W::new(self)
+    pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_DREFH_W::new(self, 6)
     }
     #[doc = "Bit 8 - TOUCH BIAS power switch."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<TOUCH_CTRL2_SPEC, 8> {
-        TOUCH_XPD_BIAS_W::new(self)
+    pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_XPD_BIAS_W::new(self, 8)
     }
     #[doc = "Bits 9:11 - Touch pad 0 reference capacitance."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_refc(&mut self) -> TOUCH_REFC_W<TOUCH_CTRL2_SPEC, 9> {
-        TOUCH_REFC_W::new(self)
+    pub fn touch_refc(&mut self) -> TOUCH_REFC_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_REFC_W::new(self, 9)
     }
     #[doc = "Bit 12 - 0: Use bandgap bias. 1: Use self bias."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_dbias(&mut self) -> TOUCH_DBIAS_W<TOUCH_CTRL2_SPEC, 12> {
-        TOUCH_DBIAS_W::new(self)
+    pub fn touch_dbias(&mut self) -> TOUCH_DBIAS_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_DBIAS_W::new(self, 12)
     }
     #[doc = "Bit 13 - Touch timer enable bit."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_timer_en(&mut self) -> TOUCH_SLP_TIMER_EN_W<TOUCH_CTRL2_SPEC, 13> {
-        TOUCH_SLP_TIMER_EN_W::new(self)
+    pub fn touch_slp_timer_en(&mut self) -> TOUCH_SLP_TIMER_EN_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_SLP_TIMER_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<TOUCH_CTRL2_SPEC, 14> {
-        TOUCH_START_FSM_EN_W::new(self)
+    pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_START_FSM_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<TOUCH_CTRL2_SPEC, 15> {
-        TOUCH_START_EN_W::new(self)
+    pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_START_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<TOUCH_CTRL2_SPEC, 16> {
-        TOUCH_START_FORCE_W::new(self)
+    pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_START_FORCE_W::new(self, 16)
     }
     #[doc = "Bits 17:24 - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<TOUCH_CTRL2_SPEC, 17> {
-        TOUCH_XPD_WAIT_W::new(self)
+    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_XPD_WAIT_W::new(self, 17)
     }
     #[doc = "Bits 25:26 - When a touch pad is active, sleep cycle could be divided by this number."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_slp_cyc_div(&mut self) -> TOUCH_SLP_CYC_DIV_W<TOUCH_CTRL2_SPEC, 25> {
-        TOUCH_SLP_CYC_DIV_W::new(self)
+    pub fn touch_slp_cyc_div(&mut self) -> TOUCH_SLP_CYC_DIV_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_SLP_CYC_DIV_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - Force touch timer done."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_timer_force_done(&mut self) -> TOUCH_TIMER_FORCE_DONE_W<TOUCH_CTRL2_SPEC, 27> {
-        TOUCH_TIMER_FORCE_DONE_W::new(self)
+    pub fn touch_timer_force_done(&mut self) -> TOUCH_TIMER_FORCE_DONE_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_TIMER_FORCE_DONE_W::new(self, 27)
     }
     #[doc = "Bit 29 - Reset TOUCH FSM via software."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_reset(&mut self) -> TOUCH_RESET_W<TOUCH_CTRL2_SPEC, 29> {
-        TOUCH_RESET_W::new(self)
+    pub fn touch_reset(&mut self) -> TOUCH_RESET_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - Touch clock force on."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_clk_fo(&mut self) -> TOUCH_CLK_FO_W<TOUCH_CTRL2_SPEC, 30> {
-        TOUCH_CLK_FO_W::new(self)
+    pub fn touch_clk_fo(&mut self) -> TOUCH_CLK_FO_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_CLK_FO_W::new(self, 30)
     }
     #[doc = "Bit 31 - Touch clock enable bit."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_clkgate_en(&mut self) -> TOUCH_CLKGATE_EN_W<TOUCH_CTRL2_SPEC, 31> {
-        TOUCH_CLKGATE_EN_W::new(self)
+    pub fn touch_clkgate_en(&mut self) -> TOUCH_CLKGATE_EN_W<TOUCH_CTRL2_SPEC> {
+        TOUCH_CLKGATE_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

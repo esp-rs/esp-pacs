@@ -5,19 +5,19 @@ pub type W = crate::W<DMAMISSEDFR_SPEC>;
 #[doc = "Field `MISSED_FC` reader - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
 pub type MISSED_FC_R = crate::FieldReader<u16>;
 #[doc = "Field `MISSED_FC` writer - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
-pub type MISSED_FC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type MISSED_FC_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `OVERFLOW_BMFC` reader - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
 pub type OVERFLOW_BMFC_R = crate::BitReader;
 #[doc = "Field `OVERFLOW_BMFC` writer - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
-pub type OVERFLOW_BMFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVERFLOW_BMFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVERFLOW_FC` reader - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
 pub type OVERFLOW_FC_R = crate::FieldReader<u16>;
 #[doc = "Field `OVERFLOW_FC` writer - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
-pub type OVERFLOW_FC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type OVERFLOW_FC_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `OVERFLOW_BFOC` reader - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
 pub type OVERFLOW_BFOC_R = crate::BitReader;
 #[doc = "Field `OVERFLOW_BFOC` writer - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
-pub type OVERFLOW_BFOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVERFLOW_BFOC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
     #[inline(always)]
@@ -63,33 +63,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMAMISSEDFR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
     #[inline(always)]
     #[must_use]
-    pub fn missed_fc(&mut self) -> MISSED_FC_W<DMAMISSEDFR_SPEC, 0> {
-        MISSED_FC_W::new(self)
+    pub fn missed_fc(&mut self) -> MISSED_FC_W<DMAMISSEDFR_SPEC> {
+        MISSED_FC_W::new(self, 0)
     }
     #[doc = "Bit 16 - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
     #[inline(always)]
     #[must_use]
-    pub fn overflow_bmfc(&mut self) -> OVERFLOW_BMFC_W<DMAMISSEDFR_SPEC, 16> {
-        OVERFLOW_BMFC_W::new(self)
+    pub fn overflow_bmfc(&mut self) -> OVERFLOW_BMFC_W<DMAMISSEDFR_SPEC> {
+        OVERFLOW_BMFC_W::new(self, 16)
     }
     #[doc = "Bits 17:27 - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
     #[inline(always)]
     #[must_use]
-    pub fn overflow_fc(&mut self) -> OVERFLOW_FC_W<DMAMISSEDFR_SPEC, 17> {
-        OVERFLOW_FC_W::new(self)
+    pub fn overflow_fc(&mut self) -> OVERFLOW_FC_W<DMAMISSEDFR_SPEC> {
+        OVERFLOW_FC_W::new(self, 17)
     }
     #[doc = "Bit 28 - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
     #[inline(always)]
     #[must_use]
-    pub fn overflow_bfoc(&mut self) -> OVERFLOW_BFOC_W<DMAMISSEDFR_SPEC, 28> {
-        OVERFLOW_BFOC_W::new(self)
+    pub fn overflow_bfoc(&mut self) -> OVERFLOW_BFOC_W<DMAMISSEDFR_SPEC> {
+        OVERFLOW_BFOC_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

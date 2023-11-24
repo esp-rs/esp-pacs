@@ -5,17 +5,17 @@ pub type W = crate::W<CH_TX_LIM_SPEC>;
 #[doc = "Field `TX_LIM` reader - reg_rmt_tx_lim_ch0."]
 pub type TX_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LIM` writer - reg_rmt_tx_lim_ch0."]
-pub type TX_LIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TX_LIM_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `TX_LOOP_NUM` reader - reg_rmt_tx_loop_num_ch0."]
 pub type TX_LOOP_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LOOP_NUM` writer - reg_rmt_tx_loop_num_ch0."]
-pub type TX_LOOP_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TX_LOOP_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TX_LOOP_CNT_EN` reader - reg_rmt_tx_loop_cnt_en_ch0."]
 pub type TX_LOOP_CNT_EN_R = crate::BitReader;
 #[doc = "Field `TX_LOOP_CNT_EN` writer - reg_rmt_tx_loop_cnt_en_ch0."]
-pub type TX_LOOP_CNT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_LOOP_CNT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LOOP_COUNT_RESET` writer - reg_loop_count_reset_ch0."]
-pub type LOOP_COUNT_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOOP_COUNT_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - reg_rmt_tx_lim_ch0."]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_TX_LIM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - reg_rmt_tx_lim_ch0."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_lim(&mut self) -> TX_LIM_W<CH_TX_LIM_SPEC, 0> {
-        TX_LIM_W::new(self)
+    pub fn tx_lim(&mut self) -> TX_LIM_W<CH_TX_LIM_SPEC> {
+        TX_LIM_W::new(self, 0)
     }
     #[doc = "Bits 9:18 - reg_rmt_tx_loop_num_ch0."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_loop_num(&mut self) -> TX_LOOP_NUM_W<CH_TX_LIM_SPEC, 9> {
-        TX_LOOP_NUM_W::new(self)
+    pub fn tx_loop_num(&mut self) -> TX_LOOP_NUM_W<CH_TX_LIM_SPEC> {
+        TX_LOOP_NUM_W::new(self, 9)
     }
     #[doc = "Bit 19 - reg_rmt_tx_loop_cnt_en_ch0."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_loop_cnt_en(&mut self) -> TX_LOOP_CNT_EN_W<CH_TX_LIM_SPEC, 19> {
-        TX_LOOP_CNT_EN_W::new(self)
+    pub fn tx_loop_cnt_en(&mut self) -> TX_LOOP_CNT_EN_W<CH_TX_LIM_SPEC> {
+        TX_LOOP_CNT_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - reg_loop_count_reset_ch0."]
     #[inline(always)]
     #[must_use]
-    pub fn loop_count_reset(&mut self) -> LOOP_COUNT_RESET_W<CH_TX_LIM_SPEC, 20> {
-        LOOP_COUNT_RESET_W::new(self)
+    pub fn loop_count_reset(&mut self) -> LOOP_COUNT_RESET_W<CH_TX_LIM_SPEC> {
+        LOOP_COUNT_RESET_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

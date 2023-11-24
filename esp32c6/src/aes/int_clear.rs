@@ -1,7 +1,7 @@
 #[doc = "Register `INT_CLEAR` writer"]
 pub type W = crate::W<INT_CLEAR_SPEC>;
 #[doc = "Field `INT_CLEAR` writer - Set this bit to clear the AES interrupt."]
-pub type INT_CLEAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INT_CLEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLEAR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Set this bit to clear the AES interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn int_clear(&mut self) -> INT_CLEAR_W<INT_CLEAR_SPEC, 0> {
-        INT_CLEAR_W::new(self)
+    pub fn int_clear(&mut self) -> INT_CLEAR_W<INT_CLEAR_SPEC> {
+        INT_CLEAR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

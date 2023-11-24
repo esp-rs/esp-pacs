@@ -7,7 +7,7 @@ pub type CMD_CRC_ERR_CNT_R = crate::FieldReader;
 #[doc = "Field `ERR_CNT_CLR` reader - "]
 pub type ERR_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `ERR_CNT_CLR` writer - "]
-pub type ERR_CNT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERR_CNT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_CRC_ST1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn err_cnt_clr(&mut self) -> ERR_CNT_CLR_W<SDIO_CRC_ST1_SPEC, 31> {
-        ERR_CNT_CLR_W::new(self)
+    pub fn err_cnt_clr(&mut self) -> ERR_CNT_CLR_W<SDIO_CRC_ST1_SPEC> {
+        ERR_CNT_CLR_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

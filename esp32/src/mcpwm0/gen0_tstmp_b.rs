@@ -5,7 +5,7 @@ pub type W = crate::W<GEN0_TSTMP_B_SPEC>;
 #[doc = "Field `GEN0_B` reader - "]
 pub type GEN0_B_R = crate::FieldReader<u16>;
 #[doc = "Field `GEN0_B` writer - "]
-pub type GEN0_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type GEN0_B_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GEN0_TSTMP_B_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
-    pub fn gen0_b(&mut self) -> GEN0_B_W<GEN0_TSTMP_B_SPEC, 0> {
-        GEN0_B_W::new(self)
+    pub fn gen0_b(&mut self) -> GEN0_B_W<GEN0_TSTMP_B_SPEC> {
+        GEN0_B_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

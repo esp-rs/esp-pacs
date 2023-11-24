@@ -7,15 +7,15 @@ pub type REG_TSENS_OUT_R = crate::FieldReader;
 #[doc = "Field `REG_TSENS_IN_INV` reader - Need add description"]
 pub type REG_TSENS_IN_INV_R = crate::BitReader;
 #[doc = "Field `REG_TSENS_IN_INV` writer - Need add description"]
-pub type REG_TSENS_IN_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REG_TSENS_IN_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REG_TSENS_CLK_DIV` reader - Need add description"]
 pub type REG_TSENS_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `REG_TSENS_CLK_DIV` writer - Need add description"]
-pub type REG_TSENS_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type REG_TSENS_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `REG_TSENS_PU` reader - Need add description"]
 pub type REG_TSENS_PU_R = crate::BitReader;
 #[doc = "Field `REG_TSENS_PU` writer - Need add description"]
-pub type REG_TSENS_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REG_TSENS_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 13 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_in_inv(&mut self) -> REG_TSENS_IN_INV_W<APB_TSENS_CTRL_SPEC, 13> {
-        REG_TSENS_IN_INV_W::new(self)
+    pub fn reg_tsens_in_inv(&mut self) -> REG_TSENS_IN_INV_W<APB_TSENS_CTRL_SPEC> {
+        REG_TSENS_IN_INV_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_clk_div(&mut self) -> REG_TSENS_CLK_DIV_W<APB_TSENS_CTRL_SPEC, 14> {
-        REG_TSENS_CLK_DIV_W::new(self)
+    pub fn reg_tsens_clk_div(&mut self) -> REG_TSENS_CLK_DIV_W<APB_TSENS_CTRL_SPEC> {
+        REG_TSENS_CLK_DIV_W::new(self, 14)
     }
     #[doc = "Bit 22 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tsens_pu(&mut self) -> REG_TSENS_PU_W<APB_TSENS_CTRL_SPEC, 22> {
-        REG_TSENS_PU_W::new(self)
+    pub fn reg_tsens_pu(&mut self) -> REG_TSENS_PU_W<APB_TSENS_CTRL_SPEC> {
+        REG_TSENS_PU_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

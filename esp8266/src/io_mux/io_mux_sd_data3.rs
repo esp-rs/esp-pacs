@@ -5,27 +5,27 @@ pub type W = crate::W<IO_MUX_SD_DATA3_SPEC>;
 #[doc = "Field `Register` reader - "]
 pub type REGISTER_R = crate::FieldReader<u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type REGISTER_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[doc = "Field `SLEEP_ENABLE` reader - configures output enable during sleep mode"]
 pub type SLEEP_ENABLE_R = crate::BitReader;
 #[doc = "Field `SLEEP_ENABLE` writer - configures output enable during sleep mode"]
-pub type SLEEP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLEEP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLEEP_PULLUP` reader - configures pull up during sleep mode"]
 pub type SLEEP_PULLUP_R = crate::BitReader;
 #[doc = "Field `SLEEP_PULLUP` writer - configures pull up during sleep mode"]
-pub type SLEEP_PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLEEP_PULLUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FUNCTION_SELECT_LOW_BITS` reader - configures IO_MUX function, bottom 2 bits"]
 pub type FUNCTION_SELECT_LOW_BITS_R = crate::FieldReader;
 #[doc = "Field `FUNCTION_SELECT_LOW_BITS` writer - configures IO_MUX function, bottom 2 bits"]
-pub type FUNCTION_SELECT_LOW_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FUNCTION_SELECT_LOW_BITS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PULLUP` reader - configures pull up"]
 pub type PULLUP_R = crate::BitReader;
 #[doc = "Field `PULLUP` writer - configures pull up"]
-pub type PULLUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PULLUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FUNCTION_SELECT_HIGH_BIT` reader - configures IO_MUX function, upper bit"]
 pub type FUNCTION_SELECT_HIGH_BIT_R = crate::BitReader;
 #[doc = "Field `FUNCTION_SELECT_HIGH_BIT` writer - configures IO_MUX function, upper bit"]
-pub type FUNCTION_SELECT_HIGH_BIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FUNCTION_SELECT_HIGH_BIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -86,51 +86,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IO_MUX_SD_DATA3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn register(&mut self) -> REGISTER_W<IO_MUX_SD_DATA3_SPEC, 0> {
-        REGISTER_W::new(self)
+    pub fn register(&mut self) -> REGISTER_W<IO_MUX_SD_DATA3_SPEC> {
+        REGISTER_W::new(self, 0)
     }
     #[doc = "Bit 0 - configures output enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_enable(&mut self) -> SLEEP_ENABLE_W<IO_MUX_SD_DATA3_SPEC, 0> {
-        SLEEP_ENABLE_W::new(self)
+    pub fn sleep_enable(&mut self) -> SLEEP_ENABLE_W<IO_MUX_SD_DATA3_SPEC> {
+        SLEEP_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 3 - configures pull up during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_pullup(&mut self) -> SLEEP_PULLUP_W<IO_MUX_SD_DATA3_SPEC, 3> {
-        SLEEP_PULLUP_W::new(self)
+    pub fn sleep_pullup(&mut self) -> SLEEP_PULLUP_W<IO_MUX_SD_DATA3_SPEC> {
+        SLEEP_PULLUP_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - configures IO_MUX function, bottom 2 bits"]
     #[inline(always)]
     #[must_use]
-    pub fn function_select_low_bits(
-        &mut self,
-    ) -> FUNCTION_SELECT_LOW_BITS_W<IO_MUX_SD_DATA3_SPEC, 4> {
-        FUNCTION_SELECT_LOW_BITS_W::new(self)
+    pub fn function_select_low_bits(&mut self) -> FUNCTION_SELECT_LOW_BITS_W<IO_MUX_SD_DATA3_SPEC> {
+        FUNCTION_SELECT_LOW_BITS_W::new(self, 4)
     }
     #[doc = "Bit 7 - configures pull up"]
     #[inline(always)]
     #[must_use]
-    pub fn pullup(&mut self) -> PULLUP_W<IO_MUX_SD_DATA3_SPEC, 7> {
-        PULLUP_W::new(self)
+    pub fn pullup(&mut self) -> PULLUP_W<IO_MUX_SD_DATA3_SPEC> {
+        PULLUP_W::new(self, 7)
     }
     #[doc = "Bit 8 - configures IO_MUX function, upper bit"]
     #[inline(always)]
     #[must_use]
-    pub fn function_select_high_bit(
-        &mut self,
-    ) -> FUNCTION_SELECT_HIGH_BIT_W<IO_MUX_SD_DATA3_SPEC, 8> {
-        FUNCTION_SELECT_HIGH_BIT_W::new(self)
+    pub fn function_select_high_bit(&mut self) -> FUNCTION_SELECT_HIGH_BIT_W<IO_MUX_SD_DATA3_SPEC> {
+        FUNCTION_SELECT_HIGH_BIT_W::new(self, 8)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

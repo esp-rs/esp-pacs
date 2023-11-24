@@ -1,7 +1,7 @@
 #[doc = "Register `T%sLOAD` writer"]
 pub type W = crate::W<TLOAD_SPEC>;
 #[doc = "Field `LOAD` writer - Write any value to trigger a timer %s time-base counter reload."]
-pub type LOAD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type LOAD_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TLOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - Write any value to trigger a timer %s time-base counter reload."]
     #[inline(always)]
     #[must_use]
-    pub fn load(&mut self) -> LOAD_W<TLOAD_SPEC, 0> {
-        LOAD_W::new(self)
+    pub fn load(&mut self) -> LOAD_W<TLOAD_SPEC> {
+        LOAD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

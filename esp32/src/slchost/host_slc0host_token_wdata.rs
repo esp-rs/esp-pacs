@@ -5,11 +5,11 @@ pub type W = crate::W<HOST_SLC0HOST_TOKEN_WDATA_SPEC>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN0_WD` reader - "]
 pub type HOST_SLC0HOST_TOKEN0_WD_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN0_WD` writer - "]
-pub type HOST_SLC0HOST_TOKEN0_WD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type HOST_SLC0HOST_TOKEN0_WD_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN1_WD` reader - "]
 pub type HOST_SLC0HOST_TOKEN1_WD_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN1_WD` writer - "]
-pub type HOST_SLC0HOST_TOKEN1_WD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type HOST_SLC0HOST_TOKEN1_WD_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn host_slc0host_token0_wd(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN0_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC, 0> {
-        HOST_SLC0HOST_TOKEN0_WD_W::new(self)
+    ) -> HOST_SLC0HOST_TOKEN0_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
+        HOST_SLC0HOST_TOKEN0_WD_W::new(self, 0)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     #[must_use]
     pub fn host_slc0host_token1_wd(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN1_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC, 16> {
-        HOST_SLC0HOST_TOKEN1_WD_W::new(self)
+    ) -> HOST_SLC0HOST_TOKEN1_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
+        HOST_SLC0HOST_TOKEN1_WD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

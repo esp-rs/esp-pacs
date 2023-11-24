@@ -5,23 +5,23 @@ pub type W = crate::W<TIMER1_SPEC>;
 #[doc = "Field `CPU_STALL_EN` reader - Enables CPU stalling."]
 pub type CPU_STALL_EN_R = crate::BitReader;
 #[doc = "Field `CPU_STALL_EN` writer - Enables CPU stalling."]
-pub type CPU_STALL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPU_STALL_WAIT` reader - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
 pub type CPU_STALL_WAIT_R = crate::FieldReader;
 #[doc = "Field `CPU_STALL_WAIT` writer - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
-pub type CPU_STALL_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CPU_STALL_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CK8M_WAIT` reader - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
 pub type CK8M_WAIT_R = crate::FieldReader;
 #[doc = "Field `CK8M_WAIT` writer - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
-pub type CK8M_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CK8M_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `XTL_BUF_WAIT` reader - Sets the XTAL waiting cycle (using the RTC slow clock)."]
 pub type XTL_BUF_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `XTL_BUF_WAIT` writer - Sets the XTAL waiting cycle (using the RTC slow clock)."]
-pub type XTL_BUF_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type XTL_BUF_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `PLL_BUF_WAIT` reader - Sets the PLL waiting cycle (using the RTC slow clock)."]
 pub type PLL_BUF_WAIT_R = crate::FieldReader;
 #[doc = "Field `PLL_BUF_WAIT` writer - Sets the PLL waiting cycle (using the RTC slow clock)."]
-pub type PLL_BUF_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PLL_BUF_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<TIMER1_SPEC, 0> {
-        CPU_STALL_EN_W::new(self)
+    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<TIMER1_SPEC> {
+        CPU_STALL_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:5 - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<TIMER1_SPEC, 1> {
-        CPU_STALL_WAIT_W::new(self)
+    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<TIMER1_SPEC> {
+        CPU_STALL_WAIT_W::new(self, 1)
     }
     #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
     #[inline(always)]
     #[must_use]
-    pub fn ck8m_wait(&mut self) -> CK8M_WAIT_W<TIMER1_SPEC, 6> {
-        CK8M_WAIT_W::new(self)
+    pub fn ck8m_wait(&mut self) -> CK8M_WAIT_W<TIMER1_SPEC> {
+        CK8M_WAIT_W::new(self, 6)
     }
     #[doc = "Bits 14:23 - Sets the XTAL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     #[must_use]
-    pub fn xtl_buf_wait(&mut self) -> XTL_BUF_WAIT_W<TIMER1_SPEC, 14> {
-        XTL_BUF_WAIT_W::new(self)
+    pub fn xtl_buf_wait(&mut self) -> XTL_BUF_WAIT_W<TIMER1_SPEC> {
+        XTL_BUF_WAIT_W::new(self, 14)
     }
     #[doc = "Bits 24:31 - Sets the PLL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     #[must_use]
-    pub fn pll_buf_wait(&mut self) -> PLL_BUF_WAIT_W<TIMER1_SPEC, 24> {
-        PLL_BUF_WAIT_W::new(self)
+    pub fn pll_buf_wait(&mut self) -> PLL_BUF_WAIT_W<TIMER1_SPEC> {
+        PLL_BUF_WAIT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

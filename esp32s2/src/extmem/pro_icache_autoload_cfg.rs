@@ -5,31 +5,31 @@ pub type W = crate::W<PRO_ICACHE_AUTOLOAD_CFG_SPEC>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_MODE` reader - Reserved."]
 pub type PRO_ICACHE_AUTOLOAD_MODE_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_MODE` writer - Reserved."]
-pub type PRO_ICACHE_AUTOLOAD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ICACHE_AUTOLOAD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_STEP` reader - Reserved."]
 pub type PRO_ICACHE_AUTOLOAD_STEP_R = crate::FieldReader;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_STEP` writer - Reserved."]
-pub type PRO_ICACHE_AUTOLOAD_STEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PRO_ICACHE_AUTOLOAD_STEP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_ORDER` reader - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
 pub type PRO_ICACHE_AUTOLOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_ORDER` writer - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
-pub type PRO_ICACHE_AUTOLOAD_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ICACHE_AUTOLOAD_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_RQST` reader - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
 pub type PRO_ICACHE_AUTOLOAD_RQST_R = crate::FieldReader;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_RQST` writer - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub type PRO_ICACHE_AUTOLOAD_RQST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PRO_ICACHE_AUTOLOAD_RQST_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SIZE` reader - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
 pub type PRO_ICACHE_AUTOLOAD_SIZE_R = crate::FieldReader;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SIZE` writer - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
-pub type PRO_ICACHE_AUTOLOAD_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PRO_ICACHE_AUTOLOAD_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_ENA` reader - The bits are used to enable the second section for conditional pre-load operation."]
 pub type PRO_ICACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_ENA` writer - The bits are used to enable the second section for conditional pre-load operation."]
-pub type PRO_ICACHE_AUTOLOAD_SCT0_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ICACHE_AUTOLOAD_SCT0_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT1_ENA` reader - The bits are used to enable the first section for conditional pre-load operation."]
 pub type PRO_ICACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT1_ENA` writer - The bits are used to enable the first section for conditional pre-load operation."]
-pub type PRO_ICACHE_AUTOLOAD_SCT1_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_ICACHE_AUTOLOAD_SCT1_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
@@ -105,7 +105,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -114,56 +114,56 @@ impl W {
     #[must_use]
     pub fn pro_icache_autoload_mode(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_MODE_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC, 0> {
-        PRO_ICACHE_AUTOLOAD_MODE_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_MODE_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
+        PRO_ICACHE_AUTOLOAD_MODE_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Reserved."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_autoload_step(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_STEP_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC, 1> {
-        PRO_ICACHE_AUTOLOAD_STEP_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_STEP_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
+        PRO_ICACHE_AUTOLOAD_STEP_W::new(self, 1)
     }
     #[doc = "Bit 3 - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_autoload_order(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_ORDER_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC, 3> {
-        PRO_ICACHE_AUTOLOAD_ORDER_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_ORDER_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
+        PRO_ICACHE_AUTOLOAD_ORDER_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_autoload_rqst(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_RQST_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC, 4> {
-        PRO_ICACHE_AUTOLOAD_RQST_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_RQST_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
+        PRO_ICACHE_AUTOLOAD_RQST_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_autoload_size(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_SIZE_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC, 6> {
-        PRO_ICACHE_AUTOLOAD_SIZE_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_SIZE_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
+        PRO_ICACHE_AUTOLOAD_SIZE_W::new(self, 6)
     }
     #[doc = "Bit 8 - The bits are used to enable the second section for conditional pre-load operation."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_autoload_sct0_ena(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_SCT0_ENA_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC, 8> {
-        PRO_ICACHE_AUTOLOAD_SCT0_ENA_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_SCT0_ENA_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
+        PRO_ICACHE_AUTOLOAD_SCT0_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bits are used to enable the first section for conditional pre-load operation."]
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_autoload_sct1_ena(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_SCT1_ENA_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC, 9> {
-        PRO_ICACHE_AUTOLOAD_SCT1_ENA_W::new(self)
+    ) -> PRO_ICACHE_AUTOLOAD_SCT1_ENA_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
+        PRO_ICACHE_AUTOLOAD_SCT1_ENA_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

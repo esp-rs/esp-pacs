@@ -5,11 +5,11 @@ pub type W = crate::W<SLP_WAKEUP_CNTL1_SPEC>;
 #[doc = "Field `SLEEP_REJECT_ENA` reader - need_des"]
 pub type SLEEP_REJECT_ENA_R = crate::FieldReader<u32>;
 #[doc = "Field `SLEEP_REJECT_ENA` writer - need_des"]
-pub type SLEEP_REJECT_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 31, O, u32>;
+pub type SLEEP_REJECT_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
 #[doc = "Field `SLP_REJECT_EN` reader - need_des"]
 pub type SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_EN` writer - need_des"]
-pub type SLP_REJECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_REJECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<SLP_WAKEUP_CNTL1_SPEC, 0> {
-        SLEEP_REJECT_ENA_W::new(self)
+    pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<SLP_WAKEUP_CNTL1_SPEC> {
+        SLEEP_REJECT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_reject_en(&mut self) -> SLP_REJECT_EN_W<SLP_WAKEUP_CNTL1_SPEC, 31> {
-        SLP_REJECT_EN_W::new(self)
+    pub fn slp_reject_en(&mut self) -> SLP_REJECT_EN_W<SLP_WAKEUP_CNTL1_SPEC> {
+        SLP_REJECT_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

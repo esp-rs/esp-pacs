@@ -5,19 +5,19 @@ pub type W = crate::W<BLK3_RDATA3_SPEC>;
 #[doc = "Field `RD_ADC1_TP_LOW` reader - "]
 pub type RD_ADC1_TP_LOW_R = crate::FieldReader;
 #[doc = "Field `RD_ADC1_TP_LOW` writer - "]
-pub type RD_ADC1_TP_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RD_ADC1_TP_LOW_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `RD_ADC1_TP_HIGH` reader - "]
 pub type RD_ADC1_TP_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `RD_ADC1_TP_HIGH` writer - "]
-pub type RD_ADC1_TP_HIGH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RD_ADC1_TP_HIGH_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RD_ADC2_TP_LOW` reader - "]
 pub type RD_ADC2_TP_LOW_R = crate::FieldReader;
 #[doc = "Field `RD_ADC2_TP_LOW` writer - "]
-pub type RD_ADC2_TP_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RD_ADC2_TP_LOW_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `RD_ADC2_TP_HIGH` reader - "]
 pub type RD_ADC2_TP_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `RD_ADC2_TP_HIGH` writer - "]
-pub type RD_ADC2_TP_HIGH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RD_ADC2_TP_HIGH_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK3_RDATA3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_adc1_tp_low(&mut self) -> RD_ADC1_TP_LOW_W<BLK3_RDATA3_SPEC, 0> {
-        RD_ADC1_TP_LOW_W::new(self)
+    pub fn rd_adc1_tp_low(&mut self) -> RD_ADC1_TP_LOW_W<BLK3_RDATA3_SPEC> {
+        RD_ADC1_TP_LOW_W::new(self, 0)
     }
     #[doc = "Bits 7:15"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_adc1_tp_high(&mut self) -> RD_ADC1_TP_HIGH_W<BLK3_RDATA3_SPEC, 7> {
-        RD_ADC1_TP_HIGH_W::new(self)
+    pub fn rd_adc1_tp_high(&mut self) -> RD_ADC1_TP_HIGH_W<BLK3_RDATA3_SPEC> {
+        RD_ADC1_TP_HIGH_W::new(self, 7)
     }
     #[doc = "Bits 16:22"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_adc2_tp_low(&mut self) -> RD_ADC2_TP_LOW_W<BLK3_RDATA3_SPEC, 16> {
-        RD_ADC2_TP_LOW_W::new(self)
+    pub fn rd_adc2_tp_low(&mut self) -> RD_ADC2_TP_LOW_W<BLK3_RDATA3_SPEC> {
+        RD_ADC2_TP_LOW_W::new(self, 16)
     }
     #[doc = "Bits 23:31"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_adc2_tp_high(&mut self) -> RD_ADC2_TP_HIGH_W<BLK3_RDATA3_SPEC, 23> {
-        RD_ADC2_TP_HIGH_W::new(self)
+    pub fn rd_adc2_tp_high(&mut self) -> RD_ADC2_TP_HIGH_W<BLK3_RDATA3_SPEC> {
+        RD_ADC2_TP_HIGH_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

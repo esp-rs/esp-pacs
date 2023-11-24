@@ -1,9 +1,9 @@
 #[doc = "Register `RST_CONF` writer"]
 pub type W = crate::W<RST_CONF_SPEC>;
 #[doc = "Field `RST_COEX` writer - "]
-pub type RST_COEX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_COEX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_I2C_MST` writer - "]
-pub type RST_I2C_MST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_I2C_MST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RST_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_coex(&mut self) -> RST_COEX_W<RST_CONF_SPEC, 1> {
-        RST_COEX_W::new(self)
+    pub fn rst_coex(&mut self) -> RST_COEX_W<RST_CONF_SPEC> {
+        RST_COEX_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_i2c_mst(&mut self) -> RST_I2C_MST_W<RST_CONF_SPEC, 2> {
-        RST_I2C_MST_W::new(self)
+    pub fn rst_i2c_mst(&mut self) -> RST_I2C_MST_W<RST_CONF_SPEC> {
+        RST_I2C_MST_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

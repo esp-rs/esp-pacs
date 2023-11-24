@@ -5,7 +5,7 @@ pub type W = crate::W<SLEEP_CONF_SPEC>;
 #[doc = "Field `ACTIVE_THRESHOLD` reader - The UART is activated from Light-sleep mode when the input RXD edge changes more times than this register's value."]
 pub type ACTIVE_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `ACTIVE_THRESHOLD` writer - The UART is activated from Light-sleep mode when the input RXD edge changes more times than this register's value."]
-pub type ACTIVE_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type ACTIVE_THRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:9 - The UART is activated from Light-sleep mode when the input RXD edge changes more times than this register's value."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLEEP_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - The UART is activated from Light-sleep mode when the input RXD edge changes more times than this register's value."]
     #[inline(always)]
     #[must_use]
-    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<SLEEP_CONF_SPEC, 0> {
-        ACTIVE_THRESHOLD_W::new(self)
+    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<SLEEP_CONF_SPEC> {
+        ACTIVE_THRESHOLD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

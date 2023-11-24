@@ -5,11 +5,11 @@ pub type W = crate::W<APB_PERIPHERAL_INTR_SPEC>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_CLR` reader - The clear signal for APB peripheral interrupt."]
 pub type APB_PERI_BYTE_ERROR_CLR_R = crate::BitReader;
 #[doc = "Field `APB_PERI_BYTE_ERROR_CLR` writer - The clear signal for APB peripheral interrupt."]
-pub type APB_PERI_BYTE_ERROR_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_PERI_BYTE_ERROR_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_EN` reader - The enable signal for APB peripheral access interrupt."]
 pub type APB_PERI_BYTE_ERROR_EN_R = crate::BitReader;
 #[doc = "Field `APB_PERI_BYTE_ERROR_EN` writer - The enable signal for APB peripheral access interrupt."]
-pub type APB_PERI_BYTE_ERROR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_PERI_BYTE_ERROR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_INTR` reader - APB peripheral access interrupt signal."]
 pub type APB_PERI_BYTE_ERROR_INTR_R = crate::BitReader;
 impl R {
@@ -51,7 +51,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_PERIPHERAL_INTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -60,16 +60,14 @@ impl W {
     #[must_use]
     pub fn apb_peri_byte_error_clr(
         &mut self,
-    ) -> APB_PERI_BYTE_ERROR_CLR_W<APB_PERIPHERAL_INTR_SPEC, 0> {
-        APB_PERI_BYTE_ERROR_CLR_W::new(self)
+    ) -> APB_PERI_BYTE_ERROR_CLR_W<APB_PERIPHERAL_INTR_SPEC> {
+        APB_PERI_BYTE_ERROR_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for APB peripheral access interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_peri_byte_error_en(
-        &mut self,
-    ) -> APB_PERI_BYTE_ERROR_EN_W<APB_PERIPHERAL_INTR_SPEC, 1> {
-        APB_PERI_BYTE_ERROR_EN_W::new(self)
+    pub fn apb_peri_byte_error_en(&mut self) -> APB_PERI_BYTE_ERROR_EN_W<APB_PERIPHERAL_INTR_SPEC> {
+        APB_PERI_BYTE_ERROR_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

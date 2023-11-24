@@ -5,35 +5,35 @@ pub type W = crate::W<NRXPD_CTRL_SPEC>;
 #[doc = "Field `DEMAP_FORCE_PD` reader - "]
 pub type DEMAP_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DEMAP_FORCE_PD` writer - "]
-pub type DEMAP_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEMAP_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEMAP_FORCE_PU` reader - "]
 pub type DEMAP_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DEMAP_FORCE_PU` writer - "]
-pub type DEMAP_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEMAP_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VIT_FORCE_PD` reader - "]
 pub type VIT_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `VIT_FORCE_PD` writer - "]
-pub type VIT_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VIT_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VIT_FORCE_PU` reader - "]
 pub type VIT_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `VIT_FORCE_PU` writer - "]
-pub type VIT_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VIT_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_ROT_FORCE_PD` reader - "]
 pub type RX_ROT_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `RX_ROT_FORCE_PD` writer - "]
-pub type RX_ROT_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_ROT_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_ROT_FORCE_PU` reader - "]
 pub type RX_ROT_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `RX_ROT_FORCE_PU` writer - "]
-pub type RX_ROT_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_ROT_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHAN_EST_FORCE_PD` reader - "]
 pub type CHAN_EST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `CHAN_EST_FORCE_PD` writer - "]
-pub type CHAN_EST_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHAN_EST_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHAN_EST_FORCE_PU` reader - "]
 pub type CHAN_EST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CHAN_EST_FORCE_PU` writer - "]
-pub type CHAN_EST_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHAN_EST_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -118,57 +118,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<NRXPD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn demap_force_pd(&mut self) -> DEMAP_FORCE_PD_W<NRXPD_CTRL_SPEC, 0> {
-        DEMAP_FORCE_PD_W::new(self)
+    pub fn demap_force_pd(&mut self) -> DEMAP_FORCE_PD_W<NRXPD_CTRL_SPEC> {
+        DEMAP_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn demap_force_pu(&mut self) -> DEMAP_FORCE_PU_W<NRXPD_CTRL_SPEC, 1> {
-        DEMAP_FORCE_PU_W::new(self)
+    pub fn demap_force_pu(&mut self) -> DEMAP_FORCE_PU_W<NRXPD_CTRL_SPEC> {
+        DEMAP_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn vit_force_pd(&mut self) -> VIT_FORCE_PD_W<NRXPD_CTRL_SPEC, 2> {
-        VIT_FORCE_PD_W::new(self)
+    pub fn vit_force_pd(&mut self) -> VIT_FORCE_PD_W<NRXPD_CTRL_SPEC> {
+        VIT_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn vit_force_pu(&mut self) -> VIT_FORCE_PU_W<NRXPD_CTRL_SPEC, 3> {
-        VIT_FORCE_PU_W::new(self)
+    pub fn vit_force_pu(&mut self) -> VIT_FORCE_PU_W<NRXPD_CTRL_SPEC> {
+        VIT_FORCE_PU_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_rot_force_pd(&mut self) -> RX_ROT_FORCE_PD_W<NRXPD_CTRL_SPEC, 4> {
-        RX_ROT_FORCE_PD_W::new(self)
+    pub fn rx_rot_force_pd(&mut self) -> RX_ROT_FORCE_PD_W<NRXPD_CTRL_SPEC> {
+        RX_ROT_FORCE_PD_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_rot_force_pu(&mut self) -> RX_ROT_FORCE_PU_W<NRXPD_CTRL_SPEC, 5> {
-        RX_ROT_FORCE_PU_W::new(self)
+    pub fn rx_rot_force_pu(&mut self) -> RX_ROT_FORCE_PU_W<NRXPD_CTRL_SPEC> {
+        RX_ROT_FORCE_PU_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn chan_est_force_pd(&mut self) -> CHAN_EST_FORCE_PD_W<NRXPD_CTRL_SPEC, 6> {
-        CHAN_EST_FORCE_PD_W::new(self)
+    pub fn chan_est_force_pd(&mut self) -> CHAN_EST_FORCE_PD_W<NRXPD_CTRL_SPEC> {
+        CHAN_EST_FORCE_PD_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn chan_est_force_pu(&mut self) -> CHAN_EST_FORCE_PU_W<NRXPD_CTRL_SPEC, 7> {
-        CHAN_EST_FORCE_PU_W::new(self)
+    pub fn chan_est_force_pu(&mut self) -> CHAN_EST_FORCE_PU_W<NRXPD_CTRL_SPEC> {
+        CHAN_EST_FORCE_PU_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

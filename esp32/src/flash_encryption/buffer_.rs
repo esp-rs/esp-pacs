@@ -1,7 +1,7 @@
 #[doc = "Register `BUFFER_%s` writer"]
 pub type W = crate::W<BUFFER__SPEC>;
 #[doc = "Field `BUFFER` writer - Data buffers for encryption."]
-pub type BUFFER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BUFFER_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BUFFER__SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:7 - Data buffers for encryption."]
     #[inline(always)]
     #[must_use]
-    pub fn buffer(&mut self) -> BUFFER_W<BUFFER__SPEC, 0> {
-        BUFFER_W::new(self)
+    pub fn buffer(&mut self) -> BUFFER_W<BUFFER__SPEC> {
+        BUFFER_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

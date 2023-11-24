@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_MEM_XTS_DESTINATION_SPEC>;
 #[doc = "Field `SPI_XTS_DESTINATION` reader - This bit stores the destination parameter which will be used in manual encryption calculation. 0: flash(default), 1: psram(reserved). Only default value can be used."]
 pub type SPI_XTS_DESTINATION_R = crate::BitReader;
 #[doc = "Field `SPI_XTS_DESTINATION` writer - This bit stores the destination parameter which will be used in manual encryption calculation. 0: flash(default), 1: psram(reserved). Only default value can be used."]
-pub type SPI_XTS_DESTINATION_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_XTS_DESTINATION_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This bit stores the destination parameter which will be used in manual encryption calculation. 0: flash(default), 1: psram(reserved). Only default value can be used."]
     #[inline(always)]
@@ -27,17 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_XTS_DESTINATION_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit stores the destination parameter which will be used in manual encryption calculation. 0: flash(default), 1: psram(reserved). Only default value can be used."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_xts_destination(
-        &mut self,
-    ) -> SPI_XTS_DESTINATION_W<SPI_MEM_XTS_DESTINATION_SPEC, 0> {
-        SPI_XTS_DESTINATION_W::new(self)
+    pub fn spi_xts_destination(&mut self) -> SPI_XTS_DESTINATION_W<SPI_MEM_XTS_DESTINATION_SPEC> {
+        SPI_XTS_DESTINATION_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

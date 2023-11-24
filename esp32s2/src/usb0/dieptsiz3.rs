@@ -5,11 +5,11 @@ pub type W = crate::W<DIEPTSIZ3_SPEC>;
 #[doc = "Field `D_XFERSIZE3` reader - "]
 pub type D_XFERSIZE3_R = crate::FieldReader;
 #[doc = "Field `D_XFERSIZE3` writer - "]
-pub type D_XFERSIZE3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type D_XFERSIZE3_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `D_PKTCNT3` reader - "]
 pub type D_PKTCNT3_R = crate::FieldReader;
 #[doc = "Field `D_PKTCNT3` writer - "]
-pub type D_PKTCNT3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type D_PKTCNT3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIEPTSIZ3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     #[must_use]
-    pub fn d_xfersize3(&mut self) -> D_XFERSIZE3_W<DIEPTSIZ3_SPEC, 0> {
-        D_XFERSIZE3_W::new(self)
+    pub fn d_xfersize3(&mut self) -> D_XFERSIZE3_W<DIEPTSIZ3_SPEC> {
+        D_XFERSIZE3_W::new(self, 0)
     }
     #[doc = "Bits 19:20"]
     #[inline(always)]
     #[must_use]
-    pub fn d_pktcnt3(&mut self) -> D_PKTCNT3_W<DIEPTSIZ3_SPEC, 19> {
-        D_PKTCNT3_W::new(self)
+    pub fn d_pktcnt3(&mut self) -> D_PKTCNT3_W<DIEPTSIZ3_SPEC> {
+        D_PKTCNT3_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,39 +5,39 @@ pub type W = crate::W<DMA_INT_ENA_SPEC>;
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_ENA` reader - The enable bit for lack of enough inlink descriptors."]
 pub type INLINK_DSCR_EMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_ENA` writer - The enable bit for lack of enough inlink descriptors."]
-pub type INLINK_DSCR_EMPTY_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INLINK_DSCR_EMPTY_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_ENA` reader - The enable bit for outlink descriptor error."]
 pub type OUTLINK_DSCR_ERROR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_ENA` writer - The enable bit for outlink descriptor error."]
-pub type OUTLINK_DSCR_ERROR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_DSCR_ERROR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_ENA` reader - The enable bit for inlink descriptor error."]
 pub type INLINK_DSCR_ERROR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_ENA` writer - The enable bit for inlink descriptor error."]
-pub type INLINK_DSCR_ERROR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INLINK_DSCR_ERROR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_DONE_INT_ENA` reader - The enable bit for completing usage of a inlink descriptor."]
 pub type IN_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_ENA` writer - The enable bit for completing usage of a inlink descriptor."]
-pub type IN_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_ERR_EOF_INT_ENA` reader - The enable bit for receiving error."]
 pub type IN_ERR_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_ENA` writer - The enable bit for receiving error."]
-pub type IN_ERR_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_ERR_EOF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_SUC_EOF_INT_ENA` reader - The enable bit for completing receiving all the packets from host."]
 pub type IN_SUC_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_ENA` writer - The enable bit for completing receiving all the packets from host."]
-pub type IN_SUC_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IN_SUC_EOF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_DONE_INT_ENA` reader - The enable bit for completing usage of a outlink descriptor ."]
 pub type OUT_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_ENA` writer - The enable bit for completing usage of a outlink descriptor ."]
-pub type OUT_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EOF_INT_ENA` reader - The enable bit for sending a packet to host done."]
 pub type OUT_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_ENA` writer - The enable bit for sending a packet to host done."]
-pub type OUT_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_EOF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ENA` reader - The enable bit for sending all the packets to host done."]
 pub type OUT_TOTAL_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ENA` writer - The enable bit for sending all the packets to host done."]
-pub type OUT_TOTAL_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUT_TOTAL_EOF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The enable bit for lack of enough inlink descriptors."]
     #[inline(always)]
@@ -131,69 +131,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The enable bit for lack of enough inlink descriptors."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_dscr_empty_int_ena(
-        &mut self,
-    ) -> INLINK_DSCR_EMPTY_INT_ENA_W<DMA_INT_ENA_SPEC, 0> {
-        INLINK_DSCR_EMPTY_INT_ENA_W::new(self)
+    pub fn inlink_dscr_empty_int_ena(&mut self) -> INLINK_DSCR_EMPTY_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        INLINK_DSCR_EMPTY_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for outlink descriptor error."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_dscr_error_int_ena(
-        &mut self,
-    ) -> OUTLINK_DSCR_ERROR_INT_ENA_W<DMA_INT_ENA_SPEC, 1> {
-        OUTLINK_DSCR_ERROR_INT_ENA_W::new(self)
+    pub fn outlink_dscr_error_int_ena(&mut self) -> OUTLINK_DSCR_ERROR_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        OUTLINK_DSCR_ERROR_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for inlink descriptor error."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_dscr_error_int_ena(
-        &mut self,
-    ) -> INLINK_DSCR_ERROR_INT_ENA_W<DMA_INT_ENA_SPEC, 2> {
-        INLINK_DSCR_ERROR_INT_ENA_W::new(self)
+    pub fn inlink_dscr_error_int_ena(&mut self) -> INLINK_DSCR_ERROR_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        INLINK_DSCR_ERROR_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for completing usage of a inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn in_done_int_ena(&mut self) -> IN_DONE_INT_ENA_W<DMA_INT_ENA_SPEC, 3> {
-        IN_DONE_INT_ENA_W::new(self)
+    pub fn in_done_int_ena(&mut self) -> IN_DONE_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        IN_DONE_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for receiving error."]
     #[inline(always)]
     #[must_use]
-    pub fn in_err_eof_int_ena(&mut self) -> IN_ERR_EOF_INT_ENA_W<DMA_INT_ENA_SPEC, 4> {
-        IN_ERR_EOF_INT_ENA_W::new(self)
+    pub fn in_err_eof_int_ena(&mut self) -> IN_ERR_EOF_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        IN_ERR_EOF_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The enable bit for completing receiving all the packets from host."]
     #[inline(always)]
     #[must_use]
-    pub fn in_suc_eof_int_ena(&mut self) -> IN_SUC_EOF_INT_ENA_W<DMA_INT_ENA_SPEC, 5> {
-        IN_SUC_EOF_INT_ENA_W::new(self)
+    pub fn in_suc_eof_int_ena(&mut self) -> IN_SUC_EOF_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        IN_SUC_EOF_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - The enable bit for completing usage of a outlink descriptor ."]
     #[inline(always)]
     #[must_use]
-    pub fn out_done_int_ena(&mut self) -> OUT_DONE_INT_ENA_W<DMA_INT_ENA_SPEC, 6> {
-        OUT_DONE_INT_ENA_W::new(self)
+    pub fn out_done_int_ena(&mut self) -> OUT_DONE_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        OUT_DONE_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - The enable bit for sending a packet to host done."]
     #[inline(always)]
     #[must_use]
-    pub fn out_eof_int_ena(&mut self) -> OUT_EOF_INT_ENA_W<DMA_INT_ENA_SPEC, 7> {
-        OUT_EOF_INT_ENA_W::new(self)
+    pub fn out_eof_int_ena(&mut self) -> OUT_EOF_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        OUT_EOF_INT_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - The enable bit for sending all the packets to host done."]
     #[inline(always)]
     #[must_use]
-    pub fn out_total_eof_int_ena(&mut self) -> OUT_TOTAL_EOF_INT_ENA_W<DMA_INT_ENA_SPEC, 8> {
-        OUT_TOTAL_EOF_INT_ENA_W::new(self)
+    pub fn out_total_eof_int_ena(&mut self) -> OUT_TOTAL_EOF_INT_ENA_W<DMA_INT_ENA_SPEC> {
+        OUT_TOTAL_EOF_INT_ENA_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

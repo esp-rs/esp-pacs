@@ -5,15 +5,15 @@ pub type W = crate::W<SPI_EXT0_SPEC>;
 #[doc = "Field `pp_time` reader - "]
 pub type PP_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `pp_time` writer - "]
-pub type PP_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type PP_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `pp_shift` reader - "]
 pub type PP_SHIFT_R = crate::FieldReader;
 #[doc = "Field `pp_shift` writer - "]
-pub type PP_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PP_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `pp_enable` reader - "]
 pub type PP_ENABLE_R = crate::BitReader;
 #[doc = "Field `pp_enable` writer - "]
-pub type PP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -44,29 +44,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_EXT0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     #[must_use]
-    pub fn pp_time(&mut self) -> PP_TIME_W<SPI_EXT0_SPEC, 0> {
-        PP_TIME_W::new(self)
+    pub fn pp_time(&mut self) -> PP_TIME_W<SPI_EXT0_SPEC> {
+        PP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
     #[must_use]
-    pub fn pp_shift(&mut self) -> PP_SHIFT_W<SPI_EXT0_SPEC, 16> {
-        PP_SHIFT_W::new(self)
+    pub fn pp_shift(&mut self) -> PP_SHIFT_W<SPI_EXT0_SPEC> {
+        PP_SHIFT_W::new(self, 16)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn pp_enable(&mut self) -> PP_ENABLE_W<SPI_EXT0_SPEC, 31> {
-        PP_ENABLE_W::new(self)
+    pub fn pp_enable(&mut self) -> PP_ENABLE_W<SPI_EXT0_SPEC> {
+        PP_ENABLE_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

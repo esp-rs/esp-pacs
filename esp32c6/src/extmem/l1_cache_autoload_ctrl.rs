@@ -5,25 +5,25 @@ pub type W = crate::W<L1_CACHE_AUTOLOAD_CTRL_SPEC>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation on L1-Cache. 1: enable, 0: disable."]
 pub type L1_CACHE_AUTOLOAD_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_AUTOLOAD_ENA` writer - The bit is used to enable and disable autoload operation on L1-Cache. 1: enable, 0: disable."]
-pub type L1_CACHE_AUTOLOAD_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_AUTOLOAD_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_DONE` reader - The bit is used to indicate whether autoload operation on L1-Cache is finished or not. 0: not finished. 1: finished."]
 pub type L1_CACHE_AUTOLOAD_DONE_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_AUTOLOAD_ORDER` reader - The bit is used to configure the direction of autoload operation on L1-Cache. 0: ascending. 1: descending."]
 pub type L1_CACHE_AUTOLOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_AUTOLOAD_ORDER` writer - The bit is used to configure the direction of autoload operation on L1-Cache. 0: ascending. 1: descending."]
-pub type L1_CACHE_AUTOLOAD_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_AUTOLOAD_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_TRIGGER_MODE` reader - The field is used to configure trigger mode of autoload operation on L1-Cache. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
 pub type L1_CACHE_AUTOLOAD_TRIGGER_MODE_R = crate::FieldReader;
 #[doc = "Field `L1_CACHE_AUTOLOAD_TRIGGER_MODE` writer - The field is used to configure trigger mode of autoload operation on L1-Cache. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
-pub type L1_CACHE_AUTOLOAD_TRIGGER_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type L1_CACHE_AUTOLOAD_TRIGGER_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT0_ENA` reader - The bit is used to enable the first section for autoload operation on L1-Cache."]
 pub type L1_CACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT0_ENA` writer - The bit is used to enable the first section for autoload operation on L1-Cache."]
-pub type L1_CACHE_AUTOLOAD_SCT0_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_AUTOLOAD_SCT0_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT1_ENA` reader - The bit is used to enable the second section for autoload operation on L1-Cache."]
 pub type L1_CACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT1_ENA` writer - The bit is used to enable the second section for autoload operation on L1-Cache."]
-pub type L1_CACHE_AUTOLOAD_SCT1_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_AUTOLOAD_SCT1_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT2_ENA` reader - The bit is used to enable the third section for autoload operation on L1-Cache."]
 pub type L1_CACHE_AUTOLOAD_SCT2_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT3_ENA` reader - The bit is used to enable the fourth section for autoload operation on L1-Cache."]
@@ -123,7 +123,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_AUTOLOAD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -132,40 +132,40 @@ impl W {
     #[must_use]
     pub fn l1_cache_autoload_ena(
         &mut self,
-    ) -> L1_CACHE_AUTOLOAD_ENA_W<L1_CACHE_AUTOLOAD_CTRL_SPEC, 0> {
-        L1_CACHE_AUTOLOAD_ENA_W::new(self)
+    ) -> L1_CACHE_AUTOLOAD_ENA_W<L1_CACHE_AUTOLOAD_CTRL_SPEC> {
+        L1_CACHE_AUTOLOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of autoload operation on L1-Cache. 0: ascending. 1: descending."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_autoload_order(
         &mut self,
-    ) -> L1_CACHE_AUTOLOAD_ORDER_W<L1_CACHE_AUTOLOAD_CTRL_SPEC, 2> {
-        L1_CACHE_AUTOLOAD_ORDER_W::new(self)
+    ) -> L1_CACHE_AUTOLOAD_ORDER_W<L1_CACHE_AUTOLOAD_CTRL_SPEC> {
+        L1_CACHE_AUTOLOAD_ORDER_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - The field is used to configure trigger mode of autoload operation on L1-Cache. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_autoload_trigger_mode(
         &mut self,
-    ) -> L1_CACHE_AUTOLOAD_TRIGGER_MODE_W<L1_CACHE_AUTOLOAD_CTRL_SPEC, 3> {
-        L1_CACHE_AUTOLOAD_TRIGGER_MODE_W::new(self)
+    ) -> L1_CACHE_AUTOLOAD_TRIGGER_MODE_W<L1_CACHE_AUTOLOAD_CTRL_SPEC> {
+        L1_CACHE_AUTOLOAD_TRIGGER_MODE_W::new(self, 3)
     }
     #[doc = "Bit 8 - The bit is used to enable the first section for autoload operation on L1-Cache."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_autoload_sct0_ena(
         &mut self,
-    ) -> L1_CACHE_AUTOLOAD_SCT0_ENA_W<L1_CACHE_AUTOLOAD_CTRL_SPEC, 8> {
-        L1_CACHE_AUTOLOAD_SCT0_ENA_W::new(self)
+    ) -> L1_CACHE_AUTOLOAD_SCT0_ENA_W<L1_CACHE_AUTOLOAD_CTRL_SPEC> {
+        L1_CACHE_AUTOLOAD_SCT0_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bit is used to enable the second section for autoload operation on L1-Cache."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_autoload_sct1_ena(
         &mut self,
-    ) -> L1_CACHE_AUTOLOAD_SCT1_ENA_W<L1_CACHE_AUTOLOAD_CTRL_SPEC, 9> {
-        L1_CACHE_AUTOLOAD_SCT1_ENA_W::new(self)
+    ) -> L1_CACHE_AUTOLOAD_SCT1_ENA_W<L1_CACHE_AUTOLOAD_CTRL_SPEC> {
+        L1_CACHE_AUTOLOAD_SCT1_ENA_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

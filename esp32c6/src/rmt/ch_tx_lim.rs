@@ -5,21 +5,21 @@ pub type W = crate::W<CH_TX_LIM_SPEC>;
 #[doc = "Field `TX_LIM` reader - This register is used to configure the maximum entries that CHANNEL%s can send out."]
 pub type TX_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LIM` writer - This register is used to configure the maximum entries that CHANNEL%s can send out."]
-pub type TX_LIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TX_LIM_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `TX_LOOP_NUM` reader - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
 pub type TX_LOOP_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LOOP_NUM` writer - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
-pub type TX_LOOP_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TX_LOOP_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TX_LOOP_CNT_EN` reader - This register is the enabled bit for loop count."]
 pub type TX_LOOP_CNT_EN_R = crate::BitReader;
 #[doc = "Field `TX_LOOP_CNT_EN` writer - This register is the enabled bit for loop count."]
-pub type TX_LOOP_CNT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_LOOP_CNT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LOOP_COUNT_RESET` writer - This register is used to reset the loop count when tx_conti_mode is valid."]
-pub type LOOP_COUNT_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOOP_COUNT_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LOOP_STOP_EN` reader - This bit is used to enable the loop send stop function after the loop counter counts to loop number for CHANNEL%s."]
 pub type LOOP_STOP_EN_R = crate::BitReader;
 #[doc = "Field `LOOP_STOP_EN` writer - This bit is used to enable the loop send stop function after the loop counter counts to loop number for CHANNEL%s."]
-pub type LOOP_STOP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOOP_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can send out."]
     #[inline(always)]
@@ -65,39 +65,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_TX_LIM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can send out."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_lim(&mut self) -> TX_LIM_W<CH_TX_LIM_SPEC, 0> {
-        TX_LIM_W::new(self)
+    pub fn tx_lim(&mut self) -> TX_LIM_W<CH_TX_LIM_SPEC> {
+        TX_LIM_W::new(self, 0)
     }
     #[doc = "Bits 9:18 - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_loop_num(&mut self) -> TX_LOOP_NUM_W<CH_TX_LIM_SPEC, 9> {
-        TX_LOOP_NUM_W::new(self)
+    pub fn tx_loop_num(&mut self) -> TX_LOOP_NUM_W<CH_TX_LIM_SPEC> {
+        TX_LOOP_NUM_W::new(self, 9)
     }
     #[doc = "Bit 19 - This register is the enabled bit for loop count."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_loop_cnt_en(&mut self) -> TX_LOOP_CNT_EN_W<CH_TX_LIM_SPEC, 19> {
-        TX_LOOP_CNT_EN_W::new(self)
+    pub fn tx_loop_cnt_en(&mut self) -> TX_LOOP_CNT_EN_W<CH_TX_LIM_SPEC> {
+        TX_LOOP_CNT_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - This register is used to reset the loop count when tx_conti_mode is valid."]
     #[inline(always)]
     #[must_use]
-    pub fn loop_count_reset(&mut self) -> LOOP_COUNT_RESET_W<CH_TX_LIM_SPEC, 20> {
-        LOOP_COUNT_RESET_W::new(self)
+    pub fn loop_count_reset(&mut self) -> LOOP_COUNT_RESET_W<CH_TX_LIM_SPEC> {
+        LOOP_COUNT_RESET_W::new(self, 20)
     }
     #[doc = "Bit 21 - This bit is used to enable the loop send stop function after the loop counter counts to loop number for CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn loop_stop_en(&mut self) -> LOOP_STOP_EN_W<CH_TX_LIM_SPEC, 21> {
-        LOOP_STOP_EN_W::new(self)
+    pub fn loop_stop_en(&mut self) -> LOOP_STOP_EN_W<CH_TX_LIM_SPEC> {
+        LOOP_STOP_EN_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

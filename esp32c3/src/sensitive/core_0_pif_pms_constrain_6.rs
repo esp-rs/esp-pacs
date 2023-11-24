@@ -5,48 +5,39 @@ pub type W = crate::W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT` reader - core_0_pif_pms_constrain_world_1_bt"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT` writer - core_0_pif_pms_constrain_world_1_bt"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0` reader - core_0_pif_pms_constrain_world_1_i2c_ext0"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0` writer - core_0_pif_pms_constrain_world_1_i2c_ext0"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0` reader - core_0_pif_pms_constrain_world_1_uhci0"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0` writer - core_0_pif_pms_constrain_world_1_uhci0"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT` reader - core_0_pif_pms_constrain_world_1_rmt"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT` writer - core_0_pif_pms_constrain_world_1_rmt"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC` reader - core_0_pif_pms_constrain_world_1_ledc"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC` writer - core_0_pif_pms_constrain_world_1_ledc"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB` reader - core_0_pif_pms_constrain_world_1_bb"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB` writer - core_0_pif_pms_constrain_world_1_bb"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP` reader - core_0_pif_pms_constrain_world_1_timergroup"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP` writer - core_0_pif_pms_constrain_world_1_timergroup"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1` reader - core_0_pif_pms_constrain_world_1_timergroup1"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1` writer - core_0_pif_pms_constrain_world_1_timergroup1"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER` reader - core_0_pif_pms_constrain_world_1_systimer"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER` writer - core_0_pif_pms_constrain_world_1_systimer"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - core_0_pif_pms_constrain_world_1_bt"]
     #[inline(always)]
@@ -162,7 +153,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -171,72 +162,72 @@ impl W {
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_bt(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 0> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_1_i2c_ext0"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_i2c_ext0(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 4> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - core_0_pif_pms_constrain_world_1_uhci0"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_uhci0(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 6> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_W::new(self, 6)
     }
     #[doc = "Bits 10:11 - core_0_pif_pms_constrain_world_1_rmt"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_rmt(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 10> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_W::new(self, 10)
     }
     #[doc = "Bits 16:17 - core_0_pif_pms_constrain_world_1_ledc"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_ledc(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 16> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_W::new(self, 16)
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_1_bb"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_bb(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 22> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_1_timergroup"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_timergroup(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 26> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_1_timergroup1"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_timergroup1(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 28> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - core_0_pif_pms_constrain_world_1_systimer"]
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_systimer(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC, 30> {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_W::new(self)
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

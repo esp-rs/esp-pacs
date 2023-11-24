@@ -5,15 +5,15 @@ pub type W = crate::W<SDIO_SLAVE_LDO_CONF_SPEC>;
 #[doc = "Field `LDO_READY_CTL_IN_EN` reader - control ldo ready signal by sdio slave itself"]
 pub type LDO_READY_CTL_IN_EN_R = crate::BitReader;
 #[doc = "Field `LDO_READY_CTL_IN_EN` writer - control ldo ready signal by sdio slave itself"]
-pub type LDO_READY_CTL_IN_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LDO_READY_CTL_IN_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LDO_READY_THRES` reader - configure ldo ready counting threshold value, the actual counting target is 2^(ldo_ready_thres)-1"]
 pub type LDO_READY_THRES_R = crate::FieldReader;
 #[doc = "Field `LDO_READY_THRES` writer - configure ldo ready counting threshold value, the actual counting target is 2^(ldo_ready_thres)-1"]
-pub type LDO_READY_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type LDO_READY_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `LDO_READY_IGNORE_EN` reader - ignore ldo ready signal"]
 pub type LDO_READY_IGNORE_EN_R = crate::BitReader;
 #[doc = "Field `LDO_READY_IGNORE_EN` writer - ignore ldo ready signal"]
-pub type LDO_READY_IGNORE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LDO_READY_IGNORE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - control ldo ready signal by sdio slave itself"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_LDO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - control ldo ready signal by sdio slave itself"]
     #[inline(always)]
     #[must_use]
-    pub fn ldo_ready_ctl_in_en(&mut self) -> LDO_READY_CTL_IN_EN_W<SDIO_SLAVE_LDO_CONF_SPEC, 0> {
-        LDO_READY_CTL_IN_EN_W::new(self)
+    pub fn ldo_ready_ctl_in_en(&mut self) -> LDO_READY_CTL_IN_EN_W<SDIO_SLAVE_LDO_CONF_SPEC> {
+        LDO_READY_CTL_IN_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:5 - configure ldo ready counting threshold value, the actual counting target is 2^(ldo_ready_thres)-1"]
     #[inline(always)]
     #[must_use]
-    pub fn ldo_ready_thres(&mut self) -> LDO_READY_THRES_W<SDIO_SLAVE_LDO_CONF_SPEC, 1> {
-        LDO_READY_THRES_W::new(self)
+    pub fn ldo_ready_thres(&mut self) -> LDO_READY_THRES_W<SDIO_SLAVE_LDO_CONF_SPEC> {
+        LDO_READY_THRES_W::new(self, 1)
     }
     #[doc = "Bit 6 - ignore ldo ready signal"]
     #[inline(always)]
     #[must_use]
-    pub fn ldo_ready_ignore_en(&mut self) -> LDO_READY_IGNORE_EN_W<SDIO_SLAVE_LDO_CONF_SPEC, 6> {
-        LDO_READY_IGNORE_EN_W::new(self)
+    pub fn ldo_ready_ignore_en(&mut self) -> LDO_READY_IGNORE_EN_W<SDIO_SLAVE_LDO_CONF_SPEC> {
+        LDO_READY_IGNORE_EN_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

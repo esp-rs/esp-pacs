@@ -5,11 +5,11 @@ pub type W = crate::W<DS_CONF_SPEC>;
 #[doc = "Field `DS_CLK_EN` reader - Set 1 to enable ds clock"]
 pub type DS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `DS_CLK_EN` writer - Set 1 to enable ds clock"]
-pub type DS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DS_RST_EN` reader - Set 0 to reset ds module"]
 pub type DS_RST_EN_R = crate::BitReader;
 #[doc = "Field `DS_RST_EN` writer - Set 0 to reset ds module"]
-pub type DS_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DS_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DS_READY` reader - Query this field after reset ds module"]
 pub type DS_READY_R = crate::BitReader;
 impl R {
@@ -42,21 +42,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DS_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable ds clock"]
     #[inline(always)]
     #[must_use]
-    pub fn ds_clk_en(&mut self) -> DS_CLK_EN_W<DS_CONF_SPEC, 0> {
-        DS_CLK_EN_W::new(self)
+    pub fn ds_clk_en(&mut self) -> DS_CLK_EN_W<DS_CONF_SPEC> {
+        DS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset ds module"]
     #[inline(always)]
     #[must_use]
-    pub fn ds_rst_en(&mut self) -> DS_RST_EN_W<DS_CONF_SPEC, 1> {
-        DS_RST_EN_W::new(self)
+    pub fn ds_rst_en(&mut self) -> DS_RST_EN_W<DS_CONF_SPEC> {
+        DS_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

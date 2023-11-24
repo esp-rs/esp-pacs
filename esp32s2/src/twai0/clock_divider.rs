@@ -5,11 +5,11 @@ pub type W = crate::W<CLOCK_DIVIDER_SPEC>;
 #[doc = "Field `CD` reader - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
 pub type CD_R = crate::FieldReader;
 #[doc = "Field `CD` writer - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
-pub type CD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CD_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLOCK_OFF` reader - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
 pub type CLOCK_OFF_R = crate::BitReader;
 #[doc = "Field `CLOCK_OFF` writer - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
-pub type CLOCK_OFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLOCK_OFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLOCK_DIVIDER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
     #[inline(always)]
     #[must_use]
-    pub fn cd(&mut self) -> CD_W<CLOCK_DIVIDER_SPEC, 0> {
-        CD_W::new(self)
+    pub fn cd(&mut self) -> CD_W<CLOCK_DIVIDER_SPEC> {
+        CD_W::new(self, 0)
     }
     #[doc = "Bit 8 - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
     #[inline(always)]
     #[must_use]
-    pub fn clock_off(&mut self) -> CLOCK_OFF_W<CLOCK_DIVIDER_SPEC, 8> {
-        CLOCK_OFF_W::new(self)
+    pub fn clock_off(&mut self) -> CLOCK_OFF_W<CLOCK_DIVIDER_SPEC> {
+        CLOCK_OFF_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

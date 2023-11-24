@@ -5,41 +5,41 @@ pub type W = crate::W<I2C_CTR_SPEC>;
 #[doc = "Field `I2C_SDA_FORCE_OUT` reader - 1: direct output, 0: open drain output."]
 pub type I2C_SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `I2C_SDA_FORCE_OUT` writer - 1: direct output, 0: open drain output."]
-pub type I2C_SDA_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SDA_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_SCL_FORCE_OUT` reader - 1: direct output, 0: open drain output."]
 pub type I2C_SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `I2C_SCL_FORCE_OUT` writer - 1: direct output, 0: open drain output."]
-pub type I2C_SCL_FORCE_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SCL_FORCE_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_SAMPLE_SCL_LEVEL` reader - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
 pub type I2C_SAMPLE_SCL_LEVEL_R = crate::BitReader;
 #[doc = "Field `I2C_SAMPLE_SCL_LEVEL` writer - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
-pub type I2C_SAMPLE_SCL_LEVEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SAMPLE_SCL_LEVEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_RX_FULL_ACK_LEVEL` reader - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
 pub type I2C_RX_FULL_ACK_LEVEL_R = crate::BitReader;
 #[doc = "Field `I2C_RX_FULL_ACK_LEVEL` writer - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
-pub type I2C_RX_FULL_ACK_LEVEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_RX_FULL_ACK_LEVEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_TRANS_START` writer - Set this bit to start sending the data in txfifo."]
-pub type I2C_TRANS_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_TRANS_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_TX_LSB_FIRST` reader - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit, 0: send data from the most significant bit."]
 pub type I2C_TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `I2C_TX_LSB_FIRST` writer - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit, 0: send data from the most significant bit."]
-pub type I2C_TX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_TX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_RX_LSB_FIRST` reader - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit, 0: receive data from the most significant bit."]
 pub type I2C_RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `I2C_RX_LSB_FIRST` writer - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit, 0: receive data from the most significant bit."]
-pub type I2C_RX_LSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_RX_LSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_CLK_EN` reader - Reserved"]
 pub type I2C_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2C_CLK_EN` writer - Reserved"]
-pub type I2C_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_ARBITRATION_EN` reader - This is the enable bit for arbitration_lost."]
 pub type I2C_ARBITRATION_EN_R = crate::BitReader;
 #[doc = "Field `I2C_ARBITRATION_EN` writer - This is the enable bit for arbitration_lost."]
-pub type I2C_ARBITRATION_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_ARBITRATION_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_FSM_RST` writer - This register is used to reset the scl FMS."]
-pub type I2C_FSM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_FSM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_CONF_UPGATE` writer - synchronization bit"]
-pub type I2C_CONF_UPGATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_CONF_UPGATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: direct output, 0: open drain output."]
     #[inline(always)]
@@ -121,75 +121,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C_CTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1: direct output, 0: open drain output."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sda_force_out(&mut self) -> I2C_SDA_FORCE_OUT_W<I2C_CTR_SPEC, 0> {
-        I2C_SDA_FORCE_OUT_W::new(self)
+    pub fn i2c_sda_force_out(&mut self) -> I2C_SDA_FORCE_OUT_W<I2C_CTR_SPEC> {
+        I2C_SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: direct output, 0: open drain output."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_scl_force_out(&mut self) -> I2C_SCL_FORCE_OUT_W<I2C_CTR_SPEC, 1> {
-        I2C_SCL_FORCE_OUT_W::new(self)
+    pub fn i2c_scl_force_out(&mut self) -> I2C_SCL_FORCE_OUT_W<I2C_CTR_SPEC> {
+        I2C_SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sample_scl_level(&mut self) -> I2C_SAMPLE_SCL_LEVEL_W<I2C_CTR_SPEC, 2> {
-        I2C_SAMPLE_SCL_LEVEL_W::new(self)
+    pub fn i2c_sample_scl_level(&mut self) -> I2C_SAMPLE_SCL_LEVEL_W<I2C_CTR_SPEC> {
+        I2C_SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_rx_full_ack_level(&mut self) -> I2C_RX_FULL_ACK_LEVEL_W<I2C_CTR_SPEC, 3> {
-        I2C_RX_FULL_ACK_LEVEL_W::new(self)
+    pub fn i2c_rx_full_ack_level(&mut self) -> I2C_RX_FULL_ACK_LEVEL_W<I2C_CTR_SPEC> {
+        I2C_RX_FULL_ACK_LEVEL_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set this bit to start sending the data in txfifo."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_trans_start(&mut self) -> I2C_TRANS_START_W<I2C_CTR_SPEC, 5> {
-        I2C_TRANS_START_W::new(self)
+    pub fn i2c_trans_start(&mut self) -> I2C_TRANS_START_W<I2C_CTR_SPEC> {
+        I2C_TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit, 0: send data from the most significant bit."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_tx_lsb_first(&mut self) -> I2C_TX_LSB_FIRST_W<I2C_CTR_SPEC, 6> {
-        I2C_TX_LSB_FIRST_W::new(self)
+    pub fn i2c_tx_lsb_first(&mut self) -> I2C_TX_LSB_FIRST_W<I2C_CTR_SPEC> {
+        I2C_TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit, 0: receive data from the most significant bit."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_rx_lsb_first(&mut self) -> I2C_RX_LSB_FIRST_W<I2C_CTR_SPEC, 7> {
-        I2C_RX_LSB_FIRST_W::new(self)
+    pub fn i2c_rx_lsb_first(&mut self) -> I2C_RX_LSB_FIRST_W<I2C_CTR_SPEC> {
+        I2C_RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_clk_en(&mut self) -> I2C_CLK_EN_W<I2C_CTR_SPEC, 8> {
-        I2C_CLK_EN_W::new(self)
+    pub fn i2c_clk_en(&mut self) -> I2C_CLK_EN_W<I2C_CTR_SPEC> {
+        I2C_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - This is the enable bit for arbitration_lost."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_arbitration_en(&mut self) -> I2C_ARBITRATION_EN_W<I2C_CTR_SPEC, 9> {
-        I2C_ARBITRATION_EN_W::new(self)
+    pub fn i2c_arbitration_en(&mut self) -> I2C_ARBITRATION_EN_W<I2C_CTR_SPEC> {
+        I2C_ARBITRATION_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - This register is used to reset the scl FMS."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_fsm_rst(&mut self) -> I2C_FSM_RST_W<I2C_CTR_SPEC, 10> {
-        I2C_FSM_RST_W::new(self)
+    pub fn i2c_fsm_rst(&mut self) -> I2C_FSM_RST_W<I2C_CTR_SPEC> {
+        I2C_FSM_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - synchronization bit"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_conf_upgate(&mut self) -> I2C_CONF_UPGATE_W<I2C_CTR_SPEC, 11> {
-        I2C_CONF_UPGATE_W::new(self)
+    pub fn i2c_conf_upgate(&mut self) -> I2C_CONF_UPGATE_W<I2C_CTR_SPEC> {
+        I2C_CONF_UPGATE_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<TX_CONF1_SPEC>;
 #[doc = "Field `TX_TDM_WS_WIDTH` reader - The width of tx_ws_out at idle level in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[8:0\\] +1) * T_bck"]
 pub type TX_TDM_WS_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_TDM_WS_WIDTH` writer - The width of tx_ws_out at idle level in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[8:0\\] +1) * T_bck"]
-pub type TX_TDM_WS_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TX_TDM_WS_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `TX_BITS_MOD` reader - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
 pub type TX_BITS_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_BITS_MOD` writer - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
-pub type TX_BITS_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TX_BITS_MOD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `TX_HALF_SAMPLE_BITS` reader - I2S Tx half sample bits -1."]
 pub type TX_HALF_SAMPLE_BITS_R = crate::FieldReader;
 #[doc = "Field `TX_HALF_SAMPLE_BITS` writer - I2S Tx half sample bits -1."]
-pub type TX_HALF_SAMPLE_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TX_HALF_SAMPLE_BITS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TX_TDM_CHAN_BITS` reader - The Tx bit number for each channel minus 1in TDM mode."]
 pub type TX_TDM_CHAN_BITS_R = crate::FieldReader;
 #[doc = "Field `TX_TDM_CHAN_BITS` writer - The Tx bit number for each channel minus 1in TDM mode."]
-pub type TX_TDM_CHAN_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TX_TDM_CHAN_BITS_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:8 - The width of tx_ws_out at idle level in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[8:0\\] +1) * T_bck"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - The width of tx_ws_out at idle level in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[8:0\\] +1) * T_bck"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_ws_width(&mut self) -> TX_TDM_WS_WIDTH_W<TX_CONF1_SPEC, 0> {
-        TX_TDM_WS_WIDTH_W::new(self)
+    pub fn tx_tdm_ws_width(&mut self) -> TX_TDM_WS_WIDTH_W<TX_CONF1_SPEC> {
+        TX_TDM_WS_WIDTH_W::new(self, 0)
     }
     #[doc = "Bits 14:18 - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<TX_CONF1_SPEC, 14> {
-        TX_BITS_MOD_W::new(self)
+    pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<TX_CONF1_SPEC> {
+        TX_BITS_MOD_W::new(self, 14)
     }
     #[doc = "Bits 19:26 - I2S Tx half sample bits -1."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_half_sample_bits(&mut self) -> TX_HALF_SAMPLE_BITS_W<TX_CONF1_SPEC, 19> {
-        TX_HALF_SAMPLE_BITS_W::new(self)
+    pub fn tx_half_sample_bits(&mut self) -> TX_HALF_SAMPLE_BITS_W<TX_CONF1_SPEC> {
+        TX_HALF_SAMPLE_BITS_W::new(self, 19)
     }
     #[doc = "Bits 27:31 - The Tx bit number for each channel minus 1in TDM mode."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan_bits(&mut self) -> TX_TDM_CHAN_BITS_W<TX_CONF1_SPEC, 27> {
-        TX_TDM_CHAN_BITS_W::new(self)
+    pub fn tx_tdm_chan_bits(&mut self) -> TX_TDM_CHAN_BITS_W<TX_CONF1_SPEC> {
+        TX_TDM_CHAN_BITS_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -1,7 +1,7 @@
 #[doc = "Register `START` writer"]
 pub type W = crate::W<START_SPEC>;
 #[doc = "Field `START` writer - Reserved."]
-pub type START_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 31, O, u32>;
+pub type START_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 1:31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<START_SPEC, 1> {
-        START_W::new(self)
+    pub fn start(&mut self) -> START_W<START_SPEC> {
+        START_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

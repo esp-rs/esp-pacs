@@ -5,11 +5,11 @@ pub type W = crate::W<DCACHE_PRELOCK_CTRL_SPEC>;
 #[doc = "Field `DCACHE_PRELOCK_SCT0_EN` reader - The bit is used to enable the first section of prelock function."]
 pub type DCACHE_PRELOCK_SCT0_EN_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOCK_SCT0_EN` writer - The bit is used to enable the first section of prelock function."]
-pub type DCACHE_PRELOCK_SCT0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_PRELOCK_SCT0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_PRELOCK_SCT1_EN` reader - The bit is used to enable the second section of prelock function."]
 pub type DCACHE_PRELOCK_SCT1_EN_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOCK_SCT1_EN` writer - The bit is used to enable the second section of prelock function."]
-pub type DCACHE_PRELOCK_SCT1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_PRELOCK_SCT1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function."]
     #[inline(always)]
@@ -40,25 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCACHE_PRELOCK_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_prelock_sct0_en(
-        &mut self,
-    ) -> DCACHE_PRELOCK_SCT0_EN_W<DCACHE_PRELOCK_CTRL_SPEC, 0> {
-        DCACHE_PRELOCK_SCT0_EN_W::new(self)
+    pub fn dcache_prelock_sct0_en(&mut self) -> DCACHE_PRELOCK_SCT0_EN_W<DCACHE_PRELOCK_CTRL_SPEC> {
+        DCACHE_PRELOCK_SCT0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_prelock_sct1_en(
-        &mut self,
-    ) -> DCACHE_PRELOCK_SCT1_EN_W<DCACHE_PRELOCK_CTRL_SPEC, 1> {
-        DCACHE_PRELOCK_SCT1_EN_W::new(self)
+    pub fn dcache_prelock_sct1_en(&mut self) -> DCACHE_PRELOCK_SCT1_EN_W<DCACHE_PRELOCK_CTRL_SPEC> {
+        DCACHE_PRELOCK_SCT1_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<WIFI_CLK_EN_SPEC>;
 #[doc = "Field `WIFI_CLK_EN` reader - reg_wifi_clk_en"]
 pub type WIFI_CLK_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `WIFI_CLK_EN` writer - reg_wifi_clk_en"]
-pub type WIFI_CLK_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type WIFI_CLK_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_wifi_clk_en"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WIFI_CLK_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - reg_wifi_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W<WIFI_CLK_EN_SPEC, 0> {
-        WIFI_CLK_EN_W::new(self)
+    pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W<WIFI_CLK_EN_SPEC> {
+        WIFI_CLK_EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

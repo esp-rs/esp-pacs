@@ -5,17 +5,17 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `CS_SETUP_TIME` reader - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
 pub type CS_SETUP_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_SETUP_TIME` writer - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
-pub type CS_SETUP_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CS_SETUP_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CS_HOLD_TIME` reader - Spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
 pub type CS_HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_TIME` writer - Spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
-pub type CS_HOLD_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CS_HOLD_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CS_HOLD_DELAY` reader - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
 pub type CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_DELAY` writer - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub type CS_HOLD_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CS_HOLD_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SYNC_RESET` writer - The FSM will be reset."]
-pub type SYNC_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNC_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
     #[inline(always)]
@@ -55,33 +55,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<CTRL2_SPEC, 0> {
-        CS_SETUP_TIME_W::new(self)
+    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<CTRL2_SPEC> {
+        CS_SETUP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<CTRL2_SPEC, 5> {
-        CS_HOLD_TIME_W::new(self)
+    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<CTRL2_SPEC> {
+        CS_HOLD_TIME_W::new(self, 5)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<CTRL2_SPEC, 25> {
-        CS_HOLD_DELAY_W::new(self)
+    pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<CTRL2_SPEC> {
+        CS_HOLD_DELAY_W::new(self, 25)
     }
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
     #[must_use]
-    pub fn sync_reset(&mut self) -> SYNC_RESET_W<CTRL2_SPEC, 31> {
-        SYNC_RESET_W::new(self)
+    pub fn sync_reset(&mut self) -> SYNC_RESET_W<CTRL2_SPEC> {
+        SYNC_RESET_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

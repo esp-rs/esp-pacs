@@ -5,7 +5,7 @@ pub type W = crate::W<CACHE_INTR_MAP_SPEC>;
 #[doc = "Field `CACHE_INTR_MAP` reader - CORE0_CACHE_INTR mapping register"]
 pub type CACHE_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `CACHE_INTR_MAP` writer - CORE0_CACHE_INTR mapping register"]
-pub type CACHE_INTR_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CACHE_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - CORE0_CACHE_INTR mapping register"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_INTR_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - CORE0_CACHE_INTR mapping register"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_intr_map(&mut self) -> CACHE_INTR_MAP_W<CACHE_INTR_MAP_SPEC, 0> {
-        CACHE_INTR_MAP_W::new(self)
+    pub fn cache_intr_map(&mut self) -> CACHE_INTR_MAP_W<CACHE_INTR_MAP_SPEC> {
+        CACHE_INTR_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

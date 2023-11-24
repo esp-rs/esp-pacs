@@ -5,25 +5,25 @@ pub type W = crate::W<ICACHE_AUTOLOAD_CTRL_SPEC>;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT0_ENA` reader - The bits are used to enable the first section for autoload operation."]
 pub type ICACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT0_ENA` writer - The bits are used to enable the first section for autoload operation."]
-pub type ICACHE_AUTOLOAD_SCT0_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_AUTOLOAD_SCT0_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT1_ENA` reader - The bits are used to enable the second section for autoload operation."]
 pub type ICACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_SCT1_ENA` writer - The bits are used to enable the second section for autoload operation."]
-pub type ICACHE_AUTOLOAD_SCT1_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_AUTOLOAD_SCT1_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
 pub type ICACHE_AUTOLOAD_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_ENA` writer - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
-pub type ICACHE_AUTOLOAD_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_AUTOLOAD_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_AUTOLOAD_DONE` reader - The bit is used to indicate autoload operation is finished."]
 pub type ICACHE_AUTOLOAD_DONE_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_ORDER` reader - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
 pub type ICACHE_AUTOLOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `ICACHE_AUTOLOAD_ORDER` writer - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
-pub type ICACHE_AUTOLOAD_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_AUTOLOAD_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ICACHE_AUTOLOAD_RQST` reader - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
 pub type ICACHE_AUTOLOAD_RQST_R = crate::FieldReader;
 #[doc = "Field `ICACHE_AUTOLOAD_RQST` writer - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub type ICACHE_AUTOLOAD_RQST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ICACHE_AUTOLOAD_RQST_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
@@ -90,7 +90,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ICACHE_AUTOLOAD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -99,36 +99,34 @@ impl W {
     #[must_use]
     pub fn icache_autoload_sct0_ena(
         &mut self,
-    ) -> ICACHE_AUTOLOAD_SCT0_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC, 0> {
-        ICACHE_AUTOLOAD_SCT0_ENA_W::new(self)
+    ) -> ICACHE_AUTOLOAD_SCT0_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC> {
+        ICACHE_AUTOLOAD_SCT0_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bits are used to enable the second section for autoload operation."]
     #[inline(always)]
     #[must_use]
     pub fn icache_autoload_sct1_ena(
         &mut self,
-    ) -> ICACHE_AUTOLOAD_SCT1_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC, 1> {
-        ICACHE_AUTOLOAD_SCT1_ENA_W::new(self)
+    ) -> ICACHE_AUTOLOAD_SCT1_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC> {
+        ICACHE_AUTOLOAD_SCT1_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_ena(&mut self) -> ICACHE_AUTOLOAD_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC, 2> {
-        ICACHE_AUTOLOAD_ENA_W::new(self)
+    pub fn icache_autoload_ena(&mut self) -> ICACHE_AUTOLOAD_ENA_W<ICACHE_AUTOLOAD_CTRL_SPEC> {
+        ICACHE_AUTOLOAD_ENA_W::new(self, 2)
     }
     #[doc = "Bit 4 - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_order(
-        &mut self,
-    ) -> ICACHE_AUTOLOAD_ORDER_W<ICACHE_AUTOLOAD_CTRL_SPEC, 4> {
-        ICACHE_AUTOLOAD_ORDER_W::new(self)
+    pub fn icache_autoload_order(&mut self) -> ICACHE_AUTOLOAD_ORDER_W<ICACHE_AUTOLOAD_CTRL_SPEC> {
+        ICACHE_AUTOLOAD_ORDER_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_autoload_rqst(&mut self) -> ICACHE_AUTOLOAD_RQST_W<ICACHE_AUTOLOAD_CTRL_SPEC, 5> {
-        ICACHE_AUTOLOAD_RQST_W::new(self)
+    pub fn icache_autoload_rqst(&mut self) -> ICACHE_AUTOLOAD_RQST_W<ICACHE_AUTOLOAD_CTRL_SPEC> {
+        ICACHE_AUTOLOAD_RQST_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<SRAM_FO_CTRL_0_SPEC>;
 #[doc = "Field `SRAM_FO_0` reader - "]
 pub type SRAM_FO_0_R = crate::FieldReader<u32>;
 #[doc = "Field `SRAM_FO_0` writer - "]
-pub type SRAM_FO_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SRAM_FO_0_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_FO_CTRL_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sram_fo_0(&mut self) -> SRAM_FO_0_W<SRAM_FO_CTRL_0_SPEC, 0> {
-        SRAM_FO_0_W::new(self)
+    pub fn sram_fo_0(&mut self) -> SRAM_FO_0_W<SRAM_FO_CTRL_0_SPEC> {
+        SRAM_FO_0_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

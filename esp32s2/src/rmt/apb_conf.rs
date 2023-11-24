@@ -5,27 +5,27 @@ pub type W = crate::W<APB_CONF_SPEC>;
 #[doc = "Field `APB_FIFO_MASK` reader - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
 pub type APB_FIFO_MASK_R = crate::BitReader;
 #[doc = "Field `APB_FIFO_MASK` writer - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub type APB_FIFO_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_FIFO_MASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
 pub type MEM_TX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub type MEM_TX_WRAP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_TX_WRAP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit to enable the clock for RMT memory."]
 pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit to enable the clock for RMT memory."]
-pub type MEM_CLK_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to power down RMT memory."]
 pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to power down RMT memory."]
-pub type MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_FORCE_PU` reader - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
 pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub type MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<APB_CONF_SPEC, 0> {
-        APB_FIFO_MASK_W::new(self)
+    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<APB_CONF_SPEC> {
+        APB_FIFO_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<APB_CONF_SPEC, 1> {
-        MEM_TX_WRAP_EN_W::new(self)
+    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<APB_CONF_SPEC> {
+        MEM_TX_WRAP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable the clock for RMT memory."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<APB_CONF_SPEC, 2> {
-        MEM_CLK_FORCE_ON_W::new(self)
+    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<APB_CONF_SPEC> {
+        MEM_CLK_FORCE_ON_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to power down RMT memory."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<APB_CONF_SPEC, 3> {
-        MEM_FORCE_PD_W::new(self)
+    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<APB_CONF_SPEC> {
+        MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<APB_CONF_SPEC, 4> {
-        MEM_FORCE_PU_W::new(self)
+    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<APB_CONF_SPEC> {
+        MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<APB_CONF_SPEC, 31> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<APB_CONF_SPEC> {
+        CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<TRACEMEM_MUX_MODE_SPEC>;
 #[doc = "Field `TRACEMEM_MUX_MODE` reader - "]
 pub type TRACEMEM_MUX_MODE_R = crate::FieldReader;
 #[doc = "Field `TRACEMEM_MUX_MODE` writer - "]
-pub type TRACEMEM_MUX_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TRACEMEM_MUX_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TRACEMEM_MUX_MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn tracemem_mux_mode(&mut self) -> TRACEMEM_MUX_MODE_W<TRACEMEM_MUX_MODE_SPEC, 0> {
-        TRACEMEM_MUX_MODE_W::new(self)
+    pub fn tracemem_mux_mode(&mut self) -> TRACEMEM_MUX_MODE_W<TRACEMEM_MUX_MODE_SPEC> {
+        TRACEMEM_MUX_MODE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<CONF_SIGLE_DATA_SPEC>;
 #[doc = "Field `SINGLE_DATA` reader - The configured constant channel data to be sent out."]
 pub type SINGLE_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `SINGLE_DATA` writer - The configured constant channel data to be sent out."]
-pub type SINGLE_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SINGLE_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The configured constant channel data to be sent out."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SIGLE_DATA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - The configured constant channel data to be sent out."]
     #[inline(always)]
     #[must_use]
-    pub fn single_data(&mut self) -> SINGLE_DATA_W<CONF_SIGLE_DATA_SPEC, 0> {
-        SINGLE_DATA_W::new(self)
+    pub fn single_data(&mut self) -> SINGLE_DATA_W<CONF_SIGLE_DATA_SPEC> {
+        SINGLE_DATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

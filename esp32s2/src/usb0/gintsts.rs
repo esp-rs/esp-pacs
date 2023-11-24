@@ -7,13 +7,13 @@ pub type CURMOD_INT_R = crate::BitReader;
 #[doc = "Field `MODEMIS` reader - "]
 pub type MODEMIS_R = crate::BitReader;
 #[doc = "Field `MODEMIS` writer - "]
-pub type MODEMIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODEMIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTGINT` reader - "]
 pub type OTGINT_R = crate::BitReader;
 #[doc = "Field `SOF` reader - "]
 pub type SOF_R = crate::BitReader;
 #[doc = "Field `SOF` writer - "]
-pub type SOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFLVI` reader - "]
 pub type RXFLVI_R = crate::BitReader;
 #[doc = "Field `NPTXFEMP` reader - "]
@@ -25,31 +25,31 @@ pub type GOUTNAKEFF_R = crate::BitReader;
 #[doc = "Field `ERLYSUSP` reader - "]
 pub type ERLYSUSP_R = crate::BitReader;
 #[doc = "Field `ERLYSUSP` writer - "]
-pub type ERLYSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERLYSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBSUSP` reader - "]
 pub type USBSUSP_R = crate::BitReader;
 #[doc = "Field `USBSUSP` writer - "]
-pub type USBSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBRST` reader - "]
 pub type USBRST_R = crate::BitReader;
 #[doc = "Field `USBRST` writer - "]
-pub type USBRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENUMDONE` reader - "]
 pub type ENUMDONE_R = crate::BitReader;
 #[doc = "Field `ENUMDONE` writer - "]
-pub type ENUMDONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENUMDONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ISOOUTDROP` reader - "]
 pub type ISOOUTDROP_R = crate::BitReader;
 #[doc = "Field `ISOOUTDROP` writer - "]
-pub type ISOOUTDROP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ISOOUTDROP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EOPF` reader - "]
 pub type EOPF_R = crate::BitReader;
 #[doc = "Field `EOPF` writer - "]
-pub type EOPF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EOPF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPMIS` reader - "]
 pub type EPMIS_R = crate::BitReader;
 #[doc = "Field `EPMIS` writer - "]
-pub type EPMIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPMIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IEPINT` reader - "]
 pub type IEPINT_R = crate::BitReader;
 #[doc = "Field `OEPINT` reader - "]
@@ -57,19 +57,19 @@ pub type OEPINT_R = crate::BitReader;
 #[doc = "Field `INCOMPISOIN` reader - "]
 pub type INCOMPISOIN_R = crate::BitReader;
 #[doc = "Field `INCOMPISOIN` writer - "]
-pub type INCOMPISOIN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INCOMPISOIN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INCOMPIP` reader - "]
 pub type INCOMPIP_R = crate::BitReader;
 #[doc = "Field `INCOMPIP` writer - "]
-pub type INCOMPIP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INCOMPIP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FETSUSP` reader - "]
 pub type FETSUSP_R = crate::BitReader;
 #[doc = "Field `FETSUSP` writer - "]
-pub type FETSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FETSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESETDET` reader - "]
 pub type RESETDET_R = crate::BitReader;
 #[doc = "Field `RESETDET` writer - "]
-pub type RESETDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESETDET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRTLNT` reader - "]
 pub type PRTLNT_R = crate::BitReader;
 #[doc = "Field `HCHLNT` reader - "]
@@ -79,19 +79,19 @@ pub type PTXFEMP_R = crate::BitReader;
 #[doc = "Field `CONIDSTSCHNG` reader - "]
 pub type CONIDSTSCHNG_R = crate::BitReader;
 #[doc = "Field `CONIDSTSCHNG` writer - "]
-pub type CONIDSTSCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONIDSTSCHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISCONNINT` reader - "]
 pub type DISCONNINT_R = crate::BitReader;
 #[doc = "Field `DISCONNINT` writer - "]
-pub type DISCONNINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISCONNINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SESSREQINT` reader - "]
 pub type SESSREQINT_R = crate::BitReader;
 #[doc = "Field `SESSREQINT` writer - "]
-pub type SESSREQINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SESSREQINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WKUPINT` reader - "]
 pub type WKUPINT_R = crate::BitReader;
 #[doc = "Field `WKUPINT` writer - "]
-pub type WKUPINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WKUPINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -275,111 +275,111 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GINTSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn modemis(&mut self) -> MODEMIS_W<GINTSTS_SPEC, 1> {
-        MODEMIS_W::new(self)
+    pub fn modemis(&mut self) -> MODEMIS_W<GINTSTS_SPEC> {
+        MODEMIS_W::new(self, 1)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn sof(&mut self) -> SOF_W<GINTSTS_SPEC, 3> {
-        SOF_W::new(self)
+    pub fn sof(&mut self) -> SOF_W<GINTSTS_SPEC> {
+        SOF_W::new(self, 3)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn erlysusp(&mut self) -> ERLYSUSP_W<GINTSTS_SPEC, 10> {
-        ERLYSUSP_W::new(self)
+    pub fn erlysusp(&mut self) -> ERLYSUSP_W<GINTSTS_SPEC> {
+        ERLYSUSP_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn usbsusp(&mut self) -> USBSUSP_W<GINTSTS_SPEC, 11> {
-        USBSUSP_W::new(self)
+    pub fn usbsusp(&mut self) -> USBSUSP_W<GINTSTS_SPEC> {
+        USBSUSP_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn usbrst(&mut self) -> USBRST_W<GINTSTS_SPEC, 12> {
-        USBRST_W::new(self)
+    pub fn usbrst(&mut self) -> USBRST_W<GINTSTS_SPEC> {
+        USBRST_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn enumdone(&mut self) -> ENUMDONE_W<GINTSTS_SPEC, 13> {
-        ENUMDONE_W::new(self)
+    pub fn enumdone(&mut self) -> ENUMDONE_W<GINTSTS_SPEC> {
+        ENUMDONE_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn isooutdrop(&mut self) -> ISOOUTDROP_W<GINTSTS_SPEC, 14> {
-        ISOOUTDROP_W::new(self)
+    pub fn isooutdrop(&mut self) -> ISOOUTDROP_W<GINTSTS_SPEC> {
+        ISOOUTDROP_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn eopf(&mut self) -> EOPF_W<GINTSTS_SPEC, 15> {
-        EOPF_W::new(self)
+    pub fn eopf(&mut self) -> EOPF_W<GINTSTS_SPEC> {
+        EOPF_W::new(self, 15)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn epmis(&mut self) -> EPMIS_W<GINTSTS_SPEC, 17> {
-        EPMIS_W::new(self)
+    pub fn epmis(&mut self) -> EPMIS_W<GINTSTS_SPEC> {
+        EPMIS_W::new(self, 17)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn incompisoin(&mut self) -> INCOMPISOIN_W<GINTSTS_SPEC, 20> {
-        INCOMPISOIN_W::new(self)
+    pub fn incompisoin(&mut self) -> INCOMPISOIN_W<GINTSTS_SPEC> {
+        INCOMPISOIN_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn incompip(&mut self) -> INCOMPIP_W<GINTSTS_SPEC, 21> {
-        INCOMPIP_W::new(self)
+    pub fn incompip(&mut self) -> INCOMPIP_W<GINTSTS_SPEC> {
+        INCOMPIP_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn fetsusp(&mut self) -> FETSUSP_W<GINTSTS_SPEC, 22> {
-        FETSUSP_W::new(self)
+    pub fn fetsusp(&mut self) -> FETSUSP_W<GINTSTS_SPEC> {
+        FETSUSP_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn resetdet(&mut self) -> RESETDET_W<GINTSTS_SPEC, 23> {
-        RESETDET_W::new(self)
+    pub fn resetdet(&mut self) -> RESETDET_W<GINTSTS_SPEC> {
+        RESETDET_W::new(self, 23)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn conidstschng(&mut self) -> CONIDSTSCHNG_W<GINTSTS_SPEC, 28> {
-        CONIDSTSCHNG_W::new(self)
+    pub fn conidstschng(&mut self) -> CONIDSTSCHNG_W<GINTSTS_SPEC> {
+        CONIDSTSCHNG_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn disconnint(&mut self) -> DISCONNINT_W<GINTSTS_SPEC, 29> {
-        DISCONNINT_W::new(self)
+    pub fn disconnint(&mut self) -> DISCONNINT_W<GINTSTS_SPEC> {
+        DISCONNINT_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn sessreqint(&mut self) -> SESSREQINT_W<GINTSTS_SPEC, 30> {
-        SESSREQINT_W::new(self)
+    pub fn sessreqint(&mut self) -> SESSREQINT_W<GINTSTS_SPEC> {
+        SESSREQINT_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn wkupint(&mut self) -> WKUPINT_W<GINTSTS_SPEC, 31> {
-        WKUPINT_W::new(self)
+    pub fn wkupint(&mut self) -> WKUPINT_W<GINTSTS_SPEC> {
+        WKUPINT_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,23 +5,23 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `VDDBAT_CHARGE_UPVOLTAGE_INT_ENA` reader - need_des"]
 pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_UPVOLTAGE_INT_ENA` writer - need_des"]
-pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA` reader - need_des"]
 pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA` writer - need_des"]
-pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VDDBAT_UPVOLTAGE_INT_ENA` reader - need_des"]
 pub type VDDBAT_UPVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_UPVOLTAGE_INT_ENA` writer - need_des"]
-pub type VDDBAT_UPVOLTAGE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDDBAT_UPVOLTAGE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_INT_ENA` reader - need_des"]
 pub type VDDBAT_UNDERVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_INT_ENA` writer - need_des"]
-pub type VDDBAT_UNDERVOLTAGE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDDBAT_UNDERVOLTAGE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOD_MODE0_INT_ENA` reader - need_des"]
 pub type BOD_MODE0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_INT_ENA` writer - need_des"]
-pub type BOD_MODE0_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -79,7 +79,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -88,36 +88,34 @@ impl W {
     #[must_use]
     pub fn vddbat_charge_upvoltage_int_ena(
         &mut self,
-    ) -> VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W<INT_ENA_SPEC, 27> {
-        VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W::new(self)
+    ) -> VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W<INT_ENA_SPEC> {
+        VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
     pub fn vddbat_charge_undervoltage_int_ena(
         &mut self,
-    ) -> VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_W<INT_ENA_SPEC, 28> {
-        VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_W::new(self)
+    ) -> VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_W<INT_ENA_SPEC> {
+        VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vddbat_upvoltage_int_ena(&mut self) -> VDDBAT_UPVOLTAGE_INT_ENA_W<INT_ENA_SPEC, 29> {
-        VDDBAT_UPVOLTAGE_INT_ENA_W::new(self)
+    pub fn vddbat_upvoltage_int_ena(&mut self) -> VDDBAT_UPVOLTAGE_INT_ENA_W<INT_ENA_SPEC> {
+        VDDBAT_UPVOLTAGE_INT_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vddbat_undervoltage_int_ena(
-        &mut self,
-    ) -> VDDBAT_UNDERVOLTAGE_INT_ENA_W<INT_ENA_SPEC, 30> {
-        VDDBAT_UNDERVOLTAGE_INT_ENA_W::new(self)
+    pub fn vddbat_undervoltage_int_ena(&mut self) -> VDDBAT_UNDERVOLTAGE_INT_ENA_W<INT_ENA_SPEC> {
+        VDDBAT_UNDERVOLTAGE_INT_ENA_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_int_ena(&mut self) -> BOD_MODE0_INT_ENA_W<INT_ENA_SPEC, 31> {
-        BOD_MODE0_INT_ENA_W::new(self)
+    pub fn bod_mode0_int_ena(&mut self) -> BOD_MODE0_INT_ENA_W<INT_ENA_SPEC> {
+        BOD_MODE0_INT_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

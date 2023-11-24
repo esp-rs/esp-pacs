@@ -5,11 +5,11 @@ pub type W = crate::W<SDA_FILTER_CFG_SPEC>;
 #[doc = "Field `SDA_FILTER_THRES` reader - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
 pub type SDA_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `SDA_FILTER_THRES` writer - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
-pub type SDA_FILTER_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SDA_FILTER_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SDA_FILTER_EN` reader - This is the filter enable bit for SDA."]
 pub type SDA_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `SDA_FILTER_EN` writer - This is the filter enable bit for SDA."]
-pub type SDA_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDA_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDA_FILTER_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
     #[inline(always)]
     #[must_use]
-    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<SDA_FILTER_CFG_SPEC, 0> {
-        SDA_FILTER_THRES_W::new(self)
+    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<SDA_FILTER_CFG_SPEC> {
+        SDA_FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bit 3 - This is the filter enable bit for SDA."]
     #[inline(always)]
     #[must_use]
-    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<SDA_FILTER_CFG_SPEC, 3> {
-        SDA_FILTER_EN_W::new(self)
+    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<SDA_FILTER_CFG_SPEC> {
+        SDA_FILTER_EN_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

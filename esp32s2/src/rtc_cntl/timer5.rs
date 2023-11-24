@@ -5,15 +5,15 @@ pub type W = crate::W<TIMER5_SPEC>;
 #[doc = "Field `MIN_SLP_VAL` reader - Sets the minimal sleep cycles (using the RTC slow clock)."]
 pub type MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `MIN_SLP_VAL` writer - Sets the minimal sleep cycles (using the RTC slow clock)."]
-pub type MIN_SLP_VAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MIN_SLP_VAL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RTCMEM_WAIT_TIMER` reader - "]
 pub type RTCMEM_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `RTCMEM_WAIT_TIMER` writer - "]
-pub type RTCMEM_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RTCMEM_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RTCMEM_POWERUP_TIMER` reader - "]
 pub type RTCMEM_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `RTCMEM_POWERUP_TIMER` writer - "]
-pub type RTCMEM_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RTCMEM_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 8:15 - Sets the minimal sleep cycles (using the RTC slow clock)."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER5_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 8:15 - Sets the minimal sleep cycles (using the RTC slow clock)."]
     #[inline(always)]
     #[must_use]
-    pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W<TIMER5_SPEC, 8> {
-        MIN_SLP_VAL_W::new(self)
+    pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W<TIMER5_SPEC> {
+        MIN_SLP_VAL_W::new(self, 8)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcmem_wait_timer(&mut self) -> RTCMEM_WAIT_TIMER_W<TIMER5_SPEC, 16> {
-        RTCMEM_WAIT_TIMER_W::new(self)
+    pub fn rtcmem_wait_timer(&mut self) -> RTCMEM_WAIT_TIMER_W<TIMER5_SPEC> {
+        RTCMEM_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcmem_powerup_timer(&mut self) -> RTCMEM_POWERUP_TIMER_W<TIMER5_SPEC, 25> {
-        RTCMEM_POWERUP_TIMER_W::new(self)
+    pub fn rtcmem_powerup_timer(&mut self) -> RTCMEM_POWERUP_TIMER_W<TIMER5_SPEC> {
+        RTCMEM_POWERUP_TIMER_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

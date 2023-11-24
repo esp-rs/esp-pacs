@@ -5,59 +5,59 @@ pub type W = crate::W<TIMING_SPEC>;
 #[doc = "Field `TX_BCK_IN_DELAY` reader - "]
 pub type TX_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_BCK_IN_DELAY` writer - "]
-pub type TX_BCK_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TX_BCK_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TX_WS_IN_DELAY` reader - "]
 pub type TX_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_WS_IN_DELAY` writer - "]
-pub type TX_WS_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TX_WS_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_BCK_IN_DELAY` reader - "]
 pub type RX_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_IN_DELAY` writer - "]
-pub type RX_BCK_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_BCK_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_WS_IN_DELAY` reader - "]
 pub type RX_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_WS_IN_DELAY` writer - "]
-pub type RX_WS_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_WS_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_SD_IN_DELAY` reader - "]
 pub type RX_SD_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_SD_IN_DELAY` writer - "]
-pub type RX_SD_IN_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_SD_IN_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TX_BCK_OUT_DELAY` reader - "]
 pub type TX_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_BCK_OUT_DELAY` writer - "]
-pub type TX_BCK_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TX_BCK_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TX_WS_OUT_DELAY` reader - "]
 pub type TX_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_WS_OUT_DELAY` writer - "]
-pub type TX_WS_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TX_WS_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TX_SD_OUT_DELAY` reader - "]
 pub type TX_SD_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_SD_OUT_DELAY` writer - "]
-pub type TX_SD_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TX_SD_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_WS_OUT_DELAY` reader - "]
 pub type RX_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_WS_OUT_DELAY` writer - "]
-pub type RX_WS_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_WS_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_BCK_OUT_DELAY` reader - "]
 pub type RX_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_OUT_DELAY` writer - "]
-pub type RX_BCK_OUT_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_BCK_OUT_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TX_DSYNC_SW` reader - "]
 pub type TX_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `TX_DSYNC_SW` writer - "]
-pub type TX_DSYNC_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_DSYNC_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_DSYNC_SW` reader - "]
 pub type RX_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `RX_DSYNC_SW` writer - "]
-pub type RX_DSYNC_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_DSYNC_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_ENABLE_DELAY` reader - "]
 pub type DATA_ENABLE_DELAY_R = crate::FieldReader;
 #[doc = "Field `DATA_ENABLE_DELAY` writer - "]
-pub type DATA_ENABLE_DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DATA_ENABLE_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TX_BCK_IN_INV` reader - "]
 pub type TX_BCK_IN_INV_R = crate::BitReader;
 #[doc = "Field `TX_BCK_IN_INV` writer - "]
-pub type TX_BCK_IN_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_BCK_IN_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -190,93 +190,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMING_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_bck_in_delay(&mut self) -> TX_BCK_IN_DELAY_W<TIMING_SPEC, 0> {
-        TX_BCK_IN_DELAY_W::new(self)
+    pub fn tx_bck_in_delay(&mut self) -> TX_BCK_IN_DELAY_W<TIMING_SPEC> {
+        TX_BCK_IN_DELAY_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_ws_in_delay(&mut self) -> TX_WS_IN_DELAY_W<TIMING_SPEC, 2> {
-        TX_WS_IN_DELAY_W::new(self)
+    pub fn tx_ws_in_delay(&mut self) -> TX_WS_IN_DELAY_W<TIMING_SPEC> {
+        TX_WS_IN_DELAY_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_bck_in_delay(&mut self) -> RX_BCK_IN_DELAY_W<TIMING_SPEC, 4> {
-        RX_BCK_IN_DELAY_W::new(self)
+    pub fn rx_bck_in_delay(&mut self) -> RX_BCK_IN_DELAY_W<TIMING_SPEC> {
+        RX_BCK_IN_DELAY_W::new(self, 4)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ws_in_delay(&mut self) -> RX_WS_IN_DELAY_W<TIMING_SPEC, 6> {
-        RX_WS_IN_DELAY_W::new(self)
+    pub fn rx_ws_in_delay(&mut self) -> RX_WS_IN_DELAY_W<TIMING_SPEC> {
+        RX_WS_IN_DELAY_W::new(self, 6)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_sd_in_delay(&mut self) -> RX_SD_IN_DELAY_W<TIMING_SPEC, 8> {
-        RX_SD_IN_DELAY_W::new(self)
+    pub fn rx_sd_in_delay(&mut self) -> RX_SD_IN_DELAY_W<TIMING_SPEC> {
+        RX_SD_IN_DELAY_W::new(self, 8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_bck_out_delay(&mut self) -> TX_BCK_OUT_DELAY_W<TIMING_SPEC, 10> {
-        TX_BCK_OUT_DELAY_W::new(self)
+    pub fn tx_bck_out_delay(&mut self) -> TX_BCK_OUT_DELAY_W<TIMING_SPEC> {
+        TX_BCK_OUT_DELAY_W::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_ws_out_delay(&mut self) -> TX_WS_OUT_DELAY_W<TIMING_SPEC, 12> {
-        TX_WS_OUT_DELAY_W::new(self)
+    pub fn tx_ws_out_delay(&mut self) -> TX_WS_OUT_DELAY_W<TIMING_SPEC> {
+        TX_WS_OUT_DELAY_W::new(self, 12)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_sd_out_delay(&mut self) -> TX_SD_OUT_DELAY_W<TIMING_SPEC, 14> {
-        TX_SD_OUT_DELAY_W::new(self)
+    pub fn tx_sd_out_delay(&mut self) -> TX_SD_OUT_DELAY_W<TIMING_SPEC> {
+        TX_SD_OUT_DELAY_W::new(self, 14)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ws_out_delay(&mut self) -> RX_WS_OUT_DELAY_W<TIMING_SPEC, 16> {
-        RX_WS_OUT_DELAY_W::new(self)
+    pub fn rx_ws_out_delay(&mut self) -> RX_WS_OUT_DELAY_W<TIMING_SPEC> {
+        RX_WS_OUT_DELAY_W::new(self, 16)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_bck_out_delay(&mut self) -> RX_BCK_OUT_DELAY_W<TIMING_SPEC, 18> {
-        RX_BCK_OUT_DELAY_W::new(self)
+    pub fn rx_bck_out_delay(&mut self) -> RX_BCK_OUT_DELAY_W<TIMING_SPEC> {
+        RX_BCK_OUT_DELAY_W::new(self, 18)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_dsync_sw(&mut self) -> TX_DSYNC_SW_W<TIMING_SPEC, 20> {
-        TX_DSYNC_SW_W::new(self)
+    pub fn tx_dsync_sw(&mut self) -> TX_DSYNC_SW_W<TIMING_SPEC> {
+        TX_DSYNC_SW_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_dsync_sw(&mut self) -> RX_DSYNC_SW_W<TIMING_SPEC, 21> {
-        RX_DSYNC_SW_W::new(self)
+    pub fn rx_dsync_sw(&mut self) -> RX_DSYNC_SW_W<TIMING_SPEC> {
+        RX_DSYNC_SW_W::new(self, 21)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     #[must_use]
-    pub fn data_enable_delay(&mut self) -> DATA_ENABLE_DELAY_W<TIMING_SPEC, 22> {
-        DATA_ENABLE_DELAY_W::new(self)
+    pub fn data_enable_delay(&mut self) -> DATA_ENABLE_DELAY_W<TIMING_SPEC> {
+        DATA_ENABLE_DELAY_W::new(self, 22)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_bck_in_inv(&mut self) -> TX_BCK_IN_INV_W<TIMING_SPEC, 24> {
-        TX_BCK_IN_INV_W::new(self)
+    pub fn tx_bck_in_inv(&mut self) -> TX_BCK_IN_INV_W<TIMING_SPEC> {
+        TX_BCK_IN_INV_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

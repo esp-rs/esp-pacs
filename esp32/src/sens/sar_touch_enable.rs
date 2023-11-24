@@ -5,15 +5,15 @@ pub type W = crate::W<SAR_TOUCH_ENABLE_SPEC>;
 #[doc = "Field `TOUCH_PAD_WORKEN` reader - Bitmap defining the working set during the measurement."]
 pub type TOUCH_PAD_WORKEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_PAD_WORKEN` writer - Bitmap defining the working set during the measurement."]
-pub type TOUCH_PAD_WORKEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TOUCH_PAD_WORKEN_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN2` reader - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN2_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN2` writer - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
-pub type TOUCH_PAD_OUTEN2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TOUCH_PAD_OUTEN2_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN1` reader - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN1_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN1` writer - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
-pub type TOUCH_PAD_OUTEN1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TOUCH_PAD_OUTEN1_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:9 - Bitmap defining the working set during the measurement."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_ENABLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - Bitmap defining the working set during the measurement."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad_worken(&mut self) -> TOUCH_PAD_WORKEN_W<SAR_TOUCH_ENABLE_SPEC, 0> {
-        TOUCH_PAD_WORKEN_W::new(self)
+    pub fn touch_pad_worken(&mut self) -> TOUCH_PAD_WORKEN_W<SAR_TOUCH_ENABLE_SPEC> {
+        TOUCH_PAD_WORKEN_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad_outen2(&mut self) -> TOUCH_PAD_OUTEN2_W<SAR_TOUCH_ENABLE_SPEC, 10> {
-        TOUCH_PAD_OUTEN2_W::new(self)
+    pub fn touch_pad_outen2(&mut self) -> TOUCH_PAD_OUTEN2_W<SAR_TOUCH_ENABLE_SPEC> {
+        TOUCH_PAD_OUTEN2_W::new(self, 10)
     }
     #[doc = "Bits 20:29 - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad_outen1(&mut self) -> TOUCH_PAD_OUTEN1_W<SAR_TOUCH_ENABLE_SPEC, 20> {
-        TOUCH_PAD_OUTEN1_W::new(self)
+    pub fn touch_pad_outen1(&mut self) -> TOUCH_PAD_OUTEN1_W<SAR_TOUCH_ENABLE_SPEC> {
+        TOUCH_PAD_OUTEN1_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

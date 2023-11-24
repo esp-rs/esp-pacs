@@ -5,19 +5,19 @@ pub type W = crate::W<CLK_SPEC>;
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force eFuse SRAM into power-saving mode."]
 pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to force eFuse SRAM into power-saving mode."]
-pub type MEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit and force to activate clock signal of eFuse SRAM."]
 pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit and force to activate clock signal of eFuse SRAM."]
-pub type MEM_CLK_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force eFuse SRAM into working mode."]
 pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - Set this bit to force eFuse SRAM into working mode."]
-pub type MEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EN` reader - Set this bit to force enable eFuse register configuration clock signal."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Set this bit to force enable eFuse register configuration clock signal."]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to force eFuse SRAM into power-saving mode."]
     #[inline(always)]
@@ -63,33 +63,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to force eFuse SRAM into power-saving mode."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<CLK_SPEC, 0> {
-        MEM_FORCE_PD_W::new(self)
+    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<CLK_SPEC> {
+        MEM_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit and force to activate clock signal of eFuse SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<CLK_SPEC, 1> {
-        MEM_CLK_FORCE_ON_W::new(self)
+    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<CLK_SPEC> {
+        MEM_CLK_FORCE_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force eFuse SRAM into working mode."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<CLK_SPEC, 2> {
-        MEM_FORCE_PU_W::new(self)
+    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<CLK_SPEC> {
+        MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 16 - Set this bit to force enable eFuse register configuration clock signal."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<CLK_SPEC, 16> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<CLK_SPEC> {
+        EN_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

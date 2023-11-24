@@ -5,13 +5,13 @@ pub type W = crate::W<HP_PERI_TIMEOUT_CONF_SPEC>;
 #[doc = "Field `HP_PERI_TIMEOUT_THRES` reader - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
 pub type HP_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `HP_PERI_TIMEOUT_THRES` writer - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
-pub type HP_PERI_TIMEOUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type HP_PERI_TIMEOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `HP_PERI_TIMEOUT_INT_CLEAR` writer - Set this bit as 1 to clear timeout interrupt"]
-pub type HP_PERI_TIMEOUT_INT_CLEAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_PERI_TIMEOUT_INT_CLEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_PERI_TIMEOUT_PROTECT_EN` reader - Set this bit as 1 to enable timeout protection for accessing hp peripheral registers"]
 pub type HP_PERI_TIMEOUT_PROTECT_EN_R = crate::BitReader;
 #[doc = "Field `HP_PERI_TIMEOUT_PROTECT_EN` writer - Set this bit as 1 to enable timeout protection for accessing hp peripheral registers"]
-pub type HP_PERI_TIMEOUT_PROTECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_PERI_TIMEOUT_PROTECT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
     #[inline(always)]
@@ -42,33 +42,31 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_PERI_TIMEOUT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_peri_timeout_thres(
-        &mut self,
-    ) -> HP_PERI_TIMEOUT_THRES_W<HP_PERI_TIMEOUT_CONF_SPEC, 0> {
-        HP_PERI_TIMEOUT_THRES_W::new(self)
+    pub fn hp_peri_timeout_thres(&mut self) -> HP_PERI_TIMEOUT_THRES_W<HP_PERI_TIMEOUT_CONF_SPEC> {
+        HP_PERI_TIMEOUT_THRES_W::new(self, 0)
     }
     #[doc = "Bit 16 - Set this bit as 1 to clear timeout interrupt"]
     #[inline(always)]
     #[must_use]
     pub fn hp_peri_timeout_int_clear(
         &mut self,
-    ) -> HP_PERI_TIMEOUT_INT_CLEAR_W<HP_PERI_TIMEOUT_CONF_SPEC, 16> {
-        HP_PERI_TIMEOUT_INT_CLEAR_W::new(self)
+    ) -> HP_PERI_TIMEOUT_INT_CLEAR_W<HP_PERI_TIMEOUT_CONF_SPEC> {
+        HP_PERI_TIMEOUT_INT_CLEAR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit as 1 to enable timeout protection for accessing hp peripheral registers"]
     #[inline(always)]
     #[must_use]
     pub fn hp_peri_timeout_protect_en(
         &mut self,
-    ) -> HP_PERI_TIMEOUT_PROTECT_EN_W<HP_PERI_TIMEOUT_CONF_SPEC, 17> {
-        HP_PERI_TIMEOUT_PROTECT_EN_W::new(self)
+    ) -> HP_PERI_TIMEOUT_PROTECT_EN_W<HP_PERI_TIMEOUT_CONF_SPEC> {
+        HP_PERI_TIMEOUT_PROTECT_EN_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

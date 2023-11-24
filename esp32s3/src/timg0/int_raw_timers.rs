@@ -5,15 +5,15 @@ pub type W = crate::W<INT_RAW_TIMERS_SPEC>;
 #[doc = "Field `T0_INT_RAW` reader - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
 pub type T0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `T0_INT_RAW` writer - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
-pub type T0_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type T0_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `T1_INT_RAW` reader - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
 pub type T1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `T1_INT_RAW` writer - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
-pub type T1_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type T1_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_INT_RAW` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
 pub type WDT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `WDT_INT_RAW` writer - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
-pub type WDT_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_TIMERS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn t0_int_raw(&mut self) -> T0_INT_RAW_W<INT_RAW_TIMERS_SPEC, 0> {
-        T0_INT_RAW_W::new(self)
+    pub fn t0_int_raw(&mut self) -> T0_INT_RAW_W<INT_RAW_TIMERS_SPEC> {
+        T0_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn t1_int_raw(&mut self) -> T1_INT_RAW_W<INT_RAW_TIMERS_SPEC, 1> {
-        T1_INT_RAW_W::new(self)
+    pub fn t1_int_raw(&mut self) -> T1_INT_RAW_W<INT_RAW_TIMERS_SPEC> {
+        T1_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_int_raw(&mut self) -> WDT_INT_RAW_W<INT_RAW_TIMERS_SPEC, 2> {
-        WDT_INT_RAW_W::new(self)
+    pub fn wdt_int_raw(&mut self) -> WDT_INT_RAW_W<INT_RAW_TIMERS_SPEC> {
+        WDT_INT_RAW_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

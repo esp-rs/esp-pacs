@@ -1,7 +1,7 @@
 #[doc = "Register `LP_INT_CLR` writer"]
 pub type W = crate::W<LP_INT_CLR_SPEC>;
 #[doc = "Field `BOD_MODE0_LP_INT_CLR` writer - need_des"]
-pub type BOD_MODE0_LP_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOD_MODE0_LP_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LP_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,10 +12,14 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_lp_int_clr(&mut self) -> BOD_MODE0_LP_INT_CLR_W<LP_INT_CLR_SPEC, 31> {
-        BOD_MODE0_LP_INT_CLR_W::new(self)
+    pub fn bod_mode0_lp_int_clr(&mut self) -> BOD_MODE0_LP_INT_CLR_W<LP_INT_CLR_SPEC> {
+        BOD_MODE0_LP_INT_CLR_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

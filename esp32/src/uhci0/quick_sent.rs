@@ -5,19 +5,19 @@ pub type W = crate::W<QUICK_SENT_SPEC>;
 #[doc = "Field `SINGLE_SEND_NUM` reader - The bits are used to choose which short packet"]
 pub type SINGLE_SEND_NUM_R = crate::FieldReader;
 #[doc = "Field `SINGLE_SEND_NUM` writer - The bits are used to choose which short packet"]
-pub type SINGLE_SEND_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SINGLE_SEND_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SINGLE_SEND_EN` reader - Set this bit to enable send a short packet"]
 pub type SINGLE_SEND_EN_R = crate::BitReader;
 #[doc = "Field `SINGLE_SEND_EN` writer - Set this bit to enable send a short packet"]
-pub type SINGLE_SEND_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SINGLE_SEND_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALWAYS_SEND_NUM` reader - The bits are used to choose which short packet"]
 pub type ALWAYS_SEND_NUM_R = crate::FieldReader;
 #[doc = "Field `ALWAYS_SEND_NUM` writer - The bits are used to choose which short packet"]
-pub type ALWAYS_SEND_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ALWAYS_SEND_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ALWAYS_SEND_EN` reader - Set this bit to enable continuously send the same short packet"]
 pub type ALWAYS_SEND_EN_R = crate::BitReader;
 #[doc = "Field `ALWAYS_SEND_EN` writer - Set this bit to enable continuously send the same short packet"]
-pub type ALWAYS_SEND_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALWAYS_SEND_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - The bits are used to choose which short packet"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<QUICK_SENT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - The bits are used to choose which short packet"]
     #[inline(always)]
     #[must_use]
-    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<QUICK_SENT_SPEC, 0> {
-        SINGLE_SEND_NUM_W::new(self)
+    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<QUICK_SENT_SPEC> {
+        SINGLE_SEND_NUM_W::new(self, 0)
     }
     #[doc = "Bit 3 - Set this bit to enable send a short packet"]
     #[inline(always)]
     #[must_use]
-    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<QUICK_SENT_SPEC, 3> {
-        SINGLE_SEND_EN_W::new(self)
+    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<QUICK_SENT_SPEC> {
+        SINGLE_SEND_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - The bits are used to choose which short packet"]
     #[inline(always)]
     #[must_use]
-    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<QUICK_SENT_SPEC, 4> {
-        ALWAYS_SEND_NUM_W::new(self)
+    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<QUICK_SENT_SPEC> {
+        ALWAYS_SEND_NUM_W::new(self, 4)
     }
     #[doc = "Bit 7 - Set this bit to enable continuously send the same short packet"]
     #[inline(always)]
     #[must_use]
-    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<QUICK_SENT_SPEC, 7> {
-        ALWAYS_SEND_EN_W::new(self)
+    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<QUICK_SENT_SPEC> {
+        ALWAYS_SEND_EN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<POWER_WAIT_TIMER0_SPEC>;
 #[doc = "Field `DG_HP_POWERDOWN_TIMER` reader - need_des"]
 pub type DG_HP_POWERDOWN_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_HP_POWERDOWN_TIMER` writer - need_des"]
-pub type DG_HP_POWERDOWN_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type DG_HP_POWERDOWN_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `DG_HP_POWERUP_TIMER` reader - need_des"]
 pub type DG_HP_POWERUP_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_HP_POWERUP_TIMER` writer - need_des"]
-pub type DG_HP_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type DG_HP_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `DG_HP_WAIT_TIMER` reader - need_des"]
 pub type DG_HP_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_HP_WAIT_TIMER` writer - need_des"]
-pub type DG_HP_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type DG_HP_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 5:13 - need_des"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_WAIT_TIMER0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 5:13 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_hp_powerdown_timer(&mut self) -> DG_HP_POWERDOWN_TIMER_W<POWER_WAIT_TIMER0_SPEC, 5> {
-        DG_HP_POWERDOWN_TIMER_W::new(self)
+    pub fn dg_hp_powerdown_timer(&mut self) -> DG_HP_POWERDOWN_TIMER_W<POWER_WAIT_TIMER0_SPEC> {
+        DG_HP_POWERDOWN_TIMER_W::new(self, 5)
     }
     #[doc = "Bits 14:22 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_hp_powerup_timer(&mut self) -> DG_HP_POWERUP_TIMER_W<POWER_WAIT_TIMER0_SPEC, 14> {
-        DG_HP_POWERUP_TIMER_W::new(self)
+    pub fn dg_hp_powerup_timer(&mut self) -> DG_HP_POWERUP_TIMER_W<POWER_WAIT_TIMER0_SPEC> {
+        DG_HP_POWERUP_TIMER_W::new(self, 14)
     }
     #[doc = "Bits 23:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn dg_hp_wait_timer(&mut self) -> DG_HP_WAIT_TIMER_W<POWER_WAIT_TIMER0_SPEC, 23> {
-        DG_HP_WAIT_TIMER_W::new(self)
+    pub fn dg_hp_wait_timer(&mut self) -> DG_HP_WAIT_TIMER_W<POWER_WAIT_TIMER0_SPEC> {
+        DG_HP_WAIT_TIMER_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

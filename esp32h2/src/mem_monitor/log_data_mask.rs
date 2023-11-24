@@ -5,7 +5,7 @@ pub type W = crate::W<LOG_DATA_MASK_SPEC>;
 #[doc = "Field `LOG_DATA_MASK` reader - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
 pub type LOG_DATA_MASK_R = crate::FieldReader;
 #[doc = "Field `LOG_DATA_MASK` writer - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
-pub type LOG_DATA_MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type LOG_DATA_MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOG_DATA_MASK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
     #[inline(always)]
     #[must_use]
-    pub fn log_data_mask(&mut self) -> LOG_DATA_MASK_W<LOG_DATA_MASK_SPEC, 0> {
-        LOG_DATA_MASK_W::new(self)
+    pub fn log_data_mask(&mut self) -> LOG_DATA_MASK_W<LOG_DATA_MASK_SPEC> {
+        LOG_DATA_MASK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

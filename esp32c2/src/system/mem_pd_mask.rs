@@ -5,7 +5,7 @@ pub type W = crate::W<MEM_PD_MASK_SPEC>;
 #[doc = "Field `LSLP_MEM_PD_MASK` reader - Set 1 to mask memory power down."]
 pub type LSLP_MEM_PD_MASK_R = crate::BitReader;
 #[doc = "Field `LSLP_MEM_PD_MASK` writer - Set 1 to mask memory power down."]
-pub type LSLP_MEM_PD_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LSLP_MEM_PD_MASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to mask memory power down."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_PD_MASK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to mask memory power down."]
     #[inline(always)]
     #[must_use]
-    pub fn lslp_mem_pd_mask(&mut self) -> LSLP_MEM_PD_MASK_W<MEM_PD_MASK_SPEC, 0> {
-        LSLP_MEM_PD_MASK_W::new(self)
+    pub fn lslp_mem_pd_mask(&mut self) -> LSLP_MEM_PD_MASK_W<MEM_PD_MASK_SPEC> {
+        LSLP_MEM_PD_MASK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

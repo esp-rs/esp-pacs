@@ -5,19 +5,19 @@ pub type W = crate::W<CACHE_SYNC_CTRL_SPEC>;
 #[doc = "Field `CACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done. Note that this bit and the other sync-bits (clean_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
 pub type CACHE_INVALIDATE_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_INVALIDATE_ENA` writer - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done. Note that this bit and the other sync-bits (clean_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
-pub type CACHE_INVALIDATE_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_INVALIDATE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_CLEAN_ENA` reader - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done. Note that this bit and the other sync-bits (invalidate_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
 pub type CACHE_CLEAN_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_CLEAN_ENA` writer - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done. Note that this bit and the other sync-bits (invalidate_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
-pub type CACHE_CLEAN_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_CLEAN_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_WRITEBACK_ENA` reader - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
 pub type CACHE_WRITEBACK_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_WRITEBACK_ENA` writer - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
-pub type CACHE_WRITEBACK_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_WRITEBACK_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_WRITEBACK_INVALIDATE_ENA` reader - The bit is used to enable writeback-invalidate operation. It will be cleared by hardware after writeback-invalidate operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
 pub type CACHE_WRITEBACK_INVALIDATE_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_WRITEBACK_INVALIDATE_ENA` writer - The bit is used to enable writeback-invalidate operation. It will be cleared by hardware after writeback-invalidate operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
-pub type CACHE_WRITEBACK_INVALIDATE_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_WRITEBACK_INVALIDATE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_SYNC_DONE` reader - The bit is used to indicate whether sync operation (invalidate, clean, writeback, writeback_invalidate) is finished or not. 0: not finished. 1: finished."]
 pub type CACHE_SYNC_DONE_R = crate::BitReader;
 #[doc = "Field `CACHE_SYNC_RGID` reader - The bit is used to set the gid of cache sync operation (invalidate, clean, writeback, writeback_invalidate)"]
@@ -88,35 +88,35 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_SYNC_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done. Note that this bit and the other sync-bits (clean_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_invalidate_ena(&mut self) -> CACHE_INVALIDATE_ENA_W<CACHE_SYNC_CTRL_SPEC, 0> {
-        CACHE_INVALIDATE_ENA_W::new(self)
+    pub fn cache_invalidate_ena(&mut self) -> CACHE_INVALIDATE_ENA_W<CACHE_SYNC_CTRL_SPEC> {
+        CACHE_INVALIDATE_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done. Note that this bit and the other sync-bits (invalidate_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_clean_ena(&mut self) -> CACHE_CLEAN_ENA_W<CACHE_SYNC_CTRL_SPEC, 1> {
-        CACHE_CLEAN_ENA_W::new(self)
+    pub fn cache_clean_ena(&mut self) -> CACHE_CLEAN_ENA_W<CACHE_SYNC_CTRL_SPEC> {
+        CACHE_CLEAN_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_writeback_ena(&mut self) -> CACHE_WRITEBACK_ENA_W<CACHE_SYNC_CTRL_SPEC, 2> {
-        CACHE_WRITEBACK_ENA_W::new(self)
+    pub fn cache_writeback_ena(&mut self) -> CACHE_WRITEBACK_ENA_W<CACHE_SYNC_CTRL_SPEC> {
+        CACHE_WRITEBACK_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to enable writeback-invalidate operation. It will be cleared by hardware after writeback-invalidate operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
     #[must_use]
     pub fn cache_writeback_invalidate_ena(
         &mut self,
-    ) -> CACHE_WRITEBACK_INVALIDATE_ENA_W<CACHE_SYNC_CTRL_SPEC, 3> {
-        CACHE_WRITEBACK_INVALIDATE_ENA_W::new(self)
+    ) -> CACHE_WRITEBACK_INVALIDATE_ENA_W<CACHE_SYNC_CTRL_SPEC> {
+        CACHE_WRITEBACK_INVALIDATE_ENA_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

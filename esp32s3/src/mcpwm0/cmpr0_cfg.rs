@@ -5,19 +5,19 @@ pub type W = crate::W<CMPR0_CFG_SPEC>;
 #[doc = "Field `CMPR0_A_UPMETHOD` reader - Update method for PWM generator 0 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
 pub type CMPR0_A_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `CMPR0_A_UPMETHOD` writer - Update method for PWM generator 0 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub type CMPR0_A_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CMPR0_A_UPMETHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CMPR0_B_UPMETHOD` reader - Update method for PWM generator 0 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
 pub type CMPR0_B_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `CMPR0_B_UPMETHOD` writer - Update method for PWM generator 0 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub type CMPR0_B_UPMETHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CMPR0_B_UPMETHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CMPR0_A_SHDW_FULL` reader - Set and reset by hardware. If set, PWM generator 0 time stamp A's shadow reg is filled and waiting to be transferred to A's active reg. If cleared, A's active reg has been updated with shadow register latest value"]
 pub type CMPR0_A_SHDW_FULL_R = crate::BitReader;
 #[doc = "Field `CMPR0_A_SHDW_FULL` writer - Set and reset by hardware. If set, PWM generator 0 time stamp A's shadow reg is filled and waiting to be transferred to A's active reg. If cleared, A's active reg has been updated with shadow register latest value"]
-pub type CMPR0_A_SHDW_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMPR0_A_SHDW_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPR0_B_SHDW_FULL` reader - Set and reset by hardware. If set, PWM generator 0 time stamp B's shadow reg is filled and waiting to be transferred to B's active reg. If cleared, B's active reg has been updated with shadow register latest value"]
 pub type CMPR0_B_SHDW_FULL_R = crate::BitReader;
 #[doc = "Field `CMPR0_B_SHDW_FULL` writer - Set and reset by hardware. If set, PWM generator 0 time stamp B's shadow reg is filled and waiting to be transferred to B's active reg. If cleared, B's active reg has been updated with shadow register latest value"]
-pub type CMPR0_B_SHDW_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMPR0_B_SHDW_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - Update method for PWM generator 0 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CMPR0_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - Update method for PWM generator 0 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
     #[must_use]
-    pub fn cmpr0_a_upmethod(&mut self) -> CMPR0_A_UPMETHOD_W<CMPR0_CFG_SPEC, 0> {
-        CMPR0_A_UPMETHOD_W::new(self)
+    pub fn cmpr0_a_upmethod(&mut self) -> CMPR0_A_UPMETHOD_W<CMPR0_CFG_SPEC> {
+        CMPR0_A_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Update method for PWM generator 0 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
     #[must_use]
-    pub fn cmpr0_b_upmethod(&mut self) -> CMPR0_B_UPMETHOD_W<CMPR0_CFG_SPEC, 4> {
-        CMPR0_B_UPMETHOD_W::new(self)
+    pub fn cmpr0_b_upmethod(&mut self) -> CMPR0_B_UPMETHOD_W<CMPR0_CFG_SPEC> {
+        CMPR0_B_UPMETHOD_W::new(self, 4)
     }
     #[doc = "Bit 8 - Set and reset by hardware. If set, PWM generator 0 time stamp A's shadow reg is filled and waiting to be transferred to A's active reg. If cleared, A's active reg has been updated with shadow register latest value"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpr0_a_shdw_full(&mut self) -> CMPR0_A_SHDW_FULL_W<CMPR0_CFG_SPEC, 8> {
-        CMPR0_A_SHDW_FULL_W::new(self)
+    pub fn cmpr0_a_shdw_full(&mut self) -> CMPR0_A_SHDW_FULL_W<CMPR0_CFG_SPEC> {
+        CMPR0_A_SHDW_FULL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set and reset by hardware. If set, PWM generator 0 time stamp B's shadow reg is filled and waiting to be transferred to B's active reg. If cleared, B's active reg has been updated with shadow register latest value"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpr0_b_shdw_full(&mut self) -> CMPR0_B_SHDW_FULL_W<CMPR0_CFG_SPEC, 9> {
-        CMPR0_B_SHDW_FULL_W::new(self)
+    pub fn cmpr0_b_shdw_full(&mut self) -> CMPR0_B_SHDW_FULL_W<CMPR0_CFG_SPEC> {
+        CMPR0_B_SHDW_FULL_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

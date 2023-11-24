@@ -5,31 +5,31 @@ pub type W = crate::W<BIAS_CONF_SPEC>;
 #[doc = "Field `DBG_ATTEN` reader - DBG_ATTEN"]
 pub type DBG_ATTEN_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN` writer - DBG_ATTEN"]
-pub type DBG_ATTEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DBG_ATTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ENB_SCK_XTAL` reader - ENB_SCK_XTAL"]
 pub type ENB_SCK_XTAL_R = crate::BitReader;
 #[doc = "Field `ENB_SCK_XTAL` writer - ENB_SCK_XTAL"]
-pub type ENB_SCK_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENB_SCK_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` reader - INC_HEARTBEAT_REFRESH"]
 pub type INC_HEARTBEAT_REFRESH_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` writer - INC_HEARTBEAT_REFRESH"]
-pub type INC_HEARTBEAT_REFRESH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INC_HEARTBEAT_REFRESH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` reader - DEC_HEARTBEAT_PERIOD"]
 pub type DEC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` writer - DEC_HEARTBEAT_PERIOD"]
-pub type DEC_HEARTBEAT_PERIOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEC_HEARTBEAT_PERIOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` reader - INC_HEARTBEAT_PERIOD"]
 pub type INC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` writer - INC_HEARTBEAT_PERIOD"]
-pub type INC_HEARTBEAT_PERIOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INC_HEARTBEAT_PERIOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` reader - DEC_HEARTBEAT_WIDTH"]
 pub type DEC_HEARTBEAT_WIDTH_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` writer - DEC_HEARTBEAT_WIDTH"]
-pub type DEC_HEARTBEAT_WIDTH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEC_HEARTBEAT_WIDTH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_BIAS_I2C` reader - RST_BIAS_I2C"]
 pub type RST_BIAS_I2C_R = crate::BitReader;
 #[doc = "Field `RST_BIAS_I2C` writer - RST_BIAS_I2C"]
-pub type RST_BIAS_I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_BIAS_I2C_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
@@ -102,51 +102,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BIAS_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
     #[must_use]
-    pub fn dbg_atten(&mut self) -> DBG_ATTEN_W<BIAS_CONF_SPEC, 24> {
-        DBG_ATTEN_W::new(self)
+    pub fn dbg_atten(&mut self) -> DBG_ATTEN_W<BIAS_CONF_SPEC> {
+        DBG_ATTEN_W::new(self, 24)
     }
     #[doc = "Bit 26 - ENB_SCK_XTAL"]
     #[inline(always)]
     #[must_use]
-    pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<BIAS_CONF_SPEC, 26> {
-        ENB_SCK_XTAL_W::new(self)
+    pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<BIAS_CONF_SPEC> {
+        ENB_SCK_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27 - INC_HEARTBEAT_REFRESH"]
     #[inline(always)]
     #[must_use]
-    pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<BIAS_CONF_SPEC, 27> {
-        INC_HEARTBEAT_REFRESH_W::new(self)
+    pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<BIAS_CONF_SPEC> {
+        INC_HEARTBEAT_REFRESH_W::new(self, 27)
     }
     #[doc = "Bit 28 - DEC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     #[must_use]
-    pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC, 28> {
-        DEC_HEARTBEAT_PERIOD_W::new(self)
+    pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC> {
+        DEC_HEARTBEAT_PERIOD_W::new(self, 28)
     }
     #[doc = "Bit 29 - INC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     #[must_use]
-    pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC, 29> {
-        INC_HEARTBEAT_PERIOD_W::new(self)
+    pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC> {
+        INC_HEARTBEAT_PERIOD_W::new(self, 29)
     }
     #[doc = "Bit 30 - DEC_HEARTBEAT_WIDTH"]
     #[inline(always)]
     #[must_use]
-    pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<BIAS_CONF_SPEC, 30> {
-        DEC_HEARTBEAT_WIDTH_W::new(self)
+    pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<BIAS_CONF_SPEC> {
+        DEC_HEARTBEAT_WIDTH_W::new(self, 30)
     }
     #[doc = "Bit 31 - RST_BIAS_I2C"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<BIAS_CONF_SPEC, 31> {
-        RST_BIAS_I2C_W::new(self)
+    pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<BIAS_CONF_SPEC> {
+        RST_BIAS_I2C_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

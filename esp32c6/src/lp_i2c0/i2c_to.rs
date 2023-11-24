@@ -5,11 +5,11 @@ pub type W = crate::W<I2C_TO_SPEC>;
 #[doc = "Field `I2C_TIME_OUT_VALUE` reader - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
 pub type I2C_TIME_OUT_VALUE_R = crate::FieldReader;
 #[doc = "Field `I2C_TIME_OUT_VALUE` writer - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
-pub type I2C_TIME_OUT_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type I2C_TIME_OUT_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `I2C_TIME_OUT_EN` reader - This is the enable bit for time out control."]
 pub type I2C_TIME_OUT_EN_R = crate::BitReader;
 #[doc = "Field `I2C_TIME_OUT_EN` writer - This is the enable bit for time out control."]
-pub type I2C_TIME_OUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_TIME_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C_TO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_time_out_value(&mut self) -> I2C_TIME_OUT_VALUE_W<I2C_TO_SPEC, 0> {
-        I2C_TIME_OUT_VALUE_W::new(self)
+    pub fn i2c_time_out_value(&mut self) -> I2C_TIME_OUT_VALUE_W<I2C_TO_SPEC> {
+        I2C_TIME_OUT_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 5 - This is the enable bit for time out control."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_time_out_en(&mut self) -> I2C_TIME_OUT_EN_W<I2C_TO_SPEC, 5> {
-        I2C_TIME_OUT_EN_W::new(self)
+    pub fn i2c_time_out_en(&mut self) -> I2C_TIME_OUT_EN_W<I2C_TO_SPEC> {
+        I2C_TIME_OUT_EN_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

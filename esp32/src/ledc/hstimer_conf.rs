@@ -5,23 +5,23 @@ pub type W = crate::W<HSTIMER_CONF_SPEC>;
 #[doc = "Field `DUTY_RES` reader - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
 pub type DUTY_RES_R = crate::FieldReader;
 #[doc = "Field `DUTY_RES` writer - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
-pub type DUTY_RES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type DUTY_RES_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `DIV_NUM` reader - This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part."]
 pub type DIV_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `DIV_NUM` writer - This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part."]
-pub type DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 #[doc = "Field `PAUSE` reader - This bit is used to pause the counter in high speed timer0"]
 pub type PAUSE_R = crate::BitReader;
 #[doc = "Field `PAUSE` writer - This bit is used to pause the counter in high speed timer0"]
-pub type PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST` reader - This bit is used to reset high speed timer0 the counter will be 0 after reset."]
 pub type RST_R = crate::BitReader;
 #[doc = "Field `RST` writer - This bit is used to reset high speed timer0 the counter will be 0 after reset."]
-pub type RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TICK_SEL` reader - This bit is used to choose apb_clk or ref_tick for high speed timer0. 1'b1:apb_clk 0:ref_tick"]
 pub type TICK_SEL_R = crate::BitReader;
 #[doc = "Field `TICK_SEL` writer - This bit is used to choose apb_clk or ref_tick for high speed timer0. 1'b1:apb_clk 0:ref_tick"]
-pub type TICK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TICK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
@@ -64,39 +64,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HSTIMER_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_res(&mut self) -> DUTY_RES_W<HSTIMER_CONF_SPEC, 0> {
-        DUTY_RES_W::new(self)
+    pub fn duty_res(&mut self) -> DUTY_RES_W<HSTIMER_CONF_SPEC> {
+        DUTY_RES_W::new(self, 0)
     }
     #[doc = "Bits 5:22 - This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part."]
     #[inline(always)]
     #[must_use]
-    pub fn div_num(&mut self) -> DIV_NUM_W<HSTIMER_CONF_SPEC, 5> {
-        DIV_NUM_W::new(self)
+    pub fn div_num(&mut self) -> DIV_NUM_W<HSTIMER_CONF_SPEC> {
+        DIV_NUM_W::new(self, 5)
     }
     #[doc = "Bit 23 - This bit is used to pause the counter in high speed timer0"]
     #[inline(always)]
     #[must_use]
-    pub fn pause(&mut self) -> PAUSE_W<HSTIMER_CONF_SPEC, 23> {
-        PAUSE_W::new(self)
+    pub fn pause(&mut self) -> PAUSE_W<HSTIMER_CONF_SPEC> {
+        PAUSE_W::new(self, 23)
     }
     #[doc = "Bit 24 - This bit is used to reset high speed timer0 the counter will be 0 after reset."]
     #[inline(always)]
     #[must_use]
-    pub fn rst(&mut self) -> RST_W<HSTIMER_CONF_SPEC, 24> {
-        RST_W::new(self)
+    pub fn rst(&mut self) -> RST_W<HSTIMER_CONF_SPEC> {
+        RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - This bit is used to choose apb_clk or ref_tick for high speed timer0. 1'b1:apb_clk 0:ref_tick"]
     #[inline(always)]
     #[must_use]
-    pub fn tick_sel(&mut self) -> TICK_SEL_W<HSTIMER_CONF_SPEC, 25> {
-        TICK_SEL_W::new(self)
+    pub fn tick_sel(&mut self) -> TICK_SEL_W<HSTIMER_CONF_SPEC> {
+        TICK_SEL_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

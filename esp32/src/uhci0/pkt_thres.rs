@@ -5,7 +5,7 @@ pub type W = crate::W<PKT_THRES_SPEC>;
 #[doc = "Field `PKT_THRS` reader - when the amount of packet payload is greater than this value the process of receiving data is done."]
 pub type PKT_THRS_R = crate::FieldReader<u16>;
 #[doc = "Field `PKT_THRS` writer - when the amount of packet payload is greater than this value the process of receiving data is done."]
-pub type PKT_THRS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type PKT_THRS_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 0:12 - when the amount of packet payload is greater than this value the process of receiving data is done."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PKT_THRES_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:12 - when the amount of packet payload is greater than this value the process of receiving data is done."]
     #[inline(always)]
     #[must_use]
-    pub fn pkt_thrs(&mut self) -> PKT_THRS_W<PKT_THRES_SPEC, 0> {
-        PKT_THRS_W::new(self)
+    pub fn pkt_thrs(&mut self) -> PKT_THRS_W<PKT_THRES_SPEC> {
+        PKT_THRS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,8 +5,7 @@ pub type W = crate::W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC>;
 #[doc = "Field `CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0` reader - busy monitor window cycle"]
 pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0` writer - busy monitor window cycle"]
-pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 impl R {
     #[doc = "Bits 0:19 - busy monitor window cycle"]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_dram0_limit_cycle_0(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC, 0> {
-        CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W::new(self)
+    ) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC> {
+        CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

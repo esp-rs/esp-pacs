@@ -5,7 +5,7 @@ pub type W = crate::W<ENABLE1_W1TC_SPEC>;
 #[doc = "Field `ENABLE1_DATA_W1TC` reader - GPIO32~39 output enable write 1 to clear"]
 pub type ENABLE1_DATA_W1TC_R = crate::FieldReader;
 #[doc = "Field `ENABLE1_DATA_W1TC` writer - GPIO32~39 output enable write 1 to clear"]
-pub type ENABLE1_DATA_W1TC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ENABLE1_DATA_W1TC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - GPIO32~39 output enable write 1 to clear"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENABLE1_W1TC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - GPIO32~39 output enable write 1 to clear"]
     #[inline(always)]
     #[must_use]
-    pub fn enable1_data_w1tc(&mut self) -> ENABLE1_DATA_W1TC_W<ENABLE1_W1TC_SPEC, 0> {
-        ENABLE1_DATA_W1TC_W::new(self)
+    pub fn enable1_data_w1tc(&mut self) -> ENABLE1_DATA_W1TC_W<ENABLE1_W1TC_SPEC> {
+        ENABLE1_DATA_W1TC_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

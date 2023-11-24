@@ -13,7 +13,7 @@ pub type L1_ICACHE3_UNALLOC_CLR_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_UNALLOC_CLR` reader - The bit is used to clear the unallocate request buffer of l1 cache where the unallocate request is responsed but not completed."]
 pub type L1_CACHE_UNALLOC_CLR_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_UNALLOC_CLR` writer - The bit is used to clear the unallocate request buffer of l1 cache where the unallocate request is responsed but not completed."]
-pub type L1_CACHE_UNALLOC_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_UNALLOC_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to clear the unallocate request buffer of l1 icache0 where the unallocate request is responsed but not completed."]
     #[inline(always)]
@@ -71,7 +71,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -80,8 +80,8 @@ impl W {
     #[must_use]
     pub fn l1_cache_unalloc_clr(
         &mut self,
-    ) -> L1_CACHE_UNALLOC_CLR_W<L1_UNALLOCATE_BUFFER_CLEAR_SPEC, 4> {
-        L1_CACHE_UNALLOC_CLR_W::new(self)
+    ) -> L1_CACHE_UNALLOC_CLR_W<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
+        L1_CACHE_UNALLOC_CLR_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

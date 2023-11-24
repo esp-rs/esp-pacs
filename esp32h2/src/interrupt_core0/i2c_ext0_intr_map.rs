@@ -5,7 +5,7 @@ pub type W = crate::W<I2C_EXT0_INTR_MAP_SPEC>;
 #[doc = "Field `I2C_EXT0_INTR_MAP` reader - CORE0_I2C_EXT0_INTR mapping register"]
 pub type I2C_EXT0_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `I2C_EXT0_INTR_MAP` writer - CORE0_I2C_EXT0_INTR mapping register"]
-pub type I2C_EXT0_INTR_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type I2C_EXT0_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - CORE0_I2C_EXT0_INTR mapping register"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C_EXT0_INTR_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - CORE0_I2C_EXT0_INTR mapping register"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_ext0_intr_map(&mut self) -> I2C_EXT0_INTR_MAP_W<I2C_EXT0_INTR_MAP_SPEC, 0> {
-        I2C_EXT0_INTR_MAP_W::new(self)
+    pub fn i2c_ext0_intr_map(&mut self) -> I2C_EXT0_INTR_MAP_W<I2C_EXT0_INTR_MAP_SPEC> {
+        I2C_EXT0_INTR_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,69 +5,69 @@ pub type W = crate::W<CFG_DATA7_SPEC>;
 #[doc = "Field `PIN_STATE` reader - configure cis addr 318 and 574"]
 pub type PIN_STATE_R = crate::FieldReader;
 #[doc = "Field `PIN_STATE` writer - configure cis addr 318 and 574"]
-pub type PIN_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PIN_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CHIP_STATE` reader - configure cis addr 312, 315, 568 and 571"]
 pub type CHIP_STATE_R = crate::FieldReader;
 #[doc = "Field `CHIP_STATE` writer - configure cis addr 312, 315, 568 and 571"]
-pub type CHIP_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CHIP_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SDIO_RST` reader - soft reset control for sdio module"]
 pub type SDIO_RST_R = crate::BitReader;
 #[doc = "Field `SDIO_RST` writer - soft reset control for sdio module"]
-pub type SDIO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_IOREADY0` reader - sdio io ready, high enable"]
 pub type SDIO_IOREADY0_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY0` writer - sdio io ready, high enable"]
-pub type SDIO_IOREADY0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_IOREADY0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_MEM_PD` reader - sdio memory power down, high active"]
 pub type SDIO_MEM_PD_R = crate::BitReader;
 #[doc = "Field `SDIO_MEM_PD` writer - sdio memory power down, high active"]
-pub type SDIO_MEM_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_MEM_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESDIO_DATA1_INT_EN` reader - enable sdio interrupt on data1 line"]
 pub type ESDIO_DATA1_INT_EN_R = crate::BitReader;
 #[doc = "Field `ESDIO_DATA1_INT_EN` writer - enable sdio interrupt on data1 line"]
-pub type ESDIO_DATA1_INT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ESDIO_DATA1_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_SWITCH_VOLT_SW` reader - control switch voltage change to 1.8V by software. 0:3.3V,1:1.8V"]
 pub type SDIO_SWITCH_VOLT_SW_R = crate::BitReader;
 #[doc = "Field `SDIO_SWITCH_VOLT_SW` writer - control switch voltage change to 1.8V by software. 0:3.3V,1:1.8V"]
-pub type SDIO_SWITCH_VOLT_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_SWITCH_VOLT_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DDR50_BLK_LEN_FIX_EN` reader - enable block length to be fixed to 512 bytes in ddr50 mode"]
 pub type DDR50_BLK_LEN_FIX_EN_R = crate::BitReader;
 #[doc = "Field `DDR50_BLK_LEN_FIX_EN` writer - enable block length to be fixed to 512 bytes in ddr50 mode"]
-pub type DDR50_BLK_LEN_FIX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DDR50_BLK_LEN_FIX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - sdio apb clock for configuration force on control:0-gating,1-force on."]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - sdio apb clock for configuration force on control:0-gating,1-force on."]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDDR50` reader - configure if support sdr50 mode in cccr"]
 pub type SDDR50_R = crate::BitReader;
 #[doc = "Field `SDDR50` writer - configure if support sdr50 mode in cccr"]
-pub type SDDR50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDDR50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SSDR104` reader - configure if support sdr104 mode in cccr"]
 pub type SSDR104_R = crate::BitReader;
 #[doc = "Field `SSDR104` writer - configure if support sdr104 mode in cccr"]
-pub type SSDR104_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SSDR104_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SSDR50` reader - configure if support ddr50 mode in cccr"]
 pub type SSDR50_R = crate::BitReader;
 #[doc = "Field `SSDR50` writer - configure if support ddr50 mode in cccr"]
-pub type SSDR50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SSDR50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDTD` reader - configure if support driver type D in cccr"]
 pub type SDTD_R = crate::BitReader;
 #[doc = "Field `SDTD` writer - configure if support driver type D in cccr"]
-pub type SDTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDTD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDTA` reader - configure if support driver type A in cccr"]
 pub type SDTA_R = crate::BitReader;
 #[doc = "Field `SDTA` writer - configure if support driver type A in cccr"]
-pub type SDTA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDTA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDTC` reader - configure if support driver type C in cccr"]
 pub type SDTC_R = crate::BitReader;
 #[doc = "Field `SDTC` writer - configure if support driver type C in cccr"]
-pub type SDTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAI` reader - configure if support asynchronous interrupt in cccr"]
 pub type SAI_R = crate::BitReader;
 #[doc = "Field `SAI` writer - configure if support asynchronous interrupt in cccr"]
-pub type SAI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_WAKEUP_CLR` writer - clear sdio_wake_up signal after the chip wakes up"]
-pub type SDIO_WAKEUP_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_WAKEUP_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - configure cis addr 318 and 574"]
     #[inline(always)]
@@ -188,111 +188,111 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CFG_DATA7_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - configure cis addr 318 and 574"]
     #[inline(always)]
     #[must_use]
-    pub fn pin_state(&mut self) -> PIN_STATE_W<CFG_DATA7_SPEC, 0> {
-        PIN_STATE_W::new(self)
+    pub fn pin_state(&mut self) -> PIN_STATE_W<CFG_DATA7_SPEC> {
+        PIN_STATE_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - configure cis addr 312, 315, 568 and 571"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_state(&mut self) -> CHIP_STATE_W<CFG_DATA7_SPEC, 8> {
-        CHIP_STATE_W::new(self)
+    pub fn chip_state(&mut self) -> CHIP_STATE_W<CFG_DATA7_SPEC> {
+        CHIP_STATE_W::new(self, 8)
     }
     #[doc = "Bit 16 - soft reset control for sdio module"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_rst(&mut self) -> SDIO_RST_W<CFG_DATA7_SPEC, 16> {
-        SDIO_RST_W::new(self)
+    pub fn sdio_rst(&mut self) -> SDIO_RST_W<CFG_DATA7_SPEC> {
+        SDIO_RST_W::new(self, 16)
     }
     #[doc = "Bit 17 - sdio io ready, high enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<CFG_DATA7_SPEC, 17> {
-        SDIO_IOREADY0_W::new(self)
+    pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<CFG_DATA7_SPEC> {
+        SDIO_IOREADY0_W::new(self, 17)
     }
     #[doc = "Bit 18 - sdio memory power down, high active"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_mem_pd(&mut self) -> SDIO_MEM_PD_W<CFG_DATA7_SPEC, 18> {
-        SDIO_MEM_PD_W::new(self)
+    pub fn sdio_mem_pd(&mut self) -> SDIO_MEM_PD_W<CFG_DATA7_SPEC> {
+        SDIO_MEM_PD_W::new(self, 18)
     }
     #[doc = "Bit 19 - enable sdio interrupt on data1 line"]
     #[inline(always)]
     #[must_use]
-    pub fn esdio_data1_int_en(&mut self) -> ESDIO_DATA1_INT_EN_W<CFG_DATA7_SPEC, 19> {
-        ESDIO_DATA1_INT_EN_W::new(self)
+    pub fn esdio_data1_int_en(&mut self) -> ESDIO_DATA1_INT_EN_W<CFG_DATA7_SPEC> {
+        ESDIO_DATA1_INT_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - control switch voltage change to 1.8V by software. 0:3.3V,1:1.8V"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_switch_volt_sw(&mut self) -> SDIO_SWITCH_VOLT_SW_W<CFG_DATA7_SPEC, 20> {
-        SDIO_SWITCH_VOLT_SW_W::new(self)
+    pub fn sdio_switch_volt_sw(&mut self) -> SDIO_SWITCH_VOLT_SW_W<CFG_DATA7_SPEC> {
+        SDIO_SWITCH_VOLT_SW_W::new(self, 20)
     }
     #[doc = "Bit 21 - enable block length to be fixed to 512 bytes in ddr50 mode"]
     #[inline(always)]
     #[must_use]
-    pub fn ddr50_blk_len_fix_en(&mut self) -> DDR50_BLK_LEN_FIX_EN_W<CFG_DATA7_SPEC, 21> {
-        DDR50_BLK_LEN_FIX_EN_W::new(self)
+    pub fn ddr50_blk_len_fix_en(&mut self) -> DDR50_BLK_LEN_FIX_EN_W<CFG_DATA7_SPEC> {
+        DDR50_BLK_LEN_FIX_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - sdio apb clock for configuration force on control:0-gating,1-force on."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CFG_DATA7_SPEC, 22> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CFG_DATA7_SPEC> {
+        CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - configure if support sdr50 mode in cccr"]
     #[inline(always)]
     #[must_use]
-    pub fn sddr50(&mut self) -> SDDR50_W<CFG_DATA7_SPEC, 23> {
-        SDDR50_W::new(self)
+    pub fn sddr50(&mut self) -> SDDR50_W<CFG_DATA7_SPEC> {
+        SDDR50_W::new(self, 23)
     }
     #[doc = "Bit 24 - configure if support sdr104 mode in cccr"]
     #[inline(always)]
     #[must_use]
-    pub fn ssdr104(&mut self) -> SSDR104_W<CFG_DATA7_SPEC, 24> {
-        SSDR104_W::new(self)
+    pub fn ssdr104(&mut self) -> SSDR104_W<CFG_DATA7_SPEC> {
+        SSDR104_W::new(self, 24)
     }
     #[doc = "Bit 25 - configure if support ddr50 mode in cccr"]
     #[inline(always)]
     #[must_use]
-    pub fn ssdr50(&mut self) -> SSDR50_W<CFG_DATA7_SPEC, 25> {
-        SSDR50_W::new(self)
+    pub fn ssdr50(&mut self) -> SSDR50_W<CFG_DATA7_SPEC> {
+        SSDR50_W::new(self, 25)
     }
     #[doc = "Bit 26 - configure if support driver type D in cccr"]
     #[inline(always)]
     #[must_use]
-    pub fn sdtd(&mut self) -> SDTD_W<CFG_DATA7_SPEC, 26> {
-        SDTD_W::new(self)
+    pub fn sdtd(&mut self) -> SDTD_W<CFG_DATA7_SPEC> {
+        SDTD_W::new(self, 26)
     }
     #[doc = "Bit 27 - configure if support driver type A in cccr"]
     #[inline(always)]
     #[must_use]
-    pub fn sdta(&mut self) -> SDTA_W<CFG_DATA7_SPEC, 27> {
-        SDTA_W::new(self)
+    pub fn sdta(&mut self) -> SDTA_W<CFG_DATA7_SPEC> {
+        SDTA_W::new(self, 27)
     }
     #[doc = "Bit 28 - configure if support driver type C in cccr"]
     #[inline(always)]
     #[must_use]
-    pub fn sdtc(&mut self) -> SDTC_W<CFG_DATA7_SPEC, 28> {
-        SDTC_W::new(self)
+    pub fn sdtc(&mut self) -> SDTC_W<CFG_DATA7_SPEC> {
+        SDTC_W::new(self, 28)
     }
     #[doc = "Bit 29 - configure if support asynchronous interrupt in cccr"]
     #[inline(always)]
     #[must_use]
-    pub fn sai(&mut self) -> SAI_W<CFG_DATA7_SPEC, 29> {
-        SAI_W::new(self)
+    pub fn sai(&mut self) -> SAI_W<CFG_DATA7_SPEC> {
+        SAI_W::new(self, 29)
     }
     #[doc = "Bit 30 - clear sdio_wake_up signal after the chip wakes up"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_wakeup_clr(&mut self) -> SDIO_WAKEUP_CLR_W<CFG_DATA7_SPEC, 30> {
-        SDIO_WAKEUP_CLR_W::new(self)
+    pub fn sdio_wakeup_clr(&mut self) -> SDIO_WAKEUP_CLR_W<CFG_DATA7_SPEC> {
+        SDIO_WAKEUP_CLR_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

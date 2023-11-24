@@ -5,39 +5,39 @@ pub type W = crate::W<DEBUG_STATUS_SPEC>;
 #[doc = "Field `ACK_VAL` reader - The value of an acknowledge signal on the bus"]
 pub type ACK_VAL_R = crate::BitReader;
 #[doc = "Field `ACK_VAL` writer - The value of an acknowledge signal on the bus"]
-pub type ACK_VAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACK_VAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_RW` reader - When working as a slave, the value of R/W bit received"]
 pub type SLAVE_RW_R = crate::BitReader;
 #[doc = "Field `SLAVE_RW` writer - When working as a slave, the value of R/W bit received"]
-pub type SLAVE_RW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_RW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMED_OUT` reader - Transfer has timed out"]
 pub type TIMED_OUT_R = crate::BitReader;
 #[doc = "Field `TIMED_OUT` writer - Transfer has timed out"]
-pub type TIMED_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMED_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARB_LOST` reader - When working as a master, lost control of I2C bus"]
 pub type ARB_LOST_R = crate::BitReader;
 #[doc = "Field `ARB_LOST` writer - When working as a master, lost control of I2C bus"]
-pub type ARB_LOST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARB_LOST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUS_BUSY` reader - operation is in progress"]
 pub type BUS_BUSY_R = crate::BitReader;
 #[doc = "Field `BUS_BUSY` writer - operation is in progress"]
-pub type BUS_BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUS_BUSY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_ADDR_MATCH` reader - When working as a slave, whether address was matched"]
 pub type SLAVE_ADDR_MATCH_R = crate::BitReader;
 #[doc = "Field `SLAVE_ADDR_MATCH` writer - When working as a slave, whether address was matched"]
-pub type SLAVE_ADDR_MATCH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_ADDR_MATCH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BYTE_TRANS` reader - 8 bit transmit done"]
 pub type BYTE_TRANS_R = crate::BitReader;
 #[doc = "Field `BYTE_TRANS` writer - 8 bit transmit done"]
-pub type BYTE_TRANS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BYTE_TRANS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAIN_STATE` reader - state of the main state machine"]
 pub type MAIN_STATE_R = crate::FieldReader;
 #[doc = "Field `MAIN_STATE` writer - state of the main state machine"]
-pub type MAIN_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MAIN_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SCL_STATE` reader - state of SCL state machine"]
 pub type SCL_STATE_R = crate::FieldReader;
 #[doc = "Field `SCL_STATE` writer - state of SCL state machine"]
-pub type SCL_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SCL_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - The value of an acknowledge signal on the bus"]
     #[inline(always)]
@@ -107,63 +107,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DEBUG_STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The value of an acknowledge signal on the bus"]
     #[inline(always)]
     #[must_use]
-    pub fn ack_val(&mut self) -> ACK_VAL_W<DEBUG_STATUS_SPEC, 0> {
-        ACK_VAL_W::new(self)
+    pub fn ack_val(&mut self) -> ACK_VAL_W<DEBUG_STATUS_SPEC> {
+        ACK_VAL_W::new(self, 0)
     }
     #[doc = "Bit 1 - When working as a slave, the value of R/W bit received"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_rw(&mut self) -> SLAVE_RW_W<DEBUG_STATUS_SPEC, 1> {
-        SLAVE_RW_W::new(self)
+    pub fn slave_rw(&mut self) -> SLAVE_RW_W<DEBUG_STATUS_SPEC> {
+        SLAVE_RW_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transfer has timed out"]
     #[inline(always)]
     #[must_use]
-    pub fn timed_out(&mut self) -> TIMED_OUT_W<DEBUG_STATUS_SPEC, 2> {
-        TIMED_OUT_W::new(self)
+    pub fn timed_out(&mut self) -> TIMED_OUT_W<DEBUG_STATUS_SPEC> {
+        TIMED_OUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - When working as a master, lost control of I2C bus"]
     #[inline(always)]
     #[must_use]
-    pub fn arb_lost(&mut self) -> ARB_LOST_W<DEBUG_STATUS_SPEC, 3> {
-        ARB_LOST_W::new(self)
+    pub fn arb_lost(&mut self) -> ARB_LOST_W<DEBUG_STATUS_SPEC> {
+        ARB_LOST_W::new(self, 3)
     }
     #[doc = "Bit 4 - operation is in progress"]
     #[inline(always)]
     #[must_use]
-    pub fn bus_busy(&mut self) -> BUS_BUSY_W<DEBUG_STATUS_SPEC, 4> {
-        BUS_BUSY_W::new(self)
+    pub fn bus_busy(&mut self) -> BUS_BUSY_W<DEBUG_STATUS_SPEC> {
+        BUS_BUSY_W::new(self, 4)
     }
     #[doc = "Bit 5 - When working as a slave, whether address was matched"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_addr_match(&mut self) -> SLAVE_ADDR_MATCH_W<DEBUG_STATUS_SPEC, 5> {
-        SLAVE_ADDR_MATCH_W::new(self)
+    pub fn slave_addr_match(&mut self) -> SLAVE_ADDR_MATCH_W<DEBUG_STATUS_SPEC> {
+        SLAVE_ADDR_MATCH_W::new(self, 5)
     }
     #[doc = "Bit 6 - 8 bit transmit done"]
     #[inline(always)]
     #[must_use]
-    pub fn byte_trans(&mut self) -> BYTE_TRANS_W<DEBUG_STATUS_SPEC, 6> {
-        BYTE_TRANS_W::new(self)
+    pub fn byte_trans(&mut self) -> BYTE_TRANS_W<DEBUG_STATUS_SPEC> {
+        BYTE_TRANS_W::new(self, 6)
     }
     #[doc = "Bits 25:27 - state of the main state machine"]
     #[inline(always)]
     #[must_use]
-    pub fn main_state(&mut self) -> MAIN_STATE_W<DEBUG_STATUS_SPEC, 25> {
-        MAIN_STATE_W::new(self)
+    pub fn main_state(&mut self) -> MAIN_STATE_W<DEBUG_STATUS_SPEC> {
+        MAIN_STATE_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - state of SCL state machine"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_state(&mut self) -> SCL_STATE_W<DEBUG_STATUS_SPEC, 28> {
-        SCL_STATE_W::new(self)
+    pub fn scl_state(&mut self) -> SCL_STATE_W<DEBUG_STATUS_SPEC> {
+        SCL_STATE_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

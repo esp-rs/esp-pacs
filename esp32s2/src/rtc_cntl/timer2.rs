@@ -5,11 +5,11 @@ pub type W = crate::W<TIMER2_SPEC>;
 #[doc = "Field `ULPCP_TOUCH_START_WAIT` reader - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
 pub type ULPCP_TOUCH_START_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `ULPCP_TOUCH_START_WAIT` writer - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
-pub type ULPCP_TOUCH_START_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type ULPCP_TOUCH_START_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `MIN_TIME_CK8M_OFF` reader - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
 pub type MIN_TIME_CK8M_OFF_R = crate::FieldReader;
 #[doc = "Field `MIN_TIME_CK8M_OFF` writer - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
-pub type MIN_TIME_CK8M_OFF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MIN_TIME_CK8M_OFF_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 15:23 - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 15:23 - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
     #[inline(always)]
     #[must_use]
-    pub fn ulpcp_touch_start_wait(&mut self) -> ULPCP_TOUCH_START_WAIT_W<TIMER2_SPEC, 15> {
-        ULPCP_TOUCH_START_WAIT_W::new(self)
+    pub fn ulpcp_touch_start_wait(&mut self) -> ULPCP_TOUCH_START_WAIT_W<TIMER2_SPEC> {
+        ULPCP_TOUCH_START_WAIT_W::new(self, 15)
     }
     #[doc = "Bits 24:31 - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
     #[inline(always)]
     #[must_use]
-    pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W<TIMER2_SPEC, 24> {
-        MIN_TIME_CK8M_OFF_W::new(self)
+    pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W<TIMER2_SPEC> {
+        MIN_TIME_CK8M_OFF_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

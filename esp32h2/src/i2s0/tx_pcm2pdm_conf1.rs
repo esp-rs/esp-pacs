@@ -5,19 +5,19 @@ pub type W = crate::W<TX_PCM2PDM_CONF1_SPEC>;
 #[doc = "Field `TX_PDM_FP` reader - I2S TX PDM Fp"]
 pub type TX_PDM_FP_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FP` writer - I2S TX PDM Fp"]
-pub type TX_PDM_FP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TX_PDM_FP_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TX_PDM_FS` reader - I2S TX PDM Fs"]
 pub type TX_PDM_FS_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FS` writer - I2S TX PDM Fs"]
-pub type TX_PDM_FS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type TX_PDM_FS_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `TX_IIR_HP_MULT12_5` reader - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
 pub type TX_IIR_HP_MULT12_5_R = crate::FieldReader;
 #[doc = "Field `TX_IIR_HP_MULT12_5` writer - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
-pub type TX_IIR_HP_MULT12_5_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TX_IIR_HP_MULT12_5_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TX_IIR_HP_MULT12_0` reader - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
 pub type TX_IIR_HP_MULT12_0_R = crate::FieldReader;
 #[doc = "Field `TX_IIR_HP_MULT12_0` writer - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
-pub type TX_IIR_HP_MULT12_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TX_IIR_HP_MULT12_0_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:9 - I2S TX PDM Fp"]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_PCM2PDM_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - I2S TX PDM Fp"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<TX_PCM2PDM_CONF1_SPEC, 0> {
-        TX_PDM_FP_W::new(self)
+    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<TX_PCM2PDM_CONF1_SPEC> {
+        TX_PDM_FP_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - I2S TX PDM Fs"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<TX_PCM2PDM_CONF1_SPEC, 10> {
-        TX_PDM_FS_W::new(self)
+    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<TX_PCM2PDM_CONF1_SPEC> {
+        TX_PDM_FS_W::new(self, 10)
     }
     #[doc = "Bits 20:22 - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_iir_hp_mult12_5(&mut self) -> TX_IIR_HP_MULT12_5_W<TX_PCM2PDM_CONF1_SPEC, 20> {
-        TX_IIR_HP_MULT12_5_W::new(self)
+    pub fn tx_iir_hp_mult12_5(&mut self) -> TX_IIR_HP_MULT12_5_W<TX_PCM2PDM_CONF1_SPEC> {
+        TX_IIR_HP_MULT12_5_W::new(self, 20)
     }
     #[doc = "Bits 23:25 - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_iir_hp_mult12_0(&mut self) -> TX_IIR_HP_MULT12_0_W<TX_PCM2PDM_CONF1_SPEC, 23> {
-        TX_IIR_HP_MULT12_0_W::new(self)
+    pub fn tx_iir_hp_mult12_0(&mut self) -> TX_IIR_HP_MULT12_0_W<TX_PCM2PDM_CONF1_SPEC> {
+        TX_IIR_HP_MULT12_0_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

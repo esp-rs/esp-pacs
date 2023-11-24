@@ -5,19 +5,19 @@ pub type W = crate::W<FILTER_CFG_SPEC>;
 #[doc = "Field `SCL_FILTER_THRES` reader - reg_scl_filter_thres"]
 pub type SCL_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `SCL_FILTER_THRES` writer - reg_scl_filter_thres"]
-pub type SCL_FILTER_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SCL_FILTER_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SDA_FILTER_THRES` reader - reg_sda_filter_thres"]
 pub type SDA_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `SDA_FILTER_THRES` writer - reg_sda_filter_thres"]
-pub type SDA_FILTER_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SDA_FILTER_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SCL_FILTER_EN` reader - reg_scl_filter_en"]
 pub type SCL_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `SCL_FILTER_EN` writer - reg_scl_filter_en"]
-pub type SCL_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCL_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDA_FILTER_EN` reader - reg_sda_filter_en"]
 pub type SDA_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `SDA_FILTER_EN` writer - reg_sda_filter_en"]
-pub type SDA_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDA_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - reg_scl_filter_thres"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FILTER_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - reg_scl_filter_thres"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<FILTER_CFG_SPEC, 0> {
-        SCL_FILTER_THRES_W::new(self)
+    pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<FILTER_CFG_SPEC> {
+        SCL_FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - reg_sda_filter_thres"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<FILTER_CFG_SPEC, 4> {
-        SDA_FILTER_THRES_W::new(self)
+    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<FILTER_CFG_SPEC> {
+        SDA_FILTER_THRES_W::new(self, 4)
     }
     #[doc = "Bit 8 - reg_scl_filter_en"]
     #[inline(always)]
     #[must_use]
-    pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<FILTER_CFG_SPEC, 8> {
-        SCL_FILTER_EN_W::new(self)
+    pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<FILTER_CFG_SPEC> {
+        SCL_FILTER_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_sda_filter_en"]
     #[inline(always)]
     #[must_use]
-    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<FILTER_CFG_SPEC, 9> {
-        SDA_FILTER_EN_W::new(self)
+    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<FILTER_CFG_SPEC> {
+        SDA_FILTER_EN_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<CACHE_BRIDGE_ARBITER_CTRL_SPEC>;
 #[doc = "Field `ALLOC_WB_HOLD_ARBITER` reader - Reserved"]
 pub type ALLOC_WB_HOLD_ARBITER_R = crate::BitReader;
 #[doc = "Field `ALLOC_WB_HOLD_ARBITER` writer - Reserved"]
-pub type ALLOC_WB_HOLD_ARBITER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALLOC_WB_HOLD_ARBITER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_BRIDGE_ARBITER_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn alloc_wb_hold_arbiter(
         &mut self,
-    ) -> ALLOC_WB_HOLD_ARBITER_W<CACHE_BRIDGE_ARBITER_CTRL_SPEC, 0> {
-        ALLOC_WB_HOLD_ARBITER_W::new(self)
+    ) -> ALLOC_WB_HOLD_ARBITER_W<CACHE_BRIDGE_ARBITER_CTRL_SPEC> {
+        ALLOC_WB_HOLD_ARBITER_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

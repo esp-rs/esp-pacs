@@ -5,51 +5,51 @@ pub type W = crate::W<DBG_MAP_SPEC>;
 #[doc = "Field `GPIO_PIN5_MUX_SEL` reader - use for debug"]
 pub type GPIO_PIN5_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN5_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN5_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN5_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN4_MUX_SEL` reader - use for debug"]
 pub type GPIO_PIN4_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN4_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN4_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN4_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN3_MUX_SEL` reader - use for debug"]
 pub type GPIO_PIN3_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN3_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN3_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN3_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN2_MUX_SEL` reader - use for debug"]
 pub type GPIO_PIN2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN2_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN2_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN1_MUX_SEL` reader - use for debug"]
 pub type GPIO_PIN1_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN1_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN1_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN1_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN0_MUX_SEL` reader - use for debug"]
 pub type GPIO_PIN0_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN0_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN0_MUX_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_PIN0_MUX_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_PIN5_FUN_SEL` reader - use for debug"]
 pub type GPIO_PIN5_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN5_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN5_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GPIO_PIN5_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GPIO_PIN4_FUN_SEL` reader - use for debug"]
 pub type GPIO_PIN4_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN4_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN4_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GPIO_PIN4_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GPIO_PIN3_FUN_SEL` reader - use for debug"]
 pub type GPIO_PIN3_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN3_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN3_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GPIO_PIN3_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GPIO_PIN2_FUN_SEL` reader - use for debug"]
 pub type GPIO_PIN2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN2_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN2_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GPIO_PIN2_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GPIO_PIN1_FUN_SEL` reader - use for debug"]
 pub type GPIO_PIN1_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN1_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN1_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GPIO_PIN1_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GPIO_PIN0_FUN_SEL` reader - use for debug"]
 pub type GPIO_PIN0_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN0_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN0_FUN_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GPIO_PIN0_FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 2 - use for debug"]
     #[inline(always)]
@@ -170,81 +170,81 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DBG_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin5_mux_sel(&mut self) -> GPIO_PIN5_MUX_SEL_W<DBG_MAP_SPEC, 2> {
-        GPIO_PIN5_MUX_SEL_W::new(self)
+    pub fn gpio_pin5_mux_sel(&mut self) -> GPIO_PIN5_MUX_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN5_MUX_SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin4_mux_sel(&mut self) -> GPIO_PIN4_MUX_SEL_W<DBG_MAP_SPEC, 3> {
-        GPIO_PIN4_MUX_SEL_W::new(self)
+    pub fn gpio_pin4_mux_sel(&mut self) -> GPIO_PIN4_MUX_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN4_MUX_SEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin3_mux_sel(&mut self) -> GPIO_PIN3_MUX_SEL_W<DBG_MAP_SPEC, 4> {
-        GPIO_PIN3_MUX_SEL_W::new(self)
+    pub fn gpio_pin3_mux_sel(&mut self) -> GPIO_PIN3_MUX_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN3_MUX_SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_mux_sel(&mut self) -> GPIO_PIN2_MUX_SEL_W<DBG_MAP_SPEC, 5> {
-        GPIO_PIN2_MUX_SEL_W::new(self)
+    pub fn gpio_pin2_mux_sel(&mut self) -> GPIO_PIN2_MUX_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN2_MUX_SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin1_mux_sel(&mut self) -> GPIO_PIN1_MUX_SEL_W<DBG_MAP_SPEC, 6> {
-        GPIO_PIN1_MUX_SEL_W::new(self)
+    pub fn gpio_pin1_mux_sel(&mut self) -> GPIO_PIN1_MUX_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN1_MUX_SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin0_mux_sel(&mut self) -> GPIO_PIN0_MUX_SEL_W<DBG_MAP_SPEC, 7> {
-        GPIO_PIN0_MUX_SEL_W::new(self)
+    pub fn gpio_pin0_mux_sel(&mut self) -> GPIO_PIN0_MUX_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN0_MUX_SEL_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin5_fun_sel(&mut self) -> GPIO_PIN5_FUN_SEL_W<DBG_MAP_SPEC, 8> {
-        GPIO_PIN5_FUN_SEL_W::new(self)
+    pub fn gpio_pin5_fun_sel(&mut self) -> GPIO_PIN5_FUN_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN5_FUN_SEL_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin4_fun_sel(&mut self) -> GPIO_PIN4_FUN_SEL_W<DBG_MAP_SPEC, 12> {
-        GPIO_PIN4_FUN_SEL_W::new(self)
+    pub fn gpio_pin4_fun_sel(&mut self) -> GPIO_PIN4_FUN_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN4_FUN_SEL_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin3_fun_sel(&mut self) -> GPIO_PIN3_FUN_SEL_W<DBG_MAP_SPEC, 16> {
-        GPIO_PIN3_FUN_SEL_W::new(self)
+    pub fn gpio_pin3_fun_sel(&mut self) -> GPIO_PIN3_FUN_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN3_FUN_SEL_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin2_fun_sel(&mut self) -> GPIO_PIN2_FUN_SEL_W<DBG_MAP_SPEC, 20> {
-        GPIO_PIN2_FUN_SEL_W::new(self)
+    pub fn gpio_pin2_fun_sel(&mut self) -> GPIO_PIN2_FUN_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN2_FUN_SEL_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin1_fun_sel(&mut self) -> GPIO_PIN1_FUN_SEL_W<DBG_MAP_SPEC, 24> {
-        GPIO_PIN1_FUN_SEL_W::new(self)
+    pub fn gpio_pin1_fun_sel(&mut self) -> GPIO_PIN1_FUN_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN1_FUN_SEL_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - use for debug"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pin0_fun_sel(&mut self) -> GPIO_PIN0_FUN_SEL_W<DBG_MAP_SPEC, 28> {
-        GPIO_PIN0_FUN_SEL_W::new(self)
+    pub fn gpio_pin0_fun_sel(&mut self) -> GPIO_PIN0_FUN_SEL_W<DBG_MAP_SPEC> {
+        GPIO_PIN0_FUN_SEL_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

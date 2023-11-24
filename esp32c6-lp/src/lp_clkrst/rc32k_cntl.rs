@@ -5,7 +5,7 @@ pub type W = crate::W<RC32K_CNTL_SPEC>;
 #[doc = "Field `RC32K_DFREQ` reader - need_des"]
 pub type RC32K_DFREQ_R = crate::FieldReader<u16>;
 #[doc = "Field `RC32K_DFREQ` writer - need_des"]
-pub type RC32K_DFREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type RC32K_DFREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RC32K_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn rc32k_dfreq(&mut self) -> RC32K_DFREQ_W<RC32K_CNTL_SPEC, 22> {
-        RC32K_DFREQ_W::new(self)
+    pub fn rc32k_dfreq(&mut self) -> RC32K_DFREQ_W<RC32K_CNTL_SPEC> {
+        RC32K_DFREQ_W::new(self, 22)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

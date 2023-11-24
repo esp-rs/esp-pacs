@@ -5,7 +5,7 @@ pub type W = crate::W<CORE_0_SP_MIN_SPEC>;
 #[doc = "Field `CORE_0_SP_MIN` reader - core0 sp region configuration regsiter"]
 pub type CORE_0_SP_MIN_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_0_SP_MIN` writer - core0 sp region configuration regsiter"]
-pub type CORE_0_SP_MIN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CORE_0_SP_MIN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - core0 sp region configuration regsiter"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_SP_MIN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - core0 sp region configuration regsiter"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_sp_min(&mut self) -> CORE_0_SP_MIN_W<CORE_0_SP_MIN_SPEC, 0> {
-        CORE_0_SP_MIN_W::new(self)
+    pub fn core_0_sp_min(&mut self) -> CORE_0_SP_MIN_W<CORE_0_SP_MIN_SPEC> {
+        CORE_0_SP_MIN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

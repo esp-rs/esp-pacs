@@ -5,47 +5,47 @@ pub type W = crate::W<SAR_START_FORCE_SPEC>;
 #[doc = "Field `SAR1_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
 pub type SAR1_BIT_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SAR1_BIT_WIDTH` writer - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub type SAR1_BIT_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SAR1_BIT_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SAR2_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
 pub type SAR2_BIT_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SAR2_BIT_WIDTH` writer - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub type SAR2_BIT_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SAR2_BIT_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
 pub type SAR2_EN_TEST_R = crate::BitReader;
 #[doc = "Field `SAR2_EN_TEST` writer - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
-pub type SAR2_EN_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_EN_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT PA power detector capacitance tuning."]
 pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT PA power detector capacitance tuning."]
-pub type SAR2_PWDET_CCT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
 pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` writer - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
-pub type ULP_CP_FORCE_START_TOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_FORCE_START_TOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
 pub type ULP_CP_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_START_TOP` writer - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
-pub type ULP_CP_START_TOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_START_TOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARCLK_EN` reader - "]
 pub type SARCLK_EN_R = crate::BitReader;
 #[doc = "Field `SARCLK_EN` writer - "]
-pub type SARCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PC_INIT` reader - initialized PC for ULP-coprocessor"]
 pub type PC_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `PC_INIT` writer - initialized PC for ULP-coprocessor"]
-pub type PC_INIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type PC_INIT_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SAR2_STOP` reader - stop SAR ADC2 conversion"]
 pub type SAR2_STOP_R = crate::BitReader;
 #[doc = "Field `SAR2_STOP` writer - stop SAR ADC2 conversion"]
-pub type SAR2_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR1_STOP` reader - stop SAR ADC1 conversion"]
 pub type SAR1_STOP_R = crate::BitReader;
 #[doc = "Field `SAR1_STOP` writer - stop SAR ADC1 conversion"]
-pub type SAR1_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR1_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR2_PWDET_EN` reader - N/A"]
 pub type SAR2_PWDET_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_PWDET_EN` writer - N/A"]
-pub type SAR2_PWDET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR2_PWDET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
@@ -145,75 +145,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_START_FORCE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_bit_width(&mut self) -> SAR1_BIT_WIDTH_W<SAR_START_FORCE_SPEC, 0> {
-        SAR1_BIT_WIDTH_W::new(self)
+    pub fn sar1_bit_width(&mut self) -> SAR1_BIT_WIDTH_W<SAR_START_FORCE_SPEC> {
+        SAR1_BIT_WIDTH_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_bit_width(&mut self) -> SAR2_BIT_WIDTH_W<SAR_START_FORCE_SPEC, 2> {
-        SAR2_BIT_WIDTH_W::new(self)
+    pub fn sar2_bit_width(&mut self) -> SAR2_BIT_WIDTH_W<SAR_START_FORCE_SPEC> {
+        SAR2_BIT_WIDTH_W::new(self, 2)
     }
     #[doc = "Bit 4 - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<SAR_START_FORCE_SPEC, 4> {
-        SAR2_EN_TEST_W::new(self)
+    pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<SAR_START_FORCE_SPEC> {
+        SAR2_EN_TEST_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - SAR2_PWDET_CCT PA power detector capacitance tuning."]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_START_FORCE_SPEC, 5> {
-        SAR2_PWDET_CCT_W::new(self)
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_START_FORCE_SPEC> {
+        SAR2_PWDET_CCT_W::new(self, 5)
     }
     #[doc = "Bit 8 - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<SAR_START_FORCE_SPEC, 8> {
-        ULP_CP_FORCE_START_TOP_W::new(self)
+    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<SAR_START_FORCE_SPEC> {
+        ULP_CP_FORCE_START_TOP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<SAR_START_FORCE_SPEC, 9> {
-        ULP_CP_START_TOP_W::new(self)
+    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<SAR_START_FORCE_SPEC> {
+        ULP_CP_START_TOP_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn sarclk_en(&mut self) -> SARCLK_EN_W<SAR_START_FORCE_SPEC, 10> {
-        SARCLK_EN_W::new(self)
+    pub fn sarclk_en(&mut self) -> SARCLK_EN_W<SAR_START_FORCE_SPEC> {
+        SARCLK_EN_W::new(self, 10)
     }
     #[doc = "Bits 11:21 - initialized PC for ULP-coprocessor"]
     #[inline(always)]
     #[must_use]
-    pub fn pc_init(&mut self) -> PC_INIT_W<SAR_START_FORCE_SPEC, 11> {
-        PC_INIT_W::new(self)
+    pub fn pc_init(&mut self) -> PC_INIT_W<SAR_START_FORCE_SPEC> {
+        PC_INIT_W::new(self, 11)
     }
     #[doc = "Bit 22 - stop SAR ADC2 conversion"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_stop(&mut self) -> SAR2_STOP_W<SAR_START_FORCE_SPEC, 22> {
-        SAR2_STOP_W::new(self)
+    pub fn sar2_stop(&mut self) -> SAR2_STOP_W<SAR_START_FORCE_SPEC> {
+        SAR2_STOP_W::new(self, 22)
     }
     #[doc = "Bit 23 - stop SAR ADC1 conversion"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_stop(&mut self) -> SAR1_STOP_W<SAR_START_FORCE_SPEC, 23> {
-        SAR1_STOP_W::new(self)
+    pub fn sar1_stop(&mut self) -> SAR1_STOP_W<SAR_START_FORCE_SPEC> {
+        SAR1_STOP_W::new(self, 23)
     }
     #[doc = "Bit 24 - N/A"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_pwdet_en(&mut self) -> SAR2_PWDET_EN_W<SAR_START_FORCE_SPEC, 24> {
-        SAR2_PWDET_EN_W::new(self)
+    pub fn sar2_pwdet_en(&mut self) -> SAR2_PWDET_EN_W<SAR_START_FORCE_SPEC> {
+        SAR2_PWDET_EN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

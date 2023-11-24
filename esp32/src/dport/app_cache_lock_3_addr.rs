@@ -5,15 +5,15 @@ pub type W = crate::W<APP_CACHE_LOCK_3_ADDR_SPEC>;
 #[doc = "Field `PRE` reader - "]
 pub type PRE_R = crate::FieldReader<u16>;
 #[doc = "Field `PRE` writer - "]
-pub type PRE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type PRE_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `MIN` reader - "]
 pub type MIN_R = crate::FieldReader;
 #[doc = "Field `MIN` writer - "]
-pub type MIN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MIN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `MAX` reader - "]
 pub type MAX_R = crate::FieldReader;
 #[doc = "Field `MAX` writer - "]
-pub type MAX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MAX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:13"]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APP_CACHE_LOCK_3_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13"]
     #[inline(always)]
     #[must_use]
-    pub fn pre(&mut self) -> PRE_W<APP_CACHE_LOCK_3_ADDR_SPEC, 0> {
-        PRE_W::new(self)
+    pub fn pre(&mut self) -> PRE_W<APP_CACHE_LOCK_3_ADDR_SPEC> {
+        PRE_W::new(self, 0)
     }
     #[doc = "Bits 14:17"]
     #[inline(always)]
     #[must_use]
-    pub fn min(&mut self) -> MIN_W<APP_CACHE_LOCK_3_ADDR_SPEC, 14> {
-        MIN_W::new(self)
+    pub fn min(&mut self) -> MIN_W<APP_CACHE_LOCK_3_ADDR_SPEC> {
+        MIN_W::new(self, 14)
     }
     #[doc = "Bits 18:21"]
     #[inline(always)]
     #[must_use]
-    pub fn max(&mut self) -> MAX_W<APP_CACHE_LOCK_3_ADDR_SPEC, 18> {
-        MAX_W::new(self)
+    pub fn max(&mut self) -> MAX_W<APP_CACHE_LOCK_3_ADDR_SPEC> {
+        MAX_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

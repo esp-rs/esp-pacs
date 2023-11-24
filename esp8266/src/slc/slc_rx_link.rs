@@ -5,23 +5,23 @@ pub type W = crate::W<SLC_RX_LINK_SPEC>;
 #[doc = "Field `SLC_RXLINK_ADDR` reader - "]
 pub type SLC_RXLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SLC_RXLINK_ADDR` writer - "]
-pub type SLC_RXLINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type SLC_RXLINK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 #[doc = "Field `SLC_RXLINK_STOP` reader - "]
 pub type SLC_RXLINK_STOP_R = crate::BitReader;
 #[doc = "Field `SLC_RXLINK_STOP` writer - "]
-pub type SLC_RXLINK_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_RXLINK_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_RXLINK_START` reader - "]
 pub type SLC_RXLINK_START_R = crate::BitReader;
 #[doc = "Field `SLC_RXLINK_START` writer - "]
-pub type SLC_RXLINK_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_RXLINK_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_RXLINK_RESTART` reader - "]
 pub type SLC_RXLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `SLC_RXLINK_RESTART` writer - "]
-pub type SLC_RXLINK_RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_RXLINK_RESTART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_RXLINK_PARK` reader - "]
 pub type SLC_RXLINK_PARK_R = crate::BitReader;
 #[doc = "Field `SLC_RXLINK_PARK` writer - "]
-pub type SLC_RXLINK_PARK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_RXLINK_PARK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
@@ -79,41 +79,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_RX_LINK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rxlink_addr(&mut self) -> SLC_RXLINK_ADDR_W<SLC_RX_LINK_SPEC, 0> {
-        SLC_RXLINK_ADDR_W::new(self)
+    pub fn slc_rxlink_addr(&mut self) -> SLC_RXLINK_ADDR_W<SLC_RX_LINK_SPEC> {
+        SLC_RXLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rxlink_stop(&mut self) -> SLC_RXLINK_STOP_W<SLC_RX_LINK_SPEC, 28> {
-        SLC_RXLINK_STOP_W::new(self)
+    pub fn slc_rxlink_stop(&mut self) -> SLC_RXLINK_STOP_W<SLC_RX_LINK_SPEC> {
+        SLC_RXLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rxlink_start(&mut self) -> SLC_RXLINK_START_W<SLC_RX_LINK_SPEC, 29> {
-        SLC_RXLINK_START_W::new(self)
+    pub fn slc_rxlink_start(&mut self) -> SLC_RXLINK_START_W<SLC_RX_LINK_SPEC> {
+        SLC_RXLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rxlink_restart(&mut self) -> SLC_RXLINK_RESTART_W<SLC_RX_LINK_SPEC, 30> {
-        SLC_RXLINK_RESTART_W::new(self)
+    pub fn slc_rxlink_restart(&mut self) -> SLC_RXLINK_RESTART_W<SLC_RX_LINK_SPEC> {
+        SLC_RXLINK_RESTART_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_rxlink_park(&mut self) -> SLC_RXLINK_PARK_W<SLC_RX_LINK_SPEC, 31> {
-        SLC_RXLINK_PARK_W::new(self)
+    pub fn slc_rxlink_park(&mut self) -> SLC_RXLINK_PARK_W<SLC_RX_LINK_SPEC> {
+        SLC_RXLINK_PARK_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_DCACHE_DBUG0_SPEC>;
 #[doc = "Field `PRO_SLAVE_WDATA` reader - "]
 pub type PRO_SLAVE_WDATA_R = crate::BitReader;
 #[doc = "Field `PRO_SLAVE_WDATA` writer - "]
-pub type PRO_SLAVE_WDATA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_SLAVE_WDATA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_MMU_IA` reader - "]
 pub type PRO_CACHE_MMU_IA_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_IA` reader - "]
@@ -109,15 +109,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_DBUG0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_slave_wdata(&mut self) -> PRO_SLAVE_WDATA_W<PRO_DCACHE_DBUG0_SPEC, 0> {
-        PRO_SLAVE_WDATA_W::new(self)
+    pub fn pro_slave_wdata(&mut self) -> PRO_SLAVE_WDATA_W<PRO_DCACHE_DBUG0_SPEC> {
+        PRO_SLAVE_WDATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

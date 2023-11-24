@@ -5,11 +5,11 @@ pub type W = crate::W<SWFC_CONF0_SPEC>;
 #[doc = "Field `XOFF_THRESHOLD` reader - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
 pub type XOFF_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `XOFF_THRESHOLD` writer - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
-pub type XOFF_THRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type XOFF_THRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `XOFF_CHAR` reader - This register stores the Xoff flow control char."]
 pub type XOFF_CHAR_R = crate::FieldReader;
 #[doc = "Field `XOFF_CHAR` writer - This register stores the Xoff flow control char."]
-pub type XOFF_CHAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XOFF_CHAR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:8 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SWFC_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
     #[inline(always)]
     #[must_use]
-    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF0_SPEC, 0> {
-        XOFF_THRESHOLD_W::new(self)
+    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF0_SPEC> {
+        XOFF_THRESHOLD_W::new(self, 0)
     }
     #[doc = "Bits 9:16 - This register stores the Xoff flow control char."]
     #[inline(always)]
     #[must_use]
-    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF0_SPEC, 9> {
-        XOFF_CHAR_W::new(self)
+    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF0_SPEC> {
+        XOFF_CHAR_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

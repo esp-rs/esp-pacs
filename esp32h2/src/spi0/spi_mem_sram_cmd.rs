@@ -31,7 +31,7 @@ pub type SPI_MEM_SCMD_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDUMMY_RIN` reader - In the dummy phase of a MSPI read data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
 pub type SPI_MEM_SDUMMY_RIN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDUMMY_RIN` writer - In the dummy phase of a MSPI read data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_SDUMMY_RIN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_SDUMMY_RIN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_SDUMMY_WOUT` reader - In the dummy phase of a MSPI write data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
 pub type SPI_MEM_SDUMMY_WOUT_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT` reader - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_DQS is output by the MSPI controller."]
@@ -225,15 +225,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_SRAM_CMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 22 - In the dummy phase of a MSPI read data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_sdummy_rin(&mut self) -> SPI_MEM_SDUMMY_RIN_W<SPI_MEM_SRAM_CMD_SPEC, 22> {
-        SPI_MEM_SDUMMY_RIN_W::new(self)
+    pub fn spi_mem_sdummy_rin(&mut self) -> SPI_MEM_SDUMMY_RIN_W<SPI_MEM_SRAM_CMD_SPEC> {
+        SPI_MEM_SDUMMY_RIN_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<CACHE_LOCK_SIZE_SPEC>;
 #[doc = "Field `CACHE_LOCK_SIZE` reader - Those bits are used to configure the size of the lock/unlock operation, which should be used together with CACHE_LOCK_ADDR_REG"]
 pub type CACHE_LOCK_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `CACHE_LOCK_SIZE` writer - Those bits are used to configure the size of the lock/unlock operation, which should be used together with CACHE_LOCK_ADDR_REG"]
-pub type CACHE_LOCK_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CACHE_LOCK_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Those bits are used to configure the size of the lock/unlock operation, which should be used together with CACHE_LOCK_ADDR_REG"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_LOCK_SIZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Those bits are used to configure the size of the lock/unlock operation, which should be used together with CACHE_LOCK_ADDR_REG"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_lock_size(&mut self) -> CACHE_LOCK_SIZE_W<CACHE_LOCK_SIZE_SPEC, 0> {
-        CACHE_LOCK_SIZE_W::new(self)
+    pub fn cache_lock_size(&mut self) -> CACHE_LOCK_SIZE_W<CACHE_LOCK_SIZE_SPEC> {
+        CACHE_LOCK_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

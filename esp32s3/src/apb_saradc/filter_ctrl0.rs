@@ -5,15 +5,15 @@ pub type W = crate::W<FILTER_CTRL0_SPEC>;
 #[doc = "Field `FILTER_CHANNEL1` reader - configure the filter1 channel"]
 pub type FILTER_CHANNEL1_R = crate::FieldReader;
 #[doc = "Field `FILTER_CHANNEL1` writer - configure the filter1 channel"]
-pub type FILTER_CHANNEL1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type FILTER_CHANNEL1_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `FILTER_CHANNEL0` reader - configure the filter0 channel"]
 pub type FILTER_CHANNEL0_R = crate::FieldReader;
 #[doc = "Field `FILTER_CHANNEL0` writer - configure the filter0 channel"]
-pub type FILTER_CHANNEL0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type FILTER_CHANNEL0_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `FILTER_RESET` reader - enable apb_adc1_filter"]
 pub type FILTER_RESET_R = crate::BitReader;
 #[doc = "Field `FILTER_RESET` writer - enable apb_adc1_filter"]
-pub type FILTER_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FILTER_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 14:18 - configure the filter1 channel"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 14:18 - configure the filter1 channel"]
     #[inline(always)]
     #[must_use]
-    pub fn filter_channel1(&mut self) -> FILTER_CHANNEL1_W<FILTER_CTRL0_SPEC, 14> {
-        FILTER_CHANNEL1_W::new(self)
+    pub fn filter_channel1(&mut self) -> FILTER_CHANNEL1_W<FILTER_CTRL0_SPEC> {
+        FILTER_CHANNEL1_W::new(self, 14)
     }
     #[doc = "Bits 19:23 - configure the filter0 channel"]
     #[inline(always)]
     #[must_use]
-    pub fn filter_channel0(&mut self) -> FILTER_CHANNEL0_W<FILTER_CTRL0_SPEC, 19> {
-        FILTER_CHANNEL0_W::new(self)
+    pub fn filter_channel0(&mut self) -> FILTER_CHANNEL0_W<FILTER_CTRL0_SPEC> {
+        FILTER_CHANNEL0_W::new(self, 19)
     }
     #[doc = "Bit 31 - enable apb_adc1_filter"]
     #[inline(always)]
     #[must_use]
-    pub fn filter_reset(&mut self) -> FILTER_RESET_W<FILTER_CTRL0_SPEC, 31> {
-        FILTER_RESET_W::new(self)
+    pub fn filter_reset(&mut self) -> FILTER_RESET_W<FILTER_CTRL0_SPEC> {
+        FILTER_RESET_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

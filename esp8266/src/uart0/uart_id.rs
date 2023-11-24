@@ -5,7 +5,7 @@ pub type W = crate::W<UART_ID_SPEC>;
 #[doc = "Field `uart_id` reader - "]
 pub type UART_ID_R = crate::FieldReader<u32>;
 #[doc = "Field `uart_id` writer - "]
-pub type UART_ID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type UART_ID_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -24,17 +24,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UART_ID_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_id(&mut self) -> UART_ID_W<UART_ID_SPEC, 0> {
-        UART_ID_W::new(self)
+    pub fn uart_id(&mut self) -> UART_ID_W<UART_ID_SPEC> {
+        UART_ID_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

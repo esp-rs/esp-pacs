@@ -5,7 +5,7 @@ pub type W = crate::W<XTS_AES_KEY_UPDATE_SPEC>;
 #[doc = "Field `XTS_AES_KEY_UPDATE` reader - Set this bit to update xts_aes key"]
 pub type XTS_AES_KEY_UPDATE_R = crate::BitReader;
 #[doc = "Field `XTS_AES_KEY_UPDATE` writer - Set this bit to update xts_aes key"]
-pub type XTS_AES_KEY_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XTS_AES_KEY_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to update xts_aes key"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<XTS_AES_KEY_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to update xts_aes key"]
     #[inline(always)]
     #[must_use]
-    pub fn xts_aes_key_update(&mut self) -> XTS_AES_KEY_UPDATE_W<XTS_AES_KEY_UPDATE_SPEC, 0> {
-        XTS_AES_KEY_UPDATE_W::new(self)
+    pub fn xts_aes_key_update(&mut self) -> XTS_AES_KEY_UPDATE_W<XTS_AES_KEY_UPDATE_SPEC> {
+        XTS_AES_KEY_UPDATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

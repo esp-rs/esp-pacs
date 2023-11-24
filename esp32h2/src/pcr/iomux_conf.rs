@@ -5,11 +5,11 @@ pub type W = crate::W<IOMUX_CONF_SPEC>;
 #[doc = "Field `IOMUX_CLK_EN` reader - Set 1 to enable iomux apb clock"]
 pub type IOMUX_CLK_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_CLK_EN` writer - Set 1 to enable iomux apb clock"]
-pub type IOMUX_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IOMUX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IOMUX_RST_EN` reader - Set 0 to reset iomux module"]
 pub type IOMUX_RST_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_RST_EN` writer - Set 0 to reset iomux module"]
-pub type IOMUX_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IOMUX_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable iomux apb clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IOMUX_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable iomux apb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<IOMUX_CONF_SPEC, 0> {
-        IOMUX_CLK_EN_W::new(self)
+    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<IOMUX_CONF_SPEC> {
+        IOMUX_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset iomux module"]
     #[inline(always)]
     #[must_use]
-    pub fn iomux_rst_en(&mut self) -> IOMUX_RST_EN_W<IOMUX_CONF_SPEC, 1> {
-        IOMUX_RST_EN_W::new(self)
+    pub fn iomux_rst_en(&mut self) -> IOMUX_RST_EN_W<IOMUX_CONF_SPEC> {
+        IOMUX_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

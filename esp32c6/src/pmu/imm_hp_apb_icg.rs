@@ -1,7 +1,7 @@
 #[doc = "Register `IMM_HP_APB_ICG` writer"]
 pub type W = crate::W<IMM_HP_APB_ICG_SPEC>;
 #[doc = "Field `UPDATE_DIG_ICG_APB_EN` writer - need_des"]
-pub type UPDATE_DIG_ICG_APB_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDATE_DIG_ICG_APB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IMM_HP_APB_ICG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn update_dig_icg_apb_en(&mut self) -> UPDATE_DIG_ICG_APB_EN_W<IMM_HP_APB_ICG_SPEC, 31> {
-        UPDATE_DIG_ICG_APB_EN_W::new(self)
+    pub fn update_dig_icg_apb_en(&mut self) -> UPDATE_DIG_ICG_APB_EN_W<IMM_HP_APB_ICG_SPEC> {
+        UPDATE_DIG_ICG_APB_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

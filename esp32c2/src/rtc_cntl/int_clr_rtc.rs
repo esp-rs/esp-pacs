@@ -5,31 +5,31 @@ pub type W = crate::W<INT_CLR_RTC_SPEC>;
 #[doc = "Field `SLP_WAKEUP_INT_CLR` reader - Clear sleep wakeup interrupt state"]
 pub type SLP_WAKEUP_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP_INT_CLR` writer - Clear sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_WAKEUP_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLP_REJECT_INT_CLR` reader - Clear sleep reject interrupt state"]
 pub type SLP_REJECT_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_CLR` writer - Clear sleep reject interrupt state"]
-pub type SLP_REJECT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_REJECT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_INT_CLR` reader - Clear RTC WDT interrupt state"]
 pub type WDT_INT_CLR_R = crate::BitReader;
 #[doc = "Field `WDT_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type WDT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BROWN_OUT_INT_CLR` reader - Clear brown out interrupt state"]
 pub type BROWN_OUT_INT_CLR_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_CLR` writer - Clear brown out interrupt state"]
-pub type BROWN_OUT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BROWN_OUT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAIN_TIMER_INT_CLR` reader - Clear RTC main timer interrupt state"]
 pub type MAIN_TIMER_INT_CLR_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_CLR` writer - Clear RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWD_INT_CLR` reader - Clear super watch dog interrupt state"]
 pub type SWD_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SWD_INT_CLR` writer - Clear super watch dog interrupt state"]
-pub type SWD_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWD_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBPLL_CAL_INT_CLR` reader - Need add desc"]
 pub type BBPLL_CAL_INT_CLR_R = crate::BitReader;
 #[doc = "Field `BBPLL_CAL_INT_CLR` writer - Need add desc"]
-pub type BBPLL_CAL_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BBPLL_CAL_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
@@ -99,51 +99,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_RTC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_wakeup_int_clr(&mut self) -> SLP_WAKEUP_INT_CLR_W<INT_CLR_RTC_SPEC, 0> {
-        SLP_WAKEUP_INT_CLR_W::new(self)
+    pub fn slp_wakeup_int_clr(&mut self) -> SLP_WAKEUP_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        SLP_WAKEUP_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear sleep reject interrupt state"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_reject_int_clr(&mut self) -> SLP_REJECT_INT_CLR_W<INT_CLR_RTC_SPEC, 1> {
-        SLP_REJECT_INT_CLR_W::new(self)
+    pub fn slp_reject_int_clr(&mut self) -> SLP_REJECT_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        SLP_REJECT_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 3 - Clear RTC WDT interrupt state"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<INT_CLR_RTC_SPEC, 3> {
-        WDT_INT_CLR_W::new(self)
+    pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        WDT_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 9 - Clear brown out interrupt state"]
     #[inline(always)]
     #[must_use]
-    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<INT_CLR_RTC_SPEC, 9> {
-        BROWN_OUT_INT_CLR_W::new(self)
+    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        BROWN_OUT_INT_CLR_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear RTC main timer interrupt state"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_int_clr(&mut self) -> MAIN_TIMER_INT_CLR_W<INT_CLR_RTC_SPEC, 10> {
-        MAIN_TIMER_INT_CLR_W::new(self)
+    pub fn main_timer_int_clr(&mut self) -> MAIN_TIMER_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        MAIN_TIMER_INT_CLR_W::new(self, 10)
     }
     #[doc = "Bit 15 - Clear super watch dog interrupt state"]
     #[inline(always)]
     #[must_use]
-    pub fn swd_int_clr(&mut self) -> SWD_INT_CLR_W<INT_CLR_RTC_SPEC, 15> {
-        SWD_INT_CLR_W::new(self)
+    pub fn swd_int_clr(&mut self) -> SWD_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        SWD_INT_CLR_W::new(self, 15)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn bbpll_cal_int_clr(&mut self) -> BBPLL_CAL_INT_CLR_W<INT_CLR_RTC_SPEC, 20> {
-        BBPLL_CAL_INT_CLR_W::new(self)
+    pub fn bbpll_cal_int_clr(&mut self) -> BBPLL_CAL_INT_CLR_W<INT_CLR_RTC_SPEC> {
+        BBPLL_CAL_INT_CLR_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

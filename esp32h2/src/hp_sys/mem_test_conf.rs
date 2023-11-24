@@ -5,23 +5,23 @@ pub type W = crate::W<MEM_TEST_CONF_SPEC>;
 #[doc = "Field `HP_MEM_WPULSE` reader - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
 pub type HP_MEM_WPULSE_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_WPULSE` writer - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
-pub type HP_MEM_WPULSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type HP_MEM_WPULSE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `HP_MEM_WA` reader - This field controls hp system memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
 pub type HP_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_WA` writer - This field controls hp system memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
-pub type HP_MEM_WA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type HP_MEM_WA_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `HP_MEM_RA` reader - This field controls hp system memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
 pub type HP_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_RA` writer - This field controls hp system memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
-pub type HP_MEM_RA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HP_MEM_RA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `HP_MEM_RM` reader - This field controls hp system memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
 pub type HP_MEM_RM_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_RM` writer - This field controls hp system memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
-pub type HP_MEM_RM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type HP_MEM_RM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ROM_RM` reader - This field controls rom RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0010(default) or 0b0001(slow) for 0.9V."]
 pub type ROM_RM_R = crate::FieldReader;
 #[doc = "Field `ROM_RM` writer - This field controls rom RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0010(default) or 0b0001(slow) for 0.9V."]
-pub type ROM_RM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ROM_RM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:2 - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_TEST_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<MEM_TEST_CONF_SPEC, 0> {
-        HP_MEM_WPULSE_W::new(self)
+    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<MEM_TEST_CONF_SPEC> {
+        HP_MEM_WPULSE_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - This field controls hp system memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<MEM_TEST_CONF_SPEC, 3> {
-        HP_MEM_WA_W::new(self)
+    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<MEM_TEST_CONF_SPEC> {
+        HP_MEM_WA_W::new(self, 3)
     }
     #[doc = "Bits 6:7 - This field controls hp system memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<MEM_TEST_CONF_SPEC, 6> {
-        HP_MEM_RA_W::new(self)
+    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<MEM_TEST_CONF_SPEC> {
+        HP_MEM_RA_W::new(self, 6)
     }
     #[doc = "Bits 8:11 - This field controls hp system memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_mem_rm(&mut self) -> HP_MEM_RM_W<MEM_TEST_CONF_SPEC, 8> {
-        HP_MEM_RM_W::new(self)
+    pub fn hp_mem_rm(&mut self) -> HP_MEM_RM_W<MEM_TEST_CONF_SPEC> {
+        HP_MEM_RM_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - This field controls rom RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0010(default) or 0b0001(slow) for 0.9V."]
     #[inline(always)]
     #[must_use]
-    pub fn rom_rm(&mut self) -> ROM_RM_W<MEM_TEST_CONF_SPEC, 12> {
-        ROM_RM_W::new(self)
+    pub fn rom_rm(&mut self) -> ROM_RM_W<MEM_TEST_CONF_SPEC> {
+        ROM_RM_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

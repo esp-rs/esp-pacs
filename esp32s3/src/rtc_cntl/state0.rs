@@ -3,27 +3,27 @@ pub type R = crate::R<STATE0_SPEC>;
 #[doc = "Register `STATE0` writer"]
 pub type W = crate::W<STATE0_SPEC>;
 #[doc = "Field `SW_CPU_INT` writer - rtc software interrupt to main cpu"]
-pub type SW_CPU_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_CPU_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLP_REJECT_CAUSE_CLR` writer - clear rtc sleep reject cause"]
-pub type SLP_REJECT_CAUSE_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_REJECT_CAUSE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` reader - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
 pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` writer - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
-pub type APB2RTC_BRIDGE_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB2RTC_BRIDGE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_ACTIVE_IND` reader - SDIO active indication"]
 pub type SDIO_ACTIVE_IND_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP` reader - leep wakeup bit"]
 pub type SLP_WAKEUP_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP` writer - leep wakeup bit"]
-pub type SLP_WAKEUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_WAKEUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLP_REJECT` reader - leep reject bit"]
 pub type SLP_REJECT_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT` writer - leep reject bit"]
-pub type SLP_REJECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_REJECT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLEEP_EN` reader - sleep enable bit"]
 pub type SLEEP_EN_R = crate::BitReader;
 #[doc = "Field `SLEEP_EN` writer - sleep enable bit"]
-pub type SLEEP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLEEP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 22 - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
     #[inline(always)]
@@ -72,45 +72,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - rtc software interrupt to main cpu"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_cpu_int(&mut self) -> SW_CPU_INT_W<STATE0_SPEC, 0> {
-        SW_CPU_INT_W::new(self)
+    pub fn sw_cpu_int(&mut self) -> SW_CPU_INT_W<STATE0_SPEC> {
+        SW_CPU_INT_W::new(self, 0)
     }
     #[doc = "Bit 1 - clear rtc sleep reject cause"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<STATE0_SPEC, 1> {
-        SLP_REJECT_CAUSE_CLR_W::new(self)
+    pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<STATE0_SPEC> {
+        SLP_REJECT_CAUSE_CLR_W::new(self, 1)
     }
     #[doc = "Bit 22 - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
     #[inline(always)]
     #[must_use]
-    pub fn apb2rtc_bridge_sel(&mut self) -> APB2RTC_BRIDGE_SEL_W<STATE0_SPEC, 22> {
-        APB2RTC_BRIDGE_SEL_W::new(self)
+    pub fn apb2rtc_bridge_sel(&mut self) -> APB2RTC_BRIDGE_SEL_W<STATE0_SPEC> {
+        APB2RTC_BRIDGE_SEL_W::new(self, 22)
     }
     #[doc = "Bit 29 - leep wakeup bit"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<STATE0_SPEC, 29> {
-        SLP_WAKEUP_W::new(self)
+    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<STATE0_SPEC> {
+        SLP_WAKEUP_W::new(self, 29)
     }
     #[doc = "Bit 30 - leep reject bit"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_reject(&mut self) -> SLP_REJECT_W<STATE0_SPEC, 30> {
-        SLP_REJECT_W::new(self)
+    pub fn slp_reject(&mut self) -> SLP_REJECT_W<STATE0_SPEC> {
+        SLP_REJECT_W::new(self, 30)
     }
     #[doc = "Bit 31 - sleep enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_en(&mut self) -> SLEEP_EN_W<STATE0_SPEC, 31> {
-        SLEEP_EN_W::new(self)
+    pub fn sleep_en(&mut self) -> SLEEP_EN_W<STATE0_SPEC> {
+        SLEEP_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

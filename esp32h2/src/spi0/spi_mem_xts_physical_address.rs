@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_MEM_XTS_PHYSICAL_ADDRESS_SPEC>;
 #[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` reader - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
 pub type SPI_XTS_PHYSICAL_ADDRESS_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` writer - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
-pub type SPI_XTS_PHYSICAL_ADDRESS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 26, O, u32>;
+pub type SPI_XTS_PHYSICAL_ADDRESS_W<'a, REG> = crate::FieldWriter<'a, REG, 26, u32>;
 impl R {
     #[doc = "Bits 0:25 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_XTS_PHYSICAL_ADDRESS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn spi_xts_physical_address(
         &mut self,
-    ) -> SPI_XTS_PHYSICAL_ADDRESS_W<SPI_MEM_XTS_PHYSICAL_ADDRESS_SPEC, 0> {
-        SPI_XTS_PHYSICAL_ADDRESS_W::new(self)
+    ) -> SPI_XTS_PHYSICAL_ADDRESS_W<SPI_MEM_XTS_PHYSICAL_ADDRESS_SPEC> {
+        SPI_XTS_PHYSICAL_ADDRESS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

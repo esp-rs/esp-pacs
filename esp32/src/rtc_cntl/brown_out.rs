@@ -5,49 +5,49 @@ pub type W = crate::W<BROWN_OUT_SPEC>;
 #[doc = "Field `RTC_MEM_PID_CONF` reader - "]
 pub type RTC_MEM_PID_CONF_R = crate::FieldReader;
 #[doc = "Field `RTC_MEM_PID_CONF` writer - "]
-pub type RTC_MEM_PID_CONF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RTC_MEM_PID_CONF_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RTC_MEM_CRC_START` reader - "]
 pub type RTC_MEM_CRC_START_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_START` writer - "]
-pub type RTC_MEM_CRC_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_MEM_CRC_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - "]
 pub type RTC_MEM_CRC_ADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` writer - "]
-pub type RTC_MEM_CRC_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type RTC_MEM_CRC_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `CLOSE_FLASH_ENA` reader - enable close flash when brown out happens"]
 pub type CLOSE_FLASH_ENA_R = crate::BitReader;
 #[doc = "Field `CLOSE_FLASH_ENA` writer - enable close flash when brown out happens"]
-pub type CLOSE_FLASH_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLOSE_FLASH_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PD_RF_ENA` reader - enable power down RF when brown out happens"]
 pub type PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `PD_RF_ENA` writer - enable power down RF when brown out happens"]
-pub type PD_RF_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD_RF_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_WAIT` reader - brown out reset wait cycles"]
 pub type RST_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `RST_WAIT` writer - brown out reset wait cycles"]
-pub type RST_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type RST_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - "]
 pub type RTC_MEM_CRC_LEN_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` writer - "]
-pub type RTC_MEM_CRC_LEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type RTC_MEM_CRC_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `RST_ENA` reader - enable brown out reset"]
 pub type RST_ENA_R = crate::BitReader;
 #[doc = "Field `RST_ENA` writer - enable brown out reset"]
-pub type RST_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBROWN_OUT_THRES` reader - brown out threshold"]
 pub type DBROWN_OUT_THRES_R = crate::FieldReader;
 #[doc = "Field `DBROWN_OUT_THRES` writer - brown out threshold"]
-pub type DBROWN_OUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DBROWN_OUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ENA` reader - enable brown out"]
 pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - enable brown out"]
-pub type ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DET` reader - brown out detect"]
 pub type DET_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - "]
 pub type RTC_MEM_CRC_FINISH_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_FINISH` writer - "]
-pub type RTC_MEM_CRC_FINISH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_MEM_CRC_FINISH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -153,75 +153,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BROWN_OUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_pid_conf(&mut self) -> RTC_MEM_PID_CONF_W<BROWN_OUT_SPEC, 0> {
-        RTC_MEM_PID_CONF_W::new(self)
+    pub fn rtc_mem_pid_conf(&mut self) -> RTC_MEM_PID_CONF_W<BROWN_OUT_SPEC> {
+        RTC_MEM_PID_CONF_W::new(self, 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<BROWN_OUT_SPEC, 8> {
-        RTC_MEM_CRC_START_W::new(self)
+    pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<BROWN_OUT_SPEC> {
+        RTC_MEM_CRC_START_W::new(self, 8)
     }
     #[doc = "Bits 9:19"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<BROWN_OUT_SPEC, 9> {
-        RTC_MEM_CRC_ADDR_W::new(self)
+    pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<BROWN_OUT_SPEC> {
+        RTC_MEM_CRC_ADDR_W::new(self, 9)
     }
     #[doc = "Bit 14 - enable close flash when brown out happens"]
     #[inline(always)]
     #[must_use]
-    pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<BROWN_OUT_SPEC, 14> {
-        CLOSE_FLASH_ENA_W::new(self)
+    pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<BROWN_OUT_SPEC> {
+        CLOSE_FLASH_ENA_W::new(self, 14)
     }
     #[doc = "Bit 15 - enable power down RF when brown out happens"]
     #[inline(always)]
     #[must_use]
-    pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<BROWN_OUT_SPEC, 15> {
-        PD_RF_ENA_W::new(self)
+    pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<BROWN_OUT_SPEC> {
+        PD_RF_ENA_W::new(self, 15)
     }
     #[doc = "Bits 16:25 - brown out reset wait cycles"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_wait(&mut self) -> RST_WAIT_W<BROWN_OUT_SPEC, 16> {
-        RST_WAIT_W::new(self)
+    pub fn rst_wait(&mut self) -> RST_WAIT_W<BROWN_OUT_SPEC> {
+        RST_WAIT_W::new(self, 16)
     }
     #[doc = "Bits 20:30"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<BROWN_OUT_SPEC, 20> {
-        RTC_MEM_CRC_LEN_W::new(self)
+    pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<BROWN_OUT_SPEC> {
+        RTC_MEM_CRC_LEN_W::new(self, 20)
     }
     #[doc = "Bit 26 - enable brown out reset"]
     #[inline(always)]
     #[must_use]
-    pub fn rst_ena(&mut self) -> RST_ENA_W<BROWN_OUT_SPEC, 26> {
-        RST_ENA_W::new(self)
+    pub fn rst_ena(&mut self) -> RST_ENA_W<BROWN_OUT_SPEC> {
+        RST_ENA_W::new(self, 26)
     }
     #[doc = "Bits 27:29 - brown out threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn dbrown_out_thres(&mut self) -> DBROWN_OUT_THRES_W<BROWN_OUT_SPEC, 27> {
-        DBROWN_OUT_THRES_W::new(self)
+    pub fn dbrown_out_thres(&mut self) -> DBROWN_OUT_THRES_W<BROWN_OUT_SPEC> {
+        DBROWN_OUT_THRES_W::new(self, 27)
     }
     #[doc = "Bit 30 - enable brown out"]
     #[inline(always)]
     #[must_use]
-    pub fn ena(&mut self) -> ENA_W<BROWN_OUT_SPEC, 30> {
-        ENA_W::new(self)
+    pub fn ena(&mut self) -> ENA_W<BROWN_OUT_SPEC> {
+        ENA_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_mem_crc_finish(&mut self) -> RTC_MEM_CRC_FINISH_W<BROWN_OUT_SPEC, 31> {
-        RTC_MEM_CRC_FINISH_W::new(self)
+    pub fn rtc_mem_crc_finish(&mut self) -> RTC_MEM_CRC_FINISH_W<BROWN_OUT_SPEC> {
+        RTC_MEM_CRC_FINISH_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

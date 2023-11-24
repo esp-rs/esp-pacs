@@ -5,7 +5,7 @@ pub type W = crate::W<RETENTION_CTRL5_SPEC>;
 #[doc = "Field `RETENTION_DISABLE` reader - ******* Description ***********"]
 pub type RETENTION_DISABLE_R = crate::BitReader;
 #[doc = "Field `RETENTION_DISABLE` writer - ******* Description ***********"]
-pub type RETENTION_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RETENTION_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL5_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_disable(&mut self) -> RETENTION_DISABLE_W<RETENTION_CTRL5_SPEC, 0> {
-        RETENTION_DISABLE_W::new(self)
+    pub fn retention_disable(&mut self) -> RETENTION_DISABLE_W<RETENTION_CTRL5_SPEC> {
+        RETENTION_DISABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

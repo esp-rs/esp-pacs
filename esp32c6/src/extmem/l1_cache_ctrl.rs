@@ -5,11 +5,11 @@ pub type W = crate::W<L1_CACHE_CTRL_SPEC>;
 #[doc = "Field `L1_CACHE_SHUT_BUS0` reader - The bit is used to disable core0 dbus access L1-Cache, 0: enable, 1: disable"]
 pub type L1_CACHE_SHUT_BUS0_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_SHUT_BUS0` writer - The bit is used to disable core0 dbus access L1-Cache, 0: enable, 1: disable"]
-pub type L1_CACHE_SHUT_BUS0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_SHUT_BUS0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_SHUT_BUS1` reader - The bit is used to disable core1 dbus access L1-Cache, 0: enable, 1: disable"]
 pub type L1_CACHE_SHUT_BUS1_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_SHUT_BUS1` writer - The bit is used to disable core1 dbus access L1-Cache, 0: enable, 1: disable"]
-pub type L1_CACHE_SHUT_BUS1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_SHUT_BUS1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_SHUT_DBUS2` reader - Reserved"]
 pub type L1_CACHE_SHUT_DBUS2_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_SHUT_DBUS3` reader - Reserved"]
@@ -19,7 +19,7 @@ pub type L1_CACHE_SHUT_DMA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_UNDEF_OP` reader - Reserved"]
 pub type L1_CACHE_UNDEF_OP_R = crate::FieldReader;
 #[doc = "Field `L1_CACHE_UNDEF_OP` writer - Reserved"]
-pub type L1_CACHE_UNDEF_OP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type L1_CACHE_UNDEF_OP_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable core0 dbus access L1-Cache, 0: enable, 1: disable"]
     #[inline(always)]
@@ -86,27 +86,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 dbus access L1-Cache, 0: enable, 1: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_shut_bus0(&mut self) -> L1_CACHE_SHUT_BUS0_W<L1_CACHE_CTRL_SPEC, 0> {
-        L1_CACHE_SHUT_BUS0_W::new(self)
+    pub fn l1_cache_shut_bus0(&mut self) -> L1_CACHE_SHUT_BUS0_W<L1_CACHE_CTRL_SPEC> {
+        L1_CACHE_SHUT_BUS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 dbus access L1-Cache, 0: enable, 1: disable"]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_shut_bus1(&mut self) -> L1_CACHE_SHUT_BUS1_W<L1_CACHE_CTRL_SPEC, 1> {
-        L1_CACHE_SHUT_BUS1_W::new(self)
+    pub fn l1_cache_shut_bus1(&mut self) -> L1_CACHE_SHUT_BUS1_W<L1_CACHE_CTRL_SPEC> {
+        L1_CACHE_SHUT_BUS1_W::new(self, 1)
     }
     #[doc = "Bits 8:11 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_undef_op(&mut self) -> L1_CACHE_UNDEF_OP_W<L1_CACHE_CTRL_SPEC, 8> {
-        L1_CACHE_UNDEF_OP_W::new(self)
+    pub fn l1_cache_undef_op(&mut self) -> L1_CACHE_UNDEF_OP_W<L1_CACHE_CTRL_SPEC> {
+        L1_CACHE_UNDEF_OP_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

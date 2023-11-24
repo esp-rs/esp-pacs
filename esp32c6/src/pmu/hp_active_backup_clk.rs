@@ -5,8 +5,7 @@ pub type W = crate::W<HP_ACTIVE_BACKUP_CLK_SPEC>;
 #[doc = "Field `HP_ACTIVE_BACKUP_ICG_FUNC_EN` reader - need_des"]
 pub type HP_ACTIVE_BACKUP_ICG_FUNC_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `HP_ACTIVE_BACKUP_ICG_FUNC_EN` writer - need_des"]
-pub type HP_ACTIVE_BACKUP_ICG_FUNC_EN_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type HP_ACTIVE_BACKUP_ICG_FUNC_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
@@ -28,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_BACKUP_CLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -37,8 +36,8 @@ impl W {
     #[must_use]
     pub fn hp_active_backup_icg_func_en(
         &mut self,
-    ) -> HP_ACTIVE_BACKUP_ICG_FUNC_EN_W<HP_ACTIVE_BACKUP_CLK_SPEC, 0> {
-        HP_ACTIVE_BACKUP_ICG_FUNC_EN_W::new(self)
+    ) -> HP_ACTIVE_BACKUP_ICG_FUNC_EN_W<HP_ACTIVE_BACKUP_CLK_SPEC> {
+        HP_ACTIVE_BACKUP_ICG_FUNC_EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

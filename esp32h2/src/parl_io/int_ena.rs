@@ -5,15 +5,15 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `TX_FIFO_REMPTY_INT_ENA` reader - Set this bit to enable TX_FIFO_REMPTY_INT."]
 pub type TX_FIFO_REMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_REMPTY_INT_ENA` writer - Set this bit to enable TX_FIFO_REMPTY_INT."]
-pub type TX_FIFO_REMPTY_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FIFO_REMPTY_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_WOVF_INT_ENA` reader - Set this bit to enable RX_FIFO_WOVF_INT."]
 pub type RX_FIFO_WOVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_WOVF_INT_ENA` writer - Set this bit to enable RX_FIFO_WOVF_INT."]
-pub type RX_FIFO_WOVF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FIFO_WOVF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_EOF_INT_ENA` reader - Set this bit to enable TX_EOF_INT."]
 pub type TX_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_EOF_INT_ENA` writer - Set this bit to enable TX_EOF_INT."]
-pub type TX_EOF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_EOF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable TX_FIFO_REMPTY_INT."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable TX_FIFO_REMPTY_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_rempty_int_ena(&mut self) -> TX_FIFO_REMPTY_INT_ENA_W<INT_ENA_SPEC, 0> {
-        TX_FIFO_REMPTY_INT_ENA_W::new(self)
+    pub fn tx_fifo_rempty_int_ena(&mut self) -> TX_FIFO_REMPTY_INT_ENA_W<INT_ENA_SPEC> {
+        TX_FIFO_REMPTY_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable RX_FIFO_WOVF_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_wovf_int_ena(&mut self) -> RX_FIFO_WOVF_INT_ENA_W<INT_ENA_SPEC, 1> {
-        RX_FIFO_WOVF_INT_ENA_W::new(self)
+    pub fn rx_fifo_wovf_int_ena(&mut self) -> RX_FIFO_WOVF_INT_ENA_W<INT_ENA_SPEC> {
+        RX_FIFO_WOVF_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable TX_EOF_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_eof_int_ena(&mut self) -> TX_EOF_INT_ENA_W<INT_ENA_SPEC, 2> {
-        TX_EOF_INT_ENA_W::new(self)
+    pub fn tx_eof_int_ena(&mut self) -> TX_EOF_INT_ENA_W<INT_ENA_SPEC> {
+        TX_EOF_INT_ENA_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

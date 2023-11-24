@@ -5,11 +5,11 @@ pub type W = crate::W<SAR_CLK_DIV_SPEC>;
 #[doc = "Field `SAR2_CLK_DIV_NUM` reader - xxxx"]
 pub type SAR2_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR2_CLK_DIV_NUM` writer - xxxx"]
-pub type SAR2_CLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR2_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SAR1_CLK_DIV_NUM` reader - xxxx"]
 pub type SAR1_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR1_CLK_DIV_NUM` writer - xxxx"]
-pub type SAR1_CLK_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR1_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_CLK_DIV_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_clk_div_num(&mut self) -> SAR2_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC, 0> {
-        SAR2_CLK_DIV_NUM_W::new(self)
+    pub fn sar2_clk_div_num(&mut self) -> SAR2_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC> {
+        SAR2_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_clk_div_num(&mut self) -> SAR1_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC, 8> {
-        SAR1_CLK_DIV_NUM_W::new(self)
+    pub fn sar1_clk_div_num(&mut self) -> SAR1_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC> {
+        SAR1_CLK_DIV_NUM_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

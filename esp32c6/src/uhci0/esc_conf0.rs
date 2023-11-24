@@ -5,15 +5,15 @@ pub type W = crate::W<ESC_CONF0_SPEC>;
 #[doc = "Field `SEPER_CHAR` reader - Configures the delimiter for encoding, default value is 0xC0."]
 pub type SEPER_CHAR_R = crate::FieldReader;
 #[doc = "Field `SEPER_CHAR` writer - Configures the delimiter for encoding, default value is 0xC0."]
-pub type SEPER_CHAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SEPER_CHAR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SEPER_ESC_CHAR0` reader - Configures the first char of SLIP escape character, default value is 0xDB."]
 pub type SEPER_ESC_CHAR0_R = crate::FieldReader;
 #[doc = "Field `SEPER_ESC_CHAR0` writer - Configures the first char of SLIP escape character, default value is 0xDB."]
-pub type SEPER_ESC_CHAR0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SEPER_ESC_CHAR0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SEPER_ESC_CHAR1` reader - Configures the second char of SLIP escape character, default value is 0xDC."]
 pub type SEPER_ESC_CHAR1_R = crate::FieldReader;
 #[doc = "Field `SEPER_ESC_CHAR1` writer - Configures the second char of SLIP escape character, default value is 0xDC."]
-pub type SEPER_ESC_CHAR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SEPER_ESC_CHAR1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Configures the delimiter for encoding, default value is 0xC0."]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ESC_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Configures the delimiter for encoding, default value is 0xC0."]
     #[inline(always)]
     #[must_use]
-    pub fn seper_char(&mut self) -> SEPER_CHAR_W<ESC_CONF0_SPEC, 0> {
-        SEPER_CHAR_W::new(self)
+    pub fn seper_char(&mut self) -> SEPER_CHAR_W<ESC_CONF0_SPEC> {
+        SEPER_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the first char of SLIP escape character, default value is 0xDB."]
     #[inline(always)]
     #[must_use]
-    pub fn seper_esc_char0(&mut self) -> SEPER_ESC_CHAR0_W<ESC_CONF0_SPEC, 8> {
-        SEPER_ESC_CHAR0_W::new(self)
+    pub fn seper_esc_char0(&mut self) -> SEPER_ESC_CHAR0_W<ESC_CONF0_SPEC> {
+        SEPER_ESC_CHAR0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures the second char of SLIP escape character, default value is 0xDC."]
     #[inline(always)]
     #[must_use]
-    pub fn seper_esc_char1(&mut self) -> SEPER_ESC_CHAR1_W<ESC_CONF0_SPEC, 16> {
-        SEPER_ESC_CHAR1_W::new(self)
+    pub fn seper_esc_char1(&mut self) -> SEPER_ESC_CHAR1_W<ESC_CONF0_SPEC> {
+        SEPER_ESC_CHAR1_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

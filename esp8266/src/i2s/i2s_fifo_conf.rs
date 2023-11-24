@@ -5,23 +5,23 @@ pub type W = crate::W<I2S_FIFO_CONF_SPEC>;
 #[doc = "Field `I2S_I2S_RX_DATA_NUM` reader - "]
 pub type I2S_I2S_RX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `I2S_I2S_RX_DATA_NUM` writer - "]
-pub type I2S_I2S_RX_DATA_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type I2S_I2S_RX_DATA_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `I2S_I2S_TX_DATA_NUM` reader - "]
 pub type I2S_I2S_TX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `I2S_I2S_TX_DATA_NUM` writer - "]
-pub type I2S_I2S_TX_DATA_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type I2S_I2S_TX_DATA_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `I2S_I2S_DSCR_EN` reader - "]
 pub type I2S_I2S_DSCR_EN_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_DSCR_EN` writer - "]
-pub type I2S_I2S_DSCR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_I2S_DSCR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S_I2S_TX_FIFO_MOD` reader - "]
 pub type I2S_I2S_TX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `I2S_I2S_TX_FIFO_MOD` writer - "]
-pub type I2S_I2S_TX_FIFO_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type I2S_I2S_TX_FIFO_MOD_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `I2S_I2S_RX_FIFO_MOD` reader - "]
 pub type I2S_I2S_RX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `I2S_I2S_RX_FIFO_MOD` writer - "]
-pub type I2S_I2S_RX_FIFO_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type I2S_I2S_RX_FIFO_MOD_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -79,41 +79,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2S_FIFO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_i2s_rx_data_num(&mut self) -> I2S_I2S_RX_DATA_NUM_W<I2S_FIFO_CONF_SPEC, 0> {
-        I2S_I2S_RX_DATA_NUM_W::new(self)
+    pub fn i2s_i2s_rx_data_num(&mut self) -> I2S_I2S_RX_DATA_NUM_W<I2S_FIFO_CONF_SPEC> {
+        I2S_I2S_RX_DATA_NUM_W::new(self, 0)
     }
     #[doc = "Bits 6:11"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_i2s_tx_data_num(&mut self) -> I2S_I2S_TX_DATA_NUM_W<I2S_FIFO_CONF_SPEC, 6> {
-        I2S_I2S_TX_DATA_NUM_W::new(self)
+    pub fn i2s_i2s_tx_data_num(&mut self) -> I2S_I2S_TX_DATA_NUM_W<I2S_FIFO_CONF_SPEC> {
+        I2S_I2S_TX_DATA_NUM_W::new(self, 6)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_i2s_dscr_en(&mut self) -> I2S_I2S_DSCR_EN_W<I2S_FIFO_CONF_SPEC, 12> {
-        I2S_I2S_DSCR_EN_W::new(self)
+    pub fn i2s_i2s_dscr_en(&mut self) -> I2S_I2S_DSCR_EN_W<I2S_FIFO_CONF_SPEC> {
+        I2S_I2S_DSCR_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:15"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_i2s_tx_fifo_mod(&mut self) -> I2S_I2S_TX_FIFO_MOD_W<I2S_FIFO_CONF_SPEC, 13> {
-        I2S_I2S_TX_FIFO_MOD_W::new(self)
+    pub fn i2s_i2s_tx_fifo_mod(&mut self) -> I2S_I2S_TX_FIFO_MOD_W<I2S_FIFO_CONF_SPEC> {
+        I2S_I2S_TX_FIFO_MOD_W::new(self, 13)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_i2s_rx_fifo_mod(&mut self) -> I2S_I2S_RX_FIFO_MOD_W<I2S_FIFO_CONF_SPEC, 16> {
-        I2S_I2S_RX_FIFO_MOD_W::new(self)
+    pub fn i2s_i2s_rx_fifo_mod(&mut self) -> I2S_I2S_RX_FIFO_MOD_W<I2S_FIFO_CONF_SPEC> {
+        I2S_I2S_RX_FIFO_MOD_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

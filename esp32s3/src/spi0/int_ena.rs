@@ -5,11 +5,11 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `TOTAL_TRANS_END_INT_ENA` reader - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
 pub type TOTAL_TRANS_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TOTAL_TRANS_END_INT_ENA` writer - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
-pub type TOTAL_TRANS_END_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOTAL_TRANS_END_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ECC_ERR_INT_ENA` reader - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
 pub type ECC_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ECC_ERR_INT_ENA` writer - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
-pub type ECC_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ECC_ERR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn total_trans_end_int_ena(&mut self) -> TOTAL_TRANS_END_INT_ENA_W<INT_ENA_SPEC, 2> {
-        TOTAL_TRANS_END_INT_ENA_W::new(self)
+    pub fn total_trans_end_int_ena(&mut self) -> TOTAL_TRANS_END_INT_ENA_W<INT_ENA_SPEC> {
+        TOTAL_TRANS_END_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 4 - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ecc_err_int_ena(&mut self) -> ECC_ERR_INT_ENA_W<INT_ENA_SPEC, 4> {
-        ECC_ERR_INT_ENA_W::new(self)
+    pub fn ecc_err_int_ena(&mut self) -> ECC_ERR_INT_ENA_W<INT_ENA_SPEC> {
+        ECC_ERR_INT_ENA_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

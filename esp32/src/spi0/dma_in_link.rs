@@ -5,23 +5,23 @@ pub type W = crate::W<DMA_IN_LINK_SPEC>;
 #[doc = "Field `INLINK_ADDR` reader - The address of the first inlink descriptor."]
 pub type INLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `INLINK_ADDR` writer - The address of the first inlink descriptor."]
-pub type INLINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type INLINK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 #[doc = "Field `INLINK_AUTO_RET` reader - when the bit is set inlink descriptor returns to the next descriptor while a packet is wrong"]
 pub type INLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `INLINK_AUTO_RET` writer - when the bit is set inlink descriptor returns to the next descriptor while a packet is wrong"]
-pub type INLINK_AUTO_RET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INLINK_AUTO_RET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INLINK_STOP` reader - Set the bit to stop to use inlink descriptor."]
 pub type INLINK_STOP_R = crate::BitReader;
 #[doc = "Field `INLINK_STOP` writer - Set the bit to stop to use inlink descriptor."]
-pub type INLINK_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INLINK_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INLINK_START` reader - Set the bit to start to use inlink descriptor."]
 pub type INLINK_START_R = crate::BitReader;
 #[doc = "Field `INLINK_START` writer - Set the bit to start to use inlink descriptor."]
-pub type INLINK_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INLINK_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INLINK_RESTART` reader - Set the bit to mount on new inlink descriptors."]
 pub type INLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `INLINK_RESTART` writer - Set the bit to mount on new inlink descriptors."]
-pub type INLINK_RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INLINK_RESTART_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:19 - The address of the first inlink descriptor."]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_IN_LINK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - The address of the first inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<DMA_IN_LINK_SPEC, 0> {
-        INLINK_ADDR_W::new(self)
+    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<DMA_IN_LINK_SPEC> {
+        INLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 20 - when the bit is set inlink descriptor returns to the next descriptor while a packet is wrong"]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<DMA_IN_LINK_SPEC, 20> {
-        INLINK_AUTO_RET_W::new(self)
+    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<DMA_IN_LINK_SPEC> {
+        INLINK_AUTO_RET_W::new(self, 20)
     }
     #[doc = "Bit 28 - Set the bit to stop to use inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<DMA_IN_LINK_SPEC, 28> {
-        INLINK_STOP_W::new(self)
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<DMA_IN_LINK_SPEC> {
+        INLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set the bit to start to use inlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_start(&mut self) -> INLINK_START_W<DMA_IN_LINK_SPEC, 29> {
-        INLINK_START_W::new(self)
+    pub fn inlink_start(&mut self) -> INLINK_START_W<DMA_IN_LINK_SPEC> {
+        INLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set the bit to mount on new inlink descriptors."]
     #[inline(always)]
     #[must_use]
-    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<DMA_IN_LINK_SPEC, 30> {
-        INLINK_RESTART_W::new(self)
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<DMA_IN_LINK_SPEC> {
+        INLINK_RESTART_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

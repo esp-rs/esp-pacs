@@ -15,7 +15,7 @@ pub type RD_CHIP_VER_REV2_R = crate::BitReader;
 #[doc = "Field `RD_RESERVE_0_181` reader - "]
 pub type RD_RESERVE_0_181_R = crate::BitReader;
 #[doc = "Field `RD_RESERVE_0_181` writer - "]
-pub type RD_RESERVE_0_181_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RD_RESERVE_0_181_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RD_VOL_LEVEL_HP_INV` reader - "]
 pub type RD_VOL_LEVEL_HP_INV_R = crate::FieldReader;
 #[doc = "Field `RD_WAFER_VERSION_MINOR` reader - "]
@@ -23,7 +23,7 @@ pub type RD_WAFER_VERSION_MINOR_R = crate::FieldReader;
 #[doc = "Field `RD_RESERVE_0_186` reader - "]
 pub type RD_RESERVE_0_186_R = crate::FieldReader;
 #[doc = "Field `RD_RESERVE_0_186` writer - "]
-pub type RD_RESERVE_0_186_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RD_RESERVE_0_186_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RD_FLASH_CRYPT_CONFIG` reader - "]
 pub type RD_FLASH_CRYPT_CONFIG_R = crate::FieldReader;
 impl R {
@@ -128,21 +128,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA5_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_reserve_0_181(&mut self) -> RD_RESERVE_0_181_W<BLK0_RDATA5_SPEC, 21> {
-        RD_RESERVE_0_181_W::new(self)
+    pub fn rd_reserve_0_181(&mut self) -> RD_RESERVE_0_181_W<BLK0_RDATA5_SPEC> {
+        RD_RESERVE_0_181_W::new(self, 21)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_reserve_0_186(&mut self) -> RD_RESERVE_0_186_W<BLK0_RDATA5_SPEC, 26> {
-        RD_RESERVE_0_186_W::new(self)
+    pub fn rd_reserve_0_186(&mut self) -> RD_RESERVE_0_186_W<BLK0_RDATA5_SPEC> {
+        RD_RESERVE_0_186_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

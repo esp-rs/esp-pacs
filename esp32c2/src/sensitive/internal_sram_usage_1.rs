@@ -5,11 +5,11 @@ pub type W = crate::W<INTERNAL_SRAM_USAGE_1_SPEC>;
 #[doc = "Field `INTERNAL_SRAM_USAGE_CPU_CACHE` reader - Need add description"]
 pub type INTERNAL_SRAM_USAGE_CPU_CACHE_R = crate::BitReader;
 #[doc = "Field `INTERNAL_SRAM_USAGE_CPU_CACHE` writer - Need add description"]
-pub type INTERNAL_SRAM_USAGE_CPU_CACHE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERNAL_SRAM_USAGE_CPU_CACHE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTERNAL_SRAM_USAGE_CPU_SRAM` reader - Need add description"]
 pub type INTERNAL_SRAM_USAGE_CPU_SRAM_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_USAGE_CPU_SRAM` writer - Need add description"]
-pub type INTERNAL_SRAM_USAGE_CPU_SRAM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type INTERNAL_SRAM_USAGE_CPU_SRAM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,16 +49,16 @@ impl W {
     #[must_use]
     pub fn internal_sram_usage_cpu_cache(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_CPU_CACHE_W<INTERNAL_SRAM_USAGE_1_SPEC, 0> {
-        INTERNAL_SRAM_USAGE_CPU_CACHE_W::new(self)
+    ) -> INTERNAL_SRAM_USAGE_CPU_CACHE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+        INTERNAL_SRAM_USAGE_CPU_CACHE_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - Need add description"]
     #[inline(always)]
     #[must_use]
     pub fn internal_sram_usage_cpu_sram(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_CPU_SRAM_W<INTERNAL_SRAM_USAGE_1_SPEC, 1> {
-        INTERNAL_SRAM_USAGE_CPU_SRAM_W::new(self)
+    ) -> INTERNAL_SRAM_USAGE_CPU_SRAM_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+        INTERNAL_SRAM_USAGE_CPU_SRAM_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

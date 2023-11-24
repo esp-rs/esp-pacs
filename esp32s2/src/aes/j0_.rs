@@ -5,7 +5,7 @@ pub type W = crate::W<J0__SPEC>;
 #[doc = "Field `J0` reader - This register stores the %sth 32-bit piece of 128-bit J0"]
 pub type J0_R = crate::FieldReader<u32>;
 #[doc = "Field `J0` writer - This register stores the %sth 32-bit piece of 128-bit J0"]
-pub type J0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type J0_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit J0"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<J0__SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit J0"]
     #[inline(always)]
     #[must_use]
-    pub fn j0(&mut self) -> J0_W<J0__SPEC, 0> {
-        J0_W::new(self)
+    pub fn j0(&mut self) -> J0_W<J0__SPEC> {
+        J0_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

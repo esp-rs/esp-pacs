@@ -5,19 +5,19 @@ pub type W = crate::W<SLAVE_SPI_CONFIG_SPEC>;
 #[doc = "Field `SLAVE_SPI_MASK_PRO` reader - "]
 pub type SLAVE_SPI_MASK_PRO_R = crate::BitReader;
 #[doc = "Field `SLAVE_SPI_MASK_PRO` writer - "]
-pub type SLAVE_SPI_MASK_PRO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_SPI_MASK_PRO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_SPI_MASK_APP` reader - "]
 pub type SLAVE_SPI_MASK_APP_R = crate::BitReader;
 #[doc = "Field `SLAVE_SPI_MASK_APP` writer - "]
-pub type SLAVE_SPI_MASK_APP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_SPI_MASK_APP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_ENCRYPT_ENABLE` reader - "]
 pub type SPI_ENCRYPT_ENABLE_R = crate::BitReader;
 #[doc = "Field `SPI_ENCRYPT_ENABLE` writer - "]
-pub type SPI_ENCRYPT_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_ENCRYPT_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_DECRYPT_ENABLE` reader - "]
 pub type SPI_DECRYPT_ENABLE_R = crate::BitReader;
 #[doc = "Field `SPI_DECRYPT_ENABLE` writer - "]
-pub type SPI_DECRYPT_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_DECRYPT_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPI_CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_spi_mask_pro(&mut self) -> SLAVE_SPI_MASK_PRO_W<SLAVE_SPI_CONFIG_SPEC, 0> {
-        SLAVE_SPI_MASK_PRO_W::new(self)
+    pub fn slave_spi_mask_pro(&mut self) -> SLAVE_SPI_MASK_PRO_W<SLAVE_SPI_CONFIG_SPEC> {
+        SLAVE_SPI_MASK_PRO_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_spi_mask_app(&mut self) -> SLAVE_SPI_MASK_APP_W<SLAVE_SPI_CONFIG_SPEC, 4> {
-        SLAVE_SPI_MASK_APP_W::new(self)
+    pub fn slave_spi_mask_app(&mut self) -> SLAVE_SPI_MASK_APP_W<SLAVE_SPI_CONFIG_SPEC> {
+        SLAVE_SPI_MASK_APP_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_encrypt_enable(&mut self) -> SPI_ENCRYPT_ENABLE_W<SLAVE_SPI_CONFIG_SPEC, 8> {
-        SPI_ENCRYPT_ENABLE_W::new(self)
+    pub fn spi_encrypt_enable(&mut self) -> SPI_ENCRYPT_ENABLE_W<SLAVE_SPI_CONFIG_SPEC> {
+        SPI_ENCRYPT_ENABLE_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_decrypt_enable(&mut self) -> SPI_DECRYPT_ENABLE_W<SLAVE_SPI_CONFIG_SPEC, 12> {
-        SPI_DECRYPT_ENABLE_W::new(self)
+    pub fn spi_decrypt_enable(&mut self) -> SPI_DECRYPT_ENABLE_W<SLAVE_SPI_CONFIG_SPEC> {
+        SPI_DECRYPT_ENABLE_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

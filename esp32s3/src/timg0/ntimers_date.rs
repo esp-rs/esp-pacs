@@ -5,7 +5,7 @@ pub type W = crate::W<NTIMERS_DATE_SPEC>;
 #[doc = "Field `NTIMERS_DATE` reader - Timer version control register"]
 pub type NTIMERS_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `NTIMERS_DATE` writer - Timer version control register"]
-pub type NTIMERS_DATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 28, O, u32>;
+pub type NTIMERS_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 impl R {
     #[doc = "Bits 0:27 - Timer version control register"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<NTIMERS_DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - Timer version control register"]
     #[inline(always)]
     #[must_use]
-    pub fn ntimers_date(&mut self) -> NTIMERS_DATE_W<NTIMERS_DATE_SPEC, 0> {
-        NTIMERS_DATE_W::new(self)
+    pub fn ntimers_date(&mut self) -> NTIMERS_DATE_W<NTIMERS_DATE_SPEC> {
+        NTIMERS_DATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

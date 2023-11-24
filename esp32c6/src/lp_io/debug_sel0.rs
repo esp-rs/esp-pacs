@@ -5,19 +5,19 @@ pub type W = crate::W<DEBUG_SEL0_SPEC>;
 #[doc = "Field `LP_DEBUG_SEL0` reader - need des"]
 pub type LP_DEBUG_SEL0_R = crate::FieldReader;
 #[doc = "Field `LP_DEBUG_SEL0` writer - need des"]
-pub type LP_DEBUG_SEL0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type LP_DEBUG_SEL0_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `LP_DEBUG_SEL1` reader - need des"]
 pub type LP_DEBUG_SEL1_R = crate::FieldReader;
 #[doc = "Field `LP_DEBUG_SEL1` writer - need des"]
-pub type LP_DEBUG_SEL1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type LP_DEBUG_SEL1_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `LP_DEBUG_SEL2` reader - need des"]
 pub type LP_DEBUG_SEL2_R = crate::FieldReader;
 #[doc = "Field `LP_DEBUG_SEL2` writer - need des"]
-pub type LP_DEBUG_SEL2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type LP_DEBUG_SEL2_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `LP_DEBUG_SEL3` reader - need des"]
 pub type LP_DEBUG_SEL3_R = crate::FieldReader;
 #[doc = "Field `LP_DEBUG_SEL3` writer - need des"]
-pub type LP_DEBUG_SEL3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type LP_DEBUG_SEL3_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DEBUG_SEL0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_debug_sel0(&mut self) -> LP_DEBUG_SEL0_W<DEBUG_SEL0_SPEC, 0> {
-        LP_DEBUG_SEL0_W::new(self)
+    pub fn lp_debug_sel0(&mut self) -> LP_DEBUG_SEL0_W<DEBUG_SEL0_SPEC> {
+        LP_DEBUG_SEL0_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_debug_sel1(&mut self) -> LP_DEBUG_SEL1_W<DEBUG_SEL0_SPEC, 7> {
-        LP_DEBUG_SEL1_W::new(self)
+    pub fn lp_debug_sel1(&mut self) -> LP_DEBUG_SEL1_W<DEBUG_SEL0_SPEC> {
+        LP_DEBUG_SEL1_W::new(self, 7)
     }
     #[doc = "Bits 14:20 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_debug_sel2(&mut self) -> LP_DEBUG_SEL2_W<DEBUG_SEL0_SPEC, 14> {
-        LP_DEBUG_SEL2_W::new(self)
+    pub fn lp_debug_sel2(&mut self) -> LP_DEBUG_SEL2_W<DEBUG_SEL0_SPEC> {
+        LP_DEBUG_SEL2_W::new(self, 14)
     }
     #[doc = "Bits 21:27 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_debug_sel3(&mut self) -> LP_DEBUG_SEL3_W<DEBUG_SEL0_SPEC, 21> {
-        LP_DEBUG_SEL3_W::new(self)
+    pub fn lp_debug_sel3(&mut self) -> LP_DEBUG_SEL3_W<DEBUG_SEL0_SPEC> {
+        LP_DEBUG_SEL3_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

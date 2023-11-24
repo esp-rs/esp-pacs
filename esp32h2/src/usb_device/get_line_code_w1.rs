@@ -5,15 +5,15 @@ pub type W = crate::W<GET_LINE_CODE_W1_SPEC>;
 #[doc = "Field `GET_BDATA_BITS` reader - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
 pub type GET_BDATA_BITS_R = crate::FieldReader;
 #[doc = "Field `GET_BDATA_BITS` writer - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BDATA_BITS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GET_BDATA_BITS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `GET_BPARITY_TYPE` reader - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
 pub type GET_BPARITY_TYPE_R = crate::FieldReader;
 #[doc = "Field `GET_BPARITY_TYPE` writer - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BPARITY_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GET_BPARITY_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `GET_BCHAR_FORMAT` reader - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
 pub type GET_BCHAR_FORMAT_R = crate::FieldReader;
 #[doc = "Field `GET_BCHAR_FORMAT` writer - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BCHAR_FORMAT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GET_BCHAR_FORMAT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GET_LINE_CODE_W1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
     #[must_use]
-    pub fn get_bdata_bits(&mut self) -> GET_BDATA_BITS_W<GET_LINE_CODE_W1_SPEC, 0> {
-        GET_BDATA_BITS_W::new(self)
+    pub fn get_bdata_bits(&mut self) -> GET_BDATA_BITS_W<GET_LINE_CODE_W1_SPEC> {
+        GET_BDATA_BITS_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
     #[must_use]
-    pub fn get_bparity_type(&mut self) -> GET_BPARITY_TYPE_W<GET_LINE_CODE_W1_SPEC, 8> {
-        GET_BPARITY_TYPE_W::new(self)
+    pub fn get_bparity_type(&mut self) -> GET_BPARITY_TYPE_W<GET_LINE_CODE_W1_SPEC> {
+        GET_BPARITY_TYPE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
     #[must_use]
-    pub fn get_bchar_format(&mut self) -> GET_BCHAR_FORMAT_W<GET_LINE_CODE_W1_SPEC, 16> {
-        GET_BCHAR_FORMAT_W::new(self)
+    pub fn get_bchar_format(&mut self) -> GET_BCHAR_FORMAT_W<GET_LINE_CODE_W1_SPEC> {
+        GET_BCHAR_FORMAT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

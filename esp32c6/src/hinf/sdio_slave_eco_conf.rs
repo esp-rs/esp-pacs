@@ -7,19 +7,19 @@ pub type SDIO_SLAVE_RDN_RESULT_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_RDN_ENA` reader - redundant registers for sdio_slave"]
 pub type SDIO_SLAVE_RDN_ENA_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_RDN_ENA` writer - redundant registers for sdio_slave"]
-pub type SDIO_SLAVE_RDN_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_SLAVE_RDN_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_SLAVE_SDIO_CLK_RDN_RESULT` reader - redundant registers for sdio_slave"]
 pub type SDIO_SLAVE_SDIO_CLK_RDN_RESULT_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_SDIO_CLK_RDN_ENA` reader - redundant registers for sdio_slave"]
 pub type SDIO_SLAVE_SDIO_CLK_RDN_ENA_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_SDIO_CLK_RDN_ENA` writer - redundant registers for sdio_slave"]
-pub type SDIO_SLAVE_SDIO_CLK_RDN_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_SLAVE_SDIO_CLK_RDN_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_SLAVE_SDCLK_PAD_RDN_RESULT` reader - redundant registers for sdio_slave"]
 pub type SDIO_SLAVE_SDCLK_PAD_RDN_RESULT_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_SDCLK_PAD_RDN_ENA` reader - redundant registers for sdio_slave"]
 pub type SDIO_SLAVE_SDCLK_PAD_RDN_ENA_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_SDCLK_PAD_RDN_ENA` writer - redundant registers for sdio_slave"]
-pub type SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - redundant registers for sdio_slave"]
     #[inline(always)]
@@ -86,31 +86,31 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_ECO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - redundant registers for sdio_slave"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_slave_rdn_ena(&mut self) -> SDIO_SLAVE_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC, 1> {
-        SDIO_SLAVE_RDN_ENA_W::new(self)
+    pub fn sdio_slave_rdn_ena(&mut self) -> SDIO_SLAVE_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC> {
+        SDIO_SLAVE_RDN_ENA_W::new(self, 1)
     }
     #[doc = "Bit 3 - redundant registers for sdio_slave"]
     #[inline(always)]
     #[must_use]
     pub fn sdio_slave_sdio_clk_rdn_ena(
         &mut self,
-    ) -> SDIO_SLAVE_SDIO_CLK_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC, 3> {
-        SDIO_SLAVE_SDIO_CLK_RDN_ENA_W::new(self)
+    ) -> SDIO_SLAVE_SDIO_CLK_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC> {
+        SDIO_SLAVE_SDIO_CLK_RDN_ENA_W::new(self, 3)
     }
     #[doc = "Bit 5 - redundant registers for sdio_slave"]
     #[inline(always)]
     #[must_use]
     pub fn sdio_slave_sdclk_pad_rdn_ena(
         &mut self,
-    ) -> SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC, 5> {
-        SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W::new(self)
+    ) -> SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC> {
+        SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

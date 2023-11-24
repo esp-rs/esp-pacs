@@ -5,31 +5,31 @@ pub type W = crate::W<SAR_MEAS_CTRL_SPEC>;
 #[doc = "Field `XPD_SAR_AMP_FSM` reader - "]
 pub type XPD_SAR_AMP_FSM_R = crate::FieldReader;
 #[doc = "Field `XPD_SAR_AMP_FSM` writer - "]
-pub type XPD_SAR_AMP_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type XPD_SAR_AMP_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `AMP_RST_FB_FSM` reader - "]
 pub type AMP_RST_FB_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_RST_FB_FSM` writer - "]
-pub type AMP_RST_FB_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type AMP_RST_FB_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `AMP_SHORT_REF_FSM` reader - "]
 pub type AMP_SHORT_REF_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_FSM` writer - "]
-pub type AMP_SHORT_REF_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type AMP_SHORT_REF_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM` reader - "]
 pub type AMP_SHORT_REF_GND_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM` writer - "]
-pub type AMP_SHORT_REF_GND_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type AMP_SHORT_REF_GND_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `XPD_SAR_FSM` reader - "]
 pub type XPD_SAR_FSM_R = crate::FieldReader;
 #[doc = "Field `XPD_SAR_FSM` writer - "]
-pub type XPD_SAR_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type XPD_SAR_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SAR_RSTB_FSM` reader - "]
 pub type SAR_RSTB_FSM_R = crate::FieldReader;
 #[doc = "Field `SAR_RSTB_FSM` writer - "]
-pub type SAR_RSTB_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SAR_RSTB_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SAR2_XPD_WAIT` reader - "]
 pub type SAR2_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_XPD_WAIT` writer - "]
-pub type SAR2_XPD_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SAR2_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -105,51 +105,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<SAR_MEAS_CTRL_SPEC, 0> {
-        XPD_SAR_AMP_FSM_W::new(self)
+    pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<SAR_MEAS_CTRL_SPEC> {
+        XPD_SAR_AMP_FSM_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     #[must_use]
-    pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<SAR_MEAS_CTRL_SPEC, 4> {
-        AMP_RST_FB_FSM_W::new(self)
+    pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<SAR_MEAS_CTRL_SPEC> {
+        AMP_RST_FB_FSM_W::new(self, 4)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     #[must_use]
-    pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<SAR_MEAS_CTRL_SPEC, 8> {
-        AMP_SHORT_REF_FSM_W::new(self)
+    pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<SAR_MEAS_CTRL_SPEC> {
+        AMP_SHORT_REF_FSM_W::new(self, 8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
     #[must_use]
-    pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<SAR_MEAS_CTRL_SPEC, 12> {
-        AMP_SHORT_REF_GND_FSM_W::new(self)
+    pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<SAR_MEAS_CTRL_SPEC> {
+        AMP_SHORT_REF_GND_FSM_W::new(self, 12)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<SAR_MEAS_CTRL_SPEC, 16> {
-        XPD_SAR_FSM_W::new(self)
+    pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<SAR_MEAS_CTRL_SPEC> {
+        XPD_SAR_FSM_W::new(self, 16)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_rstb_fsm(&mut self) -> SAR_RSTB_FSM_W<SAR_MEAS_CTRL_SPEC, 20> {
-        SAR_RSTB_FSM_W::new(self)
+    pub fn sar_rstb_fsm(&mut self) -> SAR_RSTB_FSM_W<SAR_MEAS_CTRL_SPEC> {
+        SAR_RSTB_FSM_W::new(self, 20)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
     #[must_use]
-    pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W<SAR_MEAS_CTRL_SPEC, 24> {
-        SAR2_XPD_WAIT_W::new(self)
+    pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W<SAR_MEAS_CTRL_SPEC> {
+        SAR2_XPD_WAIT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

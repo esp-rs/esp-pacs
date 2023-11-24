@@ -7,7 +7,7 @@ pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_PM_EN` reader - Set this bit to enable SPI0/1 transfer permission control function."]
 pub type SPI_MEM_PM_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PM_EN` writer - Set this bit to enable SPI0/1 transfer permission control function."]
-pub type SPI_MEM_PM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_PM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_PMS_LD` reader - 1: SPI1 write access error. 0: No write access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
 pub type SPI_MEM_PMS_LD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_ST` reader - 1: SPI1 read access error. 0: No read access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
@@ -82,15 +82,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_PMS_REJECT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 26 - Set this bit to enable SPI0/1 transfer permission control function."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_pm_en(&mut self) -> SPI_MEM_PM_EN_W<SPI_MEM_PMS_REJECT_SPEC, 26> {
-        SPI_MEM_PM_EN_W::new(self)
+    pub fn spi_mem_pm_en(&mut self) -> SPI_MEM_PM_EN_W<SPI_MEM_PMS_REJECT_SPEC> {
+        SPI_MEM_PM_EN_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

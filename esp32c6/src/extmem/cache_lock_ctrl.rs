@@ -5,11 +5,11 @@ pub type W = crate::W<CACHE_LOCK_CTRL_SPEC>;
 #[doc = "Field `CACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done"]
 pub type CACHE_LOCK_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_LOCK_ENA` writer - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done"]
-pub type CACHE_LOCK_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_LOCK_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done"]
 pub type CACHE_UNLOCK_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_UNLOCK_ENA` writer - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done"]
-pub type CACHE_UNLOCK_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_UNLOCK_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_LOCK_DONE` reader - The bit is used to indicate whether unlock/lock operation is finished or not. 0: not finished. 1: finished."]
 pub type CACHE_LOCK_DONE_R = crate::BitReader;
 #[doc = "Field `CACHE_LOCK_RGID` reader - The bit is used to set the gid of cache lock/unlock."]
@@ -62,21 +62,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_LOCK_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_lock_ena(&mut self) -> CACHE_LOCK_ENA_W<CACHE_LOCK_CTRL_SPEC, 0> {
-        CACHE_LOCK_ENA_W::new(self)
+    pub fn cache_lock_ena(&mut self) -> CACHE_LOCK_ENA_W<CACHE_LOCK_CTRL_SPEC> {
+        CACHE_LOCK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_unlock_ena(&mut self) -> CACHE_UNLOCK_ENA_W<CACHE_LOCK_CTRL_SPEC, 1> {
-        CACHE_UNLOCK_ENA_W::new(self)
+    pub fn cache_unlock_ena(&mut self) -> CACHE_UNLOCK_ENA_W<CACHE_LOCK_CTRL_SPEC> {
+        CACHE_UNLOCK_ENA_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

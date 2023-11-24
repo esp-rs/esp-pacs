@@ -5,7 +5,7 @@ pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `RMT_DATE` reader - This is the version register."]
 pub type RMT_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `RMT_DATE` writer - This is the version register."]
-pub type RMT_DATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 28, O, u32>;
+pub type RMT_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 impl R {
     #[doc = "Bits 0:27 - This is the version register."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - This is the version register."]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_date(&mut self) -> RMT_DATE_W<DATE_SPEC, 0> {
-        RMT_DATE_W::new(self)
+    pub fn rmt_date(&mut self) -> RMT_DATE_W<DATE_SPEC> {
+        RMT_DATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

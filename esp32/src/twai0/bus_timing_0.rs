@@ -5,11 +5,11 @@ pub type W = crate::W<BUS_TIMING_0_SPEC>;
 #[doc = "Field `BAUD_PRESC` reader - Baud Rate Prescaler, determines the frequency dividing ratio."]
 pub type BAUD_PRESC_R = crate::FieldReader;
 #[doc = "Field `BAUD_PRESC` writer - Baud Rate Prescaler, determines the frequency dividing ratio."]
-pub type BAUD_PRESC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type BAUD_PRESC_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SYNC_JUMP_WIDTH` reader - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
 pub type SYNC_JUMP_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SYNC_JUMP_WIDTH` writer - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
-pub type SYNC_JUMP_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SYNC_JUMP_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:5 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BUS_TIMING_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
     #[must_use]
-    pub fn baud_presc(&mut self) -> BAUD_PRESC_W<BUS_TIMING_0_SPEC, 0> {
-        BAUD_PRESC_W::new(self)
+    pub fn baud_presc(&mut self) -> BAUD_PRESC_W<BUS_TIMING_0_SPEC> {
+        BAUD_PRESC_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
     #[inline(always)]
     #[must_use]
-    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<BUS_TIMING_0_SPEC, 6> {
-        SYNC_JUMP_WIDTH_W::new(self)
+    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<BUS_TIMING_0_SPEC> {
+        SYNC_JUMP_WIDTH_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

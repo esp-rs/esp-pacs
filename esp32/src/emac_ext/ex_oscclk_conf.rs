@@ -5,23 +5,23 @@ pub type W = crate::W<EX_OSCCLK_CONF_SPEC>;
 #[doc = "Field `DIV_NUM_10M` reader - "]
 pub type DIV_NUM_10M_R = crate::FieldReader;
 #[doc = "Field `DIV_NUM_10M` writer - "]
-pub type DIV_NUM_10M_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type DIV_NUM_10M_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `H_DIV_NUM_10M` reader - "]
 pub type H_DIV_NUM_10M_R = crate::FieldReader;
 #[doc = "Field `H_DIV_NUM_10M` writer - "]
-pub type H_DIV_NUM_10M_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type H_DIV_NUM_10M_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `DIV_NUM_100M` reader - "]
 pub type DIV_NUM_100M_R = crate::FieldReader;
 #[doc = "Field `DIV_NUM_100M` writer - "]
-pub type DIV_NUM_100M_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type DIV_NUM_100M_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `H_DIV_NUM_100M` reader - "]
 pub type H_DIV_NUM_100M_R = crate::FieldReader;
 #[doc = "Field `H_DIV_NUM_100M` writer - "]
-pub type H_DIV_NUM_100M_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type H_DIV_NUM_100M_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `CLK_SEL` reader - "]
 pub type CLK_SEL_R = crate::BitReader;
 #[doc = "Field `CLK_SEL` writer - "]
-pub type CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EX_OSCCLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn div_num_10m(&mut self) -> DIV_NUM_10M_W<EX_OSCCLK_CONF_SPEC, 0> {
-        DIV_NUM_10M_W::new(self)
+    pub fn div_num_10m(&mut self) -> DIV_NUM_10M_W<EX_OSCCLK_CONF_SPEC> {
+        DIV_NUM_10M_W::new(self, 0)
     }
     #[doc = "Bits 6:11"]
     #[inline(always)]
     #[must_use]
-    pub fn h_div_num_10m(&mut self) -> H_DIV_NUM_10M_W<EX_OSCCLK_CONF_SPEC, 6> {
-        H_DIV_NUM_10M_W::new(self)
+    pub fn h_div_num_10m(&mut self) -> H_DIV_NUM_10M_W<EX_OSCCLK_CONF_SPEC> {
+        H_DIV_NUM_10M_W::new(self, 6)
     }
     #[doc = "Bits 12:17"]
     #[inline(always)]
     #[must_use]
-    pub fn div_num_100m(&mut self) -> DIV_NUM_100M_W<EX_OSCCLK_CONF_SPEC, 12> {
-        DIV_NUM_100M_W::new(self)
+    pub fn div_num_100m(&mut self) -> DIV_NUM_100M_W<EX_OSCCLK_CONF_SPEC> {
+        DIV_NUM_100M_W::new(self, 12)
     }
     #[doc = "Bits 18:23"]
     #[inline(always)]
     #[must_use]
-    pub fn h_div_num_100m(&mut self) -> H_DIV_NUM_100M_W<EX_OSCCLK_CONF_SPEC, 18> {
-        H_DIV_NUM_100M_W::new(self)
+    pub fn h_div_num_100m(&mut self) -> H_DIV_NUM_100M_W<EX_OSCCLK_CONF_SPEC> {
+        H_DIV_NUM_100M_W::new(self, 18)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sel(&mut self) -> CLK_SEL_W<EX_OSCCLK_CONF_SPEC, 24> {
-        CLK_SEL_W::new(self)
+    pub fn clk_sel(&mut self) -> CLK_SEL_W<EX_OSCCLK_CONF_SPEC> {
+        CLK_SEL_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

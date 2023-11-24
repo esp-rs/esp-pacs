@@ -5,11 +5,11 @@ pub type W = crate::W<HP_CK_CNTL_SPEC>;
 #[doc = "Field `MODIFY_ICG_CNTL_WAIT` reader - need_des"]
 pub type MODIFY_ICG_CNTL_WAIT_R = crate::FieldReader;
 #[doc = "Field `MODIFY_ICG_CNTL_WAIT` writer - need_des"]
-pub type MODIFY_ICG_CNTL_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MODIFY_ICG_CNTL_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SWITCH_ICG_CNTL_WAIT` reader - need_des"]
 pub type SWITCH_ICG_CNTL_WAIT_R = crate::FieldReader;
 #[doc = "Field `SWITCH_ICG_CNTL_WAIT` writer - need_des"]
-pub type SWITCH_ICG_CNTL_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SWITCH_ICG_CNTL_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_CK_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn modify_icg_cntl_wait(&mut self) -> MODIFY_ICG_CNTL_WAIT_W<HP_CK_CNTL_SPEC, 0> {
-        MODIFY_ICG_CNTL_WAIT_W::new(self)
+    pub fn modify_icg_cntl_wait(&mut self) -> MODIFY_ICG_CNTL_WAIT_W<HP_CK_CNTL_SPEC> {
+        MODIFY_ICG_CNTL_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn switch_icg_cntl_wait(&mut self) -> SWITCH_ICG_CNTL_WAIT_W<HP_CK_CNTL_SPEC, 8> {
-        SWITCH_ICG_CNTL_WAIT_W::new(self)
+    pub fn switch_icg_cntl_wait(&mut self) -> SWITCH_ICG_CNTL_WAIT_W<HP_CK_CNTL_SPEC> {
+        SWITCH_ICG_CNTL_WAIT_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

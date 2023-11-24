@@ -5,7 +5,7 @@ pub type W = crate::W<W6_SPEC>;
 #[doc = "Field `BUF6` reader - data buffer"]
 pub type BUF6_R = crate::FieldReader<u32>;
 #[doc = "Field `BUF6` writer - data buffer"]
-pub type BUF6_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type BUF6_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<W6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
     #[must_use]
-    pub fn buf6(&mut self) -> BUF6_W<W6_SPEC, 0> {
-        BUF6_W::new(self)
+    pub fn buf6(&mut self) -> BUF6_W<W6_SPEC> {
+        BUF6_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

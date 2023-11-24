@@ -5,17 +5,17 @@ pub type W = crate::W<TIME_UPDATE_SPEC>;
 #[doc = "Field `TIMER_SYS_STALL` reader - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
 pub type TIMER_SYS_STALL_R = crate::BitReader;
 #[doc = "Field `TIMER_SYS_STALL` writer - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
-pub type TIMER_SYS_STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER_SYS_STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER_XTL_OFF` reader - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
 pub type TIMER_XTL_OFF_R = crate::BitReader;
 #[doc = "Field `TIMER_XTL_OFF` writer - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
-pub type TIMER_XTL_OFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER_XTL_OFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER_SYS_RST` reader - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
 pub type TIMER_SYS_RST_R = crate::BitReader;
 #[doc = "Field `TIMER_SYS_RST` writer - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
-pub type TIMER_SYS_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER_SYS_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIME_UPDATE` writer - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
-pub type TIME_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIME_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
@@ -55,33 +55,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIME_UPDATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 27 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_sys_stall(&mut self) -> TIMER_SYS_STALL_W<TIME_UPDATE_SPEC, 27> {
-        TIMER_SYS_STALL_W::new(self)
+    pub fn timer_sys_stall(&mut self) -> TIMER_SYS_STALL_W<TIME_UPDATE_SPEC> {
+        TIMER_SYS_STALL_W::new(self, 27)
     }
     #[doc = "Bit 28 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_xtl_off(&mut self) -> TIMER_XTL_OFF_W<TIME_UPDATE_SPEC, 28> {
-        TIMER_XTL_OFF_W::new(self)
+    pub fn timer_xtl_off(&mut self) -> TIMER_XTL_OFF_W<TIME_UPDATE_SPEC> {
+        TIMER_XTL_OFF_W::new(self, 28)
     }
     #[doc = "Bit 29 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_sys_rst(&mut self) -> TIMER_SYS_RST_W<TIME_UPDATE_SPEC, 29> {
-        TIMER_SYS_RST_W::new(self)
+    pub fn timer_sys_rst(&mut self) -> TIMER_SYS_RST_W<TIME_UPDATE_SPEC> {
+        TIMER_SYS_RST_W::new(self, 29)
     }
     #[doc = "Bit 31 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
     #[must_use]
-    pub fn time_update(&mut self) -> TIME_UPDATE_W<TIME_UPDATE_SPEC, 31> {
-        TIME_UPDATE_W::new(self)
+    pub fn time_update(&mut self) -> TIME_UPDATE_W<TIME_UPDATE_SPEC> {
+        TIME_UPDATE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -7,43 +7,43 @@ pub type RECORD_PRO_PDEBUGLS0STAT_R = crate::FieldReader<u32>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` reader - "]
 pub type RECORD_PDEBUGLS0STAT_TYPE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` writer - "]
-pub type RECORD_PDEBUGLS0STAT_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RECORD_PDEBUGLS0STAT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_SZ` reader - "]
 pub type RECORD_PDEBUGLS0STAT_SZ_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_SZ` writer - "]
-pub type RECORD_PDEBUGLS0STAT_SZ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RECORD_PDEBUGLS0STAT_SZ_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DTLBM` reader - "]
 pub type RECORD_PDEBUGLS0STAT_DTLBM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DTLBM` writer - "]
-pub type RECORD_PDEBUGLS0STAT_DTLBM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGLS0STAT_DTLBM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCM` reader - "]
 pub type RECORD_PDEBUGLS0STAT_DCM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCM` writer - "]
-pub type RECORD_PDEBUGLS0STAT_DCM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGLS0STAT_DCM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCH` reader - "]
 pub type RECORD_PDEBUGLS0STAT_DCH_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCH` writer - "]
-pub type RECORD_PDEBUGLS0STAT_DCH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGLS0STAT_DCH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_UC` reader - "]
 pub type RECORD_PDEBUGLS0STAT_UC_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_UC` writer - "]
-pub type RECORD_PDEBUGLS0STAT_UC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGLS0STAT_UC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_WB` reader - "]
 pub type RECORD_PDEBUGLS0STAT_WB_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_WB` writer - "]
-pub type RECORD_PDEBUGLS0STAT_WB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGLS0STAT_WB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_COH` reader - "]
 pub type RECORD_PDEBUGLS0STAT_COH_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_COH` writer - "]
-pub type RECORD_PDEBUGLS0STAT_COH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGLS0STAT_COH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_STCOH` reader - "]
 pub type RECORD_PDEBUGLS0STAT_STCOH_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_STCOH` writer - "]
-pub type RECORD_PDEBUGLS0STAT_STCOH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RECORD_PDEBUGLS0STAT_STCOH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TGT` reader - "]
 pub type RECORD_PDEBUGLS0STAT_TGT_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TGT` writer - "]
-pub type RECORD_PDEBUGLS0STAT_TGT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RECORD_PDEBUGLS0STAT_TGT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -155,7 +155,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -164,80 +164,80 @@ impl W {
     #[must_use]
     pub fn record_pdebugls0stat_type(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_TYPE_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 0> {
-        RECORD_PDEBUGLS0STAT_TYPE_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_TYPE_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_TYPE_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_sz(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_SZ_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 4> {
-        RECORD_PDEBUGLS0STAT_SZ_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_SZ_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_SZ_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_dtlbm(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_DTLBM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 8> {
-        RECORD_PDEBUGLS0STAT_DTLBM_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_DTLBM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_DTLBM_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_dcm(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_DCM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 9> {
-        RECORD_PDEBUGLS0STAT_DCM_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_DCM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_DCM_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_dch(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_DCH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 10> {
-        RECORD_PDEBUGLS0STAT_DCH_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_DCH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_DCH_W::new(self, 10)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_uc(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_UC_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 12> {
-        RECORD_PDEBUGLS0STAT_UC_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_UC_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_UC_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_wb(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_WB_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 13> {
-        RECORD_PDEBUGLS0STAT_WB_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_WB_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_WB_W::new(self, 13)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_coh(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_COH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 16> {
-        RECORD_PDEBUGLS0STAT_COH_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_COH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_COH_W::new(self, 16)
     }
     #[doc = "Bits 17:18"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_stcoh(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_STCOH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 17> {
-        RECORD_PDEBUGLS0STAT_STCOH_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_STCOH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_STCOH_W::new(self, 17)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebugls0stat_tgt(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_TGT_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 20> {
-        RECORD_PDEBUGLS0STAT_TGT_W::new(self)
+    ) -> RECORD_PDEBUGLS0STAT_TGT_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+        RECORD_PDEBUGLS0STAT_TGT_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

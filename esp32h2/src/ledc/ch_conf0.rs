@@ -5,27 +5,27 @@ pub type W = crate::W<CH_CONF0_SPEC>;
 #[doc = "Field `TIMER_SEL` reader - This field is used to select one of timers for channel %s. 0: select timer0, 1: select timer1, 2: select timer2, 3: select timer3"]
 pub type TIMER_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER_SEL` writer - This field is used to select one of timers for channel %s. 0: select timer0, 1: select timer1, 2: select timer2, 3: select timer3"]
-pub type TIMER_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TIMER_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SIG_OUT_EN` reader - Set this bit to enable signal output on channel %s."]
 pub type SIG_OUT_EN_R = crate::BitReader;
 #[doc = "Field `SIG_OUT_EN` writer - Set this bit to enable signal output on channel %s."]
-pub type SIG_OUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SIG_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IDLE_LV` reader - This bit is used to control the output value when channel %s is inactive (when LEDC_SIG_OUT_EN_CH%s is 0)."]
 pub type IDLE_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_LV` writer - This bit is used to control the output value when channel %s is inactive (when LEDC_SIG_OUT_EN_CH%s is 0)."]
-pub type IDLE_LV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IDLE_LV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PARA_UP` writer - This bit is used to update LEDC_HPOINT_CH%s, LEDC_DUTY_START_CH%s, LEDC_SIG_OUT_EN_CH%s, LEDC_TIMER_SEL_CH%s, LEDC_DUTY_NUM_CH%s, LEDC_DUTY_CYCLE_CH%s, LEDC_DUTY_SCALE_CH%s, LEDC_DUTY_INC_CH%s, and LEDC_OVF_CNT_EN_CH%s fields for channel %s, and will be automatically cleared by hardware."]
-pub type PARA_UP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PARA_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_NUM` reader - This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times."]
 pub type OVF_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `OVF_NUM` writer - This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times."]
-pub type OVF_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type OVF_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `OVF_CNT_EN` reader - This bit is used to enable the ovf_cnt of channel %s."]
 pub type OVF_CNT_EN_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_EN` writer - This bit is used to enable the ovf_cnt of channel %s."]
-pub type OVF_CNT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_CNT_RESET` writer - Set this bit to reset the ovf_cnt of channel %s."]
-pub type OVF_CNT_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to select one of timers for channel %s. 0: select timer0, 1: select timer1, 2: select timer2, 3: select timer3"]
     #[inline(always)]
@@ -68,51 +68,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - This field is used to select one of timers for channel %s. 0: select timer0, 1: select timer1, 2: select timer2, 3: select timer3"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_sel(&mut self) -> TIMER_SEL_W<CH_CONF0_SPEC, 0> {
-        TIMER_SEL_W::new(self)
+    pub fn timer_sel(&mut self) -> TIMER_SEL_W<CH_CONF0_SPEC> {
+        TIMER_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set this bit to enable signal output on channel %s."]
     #[inline(always)]
     #[must_use]
-    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<CH_CONF0_SPEC, 2> {
-        SIG_OUT_EN_W::new(self)
+    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<CH_CONF0_SPEC> {
+        SIG_OUT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when channel %s is inactive (when LEDC_SIG_OUT_EN_CH%s is 0)."]
     #[inline(always)]
     #[must_use]
-    pub fn idle_lv(&mut self) -> IDLE_LV_W<CH_CONF0_SPEC, 3> {
-        IDLE_LV_W::new(self)
+    pub fn idle_lv(&mut self) -> IDLE_LV_W<CH_CONF0_SPEC> {
+        IDLE_LV_W::new(self, 3)
     }
     #[doc = "Bit 4 - This bit is used to update LEDC_HPOINT_CH%s, LEDC_DUTY_START_CH%s, LEDC_SIG_OUT_EN_CH%s, LEDC_TIMER_SEL_CH%s, LEDC_DUTY_NUM_CH%s, LEDC_DUTY_CYCLE_CH%s, LEDC_DUTY_SCALE_CH%s, LEDC_DUTY_INC_CH%s, and LEDC_OVF_CNT_EN_CH%s fields for channel %s, and will be automatically cleared by hardware."]
     #[inline(always)]
     #[must_use]
-    pub fn para_up(&mut self) -> PARA_UP_W<CH_CONF0_SPEC, 4> {
-        PARA_UP_W::new(self)
+    pub fn para_up(&mut self) -> PARA_UP_W<CH_CONF0_SPEC> {
+        PARA_UP_W::new(self, 4)
     }
     #[doc = "Bits 5:14 - This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_num(&mut self) -> OVF_NUM_W<CH_CONF0_SPEC, 5> {
-        OVF_NUM_W::new(self)
+    pub fn ovf_num(&mut self) -> OVF_NUM_W<CH_CONF0_SPEC> {
+        OVF_NUM_W::new(self, 5)
     }
     #[doc = "Bit 15 - This bit is used to enable the ovf_cnt of channel %s."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<CH_CONF0_SPEC, 15> {
-        OVF_CNT_EN_W::new(self)
+    pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<CH_CONF0_SPEC> {
+        OVF_CNT_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to reset the ovf_cnt of channel %s."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<CH_CONF0_SPEC, 16> {
-        OVF_CNT_RESET_W::new(self)
+    pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<CH_CONF0_SPEC> {
+        OVF_CNT_RESET_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

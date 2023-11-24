@@ -5,7 +5,7 @@ pub type W = crate::W<PGM_CHECK_VALUE1_SPEC>;
 #[doc = "Field `PGM_RS_DATA_1` reader - Configures the 1st 32-bit RS code to be programmed."]
 pub type PGM_RS_DATA_1_R = crate::FieldReader<u32>;
 #[doc = "Field `PGM_RS_DATA_1` writer - Configures the 1st 32-bit RS code to be programmed."]
-pub type PGM_RS_DATA_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type PGM_RS_DATA_1_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configures the 1st 32-bit RS code to be programmed."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PGM_CHECK_VALUE1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Configures the 1st 32-bit RS code to be programmed."]
     #[inline(always)]
     #[must_use]
-    pub fn pgm_rs_data_1(&mut self) -> PGM_RS_DATA_1_W<PGM_CHECK_VALUE1_SPEC, 0> {
-        PGM_RS_DATA_1_W::new(self)
+    pub fn pgm_rs_data_1(&mut self) -> PGM_RS_DATA_1_W<PGM_CHECK_VALUE1_SPEC> {
+        PGM_RS_DATA_1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

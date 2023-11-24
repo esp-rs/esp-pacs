@@ -5,7 +5,7 @@ pub type W = crate::W<REG_MAP3_SPEC>;
 #[doc = "Field `MAP3` reader - x"]
 pub type MAP3_R = crate::FieldReader<u32>;
 #[doc = "Field `MAP3` writer - x"]
-pub type MAP3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type MAP3_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REG_MAP3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
     #[must_use]
-    pub fn map3(&mut self) -> MAP3_W<REG_MAP3_SPEC, 0> {
-        MAP3_W::new(self)
+    pub fn map3(&mut self) -> MAP3_W<REG_MAP3_SPEC> {
+        MAP3_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

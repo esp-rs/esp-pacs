@@ -5,15 +5,15 @@ pub type W = crate::W<THRES1_CTRL_SPEC>;
 #[doc = "Field `THRES1_CHANNEL` reader - configure which channel thres0 monitor"]
 pub type THRES1_CHANNEL_R = crate::FieldReader;
 #[doc = "Field `THRES1_CHANNEL` writer - configure which channel thres0 monitor"]
-pub type THRES1_CHANNEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type THRES1_CHANNEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `THRES1_HIGH` reader - thres1 monitor high thres"]
 pub type THRES1_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `THRES1_HIGH` writer - thres1 monitor high thres"]
-pub type THRES1_HIGH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type THRES1_HIGH_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 #[doc = "Field `THRES1_LOW` reader - thres1 monitor low thres"]
 pub type THRES1_LOW_R = crate::FieldReader<u16>;
 #[doc = "Field `THRES1_LOW` writer - thres1 monitor low thres"]
-pub type THRES1_LOW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type THRES1_LOW_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 0:4 - configure which channel thres0 monitor"]
     #[inline(always)]
@@ -50,27 +50,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<THRES1_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - configure which channel thres0 monitor"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_channel(&mut self) -> THRES1_CHANNEL_W<THRES1_CTRL_SPEC, 0> {
-        THRES1_CHANNEL_W::new(self)
+    pub fn thres1_channel(&mut self) -> THRES1_CHANNEL_W<THRES1_CTRL_SPEC> {
+        THRES1_CHANNEL_W::new(self, 0)
     }
     #[doc = "Bits 5:17 - thres1 monitor high thres"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<THRES1_CTRL_SPEC, 5> {
-        THRES1_HIGH_W::new(self)
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<THRES1_CTRL_SPEC> {
+        THRES1_HIGH_W::new(self, 5)
     }
     #[doc = "Bits 18:30 - thres1 monitor low thres"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_low(&mut self) -> THRES1_LOW_W<THRES1_CTRL_SPEC, 18> {
-        THRES1_LOW_W::new(self)
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<THRES1_CTRL_SPEC> {
+        THRES1_LOW_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

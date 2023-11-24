@@ -5,7 +5,7 @@ pub type W = crate::W<SDIO_DATE_SPEC>;
 #[doc = "Field `SDIO_DATE` reader - sdio version date."]
 pub type SDIO_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `SDIO_DATE` writer - sdio version date."]
-pub type SDIO_DATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SDIO_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - sdio version date."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SDIO_DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - sdio version date."]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_date(&mut self) -> SDIO_DATE_W<SDIO_DATE_SPEC, 0> {
-        SDIO_DATE_W::new(self)
+    pub fn sdio_date(&mut self) -> SDIO_DATE_W<SDIO_DATE_SPEC> {
+        SDIO_DATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

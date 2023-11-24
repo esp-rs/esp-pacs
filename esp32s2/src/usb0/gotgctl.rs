@@ -7,53 +7,53 @@ pub type SESREQSCS_R = crate::BitReader;
 #[doc = "Field `SESREQ` reader - "]
 pub type SESREQ_R = crate::BitReader;
 #[doc = "Field `SESREQ` writer - "]
-pub type SESREQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SESREQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VBVALIDOVEN` reader - "]
 pub type VBVALIDOVEN_R = crate::BitReader;
 #[doc = "Field `VBVALIDOVEN` writer - "]
-pub type VBVALIDOVEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VBVALIDOVEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VBVALIDOVVAL` reader - "]
 pub type VBVALIDOVVAL_R = crate::BitReader;
 #[doc = "Field `VBVALIDOVVAL` writer - "]
-pub type VBVALIDOVVAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VBVALIDOVVAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AVALIDOVEN` reader - "]
 pub type AVALIDOVEN_R = crate::BitReader;
 #[doc = "Field `AVALIDOVEN` writer - "]
-pub type AVALIDOVEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AVALIDOVEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AVALIDOVVAL` reader - "]
 pub type AVALIDOVVAL_R = crate::BitReader;
 #[doc = "Field `AVALIDOVVAL` writer - "]
-pub type AVALIDOVVAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AVALIDOVVAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BVALIDOVEN` reader - "]
 pub type BVALIDOVEN_R = crate::BitReader;
 #[doc = "Field `BVALIDOVEN` writer - "]
-pub type BVALIDOVEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BVALIDOVEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BVALIDOVVAL` reader - "]
 pub type BVALIDOVVAL_R = crate::BitReader;
 #[doc = "Field `BVALIDOVVAL` writer - "]
-pub type BVALIDOVVAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BVALIDOVVAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSTNEGSCS` reader - "]
 pub type HSTNEGSCS_R = crate::BitReader;
 #[doc = "Field `HNPREQ` reader - "]
 pub type HNPREQ_R = crate::BitReader;
 #[doc = "Field `HNPREQ` writer - "]
-pub type HNPREQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNPREQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSTSETHNPEN` reader - "]
 pub type HSTSETHNPEN_R = crate::BitReader;
 #[doc = "Field `HSTSETHNPEN` writer - "]
-pub type HSTSETHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSTSETHNPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEVHNPEN` reader - "]
 pub type DEVHNPEN_R = crate::BitReader;
 #[doc = "Field `DEVHNPEN` writer - "]
-pub type DEVHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEVHNPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EHEN` reader - "]
 pub type EHEN_R = crate::BitReader;
 #[doc = "Field `EHEN` writer - "]
-pub type EHEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EHEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBNCEFLTRBYPASS` reader - "]
 pub type DBNCEFLTRBYPASS_R = crate::BitReader;
 #[doc = "Field `DBNCEFLTRBYPASS` writer - "]
-pub type DBNCEFLTRBYPASS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBNCEFLTRBYPASS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONIDSTS` reader - "]
 pub type CONIDSTS_R = crate::BitReader;
 #[doc = "Field `DBNCTIME` reader - "]
@@ -65,7 +65,7 @@ pub type BSESVLD_R = crate::BitReader;
 #[doc = "Field `OTGVER` reader - "]
 pub type OTGVER_R = crate::BitReader;
 #[doc = "Field `OTGVER` writer - "]
-pub type OTGVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTGVER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CURMOD` reader - "]
 pub type CURMOD_R = crate::BitReader;
 impl R {
@@ -206,87 +206,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GOTGCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sesreq(&mut self) -> SESREQ_W<GOTGCTL_SPEC, 1> {
-        SESREQ_W::new(self)
+    pub fn sesreq(&mut self) -> SESREQ_W<GOTGCTL_SPEC> {
+        SESREQ_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn vbvalidoven(&mut self) -> VBVALIDOVEN_W<GOTGCTL_SPEC, 2> {
-        VBVALIDOVEN_W::new(self)
+    pub fn vbvalidoven(&mut self) -> VBVALIDOVEN_W<GOTGCTL_SPEC> {
+        VBVALIDOVEN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn vbvalidovval(&mut self) -> VBVALIDOVVAL_W<GOTGCTL_SPEC, 3> {
-        VBVALIDOVVAL_W::new(self)
+    pub fn vbvalidovval(&mut self) -> VBVALIDOVVAL_W<GOTGCTL_SPEC> {
+        VBVALIDOVVAL_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn avalidoven(&mut self) -> AVALIDOVEN_W<GOTGCTL_SPEC, 4> {
-        AVALIDOVEN_W::new(self)
+    pub fn avalidoven(&mut self) -> AVALIDOVEN_W<GOTGCTL_SPEC> {
+        AVALIDOVEN_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn avalidovval(&mut self) -> AVALIDOVVAL_W<GOTGCTL_SPEC, 5> {
-        AVALIDOVVAL_W::new(self)
+    pub fn avalidovval(&mut self) -> AVALIDOVVAL_W<GOTGCTL_SPEC> {
+        AVALIDOVVAL_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn bvalidoven(&mut self) -> BVALIDOVEN_W<GOTGCTL_SPEC, 6> {
-        BVALIDOVEN_W::new(self)
+    pub fn bvalidoven(&mut self) -> BVALIDOVEN_W<GOTGCTL_SPEC> {
+        BVALIDOVEN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn bvalidovval(&mut self) -> BVALIDOVVAL_W<GOTGCTL_SPEC, 7> {
-        BVALIDOVVAL_W::new(self)
+    pub fn bvalidovval(&mut self) -> BVALIDOVVAL_W<GOTGCTL_SPEC> {
+        BVALIDOVVAL_W::new(self, 7)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn hnpreq(&mut self) -> HNPREQ_W<GOTGCTL_SPEC, 9> {
-        HNPREQ_W::new(self)
+    pub fn hnpreq(&mut self) -> HNPREQ_W<GOTGCTL_SPEC> {
+        HNPREQ_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn hstsethnpen(&mut self) -> HSTSETHNPEN_W<GOTGCTL_SPEC, 10> {
-        HSTSETHNPEN_W::new(self)
+    pub fn hstsethnpen(&mut self) -> HSTSETHNPEN_W<GOTGCTL_SPEC> {
+        HSTSETHNPEN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn devhnpen(&mut self) -> DEVHNPEN_W<GOTGCTL_SPEC, 11> {
-        DEVHNPEN_W::new(self)
+    pub fn devhnpen(&mut self) -> DEVHNPEN_W<GOTGCTL_SPEC> {
+        DEVHNPEN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn ehen(&mut self) -> EHEN_W<GOTGCTL_SPEC, 12> {
-        EHEN_W::new(self)
+    pub fn ehen(&mut self) -> EHEN_W<GOTGCTL_SPEC> {
+        EHEN_W::new(self, 12)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn dbncefltrbypass(&mut self) -> DBNCEFLTRBYPASS_W<GOTGCTL_SPEC, 15> {
-        DBNCEFLTRBYPASS_W::new(self)
+    pub fn dbncefltrbypass(&mut self) -> DBNCEFLTRBYPASS_W<GOTGCTL_SPEC> {
+        DBNCEFLTRBYPASS_W::new(self, 15)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn otgver(&mut self) -> OTGVER_W<GOTGCTL_SPEC, 20> {
-        OTGVER_W::new(self)
+    pub fn otgver(&mut self) -> OTGVER_W<GOTGCTL_SPEC> {
+        OTGVER_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

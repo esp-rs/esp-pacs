@@ -5,39 +5,39 @@ pub type W = crate::W<DIN_MODE_SPEC>;
 #[doc = "Field `DIN0_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN0_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN0_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN0_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN0_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN1_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN1_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN1_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN1_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN1_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN2_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN2_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN2_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN2_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN2_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN3_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN3_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN3_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN3_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN3_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN4_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN4_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN4_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN4_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN4_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN5_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN5_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN5_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN5_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN5_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN6_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN6_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN6_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN6_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN6_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN7_MODE` reader - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
 pub type DIN7_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN7_MODE` writer - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub type DIN7_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN7_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TIMING_HCLK_ACTIVE` reader - 1:enable hclk in SPI input timing module. 0: disable it. Can be configured in CONF state."]
 pub type TIMING_HCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `TIMING_HCLK_ACTIVE` writer - 1:enable hclk in SPI input timing module. 0: disable it. Can be configured in CONF state."]
-pub type TIMING_HCLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMING_HCLK_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
@@ -107,63 +107,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIN_MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din0_mode(&mut self) -> DIN0_MODE_W<DIN_MODE_SPEC, 0> {
-        DIN0_MODE_W::new(self)
+    pub fn din0_mode(&mut self) -> DIN0_MODE_W<DIN_MODE_SPEC> {
+        DIN0_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din1_mode(&mut self) -> DIN1_MODE_W<DIN_MODE_SPEC, 2> {
-        DIN1_MODE_W::new(self)
+    pub fn din1_mode(&mut self) -> DIN1_MODE_W<DIN_MODE_SPEC> {
+        DIN1_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din2_mode(&mut self) -> DIN2_MODE_W<DIN_MODE_SPEC, 4> {
-        DIN2_MODE_W::new(self)
+    pub fn din2_mode(&mut self) -> DIN2_MODE_W<DIN_MODE_SPEC> {
+        DIN2_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din3_mode(&mut self) -> DIN3_MODE_W<DIN_MODE_SPEC, 6> {
-        DIN3_MODE_W::new(self)
+    pub fn din3_mode(&mut self) -> DIN3_MODE_W<DIN_MODE_SPEC> {
+        DIN3_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din4_mode(&mut self) -> DIN4_MODE_W<DIN_MODE_SPEC, 8> {
-        DIN4_MODE_W::new(self)
+    pub fn din4_mode(&mut self) -> DIN4_MODE_W<DIN_MODE_SPEC> {
+        DIN4_MODE_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din5_mode(&mut self) -> DIN5_MODE_W<DIN_MODE_SPEC, 10> {
-        DIN5_MODE_W::new(self)
+    pub fn din5_mode(&mut self) -> DIN5_MODE_W<DIN_MODE_SPEC> {
+        DIN5_MODE_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din6_mode(&mut self) -> DIN6_MODE_W<DIN_MODE_SPEC, 12> {
-        DIN6_MODE_W::new(self)
+    pub fn din6_mode(&mut self) -> DIN6_MODE_W<DIN_MODE_SPEC> {
+        DIN6_MODE_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn din7_mode(&mut self) -> DIN7_MODE_W<DIN_MODE_SPEC, 14> {
-        DIN7_MODE_W::new(self)
+    pub fn din7_mode(&mut self) -> DIN7_MODE_W<DIN_MODE_SPEC> {
+        DIN7_MODE_W::new(self, 14)
     }
     #[doc = "Bit 16 - 1:enable hclk in SPI input timing module. 0: disable it. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn timing_hclk_active(&mut self) -> TIMING_HCLK_ACTIVE_W<DIN_MODE_SPEC, 16> {
-        TIMING_HCLK_ACTIVE_W::new(self)
+    pub fn timing_hclk_active(&mut self) -> TIMING_HCLK_ACTIVE_W<DIN_MODE_SPEC> {
+        TIMING_HCLK_ACTIVE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

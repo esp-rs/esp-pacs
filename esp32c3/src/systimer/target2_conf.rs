@@ -5,15 +5,15 @@ pub type W = crate::W<TARGET2_CONF_SPEC>;
 #[doc = "Field `TARGET2_PERIOD` reader - target2 period"]
 pub type TARGET2_PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `TARGET2_PERIOD` writer - target2 period"]
-pub type TARGET2_PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 26, O, u32>;
+pub type TARGET2_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 26, u32>;
 #[doc = "Field `TARGET2_PERIOD_MODE` reader - Set target2 to period mode"]
 pub type TARGET2_PERIOD_MODE_R = crate::BitReader;
 #[doc = "Field `TARGET2_PERIOD_MODE` writer - Set target2 to period mode"]
-pub type TARGET2_PERIOD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET2_PERIOD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TARGET2_TIMER_UNIT_SEL` reader - select which unit to compare"]
 pub type TARGET2_TIMER_UNIT_SEL_R = crate::BitReader;
 #[doc = "Field `TARGET2_TIMER_UNIT_SEL` writer - select which unit to compare"]
-pub type TARGET2_TIMER_UNIT_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET2_TIMER_UNIT_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:25 - target2 period"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TARGET2_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:25 - target2 period"]
     #[inline(always)]
     #[must_use]
-    pub fn target2_period(&mut self) -> TARGET2_PERIOD_W<TARGET2_CONF_SPEC, 0> {
-        TARGET2_PERIOD_W::new(self)
+    pub fn target2_period(&mut self) -> TARGET2_PERIOD_W<TARGET2_CONF_SPEC> {
+        TARGET2_PERIOD_W::new(self, 0)
     }
     #[doc = "Bit 30 - Set target2 to period mode"]
     #[inline(always)]
     #[must_use]
-    pub fn target2_period_mode(&mut self) -> TARGET2_PERIOD_MODE_W<TARGET2_CONF_SPEC, 30> {
-        TARGET2_PERIOD_MODE_W::new(self)
+    pub fn target2_period_mode(&mut self) -> TARGET2_PERIOD_MODE_W<TARGET2_CONF_SPEC> {
+        TARGET2_PERIOD_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - select which unit to compare"]
     #[inline(always)]
     #[must_use]
-    pub fn target2_timer_unit_sel(&mut self) -> TARGET2_TIMER_UNIT_SEL_W<TARGET2_CONF_SPEC, 31> {
-        TARGET2_TIMER_UNIT_SEL_W::new(self)
+    pub fn target2_timer_unit_sel(&mut self) -> TARGET2_TIMER_UNIT_SEL_W<TARGET2_CONF_SPEC> {
+        TARGET2_TIMER_UNIT_SEL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

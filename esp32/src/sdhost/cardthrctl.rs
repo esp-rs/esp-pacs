@@ -5,19 +5,19 @@ pub type W = crate::W<CARDTHRCTL_SPEC>;
 #[doc = "Field `CARDRDTHREN` reader - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
 pub type CARDRDTHREN_R = crate::BitReader;
 #[doc = "Field `CARDRDTHREN` writer - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
-pub type CARDRDTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARDRDTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARDCLRINTEN` reader - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
 pub type CARDCLRINTEN_R = crate::BitReader;
 #[doc = "Field `CARDCLRINTEN` writer - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
-pub type CARDCLRINTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARDCLRINTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARDWRTHREN` reader - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
 pub type CARDWRTHREN_R = crate::BitReader;
 #[doc = "Field `CARDWRTHREN` writer - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
-pub type CARDWRTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARDWRTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARDTHRESHOLD` reader - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
 pub type CARDTHRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `CARDTHRESHOLD` writer - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
-pub type CARDTHRESHOLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CARDTHRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0 - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CARDTHRCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cardrdthren(&mut self) -> CARDRDTHREN_W<CARDTHRCTL_SPEC, 0> {
-        CARDRDTHREN_W::new(self)
+    pub fn cardrdthren(&mut self) -> CARDRDTHREN_W<CARDTHRCTL_SPEC> {
+        CARDRDTHREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cardclrinten(&mut self) -> CARDCLRINTEN_W<CARDTHRCTL_SPEC, 1> {
-        CARDCLRINTEN_W::new(self)
+    pub fn cardclrinten(&mut self) -> CARDCLRINTEN_W<CARDTHRCTL_SPEC> {
+        CARDCLRINTEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cardwrthren(&mut self) -> CARDWRTHREN_W<CARDTHRCTL_SPEC, 2> {
-        CARDWRTHREN_W::new(self)
+    pub fn cardwrthren(&mut self) -> CARDWRTHREN_W<CARDTHRCTL_SPEC> {
+        CARDWRTHREN_W::new(self, 2)
     }
     #[doc = "Bits 16:31 - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn cardthreshold(&mut self) -> CARDTHRESHOLD_W<CARDTHRCTL_SPEC, 16> {
-        CARDTHRESHOLD_W::new(self)
+    pub fn cardthreshold(&mut self) -> CARDTHRESHOLD_W<CARDTHRCTL_SPEC> {
+        CARDTHRESHOLD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

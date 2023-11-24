@@ -1,7 +1,7 @@
 #[doc = "Register `CONTINUE` writer"]
 pub type W = crate::W<CONTINUE_SPEC>;
 #[doc = "Field `CONTINUE_OP` writer - Write 1 to continue Typical SHA calculation."]
-pub type CONTINUE_OP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONTINUE_OP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONTINUE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Write 1 to continue Typical SHA calculation."]
     #[inline(always)]
     #[must_use]
-    pub fn continue_op(&mut self) -> CONTINUE_OP_W<CONTINUE_SPEC, 0> {
-        CONTINUE_OP_W::new(self)
+    pub fn continue_op(&mut self) -> CONTINUE_OP_W<CONTINUE_SPEC> {
+        CONTINUE_OP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

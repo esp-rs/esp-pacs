@@ -5,19 +5,19 @@ pub type W = crate::W<I2C_SCL_SP_CONF_SPEC>;
 #[doc = "Field `I2C_SCL_RST_SLV_EN` reader - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to reg_scl_rst_slv_num\\[4:0\\]."]
 pub type I2C_SCL_RST_SLV_EN_R = crate::BitReader;
 #[doc = "Field `I2C_SCL_RST_SLV_EN` writer - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to reg_scl_rst_slv_num\\[4:0\\]."]
-pub type I2C_SCL_RST_SLV_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SCL_RST_SLV_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_SCL_RST_SLV_NUM` reader - Configure the pulses of SCL generated in I2C master mode. Valid when reg_scl_rst_slv_en is 1."]
 pub type I2C_SCL_RST_SLV_NUM_R = crate::FieldReader;
 #[doc = "Field `I2C_SCL_RST_SLV_NUM` writer - Configure the pulses of SCL generated in I2C master mode. Valid when reg_scl_rst_slv_en is 1."]
-pub type I2C_SCL_RST_SLV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type I2C_SCL_RST_SLV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `I2C_SCL_PD_EN` reader - The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set reg_scl_force_out and reg_scl_pd_en to 1 to stretch SCL low."]
 pub type I2C_SCL_PD_EN_R = crate::BitReader;
 #[doc = "Field `I2C_SCL_PD_EN` writer - The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set reg_scl_force_out and reg_scl_pd_en to 1 to stretch SCL low."]
-pub type I2C_SCL_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SCL_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_SDA_PD_EN` reader - The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set reg_sda_force_out and reg_sda_pd_en to 1 to stretch SDA low."]
 pub type I2C_SDA_PD_EN_R = crate::BitReader;
 #[doc = "Field `I2C_SDA_PD_EN` writer - The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set reg_sda_force_out and reg_sda_pd_en to 1 to stretch SDA low."]
-pub type I2C_SDA_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_SDA_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to reg_scl_rst_slv_num\\[4:0\\]."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2C_SCL_SP_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to reg_scl_rst_slv_num\\[4:0\\]."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_scl_rst_slv_en(&mut self) -> I2C_SCL_RST_SLV_EN_W<I2C_SCL_SP_CONF_SPEC, 0> {
-        I2C_SCL_RST_SLV_EN_W::new(self)
+    pub fn i2c_scl_rst_slv_en(&mut self) -> I2C_SCL_RST_SLV_EN_W<I2C_SCL_SP_CONF_SPEC> {
+        I2C_SCL_RST_SLV_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:5 - Configure the pulses of SCL generated in I2C master mode. Valid when reg_scl_rst_slv_en is 1."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_scl_rst_slv_num(&mut self) -> I2C_SCL_RST_SLV_NUM_W<I2C_SCL_SP_CONF_SPEC, 1> {
-        I2C_SCL_RST_SLV_NUM_W::new(self)
+    pub fn i2c_scl_rst_slv_num(&mut self) -> I2C_SCL_RST_SLV_NUM_W<I2C_SCL_SP_CONF_SPEC> {
+        I2C_SCL_RST_SLV_NUM_W::new(self, 1)
     }
     #[doc = "Bit 6 - The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set reg_scl_force_out and reg_scl_pd_en to 1 to stretch SCL low."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_scl_pd_en(&mut self) -> I2C_SCL_PD_EN_W<I2C_SCL_SP_CONF_SPEC, 6> {
-        I2C_SCL_PD_EN_W::new(self)
+    pub fn i2c_scl_pd_en(&mut self) -> I2C_SCL_PD_EN_W<I2C_SCL_SP_CONF_SPEC> {
+        I2C_SCL_PD_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set reg_sda_force_out and reg_sda_pd_en to 1 to stretch SDA low."]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_sda_pd_en(&mut self) -> I2C_SDA_PD_EN_W<I2C_SCL_SP_CONF_SPEC, 7> {
-        I2C_SDA_PD_EN_W::new(self)
+    pub fn i2c_sda_pd_en(&mut self) -> I2C_SDA_PD_EN_W<I2C_SCL_SP_CONF_SPEC> {
+        I2C_SDA_PD_EN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

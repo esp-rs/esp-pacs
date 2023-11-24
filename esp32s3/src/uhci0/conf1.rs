@@ -5,35 +5,35 @@ pub type W = crate::W<CONF1_SPEC>;
 #[doc = "Field `CHECK_SUM_EN` reader - This is the enable bit to check header checksum when UHCI receives a data packet."]
 pub type CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `CHECK_SUM_EN` writer - This is the enable bit to check header checksum when UHCI receives a data packet."]
-pub type CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHECK_SUM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHECK_SEQ_EN` reader - This is the enable bit to check sequence number when UHCI receives a data packet."]
 pub type CHECK_SEQ_EN_R = crate::BitReader;
 #[doc = "Field `CHECK_SEQ_EN` writer - This is the enable bit to check sequence number when UHCI receives a data packet."]
-pub type CHECK_SEQ_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHECK_SEQ_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRC_DISABLE` reader - Set this bit to support CRC calculation. Data Integrity Check Present bit in UHCI packet frame should be 1."]
 pub type CRC_DISABLE_R = crate::BitReader;
 #[doc = "Field `CRC_DISABLE` writer - Set this bit to support CRC calculation. Data Integrity Check Present bit in UHCI packet frame should be 1."]
-pub type CRC_DISABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRC_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAVE_HEAD` reader - Set this bit to save the packet header when HCI receives a data packet."]
 pub type SAVE_HEAD_R = crate::BitReader;
 #[doc = "Field `SAVE_HEAD` writer - Set this bit to save the packet header when HCI receives a data packet."]
-pub type SAVE_HEAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAVE_HEAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_CHECK_SUM_RE` reader - Set this bit to encode the data packet with a checksum."]
 pub type TX_CHECK_SUM_RE_R = crate::BitReader;
 #[doc = "Field `TX_CHECK_SUM_RE` writer - Set this bit to encode the data packet with a checksum."]
-pub type TX_CHECK_SUM_RE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_CHECK_SUM_RE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_ACK_NUM_RE` reader - Set this bit to encode the data packet with an acknowledgment when a reliable packet is to be transmit."]
 pub type TX_ACK_NUM_RE_R = crate::BitReader;
 #[doc = "Field `TX_ACK_NUM_RE` writer - Set this bit to encode the data packet with an acknowledgment when a reliable packet is to be transmit."]
-pub type TX_ACK_NUM_RE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_ACK_NUM_RE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WAIT_SW_START` reader - The uhci-encoder will jump to ST_SW_WAIT status if this register is set to 1."]
 pub type WAIT_SW_START_R = crate::BitReader;
 #[doc = "Field `WAIT_SW_START` writer - The uhci-encoder will jump to ST_SW_WAIT status if this register is set to 1."]
-pub type WAIT_SW_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAIT_SW_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SW_START` reader - If current UHCI_ENCODE_STATE is ST_SW_WAIT, the UHCI will start to send data packet out when this bit is set to 1."]
 pub type SW_START_R = crate::BitReader;
 #[doc = "Field `SW_START` writer - If current UHCI_ENCODE_STATE is ST_SW_WAIT, the UHCI will start to send data packet out when this bit is set to 1."]
-pub type SW_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This is the enable bit to check header checksum when UHCI receives a data packet."]
     #[inline(always)]
@@ -109,57 +109,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - This is the enable bit to check header checksum when UHCI receives a data packet."]
     #[inline(always)]
     #[must_use]
-    pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<CONF1_SPEC, 0> {
-        CHECK_SUM_EN_W::new(self)
+    pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<CONF1_SPEC> {
+        CHECK_SUM_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the enable bit to check sequence number when UHCI receives a data packet."]
     #[inline(always)]
     #[must_use]
-    pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<CONF1_SPEC, 1> {
-        CHECK_SEQ_EN_W::new(self)
+    pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<CONF1_SPEC> {
+        CHECK_SEQ_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to support CRC calculation. Data Integrity Check Present bit in UHCI packet frame should be 1."]
     #[inline(always)]
     #[must_use]
-    pub fn crc_disable(&mut self) -> CRC_DISABLE_W<CONF1_SPEC, 2> {
-        CRC_DISABLE_W::new(self)
+    pub fn crc_disable(&mut self) -> CRC_DISABLE_W<CONF1_SPEC> {
+        CRC_DISABLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to save the packet header when HCI receives a data packet."]
     #[inline(always)]
     #[must_use]
-    pub fn save_head(&mut self) -> SAVE_HEAD_W<CONF1_SPEC, 3> {
-        SAVE_HEAD_W::new(self)
+    pub fn save_head(&mut self) -> SAVE_HEAD_W<CONF1_SPEC> {
+        SAVE_HEAD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to encode the data packet with a checksum."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<CONF1_SPEC, 4> {
-        TX_CHECK_SUM_RE_W::new(self)
+    pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<CONF1_SPEC> {
+        TX_CHECK_SUM_RE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to encode the data packet with an acknowledgment when a reliable packet is to be transmit."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<CONF1_SPEC, 5> {
-        TX_ACK_NUM_RE_W::new(self)
+    pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<CONF1_SPEC> {
+        TX_ACK_NUM_RE_W::new(self, 5)
     }
     #[doc = "Bit 7 - The uhci-encoder will jump to ST_SW_WAIT status if this register is set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<CONF1_SPEC, 7> {
-        WAIT_SW_START_W::new(self)
+    pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<CONF1_SPEC> {
+        WAIT_SW_START_W::new(self, 7)
     }
     #[doc = "Bit 8 - If current UHCI_ENCODE_STATE is ST_SW_WAIT, the UHCI will start to send data packet out when this bit is set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_start(&mut self) -> SW_START_W<CONF1_SPEC, 8> {
-        SW_START_W::new(self)
+    pub fn sw_start(&mut self) -> SW_START_W<CONF1_SPEC> {
+        SW_START_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<CVSD_CONF2_SPEC>;
 #[doc = "Field `CVSD_K` reader - "]
 pub type CVSD_K_R = crate::FieldReader;
 #[doc = "Field `CVSD_K` writer - "]
-pub type CVSD_K_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CVSD_K_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CVSD_J` reader - "]
 pub type CVSD_J_R = crate::FieldReader;
 #[doc = "Field `CVSD_J` writer - "]
-pub type CVSD_J_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CVSD_J_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CVSD_BETA` reader - "]
 pub type CVSD_BETA_R = crate::FieldReader<u16>;
 #[doc = "Field `CVSD_BETA` writer - "]
-pub type CVSD_BETA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type CVSD_BETA_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `CVSD_H` reader - "]
 pub type CVSD_H_R = crate::FieldReader;
 #[doc = "Field `CVSD_H` writer - "]
-pub type CVSD_H_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CVSD_H_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -54,33 +54,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CVSD_CONF2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn cvsd_k(&mut self) -> CVSD_K_W<CVSD_CONF2_SPEC, 0> {
-        CVSD_K_W::new(self)
+    pub fn cvsd_k(&mut self) -> CVSD_K_W<CVSD_CONF2_SPEC> {
+        CVSD_K_W::new(self, 0)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
     #[must_use]
-    pub fn cvsd_j(&mut self) -> CVSD_J_W<CVSD_CONF2_SPEC, 3> {
-        CVSD_J_W::new(self)
+    pub fn cvsd_j(&mut self) -> CVSD_J_W<CVSD_CONF2_SPEC> {
+        CVSD_J_W::new(self, 3)
     }
     #[doc = "Bits 6:15"]
     #[inline(always)]
     #[must_use]
-    pub fn cvsd_beta(&mut self) -> CVSD_BETA_W<CVSD_CONF2_SPEC, 6> {
-        CVSD_BETA_W::new(self)
+    pub fn cvsd_beta(&mut self) -> CVSD_BETA_W<CVSD_CONF2_SPEC> {
+        CVSD_BETA_W::new(self, 6)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
     #[must_use]
-    pub fn cvsd_h(&mut self) -> CVSD_H_W<CVSD_CONF2_SPEC, 16> {
-        CVSD_H_W::new(self)
+    pub fn cvsd_h(&mut self) -> CVSD_H_W<CVSD_CONF2_SPEC> {
+        CVSD_H_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

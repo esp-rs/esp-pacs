@@ -5,15 +5,15 @@ pub type W = crate::W<CMD_SPEC>;
 #[doc = "Field `READ_CMD` reader - Set this bit to send read command."]
 pub type READ_CMD_R = crate::BitReader;
 #[doc = "Field `READ_CMD` writer - Set this bit to send read command."]
-pub type READ_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READ_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PGM_CMD` reader - Set this bit to send programming command."]
 pub type PGM_CMD_R = crate::BitReader;
 #[doc = "Field `PGM_CMD` writer - Set this bit to send programming command."]
-pub type PGM_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PGM_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLK_NUM` reader - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
 pub type BLK_NUM_R = crate::FieldReader;
 #[doc = "Field `BLK_NUM` writer - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
-pub type BLK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BLK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Set this bit to send read command."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to send read command."]
     #[inline(always)]
     #[must_use]
-    pub fn read_cmd(&mut self) -> READ_CMD_W<CMD_SPEC, 0> {
-        READ_CMD_W::new(self)
+    pub fn read_cmd(&mut self) -> READ_CMD_W<CMD_SPEC> {
+        READ_CMD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to send programming command."]
     #[inline(always)]
     #[must_use]
-    pub fn pgm_cmd(&mut self) -> PGM_CMD_W<CMD_SPEC, 1> {
-        PGM_CMD_W::new(self)
+    pub fn pgm_cmd(&mut self) -> PGM_CMD_W<CMD_SPEC> {
+        PGM_CMD_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
     #[inline(always)]
     #[must_use]
-    pub fn blk_num(&mut self) -> BLK_NUM_W<CMD_SPEC, 2> {
-        BLK_NUM_W::new(self)
+    pub fn blk_num(&mut self) -> BLK_NUM_W<CMD_SPEC> {
+        BLK_NUM_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

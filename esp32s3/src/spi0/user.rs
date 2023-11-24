@@ -5,23 +5,23 @@ pub type W = crate::W<USER_SPEC>;
 #[doc = "Field `CS_HOLD` reader - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
 pub type CS_HOLD_R = crate::BitReader;
 #[doc = "Field `CS_HOLD` writer - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
-pub type CS_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS_SETUP` reader - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
 pub type CS_SETUP_R = crate::BitReader;
 #[doc = "Field `CS_SETUP` writer - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
-pub type CS_SETUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CS_SETUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CK_OUT_EDGE` reader - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
 pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
-pub type CK_OUT_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CK_OUT_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
 pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_DUMMY_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the DUMMY phase of an SPI transfer."]
 pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the DUMMY phase of an SPI transfer."]
-pub type USR_DUMMY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_DUMMY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 6 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 6 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_hold(&mut self) -> CS_HOLD_W<USER_SPEC, 6> {
-        CS_HOLD_W::new(self)
+    pub fn cs_hold(&mut self) -> CS_HOLD_W<USER_SPEC> {
+        CS_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
     #[must_use]
-    pub fn cs_setup(&mut self) -> CS_SETUP_W<USER_SPEC, 7> {
-        CS_SETUP_W::new(self)
+    pub fn cs_setup(&mut self) -> CS_SETUP_W<USER_SPEC> {
+        CS_SETUP_W::new(self, 7)
     }
     #[doc = "Bit 9 - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
     #[inline(always)]
     #[must_use]
-    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC, 9> {
-        CK_OUT_EDGE_W::new(self)
+    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC> {
+        CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 26 - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC, 26> {
-        USR_DUMMY_IDLE_W::new(self)
+    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC> {
+        USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 29 - This bit enable the DUMMY phase of an SPI transfer."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC, 29> {
-        USR_DUMMY_W::new(self)
+    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC> {
+        USR_DUMMY_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

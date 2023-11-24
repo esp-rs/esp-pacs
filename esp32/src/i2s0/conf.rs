@@ -5,79 +5,79 @@ pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `TX_RESET` reader - "]
 pub type TX_RESET_R = crate::BitReader;
 #[doc = "Field `TX_RESET` writer - "]
-pub type TX_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_RESET` reader - "]
 pub type RX_RESET_R = crate::BitReader;
 #[doc = "Field `RX_RESET` writer - "]
-pub type RX_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_FIFO_RESET` reader - "]
 pub type TX_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_RESET` writer - "]
-pub type TX_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FIFO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_RESET` reader - "]
 pub type RX_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_RESET` writer - "]
-pub type RX_FIFO_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FIFO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_START` reader - "]
 pub type TX_START_R = crate::BitReader;
 #[doc = "Field `TX_START` writer - "]
-pub type TX_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_START` reader - "]
 pub type RX_START_R = crate::BitReader;
 #[doc = "Field `RX_START` writer - "]
-pub type RX_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_SLAVE_MOD` reader - "]
 pub type TX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `TX_SLAVE_MOD` writer - "]
-pub type TX_SLAVE_MOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SLAVE_MOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_SLAVE_MOD` reader - "]
 pub type RX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `RX_SLAVE_MOD` writer - "]
-pub type RX_SLAVE_MOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_SLAVE_MOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_RIGHT_FIRST` reader - "]
 pub type TX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_RIGHT_FIRST` writer - "]
-pub type TX_RIGHT_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_RIGHT_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_RIGHT_FIRST` reader - "]
 pub type RX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_RIGHT_FIRST` writer - "]
-pub type RX_RIGHT_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_RIGHT_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_MSB_SHIFT` reader - "]
 pub type TX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_SHIFT` writer - "]
-pub type TX_MSB_SHIFT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_MSB_SHIFT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_MSB_SHIFT` reader - "]
 pub type RX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_SHIFT` writer - "]
-pub type RX_MSB_SHIFT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_MSB_SHIFT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_SHORT_SYNC` reader - "]
 pub type TX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `TX_SHORT_SYNC` writer - "]
-pub type TX_SHORT_SYNC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SHORT_SYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_SHORT_SYNC` reader - "]
 pub type RX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `RX_SHORT_SYNC` writer - "]
-pub type RX_SHORT_SYNC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_SHORT_SYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_MONO` reader - "]
 pub type TX_MONO_R = crate::BitReader;
 #[doc = "Field `TX_MONO` writer - "]
-pub type TX_MONO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_MONO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_MONO` reader - "]
 pub type RX_MONO_R = crate::BitReader;
 #[doc = "Field `RX_MONO` writer - "]
-pub type RX_MONO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_MONO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_MSB_RIGHT` reader - "]
 pub type TX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_RIGHT` writer - "]
-pub type TX_MSB_RIGHT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_MSB_RIGHT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_MSB_RIGHT` reader - "]
 pub type RX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_RIGHT` writer - "]
-pub type RX_MSB_RIGHT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_MSB_RIGHT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SIG_LOOPBACK` reader - "]
 pub type SIG_LOOPBACK_R = crate::BitReader;
 #[doc = "Field `SIG_LOOPBACK` writer - "]
-pub type SIG_LOOPBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SIG_LOOPBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -243,123 +243,123 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_reset(&mut self) -> TX_RESET_W<CONF_SPEC, 0> {
-        TX_RESET_W::new(self)
+    pub fn tx_reset(&mut self) -> TX_RESET_W<CONF_SPEC> {
+        TX_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_reset(&mut self) -> RX_RESET_W<CONF_SPEC, 1> {
-        RX_RESET_W::new(self)
+    pub fn rx_reset(&mut self) -> RX_RESET_W<CONF_SPEC> {
+        RX_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<CONF_SPEC, 2> {
-        TX_FIFO_RESET_W::new(self)
+    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<CONF_SPEC> {
+        TX_FIFO_RESET_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<CONF_SPEC, 3> {
-        RX_FIFO_RESET_W::new(self)
+    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<CONF_SPEC> {
+        RX_FIFO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_start(&mut self) -> TX_START_W<CONF_SPEC, 4> {
-        TX_START_W::new(self)
+    pub fn tx_start(&mut self) -> TX_START_W<CONF_SPEC> {
+        TX_START_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_start(&mut self) -> RX_START_W<CONF_SPEC, 5> {
-        RX_START_W::new(self)
+    pub fn rx_start(&mut self) -> RX_START_W<CONF_SPEC> {
+        RX_START_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<CONF_SPEC, 6> {
-        TX_SLAVE_MOD_W::new(self)
+    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<CONF_SPEC> {
+        TX_SLAVE_MOD_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<CONF_SPEC, 7> {
-        RX_SLAVE_MOD_W::new(self)
+    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<CONF_SPEC> {
+        RX_SLAVE_MOD_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<CONF_SPEC, 8> {
-        TX_RIGHT_FIRST_W::new(self)
+    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<CONF_SPEC> {
+        TX_RIGHT_FIRST_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<CONF_SPEC, 9> {
-        RX_RIGHT_FIRST_W::new(self)
+    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<CONF_SPEC> {
+        RX_RIGHT_FIRST_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<CONF_SPEC, 10> {
-        TX_MSB_SHIFT_W::new(self)
+    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<CONF_SPEC> {
+        TX_MSB_SHIFT_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<CONF_SPEC, 11> {
-        RX_MSB_SHIFT_W::new(self)
+    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<CONF_SPEC> {
+        RX_MSB_SHIFT_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<CONF_SPEC, 12> {
-        TX_SHORT_SYNC_W::new(self)
+    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<CONF_SPEC> {
+        TX_SHORT_SYNC_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<CONF_SPEC, 13> {
-        RX_SHORT_SYNC_W::new(self)
+    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<CONF_SPEC> {
+        RX_SHORT_SYNC_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_mono(&mut self) -> TX_MONO_W<CONF_SPEC, 14> {
-        TX_MONO_W::new(self)
+    pub fn tx_mono(&mut self) -> TX_MONO_W<CONF_SPEC> {
+        TX_MONO_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_mono(&mut self) -> RX_MONO_W<CONF_SPEC, 15> {
-        RX_MONO_W::new(self)
+    pub fn rx_mono(&mut self) -> RX_MONO_W<CONF_SPEC> {
+        RX_MONO_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<CONF_SPEC, 16> {
-        TX_MSB_RIGHT_W::new(self)
+    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<CONF_SPEC> {
+        TX_MSB_RIGHT_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<CONF_SPEC, 17> {
-        RX_MSB_RIGHT_W::new(self)
+    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<CONF_SPEC> {
+        RX_MSB_RIGHT_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<CONF_SPEC, 18> {
-        SIG_LOOPBACK_W::new(self)
+    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<CONF_SPEC> {
+        SIG_LOOPBACK_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

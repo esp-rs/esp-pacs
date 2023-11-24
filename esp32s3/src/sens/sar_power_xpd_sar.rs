@@ -5,11 +5,11 @@ pub type W = crate::W<SAR_POWER_XPD_SAR_SPEC>;
 #[doc = "Field `FORCE_XPD_SAR` reader - force power on/off saradc"]
 pub type FORCE_XPD_SAR_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_SAR` writer - force power on/off saradc"]
-pub type FORCE_XPD_SAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FORCE_XPD_SAR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SARCLK_EN` reader - no public"]
 pub type SARCLK_EN_R = crate::BitReader;
 #[doc = "Field `SARCLK_EN` writer - no public"]
-pub type SARCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 29:30 - force power on/off saradc"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_POWER_XPD_SAR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 29:30 - force power on/off saradc"]
     #[inline(always)]
     #[must_use]
-    pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<SAR_POWER_XPD_SAR_SPEC, 29> {
-        FORCE_XPD_SAR_W::new(self)
+    pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<SAR_POWER_XPD_SAR_SPEC> {
+        FORCE_XPD_SAR_W::new(self, 29)
     }
     #[doc = "Bit 31 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sarclk_en(&mut self) -> SARCLK_EN_W<SAR_POWER_XPD_SAR_SPEC, 31> {
-        SARCLK_EN_W::new(self)
+    pub fn sarclk_en(&mut self) -> SARCLK_EN_W<SAR_POWER_XPD_SAR_SPEC> {
+        SARCLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

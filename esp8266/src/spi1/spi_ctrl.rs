@@ -5,59 +5,59 @@ pub type W = crate::W<SPI_CTRL_SPEC>;
 #[doc = "Field `spi_fastrd_mode` reader - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
 pub type SPI_FASTRD_MODE_R = crate::BitReader;
 #[doc = "Field `spi_fastrd_mode` writer - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
-pub type SPI_FASTRD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_FASTRD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_dout_mode` reader - In the read operations, \"read-data\" phase apply 2 signals"]
 pub type SPI_DOUT_MODE_R = crate::BitReader;
 #[doc = "Field `spi_dout_mode` writer - In the read operations, \"read-data\" phase apply 2 signals"]
-pub type SPI_DOUT_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_DOUT_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `res_and_res` reader - 'Res and res'?"]
 pub type RES_AND_RES_R = crate::BitReader;
 #[doc = "Field `res_and_res` writer - 'Res and res'?"]
-pub type RES_AND_RES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RES_AND_RES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sst_aai` reader - SST_AAI?"]
 pub type SST_AAI_R = crate::BitReader;
 #[doc = "Field `sst_aai` writer - SST_AAI?"]
-pub type SST_AAI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SST_AAI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `enable_ahb` reader - Enable AHB"]
 pub type ENABLE_AHB_R = crate::BitReader;
 #[doc = "Field `enable_ahb` writer - Enable AHB"]
-pub type ENABLE_AHB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENABLE_AHB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `hold_mode` reader - Hold mode"]
 pub type HOLD_MODE_R = crate::BitReader;
 #[doc = "Field `hold_mode` writer - Hold mode"]
-pub type HOLD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HOLD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `share_but` reader - Share bus"]
 pub type SHARE_BUT_R = crate::BitReader;
 #[doc = "Field `share_but` writer - Share bus"]
-pub type SHARE_BUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SHARE_BUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_qout_mode` reader - In the read operations, \"read-data\" phase apply 4 signals"]
 pub type SPI_QOUT_MODE_R = crate::BitReader;
 #[doc = "Field `spi_qout_mode` writer - In the read operations, \"read-data\" phase apply 4 signals"]
-pub type SPI_QOUT_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_QOUT_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `wp_reg` reader - Write protect?"]
 pub type WP_REG_R = crate::BitReader;
 #[doc = "Field `wp_reg` writer - Write protect?"]
-pub type WP_REG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WP_REG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `two_byte_status` reader - Enable two byte status"]
 pub type TWO_BYTE_STATUS_R = crate::BitReader;
 #[doc = "Field `two_byte_status` writer - Enable two byte status"]
-pub type TWO_BYTE_STATUS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWO_BYTE_STATUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_dio_mode` reader - In the read operations, \"address\" phase and \"read-data\" phase apply 2 signals"]
 pub type SPI_DIO_MODE_R = crate::BitReader;
 #[doc = "Field `spi_dio_mode` writer - In the read operations, \"address\" phase and \"read-data\" phase apply 2 signals"]
-pub type SPI_DIO_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_DIO_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_qio_mode` reader - In the read operations, \"address\" phase and \"read-data\" phase apply 4 signals"]
 pub type SPI_QIO_MODE_R = crate::BitReader;
 #[doc = "Field `spi_qio_mode` writer - In the read operations, \"address\" phase and \"read-data\" phase apply 4 signals"]
-pub type SPI_QIO_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_QIO_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_rd_bit_order` reader - In \"read-data\" (MISO) phase, 1: LSB first; 0: MSB first"]
 pub type SPI_RD_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `spi_rd_bit_order` writer - In \"read-data\" (MISO) phase, 1: LSB first; 0: MSB first"]
-pub type SPI_RD_BIT_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_RD_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi_wr_bit_order` reader - In \"command\", \"address\", \"write-data\" (MOSI) phases, 1: LSB first; 0: MSB first"]
 pub type SPI_WR_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `spi_wr_bit_order` writer - In \"command\", \"address\", \"write-data\" (MOSI) phases, 1: LSB first; 0: MSB first"]
-pub type SPI_WR_BIT_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_WR_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 13 - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
     #[inline(always)]
@@ -178,95 +178,99 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 13 - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_fastrd_mode(&mut self) -> SPI_FASTRD_MODE_W<SPI_CTRL_SPEC, 13> {
-        SPI_FASTRD_MODE_W::new(self)
+    pub fn spi_fastrd_mode(&mut self) -> SPI_FASTRD_MODE_W<SPI_CTRL_SPEC> {
+        SPI_FASTRD_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - In the read operations, \"read-data\" phase apply 2 signals"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_dout_mode(&mut self) -> SPI_DOUT_MODE_W<SPI_CTRL_SPEC, 14> {
-        SPI_DOUT_MODE_W::new(self)
+    pub fn spi_dout_mode(&mut self) -> SPI_DOUT_MODE_W<SPI_CTRL_SPEC> {
+        SPI_DOUT_MODE_W::new(self, 14)
     }
     #[doc = "Bit 15 - 'Res and res'?"]
     #[inline(always)]
     #[must_use]
-    pub fn res_and_res(&mut self) -> RES_AND_RES_W<SPI_CTRL_SPEC, 15> {
-        RES_AND_RES_W::new(self)
+    pub fn res_and_res(&mut self) -> RES_AND_RES_W<SPI_CTRL_SPEC> {
+        RES_AND_RES_W::new(self, 15)
     }
     #[doc = "Bit 16 - SST_AAI?"]
     #[inline(always)]
     #[must_use]
-    pub fn sst_aai(&mut self) -> SST_AAI_W<SPI_CTRL_SPEC, 16> {
-        SST_AAI_W::new(self)
+    pub fn sst_aai(&mut self) -> SST_AAI_W<SPI_CTRL_SPEC> {
+        SST_AAI_W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable AHB"]
     #[inline(always)]
     #[must_use]
-    pub fn enable_ahb(&mut self) -> ENABLE_AHB_W<SPI_CTRL_SPEC, 17> {
-        ENABLE_AHB_W::new(self)
+    pub fn enable_ahb(&mut self) -> ENABLE_AHB_W<SPI_CTRL_SPEC> {
+        ENABLE_AHB_W::new(self, 17)
     }
     #[doc = "Bit 18 - Hold mode"]
     #[inline(always)]
     #[must_use]
-    pub fn hold_mode(&mut self) -> HOLD_MODE_W<SPI_CTRL_SPEC, 18> {
-        HOLD_MODE_W::new(self)
+    pub fn hold_mode(&mut self) -> HOLD_MODE_W<SPI_CTRL_SPEC> {
+        HOLD_MODE_W::new(self, 18)
     }
     #[doc = "Bit 19 - Share bus"]
     #[inline(always)]
     #[must_use]
-    pub fn share_but(&mut self) -> SHARE_BUT_W<SPI_CTRL_SPEC, 19> {
-        SHARE_BUT_W::new(self)
+    pub fn share_but(&mut self) -> SHARE_BUT_W<SPI_CTRL_SPEC> {
+        SHARE_BUT_W::new(self, 19)
     }
     #[doc = "Bit 20 - In the read operations, \"read-data\" phase apply 4 signals"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_qout_mode(&mut self) -> SPI_QOUT_MODE_W<SPI_CTRL_SPEC, 20> {
-        SPI_QOUT_MODE_W::new(self)
+    pub fn spi_qout_mode(&mut self) -> SPI_QOUT_MODE_W<SPI_CTRL_SPEC> {
+        SPI_QOUT_MODE_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write protect?"]
     #[inline(always)]
     #[must_use]
-    pub fn wp_reg(&mut self) -> WP_REG_W<SPI_CTRL_SPEC, 21> {
-        WP_REG_W::new(self)
+    pub fn wp_reg(&mut self) -> WP_REG_W<SPI_CTRL_SPEC> {
+        WP_REG_W::new(self, 21)
     }
     #[doc = "Bit 22 - Enable two byte status"]
     #[inline(always)]
     #[must_use]
-    pub fn two_byte_status(&mut self) -> TWO_BYTE_STATUS_W<SPI_CTRL_SPEC, 22> {
-        TWO_BYTE_STATUS_W::new(self)
+    pub fn two_byte_status(&mut self) -> TWO_BYTE_STATUS_W<SPI_CTRL_SPEC> {
+        TWO_BYTE_STATUS_W::new(self, 22)
     }
     #[doc = "Bit 23 - In the read operations, \"address\" phase and \"read-data\" phase apply 2 signals"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_dio_mode(&mut self) -> SPI_DIO_MODE_W<SPI_CTRL_SPEC, 23> {
-        SPI_DIO_MODE_W::new(self)
+    pub fn spi_dio_mode(&mut self) -> SPI_DIO_MODE_W<SPI_CTRL_SPEC> {
+        SPI_DIO_MODE_W::new(self, 23)
     }
     #[doc = "Bit 24 - In the read operations, \"address\" phase and \"read-data\" phase apply 4 signals"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_qio_mode(&mut self) -> SPI_QIO_MODE_W<SPI_CTRL_SPEC, 24> {
-        SPI_QIO_MODE_W::new(self)
+    pub fn spi_qio_mode(&mut self) -> SPI_QIO_MODE_W<SPI_CTRL_SPEC> {
+        SPI_QIO_MODE_W::new(self, 24)
     }
     #[doc = "Bit 25 - In \"read-data\" (MISO) phase, 1: LSB first; 0: MSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_rd_bit_order(&mut self) -> SPI_RD_BIT_ORDER_W<SPI_CTRL_SPEC, 25> {
-        SPI_RD_BIT_ORDER_W::new(self)
+    pub fn spi_rd_bit_order(&mut self) -> SPI_RD_BIT_ORDER_W<SPI_CTRL_SPEC> {
+        SPI_RD_BIT_ORDER_W::new(self, 25)
     }
     #[doc = "Bit 26 - In \"command\", \"address\", \"write-data\" (MOSI) phases, 1: LSB first; 0: MSB first"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_wr_bit_order(&mut self) -> SPI_WR_BIT_ORDER_W<SPI_CTRL_SPEC, 26> {
-        SPI_WR_BIT_ORDER_W::new(self)
+    pub fn spi_wr_bit_order(&mut self) -> SPI_WR_BIT_ORDER_W<SPI_CTRL_SPEC> {
+        SPI_WR_BIT_ORDER_W::new(self, 26)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

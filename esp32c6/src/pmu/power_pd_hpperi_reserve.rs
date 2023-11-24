@@ -1,7 +1,7 @@
 #[doc = "Register `POWER_PD_HPPERI_RESERVE` writer"]
 pub type W = crate::W<POWER_PD_HPPERI_RESERVE_SPEC>;
 #[doc = "Field `HP_PERI_RESERVE` writer - need_des"]
-pub type HP_PERI_RESERVE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type HP_PERI_RESERVE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_PD_HPPERI_RESERVE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_peri_reserve(&mut self) -> HP_PERI_RESERVE_W<POWER_PD_HPPERI_RESERVE_SPEC, 0> {
-        HP_PERI_RESERVE_W::new(self)
+    pub fn hp_peri_reserve(&mut self) -> HP_PERI_RESERVE_W<POWER_PD_HPPERI_RESERVE_SPEC> {
+        HP_PERI_RESERVE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

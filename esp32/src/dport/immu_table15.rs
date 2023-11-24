@@ -5,7 +5,7 @@ pub type W = crate::W<IMMU_TABLE15_SPEC>;
 #[doc = "Field `IMMU_TABLE15` reader - "]
 pub type IMMU_TABLE15_R = crate::FieldReader;
 #[doc = "Field `IMMU_TABLE15` writer - "]
-pub type IMMU_TABLE15_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type IMMU_TABLE15_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IMMU_TABLE15_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     #[must_use]
-    pub fn immu_table15(&mut self) -> IMMU_TABLE15_W<IMMU_TABLE15_SPEC, 0> {
-        IMMU_TABLE15_W::new(self)
+    pub fn immu_table15(&mut self) -> IMMU_TABLE15_W<IMMU_TABLE15_SPEC> {
+        IMMU_TABLE15_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

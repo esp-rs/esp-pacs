@@ -5,11 +5,11 @@ pub type W = crate::W<FUNC_CTRL_SPEC>;
 #[doc = "Field `M0_PMS_FUNC_EN` reader - PMS M0 function enable"]
 pub type M0_PMS_FUNC_EN_R = crate::BitReader;
 #[doc = "Field `M0_PMS_FUNC_EN` writer - PMS M0 function enable"]
-pub type M0_PMS_FUNC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M0_PMS_FUNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `M1_PMS_FUNC_EN` reader - PMS M1 function enable"]
 pub type M1_PMS_FUNC_EN_R = crate::BitReader;
 #[doc = "Field `M1_PMS_FUNC_EN` writer - PMS M1 function enable"]
-pub type M1_PMS_FUNC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type M1_PMS_FUNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - PMS M0 function enable"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FUNC_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - PMS M0 function enable"]
     #[inline(always)]
     #[must_use]
-    pub fn m0_pms_func_en(&mut self) -> M0_PMS_FUNC_EN_W<FUNC_CTRL_SPEC, 0> {
-        M0_PMS_FUNC_EN_W::new(self)
+    pub fn m0_pms_func_en(&mut self) -> M0_PMS_FUNC_EN_W<FUNC_CTRL_SPEC> {
+        M0_PMS_FUNC_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - PMS M1 function enable"]
     #[inline(always)]
     #[must_use]
-    pub fn m1_pms_func_en(&mut self) -> M1_PMS_FUNC_EN_W<FUNC_CTRL_SPEC, 1> {
-        M1_PMS_FUNC_EN_W::new(self)
+    pub fn m1_pms_func_en(&mut self) -> M1_PMS_FUNC_EN_W<FUNC_CTRL_SPEC> {
+        M1_PMS_FUNC_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

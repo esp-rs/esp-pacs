@@ -7,11 +7,11 @@ pub type RESET_CAUSE_R = crate::FieldReader;
 #[doc = "Field `CORE0_RESET_FLAG` reader - need_des"]
 pub type CORE0_RESET_FLAG_R = crate::BitReader;
 #[doc = "Field `CORE0_RESET_CAUSE_CLR` writer - need_des"]
-pub type CORE0_RESET_CAUSE_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE0_RESET_CAUSE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE0_RESET_FLAG_SET` writer - need_des"]
-pub type CORE0_RESET_FLAG_SET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE0_RESET_FLAG_SET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORE0_RESET_FLAG_CLR` writer - need_des"]
-pub type CORE0_RESET_FLAG_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORE0_RESET_FLAG_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
@@ -42,29 +42,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RESET_CAUSE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn core0_reset_cause_clr(&mut self) -> CORE0_RESET_CAUSE_CLR_W<RESET_CAUSE_SPEC, 29> {
-        CORE0_RESET_CAUSE_CLR_W::new(self)
+    pub fn core0_reset_cause_clr(&mut self) -> CORE0_RESET_CAUSE_CLR_W<RESET_CAUSE_SPEC> {
+        CORE0_RESET_CAUSE_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn core0_reset_flag_set(&mut self) -> CORE0_RESET_FLAG_SET_W<RESET_CAUSE_SPEC, 30> {
-        CORE0_RESET_FLAG_SET_W::new(self)
+    pub fn core0_reset_flag_set(&mut self) -> CORE0_RESET_FLAG_SET_W<RESET_CAUSE_SPEC> {
+        CORE0_RESET_FLAG_SET_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn core0_reset_flag_clr(&mut self) -> CORE0_RESET_FLAG_CLR_W<RESET_CAUSE_SPEC, 31> {
-        CORE0_RESET_FLAG_CLR_W::new(self)
+    pub fn core0_reset_flag_clr(&mut self) -> CORE0_RESET_FLAG_CLR_W<RESET_CAUSE_SPEC> {
+        CORE0_RESET_FLAG_CLR_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

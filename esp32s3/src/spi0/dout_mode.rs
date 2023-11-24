@@ -5,39 +5,39 @@ pub type W = crate::W<DOUT_MODE_SPEC>;
 #[doc = "Field `DOUT0_MODE` reader - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT0_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT0_MODE` writer - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT0_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT0_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUT1_MODE` reader - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT1_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT1_MODE` writer - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT1_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT1_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUT2_MODE` reader - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT2_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT2_MODE` writer - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT2_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT2_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUT3_MODE` reader - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT3_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT3_MODE` writer - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT3_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT3_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUT4_MODE` reader - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT4_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT4_MODE` writer - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT4_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT4_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUT5_MODE` reader - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT5_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT5_MODE` writer - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT5_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT5_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUT6_MODE` reader - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT6_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT6_MODE` writer - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT6_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT6_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUT7_MODE` reader - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUT7_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT7_MODE` writer - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT7_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUT7_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUTS_MODE` reader - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
 pub type DOUTS_MODE_R = crate::BitReader;
 #[doc = "Field `DOUTS_MODE` writer - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUTS_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOUTS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
@@ -104,63 +104,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DOUT_MODE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<DOUT_MODE_SPEC, 0> {
-        DOUT0_MODE_W::new(self)
+    pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<DOUT_MODE_SPEC> {
+        DOUT0_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<DOUT_MODE_SPEC, 1> {
-        DOUT1_MODE_W::new(self)
+    pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<DOUT_MODE_SPEC> {
+        DOUT1_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<DOUT_MODE_SPEC, 2> {
-        DOUT2_MODE_W::new(self)
+    pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<DOUT_MODE_SPEC> {
+        DOUT2_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<DOUT_MODE_SPEC, 3> {
-        DOUT3_MODE_W::new(self)
+    pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<DOUT_MODE_SPEC> {
+        DOUT3_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout4_mode(&mut self) -> DOUT4_MODE_W<DOUT_MODE_SPEC, 4> {
-        DOUT4_MODE_W::new(self)
+    pub fn dout4_mode(&mut self) -> DOUT4_MODE_W<DOUT_MODE_SPEC> {
+        DOUT4_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout5_mode(&mut self) -> DOUT5_MODE_W<DOUT_MODE_SPEC, 5> {
-        DOUT5_MODE_W::new(self)
+    pub fn dout5_mode(&mut self) -> DOUT5_MODE_W<DOUT_MODE_SPEC> {
+        DOUT5_MODE_W::new(self, 5)
     }
     #[doc = "Bit 6 - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout6_mode(&mut self) -> DOUT6_MODE_W<DOUT_MODE_SPEC, 6> {
-        DOUT6_MODE_W::new(self)
+    pub fn dout6_mode(&mut self) -> DOUT6_MODE_W<DOUT_MODE_SPEC> {
+        DOUT6_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn dout7_mode(&mut self) -> DOUT7_MODE_W<DOUT_MODE_SPEC, 7> {
-        DOUT7_MODE_W::new(self)
+    pub fn dout7_mode(&mut self) -> DOUT7_MODE_W<DOUT_MODE_SPEC> {
+        DOUT7_MODE_W::new(self, 7)
     }
     #[doc = "Bit 8 - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
     #[must_use]
-    pub fn douts_mode(&mut self) -> DOUTS_MODE_W<DOUT_MODE_SPEC, 8> {
-        DOUTS_MODE_W::new(self)
+    pub fn douts_mode(&mut self) -> DOUTS_MODE_W<DOUT_MODE_SPEC> {
+        DOUTS_MODE_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

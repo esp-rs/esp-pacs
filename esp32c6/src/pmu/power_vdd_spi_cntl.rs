@@ -5,15 +5,15 @@ pub type W = crate::W<POWER_VDD_SPI_CNTL_SPEC>;
 #[doc = "Field `VDD_SPI_PWR_WAIT` reader - need_des"]
 pub type VDD_SPI_PWR_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `VDD_SPI_PWR_WAIT` writer - need_des"]
-pub type VDD_SPI_PWR_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type VDD_SPI_PWR_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `VDD_SPI_PWR_SW` reader - need_des"]
 pub type VDD_SPI_PWR_SW_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_PWR_SW` writer - need_des"]
-pub type VDD_SPI_PWR_SW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type VDD_SPI_PWR_SW_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `VDD_SPI_PWR_SEL_SW` reader - need_des"]
 pub type VDD_SPI_PWR_SEL_SW_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_PWR_SEL_SW` writer - need_des"]
-pub type VDD_SPI_PWR_SEL_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDD_SPI_PWR_SEL_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 18:28 - need_des"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_VDD_SPI_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 18:28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vdd_spi_pwr_wait(&mut self) -> VDD_SPI_PWR_WAIT_W<POWER_VDD_SPI_CNTL_SPEC, 18> {
-        VDD_SPI_PWR_WAIT_W::new(self)
+    pub fn vdd_spi_pwr_wait(&mut self) -> VDD_SPI_PWR_WAIT_W<POWER_VDD_SPI_CNTL_SPEC> {
+        VDD_SPI_PWR_WAIT_W::new(self, 18)
     }
     #[doc = "Bits 29:30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vdd_spi_pwr_sw(&mut self) -> VDD_SPI_PWR_SW_W<POWER_VDD_SPI_CNTL_SPEC, 29> {
-        VDD_SPI_PWR_SW_W::new(self)
+    pub fn vdd_spi_pwr_sw(&mut self) -> VDD_SPI_PWR_SW_W<POWER_VDD_SPI_CNTL_SPEC> {
+        VDD_SPI_PWR_SW_W::new(self, 29)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vdd_spi_pwr_sel_sw(&mut self) -> VDD_SPI_PWR_SEL_SW_W<POWER_VDD_SPI_CNTL_SPEC, 31> {
-        VDD_SPI_PWR_SEL_SW_W::new(self)
+    pub fn vdd_spi_pwr_sel_sw(&mut self) -> VDD_SPI_PWR_SEL_SW_W<POWER_VDD_SPI_CNTL_SPEC> {
+        VDD_SPI_PWR_SEL_SW_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

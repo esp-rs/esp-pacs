@@ -5,59 +5,59 @@ pub type W = crate::W<CONF1_SPEC>;
 #[doc = "Field `SLC0_CHECK_OWNER` reader - "]
 pub type SLC0_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `SLC0_CHECK_OWNER` writer - "]
-pub type SLC0_CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_CHECK_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` reader - "]
 pub type SLC0_TX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` writer - "]
-pub type SLC0_TX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TX_CHECK_SUM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` reader - "]
 pub type SLC0_RX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` writer - "]
-pub type SLC0_RX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_CHECK_SUM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMD_HOLD_EN` reader - "]
 pub type CMD_HOLD_EN_R = crate::BitReader;
 #[doc = "Field `CMD_HOLD_EN` writer - "]
-pub type CMD_HOLD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMD_HOLD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` reader - "]
 pub type SLC0_LEN_AUTO_CLR_R = crate::BitReader;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` writer - "]
-pub type SLC0_LEN_AUTO_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_LEN_AUTO_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TX_STITCH_EN` reader - "]
 pub type SLC0_TX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_STITCH_EN` writer - "]
-pub type SLC0_TX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TX_STITCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_STITCH_EN` reader - "]
 pub type SLC0_RX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_STITCH_EN` writer - "]
-pub type SLC0_RX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_STITCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_CHECK_OWNER` reader - "]
 pub type SLC1_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `SLC1_CHECK_OWNER` writer - "]
-pub type SLC1_CHECK_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_CHECK_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` reader - "]
 pub type SLC1_TX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` writer - "]
-pub type SLC1_TX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TX_CHECK_SUM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` reader - "]
 pub type SLC1_RX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` writer - "]
-pub type SLC1_RX_CHECK_SUM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RX_CHECK_SUM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HOST_INT_LEVEL_SEL` reader - "]
 pub type HOST_INT_LEVEL_SEL_R = crate::BitReader;
 #[doc = "Field `HOST_INT_LEVEL_SEL` writer - "]
-pub type HOST_INT_LEVEL_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HOST_INT_LEVEL_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TX_STITCH_EN` reader - "]
 pub type SLC1_TX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_STITCH_EN` writer - "]
-pub type SLC1_TX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TX_STITCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RX_STITCH_EN` reader - "]
 pub type SLC1_RX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_STITCH_EN` writer - "]
-pub type SLC1_RX_STITCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RX_STITCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -190,93 +190,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_check_owner(&mut self) -> SLC0_CHECK_OWNER_W<CONF1_SPEC, 0> {
-        SLC0_CHECK_OWNER_W::new(self)
+    pub fn slc0_check_owner(&mut self) -> SLC0_CHECK_OWNER_W<CONF1_SPEC> {
+        SLC0_CHECK_OWNER_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_check_sum_en(&mut self) -> SLC0_TX_CHECK_SUM_EN_W<CONF1_SPEC, 1> {
-        SLC0_TX_CHECK_SUM_EN_W::new(self)
+    pub fn slc0_tx_check_sum_en(&mut self) -> SLC0_TX_CHECK_SUM_EN_W<CONF1_SPEC> {
+        SLC0_TX_CHECK_SUM_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_check_sum_en(&mut self) -> SLC0_RX_CHECK_SUM_EN_W<CONF1_SPEC, 2> {
-        SLC0_RX_CHECK_SUM_EN_W::new(self)
+    pub fn slc0_rx_check_sum_en(&mut self) -> SLC0_RX_CHECK_SUM_EN_W<CONF1_SPEC> {
+        SLC0_RX_CHECK_SUM_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_hold_en(&mut self) -> CMD_HOLD_EN_W<CONF1_SPEC, 3> {
-        CMD_HOLD_EN_W::new(self)
+    pub fn cmd_hold_en(&mut self) -> CMD_HOLD_EN_W<CONF1_SPEC> {
+        CMD_HOLD_EN_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_len_auto_clr(&mut self) -> SLC0_LEN_AUTO_CLR_W<CONF1_SPEC, 4> {
-        SLC0_LEN_AUTO_CLR_W::new(self)
+    pub fn slc0_len_auto_clr(&mut self) -> SLC0_LEN_AUTO_CLR_W<CONF1_SPEC> {
+        SLC0_LEN_AUTO_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_stitch_en(&mut self) -> SLC0_TX_STITCH_EN_W<CONF1_SPEC, 5> {
-        SLC0_TX_STITCH_EN_W::new(self)
+    pub fn slc0_tx_stitch_en(&mut self) -> SLC0_TX_STITCH_EN_W<CONF1_SPEC> {
+        SLC0_TX_STITCH_EN_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_stitch_en(&mut self) -> SLC0_RX_STITCH_EN_W<CONF1_SPEC, 6> {
-        SLC0_RX_STITCH_EN_W::new(self)
+    pub fn slc0_rx_stitch_en(&mut self) -> SLC0_RX_STITCH_EN_W<CONF1_SPEC> {
+        SLC0_RX_STITCH_EN_W::new(self, 6)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_check_owner(&mut self) -> SLC1_CHECK_OWNER_W<CONF1_SPEC, 16> {
-        SLC1_CHECK_OWNER_W::new(self)
+    pub fn slc1_check_owner(&mut self) -> SLC1_CHECK_OWNER_W<CONF1_SPEC> {
+        SLC1_CHECK_OWNER_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tx_check_sum_en(&mut self) -> SLC1_TX_CHECK_SUM_EN_W<CONF1_SPEC, 17> {
-        SLC1_TX_CHECK_SUM_EN_W::new(self)
+    pub fn slc1_tx_check_sum_en(&mut self) -> SLC1_TX_CHECK_SUM_EN_W<CONF1_SPEC> {
+        SLC1_TX_CHECK_SUM_EN_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_check_sum_en(&mut self) -> SLC1_RX_CHECK_SUM_EN_W<CONF1_SPEC, 18> {
-        SLC1_RX_CHECK_SUM_EN_W::new(self)
+    pub fn slc1_rx_check_sum_en(&mut self) -> SLC1_RX_CHECK_SUM_EN_W<CONF1_SPEC> {
+        SLC1_RX_CHECK_SUM_EN_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn host_int_level_sel(&mut self) -> HOST_INT_LEVEL_SEL_W<CONF1_SPEC, 19> {
-        HOST_INT_LEVEL_SEL_W::new(self)
+    pub fn host_int_level_sel(&mut self) -> HOST_INT_LEVEL_SEL_W<CONF1_SPEC> {
+        HOST_INT_LEVEL_SEL_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tx_stitch_en(&mut self) -> SLC1_TX_STITCH_EN_W<CONF1_SPEC, 20> {
-        SLC1_TX_STITCH_EN_W::new(self)
+    pub fn slc1_tx_stitch_en(&mut self) -> SLC1_TX_STITCH_EN_W<CONF1_SPEC> {
+        SLC1_TX_STITCH_EN_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_stitch_en(&mut self) -> SLC1_RX_STITCH_EN_W<CONF1_SPEC, 21> {
-        SLC1_RX_STITCH_EN_W::new(self)
+    pub fn slc1_rx_stitch_en(&mut self) -> SLC1_RX_STITCH_EN_W<CONF1_SPEC> {
+        SLC1_RX_STITCH_EN_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF1_SPEC, 22> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CONF1_SPEC> {
+        CLK_EN_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

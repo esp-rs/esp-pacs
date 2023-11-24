@@ -5,19 +5,19 @@ pub type W = crate::W<RX_CLKM_CONF_SPEC>;
 #[doc = "Field `RX_CLKM_DIV_NUM` reader - Integral I2S clock divider value"]
 pub type RX_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `RX_CLKM_DIV_NUM` writer - Integral I2S clock divider value"]
-pub type RX_CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RX_CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RX_CLK_ACTIVE` reader - I2S Rx module clock enable signal."]
 pub type RX_CLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `RX_CLK_ACTIVE` writer - I2S Rx module clock enable signal."]
-pub type RX_CLK_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_CLK_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_CLK_SEL` reader - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
 pub type RX_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_CLK_SEL` writer - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
-pub type RX_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MCLK_SEL` reader - 0: UseI2S Tx module clock as I2S_MCLK_OUT. 1: UseI2S Rx module clock as I2S_MCLK_OUT."]
 pub type MCLK_SEL_R = crate::BitReader;
 #[doc = "Field `MCLK_SEL` writer - 0: UseI2S Tx module clock as I2S_MCLK_OUT. 1: UseI2S Rx module clock as I2S_MCLK_OUT."]
-pub type MCLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MCLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
@@ -60,33 +60,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RX_CLKM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_clkm_div_num(&mut self) -> RX_CLKM_DIV_NUM_W<RX_CLKM_CONF_SPEC, 0> {
-        RX_CLKM_DIV_NUM_W::new(self)
+    pub fn rx_clkm_div_num(&mut self) -> RX_CLKM_DIV_NUM_W<RX_CLKM_CONF_SPEC> {
+        RX_CLKM_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 26 - I2S Rx module clock enable signal."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_clk_active(&mut self) -> RX_CLK_ACTIVE_W<RX_CLKM_CONF_SPEC, 26> {
-        RX_CLK_ACTIVE_W::new(self)
+    pub fn rx_clk_active(&mut self) -> RX_CLK_ACTIVE_W<RX_CLKM_CONF_SPEC> {
+        RX_CLK_ACTIVE_W::new(self, 26)
     }
     #[doc = "Bits 27:28 - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_clk_sel(&mut self) -> RX_CLK_SEL_W<RX_CLKM_CONF_SPEC, 27> {
-        RX_CLK_SEL_W::new(self)
+    pub fn rx_clk_sel(&mut self) -> RX_CLK_SEL_W<RX_CLKM_CONF_SPEC> {
+        RX_CLK_SEL_W::new(self, 27)
     }
     #[doc = "Bit 29 - 0: UseI2S Tx module clock as I2S_MCLK_OUT. 1: UseI2S Rx module clock as I2S_MCLK_OUT."]
     #[inline(always)]
     #[must_use]
-    pub fn mclk_sel(&mut self) -> MCLK_SEL_W<RX_CLKM_CONF_SPEC, 29> {
-        MCLK_SEL_W::new(self)
+    pub fn mclk_sel(&mut self) -> MCLK_SEL_W<RX_CLKM_CONF_SPEC> {
+        MCLK_SEL_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

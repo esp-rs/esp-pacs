@@ -1,7 +1,7 @@
 #[doc = "Register `MAIN_OVERFLOW` writer"]
 pub type W = crate::W<MAIN_OVERFLOW_SPEC>;
 #[doc = "Field `MAIN_TIMER_ALARM_LOAD` writer - need_des"]
-pub type MAIN_TIMER_ALARM_LOAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MAIN_TIMER_ALARM_LOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MAIN_OVERFLOW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,10 +12,14 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_alarm_load(&mut self) -> MAIN_TIMER_ALARM_LOAD_W<MAIN_OVERFLOW_SPEC, 31> {
-        MAIN_TIMER_ALARM_LOAD_W::new(self)
+    pub fn main_timer_alarm_load(&mut self) -> MAIN_TIMER_ALARM_LOAD_W<MAIN_OVERFLOW_SPEC> {
+        MAIN_TIMER_ALARM_LOAD_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

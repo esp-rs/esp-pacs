@@ -5,11 +5,11 @@ pub type W = crate::W<MEM_POWER_DOWN_SPEC>;
 #[doc = "Field `ROM_POWER_DOWN` reader - reg_rom_power_down"]
 pub type ROM_POWER_DOWN_R = crate::FieldReader;
 #[doc = "Field `ROM_POWER_DOWN` writer - reg_rom_power_down"]
-pub type ROM_POWER_DOWN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ROM_POWER_DOWN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SRAM_POWER_DOWN` reader - reg_sram_power_down"]
 pub type SRAM_POWER_DOWN_R = crate::FieldReader;
 #[doc = "Field `SRAM_POWER_DOWN` writer - reg_sram_power_down"]
-pub type SRAM_POWER_DOWN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SRAM_POWER_DOWN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:1 - reg_rom_power_down"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_POWER_DOWN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - reg_rom_power_down"]
     #[inline(always)]
     #[must_use]
-    pub fn rom_power_down(&mut self) -> ROM_POWER_DOWN_W<MEM_POWER_DOWN_SPEC, 0> {
-        ROM_POWER_DOWN_W::new(self)
+    pub fn rom_power_down(&mut self) -> ROM_POWER_DOWN_W<MEM_POWER_DOWN_SPEC> {
+        ROM_POWER_DOWN_W::new(self, 0)
     }
     #[doc = "Bits 2:5 - reg_sram_power_down"]
     #[inline(always)]
     #[must_use]
-    pub fn sram_power_down(&mut self) -> SRAM_POWER_DOWN_W<MEM_POWER_DOWN_SPEC, 2> {
-        SRAM_POWER_DOWN_W::new(self)
+    pub fn sram_power_down(&mut self) -> SRAM_POWER_DOWN_W<MEM_POWER_DOWN_SPEC> {
+        SRAM_POWER_DOWN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

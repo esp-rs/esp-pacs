@@ -3,15 +3,15 @@ pub type R = crate::R<SPI_MEM_INT_CLR_SPEC>;
 #[doc = "Register `SPI_MEM_INT_CLR` writer"]
 pub type W = crate::W<SPI_MEM_INT_CLR_SPEC>;
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_CLR` writer - The clear bit for SPI_MEM_SLV_ST_END_INT interrupt."]
-pub type SPI_MEM_SLV_ST_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_SLV_ST_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_CLR` writer - The clear bit for SPI_MEM_MST_ST_END_INT interrupt."]
-pub type SPI_MEM_MST_ST_END_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_MST_ST_END_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_ECC_ERR_INT_CLR` reader - The clear bit for SPI_MEM_ECC_ERR_INT interrupt."]
 pub type SPI_MEM_ECC_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_REJECT_INT_CLR` writer - The clear bit for SPI_MEM_PMS_REJECT_INT interrupt."]
-pub type SPI_MEM_PMS_REJECT_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_PMS_REJECT_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_AXI_RADDR_ERR_INT_CLR` writer - The clear bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt."]
-pub type SPI_MEM_AXI_RADDR_ERR_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MEM_AXI_RADDR_ERR_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MEM_AXI_WR_FLASH_ERR_INT_CLR` reader - The clear bit for SPI_MEM_AXI_WR_FALSH_ERR_INT interrupt."]
 pub type SPI_MEM_AXI_WR_FLASH_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AXI_WADDR_ERR_INT_CLR` reader - The clear bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt."]
@@ -55,7 +55,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -64,32 +64,32 @@ impl W {
     #[must_use]
     pub fn spi_mem_slv_st_end_int_clr(
         &mut self,
-    ) -> SPI_MEM_SLV_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 3> {
-        SPI_MEM_SLV_ST_END_INT_CLR_W::new(self)
+    ) -> SPI_MEM_SLV_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_SLV_ST_END_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - The clear bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_mst_st_end_int_clr(
         &mut self,
-    ) -> SPI_MEM_MST_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 4> {
-        SPI_MEM_MST_ST_END_INT_CLR_W::new(self)
+    ) -> SPI_MEM_MST_ST_END_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_MST_ST_END_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 6 - The clear bit for SPI_MEM_PMS_REJECT_INT interrupt."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_pms_reject_int_clr(
         &mut self,
-    ) -> SPI_MEM_PMS_REJECT_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 6> {
-        SPI_MEM_PMS_REJECT_INT_CLR_W::new(self)
+    ) -> SPI_MEM_PMS_REJECT_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_PMS_REJECT_INT_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7 - The clear bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
     pub fn spi_mem_axi_raddr_err_int_clr(
         &mut self,
-    ) -> SPI_MEM_AXI_RADDR_ERR_INT_CLR_W<SPI_MEM_INT_CLR_SPEC, 7> {
-        SPI_MEM_AXI_RADDR_ERR_INT_CLR_W::new(self)
+    ) -> SPI_MEM_AXI_RADDR_ERR_INT_CLR_W<SPI_MEM_INT_CLR_SPEC> {
+        SPI_MEM_AXI_RADDR_ERR_INT_CLR_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

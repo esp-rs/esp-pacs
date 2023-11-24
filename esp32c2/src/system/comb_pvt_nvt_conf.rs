@@ -5,13 +5,13 @@ pub type W = crate::W<COMB_PVT_NVT_CONF_SPEC>;
 #[doc = "Field `COMB_PATH_LEN_NVT` reader - reg_comb_path_len_nvt"]
 pub type COMB_PATH_LEN_NVT_R = crate::FieldReader;
 #[doc = "Field `COMB_PATH_LEN_NVT` writer - reg_comb_path_len_nvt"]
-pub type COMB_PATH_LEN_NVT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type COMB_PATH_LEN_NVT_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `COMB_ERR_CNT_CLR_NVT` writer - reg_comb_err_cnt_clr_nvt"]
-pub type COMB_ERR_CNT_CLR_NVT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COMB_ERR_CNT_CLR_NVT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COMB_PVT_MONITOR_EN_NVT` reader - reg_comb_pvt_monitor_en_nvt"]
 pub type COMB_PVT_MONITOR_EN_NVT_R = crate::BitReader;
 #[doc = "Field `COMB_PVT_MONITOR_EN_NVT` writer - reg_comb_pvt_monitor_en_nvt"]
-pub type COMB_PVT_MONITOR_EN_NVT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COMB_PVT_MONITOR_EN_NVT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - reg_comb_path_len_nvt"]
     #[inline(always)]
@@ -42,29 +42,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<COMB_PVT_NVT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - reg_comb_path_len_nvt"]
     #[inline(always)]
     #[must_use]
-    pub fn comb_path_len_nvt(&mut self) -> COMB_PATH_LEN_NVT_W<COMB_PVT_NVT_CONF_SPEC, 0> {
-        COMB_PATH_LEN_NVT_W::new(self)
+    pub fn comb_path_len_nvt(&mut self) -> COMB_PATH_LEN_NVT_W<COMB_PVT_NVT_CONF_SPEC> {
+        COMB_PATH_LEN_NVT_W::new(self, 0)
     }
     #[doc = "Bit 6 - reg_comb_err_cnt_clr_nvt"]
     #[inline(always)]
     #[must_use]
-    pub fn comb_err_cnt_clr_nvt(&mut self) -> COMB_ERR_CNT_CLR_NVT_W<COMB_PVT_NVT_CONF_SPEC, 6> {
-        COMB_ERR_CNT_CLR_NVT_W::new(self)
+    pub fn comb_err_cnt_clr_nvt(&mut self) -> COMB_ERR_CNT_CLR_NVT_W<COMB_PVT_NVT_CONF_SPEC> {
+        COMB_ERR_CNT_CLR_NVT_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_comb_pvt_monitor_en_nvt"]
     #[inline(always)]
     #[must_use]
-    pub fn comb_pvt_monitor_en_nvt(
-        &mut self,
-    ) -> COMB_PVT_MONITOR_EN_NVT_W<COMB_PVT_NVT_CONF_SPEC, 7> {
-        COMB_PVT_MONITOR_EN_NVT_W::new(self)
+    pub fn comb_pvt_monitor_en_nvt(&mut self) -> COMB_PVT_MONITOR_EN_NVT_W<COMB_PVT_NVT_CONF_SPEC> {
+        COMB_PVT_MONITOR_EN_NVT_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

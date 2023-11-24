@@ -5,35 +5,35 @@ pub type W = crate::W<IN_DLY_SPEC>;
 #[doc = "Field `CH0` reader - Configure GPIO0 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH0_R = crate::FieldReader;
 #[doc = "Field `CH0` writer - Configure GPIO0 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH1` reader - Configure GPIO1 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH1_R = crate::FieldReader;
 #[doc = "Field `CH1` writer - Configure GPIO1 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH2` reader - Configure GPIO2 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH2_R = crate::FieldReader;
 #[doc = "Field `CH2` writer - Configure GPIO2 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH3` reader - Configure GPIO3 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH3_R = crate::FieldReader;
 #[doc = "Field `CH3` writer - Configure GPIO3 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH4` reader - Configure GPIO4 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH4_R = crate::FieldReader;
 #[doc = "Field `CH4` writer - Configure GPIO4 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH4_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH5` reader - Configure GPIO5 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH5_R = crate::FieldReader;
 #[doc = "Field `CH5` writer - Configure GPIO5 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH5_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH5_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH6` reader - Configure GPIO6 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH6_R = crate::FieldReader;
 #[doc = "Field `CH6` writer - Configure GPIO6 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH6_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH6_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CH7` reader - Configure GPIO7 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
 pub type CH7_R = crate::FieldReader;
 #[doc = "Field `CH7` writer - Configure GPIO7 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
-pub type CH7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CH7_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Configure GPIO0 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
@@ -94,57 +94,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IN_DLY_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Configure GPIO0 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0(&mut self) -> CH0_W<IN_DLY_SPEC, 0> {
-        CH0_W::new(self)
+    pub fn ch0(&mut self) -> CH0_W<IN_DLY_SPEC> {
+        CH0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Configure GPIO1 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1(&mut self) -> CH1_W<IN_DLY_SPEC, 2> {
-        CH1_W::new(self)
+    pub fn ch1(&mut self) -> CH1_W<IN_DLY_SPEC> {
+        CH1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Configure GPIO2 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2(&mut self) -> CH2_W<IN_DLY_SPEC, 4> {
-        CH2_W::new(self)
+    pub fn ch2(&mut self) -> CH2_W<IN_DLY_SPEC> {
+        CH2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Configure GPIO3 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3(&mut self) -> CH3_W<IN_DLY_SPEC, 6> {
-        CH3_W::new(self)
+    pub fn ch3(&mut self) -> CH3_W<IN_DLY_SPEC> {
+        CH3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Configure GPIO4 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch4(&mut self) -> CH4_W<IN_DLY_SPEC, 8> {
-        CH4_W::new(self)
+    pub fn ch4(&mut self) -> CH4_W<IN_DLY_SPEC> {
+        CH4_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Configure GPIO5 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch5(&mut self) -> CH5_W<IN_DLY_SPEC, 10> {
-        CH5_W::new(self)
+    pub fn ch5(&mut self) -> CH5_W<IN_DLY_SPEC> {
+        CH5_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Configure GPIO6 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch6(&mut self) -> CH6_W<IN_DLY_SPEC, 12> {
-        CH6_W::new(self)
+    pub fn ch6(&mut self) -> CH6_W<IN_DLY_SPEC> {
+        CH6_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Configure GPIO7 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
     #[must_use]
-    pub fn ch7(&mut self) -> CH7_W<IN_DLY_SPEC, 14> {
-        CH7_W::new(self)
+    pub fn ch7(&mut self) -> CH7_W<IN_DLY_SPEC> {
+        CH7_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,27 +5,27 @@ pub type W = crate::W<CONF1_SPEC>;
 #[doc = "Field `TX_PCM_CONF` reader - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
 pub type TX_PCM_CONF_R = crate::FieldReader;
 #[doc = "Field `TX_PCM_CONF` writer - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
-pub type TX_PCM_CONF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TX_PCM_CONF_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for transmitted data."]
 pub type TX_PCM_BYPASS_R = crate::BitReader;
 #[doc = "Field `TX_PCM_BYPASS` writer - Set this bit to bypass Compress/Decompress module for transmitted data."]
-pub type TX_PCM_BYPASS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_PCM_BYPASS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_PCM_CONF` reader - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
 pub type RX_PCM_CONF_R = crate::FieldReader;
 #[doc = "Field `RX_PCM_CONF` writer - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
-pub type RX_PCM_CONF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RX_PCM_CONF_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for received data."]
 pub type RX_PCM_BYPASS_R = crate::BitReader;
 #[doc = "Field `RX_PCM_BYPASS` writer - Set this bit to bypass Compress/Decompress module for received data."]
-pub type RX_PCM_BYPASS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_PCM_BYPASS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_STOP_EN` reader - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
 pub type TX_STOP_EN_R = crate::BitReader;
 #[doc = "Field `TX_STOP_EN` writer - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
-pub type TX_STOP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_ZEROS_RM_EN` reader - Reserved."]
 pub type TX_ZEROS_RM_EN_R = crate::BitReader;
 #[doc = "Field `TX_ZEROS_RM_EN` writer - Reserved."]
-pub type TX_ZEROS_RM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_ZEROS_RM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pcm_conf(&mut self) -> TX_PCM_CONF_W<CONF1_SPEC, 0> {
-        TX_PCM_CONF_W::new(self)
+    pub fn tx_pcm_conf(&mut self) -> TX_PCM_CONF_W<CONF1_SPEC> {
+        TX_PCM_CONF_W::new(self, 0)
     }
     #[doc = "Bit 3 - Set this bit to bypass Compress/Decompress module for transmitted data."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_pcm_bypass(&mut self) -> TX_PCM_BYPASS_W<CONF1_SPEC, 3> {
-        TX_PCM_BYPASS_W::new(self)
+    pub fn tx_pcm_bypass(&mut self) -> TX_PCM_BYPASS_W<CONF1_SPEC> {
+        TX_PCM_BYPASS_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W<CONF1_SPEC, 4> {
-        RX_PCM_CONF_W::new(self)
+    pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W<CONF1_SPEC> {
+        RX_PCM_CONF_W::new(self, 4)
     }
     #[doc = "Bit 7 - Set this bit to bypass Compress/Decompress module for received data."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pcm_bypass(&mut self) -> RX_PCM_BYPASS_W<CONF1_SPEC, 7> {
-        RX_PCM_BYPASS_W::new(self)
+    pub fn rx_pcm_bypass(&mut self) -> RX_PCM_BYPASS_W<CONF1_SPEC> {
+        RX_PCM_BYPASS_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_stop_en(&mut self) -> TX_STOP_EN_W<CONF1_SPEC, 8> {
-        TX_STOP_EN_W::new(self)
+    pub fn tx_stop_en(&mut self) -> TX_STOP_EN_W<CONF1_SPEC> {
+        TX_STOP_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_zeros_rm_en(&mut self) -> TX_ZEROS_RM_EN_W<CONF1_SPEC, 9> {
-        TX_ZEROS_RM_EN_W::new(self)
+    pub fn tx_zeros_rm_en(&mut self) -> TX_ZEROS_RM_EN_W<CONF1_SPEC> {
+        TX_ZEROS_RM_EN_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

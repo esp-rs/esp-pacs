@@ -5,7 +5,7 @@ pub type W = crate::W<SRAM_ACE3_SIZE_SPEC>;
 #[doc = "Field `SRAM_ACE3_SIZE` reader - ******* Description ***********"]
 pub type SRAM_ACE3_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `SRAM_ACE3_SIZE` writer - ******* Description ***********"]
-pub type SRAM_ACE3_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SRAM_ACE3_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SRAM_ACE3_SIZE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn sram_ace3_size(&mut self) -> SRAM_ACE3_SIZE_W<SRAM_ACE3_SIZE_SPEC, 0> {
-        SRAM_ACE3_SIZE_W::new(self)
+    pub fn sram_ace3_size(&mut self) -> SRAM_ACE3_SIZE_W<SRAM_ACE3_SIZE_SPEC> {
+        SRAM_ACE3_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

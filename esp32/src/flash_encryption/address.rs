@@ -1,7 +1,7 @@
 #[doc = "Register `ADDRESS` writer"]
 pub type W = crate::W<ADDRESS_SPEC>;
 #[doc = "Field `ADDRESS` writer - The physical address on the off-chip flash must be 8-word boundary aligned."]
-pub type ADDRESS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ADDRESS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ADDRESS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:7 - The physical address on the off-chip flash must be 8-word boundary aligned."]
     #[inline(always)]
     #[must_use]
-    pub fn address(&mut self) -> ADDRESS_W<ADDRESS_SPEC, 0> {
-        ADDRESS_W::new(self)
+    pub fn address(&mut self) -> ADDRESS_W<ADDRESS_SPEC> {
+        ADDRESS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

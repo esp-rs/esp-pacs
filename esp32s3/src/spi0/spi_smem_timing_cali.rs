@@ -5,15 +5,15 @@ pub type W = crate::W<SPI_SMEM_TIMING_CALI_SPEC>;
 #[doc = "Field `SPI_SMEM_TIMING_CLK_ENA` reader - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
 pub type SPI_SMEM_TIMING_CLK_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_TIMING_CLK_ENA` writer - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
-pub type SPI_SMEM_TIMING_CLK_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_SMEM_TIMING_CLK_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_SMEM_TIMING_CALI` reader - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
 pub type SPI_SMEM_TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_TIMING_CALI` writer - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
-pub type SPI_SMEM_TIMING_CALI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_SMEM_TIMING_CALI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_SMEM_EXTRA_DUMMY_CYCLELEN` reader - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
 pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_EXTRA_DUMMY_CYCLELEN` writer - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
-pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
     #[inline(always)]
@@ -53,7 +53,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_TIMING_CALI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -62,22 +62,22 @@ impl W {
     #[must_use]
     pub fn spi_smem_timing_clk_ena(
         &mut self,
-    ) -> SPI_SMEM_TIMING_CLK_ENA_W<SPI_SMEM_TIMING_CALI_SPEC, 0> {
-        SPI_SMEM_TIMING_CLK_ENA_W::new(self)
+    ) -> SPI_SMEM_TIMING_CLK_ENA_W<SPI_SMEM_TIMING_CALI_SPEC> {
+        SPI_SMEM_TIMING_CLK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_smem_timing_cali(&mut self) -> SPI_SMEM_TIMING_CALI_W<SPI_SMEM_TIMING_CALI_SPEC, 1> {
-        SPI_SMEM_TIMING_CALI_W::new(self)
+    pub fn spi_smem_timing_cali(&mut self) -> SPI_SMEM_TIMING_CALI_W<SPI_SMEM_TIMING_CALI_SPEC> {
+        SPI_SMEM_TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
     #[inline(always)]
     #[must_use]
     pub fn spi_smem_extra_dummy_cyclelen(
         &mut self,
-    ) -> SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<SPI_SMEM_TIMING_CALI_SPEC, 2> {
-        SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W::new(self)
+    ) -> SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<SPI_SMEM_TIMING_CALI_SPEC> {
+        SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

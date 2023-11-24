@@ -7,25 +7,25 @@ pub type PERI_BACKUP_FLOW_ERR_R = crate::FieldReader;
 #[doc = "Field `PERI_BACKUP_BURST_LIMIT` reader - reg_peri_backup_burst_limit"]
 pub type PERI_BACKUP_BURST_LIMIT_R = crate::FieldReader;
 #[doc = "Field `PERI_BACKUP_BURST_LIMIT` writer - reg_peri_backup_burst_limit"]
-pub type PERI_BACKUP_BURST_LIMIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PERI_BACKUP_BURST_LIMIT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` reader - reg_peri_backup_tout_thres"]
 pub type PERI_BACKUP_TOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` writer - reg_peri_backup_tout_thres"]
-pub type PERI_BACKUP_TOUT_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type PERI_BACKUP_TOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `PERI_BACKUP_SIZE` reader - reg_peri_backup_size"]
 pub type PERI_BACKUP_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PERI_BACKUP_SIZE` writer - reg_peri_backup_size"]
-pub type PERI_BACKUP_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type PERI_BACKUP_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `PERI_BACKUP_START` writer - reg_peri_backup_start"]
-pub type PERI_BACKUP_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERI_BACKUP_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PERI_BACKUP_TO_MEM` reader - reg_peri_backup_to_mem"]
 pub type PERI_BACKUP_TO_MEM_R = crate::BitReader;
 #[doc = "Field `PERI_BACKUP_TO_MEM` writer - reg_peri_backup_to_mem"]
-pub type PERI_BACKUP_TO_MEM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERI_BACKUP_TO_MEM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PERI_BACKUP_ENA` reader - reg_peri_backup_ena"]
 pub type PERI_BACKUP_ENA_R = crate::BitReader;
 #[doc = "Field `PERI_BACKUP_ENA` writer - reg_peri_backup_ena"]
-pub type PERI_BACKUP_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERI_BACKUP_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 1:2 - reg_peri_backup_flow_err"]
     #[inline(always)]
@@ -92,7 +92,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -101,40 +101,38 @@ impl W {
     #[must_use]
     pub fn peri_backup_burst_limit(
         &mut self,
-    ) -> PERI_BACKUP_BURST_LIMIT_W<PERI_BACKUP_CONFIG_SPEC, 4> {
-        PERI_BACKUP_BURST_LIMIT_W::new(self)
+    ) -> PERI_BACKUP_BURST_LIMIT_W<PERI_BACKUP_CONFIG_SPEC> {
+        PERI_BACKUP_BURST_LIMIT_W::new(self, 4)
     }
     #[doc = "Bits 9:18 - reg_peri_backup_tout_thres"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_tout_thres(
-        &mut self,
-    ) -> PERI_BACKUP_TOUT_THRES_W<PERI_BACKUP_CONFIG_SPEC, 9> {
-        PERI_BACKUP_TOUT_THRES_W::new(self)
+    pub fn peri_backup_tout_thres(&mut self) -> PERI_BACKUP_TOUT_THRES_W<PERI_BACKUP_CONFIG_SPEC> {
+        PERI_BACKUP_TOUT_THRES_W::new(self, 9)
     }
     #[doc = "Bits 19:28 - reg_peri_backup_size"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_size(&mut self) -> PERI_BACKUP_SIZE_W<PERI_BACKUP_CONFIG_SPEC, 19> {
-        PERI_BACKUP_SIZE_W::new(self)
+    pub fn peri_backup_size(&mut self) -> PERI_BACKUP_SIZE_W<PERI_BACKUP_CONFIG_SPEC> {
+        PERI_BACKUP_SIZE_W::new(self, 19)
     }
     #[doc = "Bit 29 - reg_peri_backup_start"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_start(&mut self) -> PERI_BACKUP_START_W<PERI_BACKUP_CONFIG_SPEC, 29> {
-        PERI_BACKUP_START_W::new(self)
+    pub fn peri_backup_start(&mut self) -> PERI_BACKUP_START_W<PERI_BACKUP_CONFIG_SPEC> {
+        PERI_BACKUP_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_peri_backup_to_mem"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_to_mem(&mut self) -> PERI_BACKUP_TO_MEM_W<PERI_BACKUP_CONFIG_SPEC, 30> {
-        PERI_BACKUP_TO_MEM_W::new(self)
+    pub fn peri_backup_to_mem(&mut self) -> PERI_BACKUP_TO_MEM_W<PERI_BACKUP_CONFIG_SPEC> {
+        PERI_BACKUP_TO_MEM_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_peri_backup_ena"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_ena(&mut self) -> PERI_BACKUP_ENA_W<PERI_BACKUP_CONFIG_SPEC, 31> {
-        PERI_BACKUP_ENA_W::new(self)
+    pub fn peri_backup_ena(&mut self) -> PERI_BACKUP_ENA_W<PERI_BACKUP_CONFIG_SPEC> {
+        PERI_BACKUP_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

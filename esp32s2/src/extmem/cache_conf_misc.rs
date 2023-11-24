@@ -5,13 +5,11 @@ pub type W = crate::W<CACHE_CONF_MISC_SPEC>;
 #[doc = "Field `PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by preload operation."]
 pub type PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT` writer - The bit is used to disable checking mmu entry fault by preload operation."]
-pub type PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by sync operation."]
 pub type PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT` writer - The bit is used to disable checking mmu entry fault by sync operation."]
-pub type PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable checking mmu entry fault by preload operation."]
     #[inline(always)]
@@ -44,7 +42,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_CONF_MISC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -53,16 +51,16 @@ impl W {
     #[must_use]
     pub fn pro_cache_ignore_preload_mmu_entry_fault(
         &mut self,
-    ) -> PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC, 0> {
-        PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W::new(self)
+    ) -> PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+        PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable checking mmu entry fault by sync operation."]
     #[inline(always)]
     #[must_use]
     pub fn pro_cache_ignore_sync_mmu_entry_fault(
         &mut self,
-    ) -> PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC, 1> {
-        PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W::new(self)
+    ) -> PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+        PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

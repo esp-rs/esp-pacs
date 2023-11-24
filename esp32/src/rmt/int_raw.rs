@@ -9,9 +9,11 @@ pub type CH_ERR_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT[0-7]` reader - The interrupt raw bit for channel %s turns to high level when transmitter in channle%s have send datas more than reg_rmt_tx_lim_ch%s after detecting this interrupt software can updata the old datas with new datas."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 impl R {
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the transmit process is done."]
+    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the transmit process is done.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
-    pub unsafe fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
+    pub fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Bit 0 - The interrupt raw bit for channel 0 turns to high level when the transmit process is done."]
@@ -54,9 +56,11 @@ impl R {
     pub fn ch7_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the receive process is done."]
+    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the receive process is done.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
-    pub unsafe fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
+    pub fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt raw bit for channel 0 turns to high level when the receive process is done."]
@@ -99,9 +103,11 @@ impl R {
     pub fn ch7_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when channle [0-7] detects some errors."]
+    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when channle [0-7] detects some errors.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
-    pub unsafe fn ch_err(&self, n: u8) -> CH_ERR_R {
+    pub fn ch_err(&self, n: u8) -> CH_ERR_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt raw bit for channel 0 turns to high level when channle 0 detects some errors."]
@@ -144,9 +150,11 @@ impl R {
     pub fn ch7_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when transmitter in channle[0-7] have send datas more than reg_rmt_tx_lim_ch[0-7] after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when transmitter in channle[0-7] have send datas more than reg_rmt_tx_lim_ch[0-7] after detecting this interrupt software can updata the old datas with new datas.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
+    pub fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Bit 24 - The interrupt raw bit for channel 0 turns to high level when transmitter in channle0 have send datas more than reg_rmt_tx_lim_ch0 after detecting this interrupt software can updata the old datas with new datas."]
@@ -256,7 +264,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

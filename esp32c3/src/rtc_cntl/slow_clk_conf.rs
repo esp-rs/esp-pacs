@@ -5,15 +5,15 @@ pub type W = crate::W<SLOW_CLK_CONF_SPEC>;
 #[doc = "Field `ANA_CLK_DIV_VLD` reader - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
 pub type ANA_CLK_DIV_VLD_R = crate::BitReader;
 #[doc = "Field `ANA_CLK_DIV_VLD` writer - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
-pub type ANA_CLK_DIV_VLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ANA_CLK_DIV_VLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ANA_CLK_DIV` reader - the clk divider num of RTC_CLK"]
 pub type ANA_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `ANA_CLK_DIV` writer - the clk divider num of RTC_CLK"]
-pub type ANA_CLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ANA_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLOW_CLK_NEXT_EDGE` reader - flag rtc_slow_clk_next_edge"]
 pub type SLOW_CLK_NEXT_EDGE_R = crate::BitReader;
 #[doc = "Field `SLOW_CLK_NEXT_EDGE` writer - flag rtc_slow_clk_next_edge"]
-pub type SLOW_CLK_NEXT_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOW_CLK_NEXT_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 22 - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLOW_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 22 - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
     #[inline(always)]
     #[must_use]
-    pub fn ana_clk_div_vld(&mut self) -> ANA_CLK_DIV_VLD_W<SLOW_CLK_CONF_SPEC, 22> {
-        ANA_CLK_DIV_VLD_W::new(self)
+    pub fn ana_clk_div_vld(&mut self) -> ANA_CLK_DIV_VLD_W<SLOW_CLK_CONF_SPEC> {
+        ANA_CLK_DIV_VLD_W::new(self, 22)
     }
     #[doc = "Bits 23:30 - the clk divider num of RTC_CLK"]
     #[inline(always)]
     #[must_use]
-    pub fn ana_clk_div(&mut self) -> ANA_CLK_DIV_W<SLOW_CLK_CONF_SPEC, 23> {
-        ANA_CLK_DIV_W::new(self)
+    pub fn ana_clk_div(&mut self) -> ANA_CLK_DIV_W<SLOW_CLK_CONF_SPEC> {
+        ANA_CLK_DIV_W::new(self, 23)
     }
     #[doc = "Bit 31 - flag rtc_slow_clk_next_edge"]
     #[inline(always)]
     #[must_use]
-    pub fn slow_clk_next_edge(&mut self) -> SLOW_CLK_NEXT_EDGE_W<SLOW_CLK_CONF_SPEC, 31> {
-        SLOW_CLK_NEXT_EDGE_W::new(self)
+    pub fn slow_clk_next_edge(&mut self) -> SLOW_CLK_NEXT_EDGE_W<SLOW_CLK_CONF_SPEC> {
+        SLOW_CLK_NEXT_EDGE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

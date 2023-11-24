@@ -19,7 +19,7 @@ impl<FI: FieldSpec> FieldReader<FI> {
     #[doc = " Creates a new instance of the reader."]
     #[allow(unused)]
     #[inline(always)]
-    pub(crate) fn new(bits: FI::Ux) -> Self {
+    pub(crate) const fn new(bits: FI::Ux) -> Self {
         Self {
             bits,
             _reg: marker::PhantomData,
@@ -34,22 +34,23 @@ impl<FI> BitReader<FI> {
     #[doc = " Creates a new instance of the reader."]
     #[allow(unused)]
     #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
+    pub(crate) const fn new(bits: bool) -> Self {
         Self {
             bits,
             _reg: marker::PhantomData,
         }
     }
 }
-pub struct FieldWriter<'a, REG, const WI: u8, const O: u8, FI = u8, Safety = Unsafe>
+pub struct FieldWriter<'a, REG, const WI: u8, FI = u8, Safety = Unsafe>
 where
     REG: Writable + RegisterSpec,
     FI: FieldSpec,
 {
     pub(crate) w: &'a mut W<REG>,
+    pub(crate) o: u8,
     _field: marker::PhantomData<(FI, Safety)>,
 }
-impl<'a, REG, const WI: u8, const O: u8, FI, Safety> FieldWriter<'a, REG, WI, O, FI, Safety>
+impl<'a, REG, const WI: u8, FI, Safety> FieldWriter<'a, REG, WI, FI, Safety>
 where
     REG: Writable + RegisterSpec,
     FI: FieldSpec,
@@ -57,22 +58,24 @@ where
     #[doc = " Creates a new instance of the writer"]
     #[allow(unused)]
     #[inline(always)]
-    pub(crate) fn new(w: &'a mut W<REG>) -> Self {
+    pub(crate) fn new(w: &'a mut W<REG>, o: u8) -> Self {
         Self {
             w,
+            o,
             _field: marker::PhantomData,
         }
     }
 }
-pub struct BitWriter<'a, REG, const O: u8, FI = bool, M = BitM>
+pub struct BitWriter<'a, REG, FI = bool, M = BitM>
 where
     REG: Writable + RegisterSpec,
     bool: From<FI>,
 {
     pub(crate) w: &'a mut W<REG>,
+    pub(crate) o: u8,
     _field: marker::PhantomData<(FI, M)>,
 }
-impl<'a, REG, const O: u8, FI, M> BitWriter<'a, REG, O, FI, M>
+impl<'a, REG, FI, M> BitWriter<'a, REG, FI, M>
 where
     REG: Writable + RegisterSpec,
     bool: From<FI>,
@@ -80,9 +83,10 @@ where
     #[doc = " Creates a new instance of the writer"]
     #[allow(unused)]
     #[inline(always)]
-    pub(crate) fn new(w: &'a mut W<REG>) -> Self {
+    pub(crate) fn new(w: &'a mut W<REG>, o: u8) -> Self {
         Self {
             w,
+            o,
             _field: marker::PhantomData,
         }
     }

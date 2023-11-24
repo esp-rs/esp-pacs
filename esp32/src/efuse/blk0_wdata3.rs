@@ -15,27 +15,27 @@ pub type SPI_PAD_CONFIG_HD_R = crate::FieldReader;
 #[doc = "Field `CHIP_PACKAGE` reader - "]
 pub type CHIP_PACKAGE_R = crate::FieldReader;
 #[doc = "Field `CHIP_PACKAGE` writer - "]
-pub type CHIP_PACKAGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CHIP_PACKAGE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CHIP_CPU_FREQ_LOW` reader - "]
 pub type CHIP_CPU_FREQ_LOW_R = crate::BitReader;
 #[doc = "Field `CHIP_CPU_FREQ_LOW` writer - "]
-pub type CHIP_CPU_FREQ_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHIP_CPU_FREQ_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHIP_CPU_FREQ_RATED` reader - "]
 pub type CHIP_CPU_FREQ_RATED_R = crate::BitReader;
 #[doc = "Field `CHIP_CPU_FREQ_RATED` writer - "]
-pub type CHIP_CPU_FREQ_RATED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHIP_CPU_FREQ_RATED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLK3_PART_RESERVE` reader - "]
 pub type BLK3_PART_RESERVE_R = crate::BitReader;
 #[doc = "Field `BLK3_PART_RESERVE` writer - "]
-pub type BLK3_PART_RESERVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BLK3_PART_RESERVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHIP_VER_REV1` reader - "]
 pub type CHIP_VER_REV1_R = crate::BitReader;
 #[doc = "Field `CHIP_VER_REV1` writer - "]
-pub type CHIP_VER_REV1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHIP_VER_REV1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESERVE_0_112` reader - "]
 pub type RESERVE_0_112_R = crate::FieldReader<u16>;
 #[doc = "Field `RESERVE_0_112` writer - "]
-pub type RESERVE_0_112_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type RESERVE_0_112_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -141,45 +141,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 9:11"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_package(&mut self) -> CHIP_PACKAGE_W<BLK0_WDATA3_SPEC, 9> {
-        CHIP_PACKAGE_W::new(self)
+    pub fn chip_package(&mut self) -> CHIP_PACKAGE_W<BLK0_WDATA3_SPEC> {
+        CHIP_PACKAGE_W::new(self, 9)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_cpu_freq_low(&mut self) -> CHIP_CPU_FREQ_LOW_W<BLK0_WDATA3_SPEC, 12> {
-        CHIP_CPU_FREQ_LOW_W::new(self)
+    pub fn chip_cpu_freq_low(&mut self) -> CHIP_CPU_FREQ_LOW_W<BLK0_WDATA3_SPEC> {
+        CHIP_CPU_FREQ_LOW_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W<BLK0_WDATA3_SPEC, 13> {
-        CHIP_CPU_FREQ_RATED_W::new(self)
+    pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W<BLK0_WDATA3_SPEC> {
+        CHIP_CPU_FREQ_RATED_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W<BLK0_WDATA3_SPEC, 14> {
-        BLK3_PART_RESERVE_W::new(self)
+    pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W<BLK0_WDATA3_SPEC> {
+        BLK3_PART_RESERVE_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_ver_rev1(&mut self) -> CHIP_VER_REV1_W<BLK0_WDATA3_SPEC, 15> {
-        CHIP_VER_REV1_W::new(self)
+    pub fn chip_ver_rev1(&mut self) -> CHIP_VER_REV1_W<BLK0_WDATA3_SPEC> {
+        CHIP_VER_REV1_W::new(self, 15)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn reserve_0_112(&mut self) -> RESERVE_0_112_W<BLK0_WDATA3_SPEC, 16> {
-        RESERVE_0_112_W::new(self)
+    pub fn reserve_0_112(&mut self) -> RESERVE_0_112_W<BLK0_WDATA3_SPEC> {
+        RESERVE_0_112_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

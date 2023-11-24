@@ -29,11 +29,11 @@ pub type L1_ICACHE3_FREEZE_DONE_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FREEZE_EN` reader - The bit is used to enable freeze operation on L1-Cache. It can be cleared by software."]
 pub type L1_CACHE_FREEZE_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FREEZE_EN` writer - The bit is used to enable freeze operation on L1-Cache. It can be cleared by software."]
-pub type L1_CACHE_FREEZE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_FREEZE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_FREEZE_MODE` reader - The bit is used to configure mode of freeze operation L1-Cache. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
 pub type L1_CACHE_FREEZE_MODE_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FREEZE_MODE` writer - The bit is used to configure mode of freeze operation L1-Cache. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
-pub type L1_CACHE_FREEZE_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_FREEZE_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_FREEZE_DONE` reader - The bit is used to indicate whether freeze operation on L1-Cache is finished or not. 0: not finished. 1: finished."]
 pub type L1_CACHE_FREEZE_DONE_R = crate::BitReader;
 impl R {
@@ -183,23 +183,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_FREEZE_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 16 - The bit is used to enable freeze operation on L1-Cache. It can be cleared by software."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_freeze_en(&mut self) -> L1_CACHE_FREEZE_EN_W<L1_CACHE_FREEZE_CTRL_SPEC, 16> {
-        L1_CACHE_FREEZE_EN_W::new(self)
+    pub fn l1_cache_freeze_en(&mut self) -> L1_CACHE_FREEZE_EN_W<L1_CACHE_FREEZE_CTRL_SPEC> {
+        L1_CACHE_FREEZE_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to configure mode of freeze operation L1-Cache. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_freeze_mode(
-        &mut self,
-    ) -> L1_CACHE_FREEZE_MODE_W<L1_CACHE_FREEZE_CTRL_SPEC, 17> {
-        L1_CACHE_FREEZE_MODE_W::new(self)
+    pub fn l1_cache_freeze_mode(&mut self) -> L1_CACHE_FREEZE_MODE_W<L1_CACHE_FREEZE_CTRL_SPEC> {
+        L1_CACHE_FREEZE_MODE_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

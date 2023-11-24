@@ -5,11 +5,11 @@ pub type W = crate::W<RS485_CONF_SPEC>;
 #[doc = "Field `DL0_EN` reader - Set this bit to delay the stop bit by 1 bit."]
 pub type DL0_EN_R = crate::BitReader;
 #[doc = "Field `DL0_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DL0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DL1_EN` reader - Set this bit to delay the stop bit by 1 bit."]
 pub type DL1_EN_R = crate::BitReader;
 #[doc = "Field `DL1_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DL1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RS485_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     #[must_use]
-    pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SPEC, 1> {
-        DL0_EN_W::new(self)
+    pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SPEC> {
+        DL0_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     #[must_use]
-    pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SPEC, 2> {
-        DL1_EN_W::new(self)
+    pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SPEC> {
+        DL1_EN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

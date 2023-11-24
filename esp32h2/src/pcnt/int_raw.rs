@@ -5,19 +5,19 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `CNT_THR_EVENT_U0` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
 pub type CNT_THR_EVENT_U0_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U0` writer - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
-pub type CNT_THR_EVENT_U0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_THR_EVENT_U0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_THR_EVENT_U1` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
 pub type CNT_THR_EVENT_U1_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U1` writer - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
-pub type CNT_THR_EVENT_U1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_THR_EVENT_U1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_THR_EVENT_U2` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
 pub type CNT_THR_EVENT_U2_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U2` writer - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
-pub type CNT_THR_EVENT_U2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_THR_EVENT_U2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT_THR_EVENT_U3` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
 pub type CNT_THR_EVENT_U3_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U3` writer - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
-pub type CNT_THR_EVENT_U3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNT_THR_EVENT_U3_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U0_W<INT_RAW_SPEC, 0> {
-        CNT_THR_EVENT_U0_W::new(self)
+    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U0_W<INT_RAW_SPEC> {
+        CNT_THR_EVENT_U0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U1_W<INT_RAW_SPEC, 1> {
-        CNT_THR_EVENT_U1_W::new(self)
+    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U1_W<INT_RAW_SPEC> {
+        CNT_THR_EVENT_U1_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U2_W<INT_RAW_SPEC, 2> {
-        CNT_THR_EVENT_U2_W::new(self)
+    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U2_W<INT_RAW_SPEC> {
+        CNT_THR_EVENT_U2_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U3_W<INT_RAW_SPEC, 3> {
-        CNT_THR_EVENT_U3_W::new(self)
+    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U3_W<INT_RAW_SPEC> {
+        CNT_THR_EVENT_U3_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

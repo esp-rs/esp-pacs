@@ -5,7 +5,7 @@ pub type W = crate::W<APP_DPORT_APB_MASK1_SPEC>;
 #[doc = "Field `APPDPORT_APB_MASK1` reader - "]
 pub type APPDPORT_APB_MASK1_R = crate::FieldReader<u32>;
 #[doc = "Field `APPDPORT_APB_MASK1` writer - "]
-pub type APPDPORT_APB_MASK1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type APPDPORT_APB_MASK1_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APP_DPORT_APB_MASK1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn appdport_apb_mask1(&mut self) -> APPDPORT_APB_MASK1_W<APP_DPORT_APB_MASK1_SPEC, 0> {
-        APPDPORT_APB_MASK1_W::new(self)
+    pub fn appdport_apb_mask1(&mut self) -> APPDPORT_APB_MASK1_W<APP_DPORT_APB_MASK1_SPEC> {
+        APPDPORT_APB_MASK1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

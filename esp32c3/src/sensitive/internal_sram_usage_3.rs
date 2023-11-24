@@ -5,12 +5,11 @@ pub type W = crate::W<INTERNAL_SRAM_USAGE_3_SPEC>;
 #[doc = "Field `INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM` reader - internal_sram_usage_mac_dump_sram"]
 pub type INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM` writer - internal_sram_usage_mac_dump_sram"]
-pub type INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `INTERNAL_SRAM_ALLOC_MAC_DUMP` reader - internal_sram_alloc_mac_dump"]
 pub type INTERNAL_SRAM_ALLOC_MAC_DUMP_R = crate::BitReader;
 #[doc = "Field `INTERNAL_SRAM_ALLOC_MAC_DUMP` writer - internal_sram_alloc_mac_dump"]
-pub type INTERNAL_SRAM_ALLOC_MAC_DUMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTERNAL_SRAM_ALLOC_MAC_DUMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - internal_sram_usage_mac_dump_sram"]
     #[inline(always)]
@@ -41,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -50,16 +49,16 @@ impl W {
     #[must_use]
     pub fn internal_sram_usage_mac_dump_sram(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<INTERNAL_SRAM_USAGE_3_SPEC, 0> {
-        INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W::new(self)
+    ) -> INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<INTERNAL_SRAM_USAGE_3_SPEC> {
+        INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W::new(self, 0)
     }
     #[doc = "Bit 3 - internal_sram_alloc_mac_dump"]
     #[inline(always)]
     #[must_use]
     pub fn internal_sram_alloc_mac_dump(
         &mut self,
-    ) -> INTERNAL_SRAM_ALLOC_MAC_DUMP_W<INTERNAL_SRAM_USAGE_3_SPEC, 3> {
-        INTERNAL_SRAM_ALLOC_MAC_DUMP_W::new(self)
+    ) -> INTERNAL_SRAM_ALLOC_MAC_DUMP_W<INTERNAL_SRAM_USAGE_3_SPEC> {
+        INTERNAL_SRAM_ALLOC_MAC_DUMP_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

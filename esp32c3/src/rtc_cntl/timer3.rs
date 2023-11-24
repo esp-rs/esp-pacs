@@ -5,19 +5,19 @@ pub type W = crate::W<TIMER3_SPEC>;
 #[doc = "Field `WIFI_WAIT_TIMER` reader - wifi power domain wakeup time"]
 pub type WIFI_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `WIFI_WAIT_TIMER` writer - wifi power domain wakeup time"]
-pub type WIFI_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type WIFI_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `WIFI_POWERUP_TIMER` reader - wifi power domain power on time"]
 pub type WIFI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `WIFI_POWERUP_TIMER` writer - wifi power domain power on time"]
-pub type WIFI_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type WIFI_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `BT_WAIT_TIMER` reader - bt power domain wakeup time"]
 pub type BT_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_WAIT_TIMER` writer - bt power domain wakeup time"]
-pub type BT_WAIT_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type BT_WAIT_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `BT_POWERUP_TIMER` reader - bt power domain power on time"]
 pub type BT_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `BT_POWERUP_TIMER` writer - bt power domain power on time"]
-pub type BT_POWERUP_TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type BT_POWERUP_TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:8 - wifi power domain wakeup time"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - wifi power domain wakeup time"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_wait_timer(&mut self) -> WIFI_WAIT_TIMER_W<TIMER3_SPEC, 0> {
-        WIFI_WAIT_TIMER_W::new(self)
+    pub fn wifi_wait_timer(&mut self) -> WIFI_WAIT_TIMER_W<TIMER3_SPEC> {
+        WIFI_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15 - wifi power domain power on time"]
     #[inline(always)]
     #[must_use]
-    pub fn wifi_powerup_timer(&mut self) -> WIFI_POWERUP_TIMER_W<TIMER3_SPEC, 9> {
-        WIFI_POWERUP_TIMER_W::new(self)
+    pub fn wifi_powerup_timer(&mut self) -> WIFI_POWERUP_TIMER_W<TIMER3_SPEC> {
+        WIFI_POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24 - bt power domain wakeup time"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_wait_timer(&mut self) -> BT_WAIT_TIMER_W<TIMER3_SPEC, 16> {
-        BT_WAIT_TIMER_W::new(self)
+    pub fn bt_wait_timer(&mut self) -> BT_WAIT_TIMER_W<TIMER3_SPEC> {
+        BT_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31 - bt power domain power on time"]
     #[inline(always)]
     #[must_use]
-    pub fn bt_powerup_timer(&mut self) -> BT_POWERUP_TIMER_W<TIMER3_SPEC, 25> {
-        BT_POWERUP_TIMER_W::new(self)
+    pub fn bt_powerup_timer(&mut self) -> BT_POWERUP_TIMER_W<TIMER3_SPEC> {
+        BT_POWERUP_TIMER_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

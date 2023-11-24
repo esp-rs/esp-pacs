@@ -5,19 +5,19 @@ pub type W = crate::W<SER_AFIFO_CONFIG_SPEC>;
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
 pub type SERIAL_IN_AFIFO_RESET_WR_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
-pub type SERIAL_IN_AFIFO_RESET_WR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SERIAL_IN_AFIFO_RESET_WR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
 pub type SERIAL_IN_AFIFO_RESET_RD_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
-pub type SERIAL_IN_AFIFO_RESET_RD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SERIAL_IN_AFIFO_RESET_RD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
 pub type SERIAL_OUT_AFIFO_RESET_WR_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
-pub type SERIAL_OUT_AFIFO_RESET_WR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SERIAL_OUT_AFIFO_RESET_WR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
 pub type SERIAL_OUT_AFIFO_RESET_RD_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
-pub type SERIAL_OUT_AFIFO_RESET_RD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SERIAL_OUT_AFIFO_RESET_RD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SERIAL_OUT_AFIFO_REMPTY` reader - CDC_ACM OUTOUT async FIFO empty signal in read clock domain."]
 pub type SERIAL_OUT_AFIFO_REMPTY_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_AFIFO_WFULL` reader - CDC_ACM OUT IN async FIFO empty signal in write clock domain."]
@@ -88,7 +88,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SER_AFIFO_CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,32 +97,32 @@ impl W {
     #[must_use]
     pub fn serial_in_afifo_reset_wr(
         &mut self,
-    ) -> SERIAL_IN_AFIFO_RESET_WR_W<SER_AFIFO_CONFIG_SPEC, 0> {
-        SERIAL_IN_AFIFO_RESET_WR_W::new(self)
+    ) -> SERIAL_IN_AFIFO_RESET_WR_W<SER_AFIFO_CONFIG_SPEC> {
+        SERIAL_IN_AFIFO_RESET_WR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
     #[inline(always)]
     #[must_use]
     pub fn serial_in_afifo_reset_rd(
         &mut self,
-    ) -> SERIAL_IN_AFIFO_RESET_RD_W<SER_AFIFO_CONFIG_SPEC, 1> {
-        SERIAL_IN_AFIFO_RESET_RD_W::new(self)
+    ) -> SERIAL_IN_AFIFO_RESET_RD_W<SER_AFIFO_CONFIG_SPEC> {
+        SERIAL_IN_AFIFO_RESET_RD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
     #[inline(always)]
     #[must_use]
     pub fn serial_out_afifo_reset_wr(
         &mut self,
-    ) -> SERIAL_OUT_AFIFO_RESET_WR_W<SER_AFIFO_CONFIG_SPEC, 2> {
-        SERIAL_OUT_AFIFO_RESET_WR_W::new(self)
+    ) -> SERIAL_OUT_AFIFO_RESET_WR_W<SER_AFIFO_CONFIG_SPEC> {
+        SERIAL_OUT_AFIFO_RESET_WR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
     #[inline(always)]
     #[must_use]
     pub fn serial_out_afifo_reset_rd(
         &mut self,
-    ) -> SERIAL_OUT_AFIFO_RESET_RD_W<SER_AFIFO_CONFIG_SPEC, 3> {
-        SERIAL_OUT_AFIFO_RESET_RD_W::new(self)
+    ) -> SERIAL_OUT_AFIFO_RESET_RD_W<SER_AFIFO_CONFIG_SPEC> {
+        SERIAL_OUT_AFIFO_RESET_RD_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

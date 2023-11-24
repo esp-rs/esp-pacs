@@ -5,15 +5,15 @@ pub type W = crate::W<DMA_CONF_SPEC>;
 #[doc = "Field `APB_ADC_EOF_NUM` reader - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
 pub type APB_ADC_EOF_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_ADC_EOF_NUM` writer - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
-pub type APB_ADC_EOF_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type APB_ADC_EOF_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `APB_ADC_RESET_FSM` reader - Reset DIG ADC CTRL status."]
 pub type APB_ADC_RESET_FSM_R = crate::BitReader;
 #[doc = "Field `APB_ADC_RESET_FSM` writer - Reset DIG ADC CTRL status."]
-pub type APB_ADC_RESET_FSM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_ADC_RESET_FSM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_ADC_TRANS` reader - Set this bit, DIG ADC CTRL uses SPI DMA."]
 pub type APB_ADC_TRANS_R = crate::BitReader;
 #[doc = "Field `APB_ADC_TRANS` writer - Set this bit, DIG ADC CTRL uses SPI DMA."]
-pub type APB_ADC_TRANS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_ADC_TRANS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_adc_eof_num(&mut self) -> APB_ADC_EOF_NUM_W<DMA_CONF_SPEC, 0> {
-        APB_ADC_EOF_NUM_W::new(self)
+    pub fn apb_adc_eof_num(&mut self) -> APB_ADC_EOF_NUM_W<DMA_CONF_SPEC> {
+        APB_ADC_EOF_NUM_W::new(self, 0)
     }
     #[doc = "Bit 30 - Reset DIG ADC CTRL status."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_adc_reset_fsm(&mut self) -> APB_ADC_RESET_FSM_W<DMA_CONF_SPEC, 30> {
-        APB_ADC_RESET_FSM_W::new(self)
+    pub fn apb_adc_reset_fsm(&mut self) -> APB_ADC_RESET_FSM_W<DMA_CONF_SPEC> {
+        APB_ADC_RESET_FSM_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit, DIG ADC CTRL uses SPI DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_adc_trans(&mut self) -> APB_ADC_TRANS_W<DMA_CONF_SPEC, 31> {
-        APB_ADC_TRANS_W::new(self)
+    pub fn apb_adc_trans(&mut self) -> APB_ADC_TRANS_W<DMA_CONF_SPEC> {
+        APB_ADC_TRANS_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

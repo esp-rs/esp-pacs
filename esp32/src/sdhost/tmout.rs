@@ -5,11 +5,11 @@ pub type W = crate::W<TMOUT_SPEC>;
 #[doc = "Field `RESPONSE_TIMEOUT` reader - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
 pub type RESPONSE_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RESPONSE_TIMEOUT` writer - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
-pub type RESPONSE_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RESPONSE_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DATA_TIMEOUT` reader - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
 pub type DATA_TIMEOUT_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA_TIMEOUT` writer - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
-pub type DATA_TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 24, O, u32>;
+pub type DATA_TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 impl R {
     #[doc = "Bits 0:7 - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TMOUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
     #[inline(always)]
     #[must_use]
-    pub fn response_timeout(&mut self) -> RESPONSE_TIMEOUT_W<TMOUT_SPEC, 0> {
-        RESPONSE_TIMEOUT_W::new(self)
+    pub fn response_timeout(&mut self) -> RESPONSE_TIMEOUT_W<TMOUT_SPEC> {
+        RESPONSE_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:31 - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
     #[inline(always)]
     #[must_use]
-    pub fn data_timeout(&mut self) -> DATA_TIMEOUT_W<TMOUT_SPEC, 8> {
-        DATA_TIMEOUT_W::new(self)
+    pub fn data_timeout(&mut self) -> DATA_TIMEOUT_W<TMOUT_SPEC> {
+        DATA_TIMEOUT_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

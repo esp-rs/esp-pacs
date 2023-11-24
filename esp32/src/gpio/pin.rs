@@ -5,23 +5,23 @@ pub type W = crate::W<PIN_SPEC>;
 #[doc = "Field `PAD_DRIVER` reader - if set to 0: normal output if set to 1: open drain"]
 pub type PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `PAD_DRIVER` writer - if set to 0: normal output if set to 1: open drain"]
-pub type PAD_DRIVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INT_TYPE` reader - if set to 0: GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
 pub type INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `INT_TYPE` writer - if set to 0: GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
-pub type INT_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WAKEUP_ENABLE` reader - GPIO wake up enable only available in light sleep"]
 pub type WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_ENABLE` writer - GPIO wake up enable only available in light sleep"]
-pub type WAKEUP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONFIG` reader - NA"]
 pub type CONFIG_R = crate::FieldReader;
 #[doc = "Field `CONFIG` writer - NA"]
-pub type CONFIG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CONFIG_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `INT_ENA` reader - bit0: APP CPU interrupt enable bit1: APP CPU non-maskable interrupt enable bit3: PRO CPU interrupt enable bit4: PRO CPU non-maskable interrupt enable bit5: SDIO's extent interrupt enable"]
 pub type INT_ENA_R = crate::FieldReader;
 #[doc = "Field `INT_ENA` writer - bit0: APP CPU interrupt enable bit1: APP CPU non-maskable interrupt enable bit3: PRO CPU interrupt enable bit4: PRO CPU non-maskable interrupt enable bit5: SDIO's extent interrupt enable"]
-pub type INT_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type INT_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bit 2 - if set to 0: normal output if set to 1: open drain"]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PIN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - if set to 0: normal output if set to 1: open drain"]
     #[inline(always)]
     #[must_use]
-    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN_SPEC, 2> {
-        PAD_DRIVER_W::new(self)
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN_SPEC> {
+        PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9 - if set to 0: GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
     #[inline(always)]
     #[must_use]
-    pub fn int_type(&mut self) -> INT_TYPE_W<PIN_SPEC, 7> {
-        INT_TYPE_W::new(self)
+    pub fn int_type(&mut self) -> INT_TYPE_W<PIN_SPEC> {
+        INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - GPIO wake up enable only available in light sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN_SPEC, 10> {
-        WAKEUP_ENABLE_W::new(self)
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN_SPEC> {
+        WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bits 11:12 - NA"]
     #[inline(always)]
     #[must_use]
-    pub fn config(&mut self) -> CONFIG_W<PIN_SPEC, 11> {
-        CONFIG_W::new(self)
+    pub fn config(&mut self) -> CONFIG_W<PIN_SPEC> {
+        CONFIG_W::new(self, 11)
     }
     #[doc = "Bits 13:17 - bit0: APP CPU interrupt enable bit1: APP CPU non-maskable interrupt enable bit3: PRO CPU interrupt enable bit4: PRO CPU non-maskable interrupt enable bit5: SDIO's extent interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn int_ena(&mut self) -> INT_ENA_W<PIN_SPEC, 13> {
-        INT_ENA_W::new(self)
+    pub fn int_ena(&mut self) -> INT_ENA_W<PIN_SPEC> {
+        INT_ENA_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

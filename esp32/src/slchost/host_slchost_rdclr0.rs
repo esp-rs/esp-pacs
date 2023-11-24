@@ -5,13 +5,11 @@ pub type W = crate::W<HOST_SLCHOST_RDCLR0_SPEC>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT7_CLRADDR` reader - "]
 pub type HOST_SLCHOST_SLC0_BIT7_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT7_CLRADDR` writer - "]
-pub type HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT6_CLRADDR` reader - "]
 pub type HOST_SLCHOST_SLC0_BIT6_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLCHOST_SLC0_BIT6_CLRADDR` writer - "]
-pub type HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -42,7 +40,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_RDCLR0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -51,16 +49,16 @@ impl W {
     #[must_use]
     pub fn host_slchost_slc0_bit7_clraddr(
         &mut self,
-    ) -> HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC, 0> {
-        HOST_SLCHOST_SLC0_BIT7_CLRADDR_W::new(self)
+    ) -> HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC> {
+        HOST_SLCHOST_SLC0_BIT7_CLRADDR_W::new(self, 0)
     }
     #[doc = "Bits 9:17"]
     #[inline(always)]
     #[must_use]
     pub fn host_slchost_slc0_bit6_clraddr(
         &mut self,
-    ) -> HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC, 9> {
-        HOST_SLCHOST_SLC0_BIT6_CLRADDR_W::new(self)
+    ) -> HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC> {
+        HOST_SLCHOST_SLC0_BIT6_CLRADDR_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<TICK_CONF_SPEC>;
 #[doc = "Field `PWR_TICK_TARGET` reader - "]
 pub type PWR_TICK_TARGET_R = crate::FieldReader;
 #[doc = "Field `PWR_TICK_TARGET` writer - "]
-pub type PWR_TICK_TARGET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type PWR_TICK_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TICK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn pwr_tick_target(&mut self) -> PWR_TICK_TARGET_W<TICK_CONF_SPEC, 0> {
-        PWR_TICK_TARGET_W::new(self)
+    pub fn pwr_tick_target(&mut self) -> PWR_TICK_TARGET_W<TICK_CONF_SPEC> {
+        PWR_TICK_TARGET_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

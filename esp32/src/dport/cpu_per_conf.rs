@@ -5,15 +5,15 @@ pub type W = crate::W<CPU_PER_CONF_SPEC>;
 #[doc = "Field `CPUPERIOD_SEL` reader - "]
 pub type CPUPERIOD_SEL_R = crate::FieldReader;
 #[doc = "Field `CPUPERIOD_SEL` writer - "]
-pub type CPUPERIOD_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CPUPERIOD_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LOWSPEED_CLK_SEL` reader - "]
 pub type LOWSPEED_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LOWSPEED_CLK_SEL` writer - "]
-pub type LOWSPEED_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOWSPEED_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - "]
 pub type FAST_CLK_RTC_SEL_R = crate::BitReader;
 #[doc = "Field `FAST_CLK_RTC_SEL` writer - "]
-pub type FAST_CLK_RTC_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FAST_CLK_RTC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_PER_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PER_CONF_SPEC, 0> {
-        CPUPERIOD_SEL_W::new(self)
+    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PER_CONF_SPEC> {
+        CPUPERIOD_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn lowspeed_clk_sel(&mut self) -> LOWSPEED_CLK_SEL_W<CPU_PER_CONF_SPEC, 2> {
-        LOWSPEED_CLK_SEL_W::new(self)
+    pub fn lowspeed_clk_sel(&mut self) -> LOWSPEED_CLK_SEL_W<CPU_PER_CONF_SPEC> {
+        LOWSPEED_CLK_SEL_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<CPU_PER_CONF_SPEC, 3> {
-        FAST_CLK_RTC_SEL_W::new(self)
+    pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<CPU_PER_CONF_SPEC> {
+        FAST_CLK_RTC_SEL_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

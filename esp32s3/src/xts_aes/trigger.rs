@@ -1,7 +1,7 @@
 #[doc = "Register `TRIGGER` writer"]
 pub type W = crate::W<TRIGGER_SPEC>;
 #[doc = "Field `TRIGGER` writer - Write 1 to activate manual encryption."]
-pub type TRIGGER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRIGGER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TRIGGER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Write 1 to activate manual encryption."]
     #[inline(always)]
     #[must_use]
-    pub fn trigger(&mut self) -> TRIGGER_W<TRIGGER_SPEC, 0> {
-        TRIGGER_W::new(self)
+    pub fn trigger(&mut self) -> TRIGGER_W<TRIGGER_SPEC> {
+        TRIGGER_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

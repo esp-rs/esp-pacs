@@ -5,19 +5,19 @@ pub type W = crate::W<HP_SLEEP_BIAS_SPEC>;
 #[doc = "Field `HP_SLEEP_XPD_TRX` reader - need_des"]
 pub type HP_SLEEP_XPD_TRX_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_TRX` writer - need_des"]
-pub type HP_SLEEP_XPD_TRX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_TRX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_XPD_BIAS` reader - need_des"]
 pub type HP_SLEEP_XPD_BIAS_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_BIAS` writer - need_des"]
-pub type HP_SLEEP_XPD_BIAS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_XPD_BIAS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_PD_CUR` reader - need_des"]
 pub type HP_SLEEP_PD_CUR_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_CUR` writer - need_des"]
-pub type HP_SLEEP_PD_CUR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_SLEEP_PD_CUR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLEEP` reader - need_des"]
 pub type SLEEP_R = crate::BitReader;
 #[doc = "Field `SLEEP` writer - need_des"]
-pub type SLEEP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLEEP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
@@ -63,33 +63,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_BIAS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_xpd_trx(&mut self) -> HP_SLEEP_XPD_TRX_W<HP_SLEEP_BIAS_SPEC, 24> {
-        HP_SLEEP_XPD_TRX_W::new(self)
+    pub fn hp_sleep_xpd_trx(&mut self) -> HP_SLEEP_XPD_TRX_W<HP_SLEEP_BIAS_SPEC> {
+        HP_SLEEP_XPD_TRX_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_xpd_bias(&mut self) -> HP_SLEEP_XPD_BIAS_W<HP_SLEEP_BIAS_SPEC, 25> {
-        HP_SLEEP_XPD_BIAS_W::new(self)
+    pub fn hp_sleep_xpd_bias(&mut self) -> HP_SLEEP_XPD_BIAS_W<HP_SLEEP_BIAS_SPEC> {
+        HP_SLEEP_XPD_BIAS_W::new(self, 25)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_sleep_pd_cur(&mut self) -> HP_SLEEP_PD_CUR_W<HP_SLEEP_BIAS_SPEC, 30> {
-        HP_SLEEP_PD_CUR_W::new(self)
+    pub fn hp_sleep_pd_cur(&mut self) -> HP_SLEEP_PD_CUR_W<HP_SLEEP_BIAS_SPEC> {
+        HP_SLEEP_PD_CUR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep(&mut self) -> SLEEP_W<HP_SLEEP_BIAS_SPEC, 31> {
-        SLEEP_W::new(self)
+    pub fn sleep(&mut self) -> SLEEP_W<HP_SLEEP_BIAS_SPEC> {
+        SLEEP_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

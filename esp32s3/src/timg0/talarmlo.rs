@@ -5,7 +5,7 @@ pub type W = crate::W<TALARMLO_SPEC>;
 #[doc = "Field `ALARM_LO` reader - Timer %s alarm trigger time-base counter value, low 32 bits."]
 pub type ALARM_LO_R = crate::FieldReader<u32>;
 #[doc = "Field `ALARM_LO` writer - Timer %s alarm trigger time-base counter value, low 32 bits."]
-pub type ALARM_LO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type ALARM_LO_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Timer %s alarm trigger time-base counter value, low 32 bits."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TALARMLO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Timer %s alarm trigger time-base counter value, low 32 bits."]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_lo(&mut self) -> ALARM_LO_W<TALARMLO_SPEC, 0> {
-        ALARM_LO_W::new(self)
+    pub fn alarm_lo(&mut self) -> ALARM_LO_W<TALARMLO_SPEC> {
+        ALARM_LO_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK8_W9_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Otp debuger block8 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w9::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

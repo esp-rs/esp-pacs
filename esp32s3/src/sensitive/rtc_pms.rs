@@ -5,7 +5,7 @@ pub type W = crate::W<RTC_PMS_SPEC>;
 #[doc = "Field `DIS_RTC_CPU` reader - Set 1 to disable rtc coprocessor."]
 pub type DIS_RTC_CPU_R = crate::BitReader;
 #[doc = "Field `DIS_RTC_CPU` writer - Set 1 to disable rtc coprocessor."]
-pub type DIS_RTC_CPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIS_RTC_CPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to disable rtc coprocessor."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_PMS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to disable rtc coprocessor."]
     #[inline(always)]
     #[must_use]
-    pub fn dis_rtc_cpu(&mut self) -> DIS_RTC_CPU_W<RTC_PMS_SPEC, 0> {
-        DIS_RTC_CPU_W::new(self)
+    pub fn dis_rtc_cpu(&mut self) -> DIS_RTC_CPU_W<RTC_PMS_SPEC> {
+        DIS_RTC_CPU_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

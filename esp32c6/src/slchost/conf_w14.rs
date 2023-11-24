@@ -5,19 +5,19 @@ pub type W = crate::W<CONF_W14_SPEC>;
 #[doc = "Field `SLCHOST_CONF56` reader - *******Description***********"]
 pub type SLCHOST_CONF56_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_CONF56` writer - *******Description***********"]
-pub type SLCHOST_CONF56_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLCHOST_CONF56_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLCHOST_CONF57` reader - *******Description***********"]
 pub type SLCHOST_CONF57_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_CONF57` writer - *******Description***********"]
-pub type SLCHOST_CONF57_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLCHOST_CONF57_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLCHOST_CONF58` reader - *******Description***********"]
 pub type SLCHOST_CONF58_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_CONF58` writer - *******Description***********"]
-pub type SLCHOST_CONF58_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLCHOST_CONF58_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLCHOST_CONF59` reader - *******Description***********"]
 pub type SLCHOST_CONF59_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_CONF59` writer - *******Description***********"]
-pub type SLCHOST_CONF59_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLCHOST_CONF59_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - *******Description***********"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_W14_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slchost_conf56(&mut self) -> SLCHOST_CONF56_W<CONF_W14_SPEC, 0> {
-        SLCHOST_CONF56_W::new(self)
+    pub fn slchost_conf56(&mut self) -> SLCHOST_CONF56_W<CONF_W14_SPEC> {
+        SLCHOST_CONF56_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slchost_conf57(&mut self) -> SLCHOST_CONF57_W<CONF_W14_SPEC, 8> {
-        SLCHOST_CONF57_W::new(self)
+    pub fn slchost_conf57(&mut self) -> SLCHOST_CONF57_W<CONF_W14_SPEC> {
+        SLCHOST_CONF57_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slchost_conf58(&mut self) -> SLCHOST_CONF58_W<CONF_W14_SPEC, 16> {
-        SLCHOST_CONF58_W::new(self)
+    pub fn slchost_conf58(&mut self) -> SLCHOST_CONF58_W<CONF_W14_SPEC> {
+        SLCHOST_CONF58_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slchost_conf59(&mut self) -> SLCHOST_CONF59_W<CONF_W14_SPEC, 24> {
-        SLCHOST_CONF59_W::new(self)
+    pub fn slchost_conf59(&mut self) -> SLCHOST_CONF59_W<CONF_W14_SPEC> {
+        SLCHOST_CONF59_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<PCGCCTL_SPEC>;
 #[doc = "Field `STOPPCLK` reader - "]
 pub type STOPPCLK_R = crate::BitReader;
 #[doc = "Field `STOPPCLK` writer - "]
-pub type STOPPCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STOPPCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GATEHCLK` reader - "]
 pub type GATEHCLK_R = crate::BitReader;
 #[doc = "Field `GATEHCLK` writer - "]
-pub type GATEHCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GATEHCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWRCLMP` reader - "]
 pub type PWRCLMP_R = crate::BitReader;
 #[doc = "Field `PWRCLMP` writer - "]
-pub type PWRCLMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWRCLMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSTPDWNMODULE` reader - "]
 pub type RSTPDWNMODULE_R = crate::BitReader;
 #[doc = "Field `RSTPDWNMODULE` writer - "]
-pub type RSTPDWNMODULE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSTPDWNMODULE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PHYSLEEP` reader - "]
 pub type PHYSLEEP_R = crate::BitReader;
 #[doc = "Field `L1SUSPENDED` reader - "]
@@ -25,7 +25,7 @@ pub type L1SUSPENDED_R = crate::BitReader;
 #[doc = "Field `RESETAFTERSUSP` reader - "]
 pub type RESETAFTERSUSP_R = crate::BitReader;
 #[doc = "Field `RESETAFTERSUSP` writer - "]
-pub type RESETAFTERSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESETAFTERSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -86,39 +86,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PCGCCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn stoppclk(&mut self) -> STOPPCLK_W<PCGCCTL_SPEC, 0> {
-        STOPPCLK_W::new(self)
+    pub fn stoppclk(&mut self) -> STOPPCLK_W<PCGCCTL_SPEC> {
+        STOPPCLK_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gatehclk(&mut self) -> GATEHCLK_W<PCGCCTL_SPEC, 1> {
-        GATEHCLK_W::new(self)
+    pub fn gatehclk(&mut self) -> GATEHCLK_W<PCGCCTL_SPEC> {
+        GATEHCLK_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrclmp(&mut self) -> PWRCLMP_W<PCGCCTL_SPEC, 2> {
-        PWRCLMP_W::new(self)
+    pub fn pwrclmp(&mut self) -> PWRCLMP_W<PCGCCTL_SPEC> {
+        PWRCLMP_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<PCGCCTL_SPEC, 3> {
-        RSTPDWNMODULE_W::new(self)
+    pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<PCGCCTL_SPEC> {
+        RSTPDWNMODULE_W::new(self, 3)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<PCGCCTL_SPEC, 8> {
-        RESETAFTERSUSP_W::new(self)
+    pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<PCGCCTL_SPEC> {
+        RESETAFTERSUSP_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

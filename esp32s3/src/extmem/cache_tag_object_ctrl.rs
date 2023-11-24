@@ -5,11 +5,11 @@ pub type W = crate::W<CACHE_TAG_OBJECT_CTRL_SPEC>;
 #[doc = "Field `ICACHE_TAG_OBJECT` reader - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
 pub type ICACHE_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `ICACHE_TAG_OBJECT` writer - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type ICACHE_TAG_OBJECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ICACHE_TAG_OBJECT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCACHE_TAG_OBJECT` reader - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
 pub type DCACHE_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `DCACHE_TAG_OBJECT` writer - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type DCACHE_TAG_OBJECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCACHE_TAG_OBJECT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_TAG_OBJECT_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
     #[must_use]
-    pub fn icache_tag_object(&mut self) -> ICACHE_TAG_OBJECT_W<CACHE_TAG_OBJECT_CTRL_SPEC, 0> {
-        ICACHE_TAG_OBJECT_W::new(self)
+    pub fn icache_tag_object(&mut self) -> ICACHE_TAG_OBJECT_W<CACHE_TAG_OBJECT_CTRL_SPEC> {
+        ICACHE_TAG_OBJECT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
     #[must_use]
-    pub fn dcache_tag_object(&mut self) -> DCACHE_TAG_OBJECT_W<CACHE_TAG_OBJECT_CTRL_SPEC, 1> {
-        DCACHE_TAG_OBJECT_W::new(self)
+    pub fn dcache_tag_object(&mut self) -> DCACHE_TAG_OBJECT_W<CACHE_TAG_OBJECT_CTRL_SPEC> {
+        DCACHE_TAG_OBJECT_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

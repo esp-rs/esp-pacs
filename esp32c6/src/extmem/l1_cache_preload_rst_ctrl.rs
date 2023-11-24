@@ -13,7 +13,7 @@ pub type L1_ICACHE3_PLD_RST_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_RST` reader - set this bit to reset preload-logic inside L1-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
 pub type L1_CACHE_PLD_RST_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_RST` writer - set this bit to reset preload-logic inside L1-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
-pub type L1_CACHE_PLD_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_PLD_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - set this bit to reset preload-logic inside L1-ICache0. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
     #[inline(always)]
@@ -71,15 +71,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 4 - set this bit to reset preload-logic inside L1-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
     #[inline(always)]
     #[must_use]
-    pub fn l1_cache_pld_rst(&mut self) -> L1_CACHE_PLD_RST_W<L1_CACHE_PRELOAD_RST_CTRL_SPEC, 4> {
-        L1_CACHE_PLD_RST_W::new(self)
+    pub fn l1_cache_pld_rst(&mut self) -> L1_CACHE_PLD_RST_W<L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
+        L1_CACHE_PLD_RST_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

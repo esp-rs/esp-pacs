@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_EXT3_SPEC>;
 #[doc = "Field `reg_int_hold_ena` reader - This register is for two SPI masters to share the same cs, clock and data signals."]
 pub type REG_INT_HOLD_ENA_R = crate::FieldReader;
 #[doc = "Field `reg_int_hold_ena` writer - This register is for two SPI masters to share the same cs, clock and data signals."]
-pub type REG_INT_HOLD_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type REG_INT_HOLD_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs, clock and data signals."]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_EXT3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs, clock and data signals."]
     #[inline(always)]
     #[must_use]
-    pub fn reg_int_hold_ena(&mut self) -> REG_INT_HOLD_ENA_W<SPI_EXT3_SPEC, 0> {
-        REG_INT_HOLD_ENA_W::new(self)
+    pub fn reg_int_hold_ena(&mut self) -> REG_INT_HOLD_ENA_W<SPI_EXT3_SPEC> {
+        REG_INT_HOLD_ENA_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

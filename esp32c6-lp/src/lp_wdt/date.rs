@@ -5,11 +5,11 @@ pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `LP_WDT_DATE` reader - need_des"]
 pub type LP_WDT_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `LP_WDT_DATE` writer - need_des"]
-pub type LP_WDT_DATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 31, O, u32>;
+pub type LP_WDT_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
 #[doc = "Field `CLK_EN` reader - need_des"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - need_des"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
@@ -37,23 +37,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_wdt_date(&mut self) -> LP_WDT_DATE_W<DATE_SPEC, 0> {
-        LP_WDT_DATE_W::new(self)
+    pub fn lp_wdt_date(&mut self) -> LP_WDT_DATE_W<DATE_SPEC> {
+        LP_WDT_DATE_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<DATE_SPEC, 31> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<DATE_SPEC> {
+        CLK_EN_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

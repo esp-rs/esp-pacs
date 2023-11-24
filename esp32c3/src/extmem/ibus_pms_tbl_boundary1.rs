@@ -5,7 +5,7 @@ pub type W = crate::W<IBUS_PMS_TBL_BOUNDARY1_SPEC>;
 #[doc = "Field `IBUS_PMS_BOUNDARY1` reader - The bit is used to configure the ibus permission control section boundary1"]
 pub type IBUS_PMS_BOUNDARY1_R = crate::FieldReader<u16>;
 #[doc = "Field `IBUS_PMS_BOUNDARY1` writer - The bit is used to configure the ibus permission control section boundary1"]
-pub type IBUS_PMS_BOUNDARY1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type IBUS_PMS_BOUNDARY1_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - The bit is used to configure the ibus permission control section boundary1"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IBUS_PMS_TBL_BOUNDARY1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - The bit is used to configure the ibus permission control section boundary1"]
     #[inline(always)]
     #[must_use]
-    pub fn ibus_pms_boundary1(&mut self) -> IBUS_PMS_BOUNDARY1_W<IBUS_PMS_TBL_BOUNDARY1_SPEC, 0> {
-        IBUS_PMS_BOUNDARY1_W::new(self)
+    pub fn ibus_pms_boundary1(&mut self) -> IBUS_PMS_BOUNDARY1_W<IBUS_PMS_TBL_BOUNDARY1_SPEC> {
+        IBUS_PMS_BOUNDARY1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

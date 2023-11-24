@@ -5,11 +5,11 @@ pub type W = crate::W<RSA_CONF_SPEC>;
 #[doc = "Field `RSA_CLK_EN` reader - Set 1 to enable rsa clock"]
 pub type RSA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `RSA_CLK_EN` writer - Set 1 to enable rsa clock"]
-pub type RSA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSA_RST_EN` reader - Set 0 to reset rsa module"]
 pub type RSA_RST_EN_R = crate::BitReader;
 #[doc = "Field `RSA_RST_EN` writer - Set 0 to reset rsa module"]
-pub type RSA_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSA_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable rsa clock"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RSA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable rsa clock"]
     #[inline(always)]
     #[must_use]
-    pub fn rsa_clk_en(&mut self) -> RSA_CLK_EN_W<RSA_CONF_SPEC, 0> {
-        RSA_CLK_EN_W::new(self)
+    pub fn rsa_clk_en(&mut self) -> RSA_CLK_EN_W<RSA_CONF_SPEC> {
+        RSA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset rsa module"]
     #[inline(always)]
     #[must_use]
-    pub fn rsa_rst_en(&mut self) -> RSA_RST_EN_W<RSA_CONF_SPEC, 1> {
-        RSA_RST_EN_W::new(self)
+    pub fn rsa_rst_en(&mut self) -> RSA_RST_EN_W<RSA_CONF_SPEC> {
+        RSA_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

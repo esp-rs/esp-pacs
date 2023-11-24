@@ -5,7 +5,7 @@ pub type W = crate::W<LACTLOADLO_SPEC>;
 #[doc = "Field `LACT_LOAD_LO` reader - "]
 pub type LACT_LOAD_LO_R = crate::FieldReader<u32>;
 #[doc = "Field `LACT_LOAD_LO` writer - "]
-pub type LACT_LOAD_LO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type LACT_LOAD_LO_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LACTLOADLO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn lact_load_lo(&mut self) -> LACT_LOAD_LO_W<LACTLOADLO_SPEC, 0> {
-        LACT_LOAD_LO_W::new(self)
+    pub fn lact_load_lo(&mut self) -> LACT_LOAD_LO_W<LACTLOADLO_SPEC> {
+        LACT_LOAD_LO_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

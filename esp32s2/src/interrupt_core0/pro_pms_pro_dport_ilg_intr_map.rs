@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_PMS_PRO_DPORT_ILG_INTR_MAP_SPEC>;
 #[doc = "Field `PRO_PMS_PRO_DPORT_ILG_INTR_MAP` reader - This register is used to map PMS_PRO_DPORT_ILG interrupt signal to one of the CPU interrupts."]
 pub type PRO_PMS_PRO_DPORT_ILG_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `PRO_PMS_PRO_DPORT_ILG_INTR_MAP` writer - This register is used to map PMS_PRO_DPORT_ILG interrupt signal to one of the CPU interrupts."]
-pub type PRO_PMS_PRO_DPORT_ILG_INTR_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PRO_PMS_PRO_DPORT_ILG_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - This register is used to map PMS_PRO_DPORT_ILG interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_PMS_PRO_DPORT_ILG_INTR_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn pro_pms_pro_dport_ilg_intr_map(
         &mut self,
-    ) -> PRO_PMS_PRO_DPORT_ILG_INTR_MAP_W<PRO_PMS_PRO_DPORT_ILG_INTR_MAP_SPEC, 0> {
-        PRO_PMS_PRO_DPORT_ILG_INTR_MAP_W::new(self)
+    ) -> PRO_PMS_PRO_DPORT_ILG_INTR_MAP_W<PRO_PMS_PRO_DPORT_ILG_INTR_MAP_SPEC> {
+        PRO_PMS_PRO_DPORT_ILG_INTR_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

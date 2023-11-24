@@ -9,27 +9,27 @@ pub type PRO_CPU_DISABLED_CACHE_IA_R = crate::FieldReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_OPPOSITE` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_OPPOSITE` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DRAM1` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DRAM1` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IROM0` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IROM0` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM1` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM1` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM0` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM0` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DROM0` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DROM0` writer - "]
-pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_IRAM0_PID_ERROR` reader - "]
 pub type PRO_CACHE_IRAM0_PID_ERROR_R = crate::BitReader;
 impl R {
@@ -125,7 +125,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_DBUG3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -134,48 +134,48 @@ impl W {
     #[must_use]
     pub fn pro_cpu_disabled_cache_ia_opposite(
         &mut self,
-    ) -> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<PRO_DCACHE_DBUG3_SPEC, 9> {
-        PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W::new(self)
+    ) -> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<PRO_DCACHE_DBUG3_SPEC> {
+        PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cpu_disabled_cache_ia_dram1(
         &mut self,
-    ) -> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<PRO_DCACHE_DBUG3_SPEC, 10> {
-        PRO_CPU_DISABLED_CACHE_IA_DRAM1_W::new(self)
+    ) -> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<PRO_DCACHE_DBUG3_SPEC> {
+        PRO_CPU_DISABLED_CACHE_IA_DRAM1_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cpu_disabled_cache_ia_irom0(
         &mut self,
-    ) -> PRO_CPU_DISABLED_CACHE_IA_IROM0_W<PRO_DCACHE_DBUG3_SPEC, 11> {
-        PRO_CPU_DISABLED_CACHE_IA_IROM0_W::new(self)
+    ) -> PRO_CPU_DISABLED_CACHE_IA_IROM0_W<PRO_DCACHE_DBUG3_SPEC> {
+        PRO_CPU_DISABLED_CACHE_IA_IROM0_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cpu_disabled_cache_ia_iram1(
         &mut self,
-    ) -> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<PRO_DCACHE_DBUG3_SPEC, 12> {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM1_W::new(self)
+    ) -> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<PRO_DCACHE_DBUG3_SPEC> {
+        PRO_CPU_DISABLED_CACHE_IA_IRAM1_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cpu_disabled_cache_ia_iram0(
         &mut self,
-    ) -> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<PRO_DCACHE_DBUG3_SPEC, 13> {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM0_W::new(self)
+    ) -> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<PRO_DCACHE_DBUG3_SPEC> {
+        PRO_CPU_DISABLED_CACHE_IA_IRAM0_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
     pub fn pro_cpu_disabled_cache_ia_drom0(
         &mut self,
-    ) -> PRO_CPU_DISABLED_CACHE_IA_DROM0_W<PRO_DCACHE_DBUG3_SPEC, 14> {
-        PRO_CPU_DISABLED_CACHE_IA_DROM0_W::new(self)
+    ) -> PRO_CPU_DISABLED_CACHE_IA_DROM0_W<PRO_DCACHE_DBUG3_SPEC> {
+        PRO_CPU_DISABLED_CACHE_IA_DROM0_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

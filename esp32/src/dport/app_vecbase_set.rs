@@ -5,7 +5,7 @@ pub type W = crate::W<APP_VECBASE_SET_SPEC>;
 #[doc = "Field `APP_OUT_VECBASE` reader - "]
 pub type APP_OUT_VECBASE_R = crate::FieldReader<u32>;
 #[doc = "Field `APP_OUT_VECBASE` writer - "]
-pub type APP_OUT_VECBASE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type APP_OUT_VECBASE_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 impl R {
     #[doc = "Bits 0:21"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APP_VECBASE_SET_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:21"]
     #[inline(always)]
     #[must_use]
-    pub fn app_out_vecbase(&mut self) -> APP_OUT_VECBASE_W<APP_VECBASE_SET_SPEC, 0> {
-        APP_OUT_VECBASE_W::new(self)
+    pub fn app_out_vecbase(&mut self) -> APP_OUT_VECBASE_W<APP_VECBASE_SET_SPEC> {
+        APP_OUT_VECBASE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

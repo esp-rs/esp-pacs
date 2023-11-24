@@ -5,11 +5,11 @@ pub type W = crate::W<RETENTION_CTRL_SPEC>;
 #[doc = "Field `RETENTION_CPU_LINK_ADDR` reader - ******* Description ***********"]
 pub type RETENTION_CPU_LINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `RETENTION_CPU_LINK_ADDR` writer - ******* Description ***********"]
-pub type RETENTION_CPU_LINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 27, O, u32>;
+pub type RETENTION_CPU_LINK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 27, u32>;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` reader - ******* Description ***********"]
 pub type NOBYPASS_CPU_ISO_RST_R = crate::BitReader;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` writer - ******* Description ***********"]
-pub type NOBYPASS_CPU_ISO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NOBYPASS_CPU_ISO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_cpu_link_addr(&mut self) -> RETENTION_CPU_LINK_ADDR_W<RETENTION_CTRL_SPEC, 0> {
-        RETENTION_CPU_LINK_ADDR_W::new(self)
+    pub fn retention_cpu_link_addr(&mut self) -> RETENTION_CPU_LINK_ADDR_W<RETENTION_CTRL_SPEC> {
+        RETENTION_CPU_LINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 27 - ******* Description ***********"]
     #[inline(always)]
     #[must_use]
-    pub fn nobypass_cpu_iso_rst(&mut self) -> NOBYPASS_CPU_ISO_RST_W<RETENTION_CTRL_SPEC, 27> {
-        NOBYPASS_CPU_ISO_RST_W::new(self)
+    pub fn nobypass_cpu_iso_rst(&mut self) -> NOBYPASS_CPU_ISO_RST_W<RETENTION_CTRL_SPEC> {
+        NOBYPASS_CPU_ISO_RST_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

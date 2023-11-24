@@ -9,7 +9,7 @@ pub type DTR_R = crate::BitReader;
 #[doc = "Field `USB_UART_CHIP_RST_DIS` reader - Set this bit to disable chip reset from usb serial channel to reset chip."]
 pub type USB_UART_CHIP_RST_DIS_R = crate::BitReader;
 #[doc = "Field `USB_UART_CHIP_RST_DIS` writer - Set this bit to disable chip reset from usb serial channel to reset chip."]
-pub type USB_UART_CHIP_RST_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_UART_CHIP_RST_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: Chip reset is detected from usb serial channel. Software write 1 to clear it."]
     #[inline(always)]
@@ -43,15 +43,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CHIP_RST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - Set this bit to disable chip reset from usb serial channel to reset chip."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_uart_chip_rst_dis(&mut self) -> USB_UART_CHIP_RST_DIS_W<CHIP_RST_SPEC, 2> {
-        USB_UART_CHIP_RST_DIS_W::new(self)
+    pub fn usb_uart_chip_rst_dis(&mut self) -> USB_UART_CHIP_RST_DIS_W<CHIP_RST_SPEC> {
+        USB_UART_CHIP_RST_DIS_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

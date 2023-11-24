@@ -5,7 +5,7 @@ pub type W = crate::W<DIAG0_SPEC>;
 #[doc = "Field `LOW_POWER_DIAG1` reader - Need add desc"]
 pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32>;
 #[doc = "Field `LOW_POWER_DIAG1` writer - Need add desc"]
-pub type LOW_POWER_DIAG1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type LOW_POWER_DIAG1_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIAG0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn low_power_diag1(&mut self) -> LOW_POWER_DIAG1_W<DIAG0_SPEC, 0> {
-        LOW_POWER_DIAG1_W::new(self)
+    pub fn low_power_diag1(&mut self) -> LOW_POWER_DIAG1_W<DIAG0_SPEC> {
+        LOW_POWER_DIAG1_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

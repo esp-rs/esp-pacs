@@ -5,59 +5,59 @@ pub type W = crate::W<HCINT6_SPEC>;
 #[doc = "Field `H_XFERCOMPL6` reader - "]
 pub type H_XFERCOMPL6_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPL6` writer - "]
-pub type H_XFERCOMPL6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XFERCOMPL6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_CHHLTD6` reader - "]
 pub type H_CHHLTD6_R = crate::BitReader;
 #[doc = "Field `H_CHHLTD6` writer - "]
-pub type H_CHHLTD6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_CHHLTD6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_AHBERR6` reader - "]
 pub type H_AHBERR6_R = crate::BitReader;
 #[doc = "Field `H_AHBERR6` writer - "]
-pub type H_AHBERR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_AHBERR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_STALL6` reader - "]
 pub type H_STALL6_R = crate::BitReader;
 #[doc = "Field `H_STALL6` writer - "]
-pub type H_STALL6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_STALL6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_NACK6` reader - "]
 pub type H_NACK6_R = crate::BitReader;
 #[doc = "Field `H_NACK6` writer - "]
-pub type H_NACK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_NACK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_ACK6` reader - "]
 pub type H_ACK6_R = crate::BitReader;
 #[doc = "Field `H_ACK6` writer - "]
-pub type H_ACK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_ACK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_NYET6` reader - "]
 pub type H_NYET6_R = crate::BitReader;
 #[doc = "Field `H_NYET6` writer - "]
-pub type H_NYET6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_NYET6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_XACTERR6` reader - "]
 pub type H_XACTERR6_R = crate::BitReader;
 #[doc = "Field `H_XACTERR6` writer - "]
-pub type H_XACTERR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XACTERR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_BBLERR6` reader - "]
 pub type H_BBLERR6_R = crate::BitReader;
 #[doc = "Field `H_BBLERR6` writer - "]
-pub type H_BBLERR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_BBLERR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_FRMOVRUN6` reader - "]
 pub type H_FRMOVRUN6_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUN6` writer - "]
-pub type H_FRMOVRUN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_FRMOVRUN6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DATATGLERR6` reader - "]
 pub type H_DATATGLERR6_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERR6` writer - "]
-pub type H_DATATGLERR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DATATGLERR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_BNAINTR6` reader - "]
 pub type H_BNAINTR6_R = crate::BitReader;
 #[doc = "Field `H_BNAINTR6` writer - "]
-pub type H_BNAINTR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_BNAINTR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_XCS_XACT_ERR6` reader - "]
 pub type H_XCS_XACT_ERR6_R = crate::BitReader;
 #[doc = "Field `H_XCS_XACT_ERR6` writer - "]
-pub type H_XCS_XACT_ERR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XCS_XACT_ERR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DESC_LST_ROLLINTR6` reader - "]
 pub type H_DESC_LST_ROLLINTR6_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTR6` writer - "]
-pub type H_DESC_LST_ROLLINTR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DESC_LST_ROLLINTR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -166,93 +166,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HCINT6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xfercompl6(&mut self) -> H_XFERCOMPL6_W<HCINT6_SPEC, 0> {
-        H_XFERCOMPL6_W::new(self)
+    pub fn h_xfercompl6(&mut self) -> H_XFERCOMPL6_W<HCINT6_SPEC> {
+        H_XFERCOMPL6_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chhltd6(&mut self) -> H_CHHLTD6_W<HCINT6_SPEC, 1> {
-        H_CHHLTD6_W::new(self)
+    pub fn h_chhltd6(&mut self) -> H_CHHLTD6_W<HCINT6_SPEC> {
+        H_CHHLTD6_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ahberr6(&mut self) -> H_AHBERR6_W<HCINT6_SPEC, 2> {
-        H_AHBERR6_W::new(self)
+    pub fn h_ahberr6(&mut self) -> H_AHBERR6_W<HCINT6_SPEC> {
+        H_AHBERR6_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn h_stall6(&mut self) -> H_STALL6_W<HCINT6_SPEC, 3> {
-        H_STALL6_W::new(self)
+    pub fn h_stall6(&mut self) -> H_STALL6_W<HCINT6_SPEC> {
+        H_STALL6_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nack6(&mut self) -> H_NACK6_W<HCINT6_SPEC, 4> {
-        H_NACK6_W::new(self)
+    pub fn h_nack6(&mut self) -> H_NACK6_W<HCINT6_SPEC> {
+        H_NACK6_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ack6(&mut self) -> H_ACK6_W<HCINT6_SPEC, 5> {
-        H_ACK6_W::new(self)
+    pub fn h_ack6(&mut self) -> H_ACK6_W<HCINT6_SPEC> {
+        H_ACK6_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nyet6(&mut self) -> H_NYET6_W<HCINT6_SPEC, 6> {
-        H_NYET6_W::new(self)
+    pub fn h_nyet6(&mut self) -> H_NYET6_W<HCINT6_SPEC> {
+        H_NYET6_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xacterr6(&mut self) -> H_XACTERR6_W<HCINT6_SPEC, 7> {
-        H_XACTERR6_W::new(self)
+    pub fn h_xacterr6(&mut self) -> H_XACTERR6_W<HCINT6_SPEC> {
+        H_XACTERR6_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bblerr6(&mut self) -> H_BBLERR6_W<HCINT6_SPEC, 8> {
-        H_BBLERR6_W::new(self)
+    pub fn h_bblerr6(&mut self) -> H_BBLERR6_W<HCINT6_SPEC> {
+        H_BBLERR6_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frmovrun6(&mut self) -> H_FRMOVRUN6_W<HCINT6_SPEC, 9> {
-        H_FRMOVRUN6_W::new(self)
+    pub fn h_frmovrun6(&mut self) -> H_FRMOVRUN6_W<HCINT6_SPEC> {
+        H_FRMOVRUN6_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn h_datatglerr6(&mut self) -> H_DATATGLERR6_W<HCINT6_SPEC, 10> {
-        H_DATATGLERR6_W::new(self)
+    pub fn h_datatglerr6(&mut self) -> H_DATATGLERR6_W<HCINT6_SPEC> {
+        H_DATATGLERR6_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bnaintr6(&mut self) -> H_BNAINTR6_W<HCINT6_SPEC, 11> {
-        H_BNAINTR6_W::new(self)
+    pub fn h_bnaintr6(&mut self) -> H_BNAINTR6_W<HCINT6_SPEC> {
+        H_BNAINTR6_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xcs_xact_err6(&mut self) -> H_XCS_XACT_ERR6_W<HCINT6_SPEC, 12> {
-        H_XCS_XACT_ERR6_W::new(self)
+    pub fn h_xcs_xact_err6(&mut self) -> H_XCS_XACT_ERR6_W<HCINT6_SPEC> {
+        H_XCS_XACT_ERR6_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn h_desc_lst_rollintr6(&mut self) -> H_DESC_LST_ROLLINTR6_W<HCINT6_SPEC, 13> {
-        H_DESC_LST_ROLLINTR6_W::new(self)
+    pub fn h_desc_lst_rollintr6(&mut self) -> H_DESC_LST_ROLLINTR6_W<HCINT6_SPEC> {
+        H_DESC_LST_ROLLINTR6_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -1,7 +1,7 @@
 #[doc = "Register `START` writer"]
 pub type W = crate::W<START_SPEC>;
 #[doc = "Field `FLASH_START` writer - Set this bit to start encryption operation on data buffer."]
-pub type FLASH_START_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FLASH_START_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:7 - Set this bit to start encryption operation on data buffer."]
     #[inline(always)]
     #[must_use]
-    pub fn flash_start(&mut self) -> FLASH_START_W<START_SPEC, 0> {
-        FLASH_START_W::new(self)
+    pub fn flash_start(&mut self) -> FLASH_START_W<START_SPEC> {
+        FLASH_START_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

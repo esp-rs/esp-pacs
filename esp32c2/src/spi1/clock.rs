@@ -5,19 +5,19 @@ pub type W = crate::W<CLOCK_SPEC>;
 #[doc = "Field `CLKCNT_L` reader - In the master mode it must be equal to spi_mem_clkcnt_N."]
 pub type CLKCNT_L_R = crate::FieldReader;
 #[doc = "Field `CLKCNT_L` writer - In the master mode it must be equal to spi_mem_clkcnt_N."]
-pub type CLKCNT_L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLKCNT_L_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLKCNT_H` reader - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
 pub type CLKCNT_H_R = crate::FieldReader;
 #[doc = "Field `CLKCNT_H` writer - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
-pub type CLKCNT_H_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLKCNT_H_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLKCNT_N` reader - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
 pub type CLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `CLKCNT_N` writer - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
-pub type CLKCNT_N_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLKCNT_N_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLK_EQU_SYSCLK` reader - reserved"]
 pub type CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `CLK_EQU_SYSCLK` writer - reserved"]
-pub type CLK_EQU_SYSCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EQU_SYSCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - In the master mode it must be equal to spi_mem_clkcnt_N."]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLOCK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - In the master mode it must be equal to spi_mem_clkcnt_N."]
     #[inline(always)]
     #[must_use]
-    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<CLOCK_SPEC, 0> {
-        CLKCNT_L_W::new(self)
+    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<CLOCK_SPEC> {
+        CLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
     #[inline(always)]
     #[must_use]
-    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<CLOCK_SPEC, 8> {
-        CLKCNT_H_W::new(self)
+    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<CLOCK_SPEC> {
+        CLKCNT_H_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
     #[inline(always)]
     #[must_use]
-    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<CLOCK_SPEC, 16> {
-        CLKCNT_N_W::new(self)
+    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<CLOCK_SPEC> {
+        CLKCNT_N_W::new(self, 16)
     }
     #[doc = "Bit 31 - reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<CLOCK_SPEC, 31> {
-        CLK_EQU_SYSCLK_W::new(self)
+    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<CLOCK_SPEC> {
+        CLK_EQU_SYSCLK_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

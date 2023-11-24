@@ -5,15 +5,15 @@ pub type W = crate::W<SLAVE1_SPEC>;
 #[doc = "Field `SLV_ADDR_ERR_CLR` reader - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
 pub type SLV_ADDR_ERR_CLR_R = crate::BitReader;
 #[doc = "Field `SLV_ADDR_ERR_CLR` writer - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
-pub type SLV_ADDR_ERR_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_ADDR_ERR_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMD_ERR_CLR` reader - 1: Clear SPI_SLV_CMD_ERR. 0: not valid. Can be changed by CONF_buf."]
 pub type SLV_CMD_ERR_CLR_R = crate::BitReader;
 #[doc = "Field `SLV_CMD_ERR_CLR` writer - 1: Clear SPI_SLV_CMD_ERR. 0: not valid. Can be changed by CONF_buf."]
-pub type SLV_CMD_ERR_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD_ERR_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_NO_QPI_EN` reader - 1: spi slave QPI mode is not supported. 0: spi slave QPI mode is supported."]
 pub type SLV_NO_QPI_EN_R = crate::BitReader;
 #[doc = "Field `SLV_NO_QPI_EN` writer - 1: spi slave QPI mode is not supported. 0: spi slave QPI mode is supported."]
-pub type SLV_NO_QPI_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_NO_QPI_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_ADDR_ERR` reader - 1: The address value of the last SPI transfer is not supported by SPI slave. 0: The address value is supported or no address value is received."]
 pub type SLV_ADDR_ERR_R = crate::BitReader;
 #[doc = "Field `SLV_CMD_ERR` reader - 1: The command value of the last SPI transfer is not supported by SPI slave. 0: The command value is supported or no command value is received."]
@@ -21,15 +21,15 @@ pub type SLV_CMD_ERR_R = crate::BitReader;
 #[doc = "Field `SLV_WR_DMA_DONE` reader - The interrupt raw bit for the completion of dma write operation in the slave mode. Can not be changed by CONF_buf."]
 pub type SLV_WR_DMA_DONE_R = crate::BitReader;
 #[doc = "Field `SLV_WR_DMA_DONE` writer - The interrupt raw bit for the completion of dma write operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_WR_DMA_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_WR_DMA_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_LAST_COMMAND` reader - In the slave mode it is the value of command."]
 pub type SLV_LAST_COMMAND_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_COMMAND` writer - In the slave mode it is the value of command."]
-pub type SLV_LAST_COMMAND_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLV_LAST_COMMAND_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLV_LAST_ADDR` reader - In the slave mode it is the value of address."]
 pub type SLV_LAST_ADDR_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_ADDR` writer - In the slave mode it is the value of address."]
-pub type SLV_LAST_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLV_LAST_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 10 - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
@@ -111,45 +111,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLAVE1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 10 - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_addr_err_clr(&mut self) -> SLV_ADDR_ERR_CLR_W<SLAVE1_SPEC, 10> {
-        SLV_ADDR_ERR_CLR_W::new(self)
+    pub fn slv_addr_err_clr(&mut self) -> SLV_ADDR_ERR_CLR_W<SLAVE1_SPEC> {
+        SLV_ADDR_ERR_CLR_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1: Clear SPI_SLV_CMD_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd_err_clr(&mut self) -> SLV_CMD_ERR_CLR_W<SLAVE1_SPEC, 11> {
-        SLV_CMD_ERR_CLR_W::new(self)
+    pub fn slv_cmd_err_clr(&mut self) -> SLV_CMD_ERR_CLR_W<SLAVE1_SPEC> {
+        SLV_CMD_ERR_CLR_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: spi slave QPI mode is not supported. 0: spi slave QPI mode is supported."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_no_qpi_en(&mut self) -> SLV_NO_QPI_EN_W<SLAVE1_SPEC, 12> {
-        SLV_NO_QPI_EN_W::new(self)
+    pub fn slv_no_qpi_en(&mut self) -> SLV_NO_QPI_EN_W<SLAVE1_SPEC> {
+        SLV_NO_QPI_EN_W::new(self, 12)
     }
     #[doc = "Bit 15 - The interrupt raw bit for the completion of dma write operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_wr_dma_done(&mut self) -> SLV_WR_DMA_DONE_W<SLAVE1_SPEC, 15> {
-        SLV_WR_DMA_DONE_W::new(self)
+    pub fn slv_wr_dma_done(&mut self) -> SLV_WR_DMA_DONE_W<SLAVE1_SPEC> {
+        SLV_WR_DMA_DONE_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - In the slave mode it is the value of command."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<SLAVE1_SPEC, 16> {
-        SLV_LAST_COMMAND_W::new(self)
+    pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<SLAVE1_SPEC> {
+        SLV_LAST_COMMAND_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - In the slave mode it is the value of address."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<SLAVE1_SPEC, 24> {
-        SLV_LAST_ADDR_W::new(self)
+    pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<SLAVE1_SPEC> {
+        SLV_LAST_ADDR_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

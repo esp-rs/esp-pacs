@@ -5,7 +5,7 @@ pub type W = crate::W<EXTMEM_REJECT_INT_ENA_SPEC>;
 #[doc = "Field `EXTMEM_REJECT_INT_ENA` reader - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
 pub type EXTMEM_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `EXTMEM_REJECT_INT_ENA` writer - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
-pub type EXTMEM_REJECT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTMEM_REJECT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
@@ -27,17 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXTMEM_REJECT_INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn extmem_reject_int_ena(
-        &mut self,
-    ) -> EXTMEM_REJECT_INT_ENA_W<EXTMEM_REJECT_INT_ENA_SPEC, 0> {
-        EXTMEM_REJECT_INT_ENA_W::new(self)
+    pub fn extmem_reject_int_ena(&mut self) -> EXTMEM_REJECT_INT_ENA_W<EXTMEM_REJECT_INT_ENA_SPEC> {
+        EXTMEM_REJECT_INT_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

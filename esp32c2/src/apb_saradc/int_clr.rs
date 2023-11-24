@@ -1,17 +1,17 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `THRES1_LOW_INT_CLR` writer - Need add description"]
-pub type THRES1_LOW_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES1_LOW_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES0_LOW_INT_CLR` writer - Need add description"]
-pub type THRES0_LOW_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES0_LOW_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES1_HIGH_INT_CLR` writer - Need add description"]
-pub type THRES1_HIGH_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES1_HIGH_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `THRES0_HIGH_INT_CLR` writer - Need add description"]
-pub type THRES0_HIGH_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type THRES0_HIGH_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC2_DONE_INT_CLR` writer - Need add description"]
-pub type APB_SARADC2_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC2_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_SARADC1_DONE_INT_CLR` writer - Need add description"]
-pub type APB_SARADC1_DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_SARADC1_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -22,38 +22,38 @@ impl W {
     #[doc = "Bit 26 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_low_int_clr(&mut self) -> THRES1_LOW_INT_CLR_W<INT_CLR_SPEC, 26> {
-        THRES1_LOW_INT_CLR_W::new(self)
+    pub fn thres1_low_int_clr(&mut self) -> THRES1_LOW_INT_CLR_W<INT_CLR_SPEC> {
+        THRES1_LOW_INT_CLR_W::new(self, 26)
     }
     #[doc = "Bit 27 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0_low_int_clr(&mut self) -> THRES0_LOW_INT_CLR_W<INT_CLR_SPEC, 27> {
-        THRES0_LOW_INT_CLR_W::new(self)
+    pub fn thres0_low_int_clr(&mut self) -> THRES0_LOW_INT_CLR_W<INT_CLR_SPEC> {
+        THRES0_LOW_INT_CLR_W::new(self, 27)
     }
     #[doc = "Bit 28 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_high_int_clr(&mut self) -> THRES1_HIGH_INT_CLR_W<INT_CLR_SPEC, 28> {
-        THRES1_HIGH_INT_CLR_W::new(self)
+    pub fn thres1_high_int_clr(&mut self) -> THRES1_HIGH_INT_CLR_W<INT_CLR_SPEC> {
+        THRES1_HIGH_INT_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0_high_int_clr(&mut self) -> THRES0_HIGH_INT_CLR_W<INT_CLR_SPEC, 29> {
-        THRES0_HIGH_INT_CLR_W::new(self)
+    pub fn thres0_high_int_clr(&mut self) -> THRES0_HIGH_INT_CLR_W<INT_CLR_SPEC> {
+        THRES0_HIGH_INT_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc2_done_int_clr(&mut self) -> APB_SARADC2_DONE_INT_CLR_W<INT_CLR_SPEC, 30> {
-        APB_SARADC2_DONE_INT_CLR_W::new(self)
+    pub fn apb_saradc2_done_int_clr(&mut self) -> APB_SARADC2_DONE_INT_CLR_W<INT_CLR_SPEC> {
+        APB_SARADC2_DONE_INT_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc1_done_int_clr(&mut self) -> APB_SARADC1_DONE_INT_CLR_W<INT_CLR_SPEC, 31> {
-        APB_SARADC1_DONE_INT_CLR_W::new(self)
+    pub fn apb_saradc1_done_int_clr(&mut self) -> APB_SARADC1_DONE_INT_CLR_W<INT_CLR_SPEC> {
+        APB_SARADC1_DONE_INT_CLR_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

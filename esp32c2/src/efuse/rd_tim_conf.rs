@@ -5,19 +5,19 @@ pub type W = crate::W<RD_TIM_CONF_SPEC>;
 #[doc = "Field `THR_A` reader - Configures hold time for efuse read."]
 pub type THR_A_R = crate::FieldReader;
 #[doc = "Field `THR_A` writer - Configures hold time for efuse read."]
-pub type THR_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type THR_A_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TRD` reader - Configures pulse time for efuse read."]
 pub type TRD_R = crate::FieldReader;
 #[doc = "Field `TRD` writer - Configures pulse time for efuse read."]
-pub type TRD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TRD_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TSUR_A` reader - Configures setup time for efuse read."]
 pub type TSUR_A_R = crate::FieldReader;
 #[doc = "Field `TSUR_A` writer - Configures setup time for efuse read."]
-pub type TSUR_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TSUR_A_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `READ_INIT_NUM` reader - Configures the initial read time of eFuse."]
 pub type READ_INIT_NUM_R = crate::FieldReader;
 #[doc = "Field `READ_INIT_NUM` writer - Configures the initial read time of eFuse."]
-pub type READ_INIT_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type READ_INIT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Configures hold time for efuse read."]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RD_TIM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Configures hold time for efuse read."]
     #[inline(always)]
     #[must_use]
-    pub fn thr_a(&mut self) -> THR_A_W<RD_TIM_CONF_SPEC, 0> {
-        THR_A_W::new(self)
+    pub fn thr_a(&mut self) -> THR_A_W<RD_TIM_CONF_SPEC> {
+        THR_A_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures pulse time for efuse read."]
     #[inline(always)]
     #[must_use]
-    pub fn trd(&mut self) -> TRD_W<RD_TIM_CONF_SPEC, 8> {
-        TRD_W::new(self)
+    pub fn trd(&mut self) -> TRD_W<RD_TIM_CONF_SPEC> {
+        TRD_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures setup time for efuse read."]
     #[inline(always)]
     #[must_use]
-    pub fn tsur_a(&mut self) -> TSUR_A_W<RD_TIM_CONF_SPEC, 16> {
-        TSUR_A_W::new(self)
+    pub fn tsur_a(&mut self) -> TSUR_A_W<RD_TIM_CONF_SPEC> {
+        TSUR_A_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Configures the initial read time of eFuse."]
     #[inline(always)]
     #[must_use]
-    pub fn read_init_num(&mut self) -> READ_INIT_NUM_W<RD_TIM_CONF_SPEC, 24> {
-        READ_INIT_NUM_W::new(self)
+    pub fn read_init_num(&mut self) -> READ_INIT_NUM_W<RD_TIM_CONF_SPEC> {
+        READ_INIT_NUM_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

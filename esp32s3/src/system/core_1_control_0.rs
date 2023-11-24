@@ -5,15 +5,15 @@ pub type W = crate::W<CORE_1_CONTROL_0_SPEC>;
 #[doc = "Field `CONTROL_CORE_1_RUNSTALL` reader - Set 1 to stall core1"]
 pub type CONTROL_CORE_1_RUNSTALL_R = crate::BitReader;
 #[doc = "Field `CONTROL_CORE_1_RUNSTALL` writer - Set 1 to stall core1"]
-pub type CONTROL_CORE_1_RUNSTALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONTROL_CORE_1_RUNSTALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONTROL_CORE_1_CLKGATE_EN` reader - Set 1 to open core1 clock"]
 pub type CONTROL_CORE_1_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `CONTROL_CORE_1_CLKGATE_EN` writer - Set 1 to open core1 clock"]
-pub type CONTROL_CORE_1_CLKGATE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONTROL_CORE_1_CLKGATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONTROL_CORE_1_RESETING` reader - Set 1 to let core1 reset"]
 pub type CONTROL_CORE_1_RESETING_R = crate::BitReader;
 #[doc = "Field `CONTROL_CORE_1_RESETING` writer - Set 1 to let core1 reset"]
-pub type CONTROL_CORE_1_RESETING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONTROL_CORE_1_RESETING_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to stall core1"]
     #[inline(always)]
@@ -53,33 +53,29 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_CONTROL_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to stall core1"]
     #[inline(always)]
     #[must_use]
-    pub fn control_core_1_runstall(
-        &mut self,
-    ) -> CONTROL_CORE_1_RUNSTALL_W<CORE_1_CONTROL_0_SPEC, 0> {
-        CONTROL_CORE_1_RUNSTALL_W::new(self)
+    pub fn control_core_1_runstall(&mut self) -> CONTROL_CORE_1_RUNSTALL_W<CORE_1_CONTROL_0_SPEC> {
+        CONTROL_CORE_1_RUNSTALL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to open core1 clock"]
     #[inline(always)]
     #[must_use]
     pub fn control_core_1_clkgate_en(
         &mut self,
-    ) -> CONTROL_CORE_1_CLKGATE_EN_W<CORE_1_CONTROL_0_SPEC, 1> {
-        CONTROL_CORE_1_CLKGATE_EN_W::new(self)
+    ) -> CONTROL_CORE_1_CLKGATE_EN_W<CORE_1_CONTROL_0_SPEC> {
+        CONTROL_CORE_1_CLKGATE_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to let core1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn control_core_1_reseting(
-        &mut self,
-    ) -> CONTROL_CORE_1_RESETING_W<CORE_1_CONTROL_0_SPEC, 2> {
-        CONTROL_CORE_1_RESETING_W::new(self)
+    pub fn control_core_1_reseting(&mut self) -> CONTROL_CORE_1_RESETING_W<CORE_1_CONTROL_0_SPEC> {
+        CONTROL_CORE_1_RESETING_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

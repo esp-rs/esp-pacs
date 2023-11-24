@@ -5,91 +5,91 @@ pub type W = crate::W<PAD_HOLD_SPEC>;
 #[doc = "Field `TOUCH_PAD0_HOLD` reader - hold rtc pad0"]
 pub type TOUCH_PAD0_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_HOLD` writer - hold rtc pad0"]
-pub type TOUCH_PAD0_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD0_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD1_HOLD` reader - hold rtc pad-1"]
 pub type TOUCH_PAD1_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD1_HOLD` writer - hold rtc pad-1"]
-pub type TOUCH_PAD1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD2_HOLD` reader - hold rtc pad-2"]
 pub type TOUCH_PAD2_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD2_HOLD` writer - hold rtc pad-2"]
-pub type TOUCH_PAD2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD3_HOLD` reader - hold rtc pad-3"]
 pub type TOUCH_PAD3_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD3_HOLD` writer - hold rtc pad-3"]
-pub type TOUCH_PAD3_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD3_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD4_HOLD` reader - hold rtc pad-4"]
 pub type TOUCH_PAD4_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD4_HOLD` writer - hold rtc pad-4"]
-pub type TOUCH_PAD4_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD4_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD5_HOLD` reader - hold rtc pad-5"]
 pub type TOUCH_PAD5_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD5_HOLD` writer - hold rtc pad-5"]
-pub type TOUCH_PAD5_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD5_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD6_HOLD` reader - hold rtc pad-6"]
 pub type TOUCH_PAD6_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD6_HOLD` writer - hold rtc pad-6"]
-pub type TOUCH_PAD6_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD6_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD7_HOLD` reader - hold rtc pad-7"]
 pub type TOUCH_PAD7_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD7_HOLD` writer - hold rtc pad-7"]
-pub type TOUCH_PAD7_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD7_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD8_HOLD` reader - hold rtc pad-8"]
 pub type TOUCH_PAD8_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD8_HOLD` writer - hold rtc pad-8"]
-pub type TOUCH_PAD8_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD8_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD9_HOLD` reader - hold rtc pad-9"]
 pub type TOUCH_PAD9_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD9_HOLD` writer - hold rtc pad-9"]
-pub type TOUCH_PAD9_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD9_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD10_HOLD` reader - hold rtc pad-10"]
 pub type TOUCH_PAD10_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD10_HOLD` writer - hold rtc pad-10"]
-pub type TOUCH_PAD10_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD10_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD11_HOLD` reader - hold rtc pad-11"]
 pub type TOUCH_PAD11_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD11_HOLD` writer - hold rtc pad-11"]
-pub type TOUCH_PAD11_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD11_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD12_HOLD` reader - hold rtc pad-12"]
 pub type TOUCH_PAD12_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD12_HOLD` writer - hold rtc pad-12"]
-pub type TOUCH_PAD12_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD12_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD13_HOLD` reader - hold rtc pad-13"]
 pub type TOUCH_PAD13_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD13_HOLD` writer - hold rtc pad-13"]
-pub type TOUCH_PAD13_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD13_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TOUCH_PAD14_HOLD` reader - hold rtc pad-14"]
 pub type TOUCH_PAD14_HOLD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD14_HOLD` writer - hold rtc pad-14"]
-pub type TOUCH_PAD14_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_PAD14_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `X32P_HOLD` reader - hold rtc pad-15"]
 pub type X32P_HOLD_R = crate::BitReader;
 #[doc = "Field `X32P_HOLD` writer - hold rtc pad-15"]
-pub type X32P_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type X32P_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `X32N_HOLD` reader - hold rtc pad-16"]
 pub type X32N_HOLD_R = crate::BitReader;
 #[doc = "Field `X32N_HOLD` writer - hold rtc pad-16"]
-pub type X32N_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type X32N_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC1_HOLD` reader - hold rtc pad-17"]
 pub type PDAC1_HOLD_R = crate::BitReader;
 #[doc = "Field `PDAC1_HOLD` writer - hold rtc pad-17"]
-pub type PDAC1_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC1_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDAC2_HOLD` reader - hold rtc pad-18"]
 pub type PDAC2_HOLD_R = crate::BitReader;
 #[doc = "Field `PDAC2_HOLD` writer - hold rtc pad-18"]
-pub type PDAC2_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDAC2_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD19_HOLD` reader - hold rtc pad-19"]
 pub type PAD19_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD19_HOLD` writer - hold rtc pad-19"]
-pub type PAD19_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD19_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD20_HOLD` reader - hold rtc pad-20"]
 pub type PAD20_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD20_HOLD` writer - hold rtc pad-20"]
-pub type PAD20_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD20_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD21_HOLD` reader - hold rtc pad-21"]
 pub type PAD21_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD21_HOLD` writer - hold rtc pad-21"]
-pub type PAD21_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD21_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - hold rtc pad0"]
     #[inline(always)]
@@ -279,141 +279,141 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PAD_HOLD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - hold rtc pad0"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad0_hold(&mut self) -> TOUCH_PAD0_HOLD_W<PAD_HOLD_SPEC, 0> {
-        TOUCH_PAD0_HOLD_W::new(self)
+    pub fn touch_pad0_hold(&mut self) -> TOUCH_PAD0_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD0_HOLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - hold rtc pad-1"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad1_hold(&mut self) -> TOUCH_PAD1_HOLD_W<PAD_HOLD_SPEC, 1> {
-        TOUCH_PAD1_HOLD_W::new(self)
+    pub fn touch_pad1_hold(&mut self) -> TOUCH_PAD1_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD1_HOLD_W::new(self, 1)
     }
     #[doc = "Bit 2 - hold rtc pad-2"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad2_hold(&mut self) -> TOUCH_PAD2_HOLD_W<PAD_HOLD_SPEC, 2> {
-        TOUCH_PAD2_HOLD_W::new(self)
+    pub fn touch_pad2_hold(&mut self) -> TOUCH_PAD2_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD2_HOLD_W::new(self, 2)
     }
     #[doc = "Bit 3 - hold rtc pad-3"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad3_hold(&mut self) -> TOUCH_PAD3_HOLD_W<PAD_HOLD_SPEC, 3> {
-        TOUCH_PAD3_HOLD_W::new(self)
+    pub fn touch_pad3_hold(&mut self) -> TOUCH_PAD3_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD3_HOLD_W::new(self, 3)
     }
     #[doc = "Bit 4 - hold rtc pad-4"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad4_hold(&mut self) -> TOUCH_PAD4_HOLD_W<PAD_HOLD_SPEC, 4> {
-        TOUCH_PAD4_HOLD_W::new(self)
+    pub fn touch_pad4_hold(&mut self) -> TOUCH_PAD4_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD4_HOLD_W::new(self, 4)
     }
     #[doc = "Bit 5 - hold rtc pad-5"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad5_hold(&mut self) -> TOUCH_PAD5_HOLD_W<PAD_HOLD_SPEC, 5> {
-        TOUCH_PAD5_HOLD_W::new(self)
+    pub fn touch_pad5_hold(&mut self) -> TOUCH_PAD5_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD5_HOLD_W::new(self, 5)
     }
     #[doc = "Bit 6 - hold rtc pad-6"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad6_hold(&mut self) -> TOUCH_PAD6_HOLD_W<PAD_HOLD_SPEC, 6> {
-        TOUCH_PAD6_HOLD_W::new(self)
+    pub fn touch_pad6_hold(&mut self) -> TOUCH_PAD6_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD6_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - hold rtc pad-7"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad7_hold(&mut self) -> TOUCH_PAD7_HOLD_W<PAD_HOLD_SPEC, 7> {
-        TOUCH_PAD7_HOLD_W::new(self)
+    pub fn touch_pad7_hold(&mut self) -> TOUCH_PAD7_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD7_HOLD_W::new(self, 7)
     }
     #[doc = "Bit 8 - hold rtc pad-8"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad8_hold(&mut self) -> TOUCH_PAD8_HOLD_W<PAD_HOLD_SPEC, 8> {
-        TOUCH_PAD8_HOLD_W::new(self)
+    pub fn touch_pad8_hold(&mut self) -> TOUCH_PAD8_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD8_HOLD_W::new(self, 8)
     }
     #[doc = "Bit 9 - hold rtc pad-9"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad9_hold(&mut self) -> TOUCH_PAD9_HOLD_W<PAD_HOLD_SPEC, 9> {
-        TOUCH_PAD9_HOLD_W::new(self)
+    pub fn touch_pad9_hold(&mut self) -> TOUCH_PAD9_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD9_HOLD_W::new(self, 9)
     }
     #[doc = "Bit 10 - hold rtc pad-10"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad10_hold(&mut self) -> TOUCH_PAD10_HOLD_W<PAD_HOLD_SPEC, 10> {
-        TOUCH_PAD10_HOLD_W::new(self)
+    pub fn touch_pad10_hold(&mut self) -> TOUCH_PAD10_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD10_HOLD_W::new(self, 10)
     }
     #[doc = "Bit 11 - hold rtc pad-11"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad11_hold(&mut self) -> TOUCH_PAD11_HOLD_W<PAD_HOLD_SPEC, 11> {
-        TOUCH_PAD11_HOLD_W::new(self)
+    pub fn touch_pad11_hold(&mut self) -> TOUCH_PAD11_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD11_HOLD_W::new(self, 11)
     }
     #[doc = "Bit 12 - hold rtc pad-12"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad12_hold(&mut self) -> TOUCH_PAD12_HOLD_W<PAD_HOLD_SPEC, 12> {
-        TOUCH_PAD12_HOLD_W::new(self)
+    pub fn touch_pad12_hold(&mut self) -> TOUCH_PAD12_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD12_HOLD_W::new(self, 12)
     }
     #[doc = "Bit 13 - hold rtc pad-13"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad13_hold(&mut self) -> TOUCH_PAD13_HOLD_W<PAD_HOLD_SPEC, 13> {
-        TOUCH_PAD13_HOLD_W::new(self)
+    pub fn touch_pad13_hold(&mut self) -> TOUCH_PAD13_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD13_HOLD_W::new(self, 13)
     }
     #[doc = "Bit 14 - hold rtc pad-14"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad14_hold(&mut self) -> TOUCH_PAD14_HOLD_W<PAD_HOLD_SPEC, 14> {
-        TOUCH_PAD14_HOLD_W::new(self)
+    pub fn touch_pad14_hold(&mut self) -> TOUCH_PAD14_HOLD_W<PAD_HOLD_SPEC> {
+        TOUCH_PAD14_HOLD_W::new(self, 14)
     }
     #[doc = "Bit 15 - hold rtc pad-15"]
     #[inline(always)]
     #[must_use]
-    pub fn x32p_hold(&mut self) -> X32P_HOLD_W<PAD_HOLD_SPEC, 15> {
-        X32P_HOLD_W::new(self)
+    pub fn x32p_hold(&mut self) -> X32P_HOLD_W<PAD_HOLD_SPEC> {
+        X32P_HOLD_W::new(self, 15)
     }
     #[doc = "Bit 16 - hold rtc pad-16"]
     #[inline(always)]
     #[must_use]
-    pub fn x32n_hold(&mut self) -> X32N_HOLD_W<PAD_HOLD_SPEC, 16> {
-        X32N_HOLD_W::new(self)
+    pub fn x32n_hold(&mut self) -> X32N_HOLD_W<PAD_HOLD_SPEC> {
+        X32N_HOLD_W::new(self, 16)
     }
     #[doc = "Bit 17 - hold rtc pad-17"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac1_hold(&mut self) -> PDAC1_HOLD_W<PAD_HOLD_SPEC, 17> {
-        PDAC1_HOLD_W::new(self)
+    pub fn pdac1_hold(&mut self) -> PDAC1_HOLD_W<PAD_HOLD_SPEC> {
+        PDAC1_HOLD_W::new(self, 17)
     }
     #[doc = "Bit 18 - hold rtc pad-18"]
     #[inline(always)]
     #[must_use]
-    pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<PAD_HOLD_SPEC, 18> {
-        PDAC2_HOLD_W::new(self)
+    pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<PAD_HOLD_SPEC> {
+        PDAC2_HOLD_W::new(self, 18)
     }
     #[doc = "Bit 19 - hold rtc pad-19"]
     #[inline(always)]
     #[must_use]
-    pub fn pad19_hold(&mut self) -> PAD19_HOLD_W<PAD_HOLD_SPEC, 19> {
-        PAD19_HOLD_W::new(self)
+    pub fn pad19_hold(&mut self) -> PAD19_HOLD_W<PAD_HOLD_SPEC> {
+        PAD19_HOLD_W::new(self, 19)
     }
     #[doc = "Bit 20 - hold rtc pad-20"]
     #[inline(always)]
     #[must_use]
-    pub fn pad20_hold(&mut self) -> PAD20_HOLD_W<PAD_HOLD_SPEC, 20> {
-        PAD20_HOLD_W::new(self)
+    pub fn pad20_hold(&mut self) -> PAD20_HOLD_W<PAD_HOLD_SPEC> {
+        PAD20_HOLD_W::new(self, 20)
     }
     #[doc = "Bit 21 - hold rtc pad-21"]
     #[inline(always)]
     #[must_use]
-    pub fn pad21_hold(&mut self) -> PAD21_HOLD_W<PAD_HOLD_SPEC, 21> {
-        PAD21_HOLD_W::new(self)
+    pub fn pad21_hold(&mut self) -> PAD21_HOLD_W<PAD_HOLD_SPEC> {
+        PAD21_HOLD_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

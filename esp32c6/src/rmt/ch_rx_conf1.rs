@@ -5,31 +5,31 @@ pub type W = crate::W<CH_RX_CONF1_SPEC>;
 #[doc = "Field `RX_EN` reader - Set this bit to enable receiver to receive data on CHANNEL%s."]
 pub type RX_EN_R = crate::BitReader;
 #[doc = "Field `RX_EN` writer - Set this bit to enable receiver to receive data on CHANNEL%s."]
-pub type RX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_WR_RST` writer - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
-pub type MEM_WR_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_WR_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APB_MEM_RST` writer - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
-pub type APB_MEM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APB_MEM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_OWNER` reader - This register marks the ownership of CHANNEL%s's ram block. 1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
 pub type MEM_OWNER_R = crate::BitReader;
 #[doc = "Field `MEM_OWNER` writer - This register marks the ownership of CHANNEL%s's ram block. 1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
-pub type MEM_OWNER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FILTER_EN` reader - This is the receive filter's enable bit for CHANNEL%s."]
 pub type RX_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `RX_FILTER_EN` writer - This is the receive filter's enable bit for CHANNEL%s."]
-pub type RX_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FILTER_THRES` reader - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
 pub type RX_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `RX_FILTER_THRES` writer - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
-pub type RX_FILTER_THRES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RX_FILTER_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `MEM_RX_WRAP_EN` reader - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
 pub type MEM_RX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_RX_WRAP_EN` writer - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
-pub type MEM_RX_WRAP_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MEM_RX_WRAP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFIFO_RST` writer - Reserved"]
-pub type AFIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CONF_UPDATE` writer - synchronization bit for CHANNEL%s"]
-pub type CONF_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CONF_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable receiver to receive data on CHANNEL%s."]
     #[inline(always)]
@@ -81,63 +81,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_RX_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable receiver to receive data on CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_en(&mut self) -> RX_EN_W<CH_RX_CONF1_SPEC, 0> {
-        RX_EN_W::new(self)
+    pub fn rx_en(&mut self) -> RX_EN_W<CH_RX_CONF1_SPEC> {
+        RX_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<CH_RX_CONF1_SPEC, 1> {
-        MEM_WR_RST_W::new(self)
+    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<CH_RX_CONF1_SPEC> {
+        MEM_WR_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<CH_RX_CONF1_SPEC, 2> {
-        APB_MEM_RST_W::new(self)
+    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<CH_RX_CONF1_SPEC> {
+        APB_MEM_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - This register marks the ownership of CHANNEL%s's ram block. 1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_owner(&mut self) -> MEM_OWNER_W<CH_RX_CONF1_SPEC, 3> {
-        MEM_OWNER_W::new(self)
+    pub fn mem_owner(&mut self) -> MEM_OWNER_W<CH_RX_CONF1_SPEC> {
+        MEM_OWNER_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is the receive filter's enable bit for CHANNEL%s."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<CH_RX_CONF1_SPEC, 4> {
-        RX_FILTER_EN_W::new(self)
+    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<CH_RX_CONF1_SPEC> {
+        RX_FILTER_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:12 - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<CH_RX_CONF1_SPEC, 5> {
-        RX_FILTER_THRES_W::new(self)
+    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<CH_RX_CONF1_SPEC> {
+        RX_FILTER_THRES_W::new(self, 5)
     }
     #[doc = "Bit 13 - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W<CH_RX_CONF1_SPEC, 13> {
-        MEM_RX_WRAP_EN_W::new(self)
+    pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W<CH_RX_CONF1_SPEC> {
+        MEM_RX_WRAP_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<CH_RX_CONF1_SPEC, 14> {
-        AFIFO_RST_W::new(self)
+    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<CH_RX_CONF1_SPEC> {
+        AFIFO_RST_W::new(self, 14)
     }
     #[doc = "Bit 15 - synchronization bit for CHANNEL%s"]
     #[inline(always)]
     #[must_use]
-    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CH_RX_CONF1_SPEC, 15> {
-        CONF_UPDATE_W::new(self)
+    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CH_RX_CONF1_SPEC> {
+        CONF_UPDATE_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

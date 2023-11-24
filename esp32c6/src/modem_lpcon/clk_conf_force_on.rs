@@ -5,43 +5,43 @@ pub type W = crate::W<CLK_CONF_FORCE_ON_SPEC>;
 #[doc = "Field `CLK_WIFIPWR_FO` reader - "]
 pub type CLK_WIFIPWR_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIPWR_FO` writer - "]
-pub type CLK_WIFIPWR_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_WIFIPWR_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_COEX_FO` reader - "]
 pub type CLK_COEX_FO_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_FO` writer - "]
-pub type CLK_COEX_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_COEX_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_I2C_MST_FO` reader - "]
 pub type CLK_I2C_MST_FO_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_FO` writer - "]
-pub type CLK_I2C_MST_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_I2C_MST_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_LP_TIMER_FO` reader - "]
 pub type CLK_LP_TIMER_FO_R = crate::BitReader;
 #[doc = "Field `CLK_LP_TIMER_FO` writer - "]
-pub type CLK_LP_TIMER_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_LP_TIMER_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BCMEM_FO` reader - "]
 pub type CLK_BCMEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_BCMEM_FO` writer - "]
-pub type CLK_BCMEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BCMEM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_I2C_MST_MEM_FO` reader - "]
 pub type CLK_I2C_MST_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_MEM_FO` writer - "]
-pub type CLK_I2C_MST_MEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_I2C_MST_MEM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_CHAN_FREQ_MEM_FO` reader - "]
 pub type CLK_CHAN_FREQ_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_CHAN_FREQ_MEM_FO` writer - "]
-pub type CLK_CHAN_FREQ_MEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_CHAN_FREQ_MEM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_PBUS_MEM_FO` reader - "]
 pub type CLK_PBUS_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_PBUS_MEM_FO` writer - "]
-pub type CLK_PBUS_MEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_PBUS_MEM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_AGC_MEM_FO` reader - "]
 pub type CLK_AGC_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_AGC_MEM_FO` writer - "]
-pub type CLK_AGC_MEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_AGC_MEM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_DC_MEM_FO` reader - "]
 pub type CLK_DC_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_DC_MEM_FO` writer - "]
-pub type CLK_DC_MEM_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_DC_MEM_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -141,69 +141,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_FORCE_ON_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_wifipwr_fo(&mut self) -> CLK_WIFIPWR_FO_W<CLK_CONF_FORCE_ON_SPEC, 0> {
-        CLK_WIFIPWR_FO_W::new(self)
+    pub fn clk_wifipwr_fo(&mut self) -> CLK_WIFIPWR_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_WIFIPWR_FO_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<CLK_CONF_FORCE_ON_SPEC, 1> {
-        CLK_COEX_FO_W::new(self)
+    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_COEX_FO_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<CLK_CONF_FORCE_ON_SPEC, 2> {
-        CLK_I2C_MST_FO_W::new(self)
+    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_I2C_MST_FO_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_lp_timer_fo(&mut self) -> CLK_LP_TIMER_FO_W<CLK_CONF_FORCE_ON_SPEC, 3> {
-        CLK_LP_TIMER_FO_W::new(self)
+    pub fn clk_lp_timer_fo(&mut self) -> CLK_LP_TIMER_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_LP_TIMER_FO_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_bcmem_fo(&mut self) -> CLK_BCMEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 4> {
-        CLK_BCMEM_FO_W::new(self)
+    pub fn clk_bcmem_fo(&mut self) -> CLK_BCMEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_BCMEM_FO_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_i2c_mst_mem_fo(&mut self) -> CLK_I2C_MST_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 5> {
-        CLK_I2C_MST_MEM_FO_W::new(self)
+    pub fn clk_i2c_mst_mem_fo(&mut self) -> CLK_I2C_MST_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_I2C_MST_MEM_FO_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_chan_freq_mem_fo(&mut self) -> CLK_CHAN_FREQ_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 6> {
-        CLK_CHAN_FREQ_MEM_FO_W::new(self)
+    pub fn clk_chan_freq_mem_fo(&mut self) -> CLK_CHAN_FREQ_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_CHAN_FREQ_MEM_FO_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_pbus_mem_fo(&mut self) -> CLK_PBUS_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 7> {
-        CLK_PBUS_MEM_FO_W::new(self)
+    pub fn clk_pbus_mem_fo(&mut self) -> CLK_PBUS_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_PBUS_MEM_FO_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_agc_mem_fo(&mut self) -> CLK_AGC_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 8> {
-        CLK_AGC_MEM_FO_W::new(self)
+    pub fn clk_agc_mem_fo(&mut self) -> CLK_AGC_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_AGC_MEM_FO_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_dc_mem_fo(&mut self) -> CLK_DC_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC, 9> {
-        CLK_DC_MEM_FO_W::new(self)
+    pub fn clk_dc_mem_fo(&mut self) -> CLK_DC_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+        CLK_DC_MEM_FO_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

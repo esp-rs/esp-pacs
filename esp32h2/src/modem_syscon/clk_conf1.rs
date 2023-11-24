@@ -5,31 +5,31 @@ pub type W = crate::W<CLK_CONF1_SPEC>;
 #[doc = "Field `CLK_FE_16M_EN` reader - "]
 pub type CLK_FE_16M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_16M_EN` writer - "]
-pub type CLK_FE_16M_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_16M_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_32M_EN` reader - "]
 pub type CLK_FE_32M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_32M_EN` writer - "]
-pub type CLK_FE_32M_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_32M_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_SDM_EN` reader - "]
 pub type CLK_FE_SDM_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_SDM_EN` writer - "]
-pub type CLK_FE_SDM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_SDM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_ADC_EN` reader - "]
 pub type CLK_FE_ADC_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ADC_EN` writer - "]
-pub type CLK_FE_ADC_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_ADC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_FE_APB_EN` reader - "]
 pub type CLK_FE_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_APB_EN` writer - "]
-pub type CLK_FE_APB_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_APB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BT_APB_EN` reader - "]
 pub type CLK_BT_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BT_APB_EN` writer - "]
-pub type CLK_BT_APB_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BT_APB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BT_EN` reader - "]
 pub type CLK_BT_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BT_EN` writer - "]
-pub type CLK_BT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 12"]
     #[inline(always)]
@@ -102,51 +102,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_16m_en(&mut self) -> CLK_FE_16M_EN_W<CLK_CONF1_SPEC, 12> {
-        CLK_FE_16M_EN_W::new(self)
+    pub fn clk_fe_16m_en(&mut self) -> CLK_FE_16M_EN_W<CLK_CONF1_SPEC> {
+        CLK_FE_16M_EN_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_32m_en(&mut self) -> CLK_FE_32M_EN_W<CLK_CONF1_SPEC, 13> {
-        CLK_FE_32M_EN_W::new(self)
+    pub fn clk_fe_32m_en(&mut self) -> CLK_FE_32M_EN_W<CLK_CONF1_SPEC> {
+        CLK_FE_32M_EN_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_sdm_en(&mut self) -> CLK_FE_SDM_EN_W<CLK_CONF1_SPEC, 14> {
-        CLK_FE_SDM_EN_W::new(self)
+    pub fn clk_fe_sdm_en(&mut self) -> CLK_FE_SDM_EN_W<CLK_CONF1_SPEC> {
+        CLK_FE_SDM_EN_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_adc_en(&mut self) -> CLK_FE_ADC_EN_W<CLK_CONF1_SPEC, 15> {
-        CLK_FE_ADC_EN_W::new(self)
+    pub fn clk_fe_adc_en(&mut self) -> CLK_FE_ADC_EN_W<CLK_CONF1_SPEC> {
+        CLK_FE_ADC_EN_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_apb_en(&mut self) -> CLK_FE_APB_EN_W<CLK_CONF1_SPEC, 16> {
-        CLK_FE_APB_EN_W::new(self)
+    pub fn clk_fe_apb_en(&mut self) -> CLK_FE_APB_EN_W<CLK_CONF1_SPEC> {
+        CLK_FE_APB_EN_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_bt_apb_en(&mut self) -> CLK_BT_APB_EN_W<CLK_CONF1_SPEC, 17> {
-        CLK_BT_APB_EN_W::new(self)
+    pub fn clk_bt_apb_en(&mut self) -> CLK_BT_APB_EN_W<CLK_CONF1_SPEC> {
+        CLK_BT_APB_EN_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_bt_en(&mut self) -> CLK_BT_EN_W<CLK_CONF1_SPEC, 18> {
-        CLK_BT_EN_W::new(self)
+    pub fn clk_bt_en(&mut self) -> CLK_BT_EN_W<CLK_CONF1_SPEC> {
+        CLK_BT_EN_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

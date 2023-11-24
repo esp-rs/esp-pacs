@@ -5,7 +5,7 @@ pub type W = crate::W<EDMA_BOUNDARY_2_SPEC>;
 #[doc = "Field `EDMA_BOUNDARY_2` reader - This field is used to configure the boundary 2 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
 pub type EDMA_BOUNDARY_2_R = crate::FieldReader<u16>;
 #[doc = "Field `EDMA_BOUNDARY_2` writer - This field is used to configure the boundary 2 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
-pub type EDMA_BOUNDARY_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type EDMA_BOUNDARY_2_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
     #[doc = "Bits 0:13 - This field is used to configure the boundary 2 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EDMA_BOUNDARY_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - This field is used to configure the boundary 2 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
     #[inline(always)]
     #[must_use]
-    pub fn edma_boundary_2(&mut self) -> EDMA_BOUNDARY_2_W<EDMA_BOUNDARY_2_SPEC, 0> {
-        EDMA_BOUNDARY_2_W::new(self)
+    pub fn edma_boundary_2(&mut self) -> EDMA_BOUNDARY_2_W<EDMA_BOUNDARY_2_SPEC> {
+        EDMA_BOUNDARY_2_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

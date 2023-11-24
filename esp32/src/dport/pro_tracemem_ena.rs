@@ -5,7 +5,7 @@ pub type W = crate::W<PRO_TRACEMEM_ENA_SPEC>;
 #[doc = "Field `PRO_TRACEMEM_ENA` reader - "]
 pub type PRO_TRACEMEM_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_TRACEMEM_ENA` writer - "]
-pub type PRO_TRACEMEM_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_TRACEMEM_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_TRACEMEM_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_tracemem_ena(&mut self) -> PRO_TRACEMEM_ENA_W<PRO_TRACEMEM_ENA_SPEC, 0> {
-        PRO_TRACEMEM_ENA_W::new(self)
+    pub fn pro_tracemem_ena(&mut self) -> PRO_TRACEMEM_ENA_W<PRO_TRACEMEM_ENA_SPEC> {
+        PRO_TRACEMEM_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<AAD_BLOCK_NUM_SPEC>;
 #[doc = "Field `AAD_BLOCK_NUM` reader - Stores the ADD Block Number for the GCM operation."]
 pub type AAD_BLOCK_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `AAD_BLOCK_NUM` writer - Stores the ADD Block Number for the GCM operation."]
-pub type AAD_BLOCK_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type AAD_BLOCK_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the ADD Block Number for the GCM operation."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<AAD_BLOCK_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Stores the ADD Block Number for the GCM operation."]
     #[inline(always)]
     #[must_use]
-    pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<AAD_BLOCK_NUM_SPEC, 0> {
-        AAD_BLOCK_NUM_W::new(self)
+    pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<AAD_BLOCK_NUM_SPEC> {
+        AAD_BLOCK_NUM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

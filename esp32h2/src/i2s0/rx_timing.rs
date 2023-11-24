@@ -5,23 +5,23 @@ pub type W = crate::W<RX_TIMING_SPEC>;
 #[doc = "Field `RX_SD_IN_DM` reader - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
 pub type RX_SD_IN_DM_R = crate::FieldReader;
 #[doc = "Field `RX_SD_IN_DM` writer - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_SD_IN_DM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_SD_IN_DM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_WS_OUT_DM` reader - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
 pub type RX_WS_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `RX_WS_OUT_DM` writer - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_WS_OUT_DM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_WS_OUT_DM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_BCK_OUT_DM` reader - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
 pub type RX_BCK_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_OUT_DM` writer - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_BCK_OUT_DM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_BCK_OUT_DM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_WS_IN_DM` reader - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
 pub type RX_WS_IN_DM_R = crate::FieldReader;
 #[doc = "Field `RX_WS_IN_DM` writer - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_WS_IN_DM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_WS_IN_DM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RX_BCK_IN_DM` reader - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
 pub type RX_BCK_IN_DM_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_IN_DM` writer - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_BCK_IN_DM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RX_BCK_IN_DM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RX_TIMING_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_sd_in_dm(&mut self) -> RX_SD_IN_DM_W<RX_TIMING_SPEC, 0> {
-        RX_SD_IN_DM_W::new(self)
+    pub fn rx_sd_in_dm(&mut self) -> RX_SD_IN_DM_W<RX_TIMING_SPEC> {
+        RX_SD_IN_DM_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ws_out_dm(&mut self) -> RX_WS_OUT_DM_W<RX_TIMING_SPEC, 16> {
-        RX_WS_OUT_DM_W::new(self)
+    pub fn rx_ws_out_dm(&mut self) -> RX_WS_OUT_DM_W<RX_TIMING_SPEC> {
+        RX_WS_OUT_DM_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_bck_out_dm(&mut self) -> RX_BCK_OUT_DM_W<RX_TIMING_SPEC, 20> {
-        RX_BCK_OUT_DM_W::new(self)
+    pub fn rx_bck_out_dm(&mut self) -> RX_BCK_OUT_DM_W<RX_TIMING_SPEC> {
+        RX_BCK_OUT_DM_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ws_in_dm(&mut self) -> RX_WS_IN_DM_W<RX_TIMING_SPEC, 24> {
-        RX_WS_IN_DM_W::new(self)
+    pub fn rx_ws_in_dm(&mut self) -> RX_WS_IN_DM_W<RX_TIMING_SPEC> {
+        RX_WS_IN_DM_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_bck_in_dm(&mut self) -> RX_BCK_IN_DM_W<RX_TIMING_SPEC, 28> {
-        RX_BCK_IN_DM_W::new(self)
+    pub fn rx_bck_in_dm(&mut self) -> RX_BCK_IN_DM_W<RX_TIMING_SPEC> {
+        RX_BCK_IN_DM_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,27 +5,27 @@ pub type W = crate::W<CONF1_SPEC>;
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
 pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RXFIFO_FULL_THRHD` writer - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
-pub type RXFIFO_FULL_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RXFIFO_FULL_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
 pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` writer - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
-pub type TXFIFO_EMPTY_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `DIS_RX_DAT_OVF` reader - Disable UART Rx data overflow detect."]
 pub type DIS_RX_DAT_OVF_R = crate::BitReader;
 #[doc = "Field `DIS_RX_DAT_OVF` writer - Disable UART Rx data overflow detect."]
-pub type DIS_RX_DAT_OVF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIS_RX_DAT_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_TOUT_FLOW_DIS` reader - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
 pub type RX_TOUT_FLOW_DIS_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_FLOW_DIS` writer - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
-pub type RX_TOUT_FLOW_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_TOUT_FLOW_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FLOW_EN` reader - This is the flow enable bit for UART receiver."]
 pub type RX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `RX_FLOW_EN` writer - This is the flow enable bit for UART receiver."]
-pub type RX_FLOW_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FLOW_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_TOUT_EN` reader - This is the enble bit for uart receiver's timeout function."]
 pub type RX_TOUT_EN_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_EN` writer - This is the enble bit for uart receiver's timeout function."]
-pub type RX_TOUT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_TOUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
     #[inline(always)]
@@ -86,45 +86,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC, 0> {
-        RXFIFO_FULL_THRHD_W::new(self)
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC> {
+        RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC, 9> {
-        TXFIFO_EMPTY_THRHD_W::new(self)
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC> {
+        TXFIFO_EMPTY_THRHD_W::new(self, 9)
     }
     #[doc = "Bit 18 - Disable UART Rx data overflow detect."]
     #[inline(always)]
     #[must_use]
-    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<CONF1_SPEC, 18> {
-        DIS_RX_DAT_OVF_W::new(self)
+    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<CONF1_SPEC> {
+        DIS_RX_DAT_OVF_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<CONF1_SPEC, 19> {
-        RX_TOUT_FLOW_DIS_W::new(self)
+    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<CONF1_SPEC> {
+        RX_TOUT_FLOW_DIS_W::new(self, 19)
     }
     #[doc = "Bit 20 - This is the flow enable bit for UART receiver."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<CONF1_SPEC, 20> {
-        RX_FLOW_EN_W::new(self)
+    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<CONF1_SPEC> {
+        RX_FLOW_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<CONF1_SPEC, 21> {
-        RX_TOUT_EN_W::new(self)
+    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<CONF1_SPEC> {
+        RX_TOUT_EN_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

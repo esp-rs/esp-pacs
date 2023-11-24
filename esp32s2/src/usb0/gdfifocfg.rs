@@ -5,11 +5,11 @@ pub type W = crate::W<GDFIFOCFG_SPEC>;
 #[doc = "Field `GDFIFOCFG` reader - "]
 pub type GDFIFOCFG_R = crate::FieldReader<u16>;
 #[doc = "Field `GDFIFOCFG` writer - "]
-pub type GDFIFOCFG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type GDFIFOCFG_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `EPINFOBASEADDR` reader - "]
 pub type EPINFOBASEADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `EPINFOBASEADDR` writer - "]
-pub type EPINFOBASEADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type EPINFOBASEADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GDFIFOCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
-    pub fn gdfifocfg(&mut self) -> GDFIFOCFG_W<GDFIFOCFG_SPEC, 0> {
-        GDFIFOCFG_W::new(self)
+    pub fn gdfifocfg(&mut self) -> GDFIFOCFG_W<GDFIFOCFG_SPEC> {
+        GDFIFOCFG_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn epinfobaseaddr(&mut self) -> EPINFOBASEADDR_W<GDFIFOCFG_SPEC, 16> {
-        EPINFOBASEADDR_W::new(self)
+    pub fn epinfobaseaddr(&mut self) -> EPINFOBASEADDR_W<GDFIFOCFG_SPEC> {
+        EPINFOBASEADDR_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

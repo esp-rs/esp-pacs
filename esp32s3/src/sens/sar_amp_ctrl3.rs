@@ -5,31 +5,31 @@ pub type W = crate::W<SAR_AMP_CTRL3_SPEC>;
 #[doc = "Field `SAR1_DAC_XPD_FSM` reader - no public"]
 pub type SAR1_DAC_XPD_FSM_R = crate::FieldReader;
 #[doc = "Field `SAR1_DAC_XPD_FSM` writer - no public"]
-pub type SAR1_DAC_XPD_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SAR1_DAC_XPD_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `XPD_SAR_AMP_FSM` reader - no public"]
 pub type XPD_SAR_AMP_FSM_R = crate::FieldReader;
 #[doc = "Field `XPD_SAR_AMP_FSM` writer - no public"]
-pub type XPD_SAR_AMP_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type XPD_SAR_AMP_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `AMP_RST_FB_FSM` reader - no public"]
 pub type AMP_RST_FB_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_RST_FB_FSM` writer - no public"]
-pub type AMP_RST_FB_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type AMP_RST_FB_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `AMP_SHORT_REF_FSM` reader - no public"]
 pub type AMP_SHORT_REF_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_FSM` writer - no public"]
-pub type AMP_SHORT_REF_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type AMP_SHORT_REF_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM` reader - no public"]
 pub type AMP_SHORT_REF_GND_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM` writer - no public"]
-pub type AMP_SHORT_REF_GND_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type AMP_SHORT_REF_GND_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `XPD_SAR_FSM` reader - no public"]
 pub type XPD_SAR_FSM_R = crate::FieldReader;
 #[doc = "Field `XPD_SAR_FSM` writer - no public"]
-pub type XPD_SAR_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type XPD_SAR_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `RSTB_FSM` reader - no public"]
 pub type RSTB_FSM_R = crate::FieldReader;
 #[doc = "Field `RSTB_FSM` writer - no public"]
-pub type RSTB_FSM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RSTB_FSM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - no public"]
     #[inline(always)]
@@ -102,51 +102,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_AMP_CTRL3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sar1_dac_xpd_fsm(&mut self) -> SAR1_DAC_XPD_FSM_W<SAR_AMP_CTRL3_SPEC, 0> {
-        SAR1_DAC_XPD_FSM_W::new(self)
+    pub fn sar1_dac_xpd_fsm(&mut self) -> SAR1_DAC_XPD_FSM_W<SAR_AMP_CTRL3_SPEC> {
+        SAR1_DAC_XPD_FSM_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<SAR_AMP_CTRL3_SPEC, 4> {
-        XPD_SAR_AMP_FSM_W::new(self)
+    pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<SAR_AMP_CTRL3_SPEC> {
+        XPD_SAR_AMP_FSM_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<SAR_AMP_CTRL3_SPEC, 8> {
-        AMP_RST_FB_FSM_W::new(self)
+    pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<SAR_AMP_CTRL3_SPEC> {
+        AMP_RST_FB_FSM_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<SAR_AMP_CTRL3_SPEC, 12> {
-        AMP_SHORT_REF_FSM_W::new(self)
+    pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<SAR_AMP_CTRL3_SPEC> {
+        AMP_SHORT_REF_FSM_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<SAR_AMP_CTRL3_SPEC, 16> {
-        AMP_SHORT_REF_GND_FSM_W::new(self)
+    pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<SAR_AMP_CTRL3_SPEC> {
+        AMP_SHORT_REF_GND_FSM_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<SAR_AMP_CTRL3_SPEC, 20> {
-        XPD_SAR_FSM_W::new(self)
+    pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<SAR_AMP_CTRL3_SPEC> {
+        XPD_SAR_FSM_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn rstb_fsm(&mut self) -> RSTB_FSM_W<SAR_AMP_CTRL3_SPEC, 24> {
-        RSTB_FSM_W::new(self)
+    pub fn rstb_fsm(&mut self) -> RSTB_FSM_W<SAR_AMP_CTRL3_SPEC> {
+        RSTB_FSM_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

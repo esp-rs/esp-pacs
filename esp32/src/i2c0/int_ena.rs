@@ -5,55 +5,55 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `RXFIFO_FULL_INT_ENA` reader - The enable bit for rxfifo_full_int interrupt."]
 pub type RXFIFO_FULL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_FULL_INT_ENA` writer - The enable bit for rxfifo_full_int interrupt."]
-pub type RXFIFO_FULL_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFIFO_FULL_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` reader - The enable bit for txfifo_empty_int interrupt."]
 pub type TXFIFO_EMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` writer - The enable bit for txfifo_empty_int interrupt."]
-pub type TXFIFO_EMPTY_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFO_EMPTY_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` reader - The enable bit for rxfifo_ovf_int interrupt."]
 pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` writer - The enable bit for rxfifo_ovf_int interrupt."]
-pub type RXFIFO_OVF_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFIFO_OVF_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `END_DETECT_INT_ENA` reader - The enable bit for end_detect_int interrupt."]
 pub type END_DETECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `END_DETECT_INT_ENA` writer - The enable bit for end_detect_int interrupt."]
-pub type END_DETECT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type END_DETECT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` reader - The enable bit for slave_tran_comp_int interrupt."]
 pub type SLAVE_TRAN_COMP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` writer - The enable bit for slave_tran_comp_int interrupt."]
-pub type SLAVE_TRAN_COMP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_TRAN_COMP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` reader - The enable bit for arbitration_lost_int interrupt."]
 pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` writer - The enable bit for arbitration_lost_int interrupt."]
-pub type ARBITRATION_LOST_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARBITRATION_LOST_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` reader - The enable bit for master_tran_comp_int interrupt."]
 pub type MASTER_TRAN_COMP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` writer - The enable bit for master_tran_comp_int interrupt."]
-pub type MASTER_TRAN_COMP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASTER_TRAN_COMP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` reader - The enable bit for trans_complete_int interrupt."]
 pub type TRANS_COMPLETE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` writer - The enable bit for trans_complete_int interrupt."]
-pub type TRANS_COMPLETE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_COMPLETE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIME_OUT_INT_ENA` reader - The enable bit for time_out_int interrupt."]
 pub type TIME_OUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_INT_ENA` writer - The enable bit for time_out_int interrupt."]
-pub type TIME_OUT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIME_OUT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_START_INT_ENA` reader - The enable bit for trans_start_int interrupt."]
 pub type TRANS_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_START_INT_ENA` writer - The enable bit for trans_start_int interrupt."]
-pub type TRANS_START_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_START_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK_ERR_INT_ENA` reader - The enable bit for ack_err_int interrupt."]
 pub type ACK_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ACK_ERR_INT_ENA` writer - The enable bit for ack_err_int interrupt."]
-pub type ACK_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACK_ERR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_REC_FULL_INT_ENA` reader - The enable bit for rx_rec_full_int interrupt."]
 pub type RX_REC_FULL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_REC_FULL_INT_ENA` writer - The enable bit for rx_rec_full_int interrupt."]
-pub type RX_REC_FULL_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_REC_FULL_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_SEND_EMPTY_INT_ENA` reader - The enable bit for tx_send_empty_int interrupt."]
 pub type TX_SEND_EMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_SEND_EMPTY_INT_ENA` writer - The enable bit for tx_send_empty_int interrupt."]
-pub type TX_SEND_EMPTY_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SEND_EMPTY_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The enable bit for rxfifo_full_int interrupt."]
     #[inline(always)]
@@ -183,87 +183,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The enable bit for rxfifo_full_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W<INT_ENA_SPEC, 0> {
-        RXFIFO_FULL_INT_ENA_W::new(self)
+    pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W<INT_ENA_SPEC> {
+        RXFIFO_FULL_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for txfifo_empty_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W<INT_ENA_SPEC, 1> {
-        TXFIFO_EMPTY_INT_ENA_W::new(self)
+    pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W<INT_ENA_SPEC> {
+        TXFIFO_EMPTY_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for rxfifo_ovf_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<INT_ENA_SPEC, 2> {
-        RXFIFO_OVF_INT_ENA_W::new(self)
+    pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<INT_ENA_SPEC> {
+        RXFIFO_OVF_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for end_detect_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn end_detect_int_ena(&mut self) -> END_DETECT_INT_ENA_W<INT_ENA_SPEC, 3> {
-        END_DETECT_INT_ENA_W::new(self)
+    pub fn end_detect_int_ena(&mut self) -> END_DETECT_INT_ENA_W<INT_ENA_SPEC> {
+        END_DETECT_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for slave_tran_comp_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slave_tran_comp_int_ena(&mut self) -> SLAVE_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC, 4> {
-        SLAVE_TRAN_COMP_INT_ENA_W::new(self)
+    pub fn slave_tran_comp_int_ena(&mut self) -> SLAVE_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC> {
+        SLAVE_TRAN_COMP_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The enable bit for arbitration_lost_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<INT_ENA_SPEC, 5> {
-        ARBITRATION_LOST_INT_ENA_W::new(self)
+    pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<INT_ENA_SPEC> {
+        ARBITRATION_LOST_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - The enable bit for master_tran_comp_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn master_tran_comp_int_ena(&mut self) -> MASTER_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC, 6> {
-        MASTER_TRAN_COMP_INT_ENA_W::new(self)
+    pub fn master_tran_comp_int_ena(&mut self) -> MASTER_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC> {
+        MASTER_TRAN_COMP_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - The enable bit for trans_complete_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W<INT_ENA_SPEC, 7> {
-        TRANS_COMPLETE_INT_ENA_W::new(self)
+    pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W<INT_ENA_SPEC> {
+        TRANS_COMPLETE_INT_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - The enable bit for time_out_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W<INT_ENA_SPEC, 8> {
-        TIME_OUT_INT_ENA_W::new(self)
+    pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W<INT_ENA_SPEC> {
+        TIME_OUT_INT_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The enable bit for trans_start_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_start_int_ena(&mut self) -> TRANS_START_INT_ENA_W<INT_ENA_SPEC, 9> {
-        TRANS_START_INT_ENA_W::new(self)
+    pub fn trans_start_int_ena(&mut self) -> TRANS_START_INT_ENA_W<INT_ENA_SPEC> {
+        TRANS_START_INT_ENA_W::new(self, 9)
     }
     #[doc = "Bit 10 - The enable bit for ack_err_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ack_err_int_ena(&mut self) -> ACK_ERR_INT_ENA_W<INT_ENA_SPEC, 10> {
-        ACK_ERR_INT_ENA_W::new(self)
+    pub fn ack_err_int_ena(&mut self) -> ACK_ERR_INT_ENA_W<INT_ENA_SPEC> {
+        ACK_ERR_INT_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - The enable bit for rx_rec_full_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_rec_full_int_ena(&mut self) -> RX_REC_FULL_INT_ENA_W<INT_ENA_SPEC, 11> {
-        RX_REC_FULL_INT_ENA_W::new(self)
+    pub fn rx_rec_full_int_ena(&mut self) -> RX_REC_FULL_INT_ENA_W<INT_ENA_SPEC> {
+        RX_REC_FULL_INT_ENA_W::new(self, 11)
     }
     #[doc = "Bit 12 - The enable bit for tx_send_empty_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_send_empty_int_ena(&mut self) -> TX_SEND_EMPTY_INT_ENA_W<INT_ENA_SPEC, 12> {
-        TX_SEND_EMPTY_INT_ENA_W::new(self)
+    pub fn tx_send_empty_int_ena(&mut self) -> TX_SEND_EMPTY_INT_ENA_W<INT_ENA_SPEC> {
+        TX_SEND_EMPTY_INT_ENA_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

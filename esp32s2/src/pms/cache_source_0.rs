@@ -5,7 +5,7 @@ pub type W = crate::W<CACHE_SOURCE_0_SPEC>;
 #[doc = "Field `CACHE_SOURCE_LOCK` reader - Lock register. Setting to 1 locks cache access permission control registers."]
 pub type CACHE_SOURCE_LOCK_R = crate::BitReader;
 #[doc = "Field `CACHE_SOURCE_LOCK` writer - Lock register. Setting to 1 locks cache access permission control registers."]
-pub type CACHE_SOURCE_LOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_SOURCE_LOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache access permission control registers."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_SOURCE_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache access permission control registers."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_source_lock(&mut self) -> CACHE_SOURCE_LOCK_W<CACHE_SOURCE_0_SPEC, 0> {
-        CACHE_SOURCE_LOCK_W::new(self)
+    pub fn cache_source_lock(&mut self) -> CACHE_SOURCE_LOCK_W<CACHE_SOURCE_0_SPEC> {
+        CACHE_SOURCE_LOCK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

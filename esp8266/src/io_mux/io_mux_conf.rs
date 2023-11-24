@@ -5,11 +5,11 @@ pub type W = crate::W<IO_MUX_CONF_SPEC>;
 #[doc = "Field `SPI0_CLK_EQU_SYS_CLK` reader - "]
 pub type SPI0_CLK_EQU_SYS_CLK_R = crate::BitReader;
 #[doc = "Field `SPI0_CLK_EQU_SYS_CLK` writer - "]
-pub type SPI0_CLK_EQU_SYS_CLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI0_CLK_EQU_SYS_CLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI1_CLK_EQU_SYS_CLK` reader - "]
 pub type SPI1_CLK_EQU_SYS_CLK_R = crate::BitReader;
 #[doc = "Field `SPI1_CLK_EQU_SYS_CLK` writer - "]
-pub type SPI1_CLK_EQU_SYS_CLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI1_CLK_EQU_SYS_CLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IO_MUX_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn spi0_clk_equ_sys_clk(&mut self) -> SPI0_CLK_EQU_SYS_CLK_W<IO_MUX_CONF_SPEC, 8> {
-        SPI0_CLK_EQU_SYS_CLK_W::new(self)
+    pub fn spi0_clk_equ_sys_clk(&mut self) -> SPI0_CLK_EQU_SYS_CLK_W<IO_MUX_CONF_SPEC> {
+        SPI0_CLK_EQU_SYS_CLK_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1_clk_equ_sys_clk(&mut self) -> SPI1_CLK_EQU_SYS_CLK_W<IO_MUX_CONF_SPEC, 9> {
-        SPI1_CLK_EQU_SYS_CLK_W::new(self)
+    pub fn spi1_clk_equ_sys_clk(&mut self) -> SPI1_CLK_EQU_SYS_CLK_W<IO_MUX_CONF_SPEC> {
+        SPI1_CLK_EQU_SYS_CLK_W::new(self, 9)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

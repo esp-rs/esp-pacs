@@ -5,91 +5,91 @@ pub type W = crate::W<PWC_SPEC>;
 #[doc = "Field `FASTMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC fast memory."]
 pub type FASTMEM_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC fast memory."]
-pub type FASTMEM_FORCE_NOISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_FORCE_NOISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTMEM_FORCE_ISO` reader - Set this bit to force isolate the RTC fast memory."]
 pub type FASTMEM_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_ISO` writer - Set this bit to force isolate the RTC fast memory."]
-pub type FASTMEM_FORCE_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_FORCE_ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC slow memory."]
 pub type SLOWMEM_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC slow memory."]
-pub type SLOWMEM_FORCE_NOISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_FORCE_NOISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_FORCE_ISO` reader - Set this bit to force isolate the RTC slow memory."]
 pub type SLOWMEM_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_ISO` writer - Set this bit to force isolate the RTC slow memory."]
-pub type SLOWMEM_FORCE_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_FORCE_ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_ISO` reader - Set this bit to force isolate the RTC peripherals."]
 pub type FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_ISO` writer - Set this bit to force isolate the RTC peripherals."]
-pub type FORCE_ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC peripherals."]
 pub type FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC peripherals."]
-pub type FORCE_NOISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_NOISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTMEM_FOLW_CPU` reader - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
 pub type FASTMEM_FOLW_CPU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FOLW_CPU` writer - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
-pub type FASTMEM_FOLW_CPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_FOLW_CPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTMEM_FORCE_LPD` reader - Set this bit to force not retain the RTC fast memory."]
 pub type FASTMEM_FORCE_LPD_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPD` writer - Set this bit to force not retain the RTC fast memory."]
-pub type FASTMEM_FORCE_LPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_FORCE_LPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTMEM_FORCE_LPU` reader - Set this bit to force retain the RTC fast memory."]
 pub type FASTMEM_FORCE_LPU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPU` writer - Set this bit to force retain the RTC fast memory."]
-pub type FASTMEM_FORCE_LPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_FORCE_LPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_FOLW_CPU` reader - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
 pub type SLOWMEM_FOLW_CPU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FOLW_CPU` writer - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
-pub type SLOWMEM_FOLW_CPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_FOLW_CPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_FORCE_LPD` reader - Set this bit to force not retain the RTC slow memory."]
 pub type SLOWMEM_FORCE_LPD_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_LPD` writer - Set this bit to force not retain the RTC slow memory."]
-pub type SLOWMEM_FORCE_LPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_FORCE_LPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_FORCE_LPU` reader - Set this bit to force retain the RTC slow memory."]
 pub type SLOWMEM_FORCE_LPU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_LPU` writer - Set this bit to force retain the RTC slow memory."]
-pub type SLOWMEM_FORCE_LPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_FORCE_LPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTMEM_FORCE_PD` reader - Set this bit to FPD the RTC fast memory."]
 pub type FASTMEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_PD` writer - Set this bit to FPD the RTC fast memory."]
-pub type FASTMEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTMEM_FORCE_PU` reader - Set this bit to FPU the RTC fast memory."]
 pub type FASTMEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_PU` writer - Set this bit to FPU the RTC fast memory."]
-pub type FASTMEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTMEM_PD_EN` reader - Set this bit to enable PD for the RTC fast memory in sleep."]
 pub type FASTMEM_PD_EN_R = crate::BitReader;
 #[doc = "Field `FASTMEM_PD_EN` writer - Set this bit to enable PD for the RTC fast memory in sleep."]
-pub type FASTMEM_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FASTMEM_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_FORCE_PD` reader - Set this bit to FPD the RTC slow memory."]
 pub type SLOWMEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_PD` writer - Set this bit to FPD the RTC slow memory."]
-pub type SLOWMEM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_FORCE_PU` reader - Set this bit to FPU the RTC slow memory."]
 pub type SLOWMEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_PU` writer - Set this bit to FPU the RTC slow memory."]
-pub type SLOWMEM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOWMEM_PD_EN` reader - Set this bit to enable PD for the RTC slow memory in sleep."]
 pub type SLOWMEM_PD_EN_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_PD_EN` writer - Set this bit to enable PD for the RTC slow memory in sleep."]
-pub type SLOWMEM_PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOWMEM_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_PD` reader - Set this bit to FPD the RTC peripherals."]
 pub type FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_PD` writer - Set this bit to FPD the RTC peripherals."]
-pub type FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_PU` reader - Set this bit to FPU the RTC peripherals."]
 pub type FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_PU` writer - Set this bit to FPU the RTC peripherals."]
-pub type FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PD_EN` reader - Set this bit to enable PD for the RTC peripherals in sleep."]
 pub type PD_EN_R = crate::BitReader;
 #[doc = "Field `PD_EN` writer - Set this bit to enable PD for the RTC peripherals in sleep."]
-pub type PD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAD_FORCE_HOLD` reader - Set this bit the force hold the RTC GPIOs."]
 pub type PAD_FORCE_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD_FORCE_HOLD` writer - Set this bit the force hold the RTC GPIOs."]
-pub type PAD_FORCE_HOLD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAD_FORCE_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to disable the force isolation to the RTC fast memory."]
     #[inline(always)]
@@ -285,141 +285,141 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PWC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to disable the force isolation to the RTC fast memory."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_noiso(&mut self) -> FASTMEM_FORCE_NOISO_W<PWC_SPEC, 0> {
-        FASTMEM_FORCE_NOISO_W::new(self)
+    pub fn fastmem_force_noiso(&mut self) -> FASTMEM_FORCE_NOISO_W<PWC_SPEC> {
+        FASTMEM_FORCE_NOISO_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force isolate the RTC fast memory."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_iso(&mut self) -> FASTMEM_FORCE_ISO_W<PWC_SPEC, 1> {
-        FASTMEM_FORCE_ISO_W::new(self)
+    pub fn fastmem_force_iso(&mut self) -> FASTMEM_FORCE_ISO_W<PWC_SPEC> {
+        FASTMEM_FORCE_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to disable the force isolation to the RTC slow memory."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_noiso(&mut self) -> SLOWMEM_FORCE_NOISO_W<PWC_SPEC, 2> {
-        SLOWMEM_FORCE_NOISO_W::new(self)
+    pub fn slowmem_force_noiso(&mut self) -> SLOWMEM_FORCE_NOISO_W<PWC_SPEC> {
+        SLOWMEM_FORCE_NOISO_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to force isolate the RTC slow memory."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_iso(&mut self) -> SLOWMEM_FORCE_ISO_W<PWC_SPEC, 3> {
-        SLOWMEM_FORCE_ISO_W::new(self)
+    pub fn slowmem_force_iso(&mut self) -> SLOWMEM_FORCE_ISO_W<PWC_SPEC> {
+        SLOWMEM_FORCE_ISO_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to force isolate the RTC peripherals."]
     #[inline(always)]
     #[must_use]
-    pub fn force_iso(&mut self) -> FORCE_ISO_W<PWC_SPEC, 4> {
-        FORCE_ISO_W::new(self)
+    pub fn force_iso(&mut self) -> FORCE_ISO_W<PWC_SPEC> {
+        FORCE_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to disable the force isolation to the RTC peripherals."]
     #[inline(always)]
     #[must_use]
-    pub fn force_noiso(&mut self) -> FORCE_NOISO_W<PWC_SPEC, 5> {
-        FORCE_NOISO_W::new(self)
+    pub fn force_noiso(&mut self) -> FORCE_NOISO_W<PWC_SPEC> {
+        FORCE_NOISO_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_folw_cpu(&mut self) -> FASTMEM_FOLW_CPU_W<PWC_SPEC, 6> {
-        FASTMEM_FOLW_CPU_W::new(self)
+    pub fn fastmem_folw_cpu(&mut self) -> FASTMEM_FOLW_CPU_W<PWC_SPEC> {
+        FASTMEM_FOLW_CPU_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to force not retain the RTC fast memory."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<PWC_SPEC, 7> {
-        FASTMEM_FORCE_LPD_W::new(self)
+    pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<PWC_SPEC> {
+        FASTMEM_FORCE_LPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to force retain the RTC fast memory."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<PWC_SPEC, 8> {
-        FASTMEM_FORCE_LPU_W::new(self)
+    pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<PWC_SPEC> {
+        FASTMEM_FORCE_LPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_folw_cpu(&mut self) -> SLOWMEM_FOLW_CPU_W<PWC_SPEC, 9> {
-        SLOWMEM_FOLW_CPU_W::new(self)
+    pub fn slowmem_folw_cpu(&mut self) -> SLOWMEM_FOLW_CPU_W<PWC_SPEC> {
+        SLOWMEM_FOLW_CPU_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to force not retain the RTC slow memory."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_lpd(&mut self) -> SLOWMEM_FORCE_LPD_W<PWC_SPEC, 10> {
-        SLOWMEM_FORCE_LPD_W::new(self)
+    pub fn slowmem_force_lpd(&mut self) -> SLOWMEM_FORCE_LPD_W<PWC_SPEC> {
+        SLOWMEM_FORCE_LPD_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to force retain the RTC slow memory."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_lpu(&mut self) -> SLOWMEM_FORCE_LPU_W<PWC_SPEC, 11> {
-        SLOWMEM_FORCE_LPU_W::new(self)
+    pub fn slowmem_force_lpu(&mut self) -> SLOWMEM_FORCE_LPU_W<PWC_SPEC> {
+        SLOWMEM_FORCE_LPU_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to FPD the RTC fast memory."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_pd(&mut self) -> FASTMEM_FORCE_PD_W<PWC_SPEC, 12> {
-        FASTMEM_FORCE_PD_W::new(self)
+    pub fn fastmem_force_pd(&mut self) -> FASTMEM_FORCE_PD_W<PWC_SPEC> {
+        FASTMEM_FORCE_PD_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to FPU the RTC fast memory."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_force_pu(&mut self) -> FASTMEM_FORCE_PU_W<PWC_SPEC, 13> {
-        FASTMEM_FORCE_PU_W::new(self)
+    pub fn fastmem_force_pu(&mut self) -> FASTMEM_FORCE_PU_W<PWC_SPEC> {
+        FASTMEM_FORCE_PU_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to enable PD for the RTC fast memory in sleep."]
     #[inline(always)]
     #[must_use]
-    pub fn fastmem_pd_en(&mut self) -> FASTMEM_PD_EN_W<PWC_SPEC, 14> {
-        FASTMEM_PD_EN_W::new(self)
+    pub fn fastmem_pd_en(&mut self) -> FASTMEM_PD_EN_W<PWC_SPEC> {
+        FASTMEM_PD_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to FPD the RTC slow memory."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_pd(&mut self) -> SLOWMEM_FORCE_PD_W<PWC_SPEC, 15> {
-        SLOWMEM_FORCE_PD_W::new(self)
+    pub fn slowmem_force_pd(&mut self) -> SLOWMEM_FORCE_PD_W<PWC_SPEC> {
+        SLOWMEM_FORCE_PD_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to FPU the RTC slow memory."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_force_pu(&mut self) -> SLOWMEM_FORCE_PU_W<PWC_SPEC, 16> {
-        SLOWMEM_FORCE_PU_W::new(self)
+    pub fn slowmem_force_pu(&mut self) -> SLOWMEM_FORCE_PU_W<PWC_SPEC> {
+        SLOWMEM_FORCE_PU_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to enable PD for the RTC slow memory in sleep."]
     #[inline(always)]
     #[must_use]
-    pub fn slowmem_pd_en(&mut self) -> SLOWMEM_PD_EN_W<PWC_SPEC, 17> {
-        SLOWMEM_PD_EN_W::new(self)
+    pub fn slowmem_pd_en(&mut self) -> SLOWMEM_PD_EN_W<PWC_SPEC> {
+        SLOWMEM_PD_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to FPD the RTC peripherals."]
     #[inline(always)]
     #[must_use]
-    pub fn force_pd(&mut self) -> FORCE_PD_W<PWC_SPEC, 18> {
-        FORCE_PD_W::new(self)
+    pub fn force_pd(&mut self) -> FORCE_PD_W<PWC_SPEC> {
+        FORCE_PD_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to FPU the RTC peripherals."]
     #[inline(always)]
     #[must_use]
-    pub fn force_pu(&mut self) -> FORCE_PU_W<PWC_SPEC, 19> {
-        FORCE_PU_W::new(self)
+    pub fn force_pu(&mut self) -> FORCE_PU_W<PWC_SPEC> {
+        FORCE_PU_W::new(self, 19)
     }
     #[doc = "Bit 20 - Set this bit to enable PD for the RTC peripherals in sleep."]
     #[inline(always)]
     #[must_use]
-    pub fn pd_en(&mut self) -> PD_EN_W<PWC_SPEC, 20> {
-        PD_EN_W::new(self)
+    pub fn pd_en(&mut self) -> PD_EN_W<PWC_SPEC> {
+        PD_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit the force hold the RTC GPIOs."]
     #[inline(always)]
     #[must_use]
-    pub fn pad_force_hold(&mut self) -> PAD_FORCE_HOLD_W<PWC_SPEC, 21> {
-        PAD_FORCE_HOLD_W::new(self)
+    pub fn pad_force_hold(&mut self) -> PAD_FORCE_HOLD_W<PWC_SPEC> {
+        PAD_FORCE_HOLD_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

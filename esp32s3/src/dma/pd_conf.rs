@@ -5,15 +5,15 @@ pub type W = crate::W<PD_CONF_SPEC>;
 #[doc = "Field `DMA_RAM_FORCE_PD` reader - Set this bit to force power down DMA internal memory."]
 pub type DMA_RAM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_FORCE_PD` writer - Set this bit to force power down DMA internal memory."]
-pub type DMA_RAM_FORCE_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RAM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RAM_FORCE_PU` reader - Set this bit to force power up DMA internal memory"]
 pub type DMA_RAM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_FORCE_PU` writer - Set this bit to force power up DMA internal memory"]
-pub type DMA_RAM_FORCE_PU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RAM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_RAM_CLK_FO` reader - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
 pub type DMA_RAM_CLK_FO_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_CLK_FO` writer - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
-pub type DMA_RAM_CLK_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_RAM_CLK_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 4 - Set this bit to force power down DMA internal memory."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PD_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 4 - Set this bit to force power down DMA internal memory."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ram_force_pd(&mut self) -> DMA_RAM_FORCE_PD_W<PD_CONF_SPEC, 4> {
-        DMA_RAM_FORCE_PD_W::new(self)
+    pub fn dma_ram_force_pd(&mut self) -> DMA_RAM_FORCE_PD_W<PD_CONF_SPEC> {
+        DMA_RAM_FORCE_PD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to force power up DMA internal memory"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ram_force_pu(&mut self) -> DMA_RAM_FORCE_PU_W<PD_CONF_SPEC, 5> {
-        DMA_RAM_FORCE_PU_W::new(self)
+    pub fn dma_ram_force_pu(&mut self) -> DMA_RAM_FORCE_PU_W<PD_CONF_SPEC> {
+        DMA_RAM_FORCE_PU_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_ram_clk_fo(&mut self) -> DMA_RAM_CLK_FO_W<PD_CONF_SPEC, 6> {
-        DMA_RAM_CLK_FO_W::new(self)
+    pub fn dma_ram_clk_fo(&mut self) -> DMA_RAM_CLK_FO_W<PD_CONF_SPEC> {
+        DMA_RAM_CLK_FO_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

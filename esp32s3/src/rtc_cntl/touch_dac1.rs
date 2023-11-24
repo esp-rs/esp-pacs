@@ -5,23 +5,23 @@ pub type W = crate::W<TOUCH_DAC1_SPEC>;
 #[doc = "Field `TOUCH_PAD14_DAC` reader - configure touch pad dac14"]
 pub type TOUCH_PAD14_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD14_DAC` writer - configure touch pad dac14"]
-pub type TOUCH_PAD14_DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_PAD14_DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TOUCH_PAD13_DAC` reader - configure touch pad dac13"]
 pub type TOUCH_PAD13_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD13_DAC` writer - configure touch pad dac13"]
-pub type TOUCH_PAD13_DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_PAD13_DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TOUCH_PAD12_DAC` reader - configure touch pad dac12"]
 pub type TOUCH_PAD12_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD12_DAC` writer - configure touch pad dac12"]
-pub type TOUCH_PAD12_DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_PAD12_DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TOUCH_PAD11_DAC` reader - configure touch pad dac11"]
 pub type TOUCH_PAD11_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD11_DAC` writer - configure touch pad dac11"]
-pub type TOUCH_PAD11_DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_PAD11_DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TOUCH_PAD10_DAC` reader - configure touch pad dac10"]
 pub type TOUCH_PAD10_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD10_DAC` writer - configure touch pad dac10"]
-pub type TOUCH_PAD10_DAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUCH_PAD10_DAC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 17:19 - configure touch pad dac14"]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_DAC1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 17:19 - configure touch pad dac14"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad14_dac(&mut self) -> TOUCH_PAD14_DAC_W<TOUCH_DAC1_SPEC, 17> {
-        TOUCH_PAD14_DAC_W::new(self)
+    pub fn touch_pad14_dac(&mut self) -> TOUCH_PAD14_DAC_W<TOUCH_DAC1_SPEC> {
+        TOUCH_PAD14_DAC_W::new(self, 17)
     }
     #[doc = "Bits 20:22 - configure touch pad dac13"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad13_dac(&mut self) -> TOUCH_PAD13_DAC_W<TOUCH_DAC1_SPEC, 20> {
-        TOUCH_PAD13_DAC_W::new(self)
+    pub fn touch_pad13_dac(&mut self) -> TOUCH_PAD13_DAC_W<TOUCH_DAC1_SPEC> {
+        TOUCH_PAD13_DAC_W::new(self, 20)
     }
     #[doc = "Bits 23:25 - configure touch pad dac12"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad12_dac(&mut self) -> TOUCH_PAD12_DAC_W<TOUCH_DAC1_SPEC, 23> {
-        TOUCH_PAD12_DAC_W::new(self)
+    pub fn touch_pad12_dac(&mut self) -> TOUCH_PAD12_DAC_W<TOUCH_DAC1_SPEC> {
+        TOUCH_PAD12_DAC_W::new(self, 23)
     }
     #[doc = "Bits 26:28 - configure touch pad dac11"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad11_dac(&mut self) -> TOUCH_PAD11_DAC_W<TOUCH_DAC1_SPEC, 26> {
-        TOUCH_PAD11_DAC_W::new(self)
+    pub fn touch_pad11_dac(&mut self) -> TOUCH_PAD11_DAC_W<TOUCH_DAC1_SPEC> {
+        TOUCH_PAD11_DAC_W::new(self, 26)
     }
     #[doc = "Bits 29:31 - configure touch pad dac10"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_pad10_dac(&mut self) -> TOUCH_PAD10_DAC_W<TOUCH_DAC1_SPEC, 29> {
-        TOUCH_PAD10_DAC_W::new(self)
+    pub fn touch_pad10_dac(&mut self) -> TOUCH_PAD10_DAC_W<TOUCH_DAC1_SPEC> {
+        TOUCH_PAD10_DAC_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

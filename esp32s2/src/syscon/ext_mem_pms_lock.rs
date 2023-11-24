@@ -5,7 +5,7 @@ pub type W = crate::W<EXT_MEM_PMS_LOCK_SPEC>;
 #[doc = "Field `EXT_MEM_PMS_LOCK` reader - "]
 pub type EXT_MEM_PMS_LOCK_R = crate::BitReader;
 #[doc = "Field `EXT_MEM_PMS_LOCK` writer - "]
-pub type EXT_MEM_PMS_LOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_MEM_PMS_LOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXT_MEM_PMS_LOCK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_mem_pms_lock(&mut self) -> EXT_MEM_PMS_LOCK_W<EXT_MEM_PMS_LOCK_SPEC, 0> {
-        EXT_MEM_PMS_LOCK_W::new(self)
+    pub fn ext_mem_pms_lock(&mut self) -> EXT_MEM_PMS_LOCK_W<EXT_MEM_PMS_LOCK_SPEC> {
+        EXT_MEM_PMS_LOCK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

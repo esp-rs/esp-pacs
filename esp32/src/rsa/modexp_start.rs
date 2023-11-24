@@ -1,7 +1,7 @@
 #[doc = "Register `MODEXP_START` writer"]
 pub type W = crate::W<MODEXP_START_SPEC>;
 #[doc = "Field `MODEXP_START` writer - Write 1 to start modular exponentiation."]
-pub type MODEXP_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODEXP_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MODEXP_START_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 0 - Write 1 to start modular exponentiation."]
     #[inline(always)]
     #[must_use]
-    pub fn modexp_start(&mut self) -> MODEXP_START_W<MODEXP_START_SPEC, 0> {
-        MODEXP_START_W::new(self)
+    pub fn modexp_start(&mut self) -> MODEXP_START_W<MODEXP_START_SPEC> {
+        MODEXP_START_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

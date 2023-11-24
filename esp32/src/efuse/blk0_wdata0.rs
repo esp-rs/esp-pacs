@@ -5,15 +5,15 @@ pub type W = crate::W<BLK0_WDATA0_SPEC>;
 #[doc = "Field `WR_DIS` reader - "]
 pub type WR_DIS_R = crate::FieldReader<u16>;
 #[doc = "Field `WR_DIS` writer - "]
-pub type WR_DIS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type WR_DIS_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `RD_DIS` reader - "]
 pub type RD_DIS_R = crate::FieldReader;
 #[doc = "Field `RD_DIS` writer - "]
-pub type RD_DIS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RD_DIS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `FLASH_CRYPT_CNT` reader - "]
 pub type FLASH_CRYPT_CNT_R = crate::FieldReader;
 #[doc = "Field `FLASH_CRYPT_CNT` writer - "]
-pub type FLASH_CRYPT_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type FLASH_CRYPT_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
-    pub fn wr_dis(&mut self) -> WR_DIS_W<BLK0_WDATA0_SPEC, 0> {
-        WR_DIS_W::new(self)
+    pub fn wr_dis(&mut self) -> WR_DIS_W<BLK0_WDATA0_SPEC> {
+        WR_DIS_W::new(self, 0)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_dis(&mut self) -> RD_DIS_W<BLK0_WDATA0_SPEC, 16> {
-        RD_DIS_W::new(self)
+    pub fn rd_dis(&mut self) -> RD_DIS_W<BLK0_WDATA0_SPEC> {
+        RD_DIS_W::new(self, 16)
     }
     #[doc = "Bits 20:26"]
     #[inline(always)]
     #[must_use]
-    pub fn flash_crypt_cnt(&mut self) -> FLASH_CRYPT_CNT_W<BLK0_WDATA0_SPEC, 20> {
-        FLASH_CRYPT_CNT_W::new(self)
+    pub fn flash_crypt_cnt(&mut self) -> FLASH_CRYPT_CNT_W<BLK0_WDATA0_SPEC> {
+        FLASH_CRYPT_CNT_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

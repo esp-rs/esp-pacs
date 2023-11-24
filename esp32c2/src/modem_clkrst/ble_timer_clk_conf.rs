@@ -5,11 +5,11 @@ pub type W = crate::W<BLE_TIMER_CLK_CONF_SPEC>;
 #[doc = "Field `BLETIMER_USE_XTAL` reader - ."]
 pub type BLETIMER_USE_XTAL_R = crate::BitReader;
 #[doc = "Field `BLETIMER_USE_XTAL` writer - ."]
-pub type BLETIMER_USE_XTAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BLETIMER_USE_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLETIMER_CLK_IS_ACTIVE` reader - ."]
 pub type BLETIMER_CLK_IS_ACTIVE_R = crate::BitReader;
 #[doc = "Field `BLETIMER_CLK_IS_ACTIVE` writer - ."]
-pub type BLETIMER_CLK_IS_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BLETIMER_CLK_IS_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
@@ -40,23 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BLE_TIMER_CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
     #[must_use]
-    pub fn bletimer_use_xtal(&mut self) -> BLETIMER_USE_XTAL_W<BLE_TIMER_CLK_CONF_SPEC, 0> {
-        BLETIMER_USE_XTAL_W::new(self)
+    pub fn bletimer_use_xtal(&mut self) -> BLETIMER_USE_XTAL_W<BLE_TIMER_CLK_CONF_SPEC> {
+        BLETIMER_USE_XTAL_W::new(self, 0)
     }
     #[doc = "Bit 1 - ."]
     #[inline(always)]
     #[must_use]
-    pub fn bletimer_clk_is_active(
-        &mut self,
-    ) -> BLETIMER_CLK_IS_ACTIVE_W<BLE_TIMER_CLK_CONF_SPEC, 1> {
-        BLETIMER_CLK_IS_ACTIVE_W::new(self)
+    pub fn bletimer_clk_is_active(&mut self) -> BLETIMER_CLK_IS_ACTIVE_W<BLE_TIMER_CLK_CONF_SPEC> {
+        BLETIMER_CLK_IS_ACTIVE_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

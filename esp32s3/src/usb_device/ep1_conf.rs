@@ -3,7 +3,7 @@ pub type R = crate::R<EP1_CONF_SPEC>;
 #[doc = "Register `EP1_CONF` writer"]
 pub type W = crate::W<EP1_CONF_SPEC>;
 #[doc = "Field `WR_DONE` writer - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
-pub type WR_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WR_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SERIAL_IN_EP_DATA_FREE` reader - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
 pub type SERIAL_IN_EP_DATA_FREE_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_EP_DATA_AVAIL` reader - 1'b1: Indicate there is data in UART Rx FIFO."]
@@ -38,15 +38,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EP1_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
     #[inline(always)]
     #[must_use]
-    pub fn wr_done(&mut self) -> WR_DONE_W<EP1_CONF_SPEC, 0> {
-        WR_DONE_W::new(self)
+    pub fn wr_done(&mut self) -> WR_DONE_W<EP1_CONF_SPEC> {
+        WR_DONE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

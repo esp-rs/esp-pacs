@@ -5,7 +5,7 @@ pub type W = crate::W<VDDBAT_CFG_SPEC>;
 #[doc = "Field `VDDBAT_MODE` reader - need_des"]
 pub type VDDBAT_MODE_R = crate::FieldReader;
 #[doc = "Field `VDDBAT_SW_UPDATE` writer - need_des"]
-pub type VDDBAT_SW_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VDDBAT_SW_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<VDDBAT_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn vddbat_sw_update(&mut self) -> VDDBAT_SW_UPDATE_W<VDDBAT_CFG_SPEC, 31> {
-        VDDBAT_SW_UPDATE_W::new(self)
+    pub fn vddbat_sw_update(&mut self) -> VDDBAT_SW_UPDATE_W<VDDBAT_CFG_SPEC> {
+        VDDBAT_SW_UPDATE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

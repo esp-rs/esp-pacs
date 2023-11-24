@@ -5,19 +5,19 @@ pub type W = crate::W<SAR_PERI_RESET_CONF_SPEC>;
 #[doc = "Field `SAR_COCPU_RESET` reader - enable ulp-riscv reset"]
 pub type SAR_COCPU_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_RESET` writer - enable ulp-riscv reset"]
-pub type SAR_COCPU_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_COCPU_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_RTC_I2C_RESET` reader - Reserved."]
 pub type SAR_RTC_I2C_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_RTC_I2C_RESET` writer - Reserved."]
-pub type SAR_RTC_I2C_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_RTC_I2C_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_TSENS_RESET` reader - enbale saradc reset"]
 pub type SAR_TSENS_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_RESET` writer - enbale saradc reset"]
-pub type SAR_TSENS_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_TSENS_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_SARADC_RESET` reader - enable io_mux reset"]
 pub type SAR_SARADC_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_SARADC_RESET` writer - enable io_mux reset"]
-pub type SAR_SARADC_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_SARADC_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 25 - enable ulp-riscv reset"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_PERI_RESET_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 25 - enable ulp-riscv reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_cocpu_reset(&mut self) -> SAR_COCPU_RESET_W<SAR_PERI_RESET_CONF_SPEC, 25> {
-        SAR_COCPU_RESET_W::new(self)
+    pub fn sar_cocpu_reset(&mut self) -> SAR_COCPU_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+        SAR_COCPU_RESET_W::new(self, 25)
     }
     #[doc = "Bit 27 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn sar_rtc_i2c_reset(&mut self) -> SAR_RTC_I2C_RESET_W<SAR_PERI_RESET_CONF_SPEC, 27> {
-        SAR_RTC_I2C_RESET_W::new(self)
+    pub fn sar_rtc_i2c_reset(&mut self) -> SAR_RTC_I2C_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+        SAR_RTC_I2C_RESET_W::new(self, 27)
     }
     #[doc = "Bit 29 - enbale saradc reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_tsens_reset(&mut self) -> SAR_TSENS_RESET_W<SAR_PERI_RESET_CONF_SPEC, 29> {
-        SAR_TSENS_RESET_W::new(self)
+    pub fn sar_tsens_reset(&mut self) -> SAR_TSENS_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+        SAR_TSENS_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable io_mux reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_saradc_reset(&mut self) -> SAR_SARADC_RESET_W<SAR_PERI_RESET_CONF_SPEC, 30> {
-        SAR_SARADC_RESET_W::new(self)
+    pub fn sar_saradc_reset(&mut self) -> SAR_SARADC_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+        SAR_SARADC_RESET_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

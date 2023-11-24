@@ -5,15 +5,15 @@ pub type W = crate::W<ID_SPEC>;
 #[doc = "Field `ID` reader - This register is used to configure the uart_id."]
 pub type ID_R = crate::FieldReader<u32>;
 #[doc = "Field `ID` writer - This register is used to configure the uart_id."]
-pub type ID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 30, O, u32>;
+pub type ID_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 #[doc = "Field `HIGH_SPEED` reader - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
 pub type HIGH_SPEED_R = crate::BitReader;
 #[doc = "Field `HIGH_SPEED` writer - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
-pub type HIGH_SPEED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HIGH_SPEED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REG_UPDATE` reader - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
 pub type REG_UPDATE_R = crate::BitReader;
 #[doc = "Field `REG_UPDATE` writer - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
-pub type REG_UPDATE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REG_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:29 - This register is used to configure the uart_id."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ID_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:29 - This register is used to configure the uart_id."]
     #[inline(always)]
     #[must_use]
-    pub fn id(&mut self) -> ID_W<ID_SPEC, 0> {
-        ID_W::new(self)
+    pub fn id(&mut self) -> ID_W<ID_SPEC> {
+        ID_W::new(self, 0)
     }
     #[doc = "Bit 30 - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
     #[inline(always)]
     #[must_use]
-    pub fn high_speed(&mut self) -> HIGH_SPEED_W<ID_SPEC, 30> {
-        HIGH_SPEED_W::new(self)
+    pub fn high_speed(&mut self) -> HIGH_SPEED_W<ID_SPEC> {
+        HIGH_SPEED_W::new(self, 30)
     }
     #[doc = "Bit 31 - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
     #[inline(always)]
     #[must_use]
-    pub fn reg_update(&mut self) -> REG_UPDATE_W<ID_SPEC, 31> {
-        REG_UPDATE_W::new(self)
+    pub fn reg_update(&mut self) -> REG_UPDATE_W<ID_SPEC> {
+        REG_UPDATE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

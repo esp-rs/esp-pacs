@@ -5,7 +5,7 @@ pub type W = crate::W<SCL_STOP_SETUP_SPEC>;
 #[doc = "Field `TIME` reader - reg_scl_stop_setup_time"]
 pub type TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `TIME` writer - reg_scl_stop_setup_time"]
-pub type TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - reg_scl_stop_setup_time"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SCL_STOP_SETUP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - reg_scl_stop_setup_time"]
     #[inline(always)]
     #[must_use]
-    pub fn time(&mut self) -> TIME_W<SCL_STOP_SETUP_SPEC, 0> {
-        TIME_W::new(self)
+    pub fn time(&mut self) -> TIME_W<SCL_STOP_SETUP_SPEC> {
+        TIME_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

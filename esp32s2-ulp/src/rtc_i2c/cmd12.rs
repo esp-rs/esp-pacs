@@ -5,7 +5,7 @@ pub type W = crate::W<CMD12_SPEC>;
 #[doc = "Field `COMMAND12` reader - Content of command 12. For more information, please refer to the register I2C_COMD12_REG in Chapter I²C Controller."]
 pub type COMMAND12_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND12` writer - Content of command 12. For more information, please refer to the register I2C_COMD12_REG in Chapter I²C Controller."]
-pub type COMMAND12_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type COMMAND12_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `COMMAND12_DONE` reader - When command 12 is done, this bit changes to 1."]
 pub type COMMAND12_DONE_R = crate::BitReader;
 impl R {
@@ -35,17 +35,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CMD12_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:13 - Content of command 12. For more information, please refer to the register I2C_COMD12_REG in Chapter I²C Controller."]
     #[inline(always)]
     #[must_use]
-    pub fn command12(&mut self) -> COMMAND12_W<CMD12_SPEC, 0> {
-        COMMAND12_W::new(self)
+    pub fn command12(&mut self) -> COMMAND12_W<CMD12_SPEC> {
+        COMMAND12_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -1,9 +1,9 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `DONE_INT_CLR` writer - backup done flag"]
-pub type DONE_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERROR_INT_CLR` writer - error flag"]
-pub type ERROR_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERROR_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,14 +14,14 @@ impl W {
     #[doc = "Bit 0 - backup done flag"]
     #[inline(always)]
     #[must_use]
-    pub fn done_int_clr(&mut self) -> DONE_INT_CLR_W<INT_CLR_SPEC, 0> {
-        DONE_INT_CLR_W::new(self)
+    pub fn done_int_clr(&mut self) -> DONE_INT_CLR_W<INT_CLR_SPEC> {
+        DONE_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - error flag"]
     #[inline(always)]
     #[must_use]
-    pub fn error_int_clr(&mut self) -> ERROR_INT_CLR_W<INT_CLR_SPEC, 1> {
-        ERROR_INT_CLR_W::new(self)
+    pub fn error_int_clr(&mut self) -> ERROR_INT_CLR_W<INT_CLR_SPEC> {
+        ERROR_INT_CLR_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

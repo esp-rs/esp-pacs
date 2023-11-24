@@ -5,7 +5,7 @@ pub type W = crate::W<FOSC_CNTL_SPEC>;
 #[doc = "Field `FOSC_DFREQ` reader - need_des"]
 pub type FOSC_DFREQ_R = crate::FieldReader<u16>;
 #[doc = "Field `FOSC_DFREQ` writer - need_des"]
-pub type FOSC_DFREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type FOSC_DFREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FOSC_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn fosc_dfreq(&mut self) -> FOSC_DFREQ_W<FOSC_CNTL_SPEC, 22> {
-        FOSC_DFREQ_W::new(self)
+    pub fn fosc_dfreq(&mut self) -> FOSC_DFREQ_W<FOSC_CNTL_SPEC> {
+        FOSC_DFREQ_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

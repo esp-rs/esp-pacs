@@ -5,7 +5,7 @@ pub type W = crate::W<EXTMEM_REJECT_INT_RAW_SPEC>;
 #[doc = "Field `EXTMEM_REJECT_INT_RAW` reader - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
 pub type EXTMEM_REJECT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `EXTMEM_REJECT_INT_RAW` writer - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
-pub type EXTMEM_REJECT_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTMEM_REJECT_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
     #[inline(always)]
@@ -27,17 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXTMEM_REJECT_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
     #[inline(always)]
     #[must_use]
-    pub fn extmem_reject_int_raw(
-        &mut self,
-    ) -> EXTMEM_REJECT_INT_RAW_W<EXTMEM_REJECT_INT_RAW_SPEC, 0> {
-        EXTMEM_REJECT_INT_RAW_W::new(self)
+    pub fn extmem_reject_int_raw(&mut self) -> EXTMEM_REJECT_INT_RAW_W<EXTMEM_REJECT_INT_RAW_SPEC> {
+        EXTMEM_REJECT_INT_RAW_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

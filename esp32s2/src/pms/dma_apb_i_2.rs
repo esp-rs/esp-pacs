@@ -5,11 +5,11 @@ pub type W = crate::W<DMA_APB_I_2_SPEC>;
 #[doc = "Field `DMA_APB_I_ILG_CLR` reader - The clear signal for internal DMA access interrupt."]
 pub type DMA_APB_I_ILG_CLR_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_ILG_CLR` writer - The clear signal for internal DMA access interrupt."]
-pub type DMA_APB_I_ILG_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_APB_I_ILG_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_APB_I_ILG_EN` reader - The enable signal for internal DMA access interrupt."]
 pub type DMA_APB_I_ILG_EN_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_ILG_EN` writer - The enable signal for internal DMA access interrupt."]
-pub type DMA_APB_I_ILG_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_APB_I_ILG_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_APB_I_ILG_INTR` reader - Internal DMA access interrupt signal."]
 pub type DMA_APB_I_ILG_INTR_R = crate::BitReader;
 impl R {
@@ -51,21 +51,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_APB_I_2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - The clear signal for internal DMA access interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_ilg_clr(&mut self) -> DMA_APB_I_ILG_CLR_W<DMA_APB_I_2_SPEC, 0> {
-        DMA_APB_I_ILG_CLR_W::new(self)
+    pub fn dma_apb_i_ilg_clr(&mut self) -> DMA_APB_I_ILG_CLR_W<DMA_APB_I_2_SPEC> {
+        DMA_APB_I_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for internal DMA access interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_apb_i_ilg_en(&mut self) -> DMA_APB_I_ILG_EN_W<DMA_APB_I_2_SPEC, 1> {
-        DMA_APB_I_ILG_EN_W::new(self)
+    pub fn dma_apb_i_ilg_en(&mut self) -> DMA_APB_I_ILG_EN_W<DMA_APB_I_2_SPEC> {
+        DMA_APB_I_ILG_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

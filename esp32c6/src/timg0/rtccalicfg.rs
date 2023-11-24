@@ -5,21 +5,21 @@ pub type W = crate::W<RTCCALICFG_SPEC>;
 #[doc = "Field `RTC_CALI_START_CYCLING` reader - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
 pub type RTC_CALI_START_CYCLING_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_START_CYCLING` writer - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
-pub type RTC_CALI_START_CYCLING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_CALI_START_CYCLING_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTC_CALI_CLK_SEL` reader - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
 pub type RTC_CALI_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `RTC_CALI_CLK_SEL` writer - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
-pub type RTC_CALI_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RTC_CALI_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RTC_CALI_RDY` reader - indicate one-shot frequency calculation is done."]
 pub type RTC_CALI_RDY_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_MAX` reader - Configure the time to calculate RTC slow clock's frequency."]
 pub type RTC_CALI_MAX_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_CALI_MAX` writer - Configure the time to calculate RTC slow clock's frequency."]
-pub type RTC_CALI_MAX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type RTC_CALI_MAX_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `RTC_CALI_START` reader - Set this bit to start one-shot frequency calculation."]
 pub type RTC_CALI_START_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_START` writer - Set this bit to start one-shot frequency calculation."]
-pub type RTC_CALI_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_CALI_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 12 - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
     #[inline(always)]
@@ -77,33 +77,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTCCALICFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 12 - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<RTCCALICFG_SPEC, 12> {
-        RTC_CALI_START_CYCLING_W::new(self)
+    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<RTCCALICFG_SPEC> {
+        RTC_CALI_START_CYCLING_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<RTCCALICFG_SPEC, 13> {
-        RTC_CALI_CLK_SEL_W::new(self)
+    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<RTCCALICFG_SPEC> {
+        RTC_CALI_CLK_SEL_W::new(self, 13)
     }
     #[doc = "Bits 16:30 - Configure the time to calculate RTC slow clock's frequency."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<RTCCALICFG_SPEC, 16> {
-        RTC_CALI_MAX_W::new(self)
+    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<RTCCALICFG_SPEC> {
+        RTC_CALI_MAX_W::new(self, 16)
     }
     #[doc = "Bit 31 - Set this bit to start one-shot frequency calculation."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<RTCCALICFG_SPEC, 31> {
-        RTC_CALI_START_W::new(self)
+    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<RTCCALICFG_SPEC> {
+        RTC_CALI_START_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

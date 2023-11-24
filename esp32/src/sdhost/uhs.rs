@@ -5,7 +5,7 @@ pub type W = crate::W<UHS_SPEC>;
 #[doc = "Field `DDR` reader - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
 pub type DDR_R = crate::FieldReader;
 #[doc = "Field `DDR` writer - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
-pub type DDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DDR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 16:17 - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UHS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 16:17 - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
     #[inline(always)]
     #[must_use]
-    pub fn ddr(&mut self) -> DDR_W<UHS_SPEC, 16> {
-        DDR_W::new(self)
+    pub fn ddr(&mut self) -> DDR_W<UHS_SPEC> {
+        DDR_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,67 +5,67 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `OVF_INT_RAW` reader - Triggered when the timer0 has reached its maximum counter value."]
 pub type OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_INT_RAW` writer - Triggered when the timer0 has reached its maximum counter value."]
-pub type OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER1_OVF_INT_RAW` reader - Triggered when the timer1 has reached its maximum counter value."]
 pub type TIMER1_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIMER1_OVF_INT_RAW` writer - Triggered when the timer1 has reached its maximum counter value."]
-pub type TIMER1_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER1_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER2_OVF_INT_RAW` reader - Triggered when the timer2 has reached its maximum counter value."]
 pub type TIMER2_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIMER2_OVF_INT_RAW` writer - Triggered when the timer2 has reached its maximum counter value."]
-pub type TIMER2_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER2_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER3_OVF_INT_RAW` reader - Triggered when the timer3 has reached its maximum counter value."]
 pub type TIMER3_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIMER3_OVF_INT_RAW` writer - Triggered when the timer3 has reached its maximum counter value."]
-pub type TIMER3_OVF_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER3_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUTY_CHNG_END_CH0_INT_RAW` reader - Interrupt raw bit for channel 0. Triggered when the gradual change of duty has finished."]
 pub type DUTY_CHNG_END_CH0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH0_INT_RAW` writer - Interrupt raw bit for channel 0. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH0_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_CHNG_END_CH0_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUTY_CHNG_END_CH1_INT_RAW` reader - Interrupt raw bit for channel 1. Triggered when the gradual change of duty has finished."]
 pub type DUTY_CHNG_END_CH1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH1_INT_RAW` writer - Interrupt raw bit for channel 1. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH1_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_CHNG_END_CH1_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUTY_CHNG_END_CH2_INT_RAW` reader - Interrupt raw bit for channel 2. Triggered when the gradual change of duty has finished."]
 pub type DUTY_CHNG_END_CH2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH2_INT_RAW` writer - Interrupt raw bit for channel 2. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH2_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_CHNG_END_CH2_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUTY_CHNG_END_CH3_INT_RAW` reader - Interrupt raw bit for channel 3. Triggered when the gradual change of duty has finished."]
 pub type DUTY_CHNG_END_CH3_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH3_INT_RAW` writer - Interrupt raw bit for channel 3. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH3_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_CHNG_END_CH3_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUTY_CHNG_END_CH4_INT_RAW` reader - Interrupt raw bit for channel 4. Triggered when the gradual change of duty has finished."]
 pub type DUTY_CHNG_END_CH4_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH4_INT_RAW` writer - Interrupt raw bit for channel 4. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH4_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_CHNG_END_CH4_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUTY_CHNG_END_CH5_INT_RAW` reader - Interrupt raw bit for channel 5. Triggered when the gradual change of duty has finished."]
 pub type DUTY_CHNG_END_CH5_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH5_INT_RAW` writer - Interrupt raw bit for channel 5. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH5_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTY_CHNG_END_CH5_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_CNT_CH0_INT_RAW` reader - Interrupt raw bit for channel 0. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
 pub type OVF_CNT_CH0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH0_INT_RAW` writer - Interrupt raw bit for channel 0. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
-pub type OVF_CNT_CH0_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_CH0_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_CNT_CH1_INT_RAW` reader - Interrupt raw bit for channel 1. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
 pub type OVF_CNT_CH1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH1_INT_RAW` writer - Interrupt raw bit for channel 1. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
-pub type OVF_CNT_CH1_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_CH1_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_CNT_CH2_INT_RAW` reader - Interrupt raw bit for channel 2. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
 pub type OVF_CNT_CH2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH2_INT_RAW` writer - Interrupt raw bit for channel 2. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
-pub type OVF_CNT_CH2_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_CH2_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_CNT_CH3_INT_RAW` reader - Interrupt raw bit for channel 3. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
 pub type OVF_CNT_CH3_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH3_INT_RAW` writer - Interrupt raw bit for channel 3. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
-pub type OVF_CNT_CH3_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_CH3_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_CNT_CH4_INT_RAW` reader - Interrupt raw bit for channel 4. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
 pub type OVF_CNT_CH4_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH4_INT_RAW` writer - Interrupt raw bit for channel 4. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
-pub type OVF_CNT_CH4_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_CH4_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF_CNT_CH5_INT_RAW` reader - Interrupt raw bit for channel 5. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
 pub type OVF_CNT_CH5_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH5_INT_RAW` writer - Interrupt raw bit for channel 5. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
-pub type OVF_CNT_CH5_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_CNT_CH5_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
@@ -219,105 +219,105 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_int_raw(&mut self) -> OVF_INT_RAW_W<INT_RAW_SPEC, 0> {
-        OVF_INT_RAW_W::new(self)
+    pub fn ovf_int_raw(&mut self) -> OVF_INT_RAW_W<INT_RAW_SPEC> {
+        OVF_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - Triggered when the timer1 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_ovf_int_raw(&mut self) -> TIMER1_OVF_INT_RAW_W<INT_RAW_SPEC, 1> {
-        TIMER1_OVF_INT_RAW_W::new(self)
+    pub fn timer1_ovf_int_raw(&mut self) -> TIMER1_OVF_INT_RAW_W<INT_RAW_SPEC> {
+        TIMER1_OVF_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - Triggered when the timer2 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn timer2_ovf_int_raw(&mut self) -> TIMER2_OVF_INT_RAW_W<INT_RAW_SPEC, 2> {
-        TIMER2_OVF_INT_RAW_W::new(self)
+    pub fn timer2_ovf_int_raw(&mut self) -> TIMER2_OVF_INT_RAW_W<INT_RAW_SPEC> {
+        TIMER2_OVF_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - Triggered when the timer3 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn timer3_ovf_int_raw(&mut self) -> TIMER3_OVF_INT_RAW_W<INT_RAW_SPEC, 3> {
-        TIMER3_OVF_INT_RAW_W::new(self)
+    pub fn timer3_ovf_int_raw(&mut self) -> TIMER3_OVF_INT_RAW_W<INT_RAW_SPEC> {
+        TIMER3_OVF_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - Interrupt raw bit for channel 0. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch0_int_raw(&mut self) -> DUTY_CHNG_END_CH0_INT_RAW_W<INT_RAW_SPEC, 4> {
-        DUTY_CHNG_END_CH0_INT_RAW_W::new(self)
+    pub fn duty_chng_end_ch0_int_raw(&mut self) -> DUTY_CHNG_END_CH0_INT_RAW_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH0_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 5 - Interrupt raw bit for channel 1. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch1_int_raw(&mut self) -> DUTY_CHNG_END_CH1_INT_RAW_W<INT_RAW_SPEC, 5> {
-        DUTY_CHNG_END_CH1_INT_RAW_W::new(self)
+    pub fn duty_chng_end_ch1_int_raw(&mut self) -> DUTY_CHNG_END_CH1_INT_RAW_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH1_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 6 - Interrupt raw bit for channel 2. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch2_int_raw(&mut self) -> DUTY_CHNG_END_CH2_INT_RAW_W<INT_RAW_SPEC, 6> {
-        DUTY_CHNG_END_CH2_INT_RAW_W::new(self)
+    pub fn duty_chng_end_ch2_int_raw(&mut self) -> DUTY_CHNG_END_CH2_INT_RAW_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH2_INT_RAW_W::new(self, 6)
     }
     #[doc = "Bit 7 - Interrupt raw bit for channel 3. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch3_int_raw(&mut self) -> DUTY_CHNG_END_CH3_INT_RAW_W<INT_RAW_SPEC, 7> {
-        DUTY_CHNG_END_CH3_INT_RAW_W::new(self)
+    pub fn duty_chng_end_ch3_int_raw(&mut self) -> DUTY_CHNG_END_CH3_INT_RAW_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH3_INT_RAW_W::new(self, 7)
     }
     #[doc = "Bit 8 - Interrupt raw bit for channel 4. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch4_int_raw(&mut self) -> DUTY_CHNG_END_CH4_INT_RAW_W<INT_RAW_SPEC, 8> {
-        DUTY_CHNG_END_CH4_INT_RAW_W::new(self)
+    pub fn duty_chng_end_ch4_int_raw(&mut self) -> DUTY_CHNG_END_CH4_INT_RAW_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH4_INT_RAW_W::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt raw bit for channel 5. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch5_int_raw(&mut self) -> DUTY_CHNG_END_CH5_INT_RAW_W<INT_RAW_SPEC, 9> {
-        DUTY_CHNG_END_CH5_INT_RAW_W::new(self)
+    pub fn duty_chng_end_ch5_int_raw(&mut self) -> DUTY_CHNG_END_CH5_INT_RAW_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH5_INT_RAW_W::new(self, 9)
     }
     #[doc = "Bit 10 - Interrupt raw bit for channel 0. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch0_int_raw(&mut self) -> OVF_CNT_CH0_INT_RAW_W<INT_RAW_SPEC, 10> {
-        OVF_CNT_CH0_INT_RAW_W::new(self)
+    pub fn ovf_cnt_ch0_int_raw(&mut self) -> OVF_CNT_CH0_INT_RAW_W<INT_RAW_SPEC> {
+        OVF_CNT_CH0_INT_RAW_W::new(self, 10)
     }
     #[doc = "Bit 11 - Interrupt raw bit for channel 1. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch1_int_raw(&mut self) -> OVF_CNT_CH1_INT_RAW_W<INT_RAW_SPEC, 11> {
-        OVF_CNT_CH1_INT_RAW_W::new(self)
+    pub fn ovf_cnt_ch1_int_raw(&mut self) -> OVF_CNT_CH1_INT_RAW_W<INT_RAW_SPEC> {
+        OVF_CNT_CH1_INT_RAW_W::new(self, 11)
     }
     #[doc = "Bit 12 - Interrupt raw bit for channel 2. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch2_int_raw(&mut self) -> OVF_CNT_CH2_INT_RAW_W<INT_RAW_SPEC, 12> {
-        OVF_CNT_CH2_INT_RAW_W::new(self)
+    pub fn ovf_cnt_ch2_int_raw(&mut self) -> OVF_CNT_CH2_INT_RAW_W<INT_RAW_SPEC> {
+        OVF_CNT_CH2_INT_RAW_W::new(self, 12)
     }
     #[doc = "Bit 13 - Interrupt raw bit for channel 3. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch3_int_raw(&mut self) -> OVF_CNT_CH3_INT_RAW_W<INT_RAW_SPEC, 13> {
-        OVF_CNT_CH3_INT_RAW_W::new(self)
+    pub fn ovf_cnt_ch3_int_raw(&mut self) -> OVF_CNT_CH3_INT_RAW_W<INT_RAW_SPEC> {
+        OVF_CNT_CH3_INT_RAW_W::new(self, 13)
     }
     #[doc = "Bit 14 - Interrupt raw bit for channel 4. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch4_int_raw(&mut self) -> OVF_CNT_CH4_INT_RAW_W<INT_RAW_SPEC, 14> {
-        OVF_CNT_CH4_INT_RAW_W::new(self)
+    pub fn ovf_cnt_ch4_int_raw(&mut self) -> OVF_CNT_CH4_INT_RAW_W<INT_RAW_SPEC> {
+        OVF_CNT_CH4_INT_RAW_W::new(self, 14)
     }
     #[doc = "Bit 15 - Interrupt raw bit for channel 5. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch5_int_raw(&mut self) -> OVF_CNT_CH5_INT_RAW_W<INT_RAW_SPEC, 15> {
-        OVF_CNT_CH5_INT_RAW_W::new(self)
+    pub fn ovf_cnt_ch5_int_raw(&mut self) -> OVF_CNT_CH5_INT_RAW_W<INT_RAW_SPEC> {
+        OVF_CNT_CH5_INT_RAW_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

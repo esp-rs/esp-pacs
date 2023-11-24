@@ -5,15 +5,15 @@ pub type W = crate::W<LOG_SETTING_SPEC>;
 #[doc = "Field `LOG_ENA` reader - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA.823 don't support lp-cpu"]
 pub type LOG_ENA_R = crate::FieldReader;
 #[doc = "Field `LOG_ENA` writer - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA.823 don't support lp-cpu"]
-pub type LOG_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LOG_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LOG_MODE` reader - This field must be onehot. 4'b0001 : WR monitor, 4'b0010: WORD monitor, 4'b0100: HALFWORD monitor, 4'b1000: BYTE monitor."]
 pub type LOG_MODE_R = crate::FieldReader;
 #[doc = "Field `LOG_MODE` writer - This field must be onehot. 4'b0001 : WR monitor, 4'b0010: WORD monitor, 4'b0100: HALFWORD monitor, 4'b1000: BYTE monitor."]
-pub type LOG_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type LOG_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` reader - Set 1 enable mem_loop, it will loop write at the range of MEM_START and MEM_END"]
 pub type LOG_MEM_LOOP_ENABLE_R = crate::BitReader;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` writer - Set 1 enable mem_loop, it will loop write at the range of MEM_START and MEM_END"]
-pub type LOG_MEM_LOOP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOG_MEM_LOOP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA.823 don't support lp-cpu"]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOG_SETTING_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA.823 don't support lp-cpu"]
     #[inline(always)]
     #[must_use]
-    pub fn log_ena(&mut self) -> LOG_ENA_W<LOG_SETTING_SPEC, 0> {
-        LOG_ENA_W::new(self)
+    pub fn log_ena(&mut self) -> LOG_ENA_W<LOG_SETTING_SPEC> {
+        LOG_ENA_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - This field must be onehot. 4'b0001 : WR monitor, 4'b0010: WORD monitor, 4'b0100: HALFWORD monitor, 4'b1000: BYTE monitor."]
     #[inline(always)]
     #[must_use]
-    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC, 3> {
-        LOG_MODE_W::new(self)
+    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC> {
+        LOG_MODE_W::new(self, 3)
     }
     #[doc = "Bit 7 - Set 1 enable mem_loop, it will loop write at the range of MEM_START and MEM_END"]
     #[inline(always)]
     #[must_use]
-    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC, 7> {
-        LOG_MEM_LOOP_ENABLE_W::new(self)
+    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC> {
+        LOG_MEM_LOOP_ENABLE_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

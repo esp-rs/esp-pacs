@@ -5,19 +5,19 @@ pub type W = crate::W<LPBUS_SPEC>;
 #[doc = "Field `FAST_MEM_WPULSE` reader - This field controls fast memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
 pub type FAST_MEM_WPULSE_R = crate::FieldReader;
 #[doc = "Field `FAST_MEM_WPULSE` writer - This field controls fast memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
-pub type FAST_MEM_WPULSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type FAST_MEM_WPULSE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FAST_MEM_WA` reader - This field controls fast memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
 pub type FAST_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `FAST_MEM_WA` writer - This field controls fast memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
-pub type FAST_MEM_WA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type FAST_MEM_WA_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FAST_MEM_RA` reader - This field controls fast memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
 pub type FAST_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `FAST_MEM_RA` writer - This field controls fast memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
-pub type FAST_MEM_RA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FAST_MEM_RA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FAST_MEM_RM` reader - This field controls fast memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
 pub type FAST_MEM_RM_R = crate::FieldReader;
 #[doc = "Field `FAST_MEM_RM` writer - This field controls fast memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
-pub type FAST_MEM_RM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type FAST_MEM_RM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `FAST_MEM_MUX_FSM_IDLE` reader - reserved"]
 pub type FAST_MEM_MUX_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `FAST_MEM_MUX_SEL_STATUS` reader - reserved"]
@@ -110,33 +110,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LPBUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 16:18 - This field controls fast memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_wpulse(&mut self) -> FAST_MEM_WPULSE_W<LPBUS_SPEC, 16> {
-        FAST_MEM_WPULSE_W::new(self)
+    pub fn fast_mem_wpulse(&mut self) -> FAST_MEM_WPULSE_W<LPBUS_SPEC> {
+        FAST_MEM_WPULSE_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - This field controls fast memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_wa(&mut self) -> FAST_MEM_WA_W<LPBUS_SPEC, 19> {
-        FAST_MEM_WA_W::new(self)
+    pub fn fast_mem_wa(&mut self) -> FAST_MEM_WA_W<LPBUS_SPEC> {
+        FAST_MEM_WA_W::new(self, 19)
     }
     #[doc = "Bits 22:23 - This field controls fast memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_ra(&mut self) -> FAST_MEM_RA_W<LPBUS_SPEC, 22> {
-        FAST_MEM_RA_W::new(self)
+    pub fn fast_mem_ra(&mut self) -> FAST_MEM_RA_W<LPBUS_SPEC> {
+        FAST_MEM_RA_W::new(self, 22)
     }
     #[doc = "Bits 24:27 - This field controls fast memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
     #[inline(always)]
     #[must_use]
-    pub fn fast_mem_rm(&mut self) -> FAST_MEM_RM_W<LPBUS_SPEC, 24> {
-        FAST_MEM_RM_W::new(self)
+    pub fn fast_mem_rm(&mut self) -> FAST_MEM_RM_W<LPBUS_SPEC> {
+        FAST_MEM_RM_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

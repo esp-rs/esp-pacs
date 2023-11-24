@@ -5,11 +5,11 @@ pub type W = crate::W<TIMEOUT_CONF_SPEC>;
 #[doc = "Field `CPU_TIMEOUT_RST_EN` reader - Set 0 to reset cpu_peri timeout module"]
 pub type CPU_TIMEOUT_RST_EN_R = crate::BitReader;
 #[doc = "Field `CPU_TIMEOUT_RST_EN` writer - Set 0 to reset cpu_peri timeout module"]
-pub type CPU_TIMEOUT_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_TIMEOUT_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_TIMEOUT_RST_EN` reader - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
 pub type HP_TIMEOUT_RST_EN_R = crate::BitReader;
 #[doc = "Field `HP_TIMEOUT_RST_EN` writer - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
-pub type HP_TIMEOUT_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HP_TIMEOUT_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Set 0 to reset cpu_peri timeout module"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMEOUT_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Set 0 to reset cpu_peri timeout module"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_timeout_rst_en(&mut self) -> CPU_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC, 1> {
-        CPU_TIMEOUT_RST_EN_W::new(self)
+    pub fn cpu_timeout_rst_en(&mut self) -> CPU_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC> {
+        CPU_TIMEOUT_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_timeout_rst_en(&mut self) -> HP_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC, 2> {
-        HP_TIMEOUT_RST_EN_W::new(self)
+    pub fn hp_timeout_rst_en(&mut self) -> HP_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC> {
+        HP_TIMEOUT_RST_EN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<CLK_CONF1_FORCE_ON_SPEC>;
 #[doc = "Field `CLK_FE_FO` reader - "]
 pub type CLK_FE_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_FO` writer - "]
-pub type CLK_FE_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_FE_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_BT_FO` reader - "]
 pub type CLK_BT_FO_R = crate::BitReader;
 #[doc = "Field `CLK_BT_FO` writer - "]
-pub type CLK_BT_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_BT_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 16"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_FORCE_ON_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_fe_fo(&mut self) -> CLK_FE_FO_W<CLK_CONF1_FORCE_ON_SPEC, 16> {
-        CLK_FE_FO_W::new(self)
+    pub fn clk_fe_fo(&mut self) -> CLK_FE_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_FE_FO_W::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<CLK_CONF1_FORCE_ON_SPEC, 18> {
-        CLK_BT_FO_W::new(self)
+    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+        CLK_BT_FO_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

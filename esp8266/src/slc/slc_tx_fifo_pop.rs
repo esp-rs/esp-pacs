@@ -5,11 +5,11 @@ pub type W = crate::W<SLC_TX_FIFO_POP_SPEC>;
 #[doc = "Field `SLC_TXFIFO_RDATA` reader - "]
 pub type SLC_TXFIFO_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TXFIFO_RDATA` writer - "]
-pub type SLC_TXFIFO_RDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SLC_TXFIFO_RDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SLC_TXFIFO_POP` reader - "]
 pub type SLC_TXFIFO_POP_R = crate::BitReader;
 #[doc = "Field `SLC_TXFIFO_POP` writer - "]
-pub type SLC_TXFIFO_POP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_TXFIFO_POP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_TX_FIFO_POP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_txfifo_rdata(&mut self) -> SLC_TXFIFO_RDATA_W<SLC_TX_FIFO_POP_SPEC, 0> {
-        SLC_TXFIFO_RDATA_W::new(self)
+    pub fn slc_txfifo_rdata(&mut self) -> SLC_TXFIFO_RDATA_W<SLC_TX_FIFO_POP_SPEC> {
+        SLC_TXFIFO_RDATA_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_txfifo_pop(&mut self) -> SLC_TXFIFO_POP_W<SLC_TX_FIFO_POP_SPEC, 16> {
-        SLC_TXFIFO_POP_W::new(self)
+    pub fn slc_txfifo_pop(&mut self) -> SLC_TXFIFO_POP_W<SLC_TX_FIFO_POP_SPEC> {
+        SLC_TXFIFO_POP_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

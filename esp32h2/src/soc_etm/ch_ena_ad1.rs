@@ -5,75 +5,75 @@ pub type W = crate::W<CH_ENA_AD1_SPEC>;
 #[doc = "Field `CH_ENA32` reader - ch32 enable"]
 pub type CH_ENA32_R = crate::BitReader;
 #[doc = "Field `CH_ENA32` writer - ch32 enable"]
-pub type CH_ENA32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA32_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA33` reader - ch33 enable"]
 pub type CH_ENA33_R = crate::BitReader;
 #[doc = "Field `CH_ENA33` writer - ch33 enable"]
-pub type CH_ENA33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA33_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA34` reader - ch34 enable"]
 pub type CH_ENA34_R = crate::BitReader;
 #[doc = "Field `CH_ENA34` writer - ch34 enable"]
-pub type CH_ENA34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA34_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA35` reader - ch35 enable"]
 pub type CH_ENA35_R = crate::BitReader;
 #[doc = "Field `CH_ENA35` writer - ch35 enable"]
-pub type CH_ENA35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA35_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA36` reader - ch36 enable"]
 pub type CH_ENA36_R = crate::BitReader;
 #[doc = "Field `CH_ENA36` writer - ch36 enable"]
-pub type CH_ENA36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA36_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA37` reader - ch37 enable"]
 pub type CH_ENA37_R = crate::BitReader;
 #[doc = "Field `CH_ENA37` writer - ch37 enable"]
-pub type CH_ENA37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA37_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA38` reader - ch38 enable"]
 pub type CH_ENA38_R = crate::BitReader;
 #[doc = "Field `CH_ENA38` writer - ch38 enable"]
-pub type CH_ENA38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA38_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA39` reader - ch39 enable"]
 pub type CH_ENA39_R = crate::BitReader;
 #[doc = "Field `CH_ENA39` writer - ch39 enable"]
-pub type CH_ENA39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA39_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA40` reader - ch40 enable"]
 pub type CH_ENA40_R = crate::BitReader;
 #[doc = "Field `CH_ENA40` writer - ch40 enable"]
-pub type CH_ENA40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA40_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA41` reader - ch41 enable"]
 pub type CH_ENA41_R = crate::BitReader;
 #[doc = "Field `CH_ENA41` writer - ch41 enable"]
-pub type CH_ENA41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA41_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA42` reader - ch42 enable"]
 pub type CH_ENA42_R = crate::BitReader;
 #[doc = "Field `CH_ENA42` writer - ch42 enable"]
-pub type CH_ENA42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA42_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA43` reader - ch43 enable"]
 pub type CH_ENA43_R = crate::BitReader;
 #[doc = "Field `CH_ENA43` writer - ch43 enable"]
-pub type CH_ENA43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA43_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA44` reader - ch44 enable"]
 pub type CH_ENA44_R = crate::BitReader;
 #[doc = "Field `CH_ENA44` writer - ch44 enable"]
-pub type CH_ENA44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA44_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA45` reader - ch45 enable"]
 pub type CH_ENA45_R = crate::BitReader;
 #[doc = "Field `CH_ENA45` writer - ch45 enable"]
-pub type CH_ENA45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA45_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA46` reader - ch46 enable"]
 pub type CH_ENA46_R = crate::BitReader;
 #[doc = "Field `CH_ENA46` writer - ch46 enable"]
-pub type CH_ENA46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA46_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA47` reader - ch47 enable"]
 pub type CH_ENA47_R = crate::BitReader;
 #[doc = "Field `CH_ENA47` writer - ch47 enable"]
-pub type CH_ENA47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA47_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA48` reader - ch48 enable"]
 pub type CH_ENA48_R = crate::BitReader;
 #[doc = "Field `CH_ENA48` writer - ch48 enable"]
-pub type CH_ENA48_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA48_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_ENA49` reader - ch49 enable"]
 pub type CH_ENA49_R = crate::BitReader;
 #[doc = "Field `CH_ENA49` writer - ch49 enable"]
-pub type CH_ENA49_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH_ENA49_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - ch32 enable"]
     #[inline(always)]
@@ -194,117 +194,117 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH_ENA_AD1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - ch32 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena32(&mut self) -> CH_ENA32_W<CH_ENA_AD1_SPEC, 0> {
-        CH_ENA32_W::new(self)
+    pub fn ch_ena32(&mut self) -> CH_ENA32_W<CH_ENA_AD1_SPEC> {
+        CH_ENA32_W::new(self, 0)
     }
     #[doc = "Bit 1 - ch33 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena33(&mut self) -> CH_ENA33_W<CH_ENA_AD1_SPEC, 1> {
-        CH_ENA33_W::new(self)
+    pub fn ch_ena33(&mut self) -> CH_ENA33_W<CH_ENA_AD1_SPEC> {
+        CH_ENA33_W::new(self, 1)
     }
     #[doc = "Bit 2 - ch34 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena34(&mut self) -> CH_ENA34_W<CH_ENA_AD1_SPEC, 2> {
-        CH_ENA34_W::new(self)
+    pub fn ch_ena34(&mut self) -> CH_ENA34_W<CH_ENA_AD1_SPEC> {
+        CH_ENA34_W::new(self, 2)
     }
     #[doc = "Bit 3 - ch35 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena35(&mut self) -> CH_ENA35_W<CH_ENA_AD1_SPEC, 3> {
-        CH_ENA35_W::new(self)
+    pub fn ch_ena35(&mut self) -> CH_ENA35_W<CH_ENA_AD1_SPEC> {
+        CH_ENA35_W::new(self, 3)
     }
     #[doc = "Bit 4 - ch36 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena36(&mut self) -> CH_ENA36_W<CH_ENA_AD1_SPEC, 4> {
-        CH_ENA36_W::new(self)
+    pub fn ch_ena36(&mut self) -> CH_ENA36_W<CH_ENA_AD1_SPEC> {
+        CH_ENA36_W::new(self, 4)
     }
     #[doc = "Bit 5 - ch37 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena37(&mut self) -> CH_ENA37_W<CH_ENA_AD1_SPEC, 5> {
-        CH_ENA37_W::new(self)
+    pub fn ch_ena37(&mut self) -> CH_ENA37_W<CH_ENA_AD1_SPEC> {
+        CH_ENA37_W::new(self, 5)
     }
     #[doc = "Bit 6 - ch38 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena38(&mut self) -> CH_ENA38_W<CH_ENA_AD1_SPEC, 6> {
-        CH_ENA38_W::new(self)
+    pub fn ch_ena38(&mut self) -> CH_ENA38_W<CH_ENA_AD1_SPEC> {
+        CH_ENA38_W::new(self, 6)
     }
     #[doc = "Bit 7 - ch39 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena39(&mut self) -> CH_ENA39_W<CH_ENA_AD1_SPEC, 7> {
-        CH_ENA39_W::new(self)
+    pub fn ch_ena39(&mut self) -> CH_ENA39_W<CH_ENA_AD1_SPEC> {
+        CH_ENA39_W::new(self, 7)
     }
     #[doc = "Bit 8 - ch40 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena40(&mut self) -> CH_ENA40_W<CH_ENA_AD1_SPEC, 8> {
-        CH_ENA40_W::new(self)
+    pub fn ch_ena40(&mut self) -> CH_ENA40_W<CH_ENA_AD1_SPEC> {
+        CH_ENA40_W::new(self, 8)
     }
     #[doc = "Bit 9 - ch41 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena41(&mut self) -> CH_ENA41_W<CH_ENA_AD1_SPEC, 9> {
-        CH_ENA41_W::new(self)
+    pub fn ch_ena41(&mut self) -> CH_ENA41_W<CH_ENA_AD1_SPEC> {
+        CH_ENA41_W::new(self, 9)
     }
     #[doc = "Bit 10 - ch42 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena42(&mut self) -> CH_ENA42_W<CH_ENA_AD1_SPEC, 10> {
-        CH_ENA42_W::new(self)
+    pub fn ch_ena42(&mut self) -> CH_ENA42_W<CH_ENA_AD1_SPEC> {
+        CH_ENA42_W::new(self, 10)
     }
     #[doc = "Bit 11 - ch43 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena43(&mut self) -> CH_ENA43_W<CH_ENA_AD1_SPEC, 11> {
-        CH_ENA43_W::new(self)
+    pub fn ch_ena43(&mut self) -> CH_ENA43_W<CH_ENA_AD1_SPEC> {
+        CH_ENA43_W::new(self, 11)
     }
     #[doc = "Bit 12 - ch44 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena44(&mut self) -> CH_ENA44_W<CH_ENA_AD1_SPEC, 12> {
-        CH_ENA44_W::new(self)
+    pub fn ch_ena44(&mut self) -> CH_ENA44_W<CH_ENA_AD1_SPEC> {
+        CH_ENA44_W::new(self, 12)
     }
     #[doc = "Bit 13 - ch45 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena45(&mut self) -> CH_ENA45_W<CH_ENA_AD1_SPEC, 13> {
-        CH_ENA45_W::new(self)
+    pub fn ch_ena45(&mut self) -> CH_ENA45_W<CH_ENA_AD1_SPEC> {
+        CH_ENA45_W::new(self, 13)
     }
     #[doc = "Bit 14 - ch46 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena46(&mut self) -> CH_ENA46_W<CH_ENA_AD1_SPEC, 14> {
-        CH_ENA46_W::new(self)
+    pub fn ch_ena46(&mut self) -> CH_ENA46_W<CH_ENA_AD1_SPEC> {
+        CH_ENA46_W::new(self, 14)
     }
     #[doc = "Bit 15 - ch47 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena47(&mut self) -> CH_ENA47_W<CH_ENA_AD1_SPEC, 15> {
-        CH_ENA47_W::new(self)
+    pub fn ch_ena47(&mut self) -> CH_ENA47_W<CH_ENA_AD1_SPEC> {
+        CH_ENA47_W::new(self, 15)
     }
     #[doc = "Bit 16 - ch48 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena48(&mut self) -> CH_ENA48_W<CH_ENA_AD1_SPEC, 16> {
-        CH_ENA48_W::new(self)
+    pub fn ch_ena48(&mut self) -> CH_ENA48_W<CH_ENA_AD1_SPEC> {
+        CH_ENA48_W::new(self, 16)
     }
     #[doc = "Bit 17 - ch49 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ch_ena49(&mut self) -> CH_ENA49_W<CH_ENA_AD1_SPEC, 17> {
-        CH_ENA49_W::new(self)
+    pub fn ch_ena49(&mut self) -> CH_ENA49_W<CH_ENA_AD1_SPEC> {
+        CH_ENA49_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

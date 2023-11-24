@@ -5,27 +5,27 @@ pub type W = crate::W<BRIDGE_CONF_SPEC>;
 #[doc = "Field `TXEOF_ENA` reader - "]
 pub type TXEOF_ENA_R = crate::FieldReader;
 #[doc = "Field `TXEOF_ENA` writer - "]
-pub type TXEOF_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type TXEOF_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `FIFO_MAP_ENA` reader - "]
 pub type FIFO_MAP_ENA_R = crate::FieldReader;
 #[doc = "Field `FIFO_MAP_ENA` writer - "]
-pub type FIFO_MAP_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type FIFO_MAP_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SLC0_TX_DUMMY_MODE` reader - "]
 pub type SLC0_TX_DUMMY_MODE_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_DUMMY_MODE` writer - "]
-pub type SLC0_TX_DUMMY_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TX_DUMMY_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDA_MAP_128K` reader - "]
 pub type HDA_MAP_128K_R = crate::BitReader;
 #[doc = "Field `HDA_MAP_128K` writer - "]
-pub type HDA_MAP_128K_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDA_MAP_128K_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TX_DUMMY_MODE` reader - "]
 pub type SLC1_TX_DUMMY_MODE_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_DUMMY_MODE` writer - "]
-pub type SLC1_TX_DUMMY_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TX_DUMMY_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_PUSH_IDLE_NUM` reader - "]
 pub type TX_PUSH_IDLE_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PUSH_IDLE_NUM` writer - "]
-pub type TX_PUSH_IDLE_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TX_PUSH_IDLE_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -89,45 +89,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BRIDGE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn txeof_ena(&mut self) -> TXEOF_ENA_W<BRIDGE_CONF_SPEC, 0> {
-        TXEOF_ENA_W::new(self)
+    pub fn txeof_ena(&mut self) -> TXEOF_ENA_W<BRIDGE_CONF_SPEC> {
+        TXEOF_ENA_W::new(self, 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_map_ena(&mut self) -> FIFO_MAP_ENA_W<BRIDGE_CONF_SPEC, 8> {
-        FIFO_MAP_ENA_W::new(self)
+    pub fn fifo_map_ena(&mut self) -> FIFO_MAP_ENA_W<BRIDGE_CONF_SPEC> {
+        FIFO_MAP_ENA_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_dummy_mode(&mut self) -> SLC0_TX_DUMMY_MODE_W<BRIDGE_CONF_SPEC, 12> {
-        SLC0_TX_DUMMY_MODE_W::new(self)
+    pub fn slc0_tx_dummy_mode(&mut self) -> SLC0_TX_DUMMY_MODE_W<BRIDGE_CONF_SPEC> {
+        SLC0_TX_DUMMY_MODE_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn hda_map_128k(&mut self) -> HDA_MAP_128K_W<BRIDGE_CONF_SPEC, 13> {
-        HDA_MAP_128K_W::new(self)
+    pub fn hda_map_128k(&mut self) -> HDA_MAP_128K_W<BRIDGE_CONF_SPEC> {
+        HDA_MAP_128K_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tx_dummy_mode(&mut self) -> SLC1_TX_DUMMY_MODE_W<BRIDGE_CONF_SPEC, 14> {
-        SLC1_TX_DUMMY_MODE_W::new(self)
+    pub fn slc1_tx_dummy_mode(&mut self) -> SLC1_TX_DUMMY_MODE_W<BRIDGE_CONF_SPEC> {
+        SLC1_TX_DUMMY_MODE_W::new(self, 14)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_push_idle_num(&mut self) -> TX_PUSH_IDLE_NUM_W<BRIDGE_CONF_SPEC, 16> {
-        TX_PUSH_IDLE_NUM_W::new(self)
+    pub fn tx_push_idle_num(&mut self) -> TX_PUSH_IDLE_NUM_W<BRIDGE_CONF_SPEC> {
+        TX_PUSH_IDLE_NUM_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

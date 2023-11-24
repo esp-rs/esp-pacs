@@ -5,23 +5,23 @@ pub type W = crate::W<SARADC_CLKM_CONF_SPEC>;
 #[doc = "Field `SARADC_CLKM_DIV_A` reader - The denominator of the frequency divider factor of the saradc function clock."]
 pub type SARADC_CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_DIV_A` writer - The denominator of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SARADC_CLKM_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SARADC_CLKM_DIV_B` reader - The numerator of the frequency divider factor of the saradc function clock."]
 pub type SARADC_CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_DIV_B` writer - The numerator of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type SARADC_CLKM_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SARADC_CLKM_DIV_NUM` reader - The integral part of the frequency divider factor of the saradc function clock."]
 pub type SARADC_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_DIV_NUM` writer - The integral part of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SARADC_CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SARADC_CLKM_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: reserved."]
 pub type SARADC_CLKM_SEL_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: reserved."]
-pub type SARADC_CLKM_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SARADC_CLKM_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SARADC_CLKM_EN` reader - Set 1 to enable saradc function clock"]
 pub type SARADC_CLKM_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_CLKM_EN` writer - Set 1 to enable saradc function clock"]
-pub type SARADC_CLKM_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_CLKM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
@@ -79,39 +79,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SARADC_CLKM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_clkm_div_a(&mut self) -> SARADC_CLKM_DIV_A_W<SARADC_CLKM_CONF_SPEC, 0> {
-        SARADC_CLKM_DIV_A_W::new(self)
+    pub fn saradc_clkm_div_a(&mut self) -> SARADC_CLKM_DIV_A_W<SARADC_CLKM_CONF_SPEC> {
+        SARADC_CLKM_DIV_A_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_clkm_div_b(&mut self) -> SARADC_CLKM_DIV_B_W<SARADC_CLKM_CONF_SPEC, 6> {
-        SARADC_CLKM_DIV_B_W::new(self)
+    pub fn saradc_clkm_div_b(&mut self) -> SARADC_CLKM_DIV_B_W<SARADC_CLKM_CONF_SPEC> {
+        SARADC_CLKM_DIV_B_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_clkm_div_num(&mut self) -> SARADC_CLKM_DIV_NUM_W<SARADC_CLKM_CONF_SPEC, 12> {
-        SARADC_CLKM_DIV_NUM_W::new(self)
+    pub fn saradc_clkm_div_num(&mut self) -> SARADC_CLKM_DIV_NUM_W<SARADC_CLKM_CONF_SPEC> {
+        SARADC_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_clkm_sel(&mut self) -> SARADC_CLKM_SEL_W<SARADC_CLKM_CONF_SPEC, 20> {
-        SARADC_CLKM_SEL_W::new(self)
+    pub fn saradc_clkm_sel(&mut self) -> SARADC_CLKM_SEL_W<SARADC_CLKM_CONF_SPEC> {
+        SARADC_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable saradc function clock"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_clkm_en(&mut self) -> SARADC_CLKM_EN_W<SARADC_CLKM_CONF_SPEC, 22> {
-        SARADC_CLKM_EN_W::new(self)
+    pub fn saradc_clkm_en(&mut self) -> SARADC_CLKM_EN_W<SARADC_CLKM_CONF_SPEC> {
+        SARADC_CLKM_EN_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

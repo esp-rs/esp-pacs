@@ -23,7 +23,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_FASTMEM_CRC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC fast memory CRC control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_fastmem_crc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

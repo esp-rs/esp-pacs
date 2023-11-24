@@ -5,11 +5,11 @@ pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `OP_CODE` reader - 0x5A5A: programming operation command 0x5AA5: read operation command."]
 pub type OP_CODE_R = crate::FieldReader<u16>;
 #[doc = "Field `OP_CODE` writer - 0x5A5A: programming operation command 0x5AA5: read operation command."]
-pub type OP_CODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type OP_CODE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `CFG_ECDSA_BLK` reader - Configures which block to use for ECDSA key output."]
 pub type CFG_ECDSA_BLK_R = crate::FieldReader;
 #[doc = "Field `CFG_ECDSA_BLK` writer - Configures which block to use for ECDSA key output."]
-pub type CFG_ECDSA_BLK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CFG_ECDSA_BLK_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:15 - 0x5A5A: programming operation command 0x5AA5: read operation command."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - 0x5A5A: programming operation command 0x5AA5: read operation command."]
     #[inline(always)]
     #[must_use]
-    pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC, 0> {
-        OP_CODE_W::new(self)
+    pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC> {
+        OP_CODE_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - Configures which block to use for ECDSA key output."]
     #[inline(always)]
     #[must_use]
-    pub fn cfg_ecdsa_blk(&mut self) -> CFG_ECDSA_BLK_W<CONF_SPEC, 16> {
-        CFG_ECDSA_BLK_W::new(self)
+    pub fn cfg_ecdsa_blk(&mut self) -> CFG_ECDSA_BLK_W<CONF_SPEC> {
+        CFG_ECDSA_BLK_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

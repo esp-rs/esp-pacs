@@ -5,19 +5,19 @@ pub type W = crate::W<RX_CLKM_DIV_CONF_SPEC>;
 #[doc = "Field `RX_CLKM_DIV_Z` reader - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_RX_CLKM_DIV_Z is (a-b)."]
 pub type RX_CLKM_DIV_Z_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_CLKM_DIV_Z` writer - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_RX_CLKM_DIV_Z is (a-b)."]
-pub type RX_CLKM_DIV_Z_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RX_CLKM_DIV_Z_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RX_CLKM_DIV_Y` reader - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_RX_CLKM_DIV_Y is (a%(a-b))."]
 pub type RX_CLKM_DIV_Y_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_CLKM_DIV_Y` writer - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_RX_CLKM_DIV_Y is (a%(a-b))."]
-pub type RX_CLKM_DIV_Y_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RX_CLKM_DIV_Y_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RX_CLKM_DIV_X` reader - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_RX_CLKM_DIV_X is (a/(a-b)) - 1."]
 pub type RX_CLKM_DIV_X_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_CLKM_DIV_X` writer - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_RX_CLKM_DIV_X is (a/(a-b)) - 1."]
-pub type RX_CLKM_DIV_X_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RX_CLKM_DIV_X_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RX_CLKM_DIV_YN1` reader - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_RX_CLKM_DIV_YN1 is 1."]
 pub type RX_CLKM_DIV_YN1_R = crate::BitReader;
 #[doc = "Field `RX_CLKM_DIV_YN1` writer - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_RX_CLKM_DIV_YN1 is 1."]
-pub type RX_CLKM_DIV_YN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_CLKM_DIV_YN1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_RX_CLKM_DIV_Z is (a-b)."]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RX_CLKM_DIV_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_RX_CLKM_DIV_Z is (a-b)."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_clkm_div_z(&mut self) -> RX_CLKM_DIV_Z_W<RX_CLKM_DIV_CONF_SPEC, 0> {
-        RX_CLKM_DIV_Z_W::new(self)
+    pub fn rx_clkm_div_z(&mut self) -> RX_CLKM_DIV_Z_W<RX_CLKM_DIV_CONF_SPEC> {
+        RX_CLKM_DIV_Z_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_RX_CLKM_DIV_Y is (a%(a-b))."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_clkm_div_y(&mut self) -> RX_CLKM_DIV_Y_W<RX_CLKM_DIV_CONF_SPEC, 9> {
-        RX_CLKM_DIV_Y_W::new(self)
+    pub fn rx_clkm_div_y(&mut self) -> RX_CLKM_DIV_Y_W<RX_CLKM_DIV_CONF_SPEC> {
+        RX_CLKM_DIV_Y_W::new(self, 9)
     }
     #[doc = "Bits 18:26 - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_RX_CLKM_DIV_X is (a/(a-b)) - 1."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_clkm_div_x(&mut self) -> RX_CLKM_DIV_X_W<RX_CLKM_DIV_CONF_SPEC, 18> {
-        RX_CLKM_DIV_X_W::new(self)
+    pub fn rx_clkm_div_x(&mut self) -> RX_CLKM_DIV_X_W<RX_CLKM_DIV_CONF_SPEC> {
+        RX_CLKM_DIV_X_W::new(self, 18)
     }
     #[doc = "Bit 27 - For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_RX_CLKM_DIV_YN1 is 1."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_clkm_div_yn1(&mut self) -> RX_CLKM_DIV_YN1_W<RX_CLKM_DIV_CONF_SPEC, 27> {
-        RX_CLKM_DIV_YN1_W::new(self)
+    pub fn rx_clkm_div_yn1(&mut self) -> RX_CLKM_DIV_YN1_W<RX_CLKM_DIV_CONF_SPEC> {
+        RX_CLKM_DIV_YN1_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

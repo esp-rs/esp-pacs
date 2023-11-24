@@ -5,11 +5,11 @@ pub type W = crate::W<IBUS_PMS_TBL_ATTR_SPEC>;
 #[doc = "Field `IBUS_PMS_SCT1_ATTR` reader - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
 pub type IBUS_PMS_SCT1_ATTR_R = crate::FieldReader;
 #[doc = "Field `IBUS_PMS_SCT1_ATTR` writer - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
-pub type IBUS_PMS_SCT1_ATTR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type IBUS_PMS_SCT1_ATTR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `IBUS_PMS_SCT2_ATTR` reader - The bit is used to configure attribute of the ibus permission control section2, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
 pub type IBUS_PMS_SCT2_ATTR_R = crate::FieldReader;
 #[doc = "Field `IBUS_PMS_SCT2_ATTR` writer - The bit is used to configure attribute of the ibus permission control section2, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
-pub type IBUS_PMS_SCT2_ATTR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type IBUS_PMS_SCT2_ATTR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IBUS_PMS_TBL_ATTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
     #[inline(always)]
     #[must_use]
-    pub fn ibus_pms_sct1_attr(&mut self) -> IBUS_PMS_SCT1_ATTR_W<IBUS_PMS_TBL_ATTR_SPEC, 0> {
-        IBUS_PMS_SCT1_ATTR_W::new(self)
+    pub fn ibus_pms_sct1_attr(&mut self) -> IBUS_PMS_SCT1_ATTR_W<IBUS_PMS_TBL_ATTR_SPEC> {
+        IBUS_PMS_SCT1_ATTR_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - The bit is used to configure attribute of the ibus permission control section2, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
     #[inline(always)]
     #[must_use]
-    pub fn ibus_pms_sct2_attr(&mut self) -> IBUS_PMS_SCT2_ATTR_W<IBUS_PMS_TBL_ATTR_SPEC, 4> {
-        IBUS_PMS_SCT2_ATTR_W::new(self)
+    pub fn ibus_pms_sct2_attr(&mut self) -> IBUS_PMS_SCT2_ATTR_W<IBUS_PMS_TBL_ATTR_SPEC> {
+        IBUS_PMS_SCT2_ATTR_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

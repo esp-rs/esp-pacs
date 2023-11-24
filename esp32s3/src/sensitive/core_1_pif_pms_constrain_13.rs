@@ -5,13 +5,13 @@ pub type W = crate::W<CORE_1_PIF_PMS_CONSTRAIN_13_SPEC>;
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0` reader - RTCSlow_1 memory split address in world 0 for core1."]
 pub type CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_R = crate::FieldReader<u16>;
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0` writer - RTCSlow_1 memory split address in world 0 for core1."]
-pub type CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1` reader - RTCSlow_1 memory split address in world 1 for core1."]
 pub type CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_R = crate::FieldReader<u16>;
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1` writer - RTCSlow_1 memory split address in world 1 for core1."]
-pub type CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 11, u16>;
 impl R {
     #[doc = "Bits 0:10 - RTCSlow_1 memory split address in world 0 for core1."]
     #[inline(always)]
@@ -56,7 +56,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_PIF_PMS_CONSTRAIN_13_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -65,18 +65,18 @@ impl W {
     #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_1_spltaddr_world_0(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_W<CORE_1_PIF_PMS_CONSTRAIN_13_SPEC, 0>
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_W<CORE_1_PIF_PMS_CONSTRAIN_13_SPEC>
     {
-        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_W::new(self)
+        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - RTCSlow_1 memory split address in world 1 for core1."]
     #[inline(always)]
     #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_1_spltaddr_world_1(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_W<CORE_1_PIF_PMS_CONSTRAIN_13_SPEC, 11>
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_W<CORE_1_PIF_PMS_CONSTRAIN_13_SPEC>
     {
-        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_W::new(self)
+        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

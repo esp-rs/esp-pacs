@@ -5,11 +5,11 @@ pub type W = crate::W<CMD_SPEC>;
 #[doc = "Field `CONF_BITLEN` reader - Define the spi_clk cycles of SPI_CONF state. Can be configured in CONF state."]
 pub type CONF_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `CONF_BITLEN` writer - Define the spi_clk cycles of SPI_CONF state. Can be configured in CONF state."]
-pub type CONF_BITLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 23, O, u32>;
+pub type CONF_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 23, u32>;
 #[doc = "Field `USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
 pub type USR_R = crate::BitReader;
 #[doc = "Field `USR` writer - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
-pub type USR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:22 - Define the spi_clk cycles of SPI_CONF state. Can be configured in CONF state."]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:22 - Define the spi_clk cycles of SPI_CONF state. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn conf_bitlen(&mut self) -> CONF_BITLEN_W<CMD_SPEC, 0> {
-        CONF_BITLEN_W::new(self)
+    pub fn conf_bitlen(&mut self) -> CONF_BITLEN_W<CMD_SPEC> {
+        CONF_BITLEN_W::new(self, 0)
     }
     #[doc = "Bit 24 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
     #[inline(always)]
     #[must_use]
-    pub fn usr(&mut self) -> USR_W<CMD_SPEC, 24> {
-        USR_W::new(self)
+    pub fn usr(&mut self) -> USR_W<CMD_SPEC> {
+        USR_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

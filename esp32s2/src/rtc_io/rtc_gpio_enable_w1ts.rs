@@ -1,8 +1,7 @@
 #[doc = "Register `RTC_GPIO_ENABLE_W1TS` writer"]
 pub type W = crate::W<RTC_GPIO_ENABLE_W1TS_SPEC>;
 #[doc = "Field `REG_RTCIO_REG_GPIO_ENABLE_W1TS` writer - GPIO0 ~ 21 output enable set register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_ENABLE_REG will be set to 1. Recommended operation: use this register to set RTCIO_RTC_GPIO_ENABLE_REG."]
-pub type REG_RTCIO_REG_GPIO_ENABLE_W1TS_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type REG_RTCIO_REG_GPIO_ENABLE_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_ENABLE_W1TS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -15,8 +14,8 @@ impl W {
     #[must_use]
     pub fn reg_rtcio_reg_gpio_enable_w1ts(
         &mut self,
-    ) -> REG_RTCIO_REG_GPIO_ENABLE_W1TS_W<RTC_GPIO_ENABLE_W1TS_SPEC, 10> {
-        REG_RTCIO_REG_GPIO_ENABLE_W1TS_W::new(self)
+    ) -> REG_RTCIO_REG_GPIO_ENABLE_W1TS_W<RTC_GPIO_ENABLE_W1TS_SPEC> {
+        REG_RTCIO_REG_GPIO_ENABLE_W1TS_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

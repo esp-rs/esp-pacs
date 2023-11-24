@@ -27,23 +27,23 @@ pub type OUTFIFO_EMPTY_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_RAW` reader - The raw bit for SPI slave CMD6 interrupt."]
 pub type SLV_CMD6_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_RAW` writer - The raw bit for SPI slave CMD6 interrupt."]
-pub type SLV_CMD6_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD6_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMD7_INT_RAW` reader - The raw bit for SPI slave CMD7 interrupt."]
 pub type SLV_CMD7_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD7_INT_RAW` writer - The raw bit for SPI slave CMD7 interrupt."]
-pub type SLV_CMD7_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD7_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMD8_INT_RAW` reader - The raw bit for SPI slave CMD8 interrupt."]
 pub type SLV_CMD8_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD8_INT_RAW` writer - The raw bit for SPI slave CMD8 interrupt."]
-pub type SLV_CMD8_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD8_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMD9_INT_RAW` reader - The raw bit for SPI slave CMD9 interrupt."]
 pub type SLV_CMD9_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD9_INT_RAW` writer - The raw bit for SPI slave CMD9 interrupt."]
-pub type SLV_CMD9_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD9_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMDA_INT_RAW` reader - The raw bit for SPI slave CMDA interrupt."]
 pub type SLV_CMDA_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMDA_INT_RAW` writer - The raw bit for SPI slave CMDA interrupt."]
-pub type SLV_CMDA_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMDA_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw bit for lack of enough inlink descriptors. Can be configured in CONF state."]
     #[inline(always)]
@@ -200,39 +200,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 11 - The raw bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd6_int_raw(&mut self) -> SLV_CMD6_INT_RAW_W<DMA_INT_RAW_SPEC, 11> {
-        SLV_CMD6_INT_RAW_W::new(self)
+    pub fn slv_cmd6_int_raw(&mut self) -> SLV_CMD6_INT_RAW_W<DMA_INT_RAW_SPEC> {
+        SLV_CMD6_INT_RAW_W::new(self, 11)
     }
     #[doc = "Bit 12 - The raw bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd7_int_raw(&mut self) -> SLV_CMD7_INT_RAW_W<DMA_INT_RAW_SPEC, 12> {
-        SLV_CMD7_INT_RAW_W::new(self)
+    pub fn slv_cmd7_int_raw(&mut self) -> SLV_CMD7_INT_RAW_W<DMA_INT_RAW_SPEC> {
+        SLV_CMD7_INT_RAW_W::new(self, 12)
     }
     #[doc = "Bit 13 - The raw bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd8_int_raw(&mut self) -> SLV_CMD8_INT_RAW_W<DMA_INT_RAW_SPEC, 13> {
-        SLV_CMD8_INT_RAW_W::new(self)
+    pub fn slv_cmd8_int_raw(&mut self) -> SLV_CMD8_INT_RAW_W<DMA_INT_RAW_SPEC> {
+        SLV_CMD8_INT_RAW_W::new(self, 13)
     }
     #[doc = "Bit 14 - The raw bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd9_int_raw(&mut self) -> SLV_CMD9_INT_RAW_W<DMA_INT_RAW_SPEC, 14> {
-        SLV_CMD9_INT_RAW_W::new(self)
+    pub fn slv_cmd9_int_raw(&mut self) -> SLV_CMD9_INT_RAW_W<DMA_INT_RAW_SPEC> {
+        SLV_CMD9_INT_RAW_W::new(self, 14)
     }
     #[doc = "Bit 15 - The raw bit for SPI slave CMDA interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmda_int_raw(&mut self) -> SLV_CMDA_INT_RAW_W<DMA_INT_RAW_SPEC, 15> {
-        SLV_CMDA_INT_RAW_W::new(self)
+    pub fn slv_cmda_int_raw(&mut self) -> SLV_CMDA_INT_RAW_W<DMA_INT_RAW_SPEC> {
+        SLV_CMDA_INT_RAW_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

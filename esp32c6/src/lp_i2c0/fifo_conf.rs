@@ -5,27 +5,27 @@ pub type W = crate::W<FIFO_CONF_SPEC>;
 #[doc = "Field `RXFIFO_WM_THRHD` reader - The water mark threshold of rx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd\\[3:0\\], reg_rxfifo_wm_int_raw bit will be valid."]
 pub type RXFIFO_WM_THRHD_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_WM_THRHD` writer - The water mark threshold of rx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd\\[3:0\\], reg_rxfifo_wm_int_raw bit will be valid."]
-pub type RXFIFO_WM_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RXFIFO_WM_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TXFIFO_WM_THRHD` reader - The water mark threshold of tx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and tx FIFO counter is smaller than reg_txfifo_wm_thrhd\\[3:0\\], reg_txfifo_wm_int_raw bit will be valid."]
 pub type TXFIFO_WM_THRHD_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_WM_THRHD` writer - The water mark threshold of tx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and tx FIFO counter is smaller than reg_txfifo_wm_thrhd\\[3:0\\], reg_txfifo_wm_int_raw bit will be valid."]
-pub type TXFIFO_WM_THRHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TXFIFO_WM_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `NONFIFO_EN` reader - Set this bit to enable APB nonfifo access."]
 pub type NONFIFO_EN_R = crate::BitReader;
 #[doc = "Field `NONFIFO_EN` writer - Set this bit to enable APB nonfifo access."]
-pub type NONFIFO_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NONFIFO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_RST` reader - Set this bit to reset rx-fifo."]
 pub type RX_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_RST` writer - Set this bit to reset rx-fifo."]
-pub type RX_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_FIFO_RST` reader - Set this bit to reset tx-fifo."]
 pub type TX_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_RST` writer - Set this bit to reset tx-fifo."]
-pub type TX_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FIFO_PRT_EN` reader - The control enable bit of FIFO pointer in non-fifo access mode. This bit controls the valid bits and the interrupts of tx/rx_fifo overflow, underflow, full and empty."]
 pub type FIFO_PRT_EN_R = crate::BitReader;
 #[doc = "Field `FIFO_PRT_EN` writer - The control enable bit of FIFO pointer in non-fifo access mode. This bit controls the valid bits and the interrupts of tx/rx_fifo overflow, underflow, full and empty."]
-pub type FIFO_PRT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FIFO_PRT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - The water mark threshold of rx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd\\[3:0\\], reg_rxfifo_wm_int_raw bit will be valid."]
     #[inline(always)]
@@ -80,45 +80,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FIFO_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - The water mark threshold of rx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd\\[3:0\\], reg_rxfifo_wm_int_raw bit will be valid."]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifo_wm_thrhd(&mut self) -> RXFIFO_WM_THRHD_W<FIFO_CONF_SPEC, 0> {
-        RXFIFO_WM_THRHD_W::new(self)
+    pub fn rxfifo_wm_thrhd(&mut self) -> RXFIFO_WM_THRHD_W<FIFO_CONF_SPEC> {
+        RXFIFO_WM_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 5:8 - The water mark threshold of tx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and tx FIFO counter is smaller than reg_txfifo_wm_thrhd\\[3:0\\], reg_txfifo_wm_int_raw bit will be valid."]
     #[inline(always)]
     #[must_use]
-    pub fn txfifo_wm_thrhd(&mut self) -> TXFIFO_WM_THRHD_W<FIFO_CONF_SPEC, 5> {
-        TXFIFO_WM_THRHD_W::new(self)
+    pub fn txfifo_wm_thrhd(&mut self) -> TXFIFO_WM_THRHD_W<FIFO_CONF_SPEC> {
+        TXFIFO_WM_THRHD_W::new(self, 5)
     }
     #[doc = "Bit 10 - Set this bit to enable APB nonfifo access."]
     #[inline(always)]
     #[must_use]
-    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<FIFO_CONF_SPEC, 10> {
-        NONFIFO_EN_W::new(self)
+    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<FIFO_CONF_SPEC> {
+        NONFIFO_EN_W::new(self, 10)
     }
     #[doc = "Bit 12 - Set this bit to reset rx-fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<FIFO_CONF_SPEC, 12> {
-        RX_FIFO_RST_W::new(self)
+    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<FIFO_CONF_SPEC> {
+        RX_FIFO_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to reset tx-fifo."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<FIFO_CONF_SPEC, 13> {
-        TX_FIFO_RST_W::new(self)
+    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<FIFO_CONF_SPEC> {
+        TX_FIFO_RST_W::new(self, 13)
     }
     #[doc = "Bit 14 - The control enable bit of FIFO pointer in non-fifo access mode. This bit controls the valid bits and the interrupts of tx/rx_fifo overflow, underflow, full and empty."]
     #[inline(always)]
     #[must_use]
-    pub fn fifo_prt_en(&mut self) -> FIFO_PRT_EN_W<FIFO_CONF_SPEC, 14> {
-        FIFO_PRT_EN_W::new(self)
+    pub fn fifo_prt_en(&mut self) -> FIFO_PRT_EN_W<FIFO_CONF_SPEC> {
+        FIFO_PRT_EN_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

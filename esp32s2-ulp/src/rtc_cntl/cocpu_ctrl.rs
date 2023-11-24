@@ -5,41 +5,41 @@ pub type W = crate::W<COCPU_CTRL_SPEC>;
 #[doc = "Field `COCPU_CLK_FO` reader - ULP-RISCV clock force on"]
 pub type COCPU_CLK_FO_R = crate::BitReader;
 #[doc = "Field `COCPU_CLK_FO` writer - ULP-RISCV clock force on"]
-pub type COCPU_CLK_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_CLK_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COCPU_START_2_RESET_DIS` reader - Time from ULP-RISCV startup to pull down reset"]
 pub type COCPU_START_2_RESET_DIS_R = crate::FieldReader;
 #[doc = "Field `COCPU_START_2_RESET_DIS` writer - Time from ULP-RISCV startup to pull down reset"]
-pub type COCPU_START_2_RESET_DIS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type COCPU_START_2_RESET_DIS_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `COCPU_START_2_INTR_EN` reader - Time from ULP-RISCV startup to send out RISCV_START_INT interrupt"]
 pub type COCPU_START_2_INTR_EN_R = crate::FieldReader;
 #[doc = "Field `COCPU_START_2_INTR_EN` writer - Time from ULP-RISCV startup to send out RISCV_START_INT interrupt"]
-pub type COCPU_START_2_INTR_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type COCPU_START_2_INTR_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `COCPU_SHUT` reader - Shut down ULP-RISCV"]
 pub type COCPU_SHUT_R = crate::BitReader;
 #[doc = "Field `COCPU_SHUT` writer - Shut down ULP-RISCV"]
-pub type COCPU_SHUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_SHUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COCPU_SHUT_2_CLK_DIS` reader - Time from shut down ULP-RISCV to disable clock"]
 pub type COCPU_SHUT_2_CLK_DIS_R = crate::FieldReader;
 #[doc = "Field `COCPU_SHUT_2_CLK_DIS` writer - Time from shut down ULP-RISCV to disable clock"]
-pub type COCPU_SHUT_2_CLK_DIS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type COCPU_SHUT_2_CLK_DIS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `COCPU_SHUT_RESET_EN` reader - This bit is used to reset ULP-RISCV"]
 pub type COCPU_SHUT_RESET_EN_R = crate::BitReader;
 #[doc = "Field `COCPU_SHUT_RESET_EN` writer - This bit is used to reset ULP-RISCV"]
-pub type COCPU_SHUT_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_SHUT_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COCPU_SEL` reader - 0: select ULP-RISCV. 1: select ULP-FSM"]
 pub type COCPU_SEL_R = crate::BitReader;
 #[doc = "Field `COCPU_SEL` writer - 0: select ULP-RISCV. 1: select ULP-FSM"]
-pub type COCPU_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COCPU_DONE_FORCE` reader - 0: select ULP-FSM DONE signal. 1: select ULP-RISCV DONE signal"]
 pub type COCPU_DONE_FORCE_R = crate::BitReader;
 #[doc = "Field `COCPU_DONE_FORCE` writer - 0: select ULP-FSM DONE signal. 1: select ULP-RISCV DONE signal"]
-pub type COCPU_DONE_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_DONE_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COCPU_DONE` reader - DONE signal. Write 1 to this bit, ULP-RISCV will go to HALT and the timer starts counting"]
 pub type COCPU_DONE_R = crate::BitReader;
 #[doc = "Field `COCPU_DONE` writer - DONE signal. Write 1 to this bit, ULP-RISCV will go to HALT and the timer starts counting"]
-pub type COCPU_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COCPU_SW_INT_TRIGGER` writer - Trigger ULP-RISCV register interrupt"]
-pub type COCPU_SW_INT_TRIGGER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COCPU_SW_INT_TRIGGER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - ULP-RISCV clock force on"]
     #[inline(always)]
@@ -124,71 +124,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<COCPU_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - ULP-RISCV clock force on"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_clk_fo(&mut self) -> COCPU_CLK_FO_W<COCPU_CTRL_SPEC, 0> {
-        COCPU_CLK_FO_W::new(self)
+    pub fn cocpu_clk_fo(&mut self) -> COCPU_CLK_FO_W<COCPU_CTRL_SPEC> {
+        COCPU_CLK_FO_W::new(self, 0)
     }
     #[doc = "Bits 1:6 - Time from ULP-RISCV startup to pull down reset"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_start_2_reset_dis(&mut self) -> COCPU_START_2_RESET_DIS_W<COCPU_CTRL_SPEC, 1> {
-        COCPU_START_2_RESET_DIS_W::new(self)
+    pub fn cocpu_start_2_reset_dis(&mut self) -> COCPU_START_2_RESET_DIS_W<COCPU_CTRL_SPEC> {
+        COCPU_START_2_RESET_DIS_W::new(self, 1)
     }
     #[doc = "Bits 7:12 - Time from ULP-RISCV startup to send out RISCV_START_INT interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_start_2_intr_en(&mut self) -> COCPU_START_2_INTR_EN_W<COCPU_CTRL_SPEC, 7> {
-        COCPU_START_2_INTR_EN_W::new(self)
+    pub fn cocpu_start_2_intr_en(&mut self) -> COCPU_START_2_INTR_EN_W<COCPU_CTRL_SPEC> {
+        COCPU_START_2_INTR_EN_W::new(self, 7)
     }
     #[doc = "Bit 13 - Shut down ULP-RISCV"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_shut(&mut self) -> COCPU_SHUT_W<COCPU_CTRL_SPEC, 13> {
-        COCPU_SHUT_W::new(self)
+    pub fn cocpu_shut(&mut self) -> COCPU_SHUT_W<COCPU_CTRL_SPEC> {
+        COCPU_SHUT_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - Time from shut down ULP-RISCV to disable clock"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_shut_2_clk_dis(&mut self) -> COCPU_SHUT_2_CLK_DIS_W<COCPU_CTRL_SPEC, 14> {
-        COCPU_SHUT_2_CLK_DIS_W::new(self)
+    pub fn cocpu_shut_2_clk_dis(&mut self) -> COCPU_SHUT_2_CLK_DIS_W<COCPU_CTRL_SPEC> {
+        COCPU_SHUT_2_CLK_DIS_W::new(self, 14)
     }
     #[doc = "Bit 22 - This bit is used to reset ULP-RISCV"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_shut_reset_en(&mut self) -> COCPU_SHUT_RESET_EN_W<COCPU_CTRL_SPEC, 22> {
-        COCPU_SHUT_RESET_EN_W::new(self)
+    pub fn cocpu_shut_reset_en(&mut self) -> COCPU_SHUT_RESET_EN_W<COCPU_CTRL_SPEC> {
+        COCPU_SHUT_RESET_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - 0: select ULP-RISCV. 1: select ULP-FSM"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_sel(&mut self) -> COCPU_SEL_W<COCPU_CTRL_SPEC, 23> {
-        COCPU_SEL_W::new(self)
+    pub fn cocpu_sel(&mut self) -> COCPU_SEL_W<COCPU_CTRL_SPEC> {
+        COCPU_SEL_W::new(self, 23)
     }
     #[doc = "Bit 24 - 0: select ULP-FSM DONE signal. 1: select ULP-RISCV DONE signal"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_done_force(&mut self) -> COCPU_DONE_FORCE_W<COCPU_CTRL_SPEC, 24> {
-        COCPU_DONE_FORCE_W::new(self)
+    pub fn cocpu_done_force(&mut self) -> COCPU_DONE_FORCE_W<COCPU_CTRL_SPEC> {
+        COCPU_DONE_FORCE_W::new(self, 24)
     }
     #[doc = "Bit 25 - DONE signal. Write 1 to this bit, ULP-RISCV will go to HALT and the timer starts counting"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_done(&mut self) -> COCPU_DONE_W<COCPU_CTRL_SPEC, 25> {
-        COCPU_DONE_W::new(self)
+    pub fn cocpu_done(&mut self) -> COCPU_DONE_W<COCPU_CTRL_SPEC> {
+        COCPU_DONE_W::new(self, 25)
     }
     #[doc = "Bit 26 - Trigger ULP-RISCV register interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn cocpu_sw_int_trigger(&mut self) -> COCPU_SW_INT_TRIGGER_W<COCPU_CTRL_SPEC, 26> {
-        COCPU_SW_INT_TRIGGER_W::new(self)
+    pub fn cocpu_sw_int_trigger(&mut self) -> COCPU_SW_INT_TRIGGER_W<COCPU_CTRL_SPEC> {
+        COCPU_SW_INT_TRIGGER_W::new(self, 26)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

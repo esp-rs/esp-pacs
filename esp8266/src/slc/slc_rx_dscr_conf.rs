@@ -5,11 +5,11 @@ pub type W = crate::W<SLC_RX_DSCR_CONF_SPEC>;
 #[doc = "Field `SLC_TOKEN_NO_REPLACE` reader - "]
 pub type SLC_TOKEN_NO_REPLACE_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN_NO_REPLACE` writer - "]
-pub type SLC_TOKEN_NO_REPLACE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_TOKEN_NO_REPLACE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC_INFOR_NO_REPLACE` reader - "]
 pub type SLC_INFOR_NO_REPLACE_R = crate::BitReader;
 #[doc = "Field `SLC_INFOR_NO_REPLACE` writer - "]
-pub type SLC_INFOR_NO_REPLACE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_INFOR_NO_REPLACE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLC_RX_DSCR_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_token_no_replace(&mut self) -> SLC_TOKEN_NO_REPLACE_W<SLC_RX_DSCR_CONF_SPEC, 8> {
-        SLC_TOKEN_NO_REPLACE_W::new(self)
+    pub fn slc_token_no_replace(&mut self) -> SLC_TOKEN_NO_REPLACE_W<SLC_RX_DSCR_CONF_SPEC> {
+        SLC_TOKEN_NO_REPLACE_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_infor_no_replace(&mut self) -> SLC_INFOR_NO_REPLACE_W<SLC_RX_DSCR_CONF_SPEC, 9> {
-        SLC_INFOR_NO_REPLACE_W::new(self)
+    pub fn slc_infor_no_replace(&mut self) -> SLC_INFOR_NO_REPLACE_W<SLC_RX_DSCR_CONF_SPEC> {
+        SLC_INFOR_NO_REPLACE_W::new(self, 9)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

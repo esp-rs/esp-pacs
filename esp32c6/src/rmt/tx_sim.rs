@@ -5,15 +5,15 @@ pub type W = crate::W<TX_SIM_SPEC>;
 #[doc = "Field `CH0` reader - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
 pub type CH0_R = crate::BitReader;
 #[doc = "Field `CH0` writer - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
-pub type CH0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH1` reader - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
 pub type CH1_R = crate::BitReader;
 #[doc = "Field `CH1` writer - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
-pub type CH1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CH1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EN` reader - This register is used to enable multiple of channels to start sending data synchronously."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - This register is used to enable multiple of channels to start sending data synchronously."]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_SIM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0(&mut self) -> CH0_W<TX_SIM_SPEC, 0> {
-        CH0_W::new(self)
+    pub fn ch0(&mut self) -> CH0_W<TX_SIM_SPEC> {
+        CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1(&mut self) -> CH1_W<TX_SIM_SPEC, 1> {
-        CH1_W::new(self)
+    pub fn ch1(&mut self) -> CH1_W<TX_SIM_SPEC> {
+        CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - This register is used to enable multiple of channels to start sending data synchronously."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<TX_SIM_SPEC, 2> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<TX_SIM_SPEC> {
+        EN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

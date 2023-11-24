@@ -5,7 +5,7 @@ pub type W = crate::W<LOG_MEM_FULL_FLAG_SPEC>;
 #[doc = "Field `LOG_MEM_FULL_FLAG` reader - when it's 1,show that mem write loop morte than one time."]
 pub type LOG_MEM_FULL_FLAG_R = crate::BitReader;
 #[doc = "Field `LOG_MEM_FULL_FLAG` writer - when it's 1,show that mem write loop morte than one time."]
-pub type LOG_MEM_FULL_FLAG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOG_MEM_FULL_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - when it's 1,show that mem write loop morte than one time."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOG_MEM_FULL_FLAG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - when it's 1,show that mem write loop morte than one time."]
     #[inline(always)]
     #[must_use]
-    pub fn log_mem_full_flag(&mut self) -> LOG_MEM_FULL_FLAG_W<LOG_MEM_FULL_FLAG_SPEC, 0> {
-        LOG_MEM_FULL_FLAG_W::new(self)
+    pub fn log_mem_full_flag(&mut self) -> LOG_MEM_FULL_FLAG_W<LOG_MEM_FULL_FLAG_SPEC> {
+        LOG_MEM_FULL_FLAG_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

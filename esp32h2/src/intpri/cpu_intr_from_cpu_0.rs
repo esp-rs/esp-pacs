@@ -5,7 +5,7 @@ pub type W = crate::W<CPU_INTR_FROM_CPU_0_SPEC>;
 #[doc = "Field `CPU_INTR_FROM_CPU_0` reader - Need add description"]
 pub type CPU_INTR_FROM_CPU_0_R = crate::BitReader;
 #[doc = "Field `CPU_INTR_FROM_CPU_0` writer - Need add description"]
-pub type CPU_INTR_FROM_CPU_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPU_INTR_FROM_CPU_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CPU_INTR_FROM_CPU_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn cpu_intr_from_cpu_0(&mut self) -> CPU_INTR_FROM_CPU_0_W<CPU_INTR_FROM_CPU_0_SPEC, 0> {
-        CPU_INTR_FROM_CPU_0_W::new(self)
+    pub fn cpu_intr_from_cpu_0(&mut self) -> CPU_INTR_FROM_CPU_0_W<CPU_INTR_FROM_CPU_0_SPEC> {
+        CPU_INTR_FROM_CPU_0_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

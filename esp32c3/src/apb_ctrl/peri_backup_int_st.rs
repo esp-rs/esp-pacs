@@ -34,7 +34,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_INT_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "APB_CTRL_PERI_BACKUP_INT_ST_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`peri_backup_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

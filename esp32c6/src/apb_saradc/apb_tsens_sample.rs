@@ -5,11 +5,11 @@ pub type W = crate::W<APB_TSENS_SAMPLE_SPEC>;
 #[doc = "Field `TSENS_SAMPLE_RATE` reader - HW sample rate"]
 pub type TSENS_SAMPLE_RATE_R = crate::FieldReader<u16>;
 #[doc = "Field `TSENS_SAMPLE_RATE` writer - HW sample rate"]
-pub type TSENS_SAMPLE_RATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TSENS_SAMPLE_RATE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `TSENS_SAMPLE_EN` reader - HW sample en"]
 pub type TSENS_SAMPLE_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_SAMPLE_EN` writer - HW sample en"]
-pub type TSENS_SAMPLE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_SAMPLE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - HW sample rate"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_SAMPLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - HW sample rate"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_sample_rate(&mut self) -> TSENS_SAMPLE_RATE_W<APB_TSENS_SAMPLE_SPEC, 0> {
-        TSENS_SAMPLE_RATE_W::new(self)
+    pub fn tsens_sample_rate(&mut self) -> TSENS_SAMPLE_RATE_W<APB_TSENS_SAMPLE_SPEC> {
+        TSENS_SAMPLE_RATE_W::new(self, 0)
     }
     #[doc = "Bit 16 - HW sample en"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_sample_en(&mut self) -> TSENS_SAMPLE_EN_W<APB_TSENS_SAMPLE_SPEC, 16> {
-        TSENS_SAMPLE_EN_W::new(self)
+    pub fn tsens_sample_en(&mut self) -> TSENS_SAMPLE_EN_W<APB_TSENS_SAMPLE_SPEC> {
+        TSENS_SAMPLE_EN_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

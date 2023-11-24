@@ -5,7 +5,7 @@ pub type W = crate::W<_0_DSCR_REC_CONF_SPEC>;
 #[doc = "Field `SLC0_RX_DSCR_REC_LIM` reader - "]
 pub type SLC0_RX_DSCR_REC_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0_RX_DSCR_REC_LIM` writer - "]
-pub type SLC0_RX_DSCR_REC_LIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type SLC0_RX_DSCR_REC_LIM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<_0_DSCR_REC_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_dscr_rec_lim(&mut self) -> SLC0_RX_DSCR_REC_LIM_W<_0_DSCR_REC_CONF_SPEC, 0> {
-        SLC0_RX_DSCR_REC_LIM_W::new(self)
+    pub fn slc0_rx_dscr_rec_lim(&mut self) -> SLC0_RX_DSCR_REC_LIM_W<_0_DSCR_REC_CONF_SPEC> {
+        SLC0_RX_DSCR_REC_LIM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

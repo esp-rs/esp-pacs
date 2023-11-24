@@ -5,11 +5,11 @@ pub type W = crate::W<TRACE_CONF_SPEC>;
 #[doc = "Field `TRACE_CLK_EN` reader - Set 1 to enable trace clock"]
 pub type TRACE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TRACE_CLK_EN` writer - Set 1 to enable trace clock"]
-pub type TRACE_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRACE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRACE_RST_EN` reader - Set 0 to reset trace module"]
 pub type TRACE_RST_EN_R = crate::BitReader;
 #[doc = "Field `TRACE_RST_EN` writer - Set 0 to reset trace module"]
-pub type TRACE_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRACE_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable trace clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TRACE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable trace clock"]
     #[inline(always)]
     #[must_use]
-    pub fn trace_clk_en(&mut self) -> TRACE_CLK_EN_W<TRACE_CONF_SPEC, 0> {
-        TRACE_CLK_EN_W::new(self)
+    pub fn trace_clk_en(&mut self) -> TRACE_CLK_EN_W<TRACE_CONF_SPEC> {
+        TRACE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset trace module"]
     #[inline(always)]
     #[must_use]
-    pub fn trace_rst_en(&mut self) -> TRACE_RST_EN_W<TRACE_CONF_SPEC, 1> {
-        TRACE_RST_EN_W::new(self)
+    pub fn trace_rst_en(&mut self) -> TRACE_RST_EN_W<TRACE_CONF_SPEC> {
+        TRACE_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

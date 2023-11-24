@@ -5,7 +5,7 @@ pub type W = crate::W<OUT_SPEC>;
 #[doc = "Field `DATA` reader - GPIO0~17 output value"]
 pub type DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA` writer - GPIO0~17 output value"]
-pub type DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 impl R {
     #[doc = "Bits 14:31 - GPIO0~17 output value"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 14:31 - GPIO0~17 output value"]
     #[inline(always)]
     #[must_use]
-    pub fn data(&mut self) -> DATA_W<OUT_SPEC, 14> {
-        DATA_W::new(self)
+    pub fn data(&mut self) -> DATA_W<OUT_SPEC> {
+        DATA_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

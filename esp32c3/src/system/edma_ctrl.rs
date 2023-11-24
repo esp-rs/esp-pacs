@@ -5,11 +5,11 @@ pub type W = crate::W<EDMA_CTRL_SPEC>;
 #[doc = "Field `EDMA_CLK_ON` reader - reg_edma_clk_on"]
 pub type EDMA_CLK_ON_R = crate::BitReader;
 #[doc = "Field `EDMA_CLK_ON` writer - reg_edma_clk_on"]
-pub type EDMA_CLK_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EDMA_CLK_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EDMA_RESET` reader - reg_edma_reset"]
 pub type EDMA_RESET_R = crate::BitReader;
 #[doc = "Field `EDMA_RESET` writer - reg_edma_reset"]
-pub type EDMA_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EDMA_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_edma_clk_on"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EDMA_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - reg_edma_clk_on"]
     #[inline(always)]
     #[must_use]
-    pub fn edma_clk_on(&mut self) -> EDMA_CLK_ON_W<EDMA_CTRL_SPEC, 0> {
-        EDMA_CLK_ON_W::new(self)
+    pub fn edma_clk_on(&mut self) -> EDMA_CLK_ON_W<EDMA_CTRL_SPEC> {
+        EDMA_CLK_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_edma_reset"]
     #[inline(always)]
     #[must_use]
-    pub fn edma_reset(&mut self) -> EDMA_RESET_W<EDMA_CTRL_SPEC, 1> {
-        EDMA_RESET_W::new(self)
+    pub fn edma_reset(&mut self) -> EDMA_RESET_W<EDMA_CTRL_SPEC> {
+        EDMA_RESET_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<TAG_FO_CTRL_SPEC>;
 #[doc = "Field `PRO_CACHE_TAG_FORCE_ON` reader - "]
 pub type PRO_CACHE_TAG_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_TAG_FORCE_ON` writer - "]
-pub type PRO_CACHE_TAG_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_TAG_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_CACHE_TAG_PD` reader - "]
 pub type PRO_CACHE_TAG_PD_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_TAG_PD` writer - "]
-pub type PRO_CACHE_TAG_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_CACHE_TAG_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_TAG_FORCE_ON` reader - "]
 pub type APP_CACHE_TAG_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_TAG_FORCE_ON` writer - "]
-pub type APP_CACHE_TAG_FORCE_ON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_TAG_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_TAG_PD` reader - "]
 pub type APP_CACHE_TAG_PD_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_TAG_PD` writer - "]
-pub type APP_CACHE_TAG_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_TAG_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TAG_FO_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_tag_force_on(&mut self) -> PRO_CACHE_TAG_FORCE_ON_W<TAG_FO_CTRL_SPEC, 0> {
-        PRO_CACHE_TAG_FORCE_ON_W::new(self)
+    pub fn pro_cache_tag_force_on(&mut self) -> PRO_CACHE_TAG_FORCE_ON_W<TAG_FO_CTRL_SPEC> {
+        PRO_CACHE_TAG_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_cache_tag_pd(&mut self) -> PRO_CACHE_TAG_PD_W<TAG_FO_CTRL_SPEC, 1> {
-        PRO_CACHE_TAG_PD_W::new(self)
+    pub fn pro_cache_tag_pd(&mut self) -> PRO_CACHE_TAG_PD_W<TAG_FO_CTRL_SPEC> {
+        PRO_CACHE_TAG_PD_W::new(self, 1)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_tag_force_on(&mut self) -> APP_CACHE_TAG_FORCE_ON_W<TAG_FO_CTRL_SPEC, 8> {
-        APP_CACHE_TAG_FORCE_ON_W::new(self)
+    pub fn app_cache_tag_force_on(&mut self) -> APP_CACHE_TAG_FORCE_ON_W<TAG_FO_CTRL_SPEC> {
+        APP_CACHE_TAG_FORCE_ON_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_tag_pd(&mut self) -> APP_CACHE_TAG_PD_W<TAG_FO_CTRL_SPEC, 9> {
-        APP_CACHE_TAG_PD_W::new(self)
+    pub fn app_cache_tag_pd(&mut self) -> APP_CACHE_TAG_PD_W<TAG_FO_CTRL_SPEC> {
+        APP_CACHE_TAG_PD_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

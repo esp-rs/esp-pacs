@@ -5,23 +5,23 @@ pub type W = crate::W<PLL_SPEC>;
 #[doc = "Field `BLOCK` reader - Block"]
 pub type BLOCK_R = crate::FieldReader;
 #[doc = "Field `BLOCK` writer - Block"]
-pub type BLOCK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BLOCK_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ADDR` reader - Address"]
 pub type ADDR_R = crate::FieldReader;
 #[doc = "Field `ADDR` writer - Address"]
-pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DATA` reader - Data"]
 pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - Data"]
-pub type DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WRITE` reader - Write"]
 pub type WRITE_R = crate::BitReader;
 #[doc = "Field `WRITE` writer - Write"]
-pub type WRITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WRITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUSY` reader - Ready"]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `BUSY` writer - Ready"]
-pub type BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUSY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Block"]
     #[inline(always)]
@@ -64,41 +64,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PLL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Block"]
     #[inline(always)]
     #[must_use]
-    pub fn block(&mut self) -> BLOCK_W<PLL_SPEC, 0> {
-        BLOCK_W::new(self)
+    pub fn block(&mut self) -> BLOCK_W<PLL_SPEC> {
+        BLOCK_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Address"]
     #[inline(always)]
     #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<PLL_SPEC, 8> {
-        ADDR_W::new(self)
+    pub fn addr(&mut self) -> ADDR_W<PLL_SPEC> {
+        ADDR_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Data"]
     #[inline(always)]
     #[must_use]
-    pub fn data(&mut self) -> DATA_W<PLL_SPEC, 16> {
-        DATA_W::new(self)
+    pub fn data(&mut self) -> DATA_W<PLL_SPEC> {
+        DATA_W::new(self, 16)
     }
     #[doc = "Bit 24 - Write"]
     #[inline(always)]
     #[must_use]
-    pub fn write(&mut self) -> WRITE_W<PLL_SPEC, 24> {
-        WRITE_W::new(self)
+    pub fn write(&mut self) -> WRITE_W<PLL_SPEC> {
+        WRITE_W::new(self, 24)
     }
     #[doc = "Bit 25 - Ready"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<PLL_SPEC, 25> {
-        BUSY_W::new(self)
+    pub fn busy(&mut self) -> BUSY_W<PLL_SPEC> {
+        BUSY_W::new(self, 25)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

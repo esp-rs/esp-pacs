@@ -5,11 +5,11 @@ pub type W = crate::W<POWER_HP_PAD_SPEC>;
 #[doc = "Field `FORCE_HP_PAD_NO_ISO_ALL` reader - need_des"]
 pub type FORCE_HP_PAD_NO_ISO_ALL_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_PAD_NO_ISO_ALL` writer - need_des"]
-pub type FORCE_HP_PAD_NO_ISO_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_PAD_NO_ISO_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_HP_PAD_ISO_ALL` reader - need_des"]
 pub type FORCE_HP_PAD_ISO_ALL_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_PAD_ISO_ALL` writer - need_des"]
-pub type FORCE_HP_PAD_ISO_ALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_HP_PAD_ISO_ALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<POWER_HP_PAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_pad_no_iso_all(&mut self) -> FORCE_HP_PAD_NO_ISO_ALL_W<POWER_HP_PAD_SPEC, 0> {
-        FORCE_HP_PAD_NO_ISO_ALL_W::new(self)
+    pub fn force_hp_pad_no_iso_all(&mut self) -> FORCE_HP_PAD_NO_ISO_ALL_W<POWER_HP_PAD_SPEC> {
+        FORCE_HP_PAD_NO_ISO_ALL_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn force_hp_pad_iso_all(&mut self) -> FORCE_HP_PAD_ISO_ALL_W<POWER_HP_PAD_SPEC, 1> {
-        FORCE_HP_PAD_ISO_ALL_W::new(self)
+    pub fn force_hp_pad_iso_all(&mut self) -> FORCE_HP_PAD_ISO_ALL_W<POWER_HP_PAD_SPEC> {
+        FORCE_HP_PAD_ISO_ALL_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

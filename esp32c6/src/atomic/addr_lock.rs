@@ -5,7 +5,7 @@ pub type W = crate::W<ADDR_LOCK_SPEC>;
 #[doc = "Field `LOCK` reader - read to acquire hardware lock, write to release hardware lock"]
 pub type LOCK_R = crate::FieldReader;
 #[doc = "Field `LOCK` writer - read to acquire hardware lock, write to release hardware lock"]
-pub type LOCK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LOCK_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - read to acquire hardware lock, write to release hardware lock"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ADDR_LOCK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - read to acquire hardware lock, write to release hardware lock"]
     #[inline(always)]
     #[must_use]
-    pub fn lock(&mut self) -> LOCK_W<ADDR_LOCK_SPEC, 0> {
-        LOCK_W::new(self)
+    pub fn lock(&mut self) -> LOCK_W<ADDR_LOCK_SPEC> {
+        LOCK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<CNTL_DBG_SAR_SEL_SPEC>;
 #[doc = "Field `SAR_DEBUG_SEL` reader - Need add desc"]
 pub type SAR_DEBUG_SEL_R = crate::FieldReader;
 #[doc = "Field `SAR_DEBUG_SEL` writer - Need add desc"]
-pub type SAR_DEBUG_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SAR_DEBUG_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 27:31 - Need add desc"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CNTL_DBG_SAR_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 27:31 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_debug_sel(&mut self) -> SAR_DEBUG_SEL_W<CNTL_DBG_SAR_SEL_SPEC, 27> {
-        SAR_DEBUG_SEL_W::new(self)
+    pub fn sar_debug_sel(&mut self) -> SAR_DEBUG_SEL_W<CNTL_DBG_SAR_SEL_SPEC> {
+        SAR_DEBUG_SEL_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

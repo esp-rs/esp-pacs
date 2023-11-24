@@ -1,7 +1,7 @@
 #[doc = "Register `HP_SLEEP_LP_DCDC_RESERVE` writer"]
 pub type W = crate::W<HP_SLEEP_LP_DCDC_RESERVE_SPEC>;
 #[doc = "Field `HP_SLEEP_LP_DCDC_RESERVE` writer - need_des"]
-pub type HP_SLEEP_LP_DCDC_RESERVE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type HP_SLEEP_LP_DCDC_RESERVE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_DCDC_RESERVE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -14,8 +14,8 @@ impl W {
     #[must_use]
     pub fn hp_sleep_lp_dcdc_reserve(
         &mut self,
-    ) -> HP_SLEEP_LP_DCDC_RESERVE_W<HP_SLEEP_LP_DCDC_RESERVE_SPEC, 0> {
-        HP_SLEEP_LP_DCDC_RESERVE_W::new(self)
+    ) -> HP_SLEEP_LP_DCDC_RESERVE_W<HP_SLEEP_LP_DCDC_RESERVE_SPEC> {
+        HP_SLEEP_LP_DCDC_RESERVE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

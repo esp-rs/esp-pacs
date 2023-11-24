@@ -5,55 +5,55 @@ pub type W = crate::W<CONFIG0_SPEC>;
 #[doc = "Field `WDT_CHIP_RESET_WIDTH` reader - need_des"]
 pub type WDT_CHIP_RESET_WIDTH_R = crate::FieldReader;
 #[doc = "Field `WDT_CHIP_RESET_WIDTH` writer - need_des"]
-pub type WDT_CHIP_RESET_WIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WDT_CHIP_RESET_WIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WDT_CHIP_RESET_EN` reader - need_des"]
 pub type WDT_CHIP_RESET_EN_R = crate::BitReader;
 #[doc = "Field `WDT_CHIP_RESET_EN` writer - need_des"]
-pub type WDT_CHIP_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_CHIP_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_PAUSE_IN_SLP` reader - need_des"]
 pub type WDT_PAUSE_IN_SLP_R = crate::BitReader;
 #[doc = "Field `WDT_PAUSE_IN_SLP` writer - need_des"]
-pub type WDT_PAUSE_IN_SLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_PAUSE_IN_SLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_APPCPU_RESET_EN` reader - need_des"]
 pub type WDT_APPCPU_RESET_EN_R = crate::BitReader;
 #[doc = "Field `WDT_APPCPU_RESET_EN` writer - need_des"]
-pub type WDT_APPCPU_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_APPCPU_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_PROCPU_RESET_EN` reader - need_des"]
 pub type WDT_PROCPU_RESET_EN_R = crate::BitReader;
 #[doc = "Field `WDT_PROCPU_RESET_EN` writer - need_des"]
-pub type WDT_PROCPU_RESET_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_PROCPU_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` reader - need_des"]
 pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - need_des"]
-pub type WDT_FLASHBOOT_MOD_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_FLASHBOOT_MOD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - need_des"]
 pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - need_des"]
-pub type WDT_SYS_RESET_LENGTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WDT_SYS_RESET_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - need_des"]
 pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader;
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - need_des"]
-pub type WDT_CPU_RESET_LENGTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WDT_CPU_RESET_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WDT_STG3` reader - need_des"]
 pub type WDT_STG3_R = crate::FieldReader;
 #[doc = "Field `WDT_STG3` writer - need_des"]
-pub type WDT_STG3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WDT_STG3_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WDT_STG2` reader - need_des"]
 pub type WDT_STG2_R = crate::FieldReader;
 #[doc = "Field `WDT_STG2` writer - need_des"]
-pub type WDT_STG2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WDT_STG2_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WDT_STG1` reader - need_des"]
 pub type WDT_STG1_R = crate::FieldReader;
 #[doc = "Field `WDT_STG1` writer - need_des"]
-pub type WDT_STG1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WDT_STG1_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WDT_STG0` reader - need_des"]
 pub type WDT_STG0_R = crate::FieldReader;
 #[doc = "Field `WDT_STG0` writer - need_des"]
-pub type WDT_STG0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type WDT_STG0_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `WDT_EN` reader - need_des"]
 pub type WDT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EN` writer - need_des"]
-pub type WDT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -168,89 +168,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONFIG0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_chip_reset_width(&mut self) -> WDT_CHIP_RESET_WIDTH_W<CONFIG0_SPEC, 0> {
-        WDT_CHIP_RESET_WIDTH_W::new(self)
+    pub fn wdt_chip_reset_width(&mut self) -> WDT_CHIP_RESET_WIDTH_W<CONFIG0_SPEC> {
+        WDT_CHIP_RESET_WIDTH_W::new(self, 0)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_chip_reset_en(&mut self) -> WDT_CHIP_RESET_EN_W<CONFIG0_SPEC, 8> {
-        WDT_CHIP_RESET_EN_W::new(self)
+    pub fn wdt_chip_reset_en(&mut self) -> WDT_CHIP_RESET_EN_W<CONFIG0_SPEC> {
+        WDT_CHIP_RESET_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<CONFIG0_SPEC, 9> {
-        WDT_PAUSE_IN_SLP_W::new(self)
+    pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<CONFIG0_SPEC> {
+        WDT_PAUSE_IN_SLP_W::new(self, 9)
     }
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<CONFIG0_SPEC, 10> {
-        WDT_APPCPU_RESET_EN_W::new(self)
+    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<CONFIG0_SPEC> {
+        WDT_APPCPU_RESET_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<CONFIG0_SPEC, 11> {
-        WDT_PROCPU_RESET_EN_W::new(self)
+    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<CONFIG0_SPEC> {
+        WDT_PROCPU_RESET_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<CONFIG0_SPEC, 12> {
-        WDT_FLASHBOOT_MOD_EN_W::new(self)
+    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<CONFIG0_SPEC> {
+        WDT_FLASHBOOT_MOD_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<CONFIG0_SPEC, 13> {
-        WDT_SYS_RESET_LENGTH_W::new(self)
+    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<CONFIG0_SPEC> {
+        WDT_SYS_RESET_LENGTH_W::new(self, 13)
     }
     #[doc = "Bits 16:18 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<CONFIG0_SPEC, 16> {
-        WDT_CPU_RESET_LENGTH_W::new(self)
+    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<CONFIG0_SPEC> {
+        WDT_CPU_RESET_LENGTH_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<CONFIG0_SPEC, 19> {
-        WDT_STG3_W::new(self)
+    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<CONFIG0_SPEC> {
+        WDT_STG3_W::new(self, 19)
     }
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<CONFIG0_SPEC, 22> {
-        WDT_STG2_W::new(self)
+    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<CONFIG0_SPEC> {
+        WDT_STG2_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<CONFIG0_SPEC, 25> {
-        WDT_STG1_W::new(self)
+    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<CONFIG0_SPEC> {
+        WDT_STG1_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<CONFIG0_SPEC, 28> {
-        WDT_STG0_W::new(self)
+    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<CONFIG0_SPEC> {
+        WDT_STG0_W::new(self, 28)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_en(&mut self) -> WDT_EN_W<CONFIG0_SPEC, 31> {
-        WDT_EN_W::new(self)
+    pub fn wdt_en(&mut self) -> WDT_EN_W<CONFIG0_SPEC> {
+        WDT_EN_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

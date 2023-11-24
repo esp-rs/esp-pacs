@@ -9,9 +9,11 @@ pub type CH_ERR_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT[0-7]` reader - The interrupt state bit for channel %s's rmt_ch%s_tx_thr_event_int_raw when mt_ch%s_tx_thr_event_int_ena is set to 1."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 impl R {
-    #[doc = "The interrupt state bit for channel [0-7]'s mt_ch[0-7]_tx_end_int_raw when mt_ch[0-7]_tx_end_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel [0-7]'s mt_ch[0-7]_tx_end_int_raw when mt_ch[0-7]_tx_end_int_ena is set to [0-7].\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
-    pub unsafe fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
+    pub fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Bit 0 - The interrupt state bit for channel 0's mt_ch0_tx_end_int_raw when mt_ch0_tx_end_int_ena is set to 0."]
@@ -54,9 +56,11 @@ impl R {
     pub fn ch7_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_rx_end_int_raw when rmt_ch[0-7]_rx_end_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_rx_end_int_raw when rmt_ch[0-7]_rx_end_int_ena is set to [0-7].\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
-    pub unsafe fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
+    pub fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt state bit for channel 0's rmt_ch0_rx_end_int_raw when rmt_ch0_rx_end_int_ena is set to 0."]
@@ -99,9 +103,11 @@ impl R {
     pub fn ch7_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_err_int_raw when rmt_ch[0-7]_err_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_err_int_raw when rmt_ch[0-7]_err_int_ena is set to [0-7].\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
-    pub unsafe fn ch_err(&self, n: u8) -> CH_ERR_R {
+    pub fn ch_err(&self, n: u8) -> CH_ERR_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt state bit for channel 0's rmt_ch0_err_int_raw when rmt_ch0_err_int_ena is set to 0."]
@@ -144,9 +150,11 @@ impl R {
     pub fn ch7_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_tx_thr_event_int_raw when mt_ch[0-7]_tx_thr_event_int_ena is set to 1."]
+    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_tx_thr_event_int_raw when mt_ch[0-7]_tx_thr_event_int_ena is set to 1.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
+    pub fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Bit 24 - The interrupt state bit for channel 0's rmt_ch0_tx_thr_event_int_raw when mt_ch0_tx_thr_event_int_ena is set to 1."]
@@ -256,7 +264,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

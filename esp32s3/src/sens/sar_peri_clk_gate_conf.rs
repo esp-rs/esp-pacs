@@ -5,19 +5,19 @@ pub type W = crate::W<SAR_PERI_CLK_GATE_CONF_SPEC>;
 #[doc = "Field `RTC_I2C_CLK_EN` reader - enable rtc i2c clock"]
 pub type RTC_I2C_CLK_EN_R = crate::BitReader;
 #[doc = "Field `RTC_I2C_CLK_EN` writer - enable rtc i2c clock"]
-pub type RTC_I2C_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_I2C_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_EN` reader - enable tsens clock"]
 pub type TSENS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_EN` writer - enable tsens clock"]
-pub type TSENS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC_CLK_EN` reader - enbale saradc clock"]
 pub type SARADC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_CLK_EN` writer - enbale saradc clock"]
-pub type SARADC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SARADC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IOMUX_CLK_EN` reader - enable io_mux clock"]
 pub type IOMUX_CLK_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_CLK_EN` writer - enable io_mux clock"]
-pub type IOMUX_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IOMUX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 27 - enable rtc i2c clock"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_PERI_CLK_GATE_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 27 - enable rtc i2c clock"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_i2c_clk_en(&mut self) -> RTC_I2C_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 27> {
-        RTC_I2C_CLK_EN_W::new(self)
+    pub fn rtc_i2c_clk_en(&mut self) -> RTC_I2C_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+        RTC_I2C_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 29 - enable tsens clock"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 29> {
-        TSENS_CLK_EN_W::new(self)
+    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+        TSENS_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - enbale saradc clock"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 30> {
-        SARADC_CLK_EN_W::new(self)
+    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+        SARADC_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable io_mux clock"]
     #[inline(always)]
     #[must_use]
-    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC, 31> {
-        IOMUX_CLK_EN_W::new(self)
+    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+        IOMUX_CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

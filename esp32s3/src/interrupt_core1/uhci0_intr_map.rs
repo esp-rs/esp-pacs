@@ -5,7 +5,7 @@ pub type W = crate::W<UHCI0_INTR_MAP_SPEC>;
 #[doc = "Field `UHCI0_INTR_MAP` reader - this register used to map uhci0 interrupt to one of core1's external interrupt"]
 pub type UHCI0_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `UHCI0_INTR_MAP` writer - this register used to map uhci0 interrupt to one of core1's external interrupt"]
-pub type UHCI0_INTR_MAP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type UHCI0_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map uhci0 interrupt to one of core1's external interrupt"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<UHCI0_INTR_MAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - this register used to map uhci0 interrupt to one of core1's external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn uhci0_intr_map(&mut self) -> UHCI0_INTR_MAP_W<UHCI0_INTR_MAP_SPEC, 0> {
-        UHCI0_INTR_MAP_W::new(self)
+    pub fn uhci0_intr_map(&mut self) -> UHCI0_INTR_MAP_W<UHCI0_INTR_MAP_SPEC> {
+        UHCI0_INTR_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

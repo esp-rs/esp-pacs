@@ -5,11 +5,11 @@ pub type W = crate::W<SAR_SLAVE_ADDR1_SPEC>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR1` reader - configure i2c slave address1"]
 pub type SAR_I2C_SLAVE_ADDR1_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR1` writer - configure i2c slave address1"]
-pub type SAR_I2C_SLAVE_ADDR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SAR_I2C_SLAVE_ADDR1_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR0` reader - configure i2c slave address0"]
 pub type SAR_I2C_SLAVE_ADDR0_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR0` writer - configure i2c slave address0"]
-pub type SAR_I2C_SLAVE_ADDR0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SAR_I2C_SLAVE_ADDR0_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SAR_SARADC_MEAS_STATUS` reader - no public"]
 pub type SAR_SARADC_MEAS_STATUS_R = crate::FieldReader;
 impl R {
@@ -51,21 +51,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_SLAVE_ADDR1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10 - configure i2c slave address1"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_slave_addr1(&mut self) -> SAR_I2C_SLAVE_ADDR1_W<SAR_SLAVE_ADDR1_SPEC, 0> {
-        SAR_I2C_SLAVE_ADDR1_W::new(self)
+    pub fn sar_i2c_slave_addr1(&mut self) -> SAR_I2C_SLAVE_ADDR1_W<SAR_SLAVE_ADDR1_SPEC> {
+        SAR_I2C_SLAVE_ADDR1_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - configure i2c slave address0"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_i2c_slave_addr0(&mut self) -> SAR_I2C_SLAVE_ADDR0_W<SAR_SLAVE_ADDR1_SPEC, 11> {
-        SAR_I2C_SLAVE_ADDR0_W::new(self)
+    pub fn sar_i2c_slave_addr0(&mut self) -> SAR_I2C_SLAVE_ADDR0_W<SAR_SLAVE_ADDR1_SPEC> {
+        SAR_I2C_SLAVE_ADDR0_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

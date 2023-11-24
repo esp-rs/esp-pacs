@@ -5,27 +5,27 @@ pub type W = crate::W<PERIP_RST_EN1_SPEC>;
 #[doc = "Field `CRYPTO_AES_RST` reader - Set this bit to reset cryptography AES."]
 pub type CRYPTO_AES_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_AES_RST` writer - Set this bit to reset cryptography AES."]
-pub type CRYPTO_AES_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_AES_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_SHA_RST` reader - Set this bit to reset cryptography SHA."]
 pub type CRYPTO_SHA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_RST` writer - Set this bit to reset cryptography SHA."]
-pub type CRYPTO_SHA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_SHA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_RSA_RST` reader - Set this bit to reset cryptography RSA."]
 pub type CRYPTO_RSA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_RSA_RST` writer - Set this bit to reset cryptography RSA."]
-pub type CRYPTO_RSA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_RSA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_DS_RST` reader - Set this bit to reset cryptography digital signature."]
 pub type CRYPTO_DS_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DS_RST` writer - Set this bit to reset cryptography digital signature."]
-pub type CRYPTO_DS_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_DS_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_HMAC_RST` reader - Set this bit to reset cryptography HMAC."]
 pub type CRYPTO_HMAC_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_HMAC_RST` writer - Set this bit to reset cryptography HMAC."]
-pub type CRYPTO_HMAC_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_HMAC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_DMA_RST` reader - Set this bit to reset cryptography DMA."]
 pub type CRYPTO_DMA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DMA_RST` writer - Set this bit to reset cryptography DMA."]
-pub type CRYPTO_DMA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_DMA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Set this bit to reset cryptography AES."]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Set this bit to reset cryptography AES."]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<PERIP_RST_EN1_SPEC, 1> {
-        CRYPTO_AES_RST_W::new(self)
+    pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_AES_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset cryptography SHA."]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERIP_RST_EN1_SPEC, 2> {
-        CRYPTO_SHA_RST_W::new(self)
+    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_SHA_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset cryptography RSA."]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<PERIP_RST_EN1_SPEC, 3> {
-        CRYPTO_RSA_RST_W::new(self)
+    pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_RSA_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to reset cryptography digital signature."]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_ds_rst(&mut self) -> CRYPTO_DS_RST_W<PERIP_RST_EN1_SPEC, 4> {
-        CRYPTO_DS_RST_W::new(self)
+    pub fn crypto_ds_rst(&mut self) -> CRYPTO_DS_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_DS_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to reset cryptography HMAC."]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_hmac_rst(&mut self) -> CRYPTO_HMAC_RST_W<PERIP_RST_EN1_SPEC, 5> {
-        CRYPTO_HMAC_RST_W::new(self)
+    pub fn crypto_hmac_rst(&mut self) -> CRYPTO_HMAC_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_HMAC_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to reset cryptography DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_dma_rst(&mut self) -> CRYPTO_DMA_RST_W<PERIP_RST_EN1_SPEC, 6> {
-        CRYPTO_DMA_RST_W::new(self)
+    pub fn crypto_dma_rst(&mut self) -> CRYPTO_DMA_RST_W<PERIP_RST_EN1_SPEC> {
+        CRYPTO_DMA_RST_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

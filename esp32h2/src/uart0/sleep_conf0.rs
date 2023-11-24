@@ -5,19 +5,19 @@ pub type W = crate::W<SLEEP_CONF0_SPEC>;
 #[doc = "Field `WK_CHAR1` reader - This register restores the specified wake up char1 to wake up"]
 pub type WK_CHAR1_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR1` writer - This register restores the specified wake up char1 to wake up"]
-pub type WK_CHAR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WK_CHAR1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WK_CHAR2` reader - This register restores the specified wake up char2 to wake up"]
 pub type WK_CHAR2_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR2` writer - This register restores the specified wake up char2 to wake up"]
-pub type WK_CHAR2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WK_CHAR2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WK_CHAR3` reader - This register restores the specified wake up char3 to wake up"]
 pub type WK_CHAR3_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR3` writer - This register restores the specified wake up char3 to wake up"]
-pub type WK_CHAR3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WK_CHAR3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `WK_CHAR4` reader - This register restores the specified wake up char4 to wake up"]
 pub type WK_CHAR4_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR4` writer - This register restores the specified wake up char4 to wake up"]
-pub type WK_CHAR4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type WK_CHAR4_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - This register restores the specified wake up char1 to wake up"]
     #[inline(always)]
@@ -54,33 +54,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLEEP_CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register restores the specified wake up char1 to wake up"]
     #[inline(always)]
     #[must_use]
-    pub fn wk_char1(&mut self) -> WK_CHAR1_W<SLEEP_CONF0_SPEC, 0> {
-        WK_CHAR1_W::new(self)
+    pub fn wk_char1(&mut self) -> WK_CHAR1_W<SLEEP_CONF0_SPEC> {
+        WK_CHAR1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register restores the specified wake up char2 to wake up"]
     #[inline(always)]
     #[must_use]
-    pub fn wk_char2(&mut self) -> WK_CHAR2_W<SLEEP_CONF0_SPEC, 8> {
-        WK_CHAR2_W::new(self)
+    pub fn wk_char2(&mut self) -> WK_CHAR2_W<SLEEP_CONF0_SPEC> {
+        WK_CHAR2_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - This register restores the specified wake up char3 to wake up"]
     #[inline(always)]
     #[must_use]
-    pub fn wk_char3(&mut self) -> WK_CHAR3_W<SLEEP_CONF0_SPEC, 16> {
-        WK_CHAR3_W::new(self)
+    pub fn wk_char3(&mut self) -> WK_CHAR3_W<SLEEP_CONF0_SPEC> {
+        WK_CHAR3_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - This register restores the specified wake up char4 to wake up"]
     #[inline(always)]
     #[must_use]
-    pub fn wk_char4(&mut self) -> WK_CHAR4_W<SLEEP_CONF0_SPEC, 24> {
-        WK_CHAR4_W::new(self)
+    pub fn wk_char4(&mut self) -> WK_CHAR4_W<SLEEP_CONF0_SPEC> {
+        WK_CHAR4_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

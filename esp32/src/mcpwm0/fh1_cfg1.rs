@@ -5,19 +5,19 @@ pub type W = crate::W<FH1_CFG1_SPEC>;
 #[doc = "Field `FH1_CLR_OST` reader - "]
 pub type FH1_CLR_OST_R = crate::BitReader;
 #[doc = "Field `FH1_CLR_OST` writer - "]
-pub type FH1_CLR_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_CLR_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_CBCPULSE` reader - "]
 pub type FH1_CBCPULSE_R = crate::FieldReader;
 #[doc = "Field `FH1_CBCPULSE` writer - "]
-pub type FH1_CBCPULSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_CBCPULSE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_FORCE_CBC` reader - "]
 pub type FH1_FORCE_CBC_R = crate::BitReader;
 #[doc = "Field `FH1_FORCE_CBC` writer - "]
-pub type FH1_FORCE_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_FORCE_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_FORCE_OST` reader - "]
 pub type FH1_FORCE_OST_R = crate::BitReader;
 #[doc = "Field `FH1_FORCE_OST` writer - "]
-pub type FH1_FORCE_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_FORCE_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -63,33 +63,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FH1_CFG1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_clr_ost(&mut self) -> FH1_CLR_OST_W<FH1_CFG1_SPEC, 0> {
-        FH1_CLR_OST_W::new(self)
+    pub fn fh1_clr_ost(&mut self) -> FH1_CLR_OST_W<FH1_CFG1_SPEC> {
+        FH1_CLR_OST_W::new(self, 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_cbcpulse(&mut self) -> FH1_CBCPULSE_W<FH1_CFG1_SPEC, 1> {
-        FH1_CBCPULSE_W::new(self)
+    pub fn fh1_cbcpulse(&mut self) -> FH1_CBCPULSE_W<FH1_CFG1_SPEC> {
+        FH1_CBCPULSE_W::new(self, 1)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_force_cbc(&mut self) -> FH1_FORCE_CBC_W<FH1_CFG1_SPEC, 3> {
-        FH1_FORCE_CBC_W::new(self)
+    pub fn fh1_force_cbc(&mut self) -> FH1_FORCE_CBC_W<FH1_CFG1_SPEC> {
+        FH1_FORCE_CBC_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_force_ost(&mut self) -> FH1_FORCE_OST_W<FH1_CFG1_SPEC, 4> {
-        FH1_FORCE_OST_W::new(self)
+    pub fn fh1_force_ost(&mut self) -> FH1_FORCE_OST_W<FH1_CFG1_SPEC> {
+        FH1_FORCE_OST_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,33 +5,28 @@ pub type W = crate::W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` reader - core_x_iram0_pms_constrain_sram_world_1_pms_0"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` writer - core_x_iram0_pms_constrain_sram_world_1_pms_0"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` reader - core_x_iram0_pms_constrain_sram_world_1_pms_1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` writer - core_x_iram0_pms_constrain_sram_world_1_pms_1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` reader - core_x_iram0_pms_constrain_sram_world_1_pms_2"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` writer - core_x_iram0_pms_constrain_sram_world_1_pms_2"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` reader - core_x_iram0_pms_constrain_sram_world_1_pms_3"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` writer - core_x_iram0_pms_constrain_sram_world_1_pms_3"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0` reader - core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_0"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0` writer - core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_0"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS` reader - core_x_iram0_pms_constrain_rom_world_1_pms"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS` writer - core_x_iram0_pms_constrain_rom_world_1_pms"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 3, O>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - core_x_iram0_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
@@ -131,7 +126,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -140,32 +135,32 @@ impl W {
     #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_0(
         &mut self,
-    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC, 0> {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self)
+    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - core_x_iram0_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
     #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_1(
         &mut self,
-    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC, 3> {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self)
+    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - core_x_iram0_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
     #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_2(
         &mut self,
-    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC, 6> {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self)
+    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - core_x_iram0_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
     #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_3(
         &mut self,
-    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC, 9> {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self)
+    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_0"]
     #[inline(always)]
@@ -174,17 +169,16 @@ impl W {
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<
         CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC,
-        12,
     > {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W::new(self)
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W::new(self, 12)
     }
     #[doc = "Bits 18:20 - core_x_iram0_pms_constrain_rom_world_1_pms"]
     #[inline(always)]
     #[must_use]
     pub fn core_x_iram0_pms_constrain_rom_world_1_pms(
         &mut self,
-    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC, 18> {
-        CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W::new(self)
+    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC> {
+        CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

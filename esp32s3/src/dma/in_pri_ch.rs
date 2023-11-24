@@ -5,7 +5,7 @@ pub type W = crate::W<IN_PRI_CH_SPEC>;
 #[doc = "Field `RX_PRI` reader - The priority of Rx channel 0. The larger of the value, the higher of the priority."]
 pub type RX_PRI_R = crate::FieldReader;
 #[doc = "Field `RX_PRI` writer - The priority of Rx channel 0. The larger of the value, the higher of the priority."]
-pub type RX_PRI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RX_PRI_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - The priority of Rx channel 0. The larger of the value, the higher of the priority."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<IN_PRI_CH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - The priority of Rx channel 0. The larger of the value, the higher of the priority."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pri(&mut self) -> RX_PRI_W<IN_PRI_CH_SPEC, 0> {
-        RX_PRI_W::new(self)
+    pub fn rx_pri(&mut self) -> RX_PRI_W<IN_PRI_CH_SPEC> {
+        RX_PRI_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

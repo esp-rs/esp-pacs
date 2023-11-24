@@ -7,23 +7,23 @@ pub type RECORD_PRO_PDEBUGINST_R = crate::FieldReader<u32>;
 #[doc = "Field `RECORD_PDEBUGINST_SZ` reader - "]
 pub type RECORD_PDEBUGINST_SZ_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGINST_SZ` writer - "]
-pub type RECORD_PDEBUGINST_SZ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RECORD_PDEBUGINST_SZ_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RECORD_PDEBUGINST_ISRC` reader - "]
 pub type RECORD_PDEBUGINST_ISRC_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGINST_ISRC` writer - "]
-pub type RECORD_PDEBUGINST_ISRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RECORD_PDEBUGINST_ISRC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP_REP` reader - "]
 pub type RECORD_PDEBUGINST_LOOP_REP_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP_REP` writer - "]
-pub type RECORD_PDEBUGINST_LOOP_REP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGINST_LOOP_REP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP` reader - "]
 pub type RECORD_PDEBUGINST_LOOP_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP` writer - "]
-pub type RECORD_PDEBUGINST_LOOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RECORD_PDEBUGINST_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RECORD_PDEBUGINST_CINTL` reader - "]
 pub type RECORD_PDEBUGINST_CINTL_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGINST_CINTL` writer - "]
-pub type RECORD_PDEBUGINST_CINTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RECORD_PDEBUGINST_CINTL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -90,7 +90,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -99,40 +99,40 @@ impl W {
     #[must_use]
     pub fn record_pdebuginst_sz(
         &mut self,
-    ) -> RECORD_PDEBUGINST_SZ_W<PRO_CPU_RECORD_PDEBUGINST_SPEC, 0> {
-        RECORD_PDEBUGINST_SZ_W::new(self)
+    ) -> RECORD_PDEBUGINST_SZ_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+        RECORD_PDEBUGINST_SZ_W::new(self, 0)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebuginst_isrc(
         &mut self,
-    ) -> RECORD_PDEBUGINST_ISRC_W<PRO_CPU_RECORD_PDEBUGINST_SPEC, 12> {
-        RECORD_PDEBUGINST_ISRC_W::new(self)
+    ) -> RECORD_PDEBUGINST_ISRC_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+        RECORD_PDEBUGINST_ISRC_W::new(self, 12)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebuginst_loop_rep(
         &mut self,
-    ) -> RECORD_PDEBUGINST_LOOP_REP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC, 20> {
-        RECORD_PDEBUGINST_LOOP_REP_W::new(self)
+    ) -> RECORD_PDEBUGINST_LOOP_REP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+        RECORD_PDEBUGINST_LOOP_REP_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebuginst_loop(
         &mut self,
-    ) -> RECORD_PDEBUGINST_LOOP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC, 21> {
-        RECORD_PDEBUGINST_LOOP_W::new(self)
+    ) -> RECORD_PDEBUGINST_LOOP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+        RECORD_PDEBUGINST_LOOP_W::new(self, 21)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
     #[must_use]
     pub fn record_pdebuginst_cintl(
         &mut self,
-    ) -> RECORD_PDEBUGINST_CINTL_W<PRO_CPU_RECORD_PDEBUGINST_SPEC, 24> {
-        RECORD_PDEBUGINST_CINTL_W::new(self)
+    ) -> RECORD_PDEBUGINST_CINTL_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+        RECORD_PDEBUGINST_CINTL_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

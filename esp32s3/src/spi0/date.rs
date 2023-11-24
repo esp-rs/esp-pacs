@@ -5,19 +5,19 @@ pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `SPI_SMEM_SPICLK_FUN_DRV` reader - The driver of SPI_CLK PAD is controlled by the bits SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
 pub type SPI_SMEM_SPICLK_FUN_DRV_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_SPICLK_FUN_DRV` writer - The driver of SPI_CLK PAD is controlled by the bits SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
-pub type SPI_SMEM_SPICLK_FUN_DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI_SMEM_SPICLK_FUN_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI_FMEM_SPICLK_FUN_DRV` reader - The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to flash."]
 pub type SPI_FMEM_SPICLK_FUN_DRV_R = crate::FieldReader;
 #[doc = "Field `SPI_FMEM_SPICLK_FUN_DRV` writer - The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to flash."]
-pub type SPI_FMEM_SPICLK_FUN_DRV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPI_FMEM_SPICLK_FUN_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPI_SPICLK_PAD_DRV_CTL_EN` reader - SPI_CLK PAD driver control signal. 1: The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] and SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\]. 0: The driver of SPI_CLK PAD is controlled by the bits IO_MUX_FUNC_DRV\\[1:0\\] of SPICLK PAD."]
 pub type SPI_SPICLK_PAD_DRV_CTL_EN_R = crate::BitReader;
 #[doc = "Field `SPI_SPICLK_PAD_DRV_CTL_EN` writer - SPI_CLK PAD driver control signal. 1: The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] and SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\]. 0: The driver of SPI_CLK PAD is controlled by the bits IO_MUX_FUNC_DRV\\[1:0\\] of SPICLK PAD."]
-pub type SPI_SPICLK_PAD_DRV_CTL_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_SPICLK_PAD_DRV_CTL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATE` reader - SPI register version."]
 pub type DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `DATE` writer - SPI register version."]
-pub type DATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 23, O, u32>;
+pub type DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 23, u32>;
 impl R {
     #[doc = "Bits 0:1 - The driver of SPI_CLK PAD is controlled by the bits SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
     #[inline(always)]
@@ -63,33 +63,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - The driver of SPI_CLK PAD is controlled by the bits SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_smem_spiclk_fun_drv(&mut self) -> SPI_SMEM_SPICLK_FUN_DRV_W<DATE_SPEC, 0> {
-        SPI_SMEM_SPICLK_FUN_DRV_W::new(self)
+    pub fn spi_smem_spiclk_fun_drv(&mut self) -> SPI_SMEM_SPICLK_FUN_DRV_W<DATE_SPEC> {
+        SPI_SMEM_SPICLK_FUN_DRV_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to flash."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_fmem_spiclk_fun_drv(&mut self) -> SPI_FMEM_SPICLK_FUN_DRV_W<DATE_SPEC, 2> {
-        SPI_FMEM_SPICLK_FUN_DRV_W::new(self)
+    pub fn spi_fmem_spiclk_fun_drv(&mut self) -> SPI_FMEM_SPICLK_FUN_DRV_W<DATE_SPEC> {
+        SPI_FMEM_SPICLK_FUN_DRV_W::new(self, 2)
     }
     #[doc = "Bit 4 - SPI_CLK PAD driver control signal. 1: The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] and SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\]. 0: The driver of SPI_CLK PAD is controlled by the bits IO_MUX_FUNC_DRV\\[1:0\\] of SPICLK PAD."]
     #[inline(always)]
     #[must_use]
-    pub fn spi_spiclk_pad_drv_ctl_en(&mut self) -> SPI_SPICLK_PAD_DRV_CTL_EN_W<DATE_SPEC, 4> {
-        SPI_SPICLK_PAD_DRV_CTL_EN_W::new(self)
+    pub fn spi_spiclk_pad_drv_ctl_en(&mut self) -> SPI_SPICLK_PAD_DRV_CTL_EN_W<DATE_SPEC> {
+        SPI_SPICLK_PAD_DRV_CTL_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:27 - SPI register version."]
     #[inline(always)]
     #[must_use]
-    pub fn date(&mut self) -> DATE_W<DATE_SPEC, 5> {
-        DATE_W::new(self)
+    pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
+        DATE_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

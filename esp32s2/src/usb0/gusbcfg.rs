@@ -5,51 +5,51 @@ pub type W = crate::W<GUSBCFG_SPEC>;
 #[doc = "Field `TOUTCAL` reader - "]
 pub type TOUTCAL_R = crate::FieldReader;
 #[doc = "Field `TOUTCAL` writer - "]
-pub type TOUTCAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUTCAL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PHYIF` reader - "]
 pub type PHYIF_R = crate::BitReader;
 #[doc = "Field `PHYIF` writer - "]
-pub type PHYIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PHYIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULPI_UTMI_SEL` reader - "]
 pub type ULPI_UTMI_SEL_R = crate::BitReader;
 #[doc = "Field `FSINTF` reader - "]
 pub type FSINTF_R = crate::BitReader;
 #[doc = "Field `FSINTF` writer - "]
-pub type FSINTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FSINTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PHYSEL` reader - "]
 pub type PHYSEL_R = crate::BitReader;
 #[doc = "Field `SRPCAP` reader - "]
 pub type SRPCAP_R = crate::BitReader;
 #[doc = "Field `SRPCAP` writer - "]
-pub type SRPCAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRPCAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HNPCAP` reader - "]
 pub type HNPCAP_R = crate::BitReader;
 #[doc = "Field `HNPCAP` writer - "]
-pub type HNPCAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNPCAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBTRDTIM` reader - "]
 pub type USBTRDTIM_R = crate::FieldReader;
 #[doc = "Field `USBTRDTIM` writer - "]
-pub type USBTRDTIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USBTRDTIM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TERMSELDLPULSE` reader - "]
 pub type TERMSELDLPULSE_R = crate::BitReader;
 #[doc = "Field `TERMSELDLPULSE` writer - "]
-pub type TERMSELDLPULSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TERMSELDLPULSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXENDDELAY` reader - "]
 pub type TXENDDELAY_R = crate::BitReader;
 #[doc = "Field `TXENDDELAY` writer - "]
-pub type TXENDDELAY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXENDDELAY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCEHSTMODE` reader - "]
 pub type FORCEHSTMODE_R = crate::BitReader;
 #[doc = "Field `FORCEHSTMODE` writer - "]
-pub type FORCEHSTMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCEHSTMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCEDEVMODE` reader - "]
 pub type FORCEDEVMODE_R = crate::BitReader;
 #[doc = "Field `FORCEDEVMODE` writer - "]
-pub type FORCEDEVMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCEDEVMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CORRUPTTXPKT` reader - "]
 pub type CORRUPTTXPKT_R = crate::BitReader;
 #[doc = "Field `CORRUPTTXPKT` writer - "]
-pub type CORRUPTTXPKT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORRUPTTXPKT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -155,75 +155,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GUSBCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn toutcal(&mut self) -> TOUTCAL_W<GUSBCFG_SPEC, 0> {
-        TOUTCAL_W::new(self)
+    pub fn toutcal(&mut self) -> TOUTCAL_W<GUSBCFG_SPEC> {
+        TOUTCAL_W::new(self, 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn phyif(&mut self) -> PHYIF_W<GUSBCFG_SPEC, 3> {
-        PHYIF_W::new(self)
+    pub fn phyif(&mut self) -> PHYIF_W<GUSBCFG_SPEC> {
+        PHYIF_W::new(self, 3)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn fsintf(&mut self) -> FSINTF_W<GUSBCFG_SPEC, 5> {
-        FSINTF_W::new(self)
+    pub fn fsintf(&mut self) -> FSINTF_W<GUSBCFG_SPEC> {
+        FSINTF_W::new(self, 5)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn srpcap(&mut self) -> SRPCAP_W<GUSBCFG_SPEC, 8> {
-        SRPCAP_W::new(self)
+    pub fn srpcap(&mut self) -> SRPCAP_W<GUSBCFG_SPEC> {
+        SRPCAP_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn hnpcap(&mut self) -> HNPCAP_W<GUSBCFG_SPEC, 9> {
-        HNPCAP_W::new(self)
+    pub fn hnpcap(&mut self) -> HNPCAP_W<GUSBCFG_SPEC> {
+        HNPCAP_W::new(self, 9)
     }
     #[doc = "Bits 10:13"]
     #[inline(always)]
     #[must_use]
-    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<GUSBCFG_SPEC, 10> {
-        USBTRDTIM_W::new(self)
+    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<GUSBCFG_SPEC> {
+        USBTRDTIM_W::new(self, 10)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn termseldlpulse(&mut self) -> TERMSELDLPULSE_W<GUSBCFG_SPEC, 22> {
-        TERMSELDLPULSE_W::new(self)
+    pub fn termseldlpulse(&mut self) -> TERMSELDLPULSE_W<GUSBCFG_SPEC> {
+        TERMSELDLPULSE_W::new(self, 22)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn txenddelay(&mut self) -> TXENDDELAY_W<GUSBCFG_SPEC, 28> {
-        TXENDDELAY_W::new(self)
+    pub fn txenddelay(&mut self) -> TXENDDELAY_W<GUSBCFG_SPEC> {
+        TXENDDELAY_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn forcehstmode(&mut self) -> FORCEHSTMODE_W<GUSBCFG_SPEC, 29> {
-        FORCEHSTMODE_W::new(self)
+    pub fn forcehstmode(&mut self) -> FORCEHSTMODE_W<GUSBCFG_SPEC> {
+        FORCEHSTMODE_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn forcedevmode(&mut self) -> FORCEDEVMODE_W<GUSBCFG_SPEC, 30> {
-        FORCEDEVMODE_W::new(self)
+    pub fn forcedevmode(&mut self) -> FORCEDEVMODE_W<GUSBCFG_SPEC> {
+        FORCEDEVMODE_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn corrupttxpkt(&mut self) -> CORRUPTTXPKT_W<GUSBCFG_SPEC, 31> {
-        CORRUPTTXPKT_W::new(self)
+    pub fn corrupttxpkt(&mut self) -> CORRUPTTXPKT_W<GUSBCFG_SPEC> {
+        CORRUPTTXPKT_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

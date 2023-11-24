@@ -5,67 +5,67 @@ pub type W = crate::W<FH1_CFG0_SPEC>;
 #[doc = "Field `FH1_SW_CBC` reader - "]
 pub type FH1_SW_CBC_R = crate::BitReader;
 #[doc = "Field `FH1_SW_CBC` writer - "]
-pub type FH1_SW_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_SW_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_F2_CBC` reader - "]
 pub type FH1_F2_CBC_R = crate::BitReader;
 #[doc = "Field `FH1_F2_CBC` writer - "]
-pub type FH1_F2_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_F2_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_F1_CBC` reader - "]
 pub type FH1_F1_CBC_R = crate::BitReader;
 #[doc = "Field `FH1_F1_CBC` writer - "]
-pub type FH1_F1_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_F1_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_F0_CBC` reader - "]
 pub type FH1_F0_CBC_R = crate::BitReader;
 #[doc = "Field `FH1_F0_CBC` writer - "]
-pub type FH1_F0_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_F0_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_SW_OST` reader - "]
 pub type FH1_SW_OST_R = crate::BitReader;
 #[doc = "Field `FH1_SW_OST` writer - "]
-pub type FH1_SW_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_SW_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_F2_OST` reader - "]
 pub type FH1_F2_OST_R = crate::BitReader;
 #[doc = "Field `FH1_F2_OST` writer - "]
-pub type FH1_F2_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_F2_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_F1_OST` reader - "]
 pub type FH1_F1_OST_R = crate::BitReader;
 #[doc = "Field `FH1_F1_OST` writer - "]
-pub type FH1_F1_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_F1_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_F0_OST` reader - "]
 pub type FH1_F0_OST_R = crate::BitReader;
 #[doc = "Field `FH1_F0_OST` writer - "]
-pub type FH1_F0_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FH1_F0_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FH1_A_CBC_D` reader - "]
 pub type FH1_A_CBC_D_R = crate::FieldReader;
 #[doc = "Field `FH1_A_CBC_D` writer - "]
-pub type FH1_A_CBC_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_A_CBC_D_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_A_CBC_U` reader - "]
 pub type FH1_A_CBC_U_R = crate::FieldReader;
 #[doc = "Field `FH1_A_CBC_U` writer - "]
-pub type FH1_A_CBC_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_A_CBC_U_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_A_OST_D` reader - "]
 pub type FH1_A_OST_D_R = crate::FieldReader;
 #[doc = "Field `FH1_A_OST_D` writer - "]
-pub type FH1_A_OST_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_A_OST_D_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_A_OST_U` reader - "]
 pub type FH1_A_OST_U_R = crate::FieldReader;
 #[doc = "Field `FH1_A_OST_U` writer - "]
-pub type FH1_A_OST_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_A_OST_U_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_B_CBC_D` reader - "]
 pub type FH1_B_CBC_D_R = crate::FieldReader;
 #[doc = "Field `FH1_B_CBC_D` writer - "]
-pub type FH1_B_CBC_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_B_CBC_D_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_B_CBC_U` reader - "]
 pub type FH1_B_CBC_U_R = crate::FieldReader;
 #[doc = "Field `FH1_B_CBC_U` writer - "]
-pub type FH1_B_CBC_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_B_CBC_U_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_B_OST_D` reader - "]
 pub type FH1_B_OST_D_R = crate::FieldReader;
 #[doc = "Field `FH1_B_OST_D` writer - "]
-pub type FH1_B_OST_D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_B_OST_D_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FH1_B_OST_U` reader - "]
 pub type FH1_B_OST_U_R = crate::FieldReader;
 #[doc = "Field `FH1_B_OST_U` writer - "]
-pub type FH1_B_OST_U_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FH1_B_OST_U_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -198,105 +198,105 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FH1_CFG0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_sw_cbc(&mut self) -> FH1_SW_CBC_W<FH1_CFG0_SPEC, 0> {
-        FH1_SW_CBC_W::new(self)
+    pub fn fh1_sw_cbc(&mut self) -> FH1_SW_CBC_W<FH1_CFG0_SPEC> {
+        FH1_SW_CBC_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_f2_cbc(&mut self) -> FH1_F2_CBC_W<FH1_CFG0_SPEC, 1> {
-        FH1_F2_CBC_W::new(self)
+    pub fn fh1_f2_cbc(&mut self) -> FH1_F2_CBC_W<FH1_CFG0_SPEC> {
+        FH1_F2_CBC_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_f1_cbc(&mut self) -> FH1_F1_CBC_W<FH1_CFG0_SPEC, 2> {
-        FH1_F1_CBC_W::new(self)
+    pub fn fh1_f1_cbc(&mut self) -> FH1_F1_CBC_W<FH1_CFG0_SPEC> {
+        FH1_F1_CBC_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_f0_cbc(&mut self) -> FH1_F0_CBC_W<FH1_CFG0_SPEC, 3> {
-        FH1_F0_CBC_W::new(self)
+    pub fn fh1_f0_cbc(&mut self) -> FH1_F0_CBC_W<FH1_CFG0_SPEC> {
+        FH1_F0_CBC_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_sw_ost(&mut self) -> FH1_SW_OST_W<FH1_CFG0_SPEC, 4> {
-        FH1_SW_OST_W::new(self)
+    pub fn fh1_sw_ost(&mut self) -> FH1_SW_OST_W<FH1_CFG0_SPEC> {
+        FH1_SW_OST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_f2_ost(&mut self) -> FH1_F2_OST_W<FH1_CFG0_SPEC, 5> {
-        FH1_F2_OST_W::new(self)
+    pub fn fh1_f2_ost(&mut self) -> FH1_F2_OST_W<FH1_CFG0_SPEC> {
+        FH1_F2_OST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_f1_ost(&mut self) -> FH1_F1_OST_W<FH1_CFG0_SPEC, 6> {
-        FH1_F1_OST_W::new(self)
+    pub fn fh1_f1_ost(&mut self) -> FH1_F1_OST_W<FH1_CFG0_SPEC> {
+        FH1_F1_OST_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_f0_ost(&mut self) -> FH1_F0_OST_W<FH1_CFG0_SPEC, 7> {
-        FH1_F0_OST_W::new(self)
+    pub fn fh1_f0_ost(&mut self) -> FH1_F0_OST_W<FH1_CFG0_SPEC> {
+        FH1_F0_OST_W::new(self, 7)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_a_cbc_d(&mut self) -> FH1_A_CBC_D_W<FH1_CFG0_SPEC, 8> {
-        FH1_A_CBC_D_W::new(self)
+    pub fn fh1_a_cbc_d(&mut self) -> FH1_A_CBC_D_W<FH1_CFG0_SPEC> {
+        FH1_A_CBC_D_W::new(self, 8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_a_cbc_u(&mut self) -> FH1_A_CBC_U_W<FH1_CFG0_SPEC, 10> {
-        FH1_A_CBC_U_W::new(self)
+    pub fn fh1_a_cbc_u(&mut self) -> FH1_A_CBC_U_W<FH1_CFG0_SPEC> {
+        FH1_A_CBC_U_W::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_a_ost_d(&mut self) -> FH1_A_OST_D_W<FH1_CFG0_SPEC, 12> {
-        FH1_A_OST_D_W::new(self)
+    pub fn fh1_a_ost_d(&mut self) -> FH1_A_OST_D_W<FH1_CFG0_SPEC> {
+        FH1_A_OST_D_W::new(self, 12)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_a_ost_u(&mut self) -> FH1_A_OST_U_W<FH1_CFG0_SPEC, 14> {
-        FH1_A_OST_U_W::new(self)
+    pub fn fh1_a_ost_u(&mut self) -> FH1_A_OST_U_W<FH1_CFG0_SPEC> {
+        FH1_A_OST_U_W::new(self, 14)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_b_cbc_d(&mut self) -> FH1_B_CBC_D_W<FH1_CFG0_SPEC, 16> {
-        FH1_B_CBC_D_W::new(self)
+    pub fn fh1_b_cbc_d(&mut self) -> FH1_B_CBC_D_W<FH1_CFG0_SPEC> {
+        FH1_B_CBC_D_W::new(self, 16)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_b_cbc_u(&mut self) -> FH1_B_CBC_U_W<FH1_CFG0_SPEC, 18> {
-        FH1_B_CBC_U_W::new(self)
+    pub fn fh1_b_cbc_u(&mut self) -> FH1_B_CBC_U_W<FH1_CFG0_SPEC> {
+        FH1_B_CBC_U_W::new(self, 18)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_b_ost_d(&mut self) -> FH1_B_OST_D_W<FH1_CFG0_SPEC, 20> {
-        FH1_B_OST_D_W::new(self)
+    pub fn fh1_b_ost_d(&mut self) -> FH1_B_OST_D_W<FH1_CFG0_SPEC> {
+        FH1_B_OST_D_W::new(self, 20)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     #[must_use]
-    pub fn fh1_b_ost_u(&mut self) -> FH1_B_OST_U_W<FH1_CFG0_SPEC, 22> {
-        FH1_B_OST_U_W::new(self)
+    pub fn fh1_b_ost_u(&mut self) -> FH1_B_OST_U_W<FH1_CFG0_SPEC> {
+        FH1_B_OST_U_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

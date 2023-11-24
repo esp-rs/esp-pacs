@@ -5,11 +5,11 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `OVERFLOW_RAW` reader - need_des"]
 pub type OVERFLOW_RAW_R = crate::BitReader;
 #[doc = "Field `OVERFLOW_RAW` writer - need_des"]
-pub type OVERFLOW_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVERFLOW_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOC_WAKEUP_INT_RAW` reader - need_des"]
 pub type SOC_WAKEUP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SOC_WAKEUP_INT_RAW` writer - need_des"]
-pub type SOC_WAKEUP_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOC_WAKEUP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn overflow_raw(&mut self) -> OVERFLOW_RAW_W<INT_RAW_SPEC, 30> {
-        OVERFLOW_RAW_W::new(self)
+    pub fn overflow_raw(&mut self) -> OVERFLOW_RAW_W<INT_RAW_SPEC> {
+        OVERFLOW_RAW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn soc_wakeup_int_raw(&mut self) -> SOC_WAKEUP_INT_RAW_W<INT_RAW_SPEC, 31> {
-        SOC_WAKEUP_INT_RAW_W::new(self)
+    pub fn soc_wakeup_int_raw(&mut self) -> SOC_WAKEUP_INT_RAW_W<INT_RAW_SPEC> {
+        SOC_WAKEUP_INT_RAW_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

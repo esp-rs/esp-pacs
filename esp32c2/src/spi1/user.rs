@@ -5,55 +5,55 @@ pub type W = crate::W<USER_SPEC>;
 #[doc = "Field `CK_OUT_EDGE` reader - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
 pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub type CK_OUT_EDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CK_OUT_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FWRITE_DUAL` reader - In the write operations read-data phase apply 2 signals"]
 pub type FWRITE_DUAL_R = crate::BitReader;
 #[doc = "Field `FWRITE_DUAL` writer - In the write operations read-data phase apply 2 signals"]
-pub type FWRITE_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FWRITE_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FWRITE_QUAD` reader - In the write operations read-data phase apply 4 signals"]
 pub type FWRITE_QUAD_R = crate::BitReader;
 #[doc = "Field `FWRITE_QUAD` writer - In the write operations read-data phase apply 4 signals"]
-pub type FWRITE_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FWRITE_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FWRITE_DIO` reader - In the write operations address phase and read-data phase apply 2 signals."]
 pub type FWRITE_DIO_R = crate::BitReader;
 #[doc = "Field `FWRITE_DIO` writer - In the write operations address phase and read-data phase apply 2 signals."]
-pub type FWRITE_DIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FWRITE_DIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FWRITE_QIO` reader - In the write operations address phase and read-data phase apply 4 signals."]
 pub type FWRITE_QIO_R = crate::BitReader;
 #[doc = "Field `FWRITE_QIO` writer - In the write operations address phase and read-data phase apply 4 signals."]
-pub type FWRITE_QIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FWRITE_QIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_MISO_HIGHPART` reader - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
 pub type USR_MISO_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MISO_HIGHPART` writer - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type USR_MISO_HIGHPART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_MISO_HIGHPART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_MOSI_HIGHPART` reader - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
 pub type USR_MOSI_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MOSI_HIGHPART` writer - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type USR_MOSI_HIGHPART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_MOSI_HIGHPART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - SPI clock is disable in dummy phase when the bit is enable."]
 pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - SPI clock is disable in dummy phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_DUMMY_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_MOSI` reader - This bit enable the write-data phase of an operation."]
 pub type USR_MOSI_R = crate::BitReader;
 #[doc = "Field `USR_MOSI` writer - This bit enable the write-data phase of an operation."]
-pub type USR_MOSI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_MOSI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_MISO` reader - This bit enable the read-data phase of an operation."]
 pub type USR_MISO_R = crate::BitReader;
 #[doc = "Field `USR_MISO` writer - This bit enable the read-data phase of an operation."]
-pub type USR_MISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_MISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
 pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the dummy phase of an operation."]
-pub type USR_DUMMY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_DUMMY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_ADDR` reader - This bit enable the address phase of an operation."]
 pub type USR_ADDR_R = crate::BitReader;
 #[doc = "Field `USR_ADDR` writer - This bit enable the address phase of an operation."]
-pub type USR_ADDR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_ADDR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_COMMAND` reader - This bit enable the command phase of an operation."]
 pub type USR_COMMAND_R = crate::BitReader;
 #[doc = "Field `USR_COMMAND` writer - This bit enable the command phase of an operation."]
-pub type USR_COMMAND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USR_COMMAND_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 9 - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
@@ -153,87 +153,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 9 - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
     #[must_use]
-    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC, 9> {
-        CK_OUT_EDGE_W::new(self)
+    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC> {
+        CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 12 - In the write operations read-data phase apply 2 signals"]
     #[inline(always)]
     #[must_use]
-    pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<USER_SPEC, 12> {
-        FWRITE_DUAL_W::new(self)
+    pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<USER_SPEC> {
+        FWRITE_DUAL_W::new(self, 12)
     }
     #[doc = "Bit 13 - In the write operations read-data phase apply 4 signals"]
     #[inline(always)]
     #[must_use]
-    pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<USER_SPEC, 13> {
-        FWRITE_QUAD_W::new(self)
+    pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<USER_SPEC> {
+        FWRITE_QUAD_W::new(self, 13)
     }
     #[doc = "Bit 14 - In the write operations address phase and read-data phase apply 2 signals."]
     #[inline(always)]
     #[must_use]
-    pub fn fwrite_dio(&mut self) -> FWRITE_DIO_W<USER_SPEC, 14> {
-        FWRITE_DIO_W::new(self)
+    pub fn fwrite_dio(&mut self) -> FWRITE_DIO_W<USER_SPEC> {
+        FWRITE_DIO_W::new(self, 14)
     }
     #[doc = "Bit 15 - In the write operations address phase and read-data phase apply 4 signals."]
     #[inline(always)]
     #[must_use]
-    pub fn fwrite_qio(&mut self) -> FWRITE_QIO_W<USER_SPEC, 15> {
-        FWRITE_QIO_W::new(self)
+    pub fn fwrite_qio(&mut self) -> FWRITE_QIO_W<USER_SPEC> {
+        FWRITE_QIO_W::new(self, 15)
     }
     #[doc = "Bit 24 - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<USER_SPEC, 24> {
-        USR_MISO_HIGHPART_W::new(self)
+    pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<USER_SPEC> {
+        USR_MISO_HIGHPART_W::new(self, 24)
     }
     #[doc = "Bit 25 - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<USER_SPEC, 25> {
-        USR_MOSI_HIGHPART_W::new(self)
+    pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<USER_SPEC> {
+        USR_MOSI_HIGHPART_W::new(self, 25)
     }
     #[doc = "Bit 26 - SPI clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC, 26> {
-        USR_DUMMY_IDLE_W::new(self)
+    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC> {
+        USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 27 - This bit enable the write-data phase of an operation."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_mosi(&mut self) -> USR_MOSI_W<USER_SPEC, 27> {
-        USR_MOSI_W::new(self)
+    pub fn usr_mosi(&mut self) -> USR_MOSI_W<USER_SPEC> {
+        USR_MOSI_W::new(self, 27)
     }
     #[doc = "Bit 28 - This bit enable the read-data phase of an operation."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_miso(&mut self) -> USR_MISO_W<USER_SPEC, 28> {
-        USR_MISO_W::new(self)
+    pub fn usr_miso(&mut self) -> USR_MISO_W<USER_SPEC> {
+        USR_MISO_W::new(self, 28)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC, 29> {
-        USR_DUMMY_W::new(self)
+    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC> {
+        USR_DUMMY_W::new(self, 29)
     }
     #[doc = "Bit 30 - This bit enable the address phase of an operation."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_addr(&mut self) -> USR_ADDR_W<USER_SPEC, 30> {
-        USR_ADDR_W::new(self)
+    pub fn usr_addr(&mut self) -> USR_ADDR_W<USER_SPEC> {
+        USR_ADDR_W::new(self, 30)
     }
     #[doc = "Bit 31 - This bit enable the command phase of an operation."]
     #[inline(always)]
     #[must_use]
-    pub fn usr_command(&mut self) -> USR_COMMAND_W<USER_SPEC, 31> {
-        USR_COMMAND_W::new(self)
+    pub fn usr_command(&mut self) -> USR_COMMAND_W<USER_SPEC> {
+        USR_COMMAND_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

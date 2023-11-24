@@ -5,7 +5,7 @@ pub type W = crate::W<FUNC2_0_SPEC>;
 #[doc = "Field `SLC_FUNC2_INT` reader - *******Description***********"]
 pub type SLC_FUNC2_INT_R = crate::BitReader;
 #[doc = "Field `SLC_FUNC2_INT` writer - *******Description***********"]
-pub type SLC_FUNC2_INT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC_FUNC2_INT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 24 - *******Description***********"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FUNC2_0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 24 - *******Description***********"]
     #[inline(always)]
     #[must_use]
-    pub fn slc_func2_int(&mut self) -> SLC_FUNC2_INT_W<FUNC2_0_SPEC, 24> {
-        SLC_FUNC2_INT_W::new(self)
+    pub fn slc_func2_int(&mut self) -> SLC_FUNC2_INT_W<FUNC2_0_SPEC> {
+        SLC_FUNC2_INT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

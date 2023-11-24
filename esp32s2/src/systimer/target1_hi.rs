@@ -5,7 +5,7 @@ pub type W = crate::W<TARGET1_HI_SPEC>;
 #[doc = "Field `TIMER_TARGET1_HI` reader - System timer target 1, high 32 bits."]
 pub type TIMER_TARGET1_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMER_TARGET1_HI` writer - System timer target 1, high 32 bits."]
-pub type TIMER_TARGET1_HI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TIMER_TARGET1_HI_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - System timer target 1, high 32 bits."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TARGET1_HI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - System timer target 1, high 32 bits."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_target1_hi(&mut self) -> TIMER_TARGET1_HI_W<TARGET1_HI_SPEC, 0> {
-        TIMER_TARGET1_HI_W::new(self)
+    pub fn timer_target1_hi(&mut self) -> TIMER_TARGET1_HI_W<TARGET1_HI_SPEC> {
+        TIMER_TARGET1_HI_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

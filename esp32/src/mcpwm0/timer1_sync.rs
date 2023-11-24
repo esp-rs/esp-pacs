@@ -5,23 +5,23 @@ pub type W = crate::W<TIMER1_SYNC_SPEC>;
 #[doc = "Field `TIMER1_SYNCI_EN` reader - "]
 pub type TIMER1_SYNCI_EN_R = crate::BitReader;
 #[doc = "Field `TIMER1_SYNCI_EN` writer - "]
-pub type TIMER1_SYNCI_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER1_SYNCI_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SW` reader - "]
 pub type SW_R = crate::BitReader;
 #[doc = "Field `SW` writer - "]
-pub type SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER1_SYNCO_SEL` reader - "]
 pub type TIMER1_SYNCO_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER1_SYNCO_SEL` writer - "]
-pub type TIMER1_SYNCO_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TIMER1_SYNCO_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TIMER1_PHASE` reader - "]
 pub type TIMER1_PHASE_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER1_PHASE` writer - "]
-pub type TIMER1_PHASE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TIMER1_PHASE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `TIMER1_PHASE_DIRECTION` reader - "]
 pub type TIMER1_PHASE_DIRECTION_R = crate::BitReader;
 #[doc = "Field `TIMER1_PHASE_DIRECTION` writer - "]
-pub type TIMER1_PHASE_DIRECTION_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMER1_PHASE_DIRECTION_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TIMER1_SYNC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_synci_en(&mut self) -> TIMER1_SYNCI_EN_W<TIMER1_SYNC_SPEC, 0> {
-        TIMER1_SYNCI_EN_W::new(self)
+    pub fn timer1_synci_en(&mut self) -> TIMER1_SYNCI_EN_W<TIMER1_SYNC_SPEC> {
+        TIMER1_SYNCI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sw(&mut self) -> SW_W<TIMER1_SYNC_SPEC, 1> {
-        SW_W::new(self)
+    pub fn sw(&mut self) -> SW_W<TIMER1_SYNC_SPEC> {
+        SW_W::new(self, 1)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_synco_sel(&mut self) -> TIMER1_SYNCO_SEL_W<TIMER1_SYNC_SPEC, 2> {
-        TIMER1_SYNCO_SEL_W::new(self)
+    pub fn timer1_synco_sel(&mut self) -> TIMER1_SYNCO_SEL_W<TIMER1_SYNC_SPEC> {
+        TIMER1_SYNCO_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:19"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_phase(&mut self) -> TIMER1_PHASE_W<TIMER1_SYNC_SPEC, 4> {
-        TIMER1_PHASE_W::new(self)
+    pub fn timer1_phase(&mut self) -> TIMER1_PHASE_W<TIMER1_SYNC_SPEC> {
+        TIMER1_PHASE_W::new(self, 4)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_phase_direction(&mut self) -> TIMER1_PHASE_DIRECTION_W<TIMER1_SYNC_SPEC, 20> {
-        TIMER1_PHASE_DIRECTION_W::new(self)
+    pub fn timer1_phase_direction(&mut self) -> TIMER1_PHASE_DIRECTION_W<TIMER1_SYNC_SPEC> {
+        TIMER1_PHASE_DIRECTION_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

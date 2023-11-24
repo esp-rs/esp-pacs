@@ -5,41 +5,41 @@ pub type W = crate::W<APP_CACHE_CTRL_SPEC>;
 #[doc = "Field `APP_CACHE_MODE` reader - "]
 pub type APP_CACHE_MODE_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_MODE` writer - "]
-pub type APP_CACHE_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_ENABLE` reader - "]
 pub type APP_CACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_ENABLE` writer - "]
-pub type APP_CACHE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_FLUSH_ENA` reader - "]
 pub type APP_CACHE_FLUSH_ENA_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_FLUSH_ENA` writer - "]
-pub type APP_CACHE_FLUSH_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_FLUSH_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_FLUSH_DONE` reader - "]
 pub type APP_CACHE_FLUSH_DONE_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_0_EN` reader - "]
 pub type APP_CACHE_LOCK_0_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_0_EN` writer - "]
-pub type APP_CACHE_LOCK_0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_LOCK_0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_LOCK_1_EN` reader - "]
 pub type APP_CACHE_LOCK_1_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_1_EN` writer - "]
-pub type APP_CACHE_LOCK_1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_LOCK_1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_LOCK_2_EN` reader - "]
 pub type APP_CACHE_LOCK_2_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_2_EN` writer - "]
-pub type APP_CACHE_LOCK_2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_LOCK_2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CACHE_LOCK_3_EN` reader - "]
 pub type APP_CACHE_LOCK_3_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_3_EN` writer - "]
-pub type APP_CACHE_LOCK_3_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CACHE_LOCK_3_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_SINGLE_IRAM_ENA` reader - "]
 pub type APP_SINGLE_IRAM_ENA_R = crate::BitReader;
 #[doc = "Field `APP_SINGLE_IRAM_ENA` writer - "]
-pub type APP_SINGLE_IRAM_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_SINGLE_IRAM_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_DRAM_SPLIT` reader - "]
 pub type APP_DRAM_SPLIT_R = crate::BitReader;
 #[doc = "Field `APP_DRAM_SPLIT` writer - "]
-pub type APP_DRAM_SPLIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_DRAM_SPLIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_AHB_SPI_REQ` reader - "]
 pub type APP_AHB_SPI_REQ_R = crate::BitReader;
 #[doc = "Field `APP_SLAVE_REQ` reader - "]
@@ -47,7 +47,7 @@ pub type APP_SLAVE_REQ_R = crate::BitReader;
 #[doc = "Field `APP_DRAM_HL` reader - "]
 pub type APP_DRAM_HL_R = crate::BitReader;
 #[doc = "Field `APP_DRAM_HL` writer - "]
-pub type APP_DRAM_HL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_DRAM_HL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -174,69 +174,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APP_CACHE_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_mode(&mut self) -> APP_CACHE_MODE_W<APP_CACHE_CTRL_SPEC, 2> {
-        APP_CACHE_MODE_W::new(self)
+    pub fn app_cache_mode(&mut self) -> APP_CACHE_MODE_W<APP_CACHE_CTRL_SPEC> {
+        APP_CACHE_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_enable(&mut self) -> APP_CACHE_ENABLE_W<APP_CACHE_CTRL_SPEC, 3> {
-        APP_CACHE_ENABLE_W::new(self)
+    pub fn app_cache_enable(&mut self) -> APP_CACHE_ENABLE_W<APP_CACHE_CTRL_SPEC> {
+        APP_CACHE_ENABLE_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_flush_ena(&mut self) -> APP_CACHE_FLUSH_ENA_W<APP_CACHE_CTRL_SPEC, 4> {
-        APP_CACHE_FLUSH_ENA_W::new(self)
+    pub fn app_cache_flush_ena(&mut self) -> APP_CACHE_FLUSH_ENA_W<APP_CACHE_CTRL_SPEC> {
+        APP_CACHE_FLUSH_ENA_W::new(self, 4)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_lock_0_en(&mut self) -> APP_CACHE_LOCK_0_EN_W<APP_CACHE_CTRL_SPEC, 6> {
-        APP_CACHE_LOCK_0_EN_W::new(self)
+    pub fn app_cache_lock_0_en(&mut self) -> APP_CACHE_LOCK_0_EN_W<APP_CACHE_CTRL_SPEC> {
+        APP_CACHE_LOCK_0_EN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_lock_1_en(&mut self) -> APP_CACHE_LOCK_1_EN_W<APP_CACHE_CTRL_SPEC, 7> {
-        APP_CACHE_LOCK_1_EN_W::new(self)
+    pub fn app_cache_lock_1_en(&mut self) -> APP_CACHE_LOCK_1_EN_W<APP_CACHE_CTRL_SPEC> {
+        APP_CACHE_LOCK_1_EN_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_lock_2_en(&mut self) -> APP_CACHE_LOCK_2_EN_W<APP_CACHE_CTRL_SPEC, 8> {
-        APP_CACHE_LOCK_2_EN_W::new(self)
+    pub fn app_cache_lock_2_en(&mut self) -> APP_CACHE_LOCK_2_EN_W<APP_CACHE_CTRL_SPEC> {
+        APP_CACHE_LOCK_2_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn app_cache_lock_3_en(&mut self) -> APP_CACHE_LOCK_3_EN_W<APP_CACHE_CTRL_SPEC, 9> {
-        APP_CACHE_LOCK_3_EN_W::new(self)
+    pub fn app_cache_lock_3_en(&mut self) -> APP_CACHE_LOCK_3_EN_W<APP_CACHE_CTRL_SPEC> {
+        APP_CACHE_LOCK_3_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn app_single_iram_ena(&mut self) -> APP_SINGLE_IRAM_ENA_W<APP_CACHE_CTRL_SPEC, 10> {
-        APP_SINGLE_IRAM_ENA_W::new(self)
+    pub fn app_single_iram_ena(&mut self) -> APP_SINGLE_IRAM_ENA_W<APP_CACHE_CTRL_SPEC> {
+        APP_SINGLE_IRAM_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn app_dram_split(&mut self) -> APP_DRAM_SPLIT_W<APP_CACHE_CTRL_SPEC, 11> {
-        APP_DRAM_SPLIT_W::new(self)
+    pub fn app_dram_split(&mut self) -> APP_DRAM_SPLIT_W<APP_CACHE_CTRL_SPEC> {
+        APP_DRAM_SPLIT_W::new(self, 11)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn app_dram_hl(&mut self) -> APP_DRAM_HL_W<APP_CACHE_CTRL_SPEC, 14> {
-        APP_DRAM_HL_W::new(self)
+    pub fn app_dram_hl(&mut self) -> APP_DRAM_HL_W<APP_CACHE_CTRL_SPEC> {
+        APP_DRAM_HL_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

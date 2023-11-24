@@ -5,11 +5,11 @@ pub type W = crate::W<SHA_CONF_SPEC>;
 #[doc = "Field `SHA_CLK_EN` reader - Set 1 to enable sha clock"]
 pub type SHA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SHA_CLK_EN` writer - Set 1 to enable sha clock"]
-pub type SHA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SHA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SHA_RST_EN` reader - Set 0 to reset sha module"]
 pub type SHA_RST_EN_R = crate::BitReader;
 #[doc = "Field `SHA_RST_EN` writer - Set 0 to reset sha module"]
-pub type SHA_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SHA_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable sha clock"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SHA_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable sha clock"]
     #[inline(always)]
     #[must_use]
-    pub fn sha_clk_en(&mut self) -> SHA_CLK_EN_W<SHA_CONF_SPEC, 0> {
-        SHA_CLK_EN_W::new(self)
+    pub fn sha_clk_en(&mut self) -> SHA_CLK_EN_W<SHA_CONF_SPEC> {
+        SHA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset sha module"]
     #[inline(always)]
     #[must_use]
-    pub fn sha_rst_en(&mut self) -> SHA_RST_EN_W<SHA_CONF_SPEC, 1> {
-        SHA_RST_EN_W::new(self)
+    pub fn sha_rst_en(&mut self) -> SHA_RST_EN_W<SHA_CONF_SPEC> {
+        SHA_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

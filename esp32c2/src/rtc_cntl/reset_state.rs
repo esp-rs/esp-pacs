@@ -5,19 +5,19 @@ pub type W = crate::W<RESET_STATE_SPEC>;
 #[doc = "Field `RESET_CAUSE_PROCPU` reader - reset cause of PRO CPU"]
 pub type RESET_CAUSE_PROCPU_R = crate::FieldReader;
 #[doc = "Field `RESET_CAUSE_PROCPU` writer - reset cause of PRO CPU"]
-pub type RESET_CAUSE_PROCPU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RESET_CAUSE_PROCPU_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` reader - PRO CPU state vector sel"]
 pub type STAT_VECTOR_SEL_PROCPU_R = crate::BitReader;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` writer - PRO CPU state vector sel"]
-pub type STAT_VECTOR_SEL_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STAT_VECTOR_SEL_PROCPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` reader - PROCPU OcdHaltOnReset"]
 pub type OCD_HALT_ON_RESET_PROCPU_R = crate::BitReader;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` writer - PROCPU OcdHaltOnReset"]
-pub type OCD_HALT_ON_RESET_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCD_HALT_ON_RESET_PROCPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DRESET_MASK_PROCPU` reader - Need add desc"]
 pub type DRESET_MASK_PROCPU_R = crate::BitReader;
 #[doc = "Field `DRESET_MASK_PROCPU` writer - Need add desc"]
-pub type DRESET_MASK_PROCPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DRESET_MASK_PROCPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RESET_STATE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
     #[must_use]
-    pub fn reset_cause_procpu(&mut self) -> RESET_CAUSE_PROCPU_W<RESET_STATE_SPEC, 0> {
-        RESET_CAUSE_PROCPU_W::new(self)
+    pub fn reset_cause_procpu(&mut self) -> RESET_CAUSE_PROCPU_W<RESET_STATE_SPEC> {
+        RESET_CAUSE_PROCPU_W::new(self, 0)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
     #[must_use]
-    pub fn stat_vector_sel_procpu(&mut self) -> STAT_VECTOR_SEL_PROCPU_W<RESET_STATE_SPEC, 13> {
-        STAT_VECTOR_SEL_PROCPU_W::new(self)
+    pub fn stat_vector_sel_procpu(&mut self) -> STAT_VECTOR_SEL_PROCPU_W<RESET_STATE_SPEC> {
+        STAT_VECTOR_SEL_PROCPU_W::new(self, 13)
     }
     #[doc = "Bit 19 - PROCPU OcdHaltOnReset"]
     #[inline(always)]
     #[must_use]
-    pub fn ocd_halt_on_reset_procpu(&mut self) -> OCD_HALT_ON_RESET_PROCPU_W<RESET_STATE_SPEC, 19> {
-        OCD_HALT_ON_RESET_PROCPU_W::new(self)
+    pub fn ocd_halt_on_reset_procpu(&mut self) -> OCD_HALT_ON_RESET_PROCPU_W<RESET_STATE_SPEC> {
+        OCD_HALT_ON_RESET_PROCPU_W::new(self, 19)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
     #[must_use]
-    pub fn dreset_mask_procpu(&mut self) -> DRESET_MASK_PROCPU_W<RESET_STATE_SPEC, 20> {
-        DRESET_MASK_PROCPU_W::new(self)
+    pub fn dreset_mask_procpu(&mut self) -> DRESET_MASK_PROCPU_W<RESET_STATE_SPEC> {
+        DRESET_MASK_PROCPU_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

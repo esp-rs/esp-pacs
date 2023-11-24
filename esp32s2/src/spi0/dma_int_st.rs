@@ -27,23 +27,23 @@ pub type OUTFIFO_EMPTY_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_ST` reader - The status bit for SPI slave CMD6 interrupt."]
 pub type SLV_CMD6_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_ST` writer - The status bit for SPI slave CMD6 interrupt."]
-pub type SLV_CMD6_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD6_INT_ST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMD7_INT_ST` reader - The status bit for SPI slave CMD7 interrupt."]
 pub type SLV_CMD7_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD7_INT_ST` writer - The status bit for SPI slave CMD7 interrupt."]
-pub type SLV_CMD7_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD7_INT_ST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMD8_INT_ST` reader - The status bit for SPI slave CMD8 interrupt."]
 pub type SLV_CMD8_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD8_INT_ST` writer - The status bit for SPI slave CMD8 interrupt."]
-pub type SLV_CMD8_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD8_INT_ST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMD9_INT_ST` reader - The status bit for SPI slave CMD9 interrupt."]
 pub type SLV_CMD9_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMD9_INT_ST` writer - The status bit for SPI slave CMD9 interrupt."]
-pub type SLV_CMD9_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMD9_INT_ST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_CMDA_INT_ST` reader - The status bit for SPI slave CMDA interrupt."]
 pub type SLV_CMDA_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLV_CMDA_INT_ST` writer - The status bit for SPI slave CMDA interrupt."]
-pub type SLV_CMDA_INT_ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLV_CMDA_INT_ST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The status bit for lack of enough inlink descriptors."]
     #[inline(always)]
@@ -200,39 +200,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_INT_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 11 - The status bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd6_int_st(&mut self) -> SLV_CMD6_INT_ST_W<DMA_INT_ST_SPEC, 11> {
-        SLV_CMD6_INT_ST_W::new(self)
+    pub fn slv_cmd6_int_st(&mut self) -> SLV_CMD6_INT_ST_W<DMA_INT_ST_SPEC> {
+        SLV_CMD6_INT_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - The status bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd7_int_st(&mut self) -> SLV_CMD7_INT_ST_W<DMA_INT_ST_SPEC, 12> {
-        SLV_CMD7_INT_ST_W::new(self)
+    pub fn slv_cmd7_int_st(&mut self) -> SLV_CMD7_INT_ST_W<DMA_INT_ST_SPEC> {
+        SLV_CMD7_INT_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - The status bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd8_int_st(&mut self) -> SLV_CMD8_INT_ST_W<DMA_INT_ST_SPEC, 13> {
-        SLV_CMD8_INT_ST_W::new(self)
+    pub fn slv_cmd8_int_st(&mut self) -> SLV_CMD8_INT_ST_W<DMA_INT_ST_SPEC> {
+        SLV_CMD8_INT_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - The status bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmd9_int_st(&mut self) -> SLV_CMD9_INT_ST_W<DMA_INT_ST_SPEC, 14> {
-        SLV_CMD9_INT_ST_W::new(self)
+    pub fn slv_cmd9_int_st(&mut self) -> SLV_CMD9_INT_ST_W<DMA_INT_ST_SPEC> {
+        SLV_CMD9_INT_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - The status bit for SPI slave CMDA interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn slv_cmda_int_st(&mut self) -> SLV_CMDA_INT_ST_W<DMA_INT_ST_SPEC, 15> {
-        SLV_CMDA_INT_ST_W::new(self)
+    pub fn slv_cmda_int_st(&mut self) -> SLV_CMDA_INT_ST_W<DMA_INT_ST_SPEC> {
+        SLV_CMDA_INT_ST_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

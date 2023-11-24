@@ -5,47 +5,47 @@ pub type W = crate::W<DCFG_SPEC>;
 #[doc = "Field `NZSTSOUTHSHK` reader - "]
 pub type NZSTSOUTHSHK_R = crate::BitReader;
 #[doc = "Field `NZSTSOUTHSHK` writer - "]
-pub type NZSTSOUTHSHK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NZSTSOUTHSHK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENA32KHZSUSP` reader - "]
 pub type ENA32KHZSUSP_R = crate::BitReader;
 #[doc = "Field `ENA32KHZSUSP` writer - "]
-pub type ENA32KHZSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENA32KHZSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEVADDR` reader - "]
 pub type DEVADDR_R = crate::FieldReader;
 #[doc = "Field `DEVADDR` writer - "]
-pub type DEVADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type DEVADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PERFRLINT` reader - "]
 pub type PERFRLINT_R = crate::FieldReader;
 #[doc = "Field `PERFRLINT` writer - "]
-pub type PERFRLINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PERFRLINT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ENDEVOUTNAK` reader - "]
 pub type ENDEVOUTNAK_R = crate::BitReader;
 #[doc = "Field `ENDEVOUTNAK` writer - "]
-pub type ENDEVOUTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENDEVOUTNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XCVRDLY` reader - "]
 pub type XCVRDLY_R = crate::BitReader;
 #[doc = "Field `XCVRDLY` writer - "]
-pub type XCVRDLY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XCVRDLY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRATICINTMSK` reader - "]
 pub type ERRATICINTMSK_R = crate::BitReader;
 #[doc = "Field `ERRATICINTMSK` writer - "]
-pub type ERRATICINTMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRATICINTMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPMISCNT` reader - "]
 pub type EPMISCNT_R = crate::FieldReader;
 #[doc = "Field `EPMISCNT` writer - "]
-pub type EPMISCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type EPMISCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `DESCDMA` reader - "]
 pub type DESCDMA_R = crate::BitReader;
 #[doc = "Field `DESCDMA` writer - "]
-pub type DESCDMA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DESCDMA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PERSCHINTVL` reader - "]
 pub type PERSCHINTVL_R = crate::FieldReader;
 #[doc = "Field `PERSCHINTVL` writer - "]
-pub type PERSCHINTVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PERSCHINTVL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RESVALID` reader - "]
 pub type RESVALID_R = crate::FieldReader;
 #[doc = "Field `RESVALID` writer - "]
-pub type RESVALID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RESVALID_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -136,75 +136,75 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<DCFG_SPEC, 2> {
-        NZSTSOUTHSHK_W::new(self)
+    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<DCFG_SPEC> {
+        NZSTSOUTHSHK_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ena32khzsusp(&mut self) -> ENA32KHZSUSP_W<DCFG_SPEC, 3> {
-        ENA32KHZSUSP_W::new(self)
+    pub fn ena32khzsusp(&mut self) -> ENA32KHZSUSP_W<DCFG_SPEC> {
+        ENA32KHZSUSP_W::new(self, 3)
     }
     #[doc = "Bits 4:10"]
     #[inline(always)]
     #[must_use]
-    pub fn devaddr(&mut self) -> DEVADDR_W<DCFG_SPEC, 4> {
-        DEVADDR_W::new(self)
+    pub fn devaddr(&mut self) -> DEVADDR_W<DCFG_SPEC> {
+        DEVADDR_W::new(self, 4)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     #[must_use]
-    pub fn perfrlint(&mut self) -> PERFRLINT_W<DCFG_SPEC, 11> {
-        PERFRLINT_W::new(self)
+    pub fn perfrlint(&mut self) -> PERFRLINT_W<DCFG_SPEC> {
+        PERFRLINT_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn endevoutnak(&mut self) -> ENDEVOUTNAK_W<DCFG_SPEC, 13> {
-        ENDEVOUTNAK_W::new(self)
+    pub fn endevoutnak(&mut self) -> ENDEVOUTNAK_W<DCFG_SPEC> {
+        ENDEVOUTNAK_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn xcvrdly(&mut self) -> XCVRDLY_W<DCFG_SPEC, 14> {
-        XCVRDLY_W::new(self)
+    pub fn xcvrdly(&mut self) -> XCVRDLY_W<DCFG_SPEC> {
+        XCVRDLY_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn erraticintmsk(&mut self) -> ERRATICINTMSK_W<DCFG_SPEC, 15> {
-        ERRATICINTMSK_W::new(self)
+    pub fn erraticintmsk(&mut self) -> ERRATICINTMSK_W<DCFG_SPEC> {
+        ERRATICINTMSK_W::new(self, 15)
     }
     #[doc = "Bits 18:22"]
     #[inline(always)]
     #[must_use]
-    pub fn epmiscnt(&mut self) -> EPMISCNT_W<DCFG_SPEC, 18> {
-        EPMISCNT_W::new(self)
+    pub fn epmiscnt(&mut self) -> EPMISCNT_W<DCFG_SPEC> {
+        EPMISCNT_W::new(self, 18)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn descdma(&mut self) -> DESCDMA_W<DCFG_SPEC, 23> {
-        DESCDMA_W::new(self)
+    pub fn descdma(&mut self) -> DESCDMA_W<DCFG_SPEC> {
+        DESCDMA_W::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
     #[must_use]
-    pub fn perschintvl(&mut self) -> PERSCHINTVL_W<DCFG_SPEC, 24> {
-        PERSCHINTVL_W::new(self)
+    pub fn perschintvl(&mut self) -> PERSCHINTVL_W<DCFG_SPEC> {
+        PERSCHINTVL_W::new(self, 24)
     }
     #[doc = "Bits 26:31"]
     #[inline(always)]
     #[must_use]
-    pub fn resvalid(&mut self) -> RESVALID_W<DCFG_SPEC, 26> {
-        RESVALID_W::new(self)
+    pub fn resvalid(&mut self) -> RESVALID_W<DCFG_SPEC> {
+        RESVALID_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

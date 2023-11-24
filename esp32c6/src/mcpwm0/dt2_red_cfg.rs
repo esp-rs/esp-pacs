@@ -5,7 +5,7 @@ pub type W = crate::W<DT2_RED_CFG_SPEC>;
 #[doc = "Field `DB2_RED` reader - Shadow register for RED"]
 pub type DB2_RED_R = crate::FieldReader<u16>;
 #[doc = "Field `DB2_RED` writer - Shadow register for RED"]
-pub type DB2_RED_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type DB2_RED_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Shadow register for RED"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DT2_RED_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Shadow register for RED"]
     #[inline(always)]
     #[must_use]
-    pub fn db2_red(&mut self) -> DB2_RED_W<DT2_RED_CFG_SPEC, 0> {
-        DB2_RED_W::new(self)
+    pub fn db2_red(&mut self) -> DB2_RED_W<DT2_RED_CFG_SPEC> {
+        DB2_RED_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

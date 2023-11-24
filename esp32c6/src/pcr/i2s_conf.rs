@@ -5,11 +5,11 @@ pub type W = crate::W<I2S_CONF_SPEC>;
 #[doc = "Field `I2S_CLK_EN` reader - Set 1 to enable i2s apb clock"]
 pub type I2S_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2S_CLK_EN` writer - Set 1 to enable i2s apb clock"]
-pub type I2S_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S_RST_EN` reader - Set 0 to reset i2s module"]
 pub type I2S_RST_EN_R = crate::BitReader;
 #[doc = "Field `I2S_RST_EN` writer - Set 0 to reset i2s module"]
-pub type I2S_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable i2s apb clock"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<I2S_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable i2s apb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_clk_en(&mut self) -> I2S_CLK_EN_W<I2S_CONF_SPEC, 0> {
-        I2S_CLK_EN_W::new(self)
+    pub fn i2s_clk_en(&mut self) -> I2S_CLK_EN_W<I2S_CONF_SPEC> {
+        I2S_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset i2s module"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_rst_en(&mut self) -> I2S_RST_EN_W<I2S_CONF_SPEC, 1> {
-        I2S_RST_EN_W::new(self)
+    pub fn i2s_rst_en(&mut self) -> I2S_RST_EN_W<I2S_CONF_SPEC> {
+        I2S_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

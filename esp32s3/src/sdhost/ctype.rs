@@ -5,11 +5,11 @@ pub type W = crate::W<CTYPE_SPEC>;
 #[doc = "Field `CARD_WIDTH4` reader - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
 pub type CARD_WIDTH4_R = crate::FieldReader;
 #[doc = "Field `CARD_WIDTH4` writer - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
-pub type CARD_WIDTH4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CARD_WIDTH4_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CARD_WIDTH8` reader - One bit per card indicates if card is in 8-bit mode. 0: Non 8-bit mode; 1: 8-bit mode. Bit\\[17:16\\] correspond to card\\[1:0\\] respectively."]
 pub type CARD_WIDTH8_R = crate::FieldReader;
 #[doc = "Field `CARD_WIDTH8` writer - One bit per card indicates if card is in 8-bit mode. 0: Non 8-bit mode; 1: 8-bit mode. Bit\\[17:16\\] correspond to card\\[1:0\\] respectively."]
-pub type CARD_WIDTH8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CARD_WIDTH8_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTYPE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
     #[inline(always)]
     #[must_use]
-    pub fn card_width4(&mut self) -> CARD_WIDTH4_W<CTYPE_SPEC, 0> {
-        CARD_WIDTH4_W::new(self)
+    pub fn card_width4(&mut self) -> CARD_WIDTH4_W<CTYPE_SPEC> {
+        CARD_WIDTH4_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - One bit per card indicates if card is in 8-bit mode. 0: Non 8-bit mode; 1: 8-bit mode. Bit\\[17:16\\] correspond to card\\[1:0\\] respectively."]
     #[inline(always)]
     #[must_use]
-    pub fn card_width8(&mut self) -> CARD_WIDTH8_W<CTYPE_SPEC, 16> {
-        CARD_WIDTH8_W::new(self)
+    pub fn card_width8(&mut self) -> CARD_WIDTH8_W<CTYPE_SPEC> {
+        CARD_WIDTH8_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

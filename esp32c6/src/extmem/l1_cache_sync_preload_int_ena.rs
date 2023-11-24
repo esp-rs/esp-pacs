@@ -13,11 +13,11 @@ pub type L1_ICACHE3_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_DONE_INT_ENA` reader - The bit is used to enable interrupt of L1-Cache preload-operation. If preload operation is done, interrupt occurs."]
 pub type L1_CACHE_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_DONE_INT_ENA` writer - The bit is used to enable interrupt of L1-Cache preload-operation. If preload operation is done, interrupt occurs."]
-pub type L1_CACHE_PLD_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_PLD_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_SYNC_DONE_INT_ENA` reader - The bit is used to enable interrupt of Cache sync-operation done."]
 pub type CACHE_SYNC_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_SYNC_DONE_INT_ENA` writer - The bit is used to enable interrupt of Cache sync-operation done."]
-pub type CACHE_SYNC_DONE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_SYNC_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_ICACHE0_PLD_ERR_INT_ENA` reader - The bit is used to enable interrupt of L1-ICache0 preload-operation error."]
 pub type L1_ICACHE0_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_ERR_INT_ENA` reader - The bit is used to enable interrupt of L1-ICache1 preload-operation error."]
@@ -29,11 +29,11 @@ pub type L1_ICACHE3_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_ERR_INT_ENA` reader - The bit is used to enable interrupt of L1-Cache preload-operation error."]
 pub type L1_CACHE_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_ERR_INT_ENA` writer - The bit is used to enable interrupt of L1-Cache preload-operation error."]
-pub type L1_CACHE_PLD_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_PLD_ERR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_SYNC_ERR_INT_ENA` reader - The bit is used to enable interrupt of Cache sync-operation error."]
 pub type CACHE_SYNC_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_SYNC_ERR_INT_ENA` writer - The bit is used to enable interrupt of Cache sync-operation error."]
-pub type CACHE_SYNC_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_SYNC_ERR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable interrupt of L1-ICache0 preload-operation. If preload operation is done, interrupt occurs."]
     #[inline(always)]
@@ -154,7 +154,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -163,32 +163,32 @@ impl W {
     #[must_use]
     pub fn l1_cache_pld_done_int_ena(
         &mut self,
-    ) -> L1_CACHE_PLD_DONE_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, 4> {
-        L1_CACHE_PLD_DONE_INT_ENA_W::new(self)
+    ) -> L1_CACHE_PLD_DONE_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+        L1_CACHE_PLD_DONE_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 6 - The bit is used to enable interrupt of Cache sync-operation done."]
     #[inline(always)]
     #[must_use]
     pub fn cache_sync_done_int_ena(
         &mut self,
-    ) -> CACHE_SYNC_DONE_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, 6> {
-        CACHE_SYNC_DONE_INT_ENA_W::new(self)
+    ) -> CACHE_SYNC_DONE_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+        CACHE_SYNC_DONE_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 11 - The bit is used to enable interrupt of L1-Cache preload-operation error."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_pld_err_int_ena(
         &mut self,
-    ) -> L1_CACHE_PLD_ERR_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, 11> {
-        L1_CACHE_PLD_ERR_INT_ENA_W::new(self)
+    ) -> L1_CACHE_PLD_ERR_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+        L1_CACHE_PLD_ERR_INT_ENA_W::new(self, 11)
     }
     #[doc = "Bit 13 - The bit is used to enable interrupt of Cache sync-operation error."]
     #[inline(always)]
     #[must_use]
     pub fn cache_sync_err_int_ena(
         &mut self,
-    ) -> CACHE_SYNC_ERR_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, 13> {
-        CACHE_SYNC_ERR_INT_ENA_W::new(self)
+    ) -> CACHE_SYNC_ERR_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+        CACHE_SYNC_ERR_INT_ENA_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

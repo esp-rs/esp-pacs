@@ -5,55 +5,55 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `DUMMY_OUT` reader - In the dummy phase the signal level of spi is output by the spi controller. Can be configured in CONF state."]
 pub type DUMMY_OUT_R = crate::BitReader;
 #[doc = "Field `DUMMY_OUT` writer - In the dummy phase the signal level of spi is output by the spi controller. Can be configured in CONF state."]
-pub type DUMMY_OUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUMMY_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FADDR_DUAL` reader - Apply 2 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
 pub type FADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `FADDR_DUAL` writer - Apply 2 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
-pub type FADDR_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FADDR_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FADDR_QUAD` reader - Apply 4 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
 pub type FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `FADDR_QUAD` writer - Apply 4 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
-pub type FADDR_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FADDR_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FCMD_DUAL` reader - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
 pub type FCMD_DUAL_R = crate::BitReader;
 #[doc = "Field `FCMD_DUAL` writer - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
-pub type FCMD_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCMD_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FCMD_QUAD` reader - Apply 4 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
 pub type FCMD_QUAD_R = crate::BitReader;
 #[doc = "Field `FCMD_QUAD` writer - Apply 4 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
-pub type FCMD_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCMD_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_DUAL` reader - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
 pub type FREAD_DUAL_R = crate::BitReader;
 #[doc = "Field `FREAD_DUAL` writer - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
-pub type FREAD_DUAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_QUAD` reader - In the read operations read-data phase apply 4 signals. 1: enable 0: disable. Can be configured in CONF state."]
 pub type FREAD_QUAD_R = crate::BitReader;
 #[doc = "Field `FREAD_QUAD` writer - In the read operations read-data phase apply 4 signals. 1: enable 0: disable. Can be configured in CONF state."]
-pub type FREAD_QUAD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FREAD_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `Q_POL` reader - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
 pub type Q_POL_R = crate::BitReader;
 #[doc = "Field `Q_POL` writer - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
-pub type Q_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type Q_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D_POL` reader - The bit is used to set MOSI line polarity, 1: high 0, low. Can be configured in CONF state."]
 pub type D_POL_R = crate::BitReader;
 #[doc = "Field `D_POL` writer - The bit is used to set MOSI line polarity, 1: high 0, low. Can be configured in CONF state."]
-pub type D_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HOLD_POL` reader - SPI_HOLD output value when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
 pub type HOLD_POL_R = crate::BitReader;
 #[doc = "Field `HOLD_POL` writer - SPI_HOLD output value when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
-pub type HOLD_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HOLD_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WP_POL` reader - Write protect signal output when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
 pub type WP_POL_R = crate::BitReader;
 #[doc = "Field `WP_POL` writer - Write protect signal output when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
-pub type WP_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WP_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RD_BIT_ORDER` reader - In read-data (MISO) phase 1: LSB first 0: MSB first. Can be configured in CONF state."]
 pub type RD_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `RD_BIT_ORDER` writer - In read-data (MISO) phase 1: LSB first 0: MSB first. Can be configured in CONF state."]
-pub type RD_BIT_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RD_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WR_BIT_ORDER` reader - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first. Can be configured in CONF state."]
 pub type WR_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `WR_BIT_ORDER` writer - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first. Can be configured in CONF state."]
-pub type WR_BIT_ORDER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WR_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - In the dummy phase the signal level of spi is output by the spi controller. Can be configured in CONF state."]
     #[inline(always)]
@@ -150,87 +150,87 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3 - In the dummy phase the signal level of spi is output by the spi controller. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn dummy_out(&mut self) -> DUMMY_OUT_W<CTRL_SPEC, 3> {
-        DUMMY_OUT_W::new(self)
+    pub fn dummy_out(&mut self) -> DUMMY_OUT_W<CTRL_SPEC> {
+        DUMMY_OUT_W::new(self, 3)
     }
     #[doc = "Bit 5 - Apply 2 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CTRL_SPEC, 5> {
-        FADDR_DUAL_W::new(self)
+    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CTRL_SPEC> {
+        FADDR_DUAL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Apply 4 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CTRL_SPEC, 6> {
-        FADDR_QUAD_W::new(self)
+    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CTRL_SPEC> {
+        FADDR_QUAD_W::new(self, 6)
     }
     #[doc = "Bit 8 - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC, 8> {
-        FCMD_DUAL_W::new(self)
+    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC> {
+        FCMD_DUAL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Apply 4 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC, 9> {
-        FCMD_QUAD_W::new(self)
+    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
+        FCMD_QUAD_W::new(self, 9)
     }
     #[doc = "Bit 14 - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC, 14> {
-        FREAD_DUAL_W::new(self)
+    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
+        FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15 - In the read operations read-data phase apply 4 signals. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC, 15> {
-        FREAD_QUAD_W::new(self)
+    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
+        FREAD_QUAD_W::new(self, 15)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC, 18> {
-        Q_POL_W::new(self)
+    pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
+        Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC, 19> {
-        D_POL_W::new(self)
+    pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
+        D_POL_W::new(self, 19)
     }
     #[doc = "Bit 20 - SPI_HOLD output value when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn hold_pol(&mut self) -> HOLD_POL_W<CTRL_SPEC, 20> {
-        HOLD_POL_W::new(self)
+    pub fn hold_pol(&mut self) -> HOLD_POL_W<CTRL_SPEC> {
+        HOLD_POL_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn wp_pol(&mut self) -> WP_POL_W<CTRL_SPEC, 21> {
-        WP_POL_W::new(self)
+    pub fn wp_pol(&mut self) -> WP_POL_W<CTRL_SPEC> {
+        WP_POL_W::new(self, 21)
     }
     #[doc = "Bit 25 - In read-data (MISO) phase 1: LSB first 0: MSB first. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<CTRL_SPEC, 25> {
-        RD_BIT_ORDER_W::new(self)
+    pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<CTRL_SPEC> {
+        RD_BIT_ORDER_W::new(self, 25)
     }
     #[doc = "Bit 26 - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first. Can be configured in CONF state."]
     #[inline(always)]
     #[must_use]
-    pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<CTRL_SPEC, 26> {
-        WR_BIT_ORDER_W::new(self)
+    pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<CTRL_SPEC> {
+        WR_BIT_ORDER_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

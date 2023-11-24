@@ -9,7 +9,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMARXPOLLDEMAND_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "When these bits are written with any value the DMA reads the current descriptor to which the Current Host Receive Descriptor Register is pointing. If that descriptor is not available (owned by the Host) the reception returns to the Suspended state and Bit\\[7\\] (RU) of Status Register is asserted. If the descriptor is available the Rx DMA returns to the active state.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmarxpolldemand::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

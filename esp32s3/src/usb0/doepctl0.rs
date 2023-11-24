@@ -13,21 +13,21 @@ pub type EPTYPE0_R = crate::FieldReader;
 #[doc = "Field `SNP0` reader - "]
 pub type SNP0_R = crate::BitReader;
 #[doc = "Field `SNP0` writer - "]
-pub type SNP0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SNP0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL0` reader - "]
 pub type STALL0_R = crate::BitReader;
 #[doc = "Field `STALL0` writer - "]
-pub type STALL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNAK0` writer - "]
-pub type CNAK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNAK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DO_SNAK0` writer - "]
-pub type DO_SNAK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DO_SNAK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDIS0` reader - "]
 pub type EPDIS0_R = crate::BitReader;
 #[doc = "Field `EPENA0` reader - "]
 pub type EPENA0_R = crate::BitReader;
 #[doc = "Field `EPENA0` writer - "]
-pub type EPENA0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPENA0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -88,39 +88,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DOEPCTL0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn snp0(&mut self) -> SNP0_W<DOEPCTL0_SPEC, 20> {
-        SNP0_W::new(self)
+    pub fn snp0(&mut self) -> SNP0_W<DOEPCTL0_SPEC> {
+        SNP0_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn stall0(&mut self) -> STALL0_W<DOEPCTL0_SPEC, 21> {
-        STALL0_W::new(self)
+    pub fn stall0(&mut self) -> STALL0_W<DOEPCTL0_SPEC> {
+        STALL0_W::new(self, 21)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak0(&mut self) -> CNAK0_W<DOEPCTL0_SPEC, 26> {
-        CNAK0_W::new(self)
+    pub fn cnak0(&mut self) -> CNAK0_W<DOEPCTL0_SPEC> {
+        CNAK0_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn do_snak0(&mut self) -> DO_SNAK0_W<DOEPCTL0_SPEC, 27> {
-        DO_SNAK0_W::new(self)
+    pub fn do_snak0(&mut self) -> DO_SNAK0_W<DOEPCTL0_SPEC> {
+        DO_SNAK0_W::new(self, 27)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn epena0(&mut self) -> EPENA0_W<DOEPCTL0_SPEC, 31> {
-        EPENA0_W::new(self)
+    pub fn epena0(&mut self) -> EPENA0_W<DOEPCTL0_SPEC> {
+        EPENA0_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,111 +5,111 @@ pub type W = crate::W<PERIP_RST_EN_SPEC>;
 #[doc = "Field `TIMERS_RST` reader - "]
 pub type TIMERS_RST_R = crate::BitReader;
 #[doc = "Field `TIMERS_RST` writer - "]
-pub type TIMERS_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERS_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI01_RST` reader - "]
 pub type SPI01_RST_R = crate::BitReader;
 #[doc = "Field `SPI01_RST` writer - "]
-pub type SPI01_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI01_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_RST` reader - "]
 pub type UART_RST_R = crate::BitReader;
 #[doc = "Field `UART_RST` writer - "]
-pub type UART_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDG_RST` reader - "]
 pub type WDG_RST_R = crate::BitReader;
 #[doc = "Field `WDG_RST` writer - "]
-pub type WDG_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDG_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S0_RST` reader - "]
 pub type I2S0_RST_R = crate::BitReader;
 #[doc = "Field `I2S0_RST` writer - "]
-pub type I2S0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1_RST` reader - "]
 pub type UART1_RST_R = crate::BitReader;
 #[doc = "Field `UART1_RST` writer - "]
-pub type UART1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2_RST` reader - "]
 pub type SPI2_RST_R = crate::BitReader;
 #[doc = "Field `SPI2_RST` writer - "]
-pub type SPI2_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C0_EXT0_RST` reader - "]
 pub type I2C0_EXT0_RST_R = crate::BitReader;
 #[doc = "Field `I2C0_EXT0_RST` writer - "]
-pub type I2C0_EXT0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C0_EXT0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI0_RST` reader - "]
 pub type UHCI0_RST_R = crate::BitReader;
 #[doc = "Field `UHCI0_RST` writer - "]
-pub type UHCI0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RMT_RST` reader - "]
 pub type RMT_RST_R = crate::BitReader;
 #[doc = "Field `RMT_RST` writer - "]
-pub type RMT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RMT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCNT_RST` reader - "]
 pub type PCNT_RST_R = crate::BitReader;
 #[doc = "Field `PCNT_RST` writer - "]
-pub type PCNT_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCNT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEDC_RST` reader - "]
 pub type LEDC_RST_R = crate::BitReader;
 #[doc = "Field `LEDC_RST` writer - "]
-pub type LEDC_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEDC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI1_RST` reader - "]
 pub type UHCI1_RST_R = crate::BitReader;
 #[doc = "Field `UHCI1_RST` writer - "]
-pub type UHCI1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UHCI1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMERGROUP_RST` reader - "]
 pub type TIMERGROUP_RST_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP_RST` writer - "]
-pub type TIMERGROUP_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERGROUP_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EFUSE_RST` reader - "]
 pub type EFUSE_RST_R = crate::BitReader;
 #[doc = "Field `EFUSE_RST` writer - "]
-pub type EFUSE_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EFUSE_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMERGROUP1_RST` reader - "]
 pub type TIMERGROUP1_RST_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP1_RST` writer - "]
-pub type TIMERGROUP1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMERGROUP1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI3_RST` reader - "]
 pub type SPI3_RST_R = crate::BitReader;
 #[doc = "Field `SPI3_RST` writer - "]
-pub type SPI3_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI3_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM0_RST` reader - "]
 pub type PWM0_RST_R = crate::BitReader;
 #[doc = "Field `PWM0_RST` writer - "]
-pub type PWM0_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_EXT1_RST` reader - "]
 pub type I2C_EXT1_RST_R = crate::BitReader;
 #[doc = "Field `I2C_EXT1_RST` writer - "]
-pub type I2C_EXT1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_EXT1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TWAI_RST` reader - "]
 pub type TWAI_RST_R = crate::BitReader;
 #[doc = "Field `TWAI_RST` writer - "]
-pub type TWAI_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWAI_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM1_RST` reader - "]
 pub type PWM1_RST_R = crate::BitReader;
 #[doc = "Field `PWM1_RST` writer - "]
-pub type PWM1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S1_RST` reader - "]
 pub type I2S1_RST_R = crate::BitReader;
 #[doc = "Field `I2S1_RST` writer - "]
-pub type I2S1_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2S1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_DMA_RST` reader - "]
 pub type SPI_DMA_RST_R = crate::BitReader;
 #[doc = "Field `SPI_DMA_RST` writer - "]
-pub type SPI_DMA_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_DMA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART2_RST` reader - "]
 pub type UART2_RST_R = crate::BitReader;
 #[doc = "Field `UART2_RST` writer - "]
-pub type UART2_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART2_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_MEM_RST` reader - "]
 pub type UART_MEM_RST_R = crate::BitReader;
 #[doc = "Field `UART_MEM_RST` writer - "]
-pub type UART_MEM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_MEM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM2_RST` reader - "]
 pub type PWM2_RST_R = crate::BitReader;
 #[doc = "Field `PWM2_RST` writer - "]
-pub type PWM2_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM2_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM3_RST` reader - "]
 pub type PWM3_RST_R = crate::BitReader;
 #[doc = "Field `PWM3_RST` writer - "]
-pub type PWM3_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWM3_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -299,171 +299,171 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn timers_rst(&mut self) -> TIMERS_RST_W<PERIP_RST_EN_SPEC, 0> {
-        TIMERS_RST_W::new(self)
+    pub fn timers_rst(&mut self) -> TIMERS_RST_W<PERIP_RST_EN_SPEC> {
+        TIMERS_RST_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn spi01_rst(&mut self) -> SPI01_RST_W<PERIP_RST_EN_SPEC, 1> {
-        SPI01_RST_W::new(self)
+    pub fn spi01_rst(&mut self) -> SPI01_RST_W<PERIP_RST_EN_SPEC> {
+        SPI01_RST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_rst(&mut self) -> UART_RST_W<PERIP_RST_EN_SPEC, 2> {
-        UART_RST_W::new(self)
+    pub fn uart_rst(&mut self) -> UART_RST_W<PERIP_RST_EN_SPEC> {
+        UART_RST_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn wdg_rst(&mut self) -> WDG_RST_W<PERIP_RST_EN_SPEC, 3> {
-        WDG_RST_W::new(self)
+    pub fn wdg_rst(&mut self) -> WDG_RST_W<PERIP_RST_EN_SPEC> {
+        WDG_RST_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN_SPEC, 4> {
-        I2S0_RST_W::new(self)
+    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN_SPEC> {
+        I2S0_RST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1_rst(&mut self) -> UART1_RST_W<PERIP_RST_EN_SPEC, 5> {
-        UART1_RST_W::new(self)
+    pub fn uart1_rst(&mut self) -> UART1_RST_W<PERIP_RST_EN_SPEC> {
+        UART1_RST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_rst(&mut self) -> SPI2_RST_W<PERIP_RST_EN_SPEC, 6> {
-        SPI2_RST_W::new(self)
+    pub fn spi2_rst(&mut self) -> SPI2_RST_W<PERIP_RST_EN_SPEC> {
+        SPI2_RST_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c0_ext0_rst(&mut self) -> I2C0_EXT0_RST_W<PERIP_RST_EN_SPEC, 7> {
-        I2C0_EXT0_RST_W::new(self)
+    pub fn i2c0_ext0_rst(&mut self) -> I2C0_EXT0_RST_W<PERIP_RST_EN_SPEC> {
+        I2C0_EXT0_RST_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<PERIP_RST_EN_SPEC, 8> {
-        UHCI0_RST_W::new(self)
+    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<PERIP_RST_EN_SPEC> {
+        UHCI0_RST_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_rst(&mut self) -> RMT_RST_W<PERIP_RST_EN_SPEC, 9> {
-        RMT_RST_W::new(self)
+    pub fn rmt_rst(&mut self) -> RMT_RST_W<PERIP_RST_EN_SPEC> {
+        RMT_RST_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<PERIP_RST_EN_SPEC, 10> {
-        PCNT_RST_W::new(self)
+    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<PERIP_RST_EN_SPEC> {
+        PCNT_RST_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn ledc_rst(&mut self) -> LEDC_RST_W<PERIP_RST_EN_SPEC, 11> {
-        LEDC_RST_W::new(self)
+    pub fn ledc_rst(&mut self) -> LEDC_RST_W<PERIP_RST_EN_SPEC> {
+        LEDC_RST_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<PERIP_RST_EN_SPEC, 12> {
-        UHCI1_RST_W::new(self)
+    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<PERIP_RST_EN_SPEC> {
+        UHCI1_RST_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<PERIP_RST_EN_SPEC, 13> {
-        TIMERGROUP_RST_W::new(self)
+    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<PERIP_RST_EN_SPEC> {
+        TIMERGROUP_RST_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<PERIP_RST_EN_SPEC, 14> {
-        EFUSE_RST_W::new(self)
+    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<PERIP_RST_EN_SPEC> {
+        EFUSE_RST_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<PERIP_RST_EN_SPEC, 15> {
-        TIMERGROUP1_RST_W::new(self)
+    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<PERIP_RST_EN_SPEC> {
+        TIMERGROUP1_RST_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn spi3_rst(&mut self) -> SPI3_RST_W<PERIP_RST_EN_SPEC, 16> {
-        SPI3_RST_W::new(self)
+    pub fn spi3_rst(&mut self) -> SPI3_RST_W<PERIP_RST_EN_SPEC> {
+        SPI3_RST_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<PERIP_RST_EN_SPEC, 17> {
-        PWM0_RST_W::new(self)
+    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<PERIP_RST_EN_SPEC> {
+        PWM0_RST_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<PERIP_RST_EN_SPEC, 18> {
-        I2C_EXT1_RST_W::new(self)
+    pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<PERIP_RST_EN_SPEC> {
+        I2C_EXT1_RST_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn twai_rst(&mut self) -> TWAI_RST_W<PERIP_RST_EN_SPEC, 19> {
-        TWAI_RST_W::new(self)
+    pub fn twai_rst(&mut self) -> TWAI_RST_W<PERIP_RST_EN_SPEC> {
+        TWAI_RST_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<PERIP_RST_EN_SPEC, 20> {
-        PWM1_RST_W::new(self)
+    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<PERIP_RST_EN_SPEC> {
+        PWM1_RST_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s1_rst(&mut self) -> I2S1_RST_W<PERIP_RST_EN_SPEC, 21> {
-        I2S1_RST_W::new(self)
+    pub fn i2s1_rst(&mut self) -> I2S1_RST_W<PERIP_RST_EN_SPEC> {
+        I2S1_RST_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_dma_rst(&mut self) -> SPI_DMA_RST_W<PERIP_RST_EN_SPEC, 22> {
-        SPI_DMA_RST_W::new(self)
+    pub fn spi_dma_rst(&mut self) -> SPI_DMA_RST_W<PERIP_RST_EN_SPEC> {
+        SPI_DMA_RST_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn uart2_rst(&mut self) -> UART2_RST_W<PERIP_RST_EN_SPEC, 23> {
-        UART2_RST_W::new(self)
+    pub fn uart2_rst(&mut self) -> UART2_RST_W<PERIP_RST_EN_SPEC> {
+        UART2_RST_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<PERIP_RST_EN_SPEC, 24> {
-        UART_MEM_RST_W::new(self)
+    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<PERIP_RST_EN_SPEC> {
+        UART_MEM_RST_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<PERIP_RST_EN_SPEC, 25> {
-        PWM2_RST_W::new(self)
+    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<PERIP_RST_EN_SPEC> {
+        PWM2_RST_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<PERIP_RST_EN_SPEC, 26> {
-        PWM3_RST_W::new(self)
+    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<PERIP_RST_EN_SPEC> {
+        PWM3_RST_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

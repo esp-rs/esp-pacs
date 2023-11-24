@@ -1,23 +1,23 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `RX_START_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_RX_START_INT."]
-pub type RX_START_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_START_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_START_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_TX_START_INT."]
-pub type TX_START_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_START_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_HUNG_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_RX_HUNG_INT."]
-pub type RX_HUNG_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_HUNG_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_HUNG_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_TX_HUNG_INT."]
-pub type TX_HUNG_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_HUNG_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_S_REG_Q_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_SEND_S_REG_Q_INT."]
-pub type SEND_S_REG_Q_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_S_REG_Q_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_A_REG_Q_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_SEND_A_REG_Q_INT."]
-pub type SEND_A_REG_Q_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEND_A_REG_Q_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_OUT_EOF_INT."]
-pub type OUTLINK_EOF_ERR_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_EOF_ERR_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CTRL0_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_APP_CTRL0_INT."]
-pub type APP_CTRL0_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CTRL0_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `APP_CTRL1_INT_CLR` writer - Set this bit to clear the raw interrupt of UHCI_APP_CTRL1_INT."]
-pub type APP_CTRL1_INT_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type APP_CTRL1_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -28,56 +28,56 @@ impl W {
     #[doc = "Bit 0 - Set this bit to clear the raw interrupt of UHCI_RX_START_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_start_int_clr(&mut self) -> RX_START_INT_CLR_W<INT_CLR_SPEC, 0> {
-        RX_START_INT_CLR_W::new(self)
+    pub fn rx_start_int_clr(&mut self) -> RX_START_INT_CLR_W<INT_CLR_SPEC> {
+        RX_START_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the raw interrupt of UHCI_TX_START_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_start_int_clr(&mut self) -> TX_START_INT_CLR_W<INT_CLR_SPEC, 1> {
-        TX_START_INT_CLR_W::new(self)
+    pub fn tx_start_int_clr(&mut self) -> TX_START_INT_CLR_W<INT_CLR_SPEC> {
+        TX_START_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the raw interrupt of UHCI_RX_HUNG_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_hung_int_clr(&mut self) -> RX_HUNG_INT_CLR_W<INT_CLR_SPEC, 2> {
-        RX_HUNG_INT_CLR_W::new(self)
+    pub fn rx_hung_int_clr(&mut self) -> RX_HUNG_INT_CLR_W<INT_CLR_SPEC> {
+        RX_HUNG_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the raw interrupt of UHCI_TX_HUNG_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_hung_int_clr(&mut self) -> TX_HUNG_INT_CLR_W<INT_CLR_SPEC, 3> {
-        TX_HUNG_INT_CLR_W::new(self)
+    pub fn tx_hung_int_clr(&mut self) -> TX_HUNG_INT_CLR_W<INT_CLR_SPEC> {
+        TX_HUNG_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear the raw interrupt of UHCI_SEND_S_REG_Q_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn send_s_reg_q_int_clr(&mut self) -> SEND_S_REG_Q_INT_CLR_W<INT_CLR_SPEC, 4> {
-        SEND_S_REG_Q_INT_CLR_W::new(self)
+    pub fn send_s_reg_q_int_clr(&mut self) -> SEND_S_REG_Q_INT_CLR_W<INT_CLR_SPEC> {
+        SEND_S_REG_Q_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear the raw interrupt of UHCI_SEND_A_REG_Q_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn send_a_reg_q_int_clr(&mut self) -> SEND_A_REG_Q_INT_CLR_W<INT_CLR_SPEC, 5> {
-        SEND_A_REG_Q_INT_CLR_W::new(self)
+    pub fn send_a_reg_q_int_clr(&mut self) -> SEND_A_REG_Q_INT_CLR_W<INT_CLR_SPEC> {
+        SEND_A_REG_Q_INT_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear the raw interrupt of UHCI_OUT_EOF_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_eof_err_int_clr(&mut self) -> OUTLINK_EOF_ERR_INT_CLR_W<INT_CLR_SPEC, 6> {
-        OUTLINK_EOF_ERR_INT_CLR_W::new(self)
+    pub fn outlink_eof_err_int_clr(&mut self) -> OUTLINK_EOF_ERR_INT_CLR_W<INT_CLR_SPEC> {
+        OUTLINK_EOF_ERR_INT_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to clear the raw interrupt of UHCI_APP_CTRL0_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn app_ctrl0_int_clr(&mut self) -> APP_CTRL0_INT_CLR_W<INT_CLR_SPEC, 7> {
-        APP_CTRL0_INT_CLR_W::new(self)
+    pub fn app_ctrl0_int_clr(&mut self) -> APP_CTRL0_INT_CLR_W<INT_CLR_SPEC> {
+        APP_CTRL0_INT_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to clear the raw interrupt of UHCI_APP_CTRL1_INT."]
     #[inline(always)]
     #[must_use]
-    pub fn app_ctrl1_int_clr(&mut self) -> APP_CTRL1_INT_CLR_W<INT_CLR_SPEC, 8> {
-        APP_CTRL1_INT_CLR_W::new(self)
+    pub fn app_ctrl1_int_clr(&mut self) -> APP_CTRL1_INT_CLR_W<INT_CLR_SPEC> {
+        APP_CTRL1_INT_CLR_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

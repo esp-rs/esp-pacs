@@ -5,11 +5,11 @@ pub type W = crate::W<FIFO_CFG_SPEC>;
 #[doc = "Field `TX_FIFO_SRST` reader - Set this bit to reset async fifo in tx module."]
 pub type TX_FIFO_SRST_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_SRST` writer - Set this bit to reset async fifo in tx module."]
-pub type TX_FIFO_SRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FIFO_SRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_SRST` reader - Set this bit to reset async fifo in rx module."]
 pub type RX_FIFO_SRST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_SRST` writer - Set this bit to reset async fifo in rx module."]
-pub type RX_FIFO_SRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FIFO_SRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - Set this bit to reset async fifo in tx module."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FIFO_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - Set this bit to reset async fifo in tx module."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_srst(&mut self) -> TX_FIFO_SRST_W<FIFO_CFG_SPEC, 30> {
-        TX_FIFO_SRST_W::new(self)
+    pub fn tx_fifo_srst(&mut self) -> TX_FIFO_SRST_W<FIFO_CFG_SPEC> {
+        TX_FIFO_SRST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to reset async fifo in rx module."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_srst(&mut self) -> RX_FIFO_SRST_W<FIFO_CFG_SPEC, 31> {
-        RX_FIFO_SRST_W::new(self)
+    pub fn rx_fifo_srst(&mut self) -> RX_FIFO_SRST_W<FIFO_CFG_SPEC> {
+        RX_FIFO_SRST_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

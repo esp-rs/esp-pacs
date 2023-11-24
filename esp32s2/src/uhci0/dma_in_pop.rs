@@ -7,7 +7,7 @@ pub type INFIFO_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `INFIFO_POP` reader - Set this bit to pop data from RX FIFO."]
 pub type INFIFO_POP_R = crate::BitReader;
 #[doc = "Field `INFIFO_POP` writer - Set this bit to pop data from RX FIFO."]
-pub type INFIFO_POP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INFIFO_POP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - This register stores the data popping from RX FIFO."]
     #[inline(always)]
@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_IN_POP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 16 - Set this bit to pop data from RX FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<DMA_IN_POP_SPEC, 16> {
-        INFIFO_POP_W::new(self)
+    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<DMA_IN_POP_SPEC> {
+        INFIFO_POP_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

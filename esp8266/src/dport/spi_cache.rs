@@ -5,31 +5,31 @@ pub type W = crate::W<SPI_CACHE_SPEC>;
 #[doc = "Field `cache_flush_start` reader - Flush cache"]
 pub type CACHE_FLUSH_START_R = crate::BitReader;
 #[doc = "Field `cache_flush_start` writer - Flush cache"]
-pub type CACHE_FLUSH_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_FLUSH_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cache_empty` reader - Cache is empty"]
 pub type CACHE_EMPTY_R = crate::BitReader;
 #[doc = "Field `cache_empty` writer - Cache is empty"]
-pub type CACHE_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cache_enable` reader - Cache enable"]
 pub type CACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `cache_enable` writer - Cache enable"]
-pub type CACHE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `busy` reader - SPI busy"]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `busy` writer - SPI busy"]
-pub type BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUSY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `block` reader - Flash memory block to map, in 2mb blocks"]
 pub type BLOCK_R = crate::FieldReader;
 #[doc = "Field `block` writer - Flash memory block to map, in 2mb blocks"]
-pub type BLOCK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type BLOCK_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `offset` reader - Offset within block to map, in megabytes"]
 pub type OFFSET_R = crate::FieldReader;
 #[doc = "Field `offset` writer - Offset within block to map, in megabytes"]
-pub type OFFSET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type OFFSET_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `target` reader - Controls where the spi flash is mapped (unconfirmed)"]
 pub type TARGET_R = crate::BitReader;
 #[doc = "Field `target` writer - Controls where the spi flash is mapped (unconfirmed)"]
-pub type TARGET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Flush cache"]
     #[inline(always)]
@@ -90,53 +90,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_CACHE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Flush cache"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_flush_start(&mut self) -> CACHE_FLUSH_START_W<SPI_CACHE_SPEC, 0> {
-        CACHE_FLUSH_START_W::new(self)
+    pub fn cache_flush_start(&mut self) -> CACHE_FLUSH_START_W<SPI_CACHE_SPEC> {
+        CACHE_FLUSH_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Cache is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_empty(&mut self) -> CACHE_EMPTY_W<SPI_CACHE_SPEC, 1> {
-        CACHE_EMPTY_W::new(self)
+    pub fn cache_empty(&mut self) -> CACHE_EMPTY_W<SPI_CACHE_SPEC> {
+        CACHE_EMPTY_W::new(self, 1)
     }
     #[doc = "Bit 8 - Cache enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_enable(&mut self) -> CACHE_ENABLE_W<SPI_CACHE_SPEC, 8> {
-        CACHE_ENABLE_W::new(self)
+    pub fn cache_enable(&mut self) -> CACHE_ENABLE_W<SPI_CACHE_SPEC> {
+        CACHE_ENABLE_W::new(self, 8)
     }
     #[doc = "Bit 9 - SPI busy"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<SPI_CACHE_SPEC, 9> {
-        BUSY_W::new(self)
+    pub fn busy(&mut self) -> BUSY_W<SPI_CACHE_SPEC> {
+        BUSY_W::new(self, 9)
     }
     #[doc = "Bits 16:18 - Flash memory block to map, in 2mb blocks"]
     #[inline(always)]
     #[must_use]
-    pub fn block(&mut self) -> BLOCK_W<SPI_CACHE_SPEC, 16> {
-        BLOCK_W::new(self)
+    pub fn block(&mut self) -> BLOCK_W<SPI_CACHE_SPEC> {
+        BLOCK_W::new(self, 16)
     }
     #[doc = "Bits 24:25 - Offset within block to map, in megabytes"]
     #[inline(always)]
     #[must_use]
-    pub fn offset(&mut self) -> OFFSET_W<SPI_CACHE_SPEC, 24> {
-        OFFSET_W::new(self)
+    pub fn offset(&mut self) -> OFFSET_W<SPI_CACHE_SPEC> {
+        OFFSET_W::new(self, 24)
     }
     #[doc = "Bit 26 - Controls where the spi flash is mapped (unconfirmed)"]
     #[inline(always)]
     #[must_use]
-    pub fn target(&mut self) -> TARGET_W<SPI_CACHE_SPEC, 26> {
-        TARGET_W::new(self)
+    pub fn target(&mut self) -> TARGET_W<SPI_CACHE_SPEC> {
+        TARGET_W::new(self, 26)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

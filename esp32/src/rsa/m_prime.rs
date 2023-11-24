@@ -5,7 +5,7 @@ pub type W = crate::W<M_PRIME_SPEC>;
 #[doc = "Field `M_PRIME` reader - This register contains M’."]
 pub type M_PRIME_R = crate::FieldReader;
 #[doc = "Field `M_PRIME` writer - This register contains M’."]
-pub type M_PRIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type M_PRIME_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - This register contains M’."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<M_PRIME_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - This register contains M’."]
     #[inline(always)]
     #[must_use]
-    pub fn m_prime(&mut self) -> M_PRIME_W<M_PRIME_SPEC, 0> {
-        M_PRIME_W::new(self)
+    pub fn m_prime(&mut self) -> M_PRIME_W<M_PRIME_SPEC> {
+        M_PRIME_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

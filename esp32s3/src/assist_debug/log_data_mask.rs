@@ -5,7 +5,7 @@ pub type W = crate::W<LOG_DATA_MASK_SPEC>;
 #[doc = "Field `LOG_DATA_SIZE` reader - data mask"]
 pub type LOG_DATA_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `LOG_DATA_SIZE` writer - data mask"]
-pub type LOG_DATA_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type LOG_DATA_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - data mask"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOG_DATA_MASK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - data mask"]
     #[inline(always)]
     #[must_use]
-    pub fn log_data_size(&mut self) -> LOG_DATA_SIZE_W<LOG_DATA_MASK_SPEC, 0> {
-        LOG_DATA_SIZE_W::new(self)
+    pub fn log_data_size(&mut self) -> LOG_DATA_SIZE_W<LOG_DATA_MASK_SPEC> {
+        LOG_DATA_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

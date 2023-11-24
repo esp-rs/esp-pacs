@@ -5,11 +5,11 @@ pub type W = crate::W<SPI_CACHE_TARGET_SPEC>;
 #[doc = "Field `target1` reader - "]
 pub type TARGET1_R = crate::BitReader;
 #[doc = "Field `target1` writer - "]
-pub type TARGET1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `target2` reader - "]
 pub type TARGET2_R = crate::BitReader;
 #[doc = "Field `target2` writer - "]
-pub type TARGET2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3"]
     #[inline(always)]
@@ -34,23 +34,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_CACHE_TARGET_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn target1(&mut self) -> TARGET1_W<SPI_CACHE_TARGET_SPEC, 3> {
-        TARGET1_W::new(self)
+    pub fn target1(&mut self) -> TARGET1_W<SPI_CACHE_TARGET_SPEC> {
+        TARGET1_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn target2(&mut self) -> TARGET2_W<SPI_CACHE_TARGET_SPEC, 4> {
-        TARGET2_W::new(self)
+    pub fn target2(&mut self) -> TARGET2_W<SPI_CACHE_TARGET_SPEC> {
+        TARGET2_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

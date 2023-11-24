@@ -5,11 +5,11 @@ pub type W = crate::W<LPPERI_SPEC>;
 #[doc = "Field `LP_I2C_CLK_SEL` reader - need_des"]
 pub type LP_I2C_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LP_I2C_CLK_SEL` writer - need_des"]
-pub type LP_I2C_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_I2C_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_UART_CLK_SEL` reader - need_des"]
 pub type LP_UART_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LP_UART_CLK_SEL` writer - need_des"]
-pub type LP_UART_CLK_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_UART_CLK_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LPPERI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<LPPERI_SPEC, 30> {
-        LP_I2C_CLK_SEL_W::new(self)
+    pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<LPPERI_SPEC> {
+        LP_I2C_CLK_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<LPPERI_SPEC, 31> {
-        LP_UART_CLK_SEL_W::new(self)
+    pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<LPPERI_SPEC> {
+        LP_UART_CLK_SEL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

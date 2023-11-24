@@ -5,11 +5,11 @@ pub type W = crate::W<_0RXFIFO_PUSH_SPEC>;
 #[doc = "Field `SLC0_RXFIFO_WDATA` reader - "]
 pub type SLC0_RXFIFO_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0_RXFIFO_WDATA` writer - "]
-pub type SLC0_RXFIFO_WDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type SLC0_RXFIFO_WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `SLC0_RXFIFO_PUSH` reader - "]
 pub type SLC0_RXFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `SLC0_RXFIFO_PUSH` writer - "]
-pub type SLC0_RXFIFO_PUSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RXFIFO_PUSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<_0RXFIFO_PUSH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rxfifo_wdata(&mut self) -> SLC0_RXFIFO_WDATA_W<_0RXFIFO_PUSH_SPEC, 0> {
-        SLC0_RXFIFO_WDATA_W::new(self)
+    pub fn slc0_rxfifo_wdata(&mut self) -> SLC0_RXFIFO_WDATA_W<_0RXFIFO_PUSH_SPEC> {
+        SLC0_RXFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rxfifo_push(&mut self) -> SLC0_RXFIFO_PUSH_W<_0RXFIFO_PUSH_SPEC, 16> {
-        SLC0_RXFIFO_PUSH_W::new(self)
+    pub fn slc0_rxfifo_push(&mut self) -> SLC0_RXFIFO_PUSH_W<_0RXFIFO_PUSH_SPEC> {
+        SLC0_RXFIFO_PUSH_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

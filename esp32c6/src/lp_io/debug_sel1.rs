@@ -5,7 +5,7 @@ pub type W = crate::W<DEBUG_SEL1_SPEC>;
 #[doc = "Field `LP_DEBUG_SEL4` reader - need des"]
 pub type LP_DEBUG_SEL4_R = crate::FieldReader;
 #[doc = "Field `LP_DEBUG_SEL4` writer - need des"]
-pub type LP_DEBUG_SEL4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type LP_DEBUG_SEL4_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DEBUG_SEL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_debug_sel4(&mut self) -> LP_DEBUG_SEL4_W<DEBUG_SEL1_SPEC, 0> {
-        LP_DEBUG_SEL4_W::new(self)
+    pub fn lp_debug_sel4(&mut self) -> LP_DEBUG_SEL4_W<DEBUG_SEL1_SPEC> {
+        LP_DEBUG_SEL4_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

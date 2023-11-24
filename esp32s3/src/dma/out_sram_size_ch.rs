@@ -5,7 +5,7 @@ pub type W = crate::W<OUT_SRAM_SIZE_CH_SPEC>;
 #[doc = "Field `OUT_SIZE` reader - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
 pub type OUT_SIZE_R = crate::FieldReader;
 #[doc = "Field `OUT_SIZE` writer - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
-pub type OUT_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type OUT_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_SRAM_SIZE_CH_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
     #[must_use]
-    pub fn out_size(&mut self) -> OUT_SIZE_W<OUT_SRAM_SIZE_CH_SPEC, 0> {
-        OUT_SIZE_W::new(self)
+    pub fn out_size(&mut self) -> OUT_SIZE_W<OUT_SRAM_SIZE_CH_SPEC> {
+        OUT_SIZE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,29 +5,29 @@ pub type W = crate::W<ULP_CP_CTRL_SPEC>;
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` reader - No public"]
 pub type ULP_CP_MEM_ADDR_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` writer - No public"]
-pub type ULP_CP_MEM_ADDR_INIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type ULP_CP_MEM_ADDR_INIT_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` reader - No public"]
 pub type ULP_CP_MEM_ADDR_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` writer - No public"]
-pub type ULP_CP_MEM_ADDR_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type ULP_CP_MEM_ADDR_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `ULP_CP_MEM_OFFST_CLR` writer - No public"]
-pub type ULP_CP_MEM_OFFST_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_MEM_OFFST_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_CLK_FO` reader - ulp coprocessor clk force on"]
 pub type ULP_CP_CLK_FO_R = crate::BitReader;
 #[doc = "Field `ULP_CP_CLK_FO` writer - ulp coprocessor clk force on"]
-pub type ULP_CP_CLK_FO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_CLK_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_RESET` reader - ulp coprocessor clk software reset"]
 pub type ULP_CP_RESET_R = crate::BitReader;
 #[doc = "Field `ULP_CP_RESET` writer - ulp coprocessor clk software reset"]
-pub type ULP_CP_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - 1: ULP-coprocessor is started by SW"]
 pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` writer - 1: ULP-coprocessor is started by SW"]
-pub type ULP_CP_FORCE_START_TOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_FORCE_START_TOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-coprocessor"]
 pub type ULP_CP_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_START_TOP` writer - Write 1 to start ULP-coprocessor"]
-pub type ULP_CP_START_TOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULP_CP_START_TOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - No public"]
     #[inline(always)]
@@ -94,51 +94,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ULP_CP_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_mem_addr_init(&mut self) -> ULP_CP_MEM_ADDR_INIT_W<ULP_CP_CTRL_SPEC, 0> {
-        ULP_CP_MEM_ADDR_INIT_W::new(self)
+    pub fn ulp_cp_mem_addr_init(&mut self) -> ULP_CP_MEM_ADDR_INIT_W<ULP_CP_CTRL_SPEC> {
+        ULP_CP_MEM_ADDR_INIT_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_mem_addr_size(&mut self) -> ULP_CP_MEM_ADDR_SIZE_W<ULP_CP_CTRL_SPEC, 11> {
-        ULP_CP_MEM_ADDR_SIZE_W::new(self)
+    pub fn ulp_cp_mem_addr_size(&mut self) -> ULP_CP_MEM_ADDR_SIZE_W<ULP_CP_CTRL_SPEC> {
+        ULP_CP_MEM_ADDR_SIZE_W::new(self, 11)
     }
     #[doc = "Bit 22 - No public"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_mem_offst_clr(&mut self) -> ULP_CP_MEM_OFFST_CLR_W<ULP_CP_CTRL_SPEC, 22> {
-        ULP_CP_MEM_OFFST_CLR_W::new(self)
+    pub fn ulp_cp_mem_offst_clr(&mut self) -> ULP_CP_MEM_OFFST_CLR_W<ULP_CP_CTRL_SPEC> {
+        ULP_CP_MEM_OFFST_CLR_W::new(self, 22)
     }
     #[doc = "Bit 28 - ulp coprocessor clk force on"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_clk_fo(&mut self) -> ULP_CP_CLK_FO_W<ULP_CP_CTRL_SPEC, 28> {
-        ULP_CP_CLK_FO_W::new(self)
+    pub fn ulp_cp_clk_fo(&mut self) -> ULP_CP_CLK_FO_W<ULP_CP_CTRL_SPEC> {
+        ULP_CP_CLK_FO_W::new(self, 28)
     }
     #[doc = "Bit 29 - ulp coprocessor clk software reset"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_reset(&mut self) -> ULP_CP_RESET_W<ULP_CP_CTRL_SPEC, 29> {
-        ULP_CP_RESET_W::new(self)
+    pub fn ulp_cp_reset(&mut self) -> ULP_CP_RESET_W<ULP_CP_CTRL_SPEC> {
+        ULP_CP_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - 1: ULP-coprocessor is started by SW"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<ULP_CP_CTRL_SPEC, 30> {
-        ULP_CP_FORCE_START_TOP_W::new(self)
+    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<ULP_CP_CTRL_SPEC> {
+        ULP_CP_FORCE_START_TOP_W::new(self, 30)
     }
     #[doc = "Bit 31 - Write 1 to start ULP-coprocessor"]
     #[inline(always)]
     #[must_use]
-    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<ULP_CP_CTRL_SPEC, 31> {
-        ULP_CP_START_TOP_W::new(self)
+    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<ULP_CP_CTRL_SPEC> {
+        ULP_CP_START_TOP_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

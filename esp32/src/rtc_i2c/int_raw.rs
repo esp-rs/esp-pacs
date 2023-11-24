@@ -5,19 +5,19 @@ pub type W = crate::W<INT_RAW_SPEC>;
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_RAW` reader - Slave accepted 1 byte and address matched"]
 pub type SLAVE_TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_RAW` writer - Slave accepted 1 byte and address matched"]
-pub type SLAVE_TRANS_COMPLETE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_TRANS_COMPLETE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARBITRATION_LOST_INT_RAW` reader - Master lost arbitration"]
 pub type ARBITRATION_LOST_INT_RAW_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_RAW` writer - Master lost arbitration"]
-pub type ARBITRATION_LOST_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARBITRATION_LOST_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_RAW` reader - "]
 pub type MASTER_TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_RAW` writer - "]
-pub type MASTER_TRANS_COMPLETE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASTER_TRANS_COMPLETE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_COMPLETE_INT_RAW` reader - Stop condition has been detected interrupt raw status"]
 pub type TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_RAW` writer - Stop condition has been detected interrupt raw status"]
-pub type TRANS_COMPLETE_INT_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_COMPLETE_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIME_OUT_INT_RAW` reader - time out interrupt raw status"]
 pub type TIME_OUT_INT_RAW_R = crate::BitReader;
 impl R {
@@ -77,37 +77,35 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 3 - Slave accepted 1 byte and address matched"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_trans_complete_int_raw(
-        &mut self,
-    ) -> SLAVE_TRANS_COMPLETE_INT_RAW_W<INT_RAW_SPEC, 3> {
-        SLAVE_TRANS_COMPLETE_INT_RAW_W::new(self)
+    pub fn slave_trans_complete_int_raw(&mut self) -> SLAVE_TRANS_COMPLETE_INT_RAW_W<INT_RAW_SPEC> {
+        SLAVE_TRANS_COMPLETE_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - Master lost arbitration"]
     #[inline(always)]
     #[must_use]
-    pub fn arbitration_lost_int_raw(&mut self) -> ARBITRATION_LOST_INT_RAW_W<INT_RAW_SPEC, 4> {
-        ARBITRATION_LOST_INT_RAW_W::new(self)
+    pub fn arbitration_lost_int_raw(&mut self) -> ARBITRATION_LOST_INT_RAW_W<INT_RAW_SPEC> {
+        ARBITRATION_LOST_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
     pub fn master_trans_complete_int_raw(
         &mut self,
-    ) -> MASTER_TRANS_COMPLETE_INT_RAW_W<INT_RAW_SPEC, 5> {
-        MASTER_TRANS_COMPLETE_INT_RAW_W::new(self)
+    ) -> MASTER_TRANS_COMPLETE_INT_RAW_W<INT_RAW_SPEC> {
+        MASTER_TRANS_COMPLETE_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 6 - Stop condition has been detected interrupt raw status"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_complete_int_raw(&mut self) -> TRANS_COMPLETE_INT_RAW_W<INT_RAW_SPEC, 6> {
-        TRANS_COMPLETE_INT_RAW_W::new(self)
+    pub fn trans_complete_int_raw(&mut self) -> TRANS_COMPLETE_INT_RAW_W<INT_RAW_SPEC> {
+        TRANS_COMPLETE_INT_RAW_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

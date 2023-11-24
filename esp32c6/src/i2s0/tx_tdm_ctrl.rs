@@ -5,75 +5,75 @@ pub type W = crate::W<TX_TDM_CTRL_SPEC>;
 #[doc = "Field `TX_TDM_CHAN0_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN0_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN0_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN1_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN1_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN1_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN2_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN2_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN2_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN2_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN3_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN3_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN3_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN3_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN3_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN4_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN4_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN4_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN4_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN4_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN5_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN5_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN5_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN5_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN5_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN6_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN6_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN6_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN6_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN6_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN7_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN7_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN7_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN7_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN7_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN8_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN8_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN8_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN8_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN8_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN9_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN9_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN9_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN9_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN9_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN10_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN10_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN10_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN10_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN10_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN11_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN11_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN11_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN11_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN11_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN12_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN12_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN12_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN12_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN12_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN13_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN13_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN13_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN13_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN13_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN14_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN14_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN14_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN14_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN14_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_CHAN15_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
 pub type TX_TDM_CHAN15_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_CHAN15_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
-pub type TX_TDM_CHAN15_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_CHAN15_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_TDM_TOT_CHAN_NUM` reader - The total channel number of I2S TX TDM mode."]
 pub type TX_TDM_TOT_CHAN_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_TDM_TOT_CHAN_NUM` writer - The total channel number of I2S TX TDM mode."]
-pub type TX_TDM_TOT_CHAN_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TX_TDM_TOT_CHAN_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TX_TDM_SKIP_MSK_EN` reader - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
 pub type TX_TDM_SKIP_MSK_EN_R = crate::BitReader;
 #[doc = "Field `TX_TDM_SKIP_MSK_EN` writer - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
-pub type TX_TDM_SKIP_MSK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_TDM_SKIP_MSK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
@@ -248,117 +248,117 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TX_TDM_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan0_en(&mut self) -> TX_TDM_CHAN0_EN_W<TX_TDM_CTRL_SPEC, 0> {
-        TX_TDM_CHAN0_EN_W::new(self)
+    pub fn tx_tdm_chan0_en(&mut self) -> TX_TDM_CHAN0_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan1_en(&mut self) -> TX_TDM_CHAN1_EN_W<TX_TDM_CTRL_SPEC, 1> {
-        TX_TDM_CHAN1_EN_W::new(self)
+    pub fn tx_tdm_chan1_en(&mut self) -> TX_TDM_CHAN1_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN1_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan2_en(&mut self) -> TX_TDM_CHAN2_EN_W<TX_TDM_CTRL_SPEC, 2> {
-        TX_TDM_CHAN2_EN_W::new(self)
+    pub fn tx_tdm_chan2_en(&mut self) -> TX_TDM_CHAN2_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan3_en(&mut self) -> TX_TDM_CHAN3_EN_W<TX_TDM_CTRL_SPEC, 3> {
-        TX_TDM_CHAN3_EN_W::new(self)
+    pub fn tx_tdm_chan3_en(&mut self) -> TX_TDM_CHAN3_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN3_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan4_en(&mut self) -> TX_TDM_CHAN4_EN_W<TX_TDM_CTRL_SPEC, 4> {
-        TX_TDM_CHAN4_EN_W::new(self)
+    pub fn tx_tdm_chan4_en(&mut self) -> TX_TDM_CHAN4_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN4_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan5_en(&mut self) -> TX_TDM_CHAN5_EN_W<TX_TDM_CTRL_SPEC, 5> {
-        TX_TDM_CHAN5_EN_W::new(self)
+    pub fn tx_tdm_chan5_en(&mut self) -> TX_TDM_CHAN5_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN5_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan6_en(&mut self) -> TX_TDM_CHAN6_EN_W<TX_TDM_CTRL_SPEC, 6> {
-        TX_TDM_CHAN6_EN_W::new(self)
+    pub fn tx_tdm_chan6_en(&mut self) -> TX_TDM_CHAN6_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN6_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan7_en(&mut self) -> TX_TDM_CHAN7_EN_W<TX_TDM_CTRL_SPEC, 7> {
-        TX_TDM_CHAN7_EN_W::new(self)
+    pub fn tx_tdm_chan7_en(&mut self) -> TX_TDM_CHAN7_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN7_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan8_en(&mut self) -> TX_TDM_CHAN8_EN_W<TX_TDM_CTRL_SPEC, 8> {
-        TX_TDM_CHAN8_EN_W::new(self)
+    pub fn tx_tdm_chan8_en(&mut self) -> TX_TDM_CHAN8_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN8_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan9_en(&mut self) -> TX_TDM_CHAN9_EN_W<TX_TDM_CTRL_SPEC, 9> {
-        TX_TDM_CHAN9_EN_W::new(self)
+    pub fn tx_tdm_chan9_en(&mut self) -> TX_TDM_CHAN9_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN9_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan10_en(&mut self) -> TX_TDM_CHAN10_EN_W<TX_TDM_CTRL_SPEC, 10> {
-        TX_TDM_CHAN10_EN_W::new(self)
+    pub fn tx_tdm_chan10_en(&mut self) -> TX_TDM_CHAN10_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN10_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan11_en(&mut self) -> TX_TDM_CHAN11_EN_W<TX_TDM_CTRL_SPEC, 11> {
-        TX_TDM_CHAN11_EN_W::new(self)
+    pub fn tx_tdm_chan11_en(&mut self) -> TX_TDM_CHAN11_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN11_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan12_en(&mut self) -> TX_TDM_CHAN12_EN_W<TX_TDM_CTRL_SPEC, 12> {
-        TX_TDM_CHAN12_EN_W::new(self)
+    pub fn tx_tdm_chan12_en(&mut self) -> TX_TDM_CHAN12_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN12_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan13_en(&mut self) -> TX_TDM_CHAN13_EN_W<TX_TDM_CTRL_SPEC, 13> {
-        TX_TDM_CHAN13_EN_W::new(self)
+    pub fn tx_tdm_chan13_en(&mut self) -> TX_TDM_CHAN13_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN13_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan14_en(&mut self) -> TX_TDM_CHAN14_EN_W<TX_TDM_CTRL_SPEC, 14> {
-        TX_TDM_CHAN14_EN_W::new(self)
+    pub fn tx_tdm_chan14_en(&mut self) -> TX_TDM_CHAN14_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN14_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_chan15_en(&mut self) -> TX_TDM_CHAN15_EN_W<TX_TDM_CTRL_SPEC, 15> {
-        TX_TDM_CHAN15_EN_W::new(self)
+    pub fn tx_tdm_chan15_en(&mut self) -> TX_TDM_CHAN15_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_CHAN15_EN_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - The total channel number of I2S TX TDM mode."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_tot_chan_num(&mut self) -> TX_TDM_TOT_CHAN_NUM_W<TX_TDM_CTRL_SPEC, 16> {
-        TX_TDM_TOT_CHAN_NUM_W::new(self)
+    pub fn tx_tdm_tot_chan_num(&mut self) -> TX_TDM_TOT_CHAN_NUM_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_TOT_CHAN_NUM_W::new(self, 16)
     }
     #[doc = "Bit 20 - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tdm_skip_msk_en(&mut self) -> TX_TDM_SKIP_MSK_EN_W<TX_TDM_CTRL_SPEC, 20> {
-        TX_TDM_SKIP_MSK_EN_W::new(self)
+    pub fn tx_tdm_skip_msk_en(&mut self) -> TX_TDM_SKIP_MSK_EN_W<TX_TDM_CTRL_SPEC> {
+        TX_TDM_SKIP_MSK_EN_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

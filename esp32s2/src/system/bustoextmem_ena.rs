@@ -5,7 +5,7 @@ pub type W = crate::W<BUSTOEXTMEM_ENA_SPEC>;
 #[doc = "Field `BUSTOEXTMEM_ENA` reader - Set this bit to enable bus to EDMA."]
 pub type BUSTOEXTMEM_ENA_R = crate::BitReader;
 #[doc = "Field `BUSTOEXTMEM_ENA` writer - Set this bit to enable bus to EDMA."]
-pub type BUSTOEXTMEM_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUSTOEXTMEM_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable bus to EDMA."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BUSTOEXTMEM_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set this bit to enable bus to EDMA."]
     #[inline(always)]
     #[must_use]
-    pub fn bustoextmem_ena(&mut self) -> BUSTOEXTMEM_ENA_W<BUSTOEXTMEM_ENA_SPEC, 0> {
-        BUSTOEXTMEM_ENA_W::new(self)
+    pub fn bustoextmem_ena(&mut self) -> BUSTOEXTMEM_ENA_W<BUSTOEXTMEM_ENA_SPEC> {
+        BUSTOEXTMEM_ENA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

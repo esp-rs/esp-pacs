@@ -5,19 +5,19 @@ pub type W = crate::W<CLK_CONF_SPEC>;
 #[doc = "Field `TX_SCLK_EN` reader - Set this bit to enable UART Tx clock."]
 pub type TX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `TX_SCLK_EN` writer - Set this bit to enable UART Tx clock."]
-pub type TX_SCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCLK_EN` reader - Set this bit to enable UART Rx clock."]
 pub type SCLK_EN_R = crate::BitReader;
 #[doc = "Field `SCLK_EN` writer - Set this bit to enable UART Rx clock."]
-pub type SCLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_RST_CORE` reader - Write 1 then write 0 to this bit to reset UART Tx."]
 pub type TX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `TX_RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Tx."]
-pub type TX_RST_CORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_CORE` reader - Write 1 then write 0 to this bit to reset UART Rx."]
 pub type RST_CORE_R = crate::BitReader;
 #[doc = "Field `RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Rx."]
-pub type RST_CORE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
@@ -54,33 +54,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<CLK_CONF_SPEC, 24> {
-        TX_SCLK_EN_W::new(self)
+    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<CLK_CONF_SPEC> {
+        TX_SCLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to enable UART Rx clock."]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC, 25> {
-        SCLK_EN_W::new(self)
+    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC> {
+        SCLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write 1 then write 0 to this bit to reset UART Tx."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<CLK_CONF_SPEC, 26> {
-        TX_RST_CORE_W::new(self)
+    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<CLK_CONF_SPEC> {
+        TX_RST_CORE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Write 1 then write 0 to this bit to reset UART Rx."]
     #[inline(always)]
     #[must_use]
-    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC, 27> {
-        RST_CORE_W::new(self)
+    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC> {
+        RST_CORE_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

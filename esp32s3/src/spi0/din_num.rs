@@ -5,39 +5,39 @@ pub type W = crate::W<DIN_NUM_SPEC>;
 #[doc = "Field `DIN0_NUM` reader - SPI_D input delay number."]
 pub type DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN0_NUM` writer - SPI_D input delay number."]
-pub type DIN0_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN0_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN1_NUM` reader - SPI_Q input delay number."]
 pub type DIN1_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN1_NUM` writer - SPI_Q input delay number."]
-pub type DIN1_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN1_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN2_NUM` reader - SPI_WP input delay number."]
 pub type DIN2_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN2_NUM` writer - SPI_WP input delay number."]
-pub type DIN2_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN2_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN3_NUM` reader - SPI_HD input delay number."]
 pub type DIN3_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN3_NUM` writer - SPI_HD input delay number."]
-pub type DIN3_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN3_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN4_NUM` reader - SPI_IO4 input delay number."]
 pub type DIN4_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN4_NUM` writer - SPI_IO4 input delay number."]
-pub type DIN4_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN4_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN5_NUM` reader - SPI_IO5 input delay number."]
 pub type DIN5_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN5_NUM` writer - SPI_IO5 input delay number."]
-pub type DIN5_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN5_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN6_NUM` reader - SPI_IO6 input delay number."]
 pub type DIN6_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN6_NUM` writer - SPI_IO6 input delay number."]
-pub type DIN6_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN6_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIN7_NUM` reader - SPI_IO7 input delay number."]
 pub type DIN7_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN7_NUM` writer - SPI_IO7 input delay number."]
-pub type DIN7_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DIN7_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DINS_NUM` reader - SPI_DQS input delay number."]
 pub type DINS_NUM_R = crate::FieldReader;
 #[doc = "Field `DINS_NUM` writer - SPI_DQS input delay number."]
-pub type DINS_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DINS_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
@@ -104,63 +104,63 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DIN_NUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din0_num(&mut self) -> DIN0_NUM_W<DIN_NUM_SPEC, 0> {
-        DIN0_NUM_W::new(self)
+    pub fn din0_num(&mut self) -> DIN0_NUM_W<DIN_NUM_SPEC> {
+        DIN0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - SPI_Q input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din1_num(&mut self) -> DIN1_NUM_W<DIN_NUM_SPEC, 2> {
-        DIN1_NUM_W::new(self)
+    pub fn din1_num(&mut self) -> DIN1_NUM_W<DIN_NUM_SPEC> {
+        DIN1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - SPI_WP input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din2_num(&mut self) -> DIN2_NUM_W<DIN_NUM_SPEC, 4> {
-        DIN2_NUM_W::new(self)
+    pub fn din2_num(&mut self) -> DIN2_NUM_W<DIN_NUM_SPEC> {
+        DIN2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - SPI_HD input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din3_num(&mut self) -> DIN3_NUM_W<DIN_NUM_SPEC, 6> {
-        DIN3_NUM_W::new(self)
+    pub fn din3_num(&mut self) -> DIN3_NUM_W<DIN_NUM_SPEC> {
+        DIN3_NUM_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - SPI_IO4 input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din4_num(&mut self) -> DIN4_NUM_W<DIN_NUM_SPEC, 8> {
-        DIN4_NUM_W::new(self)
+    pub fn din4_num(&mut self) -> DIN4_NUM_W<DIN_NUM_SPEC> {
+        DIN4_NUM_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - SPI_IO5 input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din5_num(&mut self) -> DIN5_NUM_W<DIN_NUM_SPEC, 10> {
-        DIN5_NUM_W::new(self)
+    pub fn din5_num(&mut self) -> DIN5_NUM_W<DIN_NUM_SPEC> {
+        DIN5_NUM_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - SPI_IO6 input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din6_num(&mut self) -> DIN6_NUM_W<DIN_NUM_SPEC, 12> {
-        DIN6_NUM_W::new(self)
+    pub fn din6_num(&mut self) -> DIN6_NUM_W<DIN_NUM_SPEC> {
+        DIN6_NUM_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - SPI_IO7 input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn din7_num(&mut self) -> DIN7_NUM_W<DIN_NUM_SPEC, 14> {
-        DIN7_NUM_W::new(self)
+    pub fn din7_num(&mut self) -> DIN7_NUM_W<DIN_NUM_SPEC> {
+        DIN7_NUM_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - SPI_DQS input delay number."]
     #[inline(always)]
     #[must_use]
-    pub fn dins_num(&mut self) -> DINS_NUM_W<DIN_NUM_SPEC, 16> {
-        DINS_NUM_W::new(self)
+    pub fn dins_num(&mut self) -> DINS_NUM_W<DIN_NUM_SPEC> {
+        DINS_NUM_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

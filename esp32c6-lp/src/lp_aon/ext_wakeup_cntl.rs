@@ -5,19 +5,19 @@ pub type W = crate::W<EXT_WAKEUP_CNTL_SPEC>;
 #[doc = "Field `EXT_WAKEUP_STATUS` reader - need_des"]
 pub type EXT_WAKEUP_STATUS_R = crate::FieldReader;
 #[doc = "Field `EXT_WAKEUP_STATUS_CLR` writer - need_des"]
-pub type EXT_WAKEUP_STATUS_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_WAKEUP_STATUS_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXT_WAKEUP_SEL` reader - need_des"]
 pub type EXT_WAKEUP_SEL_R = crate::FieldReader;
 #[doc = "Field `EXT_WAKEUP_SEL` writer - need_des"]
-pub type EXT_WAKEUP_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type EXT_WAKEUP_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `EXT_WAKEUP_LV` reader - need_des"]
 pub type EXT_WAKEUP_LV_R = crate::FieldReader;
 #[doc = "Field `EXT_WAKEUP_LV` writer - need_des"]
-pub type EXT_WAKEUP_LV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type EXT_WAKEUP_LV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `EXT_WAKEUP_FILTER` reader - need_des"]
 pub type EXT_WAKEUP_FILTER_R = crate::BitReader;
 #[doc = "Field `EXT_WAKEUP_FILTER` writer - need_des"]
-pub type EXT_WAKEUP_FILTER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_WAKEUP_FILTER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -66,35 +66,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP_CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 14 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_wakeup_status_clr(&mut self) -> EXT_WAKEUP_STATUS_CLR_W<EXT_WAKEUP_CNTL_SPEC, 14> {
-        EXT_WAKEUP_STATUS_CLR_W::new(self)
+    pub fn ext_wakeup_status_clr(&mut self) -> EXT_WAKEUP_STATUS_CLR_W<EXT_WAKEUP_CNTL_SPEC> {
+        EXT_WAKEUP_STATUS_CLR_W::new(self, 14)
     }
     #[doc = "Bits 15:22 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_wakeup_sel(&mut self) -> EXT_WAKEUP_SEL_W<EXT_WAKEUP_CNTL_SPEC, 15> {
-        EXT_WAKEUP_SEL_W::new(self)
+    pub fn ext_wakeup_sel(&mut self) -> EXT_WAKEUP_SEL_W<EXT_WAKEUP_CNTL_SPEC> {
+        EXT_WAKEUP_SEL_W::new(self, 15)
     }
     #[doc = "Bits 23:30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_wakeup_lv(&mut self) -> EXT_WAKEUP_LV_W<EXT_WAKEUP_CNTL_SPEC, 23> {
-        EXT_WAKEUP_LV_W::new(self)
+    pub fn ext_wakeup_lv(&mut self) -> EXT_WAKEUP_LV_W<EXT_WAKEUP_CNTL_SPEC> {
+        EXT_WAKEUP_LV_W::new(self, 23)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_wakeup_filter(&mut self) -> EXT_WAKEUP_FILTER_W<EXT_WAKEUP_CNTL_SPEC, 31> {
-        EXT_WAKEUP_FILTER_W::new(self)
+    pub fn ext_wakeup_filter(&mut self) -> EXT_WAKEUP_FILTER_W<EXT_WAKEUP_CNTL_SPEC> {
+        EXT_WAKEUP_FILTER_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

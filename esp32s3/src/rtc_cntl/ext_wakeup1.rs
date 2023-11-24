@@ -5,9 +5,9 @@ pub type W = crate::W<EXT_WAKEUP1_SPEC>;
 #[doc = "Field `EXT_WAKEUP1_SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
 pub type EXT_WAKEUP1_SEL_R = crate::FieldReader<u32>;
 #[doc = "Field `EXT_WAKEUP1_SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
-pub type EXT_WAKEUP1_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type EXT_WAKEUP1_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 #[doc = "Field `EXT_WAKEUP1_STATUS_CLR` writer - clear ext wakeup1 status"]
-pub type EXT_WAKEUP1_STATUS_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_WAKEUP1_STATUS_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
@@ -29,21 +29,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_wakeup1_sel(&mut self) -> EXT_WAKEUP1_SEL_W<EXT_WAKEUP1_SPEC, 0> {
-        EXT_WAKEUP1_SEL_W::new(self)
+    pub fn ext_wakeup1_sel(&mut self) -> EXT_WAKEUP1_SEL_W<EXT_WAKEUP1_SPEC> {
+        EXT_WAKEUP1_SEL_W::new(self, 0)
     }
     #[doc = "Bit 22 - clear ext wakeup1 status"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_wakeup1_status_clr(&mut self) -> EXT_WAKEUP1_STATUS_CLR_W<EXT_WAKEUP1_SPEC, 22> {
-        EXT_WAKEUP1_STATUS_CLR_W::new(self)
+    pub fn ext_wakeup1_status_clr(&mut self) -> EXT_WAKEUP1_STATUS_CLR_W<EXT_WAKEUP1_SPEC> {
+        EXT_WAKEUP1_STATUS_CLR_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

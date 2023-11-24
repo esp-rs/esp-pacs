@@ -5,21 +5,21 @@ pub type W = crate::W<RTCCALICFG_SPEC>;
 #[doc = "Field `RTC_CALI_START_CYCLING` reader - When set, periodic calibration is enabled."]
 pub type RTC_CALI_START_CYCLING_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_START_CYCLING` writer - When set, periodic calibration is enabled."]
-pub type RTC_CALI_START_CYCLING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_CALI_START_CYCLING_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTC_CALI_CLK_SEL` reader - Used to select the clock to be calibrated. 0: RTC_CLK. 1: RTC20M_D256_CLK. 2: XTAL32K_CLK."]
 pub type RTC_CALI_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `RTC_CALI_CLK_SEL` writer - Used to select the clock to be calibrated. 0: RTC_CLK. 1: RTC20M_D256_CLK. 2: XTAL32K_CLK."]
-pub type RTC_CALI_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RTC_CALI_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RTC_CALI_RDY` reader - Set this bit to mark the completion of calibration."]
 pub type RTC_CALI_RDY_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_MAX` reader - Calibration time, in cycles of the clock to be calibrated."]
 pub type RTC_CALI_MAX_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_CALI_MAX` writer - Calibration time, in cycles of the clock to be calibrated."]
-pub type RTC_CALI_MAX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type RTC_CALI_MAX_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `RTC_CALI_START` reader - Set this bit to starts calibration."]
 pub type RTC_CALI_START_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_START` writer - Set this bit to starts calibration."]
-pub type RTC_CALI_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTC_CALI_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 12 - When set, periodic calibration is enabled."]
     #[inline(always)]
@@ -77,33 +77,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTCCALICFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 12 - When set, periodic calibration is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<RTCCALICFG_SPEC, 12> {
-        RTC_CALI_START_CYCLING_W::new(self)
+    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<RTCCALICFG_SPEC> {
+        RTC_CALI_START_CYCLING_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - Used to select the clock to be calibrated. 0: RTC_CLK. 1: RTC20M_D256_CLK. 2: XTAL32K_CLK."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<RTCCALICFG_SPEC, 13> {
-        RTC_CALI_CLK_SEL_W::new(self)
+    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<RTCCALICFG_SPEC> {
+        RTC_CALI_CLK_SEL_W::new(self, 13)
     }
     #[doc = "Bits 16:30 - Calibration time, in cycles of the clock to be calibrated."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<RTCCALICFG_SPEC, 16> {
-        RTC_CALI_MAX_W::new(self)
+    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<RTCCALICFG_SPEC> {
+        RTC_CALI_MAX_W::new(self, 16)
     }
     #[doc = "Bit 31 - Set this bit to starts calibration."]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<RTCCALICFG_SPEC, 31> {
-        RTC_CALI_START_W::new(self)
+    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<RTCCALICFG_SPEC> {
+        RTC_CALI_START_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

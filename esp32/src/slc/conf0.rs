@@ -5,131 +5,131 @@ pub type W = crate::W<CONF0_SPEC>;
 #[doc = "Field `SLC0_TX_RST` reader - "]
 pub type SLC0_TX_RST_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_RST` writer - "]
-pub type SLC0_TX_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TX_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_RST` reader - "]
 pub type SLC0_RX_RST_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_RST` writer - "]
-pub type SLC0_RX_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBM_FIFO_RST` reader - "]
 pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - "]
-pub type AHBM_FIFO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBM_FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBM_RST` reader - "]
 pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - "]
-pub type AHBM_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TX_LOOP_TEST` reader - "]
 pub type SLC0_TX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_LOOP_TEST` writer - "]
-pub type SLC0_TX_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TX_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_LOOP_TEST` reader - "]
 pub type SLC0_RX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_LOOP_TEST` writer - "]
-pub type SLC0_RX_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_AUTO_WRBACK` reader - "]
 pub type SLC0_RX_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_AUTO_WRBACK` writer - "]
-pub type SLC0_RX_AUTO_WRBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_AUTO_WRBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RX_NO_RESTART_CLR` reader - "]
 pub type SLC0_RX_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_NO_RESTART_CLR` writer - "]
-pub type SLC0_RX_NO_RESTART_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RX_NO_RESTART_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RXDSCR_BURST_EN` reader - "]
 pub type SLC0_RXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RXDSCR_BURST_EN` writer - "]
-pub type SLC0_RXDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RXDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RXDATA_BURST_EN` reader - "]
 pub type SLC0_RXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RXDATA_BURST_EN` writer - "]
-pub type SLC0_RXDATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RXDATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_RXLINK_AUTO_RET` reader - "]
 pub type SLC0_RXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC0_RXLINK_AUTO_RET` writer - "]
-pub type SLC0_RXLINK_AUTO_RET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_RXLINK_AUTO_RET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TXLINK_AUTO_RET` reader - "]
 pub type SLC0_TXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC0_TXLINK_AUTO_RET` writer - "]
-pub type SLC0_TXLINK_AUTO_RET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TXLINK_AUTO_RET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TXDSCR_BURST_EN` reader - "]
 pub type SLC0_TXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TXDSCR_BURST_EN` writer - "]
-pub type SLC0_TXDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TXDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TXDATA_BURST_EN` reader - "]
 pub type SLC0_TXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TXDATA_BURST_EN` writer - "]
-pub type SLC0_TXDATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TXDATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TOKEN_AUTO_CLR` reader - "]
 pub type SLC0_TOKEN_AUTO_CLR_R = crate::BitReader;
 #[doc = "Field `SLC0_TOKEN_AUTO_CLR` writer - "]
-pub type SLC0_TOKEN_AUTO_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TOKEN_AUTO_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_TOKEN_SEL` reader - "]
 pub type SLC0_TOKEN_SEL_R = crate::BitReader;
 #[doc = "Field `SLC0_TOKEN_SEL` writer - "]
-pub type SLC0_TOKEN_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_TOKEN_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TX_RST` reader - "]
 pub type SLC1_TX_RST_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_RST` writer - "]
-pub type SLC1_TX_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TX_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RX_RST` reader - "]
 pub type SLC1_RX_RST_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_RST` writer - "]
-pub type SLC1_RX_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RX_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC0_WR_RETRY_MASK_EN` reader - "]
 pub type SLC0_WR_RETRY_MASK_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_WR_RETRY_MASK_EN` writer - "]
-pub type SLC0_WR_RETRY_MASK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC0_WR_RETRY_MASK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_WR_RETRY_MASK_EN` reader - "]
 pub type SLC1_WR_RETRY_MASK_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_WR_RETRY_MASK_EN` writer - "]
-pub type SLC1_WR_RETRY_MASK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_WR_RETRY_MASK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TX_LOOP_TEST` reader - "]
 pub type SLC1_TX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_LOOP_TEST` writer - "]
-pub type SLC1_TX_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TX_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RX_LOOP_TEST` reader - "]
 pub type SLC1_RX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_LOOP_TEST` writer - "]
-pub type SLC1_RX_LOOP_TEST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RX_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RX_AUTO_WRBACK` reader - "]
 pub type SLC1_RX_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_AUTO_WRBACK` writer - "]
-pub type SLC1_RX_AUTO_WRBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RX_AUTO_WRBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RX_NO_RESTART_CLR` reader - "]
 pub type SLC1_RX_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_NO_RESTART_CLR` writer - "]
-pub type SLC1_RX_NO_RESTART_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RX_NO_RESTART_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RXDSCR_BURST_EN` reader - "]
 pub type SLC1_RXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RXDSCR_BURST_EN` writer - "]
-pub type SLC1_RXDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RXDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RXDATA_BURST_EN` reader - "]
 pub type SLC1_RXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RXDATA_BURST_EN` writer - "]
-pub type SLC1_RXDATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RXDATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_RXLINK_AUTO_RET` reader - "]
 pub type SLC1_RXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC1_RXLINK_AUTO_RET` writer - "]
-pub type SLC1_RXLINK_AUTO_RET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_RXLINK_AUTO_RET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TXLINK_AUTO_RET` reader - "]
 pub type SLC1_TXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC1_TXLINK_AUTO_RET` writer - "]
-pub type SLC1_TXLINK_AUTO_RET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TXLINK_AUTO_RET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TXDSCR_BURST_EN` reader - "]
 pub type SLC1_TXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TXDSCR_BURST_EN` writer - "]
-pub type SLC1_TXDSCR_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TXDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TXDATA_BURST_EN` reader - "]
 pub type SLC1_TXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TXDATA_BURST_EN` writer - "]
-pub type SLC1_TXDATA_BURST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TXDATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TOKEN_AUTO_CLR` reader - "]
 pub type SLC1_TOKEN_AUTO_CLR_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN_AUTO_CLR` writer - "]
-pub type SLC1_TOKEN_AUTO_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TOKEN_AUTO_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLC1_TOKEN_SEL` reader - "]
 pub type SLC1_TOKEN_SEL_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN_SEL` writer - "]
-pub type SLC1_TOKEN_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLC1_TOKEN_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -415,201 +415,201 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_rst(&mut self) -> SLC0_TX_RST_W<CONF0_SPEC, 0> {
-        SLC0_TX_RST_W::new(self)
+    pub fn slc0_tx_rst(&mut self) -> SLC0_TX_RST_W<CONF0_SPEC> {
+        SLC0_TX_RST_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_rst(&mut self) -> SLC0_RX_RST_W<CONF0_SPEC, 1> {
-        SLC0_RX_RST_W::new(self)
+    pub fn slc0_rx_rst(&mut self) -> SLC0_RX_RST_W<CONF0_SPEC> {
+        SLC0_RX_RST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<CONF0_SPEC, 2> {
-        AHBM_FIFO_RST_W::new(self)
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<CONF0_SPEC> {
+        AHBM_FIFO_RST_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<CONF0_SPEC, 3> {
-        AHBM_RST_W::new(self)
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<CONF0_SPEC> {
+        AHBM_RST_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_tx_loop_test(&mut self) -> SLC0_TX_LOOP_TEST_W<CONF0_SPEC, 4> {
-        SLC0_TX_LOOP_TEST_W::new(self)
+    pub fn slc0_tx_loop_test(&mut self) -> SLC0_TX_LOOP_TEST_W<CONF0_SPEC> {
+        SLC0_TX_LOOP_TEST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_loop_test(&mut self) -> SLC0_RX_LOOP_TEST_W<CONF0_SPEC, 5> {
-        SLC0_RX_LOOP_TEST_W::new(self)
+    pub fn slc0_rx_loop_test(&mut self) -> SLC0_RX_LOOP_TEST_W<CONF0_SPEC> {
+        SLC0_RX_LOOP_TEST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_auto_wrback(&mut self) -> SLC0_RX_AUTO_WRBACK_W<CONF0_SPEC, 6> {
-        SLC0_RX_AUTO_WRBACK_W::new(self)
+    pub fn slc0_rx_auto_wrback(&mut self) -> SLC0_RX_AUTO_WRBACK_W<CONF0_SPEC> {
+        SLC0_RX_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rx_no_restart_clr(&mut self) -> SLC0_RX_NO_RESTART_CLR_W<CONF0_SPEC, 7> {
-        SLC0_RX_NO_RESTART_CLR_W::new(self)
+    pub fn slc0_rx_no_restart_clr(&mut self) -> SLC0_RX_NO_RESTART_CLR_W<CONF0_SPEC> {
+        SLC0_RX_NO_RESTART_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rxdscr_burst_en(&mut self) -> SLC0_RXDSCR_BURST_EN_W<CONF0_SPEC, 8> {
-        SLC0_RXDSCR_BURST_EN_W::new(self)
+    pub fn slc0_rxdscr_burst_en(&mut self) -> SLC0_RXDSCR_BURST_EN_W<CONF0_SPEC> {
+        SLC0_RXDSCR_BURST_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rxdata_burst_en(&mut self) -> SLC0_RXDATA_BURST_EN_W<CONF0_SPEC, 9> {
-        SLC0_RXDATA_BURST_EN_W::new(self)
+    pub fn slc0_rxdata_burst_en(&mut self) -> SLC0_RXDATA_BURST_EN_W<CONF0_SPEC> {
+        SLC0_RXDATA_BURST_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_rxlink_auto_ret(&mut self) -> SLC0_RXLINK_AUTO_RET_W<CONF0_SPEC, 10> {
-        SLC0_RXLINK_AUTO_RET_W::new(self)
+    pub fn slc0_rxlink_auto_ret(&mut self) -> SLC0_RXLINK_AUTO_RET_W<CONF0_SPEC> {
+        SLC0_RXLINK_AUTO_RET_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_txlink_auto_ret(&mut self) -> SLC0_TXLINK_AUTO_RET_W<CONF0_SPEC, 11> {
-        SLC0_TXLINK_AUTO_RET_W::new(self)
+    pub fn slc0_txlink_auto_ret(&mut self) -> SLC0_TXLINK_AUTO_RET_W<CONF0_SPEC> {
+        SLC0_TXLINK_AUTO_RET_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_txdscr_burst_en(&mut self) -> SLC0_TXDSCR_BURST_EN_W<CONF0_SPEC, 12> {
-        SLC0_TXDSCR_BURST_EN_W::new(self)
+    pub fn slc0_txdscr_burst_en(&mut self) -> SLC0_TXDSCR_BURST_EN_W<CONF0_SPEC> {
+        SLC0_TXDSCR_BURST_EN_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_txdata_burst_en(&mut self) -> SLC0_TXDATA_BURST_EN_W<CONF0_SPEC, 13> {
-        SLC0_TXDATA_BURST_EN_W::new(self)
+    pub fn slc0_txdata_burst_en(&mut self) -> SLC0_TXDATA_BURST_EN_W<CONF0_SPEC> {
+        SLC0_TXDATA_BURST_EN_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_token_auto_clr(&mut self) -> SLC0_TOKEN_AUTO_CLR_W<CONF0_SPEC, 14> {
-        SLC0_TOKEN_AUTO_CLR_W::new(self)
+    pub fn slc0_token_auto_clr(&mut self) -> SLC0_TOKEN_AUTO_CLR_W<CONF0_SPEC> {
+        SLC0_TOKEN_AUTO_CLR_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_token_sel(&mut self) -> SLC0_TOKEN_SEL_W<CONF0_SPEC, 15> {
-        SLC0_TOKEN_SEL_W::new(self)
+    pub fn slc0_token_sel(&mut self) -> SLC0_TOKEN_SEL_W<CONF0_SPEC> {
+        SLC0_TOKEN_SEL_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tx_rst(&mut self) -> SLC1_TX_RST_W<CONF0_SPEC, 16> {
-        SLC1_TX_RST_W::new(self)
+    pub fn slc1_tx_rst(&mut self) -> SLC1_TX_RST_W<CONF0_SPEC> {
+        SLC1_TX_RST_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_rst(&mut self) -> SLC1_RX_RST_W<CONF0_SPEC, 17> {
-        SLC1_RX_RST_W::new(self)
+    pub fn slc1_rx_rst(&mut self) -> SLC1_RX_RST_W<CONF0_SPEC> {
+        SLC1_RX_RST_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn slc0_wr_retry_mask_en(&mut self) -> SLC0_WR_RETRY_MASK_EN_W<CONF0_SPEC, 18> {
-        SLC0_WR_RETRY_MASK_EN_W::new(self)
+    pub fn slc0_wr_retry_mask_en(&mut self) -> SLC0_WR_RETRY_MASK_EN_W<CONF0_SPEC> {
+        SLC0_WR_RETRY_MASK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_wr_retry_mask_en(&mut self) -> SLC1_WR_RETRY_MASK_EN_W<CONF0_SPEC, 19> {
-        SLC1_WR_RETRY_MASK_EN_W::new(self)
+    pub fn slc1_wr_retry_mask_en(&mut self) -> SLC1_WR_RETRY_MASK_EN_W<CONF0_SPEC> {
+        SLC1_WR_RETRY_MASK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_tx_loop_test(&mut self) -> SLC1_TX_LOOP_TEST_W<CONF0_SPEC, 20> {
-        SLC1_TX_LOOP_TEST_W::new(self)
+    pub fn slc1_tx_loop_test(&mut self) -> SLC1_TX_LOOP_TEST_W<CONF0_SPEC> {
+        SLC1_TX_LOOP_TEST_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_loop_test(&mut self) -> SLC1_RX_LOOP_TEST_W<CONF0_SPEC, 21> {
-        SLC1_RX_LOOP_TEST_W::new(self)
+    pub fn slc1_rx_loop_test(&mut self) -> SLC1_RX_LOOP_TEST_W<CONF0_SPEC> {
+        SLC1_RX_LOOP_TEST_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_auto_wrback(&mut self) -> SLC1_RX_AUTO_WRBACK_W<CONF0_SPEC, 22> {
-        SLC1_RX_AUTO_WRBACK_W::new(self)
+    pub fn slc1_rx_auto_wrback(&mut self) -> SLC1_RX_AUTO_WRBACK_W<CONF0_SPEC> {
+        SLC1_RX_AUTO_WRBACK_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rx_no_restart_clr(&mut self) -> SLC1_RX_NO_RESTART_CLR_W<CONF0_SPEC, 23> {
-        SLC1_RX_NO_RESTART_CLR_W::new(self)
+    pub fn slc1_rx_no_restart_clr(&mut self) -> SLC1_RX_NO_RESTART_CLR_W<CONF0_SPEC> {
+        SLC1_RX_NO_RESTART_CLR_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rxdscr_burst_en(&mut self) -> SLC1_RXDSCR_BURST_EN_W<CONF0_SPEC, 24> {
-        SLC1_RXDSCR_BURST_EN_W::new(self)
+    pub fn slc1_rxdscr_burst_en(&mut self) -> SLC1_RXDSCR_BURST_EN_W<CONF0_SPEC> {
+        SLC1_RXDSCR_BURST_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rxdata_burst_en(&mut self) -> SLC1_RXDATA_BURST_EN_W<CONF0_SPEC, 25> {
-        SLC1_RXDATA_BURST_EN_W::new(self)
+    pub fn slc1_rxdata_burst_en(&mut self) -> SLC1_RXDATA_BURST_EN_W<CONF0_SPEC> {
+        SLC1_RXDATA_BURST_EN_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_rxlink_auto_ret(&mut self) -> SLC1_RXLINK_AUTO_RET_W<CONF0_SPEC, 26> {
-        SLC1_RXLINK_AUTO_RET_W::new(self)
+    pub fn slc1_rxlink_auto_ret(&mut self) -> SLC1_RXLINK_AUTO_RET_W<CONF0_SPEC> {
+        SLC1_RXLINK_AUTO_RET_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_txlink_auto_ret(&mut self) -> SLC1_TXLINK_AUTO_RET_W<CONF0_SPEC, 27> {
-        SLC1_TXLINK_AUTO_RET_W::new(self)
+    pub fn slc1_txlink_auto_ret(&mut self) -> SLC1_TXLINK_AUTO_RET_W<CONF0_SPEC> {
+        SLC1_TXLINK_AUTO_RET_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_txdscr_burst_en(&mut self) -> SLC1_TXDSCR_BURST_EN_W<CONF0_SPEC, 28> {
-        SLC1_TXDSCR_BURST_EN_W::new(self)
+    pub fn slc1_txdscr_burst_en(&mut self) -> SLC1_TXDSCR_BURST_EN_W<CONF0_SPEC> {
+        SLC1_TXDSCR_BURST_EN_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_txdata_burst_en(&mut self) -> SLC1_TXDATA_BURST_EN_W<CONF0_SPEC, 29> {
-        SLC1_TXDATA_BURST_EN_W::new(self)
+    pub fn slc1_txdata_burst_en(&mut self) -> SLC1_TXDATA_BURST_EN_W<CONF0_SPEC> {
+        SLC1_TXDATA_BURST_EN_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_token_auto_clr(&mut self) -> SLC1_TOKEN_AUTO_CLR_W<CONF0_SPEC, 30> {
-        SLC1_TOKEN_AUTO_CLR_W::new(self)
+    pub fn slc1_token_auto_clr(&mut self) -> SLC1_TOKEN_AUTO_CLR_W<CONF0_SPEC> {
+        SLC1_TOKEN_AUTO_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn slc1_token_sel(&mut self) -> SLC1_TOKEN_SEL_W<CONF0_SPEC, 31> {
-        SLC1_TOKEN_SEL_W::new(self)
+    pub fn slc1_token_sel(&mut self) -> SLC1_TOKEN_SEL_W<CONF0_SPEC> {
+        SLC1_TOKEN_SEL_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

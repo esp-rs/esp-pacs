@@ -5,15 +5,15 @@ pub type W = crate::W<MEM_TEST_CONF_SPEC>;
 #[doc = "Field `HP_MEM_WPULSE` reader - This field controls hp system memory WPULSE parameter."]
 pub type HP_MEM_WPULSE_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_WPULSE` writer - This field controls hp system memory WPULSE parameter."]
-pub type HP_MEM_WPULSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type HP_MEM_WPULSE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `HP_MEM_WA` reader - This field controls hp system memory WA parameter."]
 pub type HP_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_WA` writer - This field controls hp system memory WA parameter."]
-pub type HP_MEM_WA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type HP_MEM_WA_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `HP_MEM_RA` reader - This field controls hp system memory RA parameter."]
 pub type HP_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_RA` writer - This field controls hp system memory RA parameter."]
-pub type HP_MEM_RA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HP_MEM_RA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:2 - This field controls hp system memory WPULSE parameter."]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MEM_TEST_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - This field controls hp system memory WPULSE parameter."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<MEM_TEST_CONF_SPEC, 0> {
-        HP_MEM_WPULSE_W::new(self)
+    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<MEM_TEST_CONF_SPEC> {
+        HP_MEM_WPULSE_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - This field controls hp system memory WA parameter."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<MEM_TEST_CONF_SPEC, 3> {
-        HP_MEM_WA_W::new(self)
+    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<MEM_TEST_CONF_SPEC> {
+        HP_MEM_WA_W::new(self, 3)
     }
     #[doc = "Bits 6:7 - This field controls hp system memory RA parameter."]
     #[inline(always)]
     #[must_use]
-    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<MEM_TEST_CONF_SPEC, 6> {
-        HP_MEM_RA_W::new(self)
+    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<MEM_TEST_CONF_SPEC> {
+        HP_MEM_RA_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<BUS_TIMING_1_SPEC>;
 #[doc = "Field `TIME_SEG1` reader - The width of PBS1."]
 pub type TIME_SEG1_R = crate::FieldReader;
 #[doc = "Field `TIME_SEG1` writer - The width of PBS1."]
-pub type TIME_SEG1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TIME_SEG1_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TIME_SEG2` reader - The width of PBS2."]
 pub type TIME_SEG2_R = crate::FieldReader;
 #[doc = "Field `TIME_SEG2` writer - The width of PBS2."]
-pub type TIME_SEG2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TIME_SEG2_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TIME_SAMP` reader - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
 pub type TIME_SAMP_R = crate::BitReader;
 #[doc = "Field `TIME_SAMP` writer - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
-pub type TIME_SAMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIME_SAMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - The width of PBS1."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<BUS_TIMING_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - The width of PBS1."]
     #[inline(always)]
     #[must_use]
-    pub fn time_seg1(&mut self) -> TIME_SEG1_W<BUS_TIMING_1_SPEC, 0> {
-        TIME_SEG1_W::new(self)
+    pub fn time_seg1(&mut self) -> TIME_SEG1_W<BUS_TIMING_1_SPEC> {
+        TIME_SEG1_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - The width of PBS2."]
     #[inline(always)]
     #[must_use]
-    pub fn time_seg2(&mut self) -> TIME_SEG2_W<BUS_TIMING_1_SPEC, 4> {
-        TIME_SEG2_W::new(self)
+    pub fn time_seg2(&mut self) -> TIME_SEG2_W<BUS_TIMING_1_SPEC> {
+        TIME_SEG2_W::new(self, 4)
     }
     #[doc = "Bit 7 - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
     #[inline(always)]
     #[must_use]
-    pub fn time_samp(&mut self) -> TIME_SAMP_W<BUS_TIMING_1_SPEC, 7> {
-        TIME_SAMP_W::new(self)
+    pub fn time_samp(&mut self) -> TIME_SAMP_W<BUS_TIMING_1_SPEC> {
+        TIME_SAMP_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

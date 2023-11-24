@@ -1,7 +1,7 @@
 #[doc = "Register `CONTINUE` writer"]
 pub type W = crate::W<CONTINUE_SPEC>;
 #[doc = "Field `CONTINUE` writer - Reserved."]
-pub type CONTINUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 31, O, u32>;
+pub type CONTINUE_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONTINUE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 1:31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn continue_(&mut self) -> CONTINUE_W<CONTINUE_SPEC, 1> {
-        CONTINUE_W::new(self)
+    pub fn continue_(&mut self) -> CONTINUE_W<CONTINUE_SPEC> {
+        CONTINUE_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

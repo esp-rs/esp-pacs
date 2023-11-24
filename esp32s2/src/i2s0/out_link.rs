@@ -5,19 +5,19 @@ pub type W = crate::W<OUT_LINK_SPEC>;
 #[doc = "Field `OUTLINK_ADDR` reader - The address of first outlink descriptor."]
 pub type OUTLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - The address of first outlink descriptor."]
-pub type OUTLINK_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type OUTLINK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 #[doc = "Field `OUTLINK_STOP` reader - Set this bit to stop outlink descriptor."]
 pub type OUTLINK_STOP_R = crate::BitReader;
 #[doc = "Field `OUTLINK_STOP` writer - Set this bit to stop outlink descriptor."]
-pub type OUTLINK_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_START` reader - Set this bit to start outlink descriptor."]
 pub type OUTLINK_START_R = crate::BitReader;
 #[doc = "Field `OUTLINK_START` writer - Set this bit to start outlink descriptor."]
-pub type OUTLINK_START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_RESTART` reader - Set this bit to restart outlink descriptor."]
 pub type OUTLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `OUTLINK_RESTART` writer - Set this bit to restart outlink descriptor."]
-pub type OUTLINK_RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTLINK_RESTART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTLINK_PARK` reader - "]
 pub type OUTLINK_PARK_R = crate::BitReader;
 impl R {
@@ -77,33 +77,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_LINK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - The address of first outlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<OUT_LINK_SPEC, 0> {
-        OUTLINK_ADDR_W::new(self)
+    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<OUT_LINK_SPEC> {
+        OUTLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28 - Set this bit to stop outlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<OUT_LINK_SPEC, 28> {
-        OUTLINK_STOP_W::new(self)
+    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<OUT_LINK_SPEC> {
+        OUTLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to start outlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_start(&mut self) -> OUTLINK_START_W<OUT_LINK_SPEC, 29> {
-        OUTLINK_START_W::new(self)
+    pub fn outlink_start(&mut self) -> OUTLINK_START_W<OUT_LINK_SPEC> {
+        OUTLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to restart outlink descriptor."]
     #[inline(always)]
     #[must_use]
-    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<OUT_LINK_SPEC, 30> {
-        OUTLINK_RESTART_W::new(self)
+    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<OUT_LINK_SPEC> {
+        OUTLINK_RESTART_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

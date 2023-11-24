@@ -5,20 +5,19 @@ pub type W = crate::W<CACHE_CONF_MISC_SPEC>;
 #[doc = "Field `CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by preload operation."]
 pub type CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R = crate::BitReader;
 #[doc = "Field `CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT` writer - The bit is used to disable checking mmu entry fault by preload operation."]
-pub type CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O>;
+pub type CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by sync operation."]
 pub type CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R = crate::BitReader;
 #[doc = "Field `CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT` writer - The bit is used to disable checking mmu entry fault by sync operation."]
-pub type CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_TRACE_ENA` reader - The bit is used to enable cache trace function."]
 pub type CACHE_TRACE_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_TRACE_ENA` writer - The bit is used to enable cache trace function."]
-pub type CACHE_TRACE_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_TRACE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_MMU_PAGE_SIZE` reader - This bit is used to choose mmu page size. 2:64KB. 1. 32KB. 0: 16KB"]
 pub type CACHE_MMU_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `CACHE_MMU_PAGE_SIZE` writer - This bit is used to choose mmu page size. 2:64KB. 1. 32KB. 0: 16KB"]
-pub type CACHE_MMU_PAGE_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CACHE_MMU_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable checking mmu entry fault by preload operation."]
     #[inline(always)]
@@ -67,7 +66,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_CONF_MISC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -76,28 +75,28 @@ impl W {
     #[must_use]
     pub fn cache_ignore_preload_mmu_entry_fault(
         &mut self,
-    ) -> CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC, 0> {
-        CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W::new(self)
+    ) -> CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+        CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable checking mmu entry fault by sync operation."]
     #[inline(always)]
     #[must_use]
     pub fn cache_ignore_sync_mmu_entry_fault(
         &mut self,
-    ) -> CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC, 1> {
-        CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W::new(self)
+    ) -> CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+        CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable cache trace function."]
     #[inline(always)]
     #[must_use]
-    pub fn cache_trace_ena(&mut self) -> CACHE_TRACE_ENA_W<CACHE_CONF_MISC_SPEC, 2> {
-        CACHE_TRACE_ENA_W::new(self)
+    pub fn cache_trace_ena(&mut self) -> CACHE_TRACE_ENA_W<CACHE_CONF_MISC_SPEC> {
+        CACHE_TRACE_ENA_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - This bit is used to choose mmu page size. 2:64KB. 1. 32KB. 0: 16KB"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_mmu_page_size(&mut self) -> CACHE_MMU_PAGE_SIZE_W<CACHE_CONF_MISC_SPEC, 3> {
-        CACHE_MMU_PAGE_SIZE_W::new(self)
+    pub fn cache_mmu_page_size(&mut self) -> CACHE_MMU_PAGE_SIZE_W<CACHE_CONF_MISC_SPEC> {
+        CACHE_MMU_PAGE_SIZE_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

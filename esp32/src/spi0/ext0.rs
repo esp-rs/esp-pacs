@@ -5,15 +5,15 @@ pub type W = crate::W<EXT0_SPEC>;
 #[doc = "Field `T_PP_TIME` reader - page program delay time by system clock."]
 pub type T_PP_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `T_PP_TIME` writer - page program delay time by system clock."]
-pub type T_PP_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type T_PP_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `T_PP_SHIFT` reader - page program delay time shift ."]
 pub type T_PP_SHIFT_R = crate::FieldReader;
 #[doc = "Field `T_PP_SHIFT` writer - page program delay time shift ."]
-pub type T_PP_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type T_PP_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `T_PP_ENA` reader - page program delay enable."]
 pub type T_PP_ENA_R = crate::BitReader;
 #[doc = "Field `T_PP_ENA` writer - page program delay enable."]
-pub type T_PP_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type T_PP_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - page program delay time by system clock."]
     #[inline(always)]
@@ -44,27 +44,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EXT0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - page program delay time by system clock."]
     #[inline(always)]
     #[must_use]
-    pub fn t_pp_time(&mut self) -> T_PP_TIME_W<EXT0_SPEC, 0> {
-        T_PP_TIME_W::new(self)
+    pub fn t_pp_time(&mut self) -> T_PP_TIME_W<EXT0_SPEC> {
+        T_PP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - page program delay time shift ."]
     #[inline(always)]
     #[must_use]
-    pub fn t_pp_shift(&mut self) -> T_PP_SHIFT_W<EXT0_SPEC, 16> {
-        T_PP_SHIFT_W::new(self)
+    pub fn t_pp_shift(&mut self) -> T_PP_SHIFT_W<EXT0_SPEC> {
+        T_PP_SHIFT_W::new(self, 16)
     }
     #[doc = "Bit 31 - page program delay enable."]
     #[inline(always)]
     #[must_use]
-    pub fn t_pp_ena(&mut self) -> T_PP_ENA_W<EXT0_SPEC, 31> {
-        T_PP_ENA_W::new(self)
+    pub fn t_pp_ena(&mut self) -> T_PP_ENA_W<EXT0_SPEC> {
+        T_PP_ENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

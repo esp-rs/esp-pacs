@@ -1,7 +1,7 @@
 #[doc = "Register `SLP_WAKEUP_CNTL4` writer"]
 pub type W = crate::W<SLP_WAKEUP_CNTL4_SPEC>;
 #[doc = "Field `SLP_REJECT_CAUSE_CLR` writer - need_des"]
-pub type SLP_REJECT_CAUSE_CLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLP_REJECT_CAUSE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<SLP_WAKEUP_CNTL4_SPEC, 31> {
-        SLP_REJECT_CAUSE_CLR_W::new(self)
+    pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<SLP_WAKEUP_CNTL4_SPEC> {
+        SLP_REJECT_CAUSE_CLR_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

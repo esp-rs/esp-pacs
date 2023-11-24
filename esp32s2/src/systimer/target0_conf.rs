@@ -5,15 +5,15 @@ pub type W = crate::W<TARGET0_CONF_SPEC>;
 #[doc = "Field `TARGET0_PERIOD` reader - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
 pub type TARGET0_PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `TARGET0_PERIOD` writer - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
-pub type TARGET0_PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 30, O, u32>;
+pub type TARGET0_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 #[doc = "Field `TARGET0_PERIOD_MODE` reader - Set work mode for system timer target 0. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
 pub type TARGET0_PERIOD_MODE_R = crate::BitReader;
 #[doc = "Field `TARGET0_PERIOD_MODE` writer - Set work mode for system timer target 0. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
-pub type TARGET0_PERIOD_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET0_PERIOD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TARGET0_WORK_EN` reader - System timer target 0 work enable."]
 pub type TARGET0_WORK_EN_R = crate::BitReader;
 #[doc = "Field `TARGET0_WORK_EN` writer - System timer target 0 work enable."]
-pub type TARGET0_WORK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TARGET0_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:29 - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TARGET0_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:29 - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
     #[inline(always)]
     #[must_use]
-    pub fn target0_period(&mut self) -> TARGET0_PERIOD_W<TARGET0_CONF_SPEC, 0> {
-        TARGET0_PERIOD_W::new(self)
+    pub fn target0_period(&mut self) -> TARGET0_PERIOD_W<TARGET0_CONF_SPEC> {
+        TARGET0_PERIOD_W::new(self, 0)
     }
     #[doc = "Bit 30 - Set work mode for system timer target 0. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
     #[inline(always)]
     #[must_use]
-    pub fn target0_period_mode(&mut self) -> TARGET0_PERIOD_MODE_W<TARGET0_CONF_SPEC, 30> {
-        TARGET0_PERIOD_MODE_W::new(self)
+    pub fn target0_period_mode(&mut self) -> TARGET0_PERIOD_MODE_W<TARGET0_CONF_SPEC> {
+        TARGET0_PERIOD_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - System timer target 0 work enable."]
     #[inline(always)]
     #[must_use]
-    pub fn target0_work_en(&mut self) -> TARGET0_WORK_EN_W<TARGET0_CONF_SPEC, 31> {
-        TARGET0_WORK_EN_W::new(self)
+    pub fn target0_work_en(&mut self) -> TARGET0_WORK_EN_W<TARGET0_CONF_SPEC> {
+        TARGET0_WORK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

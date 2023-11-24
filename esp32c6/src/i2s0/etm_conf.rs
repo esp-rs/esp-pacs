@@ -5,11 +5,11 @@ pub type W = crate::W<ETM_CONF_SPEC>;
 #[doc = "Field `ETM_TX_SEND_WORD_NUM` reader - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
 pub type ETM_TX_SEND_WORD_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `ETM_TX_SEND_WORD_NUM` writer - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
-pub type ETM_TX_SEND_WORD_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type ETM_TX_SEND_WORD_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `ETM_RX_RECEIVE_WORD_NUM` reader - I2S ETM receive x words event. When receiving word number of reg_etm_rx_receive_word_num\\[9:0\\], i2s will trigger an etm event."]
 pub type ETM_RX_RECEIVE_WORD_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `ETM_RX_RECEIVE_WORD_NUM` writer - I2S ETM receive x words event. When receiving word number of reg_etm_rx_receive_word_num\\[9:0\\], i2s will trigger an etm event."]
-pub type ETM_RX_RECEIVE_WORD_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type ETM_RX_RECEIVE_WORD_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:9 - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ETM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_tx_send_word_num(&mut self) -> ETM_TX_SEND_WORD_NUM_W<ETM_CONF_SPEC, 0> {
-        ETM_TX_SEND_WORD_NUM_W::new(self)
+    pub fn etm_tx_send_word_num(&mut self) -> ETM_TX_SEND_WORD_NUM_W<ETM_CONF_SPEC> {
+        ETM_TX_SEND_WORD_NUM_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - I2S ETM receive x words event. When receiving word number of reg_etm_rx_receive_word_num\\[9:0\\], i2s will trigger an etm event."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_rx_receive_word_num(&mut self) -> ETM_RX_RECEIVE_WORD_NUM_W<ETM_CONF_SPEC, 10> {
-        ETM_RX_RECEIVE_WORD_NUM_W::new(self)
+    pub fn etm_rx_receive_word_num(&mut self) -> ETM_RX_RECEIVE_WORD_NUM_W<ETM_CONF_SPEC> {
+        ETM_RX_RECEIVE_WORD_NUM_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

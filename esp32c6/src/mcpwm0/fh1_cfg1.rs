@@ -5,19 +5,19 @@ pub type W = crate::W<FH1_CFG1_SPEC>;
 #[doc = "Field `TZ1_CLR_OST` reader - a rising edge will clear on going one-shot mode action"]
 pub type TZ1_CLR_OST_R = crate::BitReader;
 #[doc = "Field `TZ1_CLR_OST` writer - a rising edge will clear on going one-shot mode action"]
-pub type TZ1_CLR_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TZ1_CLR_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TZ1_CBCPULSE` reader - cycle-by-cycle mode action refresh moment selection. When bit0 is set to 1: TEZ, when bit1 is set to 1:TEP"]
 pub type TZ1_CBCPULSE_R = crate::FieldReader;
 #[doc = "Field `TZ1_CBCPULSE` writer - cycle-by-cycle mode action refresh moment selection. When bit0 is set to 1: TEZ, when bit1 is set to 1:TEP"]
-pub type TZ1_CBCPULSE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TZ1_CBCPULSE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TZ1_FORCE_CBC` reader - a toggle trigger a cycle-by-cycle mode action"]
 pub type TZ1_FORCE_CBC_R = crate::BitReader;
 #[doc = "Field `TZ1_FORCE_CBC` writer - a toggle trigger a cycle-by-cycle mode action"]
-pub type TZ1_FORCE_CBC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TZ1_FORCE_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TZ1_FORCE_OST` reader - a toggle (software negate its value) triggers a one-shot mode action"]
 pub type TZ1_FORCE_OST_R = crate::BitReader;
 #[doc = "Field `TZ1_FORCE_OST` writer - a toggle (software negate its value) triggers a one-shot mode action"]
-pub type TZ1_FORCE_OST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TZ1_FORCE_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - a rising edge will clear on going one-shot mode action"]
     #[inline(always)]
@@ -63,33 +63,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FH1_CFG1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - a rising edge will clear on going one-shot mode action"]
     #[inline(always)]
     #[must_use]
-    pub fn tz1_clr_ost(&mut self) -> TZ1_CLR_OST_W<FH1_CFG1_SPEC, 0> {
-        TZ1_CLR_OST_W::new(self)
+    pub fn tz1_clr_ost(&mut self) -> TZ1_CLR_OST_W<FH1_CFG1_SPEC> {
+        TZ1_CLR_OST_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - cycle-by-cycle mode action refresh moment selection. When bit0 is set to 1: TEZ, when bit1 is set to 1:TEP"]
     #[inline(always)]
     #[must_use]
-    pub fn tz1_cbcpulse(&mut self) -> TZ1_CBCPULSE_W<FH1_CFG1_SPEC, 1> {
-        TZ1_CBCPULSE_W::new(self)
+    pub fn tz1_cbcpulse(&mut self) -> TZ1_CBCPULSE_W<FH1_CFG1_SPEC> {
+        TZ1_CBCPULSE_W::new(self, 1)
     }
     #[doc = "Bit 3 - a toggle trigger a cycle-by-cycle mode action"]
     #[inline(always)]
     #[must_use]
-    pub fn tz1_force_cbc(&mut self) -> TZ1_FORCE_CBC_W<FH1_CFG1_SPEC, 3> {
-        TZ1_FORCE_CBC_W::new(self)
+    pub fn tz1_force_cbc(&mut self) -> TZ1_FORCE_CBC_W<FH1_CFG1_SPEC> {
+        TZ1_FORCE_CBC_W::new(self, 3)
     }
     #[doc = "Bit 4 - a toggle (software negate its value) triggers a one-shot mode action"]
     #[inline(always)]
     #[must_use]
-    pub fn tz1_force_ost(&mut self) -> TZ1_FORCE_OST_W<FH1_CFG1_SPEC, 4> {
-        TZ1_FORCE_OST_W::new(self)
+    pub fn tz1_force_ost(&mut self) -> TZ1_FORCE_OST_W<FH1_CFG1_SPEC> {
+        TZ1_FORCE_OST_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

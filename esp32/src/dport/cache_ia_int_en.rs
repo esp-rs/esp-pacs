@@ -5,55 +5,55 @@ pub type W = crate::W<CACHE_IA_INT_EN_SPEC>;
 #[doc = "Field `CACHE_IA_INT_EN` reader - Interrupt enable bits for various invalid cache access reasons"]
 pub type CACHE_IA_INT_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_IA_INT_EN` writer - Interrupt enable bits for various invalid cache access reasons"]
-pub type CACHE_IA_INT_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 28, O, u32>;
+pub type CACHE_IA_INT_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 #[doc = "Field `CACHE_IA_INT_APP_DROM0` reader - APP CPU invalid access to DROM0 when cache is disabled"]
 pub type CACHE_IA_INT_APP_DROM0_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_APP_DROM0` writer - APP CPU invalid access to DROM0 when cache is disabled"]
-pub type CACHE_IA_INT_APP_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_APP_DROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_APP_IRAM0` reader - APP CPU invalid access to IRAM0 when cache is disabled"]
 pub type CACHE_IA_INT_APP_IRAM0_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_APP_IRAM0` writer - APP CPU invalid access to IRAM0 when cache is disabled"]
-pub type CACHE_IA_INT_APP_IRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_APP_IRAM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_APP_IRAM1` reader - APP CPU invalid access to IRAM1 when cache is disabled"]
 pub type CACHE_IA_INT_APP_IRAM1_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_APP_IRAM1` writer - APP CPU invalid access to IRAM1 when cache is disabled"]
-pub type CACHE_IA_INT_APP_IRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_APP_IRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_APP_IROM0` reader - APP CPU invalid access to IROM0 when cache is disabled"]
 pub type CACHE_IA_INT_APP_IROM0_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_APP_IROM0` writer - APP CPU invalid access to IROM0 when cache is disabled"]
-pub type CACHE_IA_INT_APP_IROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_APP_IROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_APP_DRAM1` reader - APP CPU invalid access to DRAM1 when cache is disabled"]
 pub type CACHE_IA_INT_APP_DRAM1_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_APP_DRAM1` writer - APP CPU invalid access to DRAM1 when cache is disabled"]
-pub type CACHE_IA_INT_APP_DRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_APP_DRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_APP_OPPOSITE` reader - APP CPU invalid access to APP CPU cache when cache disabled"]
 pub type CACHE_IA_INT_APP_OPPOSITE_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_APP_OPPOSITE` writer - APP CPU invalid access to APP CPU cache when cache disabled"]
-pub type CACHE_IA_INT_APP_OPPOSITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_APP_OPPOSITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_PRO_DROM0` reader - PRO CPU invalid access to DROM0 when cache is disabled"]
 pub type CACHE_IA_INT_PRO_DROM0_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_PRO_DROM0` writer - PRO CPU invalid access to DROM0 when cache is disabled"]
-pub type CACHE_IA_INT_PRO_DROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_PRO_DROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_PRO_IRAM0` reader - PRO CPU invalid access to IRAM0 when cache is disabled"]
 pub type CACHE_IA_INT_PRO_IRAM0_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_PRO_IRAM0` writer - PRO CPU invalid access to IRAM0 when cache is disabled"]
-pub type CACHE_IA_INT_PRO_IRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_PRO_IRAM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_PRO_IRAM1` reader - PRO CPU invalid access to IRAM1 when cache is disabled"]
 pub type CACHE_IA_INT_PRO_IRAM1_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_PRO_IRAM1` writer - PRO CPU invalid access to IRAM1 when cache is disabled"]
-pub type CACHE_IA_INT_PRO_IRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_PRO_IRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_PRO_IROM0` reader - PRO CPU invalid access to IROM0 when cache is disabled"]
 pub type CACHE_IA_INT_PRO_IROM0_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_PRO_IROM0` writer - PRO CPU invalid access to IROM0 when cache is disabled"]
-pub type CACHE_IA_INT_PRO_IROM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_PRO_IROM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_PRO_DRAM1` reader - PRO CPU invalid access to DRAM1 when cache is disabled"]
 pub type CACHE_IA_INT_PRO_DRAM1_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_PRO_DRAM1` writer - PRO CPU invalid access to DRAM1 when cache is disabled"]
-pub type CACHE_IA_INT_PRO_DRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_PRO_DRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CACHE_IA_INT_PRO_OPPOSITE` reader - PRO CPU invalid access to APP CPU cache when cache disabled"]
 pub type CACHE_IA_INT_PRO_OPPOSITE_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_PRO_OPPOSITE` writer - PRO CPU invalid access to APP CPU cache when cache disabled"]
-pub type CACHE_IA_INT_PRO_OPPOSITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CACHE_IA_INT_PRO_OPPOSITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:27 - Interrupt enable bits for various invalid cache access reasons"]
     #[inline(always)]
@@ -183,91 +183,91 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_IA_INT_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - Interrupt enable bits for various invalid cache access reasons"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_en(&mut self) -> CACHE_IA_INT_EN_W<CACHE_IA_INT_EN_SPEC, 0> {
-        CACHE_IA_INT_EN_W::new(self)
+    pub fn cache_ia_int_en(&mut self) -> CACHE_IA_INT_EN_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_EN_W::new(self, 0)
     }
     #[doc = "Bit 0 - APP CPU invalid access to DROM0 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_app_drom0(&mut self) -> CACHE_IA_INT_APP_DROM0_W<CACHE_IA_INT_EN_SPEC, 0> {
-        CACHE_IA_INT_APP_DROM0_W::new(self)
+    pub fn cache_ia_int_app_drom0(&mut self) -> CACHE_IA_INT_APP_DROM0_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_APP_DROM0_W::new(self, 0)
     }
     #[doc = "Bit 1 - APP CPU invalid access to IRAM0 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_app_iram0(&mut self) -> CACHE_IA_INT_APP_IRAM0_W<CACHE_IA_INT_EN_SPEC, 1> {
-        CACHE_IA_INT_APP_IRAM0_W::new(self)
+    pub fn cache_ia_int_app_iram0(&mut self) -> CACHE_IA_INT_APP_IRAM0_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_APP_IRAM0_W::new(self, 1)
     }
     #[doc = "Bit 2 - APP CPU invalid access to IRAM1 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_app_iram1(&mut self) -> CACHE_IA_INT_APP_IRAM1_W<CACHE_IA_INT_EN_SPEC, 2> {
-        CACHE_IA_INT_APP_IRAM1_W::new(self)
+    pub fn cache_ia_int_app_iram1(&mut self) -> CACHE_IA_INT_APP_IRAM1_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_APP_IRAM1_W::new(self, 2)
     }
     #[doc = "Bit 3 - APP CPU invalid access to IROM0 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_app_irom0(&mut self) -> CACHE_IA_INT_APP_IROM0_W<CACHE_IA_INT_EN_SPEC, 3> {
-        CACHE_IA_INT_APP_IROM0_W::new(self)
+    pub fn cache_ia_int_app_irom0(&mut self) -> CACHE_IA_INT_APP_IROM0_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_APP_IROM0_W::new(self, 3)
     }
     #[doc = "Bit 4 - APP CPU invalid access to DRAM1 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_app_dram1(&mut self) -> CACHE_IA_INT_APP_DRAM1_W<CACHE_IA_INT_EN_SPEC, 4> {
-        CACHE_IA_INT_APP_DRAM1_W::new(self)
+    pub fn cache_ia_int_app_dram1(&mut self) -> CACHE_IA_INT_APP_DRAM1_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_APP_DRAM1_W::new(self, 4)
     }
     #[doc = "Bit 5 - APP CPU invalid access to APP CPU cache when cache disabled"]
     #[inline(always)]
     #[must_use]
     pub fn cache_ia_int_app_opposite(
         &mut self,
-    ) -> CACHE_IA_INT_APP_OPPOSITE_W<CACHE_IA_INT_EN_SPEC, 5> {
-        CACHE_IA_INT_APP_OPPOSITE_W::new(self)
+    ) -> CACHE_IA_INT_APP_OPPOSITE_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_APP_OPPOSITE_W::new(self, 5)
     }
     #[doc = "Bit 14 - PRO CPU invalid access to DROM0 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_pro_drom0(&mut self) -> CACHE_IA_INT_PRO_DROM0_W<CACHE_IA_INT_EN_SPEC, 14> {
-        CACHE_IA_INT_PRO_DROM0_W::new(self)
+    pub fn cache_ia_int_pro_drom0(&mut self) -> CACHE_IA_INT_PRO_DROM0_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_PRO_DROM0_W::new(self, 14)
     }
     #[doc = "Bit 15 - PRO CPU invalid access to IRAM0 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_pro_iram0(&mut self) -> CACHE_IA_INT_PRO_IRAM0_W<CACHE_IA_INT_EN_SPEC, 15> {
-        CACHE_IA_INT_PRO_IRAM0_W::new(self)
+    pub fn cache_ia_int_pro_iram0(&mut self) -> CACHE_IA_INT_PRO_IRAM0_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_PRO_IRAM0_W::new(self, 15)
     }
     #[doc = "Bit 16 - PRO CPU invalid access to IRAM1 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_pro_iram1(&mut self) -> CACHE_IA_INT_PRO_IRAM1_W<CACHE_IA_INT_EN_SPEC, 16> {
-        CACHE_IA_INT_PRO_IRAM1_W::new(self)
+    pub fn cache_ia_int_pro_iram1(&mut self) -> CACHE_IA_INT_PRO_IRAM1_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_PRO_IRAM1_W::new(self, 16)
     }
     #[doc = "Bit 17 - PRO CPU invalid access to IROM0 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_pro_irom0(&mut self) -> CACHE_IA_INT_PRO_IROM0_W<CACHE_IA_INT_EN_SPEC, 17> {
-        CACHE_IA_INT_PRO_IROM0_W::new(self)
+    pub fn cache_ia_int_pro_irom0(&mut self) -> CACHE_IA_INT_PRO_IROM0_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_PRO_IROM0_W::new(self, 17)
     }
     #[doc = "Bit 18 - PRO CPU invalid access to DRAM1 when cache is disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn cache_ia_int_pro_dram1(&mut self) -> CACHE_IA_INT_PRO_DRAM1_W<CACHE_IA_INT_EN_SPEC, 18> {
-        CACHE_IA_INT_PRO_DRAM1_W::new(self)
+    pub fn cache_ia_int_pro_dram1(&mut self) -> CACHE_IA_INT_PRO_DRAM1_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_PRO_DRAM1_W::new(self, 18)
     }
     #[doc = "Bit 19 - PRO CPU invalid access to APP CPU cache when cache disabled"]
     #[inline(always)]
     #[must_use]
     pub fn cache_ia_int_pro_opposite(
         &mut self,
-    ) -> CACHE_IA_INT_PRO_OPPOSITE_W<CACHE_IA_INT_EN_SPEC, 19> {
-        CACHE_IA_INT_PRO_OPPOSITE_W::new(self)
+    ) -> CACHE_IA_INT_PRO_OPPOSITE_W<CACHE_IA_INT_EN_SPEC> {
+        CACHE_IA_INT_PRO_OPPOSITE_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

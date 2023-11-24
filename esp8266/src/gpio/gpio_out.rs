@@ -5,11 +5,11 @@ pub type W = crate::W<GPIO_OUT_SPEC>;
 #[doc = "Field `GPIO_OUT_DATA` reader - The output value when the GPIO pin is set as output."]
 pub type GPIO_OUT_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_OUT_DATA` writer - The output value when the GPIO pin is set as output."]
-pub type GPIO_OUT_DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type GPIO_OUT_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `GPIO_BT_SEL` reader - BT-Coexist Selection register"]
 pub type GPIO_BT_SEL_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_BT_SEL` writer - BT-Coexist Selection register"]
-pub type GPIO_BT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type GPIO_BT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The output value when the GPIO pin is set as output."]
     #[inline(always)]
@@ -40,23 +40,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_OUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - The output value when the GPIO pin is set as output."]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_out_data(&mut self) -> GPIO_OUT_DATA_W<GPIO_OUT_SPEC, 0> {
-        GPIO_OUT_DATA_W::new(self)
+    pub fn gpio_out_data(&mut self) -> GPIO_OUT_DATA_W<GPIO_OUT_SPEC> {
+        GPIO_OUT_DATA_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - BT-Coexist Selection register"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_bt_sel(&mut self) -> GPIO_BT_SEL_W<GPIO_OUT_SPEC, 16> {
-        GPIO_BT_SEL_W::new(self)
+    pub fn gpio_bt_sel(&mut self) -> GPIO_BT_SEL_W<GPIO_OUT_SPEC> {
+        GPIO_BT_SEL_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

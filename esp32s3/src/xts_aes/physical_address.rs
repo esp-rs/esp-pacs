@@ -5,7 +5,7 @@ pub type W = crate::W<PHYSICAL_ADDRESS_SPEC>;
 #[doc = "Field `PHYSICAL_ADDRESS` reader - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
 pub type PHYSICAL_ADDRESS_R = crate::FieldReader<u32>;
 #[doc = "Field `PHYSICAL_ADDRESS` writer - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
-pub type PHYSICAL_ADDRESS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 30, O, u32>;
+pub type PHYSICAL_ADDRESS_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 impl R {
     #[doc = "Bits 0:29 - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PHYSICAL_ADDRESS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:29 - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
     #[inline(always)]
     #[must_use]
-    pub fn physical_address(&mut self) -> PHYSICAL_ADDRESS_W<PHYSICAL_ADDRESS_SPEC, 0> {
-        PHYSICAL_ADDRESS_W::new(self)
+    pub fn physical_address(&mut self) -> PHYSICAL_ADDRESS_W<PHYSICAL_ADDRESS_SPEC> {
+        PHYSICAL_ADDRESS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

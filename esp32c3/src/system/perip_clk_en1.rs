@@ -5,43 +5,43 @@ pub type W = crate::W<PERIP_CLK_EN1_SPEC>;
 #[doc = "Field `CRYPTO_AES_CLK_EN` reader - reg_crypto_aes_clk_en"]
 pub type CRYPTO_AES_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_AES_CLK_EN` writer - reg_crypto_aes_clk_en"]
-pub type CRYPTO_AES_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_AES_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` reader - reg_crypto_sha_clk_en"]
 pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` writer - reg_crypto_sha_clk_en"]
-pub type CRYPTO_SHA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_SHA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` reader - reg_crypto_rsa_clk_en"]
 pub type CRYPTO_RSA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` writer - reg_crypto_rsa_clk_en"]
-pub type CRYPTO_RSA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_RSA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_DS_CLK_EN` reader - reg_crypto_ds_clk_en"]
 pub type CRYPTO_DS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DS_CLK_EN` writer - reg_crypto_ds_clk_en"]
-pub type CRYPTO_DS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_DS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` reader - reg_crypto_hmac_clk_en"]
 pub type CRYPTO_HMAC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` writer - reg_crypto_hmac_clk_en"]
-pub type CRYPTO_HMAC_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRYPTO_HMAC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_CLK_EN` reader - reg_dma_clk_en"]
 pub type DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `DMA_CLK_EN` writer - reg_dma_clk_en"]
-pub type DMA_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_HOST_CLK_EN` reader - reg_sdio_host_clk_en"]
 pub type SDIO_HOST_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_HOST_CLK_EN` writer - reg_sdio_host_clk_en"]
-pub type SDIO_HOST_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_HOST_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_CAM_CLK_EN` reader - reg_lcd_cam_clk_en"]
 pub type LCD_CAM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LCD_CAM_CLK_EN` writer - reg_lcd_cam_clk_en"]
-pub type LCD_CAM_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCD_CAM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART2_CLK_EN` reader - reg_uart2_clk_en"]
 pub type UART2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART2_CLK_EN` writer - reg_uart2_clk_en"]
-pub type UART2_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART2_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSENS_CLK_EN` reader - reg_tsens_clk_en"]
 pub type TSENS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_EN` writer - reg_tsens_clk_en"]
-pub type TSENS_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSENS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - reg_crypto_aes_clk_en"]
     #[inline(always)]
@@ -141,69 +141,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - reg_crypto_aes_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERIP_CLK_EN1_SPEC, 1> {
-        CRYPTO_AES_CLK_EN_W::new(self)
+    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_AES_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_crypto_sha_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 2> {
-        CRYPTO_SHA_CLK_EN_W::new(self)
+    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_SHA_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_crypto_rsa_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 3> {
-        CRYPTO_RSA_CLK_EN_W::new(self)
+    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_RSA_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_crypto_ds_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERIP_CLK_EN1_SPEC, 4> {
-        CRYPTO_DS_CLK_EN_W::new(self)
+    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_DS_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_crypto_hmac_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERIP_CLK_EN1_SPEC, 5> {
-        CRYPTO_HMAC_CLK_EN_W::new(self)
+    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        CRYPTO_HMAC_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_dma_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC, 6> {
-        DMA_CLK_EN_W::new(self)
+    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        DMA_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_sdio_host_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<PERIP_CLK_EN1_SPEC, 7> {
-        SDIO_HOST_CLK_EN_W::new(self)
+    pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        SDIO_HOST_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - reg_lcd_cam_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<PERIP_CLK_EN1_SPEC, 8> {
-        LCD_CAM_CLK_EN_W::new(self)
+    pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        LCD_CAM_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_uart2_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<PERIP_CLK_EN1_SPEC, 9> {
-        UART2_CLK_EN_W::new(self)
+    pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        UART2_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_tsens_clk_en"]
     #[inline(always)]
     #[must_use]
-    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<PERIP_CLK_EN1_SPEC, 10> {
-        TSENS_CLK_EN_W::new(self)
+    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+        TSENS_CLK_EN_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<LOG_SETTING_SPEC>;
 #[doc = "Field `LOG_ENA` reader - bus moniter enable: \\[0\\]Core1,\\[1\\]core1,\\[2\\]dma"]
 pub type LOG_ENA_R = crate::FieldReader;
 #[doc = "Field `LOG_ENA` writer - bus moniter enable: \\[0\\]Core1,\\[1\\]core1,\\[2\\]dma"]
-pub type LOG_ENA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LOG_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LOG_MODE` reader - check_mode:0:write,1:word,2:halword,3:byte,4:doubleword,5:4word"]
 pub type LOG_MODE_R = crate::FieldReader;
 #[doc = "Field `LOG_MODE` writer - check_mode:0:write,1:word,2:halword,3:byte,4:doubleword,5:4word"]
-pub type LOG_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LOG_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` reader - mem_loop enable,1 means that loop write"]
 pub type LOG_MEM_LOOP_ENABLE_R = crate::BitReader;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` writer - mem_loop enable,1 means that loop write"]
-pub type LOG_MEM_LOOP_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOG_MEM_LOOP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - bus moniter enable: \\[0\\]Core1,\\[1\\]core1,\\[2\\]dma"]
     #[inline(always)]
@@ -47,27 +47,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<LOG_SETTING_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - bus moniter enable: \\[0\\]Core1,\\[1\\]core1,\\[2\\]dma"]
     #[inline(always)]
     #[must_use]
-    pub fn log_ena(&mut self) -> LOG_ENA_W<LOG_SETTING_SPEC, 0> {
-        LOG_ENA_W::new(self)
+    pub fn log_ena(&mut self) -> LOG_ENA_W<LOG_SETTING_SPEC> {
+        LOG_ENA_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - check_mode:0:write,1:word,2:halword,3:byte,4:doubleword,5:4word"]
     #[inline(always)]
     #[must_use]
-    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC, 3> {
-        LOG_MODE_W::new(self)
+    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC> {
+        LOG_MODE_W::new(self, 3)
     }
     #[doc = "Bit 6 - mem_loop enable,1 means that loop write"]
     #[inline(always)]
     #[must_use]
-    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC, 6> {
-        LOG_MEM_LOOP_ENABLE_W::new(self)
+    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC> {
+        LOG_MEM_LOOP_ENABLE_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

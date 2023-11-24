@@ -5,23 +5,23 @@ pub type W = crate::W<CLKM_CONF_SPEC>;
 #[doc = "Field `CLKM_DIV_NUM` reader - "]
 pub type CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_NUM` writer - "]
-pub type CLKM_DIV_NUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLKM_DIV_B` reader - "]
 pub type CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_B` writer - "]
-pub type CLKM_DIV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CLKM_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `CLKM_DIV_A` reader - "]
 pub type CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_A` writer - "]
-pub type CLKM_DIV_A_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CLKM_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `CLK_EN` reader - "]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLKA_ENA` reader - "]
 pub type CLKA_ENA_R = crate::BitReader;
 #[doc = "Field `CLKA_ENA` writer - "]
-pub type CLKA_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLKA_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -67,39 +67,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLKM_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<CLKM_CONF_SPEC, 0> {
-        CLKM_DIV_NUM_W::new(self)
+    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<CLKM_CONF_SPEC> {
+        CLKM_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<CLKM_CONF_SPEC, 8> {
-        CLKM_DIV_B_W::new(self)
+    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<CLKM_CONF_SPEC> {
+        CLKM_DIV_B_W::new(self, 8)
     }
     #[doc = "Bits 14:19"]
     #[inline(always)]
     #[must_use]
-    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<CLKM_CONF_SPEC, 14> {
-        CLKM_DIV_A_W::new(self)
+    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<CLKM_CONF_SPEC> {
+        CLKM_DIV_A_W::new(self, 14)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CLKM_CONF_SPEC, 20> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CLKM_CONF_SPEC> {
+        CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn clka_ena(&mut self) -> CLKA_ENA_W<CLKM_CONF_SPEC, 21> {
-        CLKA_ENA_W::new(self)
+    pub fn clka_ena(&mut self) -> CLKA_ENA_W<CLKM_CONF_SPEC> {
+        CLKA_ENA_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,21 +5,21 @@ pub type W = crate::W<CAP_CH0_CFG_SPEC>;
 #[doc = "Field `CAP0_EN` reader - "]
 pub type CAP0_EN_R = crate::BitReader;
 #[doc = "Field `CAP0_EN` writer - "]
-pub type CAP0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAP0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAP0_MODE` reader - "]
 pub type CAP0_MODE_R = crate::FieldReader;
 #[doc = "Field `CAP0_MODE` writer - "]
-pub type CAP0_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CAP0_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CAP0_PRESCALE` reader - "]
 pub type CAP0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CAP0_PRESCALE` writer - "]
-pub type CAP0_PRESCALE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CAP0_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CAP0_IN_INVERT` reader - "]
 pub type CAP0_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CAP0_IN_INVERT` writer - "]
-pub type CAP0_IN_INVERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAP0_IN_INVERT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAP0_SW` writer - "]
-pub type CAP0_SW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAP0_SW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -62,39 +62,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CAP_CH0_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn cap0_en(&mut self) -> CAP0_EN_W<CAP_CH0_CFG_SPEC, 0> {
-        CAP0_EN_W::new(self)
+    pub fn cap0_en(&mut self) -> CAP0_EN_W<CAP_CH0_CFG_SPEC> {
+        CAP0_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
     #[must_use]
-    pub fn cap0_mode(&mut self) -> CAP0_MODE_W<CAP_CH0_CFG_SPEC, 1> {
-        CAP0_MODE_W::new(self)
+    pub fn cap0_mode(&mut self) -> CAP0_MODE_W<CAP_CH0_CFG_SPEC> {
+        CAP0_MODE_W::new(self, 1)
     }
     #[doc = "Bits 3:10"]
     #[inline(always)]
     #[must_use]
-    pub fn cap0_prescale(&mut self) -> CAP0_PRESCALE_W<CAP_CH0_CFG_SPEC, 3> {
-        CAP0_PRESCALE_W::new(self)
+    pub fn cap0_prescale(&mut self) -> CAP0_PRESCALE_W<CAP_CH0_CFG_SPEC> {
+        CAP0_PRESCALE_W::new(self, 3)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn cap0_in_invert(&mut self) -> CAP0_IN_INVERT_W<CAP_CH0_CFG_SPEC, 11> {
-        CAP0_IN_INVERT_W::new(self)
+    pub fn cap0_in_invert(&mut self) -> CAP0_IN_INVERT_W<CAP_CH0_CFG_SPEC> {
+        CAP0_IN_INVERT_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn cap0_sw(&mut self) -> CAP0_SW_W<CAP_CH0_CFG_SPEC, 12> {
-        CAP0_SW_W::new(self)
+    pub fn cap0_sw(&mut self) -> CAP0_SW_W<CAP_CH0_CFG_SPEC> {
+        CAP0_SW_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<EDMA_PMS_ADC_DAC_LOCK_SPEC>;
 #[doc = "Field `EDMA_PMS_ADC_DAC_LOCK` reader - Set 1 to lock EDMA-ADC/DAC permission control registers."]
 pub type EDMA_PMS_ADC_DAC_LOCK_R = crate::BitReader;
 #[doc = "Field `EDMA_PMS_ADC_DAC_LOCK` writer - Set 1 to lock EDMA-ADC/DAC permission control registers."]
-pub type EDMA_PMS_ADC_DAC_LOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EDMA_PMS_ADC_DAC_LOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock EDMA-ADC/DAC permission control registers."]
     #[inline(always)]
@@ -27,17 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EDMA_PMS_ADC_DAC_LOCK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to lock EDMA-ADC/DAC permission control registers."]
     #[inline(always)]
     #[must_use]
-    pub fn edma_pms_adc_dac_lock(
-        &mut self,
-    ) -> EDMA_PMS_ADC_DAC_LOCK_W<EDMA_PMS_ADC_DAC_LOCK_SPEC, 0> {
-        EDMA_PMS_ADC_DAC_LOCK_W::new(self)
+    pub fn edma_pms_adc_dac_lock(&mut self) -> EDMA_PMS_ADC_DAC_LOCK_W<EDMA_PMS_ADC_DAC_LOCK_SPEC> {
+        EDMA_PMS_ADC_DAC_LOCK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

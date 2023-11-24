@@ -5,7 +5,7 @@ pub type W = crate::W<CLK_SPEC>;
 #[doc = "Field `EN` reader - Force clock on for this register file."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Force clock on for this register file."]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Force clock on for this register file."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Force clock on for this register file."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<CLK_SPEC, 0> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<CLK_SPEC> {
+        EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

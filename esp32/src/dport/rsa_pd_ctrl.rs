@@ -5,7 +5,7 @@ pub type W = crate::W<RSA_PD_CTRL_SPEC>;
 #[doc = "Field `RSA_PD` reader - "]
 pub type RSA_PD_R = crate::BitReader;
 #[doc = "Field `RSA_PD` writer - "]
-pub type RSA_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSA_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RSA_PD_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn rsa_pd(&mut self) -> RSA_PD_W<RSA_PD_CTRL_SPEC, 0> {
-        RSA_PD_W::new(self)
+    pub fn rsa_pd(&mut self) -> RSA_PD_W<RSA_PD_CTRL_SPEC> {
+        RSA_PD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

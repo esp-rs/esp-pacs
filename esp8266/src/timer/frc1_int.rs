@@ -5,7 +5,7 @@ pub type W = crate::W<FRC1_INT_SPEC>;
 #[doc = "Field `frc1_int_clr_mask` reader - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
 pub type FRC1_INT_CLR_MASK_R = crate::BitReader;
 #[doc = "Field `frc1_int_clr_mask` writer - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
-pub type FRC1_INT_CLR_MASK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FRC1_INT_CLR_MASK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
     #[inline(always)]
@@ -27,17 +27,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<FRC1_INT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
     #[inline(always)]
     #[must_use]
-    pub fn frc1_int_clr_mask(&mut self) -> FRC1_INT_CLR_MASK_W<FRC1_INT_SPEC, 0> {
-        FRC1_INT_CLR_MASK_W::new(self)
+    pub fn frc1_int_clr_mask(&mut self) -> FRC1_INT_CLR_MASK_W<FRC1_INT_SPEC> {
+        FRC1_INT_CLR_MASK_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

@@ -5,35 +5,35 @@ pub type W = crate::W<APB_ADC_ARB_CTRL_SPEC>;
 #[doc = "Field `ADC_ARB_APB_FORCE` reader - adc2 arbiter force to enableapb controller"]
 pub type ADC_ARB_APB_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_APB_FORCE` writer - adc2 arbiter force to enableapb controller"]
-pub type ADC_ARB_APB_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_ARB_APB_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC_ARB_RTC_FORCE` reader - adc2 arbiter force to enable rtc controller"]
 pub type ADC_ARB_RTC_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_RTC_FORCE` writer - adc2 arbiter force to enable rtc controller"]
-pub type ADC_ARB_RTC_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_ARB_RTC_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` reader - adc2 arbiter force to enable wifi controller"]
 pub type ADC_ARB_WIFI_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` writer - adc2 arbiter force to enable wifi controller"]
-pub type ADC_ARB_WIFI_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_ARB_WIFI_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` reader - adc2 arbiter force grant"]
 pub type ADC_ARB_GRANT_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` writer - adc2 arbiter force grant"]
-pub type ADC_ARB_GRANT_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_ARB_GRANT_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` reader - Set adc2 arbiterapb priority"]
 pub type ADC_ARB_APB_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` writer - Set adc2 arbiterapb priority"]
-pub type ADC_ARB_APB_PRIORITY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADC_ARB_APB_PRIORITY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` reader - Set adc2 arbiter rtc priority"]
 pub type ADC_ARB_RTC_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` writer - Set adc2 arbiter rtc priority"]
-pub type ADC_ARB_RTC_PRIORITY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADC_ARB_RTC_PRIORITY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` reader - Set adc2 arbiter wifi priority"]
 pub type ADC_ARB_WIFI_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` writer - Set adc2 arbiter wifi priority"]
-pub type ADC_ARB_WIFI_PRIORITY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADC_ARB_WIFI_PRIORITY_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` reader - adc2 arbiter uses fixed priority"]
 pub type ADC_ARB_FIX_PRIORITY_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` writer - adc2 arbiter uses fixed priority"]
-pub type ADC_ARB_FIX_PRIORITY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_ARB_FIX_PRIORITY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
@@ -118,57 +118,57 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<APB_ADC_ARB_CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_apb_force(&mut self) -> ADC_ARB_APB_FORCE_W<APB_ADC_ARB_CTRL_SPEC, 2> {
-        ADC_ARB_APB_FORCE_W::new(self)
+    pub fn adc_arb_apb_force(&mut self) -> ADC_ARB_APB_FORCE_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_APB_FORCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - adc2 arbiter force to enable rtc controller"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_rtc_force(&mut self) -> ADC_ARB_RTC_FORCE_W<APB_ADC_ARB_CTRL_SPEC, 3> {
-        ADC_ARB_RTC_FORCE_W::new(self)
+    pub fn adc_arb_rtc_force(&mut self) -> ADC_ARB_RTC_FORCE_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_RTC_FORCE_W::new(self, 3)
     }
     #[doc = "Bit 4 - adc2 arbiter force to enable wifi controller"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_wifi_force(&mut self) -> ADC_ARB_WIFI_FORCE_W<APB_ADC_ARB_CTRL_SPEC, 4> {
-        ADC_ARB_WIFI_FORCE_W::new(self)
+    pub fn adc_arb_wifi_force(&mut self) -> ADC_ARB_WIFI_FORCE_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_WIFI_FORCE_W::new(self, 4)
     }
     #[doc = "Bit 5 - adc2 arbiter force grant"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_grant_force(&mut self) -> ADC_ARB_GRANT_FORCE_W<APB_ADC_ARB_CTRL_SPEC, 5> {
-        ADC_ARB_GRANT_FORCE_W::new(self)
+    pub fn adc_arb_grant_force(&mut self) -> ADC_ARB_GRANT_FORCE_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_GRANT_FORCE_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Set adc2 arbiterapb priority"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_apb_priority(&mut self) -> ADC_ARB_APB_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC, 6> {
-        ADC_ARB_APB_PRIORITY_W::new(self)
+    pub fn adc_arb_apb_priority(&mut self) -> ADC_ARB_APB_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_APB_PRIORITY_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Set adc2 arbiter rtc priority"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_rtc_priority(&mut self) -> ADC_ARB_RTC_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC, 8> {
-        ADC_ARB_RTC_PRIORITY_W::new(self)
+    pub fn adc_arb_rtc_priority(&mut self) -> ADC_ARB_RTC_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_RTC_PRIORITY_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Set adc2 arbiter wifi priority"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_wifi_priority(&mut self) -> ADC_ARB_WIFI_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC, 10> {
-        ADC_ARB_WIFI_PRIORITY_W::new(self)
+    pub fn adc_arb_wifi_priority(&mut self) -> ADC_ARB_WIFI_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_WIFI_PRIORITY_W::new(self, 10)
     }
     #[doc = "Bit 12 - adc2 arbiter uses fixed priority"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_arb_fix_priority(&mut self) -> ADC_ARB_FIX_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC, 12> {
-        ADC_ARB_FIX_PRIORITY_W::new(self)
+    pub fn adc_arb_fix_priority(&mut self) -> ADC_ARB_FIX_PRIORITY_W<APB_ADC_ARB_CTRL_SPEC> {
+        ADC_ARB_FIX_PRIORITY_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

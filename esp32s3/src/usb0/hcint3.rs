@@ -5,59 +5,59 @@ pub type W = crate::W<HCINT3_SPEC>;
 #[doc = "Field `H_XFERCOMPL3` reader - "]
 pub type H_XFERCOMPL3_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPL3` writer - "]
-pub type H_XFERCOMPL3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XFERCOMPL3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_CHHLTD3` reader - "]
 pub type H_CHHLTD3_R = crate::BitReader;
 #[doc = "Field `H_CHHLTD3` writer - "]
-pub type H_CHHLTD3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_CHHLTD3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_AHBERR3` reader - "]
 pub type H_AHBERR3_R = crate::BitReader;
 #[doc = "Field `H_AHBERR3` writer - "]
-pub type H_AHBERR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_AHBERR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_STALL3` reader - "]
 pub type H_STALL3_R = crate::BitReader;
 #[doc = "Field `H_STALL3` writer - "]
-pub type H_STALL3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_STALL3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_NACK3` reader - "]
 pub type H_NACK3_R = crate::BitReader;
 #[doc = "Field `H_NACK3` writer - "]
-pub type H_NACK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_NACK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_ACK3` reader - "]
 pub type H_ACK3_R = crate::BitReader;
 #[doc = "Field `H_ACK3` writer - "]
-pub type H_ACK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_ACK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_NYET3` reader - "]
 pub type H_NYET3_R = crate::BitReader;
 #[doc = "Field `H_NYET3` writer - "]
-pub type H_NYET3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_NYET3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_XACTERR3` reader - "]
 pub type H_XACTERR3_R = crate::BitReader;
 #[doc = "Field `H_XACTERR3` writer - "]
-pub type H_XACTERR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XACTERR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_BBLERR3` reader - "]
 pub type H_BBLERR3_R = crate::BitReader;
 #[doc = "Field `H_BBLERR3` writer - "]
-pub type H_BBLERR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_BBLERR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_FRMOVRUN3` reader - "]
 pub type H_FRMOVRUN3_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUN3` writer - "]
-pub type H_FRMOVRUN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_FRMOVRUN3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DATATGLERR3` reader - "]
 pub type H_DATATGLERR3_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERR3` writer - "]
-pub type H_DATATGLERR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DATATGLERR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_BNAINTR3` reader - "]
 pub type H_BNAINTR3_R = crate::BitReader;
 #[doc = "Field `H_BNAINTR3` writer - "]
-pub type H_BNAINTR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_BNAINTR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_XCS_XACT_ERR3` reader - "]
 pub type H_XCS_XACT_ERR3_R = crate::BitReader;
 #[doc = "Field `H_XCS_XACT_ERR3` writer - "]
-pub type H_XCS_XACT_ERR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_XCS_XACT_ERR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H_DESC_LST_ROLLINTR3` reader - "]
 pub type H_DESC_LST_ROLLINTR3_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTR3` writer - "]
-pub type H_DESC_LST_ROLLINTR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type H_DESC_LST_ROLLINTR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -166,93 +166,93 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HCINT3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xfercompl3(&mut self) -> H_XFERCOMPL3_W<HCINT3_SPEC, 0> {
-        H_XFERCOMPL3_W::new(self)
+    pub fn h_xfercompl3(&mut self) -> H_XFERCOMPL3_W<HCINT3_SPEC> {
+        H_XFERCOMPL3_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_chhltd3(&mut self) -> H_CHHLTD3_W<HCINT3_SPEC, 1> {
-        H_CHHLTD3_W::new(self)
+    pub fn h_chhltd3(&mut self) -> H_CHHLTD3_W<HCINT3_SPEC> {
+        H_CHHLTD3_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ahberr3(&mut self) -> H_AHBERR3_W<HCINT3_SPEC, 2> {
-        H_AHBERR3_W::new(self)
+    pub fn h_ahberr3(&mut self) -> H_AHBERR3_W<HCINT3_SPEC> {
+        H_AHBERR3_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn h_stall3(&mut self) -> H_STALL3_W<HCINT3_SPEC, 3> {
-        H_STALL3_W::new(self)
+    pub fn h_stall3(&mut self) -> H_STALL3_W<HCINT3_SPEC> {
+        H_STALL3_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nack3(&mut self) -> H_NACK3_W<HCINT3_SPEC, 4> {
-        H_NACK3_W::new(self)
+    pub fn h_nack3(&mut self) -> H_NACK3_W<HCINT3_SPEC> {
+        H_NACK3_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ack3(&mut self) -> H_ACK3_W<HCINT3_SPEC, 5> {
-        H_ACK3_W::new(self)
+    pub fn h_ack3(&mut self) -> H_ACK3_W<HCINT3_SPEC> {
+        H_ACK3_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn h_nyet3(&mut self) -> H_NYET3_W<HCINT3_SPEC, 6> {
-        H_NYET3_W::new(self)
+    pub fn h_nyet3(&mut self) -> H_NYET3_W<HCINT3_SPEC> {
+        H_NYET3_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xacterr3(&mut self) -> H_XACTERR3_W<HCINT3_SPEC, 7> {
-        H_XACTERR3_W::new(self)
+    pub fn h_xacterr3(&mut self) -> H_XACTERR3_W<HCINT3_SPEC> {
+        H_XACTERR3_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bblerr3(&mut self) -> H_BBLERR3_W<HCINT3_SPEC, 8> {
-        H_BBLERR3_W::new(self)
+    pub fn h_bblerr3(&mut self) -> H_BBLERR3_W<HCINT3_SPEC> {
+        H_BBLERR3_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frmovrun3(&mut self) -> H_FRMOVRUN3_W<HCINT3_SPEC, 9> {
-        H_FRMOVRUN3_W::new(self)
+    pub fn h_frmovrun3(&mut self) -> H_FRMOVRUN3_W<HCINT3_SPEC> {
+        H_FRMOVRUN3_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn h_datatglerr3(&mut self) -> H_DATATGLERR3_W<HCINT3_SPEC, 10> {
-        H_DATATGLERR3_W::new(self)
+    pub fn h_datatglerr3(&mut self) -> H_DATATGLERR3_W<HCINT3_SPEC> {
+        H_DATATGLERR3_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn h_bnaintr3(&mut self) -> H_BNAINTR3_W<HCINT3_SPEC, 11> {
-        H_BNAINTR3_W::new(self)
+    pub fn h_bnaintr3(&mut self) -> H_BNAINTR3_W<HCINT3_SPEC> {
+        H_BNAINTR3_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn h_xcs_xact_err3(&mut self) -> H_XCS_XACT_ERR3_W<HCINT3_SPEC, 12> {
-        H_XCS_XACT_ERR3_W::new(self)
+    pub fn h_xcs_xact_err3(&mut self) -> H_XCS_XACT_ERR3_W<HCINT3_SPEC> {
+        H_XCS_XACT_ERR3_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn h_desc_lst_rollintr3(&mut self) -> H_DESC_LST_ROLLINTR3_W<HCINT3_SPEC, 13> {
-        H_DESC_LST_ROLLINTR3_W::new(self)
+    pub fn h_desc_lst_rollintr3(&mut self) -> H_DESC_LST_ROLLINTR3_W<HCINT3_SPEC> {
+        H_DESC_LST_ROLLINTR3_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

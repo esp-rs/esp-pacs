@@ -5,11 +5,11 @@ pub type W = crate::W<EDMA_PMS_LCD_CAM_SPEC>;
 #[doc = "Field `ATTR1` reader - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
 pub type ATTR1_R = crate::FieldReader;
 #[doc = "Field `ATTR1` writer - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub type ATTR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ATTR1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ATTR2` reader - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
 pub type ATTR2_R = crate::FieldReader;
 #[doc = "Field `ATTR2` writer - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub type ATTR2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ATTR2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<EDMA_PMS_LCD_CAM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
     #[must_use]
-    pub fn attr1(&mut self) -> ATTR1_W<EDMA_PMS_LCD_CAM_SPEC, 0> {
-        ATTR1_W::new(self)
+    pub fn attr1(&mut self) -> ATTR1_W<EDMA_PMS_LCD_CAM_SPEC> {
+        ATTR1_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
     #[must_use]
-    pub fn attr2(&mut self) -> ATTR2_W<EDMA_PMS_LCD_CAM_SPEC, 2> {
-        ATTR2_W::new(self)
+    pub fn attr2(&mut self) -> ATTR2_W<EDMA_PMS_LCD_CAM_SPEC> {
+        ATTR2_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

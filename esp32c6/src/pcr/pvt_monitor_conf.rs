@@ -5,23 +5,23 @@ pub type W = crate::W<PVT_MONITOR_CONF_SPEC>;
 #[doc = "Field `PVT_MONITOR_CLK_EN` reader - Set 1 to enable apb clock of pvt module"]
 pub type PVT_MONITOR_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_CLK_EN` writer - Set 1 to enable apb clock of pvt module"]
-pub type PVT_MONITOR_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVT_MONITOR_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVT_MONITOR_RST_EN` reader - Set 0 to reset all pvt monitor module"]
 pub type PVT_MONITOR_RST_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_RST_EN` writer - Set 0 to reset all pvt monitor module"]
-pub type PVT_MONITOR_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVT_MONITOR_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVT_MONITOR_SITE1_CLK_EN` reader - Set 1 to enable function clock of modem pvt module"]
 pub type PVT_MONITOR_SITE1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_SITE1_CLK_EN` writer - Set 1 to enable function clock of modem pvt module"]
-pub type PVT_MONITOR_SITE1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVT_MONITOR_SITE1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVT_MONITOR_SITE2_CLK_EN` reader - Set 1 to enable function clock of cpu pvt module"]
 pub type PVT_MONITOR_SITE2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_SITE2_CLK_EN` writer - Set 1 to enable function clock of cpu pvt module"]
-pub type PVT_MONITOR_SITE2_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVT_MONITOR_SITE2_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVT_MONITOR_SITE3_CLK_EN` reader - Set 1 to enable function clock of hp_peri pvt module"]
 pub type PVT_MONITOR_SITE3_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_SITE3_CLK_EN` writer - Set 1 to enable function clock of hp_peri pvt module"]
-pub type PVT_MONITOR_SITE3_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVT_MONITOR_SITE3_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable apb clock of pvt module"]
     #[inline(always)]
@@ -79,45 +79,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PVT_MONITOR_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable apb clock of pvt module"]
     #[inline(always)]
     #[must_use]
-    pub fn pvt_monitor_clk_en(&mut self) -> PVT_MONITOR_CLK_EN_W<PVT_MONITOR_CONF_SPEC, 0> {
-        PVT_MONITOR_CLK_EN_W::new(self)
+    pub fn pvt_monitor_clk_en(&mut self) -> PVT_MONITOR_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {
+        PVT_MONITOR_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset all pvt monitor module"]
     #[inline(always)]
     #[must_use]
-    pub fn pvt_monitor_rst_en(&mut self) -> PVT_MONITOR_RST_EN_W<PVT_MONITOR_CONF_SPEC, 1> {
-        PVT_MONITOR_RST_EN_W::new(self)
+    pub fn pvt_monitor_rst_en(&mut self) -> PVT_MONITOR_RST_EN_W<PVT_MONITOR_CONF_SPEC> {
+        PVT_MONITOR_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable function clock of modem pvt module"]
     #[inline(always)]
     #[must_use]
     pub fn pvt_monitor_site1_clk_en(
         &mut self,
-    ) -> PVT_MONITOR_SITE1_CLK_EN_W<PVT_MONITOR_CONF_SPEC, 2> {
-        PVT_MONITOR_SITE1_CLK_EN_W::new(self)
+    ) -> PVT_MONITOR_SITE1_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {
+        PVT_MONITOR_SITE1_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set 1 to enable function clock of cpu pvt module"]
     #[inline(always)]
     #[must_use]
     pub fn pvt_monitor_site2_clk_en(
         &mut self,
-    ) -> PVT_MONITOR_SITE2_CLK_EN_W<PVT_MONITOR_CONF_SPEC, 3> {
-        PVT_MONITOR_SITE2_CLK_EN_W::new(self)
+    ) -> PVT_MONITOR_SITE2_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {
+        PVT_MONITOR_SITE2_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set 1 to enable function clock of hp_peri pvt module"]
     #[inline(always)]
     #[must_use]
     pub fn pvt_monitor_site3_clk_en(
         &mut self,
-    ) -> PVT_MONITOR_SITE3_CLK_EN_W<PVT_MONITOR_CONF_SPEC, 4> {
-        PVT_MONITOR_SITE3_CLK_EN_W::new(self)
+    ) -> PVT_MONITOR_SITE3_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {
+        PVT_MONITOR_SITE3_CLK_EN_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

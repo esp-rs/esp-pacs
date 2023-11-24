@@ -5,35 +5,35 @@ pub type W = crate::W<SAR_AMP_CTRL2_SPEC>;
 #[doc = "Field `SAR_SAR1_DAC_XPD_FSM_IDLE` reader - no public"]
 pub type SAR_SAR1_DAC_XPD_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_SAR1_DAC_XPD_FSM_IDLE` writer - no public"]
-pub type SAR_SAR1_DAC_XPD_FSM_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_SAR1_DAC_XPD_FSM_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_XPD_SAR_AMP_FSM_IDLE` reader - no public"]
 pub type SAR_XPD_SAR_AMP_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_XPD_SAR_AMP_FSM_IDLE` writer - no public"]
-pub type SAR_XPD_SAR_AMP_FSM_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_XPD_SAR_AMP_FSM_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_AMP_RST_FB_FSM_IDLE` reader - no public"]
 pub type SAR_AMP_RST_FB_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_AMP_RST_FB_FSM_IDLE` writer - no public"]
-pub type SAR_AMP_RST_FB_FSM_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_AMP_RST_FB_FSM_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_AMP_SHORT_REF_FSM_IDLE` reader - no public"]
 pub type SAR_AMP_SHORT_REF_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_AMP_SHORT_REF_FSM_IDLE` writer - no public"]
-pub type SAR_AMP_SHORT_REF_FSM_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_AMP_SHORT_REF_FSM_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_AMP_SHORT_REF_GND_FSM_IDLE` reader - no public"]
 pub type SAR_AMP_SHORT_REF_GND_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_AMP_SHORT_REF_GND_FSM_IDLE` writer - no public"]
-pub type SAR_AMP_SHORT_REF_GND_FSM_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_AMP_SHORT_REF_GND_FSM_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_XPD_SAR_FSM_IDLE` reader - no public"]
 pub type SAR_XPD_SAR_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_XPD_SAR_FSM_IDLE` writer - no public"]
-pub type SAR_XPD_SAR_FSM_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_XPD_SAR_FSM_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_RSTB_FSM_IDLE` reader - no public"]
 pub type SAR_RSTB_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_RSTB_FSM_IDLE` writer - no public"]
-pub type SAR_RSTB_FSM_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SAR_RSTB_FSM_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_AMP_WAIT3` reader - no public"]
 pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT3` writer - no public"]
-pub type SAR_AMP_WAIT3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SAR_AMP_WAIT3_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0 - no public"]
     #[inline(always)]
@@ -118,65 +118,61 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_AMP_CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_sar1_dac_xpd_fsm_idle(
-        &mut self,
-    ) -> SAR_SAR1_DAC_XPD_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC, 0> {
-        SAR_SAR1_DAC_XPD_FSM_IDLE_W::new(self)
+    pub fn sar_sar1_dac_xpd_fsm_idle(&mut self) -> SAR_SAR1_DAC_XPD_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_SAR1_DAC_XPD_FSM_IDLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_xpd_sar_amp_fsm_idle(
-        &mut self,
-    ) -> SAR_XPD_SAR_AMP_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC, 1> {
-        SAR_XPD_SAR_AMP_FSM_IDLE_W::new(self)
+    pub fn sar_xpd_sar_amp_fsm_idle(&mut self) -> SAR_XPD_SAR_AMP_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_XPD_SAR_AMP_FSM_IDLE_W::new(self, 1)
     }
     #[doc = "Bit 2 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_amp_rst_fb_fsm_idle(&mut self) -> SAR_AMP_RST_FB_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC, 2> {
-        SAR_AMP_RST_FB_FSM_IDLE_W::new(self)
+    pub fn sar_amp_rst_fb_fsm_idle(&mut self) -> SAR_AMP_RST_FB_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_AMP_RST_FB_FSM_IDLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - no public"]
     #[inline(always)]
     #[must_use]
     pub fn sar_amp_short_ref_fsm_idle(
         &mut self,
-    ) -> SAR_AMP_SHORT_REF_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC, 3> {
-        SAR_AMP_SHORT_REF_FSM_IDLE_W::new(self)
+    ) -> SAR_AMP_SHORT_REF_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_AMP_SHORT_REF_FSM_IDLE_W::new(self, 3)
     }
     #[doc = "Bit 4 - no public"]
     #[inline(always)]
     #[must_use]
     pub fn sar_amp_short_ref_gnd_fsm_idle(
         &mut self,
-    ) -> SAR_AMP_SHORT_REF_GND_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC, 4> {
-        SAR_AMP_SHORT_REF_GND_FSM_IDLE_W::new(self)
+    ) -> SAR_AMP_SHORT_REF_GND_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_AMP_SHORT_REF_GND_FSM_IDLE_W::new(self, 4)
     }
     #[doc = "Bit 5 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_xpd_sar_fsm_idle(&mut self) -> SAR_XPD_SAR_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC, 5> {
-        SAR_XPD_SAR_FSM_IDLE_W::new(self)
+    pub fn sar_xpd_sar_fsm_idle(&mut self) -> SAR_XPD_SAR_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_XPD_SAR_FSM_IDLE_W::new(self, 5)
     }
     #[doc = "Bit 6 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_rstb_fsm_idle(&mut self) -> SAR_RSTB_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC, 6> {
-        SAR_RSTB_FSM_IDLE_W::new(self)
+    pub fn sar_rstb_fsm_idle(&mut self) -> SAR_RSTB_FSM_IDLE_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_RSTB_FSM_IDLE_W::new(self, 6)
     }
     #[doc = "Bits 16:31 - no public"]
     #[inline(always)]
     #[must_use]
-    pub fn sar_amp_wait3(&mut self) -> SAR_AMP_WAIT3_W<SAR_AMP_CTRL2_SPEC, 16> {
-        SAR_AMP_WAIT3_W::new(self)
+    pub fn sar_amp_wait3(&mut self) -> SAR_AMP_WAIT3_W<SAR_AMP_CTRL2_SPEC> {
+        SAR_AMP_WAIT3_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

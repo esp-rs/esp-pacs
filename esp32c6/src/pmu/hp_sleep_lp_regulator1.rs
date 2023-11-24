@@ -5,7 +5,7 @@ pub type W = crate::W<HP_SLEEP_LP_REGULATOR1_SPEC>;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_DRV_B` reader - need_des"]
 pub type HP_SLEEP_LP_REGULATOR_DRV_B_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_LP_REGULATOR_DRV_B` writer - need_des"]
-pub type HP_SLEEP_LP_REGULATOR_DRV_B_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type HP_SLEEP_LP_REGULATOR_DRV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 28:31 - need_des"]
     #[inline(always)]
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_REGULATOR1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,8 +36,8 @@ impl W {
     #[must_use]
     pub fn hp_sleep_lp_regulator_drv_b(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_DRV_B_W<HP_SLEEP_LP_REGULATOR1_SPEC, 28> {
-        HP_SLEEP_LP_REGULATOR_DRV_B_W::new(self)
+    ) -> HP_SLEEP_LP_REGULATOR_DRV_B_W<HP_SLEEP_LP_REGULATOR1_SPEC> {
+        HP_SLEEP_LP_REGULATOR_DRV_B_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

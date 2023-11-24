@@ -5,11 +5,11 @@ pub type W = crate::W<PLC_CONF2_SPEC>;
 #[doc = "Field `CVSD_SEG_MOD` reader - "]
 pub type CVSD_SEG_MOD_R = crate::FieldReader;
 #[doc = "Field `CVSD_SEG_MOD` writer - "]
-pub type CVSD_SEG_MOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CVSD_SEG_MOD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MIN_PERIOD` reader - "]
 pub type MIN_PERIOD_R = crate::FieldReader;
 #[doc = "Field `MIN_PERIOD` writer - "]
-pub type MIN_PERIOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type MIN_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PLC_CONF2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn cvsd_seg_mod(&mut self) -> CVSD_SEG_MOD_W<PLC_CONF2_SPEC, 0> {
-        CVSD_SEG_MOD_W::new(self)
+    pub fn cvsd_seg_mod(&mut self) -> CVSD_SEG_MOD_W<PLC_CONF2_SPEC> {
+        CVSD_SEG_MOD_W::new(self, 0)
     }
     #[doc = "Bits 2:6"]
     #[inline(always)]
     #[must_use]
-    pub fn min_period(&mut self) -> MIN_PERIOD_W<PLC_CONF2_SPEC, 2> {
-        MIN_PERIOD_W::new(self)
+    pub fn min_period(&mut self) -> MIN_PERIOD_W<PLC_CONF2_SPEC> {
+        MIN_PERIOD_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

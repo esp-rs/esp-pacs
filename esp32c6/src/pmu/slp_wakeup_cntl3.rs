@@ -5,15 +5,15 @@ pub type W = crate::W<SLP_WAKEUP_CNTL3_SPEC>;
 #[doc = "Field `LP_MIN_SLP_VAL` reader - need_des"]
 pub type LP_MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `LP_MIN_SLP_VAL` writer - need_des"]
-pub type LP_MIN_SLP_VAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LP_MIN_SLP_VAL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HP_MIN_SLP_VAL` reader - need_des"]
 pub type HP_MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `HP_MIN_SLP_VAL` writer - need_des"]
-pub type HP_MIN_SLP_VAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HP_MIN_SLP_VAL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SLEEP_PRT_SEL` reader - need_des"]
 pub type SLEEP_PRT_SEL_R = crate::FieldReader;
 #[doc = "Field `SLEEP_PRT_SEL` writer - need_des"]
-pub type SLEEP_PRT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SLEEP_PRT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -53,27 +53,27 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_min_slp_val(&mut self) -> LP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC, 0> {
-        LP_MIN_SLP_VAL_W::new(self)
+    pub fn lp_min_slp_val(&mut self) -> LP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC> {
+        LP_MIN_SLP_VAL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_min_slp_val(&mut self) -> HP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC, 8> {
-        HP_MIN_SLP_VAL_W::new(self)
+    pub fn hp_min_slp_val(&mut self) -> HP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC> {
+        HP_MIN_SLP_VAL_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_prt_sel(&mut self) -> SLEEP_PRT_SEL_W<SLP_WAKEUP_CNTL3_SPEC, 16> {
-        SLEEP_PRT_SEL_W::new(self)
+    pub fn sleep_prt_sel(&mut self) -> SLEEP_PRT_SEL_W<SLP_WAKEUP_CNTL3_SPEC> {
+        SLEEP_PRT_SEL_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<RETENTION_CONF_SPEC>;
 #[doc = "Field `RETENTION_CLK_EN` reader - Set 1 to enable retention clock"]
 pub type RETENTION_CLK_EN_R = crate::BitReader;
 #[doc = "Field `RETENTION_CLK_EN` writer - Set 1 to enable retention clock"]
-pub type RETENTION_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RETENTION_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RETENTION_RST_EN` reader - Set 0 to reset retention module"]
 pub type RETENTION_RST_EN_R = crate::BitReader;
 #[doc = "Field `RETENTION_RST_EN` writer - Set 0 to reset retention module"]
-pub type RETENTION_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RETENTION_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable retention clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RETENTION_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable retention clock"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_clk_en(&mut self) -> RETENTION_CLK_EN_W<RETENTION_CONF_SPEC, 0> {
-        RETENTION_CLK_EN_W::new(self)
+    pub fn retention_clk_en(&mut self) -> RETENTION_CLK_EN_W<RETENTION_CONF_SPEC> {
+        RETENTION_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset retention module"]
     #[inline(always)]
     #[must_use]
-    pub fn retention_rst_en(&mut self) -> RETENTION_RST_EN_W<RETENTION_CONF_SPEC, 1> {
-        RETENTION_RST_EN_W::new(self)
+    pub fn retention_rst_en(&mut self) -> RETENTION_RST_EN_W<RETENTION_CONF_SPEC> {
+        RETENTION_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

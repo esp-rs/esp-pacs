@@ -5,7 +5,7 @@ pub type W = crate::W<TEXT__SPEC>;
 #[doc = "Field `TEXT` reader - Plaintext and ciphertext register."]
 pub type TEXT_R = crate::FieldReader;
 #[doc = "Field `TEXT` writer - Plaintext and ciphertext register."]
-pub type TEXT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TEXT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Plaintext and ciphertext register."]
     #[inline(always)]
@@ -24,15 +24,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TEXT__SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Plaintext and ciphertext register."]
     #[inline(always)]
     #[must_use]
-    pub fn text(&mut self) -> TEXT_W<TEXT__SPEC, 0> {
-        TEXT_W::new(self)
+    pub fn text(&mut self) -> TEXT_W<TEXT__SPEC> {
+        TEXT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

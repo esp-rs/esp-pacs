@@ -9,7 +9,7 @@ pub type HS_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SOC_CLK_SEL` reader - This field is used to select clock source. 0: XTAL, 1: SPLL, 2: FOSC, 3: reserved."]
 pub type SOC_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SOC_CLK_SEL` writer - This field is used to select clock source. 0: XTAL, 1: SPLL, 2: FOSC, 3: reserved."]
-pub type SOC_CLK_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SOC_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLK_XTAL_FREQ` reader - This field indicates the frequency(MHz) of XTAL."]
 pub type CLK_XTAL_FREQ_R = crate::FieldReader;
 impl R {
@@ -54,15 +54,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SYSCLK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 16:17 - This field is used to select clock source. 0: XTAL, 1: SPLL, 2: FOSC, 3: reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<SYSCLK_CONF_SPEC, 16> {
-        SOC_CLK_SEL_W::new(self)
+    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<SYSCLK_CONF_SPEC> {
+        SOC_CLK_SEL_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,27 +5,27 @@ pub type W = crate::W<ETM_TASK_P7_CFG_SPEC>;
 #[doc = "Field `ETM_TASK_GPIO28_EN` reader - Enable bit of GPIO response etm task."]
 pub type ETM_TASK_GPIO28_EN_R = crate::BitReader;
 #[doc = "Field `ETM_TASK_GPIO28_EN` writer - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO28_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETM_TASK_GPIO28_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETM_TASK_GPIO28_SEL` reader - GPIO choose a etm task channel."]
 pub type ETM_TASK_GPIO28_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_TASK_GPIO28_SEL` writer - GPIO choose a etm task channel."]
-pub type ETM_TASK_GPIO28_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ETM_TASK_GPIO28_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ETM_TASK_GPIO29_EN` reader - Enable bit of GPIO response etm task."]
 pub type ETM_TASK_GPIO29_EN_R = crate::BitReader;
 #[doc = "Field `ETM_TASK_GPIO29_EN` writer - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO29_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETM_TASK_GPIO29_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETM_TASK_GPIO29_SEL` reader - GPIO choose a etm task channel."]
 pub type ETM_TASK_GPIO29_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_TASK_GPIO29_SEL` writer - GPIO choose a etm task channel."]
-pub type ETM_TASK_GPIO29_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ETM_TASK_GPIO29_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ETM_TASK_GPIO30_EN` reader - Enable bit of GPIO response etm task."]
 pub type ETM_TASK_GPIO30_EN_R = crate::BitReader;
 #[doc = "Field `ETM_TASK_GPIO30_EN` writer - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO30_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETM_TASK_GPIO30_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETM_TASK_GPIO30_SEL` reader - GPIO choose a etm task channel."]
 pub type ETM_TASK_GPIO30_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_TASK_GPIO30_SEL` writer - GPIO choose a etm task channel."]
-pub type ETM_TASK_GPIO30_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ETM_TASK_GPIO30_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - Enable bit of GPIO response etm task."]
     #[inline(always)]
@@ -92,45 +92,45 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ETM_TASK_P7_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable bit of GPIO response etm task."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_task_gpio28_en(&mut self) -> ETM_TASK_GPIO28_EN_W<ETM_TASK_P7_CFG_SPEC, 0> {
-        ETM_TASK_GPIO28_EN_W::new(self)
+    pub fn etm_task_gpio28_en(&mut self) -> ETM_TASK_GPIO28_EN_W<ETM_TASK_P7_CFG_SPEC> {
+        ETM_TASK_GPIO28_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - GPIO choose a etm task channel."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_task_gpio28_sel(&mut self) -> ETM_TASK_GPIO28_SEL_W<ETM_TASK_P7_CFG_SPEC, 1> {
-        ETM_TASK_GPIO28_SEL_W::new(self)
+    pub fn etm_task_gpio28_sel(&mut self) -> ETM_TASK_GPIO28_SEL_W<ETM_TASK_P7_CFG_SPEC> {
+        ETM_TASK_GPIO28_SEL_W::new(self, 1)
     }
     #[doc = "Bit 8 - Enable bit of GPIO response etm task."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_task_gpio29_en(&mut self) -> ETM_TASK_GPIO29_EN_W<ETM_TASK_P7_CFG_SPEC, 8> {
-        ETM_TASK_GPIO29_EN_W::new(self)
+    pub fn etm_task_gpio29_en(&mut self) -> ETM_TASK_GPIO29_EN_W<ETM_TASK_P7_CFG_SPEC> {
+        ETM_TASK_GPIO29_EN_W::new(self, 8)
     }
     #[doc = "Bits 9:11 - GPIO choose a etm task channel."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_task_gpio29_sel(&mut self) -> ETM_TASK_GPIO29_SEL_W<ETM_TASK_P7_CFG_SPEC, 9> {
-        ETM_TASK_GPIO29_SEL_W::new(self)
+    pub fn etm_task_gpio29_sel(&mut self) -> ETM_TASK_GPIO29_SEL_W<ETM_TASK_P7_CFG_SPEC> {
+        ETM_TASK_GPIO29_SEL_W::new(self, 9)
     }
     #[doc = "Bit 16 - Enable bit of GPIO response etm task."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_task_gpio30_en(&mut self) -> ETM_TASK_GPIO30_EN_W<ETM_TASK_P7_CFG_SPEC, 16> {
-        ETM_TASK_GPIO30_EN_W::new(self)
+    pub fn etm_task_gpio30_en(&mut self) -> ETM_TASK_GPIO30_EN_W<ETM_TASK_P7_CFG_SPEC> {
+        ETM_TASK_GPIO30_EN_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - GPIO choose a etm task channel."]
     #[inline(always)]
     #[must_use]
-    pub fn etm_task_gpio30_sel(&mut self) -> ETM_TASK_GPIO30_SEL_W<ETM_TASK_P7_CFG_SPEC, 17> {
-        ETM_TASK_GPIO30_SEL_W::new(self)
+    pub fn etm_task_gpio30_sel(&mut self) -> ETM_TASK_GPIO30_SEL_W<ETM_TASK_P7_CFG_SPEC> {
+        ETM_TASK_GPIO30_SEL_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

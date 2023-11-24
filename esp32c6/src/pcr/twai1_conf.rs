@@ -5,11 +5,11 @@ pub type W = crate::W<TWAI1_CONF_SPEC>;
 #[doc = "Field `TWAI1_CLK_EN` reader - Set 1 to enable twai1 apb clock"]
 pub type TWAI1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TWAI1_CLK_EN` writer - Set 1 to enable twai1 apb clock"]
-pub type TWAI1_CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWAI1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TWAI1_RST_EN` reader - Set 0 to reset twai1 module"]
 pub type TWAI1_RST_EN_R = crate::BitReader;
 #[doc = "Field `TWAI1_RST_EN` writer - Set 0 to reset twai1 module"]
-pub type TWAI1_RST_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TWAI1_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable twai1 apb clock"]
     #[inline(always)]
@@ -40,21 +40,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TWAI1_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Set 1 to enable twai1 apb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn twai1_clk_en(&mut self) -> TWAI1_CLK_EN_W<TWAI1_CONF_SPEC, 0> {
-        TWAI1_CLK_EN_W::new(self)
+    pub fn twai1_clk_en(&mut self) -> TWAI1_CLK_EN_W<TWAI1_CONF_SPEC> {
+        TWAI1_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset twai1 module"]
     #[inline(always)]
     #[must_use]
-    pub fn twai1_rst_en(&mut self) -> TWAI1_RST_EN_W<TWAI1_CONF_SPEC, 1> {
-        TWAI1_RST_EN_W::new(self)
+    pub fn twai1_rst_en(&mut self) -> TWAI1_RST_EN_W<TWAI1_CONF_SPEC> {
+        TWAI1_RST_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

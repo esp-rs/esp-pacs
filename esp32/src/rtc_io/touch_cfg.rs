@@ -5,23 +5,23 @@ pub type W = crate::W<TOUCH_CFG_SPEC>;
 #[doc = "Field `TOUCH_DCUR` reader - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
 pub type TOUCH_DCUR_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DCUR` writer - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
-pub type TOUCH_DCUR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DCUR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_DRANGE` reader - touch sensor saw wave voltage range."]
 pub type TOUCH_DRANGE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DRANGE` writer - touch sensor saw wave voltage range."]
-pub type TOUCH_DRANGE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DRANGE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_DREFL` reader - touch sensor saw wave bottom voltage."]
 pub type TOUCH_DREFL_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFL` writer - touch sensor saw wave bottom voltage."]
-pub type TOUCH_DREFL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DREFL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_DREFH` reader - touch sensor saw wave top voltage."]
 pub type TOUCH_DREFH_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFH` writer - touch sensor saw wave top voltage."]
-pub type TOUCH_DREFH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TOUCH_DREFH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TOUCH_XPD_BIAS` reader - touch sensor bias power on."]
 pub type TOUCH_XPD_BIAS_R = crate::BitReader;
 #[doc = "Field `TOUCH_XPD_BIAS` writer - touch sensor bias power on."]
-pub type TOUCH_XPD_BIAS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TOUCH_XPD_BIAS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 23:24 - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
     #[inline(always)]
@@ -76,39 +76,39 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TOUCH_CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 23:24 - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
     #[inline(always)]
     #[must_use]
-    pub fn touch_dcur(&mut self) -> TOUCH_DCUR_W<TOUCH_CFG_SPEC, 23> {
-        TOUCH_DCUR_W::new(self)
+    pub fn touch_dcur(&mut self) -> TOUCH_DCUR_W<TOUCH_CFG_SPEC> {
+        TOUCH_DCUR_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - touch sensor saw wave voltage range."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<TOUCH_CFG_SPEC, 25> {
-        TOUCH_DRANGE_W::new(self)
+    pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<TOUCH_CFG_SPEC> {
+        TOUCH_DRANGE_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - touch sensor saw wave bottom voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<TOUCH_CFG_SPEC, 27> {
-        TOUCH_DREFL_W::new(self)
+    pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<TOUCH_CFG_SPEC> {
+        TOUCH_DREFL_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - touch sensor saw wave top voltage."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<TOUCH_CFG_SPEC, 29> {
-        TOUCH_DREFH_W::new(self)
+    pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<TOUCH_CFG_SPEC> {
+        TOUCH_DREFH_W::new(self, 29)
     }
     #[doc = "Bit 31 - touch sensor bias power on."]
     #[inline(always)]
     #[must_use]
-    pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<TOUCH_CFG_SPEC, 31> {
-        TOUCH_XPD_BIAS_W::new(self)
+    pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<TOUCH_CFG_SPEC> {
+        TOUCH_XPD_BIAS_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

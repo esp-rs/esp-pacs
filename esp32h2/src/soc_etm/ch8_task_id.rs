@@ -5,7 +5,7 @@ pub type W = crate::W<CH8_TASK_ID_SPEC>;
 #[doc = "Field `CH8_TASK_ID` reader - ch8_task_id"]
 pub type CH8_TASK_ID_R = crate::FieldReader;
 #[doc = "Field `CH8_TASK_ID` writer - ch8_task_id"]
-pub type CH8_TASK_ID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH8_TASK_ID_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - ch8_task_id"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CH8_TASK_ID_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - ch8_task_id"]
     #[inline(always)]
     #[must_use]
-    pub fn ch8_task_id(&mut self) -> CH8_TASK_ID_W<CH8_TASK_ID_SPEC, 0> {
-        CH8_TASK_ID_W::new(self)
+    pub fn ch8_task_id(&mut self) -> CH8_TASK_ID_W<CH8_TASK_ID_SPEC> {
+        CH8_TASK_ID_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

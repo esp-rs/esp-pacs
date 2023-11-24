@@ -5,19 +5,19 @@ pub type W = crate::W<PAD_COMP_CONFIG_SPEC>;
 #[doc = "Field `XPD_COMP` reader - Pad compare enable bit."]
 pub type XPD_COMP_R = crate::BitReader;
 #[doc = "Field `XPD_COMP` writer - Pad compare enable bit."]
-pub type XPD_COMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XPD_COMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MODE_COMP` reader - 1 to enable external reference from PAD\\[0\\]. 0 to enable internal reference, meanwhile PAD\\[0\\] can be used as a regular GPIO."]
 pub type MODE_COMP_R = crate::BitReader;
 #[doc = "Field `MODE_COMP` writer - 1 to enable external reference from PAD\\[0\\]. 0 to enable internal reference, meanwhile PAD\\[0\\] can be used as a regular GPIO."]
-pub type MODE_COMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MODE_COMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DREF_COMP` reader - internal reference voltage tuning bit. 0V to 0.7*VDDPST step 0.1*VDDPST."]
 pub type DREF_COMP_R = crate::FieldReader;
 #[doc = "Field `DREF_COMP` writer - internal reference voltage tuning bit. 0V to 0.7*VDDPST step 0.1*VDDPST."]
-pub type DREF_COMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DREF_COMP_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ZERO_DET_MODE` reader - Zero Detect mode select."]
 pub type ZERO_DET_MODE_R = crate::FieldReader;
 #[doc = "Field `ZERO_DET_MODE` writer - Zero Detect mode select."]
-pub type ZERO_DET_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ZERO_DET_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Pad compare enable bit."]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PAD_COMP_CONFIG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Pad compare enable bit."]
     #[inline(always)]
     #[must_use]
-    pub fn xpd_comp(&mut self) -> XPD_COMP_W<PAD_COMP_CONFIG_SPEC, 0> {
-        XPD_COMP_W::new(self)
+    pub fn xpd_comp(&mut self) -> XPD_COMP_W<PAD_COMP_CONFIG_SPEC> {
+        XPD_COMP_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1 to enable external reference from PAD\\[0\\]. 0 to enable internal reference, meanwhile PAD\\[0\\] can be used as a regular GPIO."]
     #[inline(always)]
     #[must_use]
-    pub fn mode_comp(&mut self) -> MODE_COMP_W<PAD_COMP_CONFIG_SPEC, 1> {
-        MODE_COMP_W::new(self)
+    pub fn mode_comp(&mut self) -> MODE_COMP_W<PAD_COMP_CONFIG_SPEC> {
+        MODE_COMP_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - internal reference voltage tuning bit. 0V to 0.7*VDDPST step 0.1*VDDPST."]
     #[inline(always)]
     #[must_use]
-    pub fn dref_comp(&mut self) -> DREF_COMP_W<PAD_COMP_CONFIG_SPEC, 2> {
-        DREF_COMP_W::new(self)
+    pub fn dref_comp(&mut self) -> DREF_COMP_W<PAD_COMP_CONFIG_SPEC> {
+        DREF_COMP_W::new(self, 2)
     }
     #[doc = "Bits 5:6 - Zero Detect mode select."]
     #[inline(always)]
     #[must_use]
-    pub fn zero_det_mode(&mut self) -> ZERO_DET_MODE_W<PAD_COMP_CONFIG_SPEC, 5> {
-        ZERO_DET_MODE_W::new(self)
+    pub fn zero_det_mode(&mut self) -> ZERO_DET_MODE_W<PAD_COMP_CONFIG_SPEC> {
+        ZERO_DET_MODE_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

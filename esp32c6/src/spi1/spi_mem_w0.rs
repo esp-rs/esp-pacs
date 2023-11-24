@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_MEM_W0_SPEC>;
 #[doc = "Field `SPI_MEM_BUF0` reader - data buffer"]
 pub type SPI_MEM_BUF0_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_BUF0` writer - data buffer"]
-pub type SPI_MEM_BUF0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SPI_MEM_BUF0_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
@@ -27,15 +27,15 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_W0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mem_buf0(&mut self) -> SPI_MEM_BUF0_W<SPI_MEM_W0_SPEC, 0> {
-        SPI_MEM_BUF0_W::new(self)
+    pub fn spi_mem_buf0(&mut self) -> SPI_MEM_BUF0_W<SPI_MEM_W0_SPEC> {
+        SPI_MEM_BUF0_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,39 +5,39 @@ pub type W = crate::W<INT_ENA_SPEC>;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` reader - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
 pub type SLAVE_TRAN_COMP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` writer - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
-pub type SLAVE_TRAN_COMP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLAVE_TRAN_COMP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` reader - RTC_I2C_ARBITRATION_LOST_INT interrupt enable bit"]
 pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` writer - RTC_I2C_ARBITRATION_LOST_INT interrupt enable bit"]
-pub type ARBITRATION_LOST_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARBITRATION_LOST_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` reader - RTC_I2C_MASTER_TRAN_COMP_INT interrupt enable bit"]
 pub type MASTER_TRAN_COMP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` writer - RTC_I2C_MASTER_TRAN_COMP_INT interrupt enable bit"]
-pub type MASTER_TRAN_COMP_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASTER_TRAN_COMP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` reader - RTC_I2C_TRANS_COMPLETE_INT interrupt enable bit"]
 pub type TRANS_COMPLETE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` writer - RTC_I2C_TRANS_COMPLETE_INT interrupt enable bit"]
-pub type TRANS_COMPLETE_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRANS_COMPLETE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIME_OUT_INT_ENA` reader - RTC_I2C_TIME_OUT_INT interrupt enable bit"]
 pub type TIME_OUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_INT_ENA` writer - RTC_I2C_TIME_OUT_INT interrupt enable bit"]
-pub type TIME_OUT_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIME_OUT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK_ERR_INT_ENA` reader - RTC_I2C_ACK_ERR_INT interrupt enable bit"]
 pub type ACK_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ACK_ERR_INT_ENA` writer - RTC_I2C_ACK_ERR_INT interrupt enable bit"]
-pub type ACK_ERR_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACK_ERR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_DATA_INT_ENA` reader - RTC_I2C_RX_DATA_INT interrupt enable bit"]
 pub type RX_DATA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_DATA_INT_ENA` writer - RTC_I2C_RX_DATA_INT interrupt enable bit"]
-pub type RX_DATA_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_DATA_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_DATA_INT_ENA` reader - RTC_I2C_TX_DATA_INT interrupt enable bit"]
 pub type TX_DATA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_DATA_INT_ENA` writer - RTC_I2C_TX_DATA_INT interrupt enable bit"]
-pub type TX_DATA_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_DATA_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DETECT_START_INT_ENA` reader - RTC_I2C_DETECT_START_INT interrupt enable bit"]
 pub type DETECT_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DETECT_START_INT_ENA` writer - RTC_I2C_DETECT_START_INT interrupt enable bit"]
-pub type DETECT_START_INT_ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DETECT_START_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
     #[inline(always)]
@@ -131,65 +131,69 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn slave_tran_comp_int_ena(&mut self) -> SLAVE_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC, 0> {
-        SLAVE_TRAN_COMP_INT_ENA_W::new(self)
+    pub fn slave_tran_comp_int_ena(&mut self) -> SLAVE_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC> {
+        SLAVE_TRAN_COMP_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - RTC_I2C_ARBITRATION_LOST_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<INT_ENA_SPEC, 1> {
-        ARBITRATION_LOST_INT_ENA_W::new(self)
+    pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<INT_ENA_SPEC> {
+        ARBITRATION_LOST_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - RTC_I2C_MASTER_TRAN_COMP_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn master_tran_comp_int_ena(&mut self) -> MASTER_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC, 2> {
-        MASTER_TRAN_COMP_INT_ENA_W::new(self)
+    pub fn master_tran_comp_int_ena(&mut self) -> MASTER_TRAN_COMP_INT_ENA_W<INT_ENA_SPEC> {
+        MASTER_TRAN_COMP_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - RTC_I2C_TRANS_COMPLETE_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W<INT_ENA_SPEC, 3> {
-        TRANS_COMPLETE_INT_ENA_W::new(self)
+    pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W<INT_ENA_SPEC> {
+        TRANS_COMPLETE_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - RTC_I2C_TIME_OUT_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W<INT_ENA_SPEC, 4> {
-        TIME_OUT_INT_ENA_W::new(self)
+    pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W<INT_ENA_SPEC> {
+        TIME_OUT_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - RTC_I2C_ACK_ERR_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn ack_err_int_ena(&mut self) -> ACK_ERR_INT_ENA_W<INT_ENA_SPEC, 5> {
-        ACK_ERR_INT_ENA_W::new(self)
+    pub fn ack_err_int_ena(&mut self) -> ACK_ERR_INT_ENA_W<INT_ENA_SPEC> {
+        ACK_ERR_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - RTC_I2C_RX_DATA_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_data_int_ena(&mut self) -> RX_DATA_INT_ENA_W<INT_ENA_SPEC, 6> {
-        RX_DATA_INT_ENA_W::new(self)
+    pub fn rx_data_int_ena(&mut self) -> RX_DATA_INT_ENA_W<INT_ENA_SPEC> {
+        RX_DATA_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - RTC_I2C_TX_DATA_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_data_int_ena(&mut self) -> TX_DATA_INT_ENA_W<INT_ENA_SPEC, 7> {
-        TX_DATA_INT_ENA_W::new(self)
+    pub fn tx_data_int_ena(&mut self) -> TX_DATA_INT_ENA_W<INT_ENA_SPEC> {
+        TX_DATA_INT_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - RTC_I2C_DETECT_START_INT interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn detect_start_int_ena(&mut self) -> DETECT_START_INT_ENA_W<INT_ENA_SPEC, 8> {
-        DETECT_START_INT_ENA_W::new(self)
+    pub fn detect_start_int_ena(&mut self) -> DETECT_START_INT_ENA_W<INT_ENA_SPEC> {
+        DETECT_START_INT_ENA_W::new(self, 8)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

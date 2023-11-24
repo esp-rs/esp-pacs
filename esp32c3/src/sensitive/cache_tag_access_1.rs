@@ -5,19 +5,19 @@ pub type W = crate::W<CACHE_TAG_ACCESS_1_SPEC>;
 #[doc = "Field `PRO_I_TAG_RD_ACS` reader - pro_i_tag_rd_acs"]
 pub type PRO_I_TAG_RD_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_I_TAG_RD_ACS` writer - pro_i_tag_rd_acs"]
-pub type PRO_I_TAG_RD_ACS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_I_TAG_RD_ACS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_I_TAG_WR_ACS` reader - pro_i_tag_wr_acs"]
 pub type PRO_I_TAG_WR_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_I_TAG_WR_ACS` writer - pro_i_tag_wr_acs"]
-pub type PRO_I_TAG_WR_ACS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_I_TAG_WR_ACS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_D_TAG_RD_ACS` reader - pro_d_tag_rd_acs"]
 pub type PRO_D_TAG_RD_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_D_TAG_RD_ACS` writer - pro_d_tag_rd_acs"]
-pub type PRO_D_TAG_RD_ACS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_D_TAG_RD_ACS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRO_D_TAG_WR_ACS` reader - pro_d_tag_wr_acs"]
 pub type PRO_D_TAG_WR_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_D_TAG_WR_ACS` writer - pro_d_tag_wr_acs"]
-pub type PRO_D_TAG_WR_ACS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRO_D_TAG_WR_ACS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - pro_i_tag_rd_acs"]
     #[inline(always)]
@@ -66,33 +66,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CACHE_TAG_ACCESS_1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - pro_i_tag_rd_acs"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_i_tag_rd_acs(&mut self) -> PRO_I_TAG_RD_ACS_W<CACHE_TAG_ACCESS_1_SPEC, 0> {
-        PRO_I_TAG_RD_ACS_W::new(self)
+    pub fn pro_i_tag_rd_acs(&mut self) -> PRO_I_TAG_RD_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
+        PRO_I_TAG_RD_ACS_W::new(self, 0)
     }
     #[doc = "Bit 1 - pro_i_tag_wr_acs"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_i_tag_wr_acs(&mut self) -> PRO_I_TAG_WR_ACS_W<CACHE_TAG_ACCESS_1_SPEC, 1> {
-        PRO_I_TAG_WR_ACS_W::new(self)
+    pub fn pro_i_tag_wr_acs(&mut self) -> PRO_I_TAG_WR_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
+        PRO_I_TAG_WR_ACS_W::new(self, 1)
     }
     #[doc = "Bit 2 - pro_d_tag_rd_acs"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_d_tag_rd_acs(&mut self) -> PRO_D_TAG_RD_ACS_W<CACHE_TAG_ACCESS_1_SPEC, 2> {
-        PRO_D_TAG_RD_ACS_W::new(self)
+    pub fn pro_d_tag_rd_acs(&mut self) -> PRO_D_TAG_RD_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
+        PRO_D_TAG_RD_ACS_W::new(self, 2)
     }
     #[doc = "Bit 3 - pro_d_tag_wr_acs"]
     #[inline(always)]
     #[must_use]
-    pub fn pro_d_tag_wr_acs(&mut self) -> PRO_D_TAG_WR_ACS_W<CACHE_TAG_ACCESS_1_SPEC, 3> {
-        PRO_D_TAG_WR_ACS_W::new(self)
+    pub fn pro_d_tag_wr_acs(&mut self) -> PRO_D_TAG_WR_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
+        PRO_D_TAG_WR_ACS_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

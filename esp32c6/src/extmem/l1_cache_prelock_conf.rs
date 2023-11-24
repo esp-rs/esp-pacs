@@ -5,11 +5,11 @@ pub type W = crate::W<L1_CACHE_PRELOCK_CONF_SPEC>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_EN` reader - The bit is used to enable the first section of prelock function on L1-Cache."]
 pub type L1_CACHE_PRELOCK_SCT0_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_EN` writer - The bit is used to enable the first section of prelock function on L1-Cache."]
-pub type L1_CACHE_PRELOCK_SCT0_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_PRELOCK_SCT0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_EN` reader - The bit is used to enable the second section of prelock function on L1-Cache."]
 pub type L1_CACHE_PRELOCK_SCT1_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_EN` writer - The bit is used to enable the second section of prelock function on L1-Cache."]
-pub type L1_CACHE_PRELOCK_SCT1_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type L1_CACHE_PRELOCK_SCT1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L1_CACHE_PRELOCK_RGID` reader - The bit is used to set the gid of l1 cache prelock."]
 pub type L1_CACHE_PRELOCK_RGID_R = crate::FieldReader;
 impl R {
@@ -51,7 +51,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_PRELOCK_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -60,16 +60,16 @@ impl W {
     #[must_use]
     pub fn l1_cache_prelock_sct0_en(
         &mut self,
-    ) -> L1_CACHE_PRELOCK_SCT0_EN_W<L1_CACHE_PRELOCK_CONF_SPEC, 0> {
-        L1_CACHE_PRELOCK_SCT0_EN_W::new(self)
+    ) -> L1_CACHE_PRELOCK_SCT0_EN_W<L1_CACHE_PRELOCK_CONF_SPEC> {
+        L1_CACHE_PRELOCK_SCT0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function on L1-Cache."]
     #[inline(always)]
     #[must_use]
     pub fn l1_cache_prelock_sct1_en(
         &mut self,
-    ) -> L1_CACHE_PRELOCK_SCT1_EN_W<L1_CACHE_PRELOCK_CONF_SPEC, 1> {
-        L1_CACHE_PRELOCK_SCT1_EN_W::new(self)
+    ) -> L1_CACHE_PRELOCK_SCT1_EN_W<L1_CACHE_PRELOCK_CONF_SPEC> {
+        L1_CACHE_PRELOCK_SCT1_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

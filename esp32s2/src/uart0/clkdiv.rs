@@ -5,11 +5,11 @@ pub type W = crate::W<CLKDIV_SPEC>;
 #[doc = "Field `CLKDIV` reader - The integral part of the frequency divisor."]
 pub type CLKDIV_R = crate::FieldReader<u32>;
 #[doc = "Field `CLKDIV` writer - The integral part of the frequency divisor."]
-pub type CLKDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 20, O, u32>;
+pub type CLKDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 #[doc = "Field `FRAG` reader - The fractional part of the frequency divisor."]
 pub type FRAG_R = crate::FieldReader;
 #[doc = "Field `FRAG` writer - The fractional part of the frequency divisor."]
-pub type FRAG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type FRAG_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:19 - The integral part of the frequency divisor."]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLKDIV_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - The integral part of the frequency divisor."]
     #[inline(always)]
     #[must_use]
-    pub fn clkdiv(&mut self) -> CLKDIV_W<CLKDIV_SPEC, 0> {
-        CLKDIV_W::new(self)
+    pub fn clkdiv(&mut self) -> CLKDIV_W<CLKDIV_SPEC> {
+        CLKDIV_W::new(self, 0)
     }
     #[doc = "Bits 20:23 - The fractional part of the frequency divisor."]
     #[inline(always)]
     #[must_use]
-    pub fn frag(&mut self) -> FRAG_W<CLKDIV_SPEC, 20> {
-        FRAG_W::new(self)
+    pub fn frag(&mut self) -> FRAG_W<CLKDIV_SPEC> {
+        FRAG_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

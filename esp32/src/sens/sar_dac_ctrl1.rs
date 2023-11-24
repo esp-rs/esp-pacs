@@ -5,31 +5,31 @@ pub type W = crate::W<SAR_DAC_CTRL1_SPEC>;
 #[doc = "Field `SW_FSTEP` reader - frequency step for CW generator can be used to adjust the frequency"]
 pub type SW_FSTEP_R = crate::FieldReader<u16>;
 #[doc = "Field `SW_FSTEP` writer - frequency step for CW generator can be used to adjust the frequency"]
-pub type SW_FSTEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SW_FSTEP_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `SW_TONE_EN` reader - 1: enable CW generator 0: disable CW generator"]
 pub type SW_TONE_EN_R = crate::BitReader;
 #[doc = "Field `SW_TONE_EN` writer - 1: enable CW generator 0: disable CW generator"]
-pub type SW_TONE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_TONE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEBUG_BIT_SEL` reader - "]
 pub type DEBUG_BIT_SEL_R = crate::FieldReader;
 #[doc = "Field `DEBUG_BIT_SEL` writer - "]
-pub type DEBUG_BIT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type DEBUG_BIT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `DAC_DIG_FORCE` reader - 1: DAC1 &amp; DAC2 use DMA 0: DAC1 &amp; DAC2 do not use DMA"]
 pub type DAC_DIG_FORCE_R = crate::BitReader;
 #[doc = "Field `DAC_DIG_FORCE` writer - 1: DAC1 &amp; DAC2 use DMA 0: DAC1 &amp; DAC2 do not use DMA"]
-pub type DAC_DIG_FORCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_DIG_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC_CLK_FORCE_LOW` reader - 1: force PDAC_CLK to low"]
 pub type DAC_CLK_FORCE_LOW_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_FORCE_LOW` writer - 1: force PDAC_CLK to low"]
-pub type DAC_CLK_FORCE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_CLK_FORCE_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC_CLK_FORCE_HIGH` reader - 1: force PDAC_CLK to high"]
 pub type DAC_CLK_FORCE_HIGH_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_FORCE_HIGH` writer - 1: force PDAC_CLK to high"]
-pub type DAC_CLK_FORCE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_CLK_FORCE_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC_CLK_INV` reader - 1: invert PDAC_CLK"]
 pub type DAC_CLK_INV_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_INV` writer - 1: invert PDAC_CLK"]
-pub type DAC_CLK_INV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_CLK_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - frequency step for CW generator can be used to adjust the frequency"]
     #[inline(always)]
@@ -96,51 +96,51 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SAR_DAC_CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - frequency step for CW generator can be used to adjust the frequency"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_fstep(&mut self) -> SW_FSTEP_W<SAR_DAC_CTRL1_SPEC, 0> {
-        SW_FSTEP_W::new(self)
+    pub fn sw_fstep(&mut self) -> SW_FSTEP_W<SAR_DAC_CTRL1_SPEC> {
+        SW_FSTEP_W::new(self, 0)
     }
     #[doc = "Bit 16 - 1: enable CW generator 0: disable CW generator"]
     #[inline(always)]
     #[must_use]
-    pub fn sw_tone_en(&mut self) -> SW_TONE_EN_W<SAR_DAC_CTRL1_SPEC, 16> {
-        SW_TONE_EN_W::new(self)
+    pub fn sw_tone_en(&mut self) -> SW_TONE_EN_W<SAR_DAC_CTRL1_SPEC> {
+        SW_TONE_EN_W::new(self, 16)
     }
     #[doc = "Bits 17:21"]
     #[inline(always)]
     #[must_use]
-    pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<SAR_DAC_CTRL1_SPEC, 17> {
-        DEBUG_BIT_SEL_W::new(self)
+    pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<SAR_DAC_CTRL1_SPEC> {
+        DEBUG_BIT_SEL_W::new(self, 17)
     }
     #[doc = "Bit 22 - 1: DAC1 &amp; DAC2 use DMA 0: DAC1 &amp; DAC2 do not use DMA"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_dig_force(&mut self) -> DAC_DIG_FORCE_W<SAR_DAC_CTRL1_SPEC, 22> {
-        DAC_DIG_FORCE_W::new(self)
+    pub fn dac_dig_force(&mut self) -> DAC_DIG_FORCE_W<SAR_DAC_CTRL1_SPEC> {
+        DAC_DIG_FORCE_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: force PDAC_CLK to low"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_force_low(&mut self) -> DAC_CLK_FORCE_LOW_W<SAR_DAC_CTRL1_SPEC, 23> {
-        DAC_CLK_FORCE_LOW_W::new(self)
+    pub fn dac_clk_force_low(&mut self) -> DAC_CLK_FORCE_LOW_W<SAR_DAC_CTRL1_SPEC> {
+        DAC_CLK_FORCE_LOW_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: force PDAC_CLK to high"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_force_high(&mut self) -> DAC_CLK_FORCE_HIGH_W<SAR_DAC_CTRL1_SPEC, 24> {
-        DAC_CLK_FORCE_HIGH_W::new(self)
+    pub fn dac_clk_force_high(&mut self) -> DAC_CLK_FORCE_HIGH_W<SAR_DAC_CTRL1_SPEC> {
+        DAC_CLK_FORCE_HIGH_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: invert PDAC_CLK"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_clk_inv(&mut self) -> DAC_CLK_INV_W<SAR_DAC_CTRL1_SPEC, 25> {
-        DAC_CLK_INV_W::new(self)
+    pub fn dac_clk_inv(&mut self) -> DAC_CLK_INV_W<SAR_DAC_CTRL1_SPEC> {
+        DAC_CLK_INV_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

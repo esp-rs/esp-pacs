@@ -100,7 +100,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache Access Counter Interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_cnt_int_clr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

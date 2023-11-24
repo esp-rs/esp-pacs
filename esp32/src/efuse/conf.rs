@@ -5,11 +5,11 @@ pub type W = crate::W<CONF_SPEC>;
 #[doc = "Field `OP_CODE` reader - "]
 pub type OP_CODE_R = crate::FieldReader<u16>;
 #[doc = "Field `OP_CODE` writer - "]
-pub type OP_CODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type OP_CODE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` reader - "]
 pub type FORCE_NO_WR_RD_DIS_R = crate::BitReader;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` writer - "]
-pub type FORCE_NO_WR_RD_DIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_NO_WR_RD_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -37,21 +37,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
-    pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC, 0> {
-        OP_CODE_W::new(self)
+    pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC> {
+        OP_CODE_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn force_no_wr_rd_dis(&mut self) -> FORCE_NO_WR_RD_DIS_W<CONF_SPEC, 16> {
-        FORCE_NO_WR_RD_DIS_W::new(self)
+    pub fn force_no_wr_rd_dis(&mut self) -> FORCE_NO_WR_RD_DIS_W<CONF_SPEC> {
+        FORCE_NO_WR_RD_DIS_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

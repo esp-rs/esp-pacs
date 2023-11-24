@@ -23,7 +23,7 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CAUSE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Stores the sleep-to-wakeup cause.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slp_wakeup_cause::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

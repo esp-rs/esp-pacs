@@ -5,19 +5,19 @@ pub type W = crate::W<CFG_DATA7_SPEC>;
 #[doc = "Field `PIN_STATE` reader - "]
 pub type PIN_STATE_R = crate::FieldReader;
 #[doc = "Field `PIN_STATE` writer - "]
-pub type PIN_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PIN_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CHIP_STATE` reader - "]
 pub type CHIP_STATE_R = crate::FieldReader;
 #[doc = "Field `CHIP_STATE` writer - "]
-pub type CHIP_STATE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CHIP_STATE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SDIO_RST` reader - "]
 pub type SDIO_RST_R = crate::BitReader;
 #[doc = "Field `SDIO_RST` writer - "]
-pub type SDIO_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO_IOREADY0` reader - "]
 pub type SDIO_IOREADY0_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY0` writer - "]
-pub type SDIO_IOREADY0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO_IOREADY0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -57,33 +57,33 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CFG_DATA7_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn pin_state(&mut self) -> PIN_STATE_W<CFG_DATA7_SPEC, 0> {
-        PIN_STATE_W::new(self)
+    pub fn pin_state(&mut self) -> PIN_STATE_W<CFG_DATA7_SPEC> {
+        PIN_STATE_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_state(&mut self) -> CHIP_STATE_W<CFG_DATA7_SPEC, 8> {
-        CHIP_STATE_W::new(self)
+    pub fn chip_state(&mut self) -> CHIP_STATE_W<CFG_DATA7_SPEC> {
+        CHIP_STATE_W::new(self, 8)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_rst(&mut self) -> SDIO_RST_W<CFG_DATA7_SPEC, 16> {
-        SDIO_RST_W::new(self)
+    pub fn sdio_rst(&mut self) -> SDIO_RST_W<CFG_DATA7_SPEC> {
+        SDIO_RST_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<CFG_DATA7_SPEC, 17> {
-        SDIO_IOREADY0_W::new(self)
+    pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<CFG_DATA7_SPEC> {
+        SDIO_IOREADY0_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

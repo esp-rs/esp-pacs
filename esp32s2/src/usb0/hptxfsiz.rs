@@ -5,11 +5,11 @@ pub type W = crate::W<HPTXFSIZ_SPEC>;
 #[doc = "Field `PTXFSTADDR` reader - "]
 pub type PTXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSTADDR` writer - "]
-pub type PTXFSTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PTXFSTADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `PTXFSIZE` reader - "]
 pub type PTXFSIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSIZE` writer - "]
-pub type PTXFSIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PTXFSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -34,21 +34,21 @@ impl core::fmt::Debug for R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<HPTXFSIZ_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfstaddr(&mut self) -> PTXFSTADDR_W<HPTXFSIZ_SPEC, 0> {
-        PTXFSTADDR_W::new(self)
+    pub fn ptxfstaddr(&mut self) -> PTXFSTADDR_W<HPTXFSIZ_SPEC> {
+        PTXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfsize(&mut self) -> PTXFSIZE_W<HPTXFSIZ_SPEC, 16> {
-        PTXFSIZE_W::new(self)
+    pub fn ptxfsize(&mut self) -> PTXFSIZE_W<HPTXFSIZ_SPEC> {
+        PTXFSIZE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
