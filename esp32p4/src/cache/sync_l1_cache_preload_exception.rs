@@ -1,0 +1,94 @@
+#[doc = "Register `SYNC_L1_CACHE_PRELOAD_EXCEPTION` reader"]
+pub type R = crate::R<SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC>;
+#[doc = "Field `L1_ICACHE0_PLD_ERR_CODE` reader - The value 2 is Only available which means preload size is error in L1-ICache0."]
+pub type L1_ICACHE0_PLD_ERR_CODE_R = crate::FieldReader;
+#[doc = "Field `L1_ICACHE1_PLD_ERR_CODE` reader - The value 2 is Only available which means preload size is error in L1-ICache1."]
+pub type L1_ICACHE1_PLD_ERR_CODE_R = crate::FieldReader;
+#[doc = "Field `L1_ICACHE2_PLD_ERR_CODE` reader - Reserved"]
+pub type L1_ICACHE2_PLD_ERR_CODE_R = crate::FieldReader;
+#[doc = "Field `L1_ICACHE3_PLD_ERR_CODE` reader - Reserved"]
+pub type L1_ICACHE3_PLD_ERR_CODE_R = crate::FieldReader;
+#[doc = "Field `L1_DCACHE_PLD_ERR_CODE` reader - The value 2 is Only available which means preload size is error in L1-DCache."]
+pub type L1_DCACHE_PLD_ERR_CODE_R = crate::FieldReader;
+#[doc = "Field `SYNC_ERR_CODE` reader - The values 0-2 are available which means sync map, command conflict and size are error in Cache System."]
+pub type SYNC_ERR_CODE_R = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:1 - The value 2 is Only available which means preload size is error in L1-ICache0."]
+    #[inline(always)]
+    pub fn l1_icache0_pld_err_code(&self) -> L1_ICACHE0_PLD_ERR_CODE_R {
+        L1_ICACHE0_PLD_ERR_CODE_R::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3 - The value 2 is Only available which means preload size is error in L1-ICache1."]
+    #[inline(always)]
+    pub fn l1_icache1_pld_err_code(&self) -> L1_ICACHE1_PLD_ERR_CODE_R {
+        L1_ICACHE1_PLD_ERR_CODE_R::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 4:5 - Reserved"]
+    #[inline(always)]
+    pub fn l1_icache2_pld_err_code(&self) -> L1_ICACHE2_PLD_ERR_CODE_R {
+        L1_ICACHE2_PLD_ERR_CODE_R::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bits 6:7 - Reserved"]
+    #[inline(always)]
+    pub fn l1_icache3_pld_err_code(&self) -> L1_ICACHE3_PLD_ERR_CODE_R {
+        L1_ICACHE3_PLD_ERR_CODE_R::new(((self.bits >> 6) & 3) as u8)
+    }
+    #[doc = "Bits 8:9 - The value 2 is Only available which means preload size is error in L1-DCache."]
+    #[inline(always)]
+    pub fn l1_dcache_pld_err_code(&self) -> L1_DCACHE_PLD_ERR_CODE_R {
+        L1_DCACHE_PLD_ERR_CODE_R::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bits 12:13 - The values 0-2 are available which means sync map, command conflict and size are error in Cache System."]
+    #[inline(always)]
+    pub fn sync_err_code(&self) -> SYNC_ERR_CODE_R {
+        SYNC_ERR_CODE_R::new(((self.bits >> 12) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYNC_L1_CACHE_PRELOAD_EXCEPTION")
+            .field(
+                "l1_icache0_pld_err_code",
+                &format_args!("{}", self.l1_icache0_pld_err_code().bits()),
+            )
+            .field(
+                "l1_icache1_pld_err_code",
+                &format_args!("{}", self.l1_icache1_pld_err_code().bits()),
+            )
+            .field(
+                "l1_icache2_pld_err_code",
+                &format_args!("{}", self.l1_icache2_pld_err_code().bits()),
+            )
+            .field(
+                "l1_icache3_pld_err_code",
+                &format_args!("{}", self.l1_icache3_pld_err_code().bits()),
+            )
+            .field(
+                "l1_dcache_pld_err_code",
+                &format_args!("{}", self.l1_dcache_pld_err_code().bits()),
+            )
+            .field(
+                "sync_err_code",
+                &format_args!("{}", self.sync_err_code().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.read(), f)
+    }
+}
+#[doc = "Cache Sync/Preload Operation exception register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sync_l1_cache_preload_exception::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC;
+impl crate::RegisterSpec for SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sync_l1_cache_preload_exception::R`](R) reader structure"]
+impl crate::Readable for SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC {}
+#[doc = "`reset()` method sets SYNC_L1_CACHE_PRELOAD_EXCEPTION to value 0"]
+impl crate::Resettable for SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}
