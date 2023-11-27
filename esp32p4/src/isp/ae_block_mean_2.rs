@@ -1,0 +1,72 @@
+#[doc = "Register `AE_BLOCK_MEAN_2` reader"]
+pub type R = crate::R<AE_BLOCK_MEAN_2_SPEC>;
+#[doc = "Field `AE_B21_MEAN` reader - this field configures block21 Y mean data"]
+pub type AE_B21_MEAN_R = crate::FieldReader;
+#[doc = "Field `AE_B20_MEAN` reader - this field configures block20 Y mean data"]
+pub type AE_B20_MEAN_R = crate::FieldReader;
+#[doc = "Field `AE_B14_MEAN` reader - this field configures block14 Y mean data"]
+pub type AE_B14_MEAN_R = crate::FieldReader;
+#[doc = "Field `AE_B13_MEAN` reader - this field configures block13 Y mean data"]
+pub type AE_B13_MEAN_R = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - this field configures block21 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b21_mean(&self) -> AE_B21_MEAN_R {
+        AE_B21_MEAN_R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - this field configures block20 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b20_mean(&self) -> AE_B20_MEAN_R {
+        AE_B20_MEAN_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - this field configures block14 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b14_mean(&self) -> AE_B14_MEAN_R {
+        AE_B14_MEAN_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - this field configures block13 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b13_mean(&self) -> AE_B13_MEAN_R {
+        AE_B13_MEAN_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AE_BLOCK_MEAN_2")
+            .field(
+                "ae_b21_mean",
+                &format_args!("{}", self.ae_b21_mean().bits()),
+            )
+            .field(
+                "ae_b20_mean",
+                &format_args!("{}", self.ae_b20_mean().bits()),
+            )
+            .field(
+                "ae_b14_mean",
+                &format_args!("{}", self.ae_b14_mean().bits()),
+            )
+            .field(
+                "ae_b13_mean",
+                &format_args!("{}", self.ae_b13_mean().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AE_BLOCK_MEAN_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.read(), f)
+    }
+}
+#[doc = "ae statistic result register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ae_block_mean_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AE_BLOCK_MEAN_2_SPEC;
+impl crate::RegisterSpec for AE_BLOCK_MEAN_2_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ae_block_mean_2::R`](R) reader structure"]
+impl crate::Readable for AE_BLOCK_MEAN_2_SPEC {}
+#[doc = "`reset()` method sets AE_BLOCK_MEAN_2 to value 0"]
+impl crate::Resettable for AE_BLOCK_MEAN_2_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}

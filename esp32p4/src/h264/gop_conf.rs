@@ -1,0 +1,82 @@
+#[doc = "Register `GOP_CONF` reader"]
+pub type R = crate::R<GOP_CONF_SPEC>;
+#[doc = "Register `GOP_CONF` writer"]
+pub type W = crate::W<GOP_CONF_SPEC>;
+#[doc = "Field `DUAL_STREAM_MODE` reader - Configures whether or not to enable dual stream mode. When this field is set to 1, H264_FRAME_MODE field must be set to 1 too.\\\\0: Normal mode\\\\1: Dual stream mode"]
+pub type DUAL_STREAM_MODE_R = crate::BitReader;
+#[doc = "Field `DUAL_STREAM_MODE` writer - Configures whether or not to enable dual stream mode. When this field is set to 1, H264_FRAME_MODE field must be set to 1 too.\\\\0: Normal mode\\\\1: Dual stream mode"]
+pub type DUAL_STREAM_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GOP_NUM` reader - Configures the frame number of one GOP.\\\\0: The frame number of one GOP is infinite\\\\Others: Actual frame number of one GOP"]
+pub type GOP_NUM_R = crate::FieldReader;
+#[doc = "Field `GOP_NUM` writer - Configures the frame number of one GOP.\\\\0: The frame number of one GOP is infinite\\\\Others: Actual frame number of one GOP"]
+pub type GOP_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bit 0 - Configures whether or not to enable dual stream mode. When this field is set to 1, H264_FRAME_MODE field must be set to 1 too.\\\\0: Normal mode\\\\1: Dual stream mode"]
+    #[inline(always)]
+    pub fn dual_stream_mode(&self) -> DUAL_STREAM_MODE_R {
+        DUAL_STREAM_MODE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 1:8 - Configures the frame number of one GOP.\\\\0: The frame number of one GOP is infinite\\\\Others: Actual frame number of one GOP"]
+    #[inline(always)]
+    pub fn gop_num(&self) -> GOP_NUM_R {
+        GOP_NUM_R::new(((self.bits >> 1) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GOP_CONF")
+            .field(
+                "dual_stream_mode",
+                &format_args!("{}", self.dual_stream_mode().bit()),
+            )
+            .field("gop_num", &format_args!("{}", self.gop_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GOP_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.read(), f)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to enable dual stream mode. When this field is set to 1, H264_FRAME_MODE field must be set to 1 too.\\\\0: Normal mode\\\\1: Dual stream mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dual_stream_mode(&mut self) -> DUAL_STREAM_MODE_W<GOP_CONF_SPEC> {
+        DUAL_STREAM_MODE_W::new(self, 0)
+    }
+    #[doc = "Bits 1:8 - Configures the frame number of one GOP.\\\\0: The frame number of one GOP is infinite\\\\Others: Actual frame number of one GOP"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gop_num(&mut self) -> GOP_NUM_W<GOP_CONF_SPEC> {
+        GOP_NUM_W::new(self, 1)
+    }
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.bits = bits;
+        self
+    }
+}
+#[doc = "GOP related configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gop_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gop_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GOP_CONF_SPEC;
+impl crate::RegisterSpec for GOP_CONF_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`gop_conf::R`](R) reader structure"]
+impl crate::Readable for GOP_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gop_conf::W`](W) writer structure"]
+impl crate::Writable for GOP_CONF_SPEC {
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets GOP_CONF to value 0"]
+impl crate::Resettable for GOP_CONF_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}

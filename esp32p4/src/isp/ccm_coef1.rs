@@ -1,0 +1,79 @@
+#[doc = "Register `CCM_COEF1` reader"]
+pub type R = crate::R<CCM_COEF1_SPEC>;
+#[doc = "Register `CCM_COEF1` writer"]
+pub type W = crate::W<CCM_COEF1_SPEC>;
+#[doc = "Field `CCM_RB` reader - this field configures the color correction matrix coefficient"]
+pub type CCM_RB_R = crate::FieldReader<u16>;
+#[doc = "Field `CCM_RB` writer - this field configures the color correction matrix coefficient"]
+pub type CCM_RB_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
+#[doc = "Field `CCM_GR` reader - this field configures the color correction matrix coefficient"]
+pub type CCM_GR_R = crate::FieldReader<u16>;
+#[doc = "Field `CCM_GR` writer - this field configures the color correction matrix coefficient"]
+pub type CCM_GR_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
+impl R {
+    #[doc = "Bits 0:12 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    pub fn ccm_rb(&self) -> CCM_RB_R {
+        CCM_RB_R::new((self.bits & 0x1fff) as u16)
+    }
+    #[doc = "Bits 13:25 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    pub fn ccm_gr(&self) -> CCM_GR_R {
+        CCM_GR_R::new(((self.bits >> 13) & 0x1fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CCM_COEF1")
+            .field("ccm_rb", &format_args!("{}", self.ccm_rb().bits()))
+            .field("ccm_gr", &format_args!("{}", self.ccm_gr().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CCM_COEF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.read(), f)
+    }
+}
+impl W {
+    #[doc = "Bits 0:12 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ccm_rb(&mut self) -> CCM_RB_W<CCM_COEF1_SPEC> {
+        CCM_RB_W::new(self, 0)
+    }
+    #[doc = "Bits 13:25 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ccm_gr(&mut self) -> CCM_GR_W<CCM_COEF1_SPEC> {
+        CCM_GR_W::new(self, 13)
+    }
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.bits = bits;
+        self
+    }
+}
+#[doc = "ccm coef register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ccm_coef1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ccm_coef1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CCM_COEF1_SPEC;
+impl crate::RegisterSpec for CCM_COEF1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ccm_coef1::R`](R) reader structure"]
+impl crate::Readable for CCM_COEF1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ccm_coef1::W`](W) writer structure"]
+impl crate::Writable for CCM_COEF1_SPEC {
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CCM_COEF1 to value 0x0228_10c0"]
+impl crate::Resettable for CCM_COEF1_SPEC {
+    const RESET_VALUE: Self::Ux = 0x0228_10c0;
+}

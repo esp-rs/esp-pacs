@@ -1,0 +1,6 @@
+[build]
+# FIXME: actual target is `riscv32imafc-unknown-none-elf`
+target = "riscv32imac-unknown-none-elf"
+
+[unstable]
+build-std = ["core"]

@@ -1,0 +1,131 @@
+#[doc = "Register `SCL_EXT_LOW_TIME` reader"]
+pub type R = crate::R<SCL_EXT_LOW_TIME_SPEC>;
+#[doc = "Register `SCL_EXT_LOW_TIME` writer"]
+pub type W = crate::W<SCL_EXT_LOW_TIME_SPEC>;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD1` reader - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD1_R = crate::FieldReader;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD1` writer - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD2` reader - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD2_R = crate::FieldReader;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD2` writer - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD3` reader - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD3_R = crate::FieldReader;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD3` writer - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD4` reader - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD4_R = crate::FieldReader;
+#[doc = "Field `REG_I3C_MST_EXT_LOW_PERIOD4` writer - NA"]
+pub type REG_I3C_MST_EXT_LOW_PERIOD4_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_ext_low_period1(&self) -> REG_I3C_MST_EXT_LOW_PERIOD1_R {
+        REG_I3C_MST_EXT_LOW_PERIOD1_R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_ext_low_period2(&self) -> REG_I3C_MST_EXT_LOW_PERIOD2_R {
+        REG_I3C_MST_EXT_LOW_PERIOD2_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_ext_low_period3(&self) -> REG_I3C_MST_EXT_LOW_PERIOD3_R {
+        REG_I3C_MST_EXT_LOW_PERIOD3_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_ext_low_period4(&self) -> REG_I3C_MST_EXT_LOW_PERIOD4_R {
+        REG_I3C_MST_EXT_LOW_PERIOD4_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCL_EXT_LOW_TIME")
+            .field(
+                "reg_i3c_mst_ext_low_period1",
+                &format_args!("{}", self.reg_i3c_mst_ext_low_period1().bits()),
+            )
+            .field(
+                "reg_i3c_mst_ext_low_period2",
+                &format_args!("{}", self.reg_i3c_mst_ext_low_period2().bits()),
+            )
+            .field(
+                "reg_i3c_mst_ext_low_period3",
+                &format_args!("{}", self.reg_i3c_mst_ext_low_period3().bits()),
+            )
+            .field(
+                "reg_i3c_mst_ext_low_period4",
+                &format_args!("{}", self.reg_i3c_mst_ext_low_period4().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCL_EXT_LOW_TIME_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.read(), f)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - NA"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_i3c_mst_ext_low_period1(
+        &mut self,
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD1_W<SCL_EXT_LOW_TIME_SPEC> {
+        REG_I3C_MST_EXT_LOW_PERIOD1_W::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - NA"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_i3c_mst_ext_low_period2(
+        &mut self,
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD2_W<SCL_EXT_LOW_TIME_SPEC> {
+        REG_I3C_MST_EXT_LOW_PERIOD2_W::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - NA"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_i3c_mst_ext_low_period3(
+        &mut self,
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD3_W<SCL_EXT_LOW_TIME_SPEC> {
+        REG_I3C_MST_EXT_LOW_PERIOD3_W::new(self, 16)
+    }
+    #[doc = "Bits 24:31 - NA"]
+    #[inline(always)]
+    #[must_use]
+    pub fn reg_i3c_mst_ext_low_period4(
+        &mut self,
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD4_W<SCL_EXT_LOW_TIME_SPEC> {
+        REG_I3C_MST_EXT_LOW_PERIOD4_W::new(self, 24)
+    }
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.bits = bits;
+        self
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scl_ext_low_time::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scl_ext_low_time::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SCL_EXT_LOW_TIME_SPEC;
+impl crate::RegisterSpec for SCL_EXT_LOW_TIME_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`scl_ext_low_time::R`](R) reader structure"]
+impl crate::Readable for SCL_EXT_LOW_TIME_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`scl_ext_low_time::W`](W) writer structure"]
+impl crate::Writable for SCL_EXT_LOW_TIME_SPEC {
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets SCL_EXT_LOW_TIME to value 0"]
+impl crate::Resettable for SCL_EXT_LOW_TIME_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}
