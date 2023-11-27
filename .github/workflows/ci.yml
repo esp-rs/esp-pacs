@@ -2,15 +2,14 @@ name: CI
 
 on:
   pull_request:
-    branches:
-      - main
+    paths-ignore:
+      - "**/README.md"
   push:
   workflow_dispatch:
 
 env:
   CARGO_TERM_COLOR: always
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  MSRV: "1.67.0"
 
 # Cancel any currently running workflows from the same PR, branch, or
 # tag when a new workflow is triggered.
@@ -31,7 +30,7 @@ jobs:
       matrix:
         build: [
             # Xtensa:
-            { package: "esp32", target: "xtensa-esp32-none-elf" },
+            { package: "esp32",   target: "xtensa-esp32-none-elf" },
             { package: "esp32s2", target: "xtensa-esp32s2-none-elf" },
             { package: "esp32s3", target: "xtensa-esp32s3-none-elf" },
   
@@ -40,9 +39,11 @@ jobs:
             { package: "esp32c3", target: "riscv32imc-unknown-none-elf" },
             { package: "esp32c6", target: "riscv32imac-unknown-none-elf" },
             { package: "esp32h2", target: "riscv32imac-unknown-none-elf" },
+            # FIXME: actual target is `riscv32imafc-unknown-none-elf`
+            { package: "esp32p4", target: "riscv32imac-unknown-none-elf" },
 
             # RISC-V (Ultra) Low-Power:
-            { package: "esp32c6-lp", target: "riscv32imac-unknown-none-elf" },
+            { package: "esp32c6-lp",  target: "riscv32imac-unknown-none-elf" },
             { package: "esp32s2-ulp", target: "riscv32imc-unknown-none-elf" },
             { package: "esp32s3-ulp", target: "riscv32imc-unknown-none-elf" },
           ]
@@ -51,6 +52,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/check
         with:
-          msrv: ${{ env.MSRV }}
+          msrv: "1.67.0"
           package: ${{ matrix.build.package }}
           target: ${{ matrix.build.target }}
