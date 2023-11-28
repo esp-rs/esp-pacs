@@ -93,6 +93,12 @@ impl RegisterBlock {
     pub const fn pin(&self, n: usize) -> &PIN {
         &self.pin[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x28..0x70 - "]
+    #[inline(always)]
+    pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
+        self.pin.iter()
+    }
     #[doc = "0x70 - "]
     #[inline(always)]
     pub const fn rtc_debug_sel(&self) -> &RTC_DEBUG_SEL {

@@ -31,15 +31,33 @@ impl RegisterBlock {
     pub const fn key_(&self, n: usize) -> &KEY_ {
         &self.key_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - AES key register %s"]
+    #[inline(always)]
+    pub fn key__iter(&self) -> impl Iterator<Item = &KEY_> {
+        self.key_.iter()
+    }
     #[doc = "0x20..0x30 - Source data register %s"]
     #[inline(always)]
     pub const fn text_in_(&self, n: usize) -> &TEXT_IN_ {
         &self.text_in_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x20..0x30 - Source data register %s"]
+    #[inline(always)]
+    pub fn text_in__iter(&self) -> impl Iterator<Item = &TEXT_IN_> {
+        self.text_in_.iter()
+    }
     #[doc = "0x30..0x40 - Result data register %s"]
     #[inline(always)]
     pub const fn text_out_(&self, n: usize) -> &TEXT_OUT_ {
         &self.text_out_[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x40 - Result data register %s"]
+    #[inline(always)]
+    pub fn text_out__iter(&self) -> impl Iterator<Item = &TEXT_OUT_> {
+        self.text_out_.iter()
     }
     #[doc = "0x40 - AES Mode register"]
     #[inline(always)]
@@ -61,20 +79,44 @@ impl RegisterBlock {
     pub const fn iv_mem(&self, n: usize) -> &IV_MEM {
         &self.iv_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x60 - The memory that stores initialization vector"]
+    #[inline(always)]
+    pub fn iv_mem_iter(&self) -> impl Iterator<Item = &IV_MEM> {
+        self.iv_mem.iter()
+    }
     #[doc = "0x60..0x70 - The memory that stores GCM hash subkey"]
     #[inline(always)]
     pub const fn h_mem(&self, n: usize) -> &H_MEM {
         &self.h_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x70 - The memory that stores GCM hash subkey"]
+    #[inline(always)]
+    pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
+        self.h_mem.iter()
     }
     #[doc = "0x70..0x80 - The memory that stores J0"]
     #[inline(always)]
     pub const fn j0_mem(&self, n: usize) -> &J0_MEM {
         &self.j0_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x70..0x80 - The memory that stores J0"]
+    #[inline(always)]
+    pub fn j0_mem_iter(&self) -> impl Iterator<Item = &J0_MEM> {
+        self.j0_mem.iter()
+    }
     #[doc = "0x80..0x90 - The memory that stores T0"]
     #[inline(always)]
     pub const fn t0_mem(&self, n: usize) -> &T0_MEM {
         &self.t0_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x80..0x90 - The memory that stores T0"]
+    #[inline(always)]
+    pub fn t0_mem_iter(&self) -> impl Iterator<Item = &T0_MEM> {
+        self.t0_mem.iter()
     }
     #[doc = "0x90 - AES accelerator working mode register"]
     #[inline(always)]

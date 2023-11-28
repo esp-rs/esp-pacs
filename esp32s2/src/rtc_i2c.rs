@@ -96,6 +96,12 @@ impl RegisterBlock {
     pub const fn cmd(&self, n: usize) -> &CMD {
         &self.cmd[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x38..0x78 - RTC I2C Command %s"]
+    #[inline(always)]
+    pub fn cmd_iter(&self) -> impl Iterator<Item = &CMD> {
+        self.cmd.iter()
+    }
     #[doc = "0xfc - Version control register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {

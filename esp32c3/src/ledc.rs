@@ -32,35 +32,41 @@ impl RegisterBlock {
         [(); 6][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x18 - LEDC_LSCH%s_CONF%s."]
+    #[inline(always)]
+    pub fn ch_conf0_iter(&self) -> impl Iterator<Item = &CH_CONF0> {
+        (0..6).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() })
+    }
     #[doc = "0x00 - LEDC_LSCH0_CONF0."]
     #[inline(always)]
     pub const fn ch0_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(0)
+        self.ch_conf0(0)
     }
     #[doc = "0x14 - LEDC_LSCH1_CONF1."]
     #[inline(always)]
     pub const fn ch1_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(1)
+        self.ch_conf0(1)
     }
     #[doc = "0x28 - LEDC_LSCH2_CONF2."]
     #[inline(always)]
     pub const fn ch2_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(2)
+        self.ch_conf0(2)
     }
     #[doc = "0x3c - LEDC_LSCH3_CONF3."]
     #[inline(always)]
     pub const fn ch3_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(3)
+        self.ch_conf0(3)
     }
     #[doc = "0x50 - LEDC_LSCH4_CONF4."]
     #[inline(always)]
     pub const fn ch4_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(4)
+        self.ch_conf0(4)
     }
     #[doc = "0x64 - LEDC_LSCH5_CONF5."]
     #[inline(always)]
     pub const fn ch5_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(5)
+        self.ch_conf0(5)
     }
     #[doc = "0x04..0x1c - LEDC_LSCH%s_HPOINT."]
     #[inline(always)]
@@ -69,35 +75,41 @@ impl RegisterBlock {
         [(); 6][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x1c - LEDC_LSCH%s_HPOINT."]
+    #[inline(always)]
+    pub fn ch_hpoint_iter(&self) -> impl Iterator<Item = &CH_HPOINT> {
+        (0..6).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() })
+    }
     #[doc = "0x04 - LEDC_LSCH0_HPOINT."]
     #[inline(always)]
     pub const fn ch0_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(0)
+        self.ch_hpoint(0)
     }
     #[doc = "0x18 - LEDC_LSCH1_HPOINT."]
     #[inline(always)]
     pub const fn ch1_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(1)
+        self.ch_hpoint(1)
     }
     #[doc = "0x2c - LEDC_LSCH2_HPOINT."]
     #[inline(always)]
     pub const fn ch2_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(2)
+        self.ch_hpoint(2)
     }
     #[doc = "0x40 - LEDC_LSCH3_HPOINT."]
     #[inline(always)]
     pub const fn ch3_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(3)
+        self.ch_hpoint(3)
     }
     #[doc = "0x54 - LEDC_LSCH4_HPOINT."]
     #[inline(always)]
     pub const fn ch4_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(4)
+        self.ch_hpoint(4)
     }
     #[doc = "0x68 - LEDC_LSCH5_HPOINT."]
     #[inline(always)]
     pub const fn ch5_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(5)
+        self.ch_hpoint(5)
     }
     #[doc = "0x08..0x20 - LEDC_LSCH%s_DUTY."]
     #[inline(always)]
@@ -106,35 +118,41 @@ impl RegisterBlock {
         [(); 6][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x20 - LEDC_LSCH%s_DUTY."]
+    #[inline(always)]
+    pub fn ch_duty_iter(&self) -> impl Iterator<Item = &CH_DUTY> {
+        (0..6).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() })
+    }
     #[doc = "0x08 - LEDC_LSCH0_DUTY."]
     #[inline(always)]
     pub const fn ch0_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(0)
+        self.ch_duty(0)
     }
     #[doc = "0x1c - LEDC_LSCH1_DUTY."]
     #[inline(always)]
     pub const fn ch1_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(1)
+        self.ch_duty(1)
     }
     #[doc = "0x30 - LEDC_LSCH2_DUTY."]
     #[inline(always)]
     pub const fn ch2_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(2)
+        self.ch_duty(2)
     }
     #[doc = "0x44 - LEDC_LSCH3_DUTY."]
     #[inline(always)]
     pub const fn ch3_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(3)
+        self.ch_duty(3)
     }
     #[doc = "0x58 - LEDC_LSCH4_DUTY."]
     #[inline(always)]
     pub const fn ch4_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(4)
+        self.ch_duty(4)
     }
     #[doc = "0x6c - LEDC_LSCH5_DUTY."]
     #[inline(always)]
     pub const fn ch5_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(5)
+        self.ch_duty(5)
     }
     #[doc = "0x0c..0x24 - LEDC_LSCH%s_CONF1."]
     #[inline(always)]
@@ -149,35 +167,47 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x24 - LEDC_LSCH%s_CONF1."]
+    #[inline(always)]
+    pub fn ch_conf1_iter(&self) -> impl Iterator<Item = &CH_CONF1> {
+        (0..6).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(12)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0x0c - LEDC_LSCH0_CONF1."]
     #[inline(always)]
     pub const fn ch0_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(0)
+        self.ch_conf1(0)
     }
     #[doc = "0x20 - LEDC_LSCH1_CONF1."]
     #[inline(always)]
     pub const fn ch1_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(1)
+        self.ch_conf1(1)
     }
     #[doc = "0x34 - LEDC_LSCH2_CONF1."]
     #[inline(always)]
     pub const fn ch2_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(2)
+        self.ch_conf1(2)
     }
     #[doc = "0x48 - LEDC_LSCH3_CONF1."]
     #[inline(always)]
     pub const fn ch3_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(3)
+        self.ch_conf1(3)
     }
     #[doc = "0x5c - LEDC_LSCH4_CONF1."]
     #[inline(always)]
     pub const fn ch4_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(4)
+        self.ch_conf1(4)
     }
     #[doc = "0x70 - LEDC_LSCH5_CONF1."]
     #[inline(always)]
     pub const fn ch5_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(5)
+        self.ch_conf1(5)
     }
     #[doc = "0x10..0x28 - LEDC_LSCH%s_DUTY_R."]
     #[inline(always)]
@@ -192,35 +222,47 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x28 - LEDC_LSCH%s_DUTY_R."]
+    #[inline(always)]
+    pub fn ch_duty_r_iter(&self) -> impl Iterator<Item = &CH_DUTY_R> {
+        (0..6).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(16)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0x10 - LEDC_LSCH0_DUTY_R."]
     #[inline(always)]
     pub const fn ch0_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(0)
+        self.ch_duty_r(0)
     }
     #[doc = "0x24 - LEDC_LSCH1_DUTY_R."]
     #[inline(always)]
     pub const fn ch1_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(1)
+        self.ch_duty_r(1)
     }
     #[doc = "0x38 - LEDC_LSCH2_DUTY_R."]
     #[inline(always)]
     pub const fn ch2_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(2)
+        self.ch_duty_r(2)
     }
     #[doc = "0x4c - LEDC_LSCH3_DUTY_R."]
     #[inline(always)]
     pub const fn ch3_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(3)
+        self.ch_duty_r(3)
     }
     #[doc = "0x60 - LEDC_LSCH4_DUTY_R."]
     #[inline(always)]
     pub const fn ch4_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(4)
+        self.ch_duty_r(4)
     }
     #[doc = "0x74 - LEDC_LSCH5_DUTY_R."]
     #[inline(always)]
     pub const fn ch5_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(5)
+        self.ch_duty_r(5)
     }
     #[doc = "0xa0..0xb0 - LEDC_LSTIMER%s_CONF."]
     #[inline(always)]
@@ -235,25 +277,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa0..0xb0 - LEDC_LSTIMER%s_CONF."]
+    #[inline(always)]
+    pub fn timer_conf_iter(&self) -> impl Iterator<Item = &TIMER_CONF> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(160)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0xa0 - LEDC_LSTIMER0_CONF."]
     #[inline(always)]
     pub const fn timer0_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(0)
+        self.timer_conf(0)
     }
     #[doc = "0xa8 - LEDC_LSTIMER1_CONF."]
     #[inline(always)]
     pub const fn timer1_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(1)
+        self.timer_conf(1)
     }
     #[doc = "0xb0 - LEDC_LSTIMER2_CONF."]
     #[inline(always)]
     pub const fn timer2_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(2)
+        self.timer_conf(2)
     }
     #[doc = "0xb8 - LEDC_LSTIMER3_CONF."]
     #[inline(always)]
     pub const fn timer3_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(3)
+        self.timer_conf(3)
     }
     #[doc = "0xa4..0xb4 - LEDC_LSTIMER%s_VALUE."]
     #[inline(always)]
@@ -268,25 +322,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa4..0xb4 - LEDC_LSTIMER%s_VALUE."]
+    #[inline(always)]
+    pub fn timer_value_iter(&self) -> impl Iterator<Item = &TIMER_VALUE> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(164)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0xa4 - LEDC_LSTIMER0_VALUE."]
     #[inline(always)]
     pub const fn timer0_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(0)
+        self.timer_value(0)
     }
     #[doc = "0xac - LEDC_LSTIMER1_VALUE."]
     #[inline(always)]
     pub const fn timer1_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(1)
+        self.timer_value(1)
     }
     #[doc = "0xb4 - LEDC_LSTIMER2_VALUE."]
     #[inline(always)]
     pub const fn timer2_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(2)
+        self.timer_value(2)
     }
     #[doc = "0xbc - LEDC_LSTIMER3_VALUE."]
     #[inline(always)]
     pub const fn timer3_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(3)
+        self.timer_value(3)
     }
     #[doc = "0xc0 - LEDC_INT_RAW."]
     #[inline(always)]

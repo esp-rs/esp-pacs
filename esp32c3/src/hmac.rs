@@ -90,10 +90,22 @@ impl RegisterBlock {
     pub const fn wr_message_mem(&self, n: usize) -> &WR_MESSAGE_MEM {
         &self.wr_message_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x80..0xc0 - Message block memory."]
+    #[inline(always)]
+    pub fn wr_message_mem_iter(&self) -> impl Iterator<Item = &WR_MESSAGE_MEM> {
+        self.wr_message_mem.iter()
+    }
     #[doc = "0xc0..0xe0 - Result from upstream."]
     #[inline(always)]
     pub const fn rd_result_mem(&self, n: usize) -> &RD_RESULT_MEM {
         &self.rd_result_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xc0..0xe0 - Result from upstream."]
+    #[inline(always)]
+    pub fn rd_result_mem_iter(&self) -> impl Iterator<Item = &RD_RESULT_MEM> {
+        self.rd_result_mem.iter()
     }
     #[doc = "0xf0 - Process control register 5."]
     #[inline(always)]

@@ -50,15 +50,33 @@ impl RegisterBlock {
     pub const fn k_mem(&self, n: usize) -> &K_MEM {
         &self.k_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x120 - The memory that stores k."]
+    #[inline(always)]
+    pub fn k_mem_iter(&self) -> impl Iterator<Item = &K_MEM> {
+        self.k_mem.iter()
+    }
     #[doc = "0x120..0x140 - The memory that stores Px."]
     #[inline(always)]
     pub const fn px_mem(&self, n: usize) -> &PX_MEM {
         &self.px_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x120..0x140 - The memory that stores Px."]
+    #[inline(always)]
+    pub fn px_mem_iter(&self) -> impl Iterator<Item = &PX_MEM> {
+        self.px_mem.iter()
+    }
     #[doc = "0x140..0x160 - The memory that stores Py."]
     #[inline(always)]
     pub const fn py_mem(&self, n: usize) -> &PY_MEM {
         &self.py_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x140..0x160 - The memory that stores Py."]
+    #[inline(always)]
+    pub fn py_mem_iter(&self) -> impl Iterator<Item = &PY_MEM> {
+        self.py_mem.iter()
     }
 }
 #[doc = "MULT_INT_RAW (r) register accessor: ECC interrupt raw register, valid in level.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mult_int_raw::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_int_raw`] module"]

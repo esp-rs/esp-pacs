@@ -23,12 +23,20 @@ pub type CH_TX_LOOP_R = crate::BitReader;
 #[doc = "Field `CH_TX_LOOP[0-3]` writer - The interrupt enabled bit for CH%s_TX_LOOP_INT."]
 pub type CH_TX_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "The interrupt enabled bit for CH[0-3]_TX_END_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_END_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
     pub fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_END_INT."]
+    #[inline(always)]
+    pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
+        (0..4).map(|n| CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0))
     }
     #[doc = "Bit 0 - The interrupt enabled bit for CH0_TX_END_INT."]
     #[inline(always)]
@@ -50,12 +58,20 @@ impl R {
     pub fn ch3_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_RX_END_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_RX_END_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
     pub fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_RX_END_INT."]
+    #[inline(always)]
+    pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
+        (0..4).map(|n| CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0))
     }
     #[doc = "Bit 1 - The interrupt enabled bit for CH0_RX_END_INT."]
     #[inline(always)]
@@ -77,12 +93,20 @@ impl R {
     pub fn ch3_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_ERR_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_ERR_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
     pub fn ch_err(&self, n: u8) -> CH_ERR_R {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_ERR_INT."]
+    #[inline(always)]
+    pub fn ch_err_iter(&self) -> impl Iterator<Item = CH_ERR_R> + '_ {
+        (0..4).map(|n| CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0))
     }
     #[doc = "Bit 2 - The interrupt enabled bit for CH0_ERR_INT."]
     #[inline(always)]
@@ -104,12 +128,20 @@ impl R {
     pub fn ch3_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_TX_THR_EVENT_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_THR_EVENT_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
     pub fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 12)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_THR_EVENT_INT."]
+    #[inline(always)]
+    pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
+        (0..4).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 12)) & 1) != 0))
     }
     #[doc = "Bit 12 - The interrupt enabled bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
@@ -131,12 +163,20 @@ impl R {
     pub fn ch3_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_TX_LOOP_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_LOOP_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
     #[inline(always)]
     pub fn ch_tx_loop(&self, n: u8) -> CH_TX_LOOP_R {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_TX_LOOP_R::new(((self.bits >> (n + 16)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_LOOP_INT."]
+    #[inline(always)]
+    pub fn ch_tx_loop_iter(&self) -> impl Iterator<Item = CH_TX_LOOP_R> + '_ {
+        (0..4).map(|n| CH_TX_LOOP_R::new(((self.bits >> (n + 16)) & 1) != 0))
     }
     #[doc = "Bit 16 - The interrupt enabled bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
@@ -205,7 +245,9 @@ impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     }
 }
 impl W {
-    #[doc = "The interrupt enabled bit for CH[0-3]_TX_END_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_END_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<INT_ENA_SPEC> {
@@ -237,7 +279,9 @@ impl W {
     pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 9)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_RX_END_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_RX_END_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<INT_ENA_SPEC> {
@@ -269,7 +313,9 @@ impl W {
     pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 10)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_ERR_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_ERR_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_err(&mut self, n: u8) -> CH_ERR_W<INT_ENA_SPEC> {
@@ -301,7 +347,9 @@ impl W {
     pub fn ch3_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
         CH_ERR_W::new(self, 11)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_TX_THR_EVENT_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_THR_EVENT_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
@@ -333,7 +381,9 @@ impl W {
     pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 15)
     }
-    #[doc = "The interrupt enabled bit for CH[0-3]_TX_LOOP_INT.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
+    #[doc = "The interrupt enabled bit for CH[0-3]_TX_LOOP_INT."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<INT_ENA_SPEC> {

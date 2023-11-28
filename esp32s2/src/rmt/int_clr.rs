@@ -17,7 +17,9 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     }
 }
 impl W {
-    #[doc = "Set this bit to clear the CH[0-3]_TX_END_INT interrupt.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
+    #[doc = "Set this bit to clear the CH[0-3]_TX_END_INT interrupt."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<INT_CLR_SPEC> {
@@ -49,7 +51,9 @@ impl W {
     pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<INT_CLR_SPEC> {
         CH_TX_END_W::new(self, 9)
     }
-    #[doc = "Set this bit to clear the CH[0-3]_RX_END_INT interrupt.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
+    #[doc = "Set this bit to clear the CH[0-3]_RX_END_INT interrupt."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<INT_CLR_SPEC> {
@@ -81,7 +85,9 @@ impl W {
     pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 10)
     }
-    #[doc = "Set this bit to clear the CH[0-3]_ERR_INT interrupt.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
+    #[doc = "Set this bit to clear the CH[0-3]_ERR_INT interrupt."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_err(&mut self, n: u8) -> CH_ERR_W<INT_CLR_SPEC> {
@@ -113,7 +119,9 @@ impl W {
     pub fn ch3_err(&mut self) -> CH_ERR_W<INT_CLR_SPEC> {
         CH_ERR_W::new(self, 11)
     }
-    #[doc = "Set this bit to clear the CH[0-3]_TX_THR_EVENT_INT interrupt.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
+    #[doc = "Set this bit to clear the CH[0-3]_TX_THR_EVENT_INT interrupt."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
@@ -145,7 +153,9 @@ impl W {
     pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 15)
     }
-    #[doc = "Set this bit to clear the CH[0-3]_TX_LOOP_INT interrupt.\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
+    #[doc = "Set this bit to clear the CH[0-3]_TX_LOOP_INT interrupt."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<INT_CLR_SPEC> {

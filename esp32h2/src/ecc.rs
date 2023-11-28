@@ -53,30 +53,66 @@ impl RegisterBlock {
     pub const fn k_mem(&self, n: usize) -> &K_MEM {
         &self.k_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x120 - The memory that stores k."]
+    #[inline(always)]
+    pub fn k_mem_iter(&self) -> impl Iterator<Item = &K_MEM> {
+        self.k_mem.iter()
+    }
     #[doc = "0x120..0x140 - The memory that stores Px."]
     #[inline(always)]
     pub const fn px_mem(&self, n: usize) -> &PX_MEM {
         &self.px_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x120..0x140 - The memory that stores Px."]
+    #[inline(always)]
+    pub fn px_mem_iter(&self) -> impl Iterator<Item = &PX_MEM> {
+        self.px_mem.iter()
     }
     #[doc = "0x140..0x160 - The memory that stores Py."]
     #[inline(always)]
     pub const fn py_mem(&self, n: usize) -> &PY_MEM {
         &self.py_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x140..0x160 - The memory that stores Py."]
+    #[inline(always)]
+    pub fn py_mem_iter(&self) -> impl Iterator<Item = &PY_MEM> {
+        self.py_mem.iter()
+    }
     #[doc = "0x160..0x180 - The memory that stores Qx"]
     #[inline(always)]
     pub const fn qx_mem(&self, n: usize) -> &QX_MEM {
         &self.qx_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x160..0x180 - The memory that stores Qx"]
+    #[inline(always)]
+    pub fn qx_mem_iter(&self) -> impl Iterator<Item = &QX_MEM> {
+        self.qx_mem.iter()
     }
     #[doc = "0x180..0x1a0 - The memory that stores Qy"]
     #[inline(always)]
     pub const fn qy_mem(&self, n: usize) -> &QY_MEM {
         &self.qy_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x180..0x1a0 - The memory that stores Qy"]
+    #[inline(always)]
+    pub fn qy_mem_iter(&self) -> impl Iterator<Item = &QY_MEM> {
+        self.qy_mem.iter()
+    }
     #[doc = "0x1a0..0x1c0 - The memory that stores Qz"]
     #[inline(always)]
     pub const fn qz_mem(&self, n: usize) -> &QZ_MEM {
         &self.qz_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1a0..0x1c0 - The memory that stores Qz"]
+    #[inline(always)]
+    pub fn qz_mem_iter(&self) -> impl Iterator<Item = &QZ_MEM> {
+        self.qz_mem.iter()
     }
 }
 #[doc = "MULT_INT_RAW (r) register accessor: ECC interrupt raw register, valid in level.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mult_int_raw::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_int_raw`] module"]

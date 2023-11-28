@@ -19,6 +19,12 @@ impl RegisterBlock {
     pub const fn plain_(&self, n: usize) -> &PLAIN_ {
         &self.plain_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x140 - Plaintext register %s"]
+    #[inline(always)]
+    pub fn plain__iter(&self) -> impl Iterator<Item = &PLAIN_> {
+        self.plain_.iter()
+    }
     #[doc = "0x140 - Configures the size of target memory space"]
     #[inline(always)]
     pub const fn linesize(&self) -> &LINESIZE {

@@ -19,6 +19,12 @@ impl RegisterBlock {
     pub const fn plain_mem(&self, n: usize) -> &PLAIN_MEM {
         &self.plain_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x10 - The memory that stores plaintext"]
+    #[inline(always)]
+    pub fn plain_mem_iter(&self) -> impl Iterator<Item = &PLAIN_MEM> {
+        self.plain_mem.iter()
+    }
     #[doc = "0x40 - XTS-AES line-size register"]
     #[inline(always)]
     pub const fn linesize(&self) -> &LINESIZE {

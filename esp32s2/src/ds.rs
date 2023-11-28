@@ -23,20 +23,44 @@ impl RegisterBlock {
     pub const fn c_mem(&self, n: usize) -> &C_MEM {
         &self.c_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x630 - memory C"]
+    #[inline(always)]
+    pub fn c_mem_iter(&self) -> impl Iterator<Item = &C_MEM> {
+        self.c_mem.iter()
+    }
     #[doc = "0x630..0x640 - IV block data."]
     #[inline(always)]
     pub const fn iv_(&self, n: usize) -> &IV_ {
         &self.iv_[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x630..0x640 - IV block data."]
+    #[inline(always)]
+    pub fn iv__iter(&self) -> impl Iterator<Item = &IV_> {
+        self.iv_.iter()
     }
     #[doc = "0x800..0xa00 - memory X"]
     #[inline(always)]
     pub const fn x_mem(&self, n: usize) -> &X_MEM {
         &self.x_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x800..0xa00 - memory X"]
+    #[inline(always)]
+    pub fn x_mem_iter(&self) -> impl Iterator<Item = &X_MEM> {
+        self.x_mem.iter()
+    }
     #[doc = "0xa00..0xc00 - memory Z"]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
         &self.z_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa00..0xc00 - memory Z"]
+    #[inline(always)]
+    pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
+        self.z_mem.iter()
     }
     #[doc = "0xe00 - Activates the DS peripheral"]
     #[inline(always)]

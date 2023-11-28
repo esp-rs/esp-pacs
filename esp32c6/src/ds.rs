@@ -26,35 +26,77 @@ impl RegisterBlock {
     pub const fn y_mem(&self, n: usize) -> &Y_MEM {
         &self.y_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x200 - memory that stores Y"]
+    #[inline(always)]
+    pub fn y_mem_iter(&self) -> impl Iterator<Item = &Y_MEM> {
+        self.y_mem.iter()
+    }
     #[doc = "0x200..0x400 - memory that stores M"]
     #[inline(always)]
     pub const fn m_mem(&self, n: usize) -> &M_MEM {
         &self.m_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x200..0x400 - memory that stores M"]
+    #[inline(always)]
+    pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
+        self.m_mem.iter()
     }
     #[doc = "0x400..0x600 - memory that stores Rb"]
     #[inline(always)]
     pub const fn rb_mem(&self, n: usize) -> &RB_MEM {
         &self.rb_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x400..0x600 - memory that stores Rb"]
+    #[inline(always)]
+    pub fn rb_mem_iter(&self) -> impl Iterator<Item = &RB_MEM> {
+        self.rb_mem.iter()
+    }
     #[doc = "0x600..0x630 - memory that stores BOX"]
     #[inline(always)]
     pub const fn box_mem(&self, n: usize) -> &BOX_MEM {
         &self.box_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x600..0x630 - memory that stores BOX"]
+    #[inline(always)]
+    pub fn box_mem_iter(&self) -> impl Iterator<Item = &BOX_MEM> {
+        self.box_mem.iter()
     }
     #[doc = "0x630..0x640 - memory that stores IV"]
     #[inline(always)]
     pub const fn iv_mem(&self, n: usize) -> &IV_MEM {
         &self.iv_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x630..0x640 - memory that stores IV"]
+    #[inline(always)]
+    pub fn iv_mem_iter(&self) -> impl Iterator<Item = &IV_MEM> {
+        self.iv_mem.iter()
+    }
     #[doc = "0x800..0xa00 - memory that stores X"]
     #[inline(always)]
     pub const fn x_mem(&self, n: usize) -> &X_MEM {
         &self.x_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x800..0xa00 - memory that stores X"]
+    #[inline(always)]
+    pub fn x_mem_iter(&self) -> impl Iterator<Item = &X_MEM> {
+        self.x_mem.iter()
+    }
     #[doc = "0xa00..0xc00 - memory that stores Z"]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
         &self.z_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa00..0xc00 - memory that stores Z"]
+    #[inline(always)]
+    pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
+        self.z_mem.iter()
     }
     #[doc = "0xe00 - DS start control register"]
     #[inline(always)]

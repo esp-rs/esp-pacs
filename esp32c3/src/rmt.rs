@@ -30,40 +30,52 @@ impl RegisterBlock {
     pub const fn chdata(&self, n: usize) -> &CHDATA {
         &self.chdata[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x10 - RMT_CH%sDATA_REG."]
+    #[inline(always)]
+    pub fn chdata_iter(&self) -> impl Iterator<Item = &CHDATA> {
+        self.chdata.iter()
+    }
     #[doc = "0x00 - RMT_CH0DATA_REG."]
     #[inline(always)]
     pub const fn ch0data(&self) -> &CHDATA {
-        &self.chdata(0)
+        self.chdata(0)
     }
     #[doc = "0x04 - RMT_CH1DATA_REG."]
     #[inline(always)]
     pub const fn ch1data(&self) -> &CHDATA {
-        &self.chdata(1)
+        self.chdata(1)
     }
     #[doc = "0x08 - RMT_CH2DATA_REG."]
     #[inline(always)]
     pub const fn ch2data(&self) -> &CHDATA {
-        &self.chdata(2)
+        self.chdata(2)
     }
     #[doc = "0x0c - RMT_CH3DATA_REG."]
     #[inline(always)]
     pub const fn ch3data(&self) -> &CHDATA {
-        &self.chdata(3)
+        self.chdata(3)
     }
     #[doc = "0x10..0x18 - RMT_CH%sCONF%s_REG."]
     #[inline(always)]
     pub const fn ch_tx_conf0(&self, n: usize) -> &CH_TX_CONF0 {
         &self.ch_tx_conf0[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x18 - RMT_CH%sCONF%s_REG."]
+    #[inline(always)]
+    pub fn ch_tx_conf0_iter(&self) -> impl Iterator<Item = &CH_TX_CONF0> {
+        self.ch_tx_conf0.iter()
+    }
     #[doc = "0x10 - RMT_CH0CONF0_REG."]
     #[inline(always)]
     pub const fn ch0_tx_conf0(&self) -> &CH_TX_CONF0 {
-        &self.ch_tx_conf0(0)
+        self.ch_tx_conf0(0)
     }
     #[doc = "0x14 - RMT_CH1CONF1_REG."]
     #[inline(always)]
     pub const fn ch1_tx_conf0(&self) -> &CH_TX_CONF0 {
-        &self.ch_tx_conf0(1)
+        self.ch_tx_conf0(1)
     }
     #[doc = "0x18..0x20 - RMT_CH2CONF0_REG."]
     #[inline(always)]
@@ -72,15 +84,21 @@ impl RegisterBlock {
         [(); 2][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(24).add(8 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x18..0x20 - RMT_CH2CONF0_REG."]
+    #[inline(always)]
+    pub fn ch_rx_conf0_iter(&self) -> impl Iterator<Item = &CH_RX_CONF0> {
+        (0..2).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(24).add(8 * n).cast() })
+    }
     #[doc = "0x18 - RMT_CH2CONF0_REG."]
     #[inline(always)]
     pub const fn ch2_rx_conf0(&self) -> &CH_RX_CONF0 {
-        &self.ch_rx_conf0(0)
+        self.ch_rx_conf0(0)
     }
     #[doc = "0x20 - RMT_CH2CONF0_REG."]
     #[inline(always)]
     pub const fn ch3_rx_conf0(&self) -> &CH_RX_CONF0 {
-        &self.ch_rx_conf0(1)
+        self.ch_rx_conf0(1)
     }
     #[doc = "0x1c..0x24 - RMT_CH2CONF1_REG."]
     #[inline(always)]
@@ -89,45 +107,63 @@ impl RegisterBlock {
         [(); 2][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(28).add(8 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1c..0x24 - RMT_CH2CONF1_REG."]
+    #[inline(always)]
+    pub fn ch_rx_conf1_iter(&self) -> impl Iterator<Item = &CH_RX_CONF1> {
+        (0..2).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(28).add(8 * n).cast() })
+    }
     #[doc = "0x1c - RMT_CH2CONF1_REG."]
     #[inline(always)]
     pub const fn ch2_rx_conf1(&self) -> &CH_RX_CONF1 {
-        &self.ch_rx_conf1(0)
+        self.ch_rx_conf1(0)
     }
     #[doc = "0x24 - RMT_CH2CONF1_REG."]
     #[inline(always)]
     pub const fn ch3_rx_conf1(&self) -> &CH_RX_CONF1 {
-        &self.ch_rx_conf1(1)
+        self.ch_rx_conf1(1)
     }
     #[doc = "0x28..0x30 - RMT_CH%sSTATUS_REG."]
     #[inline(always)]
     pub const fn ch_tx_status(&self, n: usize) -> &CH_TX_STATUS {
         &self.ch_tx_status[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x28..0x30 - RMT_CH%sSTATUS_REG."]
+    #[inline(always)]
+    pub fn ch_tx_status_iter(&self) -> impl Iterator<Item = &CH_TX_STATUS> {
+        self.ch_tx_status.iter()
+    }
     #[doc = "0x28 - RMT_CH0STATUS_REG."]
     #[inline(always)]
     pub const fn ch0_tx_status(&self) -> &CH_TX_STATUS {
-        &self.ch_tx_status(0)
+        self.ch_tx_status(0)
     }
     #[doc = "0x2c - RMT_CH1STATUS_REG."]
     #[inline(always)]
     pub const fn ch1_tx_status(&self) -> &CH_TX_STATUS {
-        &self.ch_tx_status(1)
+        self.ch_tx_status(1)
     }
     #[doc = "0x30..0x38 - RMT_CH2STATUS_REG."]
     #[inline(always)]
     pub const fn ch_rx_status(&self, n: usize) -> &CH_RX_STATUS {
         &self.ch_rx_status[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x38 - RMT_CH2STATUS_REG."]
+    #[inline(always)]
+    pub fn ch_rx_status_iter(&self) -> impl Iterator<Item = &CH_RX_STATUS> {
+        self.ch_rx_status.iter()
+    }
     #[doc = "0x30 - RMT_CH2STATUS_REG."]
     #[inline(always)]
     pub const fn ch2_rx_status(&self) -> &CH_RX_STATUS {
-        &self.ch_rx_status(0)
+        self.ch_rx_status(0)
     }
     #[doc = "0x34 - RMT_CH2STATUS_REG."]
     #[inline(always)]
     pub const fn ch3_rx_status(&self) -> &CH_RX_STATUS {
-        &self.ch_rx_status(1)
+        self.ch_rx_status(1)
     }
     #[doc = "0x38 - RMT_INT_RAW_REG."]
     #[inline(always)]
@@ -154,60 +190,84 @@ impl RegisterBlock {
     pub const fn chcarrier_duty(&self, n: usize) -> &CHCARRIER_DUTY {
         &self.chcarrier_duty[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x48..0x50 - RMT_CH%sCARRIER_DUTY_REG."]
+    #[inline(always)]
+    pub fn chcarrier_duty_iter(&self) -> impl Iterator<Item = &CHCARRIER_DUTY> {
+        self.chcarrier_duty.iter()
+    }
     #[doc = "0x48 - RMT_CH0CARRIER_DUTY_REG."]
     #[inline(always)]
     pub const fn ch0carrier_duty(&self) -> &CHCARRIER_DUTY {
-        &self.chcarrier_duty(0)
+        self.chcarrier_duty(0)
     }
     #[doc = "0x4c - RMT_CH1CARRIER_DUTY_REG."]
     #[inline(always)]
     pub const fn ch1carrier_duty(&self) -> &CHCARRIER_DUTY {
-        &self.chcarrier_duty(1)
+        self.chcarrier_duty(1)
     }
     #[doc = "0x50..0x58 - RMT_CH2_RX_CARRIER_RM_REG."]
     #[inline(always)]
     pub const fn ch_rx_carrier_rm(&self, n: usize) -> &CH_RX_CARRIER_RM {
         &self.ch_rx_carrier_rm[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x58 - RMT_CH2_RX_CARRIER_RM_REG."]
+    #[inline(always)]
+    pub fn ch_rx_carrier_rm_iter(&self) -> impl Iterator<Item = &CH_RX_CARRIER_RM> {
+        self.ch_rx_carrier_rm.iter()
+    }
     #[doc = "0x50 - RMT_CH2_RX_CARRIER_RM_REG."]
     #[inline(always)]
     pub const fn ch2_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
-        &self.ch_rx_carrier_rm(0)
+        self.ch_rx_carrier_rm(0)
     }
     #[doc = "0x54 - RMT_CH2_RX_CARRIER_RM_REG."]
     #[inline(always)]
     pub const fn ch3_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
-        &self.ch_rx_carrier_rm(1)
+        self.ch_rx_carrier_rm(1)
     }
     #[doc = "0x58..0x60 - RMT_CH%s_TX_LIM_REG."]
     #[inline(always)]
     pub const fn ch_tx_lim(&self, n: usize) -> &CH_TX_LIM {
         &self.ch_tx_lim[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x58..0x60 - RMT_CH%s_TX_LIM_REG."]
+    #[inline(always)]
+    pub fn ch_tx_lim_iter(&self) -> impl Iterator<Item = &CH_TX_LIM> {
+        self.ch_tx_lim.iter()
+    }
     #[doc = "0x58 - RMT_CH0_TX_LIM_REG."]
     #[inline(always)]
     pub const fn ch0_tx_lim(&self) -> &CH_TX_LIM {
-        &self.ch_tx_lim(0)
+        self.ch_tx_lim(0)
     }
     #[doc = "0x5c - RMT_CH1_TX_LIM_REG."]
     #[inline(always)]
     pub const fn ch1_tx_lim(&self) -> &CH_TX_LIM {
-        &self.ch_tx_lim(1)
+        self.ch_tx_lim(1)
     }
     #[doc = "0x60..0x68 - RMT_CH2_RX_LIM_REG."]
     #[inline(always)]
     pub const fn ch_rx_lim(&self, n: usize) -> &CH_RX_LIM {
         &self.ch_rx_lim[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x68 - RMT_CH2_RX_LIM_REG."]
+    #[inline(always)]
+    pub fn ch_rx_lim_iter(&self) -> impl Iterator<Item = &CH_RX_LIM> {
+        self.ch_rx_lim.iter()
+    }
     #[doc = "0x60 - RMT_CH2_RX_LIM_REG."]
     #[inline(always)]
     pub const fn ch2_rx_lim(&self) -> &CH_RX_LIM {
-        &self.ch_rx_lim(0)
+        self.ch_rx_lim(0)
     }
     #[doc = "0x64 - RMT_CH2_RX_LIM_REG."]
     #[inline(always)]
     pub const fn ch3_rx_lim(&self) -> &CH_RX_LIM {
-        &self.ch_rx_lim(1)
+        self.ch_rx_lim(1)
     }
     #[doc = "0x68 - RMT_SYS_CONF_REG."]
     #[inline(always)]

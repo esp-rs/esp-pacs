@@ -147,6 +147,12 @@ impl RegisterBlock {
     pub const fn comd(&self, n: usize) -> &COMD {
         &self.comd[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x58..0x78 - I2C_COMD%s_REG"]
+    #[inline(always)]
+    pub fn comd_iter(&self) -> impl Iterator<Item = &COMD> {
+        self.comd.iter()
+    }
     #[doc = "0x78 - I2C_SCL_ST_TIME_OUT_REG"]
     #[inline(always)]
     pub const fn scl_st_time_out(&self) -> &SCL_ST_TIME_OUT {

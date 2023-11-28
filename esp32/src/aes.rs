@@ -31,10 +31,22 @@ impl RegisterBlock {
     pub const fn key_(&self, n: usize) -> &KEY_ {
         &self.key_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x30 - "]
+    #[inline(always)]
+    pub fn key__iter(&self) -> impl Iterator<Item = &KEY_> {
+        self.key_.iter()
+    }
     #[doc = "0x30..0x40 - "]
     #[inline(always)]
     pub const fn text_(&self, n: usize) -> &TEXT_ {
         &self.text_[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x40 - "]
+    #[inline(always)]
+    pub fn text__iter(&self) -> impl Iterator<Item = &TEXT_> {
+        self.text_.iter()
     }
     #[doc = "0x40 - "]
     #[inline(always)]

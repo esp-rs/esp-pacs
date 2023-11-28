@@ -26,6 +26,12 @@ impl RegisterBlock {
     pub const fn text(&self, n: usize) -> &TEXT {
         &self.text[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x80 - "]
+    #[inline(always)]
+    pub fn text_iter(&self) -> impl Iterator<Item = &TEXT> {
+        self.text.iter()
+    }
     #[doc = "0x80 - "]
     #[inline(always)]
     pub const fn sha1_start(&self) -> &SHA1_START {

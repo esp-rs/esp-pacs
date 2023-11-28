@@ -74,6 +74,12 @@ impl RegisterBlock {
     pub const fn info_mem(&self, n: usize) -> &INFO_MEM {
         &self.info_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x280 - The memory that stores HUK info."]
+    #[inline(always)]
+    pub fn info_mem_iter(&self) -> impl Iterator<Item = &INFO_MEM> {
+        self.info_mem.iter()
+    }
 }
 #[doc = "CLK (rw) register accessor: HUK Generator clock gate control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
 pub type CLK = crate::Reg<clk::CLK_SPEC>;

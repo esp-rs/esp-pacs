@@ -9,7 +9,9 @@ impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
     }
 }
 impl W {
-    #[doc = "This register is used to reset the clock divider of CHANNEL[0-7].\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `CH0` field"]
+    #[doc = "This register is used to reset the clock divider of CHANNEL[0-7]."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0` field"]
     #[inline(always)]
     #[must_use]
     pub fn ch(&mut self, n: u8) -> CH_W<REF_CNT_RST_SPEC> {

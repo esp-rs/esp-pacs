@@ -20,6 +20,12 @@ impl RegisterBlock {
     pub const fn gpio(&self, n: usize) -> &GPIO {
         &self.gpio[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x74 - IO MUX Configure Register for pad GPIO0"]
+    #[inline(always)]
+    pub fn gpio_iter(&self) -> impl Iterator<Item = &GPIO> {
+        self.gpio.iter()
+    }
     #[doc = "0xbc - GPIO MATRIX Configure Register for modem diag"]
     #[inline(always)]
     pub const fn modem_diag_en(&self) -> &MODEM_DIAG_EN {

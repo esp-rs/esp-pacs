@@ -434,6 +434,12 @@ impl RegisterBlock {
     pub const fn pin(&self, n: usize) -> &PIN {
         &self.pin[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x74..0x158 - GPIO pin configuration register"]
+    #[inline(always)]
+    pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
+        self.pin.iter()
+    }
     #[doc = "0x15c - GPIO input function configuration register"]
     #[inline(always)]
     pub const fn func1_in_sel_cfg(&self) -> &FUNC1_IN_SEL_CFG {
@@ -1559,290 +1565,296 @@ impl RegisterBlock {
     pub const fn func_out_sel_cfg(&self, n: usize) -> &FUNC_OUT_SEL_CFG {
         &self.func_out_sel_cfg[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x558..0x63c - GPIO output function select register"]
+    #[inline(always)]
+    pub fn func_out_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_OUT_SEL_CFG> {
+        self.func_out_sel_cfg.iter()
+    }
     #[doc = "0x558 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func0_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(0)
+        self.func_out_sel_cfg(0)
     }
     #[doc = "0x55c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func1_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(1)
+        self.func_out_sel_cfg(1)
     }
     #[doc = "0x560 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func2_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(2)
+        self.func_out_sel_cfg(2)
     }
     #[doc = "0x564 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func3_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(3)
+        self.func_out_sel_cfg(3)
     }
     #[doc = "0x568 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func4_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(4)
+        self.func_out_sel_cfg(4)
     }
     #[doc = "0x56c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func5_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(5)
+        self.func_out_sel_cfg(5)
     }
     #[doc = "0x570 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func6_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(6)
+        self.func_out_sel_cfg(6)
     }
     #[doc = "0x574 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func7_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(7)
+        self.func_out_sel_cfg(7)
     }
     #[doc = "0x578 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func8_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(8)
+        self.func_out_sel_cfg(8)
     }
     #[doc = "0x57c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func9_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(9)
+        self.func_out_sel_cfg(9)
     }
     #[doc = "0x580 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func10_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(10)
+        self.func_out_sel_cfg(10)
     }
     #[doc = "0x584 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func11_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(11)
+        self.func_out_sel_cfg(11)
     }
     #[doc = "0x588 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func12_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(12)
+        self.func_out_sel_cfg(12)
     }
     #[doc = "0x58c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func13_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(13)
+        self.func_out_sel_cfg(13)
     }
     #[doc = "0x590 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func14_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(14)
+        self.func_out_sel_cfg(14)
     }
     #[doc = "0x594 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func15_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(15)
+        self.func_out_sel_cfg(15)
     }
     #[doc = "0x598 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func16_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(16)
+        self.func_out_sel_cfg(16)
     }
     #[doc = "0x59c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func17_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(17)
+        self.func_out_sel_cfg(17)
     }
     #[doc = "0x5a0 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func18_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(18)
+        self.func_out_sel_cfg(18)
     }
     #[doc = "0x5a4 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func19_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(19)
+        self.func_out_sel_cfg(19)
     }
     #[doc = "0x5a8 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func20_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(20)
+        self.func_out_sel_cfg(20)
     }
     #[doc = "0x5ac - GPIO output function select register"]
     #[inline(always)]
     pub const fn func21_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(21)
+        self.func_out_sel_cfg(21)
     }
     #[doc = "0x5b0 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func22_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(22)
+        self.func_out_sel_cfg(22)
     }
     #[doc = "0x5b4 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func23_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(23)
+        self.func_out_sel_cfg(23)
     }
     #[doc = "0x5b8 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func24_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(24)
+        self.func_out_sel_cfg(24)
     }
     #[doc = "0x5bc - GPIO output function select register"]
     #[inline(always)]
     pub const fn func25_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(25)
+        self.func_out_sel_cfg(25)
     }
     #[doc = "0x5c0 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func26_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(26)
+        self.func_out_sel_cfg(26)
     }
     #[doc = "0x5c4 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func27_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(27)
+        self.func_out_sel_cfg(27)
     }
     #[doc = "0x5c8 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func28_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(28)
+        self.func_out_sel_cfg(28)
     }
     #[doc = "0x5cc - GPIO output function select register"]
     #[inline(always)]
     pub const fn func29_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(29)
+        self.func_out_sel_cfg(29)
     }
     #[doc = "0x5d0 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func30_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(30)
+        self.func_out_sel_cfg(30)
     }
     #[doc = "0x5d4 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func31_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(31)
+        self.func_out_sel_cfg(31)
     }
     #[doc = "0x5d8 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func32_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(32)
+        self.func_out_sel_cfg(32)
     }
     #[doc = "0x5dc - GPIO output function select register"]
     #[inline(always)]
     pub const fn func33_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(33)
+        self.func_out_sel_cfg(33)
     }
     #[doc = "0x5e0 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func34_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(34)
+        self.func_out_sel_cfg(34)
     }
     #[doc = "0x5e4 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func35_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(35)
+        self.func_out_sel_cfg(35)
     }
     #[doc = "0x5e8 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func36_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(36)
+        self.func_out_sel_cfg(36)
     }
     #[doc = "0x5ec - GPIO output function select register"]
     #[inline(always)]
     pub const fn func37_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(37)
+        self.func_out_sel_cfg(37)
     }
     #[doc = "0x5f0 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func38_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(38)
+        self.func_out_sel_cfg(38)
     }
     #[doc = "0x5f4 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func39_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(39)
+        self.func_out_sel_cfg(39)
     }
     #[doc = "0x5f8 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func40_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(40)
+        self.func_out_sel_cfg(40)
     }
     #[doc = "0x5fc - GPIO output function select register"]
     #[inline(always)]
     pub const fn func41_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(41)
+        self.func_out_sel_cfg(41)
     }
     #[doc = "0x600 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func42_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(42)
+        self.func_out_sel_cfg(42)
     }
     #[doc = "0x604 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func43_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(43)
+        self.func_out_sel_cfg(43)
     }
     #[doc = "0x608 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func44_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(44)
+        self.func_out_sel_cfg(44)
     }
     #[doc = "0x60c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func45_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(45)
+        self.func_out_sel_cfg(45)
     }
     #[doc = "0x610 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func46_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(46)
+        self.func_out_sel_cfg(46)
     }
     #[doc = "0x614 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func47_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(47)
+        self.func_out_sel_cfg(47)
     }
     #[doc = "0x618 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func48_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(48)
+        self.func_out_sel_cfg(48)
     }
     #[doc = "0x61c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func49_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(49)
+        self.func_out_sel_cfg(49)
     }
     #[doc = "0x620 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func50_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(50)
+        self.func_out_sel_cfg(50)
     }
     #[doc = "0x624 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func51_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(51)
+        self.func_out_sel_cfg(51)
     }
     #[doc = "0x628 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func52_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(52)
+        self.func_out_sel_cfg(52)
     }
     #[doc = "0x62c - GPIO output function select register"]
     #[inline(always)]
     pub const fn func53_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(53)
+        self.func_out_sel_cfg(53)
     }
     #[doc = "0x630 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func54_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(54)
+        self.func_out_sel_cfg(54)
     }
     #[doc = "0x634 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func55_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(55)
+        self.func_out_sel_cfg(55)
     }
     #[doc = "0x638 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func56_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
-        &self.func_out_sel_cfg(56)
+        self.func_out_sel_cfg(56)
     }
     #[doc = "0x63c - GPIO interrupt 2 status register for GPIO0-31"]
     #[inline(always)]

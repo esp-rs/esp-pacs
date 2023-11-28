@@ -30,75 +30,93 @@ impl RegisterBlock {
     pub const fn tx_chdata(&self, n: usize) -> &TX_CHDATA {
         &self.tx_chdata[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x10 - The read and write data register for CHANNEL%s by apb fifo access."]
+    #[inline(always)]
+    pub fn tx_chdata_iter(&self) -> impl Iterator<Item = &TX_CHDATA> {
+        self.tx_chdata.iter()
+    }
     #[doc = "0x00 - The read and write data register for CHANNEL0 by apb fifo access."]
     #[inline(always)]
     pub const fn tx_ch0data(&self) -> &TX_CHDATA {
-        &self.tx_chdata(0)
+        self.tx_chdata(0)
     }
     #[doc = "0x04 - The read and write data register for CHANNEL1 by apb fifo access."]
     #[inline(always)]
     pub const fn tx_ch1data(&self) -> &TX_CHDATA {
-        &self.tx_chdata(1)
+        self.tx_chdata(1)
     }
     #[doc = "0x08 - The read and write data register for CHANNEL2 by apb fifo access."]
     #[inline(always)]
     pub const fn tx_ch2data(&self) -> &TX_CHDATA {
-        &self.tx_chdata(2)
+        self.tx_chdata(2)
     }
     #[doc = "0x0c - The read and write data register for CHANNEL3 by apb fifo access."]
     #[inline(always)]
     pub const fn tx_ch3data(&self) -> &TX_CHDATA {
-        &self.tx_chdata(3)
+        self.tx_chdata(3)
     }
     #[doc = "0x10..0x20 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
     pub const fn rx_chdata(&self, n: usize) -> &RX_CHDATA {
         &self.rx_chdata[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x20 - The read and write data register for CHANNEL$n by apb fifo access."]
+    #[inline(always)]
+    pub fn rx_chdata_iter(&self) -> impl Iterator<Item = &RX_CHDATA> {
+        self.rx_chdata.iter()
+    }
     #[doc = "0x10 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
     pub const fn rx_ch0data(&self) -> &RX_CHDATA {
-        &self.rx_chdata(0)
+        self.rx_chdata(0)
     }
     #[doc = "0x14 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
     pub const fn rx_ch1data(&self) -> &RX_CHDATA {
-        &self.rx_chdata(1)
+        self.rx_chdata(1)
     }
     #[doc = "0x18 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
     pub const fn rx_ch2data(&self) -> &RX_CHDATA {
-        &self.rx_chdata(2)
+        self.rx_chdata(2)
     }
     #[doc = "0x1c - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
     pub const fn rx_ch3data(&self) -> &RX_CHDATA {
-        &self.rx_chdata(3)
+        self.rx_chdata(3)
     }
     #[doc = "0x20..0x30 - Channel %s configure register 0"]
     #[inline(always)]
     pub const fn tx_chconf0(&self, n: usize) -> &TX_CHCONF0 {
         &self.tx_chconf0[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x20..0x30 - Channel %s configure register 0"]
+    #[inline(always)]
+    pub fn tx_chconf0_iter(&self) -> impl Iterator<Item = &TX_CHCONF0> {
+        self.tx_chconf0.iter()
+    }
     #[doc = "0x20 - Channel 0 configure register 0"]
     #[inline(always)]
     pub const fn tx_ch0conf0(&self) -> &TX_CHCONF0 {
-        &self.tx_chconf0(0)
+        self.tx_chconf0(0)
     }
     #[doc = "0x24 - Channel 1 configure register 0"]
     #[inline(always)]
     pub const fn tx_ch1conf0(&self) -> &TX_CHCONF0 {
-        &self.tx_chconf0(1)
+        self.tx_chconf0(1)
     }
     #[doc = "0x28 - Channel 2 configure register 0"]
     #[inline(always)]
     pub const fn tx_ch2conf0(&self) -> &TX_CHCONF0 {
-        &self.tx_chconf0(2)
+        self.tx_chconf0(2)
     }
     #[doc = "0x2c - Channel 3 configure register 0"]
     #[inline(always)]
     pub const fn tx_ch3conf0(&self) -> &TX_CHCONF0 {
-        &self.tx_chconf0(3)
+        self.tx_chconf0(3)
     }
     #[doc = "0x30..0x40 - Channel %s configure register 0"]
     #[inline(always)]
@@ -107,25 +125,31 @@ impl RegisterBlock {
         [(); 4][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(48).add(8 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x40 - Channel %s configure register 0"]
+    #[inline(always)]
+    pub fn rx_chconf0_iter(&self) -> impl Iterator<Item = &RX_CHCONF0> {
+        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(48).add(8 * n).cast() })
+    }
     #[doc = "0x30 - Channel 0 configure register 0"]
     #[inline(always)]
     pub const fn rx_ch0conf0(&self) -> &RX_CHCONF0 {
-        &self.rx_chconf0(0)
+        self.rx_chconf0(0)
     }
     #[doc = "0x38 - Channel 1 configure register 0"]
     #[inline(always)]
     pub const fn rx_ch1conf0(&self) -> &RX_CHCONF0 {
-        &self.rx_chconf0(1)
+        self.rx_chconf0(1)
     }
     #[doc = "0x40 - Channel 2 configure register 0"]
     #[inline(always)]
     pub const fn rx_ch2conf0(&self) -> &RX_CHCONF0 {
-        &self.rx_chconf0(2)
+        self.rx_chconf0(2)
     }
     #[doc = "0x48 - Channel 3 configure register 0"]
     #[inline(always)]
     pub const fn rx_ch3conf0(&self) -> &RX_CHCONF0 {
-        &self.rx_chconf0(3)
+        self.rx_chconf0(3)
     }
     #[doc = "0x34..0x44 - Channel %s configure register 1"]
     #[inline(always)]
@@ -134,75 +158,93 @@ impl RegisterBlock {
         [(); 4][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(52).add(8 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x34..0x44 - Channel %s configure register 1"]
+    #[inline(always)]
+    pub fn rx_chconf1_iter(&self) -> impl Iterator<Item = &RX_CHCONF1> {
+        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(52).add(8 * n).cast() })
+    }
     #[doc = "0x34 - Channel 0 configure register 1"]
     #[inline(always)]
     pub const fn rx_ch0conf1(&self) -> &RX_CHCONF1 {
-        &self.rx_chconf1(0)
+        self.rx_chconf1(0)
     }
     #[doc = "0x3c - Channel 1 configure register 1"]
     #[inline(always)]
     pub const fn rx_ch1conf1(&self) -> &RX_CHCONF1 {
-        &self.rx_chconf1(1)
+        self.rx_chconf1(1)
     }
     #[doc = "0x44 - Channel 2 configure register 1"]
     #[inline(always)]
     pub const fn rx_ch2conf1(&self) -> &RX_CHCONF1 {
-        &self.rx_chconf1(2)
+        self.rx_chconf1(2)
     }
     #[doc = "0x4c - Channel 3 configure register 1"]
     #[inline(always)]
     pub const fn rx_ch3conf1(&self) -> &RX_CHCONF1 {
-        &self.rx_chconf1(3)
+        self.rx_chconf1(3)
     }
     #[doc = "0x50..0x60 - Channel %s status register"]
     #[inline(always)]
     pub const fn tx_chstatus(&self, n: usize) -> &TX_CHSTATUS {
         &self.tx_chstatus[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x60 - Channel %s status register"]
+    #[inline(always)]
+    pub fn tx_chstatus_iter(&self) -> impl Iterator<Item = &TX_CHSTATUS> {
+        self.tx_chstatus.iter()
+    }
     #[doc = "0x50 - Channel 0 status register"]
     #[inline(always)]
     pub const fn tx_ch0status(&self) -> &TX_CHSTATUS {
-        &self.tx_chstatus(0)
+        self.tx_chstatus(0)
     }
     #[doc = "0x54 - Channel 1 status register"]
     #[inline(always)]
     pub const fn tx_ch1status(&self) -> &TX_CHSTATUS {
-        &self.tx_chstatus(1)
+        self.tx_chstatus(1)
     }
     #[doc = "0x58 - Channel 2 status register"]
     #[inline(always)]
     pub const fn tx_ch2status(&self) -> &TX_CHSTATUS {
-        &self.tx_chstatus(2)
+        self.tx_chstatus(2)
     }
     #[doc = "0x5c - Channel 3 status register"]
     #[inline(always)]
     pub const fn tx_ch3status(&self) -> &TX_CHSTATUS {
-        &self.tx_chstatus(3)
+        self.tx_chstatus(3)
     }
     #[doc = "0x60..0x70 - Channel %s status register"]
     #[inline(always)]
     pub const fn rx_chstatus(&self, n: usize) -> &RX_CHSTATUS {
         &self.rx_chstatus[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x70 - Channel %s status register"]
+    #[inline(always)]
+    pub fn rx_chstatus_iter(&self) -> impl Iterator<Item = &RX_CHSTATUS> {
+        self.rx_chstatus.iter()
+    }
     #[doc = "0x60 - Channel 0 status register"]
     #[inline(always)]
     pub const fn rx_ch0status(&self) -> &RX_CHSTATUS {
-        &self.rx_chstatus(0)
+        self.rx_chstatus(0)
     }
     #[doc = "0x64 - Channel 1 status register"]
     #[inline(always)]
     pub const fn rx_ch1status(&self) -> &RX_CHSTATUS {
-        &self.rx_chstatus(1)
+        self.rx_chstatus(1)
     }
     #[doc = "0x68 - Channel 2 status register"]
     #[inline(always)]
     pub const fn rx_ch2status(&self) -> &RX_CHSTATUS {
-        &self.rx_chstatus(2)
+        self.rx_chstatus(2)
     }
     #[doc = "0x6c - Channel 3 status register"]
     #[inline(always)]
     pub const fn rx_ch3status(&self) -> &RX_CHSTATUS {
-        &self.rx_chstatus(3)
+        self.rx_chstatus(3)
     }
     #[doc = "0x70 - Raw interrupt status"]
     #[inline(always)]
@@ -229,100 +271,124 @@ impl RegisterBlock {
     pub const fn chcarrier_duty(&self, n: usize) -> &CHCARRIER_DUTY {
         &self.chcarrier_duty[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x80..0x90 - Channel %s duty cycle configuration register"]
+    #[inline(always)]
+    pub fn chcarrier_duty_iter(&self) -> impl Iterator<Item = &CHCARRIER_DUTY> {
+        self.chcarrier_duty.iter()
+    }
     #[doc = "0x80 - Channel 0 duty cycle configuration register"]
     #[inline(always)]
     pub const fn ch0carrier_duty(&self) -> &CHCARRIER_DUTY {
-        &self.chcarrier_duty(0)
+        self.chcarrier_duty(0)
     }
     #[doc = "0x84 - Channel 1 duty cycle configuration register"]
     #[inline(always)]
     pub const fn ch1carrier_duty(&self) -> &CHCARRIER_DUTY {
-        &self.chcarrier_duty(1)
+        self.chcarrier_duty(1)
     }
     #[doc = "0x88 - Channel 2 duty cycle configuration register"]
     #[inline(always)]
     pub const fn ch2carrier_duty(&self) -> &CHCARRIER_DUTY {
-        &self.chcarrier_duty(2)
+        self.chcarrier_duty(2)
     }
     #[doc = "0x8c - Channel 3 duty cycle configuration register"]
     #[inline(always)]
     pub const fn ch3carrier_duty(&self) -> &CHCARRIER_DUTY {
-        &self.chcarrier_duty(3)
+        self.chcarrier_duty(3)
     }
     #[doc = "0x90..0xa0 - Channel %s carrier remove register"]
     #[inline(always)]
     pub const fn ch_rx_carrier_rm(&self, n: usize) -> &CH_RX_CARRIER_RM {
         &self.ch_rx_carrier_rm[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x90..0xa0 - Channel %s carrier remove register"]
+    #[inline(always)]
+    pub fn ch_rx_carrier_rm_iter(&self) -> impl Iterator<Item = &CH_RX_CARRIER_RM> {
+        self.ch_rx_carrier_rm.iter()
+    }
     #[doc = "0x90 - Channel 0 carrier remove register"]
     #[inline(always)]
     pub const fn ch0_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
-        &self.ch_rx_carrier_rm(0)
+        self.ch_rx_carrier_rm(0)
     }
     #[doc = "0x94 - Channel 1 carrier remove register"]
     #[inline(always)]
     pub const fn ch1_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
-        &self.ch_rx_carrier_rm(1)
+        self.ch_rx_carrier_rm(1)
     }
     #[doc = "0x98 - Channel 2 carrier remove register"]
     #[inline(always)]
     pub const fn ch2_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
-        &self.ch_rx_carrier_rm(2)
+        self.ch_rx_carrier_rm(2)
     }
     #[doc = "0x9c - Channel 3 carrier remove register"]
     #[inline(always)]
     pub const fn ch3_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
-        &self.ch_rx_carrier_rm(3)
+        self.ch_rx_carrier_rm(3)
     }
     #[doc = "0xa0..0xb0 - Channel %s Tx event configuration register"]
     #[inline(always)]
     pub const fn ch_tx_lim(&self, n: usize) -> &CH_TX_LIM {
         &self.ch_tx_lim[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa0..0xb0 - Channel %s Tx event configuration register"]
+    #[inline(always)]
+    pub fn ch_tx_lim_iter(&self) -> impl Iterator<Item = &CH_TX_LIM> {
+        self.ch_tx_lim.iter()
+    }
     #[doc = "0xa0 - Channel 0 Tx event configuration register"]
     #[inline(always)]
     pub const fn ch0_tx_lim(&self) -> &CH_TX_LIM {
-        &self.ch_tx_lim(0)
+        self.ch_tx_lim(0)
     }
     #[doc = "0xa4 - Channel 1 Tx event configuration register"]
     #[inline(always)]
     pub const fn ch1_tx_lim(&self) -> &CH_TX_LIM {
-        &self.ch_tx_lim(1)
+        self.ch_tx_lim(1)
     }
     #[doc = "0xa8 - Channel 2 Tx event configuration register"]
     #[inline(always)]
     pub const fn ch2_tx_lim(&self) -> &CH_TX_LIM {
-        &self.ch_tx_lim(2)
+        self.ch_tx_lim(2)
     }
     #[doc = "0xac - Channel 3 Tx event configuration register"]
     #[inline(always)]
     pub const fn ch3_tx_lim(&self) -> &CH_TX_LIM {
-        &self.ch_tx_lim(3)
+        self.ch_tx_lim(3)
     }
     #[doc = "0xb0..0xc0 - Channel %s Rx event configuration register"]
     #[inline(always)]
     pub const fn ch_rx_lim(&self, n: usize) -> &CH_RX_LIM {
         &self.ch_rx_lim[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xb0..0xc0 - Channel %s Rx event configuration register"]
+    #[inline(always)]
+    pub fn ch_rx_lim_iter(&self) -> impl Iterator<Item = &CH_RX_LIM> {
+        self.ch_rx_lim.iter()
+    }
     #[doc = "0xb0 - Channel 0 Rx event configuration register"]
     #[inline(always)]
     pub const fn ch0_rx_lim(&self) -> &CH_RX_LIM {
-        &self.ch_rx_lim(0)
+        self.ch_rx_lim(0)
     }
     #[doc = "0xb4 - Channel 1 Rx event configuration register"]
     #[inline(always)]
     pub const fn ch1_rx_lim(&self) -> &CH_RX_LIM {
-        &self.ch_rx_lim(1)
+        self.ch_rx_lim(1)
     }
     #[doc = "0xb8 - Channel 2 Rx event configuration register"]
     #[inline(always)]
     pub const fn ch2_rx_lim(&self) -> &CH_RX_LIM {
-        &self.ch_rx_lim(2)
+        self.ch_rx_lim(2)
     }
     #[doc = "0xbc - Channel 3 Rx event configuration register"]
     #[inline(always)]
     pub const fn ch3_rx_lim(&self) -> &CH_RX_LIM {
-        &self.ch_rx_lim(3)
+        self.ch_rx_lim(3)
     }
     #[doc = "0xc0 - RMT apb configuration register"]
     #[inline(always)]

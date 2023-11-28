@@ -141,6 +141,12 @@ impl RegisterBlock {
     pub const fn comd(&self, n: usize) -> &COMD {
         &self.comd[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x58..0x98 - "]
+    #[inline(always)]
+    pub fn comd_iter(&self) -> impl Iterator<Item = &COMD> {
+        self.comd.iter()
+    }
     #[doc = "0xf8 - "]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {

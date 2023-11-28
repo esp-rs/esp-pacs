@@ -75,20 +75,26 @@ impl RegisterBlock {
         [(); 3][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(4).add(16 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x10 - PWM timer%s period and update method configuration register."]
+    #[inline(always)]
+    pub fn timer_cfg0_iter(&self) -> impl Iterator<Item = &TIMER_CFG0> {
+        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(16 * n).cast() })
+    }
     #[doc = "0x04 - PWM timer0 period and update method configuration register."]
     #[inline(always)]
     pub const fn timer0_cfg0(&self) -> &TIMER_CFG0 {
-        &self.timer_cfg0(0)
+        self.timer_cfg0(0)
     }
     #[doc = "0x14 - PWM timer1 period and update method configuration register."]
     #[inline(always)]
     pub const fn timer1_cfg0(&self) -> &TIMER_CFG0 {
-        &self.timer_cfg0(1)
+        self.timer_cfg0(1)
     }
     #[doc = "0x24 - PWM timer2 period and update method configuration register."]
     #[inline(always)]
     pub const fn timer2_cfg0(&self) -> &TIMER_CFG0 {
-        &self.timer_cfg0(2)
+        self.timer_cfg0(2)
     }
     #[doc = "0x08..0x14 - PWM timer%s working mode and start/stop control register."]
     #[inline(always)]
@@ -97,20 +103,26 @@ impl RegisterBlock {
         [(); 3][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x14 - PWM timer%s working mode and start/stop control register."]
+    #[inline(always)]
+    pub fn timer_cfg1_iter(&self) -> impl Iterator<Item = &TIMER_CFG1> {
+        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() })
+    }
     #[doc = "0x08 - PWM timer0 working mode and start/stop control register."]
     #[inline(always)]
     pub const fn timer0_cfg1(&self) -> &TIMER_CFG1 {
-        &self.timer_cfg1(0)
+        self.timer_cfg1(0)
     }
     #[doc = "0x18 - PWM timer1 working mode and start/stop control register."]
     #[inline(always)]
     pub const fn timer1_cfg1(&self) -> &TIMER_CFG1 {
-        &self.timer_cfg1(1)
+        self.timer_cfg1(1)
     }
     #[doc = "0x28 - PWM timer2 working mode and start/stop control register."]
     #[inline(always)]
     pub const fn timer2_cfg1(&self) -> &TIMER_CFG1 {
-        &self.timer_cfg1(2)
+        self.timer_cfg1(2)
     }
     #[doc = "0x0c..0x18 - PWM timer%s sync function configuration register."]
     #[inline(always)]
@@ -125,20 +137,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x18 - PWM timer%s sync function configuration register."]
+    #[inline(always)]
+    pub fn timer_sync_iter(&self) -> impl Iterator<Item = &TIMER_SYNC> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(12)
+                .add(16 * n)
+                .cast()
+        })
+    }
     #[doc = "0x0c - PWM timer0 sync function configuration register."]
     #[inline(always)]
     pub const fn timer0_sync(&self) -> &TIMER_SYNC {
-        &self.timer_sync(0)
+        self.timer_sync(0)
     }
     #[doc = "0x1c - PWM timer1 sync function configuration register."]
     #[inline(always)]
     pub const fn timer1_sync(&self) -> &TIMER_SYNC {
-        &self.timer_sync(1)
+        self.timer_sync(1)
     }
     #[doc = "0x2c - PWM timer2 sync function configuration register."]
     #[inline(always)]
     pub const fn timer2_sync(&self) -> &TIMER_SYNC {
-        &self.timer_sync(2)
+        self.timer_sync(2)
     }
     #[doc = "0x10..0x1c - PWM timer%s status register."]
     #[inline(always)]
@@ -153,20 +177,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x1c - PWM timer%s status register."]
+    #[inline(always)]
+    pub fn timer_status_iter(&self) -> impl Iterator<Item = &TIMER_STATUS> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(16)
+                .add(16 * n)
+                .cast()
+        })
+    }
     #[doc = "0x10 - PWM timer0 status register."]
     #[inline(always)]
     pub const fn timer0_status(&self) -> &TIMER_STATUS {
-        &self.timer_status(0)
+        self.timer_status(0)
     }
     #[doc = "0x20 - PWM timer1 status register."]
     #[inline(always)]
     pub const fn timer1_status(&self) -> &TIMER_STATUS {
-        &self.timer_status(1)
+        self.timer_status(1)
     }
     #[doc = "0x30 - PWM timer2 status register."]
     #[inline(always)]
     pub const fn timer2_status(&self) -> &TIMER_STATUS {
-        &self.timer_status(2)
+        self.timer_status(2)
     }
     #[doc = "0x34 - Synchronization input selection register for PWM timers."]
     #[inline(always)]
@@ -191,20 +227,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x3c..0x48 - Generator%s time stamp registers A and B transfer status and update method register"]
+    #[inline(always)]
+    pub fn gen_stmp_cfg_iter(&self) -> impl Iterator<Item = &GEN_STMP_CFG> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(60)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x3c - Generator0 time stamp registers A and B transfer status and update method register"]
     #[inline(always)]
     pub const fn gen0_stmp_cfg(&self) -> &GEN_STMP_CFG {
-        &self.gen_stmp_cfg(0)
+        self.gen_stmp_cfg(0)
     }
     #[doc = "0x74 - Generator1 time stamp registers A and B transfer status and update method register"]
     #[inline(always)]
     pub const fn gen1_stmp_cfg(&self) -> &GEN_STMP_CFG {
-        &self.gen_stmp_cfg(1)
+        self.gen_stmp_cfg(1)
     }
     #[doc = "0xac - Generator2 time stamp registers A and B transfer status and update method register"]
     #[inline(always)]
     pub const fn gen2_stmp_cfg(&self) -> &GEN_STMP_CFG {
-        &self.gen_stmp_cfg(2)
+        self.gen_stmp_cfg(2)
     }
     #[doc = "0x40..0x4c - Generator%s time stamp A's shadow register"]
     #[inline(always)]
@@ -219,20 +267,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x40..0x4c - Generator%s time stamp A's shadow register"]
+    #[inline(always)]
+    pub fn gen_tstmp_a_iter(&self) -> impl Iterator<Item = &GEN_TSTMP_A> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(64)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x40 - Generator0 time stamp A's shadow register"]
     #[inline(always)]
     pub const fn gen0_tstmp_a(&self) -> &GEN_TSTMP_A {
-        &self.gen_tstmp_a(0)
+        self.gen_tstmp_a(0)
     }
     #[doc = "0x78 - Generator1 time stamp A's shadow register"]
     #[inline(always)]
     pub const fn gen1_tstmp_a(&self) -> &GEN_TSTMP_A {
-        &self.gen_tstmp_a(1)
+        self.gen_tstmp_a(1)
     }
     #[doc = "0xb0 - Generator2 time stamp A's shadow register"]
     #[inline(always)]
     pub const fn gen2_tstmp_a(&self) -> &GEN_TSTMP_A {
-        &self.gen_tstmp_a(2)
+        self.gen_tstmp_a(2)
     }
     #[doc = "0x44..0x50 - Generator%s time stamp B's shadow register"]
     #[inline(always)]
@@ -247,20 +307,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x44..0x50 - Generator%s time stamp B's shadow register"]
+    #[inline(always)]
+    pub fn gen_tstmp_b_iter(&self) -> impl Iterator<Item = &GEN_TSTMP_B> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(68)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x44 - Generator0 time stamp B's shadow register"]
     #[inline(always)]
     pub const fn gen0_tstmp_b(&self) -> &GEN_TSTMP_B {
-        &self.gen_tstmp_b(0)
+        self.gen_tstmp_b(0)
     }
     #[doc = "0x7c - Generator1 time stamp B's shadow register"]
     #[inline(always)]
     pub const fn gen1_tstmp_b(&self) -> &GEN_TSTMP_B {
-        &self.gen_tstmp_b(1)
+        self.gen_tstmp_b(1)
     }
     #[doc = "0xb4 - Generator2 time stamp B's shadow register"]
     #[inline(always)]
     pub const fn gen2_tstmp_b(&self) -> &GEN_TSTMP_B {
-        &self.gen_tstmp_b(2)
+        self.gen_tstmp_b(2)
     }
     #[doc = "0x48..0x54 - Generator%s fault event T0 and T1 configuration register"]
     #[inline(always)]
@@ -275,20 +347,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x48..0x54 - Generator%s fault event T0 and T1 configuration register"]
+    #[inline(always)]
+    pub fn gen_cfg0_iter(&self) -> impl Iterator<Item = &GEN_CFG0> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(72)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x48 - Generator0 fault event T0 and T1 configuration register"]
     #[inline(always)]
     pub const fn gen0_cfg0(&self) -> &GEN_CFG0 {
-        &self.gen_cfg0(0)
+        self.gen_cfg0(0)
     }
     #[doc = "0x80 - Generator1 fault event T0 and T1 configuration register"]
     #[inline(always)]
     pub const fn gen1_cfg0(&self) -> &GEN_CFG0 {
-        &self.gen_cfg0(1)
+        self.gen_cfg0(1)
     }
     #[doc = "0xb8 - Generator2 fault event T0 and T1 configuration register"]
     #[inline(always)]
     pub const fn gen2_cfg0(&self) -> &GEN_CFG0 {
-        &self.gen_cfg0(2)
+        self.gen_cfg0(2)
     }
     #[doc = "0x4c..0x58 - Generator%s output signal force mode register."]
     #[inline(always)]
@@ -303,20 +387,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x4c..0x58 - Generator%s output signal force mode register."]
+    #[inline(always)]
+    pub fn gen_force_iter(&self) -> impl Iterator<Item = &GEN_FORCE> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(76)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x4c - Generator0 output signal force mode register."]
     #[inline(always)]
     pub const fn gen0_force(&self) -> &GEN_FORCE {
-        &self.gen_force(0)
+        self.gen_force(0)
     }
     #[doc = "0x84 - Generator1 output signal force mode register."]
     #[inline(always)]
     pub const fn gen1_force(&self) -> &GEN_FORCE {
-        &self.gen_force(1)
+        self.gen_force(1)
     }
     #[doc = "0xbc - Generator2 output signal force mode register."]
     #[inline(always)]
     pub const fn gen2_force(&self) -> &GEN_FORCE {
-        &self.gen_force(2)
+        self.gen_force(2)
     }
     #[doc = "0x50..0x5c - PWM%s output signal A actions configuration register"]
     #[inline(always)]
@@ -331,20 +427,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x5c - PWM%s output signal A actions configuration register"]
+    #[inline(always)]
+    pub fn gen_a_iter(&self) -> impl Iterator<Item = &GEN_A> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(80)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x50 - PWM0 output signal A actions configuration register"]
     #[inline(always)]
     pub const fn gen0_a(&self) -> &GEN_A {
-        &self.gen_a(0)
+        self.gen_a(0)
     }
     #[doc = "0x88 - PWM1 output signal A actions configuration register"]
     #[inline(always)]
     pub const fn gen1_a(&self) -> &GEN_A {
-        &self.gen_a(1)
+        self.gen_a(1)
     }
     #[doc = "0xc0 - PWM2 output signal A actions configuration register"]
     #[inline(always)]
     pub const fn gen2_a(&self) -> &GEN_A {
-        &self.gen_a(2)
+        self.gen_a(2)
     }
     #[doc = "0x54..0x60 - PWM%s output signal B actions configuration register"]
     #[inline(always)]
@@ -359,20 +467,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x54..0x60 - PWM%s output signal B actions configuration register"]
+    #[inline(always)]
+    pub fn gen_b_iter(&self) -> impl Iterator<Item = &GEN_B> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(84)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x54 - PWM0 output signal B actions configuration register"]
     #[inline(always)]
     pub const fn gen0_b(&self) -> &GEN_B {
-        &self.gen_b(0)
+        self.gen_b(0)
     }
     #[doc = "0x8c - PWM1 output signal B actions configuration register"]
     #[inline(always)]
     pub const fn gen1_b(&self) -> &GEN_B {
-        &self.gen_b(1)
+        self.gen_b(1)
     }
     #[doc = "0xc4 - PWM2 output signal B actions configuration register"]
     #[inline(always)]
     pub const fn gen2_b(&self) -> &GEN_B {
-        &self.gen_b(2)
+        self.gen_b(2)
     }
     #[doc = "0x58..0x64 - Dead time configuration register"]
     #[inline(always)]
@@ -387,20 +507,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x58..0x64 - Dead time configuration register"]
+    #[inline(always)]
+    pub fn dt_cfg_iter(&self) -> impl Iterator<Item = &DT_CFG> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(88)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x58 - Dead time configuration register"]
     #[inline(always)]
     pub const fn dt0_cfg(&self) -> &DT_CFG {
-        &self.dt_cfg(0)
+        self.dt_cfg(0)
     }
     #[doc = "0x90 - Dead time configuration register"]
     #[inline(always)]
     pub const fn dt1_cfg(&self) -> &DT_CFG {
-        &self.dt_cfg(1)
+        self.dt_cfg(1)
     }
     #[doc = "0xc8 - Dead time configuration register"]
     #[inline(always)]
     pub const fn dt2_cfg(&self) -> &DT_CFG {
-        &self.dt_cfg(2)
+        self.dt_cfg(2)
     }
     #[doc = "0x5c..0x68 - Falling edge delay (FED) shadow register"]
     #[inline(always)]
@@ -415,20 +547,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x5c..0x68 - Falling edge delay (FED) shadow register"]
+    #[inline(always)]
+    pub fn dt_fed_cfg_iter(&self) -> impl Iterator<Item = &DT_FED_CFG> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(92)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x5c - Falling edge delay (FED) shadow register"]
     #[inline(always)]
     pub const fn dt0_fed_cfg(&self) -> &DT_FED_CFG {
-        &self.dt_fed_cfg(0)
+        self.dt_fed_cfg(0)
     }
     #[doc = "0x94 - Falling edge delay (FED) shadow register"]
     #[inline(always)]
     pub const fn dt1_fed_cfg(&self) -> &DT_FED_CFG {
-        &self.dt_fed_cfg(1)
+        self.dt_fed_cfg(1)
     }
     #[doc = "0xcc - Falling edge delay (FED) shadow register"]
     #[inline(always)]
     pub const fn dt2_fed_cfg(&self) -> &DT_FED_CFG {
-        &self.dt_fed_cfg(2)
+        self.dt_fed_cfg(2)
     }
     #[doc = "0x60..0x6c - Rising edge delay (RED) shadow register"]
     #[inline(always)]
@@ -443,20 +587,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x6c - Rising edge delay (RED) shadow register"]
+    #[inline(always)]
+    pub fn dt_red_cfg_iter(&self) -> impl Iterator<Item = &DT_RED_CFG> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(96)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x60 - Rising edge delay (RED) shadow register"]
     #[inline(always)]
     pub const fn dt0_red_cfg(&self) -> &DT_RED_CFG {
-        &self.dt_red_cfg(0)
+        self.dt_red_cfg(0)
     }
     #[doc = "0x98 - Rising edge delay (RED) shadow register"]
     #[inline(always)]
     pub const fn dt1_red_cfg(&self) -> &DT_RED_CFG {
-        &self.dt_red_cfg(1)
+        self.dt_red_cfg(1)
     }
     #[doc = "0xd0 - Rising edge delay (RED) shadow register"]
     #[inline(always)]
     pub const fn dt2_red_cfg(&self) -> &DT_RED_CFG {
-        &self.dt_red_cfg(2)
+        self.dt_red_cfg(2)
     }
     #[doc = "0x64..0x70 - Carrier%s configuration register"]
     #[inline(always)]
@@ -471,20 +627,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x64..0x70 - Carrier%s configuration register"]
+    #[inline(always)]
+    pub fn carrier_cfg_iter(&self) -> impl Iterator<Item = &CARRIER_CFG> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(100)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x64 - Carrier0 configuration register"]
     #[inline(always)]
     pub const fn carrier0_cfg(&self) -> &CARRIER_CFG {
-        &self.carrier_cfg(0)
+        self.carrier_cfg(0)
     }
     #[doc = "0x9c - Carrier1 configuration register"]
     #[inline(always)]
     pub const fn carrier1_cfg(&self) -> &CARRIER_CFG {
-        &self.carrier_cfg(1)
+        self.carrier_cfg(1)
     }
     #[doc = "0xd4 - Carrier2 configuration register"]
     #[inline(always)]
     pub const fn carrier2_cfg(&self) -> &CARRIER_CFG {
-        &self.carrier_cfg(2)
+        self.carrier_cfg(2)
     }
     #[doc = "0x68..0x74 - PWM%s A and PWM%s B trip events actions configuration register"]
     #[inline(always)]
@@ -499,20 +667,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x68..0x74 - PWM%s A and PWM%s B trip events actions configuration register"]
+    #[inline(always)]
+    pub fn fh_cfg0_iter(&self) -> impl Iterator<Item = &FH_CFG0> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(104)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x68 - PWM0 A and PWM0 B trip events actions configuration register"]
     #[inline(always)]
     pub const fn fh0_cfg0(&self) -> &FH_CFG0 {
-        &self.fh_cfg0(0)
+        self.fh_cfg0(0)
     }
     #[doc = "0xa0 - PWM1 A and PWM1 B trip events actions configuration register"]
     #[inline(always)]
     pub const fn fh1_cfg0(&self) -> &FH_CFG0 {
-        &self.fh_cfg0(1)
+        self.fh_cfg0(1)
     }
     #[doc = "0xd8 - PWM2 A and PWM2 B trip events actions configuration register"]
     #[inline(always)]
     pub const fn fh2_cfg0(&self) -> &FH_CFG0 {
-        &self.fh_cfg0(2)
+        self.fh_cfg0(2)
     }
     #[doc = "0x6c..0x78 - Software triggers for fault handler actions configuration register"]
     #[inline(always)]
@@ -527,20 +707,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x6c..0x78 - Software triggers for fault handler actions configuration register"]
+    #[inline(always)]
+    pub fn fh_cfg1_iter(&self) -> impl Iterator<Item = &FH_CFG1> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(108)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x6c - Software triggers for fault handler actions configuration register"]
     #[inline(always)]
     pub const fn fh0_cfg1(&self) -> &FH_CFG1 {
-        &self.fh_cfg1(0)
+        self.fh_cfg1(0)
     }
     #[doc = "0xa4 - Software triggers for fault handler actions configuration register"]
     #[inline(always)]
     pub const fn fh1_cfg1(&self) -> &FH_CFG1 {
-        &self.fh_cfg1(1)
+        self.fh_cfg1(1)
     }
     #[doc = "0xdc - Software triggers for fault handler actions configuration register"]
     #[inline(always)]
     pub const fn fh2_cfg1(&self) -> &FH_CFG1 {
-        &self.fh_cfg1(2)
+        self.fh_cfg1(2)
     }
     #[doc = "0x70..0x7c - Fault events status register"]
     #[inline(always)]
@@ -555,20 +747,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x70..0x7c - Fault events status register"]
+    #[inline(always)]
+    pub fn fh_status_iter(&self) -> impl Iterator<Item = &FH_STATUS> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(112)
+                .add(56 * n)
+                .cast()
+        })
+    }
     #[doc = "0x70 - Fault events status register"]
     #[inline(always)]
     pub const fn fh0_status(&self) -> &FH_STATUS {
-        &self.fh_status(0)
+        self.fh_status(0)
     }
     #[doc = "0xa8 - Fault events status register"]
     #[inline(always)]
     pub const fn fh1_status(&self) -> &FH_STATUS {
-        &self.fh_status(1)
+        self.fh_status(1)
     }
     #[doc = "0xe0 - Fault events status register"]
     #[inline(always)]
     pub const fn fh2_status(&self) -> &FH_STATUS {
-        &self.fh_status(2)
+        self.fh_status(2)
     }
     #[doc = "0xe4 - Fault detection configuration and status register"]
     #[inline(always)]
@@ -590,25 +794,37 @@ impl RegisterBlock {
     pub const fn cap_ch_cfg(&self, n: usize) -> &CAP_CH_CFG {
         &self.cap_ch_cfg[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xf0..0xfc - Capture channel %s configuration register"]
+    #[inline(always)]
+    pub fn cap_ch_cfg_iter(&self) -> impl Iterator<Item = &CAP_CH_CFG> {
+        self.cap_ch_cfg.iter()
+    }
     #[doc = "0xf0 - Capture channel 0 configuration register"]
     #[inline(always)]
     pub const fn cap_ch0_cfg(&self) -> &CAP_CH_CFG {
-        &self.cap_ch_cfg(0)
+        self.cap_ch_cfg(0)
     }
     #[doc = "0xf4 - Capture channel 1 configuration register"]
     #[inline(always)]
     pub const fn cap_ch1_cfg(&self) -> &CAP_CH_CFG {
-        &self.cap_ch_cfg(1)
+        self.cap_ch_cfg(1)
     }
     #[doc = "0xf8 - Capture channel 2 configuration register"]
     #[inline(always)]
     pub const fn cap_ch2_cfg(&self) -> &CAP_CH_CFG {
-        &self.cap_ch_cfg(2)
+        self.cap_ch_cfg(2)
     }
     #[doc = "0xfc..0x108 - CAP%s capture value register"]
     #[inline(always)]
     pub const fn cap_ch(&self, n: usize) -> &CAP_CH {
         &self.cap_ch[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xfc..0x108 - CAP%s capture value register"]
+    #[inline(always)]
+    pub fn cap_ch_iter(&self) -> impl Iterator<Item = &CAP_CH> {
+        self.cap_ch.iter()
     }
     #[doc = "0x108 - Last capture trigger edge information register"]
     #[inline(always)]
@@ -668,20 +884,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x12c..0x138 - Generator%s timer stamp E1 value register"]
+    #[inline(always)]
+    pub fn op_tstmp_e1_iter(&self) -> impl Iterator<Item = &OP_TSTMP_E1> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(300)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x12c - Generator0 timer stamp E1 value register"]
     #[inline(always)]
     pub const fn op0_tstmp_e1(&self) -> &OP_TSTMP_E1 {
-        &self.op_tstmp_e1(0)
+        self.op_tstmp_e1(0)
     }
     #[doc = "0x134 - Generator1 timer stamp E1 value register"]
     #[inline(always)]
     pub const fn op1_tstmp_e1(&self) -> &OP_TSTMP_E1 {
-        &self.op_tstmp_e1(1)
+        self.op_tstmp_e1(1)
     }
     #[doc = "0x13c - Generator2 timer stamp E1 value register"]
     #[inline(always)]
     pub const fn op2_tstmp_e1(&self) -> &OP_TSTMP_E1 {
-        &self.op_tstmp_e1(2)
+        self.op_tstmp_e1(2)
     }
     #[doc = "0x130..0x13c - Generator%s timer stamp E2 value register"]
     #[inline(always)]
@@ -696,20 +924,32 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x130..0x13c - Generator%s timer stamp E2 value register"]
+    #[inline(always)]
+    pub fn op_tstmp_e2_iter(&self) -> impl Iterator<Item = &OP_TSTMP_E2> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(304)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x130 - Generator0 timer stamp E2 value register"]
     #[inline(always)]
     pub const fn op0_tstmp_e2(&self) -> &OP_TSTMP_E2 {
-        &self.op_tstmp_e2(0)
+        self.op_tstmp_e2(0)
     }
     #[doc = "0x138 - Generator1 timer stamp E2 value register"]
     #[inline(always)]
     pub const fn op1_tstmp_e2(&self) -> &OP_TSTMP_E2 {
-        &self.op_tstmp_e2(1)
+        self.op_tstmp_e2(1)
     }
     #[doc = "0x140 - Generator2 timer stamp E2 value register"]
     #[inline(always)]
     pub const fn op2_tstmp_e2(&self) -> &OP_TSTMP_E2 {
-        &self.op_tstmp_e2(2)
+        self.op_tstmp_e2(2)
     }
     #[doc = "0x144 - Global configuration register"]
     #[inline(always)]

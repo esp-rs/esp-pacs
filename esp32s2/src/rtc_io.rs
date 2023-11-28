@@ -85,6 +85,12 @@ impl RegisterBlock {
     pub const fn pin(&self, n: usize) -> &PIN {
         &self.pin[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x28..0x80 - RTC configuration for pin %s"]
+    #[inline(always)]
+    pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
+        self.pin.iter()
+    }
     #[doc = "0x80 - RTC debug select register"]
     #[inline(always)]
     pub const fn rtc_debug_sel(&self) -> &RTC_DEBUG_SEL {
@@ -94,6 +100,12 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn touch_pad(&self, n: usize) -> &TOUCH_PAD {
         &self.touch_pad[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x84..0xc0 - Touch pad %s configuration register"]
+    #[inline(always)]
+    pub fn touch_pad_iter(&self) -> impl Iterator<Item = &TOUCH_PAD> {
+        self.touch_pad.iter()
     }
     #[doc = "0xc0 - 32KHz crystal P-pad configuration register"]
     #[inline(always)]

@@ -40,45 +40,51 @@ impl RegisterBlock {
         [(); 8][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - Configuration register 0 for channel %s"]
+    #[inline(always)]
+    pub fn ch_conf0_iter(&self) -> impl Iterator<Item = &CH_CONF0> {
+        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() })
+    }
     #[doc = "0x00 - Configuration register 0 for channel 0"]
     #[inline(always)]
     pub const fn ch0_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(0)
+        self.ch_conf0(0)
     }
     #[doc = "0x14 - Configuration register 0 for channel 1"]
     #[inline(always)]
     pub const fn ch1_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(1)
+        self.ch_conf0(1)
     }
     #[doc = "0x28 - Configuration register 0 for channel 2"]
     #[inline(always)]
     pub const fn ch2_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(2)
+        self.ch_conf0(2)
     }
     #[doc = "0x3c - Configuration register 0 for channel 3"]
     #[inline(always)]
     pub const fn ch3_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(3)
+        self.ch_conf0(3)
     }
     #[doc = "0x50 - Configuration register 0 for channel 4"]
     #[inline(always)]
     pub const fn ch4_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(4)
+        self.ch_conf0(4)
     }
     #[doc = "0x64 - Configuration register 0 for channel 5"]
     #[inline(always)]
     pub const fn ch5_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(5)
+        self.ch_conf0(5)
     }
     #[doc = "0x78 - Configuration register 0 for channel 6"]
     #[inline(always)]
     pub const fn ch6_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(6)
+        self.ch_conf0(6)
     }
     #[doc = "0x8c - Configuration register 0 for channel 7"]
     #[inline(always)]
     pub const fn ch7_conf0(&self) -> &CH_CONF0 {
-        &self.ch_conf0(7)
+        self.ch_conf0(7)
     }
     #[doc = "0x04..0x24 - High point register for channel %s"]
     #[inline(always)]
@@ -87,45 +93,51 @@ impl RegisterBlock {
         [(); 8][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x24 - High point register for channel %s"]
+    #[inline(always)]
+    pub fn ch_hpoint_iter(&self) -> impl Iterator<Item = &CH_HPOINT> {
+        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() })
+    }
     #[doc = "0x04 - High point register for channel 0"]
     #[inline(always)]
     pub const fn ch0_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(0)
+        self.ch_hpoint(0)
     }
     #[doc = "0x18 - High point register for channel 1"]
     #[inline(always)]
     pub const fn ch1_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(1)
+        self.ch_hpoint(1)
     }
     #[doc = "0x2c - High point register for channel 2"]
     #[inline(always)]
     pub const fn ch2_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(2)
+        self.ch_hpoint(2)
     }
     #[doc = "0x40 - High point register for channel 3"]
     #[inline(always)]
     pub const fn ch3_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(3)
+        self.ch_hpoint(3)
     }
     #[doc = "0x54 - High point register for channel 4"]
     #[inline(always)]
     pub const fn ch4_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(4)
+        self.ch_hpoint(4)
     }
     #[doc = "0x68 - High point register for channel 5"]
     #[inline(always)]
     pub const fn ch5_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(5)
+        self.ch_hpoint(5)
     }
     #[doc = "0x7c - High point register for channel 6"]
     #[inline(always)]
     pub const fn ch6_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(6)
+        self.ch_hpoint(6)
     }
     #[doc = "0x90 - High point register for channel 7"]
     #[inline(always)]
     pub const fn ch7_hpoint(&self) -> &CH_HPOINT {
-        &self.ch_hpoint(7)
+        self.ch_hpoint(7)
     }
     #[doc = "0x08..0x28 - Initial duty cycle register for channel %s"]
     #[inline(always)]
@@ -134,45 +146,51 @@ impl RegisterBlock {
         [(); 8][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x28 - Initial duty cycle register for channel %s"]
+    #[inline(always)]
+    pub fn ch_duty_iter(&self) -> impl Iterator<Item = &CH_DUTY> {
+        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() })
+    }
     #[doc = "0x08 - Initial duty cycle register for channel 0"]
     #[inline(always)]
     pub const fn ch0_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(0)
+        self.ch_duty(0)
     }
     #[doc = "0x1c - Initial duty cycle register for channel 1"]
     #[inline(always)]
     pub const fn ch1_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(1)
+        self.ch_duty(1)
     }
     #[doc = "0x30 - Initial duty cycle register for channel 2"]
     #[inline(always)]
     pub const fn ch2_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(2)
+        self.ch_duty(2)
     }
     #[doc = "0x44 - Initial duty cycle register for channel 3"]
     #[inline(always)]
     pub const fn ch3_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(3)
+        self.ch_duty(3)
     }
     #[doc = "0x58 - Initial duty cycle register for channel 4"]
     #[inline(always)]
     pub const fn ch4_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(4)
+        self.ch_duty(4)
     }
     #[doc = "0x6c - Initial duty cycle register for channel 5"]
     #[inline(always)]
     pub const fn ch5_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(5)
+        self.ch_duty(5)
     }
     #[doc = "0x80 - Initial duty cycle register for channel 6"]
     #[inline(always)]
     pub const fn ch6_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(6)
+        self.ch_duty(6)
     }
     #[doc = "0x94 - Initial duty cycle register for channel 7"]
     #[inline(always)]
     pub const fn ch7_duty(&self) -> &CH_DUTY {
-        &self.ch_duty(7)
+        self.ch_duty(7)
     }
     #[doc = "0x0c..0x2c - Configuration register 1 for channel %s"]
     #[inline(always)]
@@ -187,45 +205,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x2c - Configuration register 1 for channel %s"]
+    #[inline(always)]
+    pub fn ch_conf1_iter(&self) -> impl Iterator<Item = &CH_CONF1> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(12)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0x0c - Configuration register 1 for channel 0"]
     #[inline(always)]
     pub const fn ch0_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(0)
+        self.ch_conf1(0)
     }
     #[doc = "0x20 - Configuration register 1 for channel 1"]
     #[inline(always)]
     pub const fn ch1_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(1)
+        self.ch_conf1(1)
     }
     #[doc = "0x34 - Configuration register 1 for channel 2"]
     #[inline(always)]
     pub const fn ch2_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(2)
+        self.ch_conf1(2)
     }
     #[doc = "0x48 - Configuration register 1 for channel 3"]
     #[inline(always)]
     pub const fn ch3_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(3)
+        self.ch_conf1(3)
     }
     #[doc = "0x5c - Configuration register 1 for channel 4"]
     #[inline(always)]
     pub const fn ch4_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(4)
+        self.ch_conf1(4)
     }
     #[doc = "0x70 - Configuration register 1 for channel 5"]
     #[inline(always)]
     pub const fn ch5_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(5)
+        self.ch_conf1(5)
     }
     #[doc = "0x84 - Configuration register 1 for channel 6"]
     #[inline(always)]
     pub const fn ch6_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(6)
+        self.ch_conf1(6)
     }
     #[doc = "0x98 - Configuration register 1 for channel 7"]
     #[inline(always)]
     pub const fn ch7_conf1(&self) -> &CH_CONF1 {
-        &self.ch_conf1(7)
+        self.ch_conf1(7)
     }
     #[doc = "0x10..0x30 - Current duty cycle register for channel %s"]
     #[inline(always)]
@@ -240,45 +270,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x30 - Current duty cycle register for channel %s"]
+    #[inline(always)]
+    pub fn ch_duty_r_iter(&self) -> impl Iterator<Item = &CH_DUTY_R> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(16)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0x10 - Current duty cycle register for channel 0"]
     #[inline(always)]
     pub const fn ch0_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(0)
+        self.ch_duty_r(0)
     }
     #[doc = "0x24 - Current duty cycle register for channel 1"]
     #[inline(always)]
     pub const fn ch1_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(1)
+        self.ch_duty_r(1)
     }
     #[doc = "0x38 - Current duty cycle register for channel 2"]
     #[inline(always)]
     pub const fn ch2_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(2)
+        self.ch_duty_r(2)
     }
     #[doc = "0x4c - Current duty cycle register for channel 3"]
     #[inline(always)]
     pub const fn ch3_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(3)
+        self.ch_duty_r(3)
     }
     #[doc = "0x60 - Current duty cycle register for channel 4"]
     #[inline(always)]
     pub const fn ch4_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(4)
+        self.ch_duty_r(4)
     }
     #[doc = "0x74 - Current duty cycle register for channel 5"]
     #[inline(always)]
     pub const fn ch5_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(5)
+        self.ch_duty_r(5)
     }
     #[doc = "0x88 - Current duty cycle register for channel 6"]
     #[inline(always)]
     pub const fn ch6_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(6)
+        self.ch_duty_r(6)
     }
     #[doc = "0x9c - Current duty cycle register for channel 7"]
     #[inline(always)]
     pub const fn ch7_duty_r(&self) -> &CH_DUTY_R {
-        &self.ch_duty_r(7)
+        self.ch_duty_r(7)
     }
     #[doc = "0xa0..0xb0 - Timer %s configuration register"]
     #[inline(always)]
@@ -293,25 +335,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa0..0xb0 - Timer %s configuration register"]
+    #[inline(always)]
+    pub fn timer_conf_iter(&self) -> impl Iterator<Item = &TIMER_CONF> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(160)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0xa0 - Timer 0 configuration register"]
     #[inline(always)]
     pub const fn timer0_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(0)
+        self.timer_conf(0)
     }
     #[doc = "0xa8 - Timer 1 configuration register"]
     #[inline(always)]
     pub const fn timer1_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(1)
+        self.timer_conf(1)
     }
     #[doc = "0xb0 - Timer 2 configuration register"]
     #[inline(always)]
     pub const fn timer2_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(2)
+        self.timer_conf(2)
     }
     #[doc = "0xb8 - Timer 3 configuration register"]
     #[inline(always)]
     pub const fn timer3_conf(&self) -> &TIMER_CONF {
-        &self.timer_conf(3)
+        self.timer_conf(3)
     }
     #[doc = "0xa4..0xb4 - Timer %s current counter value register"]
     #[inline(always)]
@@ -326,25 +380,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa4..0xb4 - Timer %s current counter value register"]
+    #[inline(always)]
+    pub fn timer_value_iter(&self) -> impl Iterator<Item = &TIMER_VALUE> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(164)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0xa4 - Timer 0 current counter value register"]
     #[inline(always)]
     pub const fn timer0_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(0)
+        self.timer_value(0)
     }
     #[doc = "0xac - Timer 1 current counter value register"]
     #[inline(always)]
     pub const fn timer1_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(1)
+        self.timer_value(1)
     }
     #[doc = "0xb4 - Timer 2 current counter value register"]
     #[inline(always)]
     pub const fn timer2_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(2)
+        self.timer_value(2)
     }
     #[doc = "0xbc - Timer 3 current counter value register"]
     #[inline(always)]
     pub const fn timer3_value(&self) -> &TIMER_VALUE {
-        &self.timer_value(3)
+        self.timer_value(3)
     }
     #[doc = "0xc0 - Interrupt raw status register"]
     #[inline(always)]
@@ -371,45 +437,51 @@ impl RegisterBlock {
     pub const fn ch_gamma_conf(&self, n: usize) -> &CH_GAMMA_CONF {
         &self.ch_gamma_conf[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x120 - Ledc ch%s gamma config register."]
+    #[inline(always)]
+    pub fn ch_gamma_conf_iter(&self) -> impl Iterator<Item = &CH_GAMMA_CONF> {
+        self.ch_gamma_conf.iter()
+    }
     #[doc = "0x100 - Ledc ch0 gamma config register."]
     #[inline(always)]
     pub const fn ch0_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(0)
+        self.ch_gamma_conf(0)
     }
     #[doc = "0x104 - Ledc ch1 gamma config register."]
     #[inline(always)]
     pub const fn ch1_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(1)
+        self.ch_gamma_conf(1)
     }
     #[doc = "0x108 - Ledc ch2 gamma config register."]
     #[inline(always)]
     pub const fn ch2_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(2)
+        self.ch_gamma_conf(2)
     }
     #[doc = "0x10c - Ledc ch3 gamma config register."]
     #[inline(always)]
     pub const fn ch3_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(3)
+        self.ch_gamma_conf(3)
     }
     #[doc = "0x110 - Ledc ch4 gamma config register."]
     #[inline(always)]
     pub const fn ch4_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(4)
+        self.ch_gamma_conf(4)
     }
     #[doc = "0x114 - Ledc ch5 gamma config register."]
     #[inline(always)]
     pub const fn ch5_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(5)
+        self.ch_gamma_conf(5)
     }
     #[doc = "0x118 - Ledc ch6 gamma config register."]
     #[inline(always)]
     pub const fn ch6_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(6)
+        self.ch_gamma_conf(6)
     }
     #[doc = "0x11c - Ledc ch7 gamma config register."]
     #[inline(always)]
     pub const fn ch7_gamma_conf(&self) -> &CH_GAMMA_CONF {
-        &self.ch_gamma_conf(7)
+        self.ch_gamma_conf(7)
     }
     #[doc = "0x120 - Ledc event task enable bit register0."]
     #[inline(always)]
@@ -431,50 +503,62 @@ impl RegisterBlock {
     pub const fn timer_cmp(&self, n: usize) -> &TIMER_CMP {
         &self.timer_cmp[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x140..0x150 - Ledc timer%s compare value register."]
+    #[inline(always)]
+    pub fn timer_cmp_iter(&self) -> impl Iterator<Item = &TIMER_CMP> {
+        self.timer_cmp.iter()
+    }
     #[doc = "0x140 - Ledc timer0 compare value register."]
     #[inline(always)]
     pub const fn timer0_cmp(&self) -> &TIMER_CMP {
-        &self.timer_cmp(0)
+        self.timer_cmp(0)
     }
     #[doc = "0x144 - Ledc timer1 compare value register."]
     #[inline(always)]
     pub const fn timer1_cmp(&self) -> &TIMER_CMP {
-        &self.timer_cmp(1)
+        self.timer_cmp(1)
     }
     #[doc = "0x148 - Ledc timer2 compare value register."]
     #[inline(always)]
     pub const fn timer2_cmp(&self) -> &TIMER_CMP {
-        &self.timer_cmp(2)
+        self.timer_cmp(2)
     }
     #[doc = "0x14c - Ledc timer3 compare value register."]
     #[inline(always)]
     pub const fn timer3_cmp(&self) -> &TIMER_CMP {
-        &self.timer_cmp(3)
+        self.timer_cmp(3)
     }
     #[doc = "0x150..0x160 - Ledc timer%s captured count value register."]
     #[inline(always)]
     pub const fn timer_cnt_cap(&self, n: usize) -> &TIMER_CNT_CAP {
         &self.timer_cnt_cap[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x150..0x160 - Ledc timer%s captured count value register."]
+    #[inline(always)]
+    pub fn timer_cnt_cap_iter(&self) -> impl Iterator<Item = &TIMER_CNT_CAP> {
+        self.timer_cnt_cap.iter()
+    }
     #[doc = "0x150 - Ledc timer0 captured count value register."]
     #[inline(always)]
     pub const fn timer0_cnt_cap(&self) -> &TIMER_CNT_CAP {
-        &self.timer_cnt_cap(0)
+        self.timer_cnt_cap(0)
     }
     #[doc = "0x154 - Ledc timer1 captured count value register."]
     #[inline(always)]
     pub const fn timer1_cnt_cap(&self) -> &TIMER_CNT_CAP {
-        &self.timer_cnt_cap(1)
+        self.timer_cnt_cap(1)
     }
     #[doc = "0x158 - Ledc timer2 captured count value register."]
     #[inline(always)]
     pub const fn timer2_cnt_cap(&self) -> &TIMER_CNT_CAP {
-        &self.timer_cnt_cap(2)
+        self.timer_cnt_cap(2)
     }
     #[doc = "0x15c - Ledc timer3 captured count value register."]
     #[inline(always)]
     pub const fn timer3_cnt_cap(&self) -> &TIMER_CNT_CAP {
-        &self.timer_cnt_cap(3)
+        self.timer_cnt_cap(3)
     }
     #[doc = "0x170 - LEDC global configuration register"]
     #[inline(always)]
