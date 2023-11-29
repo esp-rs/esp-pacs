@@ -21,13 +21,13 @@ pub struct RegisterBlock {
     sha_continue: SHA_CONTINUE,
     sha_busy: SHA_BUSY,
     _reserved14: [u8; 0x64],
-    message_mem: [MESSAGE_MEM; 32],
+    message_mem: [MESSAGE_MEM; 8],
     _reserved15: [u8; 0x0760],
-    r_mem: [R_MEM; 32],
-    s_mem: [S_MEM; 32],
-    z_mem: [Z_MEM; 32],
-    qax_mem: [QAX_MEM; 32],
-    qay_mem: [QAY_MEM; 32],
+    r_mem: [R_MEM; 8],
+    s_mem: [S_MEM; 8],
+    z_mem: [Z_MEM; 8],
+    qax_mem: [QAX_MEM; 8],
+    qay_mem: [QAY_MEM; 8],
 }
 impl RegisterBlock {
     #[doc = "0x04 - ECDSA configure register"]
@@ -105,30 +105,66 @@ impl RegisterBlock {
     pub const fn message_mem(&self, n: usize) -> &MESSAGE_MEM {
         &self.message_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x280..0x2a0 - The memory that stores message."]
+    #[inline(always)]
+    pub fn message_mem_iter(&self) -> impl Iterator<Item = &MESSAGE_MEM> {
+        self.message_mem.iter()
+    }
     #[doc = "0xa00..0xa20 - The memory that stores r."]
     #[inline(always)]
     pub const fn r_mem(&self, n: usize) -> &R_MEM {
         &self.r_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa00..0xa20 - The memory that stores r."]
+    #[inline(always)]
+    pub fn r_mem_iter(&self) -> impl Iterator<Item = &R_MEM> {
+        self.r_mem.iter()
     }
     #[doc = "0xa20..0xa40 - The memory that stores s."]
     #[inline(always)]
     pub const fn s_mem(&self, n: usize) -> &S_MEM {
         &self.s_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa20..0xa40 - The memory that stores s."]
+    #[inline(always)]
+    pub fn s_mem_iter(&self) -> impl Iterator<Item = &S_MEM> {
+        self.s_mem.iter()
+    }
     #[doc = "0xa40..0xa60 - The memory that stores software written z."]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
         &self.z_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa40..0xa60 - The memory that stores software written z."]
+    #[inline(always)]
+    pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
+        self.z_mem.iter()
     }
     #[doc = "0xa60..0xa80 - The memory that stores x coordinates of QA or software written k."]
     #[inline(always)]
     pub const fn qax_mem(&self, n: usize) -> &QAX_MEM {
         &self.qax_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa60..0xa80 - The memory that stores x coordinates of QA or software written k."]
+    #[inline(always)]
+    pub fn qax_mem_iter(&self) -> impl Iterator<Item = &QAX_MEM> {
+        self.qax_mem.iter()
+    }
     #[doc = "0xa80..0xaa0 - The memory that stores y coordinates of QA."]
     #[inline(always)]
     pub const fn qay_mem(&self, n: usize) -> &QAY_MEM {
         &self.qay_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa80..0xaa0 - The memory that stores y coordinates of QA."]
+    #[inline(always)]
+    pub fn qay_mem_iter(&self) -> impl Iterator<Item = &QAY_MEM> {
+        self.qay_mem.iter()
     }
 }
 #[doc = "CONF (rw) register accessor: ECDSA configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]

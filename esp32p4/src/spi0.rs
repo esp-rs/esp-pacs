@@ -203,150 +203,186 @@ impl RegisterBlock {
     pub const fn spi_fmem_pms_attr(&self, n: usize) -> &SPI_FMEM_PMS_ATTR {
         &self.spi_fmem_pms_attr[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x110 - MSPI flash PMS section %s attribute register"]
+    #[inline(always)]
+    pub fn spi_fmem_pms_attr_iter(&self) -> impl Iterator<Item = &SPI_FMEM_PMS_ATTR> {
+        self.spi_fmem_pms_attr.iter()
+    }
     #[doc = "0x100 - MSPI flash PMS section 0 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms0_attr(&self) -> &SPI_FMEM_PMS_ATTR {
-        &self.spi_fmem_pms_attr(0)
+        self.spi_fmem_pms_attr(0)
     }
     #[doc = "0x104 - MSPI flash PMS section 1 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms1_attr(&self) -> &SPI_FMEM_PMS_ATTR {
-        &self.spi_fmem_pms_attr(1)
+        self.spi_fmem_pms_attr(1)
     }
     #[doc = "0x108 - MSPI flash PMS section 2 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms2_attr(&self) -> &SPI_FMEM_PMS_ATTR {
-        &self.spi_fmem_pms_attr(2)
+        self.spi_fmem_pms_attr(2)
     }
     #[doc = "0x10c - MSPI flash PMS section 3 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms3_attr(&self) -> &SPI_FMEM_PMS_ATTR {
-        &self.spi_fmem_pms_attr(3)
+        self.spi_fmem_pms_attr(3)
     }
     #[doc = "0x110..0x120 - SPI1 flash PMS section %s start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms_addr(&self, n: usize) -> &SPI_FMEM_PMS_ADDR {
         &self.spi_fmem_pms_addr[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x110..0x120 - SPI1 flash PMS section %s start address register"]
+    #[inline(always)]
+    pub fn spi_fmem_pms_addr_iter(&self) -> impl Iterator<Item = &SPI_FMEM_PMS_ADDR> {
+        self.spi_fmem_pms_addr.iter()
+    }
     #[doc = "0x110 - SPI1 flash PMS section 0 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms0_addr(&self) -> &SPI_FMEM_PMS_ADDR {
-        &self.spi_fmem_pms_addr(0)
+        self.spi_fmem_pms_addr(0)
     }
     #[doc = "0x114 - SPI1 flash PMS section 1 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms1_addr(&self) -> &SPI_FMEM_PMS_ADDR {
-        &self.spi_fmem_pms_addr(1)
+        self.spi_fmem_pms_addr(1)
     }
     #[doc = "0x118 - SPI1 flash PMS section 2 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms2_addr(&self) -> &SPI_FMEM_PMS_ADDR {
-        &self.spi_fmem_pms_addr(2)
+        self.spi_fmem_pms_addr(2)
     }
     #[doc = "0x11c - SPI1 flash PMS section 3 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms3_addr(&self) -> &SPI_FMEM_PMS_ADDR {
-        &self.spi_fmem_pms_addr(3)
+        self.spi_fmem_pms_addr(3)
     }
     #[doc = "0x120..0x130 - SPI1 flash PMS section %s start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms_size(&self, n: usize) -> &SPI_FMEM_PMS_SIZE {
         &self.spi_fmem_pms_size[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x120..0x130 - SPI1 flash PMS section %s start address register"]
+    #[inline(always)]
+    pub fn spi_fmem_pms_size_iter(&self) -> impl Iterator<Item = &SPI_FMEM_PMS_SIZE> {
+        self.spi_fmem_pms_size.iter()
+    }
     #[doc = "0x120 - SPI1 flash PMS section 0 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms0_size(&self) -> &SPI_FMEM_PMS_SIZE {
-        &self.spi_fmem_pms_size(0)
+        self.spi_fmem_pms_size(0)
     }
     #[doc = "0x124 - SPI1 flash PMS section 1 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms1_size(&self) -> &SPI_FMEM_PMS_SIZE {
-        &self.spi_fmem_pms_size(1)
+        self.spi_fmem_pms_size(1)
     }
     #[doc = "0x128 - SPI1 flash PMS section 2 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms2_size(&self) -> &SPI_FMEM_PMS_SIZE {
-        &self.spi_fmem_pms_size(2)
+        self.spi_fmem_pms_size(2)
     }
     #[doc = "0x12c - SPI1 flash PMS section 3 start address register"]
     #[inline(always)]
     pub const fn spi_fmem_pms3_size(&self) -> &SPI_FMEM_PMS_SIZE {
-        &self.spi_fmem_pms_size(3)
+        self.spi_fmem_pms_size(3)
     }
     #[doc = "0x130..0x140 - SPI1 flash PMS section %s start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms_attr(&self, n: usize) -> &SPI_SMEM_PMS_ATTR {
         &self.spi_smem_pms_attr[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x130..0x140 - SPI1 flash PMS section %s start address register"]
+    #[inline(always)]
+    pub fn spi_smem_pms_attr_iter(&self) -> impl Iterator<Item = &SPI_SMEM_PMS_ATTR> {
+        self.spi_smem_pms_attr.iter()
+    }
     #[doc = "0x130 - SPI1 flash PMS section 0 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms0_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        &self.spi_smem_pms_attr(0)
+        self.spi_smem_pms_attr(0)
     }
     #[doc = "0x134 - SPI1 flash PMS section 1 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms1_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        &self.spi_smem_pms_attr(1)
+        self.spi_smem_pms_attr(1)
     }
     #[doc = "0x138 - SPI1 flash PMS section 2 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms2_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        &self.spi_smem_pms_attr(2)
+        self.spi_smem_pms_attr(2)
     }
     #[doc = "0x13c - SPI1 flash PMS section 3 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms3_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        &self.spi_smem_pms_attr(3)
+        self.spi_smem_pms_attr(3)
     }
     #[doc = "0x140..0x150 - SPI1 external RAM PMS section %s start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms_addr(&self, n: usize) -> &SPI_SMEM_PMS_ADDR {
         &self.spi_smem_pms_addr[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x140..0x150 - SPI1 external RAM PMS section %s start address register"]
+    #[inline(always)]
+    pub fn spi_smem_pms_addr_iter(&self) -> impl Iterator<Item = &SPI_SMEM_PMS_ADDR> {
+        self.spi_smem_pms_addr.iter()
+    }
     #[doc = "0x140 - SPI1 external RAM PMS section 0 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms0_addr(&self) -> &SPI_SMEM_PMS_ADDR {
-        &self.spi_smem_pms_addr(0)
+        self.spi_smem_pms_addr(0)
     }
     #[doc = "0x144 - SPI1 external RAM PMS section 1 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms1_addr(&self) -> &SPI_SMEM_PMS_ADDR {
-        &self.spi_smem_pms_addr(1)
+        self.spi_smem_pms_addr(1)
     }
     #[doc = "0x148 - SPI1 external RAM PMS section 2 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms2_addr(&self) -> &SPI_SMEM_PMS_ADDR {
-        &self.spi_smem_pms_addr(2)
+        self.spi_smem_pms_addr(2)
     }
     #[doc = "0x14c - SPI1 external RAM PMS section 3 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms3_addr(&self) -> &SPI_SMEM_PMS_ADDR {
-        &self.spi_smem_pms_addr(3)
+        self.spi_smem_pms_addr(3)
     }
     #[doc = "0x150..0x160 - SPI1 external RAM PMS section %s start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms_size(&self, n: usize) -> &SPI_SMEM_PMS_SIZE {
         &self.spi_smem_pms_size[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x150..0x160 - SPI1 external RAM PMS section %s start address register"]
+    #[inline(always)]
+    pub fn spi_smem_pms_size_iter(&self) -> impl Iterator<Item = &SPI_SMEM_PMS_SIZE> {
+        self.spi_smem_pms_size.iter()
+    }
     #[doc = "0x150 - SPI1 external RAM PMS section 0 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms0_size(&self) -> &SPI_SMEM_PMS_SIZE {
-        &self.spi_smem_pms_size(0)
+        self.spi_smem_pms_size(0)
     }
     #[doc = "0x154 - SPI1 external RAM PMS section 1 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms1_size(&self) -> &SPI_SMEM_PMS_SIZE {
-        &self.spi_smem_pms_size(1)
+        self.spi_smem_pms_size(1)
     }
     #[doc = "0x158 - SPI1 external RAM PMS section 2 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms2_size(&self) -> &SPI_SMEM_PMS_SIZE {
-        &self.spi_smem_pms_size(2)
+        self.spi_smem_pms_size(2)
     }
     #[doc = "0x15c - SPI1 external RAM PMS section 3 start address register"]
     #[inline(always)]
     pub const fn spi_smem_pms3_size(&self) -> &SPI_SMEM_PMS_SIZE {
-        &self.spi_smem_pms_size(3)
+        self.spi_smem_pms_size(3)
     }
     #[doc = "0x164 - SPI1 access reject register"]
     #[inline(always)]

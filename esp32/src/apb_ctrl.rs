@@ -56,50 +56,62 @@ impl RegisterBlock {
     pub const fn apb_saradc_sar1_patt_tab(&self, n: usize) -> &APB_SARADC_SAR1_PATT_TAB {
         &self.apb_saradc_sar1_patt_tab[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1c..0x2c - "]
+    #[inline(always)]
+    pub fn apb_saradc_sar1_patt_tab_iter(&self) -> impl Iterator<Item = &APB_SARADC_SAR1_PATT_TAB> {
+        self.apb_saradc_sar1_patt_tab.iter()
+    }
     #[doc = "0x1c - APB_SARADC_SAR1_PATT_TAB1"]
     #[inline(always)]
     pub const fn apb_saradc_sar1_patt_tab1(&self) -> &APB_SARADC_SAR1_PATT_TAB {
-        &self.apb_saradc_sar1_patt_tab(0)
+        self.apb_saradc_sar1_patt_tab(0)
     }
     #[doc = "0x20 - APB_SARADC_SAR1_PATT_TAB2"]
     #[inline(always)]
     pub const fn apb_saradc_sar1_patt_tab2(&self) -> &APB_SARADC_SAR1_PATT_TAB {
-        &self.apb_saradc_sar1_patt_tab(1)
+        self.apb_saradc_sar1_patt_tab(1)
     }
     #[doc = "0x24 - APB_SARADC_SAR1_PATT_TAB3"]
     #[inline(always)]
     pub const fn apb_saradc_sar1_patt_tab3(&self) -> &APB_SARADC_SAR1_PATT_TAB {
-        &self.apb_saradc_sar1_patt_tab(2)
+        self.apb_saradc_sar1_patt_tab(2)
     }
     #[doc = "0x28 - APB_SARADC_SAR1_PATT_TAB4"]
     #[inline(always)]
     pub const fn apb_saradc_sar1_patt_tab4(&self) -> &APB_SARADC_SAR1_PATT_TAB {
-        &self.apb_saradc_sar1_patt_tab(3)
+        self.apb_saradc_sar1_patt_tab(3)
     }
     #[doc = "0x2c..0x3c - "]
     #[inline(always)]
     pub const fn apb_saradc_sar2_patt_tab(&self, n: usize) -> &APB_SARADC_SAR2_PATT_TAB {
         &self.apb_saradc_sar2_patt_tab[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x2c..0x3c - "]
+    #[inline(always)]
+    pub fn apb_saradc_sar2_patt_tab_iter(&self) -> impl Iterator<Item = &APB_SARADC_SAR2_PATT_TAB> {
+        self.apb_saradc_sar2_patt_tab.iter()
+    }
     #[doc = "0x2c - APB_SARADC_SAR2_PATT_TAB1"]
     #[inline(always)]
     pub const fn apb_saradc_sar2_patt_tab1(&self) -> &APB_SARADC_SAR2_PATT_TAB {
-        &self.apb_saradc_sar2_patt_tab(0)
+        self.apb_saradc_sar2_patt_tab(0)
     }
     #[doc = "0x30 - APB_SARADC_SAR2_PATT_TAB2"]
     #[inline(always)]
     pub const fn apb_saradc_sar2_patt_tab2(&self) -> &APB_SARADC_SAR2_PATT_TAB {
-        &self.apb_saradc_sar2_patt_tab(1)
+        self.apb_saradc_sar2_patt_tab(1)
     }
     #[doc = "0x34 - APB_SARADC_SAR2_PATT_TAB3"]
     #[inline(always)]
     pub const fn apb_saradc_sar2_patt_tab3(&self) -> &APB_SARADC_SAR2_PATT_TAB {
-        &self.apb_saradc_sar2_patt_tab(2)
+        self.apb_saradc_sar2_patt_tab(2)
     }
     #[doc = "0x38 - APB_SARADC_SAR2_PATT_TAB4"]
     #[inline(always)]
     pub const fn apb_saradc_sar2_patt_tab4(&self) -> &APB_SARADC_SAR2_PATT_TAB {
-        &self.apb_saradc_sar2_patt_tab(3)
+        self.apb_saradc_sar2_patt_tab(3)
     }
     #[doc = "0x3c - "]
     #[inline(always)]

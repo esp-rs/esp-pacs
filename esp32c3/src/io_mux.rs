@@ -18,6 +18,12 @@ impl RegisterBlock {
     pub const fn gpio(&self, n: usize) -> &GPIO {
         &self.gpio[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x5c - IO MUX Configure Register for pad XTAL_32K_P"]
+    #[inline(always)]
+    pub fn gpio_iter(&self) -> impl Iterator<Item = &GPIO> {
+        self.gpio.iter()
+    }
     #[doc = "0xfc - IO MUX Version Control Register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {

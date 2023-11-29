@@ -82,6 +82,12 @@ impl RegisterBlock {
         [(); 3][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(0).add(16 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x0c - Raw status interrupt of channel 0"]
+    #[inline(always)]
+    pub fn in_int_raw_ch_iter(&self) -> impl Iterator<Item = &IN_INT_RAW_CH> {
+        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(16 * n).cast() })
+    }
     #[doc = "0x04..0x10 - Masked interrupt of channel 0"]
     #[inline(always)]
     pub const fn in_int_st_ch(&self, n: usize) -> &IN_INT_ST_CH {
@@ -89,12 +95,24 @@ impl RegisterBlock {
         [(); 3][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(4).add(16 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x10 - Masked interrupt of channel 0"]
+    #[inline(always)]
+    pub fn in_int_st_ch_iter(&self) -> impl Iterator<Item = &IN_INT_ST_CH> {
+        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(16 * n).cast() })
+    }
     #[doc = "0x08..0x14 - Interrupt enable bits of channel 0"]
     #[inline(always)]
     pub const fn in_int_ena_ch(&self, n: usize) -> &IN_INT_ENA_CH {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x14 - Interrupt enable bits of channel 0"]
+    #[inline(always)]
+    pub fn in_int_ena_ch_iter(&self) -> impl Iterator<Item = &IN_INT_ENA_CH> {
+        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() })
     }
     #[doc = "0x0c..0x18 - Interrupt clear bits of channel 0"]
     #[inline(always)]
@@ -109,6 +127,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x18 - Interrupt clear bits of channel 0"]
+    #[inline(always)]
+    pub fn in_int_clr_ch_iter(&self) -> impl Iterator<Item = &IN_INT_CLR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(12)
+                .add(16 * n)
+                .cast()
+        })
+    }
     #[doc = "0x30..0x3c - Raw status interrupt of channel 0"]
     #[inline(always)]
     pub const fn out_int_raw_ch(&self, n: usize) -> &OUT_INT_RAW_CH {
@@ -121,6 +151,18 @@ impl RegisterBlock {
                 .add(16 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x3c - Raw status interrupt of channel 0"]
+    #[inline(always)]
+    pub fn out_int_raw_ch_iter(&self) -> impl Iterator<Item = &OUT_INT_RAW_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(48)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x34..0x40 - Masked interrupt of channel 0"]
     #[inline(always)]
@@ -135,6 +177,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x34..0x40 - Masked interrupt of channel 0"]
+    #[inline(always)]
+    pub fn out_int_st_ch_iter(&self) -> impl Iterator<Item = &OUT_INT_ST_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(52)
+                .add(16 * n)
+                .cast()
+        })
+    }
     #[doc = "0x38..0x44 - Interrupt enable bits of channel 0"]
     #[inline(always)]
     pub const fn out_int_ena_ch(&self, n: usize) -> &OUT_INT_ENA_CH {
@@ -148,6 +202,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x38..0x44 - Interrupt enable bits of channel 0"]
+    #[inline(always)]
+    pub fn out_int_ena_ch_iter(&self) -> impl Iterator<Item = &OUT_INT_ENA_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(56)
+                .add(16 * n)
+                .cast()
+        })
+    }
     #[doc = "0x3c..0x48 - Interrupt clear bits of channel 0"]
     #[inline(always)]
     pub const fn out_int_clr_ch(&self, n: usize) -> &OUT_INT_CLR_CH {
@@ -160,6 +226,18 @@ impl RegisterBlock {
                 .add(16 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x3c..0x48 - Interrupt clear bits of channel 0"]
+    #[inline(always)]
+    pub fn out_int_clr_ch_iter(&self) -> impl Iterator<Item = &OUT_INT_CLR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(60)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x60 - reserved"]
     #[inline(always)]
@@ -189,6 +267,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x70..0x7c - Configure 0 register of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_conf0_ch_iter(&self) -> impl Iterator<Item = &IN_CONF0_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(112)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0x74..0x80 - Configure 1 register of Rx channel 0"]
     #[inline(always)]
     pub const fn in_conf1_ch(&self, n: usize) -> &IN_CONF1_CH {
@@ -201,6 +291,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x74..0x80 - Configure 1 register of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_conf1_ch_iter(&self) -> impl Iterator<Item = &IN_CONF1_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(116)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0x78..0x84 - Receive FIFO status of Rx channel 0"]
     #[inline(always)]
@@ -215,6 +317,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x78..0x84 - Receive FIFO status of Rx channel 0"]
+    #[inline(always)]
+    pub fn infifo_status_ch_iter(&self) -> impl Iterator<Item = &INFIFO_STATUS_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(120)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0x7c..0x88 - Pop control register of Rx channel 0"]
     #[inline(always)]
     pub const fn in_pop_ch(&self, n: usize) -> &IN_POP_CH {
@@ -227,6 +341,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x7c..0x88 - Pop control register of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_pop_ch_iter(&self) -> impl Iterator<Item = &IN_POP_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(124)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0x80..0x8c - Link descriptor configure and control register of Rx channel 0"]
     #[inline(always)]
@@ -241,6 +367,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x80..0x8c - Link descriptor configure and control register of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_link_ch_iter(&self) -> impl Iterator<Item = &IN_LINK_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(128)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0x84..0x90 - Receive status of Rx channel 0"]
     #[inline(always)]
     pub const fn in_state_ch(&self, n: usize) -> &IN_STATE_CH {
@@ -253,6 +391,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x84..0x90 - Receive status of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_state_ch_iter(&self) -> impl Iterator<Item = &IN_STATE_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(132)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0x88..0x94 - Inlink descriptor address when EOF occurs of Rx channel 0"]
     #[inline(always)]
@@ -267,6 +417,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x88..0x94 - Inlink descriptor address when EOF occurs of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_suc_eof_des_addr_ch_iter(&self) -> impl Iterator<Item = &IN_SUC_EOF_DES_ADDR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(136)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0x8c..0x98 - Inlink descriptor address when errors occur of Rx channel 0"]
     #[inline(always)]
     pub const fn in_err_eof_des_addr_ch(&self, n: usize) -> &IN_ERR_EOF_DES_ADDR_CH {
@@ -279,6 +441,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x8c..0x98 - Inlink descriptor address when errors occur of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_err_eof_des_addr_ch_iter(&self) -> impl Iterator<Item = &IN_ERR_EOF_DES_ADDR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(140)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0x90..0x9c - Current inlink descriptor address of Rx channel 0"]
     #[inline(always)]
@@ -293,6 +467,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x90..0x9c - Current inlink descriptor address of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_dscr_ch_iter(&self) -> impl Iterator<Item = &IN_DSCR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(144)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0x94..0xa0 - The last inlink descriptor address of Rx channel 0"]
     #[inline(always)]
     pub const fn in_dscr_bf0_ch(&self, n: usize) -> &IN_DSCR_BF0_CH {
@@ -305,6 +491,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x94..0xa0 - The last inlink descriptor address of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_dscr_bf0_ch_iter(&self) -> impl Iterator<Item = &IN_DSCR_BF0_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(148)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0x98..0xa4 - The second-to-last inlink descriptor address of Rx channel 0"]
     #[inline(always)]
@@ -319,6 +517,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x98..0xa4 - The second-to-last inlink descriptor address of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_dscr_bf1_ch_iter(&self) -> impl Iterator<Item = &IN_DSCR_BF1_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(152)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0x9c..0xa8 - Priority register of Rx channel 0"]
     #[inline(always)]
     pub const fn in_pri_ch(&self, n: usize) -> &IN_PRI_CH {
@@ -331,6 +541,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x9c..0xa8 - Priority register of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_pri_ch_iter(&self) -> impl Iterator<Item = &IN_PRI_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(156)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0xa0..0xac - Peripheral selection of Rx channel 0"]
     #[inline(always)]
@@ -345,6 +567,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa0..0xac - Peripheral selection of Rx channel 0"]
+    #[inline(always)]
+    pub fn in_peri_sel_ch_iter(&self) -> impl Iterator<Item = &IN_PERI_SEL_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(160)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0xd4..0xe0 - Configure 1 register of Tx channel 0"]
     #[inline(always)]
     pub const fn out_conf1_ch(&self, n: usize) -> &OUT_CONF1_CH {
@@ -357,6 +591,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xd4..0xe0 - Configure 1 register of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_conf1_ch_iter(&self) -> impl Iterator<Item = &OUT_CONF1_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(212)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0xd8..0xe4 - Transmit FIFO status of Tx channel 0"]
     #[inline(always)]
@@ -371,6 +617,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xd8..0xe4 - Transmit FIFO status of Tx channel 0"]
+    #[inline(always)]
+    pub fn outfifo_status_ch_iter(&self) -> impl Iterator<Item = &OUTFIFO_STATUS_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(216)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0xdc..0xe8 - Push control register of Rx channel 0"]
     #[inline(always)]
     pub const fn out_push_ch(&self, n: usize) -> &OUT_PUSH_CH {
@@ -383,6 +641,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xdc..0xe8 - Push control register of Rx channel 0"]
+    #[inline(always)]
+    pub fn out_push_ch_iter(&self) -> impl Iterator<Item = &OUT_PUSH_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(220)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0xe0..0xec - Link descriptor configure and control register of Tx channel 0"]
     #[inline(always)]
@@ -397,6 +667,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xe0..0xec - Link descriptor configure and control register of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_link_ch_iter(&self) -> impl Iterator<Item = &OUT_LINK_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(224)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0xe4..0xf0 - Transmit status of Tx channel 0"]
     #[inline(always)]
     pub const fn out_state_ch(&self, n: usize) -> &OUT_STATE_CH {
@@ -409,6 +691,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xe4..0xf0 - Transmit status of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_state_ch_iter(&self) -> impl Iterator<Item = &OUT_STATE_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(228)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0xe8..0xf4 - Outlink descriptor address when EOF occurs of Tx channel 0"]
     #[inline(always)]
@@ -423,6 +717,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xe8..0xf4 - Outlink descriptor address when EOF occurs of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_eof_des_addr_ch_iter(&self) -> impl Iterator<Item = &OUT_EOF_DES_ADDR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(232)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0xec..0xf8 - The last outlink descriptor address when EOF occurs of Tx channel 0"]
     #[inline(always)]
     pub const fn out_eof_bfr_des_addr_ch(&self, n: usize) -> &OUT_EOF_BFR_DES_ADDR_CH {
@@ -435,6 +741,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xec..0xf8 - The last outlink descriptor address when EOF occurs of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_eof_bfr_des_addr_ch_iter(&self) -> impl Iterator<Item = &OUT_EOF_BFR_DES_ADDR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(236)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0xf0..0xfc - Current inlink descriptor address of Tx channel 0"]
     #[inline(always)]
@@ -449,6 +767,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xf0..0xfc - Current inlink descriptor address of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_dscr_ch_iter(&self) -> impl Iterator<Item = &OUT_DSCR_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(240)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0xf4..0x100 - The last inlink descriptor address of Tx channel 0"]
     #[inline(always)]
     pub const fn out_dscr_bf0_ch(&self, n: usize) -> &OUT_DSCR_BF0_CH {
@@ -461,6 +791,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xf4..0x100 - The last inlink descriptor address of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_dscr_bf0_ch_iter(&self) -> impl Iterator<Item = &OUT_DSCR_BF0_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(244)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0xf8..0x104 - The second-to-last inlink descriptor address of Tx channel 0"]
     #[inline(always)]
@@ -475,6 +817,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xf8..0x104 - The second-to-last inlink descriptor address of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_dscr_bf1_ch_iter(&self) -> impl Iterator<Item = &OUT_DSCR_BF1_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(248)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0xfc..0x108 - Priority register of Tx channel 0."]
     #[inline(always)]
     pub const fn out_pri_ch(&self, n: usize) -> &OUT_PRI_CH {
@@ -487,6 +841,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xfc..0x108 - Priority register of Tx channel 0."]
+    #[inline(always)]
+    pub fn out_pri_ch_iter(&self) -> impl Iterator<Item = &OUT_PRI_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(252)
+                .add(192 * n)
+                .cast()
+        })
     }
     #[doc = "0x100..0x10c - Peripheral selection of Tx channel 0"]
     #[inline(always)]
@@ -501,6 +867,18 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x10c - Peripheral selection of Tx channel 0"]
+    #[inline(always)]
+    pub fn out_peri_sel_ch_iter(&self) -> impl Iterator<Item = &OUT_PERI_SEL_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(256)
+                .add(192 * n)
+                .cast()
+        })
+    }
     #[doc = "0x190..0x19c - Configure 0 register of Tx channel 1"]
     #[inline(always)]
     pub const fn out_conf0_ch(&self, n: usize) -> &OUT_CONF0_CH {
@@ -513,6 +891,18 @@ impl RegisterBlock {
                 .add(192 * n)
                 .cast()
         }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x190..0x19c - Configure 0 register of Tx channel 1"]
+    #[inline(always)]
+    pub fn out_conf0_ch_iter(&self) -> impl Iterator<Item = &OUT_CONF0_CH> {
+        (0..3).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(400)
+                .add(192 * n)
+                .cast()
+        })
     }
 }
 #[doc = "IN_INT_RAW_CH (rw) register accessor: Raw status interrupt of channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_int_raw_ch::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_int_raw_ch::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_raw_ch`] module"]

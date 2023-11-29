@@ -18,6 +18,12 @@ impl RegisterBlock {
     pub const fn plain_(&self, n: usize) -> &PLAIN_ {
         &self.plain_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x40 - Plaintext register %s"]
+    #[inline(always)]
+    pub fn plain__iter(&self) -> impl Iterator<Item = &PLAIN_> {
+        self.plain_.iter()
+    }
     #[doc = "0x40 - XTS-AES line-size register"]
     #[inline(always)]
     pub const fn linesize(&self) -> &LINESIZE {

@@ -46,45 +46,51 @@ impl RegisterBlock {
         [(); 8][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - "]
+    #[inline(always)]
+    pub fn hsch_conf0_iter(&self) -> impl Iterator<Item = &HSCH_CONF0> {
+        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() })
+    }
     #[doc = "0x00 - HSCH0_CONF0"]
     #[inline(always)]
     pub const fn hsch0_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(0)
+        self.hsch_conf0(0)
     }
     #[doc = "0x14 - HSCH1_CONF0"]
     #[inline(always)]
     pub const fn hsch1_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(1)
+        self.hsch_conf0(1)
     }
     #[doc = "0x28 - HSCH2_CONF0"]
     #[inline(always)]
     pub const fn hsch2_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(2)
+        self.hsch_conf0(2)
     }
     #[doc = "0x3c - HSCH3_CONF0"]
     #[inline(always)]
     pub const fn hsch3_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(3)
+        self.hsch_conf0(3)
     }
     #[doc = "0x50 - HSCH4_CONF0"]
     #[inline(always)]
     pub const fn hsch4_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(4)
+        self.hsch_conf0(4)
     }
     #[doc = "0x64 - HSCH5_CONF0"]
     #[inline(always)]
     pub const fn hsch5_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(5)
+        self.hsch_conf0(5)
     }
     #[doc = "0x78 - HSCH6_CONF0"]
     #[inline(always)]
     pub const fn hsch6_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(6)
+        self.hsch_conf0(6)
     }
     #[doc = "0x8c - HSCH7_CONF0"]
     #[inline(always)]
     pub const fn hsch7_conf0(&self) -> &HSCH_CONF0 {
-        &self.hsch_conf0(7)
+        self.hsch_conf0(7)
     }
     #[doc = "0x04..0x24 - "]
     #[inline(always)]
@@ -93,45 +99,51 @@ impl RegisterBlock {
         [(); 8][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x24 - "]
+    #[inline(always)]
+    pub fn hsch_hpoint_iter(&self) -> impl Iterator<Item = &HSCH_HPOINT> {
+        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() })
+    }
     #[doc = "0x04 - HSCH0_HPOINT"]
     #[inline(always)]
     pub const fn hsch0_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(0)
+        self.hsch_hpoint(0)
     }
     #[doc = "0x18 - HSCH1_HPOINT"]
     #[inline(always)]
     pub const fn hsch1_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(1)
+        self.hsch_hpoint(1)
     }
     #[doc = "0x2c - HSCH2_HPOINT"]
     #[inline(always)]
     pub const fn hsch2_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(2)
+        self.hsch_hpoint(2)
     }
     #[doc = "0x40 - HSCH3_HPOINT"]
     #[inline(always)]
     pub const fn hsch3_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(3)
+        self.hsch_hpoint(3)
     }
     #[doc = "0x54 - HSCH4_HPOINT"]
     #[inline(always)]
     pub const fn hsch4_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(4)
+        self.hsch_hpoint(4)
     }
     #[doc = "0x68 - HSCH5_HPOINT"]
     #[inline(always)]
     pub const fn hsch5_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(5)
+        self.hsch_hpoint(5)
     }
     #[doc = "0x7c - HSCH6_HPOINT"]
     #[inline(always)]
     pub const fn hsch6_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(6)
+        self.hsch_hpoint(6)
     }
     #[doc = "0x90 - HSCH7_HPOINT"]
     #[inline(always)]
     pub const fn hsch7_hpoint(&self) -> &HSCH_HPOINT {
-        &self.hsch_hpoint(7)
+        self.hsch_hpoint(7)
     }
     #[doc = "0x08..0x28 - "]
     #[inline(always)]
@@ -140,45 +152,51 @@ impl RegisterBlock {
         [(); 8][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x28 - "]
+    #[inline(always)]
+    pub fn hsch_duty_iter(&self) -> impl Iterator<Item = &HSCH_DUTY> {
+        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() })
+    }
     #[doc = "0x08 - HSCH0_DUTY"]
     #[inline(always)]
     pub const fn hsch0_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(0)
+        self.hsch_duty(0)
     }
     #[doc = "0x1c - HSCH1_DUTY"]
     #[inline(always)]
     pub const fn hsch1_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(1)
+        self.hsch_duty(1)
     }
     #[doc = "0x30 - HSCH2_DUTY"]
     #[inline(always)]
     pub const fn hsch2_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(2)
+        self.hsch_duty(2)
     }
     #[doc = "0x44 - HSCH3_DUTY"]
     #[inline(always)]
     pub const fn hsch3_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(3)
+        self.hsch_duty(3)
     }
     #[doc = "0x58 - HSCH4_DUTY"]
     #[inline(always)]
     pub const fn hsch4_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(4)
+        self.hsch_duty(4)
     }
     #[doc = "0x6c - HSCH5_DUTY"]
     #[inline(always)]
     pub const fn hsch5_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(5)
+        self.hsch_duty(5)
     }
     #[doc = "0x80 - HSCH6_DUTY"]
     #[inline(always)]
     pub const fn hsch6_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(6)
+        self.hsch_duty(6)
     }
     #[doc = "0x94 - HSCH7_DUTY"]
     #[inline(always)]
     pub const fn hsch7_duty(&self) -> &HSCH_DUTY {
-        &self.hsch_duty(7)
+        self.hsch_duty(7)
     }
     #[doc = "0x0c..0x2c - "]
     #[inline(always)]
@@ -193,45 +211,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x2c - "]
+    #[inline(always)]
+    pub fn hsch_conf1_iter(&self) -> impl Iterator<Item = &HSCH_CONF1> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(12)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0x0c - HSCH0_CONF1"]
     #[inline(always)]
     pub const fn hsch0_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(0)
+        self.hsch_conf1(0)
     }
     #[doc = "0x20 - HSCH1_CONF1"]
     #[inline(always)]
     pub const fn hsch1_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(1)
+        self.hsch_conf1(1)
     }
     #[doc = "0x34 - HSCH2_CONF1"]
     #[inline(always)]
     pub const fn hsch2_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(2)
+        self.hsch_conf1(2)
     }
     #[doc = "0x48 - HSCH3_CONF1"]
     #[inline(always)]
     pub const fn hsch3_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(3)
+        self.hsch_conf1(3)
     }
     #[doc = "0x5c - HSCH4_CONF1"]
     #[inline(always)]
     pub const fn hsch4_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(4)
+        self.hsch_conf1(4)
     }
     #[doc = "0x70 - HSCH5_CONF1"]
     #[inline(always)]
     pub const fn hsch5_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(5)
+        self.hsch_conf1(5)
     }
     #[doc = "0x84 - HSCH6_CONF1"]
     #[inline(always)]
     pub const fn hsch6_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(6)
+        self.hsch_conf1(6)
     }
     #[doc = "0x98 - HSCH7_CONF1"]
     #[inline(always)]
     pub const fn hsch7_conf1(&self) -> &HSCH_CONF1 {
-        &self.hsch_conf1(7)
+        self.hsch_conf1(7)
     }
     #[doc = "0x10..0x30 - "]
     #[inline(always)]
@@ -246,45 +276,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x30 - "]
+    #[inline(always)]
+    pub fn hsch_duty_r_iter(&self) -> impl Iterator<Item = &HSCH_DUTY_R> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(16)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0x10 - HSCH0_DUTY_R"]
     #[inline(always)]
     pub const fn hsch0_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(0)
+        self.hsch_duty_r(0)
     }
     #[doc = "0x24 - HSCH1_DUTY_R"]
     #[inline(always)]
     pub const fn hsch1_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(1)
+        self.hsch_duty_r(1)
     }
     #[doc = "0x38 - HSCH2_DUTY_R"]
     #[inline(always)]
     pub const fn hsch2_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(2)
+        self.hsch_duty_r(2)
     }
     #[doc = "0x4c - HSCH3_DUTY_R"]
     #[inline(always)]
     pub const fn hsch3_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(3)
+        self.hsch_duty_r(3)
     }
     #[doc = "0x60 - HSCH4_DUTY_R"]
     #[inline(always)]
     pub const fn hsch4_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(4)
+        self.hsch_duty_r(4)
     }
     #[doc = "0x74 - HSCH5_DUTY_R"]
     #[inline(always)]
     pub const fn hsch5_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(5)
+        self.hsch_duty_r(5)
     }
     #[doc = "0x88 - HSCH6_DUTY_R"]
     #[inline(always)]
     pub const fn hsch6_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(6)
+        self.hsch_duty_r(6)
     }
     #[doc = "0x9c - HSCH7_DUTY_R"]
     #[inline(always)]
     pub const fn hsch7_duty_r(&self) -> &HSCH_DUTY_R {
-        &self.hsch_duty_r(7)
+        self.hsch_duty_r(7)
     }
     #[doc = "0xa0..0xc0 - "]
     #[inline(always)]
@@ -299,45 +341,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa0..0xc0 - "]
+    #[inline(always)]
+    pub fn lsch_conf0_iter(&self) -> impl Iterator<Item = &LSCH_CONF0> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(160)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0xa0 - LSCH0_CONF0"]
     #[inline(always)]
     pub const fn lsch0_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(0)
+        self.lsch_conf0(0)
     }
     #[doc = "0xb4 - LSCH1_CONF0"]
     #[inline(always)]
     pub const fn lsch1_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(1)
+        self.lsch_conf0(1)
     }
     #[doc = "0xc8 - LSCH2_CONF0"]
     #[inline(always)]
     pub const fn lsch2_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(2)
+        self.lsch_conf0(2)
     }
     #[doc = "0xdc - LSCH3_CONF0"]
     #[inline(always)]
     pub const fn lsch3_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(3)
+        self.lsch_conf0(3)
     }
     #[doc = "0xf0 - LSCH4_CONF0"]
     #[inline(always)]
     pub const fn lsch4_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(4)
+        self.lsch_conf0(4)
     }
     #[doc = "0x104 - LSCH5_CONF0"]
     #[inline(always)]
     pub const fn lsch5_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(5)
+        self.lsch_conf0(5)
     }
     #[doc = "0x118 - LSCH6_CONF0"]
     #[inline(always)]
     pub const fn lsch6_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(6)
+        self.lsch_conf0(6)
     }
     #[doc = "0x12c - LSCH7_CONF0"]
     #[inline(always)]
     pub const fn lsch7_conf0(&self) -> &LSCH_CONF0 {
-        &self.lsch_conf0(7)
+        self.lsch_conf0(7)
     }
     #[doc = "0xa4..0xc4 - "]
     #[inline(always)]
@@ -352,45 +406,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa4..0xc4 - "]
+    #[inline(always)]
+    pub fn lsch_hpoint_iter(&self) -> impl Iterator<Item = &LSCH_HPOINT> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(164)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0xa4 - LSCH0_HPOINT"]
     #[inline(always)]
     pub const fn lsch0_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(0)
+        self.lsch_hpoint(0)
     }
     #[doc = "0xb8 - LSCH1_HPOINT"]
     #[inline(always)]
     pub const fn lsch1_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(1)
+        self.lsch_hpoint(1)
     }
     #[doc = "0xcc - LSCH2_HPOINT"]
     #[inline(always)]
     pub const fn lsch2_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(2)
+        self.lsch_hpoint(2)
     }
     #[doc = "0xe0 - LSCH3_HPOINT"]
     #[inline(always)]
     pub const fn lsch3_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(3)
+        self.lsch_hpoint(3)
     }
     #[doc = "0xf4 - LSCH4_HPOINT"]
     #[inline(always)]
     pub const fn lsch4_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(4)
+        self.lsch_hpoint(4)
     }
     #[doc = "0x108 - LSCH5_HPOINT"]
     #[inline(always)]
     pub const fn lsch5_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(5)
+        self.lsch_hpoint(5)
     }
     #[doc = "0x11c - LSCH6_HPOINT"]
     #[inline(always)]
     pub const fn lsch6_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(6)
+        self.lsch_hpoint(6)
     }
     #[doc = "0x130 - LSCH7_HPOINT"]
     #[inline(always)]
     pub const fn lsch7_hpoint(&self) -> &LSCH_HPOINT {
-        &self.lsch_hpoint(7)
+        self.lsch_hpoint(7)
     }
     #[doc = "0xa8..0xc8 - "]
     #[inline(always)]
@@ -405,45 +471,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa8..0xc8 - "]
+    #[inline(always)]
+    pub fn lsch_duty_iter(&self) -> impl Iterator<Item = &LSCH_DUTY> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(168)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0xa8 - LSCH0_DUTY"]
     #[inline(always)]
     pub const fn lsch0_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(0)
+        self.lsch_duty(0)
     }
     #[doc = "0xbc - LSCH1_DUTY"]
     #[inline(always)]
     pub const fn lsch1_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(1)
+        self.lsch_duty(1)
     }
     #[doc = "0xd0 - LSCH2_DUTY"]
     #[inline(always)]
     pub const fn lsch2_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(2)
+        self.lsch_duty(2)
     }
     #[doc = "0xe4 - LSCH3_DUTY"]
     #[inline(always)]
     pub const fn lsch3_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(3)
+        self.lsch_duty(3)
     }
     #[doc = "0xf8 - LSCH4_DUTY"]
     #[inline(always)]
     pub const fn lsch4_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(4)
+        self.lsch_duty(4)
     }
     #[doc = "0x10c - LSCH5_DUTY"]
     #[inline(always)]
     pub const fn lsch5_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(5)
+        self.lsch_duty(5)
     }
     #[doc = "0x120 - LSCH6_DUTY"]
     #[inline(always)]
     pub const fn lsch6_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(6)
+        self.lsch_duty(6)
     }
     #[doc = "0x134 - LSCH7_DUTY"]
     #[inline(always)]
     pub const fn lsch7_duty(&self) -> &LSCH_DUTY {
-        &self.lsch_duty(7)
+        self.lsch_duty(7)
     }
     #[doc = "0xac..0xcc - "]
     #[inline(always)]
@@ -458,45 +536,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xac..0xcc - "]
+    #[inline(always)]
+    pub fn lsch_conf1_iter(&self) -> impl Iterator<Item = &LSCH_CONF1> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(172)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0xac - LSCH0_CONF1"]
     #[inline(always)]
     pub const fn lsch0_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(0)
+        self.lsch_conf1(0)
     }
     #[doc = "0xc0 - LSCH1_CONF1"]
     #[inline(always)]
     pub const fn lsch1_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(1)
+        self.lsch_conf1(1)
     }
     #[doc = "0xd4 - LSCH2_CONF1"]
     #[inline(always)]
     pub const fn lsch2_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(2)
+        self.lsch_conf1(2)
     }
     #[doc = "0xe8 - LSCH3_CONF1"]
     #[inline(always)]
     pub const fn lsch3_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(3)
+        self.lsch_conf1(3)
     }
     #[doc = "0xfc - LSCH4_CONF1"]
     #[inline(always)]
     pub const fn lsch4_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(4)
+        self.lsch_conf1(4)
     }
     #[doc = "0x110 - LSCH5_CONF1"]
     #[inline(always)]
     pub const fn lsch5_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(5)
+        self.lsch_conf1(5)
     }
     #[doc = "0x124 - LSCH6_CONF1"]
     #[inline(always)]
     pub const fn lsch6_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(6)
+        self.lsch_conf1(6)
     }
     #[doc = "0x138 - LSCH7_CONF1"]
     #[inline(always)]
     pub const fn lsch7_conf1(&self) -> &LSCH_CONF1 {
-        &self.lsch_conf1(7)
+        self.lsch_conf1(7)
     }
     #[doc = "0xb0..0xd0 - "]
     #[inline(always)]
@@ -511,45 +601,57 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xb0..0xd0 - "]
+    #[inline(always)]
+    pub fn lsch_duty_r_iter(&self) -> impl Iterator<Item = &LSCH_DUTY_R> {
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(176)
+                .add(20 * n)
+                .cast()
+        })
+    }
     #[doc = "0xb0 - LSCH0_DUTY_R"]
     #[inline(always)]
     pub const fn lsch0_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(0)
+        self.lsch_duty_r(0)
     }
     #[doc = "0xc4 - LSCH1_DUTY_R"]
     #[inline(always)]
     pub const fn lsch1_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(1)
+        self.lsch_duty_r(1)
     }
     #[doc = "0xd8 - LSCH2_DUTY_R"]
     #[inline(always)]
     pub const fn lsch2_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(2)
+        self.lsch_duty_r(2)
     }
     #[doc = "0xec - LSCH3_DUTY_R"]
     #[inline(always)]
     pub const fn lsch3_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(3)
+        self.lsch_duty_r(3)
     }
     #[doc = "0x100 - LSCH4_DUTY_R"]
     #[inline(always)]
     pub const fn lsch4_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(4)
+        self.lsch_duty_r(4)
     }
     #[doc = "0x114 - LSCH5_DUTY_R"]
     #[inline(always)]
     pub const fn lsch5_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(5)
+        self.lsch_duty_r(5)
     }
     #[doc = "0x128 - LSCH6_DUTY_R"]
     #[inline(always)]
     pub const fn lsch6_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(6)
+        self.lsch_duty_r(6)
     }
     #[doc = "0x13c - LSCH7_DUTY_R"]
     #[inline(always)]
     pub const fn lsch7_duty_r(&self) -> &LSCH_DUTY_R {
-        &self.lsch_duty_r(7)
+        self.lsch_duty_r(7)
     }
     #[doc = "0x140..0x150 - "]
     #[inline(always)]
@@ -564,25 +666,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x140..0x150 - "]
+    #[inline(always)]
+    pub fn hstimer_conf_iter(&self) -> impl Iterator<Item = &HSTIMER_CONF> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(320)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x140 - HSTIMER0_CONF"]
     #[inline(always)]
     pub const fn hstimer0_conf(&self) -> &HSTIMER_CONF {
-        &self.hstimer_conf(0)
+        self.hstimer_conf(0)
     }
     #[doc = "0x148 - HSTIMER1_CONF"]
     #[inline(always)]
     pub const fn hstimer1_conf(&self) -> &HSTIMER_CONF {
-        &self.hstimer_conf(1)
+        self.hstimer_conf(1)
     }
     #[doc = "0x150 - HSTIMER2_CONF"]
     #[inline(always)]
     pub const fn hstimer2_conf(&self) -> &HSTIMER_CONF {
-        &self.hstimer_conf(2)
+        self.hstimer_conf(2)
     }
     #[doc = "0x158 - HSTIMER3_CONF"]
     #[inline(always)]
     pub const fn hstimer3_conf(&self) -> &HSTIMER_CONF {
-        &self.hstimer_conf(3)
+        self.hstimer_conf(3)
     }
     #[doc = "0x144..0x154 - "]
     #[inline(always)]
@@ -597,25 +711,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x144..0x154 - "]
+    #[inline(always)]
+    pub fn hstimer_value_iter(&self) -> impl Iterator<Item = &HSTIMER_VALUE> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(324)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x144 - HSTIMER0_VALUE"]
     #[inline(always)]
     pub const fn hstimer0_value(&self) -> &HSTIMER_VALUE {
-        &self.hstimer_value(0)
+        self.hstimer_value(0)
     }
     #[doc = "0x14c - HSTIMER1_VALUE"]
     #[inline(always)]
     pub const fn hstimer1_value(&self) -> &HSTIMER_VALUE {
-        &self.hstimer_value(1)
+        self.hstimer_value(1)
     }
     #[doc = "0x154 - HSTIMER2_VALUE"]
     #[inline(always)]
     pub const fn hstimer2_value(&self) -> &HSTIMER_VALUE {
-        &self.hstimer_value(2)
+        self.hstimer_value(2)
     }
     #[doc = "0x15c - HSTIMER3_VALUE"]
     #[inline(always)]
     pub const fn hstimer3_value(&self) -> &HSTIMER_VALUE {
-        &self.hstimer_value(3)
+        self.hstimer_value(3)
     }
     #[doc = "0x160..0x170 - "]
     #[inline(always)]
@@ -630,25 +756,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x160..0x170 - "]
+    #[inline(always)]
+    pub fn lstimer_conf_iter(&self) -> impl Iterator<Item = &LSTIMER_CONF> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(352)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x160 - LSTIMER0_CONF"]
     #[inline(always)]
     pub const fn lstimer0_conf(&self) -> &LSTIMER_CONF {
-        &self.lstimer_conf(0)
+        self.lstimer_conf(0)
     }
     #[doc = "0x168 - LSTIMER1_CONF"]
     #[inline(always)]
     pub const fn lstimer1_conf(&self) -> &LSTIMER_CONF {
-        &self.lstimer_conf(1)
+        self.lstimer_conf(1)
     }
     #[doc = "0x170 - LSTIMER2_CONF"]
     #[inline(always)]
     pub const fn lstimer2_conf(&self) -> &LSTIMER_CONF {
-        &self.lstimer_conf(2)
+        self.lstimer_conf(2)
     }
     #[doc = "0x178 - LSTIMER3_CONF"]
     #[inline(always)]
     pub const fn lstimer3_conf(&self) -> &LSTIMER_CONF {
-        &self.lstimer_conf(3)
+        self.lstimer_conf(3)
     }
     #[doc = "0x164..0x174 - "]
     #[inline(always)]
@@ -663,25 +801,37 @@ impl RegisterBlock {
                 .cast()
         }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x164..0x174 - "]
+    #[inline(always)]
+    pub fn lstimer_value_iter(&self) -> impl Iterator<Item = &LSTIMER_VALUE> {
+        (0..4).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(356)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x164 - LSTIMER0_VALUE"]
     #[inline(always)]
     pub const fn lstimer0_value(&self) -> &LSTIMER_VALUE {
-        &self.lstimer_value(0)
+        self.lstimer_value(0)
     }
     #[doc = "0x16c - LSTIMER1_VALUE"]
     #[inline(always)]
     pub const fn lstimer1_value(&self) -> &LSTIMER_VALUE {
-        &self.lstimer_value(1)
+        self.lstimer_value(1)
     }
     #[doc = "0x174 - LSTIMER2_VALUE"]
     #[inline(always)]
     pub const fn lstimer2_value(&self) -> &LSTIMER_VALUE {
-        &self.lstimer_value(2)
+        self.lstimer_value(2)
     }
     #[doc = "0x17c - LSTIMER3_VALUE"]
     #[inline(always)]
     pub const fn lstimer3_value(&self) -> &LSTIMER_VALUE {
-        &self.lstimer_value(3)
+        self.lstimer_value(3)
     }
     #[doc = "0x180 - "]
     #[inline(always)]

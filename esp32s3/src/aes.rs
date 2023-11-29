@@ -2,17 +2,17 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    key_: [KEY_; 8],
+    key: [KEY; 8],
     text_in_: [TEXT_IN_; 4],
     text_out_: [TEXT_OUT_; 4],
     mode: MODE,
     _reserved4: [u8; 0x04],
     trigger: TRIGGER,
     state: STATE,
-    iv_mem: [IV_MEM; 16],
-    h_mem: [H_MEM; 16],
-    j0_mem: [J0_MEM; 16],
-    t0_mem: [T0_MEM; 16],
+    iv_mem: [IV_MEM; 4],
+    h_mem: [H_MEM; 4],
+    j0_mem: [J0_MEM; 4],
+    t0_mem: [T0_MEM; 4],
     dma_enable: DMA_ENABLE,
     block_mode: BLOCK_MODE,
     block_num: BLOCK_NUM,
@@ -28,18 +28,36 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x00..0x20 - AES key register %s"]
     #[inline(always)]
-    pub const fn key_(&self, n: usize) -> &KEY_ {
-        &self.key_[n]
+    pub const fn key(&self, n: usize) -> &KEY {
+        &self.key[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - AES key register %s"]
+    #[inline(always)]
+    pub fn key_iter(&self) -> impl Iterator<Item = &KEY> {
+        self.key.iter()
     }
     #[doc = "0x20..0x30 - Source data register %s"]
     #[inline(always)]
     pub const fn text_in_(&self, n: usize) -> &TEXT_IN_ {
         &self.text_in_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x20..0x30 - Source data register %s"]
+    #[inline(always)]
+    pub fn text_in__iter(&self) -> impl Iterator<Item = &TEXT_IN_> {
+        self.text_in_.iter()
+    }
     #[doc = "0x30..0x40 - Result data register %s"]
     #[inline(always)]
     pub const fn text_out_(&self, n: usize) -> &TEXT_OUT_ {
         &self.text_out_[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x40 - Result data register %s"]
+    #[inline(always)]
+    pub fn text_out__iter(&self) -> impl Iterator<Item = &TEXT_OUT_> {
+        self.text_out_.iter()
     }
     #[doc = "0x40 - AES Mode register"]
     #[inline(always)]
@@ -61,20 +79,44 @@ impl RegisterBlock {
     pub const fn iv_mem(&self, n: usize) -> &IV_MEM {
         &self.iv_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x60 - The memory that stores initialization vector"]
+    #[inline(always)]
+    pub fn iv_mem_iter(&self) -> impl Iterator<Item = &IV_MEM> {
+        self.iv_mem.iter()
+    }
     #[doc = "0x60..0x70 - The memory that stores GCM hash subkey"]
     #[inline(always)]
     pub const fn h_mem(&self, n: usize) -> &H_MEM {
         &self.h_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x70 - The memory that stores GCM hash subkey"]
+    #[inline(always)]
+    pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
+        self.h_mem.iter()
     }
     #[doc = "0x70..0x80 - The memory that stores J0"]
     #[inline(always)]
     pub const fn j0_mem(&self, n: usize) -> &J0_MEM {
         &self.j0_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x70..0x80 - The memory that stores J0"]
+    #[inline(always)]
+    pub fn j0_mem_iter(&self) -> impl Iterator<Item = &J0_MEM> {
+        self.j0_mem.iter()
+    }
     #[doc = "0x80..0x90 - The memory that stores T0"]
     #[inline(always)]
     pub const fn t0_mem(&self, n: usize) -> &T0_MEM {
         &self.t0_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x80..0x90 - The memory that stores T0"]
+    #[inline(always)]
+    pub fn t0_mem_iter(&self) -> impl Iterator<Item = &T0_MEM> {
+        self.t0_mem.iter()
     }
     #[doc = "0x90 - AES accelerator working mode register"]
     #[inline(always)]
@@ -132,10 +174,10 @@ impl RegisterBlock {
         &self.dma_exit
     }
 }
-#[doc = "KEY_ (rw) register accessor: AES key register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_`] module"]
-pub type KEY_ = crate::Reg<key_::KEY__SPEC>;
+#[doc = "KEY (rw) register accessor: AES key register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key`] module"]
+pub type KEY = crate::Reg<key::KEY_SPEC>;
 #[doc = "AES key register %s"]
-pub mod key_;
+pub mod key;
 #[doc = "TEXT_IN_ (rw) register accessor: Source data register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in_`] module"]
 pub type TEXT_IN_ = crate::Reg<text_in_::TEXT_IN__SPEC>;
 #[doc = "Source data register %s"]

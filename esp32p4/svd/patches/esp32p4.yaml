@@ -1,1 +1,141 @@
 _svd: "../esp32p4.base.svd"
+
+AES:
+  _modify:
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "H_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "J0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "T0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+
+DS:
+  _modify:
+    "Y_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "RB_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "BOX_MEM*":
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "X_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "Z_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+
+ECC:
+  _modify:
+    "K_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PX_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PY_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+
+ECDSA:
+  _modify:
+    "MESSAGE_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "R_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "S_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "Z_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "QAX_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "QAY_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+
+HMAC:
+  _modify:
+    "WR_MESSAGE_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "RD_RESULT_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+
+LP_HUK:
+  _modify:
+    "INFO_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+      size: 0x20
+
+RSA:
+  _modify:
+    "M_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "Z_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "Y_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "X_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+
+SHA:
+  _modify:
+    "H_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20

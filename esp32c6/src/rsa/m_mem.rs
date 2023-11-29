@@ -21,7 +21,7 @@ impl W {
     #[doc = r""]
     #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
         self
     }
@@ -29,7 +29,7 @@ impl W {
 #[doc = "The memory that stores M\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`m_mem::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`m_mem::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct M_MEM_SPEC;
 impl crate::RegisterSpec for M_MEM_SPEC {
-    type Ux = u8;
+    type Ux = u32;
 }
 #[doc = "`read()` method returns [`m_mem::R`](R) reader structure"]
 impl crate::Readable for M_MEM_SPEC {}

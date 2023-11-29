@@ -33,6 +33,12 @@ impl RegisterBlock {
     pub const fn sigmadelta(&self, n: usize) -> &SIGMADELTA {
         &self.sigmadelta[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - Duty Cycle Configure Register of SDM%s"]
+    #[inline(always)]
+    pub fn sigmadelta_iter(&self) -> impl Iterator<Item = &SIGMADELTA> {
+        self.sigmadelta.iter()
+    }
     #[doc = "0x20 - Clock Gating Configure Register"]
     #[inline(always)]
     pub const fn clock_gate(&self) -> &CLOCK_GATE {
@@ -48,50 +54,62 @@ impl RegisterBlock {
     pub const fn glitch_filter_ch(&self, n: usize) -> &GLITCH_FILTER_CH {
         &self.glitch_filter_ch[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x50 - Glitch Filter Configure Register of Channel%s"]
+    #[inline(always)]
+    pub fn glitch_filter_ch_iter(&self) -> impl Iterator<Item = &GLITCH_FILTER_CH> {
+        self.glitch_filter_ch.iter()
+    }
     #[doc = "0x60..0x80 - Etm Config register of Channel%s"]
     #[inline(always)]
     pub const fn etm_event_ch_cfg(&self, n: usize) -> &ETM_EVENT_CH_CFG {
         &self.etm_event_ch_cfg[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x80 - Etm Config register of Channel%s"]
+    #[inline(always)]
+    pub fn etm_event_ch_cfg_iter(&self) -> impl Iterator<Item = &ETM_EVENT_CH_CFG> {
+        self.etm_event_ch_cfg.iter()
+    }
     #[doc = "0x60 - Etm Config register of Channel0"]
     #[inline(always)]
     pub const fn etm_event_ch0_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(0)
+        self.etm_event_ch_cfg(0)
     }
     #[doc = "0x64 - Etm Config register of Channel1"]
     #[inline(always)]
     pub const fn etm_event_ch1_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(1)
+        self.etm_event_ch_cfg(1)
     }
     #[doc = "0x68 - Etm Config register of Channel2"]
     #[inline(always)]
     pub const fn etm_event_ch2_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(2)
+        self.etm_event_ch_cfg(2)
     }
     #[doc = "0x6c - Etm Config register of Channel3"]
     #[inline(always)]
     pub const fn etm_event_ch3_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(3)
+        self.etm_event_ch_cfg(3)
     }
     #[doc = "0x70 - Etm Config register of Channel4"]
     #[inline(always)]
     pub const fn etm_event_ch4_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(4)
+        self.etm_event_ch_cfg(4)
     }
     #[doc = "0x74 - Etm Config register of Channel5"]
     #[inline(always)]
     pub const fn etm_event_ch5_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(5)
+        self.etm_event_ch_cfg(5)
     }
     #[doc = "0x78 - Etm Config register of Channel6"]
     #[inline(always)]
     pub const fn etm_event_ch6_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(6)
+        self.etm_event_ch_cfg(6)
     }
     #[doc = "0x7c - Etm Config register of Channel7"]
     #[inline(always)]
     pub const fn etm_event_ch7_cfg(&self) -> &ETM_EVENT_CH_CFG {
-        &self.etm_event_ch_cfg(7)
+        self.etm_event_ch_cfg(7)
     }
     #[doc = "0xa0 - Etm Configure Register to decide which GPIO been chosen"]
     #[inline(always)]

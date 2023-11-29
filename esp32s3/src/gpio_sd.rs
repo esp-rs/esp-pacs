@@ -13,6 +13,12 @@ impl RegisterBlock {
     pub const fn sigmadelta(&self, n: usize) -> &SIGMADELTA {
         &self.sigmadelta[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - Duty Cycle Configure Register of SDM%s"]
+    #[inline(always)]
+    pub fn sigmadelta_iter(&self) -> impl Iterator<Item = &SIGMADELTA> {
+        self.sigmadelta.iter()
+    }
     #[doc = "0x20 - Clock Gating Configure Register"]
     #[inline(always)]
     pub const fn sigmadelta_cg(&self) -> &SIGMADELTA_CG {

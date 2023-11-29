@@ -1,1 +1,34 @@
 _svd: ../esp32c2.base.svd
+
+ECC:
+  _modify:
+    "K_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PX_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PY_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+
+SHA:
+  _modify:
+    "H_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+
+XTS_AES:
+  _modify:
+    "PLAIN_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20

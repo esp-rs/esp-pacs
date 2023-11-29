@@ -55,10 +55,22 @@ impl RegisterBlock {
     pub const fn pgm_data(&self, n: usize) -> &PGM_DATA {
         &self.pgm_data[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - Register %s that stores data to be programmed."]
+    #[inline(always)]
+    pub fn pgm_data_iter(&self) -> impl Iterator<Item = &PGM_DATA> {
+        self.pgm_data.iter()
+    }
     #[doc = "0x20..0x2c - Register %s that stores the RS code to be programmed."]
     #[inline(always)]
     pub const fn pgm_check_value(&self, n: usize) -> &PGM_CHECK_VALUE {
         &self.pgm_check_value[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x20..0x2c - Register %s that stores the RS code to be programmed."]
+    #[inline(always)]
+    pub fn pgm_check_value_iter(&self) -> impl Iterator<Item = &PGM_CHECK_VALUE> {
+        self.pgm_check_value.iter()
     }
     #[doc = "0x2c - Register 0 of BLOCK0."]
     #[inline(always)]
@@ -125,45 +137,99 @@ impl RegisterBlock {
     pub const fn rd_sys_data_part1_(&self, n: usize) -> &RD_SYS_DATA_PART1_ {
         &self.rd_sys_data_part1_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x5c..0x7c - Register %s of BLOCK2 (system)."]
+    #[inline(always)]
+    pub fn rd_sys_data_part1__iter(&self) -> impl Iterator<Item = &RD_SYS_DATA_PART1_> {
+        self.rd_sys_data_part1_.iter()
+    }
     #[doc = "0x7c..0x9c - Register %s of BLOCK3 (user)."]
     #[inline(always)]
     pub const fn rd_usr_data(&self, n: usize) -> &RD_USR_DATA {
         &self.rd_usr_data[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x7c..0x9c - Register %s of BLOCK3 (user)."]
+    #[inline(always)]
+    pub fn rd_usr_data_iter(&self) -> impl Iterator<Item = &RD_USR_DATA> {
+        self.rd_usr_data.iter()
     }
     #[doc = "0x9c..0xbc - Register %s of BLOCK4 (KEY0)."]
     #[inline(always)]
     pub const fn rd_key0_data(&self, n: usize) -> &RD_KEY0_DATA {
         &self.rd_key0_data[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x9c..0xbc - Register %s of BLOCK4 (KEY0)."]
+    #[inline(always)]
+    pub fn rd_key0_data_iter(&self) -> impl Iterator<Item = &RD_KEY0_DATA> {
+        self.rd_key0_data.iter()
+    }
     #[doc = "0xbc..0xdc - Register %s of BLOCK5 (KEY1)."]
     #[inline(always)]
     pub const fn rd_key1_data(&self, n: usize) -> &RD_KEY1_DATA {
         &self.rd_key1_data[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xbc..0xdc - Register %s of BLOCK5 (KEY1)."]
+    #[inline(always)]
+    pub fn rd_key1_data_iter(&self) -> impl Iterator<Item = &RD_KEY1_DATA> {
+        self.rd_key1_data.iter()
     }
     #[doc = "0xdc..0xfc - Register %s of BLOCK6 (KEY2)."]
     #[inline(always)]
     pub const fn rd_key2_data(&self, n: usize) -> &RD_KEY2_DATA {
         &self.rd_key2_data[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xdc..0xfc - Register %s of BLOCK6 (KEY2)."]
+    #[inline(always)]
+    pub fn rd_key2_data_iter(&self) -> impl Iterator<Item = &RD_KEY2_DATA> {
+        self.rd_key2_data.iter()
+    }
     #[doc = "0xfc..0x11c - Register %s of BLOCK7 (KEY3)."]
     #[inline(always)]
     pub const fn rd_key3_data(&self, n: usize) -> &RD_KEY3_DATA {
         &self.rd_key3_data[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xfc..0x11c - Register %s of BLOCK7 (KEY3)."]
+    #[inline(always)]
+    pub fn rd_key3_data_iter(&self) -> impl Iterator<Item = &RD_KEY3_DATA> {
+        self.rd_key3_data.iter()
     }
     #[doc = "0x11c..0x13c - Register %s of BLOCK8 (KEY4)."]
     #[inline(always)]
     pub const fn rd_key4_data(&self, n: usize) -> &RD_KEY4_DATA {
         &self.rd_key4_data[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x11c..0x13c - Register %s of BLOCK8 (KEY4)."]
+    #[inline(always)]
+    pub fn rd_key4_data_iter(&self) -> impl Iterator<Item = &RD_KEY4_DATA> {
+        self.rd_key4_data.iter()
+    }
     #[doc = "0x13c..0x15c - Register %s of BLOCK9 (KEY5)."]
     #[inline(always)]
     pub const fn rd_key5_data(&self, n: usize) -> &RD_KEY5_DATA {
         &self.rd_key5_data[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x13c..0x15c - Register %s of BLOCK9 (KEY5)."]
+    #[inline(always)]
+    pub fn rd_key5_data_iter(&self) -> impl Iterator<Item = &RD_KEY5_DATA> {
+        self.rd_key5_data.iter()
+    }
     #[doc = "0x15c..0x17c - Register %s of BLOCK10 (system)."]
     #[inline(always)]
     pub const fn rd_sys_data_part2_(&self, n: usize) -> &RD_SYS_DATA_PART2_ {
         &self.rd_sys_data_part2_[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x15c..0x17c - Register %s of BLOCK10 (system)."]
+    #[inline(always)]
+    pub fn rd_sys_data_part2__iter(&self) -> impl Iterator<Item = &RD_SYS_DATA_PART2_> {
+        self.rd_sys_data_part2_.iter()
     }
     #[doc = "0x17c - Programming error record register 0 of BLOCK0."]
     #[inline(always)]

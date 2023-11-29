@@ -89,10 +89,22 @@ impl RegisterBlock {
     pub const fn wr_message_(&self, n: usize) -> &WR_MESSAGE_ {
         &self.wr_message_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x80..0xc0 - Message register %s"]
+    #[inline(always)]
+    pub fn wr_message__iter(&self) -> impl Iterator<Item = &WR_MESSAGE_> {
+        self.wr_message_.iter()
+    }
     #[doc = "0xc0..0xe0 - Hash result register %s"]
     #[inline(always)]
     pub const fn rd_result_(&self, n: usize) -> &RD_RESULT_ {
         &self.rd_result_[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xc0..0xe0 - Hash result register %s"]
+    #[inline(always)]
+    pub fn rd_result__iter(&self) -> impl Iterator<Item = &RD_RESULT_> {
+        self.rd_result_.iter()
     }
     #[doc = "0xf0 - Software padding register"]
     #[inline(always)]

@@ -74,10 +74,22 @@ impl RegisterBlock {
     pub const fn pin(&self, n: usize) -> &PIN {
         &self.pin[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x28..0x48 - need des"]
+    #[inline(always)]
+    pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
+        self.pin.iter()
+    }
     #[doc = "0x48..0x68 - need des"]
     #[inline(always)]
     pub const fn gpio(&self, n: usize) -> &GPIO {
         &self.gpio[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x48..0x68 - need des"]
+    #[inline(always)]
+    pub fn gpio_iter(&self) -> impl Iterator<Item = &GPIO> {
+        self.gpio.iter()
     }
     #[doc = "0x68 - need des"]
     #[inline(always)]

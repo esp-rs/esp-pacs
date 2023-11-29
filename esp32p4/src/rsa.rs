@@ -2,13 +2,13 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    m_mem: [M_MEM; 16],
+    m_mem: [M_MEM; 4],
     _reserved1: [u8; 0x01f0],
-    z_mem: [Z_MEM; 16],
+    z_mem: [Z_MEM; 4],
     _reserved2: [u8; 0x01f0],
-    y_mem: [Y_MEM; 16],
+    y_mem: [Y_MEM; 4],
     _reserved3: [u8; 0x01f0],
-    x_mem: [X_MEM; 16],
+    x_mem: [X_MEM; 4],
     _reserved4: [u8; 0x01f0],
     m_prime: M_PRIME,
     mode: MODE,
@@ -30,20 +30,44 @@ impl RegisterBlock {
     pub const fn m_mem(&self, n: usize) -> &M_MEM {
         &self.m_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x10 - Represents M"]
+    #[inline(always)]
+    pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
+        self.m_mem.iter()
+    }
     #[doc = "0x200..0x210 - Represents Z"]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
         &self.z_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x200..0x210 - Represents Z"]
+    #[inline(always)]
+    pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
+        self.z_mem.iter()
     }
     #[doc = "0x400..0x410 - Represents Y"]
     #[inline(always)]
     pub const fn y_mem(&self, n: usize) -> &Y_MEM {
         &self.y_mem[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x400..0x410 - Represents Y"]
+    #[inline(always)]
+    pub fn y_mem_iter(&self) -> impl Iterator<Item = &Y_MEM> {
+        self.y_mem.iter()
+    }
     #[doc = "0x600..0x610 - Represents X"]
     #[inline(always)]
     pub const fn x_mem(&self, n: usize) -> &X_MEM {
         &self.x_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x600..0x610 - Represents X"]
+    #[inline(always)]
+    pub fn x_mem_iter(&self) -> impl Iterator<Item = &X_MEM> {
+        self.x_mem.iter()
     }
     #[doc = "0x800 - Represents M’"]
     #[inline(always)]

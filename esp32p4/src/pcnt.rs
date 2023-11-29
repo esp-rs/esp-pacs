@@ -30,25 +30,31 @@ impl RegisterBlock {
         [(); 4][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x10 - Configuration register 0 for unit %s"]
+    #[inline(always)]
+    pub fn u_conf0_iter(&self) -> impl Iterator<Item = &U_CONF0> {
+        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() })
+    }
     #[doc = "0x00 - Configuration register 0 for unit 0"]
     #[inline(always)]
     pub const fn u0_conf0(&self) -> &U_CONF0 {
-        &self.u_conf0(0)
+        self.u_conf0(0)
     }
     #[doc = "0x0c - Configuration register 0 for unit 1"]
     #[inline(always)]
     pub const fn u1_conf0(&self) -> &U_CONF0 {
-        &self.u_conf0(1)
+        self.u_conf0(1)
     }
     #[doc = "0x18 - Configuration register 0 for unit 2"]
     #[inline(always)]
     pub const fn u2_conf0(&self) -> &U_CONF0 {
-        &self.u_conf0(2)
+        self.u_conf0(2)
     }
     #[doc = "0x24 - Configuration register 0 for unit 3"]
     #[inline(always)]
     pub const fn u3_conf0(&self) -> &U_CONF0 {
-        &self.u_conf0(3)
+        self.u_conf0(3)
     }
     #[doc = "0x04..0x14 - Configuration register 1 for unit %s"]
     #[inline(always)]
@@ -57,25 +63,31 @@ impl RegisterBlock {
         [(); 4][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x14 - Configuration register 1 for unit %s"]
+    #[inline(always)]
+    pub fn u_conf1_iter(&self) -> impl Iterator<Item = &U_CONF1> {
+        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() })
+    }
     #[doc = "0x04 - Configuration register 1 for unit 0"]
     #[inline(always)]
     pub const fn u0_conf1(&self) -> &U_CONF1 {
-        &self.u_conf1(0)
+        self.u_conf1(0)
     }
     #[doc = "0x10 - Configuration register 1 for unit 1"]
     #[inline(always)]
     pub const fn u1_conf1(&self) -> &U_CONF1 {
-        &self.u_conf1(1)
+        self.u_conf1(1)
     }
     #[doc = "0x1c - Configuration register 1 for unit 2"]
     #[inline(always)]
     pub const fn u2_conf1(&self) -> &U_CONF1 {
-        &self.u_conf1(2)
+        self.u_conf1(2)
     }
     #[doc = "0x28 - Configuration register 1 for unit 3"]
     #[inline(always)]
     pub const fn u3_conf1(&self) -> &U_CONF1 {
-        &self.u_conf1(3)
+        self.u_conf1(3)
     }
     #[doc = "0x08..0x18 - Configuration register 2 for unit %s"]
     #[inline(always)]
@@ -84,50 +96,62 @@ impl RegisterBlock {
         [(); 4][n];
         unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() }
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x18 - Configuration register 2 for unit %s"]
+    #[inline(always)]
+    pub fn u_conf2_iter(&self) -> impl Iterator<Item = &U_CONF2> {
+        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() })
+    }
     #[doc = "0x08 - Configuration register 2 for unit 0"]
     #[inline(always)]
     pub const fn u0_conf2(&self) -> &U_CONF2 {
-        &self.u_conf2(0)
+        self.u_conf2(0)
     }
     #[doc = "0x14 - Configuration register 2 for unit 1"]
     #[inline(always)]
     pub const fn u1_conf2(&self) -> &U_CONF2 {
-        &self.u_conf2(1)
+        self.u_conf2(1)
     }
     #[doc = "0x20 - Configuration register 2 for unit 2"]
     #[inline(always)]
     pub const fn u2_conf2(&self) -> &U_CONF2 {
-        &self.u_conf2(2)
+        self.u_conf2(2)
     }
     #[doc = "0x2c - Configuration register 2 for unit 3"]
     #[inline(always)]
     pub const fn u3_conf2(&self) -> &U_CONF2 {
-        &self.u_conf2(3)
+        self.u_conf2(3)
     }
     #[doc = "0x30..0x40 - Counter value for unit %s"]
     #[inline(always)]
     pub const fn u_cnt(&self, n: usize) -> &U_CNT {
         &self.u_cnt[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x40 - Counter value for unit %s"]
+    #[inline(always)]
+    pub fn u_cnt_iter(&self) -> impl Iterator<Item = &U_CNT> {
+        self.u_cnt.iter()
+    }
     #[doc = "0x30 - Counter value for unit 0"]
     #[inline(always)]
     pub const fn u0_cnt(&self) -> &U_CNT {
-        &self.u_cnt(0)
+        self.u_cnt(0)
     }
     #[doc = "0x34 - Counter value for unit 1"]
     #[inline(always)]
     pub const fn u1_cnt(&self) -> &U_CNT {
-        &self.u_cnt(1)
+        self.u_cnt(1)
     }
     #[doc = "0x38 - Counter value for unit 2"]
     #[inline(always)]
     pub const fn u2_cnt(&self) -> &U_CNT {
-        &self.u_cnt(2)
+        self.u_cnt(2)
     }
     #[doc = "0x3c - Counter value for unit 3"]
     #[inline(always)]
     pub const fn u3_cnt(&self) -> &U_CNT {
-        &self.u_cnt(3)
+        self.u_cnt(3)
     }
     #[doc = "0x40 - Interrupt raw status register"]
     #[inline(always)]
@@ -154,25 +178,31 @@ impl RegisterBlock {
     pub const fn u_status(&self, n: usize) -> &U_STATUS {
         &self.u_status[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x60 - PNCT UNIT%s status register"]
+    #[inline(always)]
+    pub fn u_status_iter(&self) -> impl Iterator<Item = &U_STATUS> {
+        self.u_status.iter()
+    }
     #[doc = "0x50 - PNCT UNIT0 status register"]
     #[inline(always)]
     pub const fn u0_status(&self) -> &U_STATUS {
-        &self.u_status(0)
+        self.u_status(0)
     }
     #[doc = "0x54 - PNCT UNIT1 status register"]
     #[inline(always)]
     pub const fn u1_status(&self) -> &U_STATUS {
-        &self.u_status(1)
+        self.u_status(1)
     }
     #[doc = "0x58 - PNCT UNIT2 status register"]
     #[inline(always)]
     pub const fn u2_status(&self) -> &U_STATUS {
-        &self.u_status(2)
+        self.u_status(2)
     }
     #[doc = "0x5c - PNCT UNIT3 status register"]
     #[inline(always)]
     pub const fn u3_status(&self) -> &U_STATUS {
-        &self.u_status(3)
+        self.u_status(3)
     }
     #[doc = "0x60 - Control register for all counters"]
     #[inline(always)]

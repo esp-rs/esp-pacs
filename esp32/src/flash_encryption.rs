@@ -13,6 +13,12 @@ impl RegisterBlock {
     pub const fn buffer_(&self, n: usize) -> &BUFFER_ {
         &self.buffer_[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - "]
+    #[inline(always)]
+    pub fn buffer__iter(&self) -> impl Iterator<Item = &BUFFER_> {
+        self.buffer_.iter()
+    }
     #[doc = "0x20 - "]
     #[inline(always)]
     pub const fn start(&self) -> &START {

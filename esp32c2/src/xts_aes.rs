@@ -2,7 +2,7 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    plain_mem: [PLAIN_MEM; 16],
+    plain_mem: [PLAIN_MEM; 4],
     _reserved1: [u8; 0x30],
     linesize: LINESIZE,
     destination: DESTINATION,
@@ -18,6 +18,12 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn plain_mem(&self, n: usize) -> &PLAIN_MEM {
         &self.plain_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x10 - The memory that stores plaintext"]
+    #[inline(always)]
+    pub fn plain_mem_iter(&self) -> impl Iterator<Item = &PLAIN_MEM> {
+        self.plain_mem.iter()
     }
     #[doc = "0x40 - XTS-AES line-size register"]
     #[inline(always)]
