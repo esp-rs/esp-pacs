@@ -1,5 +1,12 @@
 _svd: ../esp32s2.base.svd
 
+AES:
+  _modify:
+    KEY_%s:
+      name: "KEY[%s]"
+    TEXT_%s:
+      name: "TEXT[%s]"
+
 DS:
   _modify:
     "C_MEM*":

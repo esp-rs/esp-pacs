@@ -15,6 +15,11 @@ AES:
       dim: 4
       dimIncrement: 0x4
 
+    KEY_%s:
+      name: "KEY[%s]"
+    TEXT_%s:
+      name: "TEXT[%s]"
+
 DS:
   _modify:
     "C_MEM*":

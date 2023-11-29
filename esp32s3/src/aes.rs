@@ -2,7 +2,7 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    key_: [KEY_; 8],
+    key: [KEY; 8],
     text_in_: [TEXT_IN_; 4],
     text_out_: [TEXT_OUT_; 4],
     mode: MODE,
@@ -32,14 +32,14 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x00..0x20 - AES key register %s"]
     #[inline(always)]
-    pub const fn key_(&self, n: usize) -> &KEY_ {
-        &self.key_[n]
+    pub const fn key(&self, n: usize) -> &KEY {
+        &self.key[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x00..0x20 - AES key register %s"]
     #[inline(always)]
-    pub fn key__iter(&self) -> impl Iterator<Item = &KEY_> {
-        self.key_.iter()
+    pub fn key_iter(&self) -> impl Iterator<Item = &KEY> {
+        self.key.iter()
     }
     #[doc = "0x20..0x30 - Source data register %s"]
     #[inline(always)]
@@ -210,10 +210,10 @@ impl RegisterBlock {
         &self.dma_exit
     }
 }
-#[doc = "KEY_ (rw) register accessor: AES key register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_`] module"]
-pub type KEY_ = crate::Reg<key_::KEY__SPEC>;
+#[doc = "KEY (rw) register accessor: AES key register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key`] module"]
+pub type KEY = crate::Reg<key::KEY_SPEC>;
 #[doc = "AES key register %s"]
-pub mod key_;
+pub mod key;
 #[doc = "TEXT_IN_ (rw) register accessor: Source data register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in_`] module"]
 pub type TEXT_IN_ = crate::Reg<text_in_::TEXT_IN__SPEC>;
 #[doc = "Source data register %s"]
