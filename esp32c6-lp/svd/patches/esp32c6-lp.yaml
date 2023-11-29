@@ -35,6 +35,9 @@ LP_IO:
 
   GPIO0:
     _strip: "LP_GPIO0_"
+    _modify:
+      MCU_SEL:
+        name: FUN_SEL
   PIN0:
     _strip: "LP_GPIO0_"
 

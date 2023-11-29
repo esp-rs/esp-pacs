@@ -42,10 +42,10 @@ pub type FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type FUN_DRV_R = crate::FieldReader;
 #[doc = "Field `FUN_DRV` writer - need des"]
 pub type FUN_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `MCU_SEL` reader - need des"]
-pub type MCU_SEL_R = crate::FieldReader;
-#[doc = "Field `MCU_SEL` writer - need des"]
-pub type MCU_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `FUN_SEL` reader - need des"]
+pub type FUN_SEL_R = crate::FieldReader;
+#[doc = "Field `FUN_SEL` writer - need des"]
+pub type FUN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
@@ -99,8 +99,8 @@ impl R {
     }
     #[doc = "Bits 12:14 - need des"]
     #[inline(always)]
-    pub fn mcu_sel(&self) -> MCU_SEL_R {
-        MCU_SEL_R::new(((self.bits >> 12) & 7) as u8)
+    pub fn fun_sel(&self) -> FUN_SEL_R {
+        FUN_SEL_R::new(((self.bits >> 12) & 7) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -117,7 +117,7 @@ impl core::fmt::Debug for R {
             .field("fun_wpu", &format_args!("{}", self.fun_wpu().bit()))
             .field("fun_ie", &format_args!("{}", self.fun_ie().bit()))
             .field("fun_drv", &format_args!("{}", self.fun_drv().bits()))
-            .field("mcu_sel", &format_args!("{}", self.mcu_sel().bits()))
+            .field("fun_sel", &format_args!("{}", self.fun_sel().bits()))
             .finish()
     }
 }
@@ -191,8 +191,8 @@ impl W {
     #[doc = "Bits 12:14 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO_SPEC> {
-        MCU_SEL_W::new(self, 12)
+    pub fn fun_sel(&mut self) -> FUN_SEL_W<GPIO_SPEC> {
+        FUN_SEL_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
