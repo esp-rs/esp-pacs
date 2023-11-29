@@ -1,7 +1,7 @@
-#[doc = "Register `TEXT_OUT_%s` reader"]
-pub type R = crate::R<TEXT_OUT__SPEC>;
-#[doc = "Register `TEXT_OUT_%s` writer"]
-pub type W = crate::W<TEXT_OUT__SPEC>;
+#[doc = "Register `TEXT_OUT[%s]` reader"]
+pub type R = crate::R<TEXT_OUT_SPEC>;
+#[doc = "Register `TEXT_OUT[%s]` writer"]
+pub type W = crate::W<TEXT_OUT_SPEC>;
 #[doc = "Field `TEXT_OUT` reader - Stores the result data when the AES accelerator operates in the Typical AES working mode."]
 pub type TEXT_OUT_R = crate::FieldReader<u32>;
 #[doc = "Field `TEXT_OUT` writer - Stores the result data when the AES accelerator operates in the Typical AES working mode."]
@@ -16,13 +16,13 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TEXT_OUT_")
+        f.debug_struct("TEXT_OUT")
             .field("text_out", &format_args!("{}", self.text_out().bits()))
             .finish()
     }
 }
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TEXT_OUT__SPEC> {
+impl core::fmt::Debug for crate::generic::Reg<TEXT_OUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         core::fmt::Debug::fmt(&self.read(), f)
     }
@@ -31,7 +31,7 @@ impl W {
     #[doc = "Bits 0:31 - Stores the result data when the AES accelerator operates in the Typical AES working mode."]
     #[inline(always)]
     #[must_use]
-    pub fn text_out(&mut self) -> TEXT_OUT_W<TEXT_OUT__SPEC> {
+    pub fn text_out(&mut self) -> TEXT_OUT_W<TEXT_OUT_SPEC> {
         TEXT_OUT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
@@ -45,19 +45,19 @@ impl W {
         self
     }
 }
-#[doc = "Result data register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_out_::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_out_::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct TEXT_OUT__SPEC;
-impl crate::RegisterSpec for TEXT_OUT__SPEC {
+#[doc = "Result data register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_out::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_out::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TEXT_OUT_SPEC;
+impl crate::RegisterSpec for TEXT_OUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`text_out_::R`](R) reader structure"]
-impl crate::Readable for TEXT_OUT__SPEC {}
-#[doc = "`write(|w| ..)` method takes [`text_out_::W`](W) writer structure"]
-impl crate::Writable for TEXT_OUT__SPEC {
+#[doc = "`read()` method returns [`text_out::R`](R) reader structure"]
+impl crate::Readable for TEXT_OUT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`text_out::W`](W) writer structure"]
+impl crate::Writable for TEXT_OUT_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets TEXT_OUT_%s to value 0"]
-impl crate::Resettable for TEXT_OUT__SPEC {
+#[doc = "`reset()` method sets TEXT_OUT[%s] to value 0"]
+impl crate::Resettable for TEXT_OUT_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }
