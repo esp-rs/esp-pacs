@@ -22,14 +22,10 @@ pub struct RegisterBlock {
     endian: ENDIAN,
     trigger: TRIGGER,
     state: STATE,
-    iv_mem: (),
-    _reserved21: [u8; 0x10],
-    h_mem: (),
-    _reserved22: [u8; 0x10],
-    j0_mem: (),
-    _reserved23: [u8; 0x10],
-    t0_mem: (),
-    _reserved24: [u8; 0x10],
+    iv_mem: [IV_MEM; 4],
+    h_mem: [H_MEM; 4],
+    j0_mem: [J0_MEM; 4],
+    t0_mem: [T0_MEM; 4],
     dma_enable: DMA_ENABLE,
     block_mode: BLOCK_MODE,
     block_num: BLOCK_NUM,
@@ -143,81 +139,49 @@ impl RegisterBlock {
     pub const fn state(&self) -> &STATE {
         &self.state
     }
-    #[doc = "0x50 - The memory that stores initialization vector"]
+    #[doc = "0x50..0x60 - The memory that stores initialization vector"]
     #[inline(always)]
     pub const fn iv_mem(&self, n: usize) -> &IV_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(80).add(4 * n).cast() }
+        &self.iv_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x50 - The memory that stores initialization vector"]
+    #[doc = "0x50..0x60 - The memory that stores initialization vector"]
     #[inline(always)]
     pub fn iv_mem_iter(&self) -> impl Iterator<Item = &IV_MEM> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(80).add(4 * n).cast() })
+        self.iv_mem.iter()
     }
-    #[doc = "0x60 - The memory that stores GCM hash subkey"]
+    #[doc = "0x60..0x70 - The memory that stores GCM hash subkey"]
     #[inline(always)]
     pub const fn h_mem(&self, n: usize) -> &H_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(96).add(4 * n).cast() }
+        &self.h_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x60 - The memory that stores GCM hash subkey"]
+    #[doc = "0x60..0x70 - The memory that stores GCM hash subkey"]
     #[inline(always)]
     pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(96).add(4 * n).cast() })
+        self.h_mem.iter()
     }
-    #[doc = "0x70 - The memory that stores J0"]
+    #[doc = "0x70..0x80 - The memory that stores J0"]
     #[inline(always)]
     pub const fn j0_mem(&self, n: usize) -> &J0_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(112)
-                .add(4 * n)
-                .cast()
-        }
+        &self.j0_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x70 - The memory that stores J0"]
+    #[doc = "0x70..0x80 - The memory that stores J0"]
     #[inline(always)]
     pub fn j0_mem_iter(&self) -> impl Iterator<Item = &J0_MEM> {
-        (0..4).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(112)
-                .add(4 * n)
-                .cast()
-        })
+        self.j0_mem.iter()
     }
-    #[doc = "0x80 - The memory that stores T0"]
+    #[doc = "0x80..0x90 - The memory that stores T0"]
     #[inline(always)]
     pub const fn t0_mem(&self, n: usize) -> &T0_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(128)
-                .add(4 * n)
-                .cast()
-        }
+        &self.t0_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x80 - The memory that stores T0"]
+    #[doc = "0x80..0x90 - The memory that stores T0"]
     #[inline(always)]
     pub fn t0_mem_iter(&self) -> impl Iterator<Item = &T0_MEM> {
-        (0..4).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(128)
-                .add(4 * n)
-                .cast()
-        })
+        self.t0_mem.iter()
     }
     #[doc = "0x90 - DMA-AES working mode register"]
     #[inline(always)]

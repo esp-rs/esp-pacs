@@ -2,14 +2,12 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    c_mem: (),
-    _reserved1: [u8; 0x0630],
+    c_mem: [C_MEM; 396],
     iv_: [IV_; 4],
     _reserved2: [u8; 0x01c0],
-    x_mem: (),
-    _reserved3: [u8; 0x0200],
-    z_mem: (),
-    _reserved4: [u8; 0x0400],
+    x_mem: [X_MEM; 128],
+    z_mem: [Z_MEM; 128],
+    _reserved4: [u8; 0x0200],
     set_start: SET_START,
     set_me: SET_ME,
     set_finish: SET_FINISH,
@@ -20,18 +18,16 @@ pub struct RegisterBlock {
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x18c - Memory C"]
+    #[doc = "0x00..0x630 - Memory C"]
     #[inline(always)]
     pub const fn c_mem(&self, n: usize) -> &C_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 396][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(4 * n).cast() }
+        &self.c_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x18c - Memory C"]
+    #[doc = "0x00..0x630 - Memory C"]
     #[inline(always)]
     pub fn c_mem_iter(&self) -> impl Iterator<Item = &C_MEM> {
-        (0..396).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(4 * n).cast() })
+        self.c_mem.iter()
     }
     #[doc = "0x630..0x640 - IV block data"]
     #[inline(always)]
@@ -44,55 +40,27 @@ impl RegisterBlock {
     pub fn iv__iter(&self) -> impl Iterator<Item = &IV_> {
         self.iv_.iter()
     }
-    #[doc = "0x800..0x880 - Memory X"]
+    #[doc = "0x800..0xa00 - Memory X"]
     #[inline(always)]
     pub const fn x_mem(&self, n: usize) -> &X_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 128][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2048)
-                .add(4 * n)
-                .cast()
-        }
+        &self.x_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x800..0x880 - Memory X"]
+    #[doc = "0x800..0xa00 - Memory X"]
     #[inline(always)]
     pub fn x_mem_iter(&self) -> impl Iterator<Item = &X_MEM> {
-        (0..128).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2048)
-                .add(4 * n)
-                .cast()
-        })
+        self.x_mem.iter()
     }
-    #[doc = "0xa00..0xa80 - Memory Z"]
+    #[doc = "0xa00..0xc00 - Memory Z"]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 128][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2560)
-                .add(4 * n)
-                .cast()
-        }
+        &self.z_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xa00..0xa80 - Memory Z"]
+    #[doc = "0xa00..0xc00 - Memory Z"]
     #[inline(always)]
     pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
-        (0..128).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2560)
-                .add(4 * n)
-                .cast()
-        })
+        self.z_mem.iter()
     }
     #[doc = "0xe00 - Activates the DS peripheral"]
     #[inline(always)]

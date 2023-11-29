@@ -15,9 +15,8 @@ pub struct RegisterBlock {
     irq_ena: IRQ_ENA,
     date: DATE,
     _reserved12: [u8; 0x10],
-    h_mem: (),
-    _reserved13: [u8; 0x40],
-    m_mem: (),
+    h_mem: [H_MEM; 16],
+    m_mem: [M_MEM; 16],
 }
 impl RegisterBlock {
     #[doc = "0x00 - Initial configuration register."]
@@ -80,43 +79,27 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
-    #[doc = "0x40..0x50 - Sha H memory which contains intermediate hash or finial hash."]
+    #[doc = "0x40..0x80 - Sha H memory which contains intermediate hash or finial hash."]
     #[inline(always)]
     pub const fn h_mem(&self, n: usize) -> &H_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 16][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(64).add(4 * n).cast() }
+        &self.h_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x40..0x50 - Sha H memory which contains intermediate hash or finial hash."]
+    #[doc = "0x40..0x80 - Sha H memory which contains intermediate hash or finial hash."]
     #[inline(always)]
     pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
-        (0..16).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(64).add(4 * n).cast() })
+        self.h_mem.iter()
     }
-    #[doc = "0x80..0x90 - Sha M memory which contains message."]
+    #[doc = "0x80..0xc0 - Sha M memory which contains message."]
     #[inline(always)]
     pub const fn m_mem(&self, n: usize) -> &M_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 16][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(128)
-                .add(4 * n)
-                .cast()
-        }
+        &self.m_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x80..0x90 - Sha M memory which contains message."]
+    #[doc = "0x80..0xc0 - Sha M memory which contains message."]
     #[inline(always)]
     pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
-        (0..16).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(128)
-                .add(4 * n)
-                .cast()
-        })
+        self.m_mem.iter()
     }
 }
 #[doc = "MODE (rw) register accessor: Initial configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mode::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mode::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mode`] module"]

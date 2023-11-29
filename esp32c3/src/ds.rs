@@ -2,18 +2,14 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    y_mem: (),
-    _reserved1: [u8; 0x0200],
-    m_mem: (),
-    _reserved2: [u8; 0x0200],
-    rb_mem: (),
-    _reserved3: [u8; 0x0200],
-    box_mem: (),
-    _reserved4: [u8; 0x0200],
-    x_mem: (),
-    _reserved5: [u8; 0x0200],
-    z_mem: (),
-    _reserved6: [u8; 0x0400],
+    y_mem: [Y_MEM; 128],
+    m_mem: [M_MEM; 128],
+    rb_mem: [RB_MEM; 128],
+    box_mem: [BOX_MEM; 12],
+    _reserved4: [u8; 0x01d0],
+    x_mem: [X_MEM; 128],
+    z_mem: [Z_MEM; 128],
+    _reserved6: [u8; 0x0200],
     set_start: SET_START,
     set_continue: SET_CONTINUE,
     set_finish: SET_FINISH,
@@ -24,143 +20,71 @@ pub struct RegisterBlock {
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x80 - memory that stores Y"]
+    #[doc = "0x00..0x200 - memory that stores Y"]
     #[inline(always)]
     pub const fn y_mem(&self, n: usize) -> &Y_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 128][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(4 * n).cast() }
+        &self.y_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x80 - memory that stores Y"]
+    #[doc = "0x00..0x200 - memory that stores Y"]
     #[inline(always)]
     pub fn y_mem_iter(&self) -> impl Iterator<Item = &Y_MEM> {
-        (0..128).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(4 * n).cast() })
+        self.y_mem.iter()
     }
-    #[doc = "0x200..0x280 - memory that stores M"]
+    #[doc = "0x200..0x400 - memory that stores M"]
     #[inline(always)]
     pub const fn m_mem(&self, n: usize) -> &M_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 128][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(512)
-                .add(4 * n)
-                .cast()
-        }
+        &self.m_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x200..0x280 - memory that stores M"]
+    #[doc = "0x200..0x400 - memory that stores M"]
     #[inline(always)]
     pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
-        (0..128).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(512)
-                .add(4 * n)
-                .cast()
-        })
+        self.m_mem.iter()
     }
-    #[doc = "0x400..0x480 - memory that stores Rb"]
+    #[doc = "0x400..0x600 - memory that stores Rb"]
     #[inline(always)]
     pub const fn rb_mem(&self, n: usize) -> &RB_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 128][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(1024)
-                .add(4 * n)
-                .cast()
-        }
+        &self.rb_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x400..0x480 - memory that stores Rb"]
+    #[doc = "0x400..0x600 - memory that stores Rb"]
     #[inline(always)]
     pub fn rb_mem_iter(&self) -> impl Iterator<Item = &RB_MEM> {
-        (0..128).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(1024)
-                .add(4 * n)
-                .cast()
-        })
+        self.rb_mem.iter()
     }
-    #[doc = "0x600..0x60c - memory that stores BOX"]
+    #[doc = "0x600..0x630 - memory that stores BOX"]
     #[inline(always)]
     pub const fn box_mem(&self, n: usize) -> &BOX_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 12][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(1536)
-                .add(4 * n)
-                .cast()
-        }
+        &self.box_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x600..0x60c - memory that stores BOX"]
+    #[doc = "0x600..0x630 - memory that stores BOX"]
     #[inline(always)]
     pub fn box_mem_iter(&self) -> impl Iterator<Item = &BOX_MEM> {
-        (0..12).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(1536)
-                .add(4 * n)
-                .cast()
-        })
+        self.box_mem.iter()
     }
-    #[doc = "0x800..0x880 - memory that stores X"]
+    #[doc = "0x800..0xa00 - memory that stores X"]
     #[inline(always)]
     pub const fn x_mem(&self, n: usize) -> &X_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 128][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2048)
-                .add(4 * n)
-                .cast()
-        }
+        &self.x_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x800..0x880 - memory that stores X"]
+    #[doc = "0x800..0xa00 - memory that stores X"]
     #[inline(always)]
     pub fn x_mem_iter(&self) -> impl Iterator<Item = &X_MEM> {
-        (0..128).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2048)
-                .add(4 * n)
-                .cast()
-        })
+        self.x_mem.iter()
     }
-    #[doc = "0xa00..0xa80 - memory that stores Z"]
+    #[doc = "0xa00..0xc00 - memory that stores Z"]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 128][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2560)
-                .add(4 * n)
-                .cast()
-        }
+        &self.z_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xa00..0xa80 - memory that stores Z"]
+    #[doc = "0xa00..0xc00 - memory that stores Z"]
     #[inline(always)]
     pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
-        (0..128).map(|n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(2560)
-                .add(4 * n)
-                .cast()
-        })
+        self.z_mem.iter()
     }
     #[doc = "0xe00 - DS start control register"]
     #[inline(always)]

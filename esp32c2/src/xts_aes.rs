@@ -2,8 +2,8 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    plain_mem: (),
-    _reserved1: [u8; 0x40],
+    plain_mem: [PLAIN_MEM; 4],
+    _reserved1: [u8; 0x30],
     linesize: LINESIZE,
     destination: DESTINATION,
     physical_address: PHYSICAL_ADDRESS,
@@ -14,18 +14,16 @@ pub struct RegisterBlock {
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - The memory that stores plaintext"]
+    #[doc = "0x00..0x10 - The memory that stores plaintext"]
     #[inline(always)]
     pub const fn plain_mem(&self, n: usize) -> &PLAIN_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(4 * n).cast() }
+        &self.plain_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00 - The memory that stores plaintext"]
+    #[doc = "0x00..0x10 - The memory that stores plaintext"]
     #[inline(always)]
     pub fn plain_mem_iter(&self) -> impl Iterator<Item = &PLAIN_MEM> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(4 * n).cast() })
+        self.plain_mem.iter()
     }
     #[doc = "0x40 - XTS-AES line-size register"]
     #[inline(always)]
