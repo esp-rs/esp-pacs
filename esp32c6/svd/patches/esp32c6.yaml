@@ -1,1 +1,85 @@
 _svd: "../esp32c6.base.svd"
+
+AES:
+  _modify:
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+    "H_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+    "J0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+    "T0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+
+DS:
+  _modify:
+    "Y_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "M_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "RB_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "BOX_MEM*":
+      dim: 12
+      dimIncrement: 0x4
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+    "X_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "Z_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+
+ECC:
+  _modify:
+    "K_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+    "PX_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+    "PY_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+
+HMAC:
+  _modify:
+    "WR_MESSAGE_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+    "RD_RESULT_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+
+RSA:
+  _modify:
+    "M_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+    "Z_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+    "Y_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+    "X_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+
+SHA:
+  _modify:
+    "H_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+    "M_MEM*":
+      dim: 16
+      dimIncrement: 0x4

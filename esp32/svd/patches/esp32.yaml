@@ -1,1 +1,23 @@
 _svd: ../esp32.base.svd
+
+AES:
+  _modify:
+    KEY_%s:
+      name: "KEY[%s]"
+    TEXT_%s:
+      name: "TEXT[%s]"
+
+RSA:
+  _modify:
+    "M_MEM*":
+      dim: 32
+      dimIncrement: 0x4
+    "Z_MEM*":
+      dim: 32
+      dimIncrement: 0x4
+    "Y_MEM*":
+      dim: 32
+      dimIncrement: 0x4
+    "X_MEM*":
+      dim: 32
+      dimIncrement: 0x4

@@ -1,1 +1,28 @@
 _svd: ../esp32s2.base.svd
+
+DS:
+  _modify:
+    "C_MEM*":
+      dim: 396
+      dimIncrement: 0x4
+    "X_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "Z_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+
+RSA:
+  _modify:
+    "M_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "Z_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "Y_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+    "X_MEM*":
+      dim: 128
+      dimIncrement: 0x4
