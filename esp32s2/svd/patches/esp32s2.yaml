@@ -12,24 +12,31 @@ DS:
     "C_MEM*":
       dim: 396
       dimIncrement: 0x4
+      size: 0x20
     "X_MEM*":
       dim: 128
       dimIncrement: 0x4
+      size: 0x20
     "Z_MEM*":
       dim: 128
       dimIncrement: 0x4
+      size: 0x20
 
 RSA:
   _modify:
     "M_MEM*":
       dim: 128
       dimIncrement: 0x4
+      size: 0x20
     "Z_MEM*":
       dim: 128
       dimIncrement: 0x4
+      size: 0x20
     "Y_MEM*":
       dim: 128
       dimIncrement: 0x4
+      size: 0x20
     "X_MEM*":
       dim: 128
       dimIncrement: 0x4
+      size: 0x20
