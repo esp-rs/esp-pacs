@@ -14,29 +14,29 @@ pub type RX_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 pub type TX_SIZE_R = crate::FieldReader;
 #[doc = "Field `TX_SIZE` writer - This register is used to configure the amount of mem allocated to transmitter's fifo.the default byte num is 128."]
 pub type TX_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `RX_FLOW_THRHD_H3` reader - refer to the rx_flow_thrhd's describtion."]
+#[doc = "Field `RX_FLOW_THRHD_H3` reader - Refer to the rx_flow_thrhd's description."]
 pub type RX_FLOW_THRHD_H3_R = crate::FieldReader;
-#[doc = "Field `RX_FLOW_THRHD_H3` writer - refer to the rx_flow_thrhd's describtion."]
+#[doc = "Field `RX_FLOW_THRHD_H3` writer - Refer to the rx_flow_thrhd's description."]
 pub type RX_FLOW_THRHD_H3_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `RX_TOUT_THRHD_H3` reader - refer to the rx_tout_thrhd's describtion."]
+#[doc = "Field `RX_TOUT_THRHD_H3` reader - Refer to the rx_tout_thrhd's description."]
 pub type RX_TOUT_THRHD_H3_R = crate::FieldReader;
-#[doc = "Field `RX_TOUT_THRHD_H3` writer - refer to the rx_tout_thrhd's describtion."]
+#[doc = "Field `RX_TOUT_THRHD_H3` writer - Refer to the rx_tout_thrhd's description."]
 pub type RX_TOUT_THRHD_H3_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `XON_THRESHOLD_H2` reader - refer to the uart_xon_threshold's describtion."]
+#[doc = "Field `XON_THRESHOLD_H2` reader - Refer to the uart_xon_threshold's description."]
 pub type XON_THRESHOLD_H2_R = crate::FieldReader;
-#[doc = "Field `XON_THRESHOLD_H2` writer - refer to the uart_xon_threshold's describtion."]
+#[doc = "Field `XON_THRESHOLD_H2` writer - Refer to the uart_xon_threshold's description."]
 pub type XON_THRESHOLD_H2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `XOFF_THRESHOLD_H2` reader - refer to the uart_xoff_threshold's describtion."]
+#[doc = "Field `XOFF_THRESHOLD_H2` reader - Refer to the uart_xoff_threshold's description."]
 pub type XOFF_THRESHOLD_H2_R = crate::FieldReader;
-#[doc = "Field `XOFF_THRESHOLD_H2` writer - refer to the uart_xoff_threshold's describtion."]
+#[doc = "Field `XOFF_THRESHOLD_H2` writer - Refer to the uart_xoff_threshold's description."]
 pub type XOFF_THRESHOLD_H2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `RX_MEM_FULL_THRHD` reader - refer to the rxfifo_full_thrhd's describtion."]
+#[doc = "Field `RX_MEM_FULL_THRHD` reader - Refer to the rxfifo_full_thrhd's description."]
 pub type RX_MEM_FULL_THRHD_R = crate::FieldReader;
-#[doc = "Field `RX_MEM_FULL_THRHD` writer - refer to the rxfifo_full_thrhd's describtion."]
+#[doc = "Field `RX_MEM_FULL_THRHD` writer - Refer to the rxfifo_full_thrhd's description."]
 pub type RX_MEM_FULL_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `TX_MEM_EMPTY_THRHD` reader - refer to txfifo_empty_thrhd 's describtion."]
+#[doc = "Field `TX_MEM_EMPTY_THRHD` reader - Refer to txfifo_empty_thrhd's description."]
 pub type TX_MEM_EMPTY_THRHD_R = crate::FieldReader;
-#[doc = "Field `TX_MEM_EMPTY_THRHD` writer - refer to txfifo_empty_thrhd 's describtion."]
+#[doc = "Field `TX_MEM_EMPTY_THRHD` writer - Refer to txfifo_empty_thrhd's description."]
 pub type TX_MEM_EMPTY_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
@@ -54,32 +54,32 @@ impl R {
     pub fn tx_size(&self) -> TX_SIZE_R {
         TX_SIZE_R::new(((self.bits >> 7) & 0x0f) as u8)
     }
-    #[doc = "Bits 15:17 - refer to the rx_flow_thrhd's describtion."]
+    #[doc = "Bits 15:17 - Refer to the rx_flow_thrhd's description."]
     #[inline(always)]
     pub fn rx_flow_thrhd_h3(&self) -> RX_FLOW_THRHD_H3_R {
         RX_FLOW_THRHD_H3_R::new(((self.bits >> 15) & 7) as u8)
     }
-    #[doc = "Bits 18:20 - refer to the rx_tout_thrhd's describtion."]
+    #[doc = "Bits 18:20 - Refer to the rx_tout_thrhd's description."]
     #[inline(always)]
     pub fn rx_tout_thrhd_h3(&self) -> RX_TOUT_THRHD_H3_R {
         RX_TOUT_THRHD_H3_R::new(((self.bits >> 18) & 7) as u8)
     }
-    #[doc = "Bits 21:22 - refer to the uart_xon_threshold's describtion."]
+    #[doc = "Bits 21:22 - Refer to the uart_xon_threshold's description."]
     #[inline(always)]
     pub fn xon_threshold_h2(&self) -> XON_THRESHOLD_H2_R {
         XON_THRESHOLD_H2_R::new(((self.bits >> 21) & 3) as u8)
     }
-    #[doc = "Bits 23:24 - refer to the uart_xoff_threshold's describtion."]
+    #[doc = "Bits 23:24 - Refer to the uart_xoff_threshold's description."]
     #[inline(always)]
     pub fn xoff_threshold_h2(&self) -> XOFF_THRESHOLD_H2_R {
         XOFF_THRESHOLD_H2_R::new(((self.bits >> 23) & 3) as u8)
     }
-    #[doc = "Bits 25:27 - refer to the rxfifo_full_thrhd's describtion."]
+    #[doc = "Bits 25:27 - Refer to the rxfifo_full_thrhd's description."]
     #[inline(always)]
     pub fn rx_mem_full_thrhd(&self) -> RX_MEM_FULL_THRHD_R {
         RX_MEM_FULL_THRHD_R::new(((self.bits >> 25) & 7) as u8)
     }
-    #[doc = "Bits 28:30 - refer to txfifo_empty_thrhd 's describtion."]
+    #[doc = "Bits 28:30 - Refer to txfifo_empty_thrhd's description."]
     #[inline(always)]
     pub fn tx_mem_empty_thrhd(&self) -> TX_MEM_EMPTY_THRHD_R {
         TX_MEM_EMPTY_THRHD_R::new(((self.bits >> 28) & 7) as u8)
@@ -144,37 +144,37 @@ impl W {
     pub fn tx_size(&mut self) -> TX_SIZE_W<MEM_CONF_SPEC> {
         TX_SIZE_W::new(self, 7)
     }
-    #[doc = "Bits 15:17 - refer to the rx_flow_thrhd's describtion."]
+    #[doc = "Bits 15:17 - Refer to the rx_flow_thrhd's description."]
     #[inline(always)]
     #[must_use]
     pub fn rx_flow_thrhd_h3(&mut self) -> RX_FLOW_THRHD_H3_W<MEM_CONF_SPEC> {
         RX_FLOW_THRHD_H3_W::new(self, 15)
     }
-    #[doc = "Bits 18:20 - refer to the rx_tout_thrhd's describtion."]
+    #[doc = "Bits 18:20 - Refer to the rx_tout_thrhd's description."]
     #[inline(always)]
     #[must_use]
     pub fn rx_tout_thrhd_h3(&mut self) -> RX_TOUT_THRHD_H3_W<MEM_CONF_SPEC> {
         RX_TOUT_THRHD_H3_W::new(self, 18)
     }
-    #[doc = "Bits 21:22 - refer to the uart_xon_threshold's describtion."]
+    #[doc = "Bits 21:22 - Refer to the uart_xon_threshold's description."]
     #[inline(always)]
     #[must_use]
     pub fn xon_threshold_h2(&mut self) -> XON_THRESHOLD_H2_W<MEM_CONF_SPEC> {
         XON_THRESHOLD_H2_W::new(self, 21)
     }
-    #[doc = "Bits 23:24 - refer to the uart_xoff_threshold's describtion."]
+    #[doc = "Bits 23:24 - Refer to the uart_xoff_threshold's description."]
     #[inline(always)]
     #[must_use]
     pub fn xoff_threshold_h2(&mut self) -> XOFF_THRESHOLD_H2_W<MEM_CONF_SPEC> {
         XOFF_THRESHOLD_H2_W::new(self, 23)
     }
-    #[doc = "Bits 25:27 - refer to the rxfifo_full_thrhd's describtion."]
+    #[doc = "Bits 25:27 - Refer to the rxfifo_full_thrhd's description."]
     #[inline(always)]
     #[must_use]
     pub fn rx_mem_full_thrhd(&mut self) -> RX_MEM_FULL_THRHD_W<MEM_CONF_SPEC> {
         RX_MEM_FULL_THRHD_W::new(self, 25)
     }
-    #[doc = "Bits 28:30 - refer to txfifo_empty_thrhd 's describtion."]
+    #[doc = "Bits 28:30 - Refer to txfifo_empty_thrhd's description."]
     #[inline(always)]
     #[must_use]
     pub fn tx_mem_empty_thrhd(&mut self) -> TX_MEM_EMPTY_THRHD_W<MEM_CONF_SPEC> {
