@@ -16,9 +16,10 @@ pub struct RegisterBlock {
     query_error: QUERY_ERROR,
     query_busy: QUERY_BUSY,
     _reserved12: [u8; 0x10],
-    wr_message_mem: [WR_MESSAGE_MEM; 64],
-    rd_result_mem: [RD_RESULT_MEM; 32],
-    _reserved14: [u8; 0x10],
+    wr_message_mem: (),
+    _reserved13: [u8; 0x40],
+    rd_result_mem: (),
+    _reserved14: [u8; 0x30],
     set_message_pad: SET_MESSAGE_PAD,
     one_block: ONE_BLOCK,
     soft_jtag_ctrl: SOFT_JTAG_CTRL,
@@ -85,27 +86,55 @@ impl RegisterBlock {
     pub const fn query_busy(&self) -> &QUERY_BUSY {
         &self.query_busy
     }
-    #[doc = "0x80..0xc0 - Message block memory."]
+    #[doc = "0x80..0x90 - Message block memory."]
     #[inline(always)]
     pub const fn wr_message_mem(&self, n: usize) -> &WR_MESSAGE_MEM {
-        &self.wr_message_mem[n]
+        #[allow(clippy::no_effect)]
+        [(); 16][n];
+        unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(128)
+                .add(4 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x80..0xc0 - Message block memory."]
+    #[doc = "0x80..0x90 - Message block memory."]
     #[inline(always)]
     pub fn wr_message_mem_iter(&self) -> impl Iterator<Item = &WR_MESSAGE_MEM> {
-        self.wr_message_mem.iter()
+        (0..16).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(128)
+                .add(4 * n)
+                .cast()
+        })
     }
-    #[doc = "0xc0..0xe0 - Result from upstream."]
+    #[doc = "0xc0..0xc8 - Result from upstream."]
     #[inline(always)]
     pub const fn rd_result_mem(&self, n: usize) -> &RD_RESULT_MEM {
-        &self.rd_result_mem[n]
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(192)
+                .add(4 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xc0..0xe0 - Result from upstream."]
+    #[doc = "0xc0..0xc8 - Result from upstream."]
     #[inline(always)]
     pub fn rd_result_mem_iter(&self) -> impl Iterator<Item = &RD_RESULT_MEM> {
-        self.rd_result_mem.iter()
+        (0..8).map(|n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(192)
+                .add(4 * n)
+                .cast()
+        })
     }
     #[doc = "0xf0 - Process control register 5."]
     #[inline(always)]

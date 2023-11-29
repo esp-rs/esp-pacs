@@ -6,8 +6,8 @@ pub struct RegisterBlock {
     idle: IDLE,
     mode: MODE,
     _reserved3: [u8; 0x04],
-    key_: [KEY_; 8],
-    text_: [TEXT_; 4],
+    key: [KEY; 8],
+    text: [TEXT; 4],
     endian: ENDIAN,
 }
 impl RegisterBlock {
@@ -28,25 +28,25 @@ impl RegisterBlock {
     }
     #[doc = "0x10..0x30 - "]
     #[inline(always)]
-    pub const fn key_(&self, n: usize) -> &KEY_ {
-        &self.key_[n]
+    pub const fn key(&self, n: usize) -> &KEY {
+        &self.key[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x10..0x30 - "]
     #[inline(always)]
-    pub fn key__iter(&self) -> impl Iterator<Item = &KEY_> {
-        self.key_.iter()
+    pub fn key_iter(&self) -> impl Iterator<Item = &KEY> {
+        self.key.iter()
     }
     #[doc = "0x30..0x40 - "]
     #[inline(always)]
-    pub const fn text_(&self, n: usize) -> &TEXT_ {
-        &self.text_[n]
+    pub const fn text(&self, n: usize) -> &TEXT {
+        &self.text[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x30..0x40 - "]
     #[inline(always)]
-    pub fn text__iter(&self) -> impl Iterator<Item = &TEXT_> {
-        self.text_.iter()
+    pub fn text_iter(&self) -> impl Iterator<Item = &TEXT> {
+        self.text.iter()
     }
     #[doc = "0x40 - "]
     #[inline(always)]
@@ -66,14 +66,14 @@ pub mod idle;
 pub type MODE = crate::Reg<mode::MODE_SPEC>;
 #[doc = ""]
 pub mod mode;
-#[doc = "KEY_ (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_`] module"]
-pub type KEY_ = crate::Reg<key_::KEY__SPEC>;
+#[doc = "KEY (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key`] module"]
+pub type KEY = crate::Reg<key::KEY_SPEC>;
 #[doc = ""]
-pub mod key_;
-#[doc = "TEXT_ (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_`] module"]
-pub type TEXT_ = crate::Reg<text_::TEXT__SPEC>;
+pub mod key;
+#[doc = "TEXT (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text`] module"]
+pub type TEXT = crate::Reg<text::TEXT_SPEC>;
 #[doc = ""]
-pub mod text_;
+pub mod text;
 #[doc = "ENDIAN (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`endian::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`endian::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@endian`] module"]
 pub type ENDIAN = crate::Reg<endian::ENDIAN_SPEC>;
 #[doc = ""]
