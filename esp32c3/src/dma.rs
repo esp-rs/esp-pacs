@@ -178,7 +178,7 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
-    #[doc = "0x70..0x7c - DMA_IN_CONF%s_CH%s_REG."]
+    #[doc = "0x70..0x7c - DMA_IN_CONF0_CH%s_REG."]
     #[inline(always)]
     pub const fn in_conf0_ch(&self, n: usize) -> &IN_CONF0_CH {
         #[allow(clippy::no_effect)]
@@ -192,7 +192,7 @@ impl RegisterBlock {
         }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x70..0x7c - DMA_IN_CONF%s_CH%s_REG."]
+    #[doc = "0x70..0x7c - DMA_IN_CONF0_CH%s_REG."]
     #[inline(always)]
     pub fn in_conf0_ch_iter(&self) -> impl Iterator<Item = &IN_CONF0_CH> {
         (0..3).map(|n| unsafe {
@@ -263,7 +263,7 @@ impl RegisterBlock {
     pub const fn in_dscr_ch0(&self) -> &IN_DSCR_CH0 {
         &self.in_dscr_ch0
     }
-    #[doc = "0x94..0xa0 - DMA_IN_DSCR_BF%s_CH%s_REG."]
+    #[doc = "0x94..0xa0 - DMA_IN_DSCR_BF0_CH%s_REG."]
     #[inline(always)]
     pub const fn in_dscr_bf0_ch(&self, n: usize) -> &IN_DSCR_BF0_CH {
         #[allow(clippy::no_effect)]
@@ -277,7 +277,7 @@ impl RegisterBlock {
         }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x94..0xa0 - DMA_IN_DSCR_BF%s_CH%s_REG."]
+    #[doc = "0x94..0xa0 - DMA_IN_DSCR_BF0_CH%s_REG."]
     #[inline(always)]
     pub fn in_dscr_bf0_ch_iter(&self) -> impl Iterator<Item = &IN_DSCR_BF0_CH> {
         (0..3).map(|n| unsafe {
@@ -343,7 +343,7 @@ impl RegisterBlock {
                 .cast()
         })
     }
-    #[doc = "0xd0..0xdc - DMA_OUT_CONF%s_CH%s_REG."]
+    #[doc = "0xd0..0xdc - DMA_OUT_CONF0_CH%s_REG."]
     #[inline(always)]
     pub const fn out_conf0_ch(&self, n: usize) -> &OUT_CONF0_CH {
         #[allow(clippy::no_effect)]
@@ -357,7 +357,7 @@ impl RegisterBlock {
         }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xd0..0xdc - DMA_OUT_CONF%s_CH%s_REG."]
+    #[doc = "0xd0..0xdc - DMA_OUT_CONF0_CH%s_REG."]
     #[inline(always)]
     pub fn out_conf0_ch_iter(&self) -> impl Iterator<Item = &OUT_CONF0_CH> {
         (0..3).map(|n| unsafe {
@@ -715,9 +715,9 @@ pub mod misc_conf;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "DMA_DATE_REG."]
 pub mod date;
-#[doc = "IN_CONF0_CH (rw) register accessor: DMA_IN_CONF%s_CH%s_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_conf0_ch::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_conf0_ch::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_conf0_ch`] module"]
+#[doc = "IN_CONF0_CH (rw) register accessor: DMA_IN_CONF0_CH%s_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_conf0_ch::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_conf0_ch::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_conf0_ch`] module"]
 pub type IN_CONF0_CH = crate::Reg<in_conf0_ch::IN_CONF0_CH_SPEC>;
-#[doc = "DMA_IN_CONF%s_CH%s_REG."]
+#[doc = "DMA_IN_CONF0_CH%s_REG."]
 pub mod in_conf0_ch;
 #[doc = "IN_CONF1_CH0 (rw) register accessor: DMA_IN_CONF1_CH0_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_conf1_ch0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_conf1_ch0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_conf1_ch0`] module"]
 pub type IN_CONF1_CH0 = crate::Reg<in_conf1_ch0::IN_CONF1_CH0_SPEC>;
@@ -753,9 +753,9 @@ pub mod in_err_eof_des_addr_ch0;
 pub type IN_DSCR_CH0 = crate::Reg<in_dscr_ch0::IN_DSCR_CH0_SPEC>;
 #[doc = "DMA_IN_DSCR_CH0_REG."]
 pub mod in_dscr_ch0;
-#[doc = "IN_DSCR_BF0_CH (r) register accessor: DMA_IN_DSCR_BF%s_CH%s_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_dscr_bf0_ch::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_dscr_bf0_ch`] module"]
+#[doc = "IN_DSCR_BF0_CH (r) register accessor: DMA_IN_DSCR_BF0_CH%s_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_dscr_bf0_ch::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_dscr_bf0_ch`] module"]
 pub type IN_DSCR_BF0_CH = crate::Reg<in_dscr_bf0_ch::IN_DSCR_BF0_CH_SPEC>;
-#[doc = "DMA_IN_DSCR_BF%s_CH%s_REG."]
+#[doc = "DMA_IN_DSCR_BF0_CH%s_REG."]
 pub mod in_dscr_bf0_ch;
 #[doc = "IN_DSCR_BF1_CH0 (r) register accessor: DMA_IN_DSCR_BF1_CH0_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_dscr_bf1_ch0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_dscr_bf1_ch0`] module"]
 pub type IN_DSCR_BF1_CH0 = crate::Reg<in_dscr_bf1_ch0::IN_DSCR_BF1_CH0_SPEC>;
@@ -769,9 +769,9 @@ pub mod in_pri_ch;
 pub type IN_PERI_SEL_CH = crate::Reg<in_peri_sel_ch::IN_PERI_SEL_CH_SPEC>;
 #[doc = "DMA_IN_PERI_SEL_CH%s_REG."]
 pub mod in_peri_sel_ch;
-#[doc = "OUT_CONF0_CH (rw) register accessor: DMA_OUT_CONF%s_CH%s_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_conf0_ch::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_conf0_ch::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_conf0_ch`] module"]
+#[doc = "OUT_CONF0_CH (rw) register accessor: DMA_OUT_CONF0_CH%s_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_conf0_ch::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_conf0_ch::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_conf0_ch`] module"]
 pub type OUT_CONF0_CH = crate::Reg<out_conf0_ch::OUT_CONF0_CH_SPEC>;
-#[doc = "DMA_OUT_CONF%s_CH%s_REG."]
+#[doc = "DMA_OUT_CONF0_CH%s_REG."]
 pub mod out_conf0_ch;
 #[doc = "OUT_CONF1_CH (rw) register accessor: DMA_OUT_CONF1_CH%s_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_conf1_ch::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_conf1_ch::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_conf1_ch`] module"]
 pub type OUT_CONF1_CH = crate::Reg<out_conf1_ch::OUT_CONF1_CH_SPEC>;

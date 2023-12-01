@@ -2,24 +2,24 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `CH_TX_END[0-7]` reader - Set this bit to enable rmt_ch%s_tx_end_int_st."]
+#[doc = "Field `CH_TX_END(0-7)` reader - Set this bit to enable rmt_ch%s_tx_end_int_st."]
 pub type CH_TX_END_R = crate::BitReader;
-#[doc = "Field `CH_TX_END[0-7]` writer - Set this bit to enable rmt_ch%s_tx_end_int_st."]
+#[doc = "Field `CH_TX_END(0-7)` writer - Set this bit to enable rmt_ch%s_tx_end_int_st."]
 pub type CH_TX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_END[0-7]` reader - Set this bit to enable rmt_ch%s_rx_end_int_st."]
+#[doc = "Field `CH_RX_END(0-7)` reader - Set this bit to enable rmt_ch%s_rx_end_int_st."]
 pub type CH_RX_END_R = crate::BitReader;
-#[doc = "Field `CH_RX_END[0-7]` writer - Set this bit to enable rmt_ch%s_rx_end_int_st."]
+#[doc = "Field `CH_RX_END(0-7)` writer - Set this bit to enable rmt_ch%s_rx_end_int_st."]
 pub type CH_RX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ERR[0-7]` reader - Set this bit to enable rmt_ch%s_err_int_st."]
+#[doc = "Field `CH_ERR(0-7)` reader - Set this bit to enable rmt_ch%s_err_int_st."]
 pub type CH_ERR_R = crate::BitReader;
-#[doc = "Field `CH_ERR[0-7]` writer - Set this bit to enable rmt_ch%s_err_int_st."]
+#[doc = "Field `CH_ERR(0-7)` writer - Set this bit to enable rmt_ch%s_err_int_st."]
 pub type CH_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_TX_THR_EVENT[0-7]` reader - Set this bit to enable rmt_ch%s_tx_thr_event_int_st."]
+#[doc = "Field `CH_TX_THR_EVENT(0-7)` reader - Set this bit to enable rmt_ch%s_tx_thr_event_int_st."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
-#[doc = "Field `CH_TX_THR_EVENT[0-7]` writer - Set this bit to enable rmt_ch%s_tx_thr_event_int_st."]
+#[doc = "Field `CH_TX_THR_EVENT(0-7)` writer - Set this bit to enable rmt_ch%s_tx_thr_event_int_st."]
 pub type CH_TX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Set this bit to enable rmt_ch[0-7]_tx_end_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_tx_end_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -29,7 +29,7 @@ impl R {
         CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "Set this bit to enable rmt_ch[0-7]_tx_end_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_tx_end_int_st."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
         (0..8).map(|n| CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0))
@@ -74,7 +74,7 @@ impl R {
     pub fn ch7_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "Set this bit to enable rmt_ch[0-7]_rx_end_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_rx_end_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
@@ -84,7 +84,7 @@ impl R {
         CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "Set this bit to enable rmt_ch[0-7]_rx_end_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_rx_end_int_st."]
     #[inline(always)]
     pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
         (0..8).map(|n| CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0))
@@ -129,7 +129,7 @@ impl R {
     pub fn ch7_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Set this bit to enable rmt_ch[0-7]_err_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_err_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
@@ -139,7 +139,7 @@ impl R {
         CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "Set this bit to enable rmt_ch[0-7]_err_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_err_int_st."]
     #[inline(always)]
     pub fn ch_err_iter(&self) -> impl Iterator<Item = CH_ERR_R> + '_ {
         (0..8).map(|n| CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0))
@@ -184,7 +184,7 @@ impl R {
     pub fn ch7_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "Set this bit to enable rmt_ch[0-7]_tx_thr_event_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_tx_thr_event_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
@@ -194,7 +194,7 @@ impl R {
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "Set this bit to enable rmt_ch[0-7]_tx_thr_event_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
         (0..8).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))
@@ -310,7 +310,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
     }
 }
 impl W {
-    #[doc = "Set this bit to enable rmt_ch[0-7]_tx_end_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_tx_end_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -368,7 +368,7 @@ impl W {
     pub fn ch7_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 21)
     }
-    #[doc = "Set this bit to enable rmt_ch[0-7]_rx_end_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_rx_end_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
@@ -426,7 +426,7 @@ impl W {
     pub fn ch7_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 22)
     }
-    #[doc = "Set this bit to enable rmt_ch[0-7]_err_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_err_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
@@ -484,7 +484,7 @@ impl W {
     pub fn ch7_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
         CH_ERR_W::new(self, 23)
     }
-    #[doc = "Set this bit to enable rmt_ch[0-7]_tx_thr_event_int_st."]
+    #[doc = "Set this bit to enable rmt_ch(0-7)_tx_thr_event_int_st."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]

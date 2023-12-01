@@ -12,9 +12,6 @@ form       = "0.11.0"
 log        = "0.4.20"
 semver     = "1.0.20"
 strum      = { version = "0.25.0", features = ["derive"] }
-svd2rust   = { version = "0.31.1", default-features = false }
+svd2rust   = { version = "0.31.2", default-features = false }
 svdtools   = "0.3.4"
 toml_edit  = "0.21.0"
-
-[patch.crates-io]
-svd2rust = { git = "https://github.com/rust-embedded/svd2rust", branch = "array_iter" }

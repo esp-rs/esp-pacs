@@ -10,7 +10,7 @@ use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{Config, Target};
-use svdtools::html::html_cli::svd2html;
+use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::Document;
 
 #[derive(Debug, Clone, Display, EnumIter, ValueEnum)]
@@ -127,7 +127,8 @@ fn patch_svd(workspace: &Path, chip: &Chip) -> Result<()> {
 
     let svd_path = workspace.join(chip.to_string()).join("svd");
     let yaml_file = svd_path.join("patches").join(format!("{chip}.yaml"));
-    svdtools::patch::process_file(&yaml_file, None, None)?;
+    let config = PatchConfig::default();
+    svdtools::patch::process_file(&yaml_file, None, None, &config)?;
 
     let from = svd_path.join(format!("{chip}.base.svd.patched"));
     let to = svd_path.join(format!("{chip}.svd"));

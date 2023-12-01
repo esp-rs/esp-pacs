@@ -1,18 +1,18 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
-#[doc = "Field `CH_TX_END[0-3]` writer - Set this bit to clear theCH%s_TX_END_INT interrupt."]
+#[doc = "Field `CH_TX_END(0-3)` writer - Set this bit to clear theCH%s_TX_END_INT interrupt."]
 pub type CH_TX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_TX_ERR[0-3]` writer - Set this bit to clear theCH%s_ERR_INT interrupt."]
+#[doc = "Field `CH_TX_ERR(0-3)` writer - Set this bit to clear theCH%s_ERR_INT interrupt."]
 pub type CH_TX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_TX_THR_EVENT[0-3]` writer - Set this bit to clear theCH%s_TX_THR_EVENT_INT interrupt."]
+#[doc = "Field `CH_TX_THR_EVENT(0-3)` writer - Set this bit to clear theCH%s_TX_THR_EVENT_INT interrupt."]
 pub type CH_TX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_TX_LOOP[0-3]` writer - Set this bit to clear theCH%s_TX_LOOP_INT interrupt."]
+#[doc = "Field `CH_TX_LOOP(0-3)` writer - Set this bit to clear theCH%s_TX_LOOP_INT interrupt."]
 pub type CH_TX_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_END[4-7]` writer - Set this bit to clear theCH4_RX_END_INT interrupt."]
+#[doc = "Field `CH_RX_END(4-7)` writer - Set this bit to clear theCH4_RX_END_INT interrupt."]
 pub type CH_RX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_ERR[4-7]` writer - Set this bit to clear theCH4_ERR_INT interrupt."]
+#[doc = "Field `CH_RX_ERR(4-7)` writer - Set this bit to clear theCH4_ERR_INT interrupt."]
 pub type CH_RX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_THR_EVENT[4-7]` writer - Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
+#[doc = "Field `CH_RX_THR_EVENT(4-7)` writer - Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
 pub type CH_RX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_CH3_DMA_ACCESS_FAIL` writer - Set this bit to clear the CH3_DMA_ACCESS_FAIL_INT interrupt."]
 pub type TX_CH3_DMA_ACCESS_FAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
@@ -25,7 +25,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     }
 }
 impl W {
-    #[doc = "Set this bit to clear theCH[0-3]_TX_END_INT interrupt."]
+    #[doc = "Set this bit to clear theCH(0-3)_TX_END_INT interrupt."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -59,7 +59,7 @@ impl W {
     pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<INT_CLR_SPEC> {
         CH_TX_END_W::new(self, 3)
     }
-    #[doc = "Set this bit to clear theCH[0-3]_ERR_INT interrupt."]
+    #[doc = "Set this bit to clear theCH(0-3)_ERR_INT interrupt."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field"]
     #[inline(always)]
@@ -93,7 +93,7 @@ impl W {
     pub fn ch3_tx_err(&mut self) -> CH_TX_ERR_W<INT_CLR_SPEC> {
         CH_TX_ERR_W::new(self, 7)
     }
-    #[doc = "Set this bit to clear theCH[0-3]_TX_THR_EVENT_INT interrupt."]
+    #[doc = "Set this bit to clear theCH(0-3)_TX_THR_EVENT_INT interrupt."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
@@ -127,7 +127,7 @@ impl W {
     pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 11)
     }
-    #[doc = "Set this bit to clear theCH[0-3]_TX_LOOP_INT interrupt."]
+    #[doc = "Set this bit to clear theCH(0-3)_TX_LOOP_INT interrupt."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
     #[inline(always)]
