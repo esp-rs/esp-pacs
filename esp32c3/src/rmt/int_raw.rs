@@ -2,36 +2,36 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `CH_TX_END[0-1]` reader - reg_ch%s_tx_end_int_raw."]
+#[doc = "Field `CH_TX_END(0-1)` reader - reg_ch%s_tx_end_int_raw."]
 pub type CH_TX_END_R = crate::BitReader;
-#[doc = "Field `CH_TX_END[0-1]` writer - reg_ch%s_tx_end_int_raw."]
+#[doc = "Field `CH_TX_END(0-1)` writer - reg_ch%s_tx_end_int_raw."]
 pub type CH_TX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_END[2-3]` reader - reg_ch2_rx_end_int_raw."]
+#[doc = "Field `CH_RX_END(2-3)` reader - reg_ch2_rx_end_int_raw."]
 pub type CH_RX_END_R = crate::BitReader;
-#[doc = "Field `CH_RX_END[2-3]` writer - reg_ch2_rx_end_int_raw."]
+#[doc = "Field `CH_RX_END(2-3)` writer - reg_ch2_rx_end_int_raw."]
 pub type CH_RX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_TX_ERR[0-1]` reader - reg_ch%s_err_int_raw."]
+#[doc = "Field `CH_TX_ERR(0-1)` reader - reg_ch%s_err_int_raw."]
 pub type CH_TX_ERR_R = crate::BitReader;
-#[doc = "Field `CH_TX_ERR[0-1]` writer - reg_ch%s_err_int_raw."]
+#[doc = "Field `CH_TX_ERR(0-1)` writer - reg_ch%s_err_int_raw."]
 pub type CH_TX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_ERR[2-3]` reader - reg_ch2_err_int_raw."]
+#[doc = "Field `CH_RX_ERR(2-3)` reader - reg_ch2_err_int_raw."]
 pub type CH_RX_ERR_R = crate::BitReader;
-#[doc = "Field `CH_RX_ERR[2-3]` writer - reg_ch2_err_int_raw."]
+#[doc = "Field `CH_RX_ERR(2-3)` writer - reg_ch2_err_int_raw."]
 pub type CH_RX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_TX_THR_EVENT[0-1]` reader - reg_ch%s_tx_thr_event_int_raw."]
+#[doc = "Field `CH_TX_THR_EVENT(0-1)` reader - reg_ch%s_tx_thr_event_int_raw."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
-#[doc = "Field `CH_TX_THR_EVENT[0-1]` writer - reg_ch%s_tx_thr_event_int_raw."]
+#[doc = "Field `CH_TX_THR_EVENT(0-1)` writer - reg_ch%s_tx_thr_event_int_raw."]
 pub type CH_TX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_THR_EVENT[2-3]` reader - reg_ch2_rx_thr_event_int_raw."]
+#[doc = "Field `CH_RX_THR_EVENT(2-3)` reader - reg_ch2_rx_thr_event_int_raw."]
 pub type CH_RX_THR_EVENT_R = crate::BitReader;
-#[doc = "Field `CH_RX_THR_EVENT[2-3]` writer - reg_ch2_rx_thr_event_int_raw."]
+#[doc = "Field `CH_RX_THR_EVENT(2-3)` writer - reg_ch2_rx_thr_event_int_raw."]
 pub type CH_RX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_TX_LOOP[0-1]` reader - reg_ch%s_tx_loop_int_raw."]
+#[doc = "Field `CH_TX_LOOP(0-1)` reader - reg_ch%s_tx_loop_int_raw."]
 pub type CH_TX_LOOP_R = crate::BitReader;
-#[doc = "Field `CH_TX_LOOP[0-1]` writer - reg_ch%s_tx_loop_int_raw."]
+#[doc = "Field `CH_TX_LOOP(0-1)` writer - reg_ch%s_tx_loop_int_raw."]
 pub type CH_TX_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "reg_ch[0-1]_tx_end_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_end_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -41,7 +41,7 @@ impl R {
         CH_TX_END_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "reg_ch[0-1]_tx_end_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_end_int_raw."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
         (0..2).map(|n| CH_TX_END_R::new(((self.bits >> n) & 1) != 0))
@@ -81,7 +81,7 @@ impl R {
     pub fn ch3_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "reg_ch[0-1]_err_int_raw."]
+    #[doc = "reg_ch(0-1)_err_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field"]
     #[inline(always)]
@@ -91,7 +91,7 @@ impl R {
         CH_TX_ERR_R::new(((self.bits >> (n + 4)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "reg_ch[0-1]_err_int_raw."]
+    #[doc = "reg_ch(0-1)_err_int_raw."]
     #[inline(always)]
     pub fn ch_tx_err_iter(&self) -> impl Iterator<Item = CH_TX_ERR_R> + '_ {
         (0..2).map(|n| CH_TX_ERR_R::new(((self.bits >> (n + 4)) & 1) != 0))
@@ -131,7 +131,7 @@ impl R {
     pub fn ch3_rx_err(&self) -> CH_RX_ERR_R {
         CH_RX_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "reg_ch[0-1]_tx_thr_event_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_thr_event_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
@@ -141,7 +141,7 @@ impl R {
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "reg_ch[0-1]_tx_thr_event_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_thr_event_int_raw."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
         (0..2).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0))
@@ -181,7 +181,7 @@ impl R {
     pub fn ch3_rx_thr_event(&self) -> CH_RX_THR_EVENT_R {
         CH_RX_THR_EVENT_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "reg_ch[0-1]_tx_loop_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_loop_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
     #[inline(always)]
@@ -191,7 +191,7 @@ impl R {
         CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "reg_ch[0-1]_tx_loop_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_loop_int_raw."]
     #[inline(always)]
     pub fn ch_tx_loop_iter(&self) -> impl Iterator<Item = CH_TX_LOOP_R> + '_ {
         (0..2).map(|n| CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))
@@ -247,7 +247,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
     }
 }
 impl W {
-    #[doc = "reg_ch[0-1]_tx_end_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_end_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -291,7 +291,7 @@ impl W {
     pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_RAW_SPEC> {
         CH_RX_END_W::new(self, 3)
     }
-    #[doc = "reg_ch[0-1]_err_int_raw."]
+    #[doc = "reg_ch(0-1)_err_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field"]
     #[inline(always)]
@@ -335,7 +335,7 @@ impl W {
     pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<INT_RAW_SPEC> {
         CH_RX_ERR_W::new(self, 7)
     }
-    #[doc = "reg_ch[0-1]_tx_thr_event_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_thr_event_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
@@ -379,7 +379,7 @@ impl W {
     pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_RAW_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 11)
     }
-    #[doc = "reg_ch[0-1]_tx_loop_int_raw."]
+    #[doc = "reg_ch(0-1)_tx_loop_int_raw."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
     #[inline(always)]

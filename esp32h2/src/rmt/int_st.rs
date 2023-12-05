@@ -1,21 +1,21 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `CH_TX_END[0-1]` reader - The masked interrupt status bit for CH%s_TX_END_INT."]
+#[doc = "Field `CH_TX_END(0-1)` reader - The masked interrupt status bit for CH%s_TX_END_INT."]
 pub type CH_TX_END_R = crate::BitReader;
-#[doc = "Field `CH_RX_END[2-3]` reader - The masked interrupt status bit for CH2_RX_END_INT."]
+#[doc = "Field `CH_RX_END(2-3)` reader - The masked interrupt status bit for CH2_RX_END_INT."]
 pub type CH_RX_END_R = crate::BitReader;
-#[doc = "Field `CH_TX_ERR[0-1]` reader - The masked interrupt status bit for CH4_ERR_INT."]
+#[doc = "Field `CH_TX_ERR(0-1)` reader - The masked interrupt status bit for CH4_ERR_INT."]
 pub type CH_TX_ERR_R = crate::BitReader;
-#[doc = "Field `CH_RX_ERR[2-3]` reader - The masked interrupt status bit for CH6_ERR_INT."]
+#[doc = "Field `CH_RX_ERR(2-3)` reader - The masked interrupt status bit for CH6_ERR_INT."]
 pub type CH_RX_ERR_R = crate::BitReader;
-#[doc = "Field `CH_TX_THR_EVENT[0-1]` reader - The masked interrupt status bit for CH%s_TX_THR_EVENT_INT."]
+#[doc = "Field `CH_TX_THR_EVENT(0-1)` reader - The masked interrupt status bit for CH%s_TX_THR_EVENT_INT."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
-#[doc = "Field `CH_RX_THR_EVENT[2-3]` reader - The masked interrupt status bit for CH2_RX_THR_EVENT_INT."]
+#[doc = "Field `CH_RX_THR_EVENT(2-3)` reader - The masked interrupt status bit for CH2_RX_THR_EVENT_INT."]
 pub type CH_RX_THR_EVENT_R = crate::BitReader;
-#[doc = "Field `CH_X_LOOP[0-1]` reader - The masked interrupt status bit for CH%s_TX_LOOP_INT."]
+#[doc = "Field `CH_X_LOOP(0-1)` reader - The masked interrupt status bit for CH%s_TX_LOOP_INT."]
 pub type CH_X_LOOP_R = crate::BitReader;
 impl R {
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_END_INT."]
+    #[doc = "The masked interrupt status bit for CH(0-1)_TX_END_INT."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -25,7 +25,7 @@ impl R {
         CH_TX_END_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_END_INT."]
+    #[doc = "The masked interrupt status bit for CH(0-1)_TX_END_INT."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
         (0..2).map(|n| CH_TX_END_R::new(((self.bits >> n) & 1) != 0))
@@ -115,7 +115,7 @@ impl R {
     pub fn ch3_rx_err(&self) -> CH_RX_ERR_R {
         CH_RX_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_THR_EVENT_INT."]
+    #[doc = "The masked interrupt status bit for CH(0-1)_TX_THR_EVENT_INT."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
@@ -125,7 +125,7 @@ impl R {
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_THR_EVENT_INT."]
+    #[doc = "The masked interrupt status bit for CH(0-1)_TX_THR_EVENT_INT."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
         (0..2).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0))
@@ -165,7 +165,7 @@ impl R {
     pub fn ch3_rx_thr_event(&self) -> CH_RX_THR_EVENT_R {
         CH_RX_THR_EVENT_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_LOOP_INT."]
+    #[doc = "The masked interrupt status bit for CH(0-1)_TX_LOOP_INT."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_X_LOOP` field"]
     #[inline(always)]
@@ -175,7 +175,7 @@ impl R {
         CH_X_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The masked interrupt status bit for CH[0-1]_TX_LOOP_INT."]
+    #[doc = "The masked interrupt status bit for CH(0-1)_TX_LOOP_INT."]
     #[inline(always)]
     pub fn ch_x_loop_iter(&self) -> impl Iterator<Item = CH_X_LOOP_R> + '_ {
         (0..2).map(|n| CH_X_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))

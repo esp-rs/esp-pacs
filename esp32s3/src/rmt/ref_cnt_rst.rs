@@ -1,6 +1,6 @@
 #[doc = "Register `REF_CNT_RST` writer"]
 pub type W = crate::W<REF_CNT_RST_SPEC>;
-#[doc = "Field `CH[0-7]` writer - This register is used to reset the clock divider of CHANNEL%s."]
+#[doc = "Field `CH(0-7)` writer - This register is used to reset the clock divider of CHANNEL%s."]
 pub type CH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
@@ -9,7 +9,7 @@ impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
     }
 }
 impl W {
-    #[doc = "This register is used to reset the clock divider of CHANNEL[0-7]."]
+    #[doc = "This register is used to reset the clock divider of CHANNEL(0-7)."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0` field"]
     #[inline(always)]

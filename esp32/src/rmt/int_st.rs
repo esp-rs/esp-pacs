@@ -1,15 +1,15 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `CH_TX_END[0-7]` reader - The interrupt state bit for channel %s's mt_ch%s_tx_end_int_raw when mt_ch%s_tx_end_int_ena is set to %s."]
+#[doc = "Field `CH_TX_END(0-7)` reader - The interrupt state bit for channel %s's mt_ch%s_tx_end_int_raw when mt_ch%s_tx_end_int_ena is set to %s."]
 pub type CH_TX_END_R = crate::BitReader;
-#[doc = "Field `CH_RX_END[0-7]` reader - The interrupt state bit for channel %s's rmt_ch%s_rx_end_int_raw when rmt_ch%s_rx_end_int_ena is set to %s."]
+#[doc = "Field `CH_RX_END(0-7)` reader - The interrupt state bit for channel %s's rmt_ch%s_rx_end_int_raw when rmt_ch%s_rx_end_int_ena is set to %s."]
 pub type CH_RX_END_R = crate::BitReader;
-#[doc = "Field `CH_ERR[0-7]` reader - The interrupt state bit for channel %s's rmt_ch%s_err_int_raw when rmt_ch%s_err_int_ena is set to %s."]
+#[doc = "Field `CH_ERR(0-7)` reader - The interrupt state bit for channel %s's rmt_ch%s_err_int_raw when rmt_ch%s_err_int_ena is set to %s."]
 pub type CH_ERR_R = crate::BitReader;
-#[doc = "Field `CH_TX_THR_EVENT[0-7]` reader - The interrupt state bit for channel %s's rmt_ch%s_tx_thr_event_int_raw when mt_ch%s_tx_thr_event_int_ena is set to 1."]
+#[doc = "Field `CH_TX_THR_EVENT(0-7)` reader - The interrupt state bit for channel %s's rmt_ch%s_tx_thr_event_int_raw when mt_ch%s_tx_thr_event_int_ena is set to 1."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 impl R {
-    #[doc = "The interrupt state bit for channel [0-7]'s mt_ch[0-7]_tx_end_int_raw when mt_ch[0-7]_tx_end_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel (0-7)'s mt_ch(0-7)_tx_end_int_raw when mt_ch(0-7)_tx_end_int_ena is set to (0-7)."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -19,7 +19,7 @@ impl R {
         CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt state bit for channel [0-7]'s mt_ch[0-7]_tx_end_int_raw when mt_ch[0-7]_tx_end_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel (0-7)'s mt_ch(0-7)_tx_end_int_raw when mt_ch(0-7)_tx_end_int_ena is set to (0-7)."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
         (0..8).map(|n| CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0))
@@ -64,7 +64,7 @@ impl R {
     pub fn ch7_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_rx_end_int_raw when rmt_ch[0-7]_rx_end_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_rx_end_int_raw when rmt_ch(0-7)_rx_end_int_ena is set to (0-7)."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
@@ -74,7 +74,7 @@ impl R {
         CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_rx_end_int_raw when rmt_ch[0-7]_rx_end_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_rx_end_int_raw when rmt_ch(0-7)_rx_end_int_ena is set to (0-7)."]
     #[inline(always)]
     pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
         (0..8).map(|n| CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0))
@@ -119,7 +119,7 @@ impl R {
     pub fn ch7_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_err_int_raw when rmt_ch[0-7]_err_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_err_int_raw when rmt_ch(0-7)_err_int_ena is set to (0-7)."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
@@ -129,7 +129,7 @@ impl R {
         CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_err_int_raw when rmt_ch[0-7]_err_int_ena is set to [0-7]."]
+    #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_err_int_raw when rmt_ch(0-7)_err_int_ena is set to (0-7)."]
     #[inline(always)]
     pub fn ch_err_iter(&self) -> impl Iterator<Item = CH_ERR_R> + '_ {
         (0..8).map(|n| CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0))
@@ -174,7 +174,7 @@ impl R {
     pub fn ch7_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_tx_thr_event_int_raw when mt_ch[0-7]_tx_thr_event_int_ena is set to 1."]
+    #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_tx_thr_event_int_raw when mt_ch(0-7)_tx_thr_event_int_ena is set to 1."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
@@ -184,7 +184,7 @@ impl R {
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt state bit for channel [0-7]'s rmt_ch[0-7]_tx_thr_event_int_raw when mt_ch[0-7]_tx_thr_event_int_ena is set to 1."]
+    #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_tx_thr_event_int_raw when mt_ch(0-7)_tx_thr_event_int_ena is set to 1."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
         (0..8).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))

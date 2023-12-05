@@ -1,15 +1,15 @@
 #[doc = "Register `INT_RAW` reader"]
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Field `CH_TX_END[0-7]` reader - The interrupt raw bit for channel %s turns to high level when the transmit process is done."]
+#[doc = "Field `CH_TX_END(0-7)` reader - The interrupt raw bit for channel %s turns to high level when the transmit process is done."]
 pub type CH_TX_END_R = crate::BitReader;
-#[doc = "Field `CH_RX_END[0-7]` reader - The interrupt raw bit for channel %s turns to high level when the receive process is done."]
+#[doc = "Field `CH_RX_END(0-7)` reader - The interrupt raw bit for channel %s turns to high level when the receive process is done."]
 pub type CH_RX_END_R = crate::BitReader;
-#[doc = "Field `CH_ERR[0-7]` reader - The interrupt raw bit for channel %s turns to high level when channle %s detects some errors."]
+#[doc = "Field `CH_ERR(0-7)` reader - The interrupt raw bit for channel %s turns to high level when channle %s detects some errors."]
 pub type CH_ERR_R = crate::BitReader;
-#[doc = "Field `CH_TX_THR_EVENT[0-7]` reader - The interrupt raw bit for channel %s turns to high level when transmitter in channle%s have send datas more than reg_rmt_tx_lim_ch%s after detecting this interrupt software can updata the old datas with new datas."]
+#[doc = "Field `CH_TX_THR_EVENT(0-7)` reader - The interrupt raw bit for channel %s turns to high level when transmitter in channle%s have send datas more than reg_rmt_tx_lim_ch%s after detecting this interrupt software can updata the old datas with new datas."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 impl R {
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the transmit process is done."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when the transmit process is done."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
     #[inline(always)]
@@ -19,7 +19,7 @@ impl R {
         CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the transmit process is done."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when the transmit process is done."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
         (0..8).map(|n| CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0))
@@ -64,7 +64,7 @@ impl R {
     pub fn ch7_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the receive process is done."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when the receive process is done."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
     #[inline(always)]
@@ -74,7 +74,7 @@ impl R {
         CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the receive process is done."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when the receive process is done."]
     #[inline(always)]
     pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
         (0..8).map(|n| CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0))
@@ -119,7 +119,7 @@ impl R {
     pub fn ch7_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when channle [0-7] detects some errors."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when channle (0-7) detects some errors."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
     #[inline(always)]
@@ -129,7 +129,7 @@ impl R {
         CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when channle [0-7] detects some errors."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when channle (0-7) detects some errors."]
     #[inline(always)]
     pub fn ch_err_iter(&self) -> impl Iterator<Item = CH_ERR_R> + '_ {
         (0..8).map(|n| CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0))
@@ -174,7 +174,7 @@ impl R {
     pub fn ch7_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when transmitter in channle[0-7] have send datas more than reg_rmt_tx_lim_ch[0-7] after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when transmitter in channle(0-7) have send datas more than reg_rmt_tx_lim_ch(0-7) after detecting this interrupt software can updata the old datas with new datas."]
     #[doc = ""]
     #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
     #[inline(always)]
@@ -184,7 +184,7 @@ impl R {
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when transmitter in channle[0-7] have send datas more than reg_rmt_tx_lim_ch[0-7] after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when transmitter in channle(0-7) have send datas more than reg_rmt_tx_lim_ch(0-7) after detecting this interrupt software can updata the old datas with new datas."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
         (0..8).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))
