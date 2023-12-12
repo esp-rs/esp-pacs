@@ -76,6 +76,12 @@ HMAC:
       dimIncrement: 0x4
       size: 0x20
 
+I2S0:
+  _modify:
+    _interrupts:
+      I2S1:
+        name: I2S0
+
 RSA:
   _modify:
     "M_MEM*":

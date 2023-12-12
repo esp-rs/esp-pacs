@@ -44,7 +44,7 @@ extern "C" {
     fn HP_APM_M2();
     fn HP_APM_M3();
     fn MSPI();
-    fn I2S1();
+    fn I2S0();
     fn UHCI0();
     fn UART0();
     fn UART1();
@@ -155,7 +155,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 65] = [
         _handler: HP_APM_M3,
     },
     Vector { _handler: MSPI },
-    Vector { _handler: I2S1 },
+    Vector { _handler: I2S0 },
     Vector { _handler: UHCI0 },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },

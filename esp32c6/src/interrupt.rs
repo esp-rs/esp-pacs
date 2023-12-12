@@ -84,8 +84,8 @@ pub enum Interrupt {
     LP_APM0 = 39,
     #[doc = "40 - MSPI"]
     MSPI = 40,
-    #[doc = "41 - I2S1"]
-    I2S1 = 41,
+    #[doc = "41 - I2S0"]
+    I2S0 = 41,
     #[doc = "42 - UHCI0"]
     UHCI0 = 42,
     #[doc = "43 - UART0"]
@@ -206,7 +206,7 @@ impl Interrupt {
             38 => Ok(Interrupt::HP_APM_M3),
             39 => Ok(Interrupt::LP_APM0),
             40 => Ok(Interrupt::MSPI),
-            41 => Ok(Interrupt::I2S1),
+            41 => Ok(Interrupt::I2S0),
             42 => Ok(Interrupt::UHCI0),
             43 => Ok(Interrupt::UART0),
             44 => Ok(Interrupt::UART1),
