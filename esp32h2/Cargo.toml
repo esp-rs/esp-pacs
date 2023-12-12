@@ -1,6 +1,6 @@
 [package]
 name = "esp32h2"
-version = "0.5.0"
+version = "0.6.0"
 edition = "2021"
 rust-version = "1.67"
 description = "Peripheral access crate for the ESP32-H2"
