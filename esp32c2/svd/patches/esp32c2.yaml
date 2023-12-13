@@ -35,7 +35,7 @@ ECC:
 SHA:
   _modify:
     "H_MEM*":
-      dim: 16
+      dim: 8
       dimIncrement: 0x4
       size: 0x20
     "M_MEM*":
