@@ -22,10 +22,12 @@ The `xtask` package is a binary application, based on the workflow outlined by [
 Usage: xtask <COMMAND>
 
 Commands:
+  html          Generate a webpage for a given SVD file
   patch         Patch the specified package(s)'s SVD file
   generate      Generate the specified package(s)
   build         Build the specified package(s)
   bump-version  Bump the version of the specified package(s)
+  publish       Published the specified package(s)
   help          Print this message or the help of the given subcommand(s)
 
 Options:

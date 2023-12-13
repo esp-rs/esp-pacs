@@ -38,6 +38,9 @@ enum Version {
     Patch,
 }
 
+// ----------------------------------------------------------------------------
+// Command-line interface
+
 #[derive(Debug, Parser)]
 struct Cli {
     #[command(subcommand)]
@@ -46,10 +49,20 @@ struct Cli {
 
 #[derive(Debug, Subcommand)]
 enum Commands {
+    /// Generate a webpage for a given SVD file
+    ///
+    /// Contains details on every peripheral and register and their level
+    /// of coverage.
+    Html {
+        /// Package(s) to target
+        #[arg(value_enum, default_values_t = Chip::iter())]
+        chips: Vec<Chip>,
+    },
+
     /// Patch the specified package(s)'s SVD file
     Patch {
-        /// Chip(s) to target
-        #[clap(value_enum, default_values_t = Chip::iter())]
+        /// Package(s) to target
+        #[arg(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
     },
 
@@ -58,8 +71,8 @@ enum Commands {
     /// Additionally patches the releavant SVD(s) prior to generating the
     /// package(s).
     Generate {
-        /// Chip(s) to target
-        #[clap(value_enum, default_values_t = Chip::iter())]
+        /// Package(s) to target
+        #[arg(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
     },
 
@@ -68,29 +81,36 @@ enum Commands {
     /// Additionally patches the relevant SVD(s) and generates the relevant
     /// package(s) prior to building the package(s).
     Build {
-        /// Chip(s) to target
-        #[clap(value_enum, default_values_t = Chip::iter())]
+        /// Package(s) to target
+        #[arg(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
     },
 
     /// Bump the version of the specified package(s)
     BumpVersion {
         /// How much to bump the version
-        #[clap(value_enum)]
+        #[arg(value_enum)]
         amount: Version,
-        /// Chip(s) to target
-        #[clap(value_enum, default_values_t = Chip::iter())]
+
+        /// Package(s) to target
+        #[arg(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
     },
 
-    // Generates a webpage for a given SVD file containing details on every
-    /// peripheral and register and their level of coverage.
-    Html {
-        /// Chip(s) to target
-        #[clap(value_enum, default_values_t = Chip::iter())]
+    /// Published the specified package(s)
+    Publish {
+        /// Perform all checks without uploading
+        #[arg(long)]
+        dry_run: bool,
+
+        /// Package(s) to publish
+        #[arg(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
     },
 }
+
+// ----------------------------------------------------------------------------
+// Application
 
 fn main() -> Result<()> {
     env_logger::Builder::new()
@@ -103,23 +123,47 @@ fn main() -> Result<()> {
     let workspace = workspace.parent().unwrap().canonicalize()?;
 
     match Cli::parse().command {
+        Commands::Html { chips } => generate_html(&workspace, chips),
+
         Commands::Patch { chips } => chips
             .iter()
             .try_for_each(|chip| patch_svd(&workspace, chip)),
+
         Commands::Generate { chips } => chips
             .iter()
             .try_for_each(|chip: &Chip| generate_package(&workspace, chip)),
+
         Commands::Build { chips } => chips
             .iter()
             .try_for_each(|chip| build_package(&workspace, chip)),
-        Commands::BumpVersion {
-            chips,
-            amount: version,
-        } => chips
+
+        Commands::BumpVersion { chips, amount } => chips
             .iter()
-            .try_for_each(|chip| bump_version(&workspace, chip, version)),
-        Commands::Html { chips } => generate_html(&workspace, chips),
+            .try_for_each(|chip| bump_version(&workspace, chip, amount)),
+
+        Commands::Publish { dry_run, chips } => chips
+            .iter()
+            .try_for_each(|chip| publish_package(&workspace, chip, dry_run)),
     }
+}
+
+// ----------------------------------------------------------------------------
+// Subcommands
+
+fn generate_html(workspace: &Path, chips: Vec<Chip>) -> Result<()> {
+    let svdfiles = chips
+        .iter()
+        .map(|chip| {
+            workspace
+                .join(chip.to_string())
+                .join("svd")
+                .join(format!("{chip}.svd"))
+        })
+        .collect::<Vec<_>>();
+
+    svd2html(&workspace.join("html"), &svdfiles)?;
+
+    Ok(())
 }
 
 fn patch_svd(workspace: &Path, chip: &Chip) -> Result<()> {
@@ -266,6 +310,25 @@ fn bump_version(workspace: &Path, chip: &Chip, amount: Version) -> Result<()> {
     Ok(())
 }
 
+fn publish_package(workspace: &Path, chip: &Chip, dry_run: bool) -> Result<()> {
+    // Patch the SVD and generate the package prior to publishing:
+    generate_package(workspace, chip)?;
+
+    let path = workspace.join(chip.to_string());
+    clean(&path)?;
+
+    log::info!("publishing package '{chip}', dry run: {dry_run}");
+    Command::new("cargo")
+        .args(&["publish", if dry_run { "--dry-run" } else { "" }])
+        .current_dir(path)
+        .output()?;
+
+    Ok(())
+}
+
+// ----------------------------------------------------------------------------
+// Helper functions
+
 fn build_target(path: &Path) -> Result<String> {
     let config_file = path.join(".cargo").join("config.toml");
     let target = extract_toml_value(&config_file, &["build", "target"])?;
@@ -317,22 +380,6 @@ fn clean(path: &Path) -> Result<()> {
         .arg("clean")
         .current_dir(path)
         .output()?;
-
-    Ok(())
-}
-
-fn generate_html(workspace: &Path, chips: Vec<Chip>) -> Result<()> {
-    let svdfiles = chips
-        .iter()
-        .map(|chip| {
-            workspace
-                .join(chip.to_string())
-                .join("svd")
-                .join(format!("{chip}.svd"))
-        })
-        .collect::<Vec<_>>();
-
-    svd2html(&workspace.join("html"), &svdfiles)?;
 
     Ok(())
 }
