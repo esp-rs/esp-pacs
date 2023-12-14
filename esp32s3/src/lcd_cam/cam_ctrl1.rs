@@ -2,13 +2,13 @@
 pub type R = crate::R<CAM_CTRL1_SPEC>;
 #[doc = "Register `CAM_CTRL1` writer"]
 pub type W = crate::W<CAM_CTRL1_SPEC>;
-#[doc = "Field `CAM_REC_DATA_BYTELEN` reader - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
+#[doc = "Field `CAM_REC_DATA_BYTELEN` reader - Configure camera received data byte length. When the length of received data reaches this value + 1, GDMA in_suc_eof_int is triggered."]
 pub type CAM_REC_DATA_BYTELEN_R = crate::FieldReader<u16>;
-#[doc = "Field `CAM_REC_DATA_BYTELEN` writer - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
+#[doc = "Field `CAM_REC_DATA_BYTELEN` writer - Configure camera received data byte length. When the length of received data reaches this value + 1, GDMA in_suc_eof_int is triggered."]
 pub type CAM_REC_DATA_BYTELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
-#[doc = "Field `CAM_LINE_INT_NUM` reader - The line number minus 1 to generate cam_hs_int."]
+#[doc = "Field `CAM_LINE_INT_NUM` reader - Configure line number. When the number of received lines reaches this value + 1, LCD_CAM_CAM_HS_INT is triggered."]
 pub type CAM_LINE_INT_NUM_R = crate::FieldReader;
-#[doc = "Field `CAM_LINE_INT_NUM` writer - The line number minus 1 to generate cam_hs_int."]
+#[doc = "Field `CAM_LINE_INT_NUM` writer - Configure line number. When the number of received lines reaches this value + 1, LCD_CAM_CAM_HS_INT is triggered."]
 pub type CAM_LINE_INT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `CAM_CLK_INV` reader - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
 pub type CAM_CLK_INV_R = crate::BitReader;
@@ -18,9 +18,9 @@ pub type CAM_CLK_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CAM_VSYNC_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `CAM_VSYNC_FILTER_EN` writer - 1: Enable CAM_VSYNC filter function. 0: bypass."]
 pub type CAM_VSYNC_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAM_2BYTE_EN` reader - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
+#[doc = "Field `CAM_2BYTE_EN` reader - 1: The width of input data is 16 bits. 0: The width of input data is 8 bits."]
 pub type CAM_2BYTE_EN_R = crate::BitReader;
-#[doc = "Field `CAM_2BYTE_EN` writer - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
+#[doc = "Field `CAM_2BYTE_EN` writer - 1: The width of input data is 16 bits. 0: The width of input data is 8 bits."]
 pub type CAM_2BYTE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAM_DE_INV` reader - CAM_DE invert enable signal, valid in high level."]
 pub type CAM_DE_INV_R = crate::BitReader;
@@ -44,15 +44,15 @@ pub type CAM_START_R = crate::BitReader;
 pub type CAM_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAM_RESET` writer - Camera module reset signal."]
 pub type CAM_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAM_AFIFO_RESET` writer - Camera AFIFO reset signal."]
+#[doc = "Field `CAM_AFIFO_RESET` writer - Camera Async Rx FIFO reset signal."]
 pub type CAM_AFIFO_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:15 - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
+    #[doc = "Bits 0:15 - Configure camera received data byte length. When the length of received data reaches this value + 1, GDMA in_suc_eof_int is triggered."]
     #[inline(always)]
     pub fn cam_rec_data_bytelen(&self) -> CAM_REC_DATA_BYTELEN_R {
         CAM_REC_DATA_BYTELEN_R::new((self.bits & 0xffff) as u16)
     }
-    #[doc = "Bits 16:21 - The line number minus 1 to generate cam_hs_int."]
+    #[doc = "Bits 16:21 - Configure line number. When the number of received lines reaches this value + 1, LCD_CAM_CAM_HS_INT is triggered."]
     #[inline(always)]
     pub fn cam_line_int_num(&self) -> CAM_LINE_INT_NUM_R {
         CAM_LINE_INT_NUM_R::new(((self.bits >> 16) & 0x3f) as u8)
@@ -67,7 +67,7 @@ impl R {
     pub fn cam_vsync_filter_en(&self) -> CAM_VSYNC_FILTER_EN_R {
         CAM_VSYNC_FILTER_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "Bit 24 - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
+    #[doc = "Bit 24 - 1: The width of input data is 16 bits. 0: The width of input data is 8 bits."]
     #[inline(always)]
     pub fn cam_2byte_en(&self) -> CAM_2BYTE_EN_R {
         CAM_2BYTE_EN_R::new(((self.bits >> 24) & 1) != 0)
@@ -143,13 +143,13 @@ impl core::fmt::Debug for crate::generic::Reg<CAM_CTRL1_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
+    #[doc = "Bits 0:15 - Configure camera received data byte length. When the length of received data reaches this value + 1, GDMA in_suc_eof_int is triggered."]
     #[inline(always)]
     #[must_use]
     pub fn cam_rec_data_bytelen(&mut self) -> CAM_REC_DATA_BYTELEN_W<CAM_CTRL1_SPEC> {
         CAM_REC_DATA_BYTELEN_W::new(self, 0)
     }
-    #[doc = "Bits 16:21 - The line number minus 1 to generate cam_hs_int."]
+    #[doc = "Bits 16:21 - Configure line number. When the number of received lines reaches this value + 1, LCD_CAM_CAM_HS_INT is triggered."]
     #[inline(always)]
     #[must_use]
     pub fn cam_line_int_num(&mut self) -> CAM_LINE_INT_NUM_W<CAM_CTRL1_SPEC> {
@@ -167,7 +167,7 @@ impl W {
     pub fn cam_vsync_filter_en(&mut self) -> CAM_VSYNC_FILTER_EN_W<CAM_CTRL1_SPEC> {
         CAM_VSYNC_FILTER_EN_W::new(self, 23)
     }
-    #[doc = "Bit 24 - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
+    #[doc = "Bit 24 - 1: The width of input data is 16 bits. 0: The width of input data is 8 bits."]
     #[inline(always)]
     #[must_use]
     pub fn cam_2byte_en(&mut self) -> CAM_2BYTE_EN_W<CAM_CTRL1_SPEC> {
@@ -209,7 +209,7 @@ impl W {
     pub fn cam_reset(&mut self) -> CAM_RESET_W<CAM_CTRL1_SPEC> {
         CAM_RESET_W::new(self, 30)
     }
-    #[doc = "Bit 31 - Camera AFIFO reset signal."]
+    #[doc = "Bit 31 - Camera Async Rx FIFO reset signal."]
     #[inline(always)]
     #[must_use]
     pub fn cam_afifo_reset(&mut self) -> CAM_AFIFO_RESET_W<CAM_CTRL1_SPEC> {

@@ -34,9 +34,9 @@ pub type LCD_CLKM_DIV_A_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 pub type LCD_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `LCD_CLK_SEL` writer - Select LCD module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: no clock."]
 pub type LCD_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
+#[doc = "Field `CLK_EN` reader - Set this bit to force enable the clock for all configuration registers. Clock gate is not used."]
 pub type CLK_EN_R = crate::BitReader;
-#[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
+#[doc = "Field `CLK_EN` writer - Set this bit to force enable the clock for all configuration registers. Clock gate is not used."]
 pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1) when reg_clk_equ_sysclk is 0."]
@@ -79,7 +79,7 @@ impl R {
     pub fn lcd_clk_sel(&self) -> LCD_CLK_SEL_R {
         LCD_CLK_SEL_R::new(((self.bits >> 29) & 3) as u8)
     }
-    #[doc = "Bit 31 - Set this bit to enable clk gate"]
+    #[doc = "Bit 31 - Set this bit to force enable the clock for all configuration registers. Clock gate is not used."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
@@ -180,7 +180,7 @@ impl W {
     pub fn lcd_clk_sel(&mut self) -> LCD_CLK_SEL_W<LCD_CLOCK_SPEC> {
         LCD_CLK_SEL_W::new(self, 29)
     }
-    #[doc = "Bit 31 - Set this bit to enable clk gate"]
+    #[doc = "Bit 31 - Set this bit to force enable the clock for all configuration registers. Clock gate is not used."]
     #[inline(always)]
     #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<LCD_CLOCK_SPEC> {

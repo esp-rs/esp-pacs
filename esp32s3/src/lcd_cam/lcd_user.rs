@@ -2,17 +2,17 @@
 pub type R = crate::R<LCD_USER_SPEC>;
 #[doc = "Register `LCD_USER` writer"]
 pub type W = crate::W<LCD_USER_SPEC>;
-#[doc = "Field `LCD_DOUT_CYCLELEN` reader - The output data cycles minus 1 of LCD module."]
+#[doc = "Field `LCD_DOUT_CYCLELEN` reader - Configure the cycles for DOUT phase of LCD module. The cycles = this value + 1."]
 pub type LCD_DOUT_CYCLELEN_R = crate::FieldReader<u16>;
-#[doc = "Field `LCD_DOUT_CYCLELEN` writer - The output data cycles minus 1 of LCD module."]
+#[doc = "Field `LCD_DOUT_CYCLELEN` writer - Configure the cycles for DOUT phase of LCD module. The cycles = this value + 1."]
 pub type LCD_DOUT_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
-#[doc = "Field `LCD_ALWAYS_OUT_EN` reader - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
+#[doc = "Field `LCD_ALWAYS_OUT_EN` reader - LCD continues outputting data when LCD is in DOUT phase, till LCD_CAM_LCD_START is cleared or LCD_CAM_LCD_RESET is set."]
 pub type LCD_ALWAYS_OUT_EN_R = crate::BitReader;
-#[doc = "Field `LCD_ALWAYS_OUT_EN` writer - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
+#[doc = "Field `LCD_ALWAYS_OUT_EN` writer - LCD continues outputting data when LCD is in DOUT phase, till LCD_CAM_LCD_START is cleared or LCD_CAM_LCD_RESET is set."]
 pub type LCD_ALWAYS_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_8BITS_ORDER` reader - 1: invert every two data byte, valid in 1 byte mode. 0: Not change."]
+#[doc = "Field `LCD_8BITS_ORDER` reader - 1: Swap every two data bytes, valid in 8-bit mode. 0: Do not swap."]
 pub type LCD_8BITS_ORDER_R = crate::BitReader;
-#[doc = "Field `LCD_8BITS_ORDER` writer - 1: invert every two data byte, valid in 1 byte mode. 0: Not change."]
+#[doc = "Field `LCD_8BITS_ORDER` writer - 1: Swap every two data bytes, valid in 8-bit mode. 0: Do not swap."]
 pub type LCD_8BITS_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_UPDATE` reader - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
 pub type LCD_UPDATE_R = crate::BitReader;
@@ -22,13 +22,13 @@ pub type LCD_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type LCD_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `LCD_BIT_ORDER` writer - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
 pub type LCD_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_BYTE_ORDER` reader - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+#[doc = "Field `LCD_BYTE_ORDER` reader - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not invert."]
 pub type LCD_BYTE_ORDER_R = crate::BitReader;
-#[doc = "Field `LCD_BYTE_ORDER` writer - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+#[doc = "Field `LCD_BYTE_ORDER` writer - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not invert."]
 pub type LCD_BYTE_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_2BYTE_EN` reader - 1: The bit number of output LCD data is 9~16. 0: The bit number of output LCD data is 0~8."]
+#[doc = "Field `LCD_2BYTE_EN` reader - 1: The width of output LCD data is 16 bits. 0: The width of output LCD data is 8 bits."]
 pub type LCD_2BYTE_EN_R = crate::BitReader;
-#[doc = "Field `LCD_2BYTE_EN` writer - 1: The bit number of output LCD data is 9~16. 0: The bit number of output LCD data is 0~8."]
+#[doc = "Field `LCD_2BYTE_EN` writer - 1: The width of output LCD data is 16 bits. 0: The width of output LCD data is 8 bits."]
 pub type LCD_2BYTE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_DOUT` reader - 1: Be able to send data out in LCD sequence when LCD starts. 0: Disable."]
 pub type LCD_DOUT_R = crate::BitReader;
@@ -46,7 +46,7 @@ pub type LCD_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type LCD_START_R = crate::BitReader;
 #[doc = "Field `LCD_START` writer - LCD start sending data enable signal, valid in high level."]
 pub type LCD_START_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_RESET` writer - The value of command."]
+#[doc = "Field `LCD_RESET` writer - Reset LCD module."]
 pub type LCD_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_DUMMY_CYCLELEN` reader - The dummy cycle length minus 1."]
 pub type LCD_DUMMY_CYCLELEN_R = crate::FieldReader;
@@ -57,17 +57,17 @@ pub type LCD_CMD_2_CYCLE_EN_R = crate::BitReader;
 #[doc = "Field `LCD_CMD_2_CYCLE_EN` writer - The cycle length of command phase. 1: 2 cycles. 0: 1 cycle."]
 pub type LCD_CMD_2_CYCLE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:12 - The output data cycles minus 1 of LCD module."]
+    #[doc = "Bits 0:12 - Configure the cycles for DOUT phase of LCD module. The cycles = this value + 1."]
     #[inline(always)]
     pub fn lcd_dout_cyclelen(&self) -> LCD_DOUT_CYCLELEN_R {
         LCD_DOUT_CYCLELEN_R::new((self.bits & 0x1fff) as u16)
     }
-    #[doc = "Bit 13 - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
+    #[doc = "Bit 13 - LCD continues outputting data when LCD is in DOUT phase, till LCD_CAM_LCD_START is cleared or LCD_CAM_LCD_RESET is set."]
     #[inline(always)]
     pub fn lcd_always_out_en(&self) -> LCD_ALWAYS_OUT_EN_R {
         LCD_ALWAYS_OUT_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 19 - 1: invert every two data byte, valid in 1 byte mode. 0: Not change."]
+    #[doc = "Bit 19 - 1: Swap every two data bytes, valid in 8-bit mode. 0: Do not swap."]
     #[inline(always)]
     pub fn lcd_8bits_order(&self) -> LCD_8BITS_ORDER_R {
         LCD_8BITS_ORDER_R::new(((self.bits >> 19) & 1) != 0)
@@ -82,12 +82,12 @@ impl R {
     pub fn lcd_bit_order(&self) -> LCD_BIT_ORDER_R {
         LCD_BIT_ORDER_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "Bit 22 - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+    #[doc = "Bit 22 - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not invert."]
     #[inline(always)]
     pub fn lcd_byte_order(&self) -> LCD_BYTE_ORDER_R {
         LCD_BYTE_ORDER_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 23 - 1: The bit number of output LCD data is 9~16. 0: The bit number of output LCD data is 0~8."]
+    #[doc = "Bit 23 - 1: The width of output LCD data is 16 bits. 0: The width of output LCD data is 8 bits."]
     #[inline(always)]
     pub fn lcd_2byte_en(&self) -> LCD_2BYTE_EN_R {
         LCD_2BYTE_EN_R::new(((self.bits >> 23) & 1) != 0)
@@ -174,19 +174,19 @@ impl core::fmt::Debug for crate::generic::Reg<LCD_USER_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:12 - The output data cycles minus 1 of LCD module."]
+    #[doc = "Bits 0:12 - Configure the cycles for DOUT phase of LCD module. The cycles = this value + 1."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_dout_cyclelen(&mut self) -> LCD_DOUT_CYCLELEN_W<LCD_USER_SPEC> {
         LCD_DOUT_CYCLELEN_W::new(self, 0)
     }
-    #[doc = "Bit 13 - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
+    #[doc = "Bit 13 - LCD continues outputting data when LCD is in DOUT phase, till LCD_CAM_LCD_START is cleared or LCD_CAM_LCD_RESET is set."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_always_out_en(&mut self) -> LCD_ALWAYS_OUT_EN_W<LCD_USER_SPEC> {
         LCD_ALWAYS_OUT_EN_W::new(self, 13)
     }
-    #[doc = "Bit 19 - 1: invert every two data byte, valid in 1 byte mode. 0: Not change."]
+    #[doc = "Bit 19 - 1: Swap every two data bytes, valid in 8-bit mode. 0: Do not swap."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_8bits_order(&mut self) -> LCD_8BITS_ORDER_W<LCD_USER_SPEC> {
@@ -204,13 +204,13 @@ impl W {
     pub fn lcd_bit_order(&mut self) -> LCD_BIT_ORDER_W<LCD_USER_SPEC> {
         LCD_BIT_ORDER_W::new(self, 21)
     }
-    #[doc = "Bit 22 - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+    #[doc = "Bit 22 - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not invert."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_byte_order(&mut self) -> LCD_BYTE_ORDER_W<LCD_USER_SPEC> {
         LCD_BYTE_ORDER_W::new(self, 22)
     }
-    #[doc = "Bit 23 - 1: The bit number of output LCD data is 9~16. 0: The bit number of output LCD data is 0~8."]
+    #[doc = "Bit 23 - 1: The width of output LCD data is 16 bits. 0: The width of output LCD data is 8 bits."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_2byte_en(&mut self) -> LCD_2BYTE_EN_W<LCD_USER_SPEC> {
@@ -240,7 +240,7 @@ impl W {
     pub fn lcd_start(&mut self) -> LCD_START_W<LCD_USER_SPEC> {
         LCD_START_W::new(self, 27)
     }
-    #[doc = "Bit 28 - The value of command."]
+    #[doc = "Bit 28 - Reset LCD module."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_reset(&mut self) -> LCD_RESET_W<LCD_USER_SPEC> {
