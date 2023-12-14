@@ -14,13 +14,13 @@ pub type CAM_VSYNC_FILTER_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 pub type CAM_UPDATE_R = crate::BitReader;
 #[doc = "Field `CAM_UPDATE` writer - 1: Update Camera registers, will be cleared by hardware. 0 : Not care."]
 pub type CAM_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAM_BYTE_ORDER` reader - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+#[doc = "Field `CAM_BYTE_ORDER` reader - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not change."]
 pub type CAM_BYTE_ORDER_R = crate::BitReader;
-#[doc = "Field `CAM_BYTE_ORDER` writer - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+#[doc = "Field `CAM_BYTE_ORDER` writer - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not change."]
 pub type CAM_BYTE_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAM_BIT_ORDER` reader - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+#[doc = "Field `CAM_BIT_ORDER` reader - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
 pub type CAM_BIT_ORDER_R = crate::BitReader;
-#[doc = "Field `CAM_BIT_ORDER` writer - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+#[doc = "Field `CAM_BIT_ORDER` writer - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
 pub type CAM_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAM_LINE_INT_EN` reader - 1: Enable to generate CAM_HS_INT. 0: Disable."]
 pub type CAM_LINE_INT_EN_R = crate::BitReader;
@@ -62,12 +62,12 @@ impl R {
     pub fn cam_update(&self) -> CAM_UPDATE_R {
         CAM_UPDATE_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+    #[doc = "Bit 5 - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not change."]
     #[inline(always)]
     pub fn cam_byte_order(&self) -> CAM_BYTE_ORDER_R {
         CAM_BYTE_ORDER_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+    #[doc = "Bit 6 - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
     #[inline(always)]
     pub fn cam_bit_order(&self) -> CAM_BIT_ORDER_R {
         CAM_BIT_ORDER_R::new(((self.bits >> 6) & 1) != 0)
@@ -173,13 +173,13 @@ impl W {
     pub fn cam_update(&mut self) -> CAM_UPDATE_W<CAM_CTRL_SPEC> {
         CAM_UPDATE_W::new(self, 4)
     }
-    #[doc = "Bit 5 - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+    #[doc = "Bit 5 - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not change."]
     #[inline(always)]
     #[must_use]
     pub fn cam_byte_order(&mut self) -> CAM_BYTE_ORDER_W<CAM_CTRL_SPEC> {
         CAM_BYTE_ORDER_W::new(self, 5)
     }
-    #[doc = "Bit 6 - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
+    #[doc = "Bit 6 - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
     #[inline(always)]
     #[must_use]
     pub fn cam_bit_order(&mut self) -> CAM_BIT_ORDER_W<CAM_CTRL_SPEC> {
