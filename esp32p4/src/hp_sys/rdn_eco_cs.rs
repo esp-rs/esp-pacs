@@ -2,22 +2,22 @@
 pub type R = crate::R<RDN_ECO_CS_SPEC>;
 #[doc = "Register `RDN_ECO_CS` writer"]
 pub type W = crate::W<RDN_ECO_CS_SPEC>;
-#[doc = "Field `HP_REG_HP_SYS_RDN_ECO_EN` reader - NA"]
-pub type HP_REG_HP_SYS_RDN_ECO_EN_R = crate::BitReader;
-#[doc = "Field `HP_REG_HP_SYS_RDN_ECO_EN` writer - NA"]
-pub type HP_REG_HP_SYS_RDN_ECO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `HP_REG_HP_SYS_RDN_ECO_RESULT` reader - NA"]
-pub type HP_REG_HP_SYS_RDN_ECO_RESULT_R = crate::BitReader;
+#[doc = "Field `REG_HP_SYS_RDN_ECO_EN` reader - NA"]
+pub type REG_HP_SYS_RDN_ECO_EN_R = crate::BitReader;
+#[doc = "Field `REG_HP_SYS_RDN_ECO_EN` writer - NA"]
+pub type REG_HP_SYS_RDN_ECO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_HP_SYS_RDN_ECO_RESULT` reader - NA"]
+pub type REG_HP_SYS_RDN_ECO_RESULT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn hp_reg_hp_sys_rdn_eco_en(&self) -> HP_REG_HP_SYS_RDN_ECO_EN_R {
-        HP_REG_HP_SYS_RDN_ECO_EN_R::new((self.bits & 1) != 0)
+    pub fn reg_hp_sys_rdn_eco_en(&self) -> REG_HP_SYS_RDN_ECO_EN_R {
+        REG_HP_SYS_RDN_ECO_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn hp_reg_hp_sys_rdn_eco_result(&self) -> HP_REG_HP_SYS_RDN_ECO_RESULT_R {
-        HP_REG_HP_SYS_RDN_ECO_RESULT_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn reg_hp_sys_rdn_eco_result(&self) -> REG_HP_SYS_RDN_ECO_RESULT_R {
+        REG_HP_SYS_RDN_ECO_RESULT_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -25,12 +25,12 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RDN_ECO_CS")
             .field(
-                "hp_reg_hp_sys_rdn_eco_en",
-                &format_args!("{}", self.hp_reg_hp_sys_rdn_eco_en().bit()),
+                "reg_hp_sys_rdn_eco_en",
+                &format_args!("{}", self.reg_hp_sys_rdn_eco_en().bit()),
             )
             .field(
-                "hp_reg_hp_sys_rdn_eco_result",
-                &format_args!("{}", self.hp_reg_hp_sys_rdn_eco_result().bit()),
+                "reg_hp_sys_rdn_eco_result",
+                &format_args!("{}", self.reg_hp_sys_rdn_eco_result().bit()),
             )
             .finish()
     }
@@ -45,8 +45,8 @@ impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_reg_hp_sys_rdn_eco_en(&mut self) -> HP_REG_HP_SYS_RDN_ECO_EN_W<RDN_ECO_CS_SPEC> {
-        HP_REG_HP_SYS_RDN_ECO_EN_W::new(self, 0)
+    pub fn reg_hp_sys_rdn_eco_en(&mut self) -> REG_HP_SYS_RDN_ECO_EN_W<RDN_ECO_CS_SPEC> {
+        REG_HP_SYS_RDN_ECO_EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

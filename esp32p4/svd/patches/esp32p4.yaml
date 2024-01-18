@@ -103,6 +103,39 @@ HMAC:
       dimIncrement: 0x4
       size: 0x20
 
+HP_SYS:
+  _strip: "HP_"
+
+  "*":
+    _strip: "HP_"
+
+  _modify:
+    CPU_INT_FROM_CPU_0:
+      name: CPU_INTR_FROM_CPU_0
+    CPU_INT_FROM_CPU_1:
+      name: CPU_INTR_FROM_CPU_1
+    CPU_INT_FROM_CPU_2:
+      name: CPU_INTR_FROM_CPU_2
+    CPU_INT_FROM_CPU_3:
+      name: CPU_INTR_FROM_CPU_3
+
+  CPU_INTR_FROM_CPU_0:
+    _modify:
+      CPU_INT_FROM_CPU_0:
+        name: CPU_INTR_FROM_CPU_0
+  CPU_INTR_FROM_CPU_1:
+    _modify:
+      CPU_INT_FROM_CPU_1:
+        name: CPU_INTR_FROM_CPU_1
+  CPU_INTR_FROM_CPU_2:
+    _modify:
+      CPU_INT_FROM_CPU_2:
+        name: CPU_INTR_FROM_CPU_2
+  CPU_INTR_FROM_CPU_3:
+    _modify:
+      CPU_INT_FROM_CPU_3:
+        name: CPU_INTR_FROM_CPU_3
+
 LP_HUK:
   _modify:
     "INFO_MEM*":
