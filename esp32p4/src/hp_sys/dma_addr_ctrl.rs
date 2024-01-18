@@ -2,15 +2,15 @@
 pub type R = crate::R<DMA_ADDR_CTRL_SPEC>;
 #[doc = "Register `DMA_ADDR_CTRL` writer"]
 pub type W = crate::W<DMA_ADDR_CTRL_SPEC>;
-#[doc = "Field `HP_REG_SYS_DMA_ADDR_SEL` reader - 0 means dma access extmem use 8xxx_xxxx else use 4xxx_xxxx"]
-pub type HP_REG_SYS_DMA_ADDR_SEL_R = crate::BitReader;
-#[doc = "Field `HP_REG_SYS_DMA_ADDR_SEL` writer - 0 means dma access extmem use 8xxx_xxxx else use 4xxx_xxxx"]
-pub type HP_REG_SYS_DMA_ADDR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_SYS_DMA_ADDR_SEL` reader - 0 means dma access extmem use 8xxx_xxxx else use 4xxx_xxxx"]
+pub type REG_SYS_DMA_ADDR_SEL_R = crate::BitReader;
+#[doc = "Field `REG_SYS_DMA_ADDR_SEL` writer - 0 means dma access extmem use 8xxx_xxxx else use 4xxx_xxxx"]
+pub type REG_SYS_DMA_ADDR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 0 means dma access extmem use 8xxx_xxxx else use 4xxx_xxxx"]
     #[inline(always)]
-    pub fn hp_reg_sys_dma_addr_sel(&self) -> HP_REG_SYS_DMA_ADDR_SEL_R {
-        HP_REG_SYS_DMA_ADDR_SEL_R::new((self.bits & 1) != 0)
+    pub fn reg_sys_dma_addr_sel(&self) -> REG_SYS_DMA_ADDR_SEL_R {
+        REG_SYS_DMA_ADDR_SEL_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_ADDR_CTRL")
             .field(
-                "hp_reg_sys_dma_addr_sel",
-                &format_args!("{}", self.hp_reg_sys_dma_addr_sel().bit()),
+                "reg_sys_dma_addr_sel",
+                &format_args!("{}", self.reg_sys_dma_addr_sel().bit()),
             )
             .finish()
     }
@@ -34,8 +34,8 @@ impl W {
     #[doc = "Bit 0 - 0 means dma access extmem use 8xxx_xxxx else use 4xxx_xxxx"]
     #[inline(always)]
     #[must_use]
-    pub fn hp_reg_sys_dma_addr_sel(&mut self) -> HP_REG_SYS_DMA_ADDR_SEL_W<DMA_ADDR_CTRL_SPEC> {
-        HP_REG_SYS_DMA_ADDR_SEL_W::new(self, 0)
+    pub fn reg_sys_dma_addr_sel(&mut self) -> REG_SYS_DMA_ADDR_SEL_W<DMA_ADDR_CTRL_SPEC> {
+        REG_SYS_DMA_ADDR_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
