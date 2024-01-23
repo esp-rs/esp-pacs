@@ -2,38 +2,38 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    rtc_gpio_out: RTC_GPIO_OUT,
-    rtc_gpio_out_w1ts: RTC_GPIO_OUT_W1TS,
-    rtc_gpio_out_w1tc: RTC_GPIO_OUT_W1TC,
-    rtc_gpio_enable: RTC_GPIO_ENABLE,
-    rtc_gpio_enable_w1ts: RTC_GPIO_ENABLE_W1TS,
-    rtc_gpio_enable_w1tc: RTC_GPIO_ENABLE_W1TC,
-    rtc_gpio_status: RTC_GPIO_STATUS,
-    rtc_gpio_status_w1ts: RTC_GPIO_STATUS_W1TS,
-    rtc_gpio_status_w1tc: RTC_GPIO_STATUS_W1TC,
-    rtc_gpio_in: RTC_GPIO_IN,
-    rtc_gpio_pin0: RTC_GPIO_PIN0,
-    rtc_gpio_pin1: RTC_GPIO_PIN1,
-    rtc_gpio_pin2: RTC_GPIO_PIN2,
-    rtc_gpio_pin3: RTC_GPIO_PIN3,
-    rtc_gpio_pin4: RTC_GPIO_PIN4,
-    rtc_gpio_pin5: RTC_GPIO_PIN5,
-    rtc_gpio_pin6: RTC_GPIO_PIN6,
-    rtc_gpio_pin7: RTC_GPIO_PIN7,
-    rtc_gpio_pin8: RTC_GPIO_PIN8,
-    rtc_gpio_pin9: RTC_GPIO_PIN9,
-    rtc_gpio_pin10: RTC_GPIO_PIN10,
-    rtc_gpio_pin11: RTC_GPIO_PIN11,
-    rtc_gpio_pin12: RTC_GPIO_PIN12,
-    rtc_gpio_pin13: RTC_GPIO_PIN13,
-    rtc_gpio_pin14: RTC_GPIO_PIN14,
-    rtc_gpio_pin15: RTC_GPIO_PIN15,
-    rtc_gpio_pin16: RTC_GPIO_PIN16,
-    rtc_gpio_pin17: RTC_GPIO_PIN17,
-    rtc_gpio_pin18: RTC_GPIO_PIN18,
-    rtc_gpio_pin19: RTC_GPIO_PIN19,
-    rtc_gpio_pin20: RTC_GPIO_PIN20,
-    rtc_gpio_pin21: RTC_GPIO_PIN21,
+    out: OUT,
+    out_w1ts: OUT_W1TS,
+    out_w1tc: OUT_W1TC,
+    enable: ENABLE,
+    enable_w1ts: ENABLE_W1TS,
+    enable_w1tc: ENABLE_W1TC,
+    status: STATUS,
+    status_w1ts: STATUS_W1TS,
+    status_w1tc: STATUS_W1TC,
+    in_: IN,
+    pin0: PIN0,
+    pin1: PIN1,
+    pin2: PIN2,
+    pin3: PIN3,
+    pin4: PIN4,
+    pin5: PIN5,
+    pin6: PIN6,
+    pin7: PIN7,
+    pin8: PIN8,
+    pin9: PIN9,
+    pin10: PIN10,
+    pin11: PIN11,
+    pin12: PIN12,
+    pin13: PIN13,
+    pin14: PIN14,
+    pin15: PIN15,
+    pin16: PIN16,
+    pin17: PIN17,
+    pin18: PIN18,
+    pin19: PIN19,
+    pin20: PIN20,
+    pin21: PIN21,
     rtc_debug_sel: RTC_DEBUG_SEL,
     touch_pad0: TOUCH_PAD0,
     touch_pad1: TOUCH_PAD1,
@@ -67,163 +67,163 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x00 - RTC GPIO 0 ~ 21 output data register"]
     #[inline(always)]
-    pub const fn rtc_gpio_out(&self) -> &RTC_GPIO_OUT {
-        &self.rtc_gpio_out
+    pub const fn out(&self) -> &OUT {
+        &self.out
     }
     #[doc = "0x04 - one set RTC GPIO output data"]
     #[inline(always)]
-    pub const fn rtc_gpio_out_w1ts(&self) -> &RTC_GPIO_OUT_W1TS {
-        &self.rtc_gpio_out_w1ts
+    pub const fn out_w1ts(&self) -> &OUT_W1TS {
+        &self.out_w1ts
     }
     #[doc = "0x08 - one clear RTC GPIO output data"]
     #[inline(always)]
-    pub const fn rtc_gpio_out_w1tc(&self) -> &RTC_GPIO_OUT_W1TC {
-        &self.rtc_gpio_out_w1tc
+    pub const fn out_w1tc(&self) -> &OUT_W1TC {
+        &self.out_w1tc
     }
     #[doc = "0x0c - Configure RTC GPIO output enable"]
     #[inline(always)]
-    pub const fn rtc_gpio_enable(&self) -> &RTC_GPIO_ENABLE {
-        &self.rtc_gpio_enable
+    pub const fn enable(&self) -> &ENABLE {
+        &self.enable
     }
     #[doc = "0x10 - one set RTC GPIO output enable"]
     #[inline(always)]
-    pub const fn rtc_gpio_enable_w1ts(&self) -> &RTC_GPIO_ENABLE_W1TS {
-        &self.rtc_gpio_enable_w1ts
+    pub const fn enable_w1ts(&self) -> &ENABLE_W1TS {
+        &self.enable_w1ts
     }
     #[doc = "0x14 - one clear RTC GPIO output enable"]
     #[inline(always)]
-    pub const fn rtc_gpio_enable_w1tc(&self) -> &RTC_GPIO_ENABLE_W1TC {
-        &self.rtc_gpio_enable_w1tc
+    pub const fn enable_w1tc(&self) -> &ENABLE_W1TC {
+        &self.enable_w1tc
     }
     #[doc = "0x18 - RTC GPIO 0 ~ 21 interrupt status"]
     #[inline(always)]
-    pub const fn rtc_gpio_status(&self) -> &RTC_GPIO_STATUS {
-        &self.rtc_gpio_status
+    pub const fn status(&self) -> &STATUS {
+        &self.status
     }
     #[doc = "0x1c - One set RTC GPIO 0 ~ 21 interrupt status"]
     #[inline(always)]
-    pub const fn rtc_gpio_status_w1ts(&self) -> &RTC_GPIO_STATUS_W1TS {
-        &self.rtc_gpio_status_w1ts
+    pub const fn status_w1ts(&self) -> &STATUS_W1TS {
+        &self.status_w1ts
     }
     #[doc = "0x20 - One clear RTC GPIO 0 ~ 21 interrupt status"]
     #[inline(always)]
-    pub const fn rtc_gpio_status_w1tc(&self) -> &RTC_GPIO_STATUS_W1TC {
-        &self.rtc_gpio_status_w1tc
+    pub const fn status_w1tc(&self) -> &STATUS_W1TC {
+        &self.status_w1tc
     }
     #[doc = "0x24 - RTC GPIO input data"]
     #[inline(always)]
-    pub const fn rtc_gpio_in(&self) -> &RTC_GPIO_IN {
-        &self.rtc_gpio_in
+    pub const fn in_(&self) -> &IN {
+        &self.in_
     }
     #[doc = "0x28 - configure RTC GPIO0"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin0(&self) -> &RTC_GPIO_PIN0 {
-        &self.rtc_gpio_pin0
+    pub const fn pin0(&self) -> &PIN0 {
+        &self.pin0
     }
     #[doc = "0x2c - configure RTC GPIO1"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin1(&self) -> &RTC_GPIO_PIN1 {
-        &self.rtc_gpio_pin1
+    pub const fn pin1(&self) -> &PIN1 {
+        &self.pin1
     }
     #[doc = "0x30 - configure RTC GPIO2"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin2(&self) -> &RTC_GPIO_PIN2 {
-        &self.rtc_gpio_pin2
+    pub const fn pin2(&self) -> &PIN2 {
+        &self.pin2
     }
     #[doc = "0x34 - configure RTC GPIO3"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin3(&self) -> &RTC_GPIO_PIN3 {
-        &self.rtc_gpio_pin3
+    pub const fn pin3(&self) -> &PIN3 {
+        &self.pin3
     }
     #[doc = "0x38 - configure RTC GPIO4"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin4(&self) -> &RTC_GPIO_PIN4 {
-        &self.rtc_gpio_pin4
+    pub const fn pin4(&self) -> &PIN4 {
+        &self.pin4
     }
     #[doc = "0x3c - configure RTC GPIO5"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin5(&self) -> &RTC_GPIO_PIN5 {
-        &self.rtc_gpio_pin5
+    pub const fn pin5(&self) -> &PIN5 {
+        &self.pin5
     }
     #[doc = "0x40 - configure RTC GPIO6"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin6(&self) -> &RTC_GPIO_PIN6 {
-        &self.rtc_gpio_pin6
+    pub const fn pin6(&self) -> &PIN6 {
+        &self.pin6
     }
     #[doc = "0x44 - configure RTC GPIO7"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin7(&self) -> &RTC_GPIO_PIN7 {
-        &self.rtc_gpio_pin7
+    pub const fn pin7(&self) -> &PIN7 {
+        &self.pin7
     }
     #[doc = "0x48 - configure RTC GPIO8"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin8(&self) -> &RTC_GPIO_PIN8 {
-        &self.rtc_gpio_pin8
+    pub const fn pin8(&self) -> &PIN8 {
+        &self.pin8
     }
     #[doc = "0x4c - configure RTC GPIO9"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin9(&self) -> &RTC_GPIO_PIN9 {
-        &self.rtc_gpio_pin9
+    pub const fn pin9(&self) -> &PIN9 {
+        &self.pin9
     }
     #[doc = "0x50 - configure RTC GPIO10"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin10(&self) -> &RTC_GPIO_PIN10 {
-        &self.rtc_gpio_pin10
+    pub const fn pin10(&self) -> &PIN10 {
+        &self.pin10
     }
     #[doc = "0x54 - configure RTC GPIO11"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin11(&self) -> &RTC_GPIO_PIN11 {
-        &self.rtc_gpio_pin11
+    pub const fn pin11(&self) -> &PIN11 {
+        &self.pin11
     }
     #[doc = "0x58 - configure RTC GPIO12"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin12(&self) -> &RTC_GPIO_PIN12 {
-        &self.rtc_gpio_pin12
+    pub const fn pin12(&self) -> &PIN12 {
+        &self.pin12
     }
     #[doc = "0x5c - configure RTC GPIO13"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin13(&self) -> &RTC_GPIO_PIN13 {
-        &self.rtc_gpio_pin13
+    pub const fn pin13(&self) -> &PIN13 {
+        &self.pin13
     }
     #[doc = "0x60 - configure RTC GPIO14"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin14(&self) -> &RTC_GPIO_PIN14 {
-        &self.rtc_gpio_pin14
+    pub const fn pin14(&self) -> &PIN14 {
+        &self.pin14
     }
     #[doc = "0x64 - configure RTC GPIO15"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin15(&self) -> &RTC_GPIO_PIN15 {
-        &self.rtc_gpio_pin15
+    pub const fn pin15(&self) -> &PIN15 {
+        &self.pin15
     }
     #[doc = "0x68 - configure RTC GPIO16"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin16(&self) -> &RTC_GPIO_PIN16 {
-        &self.rtc_gpio_pin16
+    pub const fn pin16(&self) -> &PIN16 {
+        &self.pin16
     }
     #[doc = "0x6c - configure RTC GPIO17"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin17(&self) -> &RTC_GPIO_PIN17 {
-        &self.rtc_gpio_pin17
+    pub const fn pin17(&self) -> &PIN17 {
+        &self.pin17
     }
     #[doc = "0x70 - configure RTC GPIO18"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin18(&self) -> &RTC_GPIO_PIN18 {
-        &self.rtc_gpio_pin18
+    pub const fn pin18(&self) -> &PIN18 {
+        &self.pin18
     }
     #[doc = "0x74 - configure RTC GPIO19"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin19(&self) -> &RTC_GPIO_PIN19 {
-        &self.rtc_gpio_pin19
+    pub const fn pin19(&self) -> &PIN19 {
+        &self.pin19
     }
     #[doc = "0x78 - configure RTC GPIO20"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin20(&self) -> &RTC_GPIO_PIN20 {
-        &self.rtc_gpio_pin20
+    pub const fn pin20(&self) -> &PIN20 {
+        &self.pin20
     }
     #[doc = "0x7c - configure RTC GPIO21"]
     #[inline(always)]
-    pub const fn rtc_gpio_pin21(&self) -> &RTC_GPIO_PIN21 {
-        &self.rtc_gpio_pin21
+    pub const fn pin21(&self) -> &PIN21 {
+        &self.pin21
     }
     #[doc = "0x80 - configure rtc debug"]
     #[inline(always)]
@@ -366,134 +366,134 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "RTC_GPIO_OUT (rw) register accessor: RTC GPIO 0 ~ 21 output data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_out::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_out::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_out`] module"]
-pub type RTC_GPIO_OUT = crate::Reg<rtc_gpio_out::RTC_GPIO_OUT_SPEC>;
+#[doc = "OUT (rw) register accessor: RTC GPIO 0 ~ 21 output data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out`] module"]
+pub type OUT = crate::Reg<out::OUT_SPEC>;
 #[doc = "RTC GPIO 0 ~ 21 output data register"]
-pub mod rtc_gpio_out;
-#[doc = "RTC_GPIO_OUT_W1TS (w) register accessor: one set RTC GPIO output data\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_out_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_out_w1ts`] module"]
-pub type RTC_GPIO_OUT_W1TS = crate::Reg<rtc_gpio_out_w1ts::RTC_GPIO_OUT_W1TS_SPEC>;
+pub mod out;
+#[doc = "OUT_W1TS (w) register accessor: one set RTC GPIO output data\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_w1ts`] module"]
+pub type OUT_W1TS = crate::Reg<out_w1ts::OUT_W1TS_SPEC>;
 #[doc = "one set RTC GPIO output data"]
-pub mod rtc_gpio_out_w1ts;
-#[doc = "RTC_GPIO_OUT_W1TC (w) register accessor: one clear RTC GPIO output data\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_out_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_out_w1tc`] module"]
-pub type RTC_GPIO_OUT_W1TC = crate::Reg<rtc_gpio_out_w1tc::RTC_GPIO_OUT_W1TC_SPEC>;
+pub mod out_w1ts;
+#[doc = "OUT_W1TC (w) register accessor: one clear RTC GPIO output data\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_w1tc`] module"]
+pub type OUT_W1TC = crate::Reg<out_w1tc::OUT_W1TC_SPEC>;
 #[doc = "one clear RTC GPIO output data"]
-pub mod rtc_gpio_out_w1tc;
-#[doc = "RTC_GPIO_ENABLE (rw) register accessor: Configure RTC GPIO output enable\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_enable::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_enable::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_enable`] module"]
-pub type RTC_GPIO_ENABLE = crate::Reg<rtc_gpio_enable::RTC_GPIO_ENABLE_SPEC>;
+pub mod out_w1tc;
+#[doc = "ENABLE (rw) register accessor: Configure RTC GPIO output enable\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`enable::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable`] module"]
+pub type ENABLE = crate::Reg<enable::ENABLE_SPEC>;
 #[doc = "Configure RTC GPIO output enable"]
-pub mod rtc_gpio_enable;
-#[doc = "RTC_GPIO_ENABLE_W1TS (w) register accessor: one set RTC GPIO output enable\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_enable_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_enable_w1ts`] module"]
-pub type RTC_GPIO_ENABLE_W1TS = crate::Reg<rtc_gpio_enable_w1ts::RTC_GPIO_ENABLE_W1TS_SPEC>;
+pub mod enable;
+#[doc = "ENABLE_W1TS (w) register accessor: one set RTC GPIO output enable\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable_w1ts`] module"]
+pub type ENABLE_W1TS = crate::Reg<enable_w1ts::ENABLE_W1TS_SPEC>;
 #[doc = "one set RTC GPIO output enable"]
-pub mod rtc_gpio_enable_w1ts;
-#[doc = "RTC_GPIO_ENABLE_W1TC (w) register accessor: one clear RTC GPIO output enable\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_enable_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_enable_w1tc`] module"]
-pub type RTC_GPIO_ENABLE_W1TC = crate::Reg<rtc_gpio_enable_w1tc::RTC_GPIO_ENABLE_W1TC_SPEC>;
+pub mod enable_w1ts;
+#[doc = "ENABLE_W1TC (w) register accessor: one clear RTC GPIO output enable\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable_w1tc`] module"]
+pub type ENABLE_W1TC = crate::Reg<enable_w1tc::ENABLE_W1TC_SPEC>;
 #[doc = "one clear RTC GPIO output enable"]
-pub mod rtc_gpio_enable_w1tc;
-#[doc = "RTC_GPIO_STATUS (rw) register accessor: RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_status::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_status::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_status`] module"]
-pub type RTC_GPIO_STATUS = crate::Reg<rtc_gpio_status::RTC_GPIO_STATUS_SPEC>;
+pub mod enable_w1tc;
+#[doc = "STATUS (rw) register accessor: RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
+pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "RTC GPIO 0 ~ 21 interrupt status"]
-pub mod rtc_gpio_status;
-#[doc = "RTC_GPIO_STATUS_W1TS (w) register accessor: One set RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_status_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_status_w1ts`] module"]
-pub type RTC_GPIO_STATUS_W1TS = crate::Reg<rtc_gpio_status_w1ts::RTC_GPIO_STATUS_W1TS_SPEC>;
+pub mod status;
+#[doc = "STATUS_W1TS (w) register accessor: One set RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_w1ts`] module"]
+pub type STATUS_W1TS = crate::Reg<status_w1ts::STATUS_W1TS_SPEC>;
 #[doc = "One set RTC GPIO 0 ~ 21 interrupt status"]
-pub mod rtc_gpio_status_w1ts;
-#[doc = "RTC_GPIO_STATUS_W1TC (w) register accessor: One clear RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_status_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_status_w1tc`] module"]
-pub type RTC_GPIO_STATUS_W1TC = crate::Reg<rtc_gpio_status_w1tc::RTC_GPIO_STATUS_W1TC_SPEC>;
+pub mod status_w1ts;
+#[doc = "STATUS_W1TC (w) register accessor: One clear RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_w1tc`] module"]
+pub type STATUS_W1TC = crate::Reg<status_w1tc::STATUS_W1TC_SPEC>;
 #[doc = "One clear RTC GPIO 0 ~ 21 interrupt status"]
-pub mod rtc_gpio_status_w1tc;
-#[doc = "RTC_GPIO_IN (r) register accessor: RTC GPIO input data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_in::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_in`] module"]
-pub type RTC_GPIO_IN = crate::Reg<rtc_gpio_in::RTC_GPIO_IN_SPEC>;
+pub mod status_w1tc;
+#[doc = "IN (r) register accessor: RTC GPIO input data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_`] module"]
+pub type IN = crate::Reg<in_::IN_SPEC>;
 #[doc = "RTC GPIO input data"]
-pub mod rtc_gpio_in;
-#[doc = "RTC_GPIO_PIN0 (rw) register accessor: configure RTC GPIO0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin0`] module"]
-pub type RTC_GPIO_PIN0 = crate::Reg<rtc_gpio_pin0::RTC_GPIO_PIN0_SPEC>;
+pub mod in_;
+#[doc = "PIN0 (rw) register accessor: configure RTC GPIO0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin0`] module"]
+pub type PIN0 = crate::Reg<pin0::PIN0_SPEC>;
 #[doc = "configure RTC GPIO0"]
-pub mod rtc_gpio_pin0;
-#[doc = "RTC_GPIO_PIN1 (rw) register accessor: configure RTC GPIO1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin1`] module"]
-pub type RTC_GPIO_PIN1 = crate::Reg<rtc_gpio_pin1::RTC_GPIO_PIN1_SPEC>;
+pub mod pin0;
+#[doc = "PIN1 (rw) register accessor: configure RTC GPIO1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin1`] module"]
+pub type PIN1 = crate::Reg<pin1::PIN1_SPEC>;
 #[doc = "configure RTC GPIO1"]
-pub mod rtc_gpio_pin1;
-#[doc = "RTC_GPIO_PIN2 (rw) register accessor: configure RTC GPIO2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin2`] module"]
-pub type RTC_GPIO_PIN2 = crate::Reg<rtc_gpio_pin2::RTC_GPIO_PIN2_SPEC>;
+pub mod pin1;
+#[doc = "PIN2 (rw) register accessor: configure RTC GPIO2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin2`] module"]
+pub type PIN2 = crate::Reg<pin2::PIN2_SPEC>;
 #[doc = "configure RTC GPIO2"]
-pub mod rtc_gpio_pin2;
-#[doc = "RTC_GPIO_PIN3 (rw) register accessor: configure RTC GPIO3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin3`] module"]
-pub type RTC_GPIO_PIN3 = crate::Reg<rtc_gpio_pin3::RTC_GPIO_PIN3_SPEC>;
+pub mod pin2;
+#[doc = "PIN3 (rw) register accessor: configure RTC GPIO3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin3`] module"]
+pub type PIN3 = crate::Reg<pin3::PIN3_SPEC>;
 #[doc = "configure RTC GPIO3"]
-pub mod rtc_gpio_pin3;
-#[doc = "RTC_GPIO_PIN4 (rw) register accessor: configure RTC GPIO4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin4`] module"]
-pub type RTC_GPIO_PIN4 = crate::Reg<rtc_gpio_pin4::RTC_GPIO_PIN4_SPEC>;
+pub mod pin3;
+#[doc = "PIN4 (rw) register accessor: configure RTC GPIO4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin4`] module"]
+pub type PIN4 = crate::Reg<pin4::PIN4_SPEC>;
 #[doc = "configure RTC GPIO4"]
-pub mod rtc_gpio_pin4;
-#[doc = "RTC_GPIO_PIN5 (rw) register accessor: configure RTC GPIO5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin5`] module"]
-pub type RTC_GPIO_PIN5 = crate::Reg<rtc_gpio_pin5::RTC_GPIO_PIN5_SPEC>;
+pub mod pin4;
+#[doc = "PIN5 (rw) register accessor: configure RTC GPIO5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin5`] module"]
+pub type PIN5 = crate::Reg<pin5::PIN5_SPEC>;
 #[doc = "configure RTC GPIO5"]
-pub mod rtc_gpio_pin5;
-#[doc = "RTC_GPIO_PIN6 (rw) register accessor: configure RTC GPIO6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin6`] module"]
-pub type RTC_GPIO_PIN6 = crate::Reg<rtc_gpio_pin6::RTC_GPIO_PIN6_SPEC>;
+pub mod pin5;
+#[doc = "PIN6 (rw) register accessor: configure RTC GPIO6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin6`] module"]
+pub type PIN6 = crate::Reg<pin6::PIN6_SPEC>;
 #[doc = "configure RTC GPIO6"]
-pub mod rtc_gpio_pin6;
-#[doc = "RTC_GPIO_PIN7 (rw) register accessor: configure RTC GPIO7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin7`] module"]
-pub type RTC_GPIO_PIN7 = crate::Reg<rtc_gpio_pin7::RTC_GPIO_PIN7_SPEC>;
+pub mod pin6;
+#[doc = "PIN7 (rw) register accessor: configure RTC GPIO7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin7`] module"]
+pub type PIN7 = crate::Reg<pin7::PIN7_SPEC>;
 #[doc = "configure RTC GPIO7"]
-pub mod rtc_gpio_pin7;
-#[doc = "RTC_GPIO_PIN8 (rw) register accessor: configure RTC GPIO8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin8`] module"]
-pub type RTC_GPIO_PIN8 = crate::Reg<rtc_gpio_pin8::RTC_GPIO_PIN8_SPEC>;
+pub mod pin7;
+#[doc = "PIN8 (rw) register accessor: configure RTC GPIO8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin8`] module"]
+pub type PIN8 = crate::Reg<pin8::PIN8_SPEC>;
 #[doc = "configure RTC GPIO8"]
-pub mod rtc_gpio_pin8;
-#[doc = "RTC_GPIO_PIN9 (rw) register accessor: configure RTC GPIO9\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin9`] module"]
-pub type RTC_GPIO_PIN9 = crate::Reg<rtc_gpio_pin9::RTC_GPIO_PIN9_SPEC>;
+pub mod pin8;
+#[doc = "PIN9 (rw) register accessor: configure RTC GPIO9\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin9`] module"]
+pub type PIN9 = crate::Reg<pin9::PIN9_SPEC>;
 #[doc = "configure RTC GPIO9"]
-pub mod rtc_gpio_pin9;
-#[doc = "RTC_GPIO_PIN10 (rw) register accessor: configure RTC GPIO10\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin10`] module"]
-pub type RTC_GPIO_PIN10 = crate::Reg<rtc_gpio_pin10::RTC_GPIO_PIN10_SPEC>;
+pub mod pin9;
+#[doc = "PIN10 (rw) register accessor: configure RTC GPIO10\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin10`] module"]
+pub type PIN10 = crate::Reg<pin10::PIN10_SPEC>;
 #[doc = "configure RTC GPIO10"]
-pub mod rtc_gpio_pin10;
-#[doc = "RTC_GPIO_PIN11 (rw) register accessor: configure RTC GPIO11\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin11::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin11::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin11`] module"]
-pub type RTC_GPIO_PIN11 = crate::Reg<rtc_gpio_pin11::RTC_GPIO_PIN11_SPEC>;
+pub mod pin10;
+#[doc = "PIN11 (rw) register accessor: configure RTC GPIO11\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin11::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin11::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin11`] module"]
+pub type PIN11 = crate::Reg<pin11::PIN11_SPEC>;
 #[doc = "configure RTC GPIO11"]
-pub mod rtc_gpio_pin11;
-#[doc = "RTC_GPIO_PIN12 (rw) register accessor: configure RTC GPIO12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin12::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin12::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin12`] module"]
-pub type RTC_GPIO_PIN12 = crate::Reg<rtc_gpio_pin12::RTC_GPIO_PIN12_SPEC>;
+pub mod pin11;
+#[doc = "PIN12 (rw) register accessor: configure RTC GPIO12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin12::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin12::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin12`] module"]
+pub type PIN12 = crate::Reg<pin12::PIN12_SPEC>;
 #[doc = "configure RTC GPIO12"]
-pub mod rtc_gpio_pin12;
-#[doc = "RTC_GPIO_PIN13 (rw) register accessor: configure RTC GPIO13\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin13::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin13::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin13`] module"]
-pub type RTC_GPIO_PIN13 = crate::Reg<rtc_gpio_pin13::RTC_GPIO_PIN13_SPEC>;
+pub mod pin12;
+#[doc = "PIN13 (rw) register accessor: configure RTC GPIO13\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin13::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin13::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin13`] module"]
+pub type PIN13 = crate::Reg<pin13::PIN13_SPEC>;
 #[doc = "configure RTC GPIO13"]
-pub mod rtc_gpio_pin13;
-#[doc = "RTC_GPIO_PIN14 (rw) register accessor: configure RTC GPIO14\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin14::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin14::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin14`] module"]
-pub type RTC_GPIO_PIN14 = crate::Reg<rtc_gpio_pin14::RTC_GPIO_PIN14_SPEC>;
+pub mod pin13;
+#[doc = "PIN14 (rw) register accessor: configure RTC GPIO14\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin14::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin14::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin14`] module"]
+pub type PIN14 = crate::Reg<pin14::PIN14_SPEC>;
 #[doc = "configure RTC GPIO14"]
-pub mod rtc_gpio_pin14;
-#[doc = "RTC_GPIO_PIN15 (rw) register accessor: configure RTC GPIO15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin15::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin15::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin15`] module"]
-pub type RTC_GPIO_PIN15 = crate::Reg<rtc_gpio_pin15::RTC_GPIO_PIN15_SPEC>;
+pub mod pin14;
+#[doc = "PIN15 (rw) register accessor: configure RTC GPIO15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin15::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin15::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin15`] module"]
+pub type PIN15 = crate::Reg<pin15::PIN15_SPEC>;
 #[doc = "configure RTC GPIO15"]
-pub mod rtc_gpio_pin15;
-#[doc = "RTC_GPIO_PIN16 (rw) register accessor: configure RTC GPIO16\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin16::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin16::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin16`] module"]
-pub type RTC_GPIO_PIN16 = crate::Reg<rtc_gpio_pin16::RTC_GPIO_PIN16_SPEC>;
+pub mod pin15;
+#[doc = "PIN16 (rw) register accessor: configure RTC GPIO16\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin16::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin16::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin16`] module"]
+pub type PIN16 = crate::Reg<pin16::PIN16_SPEC>;
 #[doc = "configure RTC GPIO16"]
-pub mod rtc_gpio_pin16;
-#[doc = "RTC_GPIO_PIN17 (rw) register accessor: configure RTC GPIO17\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin17::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin17::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin17`] module"]
-pub type RTC_GPIO_PIN17 = crate::Reg<rtc_gpio_pin17::RTC_GPIO_PIN17_SPEC>;
+pub mod pin16;
+#[doc = "PIN17 (rw) register accessor: configure RTC GPIO17\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin17::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin17::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin17`] module"]
+pub type PIN17 = crate::Reg<pin17::PIN17_SPEC>;
 #[doc = "configure RTC GPIO17"]
-pub mod rtc_gpio_pin17;
-#[doc = "RTC_GPIO_PIN18 (rw) register accessor: configure RTC GPIO18\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin18::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin18::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin18`] module"]
-pub type RTC_GPIO_PIN18 = crate::Reg<rtc_gpio_pin18::RTC_GPIO_PIN18_SPEC>;
+pub mod pin17;
+#[doc = "PIN18 (rw) register accessor: configure RTC GPIO18\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin18::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin18::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin18`] module"]
+pub type PIN18 = crate::Reg<pin18::PIN18_SPEC>;
 #[doc = "configure RTC GPIO18"]
-pub mod rtc_gpio_pin18;
-#[doc = "RTC_GPIO_PIN19 (rw) register accessor: configure RTC GPIO19\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin19::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin19::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin19`] module"]
-pub type RTC_GPIO_PIN19 = crate::Reg<rtc_gpio_pin19::RTC_GPIO_PIN19_SPEC>;
+pub mod pin18;
+#[doc = "PIN19 (rw) register accessor: configure RTC GPIO19\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin19::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin19::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin19`] module"]
+pub type PIN19 = crate::Reg<pin19::PIN19_SPEC>;
 #[doc = "configure RTC GPIO19"]
-pub mod rtc_gpio_pin19;
-#[doc = "RTC_GPIO_PIN20 (rw) register accessor: configure RTC GPIO20\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin20::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin20::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin20`] module"]
-pub type RTC_GPIO_PIN20 = crate::Reg<rtc_gpio_pin20::RTC_GPIO_PIN20_SPEC>;
+pub mod pin19;
+#[doc = "PIN20 (rw) register accessor: configure RTC GPIO20\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin20::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin20::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin20`] module"]
+pub type PIN20 = crate::Reg<pin20::PIN20_SPEC>;
 #[doc = "configure RTC GPIO20"]
-pub mod rtc_gpio_pin20;
-#[doc = "RTC_GPIO_PIN21 (rw) register accessor: configure RTC GPIO21\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_pin21::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_pin21::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_gpio_pin21`] module"]
-pub type RTC_GPIO_PIN21 = crate::Reg<rtc_gpio_pin21::RTC_GPIO_PIN21_SPEC>;
+pub mod pin20;
+#[doc = "PIN21 (rw) register accessor: configure RTC GPIO21\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin21::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin21::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin21`] module"]
+pub type PIN21 = crate::Reg<pin21::PIN21_SPEC>;
 #[doc = "configure RTC GPIO21"]
-pub mod rtc_gpio_pin21;
+pub mod pin21;
 #[doc = "RTC_DEBUG_SEL (rw) register accessor: configure rtc debug\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_debug_sel::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_debug_sel::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_debug_sel`] module"]
 pub type RTC_DEBUG_SEL = crate::Reg<rtc_debug_sel::RTC_DEBUG_SEL_SPEC>;
 #[doc = "configure rtc debug"]

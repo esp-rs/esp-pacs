@@ -1,1 +1,12 @@
 _svd: "../esp32s2-ulp.base.svd"
+
+RTC_IO:
+  _strip: "RTC_GPIO_"
+
+  "*":
+    _strip: "RTC_"
+
+  OUT_W1TC:
+    _strip: "GPIO_"
+  OUT_W1TS:
+    _strip: "GPIO_"
