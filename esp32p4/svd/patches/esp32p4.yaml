@@ -172,3 +172,103 @@ SHA:
       dim: 16
       dimIncrement: 0x4
       size: 0x20
+
+GPIO:
+  _delete:
+    - FUNC*_IN_SEL_CFG
+  _add:
+    FUNC%s_IN_SEL_CFG:
+        dim: 254
+        dimIncrement: 0x04
+        dimIndex: 1-255
+        description: GPIO input function configuration register
+        addressOffset: 0x15c
+        access: read-write
+        reset-value: 0x0000003F
+        size: 0x20
+        fields:
+            IN_SEL:
+                description: "set this value: s=0-56: connect GPIO[s] to this port. s=0x3F: set this port always high level. s=0x3E: set this port always low level."
+                bitOffset: 0
+                bitWidth: 6
+            IN_INV_SEL:
+                description: "set this bit to invert input signal. 1:invert. 0:not invert."
+                bitOffset: 6
+                bitWidth: 1
+            SEL:
+                description: "set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."
+                bitOffset: 7
+                bitWidth: 1
+  FUNC%s_OUT_SEL_CFG:
+    _modify:
+      FUNC_OUT_SEL:
+        name: OUT_SEL
+      FUNC_OUT_INV_SEL:
+        name: INV_SEL
+      FUNC_OEN_SEL:
+        name: OEN_SEL
+      FUNC_OEN_INV_SEL:
+        name: OEN_INV_SEL
+
+IO_MUX:
+  _delete:
+    - gpio*
+  _add:
+    GPIO%s:
+        dim: 54
+        dimIncrement: 0x04
+        dimIndex: 0-54
+        description: IO_MUX Control Register
+        addressOffset: 0x4
+        access: read-write
+        reset-value: 0x800
+        size: 0x20
+        fields:
+            MCU_OE:
+                description: "Configures whether or not to enable the output of GPIOn in sleep mode. 0: Disable 1: Enable"
+                bitOffset: 0
+                bitWidth: 1
+            SLP_SEL:
+                description: "Configures whether or not to enter sleep mode for GPIOn. 0: Not enter 1: Enter"
+                bitOffset: 1
+                bitWidth: 1
+            MCU_WPD:
+                description: "Configure whether or not to enable pull-down resistor of GPIOn during sleep mode. 0: Disable 1: Enable"
+                bitOffset: 2
+                bitWidth: 1
+            MCU_WPU:
+                description: "Configures whether or not to enable pull-up resistor of GPIOn during sleep mode. 0: Disable 1: Enable"
+                bitOffset: 3
+                bitWidth: 1
+            MCU_IE:
+                description: "Configures whether or not to enable the input of GPIOn during sleep mode. 0: Disable 1: Enable"
+                bitOffset: 4
+                bitWidth: 1
+            MCU_DRV:
+                description: "Configures the drive strength of GPIOn during sleep mode. 0: ~5 mA 1: ~10 mA 2: ~20 mA 3: ~40 mA"
+                bitOffset: 5
+                bitWidth: 2
+            FUN_WPD:
+                description: "Configures whether or not to enable pull-down resistor of GPIOn. 0: Disable 1: Enable"
+                bitOffset: 7
+                bitWidth: 1
+            FUN_WPU:
+                description: "Configures whether or not enable pull-up resistor of GPIOn. 0: Disable 1: Enable"
+                bitOffset: 8
+                bitWidth: 1
+            FUN_IE:
+                description: "Configures whether or not to enable input of GPIOn. 0: Disable 1: Enable"
+                bitOffset: 9
+                bitWidth: 1
+            FUN_DRV:
+                description: "Configures the drive strength of GPIOn. 0: ~5 mA 1: ~10 mA 2: ~20 mA 3: ~40 mA"
+                bitOffset: 10
+                bitWidth: 2
+            MCU_SEL:
+                description: "Configures to select IO MUX function for this pin. 0: Select Function 0 1: Select Function 1 ......"
+                bitOffset: 12
+                bitWidth: 3
+            FILTER_EN:
+                description: "Configures whether or not to enable filter for pin input signals. 0: Disable 1: Enable"
+                bitOffset: 15
+                bitWidth: 1
