@@ -37,6 +37,10 @@ extern "C" {
     fn I2S2();
     fn UHCI0();
     fn UART0();
+    fn UART1();
+    fn UART2();
+    fn UART3();
+    fn UART4();
     fn PWM0();
     fn PWM1();
     fn TWAI0();
@@ -55,6 +59,18 @@ extern "C" {
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
+    fn AHB_PDMA_IN_CH0();
+    fn AHB_PDMA_IN_CH1();
+    fn AHB_PDMA_IN_CH2();
+    fn AHB_PDMA_OUT_CH0();
+    fn AHB_PDMA_OUT_CH1();
+    fn AHB_PDMA_OUT_CH2();
+    fn AXI_PDMA_IN_CH0();
+    fn AXI_PDMA_IN_CH1();
+    fn AXI_PDMA_IN_CH2();
+    fn AXI_PDMA_OUT_CH0();
+    fn AXI_PDMA_OUT_CH1();
+    fn AXI_PDMA_OUT_CH2();
     fn RSA();
     fn AES();
     fn SHA();
@@ -142,10 +158,10 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _handler: I2S2 },
     Vector { _handler: UHCI0 },
     Vector { _handler: UART0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: UART1 },
+    Vector { _handler: UART2 },
+    Vector { _handler: UART3 },
+    Vector { _handler: UART4 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: PWM0 },
@@ -172,18 +188,42 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector {
         _handler: SYSTIMER_TARGET2,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: AHB_PDMA_IN_CH0,
+    },
+    Vector {
+        _handler: AHB_PDMA_IN_CH1,
+    },
+    Vector {
+        _handler: AHB_PDMA_IN_CH2,
+    },
+    Vector {
+        _handler: AHB_PDMA_OUT_CH0,
+    },
+    Vector {
+        _handler: AHB_PDMA_OUT_CH1,
+    },
+    Vector {
+        _handler: AHB_PDMA_OUT_CH2,
+    },
+    Vector {
+        _handler: AXI_PDMA_IN_CH0,
+    },
+    Vector {
+        _handler: AXI_PDMA_IN_CH1,
+    },
+    Vector {
+        _handler: AXI_PDMA_IN_CH2,
+    },
+    Vector {
+        _handler: AXI_PDMA_OUT_CH0,
+    },
+    Vector {
+        _handler: AXI_PDMA_OUT_CH1,
+    },
+    Vector {
+        _handler: AXI_PDMA_OUT_CH2,
+    },
     Vector { _handler: RSA },
     Vector { _handler: AES },
     Vector { _handler: SHA },
@@ -382,6 +422,52 @@ impl core::fmt::Debug for AES {
 }
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub mod aes;
+#[doc = "AHB_DMA Peripheral"]
+pub struct AHB_DMA {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for AHB_DMA {}
+impl AHB_DMA {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const ahb_dma::RegisterBlock = 0x5008_5000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const ahb_dma::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for AHB_DMA {
+    type Target = ahb_dma::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for AHB_DMA {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHB_DMA").finish()
+    }
+}
+#[doc = "AHB_DMA Peripheral"]
+pub mod ahb_dma;
 #[doc = "LP_I2C_ANA_MST Peripheral"]
 pub struct LP_I2C_ANA_MST {
     _marker: PhantomData<*const ()>,
@@ -4016,6 +4102,190 @@ impl core::fmt::Debug for UART0 {
 }
 #[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 0"]
 pub mod uart0;
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 1"]
+pub struct UART1 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for UART1 {}
+impl UART1 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const uart0::RegisterBlock = 0x500c_b000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const uart0::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for UART1 {
+    type Target = uart0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for UART1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART1").finish()
+    }
+}
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 1"]
+pub use self::uart0 as uart1;
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 2"]
+pub struct UART2 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for UART2 {}
+impl UART2 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const uart0::RegisterBlock = 0x500c_c000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const uart0::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for UART2 {
+    type Target = uart0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for UART2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART2").finish()
+    }
+}
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 2"]
+pub use self::uart0 as uart2;
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 3"]
+pub struct UART3 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for UART3 {}
+impl UART3 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const uart0::RegisterBlock = 0x500c_d000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const uart0::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for UART3 {
+    type Target = uart0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for UART3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART3").finish()
+    }
+}
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 3"]
+pub use self::uart0 as uart3;
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 4"]
+pub struct UART4 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for UART4 {}
+impl UART4 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const uart0::RegisterBlock = 0x500c_e000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const uart0::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for UART4 {
+    type Target = uart0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for UART4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART4").finish()
+    }
+}
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 4"]
+pub use self::uart0 as uart4;
 #[doc = "Universal Host Controller Interface 0"]
 pub struct UHCI0 {
     _marker: PhantomData<*const ()>,
@@ -4163,6 +4433,8 @@ pub struct Peripherals {
     pub ADC: ADC,
     #[doc = "AES"]
     pub AES: AES,
+    #[doc = "AHB_DMA"]
+    pub AHB_DMA: AHB_DMA,
     #[doc = "LP_I2C_ANA_MST"]
     pub LP_I2C_ANA_MST: LP_I2C_ANA_MST,
     #[doc = "ASSIST_DEBUG"]
@@ -4321,6 +4593,14 @@ pub struct Peripherals {
     pub TWAI2: TWAI2,
     #[doc = "UART0"]
     pub UART0: UART0,
+    #[doc = "UART1"]
+    pub UART1: UART1,
+    #[doc = "UART2"]
+    pub UART2: UART2,
+    #[doc = "UART3"]
+    pub UART3: UART3,
+    #[doc = "UART4"]
+    pub UART4: UART4,
     #[doc = "UHCI0"]
     pub UHCI0: UHCI0,
     #[doc = "USB_DEVICE"]
@@ -4353,6 +4633,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             AES: AES {
+                _marker: PhantomData,
+            },
+            AHB_DMA: AHB_DMA {
                 _marker: PhantomData,
             },
             LP_I2C_ANA_MST: LP_I2C_ANA_MST {
@@ -4590,6 +4873,18 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             UART0: UART0 {
+                _marker: PhantomData,
+            },
+            UART1: UART1 {
+                _marker: PhantomData,
+            },
+            UART2: UART2 {
+                _marker: PhantomData,
+            },
+            UART3: UART3 {
+                _marker: PhantomData,
+            },
+            UART4: UART4 {
                 _marker: PhantomData,
             },
             UHCI0: UHCI0 {
