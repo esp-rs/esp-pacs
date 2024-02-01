@@ -111,3 +111,9 @@ SHA:
       dim: 16
       dimIncrement: 0x4
       size: 0x20
+
+TRACE:
+  MEM_START_ADDR:
+    _modify:
+      MEM_STAET_ADDR:
+        name: MEM_START_ADDR

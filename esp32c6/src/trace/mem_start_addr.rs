@@ -2,15 +2,15 @@
 pub type R = crate::R<MEM_START_ADDR_SPEC>;
 #[doc = "Register `MEM_START_ADDR` writer"]
 pub type W = crate::W<MEM_START_ADDR_SPEC>;
-#[doc = "Field `MEM_STAET_ADDR` reader - The start address of trace memory"]
-pub type MEM_STAET_ADDR_R = crate::FieldReader<u32>;
-#[doc = "Field `MEM_STAET_ADDR` writer - The start address of trace memory"]
-pub type MEM_STAET_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `MEM_START_ADDR` reader - The start address of trace memory"]
+pub type MEM_START_ADDR_R = crate::FieldReader<u32>;
+#[doc = "Field `MEM_START_ADDR` writer - The start address of trace memory"]
+pub type MEM_START_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The start address of trace memory"]
     #[inline(always)]
-    pub fn mem_staet_addr(&self) -> MEM_STAET_ADDR_R {
-        MEM_STAET_ADDR_R::new(self.bits)
+    pub fn mem_start_addr(&self) -> MEM_START_ADDR_R {
+        MEM_START_ADDR_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_START_ADDR")
             .field(
-                "mem_staet_addr",
-                &format_args!("{}", self.mem_staet_addr().bits()),
+                "mem_start_addr",
+                &format_args!("{}", self.mem_start_addr().bits()),
             )
             .finish()
     }
@@ -34,8 +34,8 @@ impl W {
     #[doc = "Bits 0:31 - The start address of trace memory"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_staet_addr(&mut self) -> MEM_STAET_ADDR_W<MEM_START_ADDR_SPEC> {
-        MEM_STAET_ADDR_W::new(self, 0)
+    pub fn mem_start_addr(&mut self) -> MEM_START_ADDR_W<MEM_START_ADDR_SPEC> {
+        MEM_START_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
