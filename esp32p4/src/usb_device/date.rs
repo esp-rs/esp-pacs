@@ -2,25 +2,22 @@
 pub type R = crate::R<DATE_SPEC>;
 #[doc = "Register `DATE` writer"]
 pub type W = crate::W<DATE_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_DATE` reader - register version."]
-pub type USB_SERIAL_JTAG_DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `USB_SERIAL_JTAG_DATE` writer - register version."]
-pub type USB_SERIAL_JTAG_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `DATE` reader - register version."]
+pub type DATE_R = crate::FieldReader<u32>;
+#[doc = "Field `DATE` writer - register version."]
+pub type DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - register version."]
     #[inline(always)]
-    pub fn usb_serial_jtag_date(&self) -> USB_SERIAL_JTAG_DATE_R {
-        USB_SERIAL_JTAG_DATE_R::new(self.bits)
+    pub fn date(&self) -> DATE_R {
+        DATE_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATE")
-            .field(
-                "usb_serial_jtag_date",
-                &format_args!("{}", self.usb_serial_jtag_date().bits()),
-            )
+            .field("date", &format_args!("{}", self.date().bits()))
             .finish()
     }
 }
@@ -34,8 +31,8 @@ impl W {
     #[doc = "Bits 0:31 - register version."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_date(&mut self) -> USB_SERIAL_JTAG_DATE_W<DATE_SPEC> {
-        USB_SERIAL_JTAG_DATE_W::new(self, 0)
+    pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
+        DATE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

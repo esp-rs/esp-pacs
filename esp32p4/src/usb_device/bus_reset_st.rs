@@ -1,12 +1,12 @@
 #[doc = "Register `BUS_RESET_ST` reader"]
 pub type R = crate::R<BUS_RESET_ST_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_USB_BUS_RESET_ST` reader - USB bus reset status. 0: USB-Serial-JTAG is in usb bus reset status. 1: USB bus reset is released."]
-pub type USB_SERIAL_JTAG_USB_BUS_RESET_ST_R = crate::BitReader;
+#[doc = "Field `USB_BUS_RESET_ST` reader - USB bus reset status. 0: USB-Serial-JTAG is in usb bus reset status. 1: USB bus reset is released."]
+pub type USB_BUS_RESET_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - USB bus reset status. 0: USB-Serial-JTAG is in usb bus reset status. 1: USB bus reset is released."]
     #[inline(always)]
-    pub fn usb_serial_jtag_usb_bus_reset_st(&self) -> USB_SERIAL_JTAG_USB_BUS_RESET_ST_R {
-        USB_SERIAL_JTAG_USB_BUS_RESET_ST_R::new((self.bits & 1) != 0)
+    pub fn usb_bus_reset_st(&self) -> USB_BUS_RESET_ST_R {
+        USB_BUS_RESET_ST_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_RESET_ST")
             .field(
-                "usb_serial_jtag_usb_bus_reset_st",
-                &format_args!("{}", self.usb_serial_jtag_usb_bus_reset_st().bit()),
+                "usb_bus_reset_st",
+                &format_args!("{}", self.usb_bus_reset_st().bit()),
             )
             .finish()
     }

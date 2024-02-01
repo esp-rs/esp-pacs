@@ -2,15 +2,15 @@
 pub type R = crate::R<SRAM_CTRL_SPEC>;
 #[doc = "Register `SRAM_CTRL` writer"]
 pub type W = crate::W<SRAM_CTRL_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_MEM_AUX_CTRL` reader - Control signals"]
-pub type USB_SERIAL_JTAG_MEM_AUX_CTRL_R = crate::FieldReader<u16>;
-#[doc = "Field `USB_SERIAL_JTAG_MEM_AUX_CTRL` writer - Control signals"]
-pub type USB_SERIAL_JTAG_MEM_AUX_CTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
+#[doc = "Field `MEM_AUX_CTRL` reader - Control signals"]
+pub type MEM_AUX_CTRL_R = crate::FieldReader<u16>;
+#[doc = "Field `MEM_AUX_CTRL` writer - Control signals"]
+pub type MEM_AUX_CTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
     #[doc = "Bits 0:13 - Control signals"]
     #[inline(always)]
-    pub fn usb_serial_jtag_mem_aux_ctrl(&self) -> USB_SERIAL_JTAG_MEM_AUX_CTRL_R {
-        USB_SERIAL_JTAG_MEM_AUX_CTRL_R::new((self.bits & 0x3fff) as u16)
+    pub fn mem_aux_ctrl(&self) -> MEM_AUX_CTRL_R {
+        MEM_AUX_CTRL_R::new((self.bits & 0x3fff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SRAM_CTRL")
             .field(
-                "usb_serial_jtag_mem_aux_ctrl",
-                &format_args!("{}", self.usb_serial_jtag_mem_aux_ctrl().bits()),
+                "mem_aux_ctrl",
+                &format_args!("{}", self.mem_aux_ctrl().bits()),
             )
             .finish()
     }
@@ -34,10 +34,8 @@ impl W {
     #[doc = "Bits 0:13 - Control signals"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_mem_aux_ctrl(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_MEM_AUX_CTRL_W<SRAM_CTRL_SPEC> {
-        USB_SERIAL_JTAG_MEM_AUX_CTRL_W::new(self, 0)
+    pub fn mem_aux_ctrl(&mut self) -> MEM_AUX_CTRL_W<SRAM_CTRL_SPEC> {
+        MEM_AUX_CTRL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

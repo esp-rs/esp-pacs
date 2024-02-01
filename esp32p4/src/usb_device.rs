@@ -215,7 +215,7 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "EP1 (r) register accessor: FIFO access for the CDC-ACM data IN and OUT endpoints.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ep1`] module"]
+#[doc = "EP1 (rw) register accessor: FIFO access for the CDC-ACM data IN and OUT endpoints.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ep1`] module"]
 pub type EP1 = crate::Reg<ep1::EP1_SPEC>;
 #[doc = "FIFO access for the CDC-ACM data IN and OUT endpoints."]
 pub mod ep1;

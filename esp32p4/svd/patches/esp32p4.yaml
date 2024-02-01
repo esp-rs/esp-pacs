@@ -1,1 +1,10 @@
 _svd: "../esp32p4.base.svd"
+
+USB_DEVICE:
+  "*":
+    _strip: "USB_SERIAL_JTAG_"
+
+  EP1:
+    _modify:
+      RDWR_BYTE:
+        access: read-write

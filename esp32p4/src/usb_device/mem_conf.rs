@@ -2,37 +2,34 @@
 pub type R = crate::R<MEM_CONF_SPEC>;
 #[doc = "Register `MEM_CONF` writer"]
 pub type W = crate::W<MEM_CONF_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_USB_MEM_PD` reader - 1: power down usb memory."]
-pub type USB_SERIAL_JTAG_USB_MEM_PD_R = crate::BitReader;
-#[doc = "Field `USB_SERIAL_JTAG_USB_MEM_PD` writer - 1: power down usb memory."]
-pub type USB_SERIAL_JTAG_USB_MEM_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `USB_SERIAL_JTAG_USB_MEM_CLK_EN` reader - 1: Force clock on for usb memory."]
-pub type USB_SERIAL_JTAG_USB_MEM_CLK_EN_R = crate::BitReader;
-#[doc = "Field `USB_SERIAL_JTAG_USB_MEM_CLK_EN` writer - 1: Force clock on for usb memory."]
-pub type USB_SERIAL_JTAG_USB_MEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USB_MEM_PD` reader - 1: power down usb memory."]
+pub type USB_MEM_PD_R = crate::BitReader;
+#[doc = "Field `USB_MEM_PD` writer - 1: power down usb memory."]
+pub type USB_MEM_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USB_MEM_CLK_EN` reader - 1: Force clock on for usb memory."]
+pub type USB_MEM_CLK_EN_R = crate::BitReader;
+#[doc = "Field `USB_MEM_CLK_EN` writer - 1: Force clock on for usb memory."]
+pub type USB_MEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
-    pub fn usb_serial_jtag_usb_mem_pd(&self) -> USB_SERIAL_JTAG_USB_MEM_PD_R {
-        USB_SERIAL_JTAG_USB_MEM_PD_R::new((self.bits & 1) != 0)
+    pub fn usb_mem_pd(&self) -> USB_MEM_PD_R {
+        USB_MEM_PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1: Force clock on for usb memory."]
     #[inline(always)]
-    pub fn usb_serial_jtag_usb_mem_clk_en(&self) -> USB_SERIAL_JTAG_USB_MEM_CLK_EN_R {
-        USB_SERIAL_JTAG_USB_MEM_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn usb_mem_clk_en(&self) -> USB_MEM_CLK_EN_R {
+        USB_MEM_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_CONF")
+            .field("usb_mem_pd", &format_args!("{}", self.usb_mem_pd().bit()))
             .field(
-                "usb_serial_jtag_usb_mem_pd",
-                &format_args!("{}", self.usb_serial_jtag_usb_mem_pd().bit()),
-            )
-            .field(
-                "usb_serial_jtag_usb_mem_clk_en",
-                &format_args!("{}", self.usb_serial_jtag_usb_mem_clk_en().bit()),
+                "usb_mem_clk_en",
+                &format_args!("{}", self.usb_mem_clk_en().bit()),
             )
             .finish()
     }
@@ -47,16 +44,14 @@ impl W {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_usb_mem_pd(&mut self) -> USB_SERIAL_JTAG_USB_MEM_PD_W<MEM_CONF_SPEC> {
-        USB_SERIAL_JTAG_USB_MEM_PD_W::new(self, 0)
+    pub fn usb_mem_pd(&mut self) -> USB_MEM_PD_W<MEM_CONF_SPEC> {
+        USB_MEM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Force clock on for usb memory."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_usb_mem_clk_en(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_USB_MEM_CLK_EN_W<MEM_CONF_SPEC> {
-        USB_SERIAL_JTAG_USB_MEM_CLK_EN_W::new(self, 1)
+    pub fn usb_mem_clk_en(&mut self) -> USB_MEM_CLK_EN_W<MEM_CONF_SPEC> {
+        USB_MEM_CLK_EN_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
