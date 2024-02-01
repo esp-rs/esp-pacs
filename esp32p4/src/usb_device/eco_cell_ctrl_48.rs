@@ -2,22 +2,22 @@
 pub type R = crate::R<ECO_CELL_CTRL_48_SPEC>;
 #[doc = "Register `ECO_CELL_CTRL_48` writer"]
 pub type W = crate::W<ECO_CELL_CTRL_48_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_RDN_RESULT_48` reader - Reserved."]
-pub type USB_SERIAL_JTAG_RDN_RESULT_48_R = crate::BitReader;
-#[doc = "Field `USB_SERIAL_JTAG_RDN_ENA_48` reader - Reserved."]
-pub type USB_SERIAL_JTAG_RDN_ENA_48_R = crate::BitReader;
-#[doc = "Field `USB_SERIAL_JTAG_RDN_ENA_48` writer - Reserved."]
-pub type USB_SERIAL_JTAG_RDN_ENA_48_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RDN_RESULT_48` reader - Reserved."]
+pub type RDN_RESULT_48_R = crate::BitReader;
+#[doc = "Field `RDN_ENA_48` reader - Reserved."]
+pub type RDN_ENA_48_R = crate::BitReader;
+#[doc = "Field `RDN_ENA_48` writer - Reserved."]
+pub type RDN_ENA_48_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
-    pub fn usb_serial_jtag_rdn_result_48(&self) -> USB_SERIAL_JTAG_RDN_RESULT_48_R {
-        USB_SERIAL_JTAG_RDN_RESULT_48_R::new((self.bits & 1) != 0)
+    pub fn rdn_result_48(&self) -> RDN_RESULT_48_R {
+        RDN_RESULT_48_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Reserved."]
     #[inline(always)]
-    pub fn usb_serial_jtag_rdn_ena_48(&self) -> USB_SERIAL_JTAG_RDN_ENA_48_R {
-        USB_SERIAL_JTAG_RDN_ENA_48_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn rdn_ena_48(&self) -> RDN_ENA_48_R {
+        RDN_ENA_48_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -25,13 +25,10 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECO_CELL_CTRL_48")
             .field(
-                "usb_serial_jtag_rdn_result_48",
-                &format_args!("{}", self.usb_serial_jtag_rdn_result_48().bit()),
+                "rdn_result_48",
+                &format_args!("{}", self.rdn_result_48().bit()),
             )
-            .field(
-                "usb_serial_jtag_rdn_ena_48",
-                &format_args!("{}", self.usb_serial_jtag_rdn_ena_48().bit()),
-            )
+            .field("rdn_ena_48", &format_args!("{}", self.rdn_ena_48().bit()))
             .finish()
     }
 }
@@ -45,10 +42,8 @@ impl W {
     #[doc = "Bit 1 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_rdn_ena_48(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_RDN_ENA_48_W<ECO_CELL_CTRL_48_SPEC> {
-        USB_SERIAL_JTAG_RDN_ENA_48_W::new(self, 1)
+    pub fn rdn_ena_48(&mut self) -> RDN_ENA_48_W<ECO_CELL_CTRL_48_SPEC> {
+        RDN_ENA_48_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

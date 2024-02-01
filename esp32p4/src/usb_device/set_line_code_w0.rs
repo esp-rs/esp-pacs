@@ -1,12 +1,12 @@
 #[doc = "Register `SET_LINE_CODE_W0` reader"]
 pub type R = crate::R<SET_LINE_CODE_W0_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_DW_DTE_RATE` reader - The value of dwDTERate set by host through SET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_DW_DTE_RATE_R = crate::FieldReader<u32>;
+#[doc = "Field `DW_DTE_RATE` reader - The value of dwDTERate set by host through SET_LINE_CODING command."]
+pub type DW_DTE_RATE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The value of dwDTERate set by host through SET_LINE_CODING command."]
     #[inline(always)]
-    pub fn usb_serial_jtag_dw_dte_rate(&self) -> USB_SERIAL_JTAG_DW_DTE_RATE_R {
-        USB_SERIAL_JTAG_DW_DTE_RATE_R::new(self.bits)
+    pub fn dw_dte_rate(&self) -> DW_DTE_RATE_R {
+        DW_DTE_RATE_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SET_LINE_CODE_W0")
             .field(
-                "usb_serial_jtag_dw_dte_rate",
-                &format_args!("{}", self.usb_serial_jtag_dw_dte_rate().bits()),
+                "dw_dte_rate",
+                &format_args!("{}", self.dw_dte_rate().bits()),
             )
             .finish()
     }

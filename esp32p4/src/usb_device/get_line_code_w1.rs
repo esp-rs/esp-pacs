@@ -2,33 +2,33 @@
 pub type R = crate::R<GET_LINE_CODE_W1_SPEC>;
 #[doc = "Register `GET_LINE_CODE_W1` writer"]
 pub type W = crate::W<GET_LINE_CODE_W1_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_GET_BDATA_BITS` reader - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_GET_BDATA_BITS_R = crate::FieldReader;
-#[doc = "Field `USB_SERIAL_JTAG_GET_BDATA_BITS` writer - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_GET_BDATA_BITS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `USB_SERIAL_JTAG_GET_BPARITY_TYPE` reader - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_GET_BPARITY_TYPE_R = crate::FieldReader;
-#[doc = "Field `USB_SERIAL_JTAG_GET_BPARITY_TYPE` writer - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_GET_BPARITY_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `USB_SERIAL_JTAG_GET_BCHAR_FORMAT` reader - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_GET_BCHAR_FORMAT_R = crate::FieldReader;
-#[doc = "Field `USB_SERIAL_JTAG_GET_BCHAR_FORMAT` writer - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_GET_BCHAR_FORMAT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GET_BDATA_BITS` reader - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
+pub type GET_BDATA_BITS_R = crate::FieldReader;
+#[doc = "Field `GET_BDATA_BITS` writer - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
+pub type GET_BDATA_BITS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GET_BPARITY_TYPE` reader - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
+pub type GET_BPARITY_TYPE_R = crate::FieldReader;
+#[doc = "Field `GET_BPARITY_TYPE` writer - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
+pub type GET_BPARITY_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GET_BCHAR_FORMAT` reader - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
+pub type GET_BCHAR_FORMAT_R = crate::FieldReader;
+#[doc = "Field `GET_BCHAR_FORMAT` writer - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
+pub type GET_BCHAR_FORMAT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
-    pub fn usb_serial_jtag_get_bdata_bits(&self) -> USB_SERIAL_JTAG_GET_BDATA_BITS_R {
-        USB_SERIAL_JTAG_GET_BDATA_BITS_R::new((self.bits & 0xff) as u8)
+    pub fn get_bdata_bits(&self) -> GET_BDATA_BITS_R {
+        GET_BDATA_BITS_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
-    pub fn usb_serial_jtag_get_bparity_type(&self) -> USB_SERIAL_JTAG_GET_BPARITY_TYPE_R {
-        USB_SERIAL_JTAG_GET_BPARITY_TYPE_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn get_bparity_type(&self) -> GET_BPARITY_TYPE_R {
+        GET_BPARITY_TYPE_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
-    pub fn usb_serial_jtag_get_bchar_format(&self) -> USB_SERIAL_JTAG_GET_BCHAR_FORMAT_R {
-        USB_SERIAL_JTAG_GET_BCHAR_FORMAT_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn get_bchar_format(&self) -> GET_BCHAR_FORMAT_R {
+        GET_BCHAR_FORMAT_R::new(((self.bits >> 16) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -36,16 +36,16 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GET_LINE_CODE_W1")
             .field(
-                "usb_serial_jtag_get_bdata_bits",
-                &format_args!("{}", self.usb_serial_jtag_get_bdata_bits().bits()),
+                "get_bdata_bits",
+                &format_args!("{}", self.get_bdata_bits().bits()),
             )
             .field(
-                "usb_serial_jtag_get_bparity_type",
-                &format_args!("{}", self.usb_serial_jtag_get_bparity_type().bits()),
+                "get_bparity_type",
+                &format_args!("{}", self.get_bparity_type().bits()),
             )
             .field(
-                "usb_serial_jtag_get_bchar_format",
-                &format_args!("{}", self.usb_serial_jtag_get_bchar_format().bits()),
+                "get_bchar_format",
+                &format_args!("{}", self.get_bchar_format().bits()),
             )
             .finish()
     }
@@ -60,26 +60,20 @@ impl W {
     #[doc = "Bits 0:7 - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_get_bdata_bits(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_GET_BDATA_BITS_W<GET_LINE_CODE_W1_SPEC> {
-        USB_SERIAL_JTAG_GET_BDATA_BITS_W::new(self, 0)
+    pub fn get_bdata_bits(&mut self) -> GET_BDATA_BITS_W<GET_LINE_CODE_W1_SPEC> {
+        GET_BDATA_BITS_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_get_bparity_type(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_GET_BPARITY_TYPE_W<GET_LINE_CODE_W1_SPEC> {
-        USB_SERIAL_JTAG_GET_BPARITY_TYPE_W::new(self, 8)
+    pub fn get_bparity_type(&mut self) -> GET_BPARITY_TYPE_W<GET_LINE_CODE_W1_SPEC> {
+        GET_BPARITY_TYPE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_get_bchar_format(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_GET_BCHAR_FORMAT_W<GET_LINE_CODE_W1_SPEC> {
-        USB_SERIAL_JTAG_GET_BCHAR_FORMAT_W::new(self, 16)
+    pub fn get_bchar_format(&mut self) -> GET_BCHAR_FORMAT_W<GET_LINE_CODE_W1_SPEC> {
+        GET_BCHAR_FORMAT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

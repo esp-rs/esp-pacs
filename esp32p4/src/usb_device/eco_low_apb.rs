@@ -2,15 +2,15 @@
 pub type R = crate::R<ECO_LOW_APB_SPEC>;
 #[doc = "Register `ECO_LOW_APB` writer"]
 pub type W = crate::W<ECO_LOW_APB_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_RND_ECO_LOW_APB` reader - Reserved."]
-pub type USB_SERIAL_JTAG_RND_ECO_LOW_APB_R = crate::FieldReader<u32>;
-#[doc = "Field `USB_SERIAL_JTAG_RND_ECO_LOW_APB` writer - Reserved."]
-pub type USB_SERIAL_JTAG_RND_ECO_LOW_APB_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `RND_ECO_LOW_APB` reader - Reserved."]
+pub type RND_ECO_LOW_APB_R = crate::FieldReader<u32>;
+#[doc = "Field `RND_ECO_LOW_APB` writer - Reserved."]
+pub type RND_ECO_LOW_APB_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
-    pub fn usb_serial_jtag_rnd_eco_low_apb(&self) -> USB_SERIAL_JTAG_RND_ECO_LOW_APB_R {
-        USB_SERIAL_JTAG_RND_ECO_LOW_APB_R::new(self.bits)
+    pub fn rnd_eco_low_apb(&self) -> RND_ECO_LOW_APB_R {
+        RND_ECO_LOW_APB_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECO_LOW_APB")
             .field(
-                "usb_serial_jtag_rnd_eco_low_apb",
-                &format_args!("{}", self.usb_serial_jtag_rnd_eco_low_apb().bits()),
+                "rnd_eco_low_apb",
+                &format_args!("{}", self.rnd_eco_low_apb().bits()),
             )
             .finish()
     }
@@ -34,10 +34,8 @@ impl W {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_rnd_eco_low_apb(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_RND_ECO_LOW_APB_W<ECO_LOW_APB_SPEC> {
-        USB_SERIAL_JTAG_RND_ECO_LOW_APB_W::new(self, 0)
+    pub fn rnd_eco_low_apb(&mut self) -> RND_ECO_LOW_APB_W<ECO_LOW_APB_SPEC> {
+        RND_ECO_LOW_APB_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

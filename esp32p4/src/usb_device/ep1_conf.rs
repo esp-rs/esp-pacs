@@ -2,26 +2,22 @@
 pub type R = crate::R<EP1_CONF_SPEC>;
 #[doc = "Register `EP1_CONF` writer"]
 pub type W = crate::W<EP1_CONF_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_WR_DONE` writer - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
-pub type USB_SERIAL_JTAG_WR_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_IN_EP_DATA_FREE` reader - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
-pub type USB_SERIAL_JTAG_SERIAL_IN_EP_DATA_FREE_R = crate::BitReader;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_OUT_EP_DATA_AVAIL` reader - 1'b1: Indicate there is data in UART Rx FIFO."]
-pub type USB_SERIAL_JTAG_SERIAL_OUT_EP_DATA_AVAIL_R = crate::BitReader;
+#[doc = "Field `WR_DONE` writer - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
+pub type WR_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SERIAL_IN_EP_DATA_FREE` reader - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
+pub type SERIAL_IN_EP_DATA_FREE_R = crate::BitReader;
+#[doc = "Field `SERIAL_OUT_EP_DATA_AVAIL` reader - 1'b1: Indicate there is data in UART Rx FIFO."]
+pub type SERIAL_OUT_EP_DATA_AVAIL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 1 - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_in_ep_data_free(
-        &self,
-    ) -> USB_SERIAL_JTAG_SERIAL_IN_EP_DATA_FREE_R {
-        USB_SERIAL_JTAG_SERIAL_IN_EP_DATA_FREE_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn serial_in_ep_data_free(&self) -> SERIAL_IN_EP_DATA_FREE_R {
+        SERIAL_IN_EP_DATA_FREE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - 1'b1: Indicate there is data in UART Rx FIFO."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_out_ep_data_avail(
-        &self,
-    ) -> USB_SERIAL_JTAG_SERIAL_OUT_EP_DATA_AVAIL_R {
-        USB_SERIAL_JTAG_SERIAL_OUT_EP_DATA_AVAIL_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn serial_out_ep_data_avail(&self) -> SERIAL_OUT_EP_DATA_AVAIL_R {
+        SERIAL_OUT_EP_DATA_AVAIL_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -29,12 +25,12 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EP1_CONF")
             .field(
-                "usb_serial_jtag_serial_in_ep_data_free",
-                &format_args!("{}", self.usb_serial_jtag_serial_in_ep_data_free().bit()),
+                "serial_in_ep_data_free",
+                &format_args!("{}", self.serial_in_ep_data_free().bit()),
             )
             .field(
-                "usb_serial_jtag_serial_out_ep_data_avail",
-                &format_args!("{}", self.usb_serial_jtag_serial_out_ep_data_avail().bit()),
+                "serial_out_ep_data_avail",
+                &format_args!("{}", self.serial_out_ep_data_avail().bit()),
             )
             .finish()
     }
@@ -49,8 +45,8 @@ impl W {
     #[doc = "Bit 0 - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_wr_done(&mut self) -> USB_SERIAL_JTAG_WR_DONE_W<EP1_CONF_SPEC> {
-        USB_SERIAL_JTAG_WR_DONE_W::new(self, 0)
+    pub fn wr_done(&mut self) -> WR_DONE_W<EP1_CONF_SPEC> {
+        WR_DONE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
