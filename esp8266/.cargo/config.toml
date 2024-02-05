@@ -1,5 +1,0 @@
-[build]
-target = "xtensa-esp8266-none-elf"
-
-[unstable]
-build-std = ["core"]
