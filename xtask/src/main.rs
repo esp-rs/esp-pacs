@@ -27,7 +27,6 @@ enum Chip {
     Esp32s2Ulp,
     Esp32s3,
     Esp32s3Ulp,
-    Esp8266,
 }
 
 #[derive(Debug, Clone, Copy, Display, ValueEnum)]
