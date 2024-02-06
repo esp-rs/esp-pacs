@@ -65,10 +65,10 @@ impl crate::RegisterSpec for BLK_RAW_NUM_CFG_SPEC {
 impl crate::Readable for BLK_RAW_NUM_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`blk_raw_num_cfg::W`](W) writer structure"]
 impl crate::Writable for BLK_RAW_NUM_CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BLK_RAW_NUM_CFG to value 0x0003_8400"]
 impl crate::Resettable for BLK_RAW_NUM_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0003_8400;
+    const RESET_VALUE: u32 = 0x0003_8400;
 }

@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CHECK_SUM1_SPEC {
 impl crate::Readable for CHECK_SUM1_SPEC {}
 #[doc = "`reset()` method sets CHECK_SUM1 to value 0x013f"]
 impl crate::Resettable for CHECK_SUM1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x013f;
+    const RESET_VALUE: u32 = 0x013f;
 }

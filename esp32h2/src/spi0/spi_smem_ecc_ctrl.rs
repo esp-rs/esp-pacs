@@ -57,5 +57,5 @@ impl crate::RegisterSpec for SPI_SMEM_ECC_CTRL_SPEC {
 impl crate::Readable for SPI_SMEM_ECC_CTRL_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_ECC_CTRL to value 0x0008_0000"]
 impl crate::Resettable for SPI_SMEM_ECC_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0008_0000;
+    const RESET_VALUE: u32 = 0x0008_0000;
 }

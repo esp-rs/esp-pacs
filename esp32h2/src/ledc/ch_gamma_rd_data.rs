@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CH_GAMMA_RD_DATA_SPEC {
 impl crate::Readable for CH_GAMMA_RD_DATA_SPEC {}
 #[doc = "`reset()` method sets CH%s_GAMMA_RD_DATA to value 0"]
 impl crate::Resettable for CH_GAMMA_RD_DATA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

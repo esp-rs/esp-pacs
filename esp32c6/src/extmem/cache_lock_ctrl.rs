@@ -98,10 +98,10 @@ impl crate::RegisterSpec for CACHE_LOCK_CTRL_SPEC {
 impl crate::Readable for CACHE_LOCK_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cache_lock_ctrl::W`](W) writer structure"]
 impl crate::Writable for CACHE_LOCK_CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CACHE_LOCK_CTRL to value 0x04"]
 impl crate::Resettable for CACHE_LOCK_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x04;
+    const RESET_VALUE: u32 = 0x04;
 }

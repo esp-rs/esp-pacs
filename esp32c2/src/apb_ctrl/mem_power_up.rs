@@ -76,10 +76,10 @@ impl crate::RegisterSpec for MEM_POWER_UP_SPEC {
 impl crate::Readable for MEM_POWER_UP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mem_power_up::W`](W) writer structure"]
 impl crate::Writable for MEM_POWER_UP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MEM_POWER_UP to value 0x7f"]
 impl crate::Resettable for MEM_POWER_UP_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7f;
+    const RESET_VALUE: u32 = 0x7f;
 }

@@ -134,5 +134,5 @@ impl crate::RegisterSpec for IN_INT_ST_CH0_SPEC {
 impl crate::Readable for IN_INT_ST_CH0_SPEC {}
 #[doc = "`reset()` method sets IN_INT_ST_CH0 to value 0"]
 impl crate::Resettable for IN_INT_ST_CH0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

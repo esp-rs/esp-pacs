@@ -35,5 +35,5 @@ impl crate::RegisterSpec for MAIN_BUF1_LOW_SPEC {
 impl crate::Readable for MAIN_BUF1_LOW_SPEC {}
 #[doc = "`reset()` method sets MAIN_BUF1_LOW to value 0"]
 impl crate::Resettable for MAIN_BUF1_LOW_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

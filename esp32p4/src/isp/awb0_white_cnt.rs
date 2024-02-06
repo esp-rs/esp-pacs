@@ -35,5 +35,5 @@ impl crate::RegisterSpec for AWB0_WHITE_CNT_SPEC {
 impl crate::Readable for AWB0_WHITE_CNT_SPEC {}
 #[doc = "`reset()` method sets AWB0_WHITE_CNT to value 0"]
 impl crate::Resettable for AWB0_WHITE_CNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -32,5 +32,5 @@ impl crate::RegisterSpec for H__SPEC {
 impl crate::Readable for H__SPEC {}
 #[doc = "`reset()` method sets H_%s to value 0"]
 impl crate::Resettable for H__SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

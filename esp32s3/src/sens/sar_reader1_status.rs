@@ -35,5 +35,5 @@ impl crate::RegisterSpec for SAR_READER1_STATUS_SPEC {
 impl crate::Readable for SAR_READER1_STATUS_SPEC {}
 #[doc = "`reset()` method sets SAR_READER1_STATUS to value 0"]
 impl crate::Resettable for SAR_READER1_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

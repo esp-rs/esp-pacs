@@ -57,10 +57,10 @@ impl crate::RegisterSpec for DEMOSAIC_GRAD_RATIO_SPEC {
 impl crate::Readable for DEMOSAIC_GRAD_RATIO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`demosaic_grad_ratio::W`](W) writer structure"]
 impl crate::Writable for DEMOSAIC_GRAD_RATIO_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DEMOSAIC_GRAD_RATIO to value 0x10"]
 impl crate::Resettable for DEMOSAIC_GRAD_RATIO_SPEC {
-    const RESET_VALUE: Self::Ux = 0x10;
+    const RESET_VALUE: u32 = 0x10;
 }

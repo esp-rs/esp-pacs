@@ -114,10 +114,10 @@ impl crate::RegisterSpec for A_ROI_REGION0_3_QP_SPEC {
 impl crate::Readable for A_ROI_REGION0_3_QP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`a_roi_region0_3_qp::W`](W) writer structure"]
 impl crate::Writable for A_ROI_REGION0_3_QP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets A_ROI_REGION0_3_QP to value 0"]
 impl crate::Resettable for A_ROI_REGION0_3_QP_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

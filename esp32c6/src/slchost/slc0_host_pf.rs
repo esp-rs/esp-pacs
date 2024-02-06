@@ -35,5 +35,5 @@ impl crate::RegisterSpec for SLC0_HOST_PF_SPEC {
 impl crate::Readable for SLC0_HOST_PF_SPEC {}
 #[doc = "`reset()` method sets SLC0_HOST_PF to value 0"]
 impl crate::Resettable for SLC0_HOST_PF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

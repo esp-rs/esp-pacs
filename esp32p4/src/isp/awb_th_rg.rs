@@ -70,10 +70,10 @@ impl crate::RegisterSpec for AWB_TH_RG_SPEC {
 impl crate::Readable for AWB_TH_RG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`awb_th_rg::W`](W) writer structure"]
 impl crate::Writable for AWB_TH_RG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AWB_TH_RG to value 0x03ff_0000"]
 impl crate::Resettable for AWB_TH_RG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03ff_0000;
+    const RESET_VALUE: u32 = 0x03ff_0000;
 }

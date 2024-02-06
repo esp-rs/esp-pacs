@@ -32,5 +32,5 @@ impl crate::RegisterSpec for LOWPULSE_SPEC {
 impl crate::Readable for LOWPULSE_SPEC {}
 #[doc = "`reset()` method sets LOWPULSE to value 0x000f_ffff"]
 impl crate::Resettable for LOWPULSE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x000f_ffff;
+    const RESET_VALUE: u32 = 0x000f_ffff;
 }

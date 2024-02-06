@@ -90,5 +90,5 @@ impl crate::RegisterSpec for DMA_INSTATUS_SPEC {
 impl crate::Readable for DMA_INSTATUS_SPEC {}
 #[doc = "`reset()` method sets DMA_INSTATUS to value 0x8000_0000"]
 impl crate::Resettable for DMA_INSTATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8000_0000;
+    const RESET_VALUE: u32 = 0x8000_0000;
 }

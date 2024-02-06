@@ -46,5 +46,5 @@ impl crate::RegisterSpec for PRO_CACHE_MMU_FAULT_CONTENT_SPEC {
 impl crate::Readable for PRO_CACHE_MMU_FAULT_CONTENT_SPEC {}
 #[doc = "`reset()` method sets PRO_CACHE_MMU_FAULT_CONTENT to value 0"]
 impl crate::Resettable for PRO_CACHE_MMU_FAULT_CONTENT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

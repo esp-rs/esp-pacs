@@ -76,10 +76,10 @@ impl crate::RegisterSpec for SEQ_POSITION_SPEC {
 impl crate::Readable for SEQ_POSITION_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`seq_position::W`](W) writer structure"]
 impl crate::Writable for SEQ_POSITION_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SEQ_POSITION to value 0x0509"]
 impl crate::Resettable for SEQ_POSITION_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0509;
+    const RESET_VALUE: u32 = 0x0509;
 }

@@ -57,10 +57,10 @@ impl crate::RegisterSpec for ENSHIFT_SPEC {
 impl crate::Readable for ENSHIFT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`enshift::W`](W) writer structure"]
 impl crate::Writable for ENSHIFT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ENSHIFT to value 0"]
 impl crate::Resettable for ENSHIFT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

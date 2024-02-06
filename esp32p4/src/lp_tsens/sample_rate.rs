@@ -57,10 +57,10 @@ impl crate::RegisterSpec for SAMPLE_RATE_SPEC {
 impl crate::Readable for SAMPLE_RATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sample_rate::W`](W) writer structure"]
 impl crate::Writable for SAMPLE_RATE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAMPLE_RATE to value 0x14"]
 impl crate::Resettable for SAMPLE_RATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x14;
+    const RESET_VALUE: u32 = 0x14;
 }

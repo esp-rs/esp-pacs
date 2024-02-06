@@ -35,10 +35,10 @@ impl crate::RegisterSpec for EMACADDR7LOW_SPEC {
 impl crate::Readable for EMACADDR7LOW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`emacaddr7low::W`](W) writer structure"]
 impl crate::Writable for EMACADDR7LOW_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EMACADDR7LOW to value 0"]
 impl crate::Resettable for EMACADDR7LOW_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

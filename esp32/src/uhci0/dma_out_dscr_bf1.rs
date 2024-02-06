@@ -35,5 +35,5 @@ impl crate::RegisterSpec for DMA_OUT_DSCR_BF1_SPEC {
 impl crate::Readable for DMA_OUT_DSCR_BF1_SPEC {}
 #[doc = "`reset()` method sets DMA_OUT_DSCR_BF1 to value 0"]
 impl crate::Resettable for DMA_OUT_DSCR_BF1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

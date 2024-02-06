@@ -238,5 +238,5 @@ impl crate::RegisterSpec for INT_ST_RTC_SPEC {
 impl crate::Readable for INT_ST_RTC_SPEC {}
 #[doc = "`reset()` method sets INT_ST_RTC to value 0"]
 impl crate::Resettable for INT_ST_RTC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -126,10 +126,10 @@ impl crate::RegisterSpec for DATACTRL_SPEC {
 impl crate::Readable for DATACTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`datactrl::W`](W) writer structure"]
 impl crate::Writable for DATACTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DATACTRL to value 0xb0"]
 impl crate::Resettable for DATACTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0xb0;
+    const RESET_VALUE: u32 = 0xb0;
 }

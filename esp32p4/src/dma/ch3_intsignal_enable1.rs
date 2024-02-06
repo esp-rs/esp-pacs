@@ -88,5 +88,5 @@ impl crate::RegisterSpec for CH3_INTSIGNAL_ENABLE1_SPEC {
 impl crate::Readable for CH3_INTSIGNAL_ENABLE1_SPEC {}
 #[doc = "`reset()` method sets CH3_INTSIGNAL_ENABLE1 to value 0x0f"]
 impl crate::Resettable for CH3_INTSIGNAL_ENABLE1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0f;
+    const RESET_VALUE: u32 = 0x0f;
 }

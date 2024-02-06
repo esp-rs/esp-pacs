@@ -46,5 +46,5 @@ impl crate::RegisterSpec for SPI_MEM_SRAM_DRD_CMD_SPEC {
 impl crate::Readable for SPI_MEM_SRAM_DRD_CMD_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_SRAM_DRD_CMD to value 0"]
 impl crate::Resettable for SPI_MEM_SRAM_DRD_CMD_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

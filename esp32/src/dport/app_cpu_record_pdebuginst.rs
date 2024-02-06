@@ -35,5 +35,5 @@ impl crate::RegisterSpec for APP_CPU_RECORD_PDEBUGINST_SPEC {
 impl crate::Readable for APP_CPU_RECORD_PDEBUGINST_SPEC {}
 #[doc = "`reset()` method sets APP_CPU_RECORD_PDEBUGINST to value 0"]
 impl crate::Resettable for APP_CPU_RECORD_PDEBUGINST_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

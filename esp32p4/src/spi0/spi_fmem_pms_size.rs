@@ -57,10 +57,10 @@ impl crate::RegisterSpec for SPI_FMEM_PMS_SIZE_SPEC {
 impl crate::Readable for SPI_FMEM_PMS_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_fmem_pms_size::W`](W) writer structure"]
 impl crate::Writable for SPI_FMEM_PMS_SIZE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_FMEM_PMS%s_SIZE to value 0x1000"]
 impl crate::Resettable for SPI_FMEM_PMS_SIZE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1000;
+    const RESET_VALUE: u32 = 0x1000;
 }

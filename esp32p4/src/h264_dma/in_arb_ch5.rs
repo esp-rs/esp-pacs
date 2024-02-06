@@ -76,10 +76,10 @@ impl crate::RegisterSpec for IN_ARB_CH5_SPEC {
 impl crate::Readable for IN_ARB_CH5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`in_arb_ch5::W`](W) writer structure"]
 impl crate::Writable for IN_ARB_CH5_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IN_ARB_CH5 to value 0x41"]
 impl crate::Resettable for IN_ARB_CH5_SPEC {
-    const RESET_VALUE: Self::Ux = 0x41;
+    const RESET_VALUE: u32 = 0x41;
 }

@@ -57,10 +57,10 @@ impl crate::RegisterSpec for ULP_CP_TIMER_1_SPEC {
 impl crate::Readable for ULP_CP_TIMER_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ulp_cp_timer_1::W`](W) writer structure"]
 impl crate::Writable for ULP_CP_TIMER_1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ULP_CP_TIMER_1 to value 0xc800"]
 impl crate::Resettable for ULP_CP_TIMER_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xc800;
+    const RESET_VALUE: u32 = 0xc800;
 }

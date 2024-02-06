@@ -35,5 +35,5 @@ impl crate::RegisterSpec for SET_LINE_CODE_W0_SPEC {
 impl crate::Readable for SET_LINE_CODE_W0_SPEC {}
 #[doc = "`reset()` method sets SET_LINE_CODE_W0 to value 0"]
 impl crate::Resettable for SET_LINE_CODE_W0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

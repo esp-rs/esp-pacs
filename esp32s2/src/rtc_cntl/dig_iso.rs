@@ -488,10 +488,10 @@ impl crate::RegisterSpec for DIG_ISO_SPEC {
 impl crate::Readable for DIG_ISO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dig_iso::W`](W) writer structure"]
 impl crate::Writable for DIG_ISO_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIG_ISO to value 0xaaaa_5000"]
 impl crate::Resettable for DIG_ISO_SPEC {
-    const RESET_VALUE: Self::Ux = 0xaaaa_5000;
+    const RESET_VALUE: u32 = 0xaaaa_5000;
 }

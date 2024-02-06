@@ -90,5 +90,5 @@ impl crate::RegisterSpec for SPI_SMEM_AXI_ADDR_CTRL_SPEC {
 impl crate::Readable for SPI_SMEM_AXI_ADDR_CTRL_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_AXI_ADDR_CTRL to value 0xfc00_0000"]
 impl crate::Resettable for SPI_SMEM_AXI_ADDR_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0xfc00_0000;
+    const RESET_VALUE: u32 = 0xfc00_0000;
 }

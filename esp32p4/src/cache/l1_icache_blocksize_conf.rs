@@ -90,5 +90,5 @@ impl crate::RegisterSpec for L1_ICACHE_BLOCKSIZE_CONF_SPEC {
 impl crate::Readable for L1_ICACHE_BLOCKSIZE_CONF_SPEC {}
 #[doc = "`reset()` method sets L1_ICACHE_BLOCKSIZE_CONF to value 0x08"]
 impl crate::Resettable for L1_ICACHE_BLOCKSIZE_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x08;
+    const RESET_VALUE: u32 = 0x08;
 }

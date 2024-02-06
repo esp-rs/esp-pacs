@@ -35,5 +35,5 @@ impl crate::RegisterSpec for HOST_SLCHOST_PKT_LEN2_SPEC {
 impl crate::Readable for HOST_SLCHOST_PKT_LEN2_SPEC {}
 #[doc = "`reset()` method sets HOST_SLCHOST_PKT_LEN2 to value 0"]
 impl crate::Resettable for HOST_SLCHOST_PKT_LEN2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

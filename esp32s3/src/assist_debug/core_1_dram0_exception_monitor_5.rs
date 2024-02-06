@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CORE_1_DRAM0_EXCEPTION_MONITOR_5_SPEC {
 impl crate::Readable for CORE_1_DRAM0_EXCEPTION_MONITOR_5_SPEC {}
 #[doc = "`reset()` method sets CORE_1_DRAM0_EXCEPTION_MONITOR_5 to value 0xffff_ffff"]
 impl crate::Resettable for CORE_1_DRAM0_EXCEPTION_MONITOR_5_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

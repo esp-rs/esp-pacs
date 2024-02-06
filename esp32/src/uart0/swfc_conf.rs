@@ -108,10 +108,10 @@ impl crate::RegisterSpec for SWFC_CONF_SPEC {
 impl crate::Readable for SWFC_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swfc_conf::W`](W) writer structure"]
 impl crate::Writable for SWFC_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SWFC_CONF to value 0x1311_e000"]
 impl crate::Resettable for SWFC_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1311_e000;
+    const RESET_VALUE: u32 = 0x1311_e000;
 }

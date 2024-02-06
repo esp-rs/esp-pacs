@@ -108,7 +108,8 @@ impl RegisterBlock {
     #[doc = "0x00..0x0c - DMA_INT_RAW_CH%s_REG."]
     #[inline(always)]
     pub fn int_raw_ch_iter(&self) -> impl Iterator<Item = &INT_RAW_CH> {
-        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(16 * n).cast() })
+        (0..3)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(16 * n).cast() })
     }
     #[doc = "0x04 - DMA_INT_ST_CH0_REG."]
     #[inline(always)]
@@ -126,7 +127,8 @@ impl RegisterBlock {
     #[doc = "0x08..0x14 - DMA_INT_ENA_CH%s_REG."]
     #[inline(always)]
     pub fn int_ena_ch_iter(&self) -> impl Iterator<Item = &INT_ENA_CH> {
-        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() })
+        (0..3)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() })
     }
     #[doc = "0x0c..0x18 - DMA_INT_CLR_CH%s_REG."]
     #[inline(always)]
@@ -145,7 +147,7 @@ impl RegisterBlock {
     #[doc = "0x0c..0x18 - DMA_INT_CLR_CH%s_REG."]
     #[inline(always)]
     pub fn int_clr_ch_iter(&self) -> impl Iterator<Item = &INT_CLR_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(12)
@@ -195,7 +197,7 @@ impl RegisterBlock {
     #[doc = "0x70..0x7c - DMA_IN_CONF0_CH%s_REG."]
     #[inline(always)]
     pub fn in_conf0_ch_iter(&self) -> impl Iterator<Item = &IN_CONF0_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(112)
@@ -235,7 +237,7 @@ impl RegisterBlock {
     #[doc = "0x80..0x8c - DMA_IN_LINK_CH%s_REG."]
     #[inline(always)]
     pub fn in_link_ch_iter(&self) -> impl Iterator<Item = &IN_LINK_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(128)
@@ -280,7 +282,7 @@ impl RegisterBlock {
     #[doc = "0x94..0xa0 - DMA_IN_DSCR_BF0_CH%s_REG."]
     #[inline(always)]
     pub fn in_dscr_bf0_ch_iter(&self) -> impl Iterator<Item = &IN_DSCR_BF0_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(148)
@@ -310,7 +312,7 @@ impl RegisterBlock {
     #[doc = "0x9c..0xa8 - DMA_IN_PRI_CH%s_REG."]
     #[inline(always)]
     pub fn in_pri_ch_iter(&self) -> impl Iterator<Item = &IN_PRI_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(156)
@@ -335,7 +337,7 @@ impl RegisterBlock {
     #[doc = "0xa0..0xac - DMA_IN_PERI_SEL_CH%s_REG."]
     #[inline(always)]
     pub fn in_peri_sel_ch_iter(&self) -> impl Iterator<Item = &IN_PERI_SEL_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(160)
@@ -360,7 +362,7 @@ impl RegisterBlock {
     #[doc = "0xd0..0xdc - DMA_OUT_CONF0_CH%s_REG."]
     #[inline(always)]
     pub fn out_conf0_ch_iter(&self) -> impl Iterator<Item = &OUT_CONF0_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(208)
@@ -385,7 +387,7 @@ impl RegisterBlock {
     #[doc = "0xd4..0xe0 - DMA_OUT_CONF1_CH%s_REG."]
     #[inline(always)]
     pub fn out_conf1_ch_iter(&self) -> impl Iterator<Item = &OUT_CONF1_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(212)
@@ -420,7 +422,7 @@ impl RegisterBlock {
     #[doc = "0xe0..0xec - DMA_OUT_LINK_CH%s_REG."]
     #[inline(always)]
     pub fn out_link_ch_iter(&self) -> impl Iterator<Item = &OUT_LINK_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(224)
@@ -450,7 +452,7 @@ impl RegisterBlock {
     #[doc = "0xe8..0xf4 - DMA_OUT_EOF_DES_ADDR_CH%s_REG."]
     #[inline(always)]
     pub fn out_eof_des_addr_ch_iter(&self) -> impl Iterator<Item = &OUT_EOF_DES_ADDR_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(232)
@@ -495,7 +497,7 @@ impl RegisterBlock {
     #[doc = "0xfc..0x108 - DMA_OUT_PRI_CH%s_REG."]
     #[inline(always)]
     pub fn out_pri_ch_iter(&self) -> impl Iterator<Item = &OUT_PRI_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(252)
@@ -520,7 +522,7 @@ impl RegisterBlock {
     #[doc = "0x100..0x10c - DMA_OUT_PERI_SEL_CH%s_REG."]
     #[inline(always)]
     pub fn out_peri_sel_ch_iter(&self) -> impl Iterator<Item = &OUT_PERI_SEL_CH> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(256)

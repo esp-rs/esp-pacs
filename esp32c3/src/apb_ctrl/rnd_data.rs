@@ -32,5 +32,5 @@ impl crate::RegisterSpec for RND_DATA_SPEC {
 impl crate::Readable for RND_DATA_SPEC {}
 #[doc = "`reset()` method sets RND_DATA to value 0"]
 impl crate::Resettable for RND_DATA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

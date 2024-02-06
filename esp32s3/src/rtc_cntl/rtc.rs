@@ -149,10 +149,10 @@ impl crate::RegisterSpec for RTC_SPEC {
 impl crate::Readable for RTC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rtc::W`](W) writer structure"]
 impl crate::Writable for RTC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RTC to value 0xa000_0000"]
 impl crate::Resettable for RTC_SPEC {
-    const RESET_VALUE: Self::Ux = 0xa000_0000;
+    const RESET_VALUE: u32 = 0xa000_0000;
 }

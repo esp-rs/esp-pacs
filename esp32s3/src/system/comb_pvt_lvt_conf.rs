@@ -84,10 +84,10 @@ impl crate::RegisterSpec for COMB_PVT_LVT_CONF_SPEC {
 impl crate::Readable for COMB_PVT_LVT_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`comb_pvt_lvt_conf::W`](W) writer structure"]
 impl crate::Writable for COMB_PVT_LVT_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets COMB_PVT_LVT_CONF to value 0x03"]
 impl crate::Resettable for COMB_PVT_LVT_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03;
+    const RESET_VALUE: u32 = 0x03;
 }

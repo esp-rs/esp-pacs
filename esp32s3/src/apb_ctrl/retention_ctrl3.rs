@@ -114,10 +114,10 @@ impl crate::RegisterSpec for RETENTION_CTRL3_SPEC {
 impl crate::Readable for RETENTION_CTRL3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`retention_ctrl3::W`](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RETENTION_CTRL3 to value 0x003f_fff0"]
 impl crate::Resettable for RETENTION_CTRL3_SPEC {
-    const RESET_VALUE: Self::Ux = 0x003f_fff0;
+    const RESET_VALUE: u32 = 0x003f_fff0;
 }

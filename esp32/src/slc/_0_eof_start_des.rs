@@ -35,5 +35,5 @@ impl crate::RegisterSpec for _0_EOF_START_DES_SPEC {
 impl crate::Readable for _0_EOF_START_DES_SPEC {}
 #[doc = "`reset()` method sets _0_EOF_START_DES to value 0"]
 impl crate::Resettable for _0_EOF_START_DES_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

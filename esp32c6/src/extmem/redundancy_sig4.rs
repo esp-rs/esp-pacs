@@ -35,5 +35,5 @@ impl crate::RegisterSpec for REDUNDANCY_SIG4_SPEC {
 impl crate::Readable for REDUNDANCY_SIG4_SPEC {}
 #[doc = "`reset()` method sets REDUNDANCY_SIG4 to value 0"]
 impl crate::Resettable for REDUNDANCY_SIG4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

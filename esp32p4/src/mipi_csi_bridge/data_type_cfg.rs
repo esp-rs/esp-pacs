@@ -76,10 +76,10 @@ impl crate::RegisterSpec for DATA_TYPE_CFG_SPEC {
 impl crate::Readable for DATA_TYPE_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`data_type_cfg::W`](W) writer structure"]
 impl crate::Writable for DATA_TYPE_CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DATA_TYPE_CFG to value 0x2f18"]
 impl crate::Resettable for DATA_TYPE_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2f18;
+    const RESET_VALUE: u32 = 0x2f18;
 }

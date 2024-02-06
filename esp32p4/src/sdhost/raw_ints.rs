@@ -32,5 +32,5 @@ impl crate::RegisterSpec for RAW_INTS_SPEC {
 impl crate::Readable for RAW_INTS_SPEC {}
 #[doc = "`reset()` method sets RAW_INTS to value 0"]
 impl crate::Resettable for RAW_INTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -32,5 +32,5 @@ impl crate::RegisterSpec for VERSION_SPEC {
 impl crate::Readable for VERSION_SPEC {}
 #[doc = "`reset()` method sets VERSION to value 0x3134_312a"]
 impl crate::Resettable for VERSION_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3134_312a;
+    const RESET_VALUE: u32 = 0x3134_312a;
 }

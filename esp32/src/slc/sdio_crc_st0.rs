@@ -68,5 +68,5 @@ impl crate::RegisterSpec for SDIO_CRC_ST0_SPEC {
 impl crate::Readable for SDIO_CRC_ST0_SPEC {}
 #[doc = "`reset()` method sets SDIO_CRC_ST0 to value 0"]
 impl crate::Resettable for SDIO_CRC_ST0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

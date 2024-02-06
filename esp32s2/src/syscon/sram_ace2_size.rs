@@ -57,10 +57,10 @@ impl crate::RegisterSpec for SRAM_ACE2_SIZE_SPEC {
 impl crate::Readable for SRAM_ACE2_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sram_ace2_size::W`](W) writer structure"]
 impl crate::Writable for SRAM_ACE2_SIZE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRAM_ACE2_SIZE to value 0x1000"]
 impl crate::Resettable for SRAM_ACE2_SIZE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1000;
+    const RESET_VALUE: u32 = 0x1000;
 }

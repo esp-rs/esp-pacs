@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CAPABILITIES2_SPEC {
 impl crate::Readable for CAPABILITIES2_SPEC {}
 #[doc = "`reset()` method sets CAPABILITIES2 to value 0x0100"]
 impl crate::Resettable for CAPABILITIES2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0100;
+    const RESET_VALUE: u32 = 0x0100;
 }

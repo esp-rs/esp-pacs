@@ -43,5 +43,5 @@ impl crate::RegisterSpec for VAD_RESULT_SPEC {
 impl crate::Readable for VAD_RESULT_SPEC {}
 #[doc = "`reset()` method sets VAD_RESULT to value 0"]
 impl crate::Resettable for VAD_RESULT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

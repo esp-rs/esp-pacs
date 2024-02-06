@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CORE_1_RCD_PDEBUGLS0DATA_SPEC {
 impl crate::Readable for CORE_1_RCD_PDEBUGLS0DATA_SPEC {}
 #[doc = "`reset()` method sets CORE_1_RCD_PDEBUGLS0DATA to value 0"]
 impl crate::Resettable for CORE_1_RCD_PDEBUGLS0DATA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

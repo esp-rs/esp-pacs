@@ -35,5 +35,5 @@ impl crate::RegisterSpec for RXD_CNT_SPEC {
 impl crate::Readable for RXD_CNT_SPEC {}
 #[doc = "`reset()` method sets RXD_CNT to value 0"]
 impl crate::Resettable for RXD_CNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

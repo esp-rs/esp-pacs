@@ -233,5 +233,5 @@ impl crate::RegisterSpec for INT_RAW_SPEC {
 impl crate::Readable for INT_RAW_SPEC {}
 #[doc = "`reset()` method sets INT_RAW to value 0x02"]
 impl crate::Resettable for INT_RAW_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

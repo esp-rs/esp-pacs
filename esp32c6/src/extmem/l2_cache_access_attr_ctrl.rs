@@ -68,5 +68,5 @@ impl crate::RegisterSpec for L2_CACHE_ACCESS_ATTR_CTRL_SPEC {
 impl crate::Readable for L2_CACHE_ACCESS_ATTR_CTRL_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_ACCESS_ATTR_CTRL to value 0x0f"]
 impl crate::Resettable for L2_CACHE_ACCESS_ATTR_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0f;
+    const RESET_VALUE: u32 = 0x0f;
 }

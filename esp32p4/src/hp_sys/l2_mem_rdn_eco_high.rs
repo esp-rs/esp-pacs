@@ -59,10 +59,10 @@ impl crate::RegisterSpec for L2_MEM_RDN_ECO_HIGH_SPEC {
 impl crate::Readable for L2_MEM_RDN_ECO_HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l2_mem_rdn_eco_high::W`](W) writer structure"]
 impl crate::Writable for L2_MEM_RDN_ECO_HIGH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L2_MEM_RDN_ECO_HIGH to value 0xffff_ffff"]
 impl crate::Resettable for L2_MEM_RDN_ECO_HIGH_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

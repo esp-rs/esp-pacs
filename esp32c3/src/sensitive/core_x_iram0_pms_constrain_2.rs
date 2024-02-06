@@ -200,10 +200,10 @@ impl crate::RegisterSpec for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
 impl crate::Readable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`core_x_iram0_pms_constrain_2::W`](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_PMS_CONSTRAIN_2 to value 0x001c_7fff"]
 impl crate::Resettable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x001c_7fff;
+    const RESET_VALUE: u32 = 0x001c_7fff;
 }

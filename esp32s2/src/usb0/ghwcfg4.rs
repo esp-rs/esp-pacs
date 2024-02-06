@@ -207,5 +207,5 @@ impl crate::RegisterSpec for GHWCFG4_SPEC {
 impl crate::Readable for GHWCFG4_SPEC {}
 #[doc = "`reset()` method sets GHWCFG4 to value 0xd3f0_a030"]
 impl crate::Resettable for GHWCFG4_SPEC {
-    const RESET_VALUE: Self::Ux = 0xd3f0_a030;
+    const RESET_VALUE: u32 = 0xd3f0_a030;
 }

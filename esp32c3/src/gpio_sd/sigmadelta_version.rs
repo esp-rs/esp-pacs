@@ -57,10 +57,10 @@ impl crate::RegisterSpec for SIGMADELTA_VERSION_SPEC {
 impl crate::Readable for SIGMADELTA_VERSION_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sigmadelta_version::W`](W) writer structure"]
 impl crate::Writable for SIGMADELTA_VERSION_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SIGMADELTA_VERSION to value 0x0200_6230"]
 impl crate::Resettable for SIGMADELTA_VERSION_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200_6230;
+    const RESET_VALUE: u32 = 0x0200_6230;
 }

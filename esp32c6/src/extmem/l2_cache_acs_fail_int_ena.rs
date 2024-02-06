@@ -35,5 +35,5 @@ impl crate::RegisterSpec for L2_CACHE_ACS_FAIL_INT_ENA_SPEC {
 impl crate::Readable for L2_CACHE_ACS_FAIL_INT_ENA_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_ACS_FAIL_INT_ENA to value 0"]
 impl crate::Resettable for L2_CACHE_ACS_FAIL_INT_ENA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

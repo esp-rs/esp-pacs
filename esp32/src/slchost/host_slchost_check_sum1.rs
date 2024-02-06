@@ -35,5 +35,5 @@ impl crate::RegisterSpec for HOST_SLCHOST_CHECK_SUM1_SPEC {
 impl crate::Readable for HOST_SLCHOST_CHECK_SUM1_SPEC {}
 #[doc = "`reset()` method sets HOST_SLCHOST_CHECK_SUM1 to value 0"]
 impl crate::Resettable for HOST_SLCHOST_CHECK_SUM1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

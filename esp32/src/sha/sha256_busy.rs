@@ -32,5 +32,5 @@ impl crate::RegisterSpec for SHA256_BUSY_SPEC {
 impl crate::Readable for SHA256_BUSY_SPEC {}
 #[doc = "`reset()` method sets SHA256_BUSY to value 0"]
 impl crate::Resettable for SHA256_BUSY_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

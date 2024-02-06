@@ -40,5 +40,5 @@ impl crate::RegisterSpec for QUERY_CHECK_SPEC {
 impl crate::Readable for QUERY_CHECK_SPEC {}
 #[doc = "`reset()` method sets QUERY_CHECK to value 0"]
 impl crate::Resettable for QUERY_CHECK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

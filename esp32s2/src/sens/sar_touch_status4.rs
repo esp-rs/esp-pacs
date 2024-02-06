@@ -46,5 +46,5 @@ impl crate::RegisterSpec for SAR_TOUCH_STATUS4_SPEC {
 impl crate::Readable for SAR_TOUCH_STATUS4_SPEC {}
 #[doc = "`reset()` method sets SAR_TOUCH_STATUS4 to value 0"]
 impl crate::Resettable for SAR_TOUCH_STATUS4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

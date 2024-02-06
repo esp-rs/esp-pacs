@@ -59,10 +59,10 @@ impl crate::RegisterSpec for LP_I2S_RXCLK_DIV_NUM_SPEC {
 impl crate::Readable for LP_I2S_RXCLK_DIV_NUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_i2s_rxclk_div_num::W`](W) writer structure"]
 impl crate::Writable for LP_I2S_RXCLK_DIV_NUM_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_I2S_RXCLK_DIV_NUM to value 0x0200_0000"]
 impl crate::Resettable for LP_I2S_RXCLK_DIV_NUM_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200_0000;
+    const RESET_VALUE: u32 = 0x0200_0000;
 }

@@ -35,5 +35,5 @@ impl crate::RegisterSpec for APB2OTP_BLK2_W6_SPEC {
 impl crate::Readable for APB2OTP_BLK2_W6_SPEC {}
 #[doc = "`reset()` method sets APB2OTP_BLK2_W6 to value 0"]
 impl crate::Resettable for APB2OTP_BLK2_W6_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

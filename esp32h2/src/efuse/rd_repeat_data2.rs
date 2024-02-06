@@ -142,5 +142,5 @@ impl crate::RegisterSpec for RD_REPEAT_DATA2_SPEC {
 impl crate::Readable for RD_REPEAT_DATA2_SPEC {}
 #[doc = "`reset()` method sets RD_REPEAT_DATA2 to value 0x000c_0000"]
 impl crate::Resettable for RD_REPEAT_DATA2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x000c_0000;
+    const RESET_VALUE: u32 = 0x000c_0000;
 }

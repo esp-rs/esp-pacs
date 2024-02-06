@@ -68,5 +68,5 @@ impl crate::RegisterSpec for AFIFO_STATUS_SPEC {
 impl crate::Readable for AFIFO_STATUS_SPEC {}
 #[doc = "`reset()` method sets AFIFO_STATUS to value 0x0a"]
 impl crate::Resettable for AFIFO_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0a;
+    const RESET_VALUE: u32 = 0x0a;
 }

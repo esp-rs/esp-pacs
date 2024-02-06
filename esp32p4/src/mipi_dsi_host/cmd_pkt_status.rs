@@ -145,5 +145,5 @@ impl crate::RegisterSpec for CMD_PKT_STATUS_SPEC {
 impl crate::Readable for CMD_PKT_STATUS_SPEC {}
 #[doc = "`reset()` method sets CMD_PKT_STATUS to value 0x0005_0015"]
 impl crate::Resettable for CMD_PKT_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0005_0015;
+    const RESET_VALUE: u32 = 0x0005_0015;
 }

@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CORE1_IBUS_REJECT_VADDR_SPEC {
 impl crate::Readable for CORE1_IBUS_REJECT_VADDR_SPEC {}
 #[doc = "`reset()` method sets CORE1_IBUS_REJECT_VADDR to value 0xffff_ffff"]
 impl crate::Resettable for CORE1_IBUS_REJECT_VADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

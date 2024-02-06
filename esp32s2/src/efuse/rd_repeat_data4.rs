@@ -35,5 +35,5 @@ impl crate::RegisterSpec for RD_REPEAT_DATA4_SPEC {
 impl crate::Readable for RD_REPEAT_DATA4_SPEC {}
 #[doc = "`reset()` method sets RD_REPEAT_DATA4 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

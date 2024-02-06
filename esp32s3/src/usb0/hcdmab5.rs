@@ -32,5 +32,5 @@ impl crate::RegisterSpec for HCDMAB5_SPEC {
 impl crate::Readable for HCDMAB5_SPEC {}
 #[doc = "`reset()` method sets HCDMAB5 to value 0"]
 impl crate::Resettable for HCDMAB5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

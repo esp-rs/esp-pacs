@@ -114,10 +114,10 @@ impl crate::RegisterSpec for CPU_RESET_SPEC {
 impl crate::Readable for CPU_RESET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cpu_reset::W`](W) writer structure"]
 impl crate::Writable for CPU_RESET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CPU_RESET to value 0x0440_0000"]
 impl crate::Resettable for CPU_RESET_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0440_0000;
+    const RESET_VALUE: u32 = 0x0440_0000;
 }

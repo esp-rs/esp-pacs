@@ -46,5 +46,5 @@ impl crate::RegisterSpec for C0RE_0_DEBUG_MODE_SPEC {
 impl crate::Readable for C0RE_0_DEBUG_MODE_SPEC {}
 #[doc = "`reset()` method sets C0RE_0_DEBUG_MODE to value 0"]
 impl crate::Resettable for C0RE_0_DEBUG_MODE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

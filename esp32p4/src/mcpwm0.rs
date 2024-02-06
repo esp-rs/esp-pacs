@@ -79,7 +79,8 @@ impl RegisterBlock {
     #[doc = "0x04..0x10 - PWM timer%s period and update method configuration register."]
     #[inline(always)]
     pub fn timer_cfg0_iter(&self) -> impl Iterator<Item = &TIMER_CFG0> {
-        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(16 * n).cast() })
+        (0..3)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(16 * n).cast() })
     }
     #[doc = "0x04 - PWM timer0 period and update method configuration register."]
     #[inline(always)]
@@ -107,7 +108,8 @@ impl RegisterBlock {
     #[doc = "0x08..0x14 - PWM timer%s working mode and start/stop control register."]
     #[inline(always)]
     pub fn timer_cfg1_iter(&self) -> impl Iterator<Item = &TIMER_CFG1> {
-        (0..3).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() })
+        (0..3)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(16 * n).cast() })
     }
     #[doc = "0x08 - PWM timer0 working mode and start/stop control register."]
     #[inline(always)]
@@ -141,7 +143,7 @@ impl RegisterBlock {
     #[doc = "0x0c..0x18 - PWM timer%s sync function configuration register."]
     #[inline(always)]
     pub fn timer_sync_iter(&self) -> impl Iterator<Item = &TIMER_SYNC> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(12)
@@ -181,7 +183,7 @@ impl RegisterBlock {
     #[doc = "0x10..0x1c - PWM timer%s status register."]
     #[inline(always)]
     pub fn timer_status_iter(&self) -> impl Iterator<Item = &TIMER_STATUS> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(16)
@@ -231,7 +233,7 @@ impl RegisterBlock {
     #[doc = "0x3c..0x48 - Generator%s time stamp registers A and B transfer status and update method register"]
     #[inline(always)]
     pub fn gen_stmp_cfg_iter(&self) -> impl Iterator<Item = &GEN_STMP_CFG> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(60)
@@ -271,7 +273,7 @@ impl RegisterBlock {
     #[doc = "0x40..0x4c - Generator%s time stamp A's shadow register"]
     #[inline(always)]
     pub fn gen_tstmp_a_iter(&self) -> impl Iterator<Item = &GEN_TSTMP_A> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(64)
@@ -311,7 +313,7 @@ impl RegisterBlock {
     #[doc = "0x44..0x50 - Generator%s time stamp B's shadow register"]
     #[inline(always)]
     pub fn gen_tstmp_b_iter(&self) -> impl Iterator<Item = &GEN_TSTMP_B> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(68)
@@ -351,7 +353,7 @@ impl RegisterBlock {
     #[doc = "0x48..0x54 - Generator%s fault event T0 and T1 configuration register"]
     #[inline(always)]
     pub fn gen_cfg0_iter(&self) -> impl Iterator<Item = &GEN_CFG0> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(72)
@@ -391,7 +393,7 @@ impl RegisterBlock {
     #[doc = "0x4c..0x58 - Generator%s output signal force mode register."]
     #[inline(always)]
     pub fn gen_force_iter(&self) -> impl Iterator<Item = &GEN_FORCE> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(76)
@@ -431,7 +433,7 @@ impl RegisterBlock {
     #[doc = "0x50..0x5c - PWM%s output signal A actions configuration register"]
     #[inline(always)]
     pub fn gen_a_iter(&self) -> impl Iterator<Item = &GEN_A> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(80)
@@ -471,7 +473,7 @@ impl RegisterBlock {
     #[doc = "0x54..0x60 - PWM%s output signal B actions configuration register"]
     #[inline(always)]
     pub fn gen_b_iter(&self) -> impl Iterator<Item = &GEN_B> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(84)
@@ -511,7 +513,7 @@ impl RegisterBlock {
     #[doc = "0x58..0x64 - Dead time configuration register"]
     #[inline(always)]
     pub fn dt_cfg_iter(&self) -> impl Iterator<Item = &DT_CFG> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(88)
@@ -551,7 +553,7 @@ impl RegisterBlock {
     #[doc = "0x5c..0x68 - Falling edge delay (FED) shadow register"]
     #[inline(always)]
     pub fn dt_fed_cfg_iter(&self) -> impl Iterator<Item = &DT_FED_CFG> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(92)
@@ -591,7 +593,7 @@ impl RegisterBlock {
     #[doc = "0x60..0x6c - Rising edge delay (RED) shadow register"]
     #[inline(always)]
     pub fn dt_red_cfg_iter(&self) -> impl Iterator<Item = &DT_RED_CFG> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(96)
@@ -631,7 +633,7 @@ impl RegisterBlock {
     #[doc = "0x64..0x70 - Carrier%s configuration register"]
     #[inline(always)]
     pub fn carrier_cfg_iter(&self) -> impl Iterator<Item = &CARRIER_CFG> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(100)
@@ -671,7 +673,7 @@ impl RegisterBlock {
     #[doc = "0x68..0x74 - PWM%s A and PWM%s B trip events actions configuration register"]
     #[inline(always)]
     pub fn fh_cfg0_iter(&self) -> impl Iterator<Item = &FH_CFG0> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(104)
@@ -711,7 +713,7 @@ impl RegisterBlock {
     #[doc = "0x6c..0x78 - Software triggers for fault handler actions configuration register"]
     #[inline(always)]
     pub fn fh_cfg1_iter(&self) -> impl Iterator<Item = &FH_CFG1> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(108)
@@ -751,7 +753,7 @@ impl RegisterBlock {
     #[doc = "0x70..0x7c - Fault events status register"]
     #[inline(always)]
     pub fn fh_status_iter(&self) -> impl Iterator<Item = &FH_STATUS> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(112)
@@ -888,7 +890,7 @@ impl RegisterBlock {
     #[doc = "0x12c..0x138 - Generator%s timer stamp E1 value register"]
     #[inline(always)]
     pub fn op_tstmp_e1_iter(&self) -> impl Iterator<Item = &OP_TSTMP_E1> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(300)
@@ -928,7 +930,7 @@ impl RegisterBlock {
     #[doc = "0x130..0x13c - Generator%s timer stamp E2 value register"]
     #[inline(always)]
     pub fn op_tstmp_e2_iter(&self) -> impl Iterator<Item = &OP_TSTMP_E2> {
-        (0..3).map(|n| unsafe {
+        (0..3).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(304)

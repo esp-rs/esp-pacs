@@ -255,5 +255,5 @@ impl crate::RegisterSpec for OUTFIFO_STATUS_CH_SPEC {
 impl crate::Readable for OUTFIFO_STATUS_CH_SPEC {}
 #[doc = "`reset()` method sets OUTFIFO_STATUS_CH%s to value 0x7f80_8802"]
 impl crate::Resettable for OUTFIFO_STATUS_CH_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7f80_8802;
+    const RESET_VALUE: u32 = 0x7f80_8802;
 }

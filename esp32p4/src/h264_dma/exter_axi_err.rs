@@ -101,5 +101,5 @@ impl crate::RegisterSpec for EXTER_AXI_ERR_SPEC {
 impl crate::Readable for EXTER_AXI_ERR_SPEC {}
 #[doc = "`reset()` method sets EXTER_AXI_ERR to value 0"]
 impl crate::Resettable for EXTER_AXI_ERR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

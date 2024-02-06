@@ -54,10 +54,10 @@ impl crate::RegisterSpec for FILTER_P_COMPARATOR_MATCH_SPEC {
 impl crate::Readable for FILTER_P_COMPARATOR_MATCH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`filter_p_comparator_match::W`](W) writer structure"]
 impl crate::Writable for FILTER_P_COMPARATOR_MATCH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FILTER_P_COMPARATOR_MATCH to value 0"]
 impl crate::Resettable for FILTER_P_COMPARATOR_MATCH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

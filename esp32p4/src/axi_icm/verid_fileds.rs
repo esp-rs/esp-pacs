@@ -35,5 +35,5 @@ impl crate::RegisterSpec for VERID_FILEDS_SPEC {
 impl crate::Readable for VERID_FILEDS_SPEC {}
 #[doc = "`reset()` method sets VERID_FILEDS to value 0x3430_342a"]
 impl crate::Resettable for VERID_FILEDS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3430_342a;
+    const RESET_VALUE: u32 = 0x3430_342a;
 }

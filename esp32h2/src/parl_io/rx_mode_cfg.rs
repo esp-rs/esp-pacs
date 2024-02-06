@@ -130,10 +130,10 @@ impl crate::RegisterSpec for RX_MODE_CFG_SPEC {
 impl crate::Readable for RX_MODE_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rx_mode_cfg::W`](W) writer structure"]
 impl crate::Writable for RX_MODE_CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RX_MODE_CFG to value 0x00e0_0000"]
 impl crate::Resettable for RX_MODE_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x00e0_0000;
+    const RESET_VALUE: u32 = 0x00e0_0000;
 }

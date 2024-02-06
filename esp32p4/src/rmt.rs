@@ -129,7 +129,8 @@ impl RegisterBlock {
     #[doc = "0x30..0x40 - Channel %s configure register 0"]
     #[inline(always)]
     pub fn rx_chconf0_iter(&self) -> impl Iterator<Item = &RX_CHCONF0> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(48).add(8 * n).cast() })
+        (0..4)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(48).add(8 * n).cast() })
     }
     #[doc = "0x30 - Channel 0 configure register 0"]
     #[inline(always)]
@@ -162,7 +163,8 @@ impl RegisterBlock {
     #[doc = "0x34..0x44 - Channel %s configure register 1"]
     #[inline(always)]
     pub fn rx_chconf1_iter(&self) -> impl Iterator<Item = &RX_CHCONF1> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(52).add(8 * n).cast() })
+        (0..4)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(52).add(8 * n).cast() })
     }
     #[doc = "0x34 - Channel 0 configure register 1"]
     #[inline(always)]

@@ -59,10 +59,10 @@ impl crate::RegisterSpec for HP_MODEM_ICG_HP_APB_SPEC {
 impl crate::Readable for HP_MODEM_ICG_HP_APB_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hp_modem_icg_hp_apb::W`](W) writer structure"]
 impl crate::Writable for HP_MODEM_ICG_HP_APB_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HP_MODEM_ICG_HP_APB to value 0xffff_ffff"]
 impl crate::Resettable for HP_MODEM_ICG_HP_APB_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

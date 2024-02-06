@@ -32,5 +32,5 @@ impl crate::RegisterSpec for QUERY_IDLE_SPEC {
 impl crate::Readable for QUERY_IDLE_SPEC {}
 #[doc = "`reset()` method sets QUERY_IDLE to value 0"]
 impl crate::Resettable for QUERY_IDLE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

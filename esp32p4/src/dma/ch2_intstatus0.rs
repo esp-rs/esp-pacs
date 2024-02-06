@@ -317,5 +317,5 @@ impl crate::RegisterSpec for CH2_INTSTATUS0_SPEC {
 impl crate::Readable for CH2_INTSTATUS0_SPEC {}
 #[doc = "`reset()` method sets CH2_INTSTATUS0 to value 0"]
 impl crate::Resettable for CH2_INTSTATUS0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

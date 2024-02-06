@@ -46,5 +46,5 @@ impl crate::RegisterSpec for CLUT_CNT_SPEC {
 impl crate::Readable for CLUT_CNT_SPEC {}
 #[doc = "`reset()` method sets CLUT_CNT to value 0"]
 impl crate::Resettable for CLUT_CNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

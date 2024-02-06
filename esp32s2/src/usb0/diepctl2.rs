@@ -174,10 +174,10 @@ impl crate::RegisterSpec for DIEPCTL2_SPEC {
 impl crate::Readable for DIEPCTL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepctl2::W`](W) writer structure"]
 impl crate::Writable for DIEPCTL2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPCTL2 to value 0x8000"]
 impl crate::Resettable for DIEPCTL2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8000;
+    const RESET_VALUE: u32 = 0x8000;
 }

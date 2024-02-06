@@ -32,5 +32,5 @@ impl crate::RegisterSpec for SPI_MEM_TX_CRC_SPEC {
 impl crate::Readable for SPI_MEM_TX_CRC_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_TX_CRC to value 0xffff_ffff"]
 impl crate::Resettable for SPI_MEM_TX_CRC_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

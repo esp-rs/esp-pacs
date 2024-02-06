@@ -35,5 +35,5 @@ impl crate::RegisterSpec for RTCCALICFG1_SPEC {
 impl crate::Readable for RTCCALICFG1_SPEC {}
 #[doc = "`reset()` method sets RTCCALICFG1 to value 0"]
 impl crate::Resettable for RTCCALICFG1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

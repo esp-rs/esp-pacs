@@ -68,5 +68,5 @@ impl crate::RegisterSpec for CORE_1_MESSAGE_PHASE_SPEC {
 impl crate::Readable for CORE_1_MESSAGE_PHASE_SPEC {}
 #[doc = "`reset()` method sets Core_1_MESSAGE_PHASE to value 0"]
 impl crate::Resettable for CORE_1_MESSAGE_PHASE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

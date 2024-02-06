@@ -114,10 +114,10 @@ impl crate::RegisterSpec for HOST_SLCHOST_CONF_W3_SPEC {
 impl crate::Readable for HOST_SLCHOST_CONF_W3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`host_slchost_conf_w3::W`](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_CONF_W3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_CONF_W3 to value 0xc0"]
 impl crate::Resettable for HOST_SLCHOST_CONF_W3_SPEC {
-    const RESET_VALUE: Self::Ux = 0xc0;
+    const RESET_VALUE: u32 = 0xc0;
 }

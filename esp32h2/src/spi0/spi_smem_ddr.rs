@@ -185,5 +185,5 @@ impl crate::RegisterSpec for SPI_SMEM_DDR_SPEC {
 impl crate::Readable for SPI_SMEM_DDR_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_DDR to value 0x3020"]
 impl crate::Resettable for SPI_SMEM_DDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3020;
+    const RESET_VALUE: u32 = 0x3020;
 }

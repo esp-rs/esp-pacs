@@ -68,5 +68,5 @@ impl crate::RegisterSpec for SPI_SMEM_TIMING_CALI_SPEC {
 impl crate::Readable for SPI_SMEM_TIMING_CALI_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_TIMING_CALI to value 0x01"]
 impl crate::Resettable for SPI_SMEM_TIMING_CALI_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

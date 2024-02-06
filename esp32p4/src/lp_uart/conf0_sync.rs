@@ -284,10 +284,10 @@ impl crate::RegisterSpec for CONF0_SYNC_SPEC {
 impl crate::Readable for CONF0_SYNC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`conf0_sync::W`](W) writer structure"]
 impl crate::Writable for CONF0_SYNC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CONF0_SYNC to value 0x1c"]
 impl crate::Resettable for CONF0_SYNC_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1c;
+    const RESET_VALUE: u32 = 0x1c;
 }

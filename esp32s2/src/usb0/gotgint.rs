@@ -140,10 +140,10 @@ impl crate::RegisterSpec for GOTGINT_SPEC {
 impl crate::Readable for GOTGINT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gotgint::W`](W) writer structure"]
 impl crate::Writable for GOTGINT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GOTGINT to value 0"]
 impl crate::Resettable for GOTGINT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

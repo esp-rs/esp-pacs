@@ -57,10 +57,10 @@ impl crate::RegisterSpec for IMMU_TABLE3_SPEC {
 impl crate::Readable for IMMU_TABLE3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`immu_table3::W`](W) writer structure"]
 impl crate::Writable for IMMU_TABLE3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IMMU_TABLE3 to value 0x03"]
 impl crate::Resettable for IMMU_TABLE3_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03;
+    const RESET_VALUE: u32 = 0x03;
 }

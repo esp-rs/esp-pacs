@@ -46,5 +46,5 @@ impl crate::RegisterSpec for DPI_LP_CMD_TIM_ACT_SPEC {
 impl crate::Readable for DPI_LP_CMD_TIM_ACT_SPEC {}
 #[doc = "`reset()` method sets DPI_LP_CMD_TIM_ACT to value 0"]
 impl crate::Resettable for DPI_LP_CMD_TIM_ACT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

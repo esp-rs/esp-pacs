@@ -222,5 +222,5 @@ impl crate::RegisterSpec for DEBUG_INFO2_SPEC {
 impl crate::Readable for DEBUG_INFO2_SPEC {}
 #[doc = "`reset()` method sets DEBUG_INFO2 to value 0"]
 impl crate::Resettable for DEBUG_INFO2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

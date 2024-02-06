@@ -35,5 +35,5 @@ impl crate::RegisterSpec for L2_CACHE_AUTOLOAD_SCT0_ADDR_SPEC {
 impl crate::Readable for L2_CACHE_AUTOLOAD_SCT0_ADDR_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_AUTOLOAD_SCT0_ADDR to value 0"]
 impl crate::Resettable for L2_CACHE_AUTOLOAD_SCT0_ADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

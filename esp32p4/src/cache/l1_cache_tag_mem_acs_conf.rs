@@ -208,10 +208,10 @@ impl crate::RegisterSpec for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {
 impl crate::Readable for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l1_cache_tag_mem_acs_conf::W`](W) writer structure"]
 impl crate::Writable for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L1_CACHE_TAG_MEM_ACS_CONF to value 0x0003_3333"]
 impl crate::Resettable for L1_CACHE_TAG_MEM_ACS_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0003_3333;
+    const RESET_VALUE: u32 = 0x0003_3333;
 }

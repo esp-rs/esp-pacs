@@ -81,5 +81,5 @@ impl crate::RegisterSpec for LC_STATE1_SPEC {
 impl crate::Readable for LC_STATE1_SPEC {}
 #[doc = "`reset()` method sets LC_STATE1 to value 0"]
 impl crate::Resettable for LC_STATE1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

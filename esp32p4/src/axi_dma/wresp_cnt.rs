@@ -32,5 +32,5 @@ impl crate::RegisterSpec for WRESP_CNT_SPEC {
 impl crate::Readable for WRESP_CNT_SPEC {}
 #[doc = "`reset()` method sets WRESP_CNT to value 0"]
 impl crate::Resettable for WRESP_CNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

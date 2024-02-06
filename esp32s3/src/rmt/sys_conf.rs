@@ -213,10 +213,10 @@ impl crate::RegisterSpec for SYS_CONF_SPEC {
 impl crate::Readable for SYS_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sys_conf::W`](W) writer structure"]
 impl crate::Writable for SYS_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYS_CONF to value 0x0500_0010"]
 impl crate::Resettable for SYS_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0500_0010;
+    const RESET_VALUE: u32 = 0x0500_0010;
 }

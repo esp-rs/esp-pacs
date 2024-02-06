@@ -138,10 +138,10 @@ impl crate::RegisterSpec for CPUSDIO_INT1_SPEC {
 impl crate::Readable for CPUSDIO_INT1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cpusdio_int1::W`](W) writer structure"]
 impl crate::Writable for CPUSDIO_INT1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CPUSDIO_INT1 to value 0"]
 impl crate::Resettable for CPUSDIO_INT1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

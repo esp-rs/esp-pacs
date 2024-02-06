@@ -40,5 +40,5 @@ impl crate::RegisterSpec for FIFO_STATUS_SPEC {
 impl crate::Readable for FIFO_STATUS_SPEC {}
 #[doc = "`reset()` method sets FIFO_STATUS to value 0x01"]
 impl crate::Resettable for FIFO_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

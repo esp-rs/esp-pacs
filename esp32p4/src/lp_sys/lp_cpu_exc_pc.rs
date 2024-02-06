@@ -35,5 +35,5 @@ impl crate::RegisterSpec for LP_CPU_EXC_PC_SPEC {
 impl crate::Readable for LP_CPU_EXC_PC_SPEC {}
 #[doc = "`reset()` method sets LP_CPU_EXC_PC to value 0"]
 impl crate::Resettable for LP_CPU_EXC_PC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

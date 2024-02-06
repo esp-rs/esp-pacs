@@ -32,5 +32,5 @@ impl crate::RegisterSpec for CLEAN_SPEC {
 impl crate::Readable for CLEAN_SPEC {}
 #[doc = "`reset()` method sets CLEAN to value 0"]
 impl crate::Resettable for CLEAN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -145,5 +145,5 @@ impl crate::RegisterSpec for SPI_MEM_CACHE_SCTRL_SPEC {
 impl crate::Readable for SPI_MEM_CACHE_SCTRL_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_CACHE_SCTRL to value 0x0055_c070"]
 impl crate::Resettable for SPI_MEM_CACHE_SCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0055_c070;
+    const RESET_VALUE: u32 = 0x0055_c070;
 }

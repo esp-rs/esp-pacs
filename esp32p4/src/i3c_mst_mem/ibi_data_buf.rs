@@ -32,5 +32,5 @@ impl crate::RegisterSpec for IBI_DATA_BUF_SPEC {
 impl crate::Readable for IBI_DATA_BUF_SPEC {}
 #[doc = "`reset()` method sets IBI_DATA_BUF to value 0"]
 impl crate::Resettable for IBI_DATA_BUF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -101,5 +101,5 @@ impl crate::RegisterSpec for SPI_MEM_AXI_ERR_ADDR_SPEC {
 impl crate::Readable for SPI_MEM_AXI_ERR_ADDR_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_AXI_ERR_ADDR to value 0xfc00_0000"]
 impl crate::Resettable for SPI_MEM_AXI_ERR_ADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0xfc00_0000;
+    const RESET_VALUE: u32 = 0xfc00_0000;
 }

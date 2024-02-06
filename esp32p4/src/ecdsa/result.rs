@@ -46,5 +46,5 @@ impl crate::RegisterSpec for RESULT_SPEC {
 impl crate::Readable for RESULT_SPEC {}
 #[doc = "`reset()` method sets RESULT to value 0"]
 impl crate::Resettable for RESULT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

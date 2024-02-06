@@ -243,10 +243,10 @@ impl crate::RegisterSpec for SPI_MEM_CACHE_FCTRL_SPEC {
 impl crate::Readable for SPI_MEM_CACHE_FCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_mem_cache_fctrl::W`](W) writer structure"]
 impl crate::Writable for SPI_MEM_CACHE_FCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_MEM_CACHE_FCTRL to value 0xc000_0000"]
 impl crate::Resettable for SPI_MEM_CACHE_FCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0xc000_0000;
+    const RESET_VALUE: u32 = 0xc000_0000;
 }

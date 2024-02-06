@@ -35,5 +35,5 @@ impl crate::RegisterSpec for LEVEL_SPLIT0_SPEC {
 impl crate::Readable for LEVEL_SPLIT0_SPEC {}
 #[doc = "`reset()` method sets LEVEL_SPLIT0 to value 0x0258"]
 impl crate::Resettable for LEVEL_SPLIT0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0258;
+    const RESET_VALUE: u32 = 0x0258;
 }

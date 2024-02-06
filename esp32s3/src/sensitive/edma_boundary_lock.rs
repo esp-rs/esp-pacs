@@ -57,10 +57,10 @@ impl crate::RegisterSpec for EDMA_BOUNDARY_LOCK_SPEC {
 impl crate::Readable for EDMA_BOUNDARY_LOCK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`edma_boundary_lock::W`](W) writer structure"]
 impl crate::Writable for EDMA_BOUNDARY_LOCK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EDMA_BOUNDARY_LOCK to value 0"]
 impl crate::Resettable for EDMA_BOUNDARY_LOCK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

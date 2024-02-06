@@ -35,5 +35,5 @@ impl crate::RegisterSpec for L2_CACHE_VADDR_SPEC {
 impl crate::Readable for L2_CACHE_VADDR_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_VADDR to value 0x4000_0000"]
 impl crate::Resettable for L2_CACHE_VADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0x4000_0000;
+    const RESET_VALUE: u32 = 0x4000_0000;
 }

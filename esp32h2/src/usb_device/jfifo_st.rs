@@ -142,10 +142,10 @@ impl crate::RegisterSpec for JFIFO_ST_SPEC {
 impl crate::Readable for JFIFO_ST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`jfifo_st::W`](W) writer structure"]
 impl crate::Writable for JFIFO_ST_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets JFIFO_ST to value 0x44"]
 impl crate::Resettable for JFIFO_ST_SPEC {
-    const RESET_VALUE: Self::Ux = 0x44;
+    const RESET_VALUE: u32 = 0x44;
 }

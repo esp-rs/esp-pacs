@@ -298,10 +298,10 @@ impl crate::RegisterSpec for TIMING_SPEC {
 impl crate::Readable for TIMING_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`timing::W`](W) writer structure"]
 impl crate::Writable for TIMING_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIMING to value 0"]
 impl crate::Resettable for TIMING_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

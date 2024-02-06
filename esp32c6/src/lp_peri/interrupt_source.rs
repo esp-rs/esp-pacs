@@ -35,5 +35,5 @@ impl crate::RegisterSpec for INTERRUPT_SOURCE_SPEC {
 impl crate::Readable for INTERRUPT_SOURCE_SPEC {}
 #[doc = "`reset()` method sets INTERRUPT_SOURCE to value 0"]
 impl crate::Resettable for INTERRUPT_SOURCE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

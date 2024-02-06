@@ -76,10 +76,10 @@ impl crate::RegisterSpec for VAD_PARAM4_SPEC {
 impl crate::Readable for VAD_PARAM4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vad_param4::W`](W) writer structure"]
 impl crate::Writable for VAD_PARAM4_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VAD_PARAM4 to value 0x799a_6666"]
 impl crate::Resettable for VAD_PARAM4_SPEC {
-    const RESET_VALUE: Self::Ux = 0x799a_6666;
+    const RESET_VALUE: u32 = 0x799a_6666;
 }

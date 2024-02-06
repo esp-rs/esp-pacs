@@ -54,10 +54,10 @@ impl crate::RegisterSpec for I2C_SCL_RSTART_SETUP_SPEC {
 impl crate::Readable for I2C_SCL_RSTART_SETUP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2c_scl_rstart_setup::W`](W) writer structure"]
 impl crate::Writable for I2C_SCL_RSTART_SETUP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2C_SCL_RSTART_SETUP to value 0x08"]
 impl crate::Resettable for I2C_SCL_RSTART_SETUP_SPEC {
-    const RESET_VALUE: Self::Ux = 0x08;
+    const RESET_VALUE: u32 = 0x08;
 }

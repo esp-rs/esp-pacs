@@ -64,5 +64,5 @@ impl crate::RegisterSpec for GRXSTSR_SPEC {
 impl crate::Readable for GRXSTSR_SPEC {}
 #[doc = "`reset()` method sets GRXSTSR to value 0"]
 impl crate::Resettable for GRXSTSR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

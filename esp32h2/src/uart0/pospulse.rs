@@ -35,5 +35,5 @@ impl crate::RegisterSpec for POSPULSE_SPEC {
 impl crate::Readable for POSPULSE_SPEC {}
 #[doc = "`reset()` method sets POSPULSE to value 0x0fff"]
 impl crate::Resettable for POSPULSE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0fff;
+    const RESET_VALUE: u32 = 0x0fff;
 }

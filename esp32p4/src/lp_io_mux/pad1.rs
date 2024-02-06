@@ -228,10 +228,10 @@ impl crate::RegisterSpec for PAD1_SPEC {
 impl crate::Readable for PAD1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pad1::W`](W) writer structure"]
 impl crate::Writable for PAD1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PAD1 to value 0x02"]
 impl crate::Resettable for PAD1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

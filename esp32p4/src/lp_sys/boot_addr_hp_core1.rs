@@ -57,10 +57,10 @@ impl crate::RegisterSpec for BOOT_ADDR_HP_CORE1_SPEC {
 impl crate::Readable for BOOT_ADDR_HP_CORE1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`boot_addr_hp_core1::W`](W) writer structure"]
 impl crate::Writable for BOOT_ADDR_HP_CORE1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BOOT_ADDR_HP_CORE1 to value 0"]
 impl crate::Resettable for BOOT_ADDR_HP_CORE1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

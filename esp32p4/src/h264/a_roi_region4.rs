@@ -118,10 +118,10 @@ impl crate::RegisterSpec for A_ROI_REGION4_SPEC {
 impl crate::Readable for A_ROI_REGION4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`a_roi_region4::W`](W) writer structure"]
 impl crate::Writable for A_ROI_REGION4_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets A_ROI_REGION4 to value 0"]
 impl crate::Resettable for A_ROI_REGION4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

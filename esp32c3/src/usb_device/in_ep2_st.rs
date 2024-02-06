@@ -57,5 +57,5 @@ impl crate::RegisterSpec for IN_EP2_ST_SPEC {
 impl crate::Readable for IN_EP2_ST_SPEC {}
 #[doc = "`reset()` method sets IN_EP2_ST to value 0x01"]
 impl crate::Resettable for IN_EP2_ST_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

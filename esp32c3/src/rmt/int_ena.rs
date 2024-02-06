@@ -44,7 +44,7 @@ impl R {
     #[doc = "reg_ch(0-1)_tx_end_int_ena."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
-        (0..2).map(|n| CH_TX_END_R::new(((self.bits >> n) & 1) != 0))
+        (0..2).map(move |n| CH_TX_END_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - reg_ch0_tx_end_int_ena."]
     #[inline(always)]
@@ -69,7 +69,7 @@ impl R {
     #[doc = "reg_ch2_rx_end_int_ena."]
     #[inline(always)]
     pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
-        (0..2).map(|n| CH_RX_END_R::new(((self.bits >> (n + 2)) & 1) != 0))
+        (0..2).map(move |n| CH_RX_END_R::new(((self.bits >> (n + 2)) & 1) != 0))
     }
     #[doc = "Bit 2 - reg_ch2_rx_end_int_ena."]
     #[inline(always)]
@@ -94,7 +94,7 @@ impl R {
     #[doc = "reg_ch(0-1)_err_int_ena."]
     #[inline(always)]
     pub fn ch_tx_err_iter(&self) -> impl Iterator<Item = CH_TX_ERR_R> + '_ {
-        (0..2).map(|n| CH_TX_ERR_R::new(((self.bits >> (n + 4)) & 1) != 0))
+        (0..2).map(move |n| CH_TX_ERR_R::new(((self.bits >> (n + 4)) & 1) != 0))
     }
     #[doc = "Bit 4 - reg_ch0_err_int_ena."]
     #[inline(always)]
@@ -119,7 +119,7 @@ impl R {
     #[doc = "reg_ch2_err_int_ena."]
     #[inline(always)]
     pub fn ch_rx_err_iter(&self) -> impl Iterator<Item = CH_RX_ERR_R> + '_ {
-        (0..2).map(|n| CH_RX_ERR_R::new(((self.bits >> (n + 6)) & 1) != 0))
+        (0..2).map(move |n| CH_RX_ERR_R::new(((self.bits >> (n + 6)) & 1) != 0))
     }
     #[doc = "Bit 6 - reg_ch2_err_int_ena."]
     #[inline(always)]
@@ -144,7 +144,7 @@ impl R {
     #[doc = "reg_ch(0-1)_tx_thr_event_int_ena."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
-        (0..2).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0))
+        (0..2).map(move |n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0))
     }
     #[doc = "Bit 8 - reg_ch0_tx_thr_event_int_ena."]
     #[inline(always)]
@@ -169,7 +169,7 @@ impl R {
     #[doc = "reg_ch2_rx_thr_event_int_ena."]
     #[inline(always)]
     pub fn ch_rx_thr_event_iter(&self) -> impl Iterator<Item = CH_RX_THR_EVENT_R> + '_ {
-        (0..2).map(|n| CH_RX_THR_EVENT_R::new(((self.bits >> (n + 10)) & 1) != 0))
+        (0..2).map(move |n| CH_RX_THR_EVENT_R::new(((self.bits >> (n + 10)) & 1) != 0))
     }
     #[doc = "Bit 10 - reg_ch2_rx_thr_event_int_ena."]
     #[inline(always)]
@@ -194,7 +194,7 @@ impl R {
     #[doc = "reg_ch(0-1)_tx_loop_int_ena."]
     #[inline(always)]
     pub fn ch_tx_loop_iter(&self) -> impl Iterator<Item = CH_TX_LOOP_R> + '_ {
-        (0..2).map(|n| CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))
+        (0..2).map(move |n| CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))
     }
     #[doc = "Bit 12 - reg_ch0_tx_loop_int_ena."]
     #[inline(always)]
@@ -421,10 +421,10 @@ impl crate::RegisterSpec for INT_ENA_SPEC {
 impl crate::Readable for INT_ENA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

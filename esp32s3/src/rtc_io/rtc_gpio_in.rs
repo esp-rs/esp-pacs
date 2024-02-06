@@ -32,5 +32,5 @@ impl crate::RegisterSpec for RTC_GPIO_IN_SPEC {
 impl crate::Readable for RTC_GPIO_IN_SPEC {}
 #[doc = "`reset()` method sets RTC_GPIO_IN to value 0"]
 impl crate::Resettable for RTC_GPIO_IN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

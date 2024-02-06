@@ -35,5 +35,5 @@ impl crate::RegisterSpec for DIEPDMAB5_SPEC {
 impl crate::Readable for DIEPDMAB5_SPEC {}
 #[doc = "`reset()` method sets DIEPDMAB5 to value 0"]
 impl crate::Resettable for DIEPDMAB5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

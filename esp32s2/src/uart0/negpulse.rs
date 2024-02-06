@@ -35,5 +35,5 @@ impl crate::RegisterSpec for NEGPULSE_SPEC {
 impl crate::Readable for NEGPULSE_SPEC {}
 #[doc = "`reset()` method sets NEGPULSE to value 0x000f_ffff"]
 impl crate::Resettable for NEGPULSE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x000f_ffff;
+    const RESET_VALUE: u32 = 0x000f_ffff;
 }

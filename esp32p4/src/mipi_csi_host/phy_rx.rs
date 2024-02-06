@@ -68,5 +68,5 @@ impl crate::RegisterSpec for PHY_RX_SPEC {
 impl crate::Readable for PHY_RX_SPEC {}
 #[doc = "`reset()` method sets PHY_RX to value 0x0001_0000"]
 impl crate::Resettable for PHY_RX_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_0000;
+    const RESET_VALUE: u32 = 0x0001_0000;
 }

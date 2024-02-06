@@ -33,10 +33,10 @@ impl crate::RegisterSpec for BUFFER__SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`buffer_::W`](W) writer structure"]
 impl crate::Writable for BUFFER__SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BUFFER_%s to value 0"]
 impl crate::Resettable for BUFFER__SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

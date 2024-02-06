@@ -21,5 +21,5 @@ impl crate::RegisterSpec for DMARXCURRADDR_BUF_SPEC {
 impl crate::Readable for DMARXCURRADDR_BUF_SPEC {}
 #[doc = "`reset()` method sets DMARXCURRADDR_BUF to value 0"]
 impl crate::Resettable for DMARXCURRADDR_BUF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

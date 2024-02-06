@@ -114,10 +114,10 @@ impl crate::RegisterSpec for REGDMA_BKP_CONF_SPEC {
 impl crate::Readable for REGDMA_BKP_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`regdma_bkp_conf::W`](W) writer structure"]
 impl crate::Writable for REGDMA_BKP_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REGDMA_BKP_CONF to value 0x7d10_1920"]
 impl crate::Resettable for REGDMA_BKP_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7d10_1920;
+    const RESET_VALUE: u32 = 0x7d10_1920;
 }

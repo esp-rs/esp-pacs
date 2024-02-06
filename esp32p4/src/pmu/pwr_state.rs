@@ -57,5 +57,5 @@ impl crate::RegisterSpec for PWR_STATE_SPEC {
 impl crate::Readable for PWR_STATE_SPEC {}
 #[doc = "`reset()` method sets PWR_STATE to value 0x0080_2000"]
 impl crate::Resettable for PWR_STATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0080_2000;
+    const RESET_VALUE: u32 = 0x0080_2000;
 }

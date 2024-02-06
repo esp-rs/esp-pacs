@@ -313,10 +313,10 @@ impl crate::RegisterSpec for CORE_0_PIF_PMS_CONSTRAIN_7_SPEC {
 impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_7_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`core_0_pif_pms_constrain_7::W`](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_7_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_7 to value 0x3cc3_ffff"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_7_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3cc3_ffff;
+    const RESET_VALUE: u32 = 0x3cc3_ffff;
 }

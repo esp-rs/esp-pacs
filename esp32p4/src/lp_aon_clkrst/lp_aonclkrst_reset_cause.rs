@@ -190,10 +190,10 @@ impl crate::RegisterSpec for LP_AONCLKRST_RESET_CAUSE_SPEC {
 impl crate::Readable for LP_AONCLKRST_RESET_CAUSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_aonclkrst_reset_cause::W`](W) writer structure"]
 impl crate::Writable for LP_AONCLKRST_RESET_CAUSE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_AONCLKRST_RESET_CAUSE to value 0x0200_0000"]
 impl crate::Resettable for LP_AONCLKRST_RESET_CAUSE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200_0000;
+    const RESET_VALUE: u32 = 0x0200_0000;
 }

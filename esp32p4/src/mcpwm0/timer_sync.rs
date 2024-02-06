@@ -130,10 +130,10 @@ impl crate::RegisterSpec for TIMER_SYNC_SPEC {
 impl crate::Readable for TIMER_SYNC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`timer_sync::W`](W) writer structure"]
 impl crate::Writable for TIMER_SYNC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIMER%s_SYNC to value 0"]
 impl crate::Resettable for TIMER_SYNC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

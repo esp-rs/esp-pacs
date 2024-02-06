@@ -59,10 +59,10 @@ impl crate::RegisterSpec for I2C_SCL_MAIN_ST_TIME_OUT_SPEC {
 impl crate::Readable for I2C_SCL_MAIN_ST_TIME_OUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2c_scl_main_st_time_out::W`](W) writer structure"]
 impl crate::Writable for I2C_SCL_MAIN_ST_TIME_OUT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2C_SCL_MAIN_ST_TIME_OUT to value 0x10"]
 impl crate::Resettable for I2C_SCL_MAIN_ST_TIME_OUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x10;
+    const RESET_VALUE: u32 = 0x10;
 }

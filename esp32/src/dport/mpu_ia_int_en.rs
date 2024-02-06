@@ -57,10 +57,10 @@ impl crate::RegisterSpec for MPU_IA_INT_EN_SPEC {
 impl crate::Readable for MPU_IA_INT_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mpu_ia_int_en::W`](W) writer structure"]
 impl crate::Writable for MPU_IA_INT_EN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MPU_IA_INT_EN to value 0"]
 impl crate::Resettable for MPU_IA_INT_EN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

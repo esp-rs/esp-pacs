@@ -266,10 +266,10 @@ impl crate::RegisterSpec for BIAS_CONF_SPEC {
 impl crate::Readable for BIAS_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bias_conf::W`](W) writer structure"]
 impl crate::Writable for BIAS_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BIAS_CONF to value 0x0001_0800"]
 impl crate::Resettable for BIAS_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_0800;
+    const RESET_VALUE: u32 = 0x0001_0800;
 }

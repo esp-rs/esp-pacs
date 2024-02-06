@@ -124,10 +124,10 @@ impl crate::RegisterSpec for MISC_SPEC {
 impl crate::Readable for MISC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc::W`](W) writer structure"]
 impl crate::Writable for MISC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISC to value 0x02"]
 impl crate::Resettable for MISC_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

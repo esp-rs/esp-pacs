@@ -54,10 +54,10 @@ impl crate::RegisterSpec for BLKSIZ_SPEC {
 impl crate::Readable for BLKSIZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`blksiz::W`](W) writer structure"]
 impl crate::Writable for BLKSIZ_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BLKSIZ to value 0x0200"]
 impl crate::Resettable for BLKSIZ_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200;
+    const RESET_VALUE: u32 = 0x0200;
 }

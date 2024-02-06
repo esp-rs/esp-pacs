@@ -57,5 +57,5 @@ impl crate::RegisterSpec for PHY_STOPSTATE_SPEC {
 impl crate::Readable for PHY_STOPSTATE_SPEC {}
 #[doc = "`reset()` method sets PHY_STOPSTATE to value 0"]
 impl crate::Resettable for PHY_STOPSTATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -35,5 +35,5 @@ impl crate::RegisterSpec for SLP_WAKEUP_CAUSE_SPEC {
 impl crate::Readable for SLP_WAKEUP_CAUSE_SPEC {}
 #[doc = "`reset()` method sets SLP_WAKEUP_CAUSE to value 0"]
 impl crate::Resettable for SLP_WAKEUP_CAUSE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

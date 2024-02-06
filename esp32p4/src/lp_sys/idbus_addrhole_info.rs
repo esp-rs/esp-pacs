@@ -57,5 +57,5 @@ impl crate::RegisterSpec for IDBUS_ADDRHOLE_INFO_SPEC {
 impl crate::Readable for IDBUS_ADDRHOLE_INFO_SPEC {}
 #[doc = "`reset()` method sets IDBUS_ADDRHOLE_INFO to value 0"]
 impl crate::Resettable for IDBUS_ADDRHOLE_INFO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

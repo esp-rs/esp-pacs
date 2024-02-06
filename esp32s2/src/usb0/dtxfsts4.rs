@@ -35,5 +35,5 @@ impl crate::RegisterSpec for DTXFSTS4_SPEC {
 impl crate::Readable for DTXFSTS4_SPEC {}
 #[doc = "`reset()` method sets DTXFSTS4 to value 0"]
 impl crate::Resettable for DTXFSTS4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

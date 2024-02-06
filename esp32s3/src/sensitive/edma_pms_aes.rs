@@ -70,10 +70,10 @@ impl crate::RegisterSpec for EDMA_PMS_AES_SPEC {
 impl crate::Readable for EDMA_PMS_AES_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`edma_pms_aes::W`](W) writer structure"]
 impl crate::Writable for EDMA_PMS_AES_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EDMA_PMS_AES to value 0x0f"]
 impl crate::Resettable for EDMA_PMS_AES_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0f;
+    const RESET_VALUE: u32 = 0x0f;
 }

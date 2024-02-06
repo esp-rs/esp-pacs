@@ -57,10 +57,10 @@ impl crate::RegisterSpec for BACKUP_DMA_CFG2_SPEC {
 impl crate::Readable for BACKUP_DMA_CFG2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`backup_dma_cfg2::W`](W) writer structure"]
 impl crate::Writable for BACKUP_DMA_CFG2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BACKUP_DMA_CFG2 to value 0"]
 impl crate::Resettable for BACKUP_DMA_CFG2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

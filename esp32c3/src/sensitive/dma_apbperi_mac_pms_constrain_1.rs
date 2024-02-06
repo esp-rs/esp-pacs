@@ -270,10 +270,10 @@ impl crate::RegisterSpec for DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC {
 impl crate::Readable for DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_apbperi_mac_pms_constrain_1::W`](W) writer structure"]
 impl crate::Writable for DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_APBPERI_MAC_PMS_CONSTRAIN_1 to value 0x000f_f0ff"]
 impl crate::Resettable for DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x000f_f0ff;
+    const RESET_VALUE: u32 = 0x000f_f0ff;
 }

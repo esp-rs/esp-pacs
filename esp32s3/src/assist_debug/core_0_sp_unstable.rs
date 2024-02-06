@@ -57,10 +57,10 @@ impl crate::RegisterSpec for CORE_0_SP_UNSTABLE_SPEC {
 impl crate::Readable for CORE_0_SP_UNSTABLE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`core_0_sp_unstable::W`](W) writer structure"]
 impl crate::Writable for CORE_0_SP_UNSTABLE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE_0_SP_UNSTABLE to value 0x0b"]
 impl crate::Resettable for CORE_0_SP_UNSTABLE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0b;
+    const RESET_VALUE: u32 = 0x0b;
 }

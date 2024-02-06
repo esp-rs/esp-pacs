@@ -32,5 +32,5 @@ impl crate::RegisterSpec for BLK3_W1_SPEC {
 impl crate::Readable for BLK3_W1_SPEC {}
 #[doc = "`reset()` method sets BLK3_W1 to value 0"]
 impl crate::Resettable for BLK3_W1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

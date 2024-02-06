@@ -200,5 +200,5 @@ impl crate::RegisterSpec for I2C_INT_RAW_SPEC {
 impl crate::Readable for I2C_INT_RAW_SPEC {}
 #[doc = "`reset()` method sets I2C_INT_RAW to value 0x02"]
 impl crate::Resettable for I2C_INT_RAW_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

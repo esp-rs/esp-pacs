@@ -46,5 +46,5 @@ impl crate::RegisterSpec for TIMER0_STATUS_SPEC {
 impl crate::Readable for TIMER0_STATUS_SPEC {}
 #[doc = "`reset()` method sets TIMER0_STATUS to value 0"]
 impl crate::Resettable for TIMER0_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

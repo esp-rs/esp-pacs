@@ -76,10 +76,10 @@ impl crate::RegisterSpec for CPU_SW_STALL_SPEC {
 impl crate::Readable for CPU_SW_STALL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cpu_sw_stall::W`](W) writer structure"]
 impl crate::Writable for CPU_SW_STALL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CPU_SW_STALL to value 0"]
 impl crate::Resettable for CPU_SW_STALL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

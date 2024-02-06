@@ -40,5 +40,5 @@ impl crate::RegisterSpec for RD_MAC_SPI_SYS_1_SPEC {
 impl crate::Readable for RD_MAC_SPI_SYS_1_SPEC {}
 #[doc = "`reset()` method sets RD_MAC_SPI_SYS_1 to value 0"]
 impl crate::Resettable for RD_MAC_SPI_SYS_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

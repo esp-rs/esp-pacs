@@ -79,5 +79,5 @@ impl crate::RegisterSpec for OUT_RO_STATUS_CH0_SPEC {
 impl crate::Readable for OUT_RO_STATUS_CH0_SPEC {}
 #[doc = "`reset()` method sets OUT_RO_STATUS_CH0 to value 0x0800"]
 impl crate::Resettable for OUT_RO_STATUS_CH0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0800;
+    const RESET_VALUE: u32 = 0x0800;
 }

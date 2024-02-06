@@ -105,10 +105,10 @@ impl crate::RegisterSpec for C0_SPEC {
 impl crate::Readable for C0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`c0::W`](W) writer structure"]
 impl crate::Writable for C0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets C0 to value 0x1100"]
 impl crate::Resettable for C0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1100;
+    const RESET_VALUE: u32 = 0x1100;
 }

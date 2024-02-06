@@ -57,10 +57,10 @@ impl crate::RegisterSpec for AE_WINPIXNUM_SPEC {
 impl crate::Readable for AE_WINPIXNUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ae_winpixnum::W`](W) writer structure"]
 impl crate::Writable for AE_WINPIXNUM_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AE_WINPIXNUM to value 0x0001_4400"]
 impl crate::Resettable for AE_WINPIXNUM_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_4400;
+    const RESET_VALUE: u32 = 0x0001_4400;
 }

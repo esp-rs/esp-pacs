@@ -35,5 +35,5 @@ impl crate::RegisterSpec for IBUS1_ACS_MISS_CNT_SPEC {
 impl crate::Readable for IBUS1_ACS_MISS_CNT_SPEC {}
 #[doc = "`reset()` method sets IBUS1_ACS_MISS_CNT to value 0"]
 impl crate::Resettable for IBUS1_ACS_MISS_CNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

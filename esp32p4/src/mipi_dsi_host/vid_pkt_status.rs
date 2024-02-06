@@ -90,5 +90,5 @@ impl crate::RegisterSpec for VID_PKT_STATUS_SPEC {
 impl crate::Readable for VID_PKT_STATUS_SPEC {}
 #[doc = "`reset()` method sets VID_PKT_STATUS to value 0x0001_0005"]
 impl crate::Resettable for VID_PKT_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_0005;
+    const RESET_VALUE: u32 = 0x0001_0005;
 }

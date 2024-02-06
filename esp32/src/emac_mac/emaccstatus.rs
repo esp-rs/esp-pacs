@@ -51,5 +51,5 @@ impl crate::RegisterSpec for EMACCSTATUS_SPEC {
 impl crate::Readable for EMACCSTATUS_SPEC {}
 #[doc = "`reset()` method sets EMACCSTATUS to value 0"]
 impl crate::Resettable for EMACCSTATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

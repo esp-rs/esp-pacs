@@ -156,5 +156,5 @@ impl crate::RegisterSpec for SYNC_L1_CACHE_PRELOAD_INT_ST_SPEC {
 impl crate::Readable for SYNC_L1_CACHE_PRELOAD_INT_ST_SPEC {}
 #[doc = "`reset()` method sets SYNC_L1_CACHE_PRELOAD_INT_ST to value 0"]
 impl crate::Resettable for SYNC_L1_CACHE_PRELOAD_INT_ST_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

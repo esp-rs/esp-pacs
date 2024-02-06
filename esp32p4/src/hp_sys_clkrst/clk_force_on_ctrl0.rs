@@ -412,10 +412,10 @@ impl crate::RegisterSpec for CLK_FORCE_ON_CTRL0_SPEC {
 impl crate::Readable for CLK_FORCE_ON_CTRL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_force_on_ctrl0::W`](W) writer structure"]
 impl crate::Writable for CLK_FORCE_ON_CTRL0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLK_FORCE_ON_CTRL0 to value 0x0003_ffff"]
 impl crate::Resettable for CLK_FORCE_ON_CTRL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0003_ffff;
+    const RESET_VALUE: u32 = 0x0003_ffff;
 }
