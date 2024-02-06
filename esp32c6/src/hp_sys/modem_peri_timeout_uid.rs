@@ -35,5 +35,5 @@ impl crate::RegisterSpec for MODEM_PERI_TIMEOUT_UID_SPEC {
 impl crate::Readable for MODEM_PERI_TIMEOUT_UID_SPEC {}
 #[doc = "`reset()` method sets MODEM_PERI_TIMEOUT_UID to value 0"]
 impl crate::Resettable for MODEM_PERI_TIMEOUT_UID_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -35,5 +35,5 @@ impl crate::RegisterSpec for LP_PROBE_OUT_SPEC {
 impl crate::Readable for LP_PROBE_OUT_SPEC {}
 #[doc = "`reset()` method sets LP_PROBE_OUT to value 0"]
 impl crate::Resettable for LP_PROBE_OUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

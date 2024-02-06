@@ -120,5 +120,5 @@ impl crate::RegisterSpec for PHY_STATUS_SPEC {
 impl crate::Readable for PHY_STATUS_SPEC {}
 #[doc = "`reset()` method sets PHY_STATUS to value 0x0140"]
 impl crate::Resettable for PHY_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0140;
+    const RESET_VALUE: u32 = 0x0140;
 }

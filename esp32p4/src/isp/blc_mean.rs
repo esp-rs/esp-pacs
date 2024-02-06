@@ -68,5 +68,5 @@ impl crate::RegisterSpec for BLC_MEAN_SPEC {
 impl crate::Readable for BLC_MEAN_SPEC {}
 #[doc = "`reset()` method sets BLC_MEAN to value 0"]
 impl crate::Resettable for BLC_MEAN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

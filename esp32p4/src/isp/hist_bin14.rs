@@ -35,5 +35,5 @@ impl crate::RegisterSpec for HIST_BIN14_SPEC {
 impl crate::Readable for HIST_BIN14_SPEC {}
 #[doc = "`reset()` method sets HIST_BIN14 to value 0"]
 impl crate::Resettable for HIST_BIN14_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

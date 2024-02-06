@@ -168,10 +168,10 @@ impl crate::RegisterSpec for READER2_CTRL_SPEC {
 impl crate::Readable for READER2_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`reader2_ctrl::W`](W) writer structure"]
 impl crate::Writable for READER2_CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets READER2_CTRL to value 0x4005_0002"]
 impl crate::Resettable for READER2_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x4005_0002;
+    const RESET_VALUE: u32 = 0x4005_0002;
 }

@@ -35,5 +35,5 @@ impl crate::RegisterSpec for IN_POP_DATA_CNT_CH3_SPEC {
 impl crate::Readable for IN_POP_DATA_CNT_CH3_SPEC {}
 #[doc = "`reset()` method sets IN_POP_DATA_CNT_CH3 to value 0x07"]
 impl crate::Resettable for IN_POP_DATA_CNT_CH3_SPEC {
-    const RESET_VALUE: Self::Ux = 0x07;
+    const RESET_VALUE: u32 = 0x07;
 }

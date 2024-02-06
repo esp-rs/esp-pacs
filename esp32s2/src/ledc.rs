@@ -36,7 +36,8 @@ impl RegisterBlock {
     #[doc = "0x00..0x20 - Configuration register 0 for channel %s"]
     #[inline(always)]
     pub fn ch_conf0_iter(&self) -> impl Iterator<Item = &CH_CONF0> {
-        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() })
+        (0..8)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() })
     }
     #[doc = "0x00 - Configuration register 0 for channel 0"]
     #[inline(always)]
@@ -89,7 +90,8 @@ impl RegisterBlock {
     #[doc = "0x04..0x24 - High point register for channel %s"]
     #[inline(always)]
     pub fn ch_hpoint_iter(&self) -> impl Iterator<Item = &CH_HPOINT> {
-        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() })
+        (0..8)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() })
     }
     #[doc = "0x04 - High point register for channel 0"]
     #[inline(always)]
@@ -142,7 +144,8 @@ impl RegisterBlock {
     #[doc = "0x08..0x28 - Initial duty cycle for channel %s"]
     #[inline(always)]
     pub fn ch_duty_iter(&self) -> impl Iterator<Item = &CH_DUTY> {
-        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() })
+        (0..8)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() })
     }
     #[doc = "0x08 - Initial duty cycle for channel 0"]
     #[inline(always)]
@@ -201,7 +204,7 @@ impl RegisterBlock {
     #[doc = "0x0c..0x2c - Configuration register 1 for channel %s"]
     #[inline(always)]
     pub fn ch_conf1_iter(&self) -> impl Iterator<Item = &CH_CONF1> {
-        (0..8).map(|n| unsafe {
+        (0..8).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(12)
@@ -266,7 +269,7 @@ impl RegisterBlock {
     #[doc = "0x10..0x30 - Current duty cycle for channel %s"]
     #[inline(always)]
     pub fn ch_duty_r_iter(&self) -> impl Iterator<Item = &CH_DUTY_R> {
-        (0..8).map(|n| unsafe {
+        (0..8).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(16)
@@ -331,7 +334,7 @@ impl RegisterBlock {
     #[doc = "0xa0..0xb0 - Timer %s configuration"]
     #[inline(always)]
     pub fn timer_conf_iter(&self) -> impl Iterator<Item = &TIMER_CONF> {
-        (0..4).map(|n| unsafe {
+        (0..4).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(160)
@@ -376,7 +379,7 @@ impl RegisterBlock {
     #[doc = "0xa4..0xb4 - Timer %s current counter value"]
     #[inline(always)]
     pub fn timer_value_iter(&self) -> impl Iterator<Item = &TIMER_VALUE> {
-        (0..4).map(|n| unsafe {
+        (0..4).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(164)

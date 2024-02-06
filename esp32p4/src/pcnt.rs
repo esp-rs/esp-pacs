@@ -34,7 +34,8 @@ impl RegisterBlock {
     #[doc = "0x00..0x10 - Configuration register 0 for unit %s"]
     #[inline(always)]
     pub fn u_conf0_iter(&self) -> impl Iterator<Item = &U_CONF0> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() })
+        (0..4)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() })
     }
     #[doc = "0x00 - Configuration register 0 for unit 0"]
     #[inline(always)]
@@ -67,7 +68,8 @@ impl RegisterBlock {
     #[doc = "0x04..0x14 - Configuration register 1 for unit %s"]
     #[inline(always)]
     pub fn u_conf1_iter(&self) -> impl Iterator<Item = &U_CONF1> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() })
+        (0..4)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() })
     }
     #[doc = "0x04 - Configuration register 1 for unit 0"]
     #[inline(always)]
@@ -100,7 +102,8 @@ impl RegisterBlock {
     #[doc = "0x08..0x18 - Configuration register 2 for unit %s"]
     #[inline(always)]
     pub fn u_conf2_iter(&self) -> impl Iterator<Item = &U_CONF2> {
-        (0..4).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() })
+        (0..4)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() })
     }
     #[doc = "0x08 - Configuration register 2 for unit 0"]
     #[inline(always)]

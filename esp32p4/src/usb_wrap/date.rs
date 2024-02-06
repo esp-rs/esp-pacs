@@ -35,5 +35,5 @@ impl crate::RegisterSpec for DATE_SPEC {
 impl crate::Readable for DATE_SPEC {}
 #[doc = "`reset()` method sets DATE to value 0x2303_0504"]
 impl crate::Resettable for DATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2303_0504;
+    const RESET_VALUE: u32 = 0x2303_0504;
 }

@@ -146,10 +146,10 @@ impl crate::RegisterSpec for SR_COLOR_MODE_SPEC {
 impl crate::Readable for SR_COLOR_MODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sr_color_mode::W`](W) writer structure"]
 impl crate::Writable for SR_COLOR_MODE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SR_COLOR_MODE to value 0"]
 impl crate::Resettable for SR_COLOR_MODE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

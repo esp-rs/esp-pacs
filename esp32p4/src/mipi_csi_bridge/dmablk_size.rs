@@ -57,10 +57,10 @@ impl crate::RegisterSpec for DMABLK_SIZE_SPEC {
 impl crate::Readable for DMABLK_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmablk_size::W`](W) writer structure"]
 impl crate::Writable for DMABLK_SIZE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMABLK_SIZE to value 0x1fff"]
 impl crate::Resettable for DMABLK_SIZE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1fff;
+    const RESET_VALUE: u32 = 0x1fff;
 }

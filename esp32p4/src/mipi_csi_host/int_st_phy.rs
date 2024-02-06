@@ -68,5 +68,5 @@ impl crate::RegisterSpec for INT_ST_PHY_SPEC {
 impl crate::Readable for INT_ST_PHY_SPEC {}
 #[doc = "`reset()` method sets INT_ST_PHY to value 0"]
 impl crate::Resettable for INT_ST_PHY_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

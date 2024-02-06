@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CLK_STATE1_SPEC {
 impl crate::Readable for CLK_STATE1_SPEC {}
 #[doc = "`reset()` method sets CLK_STATE1 to value 0xffff_ffff"]
 impl crate::Resettable for CLK_STATE1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

@@ -114,10 +114,10 @@ impl crate::RegisterSpec for GEN2_STMP_CFG_SPEC {
 impl crate::Readable for GEN2_STMP_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gen2_stmp_cfg::W`](W) writer structure"]
 impl crate::Writable for GEN2_STMP_CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GEN2_STMP_CFG to value 0"]
 impl crate::Resettable for GEN2_STMP_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -76,10 +76,10 @@ impl crate::RegisterSpec for RX_FILT_SPEC {
 impl crate::Readable for RX_FILT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rx_filt::W`](W) writer structure"]
 impl crate::Writable for RX_FILT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RX_FILT to value 0x08"]
 impl crate::Resettable for RX_FILT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x08;
+    const RESET_VALUE: u32 = 0x08;
 }

@@ -113,10 +113,10 @@ impl crate::RegisterSpec for DMA_BLOCK_INTERVAL_SPEC {
 impl crate::Readable for DMA_BLOCK_INTERVAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_block_interval::W`](W) writer structure"]
 impl crate::Writable for DMA_BLOCK_INTERVAL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_BLOCK_INTERVAL to value 0x3000_2409"]
 impl crate::Resettable for DMA_BLOCK_INTERVAL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3000_2409;
+    const RESET_VALUE: u32 = 0x3000_2409;
 }

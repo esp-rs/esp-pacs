@@ -32,5 +32,5 @@ impl crate::RegisterSpec for RDARAB_SPEC {
 impl crate::Readable for RDARAB_SPEC {}
 #[doc = "`reset()` method sets RDARAB to value 0"]
 impl crate::Resettable for RDARAB_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

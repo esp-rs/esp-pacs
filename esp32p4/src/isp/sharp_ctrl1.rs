@@ -35,5 +35,5 @@ impl crate::RegisterSpec for SHARP_CTRL1_SPEC {
 impl crate::Readable for SHARP_CTRL1_SPEC {}
 #[doc = "`reset()` method sets SHARP_CTRL1 to value 0"]
 impl crate::Resettable for SHARP_CTRL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

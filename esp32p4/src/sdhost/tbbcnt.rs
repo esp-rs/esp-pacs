@@ -32,5 +32,5 @@ impl crate::RegisterSpec for TBBCNT_SPEC {
 impl crate::Readable for TBBCNT_SPEC {}
 #[doc = "`reset()` method sets TBBCNT to value 0"]
 impl crate::Resettable for TBBCNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

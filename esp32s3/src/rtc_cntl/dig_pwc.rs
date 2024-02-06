@@ -349,10 +349,10 @@ impl crate::RegisterSpec for DIG_PWC_SPEC {
 impl crate::Readable for DIG_PWC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dig_pwc::W`](W) writer structure"]
 impl crate::Writable for DIG_PWC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIG_PWC to value 0x0054_5010"]
 impl crate::Resettable for DIG_PWC_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0054_5010;
+    const RESET_VALUE: u32 = 0x0054_5010;
 }

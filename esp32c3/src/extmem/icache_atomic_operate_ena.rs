@@ -59,10 +59,10 @@ impl crate::RegisterSpec for ICACHE_ATOMIC_OPERATE_ENA_SPEC {
 impl crate::Readable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`icache_atomic_operate_ena::W`](W) writer structure"]
 impl crate::Writable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ICACHE_ATOMIC_OPERATE_ENA to value 0x01"]
 impl crate::Resettable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

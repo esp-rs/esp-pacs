@@ -105,10 +105,10 @@ impl crate::RegisterSpec for RD_TIM_CONF_SPEC {
 impl crate::Readable for RD_TIM_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rd_tim_conf::W`](W) writer structure"]
 impl crate::Writable for RD_TIM_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RD_TIM_CONF to value 0x1201_0201"]
 impl crate::Resettable for RD_TIM_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1201_0201;
+    const RESET_VALUE: u32 = 0x1201_0201;
 }

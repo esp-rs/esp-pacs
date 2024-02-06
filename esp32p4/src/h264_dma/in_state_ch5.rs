@@ -46,5 +46,5 @@ impl crate::RegisterSpec for IN_STATE_CH5_SPEC {
 impl crate::Readable for IN_STATE_CH5_SPEC {}
 #[doc = "`reset()` method sets IN_STATE_CH5 to value 0x08"]
 impl crate::Resettable for IN_STATE_CH5_SPEC {
-    const RESET_VALUE: Self::Ux = 0x08;
+    const RESET_VALUE: u32 = 0x08;
 }

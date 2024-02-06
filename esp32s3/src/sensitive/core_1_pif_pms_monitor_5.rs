@@ -74,5 +74,5 @@ impl crate::RegisterSpec for CORE_1_PIF_PMS_MONITOR_5_SPEC {
 impl crate::Readable for CORE_1_PIF_PMS_MONITOR_5_SPEC {}
 #[doc = "`reset()` method sets CORE_1_PIF_PMS_MONITOR_5 to value 0"]
 impl crate::Resettable for CORE_1_PIF_PMS_MONITOR_5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

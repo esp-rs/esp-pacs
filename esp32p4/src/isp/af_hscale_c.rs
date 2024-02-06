@@ -76,10 +76,10 @@ impl crate::RegisterSpec for AF_HSCALE_C_SPEC {
 impl crate::Readable for AF_HSCALE_C_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`af_hscale_c::W`](W) writer structure"]
 impl crate::Writable for AF_HSCALE_C_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AF_HSCALE_C to value 0x0001_0080"]
 impl crate::Resettable for AF_HSCALE_C_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_0080;
+    const RESET_VALUE: u32 = 0x0001_0080;
 }

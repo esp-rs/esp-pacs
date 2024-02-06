@@ -57,10 +57,10 @@ impl crate::RegisterSpec for AT_CMD_GAPTOUT_SYNC_SPEC {
 impl crate::Readable for AT_CMD_GAPTOUT_SYNC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`at_cmd_gaptout_sync::W`](W) writer structure"]
 impl crate::Writable for AT_CMD_GAPTOUT_SYNC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AT_CMD_GAPTOUT_SYNC to value 0x0b"]
 impl crate::Resettable for AT_CMD_GAPTOUT_SYNC_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0b;
+    const RESET_VALUE: u32 = 0x0b;
 }

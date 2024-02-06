@@ -167,5 +167,5 @@ impl crate::RegisterSpec for L2_CACHE_CACHESIZE_CONF_SPEC {
 impl crate::Readable for L2_CACHE_CACHESIZE_CONF_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_CACHESIZE_CONF to value 0"]
 impl crate::Resettable for L2_CACHE_CACHESIZE_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

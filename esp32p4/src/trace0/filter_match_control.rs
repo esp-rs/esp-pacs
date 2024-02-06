@@ -97,10 +97,10 @@ impl crate::RegisterSpec for FILTER_MATCH_CONTROL_SPEC {
 impl crate::Readable for FILTER_MATCH_CONTROL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`filter_match_control::W`](W) writer structure"]
 impl crate::Writable for FILTER_MATCH_CONTROL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FILTER_MATCH_CONTROL to value 0"]
 impl crate::Resettable for FILTER_MATCH_CONTROL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

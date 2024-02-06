@@ -35,5 +35,5 @@ impl crate::RegisterSpec for VID_PKT_SIZE_ACT_SPEC {
 impl crate::Readable for VID_PKT_SIZE_ACT_SPEC {}
 #[doc = "`reset()` method sets VID_PKT_SIZE_ACT to value 0"]
 impl crate::Resettable for VID_PKT_SIZE_ACT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

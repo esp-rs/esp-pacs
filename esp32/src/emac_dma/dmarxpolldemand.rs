@@ -21,5 +21,5 @@ impl crate::RegisterSpec for DMARXPOLLDEMAND_SPEC {
 impl crate::Readable for DMARXPOLLDEMAND_SPEC {}
 #[doc = "`reset()` method sets DMARXPOLLDEMAND to value 0"]
 impl crate::Resettable for DMARXPOLLDEMAND_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

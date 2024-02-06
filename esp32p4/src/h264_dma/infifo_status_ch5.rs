@@ -57,5 +57,5 @@ impl crate::RegisterSpec for INFIFO_STATUS_CH5_SPEC {
 impl crate::Readable for INFIFO_STATUS_CH5_SPEC {}
 #[doc = "`reset()` method sets INFIFO_STATUS_CH5 to value 0x02"]
 impl crate::Resettable for INFIFO_STATUS_CH5_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

@@ -57,10 +57,10 @@ impl crate::RegisterSpec for REGION9_ADDR_START_SPEC {
 impl crate::Readable for REGION9_ADDR_START_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`region9_addr_start::W`](W) writer structure"]
 impl crate::Writable for REGION9_ADDR_START_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REGION9_ADDR_START to value 0"]
 impl crate::Resettable for REGION9_ADDR_START_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

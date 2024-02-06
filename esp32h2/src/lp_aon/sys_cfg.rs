@@ -98,10 +98,10 @@ impl crate::RegisterSpec for SYS_CFG_SPEC {
 impl crate::Readable for SYS_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sys_cfg::W`](W) writer structure"]
 impl crate::Writable for SYS_CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYS_CFG to value 0x07"]
 impl crate::Resettable for SYS_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x07;
+    const RESET_VALUE: u32 = 0x07;
 }

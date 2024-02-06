@@ -86,10 +86,10 @@ impl crate::RegisterSpec for TRIGGER_SPEC {
 impl crate::Readable for TRIGGER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`trigger::W`](W) writer structure"]
 impl crate::Writable for TRIGGER_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TRIGGER to value 0x0c"]
 impl crate::Resettable for TRIGGER_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0c;
+    const RESET_VALUE: u32 = 0x0c;
 }

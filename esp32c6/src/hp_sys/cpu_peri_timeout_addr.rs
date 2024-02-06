@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CPU_PERI_TIMEOUT_ADDR_SPEC {
 impl crate::Readable for CPU_PERI_TIMEOUT_ADDR_SPEC {}
 #[doc = "`reset()` method sets CPU_PERI_TIMEOUT_ADDR to value 0"]
 impl crate::Resettable for CPU_PERI_TIMEOUT_ADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

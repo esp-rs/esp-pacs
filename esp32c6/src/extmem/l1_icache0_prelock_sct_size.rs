@@ -46,5 +46,5 @@ impl crate::RegisterSpec for L1_ICACHE0_PRELOCK_SCT_SIZE_SPEC {
 impl crate::Readable for L1_ICACHE0_PRELOCK_SCT_SIZE_SPEC {}
 #[doc = "`reset()` method sets L1_ICACHE0_PRELOCK_SCT_SIZE to value 0x3fff_3fff"]
 impl crate::Resettable for L1_ICACHE0_PRELOCK_SCT_SIZE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3fff_3fff;
+    const RESET_VALUE: u32 = 0x3fff_3fff;
 }

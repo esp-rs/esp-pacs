@@ -229,10 +229,10 @@ impl crate::RegisterSpec for CTRL_CLK_OUT_EN_SPEC {
 impl crate::Readable for CTRL_CLK_OUT_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl_clk_out_en::W`](W) writer structure"]
 impl crate::Writable for CTRL_CLK_OUT_EN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL_CLK_OUT_EN to value 0x07ff"]
 impl crate::Resettable for CTRL_CLK_OUT_EN_SPEC {
-    const RESET_VALUE: Self::Ux = 0x07ff;
+    const RESET_VALUE: u32 = 0x07ff;
 }

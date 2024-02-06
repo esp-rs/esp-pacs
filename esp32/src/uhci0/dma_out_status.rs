@@ -40,5 +40,5 @@ impl crate::RegisterSpec for DMA_OUT_STATUS_SPEC {
 impl crate::Readable for DMA_OUT_STATUS_SPEC {}
 #[doc = "`reset()` method sets DMA_OUT_STATUS to value 0x02"]
 impl crate::Resettable for DMA_OUT_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

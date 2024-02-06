@@ -371,10 +371,10 @@ impl crate::RegisterSpec for PERI_CLK_CTRL25_SPEC {
 impl crate::Readable for PERI_CLK_CTRL25_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl25::W`](W) writer structure"]
 impl crate::Writable for PERI_CLK_CTRL25_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PERI_CLK_CTRL25 to value 0x007f_c000"]
 impl crate::Resettable for PERI_CLK_CTRL25_SPEC {
-    const RESET_VALUE: Self::Ux = 0x007f_c000;
+    const RESET_VALUE: u32 = 0x007f_c000;
 }

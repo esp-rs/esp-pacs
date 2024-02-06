@@ -48,5 +48,5 @@ impl crate::RegisterSpec for INTMASKED_SPEC {
 impl crate::Readable for INTMASKED_SPEC {}
 #[doc = "`reset()` method sets INTMASKED to value 0"]
 impl crate::Resettable for INTMASKED_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

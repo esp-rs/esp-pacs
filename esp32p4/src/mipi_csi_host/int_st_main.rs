@@ -123,5 +123,5 @@ impl crate::RegisterSpec for INT_ST_MAIN_SPEC {
 impl crate::Readable for INT_ST_MAIN_SPEC {}
 #[doc = "`reset()` method sets INT_ST_MAIN to value 0"]
 impl crate::Resettable for INT_ST_MAIN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -76,10 +76,10 @@ impl crate::RegisterSpec for SAR_SLAVE_ADDR4_SPEC {
 impl crate::Readable for SAR_SLAVE_ADDR4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_slave_addr4::W`](W) writer structure"]
 impl crate::Writable for SAR_SLAVE_ADDR4_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR_SLAVE_ADDR4 to value 0"]
 impl crate::Resettable for SAR_SLAVE_ADDR4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

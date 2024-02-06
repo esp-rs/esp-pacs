@@ -120,5 +120,5 @@ impl crate::RegisterSpec for EMACDEBUG_SPEC {
 impl crate::Readable for EMACDEBUG_SPEC {}
 #[doc = "`reset()` method sets EMACDEBUG to value 0"]
 impl crate::Resettable for EMACDEBUG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

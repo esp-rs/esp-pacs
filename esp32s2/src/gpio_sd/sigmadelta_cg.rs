@@ -54,10 +54,10 @@ impl crate::RegisterSpec for SIGMADELTA_CG_SPEC {
 impl crate::Readable for SIGMADELTA_CG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sigmadelta_cg::W`](W) writer structure"]
 impl crate::Writable for SIGMADELTA_CG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SIGMADELTA_CG to value 0"]
 impl crate::Resettable for SIGMADELTA_CG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

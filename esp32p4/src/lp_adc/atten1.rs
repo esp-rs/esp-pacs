@@ -54,10 +54,10 @@ impl crate::RegisterSpec for ATTEN1_SPEC {
 impl crate::Readable for ATTEN1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`atten1::W`](W) writer structure"]
 impl crate::Writable for ATTEN1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ATTEN1 to value 0xffff_ffff"]
 impl crate::Resettable for ATTEN1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

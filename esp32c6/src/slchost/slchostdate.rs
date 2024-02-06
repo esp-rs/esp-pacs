@@ -57,10 +57,10 @@ impl crate::RegisterSpec for SLCHOSTDATE_SPEC {
 impl crate::Readable for SLCHOSTDATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slchostdate::W`](W) writer structure"]
 impl crate::Writable for SLCHOSTDATE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLCHOSTDATE to value 0x2106_0700"]
 impl crate::Resettable for SLCHOSTDATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2106_0700;
+    const RESET_VALUE: u32 = 0x2106_0700;
 }

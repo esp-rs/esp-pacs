@@ -54,10 +54,10 @@ impl crate::RegisterSpec for SDIO_DATE_SPEC {
 impl crate::Readable for SDIO_DATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sdio_date::W`](W) writer structure"]
 impl crate::Writable for SDIO_DATE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SDIO_DATE to value 0x0220_3150"]
 impl crate::Resettable for SDIO_DATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0220_3150;
+    const RESET_VALUE: u32 = 0x0220_3150;
 }

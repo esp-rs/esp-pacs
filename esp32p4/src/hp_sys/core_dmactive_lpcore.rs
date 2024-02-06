@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CORE_DMACTIVE_LPCORE_SPEC {
 impl crate::Readable for CORE_DMACTIVE_LPCORE_SPEC {}
 #[doc = "`reset()` method sets CORE_DMACTIVE_LPCORE to value 0"]
 impl crate::Resettable for CORE_DMACTIVE_LPCORE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

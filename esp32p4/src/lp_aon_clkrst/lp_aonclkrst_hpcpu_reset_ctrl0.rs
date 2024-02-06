@@ -360,10 +360,10 @@ impl crate::RegisterSpec for LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC {
 impl crate::Readable for LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_aonclkrst_hpcpu_reset_ctrl0::W`](W) writer structure"]
 impl crate::Writable for LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_AONCLKRST_HPCPU_RESET_CTRL0 to value 0x8002_8002"]
 impl crate::Resettable for LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8002_8002;
+    const RESET_VALUE: u32 = 0x8002_8002;
 }

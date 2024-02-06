@@ -32,5 +32,5 @@ impl crate::RegisterSpec for HSCH_DUTY_R_SPEC {
 impl crate::Readable for HSCH_DUTY_R_SPEC {}
 #[doc = "`reset()` method sets HSCH%s_DUTY_R to value 0"]
 impl crate::Resettable for HSCH_DUTY_R_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

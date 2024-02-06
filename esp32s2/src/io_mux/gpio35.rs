@@ -214,10 +214,10 @@ impl crate::RegisterSpec for GPIO35_SPEC {
 impl crate::Readable for GPIO35_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpio35::W`](W) writer structure"]
 impl crate::Writable for GPIO35_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPIO35 to value 0x0b00"]
 impl crate::Resettable for GPIO35_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0b00;
+    const RESET_VALUE: u32 = 0x0b00;
 }

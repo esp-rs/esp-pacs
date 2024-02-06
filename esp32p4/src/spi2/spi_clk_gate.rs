@@ -92,10 +92,10 @@ impl crate::RegisterSpec for SPI_CLK_GATE_SPEC {
 impl crate::Readable for SPI_CLK_GATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_clk_gate::W`](W) writer structure"]
 impl crate::Writable for SPI_CLK_GATE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_CLK_GATE to value 0"]
 impl crate::Resettable for SPI_CLK_GATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -56,5 +56,5 @@ impl crate::RegisterSpec for DOUT_MODE_SPEC {
 impl crate::Readable for DOUT_MODE_SPEC {}
 #[doc = "`reset()` method sets DOUT_MODE to value 0"]
 impl crate::Resettable for DOUT_MODE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

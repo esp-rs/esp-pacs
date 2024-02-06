@@ -35,5 +35,5 @@ impl crate::RegisterSpec for OUT_BLOCK_BUF_LEN_CH4_SPEC {
 impl crate::Readable for OUT_BLOCK_BUF_LEN_CH4_SPEC {}
 #[doc = "`reset()` method sets OUT_BLOCK_BUF_LEN_CH4 to value 0"]
 impl crate::Resettable for OUT_BLOCK_BUF_LEN_CH4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

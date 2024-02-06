@@ -32,5 +32,5 @@ impl crate::RegisterSpec for GSNPSID_SPEC {
 impl crate::Readable for GSNPSID_SPEC {}
 #[doc = "`reset()` method sets GSNPSID to value 0x4f54_400a"]
 impl crate::Resettable for GSNPSID_SPEC {
-    const RESET_VALUE: Self::Ux = 0x4f54_400a;
+    const RESET_VALUE: u32 = 0x4f54_400a;
 }

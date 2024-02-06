@@ -32,5 +32,5 @@ impl crate::RegisterSpec for DSCADDR_SPEC {
 impl crate::Readable for DSCADDR_SPEC {}
 #[doc = "`reset()` method sets DSCADDR to value 0"]
 impl crate::Resettable for DSCADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

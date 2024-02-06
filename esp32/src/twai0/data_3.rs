@@ -54,10 +54,10 @@ impl crate::RegisterSpec for DATA_3_SPEC {
 impl crate::Readable for DATA_3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`data_3::W`](W) writer structure"]
 impl crate::Writable for DATA_3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DATA_3 to value 0"]
 impl crate::Resettable for DATA_3_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

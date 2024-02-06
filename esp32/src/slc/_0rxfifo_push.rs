@@ -76,10 +76,10 @@ impl crate::RegisterSpec for _0RXFIFO_PUSH_SPEC {
 impl crate::Readable for _0RXFIFO_PUSH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`_0rxfifo_push::W`](W) writer structure"]
 impl crate::Writable for _0RXFIFO_PUSH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets _0RXFIFO_PUSH to value 0"]
 impl crate::Resettable for _0RXFIFO_PUSH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

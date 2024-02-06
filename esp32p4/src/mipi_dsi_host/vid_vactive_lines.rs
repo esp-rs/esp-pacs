@@ -57,10 +57,10 @@ impl crate::RegisterSpec for VID_VACTIVE_LINES_SPEC {
 impl crate::Readable for VID_VACTIVE_LINES_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vid_vactive_lines::W`](W) writer structure"]
 impl crate::Writable for VID_VACTIVE_LINES_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VID_VACTIVE_LINES to value 0"]
 impl crate::Resettable for VID_VACTIVE_LINES_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

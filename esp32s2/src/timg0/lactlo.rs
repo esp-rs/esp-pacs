@@ -32,5 +32,5 @@ impl crate::RegisterSpec for LACTLO_SPEC {
 impl crate::Readable for LACTLO_SPEC {}
 #[doc = "`reset()` method sets LACTLO to value 0"]
 impl crate::Resettable for LACTLO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

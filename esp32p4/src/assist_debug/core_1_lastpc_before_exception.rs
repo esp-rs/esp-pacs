@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CORE_1_LASTPC_BEFORE_EXCEPTION_SPEC {
 impl crate::Readable for CORE_1_LASTPC_BEFORE_EXCEPTION_SPEC {}
 #[doc = "`reset()` method sets CORE_1_LASTPC_BEFORE_EXCEPTION to value 0"]
 impl crate::Resettable for CORE_1_LASTPC_BEFORE_EXCEPTION_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

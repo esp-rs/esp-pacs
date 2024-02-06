@@ -95,10 +95,10 @@ impl crate::RegisterSpec for FSM_WAIT_SPEC {
 impl crate::Readable for FSM_WAIT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fsm_wait::W`](W) writer structure"]
 impl crate::Writable for FSM_WAIT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSM_WAIT to value 0x00ff_0808"]
 impl crate::Resettable for FSM_WAIT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x00ff_0808;
+    const RESET_VALUE: u32 = 0x00ff_0808;
 }

@@ -32,5 +32,5 @@ impl crate::RegisterSpec for RECIVE_SEQ_SPEC {
 impl crate::Readable for RECIVE_SEQ_SPEC {}
 #[doc = "`reset()` method sets RECIVE_SEQ to value 0"]
 impl crate::Resettable for RECIVE_SEQ_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

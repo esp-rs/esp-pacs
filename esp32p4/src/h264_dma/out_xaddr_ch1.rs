@@ -35,5 +35,5 @@ impl crate::RegisterSpec for OUT_XADDR_CH1_SPEC {
 impl crate::Readable for OUT_XADDR_CH1_SPEC {}
 #[doc = "`reset()` method sets OUT_XADDR_CH1 to value 0"]
 impl crate::Resettable for OUT_XADDR_CH1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

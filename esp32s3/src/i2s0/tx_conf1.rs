@@ -171,10 +171,10 @@ impl crate::RegisterSpec for TX_CONF1_SPEC {
 impl crate::Readable for TX_CONF1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_conf1::W`](W) writer structure"]
 impl crate::Writable for TX_CONF1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TX_CONF1 to value 0x6f3d_e300"]
 impl crate::Resettable for TX_CONF1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x6f3d_e300;
+    const RESET_VALUE: u32 = 0x6f3d_e300;
 }

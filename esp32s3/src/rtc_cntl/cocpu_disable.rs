@@ -57,10 +57,10 @@ impl crate::RegisterSpec for COCPU_DISABLE_SPEC {
 impl crate::Readable for COCPU_DISABLE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cocpu_disable::W`](W) writer structure"]
 impl crate::Writable for COCPU_DISABLE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets COCPU_DISABLE to value 0"]
 impl crate::Resettable for COCPU_DISABLE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

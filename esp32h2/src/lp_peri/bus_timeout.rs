@@ -84,10 +84,10 @@ impl crate::RegisterSpec for BUS_TIMEOUT_SPEC {
 impl crate::Readable for BUS_TIMEOUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bus_timeout::W`](W) writer structure"]
 impl crate::Writable for BUS_TIMEOUT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BUS_TIMEOUT to value 0xbfff_c000"]
 impl crate::Resettable for BUS_TIMEOUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0xbfff_c000;
+    const RESET_VALUE: u32 = 0xbfff_c000;
 }

@@ -46,5 +46,5 @@ impl crate::RegisterSpec for FILTER_STATUS_SPEC {
 impl crate::Readable for FILTER_STATUS_SPEC {}
 #[doc = "`reset()` method sets FILTER_STATUS to value 0"]
 impl crate::Resettable for FILTER_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

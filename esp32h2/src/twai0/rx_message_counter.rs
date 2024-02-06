@@ -35,5 +35,5 @@ impl crate::RegisterSpec for RX_MESSAGE_COUNTER_SPEC {
 impl crate::Readable for RX_MESSAGE_COUNTER_SPEC {}
 #[doc = "`reset()` method sets RX_MESSAGE_COUNTER to value 0"]
 impl crate::Resettable for RX_MESSAGE_COUNTER_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

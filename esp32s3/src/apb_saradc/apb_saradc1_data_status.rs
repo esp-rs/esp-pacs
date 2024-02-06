@@ -35,5 +35,5 @@ impl crate::RegisterSpec for APB_SARADC1_DATA_STATUS_SPEC {
 impl crate::Readable for APB_SARADC1_DATA_STATUS_SPEC {}
 #[doc = "`reset()` method sets APB_SARADC1_DATA_STATUS to value 0"]
 impl crate::Resettable for APB_SARADC1_DATA_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

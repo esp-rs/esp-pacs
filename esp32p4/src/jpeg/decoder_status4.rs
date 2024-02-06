@@ -68,5 +68,5 @@ impl crate::RegisterSpec for DECODER_STATUS4_SPEC {
 impl crate::Readable for DECODER_STATUS4_SPEC {}
 #[doc = "`reset()` method sets DECODER_STATUS4 to value 0"]
 impl crate::Resettable for DECODER_STATUS4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

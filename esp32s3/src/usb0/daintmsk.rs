@@ -262,10 +262,10 @@ impl crate::RegisterSpec for DAINTMSK_SPEC {
 impl crate::Readable for DAINTMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`daintmsk::W`](W) writer structure"]
 impl crate::Writable for DAINTMSK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DAINTMSK to value 0"]
 impl crate::Resettable for DAINTMSK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

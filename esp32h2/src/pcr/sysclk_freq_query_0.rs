@@ -40,5 +40,5 @@ impl crate::RegisterSpec for SYSCLK_FREQ_QUERY_0_SPEC {
 impl crate::Readable for SYSCLK_FREQ_QUERY_0_SPEC {}
 #[doc = "`reset()` method sets SYSCLK_FREQ_QUERY_0 to value 0x6008"]
 impl crate::Resettable for SYSCLK_FREQ_QUERY_0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x6008;
+    const RESET_VALUE: u32 = 0x6008;
 }

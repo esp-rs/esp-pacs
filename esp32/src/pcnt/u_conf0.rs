@@ -317,10 +317,10 @@ impl crate::RegisterSpec for U_CONF0_SPEC {
 impl crate::Readable for U_CONF0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`u_conf0::W`](W) writer structure"]
 impl crate::Writable for U_CONF0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets U%s_CONF0 to value 0x3c10"]
 impl crate::Resettable for U_CONF0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3c10;
+    const RESET_VALUE: u32 = 0x3c10;
 }

@@ -123,5 +123,5 @@ impl crate::RegisterSpec for DMA_INT_RAW_SPEC {
 impl crate::Readable for DMA_INT_RAW_SPEC {}
 #[doc = "`reset()` method sets DMA_INT_RAW to value 0"]
 impl crate::Resettable for DMA_INT_RAW_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -35,10 +35,10 @@ impl crate::RegisterSpec for JTAG_CTRL_6_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`jtag_ctrl_6::W`](W) writer structure"]
 impl crate::Writable for JTAG_CTRL_6_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets JTAG_CTRL_6 to value 0"]
 impl crate::Resettable for JTAG_CTRL_6_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

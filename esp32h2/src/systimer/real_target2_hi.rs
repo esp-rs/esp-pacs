@@ -35,5 +35,5 @@ impl crate::RegisterSpec for REAL_TARGET2_HI_SPEC {
 impl crate::Readable for REAL_TARGET2_HI_SPEC {}
 #[doc = "`reset()` method sets REAL_TARGET2_HI to value 0"]
 impl crate::Resettable for REAL_TARGET2_HI_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

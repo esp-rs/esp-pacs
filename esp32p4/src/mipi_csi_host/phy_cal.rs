@@ -32,5 +32,5 @@ impl crate::RegisterSpec for PHY_CAL_SPEC {
 impl crate::Readable for PHY_CAL_SPEC {}
 #[doc = "`reset()` method sets PHY_CAL to value 0"]
 impl crate::Resettable for PHY_CAL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -59,10 +59,10 @@ impl crate::RegisterSpec for CACHE_DATAARRAY_CONNECT_1_SPEC {
 impl crate::Readable for CACHE_DATAARRAY_CONNECT_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cache_dataarray_connect_1::W`](W) writer structure"]
 impl crate::Writable for CACHE_DATAARRAY_CONNECT_1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CACHE_DATAARRAY_CONNECT_1 to value 0xff"]
 impl crate::Resettable for CACHE_DATAARRAY_CONNECT_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xff;
+    const RESET_VALUE: u32 = 0xff;
 }

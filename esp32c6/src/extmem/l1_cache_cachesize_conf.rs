@@ -167,5 +167,5 @@ impl crate::RegisterSpec for L1_CACHE_CACHESIZE_CONF_SPEC {
 impl crate::Readable for L1_CACHE_CACHESIZE_CONF_SPEC {}
 #[doc = "`reset()` method sets L1_CACHE_CACHESIZE_CONF to value 0x20"]
 impl crate::Resettable for L1_CACHE_CACHESIZE_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x20;
+    const RESET_VALUE: u32 = 0x20;
 }

@@ -40,5 +40,5 @@ impl crate::RegisterSpec for HFNUM_SPEC {
 impl crate::Readable for HFNUM_SPEC {}
 #[doc = "`reset()` method sets HFNUM to value 0x3fff"]
 impl crate::Resettable for HFNUM_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3fff;
+    const RESET_VALUE: u32 = 0x3fff;
 }

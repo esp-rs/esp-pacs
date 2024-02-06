@@ -133,10 +133,10 @@ impl crate::RegisterSpec for RX_CHCONF0_SPEC {
 impl crate::Readable for RX_CHCONF0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rx_chconf0::W`](W) writer structure"]
 impl crate::Writable for RX_CHCONF0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RX_CH%sCONF0 to value 0x317f_ff02"]
 impl crate::Resettable for RX_CHCONF0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x317f_ff02;
+    const RESET_VALUE: u32 = 0x317f_ff02;
 }

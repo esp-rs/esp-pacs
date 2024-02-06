@@ -35,5 +35,5 @@ impl crate::RegisterSpec for DPC_DEADPIX_CNT_SPEC {
 impl crate::Readable for DPC_DEADPIX_CNT_SPEC {}
 #[doc = "`reset()` method sets DPC_DEADPIX_CNT to value 0"]
 impl crate::Resettable for DPC_DEADPIX_CNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

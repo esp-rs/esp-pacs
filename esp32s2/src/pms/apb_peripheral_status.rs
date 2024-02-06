@@ -35,5 +35,5 @@ impl crate::RegisterSpec for APB_PERIPHERAL_STATUS_SPEC {
 impl crate::Readable for APB_PERIPHERAL_STATUS_SPEC {}
 #[doc = "`reset()` method sets APB_PERIPHERAL_STATUS to value 0"]
 impl crate::Resettable for APB_PERIPHERAL_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

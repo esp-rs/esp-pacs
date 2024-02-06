@@ -59,10 +59,10 @@ impl crate::RegisterSpec for INTER_MEM_END_ADDR0_SPEC {
 impl crate::Readable for INTER_MEM_END_ADDR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inter_mem_end_addr0::W`](W) writer structure"]
 impl crate::Writable for INTER_MEM_END_ADDR0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTER_MEM_END_ADDR0 to value 0x8fff_ffff"]
 impl crate::Resettable for INTER_MEM_END_ADDR0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8fff_ffff;
+    const RESET_VALUE: u32 = 0x8fff_ffff;
 }

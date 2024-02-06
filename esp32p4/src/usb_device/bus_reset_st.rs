@@ -35,5 +35,5 @@ impl crate::RegisterSpec for BUS_RESET_ST_SPEC {
 impl crate::Readable for BUS_RESET_ST_SPEC {}
 #[doc = "`reset()` method sets BUS_RESET_ST to value 0x01"]
 impl crate::Resettable for BUS_RESET_ST_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

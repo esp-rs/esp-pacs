@@ -35,5 +35,5 @@ impl crate::RegisterSpec for OUT_PUSH_BYTECNT_CH3_SPEC {
 impl crate::Readable for OUT_PUSH_BYTECNT_CH3_SPEC {}
 #[doc = "`reset()` method sets OUT_PUSH_BYTECNT_CH3 to value 0x3f"]
 impl crate::Resettable for OUT_PUSH_BYTECNT_CH3_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3f;
+    const RESET_VALUE: u32 = 0x3f;
 }

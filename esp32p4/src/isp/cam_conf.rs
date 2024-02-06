@@ -187,10 +187,10 @@ impl crate::RegisterSpec for CAM_CONF_SPEC {
 impl crate::Readable for CAM_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cam_conf::W`](W) writer structure"]
 impl crate::Writable for CAM_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CAM_CONF to value 0xa8"]
 impl crate::Resettable for CAM_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0xa8;
+    const RESET_VALUE: u32 = 0xa8;
 }

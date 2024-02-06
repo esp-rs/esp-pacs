@@ -32,7 +32,7 @@ impl R {
     #[doc = "The masked interrupt status bit for CH(0-3)_TX_END_INT."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
-        (0..4).map(|n| CH_TX_END_R::new(((self.bits >> n) & 1) != 0))
+        (0..4).map(move |n| CH_TX_END_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - The masked interrupt status bit for CH0_TX_END_INT."]
     #[inline(always)]
@@ -67,7 +67,7 @@ impl R {
     #[doc = "The masked interrupt status bit for CH(0-3)_ERR_INT."]
     #[inline(always)]
     pub fn ch_tx_err_iter(&self) -> impl Iterator<Item = CH_TX_ERR_R> + '_ {
-        (0..4).map(|n| CH_TX_ERR_R::new(((self.bits >> (n + 4)) & 1) != 0))
+        (0..4).map(move |n| CH_TX_ERR_R::new(((self.bits >> (n + 4)) & 1) != 0))
     }
     #[doc = "Bit 4 - The masked interrupt status bit for CH0_ERR_INT."]
     #[inline(always)]
@@ -102,7 +102,7 @@ impl R {
     #[doc = "The masked interrupt status bit for CH(0-3)_TX_THR_EVENT_INT."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
-        (0..4).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0))
+        (0..4).map(move |n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 8)) & 1) != 0))
     }
     #[doc = "Bit 8 - The masked interrupt status bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
@@ -137,7 +137,7 @@ impl R {
     #[doc = "The masked interrupt status bit for CH(0-3)_TX_LOOP_INT."]
     #[inline(always)]
     pub fn ch_tx_loop_iter(&self) -> impl Iterator<Item = CH_TX_LOOP_R> + '_ {
-        (0..4).map(|n| CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))
+        (0..4).map(move |n| CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))
     }
     #[doc = "Bit 12 - The masked interrupt status bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
@@ -172,7 +172,7 @@ impl R {
     #[doc = "The masked interrupt status bit for CH4_RX_END_INT."]
     #[inline(always)]
     pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
-        (0..4).map(|n| CH_RX_END_R::new(((self.bits >> (n + 16)) & 1) != 0))
+        (0..4).map(move |n| CH_RX_END_R::new(((self.bits >> (n + 16)) & 1) != 0))
     }
     #[doc = "Bit 16 - The masked interrupt status bit for CH4_RX_END_INT."]
     #[inline(always)]
@@ -207,7 +207,7 @@ impl R {
     #[doc = "The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
     pub fn ch_rx_err_iter(&self) -> impl Iterator<Item = CH_RX_ERR_R> + '_ {
-        (0..4).map(|n| CH_RX_ERR_R::new(((self.bits >> (n + 20)) & 1) != 0))
+        (0..4).map(move |n| CH_RX_ERR_R::new(((self.bits >> (n + 20)) & 1) != 0))
     }
     #[doc = "Bit 20 - The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
@@ -242,7 +242,7 @@ impl R {
     #[doc = "The masked interrupt status bit for CH4_RX_THR_EVENT_INT."]
     #[inline(always)]
     pub fn ch_rx_thr_event_iter(&self) -> impl Iterator<Item = CH_RX_THR_EVENT_R> + '_ {
-        (0..4).map(|n| CH_RX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))
+        (0..4).map(move |n| CH_RX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))
     }
     #[doc = "Bit 24 - The masked interrupt status bit for CH4_RX_THR_EVENT_INT."]
     #[inline(always)]
@@ -357,5 +357,5 @@ impl crate::RegisterSpec for INT_ST_SPEC {
 impl crate::Readable for INT_ST_SPEC {}
 #[doc = "`reset()` method sets INT_ST to value 0"]
 impl crate::Resettable for INT_ST_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

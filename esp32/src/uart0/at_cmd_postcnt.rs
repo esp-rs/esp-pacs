@@ -57,10 +57,10 @@ impl crate::RegisterSpec for AT_CMD_POSTCNT_SPEC {
 impl crate::Readable for AT_CMD_POSTCNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`at_cmd_postcnt::W`](W) writer structure"]
 impl crate::Writable for AT_CMD_POSTCNT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AT_CMD_POSTCNT to value 0x0018_6a00"]
 impl crate::Resettable for AT_CMD_POSTCNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0018_6a00;
+    const RESET_VALUE: u32 = 0x0018_6a00;
 }

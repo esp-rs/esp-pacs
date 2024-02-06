@@ -80,10 +80,10 @@ impl crate::RegisterSpec for BACKUP_BUS_PMS_CONSTRAIN_6_SPEC {
 impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_6_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`backup_bus_pms_constrain_6::W`](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_6_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_CONSTRAIN_6 to value 0x3f"]
 impl crate::Resettable for BACKUP_BUS_PMS_CONSTRAIN_6_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3f;
+    const RESET_VALUE: u32 = 0x3f;
 }

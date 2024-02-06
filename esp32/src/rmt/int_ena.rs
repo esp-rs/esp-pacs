@@ -32,7 +32,7 @@ impl R {
     #[doc = "Set this bit to enable rmt_ch(0-7)_tx_end_int_st."]
     #[inline(always)]
     pub fn ch_tx_end_iter(&self) -> impl Iterator<Item = CH_TX_END_R> + '_ {
-        (0..8).map(|n| CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0))
+        (0..8).map(move |n| CH_TX_END_R::new(((self.bits >> (n * 3)) & 1) != 0))
     }
     #[doc = "Bit 0 - Set this bit to enable rmt_ch0_tx_end_int_st."]
     #[inline(always)]
@@ -87,7 +87,7 @@ impl R {
     #[doc = "Set this bit to enable rmt_ch(0-7)_rx_end_int_st."]
     #[inline(always)]
     pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
-        (0..8).map(|n| CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0))
+        (0..8).map(move |n| CH_RX_END_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0))
     }
     #[doc = "Bit 1 - Set this bit to enable rmt_ch0_rx_end_int_st."]
     #[inline(always)]
@@ -142,7 +142,7 @@ impl R {
     #[doc = "Set this bit to enable rmt_ch(0-7)_err_int_st."]
     #[inline(always)]
     pub fn ch_err_iter(&self) -> impl Iterator<Item = CH_ERR_R> + '_ {
-        (0..8).map(|n| CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0))
+        (0..8).map(move |n| CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0))
     }
     #[doc = "Bit 2 - Set this bit to enable rmt_ch0_err_int_st."]
     #[inline(always)]
@@ -197,7 +197,7 @@ impl R {
     #[doc = "Set this bit to enable rmt_ch(0-7)_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
-        (0..8).map(|n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))
+        (0..8).map(move |n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))
     }
     #[doc = "Bit 24 - Set this bit to enable rmt_ch0_tx_thr_event_int_st."]
     #[inline(always)]
@@ -562,10 +562,10 @@ impl crate::RegisterSpec for INT_ENA_SPEC {
 impl crate::Readable for INT_ENA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

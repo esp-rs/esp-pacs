@@ -84,5 +84,5 @@ impl crate::RegisterSpec for CH_RX_STATUS_SPEC {
 impl crate::Readable for CH_RX_STATUS_SPEC {}
 #[doc = "`reset()` method sets CH%s_RX_STATUS to value 0"]
 impl crate::Resettable for CH_RX_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

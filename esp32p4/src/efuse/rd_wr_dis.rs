@@ -32,5 +32,5 @@ impl crate::RegisterSpec for RD_WR_DIS_SPEC {
 impl crate::Readable for RD_WR_DIS_SPEC {}
 #[doc = "`reset()` method sets RD_WR_DIS to value 0"]
 impl crate::Resettable for RD_WR_DIS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -96,5 +96,5 @@ impl crate::RegisterSpec for EMACLPI_CRS_SPEC {
 impl crate::Readable for EMACLPI_CRS_SPEC {}
 #[doc = "`reset()` method sets EMACLPI_CRS to value 0"]
 impl crate::Resettable for EMACLPI_CRS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

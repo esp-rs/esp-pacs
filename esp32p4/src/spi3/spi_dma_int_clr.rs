@@ -205,10 +205,10 @@ impl crate::RegisterSpec for SPI_DMA_INT_CLR_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`spi_dma_int_clr::W`](W) writer structure"]
 impl crate::Writable for SPI_DMA_INT_CLR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_DMA_INT_CLR to value 0"]
 impl crate::Resettable for SPI_DMA_INT_CLR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

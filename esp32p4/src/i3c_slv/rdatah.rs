@@ -40,5 +40,5 @@ impl crate::RegisterSpec for RDATAH_SPEC {
 impl crate::Readable for RDATAH_SPEC {}
 #[doc = "`reset()` method sets RDATAH to value 0"]
 impl crate::Resettable for RDATAH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -190,10 +190,10 @@ impl crate::RegisterSpec for GAMMA_RX1_SPEC {
 impl crate::Readable for GAMMA_RX1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gamma_rx1::W`](W) writer structure"]
 impl crate::Writable for GAMMA_RX1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GAMMA_RX1 to value 0x0092_4924"]
 impl crate::Resettable for GAMMA_RX1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0092_4924;
+    const RESET_VALUE: u32 = 0x0092_4924;
 }

@@ -35,5 +35,5 @@ impl crate::RegisterSpec for DMA_IN_ERR_EOF_DES_ADDR_SPEC {
 impl crate::Readable for DMA_IN_ERR_EOF_DES_ADDR_SPEC {}
 #[doc = "`reset()` method sets DMA_IN_ERR_EOF_DES_ADDR to value 0"]
 impl crate::Resettable for DMA_IN_ERR_EOF_DES_ADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

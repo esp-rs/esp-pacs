@@ -194,10 +194,10 @@ impl crate::RegisterSpec for TIME_OUT_VALUE_SPEC {
 impl crate::Readable for TIME_OUT_VALUE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`time_out_value::W`](W) writer structure"]
 impl crate::Writable for TIME_OUT_VALUE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIME_OUT_VALUE to value 0x0041_0410"]
 impl crate::Resettable for TIME_OUT_VALUE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0041_0410;
+    const RESET_VALUE: u32 = 0x0041_0410;
 }

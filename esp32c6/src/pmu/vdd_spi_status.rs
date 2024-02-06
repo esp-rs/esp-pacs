@@ -35,5 +35,5 @@ impl crate::RegisterSpec for VDD_SPI_STATUS_SPEC {
 impl crate::Readable for VDD_SPI_STATUS_SPEC {}
 #[doc = "`reset()` method sets VDD_SPI_STATUS to value 0"]
 impl crate::Resettable for VDD_SPI_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

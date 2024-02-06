@@ -105,10 +105,10 @@ impl crate::RegisterSpec for C2_SPEC {
 impl crate::Readable for C2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`c2::W`](W) writer structure"]
 impl crate::Writable for C2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets C2 to value 0x1100"]
 impl crate::Resettable for C2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1100;
+    const RESET_VALUE: u32 = 0x1100;
 }

@@ -57,10 +57,10 @@ impl crate::RegisterSpec for EXT_MEM_WRITEBACK_BYPASS_SPEC {
 impl crate::Readable for EXT_MEM_WRITEBACK_BYPASS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ext_mem_writeback_bypass::W`](W) writer structure"]
 impl crate::Writable for EXT_MEM_WRITEBACK_BYPASS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXT_MEM_WRITEBACK_BYPASS to value 0"]
 impl crate::Resettable for EXT_MEM_WRITEBACK_BYPASS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

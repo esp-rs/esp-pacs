@@ -32,5 +32,5 @@ impl crate::RegisterSpec for HSTIMER_VALUE_SPEC {
 impl crate::Readable for HSTIMER_VALUE_SPEC {}
 #[doc = "`reset()` method sets HSTIMER%s_VALUE to value 0"]
 impl crate::Resettable for HSTIMER_VALUE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

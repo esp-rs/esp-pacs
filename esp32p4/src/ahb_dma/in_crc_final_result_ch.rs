@@ -35,5 +35,5 @@ impl crate::RegisterSpec for IN_CRC_FINAL_RESULT_CH_SPEC {
 impl crate::Readable for IN_CRC_FINAL_RESULT_CH_SPEC {}
 #[doc = "`reset()` method sets IN_CRC_FINAL_RESULT_CH%s to value 0"]
 impl crate::Resettable for IN_CRC_FINAL_RESULT_CH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

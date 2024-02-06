@@ -118,10 +118,10 @@ impl crate::RegisterSpec for TOUCH_PAD9_SPEC {
 impl crate::Readable for TOUCH_PAD9_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`touch_pad9::W`](W) writer structure"]
 impl crate::Writable for TOUCH_PAD9_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TOUCH_PAD9 to value 0x0200_0000"]
 impl crate::Resettable for TOUCH_PAD9_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200_0000;
+    const RESET_VALUE: u32 = 0x0200_0000;
 }

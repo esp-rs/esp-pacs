@@ -46,5 +46,5 @@ impl crate::RegisterSpec for PKT_LEN2_SPEC {
 impl crate::Readable for PKT_LEN2_SPEC {}
 #[doc = "`reset()` method sets PKT_LEN2 to value 0"]
 impl crate::Resettable for PKT_LEN2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

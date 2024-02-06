@@ -73,10 +73,10 @@ impl crate::RegisterSpec for WR_TIM_CONF2_SPEC {
 impl crate::Readable for WR_TIM_CONF2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wr_tim_conf2::W`](W) writer structure"]
 impl crate::Writable for WR_TIM_CONF2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WR_TIM_CONF2 to value 0x00c8_0190"]
 impl crate::Resettable for WR_TIM_CONF2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x00c8_0190;
+    const RESET_VALUE: u32 = 0x00c8_0190;
 }

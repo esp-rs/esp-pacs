@@ -250,10 +250,10 @@ impl crate::RegisterSpec for RESET_STATE_SPEC {
 impl crate::Readable for RESET_STATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`reset_state::W`](W) writer structure"]
 impl crate::Writable for RESET_STATE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RESET_STATE to value 0x3000"]
 impl crate::Resettable for RESET_STATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3000;
+    const RESET_VALUE: u32 = 0x3000;
 }

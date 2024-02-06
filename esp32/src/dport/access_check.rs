@@ -40,5 +40,5 @@ impl crate::RegisterSpec for ACCESS_CHECK_SPEC {
 impl crate::Readable for ACCESS_CHECK_SPEC {}
 #[doc = "`reset()` method sets ACCESS_CHECK to value 0"]
 impl crate::Resettable for ACCESS_CHECK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

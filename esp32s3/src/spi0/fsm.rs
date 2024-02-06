@@ -32,5 +32,5 @@ impl crate::RegisterSpec for FSM_SPEC {
 impl crate::Readable for FSM_SPEC {}
 #[doc = "`reset()` method sets FSM to value 0"]
 impl crate::Resettable for FSM_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -101,5 +101,5 @@ impl crate::RegisterSpec for L1_ICACHE3_AUTOLOAD_CTRL_SPEC {
 impl crate::Readable for L1_ICACHE3_AUTOLOAD_CTRL_SPEC {}
 #[doc = "`reset()` method sets L1_ICACHE3_AUTOLOAD_CTRL to value 0x02"]
 impl crate::Resettable for L1_ICACHE3_AUTOLOAD_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

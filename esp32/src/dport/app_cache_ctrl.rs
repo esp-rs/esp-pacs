@@ -258,10 +258,10 @@ impl crate::RegisterSpec for APP_CACHE_CTRL_SPEC {
 impl crate::Readable for APP_CACHE_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`app_cache_ctrl::W`](W) writer structure"]
 impl crate::Writable for APP_CACHE_CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APP_CACHE_CTRL to value 0x10"]
 impl crate::Resettable for APP_CACHE_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x10;
+    const RESET_VALUE: u32 = 0x10;
 }

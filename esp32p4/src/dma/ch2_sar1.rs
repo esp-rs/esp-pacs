@@ -54,10 +54,10 @@ impl crate::RegisterSpec for CH2_SAR1_SPEC {
 impl crate::Readable for CH2_SAR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch2_sar1::W`](W) writer structure"]
 impl crate::Writable for CH2_SAR1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH2_SAR1 to value 0"]
 impl crate::Resettable for CH2_SAR1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

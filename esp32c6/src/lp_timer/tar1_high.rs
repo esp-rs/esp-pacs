@@ -65,10 +65,10 @@ impl crate::RegisterSpec for TAR1_HIGH_SPEC {
 impl crate::Readable for TAR1_HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tar1_high::W`](W) writer structure"]
 impl crate::Writable for TAR1_HIGH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TAR1_HIGH to value 0"]
 impl crate::Resettable for TAR1_HIGH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

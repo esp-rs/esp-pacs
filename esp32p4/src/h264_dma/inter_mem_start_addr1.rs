@@ -59,10 +59,10 @@ impl crate::RegisterSpec for INTER_MEM_START_ADDR1_SPEC {
 impl crate::Readable for INTER_MEM_START_ADDR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inter_mem_start_addr1::W`](W) writer structure"]
 impl crate::Writable for INTER_MEM_START_ADDR1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTER_MEM_START_ADDR1 to value 0x3010_0000"]
 impl crate::Resettable for INTER_MEM_START_ADDR1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3010_0000;
+    const RESET_VALUE: u32 = 0x3010_0000;
 }

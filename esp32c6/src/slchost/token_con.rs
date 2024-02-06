@@ -97,10 +97,10 @@ impl crate::RegisterSpec for TOKEN_CON_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`token_con::W`](W) writer structure"]
 impl crate::Writable for TOKEN_CON_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TOKEN_CON to value 0"]
 impl crate::Resettable for TOKEN_CON_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

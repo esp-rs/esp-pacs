@@ -68,5 +68,5 @@ impl crate::RegisterSpec for BUFFER_STATUS_LEVEL_SPEC {
 impl crate::Readable for BUFFER_STATUS_LEVEL_SPEC {}
 #[doc = "`reset()` method sets BUFFER_STATUS_LEVEL to value 0x10"]
 impl crate::Resettable for BUFFER_STATUS_LEVEL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x10;
+    const RESET_VALUE: u32 = 0x10;
 }

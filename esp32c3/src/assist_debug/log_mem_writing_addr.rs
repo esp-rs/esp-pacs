@@ -35,5 +35,5 @@ impl crate::RegisterSpec for LOG_MEM_WRITING_ADDR_SPEC {
 impl crate::Readable for LOG_MEM_WRITING_ADDR_SPEC {}
 #[doc = "`reset()` method sets LOG_MEM_WRITING_ADDR to value 0"]
 impl crate::Resettable for LOG_MEM_WRITING_ADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

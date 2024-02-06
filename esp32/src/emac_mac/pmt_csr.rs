@@ -88,5 +88,5 @@ impl crate::RegisterSpec for PMT_CSR_SPEC {
 impl crate::Readable for PMT_CSR_SPEC {}
 #[doc = "`reset()` method sets PMT_CSR to value 0"]
 impl crate::Resettable for PMT_CSR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -57,5 +57,5 @@ impl crate::RegisterSpec for MAIN_STATE_SPEC {
 impl crate::Readable for MAIN_STATE_SPEC {}
 #[doc = "`reset()` method sets MAIN_STATE to value 0x0810_0800"]
 impl crate::Resettable for MAIN_STATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0810_0800;
+    const RESET_VALUE: u32 = 0x0810_0800;
 }

@@ -46,5 +46,5 @@ impl crate::RegisterSpec for L1_ICACHE3_ACS_FAIL_ID_ATTR_SPEC {
 impl crate::Readable for L1_ICACHE3_ACS_FAIL_ID_ATTR_SPEC {}
 #[doc = "`reset()` method sets L1_ICACHE3_ACS_FAIL_ID_ATTR to value 0"]
 impl crate::Resettable for L1_ICACHE3_ACS_FAIL_ID_ATTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

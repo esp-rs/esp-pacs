@@ -32,5 +32,5 @@ impl crate::RegisterSpec for CAP_CH_SPEC {
 impl crate::Readable for CAP_CH_SPEC {}
 #[doc = "`reset()` method sets CAP_CH%s to value 0"]
 impl crate::Resettable for CAP_CH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

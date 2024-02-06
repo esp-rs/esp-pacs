@@ -181,10 +181,10 @@ impl crate::RegisterSpec for UPDATE_CFG_SPEC {
 impl crate::Readable for UPDATE_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`update_cfg::W`](W) writer structure"]
 impl crate::Writable for UPDATE_CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UPDATE_CFG to value 0x05"]
 impl crate::Resettable for UPDATE_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x05;
+    const RESET_VALUE: u32 = 0x05;
 }

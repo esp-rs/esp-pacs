@@ -32,5 +32,5 @@ impl crate::RegisterSpec for POR_STATUS_SPEC {
 impl crate::Readable for POR_STATUS_SPEC {}
 #[doc = "`reset()` method sets POR_STATUS to value 0x8000_0000"]
 impl crate::Resettable for POR_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8000_0000;
+    const RESET_VALUE: u32 = 0x8000_0000;
 }

@@ -99,10 +99,10 @@ impl crate::RegisterSpec for OUT_RO_PD_CONF_CH0_SPEC {
 impl crate::Readable for OUT_RO_PD_CONF_CH0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`out_ro_pd_conf_ch0::W`](W) writer structure"]
 impl crate::Writable for OUT_RO_PD_CONF_CH0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OUT_RO_PD_CONF_CH0 to value 0x20"]
 impl crate::Resettable for OUT_RO_PD_CONF_CH0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x20;
+    const RESET_VALUE: u32 = 0x20;
 }

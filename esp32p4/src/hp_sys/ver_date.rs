@@ -57,10 +57,10 @@ impl crate::RegisterSpec for VER_DATE_SPEC {
 impl crate::Readable for VER_DATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ver_date::W`](W) writer structure"]
 impl crate::Writable for VER_DATE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VER_DATE to value 0x2023_0519"]
 impl crate::Resettable for VER_DATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2023_0519;
+    const RESET_VALUE: u32 = 0x2023_0519;
 }

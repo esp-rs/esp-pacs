@@ -103,10 +103,10 @@ impl crate::RegisterSpec for WR_TIM_CONF0_RS_BYPASS_SPEC {
 impl crate::Readable for WR_TIM_CONF0_RS_BYPASS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wr_tim_conf0_rs_bypass::W`](W) writer structure"]
 impl crate::Writable for WR_TIM_CONF0_RS_BYPASS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WR_TIM_CONF0_RS_BYPASS to value 0x2000"]
 impl crate::Resettable for WR_TIM_CONF0_RS_BYPASS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2000;
+    const RESET_VALUE: u32 = 0x2000;
 }

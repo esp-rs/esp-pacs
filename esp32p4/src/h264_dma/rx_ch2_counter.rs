@@ -32,5 +32,5 @@ impl crate::RegisterSpec for RX_CH2_COUNTER_SPEC {
 impl crate::Readable for RX_CH2_COUNTER_SPEC {}
 #[doc = "`reset()` method sets RX_CH2_COUNTER to value 0"]
 impl crate::Resettable for RX_CH2_COUNTER_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

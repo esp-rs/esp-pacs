@@ -59,10 +59,10 @@ impl crate::RegisterSpec for AHBLITE_MPU_TABLE_BT_BUFFER_SPEC {
 impl crate::Readable for AHBLITE_MPU_TABLE_BT_BUFFER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblite_mpu_table_bt_buffer::W`](W) writer structure"]
 impl crate::Writable for AHBLITE_MPU_TABLE_BT_BUFFER_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBLITE_MPU_TABLE_BT_BUFFER to value 0"]
 impl crate::Resettable for AHBLITE_MPU_TABLE_BT_BUFFER_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

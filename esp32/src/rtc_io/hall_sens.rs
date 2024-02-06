@@ -70,10 +70,10 @@ impl crate::RegisterSpec for HALL_SENS_SPEC {
 impl crate::Readable for HALL_SENS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hall_sens::W`](W) writer structure"]
 impl crate::Writable for HALL_SENS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HALL_SENS to value 0"]
 impl crate::Resettable for HALL_SENS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

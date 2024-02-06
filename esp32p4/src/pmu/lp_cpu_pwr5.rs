@@ -35,5 +35,5 @@ impl crate::RegisterSpec for LP_CPU_PWR5_SPEC {
 impl crate::Readable for LP_CPU_PWR5_SPEC {}
 #[doc = "`reset()` method sets LP_CPU_PWR5 to value 0"]
 impl crate::Resettable for LP_CPU_PWR5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

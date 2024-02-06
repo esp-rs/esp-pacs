@@ -35,5 +35,5 @@ impl crate::RegisterSpec for CACHE_STATE_SPEC {
 impl crate::Readable for CACHE_STATE_SPEC {}
 #[doc = "`reset()` method sets CACHE_STATE to value 0x01"]
 impl crate::Resettable for CACHE_STATE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

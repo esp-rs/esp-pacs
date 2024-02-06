@@ -35,5 +35,5 @@ impl crate::RegisterSpec for OUT_EOF_BFR_DES_ADDR_CH_SPEC {
 impl crate::Readable for OUT_EOF_BFR_DES_ADDR_CH_SPEC {}
 #[doc = "`reset()` method sets OUT_EOF_BFR_DES_ADDR_CH%s to value 0"]
 impl crate::Resettable for OUT_EOF_BFR_DES_ADDR_CH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

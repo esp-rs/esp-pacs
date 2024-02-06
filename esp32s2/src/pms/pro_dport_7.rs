@@ -35,5 +35,5 @@ impl crate::RegisterSpec for PRO_DPORT_7_SPEC {
 impl crate::Readable for PRO_DPORT_7_SPEC {}
 #[doc = "`reset()` method sets PRO_DPORT_7 to value 0"]
 impl crate::Resettable for PRO_DPORT_7_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -135,10 +135,10 @@ impl crate::RegisterSpec for SYNC_CTRL_SPEC {
 impl crate::Readable for SYNC_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sync_ctrl::W`](W) writer structure"]
 impl crate::Writable for SYNC_CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYNC_CTRL to value 0x01"]
 impl crate::Resettable for SYNC_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

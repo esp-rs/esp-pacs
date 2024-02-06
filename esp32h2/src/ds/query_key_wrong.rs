@@ -35,5 +35,5 @@ impl crate::RegisterSpec for QUERY_KEY_WRONG_SPEC {
 impl crate::Readable for QUERY_KEY_WRONG_SPEC {}
 #[doc = "`reset()` method sets QUERY_KEY_WRONG to value 0"]
 impl crate::Resettable for QUERY_KEY_WRONG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

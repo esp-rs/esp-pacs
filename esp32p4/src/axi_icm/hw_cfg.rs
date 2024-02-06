@@ -145,5 +145,5 @@ impl crate::RegisterSpec for HW_CFG_SPEC {
 impl crate::Readable for HW_CFG_SPEC {}
 #[doc = "`reset()` method sets HW_CFG to value 0x0070_d151"]
 impl crate::Resettable for HW_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0070_d151;
+    const RESET_VALUE: u32 = 0x0070_d151;
 }

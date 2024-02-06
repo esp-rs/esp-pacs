@@ -35,5 +35,5 @@ impl crate::RegisterSpec for COMPVER0_SPEC {
 impl crate::Readable for COMPVER0_SPEC {}
 #[doc = "`reset()` method sets COMPVER0 to value 0x3230_302a"]
 impl crate::Resettable for COMPVER0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3230_302a;
+    const RESET_VALUE: u32 = 0x3230_302a;
 }

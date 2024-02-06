@@ -171,10 +171,10 @@ impl crate::RegisterSpec for PRO_IRAM0_3_SPEC {
 impl crate::Readable for PRO_IRAM0_3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pro_iram0_3::W`](W) writer structure"]
 impl crate::Writable for PRO_IRAM0_3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PRO_IRAM0_3 to value 0x0001_f800"]
 impl crate::Resettable for PRO_IRAM0_3_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_f800;
+    const RESET_VALUE: u32 = 0x0001_f800;
 }

@@ -68,5 +68,5 @@ impl crate::RegisterSpec for AE_BLOCK_MEAN_1_SPEC {
 impl crate::Readable for AE_BLOCK_MEAN_1_SPEC {}
 #[doc = "`reset()` method sets AE_BLOCK_MEAN_1 to value 0"]
 impl crate::Resettable for AE_BLOCK_MEAN_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

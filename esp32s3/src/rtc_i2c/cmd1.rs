@@ -65,10 +65,10 @@ impl crate::RegisterSpec for CMD1_SPEC {
 impl crate::Readable for CMD1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmd1::W`](W) writer structure"]
 impl crate::Writable for CMD1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMD1 to value 0x1901"]
 impl crate::Resettable for CMD1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1901;
+    const RESET_VALUE: u32 = 0x1901;
 }

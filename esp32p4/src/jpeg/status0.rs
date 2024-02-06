@@ -68,5 +68,5 @@ impl crate::RegisterSpec for STATUS0_SPEC {
 impl crate::Readable for STATUS0_SPEC {}
 #[doc = "`reset()` method sets STATUS0 to value 0"]
 impl crate::Resettable for STATUS0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

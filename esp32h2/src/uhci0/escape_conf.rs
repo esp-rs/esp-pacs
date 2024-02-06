@@ -190,10 +190,10 @@ impl crate::RegisterSpec for ESCAPE_CONF_SPEC {
 impl crate::Readable for ESCAPE_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`escape_conf::W`](W) writer structure"]
 impl crate::Writable for ESCAPE_CONF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ESCAPE_CONF to value 0x33"]
 impl crate::Resettable for ESCAPE_CONF_SPEC {
-    const RESET_VALUE: Self::Ux = 0x33;
+    const RESET_VALUE: u32 = 0x33;
 }

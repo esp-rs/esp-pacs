@@ -57,10 +57,10 @@ impl crate::RegisterSpec for TARGET1_LO_SPEC {
 impl crate::Readable for TARGET1_LO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`target1_lo::W`](W) writer structure"]
 impl crate::Writable for TARGET1_LO_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TARGET1_LO to value 0"]
 impl crate::Resettable for TARGET1_LO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

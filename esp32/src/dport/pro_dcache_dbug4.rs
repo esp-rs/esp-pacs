@@ -35,5 +35,5 @@ impl crate::RegisterSpec for PRO_DCACHE_DBUG4_SPEC {
 impl crate::Readable for PRO_DCACHE_DBUG4_SPEC {}
 #[doc = "`reset()` method sets PRO_DCACHE_DBUG4 to value 0"]
 impl crate::Resettable for PRO_DCACHE_DBUG4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

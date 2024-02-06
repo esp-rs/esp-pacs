@@ -54,10 +54,10 @@ impl crate::RegisterSpec for DVBUSPULSE_SPEC {
 impl crate::Readable for DVBUSPULSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dvbuspulse::W`](W) writer structure"]
 impl crate::Writable for DVBUSPULSE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DVBUSPULSE to value 0x05b8"]
 impl crate::Resettable for DVBUSPULSE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x05b8;
+    const RESET_VALUE: u32 = 0x05b8;
 }

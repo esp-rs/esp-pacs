@@ -46,5 +46,5 @@ impl crate::RegisterSpec for L2_CACHE_ACS_FAIL_ID_ATTR_SPEC {
 impl crate::Readable for L2_CACHE_ACS_FAIL_ID_ATTR_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_ACS_FAIL_ID_ATTR to value 0"]
 impl crate::Resettable for L2_CACHE_ACS_FAIL_ID_ATTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

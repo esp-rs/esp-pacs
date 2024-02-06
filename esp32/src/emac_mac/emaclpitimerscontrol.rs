@@ -46,5 +46,5 @@ impl crate::RegisterSpec for EMACLPITIMERSCONTROL_SPEC {
 impl crate::Readable for EMACLPITIMERSCONTROL_SPEC {}
 #[doc = "`reset()` method sets EMACLPITIMERSCONTROL to value 0"]
 impl crate::Resettable for EMACLPITIMERSCONTROL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

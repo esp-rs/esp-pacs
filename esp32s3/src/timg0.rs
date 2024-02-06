@@ -51,7 +51,8 @@ impl RegisterBlock {
     #[doc = "0x00..0x08 - Timer %s configuration register"]
     #[inline(always)]
     pub fn tconfig_iter(&self) -> impl Iterator<Item = &TCONFIG> {
-        (0..2).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(36 * n).cast() })
+        (0..2)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(36 * n).cast() })
     }
     #[doc = "0x00 - Timer 0 configuration register"]
     #[inline(always)]
@@ -74,7 +75,8 @@ impl RegisterBlock {
     #[doc = "0x04..0x0c - Timer %s current value, low 32 bits"]
     #[inline(always)]
     pub fn tlo_iter(&self) -> impl Iterator<Item = &TLO> {
-        (0..2).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(36 * n).cast() })
+        (0..2)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(36 * n).cast() })
     }
     #[doc = "0x04 - Timer 0 current value, low 32 bits"]
     #[inline(always)]
@@ -97,7 +99,8 @@ impl RegisterBlock {
     #[doc = "0x08..0x10 - Timer %s current value, high 22 bits"]
     #[inline(always)]
     pub fn thi_iter(&self) -> impl Iterator<Item = &THI> {
-        (0..2).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(36 * n).cast() })
+        (0..2)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(36 * n).cast() })
     }
     #[doc = "0x08 - Timer 0 current value, high 22 bits"]
     #[inline(always)]
@@ -126,7 +129,7 @@ impl RegisterBlock {
     #[doc = "0x0c..0x14 - Write to copy current timer value to TIMGn_T%s_(LO/HI)_REG"]
     #[inline(always)]
     pub fn tupdate_iter(&self) -> impl Iterator<Item = &TUPDATE> {
-        (0..2).map(|n| unsafe {
+        (0..2).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(12)
@@ -161,7 +164,7 @@ impl RegisterBlock {
     #[doc = "0x10..0x18 - Timer %s alarm value, low 32 bits"]
     #[inline(always)]
     pub fn talarmlo_iter(&self) -> impl Iterator<Item = &TALARMLO> {
-        (0..2).map(|n| unsafe {
+        (0..2).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(16)
@@ -196,7 +199,7 @@ impl RegisterBlock {
     #[doc = "0x14..0x1c - Timer %s alarm value, high bits"]
     #[inline(always)]
     pub fn talarmhi_iter(&self) -> impl Iterator<Item = &TALARMHI> {
-        (0..2).map(|n| unsafe {
+        (0..2).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(20)
@@ -231,7 +234,7 @@ impl RegisterBlock {
     #[doc = "0x18..0x20 - Timer %s reload value, low 32 bits"]
     #[inline(always)]
     pub fn tloadlo_iter(&self) -> impl Iterator<Item = &TLOADLO> {
-        (0..2).map(|n| unsafe {
+        (0..2).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(24)
@@ -266,7 +269,7 @@ impl RegisterBlock {
     #[doc = "0x1c..0x24 - Timer %s reload value, high 22 bits"]
     #[inline(always)]
     pub fn tloadhi_iter(&self) -> impl Iterator<Item = &TLOADHI> {
-        (0..2).map(|n| unsafe {
+        (0..2).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(28)
@@ -301,7 +304,7 @@ impl RegisterBlock {
     #[doc = "0x20..0x28 - Write to reload timer from TIMG_T%s_(LOADLOLOADHI)_REG"]
     #[inline(always)]
     pub fn tload_iter(&self) -> impl Iterator<Item = &TLOAD> {
-        (0..2).map(|n| unsafe {
+        (0..2).map(move |n| unsafe {
             &*(self as *const Self)
                 .cast::<u8>()
                 .add(32)

@@ -76,10 +76,10 @@ impl crate::RegisterSpec for UART0_PD_CTRL_SPEC {
 impl crate::Readable for UART0_PD_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`uart0_pd_ctrl::W`](W) writer structure"]
 impl crate::Writable for UART0_PD_CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UART0_PD_CTRL to value 0x02"]
 impl crate::Resettable for UART0_PD_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u32 = 0x02;
 }

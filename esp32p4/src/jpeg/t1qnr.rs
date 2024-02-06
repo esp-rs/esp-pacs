@@ -35,5 +35,5 @@ impl crate::RegisterSpec for T1QNR_SPEC {
 impl crate::Readable for T1QNR_SPEC {}
 #[doc = "`reset()` method sets T1QNR to value 0"]
 impl crate::Resettable for T1QNR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -82,7 +82,8 @@ impl RegisterBlock {
     #[doc = "0x20..0x40 - "]
     #[inline(always)]
     pub fn chconf0_iter(&self) -> impl Iterator<Item = &CHCONF0> {
-        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(32).add(8 * n).cast() })
+        (0..8)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(32).add(8 * n).cast() })
     }
     #[doc = "0x20 - CH0CONF0"]
     #[inline(always)]
@@ -135,7 +136,8 @@ impl RegisterBlock {
     #[doc = "0x24..0x44 - "]
     #[inline(always)]
     pub fn chconf1_iter(&self) -> impl Iterator<Item = &CHCONF1> {
-        (0..8).map(|n| unsafe { &*(self as *const Self).cast::<u8>().add(36).add(8 * n).cast() })
+        (0..8)
+            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(36).add(8 * n).cast() })
     }
     #[doc = "0x24 - CH0CONF1"]
     #[inline(always)]

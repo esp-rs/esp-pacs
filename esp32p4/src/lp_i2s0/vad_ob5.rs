@@ -32,5 +32,5 @@ impl crate::RegisterSpec for VAD_OB5_SPEC {
 impl crate::Readable for VAD_OB5_SPEC {}
 #[doc = "`reset()` method sets VAD_OB5 to value 0"]
 impl crate::Resettable for VAD_OB5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

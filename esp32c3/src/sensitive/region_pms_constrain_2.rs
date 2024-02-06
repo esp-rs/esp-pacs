@@ -185,10 +185,10 @@ impl crate::RegisterSpec for REGION_PMS_CONSTRAIN_2_SPEC {
 impl crate::Readable for REGION_PMS_CONSTRAIN_2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`region_pms_constrain_2::W`](W) writer structure"]
 impl crate::Writable for REGION_PMS_CONSTRAIN_2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REGION_PMS_CONSTRAIN_2 to value 0x3fff"]
 impl crate::Resettable for REGION_PMS_CONSTRAIN_2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3fff;
+    const RESET_VALUE: u32 = 0x3fff;
 }

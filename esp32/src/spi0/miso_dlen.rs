@@ -57,10 +57,10 @@ impl crate::RegisterSpec for MISO_DLEN_SPEC {
 impl crate::Readable for MISO_DLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`miso_dlen::W`](W) writer structure"]
 impl crate::Writable for MISO_DLEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISO_DLEN to value 0"]
 impl crate::Resettable for MISO_DLEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

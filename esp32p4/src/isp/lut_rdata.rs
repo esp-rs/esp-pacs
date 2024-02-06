@@ -32,5 +32,5 @@ impl crate::RegisterSpec for LUT_RDATA_SPEC {
 impl crate::Readable for LUT_RDATA_SPEC {}
 #[doc = "`reset()` method sets LUT_RDATA to value 0"]
 impl crate::Resettable for LUT_RDATA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

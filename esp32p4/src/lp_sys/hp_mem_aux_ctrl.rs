@@ -57,10 +57,10 @@ impl crate::RegisterSpec for HP_MEM_AUX_CTRL_SPEC {
 impl crate::Readable for HP_MEM_AUX_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hp_mem_aux_ctrl::W`](W) writer structure"]
 impl crate::Writable for HP_MEM_AUX_CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HP_MEM_AUX_CTRL to value 0x2070"]
 impl crate::Resettable for HP_MEM_AUX_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2070;
+    const RESET_VALUE: u32 = 0x2070;
 }

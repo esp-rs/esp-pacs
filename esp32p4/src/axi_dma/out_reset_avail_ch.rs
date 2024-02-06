@@ -35,5 +35,5 @@ impl crate::RegisterSpec for OUT_RESET_AVAIL_CH_SPEC {
 impl crate::Readable for OUT_RESET_AVAIL_CH_SPEC {}
 #[doc = "`reset()` method sets OUT_RESET_AVAIL_CH%s to value 0x01"]
 impl crate::Resettable for OUT_RESET_AVAIL_CH_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

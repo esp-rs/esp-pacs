@@ -90,5 +90,5 @@ impl crate::RegisterSpec for CPU_CLK_STATUS0_SPEC {
 impl crate::Readable for CPU_CLK_STATUS0_SPEC {}
 #[doc = "`reset()` method sets CPU_CLK_STATUS0 to value 0"]
 impl crate::Resettable for CPU_CLK_STATUS0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

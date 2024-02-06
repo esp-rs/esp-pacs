@@ -182,10 +182,10 @@ impl crate::RegisterSpec for RTC_PAD20_SPEC {
 impl crate::Readable for RTC_PAD20_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rtc_pad20::W`](W) writer structure"]
 impl crate::Writable for RTC_PAD20_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RTC_PAD20 to value 0x5000_0000"]
 impl crate::Resettable for RTC_PAD20_SPEC {
-    const RESET_VALUE: Self::Ux = 0x5000_0000;
+    const RESET_VALUE: u32 = 0x5000_0000;
 }

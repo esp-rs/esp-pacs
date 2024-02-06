@@ -35,5 +35,5 @@ impl crate::RegisterSpec for REGDMA_CURRENT_LINK_ADDR_SPEC {
 impl crate::Readable for REGDMA_CURRENT_LINK_ADDR_SPEC {}
 #[doc = "`reset()` method sets REGDMA_CURRENT_LINK_ADDR to value 0"]
 impl crate::Resettable for REGDMA_CURRENT_LINK_ADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

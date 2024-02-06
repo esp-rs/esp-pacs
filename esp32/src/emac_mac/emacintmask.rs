@@ -70,10 +70,10 @@ impl crate::RegisterSpec for EMACINTMASK_SPEC {
 impl crate::Readable for EMACINTMASK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`emacintmask::W`](W) writer structure"]
 impl crate::Writable for EMACINTMASK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EMACINTMASK to value 0"]
 impl crate::Resettable for EMACINTMASK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

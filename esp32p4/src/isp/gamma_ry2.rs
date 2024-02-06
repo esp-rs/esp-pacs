@@ -114,10 +114,10 @@ impl crate::RegisterSpec for GAMMA_RY2_SPEC {
 impl crate::Readable for GAMMA_RY2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gamma_ry2::W`](W) writer structure"]
 impl crate::Writable for GAMMA_RY2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GAMMA_RY2 to value 0x5060_7080"]
 impl crate::Resettable for GAMMA_RY2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x5060_7080;
+    const RESET_VALUE: u32 = 0x5060_7080;
 }
