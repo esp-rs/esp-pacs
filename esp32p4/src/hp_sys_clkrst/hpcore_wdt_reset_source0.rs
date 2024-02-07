@@ -2,24 +2,24 @@
 pub type R = crate::R<HPCORE_WDT_RESET_SOURCE0_SPEC>;
 #[doc = "Register `HPCORE_WDT_RESET_SOURCE0` writer"]
 pub type W = crate::W<HPCORE_WDT_RESET_SOURCE0_SPEC>;
-#[doc = "Field `REG_HPCORE0_WDT_RESET_SOURCE_SEL` reader - 1'b0: use wdt0 to reset hpcore0, 1'b1: use wdt1 to reset hpcore0"]
-pub type REG_HPCORE0_WDT_RESET_SOURCE_SEL_R = crate::BitReader;
-#[doc = "Field `REG_HPCORE0_WDT_RESET_SOURCE_SEL` writer - 1'b0: use wdt0 to reset hpcore0, 1'b1: use wdt1 to reset hpcore0"]
-pub type REG_HPCORE0_WDT_RESET_SOURCE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_HPCORE1_WDT_RESET_SOURCE_SEL` reader - 1'b0: use wdt0 to reset hpcore1, 1'b1: use wdt1 to reset hpcore1"]
-pub type REG_HPCORE1_WDT_RESET_SOURCE_SEL_R = crate::BitReader;
-#[doc = "Field `REG_HPCORE1_WDT_RESET_SOURCE_SEL` writer - 1'b0: use wdt0 to reset hpcore1, 1'b1: use wdt1 to reset hpcore1"]
-pub type REG_HPCORE1_WDT_RESET_SOURCE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HPCORE0_WDT_RESET_SOURCE_SEL` reader - 1'b0: use wdt0 to reset hpcore0, 1'b1: use wdt1 to reset hpcore0"]
+pub type HPCORE0_WDT_RESET_SOURCE_SEL_R = crate::BitReader;
+#[doc = "Field `HPCORE0_WDT_RESET_SOURCE_SEL` writer - 1'b0: use wdt0 to reset hpcore0, 1'b1: use wdt1 to reset hpcore0"]
+pub type HPCORE0_WDT_RESET_SOURCE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HPCORE1_WDT_RESET_SOURCE_SEL` reader - 1'b0: use wdt0 to reset hpcore1, 1'b1: use wdt1 to reset hpcore1"]
+pub type HPCORE1_WDT_RESET_SOURCE_SEL_R = crate::BitReader;
+#[doc = "Field `HPCORE1_WDT_RESET_SOURCE_SEL` writer - 1'b0: use wdt0 to reset hpcore1, 1'b1: use wdt1 to reset hpcore1"]
+pub type HPCORE1_WDT_RESET_SOURCE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1'b0: use wdt0 to reset hpcore0, 1'b1: use wdt1 to reset hpcore0"]
     #[inline(always)]
-    pub fn reg_hpcore0_wdt_reset_source_sel(&self) -> REG_HPCORE0_WDT_RESET_SOURCE_SEL_R {
-        REG_HPCORE0_WDT_RESET_SOURCE_SEL_R::new((self.bits & 1) != 0)
+    pub fn hpcore0_wdt_reset_source_sel(&self) -> HPCORE0_WDT_RESET_SOURCE_SEL_R {
+        HPCORE0_WDT_RESET_SOURCE_SEL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1'b0: use wdt0 to reset hpcore1, 1'b1: use wdt1 to reset hpcore1"]
     #[inline(always)]
-    pub fn reg_hpcore1_wdt_reset_source_sel(&self) -> REG_HPCORE1_WDT_RESET_SOURCE_SEL_R {
-        REG_HPCORE1_WDT_RESET_SOURCE_SEL_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn hpcore1_wdt_reset_source_sel(&self) -> HPCORE1_WDT_RESET_SOURCE_SEL_R {
+        HPCORE1_WDT_RESET_SOURCE_SEL_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -27,12 +27,12 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HPCORE_WDT_RESET_SOURCE0")
             .field(
-                "reg_hpcore0_wdt_reset_source_sel",
-                &format_args!("{}", self.reg_hpcore0_wdt_reset_source_sel().bit()),
+                "hpcore0_wdt_reset_source_sel",
+                &format_args!("{}", self.hpcore0_wdt_reset_source_sel().bit()),
             )
             .field(
-                "reg_hpcore1_wdt_reset_source_sel",
-                &format_args!("{}", self.reg_hpcore1_wdt_reset_source_sel().bit()),
+                "hpcore1_wdt_reset_source_sel",
+                &format_args!("{}", self.hpcore1_wdt_reset_source_sel().bit()),
             )
             .finish()
     }
@@ -47,18 +47,18 @@ impl W {
     #[doc = "Bit 0 - 1'b0: use wdt0 to reset hpcore0, 1'b1: use wdt1 to reset hpcore0"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_hpcore0_wdt_reset_source_sel(
+    pub fn hpcore0_wdt_reset_source_sel(
         &mut self,
-    ) -> REG_HPCORE0_WDT_RESET_SOURCE_SEL_W<HPCORE_WDT_RESET_SOURCE0_SPEC> {
-        REG_HPCORE0_WDT_RESET_SOURCE_SEL_W::new(self, 0)
+    ) -> HPCORE0_WDT_RESET_SOURCE_SEL_W<HPCORE_WDT_RESET_SOURCE0_SPEC> {
+        HPCORE0_WDT_RESET_SOURCE_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1'b0: use wdt0 to reset hpcore1, 1'b1: use wdt1 to reset hpcore1"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_hpcore1_wdt_reset_source_sel(
+    pub fn hpcore1_wdt_reset_source_sel(
         &mut self,
-    ) -> REG_HPCORE1_WDT_RESET_SOURCE_SEL_W<HPCORE_WDT_RESET_SOURCE0_SPEC> {
-        REG_HPCORE1_WDT_RESET_SOURCE_SEL_W::new(self, 1)
+    ) -> HPCORE1_WDT_RESET_SOURCE_SEL_W<HPCORE_WDT_RESET_SOURCE0_SPEC> {
+        HPCORE1_WDT_RESET_SOURCE_SEL_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

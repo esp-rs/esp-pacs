@@ -1,5 +1,14 @@
 _svd: "../esp32p4.base.svd"
 
+HP_SYS_CLKRST:
+  "*":
+    _strip: "REG_"
+
+  ROOT_CLK_CTRL0:
+    _modify:
+      SOC_CLK_DIV_UPDATE:
+        access: read-write
+
 UART0:
   _strip_end: "_SYNC"
 
@@ -15,10 +24,4 @@ USB_DEVICE:
   EP1:
     _modify:
       RDWR_BYTE:
-        access: read-write
-
-HP_SYS_CLKRST:
-  ROOT_CLK_CTRL0:
-    _modify:
-      REG_SOC_CLK_DIV_UPDATE:
         access: read-write

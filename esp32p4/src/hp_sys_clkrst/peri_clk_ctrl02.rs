@@ -2,107 +2,107 @@
 pub type R = crate::R<PERI_CLK_CTRL02_SPEC>;
 #[doc = "Register `PERI_CLK_CTRL02` writer"]
 pub type W = crate::W<PERI_CLK_CTRL02_SPEC>;
-#[doc = "Field `REG_SDIO_LS_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_SDIO_LS_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_SDIO_LS_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_SDIO_LS_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_SDIO_LS_CLK_EDGE_CFG_UPDATE` writer - Reserved"]
-pub type REG_SDIO_LS_CLK_EDGE_CFG_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SDIO_LS_CLK_EDGE_L` reader - Reserved"]
-pub type REG_SDIO_LS_CLK_EDGE_L_R = crate::FieldReader;
-#[doc = "Field `REG_SDIO_LS_CLK_EDGE_L` writer - Reserved"]
-pub type REG_SDIO_LS_CLK_EDGE_L_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `REG_SDIO_LS_CLK_EDGE_H` reader - Reserved"]
-pub type REG_SDIO_LS_CLK_EDGE_H_R = crate::FieldReader;
-#[doc = "Field `REG_SDIO_LS_CLK_EDGE_H` writer - Reserved"]
-pub type REG_SDIO_LS_CLK_EDGE_H_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `REG_SDIO_LS_CLK_EDGE_N` reader - Reserved"]
-pub type REG_SDIO_LS_CLK_EDGE_N_R = crate::FieldReader;
-#[doc = "Field `REG_SDIO_LS_CLK_EDGE_N` writer - Reserved"]
-pub type REG_SDIO_LS_CLK_EDGE_N_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `REG_SDIO_LS_SLF_CLK_EDGE_SEL` reader - Reserved"]
-pub type REG_SDIO_LS_SLF_CLK_EDGE_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_SDIO_LS_SLF_CLK_EDGE_SEL` writer - Reserved"]
-pub type REG_SDIO_LS_SLF_CLK_EDGE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_SDIO_LS_DRV_CLK_EDGE_SEL` reader - Reserved"]
-pub type REG_SDIO_LS_DRV_CLK_EDGE_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_SDIO_LS_DRV_CLK_EDGE_SEL` writer - Reserved"]
-pub type REG_SDIO_LS_DRV_CLK_EDGE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_SDIO_LS_SAM_CLK_EDGE_SEL` reader - Reserved"]
-pub type REG_SDIO_LS_SAM_CLK_EDGE_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_SDIO_LS_SAM_CLK_EDGE_SEL` writer - Reserved"]
-pub type REG_SDIO_LS_SAM_CLK_EDGE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_SDIO_LS_SLF_CLK_EN` reader - Reserved"]
-pub type REG_SDIO_LS_SLF_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_LS_SLF_CLK_EN` writer - Reserved"]
-pub type REG_SDIO_LS_SLF_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SDIO_LS_DRV_CLK_EN` reader - Reserved"]
-pub type REG_SDIO_LS_DRV_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_LS_DRV_CLK_EN` writer - Reserved"]
-pub type REG_SDIO_LS_DRV_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SDIO_LS_SAM_CLK_EN` reader - Reserved"]
-pub type REG_SDIO_LS_SAM_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_LS_SAM_CLK_EN` writer - Reserved"]
-pub type REG_SDIO_LS_SAM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_MIPI_DSI_DPHY_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_MIPI_DSI_DPHY_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_MIPI_DSI_DPHY_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_MIPI_DSI_DPHY_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SDIO_LS_CLK_DIV_NUM` reader - Reserved"]
+pub type SDIO_LS_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `SDIO_LS_CLK_DIV_NUM` writer - Reserved"]
+pub type SDIO_LS_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SDIO_LS_CLK_EDGE_CFG_UPDATE` writer - Reserved"]
+pub type SDIO_LS_CLK_EDGE_CFG_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_LS_CLK_EDGE_L` reader - Reserved"]
+pub type SDIO_LS_CLK_EDGE_L_R = crate::FieldReader;
+#[doc = "Field `SDIO_LS_CLK_EDGE_L` writer - Reserved"]
+pub type SDIO_LS_CLK_EDGE_L_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `SDIO_LS_CLK_EDGE_H` reader - Reserved"]
+pub type SDIO_LS_CLK_EDGE_H_R = crate::FieldReader;
+#[doc = "Field `SDIO_LS_CLK_EDGE_H` writer - Reserved"]
+pub type SDIO_LS_CLK_EDGE_H_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `SDIO_LS_CLK_EDGE_N` reader - Reserved"]
+pub type SDIO_LS_CLK_EDGE_N_R = crate::FieldReader;
+#[doc = "Field `SDIO_LS_CLK_EDGE_N` writer - Reserved"]
+pub type SDIO_LS_CLK_EDGE_N_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `SDIO_LS_SLF_CLK_EDGE_SEL` reader - Reserved"]
+pub type SDIO_LS_SLF_CLK_EDGE_SEL_R = crate::FieldReader;
+#[doc = "Field `SDIO_LS_SLF_CLK_EDGE_SEL` writer - Reserved"]
+pub type SDIO_LS_SLF_CLK_EDGE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SDIO_LS_DRV_CLK_EDGE_SEL` reader - Reserved"]
+pub type SDIO_LS_DRV_CLK_EDGE_SEL_R = crate::FieldReader;
+#[doc = "Field `SDIO_LS_DRV_CLK_EDGE_SEL` writer - Reserved"]
+pub type SDIO_LS_DRV_CLK_EDGE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SDIO_LS_SAM_CLK_EDGE_SEL` reader - Reserved"]
+pub type SDIO_LS_SAM_CLK_EDGE_SEL_R = crate::FieldReader;
+#[doc = "Field `SDIO_LS_SAM_CLK_EDGE_SEL` writer - Reserved"]
+pub type SDIO_LS_SAM_CLK_EDGE_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SDIO_LS_SLF_CLK_EN` reader - Reserved"]
+pub type SDIO_LS_SLF_CLK_EN_R = crate::BitReader;
+#[doc = "Field `SDIO_LS_SLF_CLK_EN` writer - Reserved"]
+pub type SDIO_LS_SLF_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_LS_DRV_CLK_EN` reader - Reserved"]
+pub type SDIO_LS_DRV_CLK_EN_R = crate::BitReader;
+#[doc = "Field `SDIO_LS_DRV_CLK_EN` writer - Reserved"]
+pub type SDIO_LS_DRV_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_LS_SAM_CLK_EN` reader - Reserved"]
+pub type SDIO_LS_SAM_CLK_EN_R = crate::BitReader;
+#[doc = "Field `SDIO_LS_SAM_CLK_EN` writer - Reserved"]
+pub type SDIO_LS_SAM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MIPI_DSI_DPHY_CLK_SRC_SEL` reader - Reserved"]
+pub type MIPI_DSI_DPHY_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `MIPI_DSI_DPHY_CLK_SRC_SEL` writer - Reserved"]
+pub type MIPI_DSI_DPHY_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_clk_div_num(&self) -> REG_SDIO_LS_CLK_DIV_NUM_R {
-        REG_SDIO_LS_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
+    pub fn sdio_ls_clk_div_num(&self) -> SDIO_LS_CLK_DIV_NUM_R {
+        SDIO_LS_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 9:12 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_clk_edge_l(&self) -> REG_SDIO_LS_CLK_EDGE_L_R {
-        REG_SDIO_LS_CLK_EDGE_L_R::new(((self.bits >> 9) & 0x0f) as u8)
+    pub fn sdio_ls_clk_edge_l(&self) -> SDIO_LS_CLK_EDGE_L_R {
+        SDIO_LS_CLK_EDGE_L_R::new(((self.bits >> 9) & 0x0f) as u8)
     }
     #[doc = "Bits 13:16 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_clk_edge_h(&self) -> REG_SDIO_LS_CLK_EDGE_H_R {
-        REG_SDIO_LS_CLK_EDGE_H_R::new(((self.bits >> 13) & 0x0f) as u8)
+    pub fn sdio_ls_clk_edge_h(&self) -> SDIO_LS_CLK_EDGE_H_R {
+        SDIO_LS_CLK_EDGE_H_R::new(((self.bits >> 13) & 0x0f) as u8)
     }
     #[doc = "Bits 17:20 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_clk_edge_n(&self) -> REG_SDIO_LS_CLK_EDGE_N_R {
-        REG_SDIO_LS_CLK_EDGE_N_R::new(((self.bits >> 17) & 0x0f) as u8)
+    pub fn sdio_ls_clk_edge_n(&self) -> SDIO_LS_CLK_EDGE_N_R {
+        SDIO_LS_CLK_EDGE_N_R::new(((self.bits >> 17) & 0x0f) as u8)
     }
     #[doc = "Bits 21:22 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_slf_clk_edge_sel(&self) -> REG_SDIO_LS_SLF_CLK_EDGE_SEL_R {
-        REG_SDIO_LS_SLF_CLK_EDGE_SEL_R::new(((self.bits >> 21) & 3) as u8)
+    pub fn sdio_ls_slf_clk_edge_sel(&self) -> SDIO_LS_SLF_CLK_EDGE_SEL_R {
+        SDIO_LS_SLF_CLK_EDGE_SEL_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:24 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_drv_clk_edge_sel(&self) -> REG_SDIO_LS_DRV_CLK_EDGE_SEL_R {
-        REG_SDIO_LS_DRV_CLK_EDGE_SEL_R::new(((self.bits >> 23) & 3) as u8)
+    pub fn sdio_ls_drv_clk_edge_sel(&self) -> SDIO_LS_DRV_CLK_EDGE_SEL_R {
+        SDIO_LS_DRV_CLK_EDGE_SEL_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bits 25:26 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_sam_clk_edge_sel(&self) -> REG_SDIO_LS_SAM_CLK_EDGE_SEL_R {
-        REG_SDIO_LS_SAM_CLK_EDGE_SEL_R::new(((self.bits >> 25) & 3) as u8)
+    pub fn sdio_ls_sam_clk_edge_sel(&self) -> SDIO_LS_SAM_CLK_EDGE_SEL_R {
+        SDIO_LS_SAM_CLK_EDGE_SEL_R::new(((self.bits >> 25) & 3) as u8)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_slf_clk_en(&self) -> REG_SDIO_LS_SLF_CLK_EN_R {
-        REG_SDIO_LS_SLF_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn sdio_ls_slf_clk_en(&self) -> SDIO_LS_SLF_CLK_EN_R {
+        SDIO_LS_SLF_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_drv_clk_en(&self) -> REG_SDIO_LS_DRV_CLK_EN_R {
-        REG_SDIO_LS_DRV_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn sdio_ls_drv_clk_en(&self) -> SDIO_LS_DRV_CLK_EN_R {
+        SDIO_LS_DRV_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_sam_clk_en(&self) -> REG_SDIO_LS_SAM_CLK_EN_R {
-        REG_SDIO_LS_SAM_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn sdio_ls_sam_clk_en(&self) -> SDIO_LS_SAM_CLK_EN_R {
+        SDIO_LS_SAM_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - Reserved"]
     #[inline(always)]
-    pub fn reg_mipi_dsi_dphy_clk_src_sel(&self) -> REG_MIPI_DSI_DPHY_CLK_SRC_SEL_R {
-        REG_MIPI_DSI_DPHY_CLK_SRC_SEL_R::new(((self.bits >> 30) & 3) as u8)
+    pub fn mipi_dsi_dphy_clk_src_sel(&self) -> MIPI_DSI_DPHY_CLK_SRC_SEL_R {
+        MIPI_DSI_DPHY_CLK_SRC_SEL_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -110,48 +110,48 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL02")
             .field(
-                "reg_sdio_ls_clk_div_num",
-                &format_args!("{}", self.reg_sdio_ls_clk_div_num().bits()),
+                "sdio_ls_clk_div_num",
+                &format_args!("{}", self.sdio_ls_clk_div_num().bits()),
             )
             .field(
-                "reg_sdio_ls_clk_edge_l",
-                &format_args!("{}", self.reg_sdio_ls_clk_edge_l().bits()),
+                "sdio_ls_clk_edge_l",
+                &format_args!("{}", self.sdio_ls_clk_edge_l().bits()),
             )
             .field(
-                "reg_sdio_ls_clk_edge_h",
-                &format_args!("{}", self.reg_sdio_ls_clk_edge_h().bits()),
+                "sdio_ls_clk_edge_h",
+                &format_args!("{}", self.sdio_ls_clk_edge_h().bits()),
             )
             .field(
-                "reg_sdio_ls_clk_edge_n",
-                &format_args!("{}", self.reg_sdio_ls_clk_edge_n().bits()),
+                "sdio_ls_clk_edge_n",
+                &format_args!("{}", self.sdio_ls_clk_edge_n().bits()),
             )
             .field(
-                "reg_sdio_ls_slf_clk_edge_sel",
-                &format_args!("{}", self.reg_sdio_ls_slf_clk_edge_sel().bits()),
+                "sdio_ls_slf_clk_edge_sel",
+                &format_args!("{}", self.sdio_ls_slf_clk_edge_sel().bits()),
             )
             .field(
-                "reg_sdio_ls_drv_clk_edge_sel",
-                &format_args!("{}", self.reg_sdio_ls_drv_clk_edge_sel().bits()),
+                "sdio_ls_drv_clk_edge_sel",
+                &format_args!("{}", self.sdio_ls_drv_clk_edge_sel().bits()),
             )
             .field(
-                "reg_sdio_ls_sam_clk_edge_sel",
-                &format_args!("{}", self.reg_sdio_ls_sam_clk_edge_sel().bits()),
+                "sdio_ls_sam_clk_edge_sel",
+                &format_args!("{}", self.sdio_ls_sam_clk_edge_sel().bits()),
             )
             .field(
-                "reg_sdio_ls_slf_clk_en",
-                &format_args!("{}", self.reg_sdio_ls_slf_clk_en().bit()),
+                "sdio_ls_slf_clk_en",
+                &format_args!("{}", self.sdio_ls_slf_clk_en().bit()),
             )
             .field(
-                "reg_sdio_ls_drv_clk_en",
-                &format_args!("{}", self.reg_sdio_ls_drv_clk_en().bit()),
+                "sdio_ls_drv_clk_en",
+                &format_args!("{}", self.sdio_ls_drv_clk_en().bit()),
             )
             .field(
-                "reg_sdio_ls_sam_clk_en",
-                &format_args!("{}", self.reg_sdio_ls_sam_clk_en().bit()),
+                "sdio_ls_sam_clk_en",
+                &format_args!("{}", self.sdio_ls_sam_clk_en().bit()),
             )
             .field(
-                "reg_mipi_dsi_dphy_clk_src_sel",
-                &format_args!("{}", self.reg_mipi_dsi_dphy_clk_src_sel().bits()),
+                "mipi_dsi_dphy_clk_src_sel",
+                &format_args!("{}", self.mipi_dsi_dphy_clk_src_sel().bits()),
             )
             .finish()
     }
@@ -166,84 +166,78 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_clk_div_num(&mut self) -> REG_SDIO_LS_CLK_DIV_NUM_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_CLK_DIV_NUM_W::new(self, 0)
+    pub fn sdio_ls_clk_div_num(&mut self) -> SDIO_LS_CLK_DIV_NUM_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_clk_edge_cfg_update(
+    pub fn sdio_ls_clk_edge_cfg_update(
         &mut self,
-    ) -> REG_SDIO_LS_CLK_EDGE_CFG_UPDATE_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_CLK_EDGE_CFG_UPDATE_W::new(self, 8)
+    ) -> SDIO_LS_CLK_EDGE_CFG_UPDATE_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_CLK_EDGE_CFG_UPDATE_W::new(self, 8)
     }
     #[doc = "Bits 9:12 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_clk_edge_l(&mut self) -> REG_SDIO_LS_CLK_EDGE_L_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_CLK_EDGE_L_W::new(self, 9)
+    pub fn sdio_ls_clk_edge_l(&mut self) -> SDIO_LS_CLK_EDGE_L_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_CLK_EDGE_L_W::new(self, 9)
     }
     #[doc = "Bits 13:16 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_clk_edge_h(&mut self) -> REG_SDIO_LS_CLK_EDGE_H_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_CLK_EDGE_H_W::new(self, 13)
+    pub fn sdio_ls_clk_edge_h(&mut self) -> SDIO_LS_CLK_EDGE_H_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_CLK_EDGE_H_W::new(self, 13)
     }
     #[doc = "Bits 17:20 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_clk_edge_n(&mut self) -> REG_SDIO_LS_CLK_EDGE_N_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_CLK_EDGE_N_W::new(self, 17)
+    pub fn sdio_ls_clk_edge_n(&mut self) -> SDIO_LS_CLK_EDGE_N_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_CLK_EDGE_N_W::new(self, 17)
     }
     #[doc = "Bits 21:22 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_slf_clk_edge_sel(
-        &mut self,
-    ) -> REG_SDIO_LS_SLF_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_SLF_CLK_EDGE_SEL_W::new(self, 21)
+    pub fn sdio_ls_slf_clk_edge_sel(&mut self) -> SDIO_LS_SLF_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_SLF_CLK_EDGE_SEL_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_drv_clk_edge_sel(
-        &mut self,
-    ) -> REG_SDIO_LS_DRV_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_DRV_CLK_EDGE_SEL_W::new(self, 23)
+    pub fn sdio_ls_drv_clk_edge_sel(&mut self) -> SDIO_LS_DRV_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_DRV_CLK_EDGE_SEL_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_sam_clk_edge_sel(
-        &mut self,
-    ) -> REG_SDIO_LS_SAM_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_SAM_CLK_EDGE_SEL_W::new(self, 25)
+    pub fn sdio_ls_sam_clk_edge_sel(&mut self) -> SDIO_LS_SAM_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_SAM_CLK_EDGE_SEL_W::new(self, 25)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_slf_clk_en(&mut self) -> REG_SDIO_LS_SLF_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_SLF_CLK_EN_W::new(self, 27)
+    pub fn sdio_ls_slf_clk_en(&mut self) -> SDIO_LS_SLF_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_SLF_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_drv_clk_en(&mut self) -> REG_SDIO_LS_DRV_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_DRV_CLK_EN_W::new(self, 28)
+    pub fn sdio_ls_drv_clk_en(&mut self) -> SDIO_LS_DRV_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_DRV_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_sam_clk_en(&mut self) -> REG_SDIO_LS_SAM_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
-        REG_SDIO_LS_SAM_CLK_EN_W::new(self, 29)
+    pub fn sdio_ls_sam_clk_en(&mut self) -> SDIO_LS_SAM_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
+        SDIO_LS_SAM_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_mipi_dsi_dphy_clk_src_sel(
+    pub fn mipi_dsi_dphy_clk_src_sel(
         &mut self,
-    ) -> REG_MIPI_DSI_DPHY_CLK_SRC_SEL_W<PERI_CLK_CTRL02_SPEC> {
-        REG_MIPI_DSI_DPHY_CLK_SRC_SEL_W::new(self, 30)
+    ) -> MIPI_DSI_DPHY_CLK_SRC_SEL_W<PERI_CLK_CTRL02_SPEC> {
+        MIPI_DSI_DPHY_CLK_SRC_SEL_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

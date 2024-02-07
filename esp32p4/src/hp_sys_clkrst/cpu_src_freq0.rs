@@ -1,12 +1,12 @@
 #[doc = "Register `CPU_SRC_FREQ0` reader"]
 pub type R = crate::R<CPU_SRC_FREQ0_SPEC>;
-#[doc = "Field `REG_CPU_SRC_FREQ` reader - cpu source clock frequency, step by 0.25MHz"]
-pub type REG_CPU_SRC_FREQ_R = crate::FieldReader<u32>;
+#[doc = "Field `CPU_SRC_FREQ` reader - cpu source clock frequency, step by 0.25MHz"]
+pub type CPU_SRC_FREQ_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - cpu source clock frequency, step by 0.25MHz"]
     #[inline(always)]
-    pub fn reg_cpu_src_freq(&self) -> REG_CPU_SRC_FREQ_R {
-        REG_CPU_SRC_FREQ_R::new(self.bits)
+    pub fn cpu_src_freq(&self) -> CPU_SRC_FREQ_R {
+        CPU_SRC_FREQ_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_SRC_FREQ0")
             .field(
-                "reg_cpu_src_freq",
-                &format_args!("{}", self.reg_cpu_src_freq().bits()),
+                "cpu_src_freq",
+                &format_args!("{}", self.cpu_src_freq().bits()),
             )
             .finish()
     }

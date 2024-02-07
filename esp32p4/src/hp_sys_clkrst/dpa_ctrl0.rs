@@ -2,24 +2,24 @@
 pub type R = crate::R<DPA_CTRL0_SPEC>;
 #[doc = "Register `DPA_CTRL0` writer"]
 pub type W = crate::W<DPA_CTRL0_SPEC>;
-#[doc = "Field `REG_SEC_DPA_LEVEL` reader - Reserved"]
-pub type REG_SEC_DPA_LEVEL_R = crate::FieldReader;
-#[doc = "Field `REG_SEC_DPA_LEVEL` writer - Reserved"]
-pub type REG_SEC_DPA_LEVEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_SEC_DPA_CFG_SEL` reader - Reserved"]
-pub type REG_SEC_DPA_CFG_SEL_R = crate::BitReader;
-#[doc = "Field `REG_SEC_DPA_CFG_SEL` writer - Reserved"]
-pub type REG_SEC_DPA_CFG_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SEC_DPA_LEVEL` reader - Reserved"]
+pub type SEC_DPA_LEVEL_R = crate::FieldReader;
+#[doc = "Field `SEC_DPA_LEVEL` writer - Reserved"]
+pub type SEC_DPA_LEVEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SEC_DPA_CFG_SEL` reader - Reserved"]
+pub type SEC_DPA_CFG_SEL_R = crate::BitReader;
+#[doc = "Field `SEC_DPA_CFG_SEL` writer - Reserved"]
+pub type SEC_DPA_CFG_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
-    pub fn reg_sec_dpa_level(&self) -> REG_SEC_DPA_LEVEL_R {
-        REG_SEC_DPA_LEVEL_R::new((self.bits & 3) as u8)
+    pub fn sec_dpa_level(&self) -> SEC_DPA_LEVEL_R {
+        SEC_DPA_LEVEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn reg_sec_dpa_cfg_sel(&self) -> REG_SEC_DPA_CFG_SEL_R {
-        REG_SEC_DPA_CFG_SEL_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn sec_dpa_cfg_sel(&self) -> SEC_DPA_CFG_SEL_R {
+        SEC_DPA_CFG_SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -27,12 +27,12 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPA_CTRL0")
             .field(
-                "reg_sec_dpa_level",
-                &format_args!("{}", self.reg_sec_dpa_level().bits()),
+                "sec_dpa_level",
+                &format_args!("{}", self.sec_dpa_level().bits()),
             )
             .field(
-                "reg_sec_dpa_cfg_sel",
-                &format_args!("{}", self.reg_sec_dpa_cfg_sel().bit()),
+                "sec_dpa_cfg_sel",
+                &format_args!("{}", self.sec_dpa_cfg_sel().bit()),
             )
             .finish()
     }
@@ -47,14 +47,14 @@ impl W {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sec_dpa_level(&mut self) -> REG_SEC_DPA_LEVEL_W<DPA_CTRL0_SPEC> {
-        REG_SEC_DPA_LEVEL_W::new(self, 0)
+    pub fn sec_dpa_level(&mut self) -> SEC_DPA_LEVEL_W<DPA_CTRL0_SPEC> {
+        SEC_DPA_LEVEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sec_dpa_cfg_sel(&mut self) -> REG_SEC_DPA_CFG_SEL_W<DPA_CTRL0_SPEC> {
-        REG_SEC_DPA_CFG_SEL_W::new(self, 2)
+    pub fn sec_dpa_cfg_sel(&mut self) -> SEC_DPA_CFG_SEL_W<DPA_CTRL0_SPEC> {
+        SEC_DPA_CFG_SEL_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

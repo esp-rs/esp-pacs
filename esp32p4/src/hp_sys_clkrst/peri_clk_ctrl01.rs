@@ -2,105 +2,105 @@
 pub type R = crate::R<PERI_CLK_CTRL01_SPEC>;
 #[doc = "Register `PERI_CLK_CTRL01` writer"]
 pub type W = crate::W<PERI_CLK_CTRL01_SPEC>;
-#[doc = "Field `REG_EMAC_RX_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_EMAC_RX_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_EMAC_RX_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_EMAC_RX_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_EMAC_TX_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_EMAC_TX_CLK_SRC_SEL_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_TX_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_EMAC_TX_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_TX_CLK_EN` reader - Reserved"]
-pub type REG_EMAC_TX_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_TX_CLK_EN` writer - Reserved"]
-pub type REG_EMAC_TX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_TX_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_EMAC_TX_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_EMAC_TX_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_EMAC_TX_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_EMAC_PTP_REF_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_EMAC_PTP_REF_CLK_SRC_SEL_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_PTP_REF_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_EMAC_PTP_REF_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_PTP_REF_CLK_EN` reader - Reserved"]
-pub type REG_EMAC_PTP_REF_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_PTP_REF_CLK_EN` writer - Reserved"]
-pub type REG_EMAC_PTP_REF_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_UNUSED0_CLK_EN` reader - Reserved"]
-pub type REG_EMAC_UNUSED0_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_UNUSED0_CLK_EN` writer - Reserved"]
-pub type REG_EMAC_UNUSED0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_UNUSED1_CLK_EN` reader - Reserved"]
-pub type REG_EMAC_UNUSED1_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_UNUSED1_CLK_EN` writer - Reserved"]
-pub type REG_EMAC_UNUSED1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SDIO_HS_MODE` reader - Reserved"]
-pub type REG_SDIO_HS_MODE_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_HS_MODE` writer - Reserved"]
-pub type REG_SDIO_HS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SDIO_LS_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_SDIO_LS_CLK_SRC_SEL_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_LS_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_SDIO_LS_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SDIO_LS_CLK_EN` reader - Reserved"]
-pub type REG_SDIO_LS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_LS_CLK_EN` writer - Reserved"]
-pub type REG_SDIO_LS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_RX_CLK_DIV_NUM` reader - Reserved"]
+pub type EMAC_RX_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `EMAC_RX_CLK_DIV_NUM` writer - Reserved"]
+pub type EMAC_RX_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `EMAC_TX_CLK_SRC_SEL` reader - Reserved"]
+pub type EMAC_TX_CLK_SRC_SEL_R = crate::BitReader;
+#[doc = "Field `EMAC_TX_CLK_SRC_SEL` writer - Reserved"]
+pub type EMAC_TX_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_TX_CLK_EN` reader - Reserved"]
+pub type EMAC_TX_CLK_EN_R = crate::BitReader;
+#[doc = "Field `EMAC_TX_CLK_EN` writer - Reserved"]
+pub type EMAC_TX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_TX_CLK_DIV_NUM` reader - Reserved"]
+pub type EMAC_TX_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `EMAC_TX_CLK_DIV_NUM` writer - Reserved"]
+pub type EMAC_TX_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `EMAC_PTP_REF_CLK_SRC_SEL` reader - Reserved"]
+pub type EMAC_PTP_REF_CLK_SRC_SEL_R = crate::BitReader;
+#[doc = "Field `EMAC_PTP_REF_CLK_SRC_SEL` writer - Reserved"]
+pub type EMAC_PTP_REF_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_PTP_REF_CLK_EN` reader - Reserved"]
+pub type EMAC_PTP_REF_CLK_EN_R = crate::BitReader;
+#[doc = "Field `EMAC_PTP_REF_CLK_EN` writer - Reserved"]
+pub type EMAC_PTP_REF_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_UNUSED0_CLK_EN` reader - Reserved"]
+pub type EMAC_UNUSED0_CLK_EN_R = crate::BitReader;
+#[doc = "Field `EMAC_UNUSED0_CLK_EN` writer - Reserved"]
+pub type EMAC_UNUSED0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_UNUSED1_CLK_EN` reader - Reserved"]
+pub type EMAC_UNUSED1_CLK_EN_R = crate::BitReader;
+#[doc = "Field `EMAC_UNUSED1_CLK_EN` writer - Reserved"]
+pub type EMAC_UNUSED1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_HS_MODE` reader - Reserved"]
+pub type SDIO_HS_MODE_R = crate::BitReader;
+#[doc = "Field `SDIO_HS_MODE` writer - Reserved"]
+pub type SDIO_HS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_LS_CLK_SRC_SEL` reader - Reserved"]
+pub type SDIO_LS_CLK_SRC_SEL_R = crate::BitReader;
+#[doc = "Field `SDIO_LS_CLK_SRC_SEL` writer - Reserved"]
+pub type SDIO_LS_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_LS_CLK_EN` reader - Reserved"]
+pub type SDIO_LS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `SDIO_LS_CLK_EN` writer - Reserved"]
+pub type SDIO_LS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_rx_clk_div_num(&self) -> REG_EMAC_RX_CLK_DIV_NUM_R {
-        REG_EMAC_RX_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
+    pub fn emac_rx_clk_div_num(&self) -> EMAC_RX_CLK_DIV_NUM_R {
+        EMAC_RX_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_tx_clk_src_sel(&self) -> REG_EMAC_TX_CLK_SRC_SEL_R {
-        REG_EMAC_TX_CLK_SRC_SEL_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn emac_tx_clk_src_sel(&self) -> EMAC_TX_CLK_SRC_SEL_R {
+        EMAC_TX_CLK_SRC_SEL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_tx_clk_en(&self) -> REG_EMAC_TX_CLK_EN_R {
-        REG_EMAC_TX_CLK_EN_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn emac_tx_clk_en(&self) -> EMAC_TX_CLK_EN_R {
+        EMAC_TX_CLK_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:17 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_tx_clk_div_num(&self) -> REG_EMAC_TX_CLK_DIV_NUM_R {
-        REG_EMAC_TX_CLK_DIV_NUM_R::new(((self.bits >> 10) & 0xff) as u8)
+    pub fn emac_tx_clk_div_num(&self) -> EMAC_TX_CLK_DIV_NUM_R {
+        EMAC_TX_CLK_DIV_NUM_R::new(((self.bits >> 10) & 0xff) as u8)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_ptp_ref_clk_src_sel(&self) -> REG_EMAC_PTP_REF_CLK_SRC_SEL_R {
-        REG_EMAC_PTP_REF_CLK_SRC_SEL_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn emac_ptp_ref_clk_src_sel(&self) -> EMAC_PTP_REF_CLK_SRC_SEL_R {
+        EMAC_PTP_REF_CLK_SRC_SEL_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_ptp_ref_clk_en(&self) -> REG_EMAC_PTP_REF_CLK_EN_R {
-        REG_EMAC_PTP_REF_CLK_EN_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn emac_ptp_ref_clk_en(&self) -> EMAC_PTP_REF_CLK_EN_R {
+        EMAC_PTP_REF_CLK_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_unused0_clk_en(&self) -> REG_EMAC_UNUSED0_CLK_EN_R {
-        REG_EMAC_UNUSED0_CLK_EN_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn emac_unused0_clk_en(&self) -> EMAC_UNUSED0_CLK_EN_R {
+        EMAC_UNUSED0_CLK_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_unused1_clk_en(&self) -> REG_EMAC_UNUSED1_CLK_EN_R {
-        REG_EMAC_UNUSED1_CLK_EN_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn emac_unused1_clk_en(&self) -> EMAC_UNUSED1_CLK_EN_R {
+        EMAC_UNUSED1_CLK_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_hs_mode(&self) -> REG_SDIO_HS_MODE_R {
-        REG_SDIO_HS_MODE_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn sdio_hs_mode(&self) -> SDIO_HS_MODE_R {
+        SDIO_HS_MODE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_clk_src_sel(&self) -> REG_SDIO_LS_CLK_SRC_SEL_R {
-        REG_SDIO_LS_CLK_SRC_SEL_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn sdio_ls_clk_src_sel(&self) -> SDIO_LS_CLK_SRC_SEL_R {
+        SDIO_LS_CLK_SRC_SEL_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_ls_clk_en(&self) -> REG_SDIO_LS_CLK_EN_R {
-        REG_SDIO_LS_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn sdio_ls_clk_en(&self) -> SDIO_LS_CLK_EN_R {
+        SDIO_LS_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -108,48 +108,48 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL01")
             .field(
-                "reg_emac_rx_clk_div_num",
-                &format_args!("{}", self.reg_emac_rx_clk_div_num().bits()),
+                "emac_rx_clk_div_num",
+                &format_args!("{}", self.emac_rx_clk_div_num().bits()),
             )
             .field(
-                "reg_emac_tx_clk_src_sel",
-                &format_args!("{}", self.reg_emac_tx_clk_src_sel().bit()),
+                "emac_tx_clk_src_sel",
+                &format_args!("{}", self.emac_tx_clk_src_sel().bit()),
             )
             .field(
-                "reg_emac_tx_clk_en",
-                &format_args!("{}", self.reg_emac_tx_clk_en().bit()),
+                "emac_tx_clk_en",
+                &format_args!("{}", self.emac_tx_clk_en().bit()),
             )
             .field(
-                "reg_emac_tx_clk_div_num",
-                &format_args!("{}", self.reg_emac_tx_clk_div_num().bits()),
+                "emac_tx_clk_div_num",
+                &format_args!("{}", self.emac_tx_clk_div_num().bits()),
             )
             .field(
-                "reg_emac_ptp_ref_clk_src_sel",
-                &format_args!("{}", self.reg_emac_ptp_ref_clk_src_sel().bit()),
+                "emac_ptp_ref_clk_src_sel",
+                &format_args!("{}", self.emac_ptp_ref_clk_src_sel().bit()),
             )
             .field(
-                "reg_emac_ptp_ref_clk_en",
-                &format_args!("{}", self.reg_emac_ptp_ref_clk_en().bit()),
+                "emac_ptp_ref_clk_en",
+                &format_args!("{}", self.emac_ptp_ref_clk_en().bit()),
             )
             .field(
-                "reg_emac_unused0_clk_en",
-                &format_args!("{}", self.reg_emac_unused0_clk_en().bit()),
+                "emac_unused0_clk_en",
+                &format_args!("{}", self.emac_unused0_clk_en().bit()),
             )
             .field(
-                "reg_emac_unused1_clk_en",
-                &format_args!("{}", self.reg_emac_unused1_clk_en().bit()),
+                "emac_unused1_clk_en",
+                &format_args!("{}", self.emac_unused1_clk_en().bit()),
             )
             .field(
-                "reg_sdio_hs_mode",
-                &format_args!("{}", self.reg_sdio_hs_mode().bit()),
+                "sdio_hs_mode",
+                &format_args!("{}", self.sdio_hs_mode().bit()),
             )
             .field(
-                "reg_sdio_ls_clk_src_sel",
-                &format_args!("{}", self.reg_sdio_ls_clk_src_sel().bit()),
+                "sdio_ls_clk_src_sel",
+                &format_args!("{}", self.sdio_ls_clk_src_sel().bit()),
             )
             .field(
-                "reg_sdio_ls_clk_en",
-                &format_args!("{}", self.reg_sdio_ls_clk_en().bit()),
+                "sdio_ls_clk_en",
+                &format_args!("{}", self.sdio_ls_clk_en().bit()),
             )
             .finish()
     }
@@ -164,70 +164,68 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_rx_clk_div_num(&mut self) -> REG_EMAC_RX_CLK_DIV_NUM_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_RX_CLK_DIV_NUM_W::new(self, 0)
+    pub fn emac_rx_clk_div_num(&mut self) -> EMAC_RX_CLK_DIV_NUM_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_RX_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_tx_clk_src_sel(&mut self) -> REG_EMAC_TX_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_TX_CLK_SRC_SEL_W::new(self, 8)
+    pub fn emac_tx_clk_src_sel(&mut self) -> EMAC_TX_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_TX_CLK_SRC_SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_tx_clk_en(&mut self) -> REG_EMAC_TX_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_TX_CLK_EN_W::new(self, 9)
+    pub fn emac_tx_clk_en(&mut self) -> EMAC_TX_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_TX_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bits 10:17 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_tx_clk_div_num(&mut self) -> REG_EMAC_TX_CLK_DIV_NUM_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_TX_CLK_DIV_NUM_W::new(self, 10)
+    pub fn emac_tx_clk_div_num(&mut self) -> EMAC_TX_CLK_DIV_NUM_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_TX_CLK_DIV_NUM_W::new(self, 10)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_ptp_ref_clk_src_sel(
-        &mut self,
-    ) -> REG_EMAC_PTP_REF_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_PTP_REF_CLK_SRC_SEL_W::new(self, 18)
+    pub fn emac_ptp_ref_clk_src_sel(&mut self) -> EMAC_PTP_REF_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_PTP_REF_CLK_SRC_SEL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_ptp_ref_clk_en(&mut self) -> REG_EMAC_PTP_REF_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_PTP_REF_CLK_EN_W::new(self, 19)
+    pub fn emac_ptp_ref_clk_en(&mut self) -> EMAC_PTP_REF_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_PTP_REF_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_unused0_clk_en(&mut self) -> REG_EMAC_UNUSED0_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_UNUSED0_CLK_EN_W::new(self, 20)
+    pub fn emac_unused0_clk_en(&mut self) -> EMAC_UNUSED0_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_UNUSED0_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_unused1_clk_en(&mut self) -> REG_EMAC_UNUSED1_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
-        REG_EMAC_UNUSED1_CLK_EN_W::new(self, 21)
+    pub fn emac_unused1_clk_en(&mut self) -> EMAC_UNUSED1_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
+        EMAC_UNUSED1_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_hs_mode(&mut self) -> REG_SDIO_HS_MODE_W<PERI_CLK_CTRL01_SPEC> {
-        REG_SDIO_HS_MODE_W::new(self, 22)
+    pub fn sdio_hs_mode(&mut self) -> SDIO_HS_MODE_W<PERI_CLK_CTRL01_SPEC> {
+        SDIO_HS_MODE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_clk_src_sel(&mut self) -> REG_SDIO_LS_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
-        REG_SDIO_LS_CLK_SRC_SEL_W::new(self, 23)
+    pub fn sdio_ls_clk_src_sel(&mut self) -> SDIO_LS_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
+        SDIO_LS_CLK_SRC_SEL_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_ls_clk_en(&mut self) -> REG_SDIO_LS_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
-        REG_SDIO_LS_CLK_EN_W::new(self, 24)
+    pub fn sdio_ls_clk_en(&mut self) -> SDIO_LS_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
+        SDIO_LS_CLK_EN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -2,105 +2,105 @@
 pub type R = crate::R<REF_CLK_CTRL1_SPEC>;
 #[doc = "Register `REF_CLK_CTRL1` writer"]
 pub type W = crate::W<REF_CLK_CTRL1_SPEC>;
-#[doc = "Field `REG_REF_120M_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_REF_120M_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_REF_120M_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_REF_120M_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_REF_80M_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_REF_80M_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_REF_80M_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_REF_80M_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_REF_20M_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_REF_20M_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_REF_20M_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_REF_20M_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_TM_400M_CLK_EN` reader - Reserved"]
-pub type REG_TM_400M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TM_400M_CLK_EN` writer - Reserved"]
-pub type REG_TM_400M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TM_200M_CLK_EN` reader - Reserved"]
-pub type REG_TM_200M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TM_200M_CLK_EN` writer - Reserved"]
-pub type REG_TM_200M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TM_100M_CLK_EN` reader - Reserved"]
-pub type REG_TM_100M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TM_100M_CLK_EN` writer - Reserved"]
-pub type REG_TM_100M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_REF_50M_CLK_EN` reader - Reserved"]
-pub type REG_REF_50M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_REF_50M_CLK_EN` writer - Reserved"]
-pub type REG_REF_50M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_REF_25M_CLK_EN` reader - Reserved"]
-pub type REG_REF_25M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_REF_25M_CLK_EN` writer - Reserved"]
-pub type REG_REF_25M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TM_480M_CLK_EN` reader - Reserved"]
-pub type REG_TM_480M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TM_480M_CLK_EN` writer - Reserved"]
-pub type REG_TM_480M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_REF_240M_CLK_EN` reader - Reserved"]
-pub type REG_REF_240M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_REF_240M_CLK_EN` writer - Reserved"]
-pub type REG_REF_240M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TM_240M_CLK_EN` reader - Reserved"]
-pub type REG_TM_240M_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TM_240M_CLK_EN` writer - Reserved"]
-pub type REG_TM_240M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REF_120M_CLK_DIV_NUM` reader - Reserved"]
+pub type REF_120M_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `REF_120M_CLK_DIV_NUM` writer - Reserved"]
+pub type REF_120M_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REF_80M_CLK_DIV_NUM` reader - Reserved"]
+pub type REF_80M_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `REF_80M_CLK_DIV_NUM` writer - Reserved"]
+pub type REF_80M_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REF_20M_CLK_DIV_NUM` reader - Reserved"]
+pub type REF_20M_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `REF_20M_CLK_DIV_NUM` writer - Reserved"]
+pub type REF_20M_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `TM_400M_CLK_EN` reader - Reserved"]
+pub type TM_400M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TM_400M_CLK_EN` writer - Reserved"]
+pub type TM_400M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TM_200M_CLK_EN` reader - Reserved"]
+pub type TM_200M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TM_200M_CLK_EN` writer - Reserved"]
+pub type TM_200M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TM_100M_CLK_EN` reader - Reserved"]
+pub type TM_100M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TM_100M_CLK_EN` writer - Reserved"]
+pub type TM_100M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REF_50M_CLK_EN` reader - Reserved"]
+pub type REF_50M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `REF_50M_CLK_EN` writer - Reserved"]
+pub type REF_50M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REF_25M_CLK_EN` reader - Reserved"]
+pub type REF_25M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `REF_25M_CLK_EN` writer - Reserved"]
+pub type REF_25M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TM_480M_CLK_EN` reader - Reserved"]
+pub type TM_480M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TM_480M_CLK_EN` writer - Reserved"]
+pub type TM_480M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REF_240M_CLK_EN` reader - Reserved"]
+pub type REF_240M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `REF_240M_CLK_EN` writer - Reserved"]
+pub type REF_240M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TM_240M_CLK_EN` reader - Reserved"]
+pub type TM_240M_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TM_240M_CLK_EN` writer - Reserved"]
+pub type TM_240M_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_ref_120m_clk_div_num(&self) -> REG_REF_120M_CLK_DIV_NUM_R {
-        REG_REF_120M_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
+    pub fn ref_120m_clk_div_num(&self) -> REF_120M_CLK_DIV_NUM_R {
+        REF_120M_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn reg_ref_80m_clk_div_num(&self) -> REG_REF_80M_CLK_DIV_NUM_R {
-        REG_REF_80M_CLK_DIV_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn ref_80m_clk_div_num(&self) -> REF_80M_CLK_DIV_NUM_R {
+        REF_80M_CLK_DIV_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn reg_ref_20m_clk_div_num(&self) -> REG_REF_20M_CLK_DIV_NUM_R {
-        REG_REF_20M_CLK_DIV_NUM_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn ref_20m_clk_div_num(&self) -> REF_20M_CLK_DIV_NUM_R {
+        REF_20M_CLK_DIV_NUM_R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn reg_tm_400m_clk_en(&self) -> REG_TM_400M_CLK_EN_R {
-        REG_TM_400M_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn tm_400m_clk_en(&self) -> TM_400M_CLK_EN_R {
+        TM_400M_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    pub fn reg_tm_200m_clk_en(&self) -> REG_TM_200M_CLK_EN_R {
-        REG_TM_200M_CLK_EN_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn tm_200m_clk_en(&self) -> TM_200M_CLK_EN_R {
+        TM_200M_CLK_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    pub fn reg_tm_100m_clk_en(&self) -> REG_TM_100M_CLK_EN_R {
-        REG_TM_100M_CLK_EN_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn tm_100m_clk_en(&self) -> TM_100M_CLK_EN_R {
+        TM_100M_CLK_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    pub fn reg_ref_50m_clk_en(&self) -> REG_REF_50M_CLK_EN_R {
-        REG_REF_50M_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn ref_50m_clk_en(&self) -> REF_50M_CLK_EN_R {
+        REF_50M_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn reg_ref_25m_clk_en(&self) -> REG_REF_25M_CLK_EN_R {
-        REG_REF_25M_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn ref_25m_clk_en(&self) -> REF_25M_CLK_EN_R {
+        REF_25M_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn reg_tm_480m_clk_en(&self) -> REG_TM_480M_CLK_EN_R {
-        REG_TM_480M_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn tm_480m_clk_en(&self) -> TM_480M_CLK_EN_R {
+        TM_480M_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    pub fn reg_ref_240m_clk_en(&self) -> REG_REF_240M_CLK_EN_R {
-        REG_REF_240M_CLK_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn ref_240m_clk_en(&self) -> REF_240M_CLK_EN_R {
+        REF_240M_CLK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    pub fn reg_tm_240m_clk_en(&self) -> REG_TM_240M_CLK_EN_R {
-        REG_TM_240M_CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn tm_240m_clk_en(&self) -> TM_240M_CLK_EN_R {
+        TM_240M_CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -108,48 +108,48 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REF_CLK_CTRL1")
             .field(
-                "reg_ref_120m_clk_div_num",
-                &format_args!("{}", self.reg_ref_120m_clk_div_num().bits()),
+                "ref_120m_clk_div_num",
+                &format_args!("{}", self.ref_120m_clk_div_num().bits()),
             )
             .field(
-                "reg_ref_80m_clk_div_num",
-                &format_args!("{}", self.reg_ref_80m_clk_div_num().bits()),
+                "ref_80m_clk_div_num",
+                &format_args!("{}", self.ref_80m_clk_div_num().bits()),
             )
             .field(
-                "reg_ref_20m_clk_div_num",
-                &format_args!("{}", self.reg_ref_20m_clk_div_num().bits()),
+                "ref_20m_clk_div_num",
+                &format_args!("{}", self.ref_20m_clk_div_num().bits()),
             )
             .field(
-                "reg_tm_400m_clk_en",
-                &format_args!("{}", self.reg_tm_400m_clk_en().bit()),
+                "tm_400m_clk_en",
+                &format_args!("{}", self.tm_400m_clk_en().bit()),
             )
             .field(
-                "reg_tm_200m_clk_en",
-                &format_args!("{}", self.reg_tm_200m_clk_en().bit()),
+                "tm_200m_clk_en",
+                &format_args!("{}", self.tm_200m_clk_en().bit()),
             )
             .field(
-                "reg_tm_100m_clk_en",
-                &format_args!("{}", self.reg_tm_100m_clk_en().bit()),
+                "tm_100m_clk_en",
+                &format_args!("{}", self.tm_100m_clk_en().bit()),
             )
             .field(
-                "reg_ref_50m_clk_en",
-                &format_args!("{}", self.reg_ref_50m_clk_en().bit()),
+                "ref_50m_clk_en",
+                &format_args!("{}", self.ref_50m_clk_en().bit()),
             )
             .field(
-                "reg_ref_25m_clk_en",
-                &format_args!("{}", self.reg_ref_25m_clk_en().bit()),
+                "ref_25m_clk_en",
+                &format_args!("{}", self.ref_25m_clk_en().bit()),
             )
             .field(
-                "reg_tm_480m_clk_en",
-                &format_args!("{}", self.reg_tm_480m_clk_en().bit()),
+                "tm_480m_clk_en",
+                &format_args!("{}", self.tm_480m_clk_en().bit()),
             )
             .field(
-                "reg_ref_240m_clk_en",
-                &format_args!("{}", self.reg_ref_240m_clk_en().bit()),
+                "ref_240m_clk_en",
+                &format_args!("{}", self.ref_240m_clk_en().bit()),
             )
             .field(
-                "reg_tm_240m_clk_en",
-                &format_args!("{}", self.reg_tm_240m_clk_en().bit()),
+                "tm_240m_clk_en",
+                &format_args!("{}", self.tm_240m_clk_en().bit()),
             )
             .finish()
     }
@@ -164,68 +164,68 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_ref_120m_clk_div_num(&mut self) -> REG_REF_120M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
-        REG_REF_120M_CLK_DIV_NUM_W::new(self, 0)
+    pub fn ref_120m_clk_div_num(&mut self) -> REF_120M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
+        REF_120M_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_ref_80m_clk_div_num(&mut self) -> REG_REF_80M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
-        REG_REF_80M_CLK_DIV_NUM_W::new(self, 8)
+    pub fn ref_80m_clk_div_num(&mut self) -> REF_80M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
+        REF_80M_CLK_DIV_NUM_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_ref_20m_clk_div_num(&mut self) -> REG_REF_20M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
-        REG_REF_20M_CLK_DIV_NUM_W::new(self, 16)
+    pub fn ref_20m_clk_div_num(&mut self) -> REF_20M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
+        REF_20M_CLK_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tm_400m_clk_en(&mut self) -> REG_TM_400M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_TM_400M_CLK_EN_W::new(self, 24)
+    pub fn tm_400m_clk_en(&mut self) -> TM_400M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        TM_400M_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tm_200m_clk_en(&mut self) -> REG_TM_200M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_TM_200M_CLK_EN_W::new(self, 25)
+    pub fn tm_200m_clk_en(&mut self) -> TM_200M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        TM_200M_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tm_100m_clk_en(&mut self) -> REG_TM_100M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_TM_100M_CLK_EN_W::new(self, 26)
+    pub fn tm_100m_clk_en(&mut self) -> TM_100M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        TM_100M_CLK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_ref_50m_clk_en(&mut self) -> REG_REF_50M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_REF_50M_CLK_EN_W::new(self, 27)
+    pub fn ref_50m_clk_en(&mut self) -> REF_50M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        REF_50M_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_ref_25m_clk_en(&mut self) -> REG_REF_25M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_REF_25M_CLK_EN_W::new(self, 28)
+    pub fn ref_25m_clk_en(&mut self) -> REF_25M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        REF_25M_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tm_480m_clk_en(&mut self) -> REG_TM_480M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_TM_480M_CLK_EN_W::new(self, 29)
+    pub fn tm_480m_clk_en(&mut self) -> TM_480M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        TM_480M_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_ref_240m_clk_en(&mut self) -> REG_REF_240M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_REF_240M_CLK_EN_W::new(self, 30)
+    pub fn ref_240m_clk_en(&mut self) -> REF_240M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        REF_240M_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_tm_240m_clk_en(&mut self) -> REG_TM_240M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
-        REG_TM_240M_CLK_EN_W::new(self, 31)
+    pub fn tm_240m_clk_en(&mut self) -> TM_240M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+        TM_240M_CLK_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

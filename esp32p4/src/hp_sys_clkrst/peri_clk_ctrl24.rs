@@ -2,42 +2,42 @@
 pub type R = crate::R<PERI_CLK_CTRL24_SPEC>;
 #[doc = "Register `PERI_CLK_CTRL24` writer"]
 pub type W = crate::W<PERI_CLK_CTRL24_SPEC>;
-#[doc = "Field `REG_ADC_SAR1_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_ADC_SAR1_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_ADC_SAR1_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_ADC_SAR1_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_ADC_SAR2_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_ADC_SAR2_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_ADC_SAR2_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_ADC_SAR2_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_PVT_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_PVT_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_PVT_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_PVT_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_PVT_CLK_EN` reader - Reserved"]
-pub type REG_PVT_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_PVT_CLK_EN` writer - Reserved"]
-pub type REG_PVT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_SAR1_CLK_DIV_NUM` reader - Reserved"]
+pub type ADC_SAR1_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `ADC_SAR1_CLK_DIV_NUM` writer - Reserved"]
+pub type ADC_SAR1_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `ADC_SAR2_CLK_DIV_NUM` reader - Reserved"]
+pub type ADC_SAR2_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `ADC_SAR2_CLK_DIV_NUM` writer - Reserved"]
+pub type ADC_SAR2_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PVT_CLK_DIV_NUM` reader - Reserved"]
+pub type PVT_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `PVT_CLK_DIV_NUM` writer - Reserved"]
+pub type PVT_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PVT_CLK_EN` reader - Reserved"]
+pub type PVT_CLK_EN_R = crate::BitReader;
+#[doc = "Field `PVT_CLK_EN` writer - Reserved"]
+pub type PVT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_adc_sar1_clk_div_num(&self) -> REG_ADC_SAR1_CLK_DIV_NUM_R {
-        REG_ADC_SAR1_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
+    pub fn adc_sar1_clk_div_num(&self) -> ADC_SAR1_CLK_DIV_NUM_R {
+        ADC_SAR1_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn reg_adc_sar2_clk_div_num(&self) -> REG_ADC_SAR2_CLK_DIV_NUM_R {
-        REG_ADC_SAR2_CLK_DIV_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn adc_sar2_clk_div_num(&self) -> ADC_SAR2_CLK_DIV_NUM_R {
+        ADC_SAR2_CLK_DIV_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn reg_pvt_clk_div_num(&self) -> REG_PVT_CLK_DIV_NUM_R {
-        REG_PVT_CLK_DIV_NUM_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn pvt_clk_div_num(&self) -> PVT_CLK_DIV_NUM_R {
+        PVT_CLK_DIV_NUM_R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn reg_pvt_clk_en(&self) -> REG_PVT_CLK_EN_R {
-        REG_PVT_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn pvt_clk_en(&self) -> PVT_CLK_EN_R {
+        PVT_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -45,21 +45,18 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL24")
             .field(
-                "reg_adc_sar1_clk_div_num",
-                &format_args!("{}", self.reg_adc_sar1_clk_div_num().bits()),
+                "adc_sar1_clk_div_num",
+                &format_args!("{}", self.adc_sar1_clk_div_num().bits()),
             )
             .field(
-                "reg_adc_sar2_clk_div_num",
-                &format_args!("{}", self.reg_adc_sar2_clk_div_num().bits()),
+                "adc_sar2_clk_div_num",
+                &format_args!("{}", self.adc_sar2_clk_div_num().bits()),
             )
             .field(
-                "reg_pvt_clk_div_num",
-                &format_args!("{}", self.reg_pvt_clk_div_num().bits()),
+                "pvt_clk_div_num",
+                &format_args!("{}", self.pvt_clk_div_num().bits()),
             )
-            .field(
-                "reg_pvt_clk_en",
-                &format_args!("{}", self.reg_pvt_clk_en().bit()),
-            )
+            .field("pvt_clk_en", &format_args!("{}", self.pvt_clk_en().bit()))
             .finish()
     }
 }
@@ -73,26 +70,26 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_adc_sar1_clk_div_num(&mut self) -> REG_ADC_SAR1_CLK_DIV_NUM_W<PERI_CLK_CTRL24_SPEC> {
-        REG_ADC_SAR1_CLK_DIV_NUM_W::new(self, 0)
+    pub fn adc_sar1_clk_div_num(&mut self) -> ADC_SAR1_CLK_DIV_NUM_W<PERI_CLK_CTRL24_SPEC> {
+        ADC_SAR1_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_adc_sar2_clk_div_num(&mut self) -> REG_ADC_SAR2_CLK_DIV_NUM_W<PERI_CLK_CTRL24_SPEC> {
-        REG_ADC_SAR2_CLK_DIV_NUM_W::new(self, 8)
+    pub fn adc_sar2_clk_div_num(&mut self) -> ADC_SAR2_CLK_DIV_NUM_W<PERI_CLK_CTRL24_SPEC> {
+        ADC_SAR2_CLK_DIV_NUM_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_pvt_clk_div_num(&mut self) -> REG_PVT_CLK_DIV_NUM_W<PERI_CLK_CTRL24_SPEC> {
-        REG_PVT_CLK_DIV_NUM_W::new(self, 16)
+    pub fn pvt_clk_div_num(&mut self) -> PVT_CLK_DIV_NUM_W<PERI_CLK_CTRL24_SPEC> {
+        PVT_CLK_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_pvt_clk_en(&mut self) -> REG_PVT_CLK_EN_W<PERI_CLK_CTRL24_SPEC> {
-        REG_PVT_CLK_EN_W::new(self, 24)
+    pub fn pvt_clk_en(&mut self) -> PVT_CLK_EN_W<PERI_CLK_CTRL24_SPEC> {
+        PVT_CLK_EN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
