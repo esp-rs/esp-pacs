@@ -1,5 +1,13 @@
 _svd: "../esp32p4.base.svd"
 
+UART0:
+  _strip_end: "_SYNC"
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
+
 USB_DEVICE:
   "*":
     _strip: "USB_SERIAL_JTAG_"

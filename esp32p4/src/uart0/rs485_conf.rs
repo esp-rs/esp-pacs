@@ -1,7 +1,7 @@
-#[doc = "Register `RS485_CONF_SYNC` reader"]
-pub type R = crate::R<RS485_CONF_SYNC_SPEC>;
-#[doc = "Register `RS485_CONF_SYNC` writer"]
-pub type W = crate::W<RS485_CONF_SYNC_SPEC>;
+#[doc = "Register `RS485_CONF` reader"]
+pub type R = crate::R<RS485_CONF_SPEC>;
+#[doc = "Register `RS485_CONF` writer"]
+pub type W = crate::W<RS485_CONF_SPEC>;
 #[doc = "Field `RS485_EN` reader - Set this bit to choose the rs485 mode."]
 pub type RS485_EN_R = crate::BitReader;
 #[doc = "Field `RS485_EN` writer - Set this bit to choose the rs485 mode."]
@@ -70,7 +70,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RS485_CONF_SYNC")
+        f.debug_struct("RS485_CONF")
             .field("rs485_en", &format_args!("{}", self.rs485_en().bit()))
             .field("dl0_en", &format_args!("{}", self.dl0_en().bit()))
             .field("dl1_en", &format_args!("{}", self.dl1_en().bit()))
@@ -94,7 +94,7 @@ impl core::fmt::Debug for R {
     }
 }
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RS485_CONF_SYNC_SPEC> {
+impl core::fmt::Debug for crate::generic::Reg<RS485_CONF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         core::fmt::Debug::fmt(&self.read(), f)
     }
@@ -103,43 +103,43 @@ impl W {
     #[doc = "Bit 0 - Set this bit to choose the rs485 mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rs485_en(&mut self) -> RS485_EN_W<RS485_CONF_SYNC_SPEC> {
+    pub fn rs485_en(&mut self) -> RS485_EN_W<RS485_CONF_SPEC> {
         RS485_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     #[must_use]
-    pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SYNC_SPEC> {
+    pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SPEC> {
         DL0_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     #[must_use]
-    pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SYNC_SPEC> {
+    pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SPEC> {
         DL1_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable receiver could receive data when the transmitter is transmitting data in rs485 mode."]
     #[inline(always)]
     #[must_use]
-    pub fn rs485tx_rx_en(&mut self) -> RS485TX_RX_EN_W<RS485_CONF_SYNC_SPEC> {
+    pub fn rs485tx_rx_en(&mut self) -> RS485TX_RX_EN_W<RS485_CONF_SPEC> {
         RS485TX_RX_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1'h1: enable rs485 transmitter to send data when rs485 receiver line is busy."]
     #[inline(always)]
     #[must_use]
-    pub fn rs485rxby_tx_en(&mut self) -> RS485RXBY_TX_EN_W<RS485_CONF_SYNC_SPEC> {
+    pub fn rs485rxby_tx_en(&mut self) -> RS485RXBY_TX_EN_W<RS485_CONF_SPEC> {
         RS485RXBY_TX_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - This register is used to delay the receiver's internal data signal."]
     #[inline(always)]
     #[must_use]
-    pub fn rs485_rx_dly_num(&mut self) -> RS485_RX_DLY_NUM_W<RS485_CONF_SYNC_SPEC> {
+    pub fn rs485_rx_dly_num(&mut self) -> RS485_RX_DLY_NUM_W<RS485_CONF_SPEC> {
         RS485_RX_DLY_NUM_W::new(self, 5)
     }
     #[doc = "Bits 6:9 - This register is used to delay the transmitter's internal data signal."]
     #[inline(always)]
     #[must_use]
-    pub fn rs485_tx_dly_num(&mut self) -> RS485_TX_DLY_NUM_W<RS485_CONF_SYNC_SPEC> {
+    pub fn rs485_tx_dly_num(&mut self) -> RS485_TX_DLY_NUM_W<RS485_CONF_SPEC> {
         RS485_TX_DLY_NUM_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
@@ -153,19 +153,19 @@ impl W {
         self
     }
 }
-#[doc = "RS485 mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rs485_conf_sync::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rs485_conf_sync::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct RS485_CONF_SYNC_SPEC;
-impl crate::RegisterSpec for RS485_CONF_SYNC_SPEC {
+#[doc = "RS485 mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rs485_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rs485_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RS485_CONF_SPEC;
+impl crate::RegisterSpec for RS485_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`rs485_conf_sync::R`](R) reader structure"]
-impl crate::Readable for RS485_CONF_SYNC_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`rs485_conf_sync::W`](W) writer structure"]
-impl crate::Writable for RS485_CONF_SYNC_SPEC {
+#[doc = "`read()` method returns [`rs485_conf::R`](R) reader structure"]
+impl crate::Readable for RS485_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rs485_conf::W`](W) writer structure"]
+impl crate::Writable for RS485_CONF_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets RS485_CONF_SYNC to value 0"]
-impl crate::Resettable for RS485_CONF_SYNC_SPEC {
+#[doc = "`reset()` method sets RS485_CONF to value 0"]
+impl crate::Resettable for RS485_CONF_SPEC {
     const RESET_VALUE: u32 = 0;
 }

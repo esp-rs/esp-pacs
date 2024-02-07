@@ -7,27 +7,27 @@ pub struct RegisterBlock {
     int_st: INT_ST,
     int_ena: INT_ENA,
     int_clr: INT_CLR,
-    clkdiv_sync: CLKDIV_SYNC,
+    clkdiv: CLKDIV,
     rx_filt: RX_FILT,
     status: STATUS,
-    conf0_sync: CONF0_SYNC,
+    conf0: CONF0,
     conf1: CONF1,
     _reserved10: [u8; 0x04],
-    hwfc_conf_sync: HWFC_CONF_SYNC,
+    hwfc_conf: HWFC_CONF,
     sleep_conf0: SLEEP_CONF0,
     sleep_conf1: SLEEP_CONF1,
     sleep_conf2: SLEEP_CONF2,
-    swfc_conf0_sync: SWFC_CONF0_SYNC,
+    swfc_conf0: SWFC_CONF0,
     swfc_conf1: SWFC_CONF1,
-    txbrk_conf_sync: TXBRK_CONF_SYNC,
-    idle_conf_sync: IDLE_CONF_SYNC,
-    rs485_conf_sync: RS485_CONF_SYNC,
-    at_cmd_precnt_sync: AT_CMD_PRECNT_SYNC,
-    at_cmd_postcnt_sync: AT_CMD_POSTCNT_SYNC,
-    at_cmd_gaptout_sync: AT_CMD_GAPTOUT_SYNC,
-    at_cmd_char_sync: AT_CMD_CHAR_SYNC,
+    txbrk_conf: TXBRK_CONF,
+    idle_conf: IDLE_CONF,
+    rs485_conf: RS485_CONF,
+    at_cmd_precnt: AT_CMD_PRECNT,
+    at_cmd_postcnt: AT_CMD_POSTCNT,
+    at_cmd_gaptout: AT_CMD_GAPTOUT,
+    at_cmd_char: AT_CMD_CHAR,
     mem_conf: MEM_CONF,
-    tout_conf_sync: TOUT_CONF_SYNC,
+    tout_conf: TOUT_CONF,
     mem_tx_status: MEM_TX_STATUS,
     mem_rx_status: MEM_RX_STATUS,
     fsm_status: FSM_STATUS,
@@ -71,8 +71,8 @@ impl RegisterBlock {
     }
     #[doc = "0x14 - Clock divider configuration"]
     #[inline(always)]
-    pub const fn clkdiv_sync(&self) -> &CLKDIV_SYNC {
-        &self.clkdiv_sync
+    pub const fn clkdiv(&self) -> &CLKDIV {
+        &self.clkdiv
     }
     #[doc = "0x18 - Rx Filter configuration"]
     #[inline(always)]
@@ -86,8 +86,8 @@ impl RegisterBlock {
     }
     #[doc = "0x20 - a"]
     #[inline(always)]
-    pub const fn conf0_sync(&self) -> &CONF0_SYNC {
-        &self.conf0_sync
+    pub const fn conf0(&self) -> &CONF0 {
+        &self.conf0
     }
     #[doc = "0x24 - Configuration register 1"]
     #[inline(always)]
@@ -96,8 +96,8 @@ impl RegisterBlock {
     }
     #[doc = "0x2c - Hardware flow-control configuration"]
     #[inline(always)]
-    pub const fn hwfc_conf_sync(&self) -> &HWFC_CONF_SYNC {
-        &self.hwfc_conf_sync
+    pub const fn hwfc_conf(&self) -> &HWFC_CONF {
+        &self.hwfc_conf
     }
     #[doc = "0x30 - UART sleep configure register 0"]
     #[inline(always)]
@@ -116,8 +116,8 @@ impl RegisterBlock {
     }
     #[doc = "0x3c - Software flow-control character configuration"]
     #[inline(always)]
-    pub const fn swfc_conf0_sync(&self) -> &SWFC_CONF0_SYNC {
-        &self.swfc_conf0_sync
+    pub const fn swfc_conf0(&self) -> &SWFC_CONF0 {
+        &self.swfc_conf0
     }
     #[doc = "0x40 - Software flow-control character configuration"]
     #[inline(always)]
@@ -126,38 +126,38 @@ impl RegisterBlock {
     }
     #[doc = "0x44 - Tx Break character configuration"]
     #[inline(always)]
-    pub const fn txbrk_conf_sync(&self) -> &TXBRK_CONF_SYNC {
-        &self.txbrk_conf_sync
+    pub const fn txbrk_conf(&self) -> &TXBRK_CONF {
+        &self.txbrk_conf
     }
     #[doc = "0x48 - Frame-end idle configuration"]
     #[inline(always)]
-    pub const fn idle_conf_sync(&self) -> &IDLE_CONF_SYNC {
-        &self.idle_conf_sync
+    pub const fn idle_conf(&self) -> &IDLE_CONF {
+        &self.idle_conf
     }
     #[doc = "0x4c - RS485 mode configuration"]
     #[inline(always)]
-    pub const fn rs485_conf_sync(&self) -> &RS485_CONF_SYNC {
-        &self.rs485_conf_sync
+    pub const fn rs485_conf(&self) -> &RS485_CONF {
+        &self.rs485_conf
     }
     #[doc = "0x50 - Pre-sequence timing configuration"]
     #[inline(always)]
-    pub const fn at_cmd_precnt_sync(&self) -> &AT_CMD_PRECNT_SYNC {
-        &self.at_cmd_precnt_sync
+    pub const fn at_cmd_precnt(&self) -> &AT_CMD_PRECNT {
+        &self.at_cmd_precnt
     }
     #[doc = "0x54 - Post-sequence timing configuration"]
     #[inline(always)]
-    pub const fn at_cmd_postcnt_sync(&self) -> &AT_CMD_POSTCNT_SYNC {
-        &self.at_cmd_postcnt_sync
+    pub const fn at_cmd_postcnt(&self) -> &AT_CMD_POSTCNT {
+        &self.at_cmd_postcnt
     }
     #[doc = "0x58 - Timeout configuration"]
     #[inline(always)]
-    pub const fn at_cmd_gaptout_sync(&self) -> &AT_CMD_GAPTOUT_SYNC {
-        &self.at_cmd_gaptout_sync
+    pub const fn at_cmd_gaptout(&self) -> &AT_CMD_GAPTOUT {
+        &self.at_cmd_gaptout
     }
     #[doc = "0x5c - AT escape sequence detection configuration"]
     #[inline(always)]
-    pub const fn at_cmd_char_sync(&self) -> &AT_CMD_CHAR_SYNC {
-        &self.at_cmd_char_sync
+    pub const fn at_cmd_char(&self) -> &AT_CMD_CHAR {
+        &self.at_cmd_char
     }
     #[doc = "0x60 - UART memory power configuration"]
     #[inline(always)]
@@ -166,8 +166,8 @@ impl RegisterBlock {
     }
     #[doc = "0x64 - UART threshold and allocation configuration"]
     #[inline(always)]
-    pub const fn tout_conf_sync(&self) -> &TOUT_CONF_SYNC {
-        &self.tout_conf_sync
+    pub const fn tout_conf(&self) -> &TOUT_CONF {
+        &self.tout_conf
     }
     #[doc = "0x68 - Tx-SRAM write and read offset address."]
     #[inline(always)]
@@ -235,7 +235,7 @@ impl RegisterBlock {
         &self.id
     }
 }
-#[doc = "FIFO (r) register accessor: FIFO data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo`] module"]
+#[doc = "FIFO (rw) register accessor: FIFO data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fifo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo`] module"]
 pub type FIFO = crate::Reg<fifo::FIFO_SPEC>;
 #[doc = "FIFO data register"]
 pub mod fifo;
@@ -255,10 +255,10 @@ pub mod int_ena;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Interrupt clear bits"]
 pub mod int_clr;
-#[doc = "CLKDIV_SYNC (rw) register accessor: Clock divider configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkdiv_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkdiv_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clkdiv_sync`] module"]
-pub type CLKDIV_SYNC = crate::Reg<clkdiv_sync::CLKDIV_SYNC_SPEC>;
+#[doc = "CLKDIV (rw) register accessor: Clock divider configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkdiv::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkdiv::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clkdiv`] module"]
+pub type CLKDIV = crate::Reg<clkdiv::CLKDIV_SPEC>;
 #[doc = "Clock divider configuration"]
-pub mod clkdiv_sync;
+pub mod clkdiv;
 #[doc = "RX_FILT (rw) register accessor: Rx Filter configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_filt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_filt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_filt`] module"]
 pub type RX_FILT = crate::Reg<rx_filt::RX_FILT_SPEC>;
 #[doc = "Rx Filter configuration"]
@@ -267,18 +267,18 @@ pub mod rx_filt;
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "UART status register"]
 pub mod status;
-#[doc = "CONF0_SYNC (rw) register accessor: a\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf0_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf0_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf0_sync`] module"]
-pub type CONF0_SYNC = crate::Reg<conf0_sync::CONF0_SYNC_SPEC>;
+#[doc = "CONF0 (rw) register accessor: a\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf0`] module"]
+pub type CONF0 = crate::Reg<conf0::CONF0_SPEC>;
 #[doc = "a"]
-pub mod conf0_sync;
+pub mod conf0;
 #[doc = "CONF1 (rw) register accessor: Configuration register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf1`] module"]
 pub type CONF1 = crate::Reg<conf1::CONF1_SPEC>;
 #[doc = "Configuration register 1"]
 pub mod conf1;
-#[doc = "HWFC_CONF_SYNC (rw) register accessor: Hardware flow-control configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hwfc_conf_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hwfc_conf_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hwfc_conf_sync`] module"]
-pub type HWFC_CONF_SYNC = crate::Reg<hwfc_conf_sync::HWFC_CONF_SYNC_SPEC>;
+#[doc = "HWFC_CONF (rw) register accessor: Hardware flow-control configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hwfc_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hwfc_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hwfc_conf`] module"]
+pub type HWFC_CONF = crate::Reg<hwfc_conf::HWFC_CONF_SPEC>;
 #[doc = "Hardware flow-control configuration"]
-pub mod hwfc_conf_sync;
+pub mod hwfc_conf;
 #[doc = "SLEEP_CONF0 (rw) register accessor: UART sleep configure register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sleep_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sleep_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sleep_conf0`] module"]
 pub type SLEEP_CONF0 = crate::Reg<sleep_conf0::SLEEP_CONF0_SPEC>;
 #[doc = "UART sleep configure register 0"]
@@ -291,50 +291,50 @@ pub mod sleep_conf1;
 pub type SLEEP_CONF2 = crate::Reg<sleep_conf2::SLEEP_CONF2_SPEC>;
 #[doc = "UART sleep configure register 2"]
 pub mod sleep_conf2;
-#[doc = "SWFC_CONF0_SYNC (rw) register accessor: Software flow-control character configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swfc_conf0_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swfc_conf0_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@swfc_conf0_sync`] module"]
-pub type SWFC_CONF0_SYNC = crate::Reg<swfc_conf0_sync::SWFC_CONF0_SYNC_SPEC>;
+#[doc = "SWFC_CONF0 (rw) register accessor: Software flow-control character configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swfc_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swfc_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@swfc_conf0`] module"]
+pub type SWFC_CONF0 = crate::Reg<swfc_conf0::SWFC_CONF0_SPEC>;
 #[doc = "Software flow-control character configuration"]
-pub mod swfc_conf0_sync;
+pub mod swfc_conf0;
 #[doc = "SWFC_CONF1 (rw) register accessor: Software flow-control character configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swfc_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swfc_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@swfc_conf1`] module"]
 pub type SWFC_CONF1 = crate::Reg<swfc_conf1::SWFC_CONF1_SPEC>;
 #[doc = "Software flow-control character configuration"]
 pub mod swfc_conf1;
-#[doc = "TXBRK_CONF_SYNC (rw) register accessor: Tx Break character configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txbrk_conf_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txbrk_conf_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txbrk_conf_sync`] module"]
-pub type TXBRK_CONF_SYNC = crate::Reg<txbrk_conf_sync::TXBRK_CONF_SYNC_SPEC>;
+#[doc = "TXBRK_CONF (rw) register accessor: Tx Break character configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txbrk_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txbrk_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txbrk_conf`] module"]
+pub type TXBRK_CONF = crate::Reg<txbrk_conf::TXBRK_CONF_SPEC>;
 #[doc = "Tx Break character configuration"]
-pub mod txbrk_conf_sync;
-#[doc = "IDLE_CONF_SYNC (rw) register accessor: Frame-end idle configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idle_conf_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`idle_conf_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@idle_conf_sync`] module"]
-pub type IDLE_CONF_SYNC = crate::Reg<idle_conf_sync::IDLE_CONF_SYNC_SPEC>;
+pub mod txbrk_conf;
+#[doc = "IDLE_CONF (rw) register accessor: Frame-end idle configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idle_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`idle_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@idle_conf`] module"]
+pub type IDLE_CONF = crate::Reg<idle_conf::IDLE_CONF_SPEC>;
 #[doc = "Frame-end idle configuration"]
-pub mod idle_conf_sync;
-#[doc = "RS485_CONF_SYNC (rw) register accessor: RS485 mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rs485_conf_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rs485_conf_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rs485_conf_sync`] module"]
-pub type RS485_CONF_SYNC = crate::Reg<rs485_conf_sync::RS485_CONF_SYNC_SPEC>;
+pub mod idle_conf;
+#[doc = "RS485_CONF (rw) register accessor: RS485 mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rs485_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rs485_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rs485_conf`] module"]
+pub type RS485_CONF = crate::Reg<rs485_conf::RS485_CONF_SPEC>;
 #[doc = "RS485 mode configuration"]
-pub mod rs485_conf_sync;
-#[doc = "AT_CMD_PRECNT_SYNC (rw) register accessor: Pre-sequence timing configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_precnt_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_precnt_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_precnt_sync`] module"]
-pub type AT_CMD_PRECNT_SYNC = crate::Reg<at_cmd_precnt_sync::AT_CMD_PRECNT_SYNC_SPEC>;
+pub mod rs485_conf;
+#[doc = "AT_CMD_PRECNT (rw) register accessor: Pre-sequence timing configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_precnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_precnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_precnt`] module"]
+pub type AT_CMD_PRECNT = crate::Reg<at_cmd_precnt::AT_CMD_PRECNT_SPEC>;
 #[doc = "Pre-sequence timing configuration"]
-pub mod at_cmd_precnt_sync;
-#[doc = "AT_CMD_POSTCNT_SYNC (rw) register accessor: Post-sequence timing configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_postcnt_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_postcnt_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_postcnt_sync`] module"]
-pub type AT_CMD_POSTCNT_SYNC = crate::Reg<at_cmd_postcnt_sync::AT_CMD_POSTCNT_SYNC_SPEC>;
+pub mod at_cmd_precnt;
+#[doc = "AT_CMD_POSTCNT (rw) register accessor: Post-sequence timing configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_postcnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_postcnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_postcnt`] module"]
+pub type AT_CMD_POSTCNT = crate::Reg<at_cmd_postcnt::AT_CMD_POSTCNT_SPEC>;
 #[doc = "Post-sequence timing configuration"]
-pub mod at_cmd_postcnt_sync;
-#[doc = "AT_CMD_GAPTOUT_SYNC (rw) register accessor: Timeout configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_gaptout_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_gaptout_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_gaptout_sync`] module"]
-pub type AT_CMD_GAPTOUT_SYNC = crate::Reg<at_cmd_gaptout_sync::AT_CMD_GAPTOUT_SYNC_SPEC>;
+pub mod at_cmd_postcnt;
+#[doc = "AT_CMD_GAPTOUT (rw) register accessor: Timeout configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_gaptout::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_gaptout::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_gaptout`] module"]
+pub type AT_CMD_GAPTOUT = crate::Reg<at_cmd_gaptout::AT_CMD_GAPTOUT_SPEC>;
 #[doc = "Timeout configuration"]
-pub mod at_cmd_gaptout_sync;
-#[doc = "AT_CMD_CHAR_SYNC (rw) register accessor: AT escape sequence detection configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_char_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_char_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_char_sync`] module"]
-pub type AT_CMD_CHAR_SYNC = crate::Reg<at_cmd_char_sync::AT_CMD_CHAR_SYNC_SPEC>;
+pub mod at_cmd_gaptout;
+#[doc = "AT_CMD_CHAR (rw) register accessor: AT escape sequence detection configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`at_cmd_char::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`at_cmd_char::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@at_cmd_char`] module"]
+pub type AT_CMD_CHAR = crate::Reg<at_cmd_char::AT_CMD_CHAR_SPEC>;
 #[doc = "AT escape sequence detection configuration"]
-pub mod at_cmd_char_sync;
+pub mod at_cmd_char;
 #[doc = "MEM_CONF (rw) register accessor: UART memory power configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mem_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mem_conf`] module"]
 pub type MEM_CONF = crate::Reg<mem_conf::MEM_CONF_SPEC>;
 #[doc = "UART memory power configuration"]
 pub mod mem_conf;
-#[doc = "TOUT_CONF_SYNC (rw) register accessor: UART threshold and allocation configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tout_conf_sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tout_conf_sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tout_conf_sync`] module"]
-pub type TOUT_CONF_SYNC = crate::Reg<tout_conf_sync::TOUT_CONF_SYNC_SPEC>;
+#[doc = "TOUT_CONF (rw) register accessor: UART threshold and allocation configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tout_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tout_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tout_conf`] module"]
+pub type TOUT_CONF = crate::Reg<tout_conf::TOUT_CONF_SPEC>;
 #[doc = "UART threshold and allocation configuration"]
-pub mod tout_conf_sync;
+pub mod tout_conf;
 #[doc = "MEM_TX_STATUS (r) register accessor: Tx-SRAM write and read offset address.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_tx_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mem_tx_status`] module"]
 pub type MEM_TX_STATUS = crate::Reg<mem_tx_status::MEM_TX_STATUS_SPEC>;
 #[doc = "Tx-SRAM write and read offset address."]
