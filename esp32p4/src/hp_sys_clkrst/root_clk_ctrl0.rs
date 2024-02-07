@@ -6,6 +6,8 @@ pub type W = crate::W<ROOT_CLK_CTRL0_SPEC>;
 pub type REG_CPUICM_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `REG_CPUICM_DELAY_NUM` writer - Reserved"]
 pub type REG_CPUICM_DELAY_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `REG_SOC_CLK_DIV_UPDATE` reader - Reserved"]
+pub type REG_SOC_CLK_DIV_UPDATE_R = crate::BitReader;
 #[doc = "Field `REG_SOC_CLK_DIV_UPDATE` writer - Reserved"]
 pub type REG_SOC_CLK_DIV_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REG_CPU_CLK_DIV_NUM` reader - Reserved"]
@@ -25,6 +27,11 @@ impl R {
     #[inline(always)]
     pub fn reg_cpuicm_delay_num(&self) -> REG_CPUICM_DELAY_NUM_R {
         REG_CPUICM_DELAY_NUM_R::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn reg_soc_clk_div_update(&self) -> REG_SOC_CLK_DIV_UPDATE_R {
+        REG_SOC_CLK_DIV_UPDATE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:12 - Reserved"]
     #[inline(always)]
@@ -49,6 +56,10 @@ impl core::fmt::Debug for R {
             .field(
                 "reg_cpuicm_delay_num",
                 &format_args!("{}", self.reg_cpuicm_delay_num().bits()),
+            )
+            .field(
+                "reg_soc_clk_div_update",
+                &format_args!("{}", self.reg_soc_clk_div_update().bit()),
             )
             .field(
                 "reg_cpu_clk_div_num",
