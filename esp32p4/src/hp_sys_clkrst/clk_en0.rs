@@ -2,22 +2,22 @@
 pub type R = crate::R<CLK_EN0_SPEC>;
 #[doc = "Register `CLK_EN0` writer"]
 pub type W = crate::W<CLK_EN0_SPEC>;
-#[doc = "Field `REG_CLK_EN` reader - Reserved"]
-pub type REG_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_CLK_EN` writer - Reserved"]
-pub type REG_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_EN` reader - Reserved"]
+pub type CLK_EN_R = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - Reserved"]
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn reg_clk_en(&self) -> REG_CLK_EN_R {
-        REG_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn clk_en(&self) -> CLK_EN_R {
+        CLK_EN_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_EN0")
-            .field("reg_clk_en", &format_args!("{}", self.reg_clk_en().bit()))
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_clk_en(&mut self) -> REG_CLK_EN_W<CLK_EN0_SPEC> {
-        REG_CLK_EN_W::new(self, 0)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CLK_EN0_SPEC> {
+        CLK_EN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -2,86 +2,86 @@
 pub type R = crate::R<ANA_PLL_CTRL0_SPEC>;
 #[doc = "Register `ANA_PLL_CTRL0` writer"]
 pub type W = crate::W<ANA_PLL_CTRL0_SPEC>;
-#[doc = "Field `REG_PLLA_CAL_END` reader - Reserved"]
-pub type REG_PLLA_CAL_END_R = crate::BitReader;
-#[doc = "Field `REG_PLLA_CAL_STOP` reader - Reserved"]
-pub type REG_PLLA_CAL_STOP_R = crate::BitReader;
-#[doc = "Field `REG_PLLA_CAL_STOP` writer - Reserved"]
-pub type REG_PLLA_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_CPU_PLL_CAL_END` reader - Reserved"]
-pub type REG_CPU_PLL_CAL_END_R = crate::BitReader;
-#[doc = "Field `REG_CPU_PLL_CAL_STOP` reader - Reserved"]
-pub type REG_CPU_PLL_CAL_STOP_R = crate::BitReader;
-#[doc = "Field `REG_CPU_PLL_CAL_STOP` writer - Reserved"]
-pub type REG_CPU_PLL_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SDIO_PLL_CAL_END` reader - Reserved"]
-pub type REG_SDIO_PLL_CAL_END_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_PLL_CAL_STOP` reader - Reserved"]
-pub type REG_SDIO_PLL_CAL_STOP_R = crate::BitReader;
-#[doc = "Field `REG_SDIO_PLL_CAL_STOP` writer - Reserved"]
-pub type REG_SDIO_PLL_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_SYS_PLL_CAL_END` reader - Reserved"]
-pub type REG_SYS_PLL_CAL_END_R = crate::BitReader;
-#[doc = "Field `REG_SYS_PLL_CAL_STOP` reader - Reserved"]
-pub type REG_SYS_PLL_CAL_STOP_R = crate::BitReader;
-#[doc = "Field `REG_SYS_PLL_CAL_STOP` writer - Reserved"]
-pub type REG_SYS_PLL_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_MSPI_CAL_END` reader - Reserved"]
-pub type REG_MSPI_CAL_END_R = crate::BitReader;
-#[doc = "Field `REG_MSPI_CAL_STOP` reader - Reserved"]
-pub type REG_MSPI_CAL_STOP_R = crate::BitReader;
-#[doc = "Field `REG_MSPI_CAL_STOP` writer - Reserved"]
-pub type REG_MSPI_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PLLA_CAL_END` reader - Reserved"]
+pub type PLLA_CAL_END_R = crate::BitReader;
+#[doc = "Field `PLLA_CAL_STOP` reader - Reserved"]
+pub type PLLA_CAL_STOP_R = crate::BitReader;
+#[doc = "Field `PLLA_CAL_STOP` writer - Reserved"]
+pub type PLLA_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CPU_PLL_CAL_END` reader - Reserved"]
+pub type CPU_PLL_CAL_END_R = crate::BitReader;
+#[doc = "Field `CPU_PLL_CAL_STOP` reader - Reserved"]
+pub type CPU_PLL_CAL_STOP_R = crate::BitReader;
+#[doc = "Field `CPU_PLL_CAL_STOP` writer - Reserved"]
+pub type CPU_PLL_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_PLL_CAL_END` reader - Reserved"]
+pub type SDIO_PLL_CAL_END_R = crate::BitReader;
+#[doc = "Field `SDIO_PLL_CAL_STOP` reader - Reserved"]
+pub type SDIO_PLL_CAL_STOP_R = crate::BitReader;
+#[doc = "Field `SDIO_PLL_CAL_STOP` writer - Reserved"]
+pub type SDIO_PLL_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYS_PLL_CAL_END` reader - Reserved"]
+pub type SYS_PLL_CAL_END_R = crate::BitReader;
+#[doc = "Field `SYS_PLL_CAL_STOP` reader - Reserved"]
+pub type SYS_PLL_CAL_STOP_R = crate::BitReader;
+#[doc = "Field `SYS_PLL_CAL_STOP` writer - Reserved"]
+pub type SYS_PLL_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MSPI_CAL_END` reader - Reserved"]
+pub type MSPI_CAL_END_R = crate::BitReader;
+#[doc = "Field `MSPI_CAL_STOP` reader - Reserved"]
+pub type MSPI_CAL_STOP_R = crate::BitReader;
+#[doc = "Field `MSPI_CAL_STOP` writer - Reserved"]
+pub type MSPI_CAL_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn reg_plla_cal_end(&self) -> REG_PLLA_CAL_END_R {
-        REG_PLLA_CAL_END_R::new((self.bits & 1) != 0)
+    pub fn plla_cal_end(&self) -> PLLA_CAL_END_R {
+        PLLA_CAL_END_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn reg_plla_cal_stop(&self) -> REG_PLLA_CAL_STOP_R {
-        REG_PLLA_CAL_STOP_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn plla_cal_stop(&self) -> PLLA_CAL_STOP_R {
+        PLLA_CAL_STOP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn reg_cpu_pll_cal_end(&self) -> REG_CPU_PLL_CAL_END_R {
-        REG_CPU_PLL_CAL_END_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cpu_pll_cal_end(&self) -> CPU_PLL_CAL_END_R {
+        CPU_PLL_CAL_END_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn reg_cpu_pll_cal_stop(&self) -> REG_CPU_PLL_CAL_STOP_R {
-        REG_CPU_PLL_CAL_STOP_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cpu_pll_cal_stop(&self) -> CPU_PLL_CAL_STOP_R {
+        CPU_PLL_CAL_STOP_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_pll_cal_end(&self) -> REG_SDIO_PLL_CAL_END_R {
-        REG_SDIO_PLL_CAL_END_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn sdio_pll_cal_end(&self) -> SDIO_PLL_CAL_END_R {
+        SDIO_PLL_CAL_END_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    pub fn reg_sdio_pll_cal_stop(&self) -> REG_SDIO_PLL_CAL_STOP_R {
-        REG_SDIO_PLL_CAL_STOP_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn sdio_pll_cal_stop(&self) -> SDIO_PLL_CAL_STOP_R {
+        SDIO_PLL_CAL_STOP_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    pub fn reg_sys_pll_cal_end(&self) -> REG_SYS_PLL_CAL_END_R {
-        REG_SYS_PLL_CAL_END_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn sys_pll_cal_end(&self) -> SYS_PLL_CAL_END_R {
+        SYS_PLL_CAL_END_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    pub fn reg_sys_pll_cal_stop(&self) -> REG_SYS_PLL_CAL_STOP_R {
-        REG_SYS_PLL_CAL_STOP_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn sys_pll_cal_stop(&self) -> SYS_PLL_CAL_STOP_R {
+        SYS_PLL_CAL_STOP_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn reg_mspi_cal_end(&self) -> REG_MSPI_CAL_END_R {
-        REG_MSPI_CAL_END_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn mspi_cal_end(&self) -> MSPI_CAL_END_R {
+        MSPI_CAL_END_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn reg_mspi_cal_stop(&self) -> REG_MSPI_CAL_STOP_R {
-        REG_MSPI_CAL_STOP_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn mspi_cal_stop(&self) -> MSPI_CAL_STOP_R {
+        MSPI_CAL_STOP_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -89,44 +89,44 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ANA_PLL_CTRL0")
             .field(
-                "reg_plla_cal_end",
-                &format_args!("{}", self.reg_plla_cal_end().bit()),
+                "plla_cal_end",
+                &format_args!("{}", self.plla_cal_end().bit()),
             )
             .field(
-                "reg_plla_cal_stop",
-                &format_args!("{}", self.reg_plla_cal_stop().bit()),
+                "plla_cal_stop",
+                &format_args!("{}", self.plla_cal_stop().bit()),
             )
             .field(
-                "reg_cpu_pll_cal_end",
-                &format_args!("{}", self.reg_cpu_pll_cal_end().bit()),
+                "cpu_pll_cal_end",
+                &format_args!("{}", self.cpu_pll_cal_end().bit()),
             )
             .field(
-                "reg_cpu_pll_cal_stop",
-                &format_args!("{}", self.reg_cpu_pll_cal_stop().bit()),
+                "cpu_pll_cal_stop",
+                &format_args!("{}", self.cpu_pll_cal_stop().bit()),
             )
             .field(
-                "reg_sdio_pll_cal_end",
-                &format_args!("{}", self.reg_sdio_pll_cal_end().bit()),
+                "sdio_pll_cal_end",
+                &format_args!("{}", self.sdio_pll_cal_end().bit()),
             )
             .field(
-                "reg_sdio_pll_cal_stop",
-                &format_args!("{}", self.reg_sdio_pll_cal_stop().bit()),
+                "sdio_pll_cal_stop",
+                &format_args!("{}", self.sdio_pll_cal_stop().bit()),
             )
             .field(
-                "reg_sys_pll_cal_end",
-                &format_args!("{}", self.reg_sys_pll_cal_end().bit()),
+                "sys_pll_cal_end",
+                &format_args!("{}", self.sys_pll_cal_end().bit()),
             )
             .field(
-                "reg_sys_pll_cal_stop",
-                &format_args!("{}", self.reg_sys_pll_cal_stop().bit()),
+                "sys_pll_cal_stop",
+                &format_args!("{}", self.sys_pll_cal_stop().bit()),
             )
             .field(
-                "reg_mspi_cal_end",
-                &format_args!("{}", self.reg_mspi_cal_end().bit()),
+                "mspi_cal_end",
+                &format_args!("{}", self.mspi_cal_end().bit()),
             )
             .field(
-                "reg_mspi_cal_stop",
-                &format_args!("{}", self.reg_mspi_cal_stop().bit()),
+                "mspi_cal_stop",
+                &format_args!("{}", self.mspi_cal_stop().bit()),
             )
             .finish()
     }
@@ -141,32 +141,32 @@ impl W {
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_plla_cal_stop(&mut self) -> REG_PLLA_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
-        REG_PLLA_CAL_STOP_W::new(self, 1)
+    pub fn plla_cal_stop(&mut self) -> PLLA_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+        PLLA_CAL_STOP_W::new(self, 1)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_cpu_pll_cal_stop(&mut self) -> REG_CPU_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
-        REG_CPU_PLL_CAL_STOP_W::new(self, 3)
+    pub fn cpu_pll_cal_stop(&mut self) -> CPU_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+        CPU_PLL_CAL_STOP_W::new(self, 3)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sdio_pll_cal_stop(&mut self) -> REG_SDIO_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
-        REG_SDIO_PLL_CAL_STOP_W::new(self, 5)
+    pub fn sdio_pll_cal_stop(&mut self) -> SDIO_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+        SDIO_PLL_CAL_STOP_W::new(self, 5)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sys_pll_cal_stop(&mut self) -> REG_SYS_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
-        REG_SYS_PLL_CAL_STOP_W::new(self, 7)
+    pub fn sys_pll_cal_stop(&mut self) -> SYS_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+        SYS_PLL_CAL_STOP_W::new(self, 7)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_mspi_cal_stop(&mut self) -> REG_MSPI_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
-        REG_MSPI_CAL_STOP_W::new(self, 9)
+    pub fn mspi_cal_stop(&mut self) -> MSPI_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+        MSPI_CAL_STOP_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

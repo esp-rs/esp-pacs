@@ -2,69 +2,69 @@
 pub type R = crate::R<PERI_CLK_CTRL116_SPEC>;
 #[doc = "Register `PERI_CLK_CTRL116` writer"]
 pub type W = crate::W<PERI_CLK_CTRL116_SPEC>;
-#[doc = "Field `REG_GPSPI2_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_GPSPI2_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_GPSPI2_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_GPSPI2_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `REG_GPSPI2_HS_CLK_EN` reader - Reserved"]
-pub type REG_GPSPI2_HS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_GPSPI2_HS_CLK_EN` writer - Reserved"]
-pub type REG_GPSPI2_HS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_GPSPI2_HS_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_GPSPI2_HS_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_GPSPI2_HS_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_GPSPI2_HS_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_GPSPI2_MST_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_GPSPI2_MST_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_GPSPI2_MST_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_GPSPI2_MST_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_GPSPI2_MST_CLK_EN` reader - Reserved"]
-pub type REG_GPSPI2_MST_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_GPSPI2_MST_CLK_EN` writer - Reserved"]
-pub type REG_GPSPI2_MST_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_GPSPI3_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_GPSPI3_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_GPSPI3_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_GPSPI3_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `REG_GPSPI3_HS_CLK_EN` reader - Reserved"]
-pub type REG_GPSPI3_HS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_GPSPI3_HS_CLK_EN` writer - Reserved"]
-pub type REG_GPSPI3_HS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPSPI2_CLK_SRC_SEL` reader - Reserved"]
+pub type GPSPI2_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `GPSPI2_CLK_SRC_SEL` writer - Reserved"]
+pub type GPSPI2_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GPSPI2_HS_CLK_EN` reader - Reserved"]
+pub type GPSPI2_HS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `GPSPI2_HS_CLK_EN` writer - Reserved"]
+pub type GPSPI2_HS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPSPI2_HS_CLK_DIV_NUM` reader - Reserved"]
+pub type GPSPI2_HS_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `GPSPI2_HS_CLK_DIV_NUM` writer - Reserved"]
+pub type GPSPI2_HS_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GPSPI2_MST_CLK_DIV_NUM` reader - Reserved"]
+pub type GPSPI2_MST_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `GPSPI2_MST_CLK_DIV_NUM` writer - Reserved"]
+pub type GPSPI2_MST_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GPSPI2_MST_CLK_EN` reader - Reserved"]
+pub type GPSPI2_MST_CLK_EN_R = crate::BitReader;
+#[doc = "Field `GPSPI2_MST_CLK_EN` writer - Reserved"]
+pub type GPSPI2_MST_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPSPI3_CLK_SRC_SEL` reader - Reserved"]
+pub type GPSPI3_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `GPSPI3_CLK_SRC_SEL` writer - Reserved"]
+pub type GPSPI3_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GPSPI3_HS_CLK_EN` reader - Reserved"]
+pub type GPSPI3_HS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `GPSPI3_HS_CLK_EN` writer - Reserved"]
+pub type GPSPI3_HS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpspi2_clk_src_sel(&self) -> REG_GPSPI2_CLK_SRC_SEL_R {
-        REG_GPSPI2_CLK_SRC_SEL_R::new((self.bits & 7) as u8)
+    pub fn gpspi2_clk_src_sel(&self) -> GPSPI2_CLK_SRC_SEL_R {
+        GPSPI2_CLK_SRC_SEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpspi2_hs_clk_en(&self) -> REG_GPSPI2_HS_CLK_EN_R {
-        REG_GPSPI2_HS_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn gpspi2_hs_clk_en(&self) -> GPSPI2_HS_CLK_EN_R {
+        GPSPI2_HS_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:11 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpspi2_hs_clk_div_num(&self) -> REG_GPSPI2_HS_CLK_DIV_NUM_R {
-        REG_GPSPI2_HS_CLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
+    pub fn gpspi2_hs_clk_div_num(&self) -> GPSPI2_HS_CLK_DIV_NUM_R {
+        GPSPI2_HS_CLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
     }
     #[doc = "Bits 12:19 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpspi2_mst_clk_div_num(&self) -> REG_GPSPI2_MST_CLK_DIV_NUM_R {
-        REG_GPSPI2_MST_CLK_DIV_NUM_R::new(((self.bits >> 12) & 0xff) as u8)
+    pub fn gpspi2_mst_clk_div_num(&self) -> GPSPI2_MST_CLK_DIV_NUM_R {
+        GPSPI2_MST_CLK_DIV_NUM_R::new(((self.bits >> 12) & 0xff) as u8)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpspi2_mst_clk_en(&self) -> REG_GPSPI2_MST_CLK_EN_R {
-        REG_GPSPI2_MST_CLK_EN_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn gpspi2_mst_clk_en(&self) -> GPSPI2_MST_CLK_EN_R {
+        GPSPI2_MST_CLK_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:23 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpspi3_clk_src_sel(&self) -> REG_GPSPI3_CLK_SRC_SEL_R {
-        REG_GPSPI3_CLK_SRC_SEL_R::new(((self.bits >> 21) & 7) as u8)
+    pub fn gpspi3_clk_src_sel(&self) -> GPSPI3_CLK_SRC_SEL_R {
+        GPSPI3_CLK_SRC_SEL_R::new(((self.bits >> 21) & 7) as u8)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpspi3_hs_clk_en(&self) -> REG_GPSPI3_HS_CLK_EN_R {
-        REG_GPSPI3_HS_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn gpspi3_hs_clk_en(&self) -> GPSPI3_HS_CLK_EN_R {
+        GPSPI3_HS_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -72,32 +72,32 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL116")
             .field(
-                "reg_gpspi2_clk_src_sel",
-                &format_args!("{}", self.reg_gpspi2_clk_src_sel().bits()),
+                "gpspi2_clk_src_sel",
+                &format_args!("{}", self.gpspi2_clk_src_sel().bits()),
             )
             .field(
-                "reg_gpspi2_hs_clk_en",
-                &format_args!("{}", self.reg_gpspi2_hs_clk_en().bit()),
+                "gpspi2_hs_clk_en",
+                &format_args!("{}", self.gpspi2_hs_clk_en().bit()),
             )
             .field(
-                "reg_gpspi2_hs_clk_div_num",
-                &format_args!("{}", self.reg_gpspi2_hs_clk_div_num().bits()),
+                "gpspi2_hs_clk_div_num",
+                &format_args!("{}", self.gpspi2_hs_clk_div_num().bits()),
             )
             .field(
-                "reg_gpspi2_mst_clk_div_num",
-                &format_args!("{}", self.reg_gpspi2_mst_clk_div_num().bits()),
+                "gpspi2_mst_clk_div_num",
+                &format_args!("{}", self.gpspi2_mst_clk_div_num().bits()),
             )
             .field(
-                "reg_gpspi2_mst_clk_en",
-                &format_args!("{}", self.reg_gpspi2_mst_clk_en().bit()),
+                "gpspi2_mst_clk_en",
+                &format_args!("{}", self.gpspi2_mst_clk_en().bit()),
             )
             .field(
-                "reg_gpspi3_clk_src_sel",
-                &format_args!("{}", self.reg_gpspi3_clk_src_sel().bits()),
+                "gpspi3_clk_src_sel",
+                &format_args!("{}", self.gpspi3_clk_src_sel().bits()),
             )
             .field(
-                "reg_gpspi3_hs_clk_en",
-                &format_args!("{}", self.reg_gpspi3_hs_clk_en().bit()),
+                "gpspi3_hs_clk_en",
+                &format_args!("{}", self.gpspi3_hs_clk_en().bit()),
             )
             .finish()
     }
@@ -112,48 +112,44 @@ impl W {
     #[doc = "Bits 0:2 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_gpspi2_clk_src_sel(&mut self) -> REG_GPSPI2_CLK_SRC_SEL_W<PERI_CLK_CTRL116_SPEC> {
-        REG_GPSPI2_CLK_SRC_SEL_W::new(self, 0)
+    pub fn gpspi2_clk_src_sel(&mut self) -> GPSPI2_CLK_SRC_SEL_W<PERI_CLK_CTRL116_SPEC> {
+        GPSPI2_CLK_SRC_SEL_W::new(self, 0)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_gpspi2_hs_clk_en(&mut self) -> REG_GPSPI2_HS_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
-        REG_GPSPI2_HS_CLK_EN_W::new(self, 3)
+    pub fn gpspi2_hs_clk_en(&mut self) -> GPSPI2_HS_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
+        GPSPI2_HS_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_gpspi2_hs_clk_div_num(
-        &mut self,
-    ) -> REG_GPSPI2_HS_CLK_DIV_NUM_W<PERI_CLK_CTRL116_SPEC> {
-        REG_GPSPI2_HS_CLK_DIV_NUM_W::new(self, 4)
+    pub fn gpspi2_hs_clk_div_num(&mut self) -> GPSPI2_HS_CLK_DIV_NUM_W<PERI_CLK_CTRL116_SPEC> {
+        GPSPI2_HS_CLK_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bits 12:19 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_gpspi2_mst_clk_div_num(
-        &mut self,
-    ) -> REG_GPSPI2_MST_CLK_DIV_NUM_W<PERI_CLK_CTRL116_SPEC> {
-        REG_GPSPI2_MST_CLK_DIV_NUM_W::new(self, 12)
+    pub fn gpspi2_mst_clk_div_num(&mut self) -> GPSPI2_MST_CLK_DIV_NUM_W<PERI_CLK_CTRL116_SPEC> {
+        GPSPI2_MST_CLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_gpspi2_mst_clk_en(&mut self) -> REG_GPSPI2_MST_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
-        REG_GPSPI2_MST_CLK_EN_W::new(self, 20)
+    pub fn gpspi2_mst_clk_en(&mut self) -> GPSPI2_MST_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
+        GPSPI2_MST_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bits 21:23 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_gpspi3_clk_src_sel(&mut self) -> REG_GPSPI3_CLK_SRC_SEL_W<PERI_CLK_CTRL116_SPEC> {
-        REG_GPSPI3_CLK_SRC_SEL_W::new(self, 21)
+    pub fn gpspi3_clk_src_sel(&mut self) -> GPSPI3_CLK_SRC_SEL_W<PERI_CLK_CTRL116_SPEC> {
+        GPSPI3_CLK_SRC_SEL_W::new(self, 21)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_gpspi3_hs_clk_en(&mut self) -> REG_GPSPI3_HS_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
-        REG_GPSPI3_HS_CLK_EN_W::new(self, 24)
+    pub fn gpspi3_hs_clk_en(&mut self) -> GPSPI3_HS_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
+        GPSPI3_HS_CLK_EN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

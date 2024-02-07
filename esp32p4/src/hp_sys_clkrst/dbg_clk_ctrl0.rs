@@ -2,42 +2,42 @@
 pub type R = crate::R<DBG_CLK_CTRL0_SPEC>;
 #[doc = "Register `DBG_CLK_CTRL0` writer"]
 pub type W = crate::W<DBG_CLK_CTRL0_SPEC>;
-#[doc = "Field `REG_DBG_CH0_SEL` reader - Reserved"]
-pub type REG_DBG_CH0_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_DBG_CH0_SEL` writer - Reserved"]
-pub type REG_DBG_CH0_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_DBG_CH1_SEL` reader - Reserved"]
-pub type REG_DBG_CH1_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_DBG_CH1_SEL` writer - Reserved"]
-pub type REG_DBG_CH1_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_DBG_CH2_SEL` reader - Reserved"]
-pub type REG_DBG_CH2_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_DBG_CH2_SEL` writer - Reserved"]
-pub type REG_DBG_CH2_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_DBG_CH0_DIV_NUM` reader - Reserved"]
-pub type REG_DBG_CH0_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_DBG_CH0_DIV_NUM` writer - Reserved"]
-pub type REG_DBG_CH0_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `DBG_CH0_SEL` reader - Reserved"]
+pub type DBG_CH0_SEL_R = crate::FieldReader;
+#[doc = "Field `DBG_CH0_SEL` writer - Reserved"]
+pub type DBG_CH0_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `DBG_CH1_SEL` reader - Reserved"]
+pub type DBG_CH1_SEL_R = crate::FieldReader;
+#[doc = "Field `DBG_CH1_SEL` writer - Reserved"]
+pub type DBG_CH1_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `DBG_CH2_SEL` reader - Reserved"]
+pub type DBG_CH2_SEL_R = crate::FieldReader;
+#[doc = "Field `DBG_CH2_SEL` writer - Reserved"]
+pub type DBG_CH2_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `DBG_CH0_DIV_NUM` reader - Reserved"]
+pub type DBG_CH0_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `DBG_CH0_DIV_NUM` writer - Reserved"]
+pub type DBG_CH0_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_dbg_ch0_sel(&self) -> REG_DBG_CH0_SEL_R {
-        REG_DBG_CH0_SEL_R::new((self.bits & 0xff) as u8)
+    pub fn dbg_ch0_sel(&self) -> DBG_CH0_SEL_R {
+        DBG_CH0_SEL_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn reg_dbg_ch1_sel(&self) -> REG_DBG_CH1_SEL_R {
-        REG_DBG_CH1_SEL_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn dbg_ch1_sel(&self) -> DBG_CH1_SEL_R {
+        DBG_CH1_SEL_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn reg_dbg_ch2_sel(&self) -> REG_DBG_CH2_SEL_R {
-        REG_DBG_CH2_SEL_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn dbg_ch2_sel(&self) -> DBG_CH2_SEL_R {
+        DBG_CH2_SEL_R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bits 24:31 - Reserved"]
     #[inline(always)]
-    pub fn reg_dbg_ch0_div_num(&self) -> REG_DBG_CH0_DIV_NUM_R {
-        REG_DBG_CH0_DIV_NUM_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn dbg_ch0_div_num(&self) -> DBG_CH0_DIV_NUM_R {
+        DBG_CH0_DIV_NUM_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -45,20 +45,20 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBG_CLK_CTRL0")
             .field(
-                "reg_dbg_ch0_sel",
-                &format_args!("{}", self.reg_dbg_ch0_sel().bits()),
+                "dbg_ch0_sel",
+                &format_args!("{}", self.dbg_ch0_sel().bits()),
             )
             .field(
-                "reg_dbg_ch1_sel",
-                &format_args!("{}", self.reg_dbg_ch1_sel().bits()),
+                "dbg_ch1_sel",
+                &format_args!("{}", self.dbg_ch1_sel().bits()),
             )
             .field(
-                "reg_dbg_ch2_sel",
-                &format_args!("{}", self.reg_dbg_ch2_sel().bits()),
+                "dbg_ch2_sel",
+                &format_args!("{}", self.dbg_ch2_sel().bits()),
             )
             .field(
-                "reg_dbg_ch0_div_num",
-                &format_args!("{}", self.reg_dbg_ch0_div_num().bits()),
+                "dbg_ch0_div_num",
+                &format_args!("{}", self.dbg_ch0_div_num().bits()),
             )
             .finish()
     }
@@ -73,26 +73,26 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_dbg_ch0_sel(&mut self) -> REG_DBG_CH0_SEL_W<DBG_CLK_CTRL0_SPEC> {
-        REG_DBG_CH0_SEL_W::new(self, 0)
+    pub fn dbg_ch0_sel(&mut self) -> DBG_CH0_SEL_W<DBG_CLK_CTRL0_SPEC> {
+        DBG_CH0_SEL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_dbg_ch1_sel(&mut self) -> REG_DBG_CH1_SEL_W<DBG_CLK_CTRL0_SPEC> {
-        REG_DBG_CH1_SEL_W::new(self, 8)
+    pub fn dbg_ch1_sel(&mut self) -> DBG_CH1_SEL_W<DBG_CLK_CTRL0_SPEC> {
+        DBG_CH1_SEL_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_dbg_ch2_sel(&mut self) -> REG_DBG_CH2_SEL_W<DBG_CLK_CTRL0_SPEC> {
-        REG_DBG_CH2_SEL_W::new(self, 16)
+    pub fn dbg_ch2_sel(&mut self) -> DBG_CH2_SEL_W<DBG_CLK_CTRL0_SPEC> {
+        DBG_CH2_SEL_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_dbg_ch0_div_num(&mut self) -> REG_DBG_CH0_DIV_NUM_W<DBG_CLK_CTRL0_SPEC> {
-        REG_DBG_CH0_DIV_NUM_W::new(self, 24)
+    pub fn dbg_ch0_div_num(&mut self) -> DBG_CH0_DIV_NUM_W<DBG_CLK_CTRL0_SPEC> {
+        DBG_CH0_DIV_NUM_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

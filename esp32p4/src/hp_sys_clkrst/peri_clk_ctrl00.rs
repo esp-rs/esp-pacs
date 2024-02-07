@@ -2,123 +2,123 @@
 pub type R = crate::R<PERI_CLK_CTRL00_SPEC>;
 #[doc = "Register `PERI_CLK_CTRL00` writer"]
 pub type W = crate::W<PERI_CLK_CTRL00_SPEC>;
-#[doc = "Field `REG_FLASH_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_FLASH_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_FLASH_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_FLASH_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_FLASH_PLL_CLK_EN` reader - Reserved"]
-pub type REG_FLASH_PLL_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_FLASH_PLL_CLK_EN` writer - Reserved"]
-pub type REG_FLASH_PLL_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_FLASH_CORE_CLK_EN` reader - Reserved"]
-pub type REG_FLASH_CORE_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_FLASH_CORE_CLK_EN` writer - Reserved"]
-pub type REG_FLASH_CORE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_FLASH_CORE_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_FLASH_CORE_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_FLASH_CORE_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_FLASH_CORE_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_PSRAM_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_PSRAM_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_PSRAM_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_PSRAM_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_PSRAM_PLL_CLK_EN` reader - Reserved"]
-pub type REG_PSRAM_PLL_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_PSRAM_PLL_CLK_EN` writer - Reserved"]
-pub type REG_PSRAM_PLL_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_PSRAM_CORE_CLK_EN` reader - Reserved"]
-pub type REG_PSRAM_CORE_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_PSRAM_CORE_CLK_EN` writer - Reserved"]
-pub type REG_PSRAM_CORE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_PSRAM_CORE_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_PSRAM_CORE_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_PSRAM_CORE_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_PSRAM_CORE_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_PAD_EMAC_REF_CLK_EN` reader - Reserved"]
-pub type REG_PAD_EMAC_REF_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_PAD_EMAC_REF_CLK_EN` writer - Reserved"]
-pub type REG_PAD_EMAC_REF_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_RMII_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_EMAC_RMII_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_EMAC_RMII_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_EMAC_RMII_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_EMAC_RMII_CLK_EN` reader - Reserved"]
-pub type REG_EMAC_RMII_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_RMII_CLK_EN` writer - Reserved"]
-pub type REG_EMAC_RMII_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_RX_CLK_SRC_SEL` reader - Reserved"]
-pub type REG_EMAC_RX_CLK_SRC_SEL_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_RX_CLK_SRC_SEL` writer - Reserved"]
-pub type REG_EMAC_RX_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_EMAC_RX_CLK_EN` reader - Reserved"]
-pub type REG_EMAC_RX_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_EMAC_RX_CLK_EN` writer - Reserved"]
-pub type REG_EMAC_RX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FLASH_CLK_SRC_SEL` reader - Reserved"]
+pub type FLASH_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `FLASH_CLK_SRC_SEL` writer - Reserved"]
+pub type FLASH_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `FLASH_PLL_CLK_EN` reader - Reserved"]
+pub type FLASH_PLL_CLK_EN_R = crate::BitReader;
+#[doc = "Field `FLASH_PLL_CLK_EN` writer - Reserved"]
+pub type FLASH_PLL_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FLASH_CORE_CLK_EN` reader - Reserved"]
+pub type FLASH_CORE_CLK_EN_R = crate::BitReader;
+#[doc = "Field `FLASH_CORE_CLK_EN` writer - Reserved"]
+pub type FLASH_CORE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FLASH_CORE_CLK_DIV_NUM` reader - Reserved"]
+pub type FLASH_CORE_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `FLASH_CORE_CLK_DIV_NUM` writer - Reserved"]
+pub type FLASH_CORE_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PSRAM_CLK_SRC_SEL` reader - Reserved"]
+pub type PSRAM_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `PSRAM_CLK_SRC_SEL` writer - Reserved"]
+pub type PSRAM_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `PSRAM_PLL_CLK_EN` reader - Reserved"]
+pub type PSRAM_PLL_CLK_EN_R = crate::BitReader;
+#[doc = "Field `PSRAM_PLL_CLK_EN` writer - Reserved"]
+pub type PSRAM_PLL_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PSRAM_CORE_CLK_EN` reader - Reserved"]
+pub type PSRAM_CORE_CLK_EN_R = crate::BitReader;
+#[doc = "Field `PSRAM_CORE_CLK_EN` writer - Reserved"]
+pub type PSRAM_CORE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PSRAM_CORE_CLK_DIV_NUM` reader - Reserved"]
+pub type PSRAM_CORE_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `PSRAM_CORE_CLK_DIV_NUM` writer - Reserved"]
+pub type PSRAM_CORE_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PAD_EMAC_REF_CLK_EN` reader - Reserved"]
+pub type PAD_EMAC_REF_CLK_EN_R = crate::BitReader;
+#[doc = "Field `PAD_EMAC_REF_CLK_EN` writer - Reserved"]
+pub type PAD_EMAC_REF_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_RMII_CLK_SRC_SEL` reader - Reserved"]
+pub type EMAC_RMII_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `EMAC_RMII_CLK_SRC_SEL` writer - Reserved"]
+pub type EMAC_RMII_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `EMAC_RMII_CLK_EN` reader - Reserved"]
+pub type EMAC_RMII_CLK_EN_R = crate::BitReader;
+#[doc = "Field `EMAC_RMII_CLK_EN` writer - Reserved"]
+pub type EMAC_RMII_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_RX_CLK_SRC_SEL` reader - Reserved"]
+pub type EMAC_RX_CLK_SRC_SEL_R = crate::BitReader;
+#[doc = "Field `EMAC_RX_CLK_SRC_SEL` writer - Reserved"]
+pub type EMAC_RX_CLK_SRC_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC_RX_CLK_EN` reader - Reserved"]
+pub type EMAC_RX_CLK_EN_R = crate::BitReader;
+#[doc = "Field `EMAC_RX_CLK_EN` writer - Reserved"]
+pub type EMAC_RX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
-    pub fn reg_flash_clk_src_sel(&self) -> REG_FLASH_CLK_SRC_SEL_R {
-        REG_FLASH_CLK_SRC_SEL_R::new((self.bits & 3) as u8)
+    pub fn flash_clk_src_sel(&self) -> FLASH_CLK_SRC_SEL_R {
+        FLASH_CLK_SRC_SEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn reg_flash_pll_clk_en(&self) -> REG_FLASH_PLL_CLK_EN_R {
-        REG_FLASH_PLL_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn flash_pll_clk_en(&self) -> FLASH_PLL_CLK_EN_R {
+        FLASH_PLL_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn reg_flash_core_clk_en(&self) -> REG_FLASH_CORE_CLK_EN_R {
-        REG_FLASH_CORE_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn flash_core_clk_en(&self) -> FLASH_CORE_CLK_EN_R {
+        FLASH_CORE_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:11 - Reserved"]
     #[inline(always)]
-    pub fn reg_flash_core_clk_div_num(&self) -> REG_FLASH_CORE_CLK_DIV_NUM_R {
-        REG_FLASH_CORE_CLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
+    pub fn flash_core_clk_div_num(&self) -> FLASH_CORE_CLK_DIV_NUM_R {
+        FLASH_CORE_CLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
     }
     #[doc = "Bits 12:13 - Reserved"]
     #[inline(always)]
-    pub fn reg_psram_clk_src_sel(&self) -> REG_PSRAM_CLK_SRC_SEL_R {
-        REG_PSRAM_CLK_SRC_SEL_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn psram_clk_src_sel(&self) -> PSRAM_CLK_SRC_SEL_R {
+        PSRAM_CLK_SRC_SEL_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    pub fn reg_psram_pll_clk_en(&self) -> REG_PSRAM_PLL_CLK_EN_R {
-        REG_PSRAM_PLL_CLK_EN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn psram_pll_clk_en(&self) -> PSRAM_PLL_CLK_EN_R {
+        PSRAM_PLL_CLK_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    pub fn reg_psram_core_clk_en(&self) -> REG_PSRAM_CORE_CLK_EN_R {
-        REG_PSRAM_CORE_CLK_EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn psram_core_clk_en(&self) -> PSRAM_CORE_CLK_EN_R {
+        PSRAM_CORE_CLK_EN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn reg_psram_core_clk_div_num(&self) -> REG_PSRAM_CORE_CLK_DIV_NUM_R {
-        REG_PSRAM_CORE_CLK_DIV_NUM_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn psram_core_clk_div_num(&self) -> PSRAM_CORE_CLK_DIV_NUM_R {
+        PSRAM_CORE_CLK_DIV_NUM_R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn reg_pad_emac_ref_clk_en(&self) -> REG_PAD_EMAC_REF_CLK_EN_R {
-        REG_PAD_EMAC_REF_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn pad_emac_ref_clk_en(&self) -> PAD_EMAC_REF_CLK_EN_R {
+        PAD_EMAC_REF_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:26 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_rmii_clk_src_sel(&self) -> REG_EMAC_RMII_CLK_SRC_SEL_R {
-        REG_EMAC_RMII_CLK_SRC_SEL_R::new(((self.bits >> 25) & 3) as u8)
+    pub fn emac_rmii_clk_src_sel(&self) -> EMAC_RMII_CLK_SRC_SEL_R {
+        EMAC_RMII_CLK_SRC_SEL_R::new(((self.bits >> 25) & 3) as u8)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_rmii_clk_en(&self) -> REG_EMAC_RMII_CLK_EN_R {
-        REG_EMAC_RMII_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn emac_rmii_clk_en(&self) -> EMAC_RMII_CLK_EN_R {
+        EMAC_RMII_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_rx_clk_src_sel(&self) -> REG_EMAC_RX_CLK_SRC_SEL_R {
-        REG_EMAC_RX_CLK_SRC_SEL_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn emac_rx_clk_src_sel(&self) -> EMAC_RX_CLK_SRC_SEL_R {
+        EMAC_RX_CLK_SRC_SEL_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn reg_emac_rx_clk_en(&self) -> REG_EMAC_RX_CLK_EN_R {
-        REG_EMAC_RX_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn emac_rx_clk_en(&self) -> EMAC_RX_CLK_EN_R {
+        EMAC_RX_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -126,56 +126,56 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL00")
             .field(
-                "reg_flash_clk_src_sel",
-                &format_args!("{}", self.reg_flash_clk_src_sel().bits()),
+                "flash_clk_src_sel",
+                &format_args!("{}", self.flash_clk_src_sel().bits()),
             )
             .field(
-                "reg_flash_pll_clk_en",
-                &format_args!("{}", self.reg_flash_pll_clk_en().bit()),
+                "flash_pll_clk_en",
+                &format_args!("{}", self.flash_pll_clk_en().bit()),
             )
             .field(
-                "reg_flash_core_clk_en",
-                &format_args!("{}", self.reg_flash_core_clk_en().bit()),
+                "flash_core_clk_en",
+                &format_args!("{}", self.flash_core_clk_en().bit()),
             )
             .field(
-                "reg_flash_core_clk_div_num",
-                &format_args!("{}", self.reg_flash_core_clk_div_num().bits()),
+                "flash_core_clk_div_num",
+                &format_args!("{}", self.flash_core_clk_div_num().bits()),
             )
             .field(
-                "reg_psram_clk_src_sel",
-                &format_args!("{}", self.reg_psram_clk_src_sel().bits()),
+                "psram_clk_src_sel",
+                &format_args!("{}", self.psram_clk_src_sel().bits()),
             )
             .field(
-                "reg_psram_pll_clk_en",
-                &format_args!("{}", self.reg_psram_pll_clk_en().bit()),
+                "psram_pll_clk_en",
+                &format_args!("{}", self.psram_pll_clk_en().bit()),
             )
             .field(
-                "reg_psram_core_clk_en",
-                &format_args!("{}", self.reg_psram_core_clk_en().bit()),
+                "psram_core_clk_en",
+                &format_args!("{}", self.psram_core_clk_en().bit()),
             )
             .field(
-                "reg_psram_core_clk_div_num",
-                &format_args!("{}", self.reg_psram_core_clk_div_num().bits()),
+                "psram_core_clk_div_num",
+                &format_args!("{}", self.psram_core_clk_div_num().bits()),
             )
             .field(
-                "reg_pad_emac_ref_clk_en",
-                &format_args!("{}", self.reg_pad_emac_ref_clk_en().bit()),
+                "pad_emac_ref_clk_en",
+                &format_args!("{}", self.pad_emac_ref_clk_en().bit()),
             )
             .field(
-                "reg_emac_rmii_clk_src_sel",
-                &format_args!("{}", self.reg_emac_rmii_clk_src_sel().bits()),
+                "emac_rmii_clk_src_sel",
+                &format_args!("{}", self.emac_rmii_clk_src_sel().bits()),
             )
             .field(
-                "reg_emac_rmii_clk_en",
-                &format_args!("{}", self.reg_emac_rmii_clk_en().bit()),
+                "emac_rmii_clk_en",
+                &format_args!("{}", self.emac_rmii_clk_en().bit()),
             )
             .field(
-                "reg_emac_rx_clk_src_sel",
-                &format_args!("{}", self.reg_emac_rx_clk_src_sel().bit()),
+                "emac_rx_clk_src_sel",
+                &format_args!("{}", self.emac_rx_clk_src_sel().bit()),
             )
             .field(
-                "reg_emac_rx_clk_en",
-                &format_args!("{}", self.reg_emac_rx_clk_en().bit()),
+                "emac_rx_clk_en",
+                &format_args!("{}", self.emac_rx_clk_en().bit()),
             )
             .finish()
     }
@@ -190,86 +190,80 @@ impl W {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_flash_clk_src_sel(&mut self) -> REG_FLASH_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
-        REG_FLASH_CLK_SRC_SEL_W::new(self, 0)
+    pub fn flash_clk_src_sel(&mut self) -> FLASH_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
+        FLASH_CLK_SRC_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_flash_pll_clk_en(&mut self) -> REG_FLASH_PLL_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
-        REG_FLASH_PLL_CLK_EN_W::new(self, 2)
+    pub fn flash_pll_clk_en(&mut self) -> FLASH_PLL_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
+        FLASH_PLL_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_flash_core_clk_en(&mut self) -> REG_FLASH_CORE_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
-        REG_FLASH_CORE_CLK_EN_W::new(self, 3)
+    pub fn flash_core_clk_en(&mut self) -> FLASH_CORE_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
+        FLASH_CORE_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_flash_core_clk_div_num(
-        &mut self,
-    ) -> REG_FLASH_CORE_CLK_DIV_NUM_W<PERI_CLK_CTRL00_SPEC> {
-        REG_FLASH_CORE_CLK_DIV_NUM_W::new(self, 4)
+    pub fn flash_core_clk_div_num(&mut self) -> FLASH_CORE_CLK_DIV_NUM_W<PERI_CLK_CTRL00_SPEC> {
+        FLASH_CORE_CLK_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bits 12:13 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_psram_clk_src_sel(&mut self) -> REG_PSRAM_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
-        REG_PSRAM_CLK_SRC_SEL_W::new(self, 12)
+    pub fn psram_clk_src_sel(&mut self) -> PSRAM_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
+        PSRAM_CLK_SRC_SEL_W::new(self, 12)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_psram_pll_clk_en(&mut self) -> REG_PSRAM_PLL_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
-        REG_PSRAM_PLL_CLK_EN_W::new(self, 14)
+    pub fn psram_pll_clk_en(&mut self) -> PSRAM_PLL_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
+        PSRAM_PLL_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_psram_core_clk_en(&mut self) -> REG_PSRAM_CORE_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
-        REG_PSRAM_CORE_CLK_EN_W::new(self, 15)
+    pub fn psram_core_clk_en(&mut self) -> PSRAM_CORE_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
+        PSRAM_CORE_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_psram_core_clk_div_num(
-        &mut self,
-    ) -> REG_PSRAM_CORE_CLK_DIV_NUM_W<PERI_CLK_CTRL00_SPEC> {
-        REG_PSRAM_CORE_CLK_DIV_NUM_W::new(self, 16)
+    pub fn psram_core_clk_div_num(&mut self) -> PSRAM_CORE_CLK_DIV_NUM_W<PERI_CLK_CTRL00_SPEC> {
+        PSRAM_CORE_CLK_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_pad_emac_ref_clk_en(&mut self) -> REG_PAD_EMAC_REF_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
-        REG_PAD_EMAC_REF_CLK_EN_W::new(self, 24)
+    pub fn pad_emac_ref_clk_en(&mut self) -> PAD_EMAC_REF_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
+        PAD_EMAC_REF_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bits 25:26 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_rmii_clk_src_sel(
-        &mut self,
-    ) -> REG_EMAC_RMII_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
-        REG_EMAC_RMII_CLK_SRC_SEL_W::new(self, 25)
+    pub fn emac_rmii_clk_src_sel(&mut self) -> EMAC_RMII_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
+        EMAC_RMII_CLK_SRC_SEL_W::new(self, 25)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_rmii_clk_en(&mut self) -> REG_EMAC_RMII_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
-        REG_EMAC_RMII_CLK_EN_W::new(self, 27)
+    pub fn emac_rmii_clk_en(&mut self) -> EMAC_RMII_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
+        EMAC_RMII_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_rx_clk_src_sel(&mut self) -> REG_EMAC_RX_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
-        REG_EMAC_RX_CLK_SRC_SEL_W::new(self, 28)
+    pub fn emac_rx_clk_src_sel(&mut self) -> EMAC_RX_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
+        EMAC_RX_CLK_SRC_SEL_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_emac_rx_clk_en(&mut self) -> REG_EMAC_RX_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
-        REG_EMAC_RX_CLK_EN_W::new(self, 29)
+    pub fn emac_rx_clk_en(&mut self) -> EMAC_RX_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
+        EMAC_RX_CLK_EN_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -2,15 +2,15 @@
 pub type R = crate::R<ROOT_CLK_CTRL3_SPEC>;
 #[doc = "Register `ROOT_CLK_CTRL3` writer"]
 pub type W = crate::W<ROOT_CLK_CTRL3_SPEC>;
-#[doc = "Field `REG_APB_CLK_DIV_DENOMINATOR` reader - Reserved"]
-pub type REG_APB_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
-#[doc = "Field `REG_APB_CLK_DIV_DENOMINATOR` writer - Reserved"]
-pub type REG_APB_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `APB_CLK_DIV_DENOMINATOR` reader - Reserved"]
+pub type APB_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
+#[doc = "Field `APB_CLK_DIV_DENOMINATOR` writer - Reserved"]
+pub type APB_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_apb_clk_div_denominator(&self) -> REG_APB_CLK_DIV_DENOMINATOR_R {
-        REG_APB_CLK_DIV_DENOMINATOR_R::new((self.bits & 0xff) as u8)
+    pub fn apb_clk_div_denominator(&self) -> APB_CLK_DIV_DENOMINATOR_R {
+        APB_CLK_DIV_DENOMINATOR_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROOT_CLK_CTRL3")
             .field(
-                "reg_apb_clk_div_denominator",
-                &format_args!("{}", self.reg_apb_clk_div_denominator().bits()),
+                "apb_clk_div_denominator",
+                &format_args!("{}", self.apb_clk_div_denominator().bits()),
             )
             .finish()
     }
@@ -34,10 +34,8 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_apb_clk_div_denominator(
-        &mut self,
-    ) -> REG_APB_CLK_DIV_DENOMINATOR_W<ROOT_CLK_CTRL3_SPEC> {
-        REG_APB_CLK_DIV_DENOMINATOR_W::new(self, 0)
+    pub fn apb_clk_div_denominator(&mut self) -> APB_CLK_DIV_DENOMINATOR_W<ROOT_CLK_CTRL3_SPEC> {
+        APB_CLK_DIV_DENOMINATOR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

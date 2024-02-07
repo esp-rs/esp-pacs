@@ -2,42 +2,42 @@
 pub type R = crate::R<SOC_CLK_CTRL3_SPEC>;
 #[doc = "Register `SOC_CLK_CTRL3` writer"]
 pub type W = crate::W<SOC_CLK_CTRL3_SPEC>;
-#[doc = "Field `REG_LEDC_APB_CLK_EN` reader - Reserved"]
-pub type REG_LEDC_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_LEDC_APB_CLK_EN` writer - Reserved"]
-pub type REG_LEDC_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_LCDCAM_APB_CLK_EN` reader - Reserved"]
-pub type REG_LCDCAM_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_LCDCAM_APB_CLK_EN` writer - Reserved"]
-pub type REG_LCDCAM_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_ETM_APB_CLK_EN` reader - Reserved"]
-pub type REG_ETM_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_ETM_APB_CLK_EN` writer - Reserved"]
-pub type REG_ETM_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_IOMUX_APB_CLK_EN` reader - Reserved"]
-pub type REG_IOMUX_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_IOMUX_APB_CLK_EN` writer - Reserved"]
-pub type REG_IOMUX_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_APB_CLK_EN` reader - Reserved"]
+pub type LEDC_APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `LEDC_APB_CLK_EN` writer - Reserved"]
+pub type LEDC_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LCDCAM_APB_CLK_EN` reader - Reserved"]
+pub type LCDCAM_APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `LCDCAM_APB_CLK_EN` writer - Reserved"]
+pub type LCDCAM_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ETM_APB_CLK_EN` reader - Reserved"]
+pub type ETM_APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `ETM_APB_CLK_EN` writer - Reserved"]
+pub type ETM_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `IOMUX_APB_CLK_EN` reader - Reserved"]
+pub type IOMUX_APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `IOMUX_APB_CLK_EN` writer - Reserved"]
+pub type IOMUX_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn reg_ledc_apb_clk_en(&self) -> REG_LEDC_APB_CLK_EN_R {
-        REG_LEDC_APB_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn ledc_apb_clk_en(&self) -> LEDC_APB_CLK_EN_R {
+        LEDC_APB_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn reg_lcdcam_apb_clk_en(&self) -> REG_LCDCAM_APB_CLK_EN_R {
-        REG_LCDCAM_APB_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn lcdcam_apb_clk_en(&self) -> LCDCAM_APB_CLK_EN_R {
+        LCDCAM_APB_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn reg_etm_apb_clk_en(&self) -> REG_ETM_APB_CLK_EN_R {
-        REG_ETM_APB_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn etm_apb_clk_en(&self) -> ETM_APB_CLK_EN_R {
+        ETM_APB_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn reg_iomux_apb_clk_en(&self) -> REG_IOMUX_APB_CLK_EN_R {
-        REG_IOMUX_APB_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn iomux_apb_clk_en(&self) -> IOMUX_APB_CLK_EN_R {
+        IOMUX_APB_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -45,20 +45,20 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SOC_CLK_CTRL3")
             .field(
-                "reg_ledc_apb_clk_en",
-                &format_args!("{}", self.reg_ledc_apb_clk_en().bit()),
+                "ledc_apb_clk_en",
+                &format_args!("{}", self.ledc_apb_clk_en().bit()),
             )
             .field(
-                "reg_lcdcam_apb_clk_en",
-                &format_args!("{}", self.reg_lcdcam_apb_clk_en().bit()),
+                "lcdcam_apb_clk_en",
+                &format_args!("{}", self.lcdcam_apb_clk_en().bit()),
             )
             .field(
-                "reg_etm_apb_clk_en",
-                &format_args!("{}", self.reg_etm_apb_clk_en().bit()),
+                "etm_apb_clk_en",
+                &format_args!("{}", self.etm_apb_clk_en().bit()),
             )
             .field(
-                "reg_iomux_apb_clk_en",
-                &format_args!("{}", self.reg_iomux_apb_clk_en().bit()),
+                "iomux_apb_clk_en",
+                &format_args!("{}", self.iomux_apb_clk_en().bit()),
             )
             .finish()
     }
@@ -73,26 +73,26 @@ impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_ledc_apb_clk_en(&mut self) -> REG_LEDC_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
-        REG_LEDC_APB_CLK_EN_W::new(self, 0)
+    pub fn ledc_apb_clk_en(&mut self) -> LEDC_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+        LEDC_APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_lcdcam_apb_clk_en(&mut self) -> REG_LCDCAM_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
-        REG_LCDCAM_APB_CLK_EN_W::new(self, 1)
+    pub fn lcdcam_apb_clk_en(&mut self) -> LCDCAM_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+        LCDCAM_APB_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_etm_apb_clk_en(&mut self) -> REG_ETM_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
-        REG_ETM_APB_CLK_EN_W::new(self, 2)
+    pub fn etm_apb_clk_en(&mut self) -> ETM_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+        ETM_APB_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_iomux_apb_clk_en(&mut self) -> REG_IOMUX_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
-        REG_IOMUX_APB_CLK_EN_W::new(self, 3)
+    pub fn iomux_apb_clk_en(&mut self) -> IOMUX_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+        IOMUX_APB_CLK_EN_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -2,33 +2,33 @@
 pub type R = crate::R<PERI_CLK_CTRL12_SPEC>;
 #[doc = "Register `PERI_CLK_CTRL12` writer"]
 pub type W = crate::W<PERI_CLK_CTRL12_SPEC>;
-#[doc = "Field `REG_I2S0_RX_DIV_N` reader - Reserved"]
-pub type REG_I2S0_RX_DIV_N_R = crate::FieldReader;
-#[doc = "Field `REG_I2S0_RX_DIV_N` writer - Reserved"]
-pub type REG_I2S0_RX_DIV_N_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_I2S0_RX_DIV_X` reader - Reserved"]
-pub type REG_I2S0_RX_DIV_X_R = crate::FieldReader<u16>;
-#[doc = "Field `REG_I2S0_RX_DIV_X` writer - Reserved"]
-pub type REG_I2S0_RX_DIV_X_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
-#[doc = "Field `REG_I2S0_RX_DIV_Y` reader - Reserved"]
-pub type REG_I2S0_RX_DIV_Y_R = crate::FieldReader<u16>;
-#[doc = "Field `REG_I2S0_RX_DIV_Y` writer - Reserved"]
-pub type REG_I2S0_RX_DIV_Y_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `I2S0_RX_DIV_N` reader - Reserved"]
+pub type I2S0_RX_DIV_N_R = crate::FieldReader;
+#[doc = "Field `I2S0_RX_DIV_N` writer - Reserved"]
+pub type I2S0_RX_DIV_N_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `I2S0_RX_DIV_X` reader - Reserved"]
+pub type I2S0_RX_DIV_X_R = crate::FieldReader<u16>;
+#[doc = "Field `I2S0_RX_DIV_X` writer - Reserved"]
+pub type I2S0_RX_DIV_X_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `I2S0_RX_DIV_Y` reader - Reserved"]
+pub type I2S0_RX_DIV_Y_R = crate::FieldReader<u16>;
+#[doc = "Field `I2S0_RX_DIV_Y` writer - Reserved"]
+pub type I2S0_RX_DIV_Y_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_i2s0_rx_div_n(&self) -> REG_I2S0_RX_DIV_N_R {
-        REG_I2S0_RX_DIV_N_R::new((self.bits & 0xff) as u8)
+    pub fn i2s0_rx_div_n(&self) -> I2S0_RX_DIV_N_R {
+        I2S0_RX_DIV_N_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:16 - Reserved"]
     #[inline(always)]
-    pub fn reg_i2s0_rx_div_x(&self) -> REG_I2S0_RX_DIV_X_R {
-        REG_I2S0_RX_DIV_X_R::new(((self.bits >> 8) & 0x01ff) as u16)
+    pub fn i2s0_rx_div_x(&self) -> I2S0_RX_DIV_X_R {
+        I2S0_RX_DIV_X_R::new(((self.bits >> 8) & 0x01ff) as u16)
     }
     #[doc = "Bits 17:25 - Reserved"]
     #[inline(always)]
-    pub fn reg_i2s0_rx_div_y(&self) -> REG_I2S0_RX_DIV_Y_R {
-        REG_I2S0_RX_DIV_Y_R::new(((self.bits >> 17) & 0x01ff) as u16)
+    pub fn i2s0_rx_div_y(&self) -> I2S0_RX_DIV_Y_R {
+        I2S0_RX_DIV_Y_R::new(((self.bits >> 17) & 0x01ff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -36,16 +36,16 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL12")
             .field(
-                "reg_i2s0_rx_div_n",
-                &format_args!("{}", self.reg_i2s0_rx_div_n().bits()),
+                "i2s0_rx_div_n",
+                &format_args!("{}", self.i2s0_rx_div_n().bits()),
             )
             .field(
-                "reg_i2s0_rx_div_x",
-                &format_args!("{}", self.reg_i2s0_rx_div_x().bits()),
+                "i2s0_rx_div_x",
+                &format_args!("{}", self.i2s0_rx_div_x().bits()),
             )
             .field(
-                "reg_i2s0_rx_div_y",
-                &format_args!("{}", self.reg_i2s0_rx_div_y().bits()),
+                "i2s0_rx_div_y",
+                &format_args!("{}", self.i2s0_rx_div_y().bits()),
             )
             .finish()
     }
@@ -60,20 +60,20 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_i2s0_rx_div_n(&mut self) -> REG_I2S0_RX_DIV_N_W<PERI_CLK_CTRL12_SPEC> {
-        REG_I2S0_RX_DIV_N_W::new(self, 0)
+    pub fn i2s0_rx_div_n(&mut self) -> I2S0_RX_DIV_N_W<PERI_CLK_CTRL12_SPEC> {
+        I2S0_RX_DIV_N_W::new(self, 0)
     }
     #[doc = "Bits 8:16 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_i2s0_rx_div_x(&mut self) -> REG_I2S0_RX_DIV_X_W<PERI_CLK_CTRL12_SPEC> {
-        REG_I2S0_RX_DIV_X_W::new(self, 8)
+    pub fn i2s0_rx_div_x(&mut self) -> I2S0_RX_DIV_X_W<PERI_CLK_CTRL12_SPEC> {
+        I2S0_RX_DIV_X_W::new(self, 8)
     }
     #[doc = "Bits 17:25 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_i2s0_rx_div_y(&mut self) -> REG_I2S0_RX_DIV_Y_W<PERI_CLK_CTRL12_SPEC> {
-        REG_I2S0_RX_DIV_Y_W::new(self, 17)
+    pub fn i2s0_rx_div_y(&mut self) -> I2S0_RX_DIV_Y_W<PERI_CLK_CTRL12_SPEC> {
+        I2S0_RX_DIV_Y_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

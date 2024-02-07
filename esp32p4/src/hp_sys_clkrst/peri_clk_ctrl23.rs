@@ -2,63 +2,60 @@
 pub type R = crate::R<PERI_CLK_CTRL23_SPEC>;
 #[doc = "Register `PERI_CLK_CTRL23` writer"]
 pub type W = crate::W<PERI_CLK_CTRL23_SPEC>;
-#[doc = "Field `REG_ADC_CLK_EN` reader - Reserved"]
-pub type REG_ADC_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_ADC_CLK_EN` writer - Reserved"]
-pub type REG_ADC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_ADC_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_ADC_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_ADC_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_ADC_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_ADC_CLK_DIV_NUMERATOR` reader - Reserved"]
-pub type REG_ADC_CLK_DIV_NUMERATOR_R = crate::FieldReader;
-#[doc = "Field `REG_ADC_CLK_DIV_NUMERATOR` writer - Reserved"]
-pub type REG_ADC_CLK_DIV_NUMERATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_ADC_CLK_DIV_DENOMINATOR` reader - Reserved"]
-pub type REG_ADC_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
-#[doc = "Field `REG_ADC_CLK_DIV_DENOMINATOR` writer - Reserved"]
-pub type REG_ADC_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `ADC_CLK_EN` reader - Reserved"]
+pub type ADC_CLK_EN_R = crate::BitReader;
+#[doc = "Field `ADC_CLK_EN` writer - Reserved"]
+pub type ADC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_CLK_DIV_NUM` reader - Reserved"]
+pub type ADC_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `ADC_CLK_DIV_NUM` writer - Reserved"]
+pub type ADC_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `ADC_CLK_DIV_NUMERATOR` reader - Reserved"]
+pub type ADC_CLK_DIV_NUMERATOR_R = crate::FieldReader;
+#[doc = "Field `ADC_CLK_DIV_NUMERATOR` writer - Reserved"]
+pub type ADC_CLK_DIV_NUMERATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `ADC_CLK_DIV_DENOMINATOR` reader - Reserved"]
+pub type ADC_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
+#[doc = "Field `ADC_CLK_DIV_DENOMINATOR` writer - Reserved"]
+pub type ADC_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn reg_adc_clk_en(&self) -> REG_ADC_CLK_EN_R {
-        REG_ADC_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn adc_clk_en(&self) -> ADC_CLK_EN_R {
+        ADC_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:8 - Reserved"]
     #[inline(always)]
-    pub fn reg_adc_clk_div_num(&self) -> REG_ADC_CLK_DIV_NUM_R {
-        REG_ADC_CLK_DIV_NUM_R::new(((self.bits >> 1) & 0xff) as u8)
+    pub fn adc_clk_div_num(&self) -> ADC_CLK_DIV_NUM_R {
+        ADC_CLK_DIV_NUM_R::new(((self.bits >> 1) & 0xff) as u8)
     }
     #[doc = "Bits 9:16 - Reserved"]
     #[inline(always)]
-    pub fn reg_adc_clk_div_numerator(&self) -> REG_ADC_CLK_DIV_NUMERATOR_R {
-        REG_ADC_CLK_DIV_NUMERATOR_R::new(((self.bits >> 9) & 0xff) as u8)
+    pub fn adc_clk_div_numerator(&self) -> ADC_CLK_DIV_NUMERATOR_R {
+        ADC_CLK_DIV_NUMERATOR_R::new(((self.bits >> 9) & 0xff) as u8)
     }
     #[doc = "Bits 17:24 - Reserved"]
     #[inline(always)]
-    pub fn reg_adc_clk_div_denominator(&self) -> REG_ADC_CLK_DIV_DENOMINATOR_R {
-        REG_ADC_CLK_DIV_DENOMINATOR_R::new(((self.bits >> 17) & 0xff) as u8)
+    pub fn adc_clk_div_denominator(&self) -> ADC_CLK_DIV_DENOMINATOR_R {
+        ADC_CLK_DIV_DENOMINATOR_R::new(((self.bits >> 17) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL23")
+            .field("adc_clk_en", &format_args!("{}", self.adc_clk_en().bit()))
             .field(
-                "reg_adc_clk_en",
-                &format_args!("{}", self.reg_adc_clk_en().bit()),
+                "adc_clk_div_num",
+                &format_args!("{}", self.adc_clk_div_num().bits()),
             )
             .field(
-                "reg_adc_clk_div_num",
-                &format_args!("{}", self.reg_adc_clk_div_num().bits()),
+                "adc_clk_div_numerator",
+                &format_args!("{}", self.adc_clk_div_numerator().bits()),
             )
             .field(
-                "reg_adc_clk_div_numerator",
-                &format_args!("{}", self.reg_adc_clk_div_numerator().bits()),
-            )
-            .field(
-                "reg_adc_clk_div_denominator",
-                &format_args!("{}", self.reg_adc_clk_div_denominator().bits()),
+                "adc_clk_div_denominator",
+                &format_args!("{}", self.adc_clk_div_denominator().bits()),
             )
             .finish()
     }
@@ -73,30 +70,26 @@ impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_adc_clk_en(&mut self) -> REG_ADC_CLK_EN_W<PERI_CLK_CTRL23_SPEC> {
-        REG_ADC_CLK_EN_W::new(self, 0)
+    pub fn adc_clk_en(&mut self) -> ADC_CLK_EN_W<PERI_CLK_CTRL23_SPEC> {
+        ADC_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_adc_clk_div_num(&mut self) -> REG_ADC_CLK_DIV_NUM_W<PERI_CLK_CTRL23_SPEC> {
-        REG_ADC_CLK_DIV_NUM_W::new(self, 1)
+    pub fn adc_clk_div_num(&mut self) -> ADC_CLK_DIV_NUM_W<PERI_CLK_CTRL23_SPEC> {
+        ADC_CLK_DIV_NUM_W::new(self, 1)
     }
     #[doc = "Bits 9:16 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_adc_clk_div_numerator(
-        &mut self,
-    ) -> REG_ADC_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL23_SPEC> {
-        REG_ADC_CLK_DIV_NUMERATOR_W::new(self, 9)
+    pub fn adc_clk_div_numerator(&mut self) -> ADC_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL23_SPEC> {
+        ADC_CLK_DIV_NUMERATOR_W::new(self, 9)
     }
     #[doc = "Bits 17:24 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_adc_clk_div_denominator(
-        &mut self,
-    ) -> REG_ADC_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL23_SPEC> {
-        REG_ADC_CLK_DIV_DENOMINATOR_W::new(self, 17)
+    pub fn adc_clk_div_denominator(&mut self) -> ADC_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL23_SPEC> {
+        ADC_CLK_DIV_DENOMINATOR_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

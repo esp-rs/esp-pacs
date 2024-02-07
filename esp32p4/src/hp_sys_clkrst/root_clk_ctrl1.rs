@@ -2,42 +2,42 @@
 pub type R = crate::R<ROOT_CLK_CTRL1_SPEC>;
 #[doc = "Register `ROOT_CLK_CTRL1` writer"]
 pub type W = crate::W<ROOT_CLK_CTRL1_SPEC>;
-#[doc = "Field `REG_MEM_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_MEM_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_MEM_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_MEM_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_MEM_CLK_DIV_NUMERATOR` reader - Reserved"]
-pub type REG_MEM_CLK_DIV_NUMERATOR_R = crate::FieldReader;
-#[doc = "Field `REG_MEM_CLK_DIV_NUMERATOR` writer - Reserved"]
-pub type REG_MEM_CLK_DIV_NUMERATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_MEM_CLK_DIV_DENOMINATOR` reader - Reserved"]
-pub type REG_MEM_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
-#[doc = "Field `REG_MEM_CLK_DIV_DENOMINATOR` writer - Reserved"]
-pub type REG_MEM_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_SYS_CLK_DIV_NUM` reader - Reserved"]
-pub type REG_SYS_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_SYS_CLK_DIV_NUM` writer - Reserved"]
-pub type REG_SYS_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `MEM_CLK_DIV_NUM` reader - Reserved"]
+pub type MEM_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `MEM_CLK_DIV_NUM` writer - Reserved"]
+pub type MEM_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `MEM_CLK_DIV_NUMERATOR` reader - Reserved"]
+pub type MEM_CLK_DIV_NUMERATOR_R = crate::FieldReader;
+#[doc = "Field `MEM_CLK_DIV_NUMERATOR` writer - Reserved"]
+pub type MEM_CLK_DIV_NUMERATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `MEM_CLK_DIV_DENOMINATOR` reader - Reserved"]
+pub type MEM_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
+#[doc = "Field `MEM_CLK_DIV_DENOMINATOR` writer - Reserved"]
+pub type MEM_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SYS_CLK_DIV_NUM` reader - Reserved"]
+pub type SYS_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `SYS_CLK_DIV_NUM` writer - Reserved"]
+pub type SYS_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_mem_clk_div_num(&self) -> REG_MEM_CLK_DIV_NUM_R {
-        REG_MEM_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
+    pub fn mem_clk_div_num(&self) -> MEM_CLK_DIV_NUM_R {
+        MEM_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn reg_mem_clk_div_numerator(&self) -> REG_MEM_CLK_DIV_NUMERATOR_R {
-        REG_MEM_CLK_DIV_NUMERATOR_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn mem_clk_div_numerator(&self) -> MEM_CLK_DIV_NUMERATOR_R {
+        MEM_CLK_DIV_NUMERATOR_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn reg_mem_clk_div_denominator(&self) -> REG_MEM_CLK_DIV_DENOMINATOR_R {
-        REG_MEM_CLK_DIV_DENOMINATOR_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn mem_clk_div_denominator(&self) -> MEM_CLK_DIV_DENOMINATOR_R {
+        MEM_CLK_DIV_DENOMINATOR_R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bits 24:31 - Reserved"]
     #[inline(always)]
-    pub fn reg_sys_clk_div_num(&self) -> REG_SYS_CLK_DIV_NUM_R {
-        REG_SYS_CLK_DIV_NUM_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn sys_clk_div_num(&self) -> SYS_CLK_DIV_NUM_R {
+        SYS_CLK_DIV_NUM_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -45,20 +45,20 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROOT_CLK_CTRL1")
             .field(
-                "reg_mem_clk_div_num",
-                &format_args!("{}", self.reg_mem_clk_div_num().bits()),
+                "mem_clk_div_num",
+                &format_args!("{}", self.mem_clk_div_num().bits()),
             )
             .field(
-                "reg_mem_clk_div_numerator",
-                &format_args!("{}", self.reg_mem_clk_div_numerator().bits()),
+                "mem_clk_div_numerator",
+                &format_args!("{}", self.mem_clk_div_numerator().bits()),
             )
             .field(
-                "reg_mem_clk_div_denominator",
-                &format_args!("{}", self.reg_mem_clk_div_denominator().bits()),
+                "mem_clk_div_denominator",
+                &format_args!("{}", self.mem_clk_div_denominator().bits()),
             )
             .field(
-                "reg_sys_clk_div_num",
-                &format_args!("{}", self.reg_sys_clk_div_num().bits()),
+                "sys_clk_div_num",
+                &format_args!("{}", self.sys_clk_div_num().bits()),
             )
             .finish()
     }
@@ -73,30 +73,26 @@ impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_mem_clk_div_num(&mut self) -> REG_MEM_CLK_DIV_NUM_W<ROOT_CLK_CTRL1_SPEC> {
-        REG_MEM_CLK_DIV_NUM_W::new(self, 0)
+    pub fn mem_clk_div_num(&mut self) -> MEM_CLK_DIV_NUM_W<ROOT_CLK_CTRL1_SPEC> {
+        MEM_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_mem_clk_div_numerator(
-        &mut self,
-    ) -> REG_MEM_CLK_DIV_NUMERATOR_W<ROOT_CLK_CTRL1_SPEC> {
-        REG_MEM_CLK_DIV_NUMERATOR_W::new(self, 8)
+    pub fn mem_clk_div_numerator(&mut self) -> MEM_CLK_DIV_NUMERATOR_W<ROOT_CLK_CTRL1_SPEC> {
+        MEM_CLK_DIV_NUMERATOR_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_mem_clk_div_denominator(
-        &mut self,
-    ) -> REG_MEM_CLK_DIV_DENOMINATOR_W<ROOT_CLK_CTRL1_SPEC> {
-        REG_MEM_CLK_DIV_DENOMINATOR_W::new(self, 16)
+    pub fn mem_clk_div_denominator(&mut self) -> MEM_CLK_DIV_DENOMINATOR_W<ROOT_CLK_CTRL1_SPEC> {
+        MEM_CLK_DIV_DENOMINATOR_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn reg_sys_clk_div_num(&mut self) -> REG_SYS_CLK_DIV_NUM_W<ROOT_CLK_CTRL1_SPEC> {
-        REG_SYS_CLK_DIV_NUM_W::new(self, 24)
+    pub fn sys_clk_div_num(&mut self) -> SYS_CLK_DIV_NUM_W<ROOT_CLK_CTRL1_SPEC> {
+        SYS_CLK_DIV_NUM_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
