@@ -8,3 +8,9 @@ USB_DEVICE:
     _modify:
       RDWR_BYTE:
         access: read-write
+
+HP_SYS_CLKRST:
+  ROOT_CLK_CTRL0:
+    _modify:
+      REG_SOC_CLK_DIV_UPDATE:
+        access: read-write
