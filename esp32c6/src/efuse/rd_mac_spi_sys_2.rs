@@ -1,19 +1,61 @@
 #[doc = "Register `RD_MAC_SPI_SYS_2` reader"]
 pub type R = crate::R<RD_MAC_SPI_SYS_2_SPEC>;
-#[doc = "Field `MAC_SPI_RESERVED` reader - Reserved."]
-pub type MAC_SPI_RESERVED_R = crate::FieldReader<u16>;
-#[doc = "Field `SPI_PAD_CONF_1` reader - Stores the first part of SPI_PAD_CONF."]
-pub type SPI_PAD_CONF_1_R = crate::FieldReader<u32>;
+#[doc = "Field `ACTIVE_HP_DBIAS` reader - Stores the active hp dbias."]
+pub type ACTIVE_HP_DBIAS_R = crate::FieldReader;
+#[doc = "Field `ACTIVE_LP_DBIAS` reader - Stores the active lp dbias."]
+pub type ACTIVE_LP_DBIAS_R = crate::FieldReader;
+#[doc = "Field `LSLP_HP_DBG` reader - Stores the lslp hp dbg."]
+pub type LSLP_HP_DBG_R = crate::FieldReader;
+#[doc = "Field `LSLP_HP_DBIAS` reader - Stores the lslp hp dbias."]
+pub type LSLP_HP_DBIAS_R = crate::FieldReader;
+#[doc = "Field `DSLP_LP_DBG` reader - Stores the dslp lp dbg."]
+pub type DSLP_LP_DBG_R = crate::FieldReader;
+#[doc = "Field `DSLP_LP_DBIAS` reader - Stores the dslp lp dbias."]
+pub type DSLP_LP_DBIAS_R = crate::FieldReader;
+#[doc = "Field `DBIAS_VOL_GAP` reader - Stores the hp and lp dbias vol gap."]
+pub type DBIAS_VOL_GAP_R = crate::FieldReader;
+#[doc = "Field `SPI_PAD_CONF_1` reader - Reserved."]
+pub type SPI_PAD_CONF_1_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:13 - Reserved."]
+    #[doc = "Bits 0:4 - Stores the active hp dbias."]
     #[inline(always)]
-    pub fn mac_spi_reserved(&self) -> MAC_SPI_RESERVED_R {
-        MAC_SPI_RESERVED_R::new((self.bits & 0x3fff) as u16)
+    pub fn active_hp_dbias(&self) -> ACTIVE_HP_DBIAS_R {
+        ACTIVE_HP_DBIAS_R::new((self.bits & 0x1f) as u8)
     }
-    #[doc = "Bits 14:31 - Stores the first part of SPI_PAD_CONF."]
+    #[doc = "Bits 5:9 - Stores the active lp dbias."]
+    #[inline(always)]
+    pub fn active_lp_dbias(&self) -> ACTIVE_LP_DBIAS_R {
+        ACTIVE_LP_DBIAS_R::new(((self.bits >> 5) & 0x1f) as u8)
+    }
+    #[doc = "Bits 10:11 - Stores the lslp hp dbg."]
+    #[inline(always)]
+    pub fn lslp_hp_dbg(&self) -> LSLP_HP_DBG_R {
+        LSLP_HP_DBG_R::new(((self.bits >> 10) & 3) as u8)
+    }
+    #[doc = "Bits 12:15 - Stores the lslp hp dbias."]
+    #[inline(always)]
+    pub fn lslp_hp_dbias(&self) -> LSLP_HP_DBIAS_R {
+        LSLP_HP_DBIAS_R::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+    #[doc = "Bits 16:18 - Stores the dslp lp dbg."]
+    #[inline(always)]
+    pub fn dslp_lp_dbg(&self) -> DSLP_LP_DBG_R {
+        DSLP_LP_DBG_R::new(((self.bits >> 16) & 7) as u8)
+    }
+    #[doc = "Bits 19:22 - Stores the dslp lp dbias."]
+    #[inline(always)]
+    pub fn dslp_lp_dbias(&self) -> DSLP_LP_DBIAS_R {
+        DSLP_LP_DBIAS_R::new(((self.bits >> 19) & 0x0f) as u8)
+    }
+    #[doc = "Bits 23:27 - Stores the hp and lp dbias vol gap."]
+    #[inline(always)]
+    pub fn dbias_vol_gap(&self) -> DBIAS_VOL_GAP_R {
+        DBIAS_VOL_GAP_R::new(((self.bits >> 23) & 0x1f) as u8)
+    }
+    #[doc = "Bits 28:31 - Reserved."]
     #[inline(always)]
     pub fn spi_pad_conf_1(&self) -> SPI_PAD_CONF_1_R {
-        SPI_PAD_CONF_1_R::new((self.bits >> 14) & 0x0003_ffff)
+        SPI_PAD_CONF_1_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -21,8 +63,32 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SPI_SYS_2")
             .field(
-                "mac_spi_reserved",
-                &format_args!("{}", self.mac_spi_reserved().bits()),
+                "active_hp_dbias",
+                &format_args!("{}", self.active_hp_dbias().bits()),
+            )
+            .field(
+                "active_lp_dbias",
+                &format_args!("{}", self.active_lp_dbias().bits()),
+            )
+            .field(
+                "lslp_hp_dbg",
+                &format_args!("{}", self.lslp_hp_dbg().bits()),
+            )
+            .field(
+                "lslp_hp_dbias",
+                &format_args!("{}", self.lslp_hp_dbias().bits()),
+            )
+            .field(
+                "dslp_lp_dbg",
+                &format_args!("{}", self.dslp_lp_dbg().bits()),
+            )
+            .field(
+                "dslp_lp_dbias",
+                &format_args!("{}", self.dslp_lp_dbias().bits()),
+            )
+            .field(
+                "dbias_vol_gap",
+                &format_args!("{}", self.dbias_vol_gap().bits()),
             )
             .field(
                 "spi_pad_conf_1",

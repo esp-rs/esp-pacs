@@ -2,155 +2,122 @@
 pub type R = crate::R<GPIO1_SPEC>;
 #[doc = "Register `GPIO1` writer"]
 pub type W = crate::W<GPIO1_SPEC>;
-#[doc = "Field `LP_GPIO1_MCU_OE` reader - need des"]
-pub type LP_GPIO1_MCU_OE_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_MCU_OE` writer - need des"]
-pub type LP_GPIO1_MCU_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_SLP_SEL` reader - need des"]
-pub type LP_GPIO1_SLP_SEL_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_SLP_SEL` writer - need des"]
-pub type LP_GPIO1_SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_MCU_WPD` reader - need des"]
-pub type LP_GPIO1_MCU_WPD_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_MCU_WPD` writer - need des"]
-pub type LP_GPIO1_MCU_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_MCU_WPU` reader - need des"]
-pub type LP_GPIO1_MCU_WPU_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_MCU_WPU` writer - need des"]
-pub type LP_GPIO1_MCU_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_MCU_IE` reader - need des"]
-pub type LP_GPIO1_MCU_IE_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_MCU_IE` writer - need des"]
-pub type LP_GPIO1_MCU_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_MCU_DRV` reader - need des"]
-pub type LP_GPIO1_MCU_DRV_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO1_MCU_DRV` writer - need des"]
-pub type LP_GPIO1_MCU_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `LP_GPIO1_FUN_WPD` reader - need des"]
-pub type LP_GPIO1_FUN_WPD_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_FUN_WPD` writer - need des"]
-pub type LP_GPIO1_FUN_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_FUN_WPU` reader - need des"]
-pub type LP_GPIO1_FUN_WPU_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_FUN_WPU` writer - need des"]
-pub type LP_GPIO1_FUN_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_FUN_IE` reader - need des"]
-pub type LP_GPIO1_FUN_IE_R = crate::BitReader;
-#[doc = "Field `LP_GPIO1_FUN_IE` writer - need des"]
-pub type LP_GPIO1_FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO1_FUN_DRV` reader - need des"]
-pub type LP_GPIO1_FUN_DRV_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO1_FUN_DRV` writer - need des"]
-pub type LP_GPIO1_FUN_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `LP_GPIO1_MCU_SEL` reader - need des"]
-pub type LP_GPIO1_MCU_SEL_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO1_MCU_SEL` writer - need des"]
-pub type LP_GPIO1_MCU_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `MCU_OE` reader - need des"]
+pub type MCU_OE_R = crate::BitReader;
+#[doc = "Field `MCU_OE` writer - need des"]
+pub type MCU_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLP_SEL` reader - need des"]
+pub type SLP_SEL_R = crate::BitReader;
+#[doc = "Field `SLP_SEL` writer - need des"]
+pub type SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCU_WPD` reader - need des"]
+pub type MCU_WPD_R = crate::BitReader;
+#[doc = "Field `MCU_WPD` writer - need des"]
+pub type MCU_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCU_WPU` reader - need des"]
+pub type MCU_WPU_R = crate::BitReader;
+#[doc = "Field `MCU_WPU` writer - need des"]
+pub type MCU_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCU_IE` reader - need des"]
+pub type MCU_IE_R = crate::BitReader;
+#[doc = "Field `MCU_IE` writer - need des"]
+pub type MCU_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCU_DRV` reader - need des"]
+pub type MCU_DRV_R = crate::FieldReader;
+#[doc = "Field `MCU_DRV` writer - need des"]
+pub type MCU_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `FUN_WPD` reader - need des"]
+pub type FUN_WPD_R = crate::BitReader;
+#[doc = "Field `FUN_WPD` writer - need des"]
+pub type FUN_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FUN_WPU` reader - need des"]
+pub type FUN_WPU_R = crate::BitReader;
+#[doc = "Field `FUN_WPU` writer - need des"]
+pub type FUN_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FUN_IE` reader - need des"]
+pub type FUN_IE_R = crate::BitReader;
+#[doc = "Field `FUN_IE` writer - need des"]
+pub type FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FUN_DRV` reader - need des"]
+pub type FUN_DRV_R = crate::FieldReader;
+#[doc = "Field `FUN_DRV` writer - need des"]
+pub type FUN_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `MCU_SEL` reader - need des"]
+pub type MCU_SEL_R = crate::FieldReader;
+#[doc = "Field `MCU_SEL` writer - need des"]
+pub type MCU_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_mcu_oe(&self) -> LP_GPIO1_MCU_OE_R {
-        LP_GPIO1_MCU_OE_R::new((self.bits & 1) != 0)
+    pub fn mcu_oe(&self) -> MCU_OE_R {
+        MCU_OE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_slp_sel(&self) -> LP_GPIO1_SLP_SEL_R {
-        LP_GPIO1_SLP_SEL_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn slp_sel(&self) -> SLP_SEL_R {
+        SLP_SEL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_mcu_wpd(&self) -> LP_GPIO1_MCU_WPD_R {
-        LP_GPIO1_MCU_WPD_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn mcu_wpd(&self) -> MCU_WPD_R {
+        MCU_WPD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_mcu_wpu(&self) -> LP_GPIO1_MCU_WPU_R {
-        LP_GPIO1_MCU_WPU_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn mcu_wpu(&self) -> MCU_WPU_R {
+        MCU_WPU_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_mcu_ie(&self) -> LP_GPIO1_MCU_IE_R {
-        LP_GPIO1_MCU_IE_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn mcu_ie(&self) -> MCU_IE_R {
+        MCU_IE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:6 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_mcu_drv(&self) -> LP_GPIO1_MCU_DRV_R {
-        LP_GPIO1_MCU_DRV_R::new(((self.bits >> 5) & 3) as u8)
+    pub fn mcu_drv(&self) -> MCU_DRV_R {
+        MCU_DRV_R::new(((self.bits >> 5) & 3) as u8)
     }
     #[doc = "Bit 7 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_fun_wpd(&self) -> LP_GPIO1_FUN_WPD_R {
-        LP_GPIO1_FUN_WPD_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn fun_wpd(&self) -> FUN_WPD_R {
+        FUN_WPD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_fun_wpu(&self) -> LP_GPIO1_FUN_WPU_R {
-        LP_GPIO1_FUN_WPU_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn fun_wpu(&self) -> FUN_WPU_R {
+        FUN_WPU_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_fun_ie(&self) -> LP_GPIO1_FUN_IE_R {
-        LP_GPIO1_FUN_IE_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn fun_ie(&self) -> FUN_IE_R {
+        FUN_IE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:11 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_fun_drv(&self) -> LP_GPIO1_FUN_DRV_R {
-        LP_GPIO1_FUN_DRV_R::new(((self.bits >> 10) & 3) as u8)
+    pub fn fun_drv(&self) -> FUN_DRV_R {
+        FUN_DRV_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:14 - need des"]
     #[inline(always)]
-    pub fn lp_gpio1_mcu_sel(&self) -> LP_GPIO1_MCU_SEL_R {
-        LP_GPIO1_MCU_SEL_R::new(((self.bits >> 12) & 7) as u8)
+    pub fn mcu_sel(&self) -> MCU_SEL_R {
+        MCU_SEL_R::new(((self.bits >> 12) & 7) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO1")
-            .field(
-                "lp_gpio1_mcu_oe",
-                &format_args!("{}", self.lp_gpio1_mcu_oe().bit()),
-            )
-            .field(
-                "lp_gpio1_slp_sel",
-                &format_args!("{}", self.lp_gpio1_slp_sel().bit()),
-            )
-            .field(
-                "lp_gpio1_mcu_wpd",
-                &format_args!("{}", self.lp_gpio1_mcu_wpd().bit()),
-            )
-            .field(
-                "lp_gpio1_mcu_wpu",
-                &format_args!("{}", self.lp_gpio1_mcu_wpu().bit()),
-            )
-            .field(
-                "lp_gpio1_mcu_ie",
-                &format_args!("{}", self.lp_gpio1_mcu_ie().bit()),
-            )
-            .field(
-                "lp_gpio1_mcu_drv",
-                &format_args!("{}", self.lp_gpio1_mcu_drv().bits()),
-            )
-            .field(
-                "lp_gpio1_fun_wpd",
-                &format_args!("{}", self.lp_gpio1_fun_wpd().bit()),
-            )
-            .field(
-                "lp_gpio1_fun_wpu",
-                &format_args!("{}", self.lp_gpio1_fun_wpu().bit()),
-            )
-            .field(
-                "lp_gpio1_fun_ie",
-                &format_args!("{}", self.lp_gpio1_fun_ie().bit()),
-            )
-            .field(
-                "lp_gpio1_fun_drv",
-                &format_args!("{}", self.lp_gpio1_fun_drv().bits()),
-            )
-            .field(
-                "lp_gpio1_mcu_sel",
-                &format_args!("{}", self.lp_gpio1_mcu_sel().bits()),
-            )
+            .field("mcu_oe", &format_args!("{}", self.mcu_oe().bit()))
+            .field("slp_sel", &format_args!("{}", self.slp_sel().bit()))
+            .field("mcu_wpd", &format_args!("{}", self.mcu_wpd().bit()))
+            .field("mcu_wpu", &format_args!("{}", self.mcu_wpu().bit()))
+            .field("mcu_ie", &format_args!("{}", self.mcu_ie().bit()))
+            .field("mcu_drv", &format_args!("{}", self.mcu_drv().bits()))
+            .field("fun_wpd", &format_args!("{}", self.fun_wpd().bit()))
+            .field("fun_wpu", &format_args!("{}", self.fun_wpu().bit()))
+            .field("fun_ie", &format_args!("{}", self.fun_ie().bit()))
+            .field("fun_drv", &format_args!("{}", self.fun_drv().bits()))
+            .field("mcu_sel", &format_args!("{}", self.mcu_sel().bits()))
             .finish()
     }
 }
@@ -164,68 +131,68 @@ impl W {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_mcu_oe(&mut self) -> LP_GPIO1_MCU_OE_W<GPIO1_SPEC> {
-        LP_GPIO1_MCU_OE_W::new(self, 0)
+    pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO1_SPEC> {
+        MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_slp_sel(&mut self) -> LP_GPIO1_SLP_SEL_W<GPIO1_SPEC> {
-        LP_GPIO1_SLP_SEL_W::new(self, 1)
+    pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO1_SPEC> {
+        SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_mcu_wpd(&mut self) -> LP_GPIO1_MCU_WPD_W<GPIO1_SPEC> {
-        LP_GPIO1_MCU_WPD_W::new(self, 2)
+    pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO1_SPEC> {
+        MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_mcu_wpu(&mut self) -> LP_GPIO1_MCU_WPU_W<GPIO1_SPEC> {
-        LP_GPIO1_MCU_WPU_W::new(self, 3)
+    pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO1_SPEC> {
+        MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_mcu_ie(&mut self) -> LP_GPIO1_MCU_IE_W<GPIO1_SPEC> {
-        LP_GPIO1_MCU_IE_W::new(self, 4)
+    pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO1_SPEC> {
+        MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_mcu_drv(&mut self) -> LP_GPIO1_MCU_DRV_W<GPIO1_SPEC> {
-        LP_GPIO1_MCU_DRV_W::new(self, 5)
+    pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO1_SPEC> {
+        MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_fun_wpd(&mut self) -> LP_GPIO1_FUN_WPD_W<GPIO1_SPEC> {
-        LP_GPIO1_FUN_WPD_W::new(self, 7)
+    pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO1_SPEC> {
+        FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_fun_wpu(&mut self) -> LP_GPIO1_FUN_WPU_W<GPIO1_SPEC> {
-        LP_GPIO1_FUN_WPU_W::new(self, 8)
+    pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO1_SPEC> {
+        FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_fun_ie(&mut self) -> LP_GPIO1_FUN_IE_W<GPIO1_SPEC> {
-        LP_GPIO1_FUN_IE_W::new(self, 9)
+    pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO1_SPEC> {
+        FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_fun_drv(&mut self) -> LP_GPIO1_FUN_DRV_W<GPIO1_SPEC> {
-        LP_GPIO1_FUN_DRV_W::new(self, 10)
+    pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO1_SPEC> {
+        FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio1_mcu_sel(&mut self) -> LP_GPIO1_MCU_SEL_W<GPIO1_SPEC> {
-        LP_GPIO1_MCU_SEL_W::new(self, 12)
+    pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO1_SPEC> {
+        MCU_SEL_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

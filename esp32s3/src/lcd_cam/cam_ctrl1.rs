@@ -10,13 +10,13 @@ pub type CAM_REC_DATA_BYTELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 pub type CAM_LINE_INT_NUM_R = crate::FieldReader;
 #[doc = "Field `CAM_LINE_INT_NUM` writer - Configure line number. When the number of received lines reaches this value + 1, LCD_CAM_CAM_HS_INT is triggered."]
 pub type CAM_LINE_INT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
-#[doc = "Field `CAM_CLK_INV` reader - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
+#[doc = "Field `CAM_CLK_INV` reader - 1: Invert the input signal CAM_PCLK. 0: Do not invert."]
 pub type CAM_CLK_INV_R = crate::BitReader;
-#[doc = "Field `CAM_CLK_INV` writer - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
+#[doc = "Field `CAM_CLK_INV` writer - 1: Invert the input signal CAM_PCLK. 0: Do not invert."]
 pub type CAM_CLK_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAM_VSYNC_FILTER_EN` reader - 1: Enable CAM_VSYNC filter function. 0: bypass."]
+#[doc = "Field `CAM_VSYNC_FILTER_EN` reader - 1: Enable CAM_VSYNC filter function. 0: Bypass."]
 pub type CAM_VSYNC_FILTER_EN_R = crate::BitReader;
-#[doc = "Field `CAM_VSYNC_FILTER_EN` writer - 1: Enable CAM_VSYNC filter function. 0: bypass."]
+#[doc = "Field `CAM_VSYNC_FILTER_EN` writer - 1: Enable CAM_VSYNC filter function. 0: Bypass."]
 pub type CAM_VSYNC_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAM_2BYTE_EN` reader - 1: The width of input data is 16 bits. 0: The width of input data is 8 bits."]
 pub type CAM_2BYTE_EN_R = crate::BitReader;
@@ -34,9 +34,9 @@ pub type CAM_HSYNC_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CAM_VSYNC_INV_R = crate::BitReader;
 #[doc = "Field `CAM_VSYNC_INV` writer - CAM_VSYNC invert enable signal, valid in high level."]
 pub type CAM_VSYNC_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAM_VH_DE_MODE_EN` reader - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
+#[doc = "Field `CAM_VH_DE_MODE_EN` reader - 1: Input control signals are CAM_DE and CAM_HSYNC. CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 at the the same time."]
 pub type CAM_VH_DE_MODE_EN_R = crate::BitReader;
-#[doc = "Field `CAM_VH_DE_MODE_EN` writer - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
+#[doc = "Field `CAM_VH_DE_MODE_EN` writer - 1: Input control signals are CAM_DE and CAM_HSYNC. CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 at the the same time."]
 pub type CAM_VH_DE_MODE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAM_START` reader - Camera module start signal."]
 pub type CAM_START_R = crate::BitReader;
@@ -57,12 +57,12 @@ impl R {
     pub fn cam_line_int_num(&self) -> CAM_LINE_INT_NUM_R {
         CAM_LINE_INT_NUM_R::new(((self.bits >> 16) & 0x3f) as u8)
     }
-    #[doc = "Bit 22 - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
+    #[doc = "Bit 22 - 1: Invert the input signal CAM_PCLK. 0: Do not invert."]
     #[inline(always)]
     pub fn cam_clk_inv(&self) -> CAM_CLK_INV_R {
         CAM_CLK_INV_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 23 - 1: Enable CAM_VSYNC filter function. 0: bypass."]
+    #[doc = "Bit 23 - 1: Enable CAM_VSYNC filter function. 0: Bypass."]
     #[inline(always)]
     pub fn cam_vsync_filter_en(&self) -> CAM_VSYNC_FILTER_EN_R {
         CAM_VSYNC_FILTER_EN_R::new(((self.bits >> 23) & 1) != 0)
@@ -87,7 +87,7 @@ impl R {
     pub fn cam_vsync_inv(&self) -> CAM_VSYNC_INV_R {
         CAM_VSYNC_INV_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bit 28 - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
+    #[doc = "Bit 28 - 1: Input control signals are CAM_DE and CAM_HSYNC. CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 at the the same time."]
     #[inline(always)]
     pub fn cam_vh_de_mode_en(&self) -> CAM_VH_DE_MODE_EN_R {
         CAM_VH_DE_MODE_EN_R::new(((self.bits >> 28) & 1) != 0)
@@ -155,13 +155,13 @@ impl W {
     pub fn cam_line_int_num(&mut self) -> CAM_LINE_INT_NUM_W<CAM_CTRL1_SPEC> {
         CAM_LINE_INT_NUM_W::new(self, 16)
     }
-    #[doc = "Bit 22 - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
+    #[doc = "Bit 22 - 1: Invert the input signal CAM_PCLK. 0: Do not invert."]
     #[inline(always)]
     #[must_use]
     pub fn cam_clk_inv(&mut self) -> CAM_CLK_INV_W<CAM_CTRL1_SPEC> {
         CAM_CLK_INV_W::new(self, 22)
     }
-    #[doc = "Bit 23 - 1: Enable CAM_VSYNC filter function. 0: bypass."]
+    #[doc = "Bit 23 - 1: Enable CAM_VSYNC filter function. 0: Bypass."]
     #[inline(always)]
     #[must_use]
     pub fn cam_vsync_filter_en(&mut self) -> CAM_VSYNC_FILTER_EN_W<CAM_CTRL1_SPEC> {
@@ -191,7 +191,7 @@ impl W {
     pub fn cam_vsync_inv(&mut self) -> CAM_VSYNC_INV_W<CAM_CTRL1_SPEC> {
         CAM_VSYNC_INV_W::new(self, 27)
     }
-    #[doc = "Bit 28 - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
+    #[doc = "Bit 28 - 1: Input control signals are CAM_DE and CAM_HSYNC. CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 at the the same time."]
     #[inline(always)]
     #[must_use]
     pub fn cam_vh_de_mode_en(&mut self) -> CAM_VH_DE_MODE_EN_W<CAM_CTRL1_SPEC> {
@@ -226,7 +226,7 @@ impl W {
         self
     }
 }
-#[doc = "Camera configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cam_ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cam_ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Camera control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cam_ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cam_ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAM_CTRL1_SPEC;
 impl crate::RegisterSpec for CAM_CTRL1_SPEC {
     type Ux = u32;

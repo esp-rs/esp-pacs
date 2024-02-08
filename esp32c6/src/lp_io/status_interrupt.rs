@@ -1,22 +1,19 @@
 #[doc = "Register `STATUS_INTERRUPT` reader"]
 pub type R = crate::R<STATUS_INTERRUPT_SPEC>;
-#[doc = "Field `LP_GPIO_STATUS_INTERRUPT_NEXT` reader - need des"]
-pub type LP_GPIO_STATUS_INTERRUPT_NEXT_R = crate::FieldReader;
+#[doc = "Field `NEXT` reader - need des"]
+pub type NEXT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - need des"]
     #[inline(always)]
-    pub fn lp_gpio_status_interrupt_next(&self) -> LP_GPIO_STATUS_INTERRUPT_NEXT_R {
-        LP_GPIO_STATUS_INTERRUPT_NEXT_R::new((self.bits & 0xff) as u8)
+    pub fn next(&self) -> NEXT_R {
+        NEXT_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_INTERRUPT")
-            .field(
-                "lp_gpio_status_interrupt_next",
-                &format_args!("{}", self.lp_gpio_status_interrupt_next().bits()),
-            )
+            .field("next", &format_args!("{}", self.next().bits()))
             .finish()
     }
 }

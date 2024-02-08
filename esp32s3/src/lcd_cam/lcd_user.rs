@@ -14,13 +14,13 @@ pub type LCD_ALWAYS_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type LCD_8BITS_ORDER_R = crate::BitReader;
 #[doc = "Field `LCD_8BITS_ORDER` writer - 1: Swap every two data bytes, valid in 8-bit mode. 0: Do not swap."]
 pub type LCD_8BITS_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_UPDATE` reader - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
+#[doc = "Field `LCD_UPDATE` reader - 1: Update LCD registers. This bit is cleared by hardware. 0: Do not care."]
 pub type LCD_UPDATE_R = crate::BitReader;
-#[doc = "Field `LCD_UPDATE` writer - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
+#[doc = "Field `LCD_UPDATE` writer - 1: Update LCD registers. This bit is cleared by hardware. 0: Do not care."]
 pub type LCD_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_BIT_ORDER` reader - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+#[doc = "Field `LCD_BIT_ORDER` reader - 1: Change data bit order. Change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
 pub type LCD_BIT_ORDER_R = crate::BitReader;
-#[doc = "Field `LCD_BIT_ORDER` writer - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+#[doc = "Field `LCD_BIT_ORDER` writer - 1: Change data bit order. Change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
 pub type LCD_BIT_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_BYTE_ORDER` reader - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not invert."]
 pub type LCD_BYTE_ORDER_R = crate::BitReader;
@@ -42,15 +42,15 @@ pub type LCD_DUMMY_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type LCD_CMD_R = crate::BitReader;
 #[doc = "Field `LCD_CMD` writer - 1: Be able to send command in LCD sequence when LCD starts. 0: Disable."]
 pub type LCD_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_START` reader - LCD start sending data enable signal, valid in high level."]
+#[doc = "Field `LCD_START` reader - LCD starts sending data enable signal, valid in high level."]
 pub type LCD_START_R = crate::BitReader;
-#[doc = "Field `LCD_START` writer - LCD start sending data enable signal, valid in high level."]
+#[doc = "Field `LCD_START` writer - LCD starts sending data enable signal, valid in high level."]
 pub type LCD_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCD_RESET` writer - Reset LCD module."]
 pub type LCD_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_DUMMY_CYCLELEN` reader - The dummy cycle length minus 1."]
+#[doc = "Field `LCD_DUMMY_CYCLELEN` reader - Configure DUMMY cycles. DUMMY cycles = this value + 1."]
 pub type LCD_DUMMY_CYCLELEN_R = crate::FieldReader;
-#[doc = "Field `LCD_DUMMY_CYCLELEN` writer - The dummy cycle length minus 1."]
+#[doc = "Field `LCD_DUMMY_CYCLELEN` writer - Configure DUMMY cycles. DUMMY cycles = this value + 1."]
 pub type LCD_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LCD_CMD_2_CYCLE_EN` reader - The cycle length of command phase. 1: 2 cycles. 0: 1 cycle."]
 pub type LCD_CMD_2_CYCLE_EN_R = crate::BitReader;
@@ -72,12 +72,12 @@ impl R {
     pub fn lcd_8bits_order(&self) -> LCD_8BITS_ORDER_R {
         LCD_8BITS_ORDER_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Bit 20 - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
+    #[doc = "Bit 20 - 1: Update LCD registers. This bit is cleared by hardware. 0: Do not care."]
     #[inline(always)]
     pub fn lcd_update(&self) -> LCD_UPDATE_R {
         LCD_UPDATE_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 21 - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+    #[doc = "Bit 21 - 1: Change data bit order. Change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
     #[inline(always)]
     pub fn lcd_bit_order(&self) -> LCD_BIT_ORDER_R {
         LCD_BIT_ORDER_R::new(((self.bits >> 21) & 1) != 0)
@@ -107,12 +107,12 @@ impl R {
     pub fn lcd_cmd(&self) -> LCD_CMD_R {
         LCD_CMD_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bit 27 - LCD start sending data enable signal, valid in high level."]
+    #[doc = "Bit 27 - LCD starts sending data enable signal, valid in high level."]
     #[inline(always)]
     pub fn lcd_start(&self) -> LCD_START_R {
         LCD_START_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bits 29:30 - The dummy cycle length minus 1."]
+    #[doc = "Bits 29:30 - Configure DUMMY cycles. DUMMY cycles = this value + 1."]
     #[inline(always)]
     pub fn lcd_dummy_cyclelen(&self) -> LCD_DUMMY_CYCLELEN_R {
         LCD_DUMMY_CYCLELEN_R::new(((self.bits >> 29) & 3) as u8)
@@ -192,13 +192,13 @@ impl W {
     pub fn lcd_8bits_order(&mut self) -> LCD_8BITS_ORDER_W<LCD_USER_SPEC> {
         LCD_8BITS_ORDER_W::new(self, 19)
     }
-    #[doc = "Bit 20 - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
+    #[doc = "Bit 20 - 1: Update LCD registers. This bit is cleared by hardware. 0: Do not care."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_update(&mut self) -> LCD_UPDATE_W<LCD_USER_SPEC> {
         LCD_UPDATE_W::new(self, 20)
     }
-    #[doc = "Bit 21 - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
+    #[doc = "Bit 21 - 1: Change data bit order. Change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_bit_order(&mut self) -> LCD_BIT_ORDER_W<LCD_USER_SPEC> {
@@ -234,7 +234,7 @@ impl W {
     pub fn lcd_cmd(&mut self) -> LCD_CMD_W<LCD_USER_SPEC> {
         LCD_CMD_W::new(self, 26)
     }
-    #[doc = "Bit 27 - LCD start sending data enable signal, valid in high level."]
+    #[doc = "Bit 27 - LCD starts sending data enable signal, valid in high level."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_start(&mut self) -> LCD_START_W<LCD_USER_SPEC> {
@@ -246,7 +246,7 @@ impl W {
     pub fn lcd_reset(&mut self) -> LCD_RESET_W<LCD_USER_SPEC> {
         LCD_RESET_W::new(self, 28)
     }
-    #[doc = "Bits 29:30 - The dummy cycle length minus 1."]
+    #[doc = "Bits 29:30 - Configure DUMMY cycles. DUMMY cycles = this value + 1."]
     #[inline(always)]
     #[must_use]
     pub fn lcd_dummy_cyclelen(&mut self) -> LCD_DUMMY_CYCLELEN_W<LCD_USER_SPEC> {
@@ -269,7 +269,7 @@ impl W {
         self
     }
 }
-#[doc = "LCD configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_user::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_user::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LCD user configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_user::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_user::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCD_USER_SPEC;
 impl crate::RegisterSpec for LCD_USER_SPEC {
     type Ux = u32;
@@ -281,7 +281,7 @@ impl crate::Writable for LCD_USER_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets LCD_USER to value 0x01"]
+#[doc = "`reset()` method sets LCD_USER to value 0"]
 impl crate::Resettable for LCD_USER_SPEC {
-    const RESET_VALUE: u32 = 0x01;
+    const RESET_VALUE: u32 = 0;
 }

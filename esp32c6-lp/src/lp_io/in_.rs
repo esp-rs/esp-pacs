@@ -1,22 +1,19 @@
 #[doc = "Register `IN` reader"]
 pub type R = crate::R<IN_SPEC>;
-#[doc = "Field `IN_DATA_NEXT` reader - need des"]
-pub type IN_DATA_NEXT_R = crate::FieldReader;
+#[doc = "Field `DATA_NEXT` reader - need des"]
+pub type DATA_NEXT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - need des"]
     #[inline(always)]
-    pub fn in_data_next(&self) -> IN_DATA_NEXT_R {
-        IN_DATA_NEXT_R::new((self.bits & 0xff) as u8)
+    pub fn data_next(&self) -> DATA_NEXT_R {
+        DATA_NEXT_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN")
-            .field(
-                "in_data_next",
-                &format_args!("{}", self.in_data_next().bits()),
-            )
+            .field("data_next", &format_args!("{}", self.data_next().bits()))
             .finish()
     }
 }

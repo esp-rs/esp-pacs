@@ -2,25 +2,22 @@
 pub type R = crate::R<OUT_ENABLE_SPEC>;
 #[doc = "Register `OUT_ENABLE` writer"]
 pub type W = crate::W<OUT_ENABLE_SPEC>;
-#[doc = "Field `LP_GPIO_ENABLE` reader - set lp gpio output data"]
-pub type LP_GPIO_ENABLE_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO_ENABLE` writer - set lp gpio output data"]
-pub type LP_GPIO_ENABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `ENABLE` reader - set lp gpio output data"]
+pub type ENABLE_R = crate::FieldReader;
+#[doc = "Field `ENABLE` writer - set lp gpio output data"]
+pub type ENABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
-    pub fn lp_gpio_enable(&self) -> LP_GPIO_ENABLE_R {
-        LP_GPIO_ENABLE_R::new((self.bits & 0xff) as u8)
+    pub fn enable(&self) -> ENABLE_R {
+        ENABLE_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_ENABLE")
-            .field(
-                "lp_gpio_enable",
-                &format_args!("{}", self.lp_gpio_enable().bits()),
-            )
+            .field("enable", &format_args!("{}", self.enable().bits()))
             .finish()
     }
 }
@@ -34,8 +31,8 @@ impl W {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio_enable(&mut self) -> LP_GPIO_ENABLE_W<OUT_ENABLE_SPEC> {
-        LP_GPIO_ENABLE_W::new(self, 0)
+    pub fn enable(&mut self) -> ENABLE_W<OUT_ENABLE_SPEC> {
+        ENABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

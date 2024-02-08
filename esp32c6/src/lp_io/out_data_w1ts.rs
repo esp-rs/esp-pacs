@@ -1,7 +1,7 @@
 #[doc = "Register `OUT_DATA_W1TS` writer"]
 pub type W = crate::W<OUT_DATA_W1TS_SPEC>;
-#[doc = "Field `LP_GPIO_OUT_DATA_W1TS` writer - set one time output data"]
-pub type LP_GPIO_OUT_DATA_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `OUT_DATA_W1TS` writer - set one time output data"]
+pub type OUT_DATA_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_DATA_W1TS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -12,8 +12,8 @@ impl W {
     #[doc = "Bits 0:7 - set one time output data"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio_out_data_w1ts(&mut self) -> LP_GPIO_OUT_DATA_W1TS_W<OUT_DATA_W1TS_SPEC> {
-        LP_GPIO_OUT_DATA_W1TS_W::new(self, 0)
+    pub fn out_data_w1ts(&mut self) -> OUT_DATA_W1TS_W<OUT_DATA_W1TS_SPEC> {
+        OUT_DATA_W1TS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

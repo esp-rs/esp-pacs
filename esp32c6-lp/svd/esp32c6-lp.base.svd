@@ -4,10 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C6-LP</name>
   <series>ESP32 Series</series>
-  <version>1</version>
+  <version>2</version>
   <description>32-bit RISC-V MCU</description>
-  <licenseText>
-    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2024 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -19,15 +18,14 @@
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
-    limitations under the License.
-</licenseText>
+    limitations under the License.</licenseText>
   <cpu>
     <name>RV32IMAC</name>
     <revision>r0p0</revision>
     <endian>little</endian>
     <mpuPresent>false</mpuPresent>
     <fpuPresent>false</fpuPresent>
-    <nvicPrioBits>4</nvicPrioBits>
+    <nvicPrioBits>0</nvicPrioBits>
     <vendorSystickConfig>false</vendorSystickConfig>
   </cpu>
   <addressUnitBits>32</addressUnitBits>
@@ -36,8 +34,8 @@
   <resetMask>0xFFFFFFFF</resetMask>
   <peripherals>
     <peripheral>
-      <name>LP_I2C</name>
-      <description>Low-power I2C (Inter-Integrated Circuit) Controller</description>
+      <name>LP_I2C0</name>
+      <description>Low-power I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x600B1800</baseAddress>
       <addressBlock>
@@ -3702,8 +3700,8 @@ Information.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>LP_IO_MUX</name>
-      <description>Low-power Input/Output Multiplexer</description>
+      <name>LP_IO</name>
+      <description>LP_IO Peripheral</description>
       <groupName>LP_IO</groupName>
       <baseAddress>0x600B2000</baseAddress>
       <addressBlock>
@@ -3713,13 +3711,13 @@ Information.</description>
       </addressBlock>
       <registers>
         <register>
-          <name>OUT_DATA</name>
+          <name>OUT</name>
           <description>need des</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_OUT_DATA</name>
+              <name>OUT_DATA</name>
               <description>set lp gpio output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3728,13 +3726,13 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>OUT_DATA_W1TS</name>
+          <name>OUT_W1TS</name>
           <description>need des</description>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_OUT_DATA_W1TS</name>
+              <name>OUT_DATA_W1TS</name>
               <description>set one time output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3743,13 +3741,13 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>OUT_DATA_W1TC</name>
+          <name>OUT_W1TC</name>
           <description>need des</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_OUT_DATA_W1TC</name>
+              <name>OUT_DATA_W1TC</name>
               <description>clear one time output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3758,13 +3756,13 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>OUT_ENABLE</name>
+          <name>ENABLE</name>
           <description>need des</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_ENABLE</name>
+              <name>ENABLE</name>
               <description>set lp gpio output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3773,13 +3771,13 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>OUT_ENABLE_W1TS</name>
+          <name>ENABLE_W1TS</name>
           <description>need des</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_ENABLE_W1TS</name>
+              <name>ENABLE_W1TS</name>
               <description>set one time output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3788,13 +3786,13 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>OUT_ENABLE_W1TC</name>
+          <name>ENABLE_W1TC</name>
           <description>need des</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_ENABLE_W1TC</name>
+              <name>ENABLE_W1TC</name>
               <description>clear one time output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3809,7 +3807,7 @@ Information.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_STATUS_INTERRUPT</name>
+              <name>INTERRUPT</name>
               <description>set lp gpio output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3824,7 +3822,7 @@ Information.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_STATUS_W1TS</name>
+              <name>STATUS_W1TS</name>
               <description>set one time output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3839,7 +3837,7 @@ Information.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_STATUS_W1TC</name>
+              <name>STATUS_W1TC</name>
               <description>clear one time output data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3854,7 +3852,7 @@ Information.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_IN_DATA_NEXT</name>
+              <name>DATA_NEXT</name>
               <description>need des</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3863,48 +3861,51 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>PIN0</name>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>PIN%s</name>
           <description>need des</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO0_SYNC_BYPASS</name>
+              <name>SYNC_BYPASS</name>
               <description>need des</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_PAD_DRIVER</name>
+              <name>PAD_DRIVER</name>
               <description>need des</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_EDGE_WAKEUP_CLR</name>
+              <name>EDGE_WAKEUP_CLR</name>
               <description>need des</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>LP_GPIO0_INT_TYPE</name>
+              <name>INT_TYPE</name>
               <description>need des</description>
               <bitOffset>7</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_WAKEUP_ENABLE</name>
+              <name>WAKEUP_ENABLE</name>
               <description>need des</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_FILTER_EN</name>
+              <name>FILTER_EN</name>
               <description>need des</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3913,433 +3914,86 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>PIN1</name>
-          <description>need des</description>
-          <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO1_SYNC_BYPASS</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_PAD_DRIVER</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_EDGE_WAKEUP_CLR</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_INT_TYPE</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_WAKEUP_ENABLE</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_FILTER_EN</name>
-              <description>need des</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PIN2</name>
-          <description>need des</description>
-          <addressOffset>0x30</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO2_SYNC_BYPASS</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_PAD_DRIVER</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_EDGE_WAKEUP_CLR</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_INT_TYPE</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_WAKEUP_ENABLE</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_FILTER_EN</name>
-              <description>need des</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PIN3</name>
-          <description>need des</description>
-          <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO3_SYNC_BYPASS</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_PAD_DRIVER</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_EDGE_WAKEUP_CLR</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_INT_TYPE</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_WAKEUP_ENABLE</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_FILTER_EN</name>
-              <description>need des</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PIN4</name>
-          <description>need des</description>
-          <addressOffset>0x38</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO4_SYNC_BYPASS</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_PAD_DRIVER</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_EDGE_WAKEUP_CLR</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_INT_TYPE</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_WAKEUP_ENABLE</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_FILTER_EN</name>
-              <description>need des</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PIN5</name>
-          <description>need des</description>
-          <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO5_SYNC_BYPASS</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_PAD_DRIVER</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_EDGE_WAKEUP_CLR</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_INT_TYPE</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_WAKEUP_ENABLE</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_FILTER_EN</name>
-              <description>need des</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PIN6</name>
-          <description>need des</description>
-          <addressOffset>0x40</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO6_SYNC_BYPASS</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_PAD_DRIVER</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_EDGE_WAKEUP_CLR</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_INT_TYPE</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_WAKEUP_ENABLE</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_FILTER_EN</name>
-              <description>need des</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PIN7</name>
-          <description>need des</description>
-          <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO7_SYNC_BYPASS</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_PAD_DRIVER</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_EDGE_WAKEUP_CLR</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_INT_TYPE</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_WAKEUP_ENABLE</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_FILTER_EN</name>
-              <description>need des</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO0</name>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>GPIO%s</name>
           <description>need des</description>
           <addressOffset>0x48</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO0_MCU_OE</name>
+              <name>MCU_OE</name>
               <description>need des</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_SLP_SEL</name>
+              <name>SLP_SEL</name>
               <description>need des</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_MCU_WPD</name>
+              <name>MCU_WPD</name>
               <description>need des</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_MCU_WPU</name>
+              <name>MCU_WPU</name>
               <description>need des</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_MCU_IE</name>
+              <name>MCU_IE</name>
               <description>need des</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_MCU_DRV</name>
+              <name>MCU_DRV</name>
               <description>need des</description>
               <bitOffset>5</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_FUN_WPD</name>
+              <name>FUN_WPD</name>
               <description>need des</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_FUN_WPU</name>
+              <name>FUN_WPU</name>
               <description>need des</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_FUN_IE</name>
+              <name>FUN_IE</name>
               <description>need des</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_FUN_DRV</name>
+              <name>FUN_DRV</name>
               <description>need des</description>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_GPIO0_MCU_SEL</name>
+              <name>FUN_SEL</name>
               <description>need des</description>
               <bitOffset>12</bitOffset>
               <bitWidth>3</bitWidth>
@@ -4348,686 +4002,17 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>GPIO1</name>
-          <description>need des</description>
-          <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO1_MCU_OE</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_SLP_SEL</name>
-              <description>need des</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_MCU_WPD</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_MCU_WPU</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_MCU_IE</name>
-              <description>need des</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_MCU_DRV</name>
-              <description>need des</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_FUN_WPD</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_FUN_WPU</name>
-              <description>need des</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_FUN_IE</name>
-              <description>need des</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_FUN_DRV</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO1_MCU_SEL</name>
-              <description>need des</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO2</name>
-          <description>need des</description>
-          <addressOffset>0x50</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO2_MCU_OE</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_SLP_SEL</name>
-              <description>need des</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_MCU_WPD</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_MCU_WPU</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_MCU_IE</name>
-              <description>need des</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_MCU_DRV</name>
-              <description>need des</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_FUN_WPD</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_FUN_WPU</name>
-              <description>need des</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_FUN_IE</name>
-              <description>need des</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_FUN_DRV</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO2_MCU_SEL</name>
-              <description>need des</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO3</name>
-          <description>need des</description>
-          <addressOffset>0x54</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO3_MCU_OE</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_SLP_SEL</name>
-              <description>need des</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_MCU_WPD</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_MCU_WPU</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_MCU_IE</name>
-              <description>need des</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_MCU_DRV</name>
-              <description>need des</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_FUN_WPD</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_FUN_WPU</name>
-              <description>need des</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_FUN_IE</name>
-              <description>need des</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_FUN_DRV</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO3_MCU_SEL</name>
-              <description>need des</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO4</name>
-          <description>need des</description>
-          <addressOffset>0x58</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO4_MCU_OE</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_SLP_SEL</name>
-              <description>need des</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_MCU_WPD</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_MCU_WPU</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_MCU_IE</name>
-              <description>need des</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_MCU_DRV</name>
-              <description>need des</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_FUN_WPD</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_FUN_WPU</name>
-              <description>need des</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_FUN_IE</name>
-              <description>need des</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_FUN_DRV</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO4_MCU_SEL</name>
-              <description>need des</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO5</name>
-          <description>need des</description>
-          <addressOffset>0x5C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO5_MCU_OE</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_SLP_SEL</name>
-              <description>need des</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_MCU_WPD</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_MCU_WPU</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_MCU_IE</name>
-              <description>need des</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_MCU_DRV</name>
-              <description>need des</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_FUN_WPD</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_FUN_WPU</name>
-              <description>need des</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_FUN_IE</name>
-              <description>need des</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_FUN_DRV</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO5_MCU_SEL</name>
-              <description>need des</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO6</name>
-          <description>need des</description>
-          <addressOffset>0x60</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO6_MCU_OE</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_SLP_SEL</name>
-              <description>need des</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_MCU_WPD</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_MCU_WPU</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_MCU_IE</name>
-              <description>need des</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_MCU_DRV</name>
-              <description>need des</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_FUN_WPD</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_FUN_WPU</name>
-              <description>need des</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_FUN_IE</name>
-              <description>need des</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_FUN_DRV</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO6_MCU_SEL</name>
-              <description>need des</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO7</name>
-          <description>need des</description>
-          <addressOffset>0x64</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_GPIO7_MCU_OE</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_SLP_SEL</name>
-              <description>need des</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_MCU_WPD</name>
-              <description>need des</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_MCU_WPU</name>
-              <description>need des</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_MCU_IE</name>
-              <description>need des</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_MCU_DRV</name>
-              <description>need des</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_FUN_WPD</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_FUN_WPU</name>
-              <description>need des</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_FUN_IE</name>
-              <description>need des</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_FUN_DRV</name>
-              <description>need des</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_GPIO7_MCU_SEL</name>
-              <description>need des</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>STATUS_INTERRUPT</name>
+          <name>STATUS_INT</name>
           <description>need des</description>
           <addressOffset>0x68</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LP_GPIO_STATUS_INTERRUPT_NEXT</name>
+              <name>NEXT</name>
               <description>need des</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>DEBUG_SEL0</name>
-          <description>need des</description>
-          <addressOffset>0x6C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_DEBUG_SEL0</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>7</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_DEBUG_SEL1</name>
-              <description>need des</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>7</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_DEBUG_SEL2</name>
-              <description>need des</description>
-              <bitOffset>14</bitOffset>
-              <bitWidth>7</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_DEBUG_SEL3</name>
-              <description>need des</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>7</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>DEBUG_SEL1</name>
-          <description>need des</description>
-          <addressOffset>0x70</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LP_DEBUG_SEL4</name>
-              <description>need des</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>7</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LPI2C</name>
-          <description>need des</description>
-          <addressOffset>0x74</addressOffset>
-          <size>0x20</size>
-          <resetValue>0xC0000000</resetValue>
-          <fields>
-            <field>
-              <name>LP_I2C_SDA_IE</name>
-              <description>need des</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LP_I2C_SCL_IE</name>
-              <description>need des</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -5559,7 +4544,7 @@ Information.</description>
               <description>UART 0 accesses FIFO via this register.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
