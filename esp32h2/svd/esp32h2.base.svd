@@ -4,9 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-H2</name>
   <series>ESP32 H-Series</series>
-  <version>9</version>
+  <version>10</version>
   <description>32-bit RISC-V MCU &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
-  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2024 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -349,36 +349,36 @@
           </fields>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>IV_MEM[%s]</name>
           <description>The memory that stores initialization vector</description>
           <addressOffset>0x50</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>H_MEM[%s]</name>
           <description>The memory that stores GCM hash subkey</description>
           <addressOffset>0x60</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>J0_MEM[%s]</name>
           <description>The memory that stores J0</description>
           <addressOffset>0x70</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>T0_MEM[%s]</name>
           <description>The memory that stores T0</description>
           <addressOffset>0x80</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
           <name>DMA_ENABLE</name>
@@ -3702,60 +3702,60 @@
       </addressBlock>
       <registers>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Y_MEM[%s]</name>
           <description>memory that stores Y</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>memory that stores M</description>
           <addressOffset>0x200</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>RB_MEM[%s]</name>
           <description>memory that stores Rb</description>
           <addressOffset>0x400</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>48</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>12</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>BOX_MEM[%s]</name>
           <description>memory that stores BOX</description>
           <addressOffset>0x600</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>IV_MEM[%s]</name>
           <description>memory that stores IV</description>
           <addressOffset>0x630</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>memory that stores X</description>
           <addressOffset>0x800</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>memory that stores Z</description>
           <addressOffset>0xA00</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
           <name>SET_START</name>
@@ -4036,54 +4036,54 @@
           </fields>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>K_MEM[%s]</name>
           <description>The memory that stores k.</description>
           <addressOffset>0x100</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PX_MEM[%s]</name>
           <description>The memory that stores Px.</description>
           <addressOffset>0x120</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PY_MEM[%s]</name>
           <description>The memory that stores Py.</description>
           <addressOffset>0x140</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QX_MEM%s</name>
           <description>The memory that stores Qx</description>
           <addressOffset>0x160</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QY_MEM%s</name>
           <description>The memory that stores Qy</description>
           <addressOffset>0x180</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QZ_MEM%s</name>
           <description>The memory that stores Qz</description>
           <addressOffset>0x1A0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
       </registers>
@@ -4739,17 +4739,52 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>MAC_RESERVED_1</name>
-              <description>Reserved.</description>
+              <name>RXIQ_VERSION</name>
+              <description>Stores RF Calibration data. RXIQ version.</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
+              <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>MAC_RESERVED_0</name>
-              <description>Reserved.</description>
-              <bitOffset>14</bitOffset>
-              <bitWidth>18</bitWidth>
+              <name>RXIQ_0</name>
+              <description>Stores RF Calibration data. RXIQ data 0.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RXIQ_1</name>
+              <description>Stores RF Calibration data. RXIQ data 1.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ACTIVE_HP_DBIAS</name>
+              <description>Stores the PMU active hp dbias.</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ACTIVE_LP_DBIAS</name>
+              <description>Stores the PMU active lp dbias.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DSLP_DBIAS</name>
+              <description>Stores the PMU sleep dbias.</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DBIAS_VOL_GAP_VALUE1</name>
+              <description>Stores the low 1 bit of dbias_vol_gap.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
           </fields>
@@ -4761,17 +4796,66 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>MAC_RESERVED_2</name>
-              <description>Reserved.</description>
+              <name>DBIAS_VOL_GAP_VALUE2</name>
+              <description>Stores the high 3 bits of dbias_vol_gap.</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>18</bitWidth>
+              <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>SYS_DATA_PART0_0</name>
-              <description>Stores the first 14 bits of the zeroth part of system data.</description>
-              <bitOffset>18</bitOffset>
+              <name>DBIAS_VOL_GAP_SIGN</name>
+              <description>Stores the sign bit of dbias_vol_gap.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MAC_RESERVED_2</name>
+              <description>Reserved.</description>
+              <bitOffset>4</bitOffset>
               <bitWidth>14</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WAFER_VERSION_MINOR</name>
+              <description>Stores the wafer version minor.</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WAFER_VERSION_MAJOR</name>
+              <description>Stores the wafer version major.</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DISABLE_WAFER_VERSION_MAJOR</name>
+              <description>Disables check of wafer version major.</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>FLASH_CAP</name>
+              <description>Stores the flash cap.</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>FLASH_TEMP</name>
+              <description>Stores the flash temp.</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>FLASH_VENDOR</name>
+              <description>Stores the flash vendor.</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
           </fields>
@@ -8225,20 +8309,20 @@
           </fields>
         </register>
         <register>
-          <dim>64</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>16</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>WR_MESSAGE_MEM[%s]</name>
           <description>Message block memory.</description>
           <addressOffset>0x80</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>RD_RESULT_MEM[%s]</name>
           <description>Result from upstream.</description>
           <addressOffset>0xC0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
           <name>SET_MESSAGE_PAD</name>
@@ -12155,7 +12239,7 @@ level.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>I2S1</name>
+        <name>I2S0</name>
         <value>31</value>
       </interrupt>
       <registers>
@@ -35803,39 +35887,39 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </interrupt>
       <registers>
         <register>
-          <dim>384</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>96</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>Represents M</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>384</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>96</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>Represents Z</description>
           <addressOffset>0x200</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>384</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>96</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Y_MEM[%s]</name>
           <description>Represents Y</description>
           <addressOffset>0x400</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>384</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>96</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>Represents X</description>
           <addressOffset>0x600</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
@@ -36264,20 +36348,20 @@ This option should be used together with RSA_SEARCH_POS.</description>
           </fields>
         </register>
         <register>
-          <dim>64</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>H_MEM[%s]</name>
           <description>Sha H memory which contains intermediate hash or finial hash.</description>
           <addressOffset>0x40</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>64</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>16</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>Sha M memory which contains message.</description>
           <addressOffset>0x80</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
       </registers>
     </peripheral>
@@ -47187,7 +47271,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>MEM_STAET_ADDR</name>
+              <name>MEM_START_ADDR</name>
               <description>The start address of trace memory</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>

@@ -4,9 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32 S-Series</series>
-  <version>18</version>
+  <version>19</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
-  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2024 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@
         <register>
           <dim>8</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>KEY_%s</name>
+          <name>KEY[%s]</name>
           <description>AES key register %s</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
@@ -68,7 +68,7 @@
         <register>
           <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>TEXT_IN_%s</name>
+          <name>TEXT_IN[%s]</name>
           <description>Source data register %s</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
@@ -85,7 +85,7 @@
         <register>
           <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>TEXT_OUT_%s</name>
+          <name>TEXT_OUT[%s]</name>
           <description>Result data register %s</description>
           <addressOffset>0x30</addressOffset>
           <size>0x20</size>
@@ -1989,12 +1989,12 @@ alternate-channel scan mode.</description>
       </addressBlock>
       <registers>
         <register>
-          <dim>1584</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>396</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>C_MEM[%s]</name>
           <description>memory C</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
           <dim>4</dim>
@@ -2014,20 +2014,20 @@ alternate-channel scan mode.</description>
           </fields>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>memory X</description>
           <addressOffset>0x800</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>memory Z</description>
           <addressOffset>0xA00</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
           <name>SET_START</name>
@@ -20138,39 +20138,39 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           </fields>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>Represents M</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>write-only</access>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>Represents Z</description>
           <addressOffset>0x200</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Y_MEM[%s]</name>
           <description>Represents Y</description>
           <addressOffset>0x400</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>write-only</access>
         </register>
         <register>
-          <dim>512</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>128</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>Represents X</description>
           <addressOffset>0x600</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>write-only</access>
         </register>
       </registers>

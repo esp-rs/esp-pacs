@@ -6,7 +6,7 @@
   <series>ESP32 C-Series</series>
   <version>10</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
-  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2024 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -2184,8 +2184,11 @@
       </interrupt>
       <registers>
         <register>
-          <name>INT_RAW_CH0</name>
-          <description>DMA_INT_RAW_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>INT_RAW_CH%s</name>
+          <description>DMA_INT_RAW_CH%s_REG.</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
@@ -2382,8 +2385,11 @@
           </fields>
         </register>
         <register>
-          <name>INT_ENA_CH0</name>
-          <description>DMA_INT_ENA_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>INT_ENA_CH%s</name>
+          <description>DMA_INT_ENA_CH%s_REG.</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
@@ -2481,8 +2487,11 @@
           </fields>
         </register>
         <register>
-          <name>INT_CLR_CH0</name>
-          <description>DMA_INT_CLR_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>INT_CLR_CH%s</name>
+          <description>DMA_INT_CLR_CH%s_REG.</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <fields>
@@ -2647,8 +2656,11 @@
           </fields>
         </register>
         <register>
-          <name>IN_CONF0_CH0</name>
-          <description>DMA_IN_CONF0_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>IN_CONF0_CH%s</name>
+          <description>DMA_IN_CONF%s_CH%s_REG.</description>
           <addressOffset>0x70</addressOffset>
           <size>0x20</size>
           <fields>
@@ -2793,8 +2805,11 @@
           </fields>
         </register>
         <register>
-          <name>IN_LINK_CH0</name>
-          <description>DMA_IN_LINK_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>IN_LINK_CH%s</name>
+          <description>DMA_IN_LINK_CH%s_REG.</description>
           <addressOffset>0x80</addressOffset>
           <size>0x20</size>
           <resetValue>0x01100000</resetValue>
@@ -2918,8 +2933,11 @@
           </fields>
         </register>
         <register>
-          <name>IN_DSCR_BF0_CH0</name>
-          <description>DMA_IN_DSCR_BF0_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>IN_DSCR_BF0_CH%s</name>
+          <description>DMA_IN_DSCR_BF%s_CH%s_REG.</description>
           <addressOffset>0x94</addressOffset>
           <size>0x20</size>
           <fields>
@@ -2948,8 +2966,11 @@
           </fields>
         </register>
         <register>
-          <name>IN_PRI_CH0</name>
-          <description>DMA_IN_PRI_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>IN_PRI_CH%s</name>
+          <description>DMA_IN_PRI_CH%s_REG.</description>
           <addressOffset>0x9C</addressOffset>
           <size>0x20</size>
           <fields>
@@ -2963,8 +2984,11 @@
           </fields>
         </register>
         <register>
-          <name>IN_PERI_SEL_CH0</name>
-          <description>DMA_IN_PERI_SEL_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>IN_PERI_SEL_CH%s</name>
+          <description>DMA_IN_PERI_SEL_CH%s_REG.</description>
           <addressOffset>0xA0</addressOffset>
           <size>0x20</size>
           <resetValue>0x0000003F</resetValue>
@@ -2979,8 +3003,11 @@
           </fields>
         </register>
         <register>
-          <name>OUT_CONF0_CH0</name>
-          <description>DMA_OUT_CONF0_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>OUT_CONF0_CH%s</name>
+          <description>DMA_OUT_CONF%s_CH%s_REG.</description>
           <addressOffset>0xD0</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000008</resetValue>
@@ -3030,8 +3057,11 @@
           </fields>
         </register>
         <register>
-          <name>OUT_CONF1_CH0</name>
-          <description>DMA_OUT_CONF1_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>OUT_CONF1_CH%s</name>
+          <description>DMA_OUT_CONF1_CH%s_REG.</description>
           <addressOffset>0xD4</addressOffset>
           <size>0x20</size>
           <fields>
@@ -3125,8 +3155,11 @@
           </fields>
         </register>
         <register>
-          <name>OUT_LINK_CH0</name>
-          <description>DMA_OUT_LINK_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>OUT_LINK_CH%s</name>
+          <description>DMA_OUT_LINK_CH%s_REG.</description>
           <addressOffset>0xE0</addressOffset>
           <size>0x20</size>
           <resetValue>0x00800000</resetValue>
@@ -3198,8 +3231,11 @@
           </fields>
         </register>
         <register>
-          <name>OUT_EOF_DES_ADDR_CH0</name>
-          <description>DMA_OUT_EOF_DES_ADDR_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>OUT_EOF_DES_ADDR_CH%s</name>
+          <description>DMA_OUT_EOF_DES_ADDR_CH%s_REG.</description>
           <addressOffset>0xE8</addressOffset>
           <size>0x20</size>
           <fields>
@@ -3273,8 +3309,11 @@
           </fields>
         </register>
         <register>
-          <name>OUT_PRI_CH0</name>
-          <description>DMA_OUT_PRI_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>OUT_PRI_CH%s</name>
+          <description>DMA_OUT_PRI_CH%s_REG.</description>
           <addressOffset>0xFC</addressOffset>
           <size>0x20</size>
           <fields>
@@ -3288,8 +3327,11 @@
           </fields>
         </register>
         <register>
-          <name>OUT_PERI_SEL_CH0</name>
-          <description>DMA_OUT_PERI_SEL_CH0_REG.</description>
+          <dim>1</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-0</dimIndex>
+          <name>OUT_PERI_SEL_CH%s</name>
+          <description>DMA_OUT_PERI_SEL_CH%s_REG.</description>
           <addressOffset>0x100</addressOffset>
           <size>0x20</size>
           <resetValue>0x0000003F</resetValue>
@@ -3450,28 +3492,28 @@
           </fields>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>K_MEM[%s]</name>
           <description>The memory that stores k.</description>
           <addressOffset>0x100</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PX_MEM[%s]</name>
           <description>The memory that stores Px.</description>
           <addressOffset>0x120</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PY_MEM[%s]</name>
           <description>The memory that stores Py.</description>
           <addressOffset>0x140</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
       </registers>
     </peripheral>
@@ -12863,20 +12905,20 @@ The least significant eight bits represent the fractional part.</description>
           </fields>
         </register>
         <register>
-          <dim>64</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>H_MEM[%s]</name>
           <description>Sha H memory which contains intermediate hash or finial hash.</description>
           <addressOffset>0x40</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>64</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>16</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>Sha M memory which contains message.</description>
           <addressOffset>0x80</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
       </registers>
     </peripheral>
@@ -20932,12 +20974,12 @@ protection is enabled.</description>
       </addressBlock>
       <registers>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PLAIN_MEM[%s]</name>
           <description>The memory that stores plaintext</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
         </register>
         <register>
           <name>LINESIZE</name>

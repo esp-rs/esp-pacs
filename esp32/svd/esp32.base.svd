@@ -4,9 +4,9 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32 Series</series>
-  <version>15</version>
+  <version>16</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
-  <licenseText>Copyright 2023 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2024 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -89,7 +89,7 @@
         <register>
           <dim>8</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>KEY_%s</name>
+          <name>KEY[%s]</name>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <fields>
@@ -105,7 +105,7 @@
         <register>
           <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>TEXT_%s</name>
+          <name>TEXT[%s]</name>
           <addressOffset>0x30</addressOffset>
           <size>0x20</size>
           <fields>
@@ -23345,39 +23345,39 @@
           </fields>
         </register>
         <register>
-          <dim>128</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>32</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>Represents M</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>128</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>32</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>Represents Z</description>
           <addressOffset>0x200</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>128</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>32</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>Y_MEM[%s]</name>
           <description>Represents Y</description>
           <addressOffset>0x400</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
         <register>
-          <dim>128</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>32</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>Represents X</description>
           <addressOffset>0x600</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
         </register>
       </registers>
@@ -43775,42 +43775,42 @@ IDINTEN[4]: DU Interrupt.</description>
             </field>
             <field>
               <name>RX_FLOW_THRHD_H3</name>
-              <description>refer to the rx_flow_thrhd's describtion.</description>
+              <description>Refer to the rx_flow_thrhd's description.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RX_TOUT_THRHD_H3</name>
-              <description>refer to the rx_tout_thrhd's describtion.</description>
+              <description>Refer to the rx_tout_thrhd's description.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XON_THRESHOLD_H2</name>
-              <description>refer to the uart_xon_threshold's describtion.</description>
+              <description>Refer to the uart_xon_threshold's description.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XOFF_THRESHOLD_H2</name>
-              <description>refer to the uart_xoff_threshold's describtion.</description>
+              <description>Refer to the uart_xoff_threshold's description.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RX_MEM_FULL_THRHD</name>
-              <description>refer to the rxfifo_full_thrhd's describtion.</description>
+              <description>Refer to the rxfifo_full_thrhd's description.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TX_MEM_EMPTY_THRHD</name>
-              <description>refer to txfifo_empty_thrhd 's describtion.</description>
+              <description>Refer to txfifo_empty_thrhd's description.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
@@ -43865,14 +43865,14 @@ IDINTEN[4]: DU Interrupt.</description>
           <fields>
             <field>
               <name>RX_MEM_CNT</name>
-              <description>refer to the rxfifo_cnt's describtion.</description>
+              <description>Refer to the rxfifo_cnt's description.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
               <name>TX_MEM_CNT</name>
-              <description>refer to the txfifo_cnt's describtion.</description>
+              <description>Refer to the txfifo_cnt's description.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
