@@ -6,7 +6,7 @@
 use core::marker::PhantomData;
 use core::ops::Deref;
 #[doc = r"Number available in the NVIC for configuring priority"]
-pub const NVIC_PRIO_BITS: u8 = 4;
+pub const NVIC_PRIO_BITS: u8 = 0;
 #[allow(unused_imports)]
 use generic::*;
 #[doc = r"Common register and bit access and modify traits"]
@@ -64,17 +64,17 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 22] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
-#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller"]
-pub struct LP_I2C {
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
+pub struct LP_I2C0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for LP_I2C {}
-impl LP_I2C {
+unsafe impl Send for LP_I2C0 {}
+impl LP_I2C0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const lp_i2c::RegisterBlock = 0x600b_1800 as *const _;
+    pub const PTR: *const lp_i2c0::RegisterBlock = 0x600b_1800 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const lp_i2c::RegisterBlock {
+    pub const fn ptr() -> *const lp_i2c0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -96,20 +96,20 @@ impl LP_I2C {
         }
     }
 }
-impl Deref for LP_I2C {
-    type Target = lp_i2c::RegisterBlock;
+impl Deref for LP_I2C0 {
+    type Target = lp_i2c0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for LP_I2C {
+impl core::fmt::Debug for LP_I2C0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_I2C").finish()
+        f.debug_struct("LP_I2C0").finish()
     }
 }
-#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller"]
-pub mod lp_i2c;
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
+pub mod lp_i2c0;
 #[doc = "LP_PERI Peripheral"]
 pub struct LP_PERI {
     _marker: PhantomData<*const ()>,
@@ -386,7 +386,7 @@ impl core::fmt::Debug for LP_I2C_ANA_MST {
 }
 #[doc = "LP_I2C_ANA_MST Peripheral"]
 pub mod lp_i2c_ana_mst;
-#[doc = "Low-power Input/Output Multiplexer"]
+#[doc = "LP_IO Peripheral"]
 pub struct LP_IO {
     _marker: PhantomData<*const ()>,
 }
@@ -430,7 +430,7 @@ impl core::fmt::Debug for LP_IO {
         f.debug_struct("LP_IO").finish()
     }
 }
-#[doc = "Low-power Input/Output Multiplexer"]
+#[doc = "LP_IO Peripheral"]
 pub mod lp_io;
 #[doc = "Low-power Trusted Execution Environment"]
 pub struct LP_TEE {
@@ -621,8 +621,8 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
 #[allow(non_snake_case)]
 pub struct Peripherals {
-    #[doc = "LP_I2C"]
-    pub LP_I2C: LP_I2C,
+    #[doc = "LP_I2C0"]
+    pub LP_I2C0: LP_I2C0,
     #[doc = "LP_PERI"]
     pub LP_PERI: LP_PERI,
     #[doc = "LP_ANA_PERI"]
@@ -667,7 +667,7 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            LP_I2C: LP_I2C {
+            LP_I2C0: LP_I2C0 {
                 _marker: PhantomData,
             },
             LP_PERI: LP_PERI {

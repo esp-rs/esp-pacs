@@ -2,12 +2,12 @@
 pub type R = crate::R<LC_REG_DATE_SPEC>;
 #[doc = "Register `LC_REG_DATE` writer"]
 pub type W = crate::W<LC_REG_DATE_SPEC>;
-#[doc = "Field `LC_DATE` reader - LCD_CAM version control register"]
+#[doc = "Field `LC_DATE` reader - Version control register"]
 pub type LC_DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `LC_DATE` writer - LCD_CAM version control register"]
+#[doc = "Field `LC_DATE` writer - Version control register"]
 pub type LC_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 impl R {
-    #[doc = "Bits 0:27 - LCD_CAM version control register"]
+    #[doc = "Bits 0:27 - Version control register"]
     #[inline(always)]
     pub fn lc_date(&self) -> LC_DATE_R {
         LC_DATE_R::new(self.bits & 0x0fff_ffff)
@@ -28,7 +28,7 @@ impl core::fmt::Debug for crate::generic::Reg<LC_REG_DATE_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:27 - LCD_CAM version control register"]
+    #[doc = "Bits 0:27 - Version control register"]
     #[inline(always)]
     #[must_use]
     pub fn lc_date(&mut self) -> LC_DATE_W<LC_REG_DATE_SPEC> {
@@ -45,7 +45,7 @@ impl W {
         self
     }
 }
-#[doc = "Version register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_reg_date::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lc_reg_date::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Version control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_reg_date::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lc_reg_date::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LC_REG_DATE_SPEC;
 impl crate::RegisterSpec for LC_REG_DATE_SPEC {
     type Ux = u32;

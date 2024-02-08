@@ -1,22 +1,19 @@
 #[doc = "Register `STATUS_INT` reader"]
 pub type R = crate::R<STATUS_INT_SPEC>;
-#[doc = "Field `STATUS_INTERRUPT_NEXT` reader - need des"]
-pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader;
+#[doc = "Field `NEXT` reader - need des"]
+pub type NEXT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - need des"]
     #[inline(always)]
-    pub fn status_interrupt_next(&self) -> STATUS_INTERRUPT_NEXT_R {
-        STATUS_INTERRUPT_NEXT_R::new((self.bits & 0xff) as u8)
+    pub fn next(&self) -> NEXT_R {
+        NEXT_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_INT")
-            .field(
-                "status_interrupt_next",
-                &format_args!("{}", self.status_interrupt_next().bits()),
-            )
+            .field("next", &format_args!("{}", self.next().bits()))
             .finish()
     }
 }

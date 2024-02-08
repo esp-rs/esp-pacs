@@ -2,53 +2,53 @@
 pub type R = crate::R<PIN4_SPEC>;
 #[doc = "Register `PIN4` writer"]
 pub type W = crate::W<PIN4_SPEC>;
-#[doc = "Field `LP_GPIO4_SYNC_BYPASS` reader - need des"]
-pub type LP_GPIO4_SYNC_BYPASS_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO4_SYNC_BYPASS` writer - need des"]
-pub type LP_GPIO4_SYNC_BYPASS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `LP_GPIO4_PAD_DRIVER` reader - need des"]
-pub type LP_GPIO4_PAD_DRIVER_R = crate::BitReader;
-#[doc = "Field `LP_GPIO4_PAD_DRIVER` writer - need des"]
-pub type LP_GPIO4_PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO4_EDGE_WAKEUP_CLR` writer - need des"]
-pub type LP_GPIO4_EDGE_WAKEUP_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO4_INT_TYPE` reader - need des"]
-pub type LP_GPIO4_INT_TYPE_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO4_INT_TYPE` writer - need des"]
-pub type LP_GPIO4_INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `LP_GPIO4_WAKEUP_ENABLE` reader - need des"]
-pub type LP_GPIO4_WAKEUP_ENABLE_R = crate::BitReader;
-#[doc = "Field `LP_GPIO4_WAKEUP_ENABLE` writer - need des"]
-pub type LP_GPIO4_WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_GPIO4_FILTER_EN` reader - need des"]
-pub type LP_GPIO4_FILTER_EN_R = crate::BitReader;
-#[doc = "Field `LP_GPIO4_FILTER_EN` writer - need des"]
-pub type LP_GPIO4_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYNC_BYPASS` reader - need des"]
+pub type SYNC_BYPASS_R = crate::FieldReader;
+#[doc = "Field `SYNC_BYPASS` writer - need des"]
+pub type SYNC_BYPASS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `PAD_DRIVER` reader - need des"]
+pub type PAD_DRIVER_R = crate::BitReader;
+#[doc = "Field `PAD_DRIVER` writer - need des"]
+pub type PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EDGE_WAKEUP_CLR` writer - need des"]
+pub type EDGE_WAKEUP_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INT_TYPE` reader - need des"]
+pub type INT_TYPE_R = crate::FieldReader;
+#[doc = "Field `INT_TYPE` writer - need des"]
+pub type INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `WAKEUP_ENABLE` reader - need des"]
+pub type WAKEUP_ENABLE_R = crate::BitReader;
+#[doc = "Field `WAKEUP_ENABLE` writer - need des"]
+pub type WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FILTER_EN` reader - need des"]
+pub type FILTER_EN_R = crate::BitReader;
+#[doc = "Field `FILTER_EN` writer - need des"]
+pub type FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
-    pub fn lp_gpio4_sync_bypass(&self) -> LP_GPIO4_SYNC_BYPASS_R {
-        LP_GPIO4_SYNC_BYPASS_R::new((self.bits & 3) as u8)
+    pub fn sync_bypass(&self) -> SYNC_BYPASS_R {
+        SYNC_BYPASS_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
-    pub fn lp_gpio4_pad_driver(&self) -> LP_GPIO4_PAD_DRIVER_R {
-        LP_GPIO4_PAD_DRIVER_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn pad_driver(&self) -> PAD_DRIVER_R {
+        PAD_DRIVER_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 7:9 - need des"]
     #[inline(always)]
-    pub fn lp_gpio4_int_type(&self) -> LP_GPIO4_INT_TYPE_R {
-        LP_GPIO4_INT_TYPE_R::new(((self.bits >> 7) & 7) as u8)
+    pub fn int_type(&self) -> INT_TYPE_R {
+        INT_TYPE_R::new(((self.bits >> 7) & 7) as u8)
     }
     #[doc = "Bit 10 - need des"]
     #[inline(always)]
-    pub fn lp_gpio4_wakeup_enable(&self) -> LP_GPIO4_WAKEUP_ENABLE_R {
-        LP_GPIO4_WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn wakeup_enable(&self) -> WAKEUP_ENABLE_R {
+        WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
-    pub fn lp_gpio4_filter_en(&self) -> LP_GPIO4_FILTER_EN_R {
-        LP_GPIO4_FILTER_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn filter_en(&self) -> FILTER_EN_R {
+        FILTER_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -56,25 +56,16 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIN4")
             .field(
-                "lp_gpio4_sync_bypass",
-                &format_args!("{}", self.lp_gpio4_sync_bypass().bits()),
+                "sync_bypass",
+                &format_args!("{}", self.sync_bypass().bits()),
             )
+            .field("pad_driver", &format_args!("{}", self.pad_driver().bit()))
+            .field("int_type", &format_args!("{}", self.int_type().bits()))
             .field(
-                "lp_gpio4_pad_driver",
-                &format_args!("{}", self.lp_gpio4_pad_driver().bit()),
+                "wakeup_enable",
+                &format_args!("{}", self.wakeup_enable().bit()),
             )
-            .field(
-                "lp_gpio4_int_type",
-                &format_args!("{}", self.lp_gpio4_int_type().bits()),
-            )
-            .field(
-                "lp_gpio4_wakeup_enable",
-                &format_args!("{}", self.lp_gpio4_wakeup_enable().bit()),
-            )
-            .field(
-                "lp_gpio4_filter_en",
-                &format_args!("{}", self.lp_gpio4_filter_en().bit()),
-            )
+            .field("filter_en", &format_args!("{}", self.filter_en().bit()))
             .finish()
     }
 }
@@ -88,38 +79,38 @@ impl W {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio4_sync_bypass(&mut self) -> LP_GPIO4_SYNC_BYPASS_W<PIN4_SPEC> {
-        LP_GPIO4_SYNC_BYPASS_W::new(self, 0)
+    pub fn sync_bypass(&mut self) -> SYNC_BYPASS_W<PIN4_SPEC> {
+        SYNC_BYPASS_W::new(self, 0)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio4_pad_driver(&mut self) -> LP_GPIO4_PAD_DRIVER_W<PIN4_SPEC> {
-        LP_GPIO4_PAD_DRIVER_W::new(self, 2)
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN4_SPEC> {
+        PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio4_edge_wakeup_clr(&mut self) -> LP_GPIO4_EDGE_WAKEUP_CLR_W<PIN4_SPEC> {
-        LP_GPIO4_EDGE_WAKEUP_CLR_W::new(self, 3)
+    pub fn edge_wakeup_clr(&mut self) -> EDGE_WAKEUP_CLR_W<PIN4_SPEC> {
+        EDGE_WAKEUP_CLR_W::new(self, 3)
     }
     #[doc = "Bits 7:9 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio4_int_type(&mut self) -> LP_GPIO4_INT_TYPE_W<PIN4_SPEC> {
-        LP_GPIO4_INT_TYPE_W::new(self, 7)
+    pub fn int_type(&mut self) -> INT_TYPE_W<PIN4_SPEC> {
+        INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio4_wakeup_enable(&mut self) -> LP_GPIO4_WAKEUP_ENABLE_W<PIN4_SPEC> {
-        LP_GPIO4_WAKEUP_ENABLE_W::new(self, 10)
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN4_SPEC> {
+        WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio4_filter_en(&mut self) -> LP_GPIO4_FILTER_EN_W<PIN4_SPEC> {
-        LP_GPIO4_FILTER_EN_W::new(self, 11)
+    pub fn filter_en(&mut self) -> FILTER_EN_W<PIN4_SPEC> {
+        FILTER_EN_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

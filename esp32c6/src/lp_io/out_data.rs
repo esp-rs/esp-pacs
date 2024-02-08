@@ -2,25 +2,22 @@
 pub type R = crate::R<OUT_DATA_SPEC>;
 #[doc = "Register `OUT_DATA` writer"]
 pub type W = crate::W<OUT_DATA_SPEC>;
-#[doc = "Field `LP_GPIO_OUT_DATA` reader - set lp gpio output data"]
-pub type LP_GPIO_OUT_DATA_R = crate::FieldReader;
-#[doc = "Field `LP_GPIO_OUT_DATA` writer - set lp gpio output data"]
-pub type LP_GPIO_OUT_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `OUT_DATA` reader - set lp gpio output data"]
+pub type OUT_DATA_R = crate::FieldReader;
+#[doc = "Field `OUT_DATA` writer - set lp gpio output data"]
+pub type OUT_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
-    pub fn lp_gpio_out_data(&self) -> LP_GPIO_OUT_DATA_R {
-        LP_GPIO_OUT_DATA_R::new((self.bits & 0xff) as u8)
+    pub fn out_data(&self) -> OUT_DATA_R {
+        OUT_DATA_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_DATA")
-            .field(
-                "lp_gpio_out_data",
-                &format_args!("{}", self.lp_gpio_out_data().bits()),
-            )
+            .field("out_data", &format_args!("{}", self.out_data().bits()))
             .finish()
     }
 }
@@ -34,8 +31,8 @@ impl W {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_gpio_out_data(&mut self) -> LP_GPIO_OUT_DATA_W<OUT_DATA_SPEC> {
-        LP_GPIO_OUT_DATA_W::new(self, 0)
+    pub fn out_data(&mut self) -> OUT_DATA_W<OUT_DATA_SPEC> {
+        OUT_DATA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

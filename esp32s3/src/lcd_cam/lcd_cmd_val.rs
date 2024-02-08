@@ -48,7 +48,7 @@ impl W {
         self
     }
 }
-#[doc = "LCD configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_cmd_val::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_cmd_val::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LCD command value configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_cmd_val::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_cmd_val::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCD_CMD_VAL_SPEC;
 impl crate::RegisterSpec for LCD_CMD_VAL_SPEC {
     type Ux = u32;
