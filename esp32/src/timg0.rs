@@ -282,7 +282,7 @@ pub mod t0lo;
 pub type T0HI = crate::Reg<t0hi::T0HI_SPEC>;
 #[doc = ""]
 pub mod t0hi;
-#[doc = "T0UPDATE (w) register accessor: \n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0update::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0update`] module"]
+#[doc = "T0UPDATE (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0update::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0update::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0update`] module"]
 pub type T0UPDATE = crate::Reg<t0update::T0UPDATE_SPEC>;
 #[doc = ""]
 pub mod t0update;
@@ -318,7 +318,7 @@ pub mod t1lo;
 pub type T1HI = crate::Reg<t1hi::T1HI_SPEC>;
 #[doc = ""]
 pub mod t1hi;
-#[doc = "T1UPDATE (w) register accessor: \n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1update::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1update`] module"]
+#[doc = "T1UPDATE (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1update::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1update::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1update`] module"]
 pub type T1UPDATE = crate::Reg<t1update::T1UPDATE_SPEC>;
 #[doc = ""]
 pub mod t1update;

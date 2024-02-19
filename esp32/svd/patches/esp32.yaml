@@ -1,1 +1,15 @@
 _svd: ../esp32.base.svd
+
+TIMG0:
+  T0UPDATE:
+    _modify:
+      UPDATE:
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+  T1UPDATE:
+    _modify:
+      UPDATE:
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
