@@ -1,1 +1,10 @@
 _svd: "../esp32c6-lp.base.svd"
+
+LP_I2C0:
+  _strip: "I2C_"
+  "*":
+    _strip: "I2C_"
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
