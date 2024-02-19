@@ -238,7 +238,7 @@ pub mod fifo_st;
 pub type FIFO_CONF = crate::Reg<fifo_conf::FIFO_CONF_SPEC>;
 #[doc = "FIFO configuration register."]
 pub mod fifo_conf;
-#[doc = "DATA (r) register accessor: Rx FIFO read data.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data`] module"]
+#[doc = "DATA (rw) register accessor: Rx FIFO read data.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`data::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data`] module"]
 pub type DATA = crate::Reg<data::DATA_SPEC>;
 #[doc = "Rx FIFO read data."]
 pub mod data;
