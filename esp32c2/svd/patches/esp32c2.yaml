@@ -1,1 +1,7 @@
 _svd: ../esp32c2.base.svd
+
+TIMG0:
+  T0UPDATE:
+    _modify:
+      T0_UPDATE:
+        name: UPDATE
