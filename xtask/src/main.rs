@@ -206,14 +206,8 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         output_dir: Some(path.clone()),
         impl_debug: true,
         impl_debug_feature: Some("impl-register-debug".to_owned()),
-
-        ..match target {
-            Target::RISCV => Config {
-                interrupt_link_section: Some(".trap.rodata".to_owned()),
-                ..Config::default()
-            },
-            _ => Config::default(),
-        }
+        interrupt_link_section: Some(".rwtext".to_owned()),
+        ..Config::default()
     };
 
     let input = fs::read_to_string(svd_file)?;
