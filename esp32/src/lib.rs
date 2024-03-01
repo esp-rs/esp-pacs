@@ -88,6 +88,7 @@ pub union Vector {
     _reserved: u32,
 }
 #[cfg(feature = "rt")]
+#[link_section = ".rwtext"]
 #[doc(hidden)]
 pub static __INTERRUPTS: [Vector; 69] = [
     Vector { _handler: WIFI_MAC },

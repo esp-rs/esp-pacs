@@ -29,7 +29,7 @@ pub union Vector {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".trap.rodata"]
+#[link_section = ".rwtext"]
 #[no_mangle]
 pub static __EXTERNAL_INTERRUPTS: [Vector; 22] = [
     Vector { _reserved: 0 },
