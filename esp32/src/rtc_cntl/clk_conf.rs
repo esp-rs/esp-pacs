@@ -3,6 +3,7 @@ pub type R = crate::R<CLK_CONF_SPEC>;
 #[doc = "Register `CLK_CONF` writer"]
 pub type W = crate::W<CLK_CONF_SPEC>;
 #[doc = "CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024.\n\nValue on reset: 1"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CK8M_DIV {
@@ -92,6 +93,7 @@ pub type ENB_CK8M_R = crate::BitReader;
 #[doc = "Field `ENB_CK8M` writer - disable CK8M and CK8M_D256_OUT"]
 pub type ENB_CK8M_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ENB_CK8M_DIV {
     #[doc = "0: CK8M_DIV_256"]
@@ -185,6 +187,7 @@ pub type CK8M_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CK8M_FORCE_PU` writer - CK8M force power up"]
 pub type CK8M_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SOC_CLK_SEL {
@@ -270,6 +273,7 @@ where
     }
 }
 #[doc = "fast_clk_rtc sel. 0: XTAL div 4 1: CK8M\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FAST_CLK_RTC_SEL {
     #[doc = "0: XTAL_DIV_4"]
@@ -323,6 +327,7 @@ where
     }
 }
 #[doc = "slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum ANA_CLK_RTC_SEL {
