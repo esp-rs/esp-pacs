@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     blend0_clut_data: BLEND0_CLUT_DATA,
     blend1_clut_data: BLEND1_CLUT_DATA,

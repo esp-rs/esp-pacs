@@ -39,16 +39,6 @@ impl W {
     pub fn etm_start_3(&mut self) -> ETM_START_3_W<REGDMA_ETM_CTRL_SPEC> {
         ETM_START_3_W::new(self, 3)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "ETM start ctrl reg\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`regdma_etm_ctrl::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REGDMA_ETM_CTRL_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for REGDMA_ETM_CTRL_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`regdma_etm_ctrl::W`](W) writer structure"]
 impl crate::Writable for REGDMA_ETM_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

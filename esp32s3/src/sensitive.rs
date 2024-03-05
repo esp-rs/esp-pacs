@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     cache_dataarray_connect_0: CACHE_DATAARRAY_CONNECT_0,
     cache_dataarray_connect_1: CACHE_DATAARRAY_CONNECT_1,

@@ -186,16 +186,6 @@ impl W {
     pub fn padbist_rx_clk_en(&mut self) -> PADBIST_RX_CLK_EN_W<PERI_CLK_CTRL26_SPEC> {
         PADBIST_RX_CLK_EN_W::new(self, 29)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Reserved\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`peri_clk_ctrl26::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`peri_clk_ctrl26::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PERI_CLK_CTRL26_SPEC;
@@ -206,6 +196,7 @@ impl crate::RegisterSpec for PERI_CLK_CTRL26_SPEC {
 impl crate::Readable for PERI_CLK_CTRL26_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl26::W`](W) writer structure"]
 impl crate::Writable for PERI_CLK_CTRL26_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

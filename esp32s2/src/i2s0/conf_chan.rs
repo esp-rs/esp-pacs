@@ -56,16 +56,6 @@ impl W {
     pub fn rx_chan_mod(&mut self) -> RX_CHAN_MOD_W<CONF_CHAN_SPEC> {
         RX_CHAN_MOD_W::new(self, 3)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2S channel configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf_chan::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf_chan::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF_CHAN_SPEC;
@@ -76,6 +66,7 @@ impl crate::RegisterSpec for CONF_CHAN_SPEC {
 impl crate::Readable for CONF_CHAN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`conf_chan::W`](W) writer structure"]
 impl crate::Writable for CONF_CHAN_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

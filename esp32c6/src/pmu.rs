@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     hp_active_dig_power: HP_ACTIVE_DIG_POWER,
     hp_active_icg_hp_func: HP_ACTIVE_ICG_HP_FUNC,

@@ -37,16 +37,6 @@ impl W {
     pub fn clk_i2c_mst_sel_160m(&mut self) -> CLK_I2C_MST_SEL_160M_W<CLK160M_SPEC> {
         CLK_I2C_MST_SEL_160M_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "need des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk160m::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk160m::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK160M_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for CLK160M_SPEC {
 impl crate::Readable for CLK160M_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk160m::W`](W) writer structure"]
 impl crate::Writable for CLK160M_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     bt_select: BT_SELECT,
     out: OUT,
@@ -1869,10 +1869,12 @@ pub type PIN = crate::Reg<pin::PIN_SPEC>;
 #[doc = ""]
 pub mod pin;
 #[doc = "cali_conf (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cali_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cali_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cali_conf`] module"]
+#[doc(alias = "cali_conf")]
 pub type CALI_CONF = crate::Reg<cali_conf::CALI_CONF_SPEC>;
 #[doc = ""]
 pub mod cali_conf;
 #[doc = "cali_data (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cali_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cali_data`] module"]
+#[doc(alias = "cali_data")]
 pub type CALI_DATA = crate::Reg<cali_data::CALI_DATA_SPEC>;
 #[doc = ""]
 pub mod cali_data;

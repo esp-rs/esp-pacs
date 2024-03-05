@@ -34,16 +34,6 @@ impl W {
     pub fn buffifo(&mut self) -> BUFFIFO_W<BUFFIFO_SPEC> {
         BUFFIFO_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "CPU write and read transmit data by FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`buffifo::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`buffifo::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUFFIFO_SPEC;
@@ -54,6 +44,7 @@ impl crate::RegisterSpec for BUFFIFO_SPEC {
 impl crate::Readable for BUFFIFO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`buffifo::W`](W) writer structure"]
 impl crate::Writable for BUFFIFO_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

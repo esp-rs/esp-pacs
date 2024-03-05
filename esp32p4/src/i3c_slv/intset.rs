@@ -66,16 +66,6 @@ impl W {
     pub fn txsend_ena(&mut self) -> TXSEND_ENA_W<INTSET_SPEC> {
         TXSEND_ENA_W::new(self, 12)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "INSET allows setting enables for interrupts(connecting the corresponding STATUS source to causing an IRQ to the processor)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intset::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intset::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTSET_SPEC;
@@ -86,6 +76,7 @@ impl crate::RegisterSpec for INTSET_SPEC {
 impl crate::Readable for INTSET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intset::W`](W) writer structure"]
 impl crate::Writable for INTSET_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

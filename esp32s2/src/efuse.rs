@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     pgm_data: [PGM_DATA; 8],
     pgm_check_value: [PGM_CHECK_VALUE; 3],

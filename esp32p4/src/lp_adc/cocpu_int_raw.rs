@@ -140,16 +140,6 @@ impl W {
     ) -> COCPU_SARADC2_WAKE_INT_RAW_W<COCPU_INT_RAW_SPEC> {
         COCPU_SARADC2_WAKE_INT_RAW_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt raw registers.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cocpu_int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cocpu_int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COCPU_INT_RAW_SPEC;
@@ -160,6 +150,7 @@ impl crate::RegisterSpec for COCPU_INT_RAW_SPEC {
 impl crate::Readable for COCPU_INT_RAW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cocpu_int_raw::W`](W) writer structure"]
 impl crate::Writable for COCPU_INT_RAW_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

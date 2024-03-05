@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     lp_clk_conf: LP_CLK_CONF,
     lp_clk_po_en: LP_CLK_PO_EN,

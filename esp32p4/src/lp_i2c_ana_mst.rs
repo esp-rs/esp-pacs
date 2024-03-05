@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     i2c0_ctrl: I2C0_CTRL,
     i2c1_ctrl: I2C1_CTRL,

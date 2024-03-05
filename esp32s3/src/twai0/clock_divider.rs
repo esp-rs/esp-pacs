@@ -50,16 +50,6 @@ impl W {
     pub fn clock_off(&mut self) -> CLOCK_OFF_W<CLOCK_DIVIDER_SPEC> {
         CLOCK_OFF_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Clock Divider register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_divider::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock_divider::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLOCK_DIVIDER_SPEC;
@@ -70,6 +60,7 @@ impl crate::RegisterSpec for CLOCK_DIVIDER_SPEC {
 impl crate::Readable for CLOCK_DIVIDER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clock_divider::W`](W) writer structure"]
 impl crate::Writable for CLOCK_DIVIDER_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

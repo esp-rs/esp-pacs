@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     l1_icache_ctrl: L1_ICACHE_CTRL,
     l1_dcache_ctrl: L1_DCACHE_CTRL,

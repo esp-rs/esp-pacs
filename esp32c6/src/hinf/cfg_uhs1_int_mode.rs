@@ -94,16 +94,6 @@ impl W {
     pub fn int_st_ahead_mode(&mut self) -> INT_ST_AHEAD_MODE_W<CFG_UHS1_INT_MODE_SPEC> {
         INT_ST_AHEAD_MODE_W::new(self, 6)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "configure int to start and end ahead of time in uhs1 mode\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg_uhs1_int_mode::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg_uhs1_int_mode::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG_UHS1_INT_MODE_SPEC;
@@ -114,6 +104,7 @@ impl crate::RegisterSpec for CFG_UHS1_INT_MODE_SPEC {
 impl crate::Readable for CFG_UHS1_INT_MODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg_uhs1_int_mode::W`](W) writer structure"]
 impl crate::Writable for CFG_UHS1_INT_MODE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

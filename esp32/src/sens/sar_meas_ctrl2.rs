@@ -248,16 +248,6 @@ impl W {
     pub fn amp_short_ref_gnd_force(&mut self) -> AMP_SHORT_REF_GND_FORCE_W<SAR_MEAS_CTRL2_SPEC> {
         AMP_SHORT_REF_GND_FORCE_W::new(self, 17)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_meas_ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_meas_ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_MEAS_CTRL2_SPEC;
@@ -268,6 +258,7 @@ impl crate::RegisterSpec for SAR_MEAS_CTRL2_SPEC {
 impl crate::Readable for SAR_MEAS_CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_meas_ctrl2::W`](W) writer structure"]
 impl crate::Writable for SAR_MEAS_CTRL2_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

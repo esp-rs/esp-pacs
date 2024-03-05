@@ -197,16 +197,6 @@ impl W {
     ) -> HP_ACTIVE_HP_REGULATOR_DBIAS_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
         HP_ACTIVE_HP_REGULATOR_DBIAS_W::new(self, 27)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_active_hp_regulator0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_active_hp_regulator0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_ACTIVE_HP_REGULATOR0_SPEC;
@@ -217,6 +207,7 @@ impl crate::RegisterSpec for HP_ACTIVE_HP_REGULATOR0_SPEC {
 impl crate::Readable for HP_ACTIVE_HP_REGULATOR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hp_active_hp_regulator0::W`](W) writer structure"]
 impl crate::Writable for HP_ACTIVE_HP_REGULATOR0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

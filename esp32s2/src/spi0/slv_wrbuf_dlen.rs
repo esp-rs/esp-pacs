@@ -56,16 +56,6 @@ impl W {
     pub fn conf_base_bitlen(&mut self) -> CONF_BASE_BITLEN_W<SLV_WRBUF_DLEN_SPEC> {
         CONF_BASE_BITLEN_W::new(self, 25)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SPI slave Wr_BUF interrupt and CONF control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slv_wrbuf_dlen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slv_wrbuf_dlen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLV_WRBUF_DLEN_SPEC;
@@ -76,6 +66,7 @@ impl crate::RegisterSpec for SLV_WRBUF_DLEN_SPEC {
 impl crate::Readable for SLV_WRBUF_DLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slv_wrbuf_dlen::W`](W) writer structure"]
 impl crate::Writable for SLV_WRBUF_DLEN_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

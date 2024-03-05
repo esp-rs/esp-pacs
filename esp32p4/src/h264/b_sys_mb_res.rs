@@ -56,16 +56,6 @@ impl W {
     pub fn b_sys_total_mb_x(&mut self) -> B_SYS_TOTAL_MB_X_W<B_SYS_MB_RES_SPEC> {
         B_SYS_TOTAL_MB_X_W::new(self, 7)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Video B horizontal and vertical MB resolution register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`b_sys_mb_res::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`b_sys_mb_res::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct B_SYS_MB_RES_SPEC;
@@ -76,6 +66,7 @@ impl crate::RegisterSpec for B_SYS_MB_RES_SPEC {
 impl crate::Readable for B_SYS_MB_RES_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`b_sys_mb_res::W`](W) writer structure"]
 impl crate::Writable for B_SYS_MB_RES_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

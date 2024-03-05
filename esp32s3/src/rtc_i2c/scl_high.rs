@@ -34,16 +34,6 @@ impl W {
     pub fn period(&mut self) -> PERIOD_W<SCL_HIGH_SPEC> {
         PERIOD_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "configure high scl period\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scl_high::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scl_high::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SCL_HIGH_SPEC;
@@ -54,6 +44,7 @@ impl crate::RegisterSpec for SCL_HIGH_SPEC {
 impl crate::Readable for SCL_HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scl_high::W`](W) writer structure"]
 impl crate::Writable for SCL_HIGH_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

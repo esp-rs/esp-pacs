@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     pro_mac_intr_map: PRO_MAC_INTR_MAP,
     mac_nmi_map: MAC_NMI_MAP,

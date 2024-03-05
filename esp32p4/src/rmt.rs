@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     tx_chdata: [TX_CHDATA; 4],
     rx_chdata: [RX_CHDATA; 4],

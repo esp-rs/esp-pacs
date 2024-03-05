@@ -224,16 +224,6 @@ impl W {
     pub fn app_cache_mmu_ia_clr(&mut self) -> APP_CACHE_MMU_IA_CLR_W<APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MMU_IA_CLR_W::new(self, 13)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`app_cache_ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`app_cache_ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APP_CACHE_CTRL1_SPEC;
@@ -244,6 +234,7 @@ impl crate::RegisterSpec for APP_CACHE_CTRL1_SPEC {
 impl crate::Readable for APP_CACHE_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`app_cache_ctrl1::W`](W) writer structure"]
 impl crate::Writable for APP_CACHE_CTRL1_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

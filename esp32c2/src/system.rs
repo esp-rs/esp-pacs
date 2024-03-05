@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     cpu_peri_clk_en: CPU_PERI_CLK_EN,
     cpu_peri_rst_en: CPU_PERI_RST_EN,

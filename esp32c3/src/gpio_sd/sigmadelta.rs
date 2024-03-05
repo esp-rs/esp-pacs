@@ -53,16 +53,6 @@ impl W {
     pub fn sd0_prescale(&mut self) -> SD0_PRESCALE_W<SIGMADELTA_SPEC> {
         SD0_PRESCALE_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Duty Cycle Configure Register of SDM%s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sigmadelta::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sigmadelta::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SIGMADELTA_SPEC;
@@ -73,6 +63,7 @@ impl crate::RegisterSpec for SIGMADELTA_SPEC {
 impl crate::Readable for SIGMADELTA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sigmadelta::W`](W) writer structure"]
 impl crate::Writable for SIGMADELTA_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -132,16 +132,6 @@ impl W {
     pub fn evt_op2_tee2_en(&mut self) -> EVT_OP2_TEE2_EN_W<EVT_EN2_SPEC> {
         EVT_OP2_TEE2_EN_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Event enable register2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evt_en2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evt_en2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVT_EN2_SPEC;
@@ -152,6 +142,7 @@ impl crate::RegisterSpec for EVT_EN2_SPEC {
 impl crate::Readable for EVT_EN2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`evt_en2::W`](W) writer structure"]
 impl crate::Writable for EVT_EN2_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

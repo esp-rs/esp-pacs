@@ -117,16 +117,6 @@ impl W {
     pub fn eotp_tx_lp_en(&mut self) -> EOTP_TX_LP_EN_W<PCKHDL_CFG_SPEC> {
         EOTP_TX_LP_EN_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pckhdl_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pckhdl_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PCKHDL_CFG_SPEC;
@@ -137,6 +127,7 @@ impl crate::RegisterSpec for PCKHDL_CFG_SPEC {
 impl crate::Readable for PCKHDL_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pckhdl_cfg::W`](W) writer structure"]
 impl crate::Writable for PCKHDL_CFG_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

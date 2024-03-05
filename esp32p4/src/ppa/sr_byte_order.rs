@@ -75,16 +75,6 @@ impl W {
     pub fn sr_macro_bk_ro_bypass(&mut self) -> SR_MACRO_BK_RO_BYPASS_W<SR_BYTE_ORDER_SPEC> {
         SR_MACRO_BK_RO_BYPASS_W::new(self, 2)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Scaling and rotating engine byte order register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr_byte_order::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr_byte_order::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SR_BYTE_ORDER_SPEC;
@@ -95,6 +85,7 @@ impl crate::RegisterSpec for SR_BYTE_ORDER_SPEC {
 impl crate::Readable for SR_BYTE_ORDER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sr_byte_order::W`](W) writer structure"]
 impl crate::Writable for SR_BYTE_ORDER_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -37,16 +37,6 @@ impl W {
     pub fn get_dw_dte_rate(&mut self) -> GET_DW_DTE_RATE_W<GET_LINE_CODE_W0_SPEC> {
         GET_DW_DTE_RATE_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "W0 of GET_LINE_CODING command.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`get_line_code_w0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`get_line_code_w0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GET_LINE_CODE_W0_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for GET_LINE_CODE_W0_SPEC {
 impl crate::Readable for GET_LINE_CODE_W0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`get_line_code_w0::W`](W) writer structure"]
 impl crate::Writable for GET_LINE_CODE_W0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

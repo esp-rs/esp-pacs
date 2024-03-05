@@ -37,16 +37,6 @@ impl W {
     pub fn reg_bus_free_time(&mut self) -> REG_BUS_FREE_TIME_W<BUS_FREE_TIME_SPEC> {
         REG_BUS_FREE_TIME_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bus_free_time::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bus_free_time::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUS_FREE_TIME_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for BUS_FREE_TIME_SPEC {
 impl crate::Readable for BUS_FREE_TIME_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bus_free_time::W`](W) writer structure"]
 impl crate::Writable for BUS_FREE_TIME_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

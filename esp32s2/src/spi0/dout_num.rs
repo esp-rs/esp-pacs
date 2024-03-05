@@ -146,16 +146,6 @@ impl W {
     pub fn dout7_num(&mut self) -> DOUT7_NUM_W<DOUT_NUM_SPEC> {
         DOUT7_NUM_W::new(self, 14)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SPI output delay number configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dout_num::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dout_num::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOUT_NUM_SPEC;
@@ -166,6 +156,7 @@ impl crate::RegisterSpec for DOUT_NUM_SPEC {
 impl crate::Readable for DOUT_NUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dout_num::W`](W) writer structure"]
 impl crate::Writable for DOUT_NUM_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

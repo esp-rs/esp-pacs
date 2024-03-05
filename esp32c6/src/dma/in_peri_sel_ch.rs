@@ -37,16 +37,6 @@ impl W {
     pub fn peri_in_sel(&mut self) -> PERI_IN_SEL_W<IN_PERI_SEL_CH_SPEC> {
         PERI_IN_SEL_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Peripheral selection of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_peri_sel_ch::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_peri_sel_ch::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_PERI_SEL_CH_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for IN_PERI_SEL_CH_SPEC {
 impl crate::Readable for IN_PERI_SEL_CH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`in_peri_sel_ch::W`](W) writer structure"]
 impl crate::Writable for IN_PERI_SEL_CH_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

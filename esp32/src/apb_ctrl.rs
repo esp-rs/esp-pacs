@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     sysclk_conf: SYSCLK_CONF,
     xtal_tick_conf: XTAL_TICK_CONF,

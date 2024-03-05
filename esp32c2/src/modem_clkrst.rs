@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     clk_conf: CLK_CONF,
     modem_lp_timer_conf: MODEM_LP_TIMER_CONF,

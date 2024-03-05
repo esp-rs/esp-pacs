@@ -151,16 +151,6 @@ impl W {
     pub fn xpd_ckgen_i2c(&mut self) -> XPD_CKGEN_I2C_W<RF_PWC_SPEC> {
         XPD_CKGEN_I2C_W::new(self, 30)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rf_pwc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rf_pwc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RF_PWC_SPEC;
@@ -171,6 +161,7 @@ impl crate::RegisterSpec for RF_PWC_SPEC {
 impl crate::Readable for RF_PWC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rf_pwc::W`](W) writer structure"]
 impl crate::Writable for RF_PWC_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -94,16 +94,6 @@ impl W {
     pub fn blend1_rx_rgb_swap_en(&mut self) -> BLEND1_RX_RGB_SWAP_EN_W<BLEND_BYTE_ORDER_SPEC> {
         BLEND1_RX_RGB_SWAP_EN_W::new(self, 3)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Blending engine byte order register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blend_byte_order::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blend_byte_order::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLEND_BYTE_ORDER_SPEC;
@@ -114,6 +104,7 @@ impl crate::RegisterSpec for BLEND_BYTE_ORDER_SPEC {
 impl crate::Readable for BLEND_BYTE_ORDER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`blend_byte_order::W`](W) writer structure"]
 impl crate::Writable for BLEND_BYTE_ORDER_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

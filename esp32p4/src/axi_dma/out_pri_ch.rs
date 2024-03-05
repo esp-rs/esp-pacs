@@ -72,16 +72,6 @@ impl W {
     pub fn tx_arb_weigh_opt_dir_ch(&mut self) -> TX_ARB_WEIGH_OPT_DIR_CH_W<OUT_PRI_CH_SPEC> {
         TX_ARB_WEIGH_OPT_DIR_CH_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Priority register of Tx channel0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_pri_ch::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_pri_ch::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_PRI_CH_SPEC;
@@ -92,6 +82,7 @@ impl crate::RegisterSpec for OUT_PRI_CH_SPEC {
 impl crate::Readable for OUT_PRI_CH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`out_pri_ch::W`](W) writer structure"]
 impl crate::Writable for OUT_PRI_CH_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

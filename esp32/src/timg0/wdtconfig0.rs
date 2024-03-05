@@ -6,8 +6,6 @@ pub type W = crate::W<WDTCONFIG0_SPEC>;
 pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - When set flash boot protection is enabled"]
 pub type WDT_FLASHBOOT_MOD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<WDT_SYS_RESET_LENGTH_A>;
 #[doc = "length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -38,6 +36,8 @@ impl From<WDT_SYS_RESET_LENGTH_A> for u8 {
 impl crate::FieldSpec for WDT_SYS_RESET_LENGTH_A {
     type Ux = u8;
 }
+#[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
+pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<WDT_SYS_RESET_LENGTH_A>;
 impl WDT_SYS_RESET_LENGTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -144,8 +144,6 @@ where
         self.variant(WDT_SYS_RESET_LENGTH_A::NS3200)
     }
 }
-#[doc = "Field `WDT_CPU_RESET_LENGTH` reader - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<WDT_CPU_RESET_LENGTH_A>;
 #[doc = "length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -176,6 +174,8 @@ impl From<WDT_CPU_RESET_LENGTH_A> for u8 {
 impl crate::FieldSpec for WDT_CPU_RESET_LENGTH_A {
     type Ux = u8;
 }
+#[doc = "Field `WDT_CPU_RESET_LENGTH` reader - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
+pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<WDT_CPU_RESET_LENGTH_A>;
 impl WDT_CPU_RESET_LENGTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -290,8 +290,6 @@ pub type WDT_LEVEL_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type WDT_EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EDGE_INT_EN` writer - When set edge type interrupt generation is enabled"]
 pub type WDT_EDGE_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
-pub type WDT_STG3_R = crate::FieldReader<WDT_STG3_A>;
 #[doc = "Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -314,6 +312,8 @@ impl From<WDT_STG3_A> for u8 {
 impl crate::FieldSpec for WDT_STG3_A {
     type Ux = u8;
 }
+#[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
+pub type WDT_STG3_R = crate::FieldReader<WDT_STG3_A>;
 impl WDT_STG3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -542,16 +542,6 @@ impl W {
     pub fn wdt_en(&mut self) -> WDT_EN_W<WDTCONFIG0_SPEC> {
         WDT_EN_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wdtconfig0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wdtconfig0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WDTCONFIG0_SPEC;
@@ -562,6 +552,7 @@ impl crate::RegisterSpec for WDTCONFIG0_SPEC {
 impl crate::Readable for WDTCONFIG0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wdtconfig0::W`](W) writer structure"]
 impl crate::Writable for WDTCONFIG0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

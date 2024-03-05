@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     pmup_bitmap_high0: PMUP_BITMAP_HIGH0,
     pmup_bitmap_high1: PMUP_BITMAP_HIGH1,

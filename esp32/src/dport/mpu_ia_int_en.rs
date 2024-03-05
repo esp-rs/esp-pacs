@@ -37,16 +37,6 @@ impl W {
     pub fn mpu_ia_int_en(&mut self) -> MPU_IA_INT_EN_W<MPU_IA_INT_EN_SPEC> {
         MPU_IA_INT_EN_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mpu_ia_int_en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mpu_ia_int_en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MPU_IA_INT_EN_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for MPU_IA_INT_EN_SPEC {
 impl crate::Readable for MPU_IA_INT_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mpu_ia_int_en::W`](W) writer structure"]
 impl crate::Writable for MPU_IA_INT_EN_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

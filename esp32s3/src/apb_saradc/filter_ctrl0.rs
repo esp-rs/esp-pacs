@@ -75,16 +75,6 @@ impl W {
     pub fn filter_reset(&mut self) -> FILTER_RESET_W<FILTER_CTRL0_SPEC> {
         FILTER_RESET_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "configure apb saradc arbit\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`filter_ctrl0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`filter_ctrl0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FILTER_CTRL0_SPEC;
@@ -95,6 +85,7 @@ impl crate::RegisterSpec for FILTER_CTRL0_SPEC {
 impl crate::Readable for FILTER_CTRL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`filter_ctrl0::W`](W) writer structure"]
 impl crate::Writable for FILTER_CTRL0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
