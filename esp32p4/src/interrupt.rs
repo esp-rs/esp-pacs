@@ -126,8 +126,8 @@ pub enum Interrupt {
     SHA = 70,
     #[doc = "71 - ECC"]
     ECC = 71,
-    #[doc = "74 - GPIO_INT0"]
-    GPIO_INT0 = 74,
+    #[doc = "74 - GPIO"]
+    GPIO = 74,
     #[doc = "75 - GPIO_INT1"]
     GPIO_INT1 = 75,
     #[doc = "76 - GPIO_INT2"]
@@ -263,7 +263,7 @@ impl Interrupt {
             69 => Ok(Interrupt::AES),
             70 => Ok(Interrupt::SHA),
             71 => Ok(Interrupt::ECC),
-            74 => Ok(Interrupt::GPIO_INT0),
+            74 => Ok(Interrupt::GPIO),
             75 => Ok(Interrupt::GPIO_INT1),
             76 => Ok(Interrupt::GPIO_INT2),
             77 => Ok(Interrupt::GPIO_INT3),
