@@ -18,12 +18,6 @@ runs:
   using: composite
 
   steps:
-    # If using the 'esp' toolchain, we also need to have 'nightly' installed
-    # prior to invoking the 'xtensa-toolchain' action:
-
-    - uses: dtolnay/rust-toolchain@nightly
-      if: startsWith(inputs.target, 'xtensa')
-
     # Install the newest available version of the specified toolchain,
     # required for building the PAC:
 
@@ -43,13 +37,13 @@ runs:
     # Build the PAC using the newest available version of the specified
     # toolchain:
 
-    - name: Build PAC
+    - name: Build (${{ inputs.package }})
       shell: bash
-      run: cd ${{ inputs.package }} && cargo check --all-targets
+      run: cd ${{ inputs.package }} && cargo check
 
     # Install the MSRV of the specified toolchain:
 
-    - uses: dtolnay/rust-toolchain@master
+    - uses: dtolnay/rust-toolchain@v1
       if: startsWith(inputs.target, 'riscv')
       with:
         toolchain: ${{ inputs.msrv }}
@@ -70,9 +64,9 @@ runs:
     - name: Check MSRV
       if: startsWith(inputs.target, 'riscv')
       shell: bash
-      run: cd ${{ inputs.package }} && cargo +${{ inputs.msrv }} check --all-targets
+      run: cd ${{ inputs.package }} && cargo +${{ inputs.msrv }} check
 
     - name: Check MSRV
       if: startsWith(inputs.target, 'xtensa')
       shell: bash
-      run: cd ${{ inputs.package }} && cargo check --all-targets
+      run: cd ${{ inputs.package }} && cargo check

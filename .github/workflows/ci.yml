@@ -39,8 +39,7 @@ jobs:
             { package: "esp32c3", target: "riscv32imc-unknown-none-elf" },
             { package: "esp32c6", target: "riscv32imac-unknown-none-elf" },
             { package: "esp32h2", target: "riscv32imac-unknown-none-elf" },
-            # FIXME: actual target is `riscv32imafc-unknown-none-elf`
-            { package: "esp32p4", target: "riscv32imac-unknown-none-elf" },
+            { package: "esp32p4", target: "riscv32imafc-unknown-none-elf" },
 
             # RISC-V (Ultra) Low-Power:
             { package: "esp32c6-lp",  target: "riscv32imac-unknown-none-elf" },
@@ -49,9 +48,9 @@ jobs:
           ]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/check
         with:
-          msrv: "1.67.0"
+          msrv: "1.76.0"
           package: ${{ matrix.build.package }}
           target: ${{ matrix.build.target }}
