@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     buffer_: [BUFFER_; 8],
     start: START,

@@ -94,16 +94,6 @@ impl W {
     pub fn b_roi_region3_qp(&mut self) -> B_ROI_REGION3_QP_W<B_ROI_REGION0_3_QP_SPEC> {
         B_ROI_REGION3_QP_W::new(self, 21)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Video B H264 ROI region0, region1,region2,region3 QP register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`b_roi_region0_3_qp::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`b_roi_region0_3_qp::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct B_ROI_REGION0_3_QP_SPEC;
@@ -114,6 +104,7 @@ impl crate::RegisterSpec for B_ROI_REGION0_3_QP_SPEC {
 impl crate::Readable for B_ROI_REGION0_3_QP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`b_roi_region0_3_qp::W`](W) writer structure"]
 impl crate::Writable for B_ROI_REGION0_3_QP_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

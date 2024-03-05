@@ -83,16 +83,6 @@ impl W {
     pub fn reg_gpi8_pin0_edge_wakeup_clr(&mut self) -> REG_GPI8_PIN0_EDGE_WAKEUP_CLR_W<PIN8_SPEC> {
         REG_GPI8_PIN0_EDGE_WAKEUP_CLR_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Reserved\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin8::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin8::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PIN8_SPEC;
@@ -103,6 +93,7 @@ impl crate::RegisterSpec for PIN8_SPEC {
 impl crate::Readable for PIN8_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pin8::W`](W) writer structure"]
 impl crate::Writable for PIN8_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

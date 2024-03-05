@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     spi_mem_cmd: SPI_MEM_CMD,
     spi_mem_addr: SPI_MEM_ADDR,

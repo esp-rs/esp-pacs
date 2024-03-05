@@ -342,16 +342,6 @@ impl W {
     pub fn reg_mem_clk_force_on(&mut self) -> REG_MEM_CLK_FORCE_ON_W<DEVICE_CTRL_SPEC> {
         REG_MEM_CLK_FORCE_ON_W::new(self, 17)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "DEVICE_CTRL register controls the transfer properties and disposition of controllers capabilities.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`device_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`device_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DEVICE_CTRL_SPEC;
@@ -362,6 +352,7 @@ impl crate::RegisterSpec for DEVICE_CTRL_SPEC {
 impl crate::Readable for DEVICE_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`device_ctrl::W`](W) writer structure"]
 impl crate::Writable for DEVICE_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

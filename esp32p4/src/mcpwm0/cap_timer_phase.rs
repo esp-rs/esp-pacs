@@ -34,16 +34,6 @@ impl W {
     pub fn cap_phase(&mut self) -> CAP_PHASE_W<CAP_TIMER_PHASE_SPEC> {
         CAP_PHASE_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Capture timer sync phase register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_timer_phase::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cap_timer_phase::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAP_TIMER_PHASE_SPEC;
@@ -54,6 +44,7 @@ impl crate::RegisterSpec for CAP_TIMER_PHASE_SPEC {
 impl crate::Readable for CAP_TIMER_PHASE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cap_timer_phase::W`](W) writer structure"]
 impl crate::Writable for CAP_TIMER_PHASE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

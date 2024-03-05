@@ -70,16 +70,6 @@ impl W {
     pub fn enable_cali_pmu_cntl(&mut self) -> ENABLE_CALI_PMU_CNTL_W<MAIN_STATE_SPEC> {
         ENABLE_CALI_PMU_CNTL_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`main_state::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`main_state::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MAIN_STATE_SPEC;
@@ -90,6 +80,7 @@ impl crate::RegisterSpec for MAIN_STATE_SPEC {
 impl crate::Readable for MAIN_STATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`main_state::W`](W) writer structure"]
 impl crate::Writable for MAIN_STATE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

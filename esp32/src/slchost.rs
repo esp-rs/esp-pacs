@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x10],
     host_slchost_func2_0: HOST_SLCHOST_FUNC2_0,

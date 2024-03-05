@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     wifi_mac_intr_map: WIFI_MAC_INTR_MAP,
     wifi_mac_nmi_map: WIFI_MAC_NMI_MAP,

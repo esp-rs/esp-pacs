@@ -75,16 +75,6 @@ impl W {
     pub fn credit_reset(&mut self) -> CREDIT_RESET_W<RAW_BUF_CREDIT_CTL_SPEC> {
         CREDIT_RESET_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "dsi bridge credit register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`raw_buf_credit_ctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`raw_buf_credit_ctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RAW_BUF_CREDIT_CTL_SPEC;
@@ -95,6 +85,7 @@ impl crate::RegisterSpec for RAW_BUF_CREDIT_CTL_SPEC {
 impl crate::Readable for RAW_BUF_CREDIT_CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`raw_buf_credit_ctl::W`](W) writer structure"]
 impl crate::Writable for RAW_BUF_CREDIT_CTL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

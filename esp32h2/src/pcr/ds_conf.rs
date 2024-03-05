@@ -58,16 +58,6 @@ impl W {
     pub fn ds_rst_en(&mut self) -> DS_RST_EN_W<DS_CONF_SPEC> {
         DS_RST_EN_W::new(self, 1)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "DS configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ds_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ds_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DS_CONF_SPEC;
@@ -78,6 +68,7 @@ impl crate::RegisterSpec for DS_CONF_SPEC {
 impl crate::Readable for DS_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ds_conf::W`](W) writer structure"]
 impl crate::Writable for DS_CONF_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

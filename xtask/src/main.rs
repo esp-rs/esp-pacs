@@ -9,7 +9,10 @@ use std::{
 use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use strum::{Display, EnumIter, IntoEnumIterator};
-use svd2rust::{Config, Target};
+use svd2rust::{
+    config::{IdentFormats, IdentFormatsTheme},
+    Config, Target,
+};
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::Document;
 
@@ -201,17 +204,25 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         Target::XtensaLX
     };
 
-    let config = Config {
-        target,
-        output_dir: Some(path.clone()),
-        impl_debug: true,
-        impl_debug_feature: Some("impl-register-debug".to_owned()),
-        interrupt_link_section: Some(".rwtext".to_owned()),
-        ..Config::default()
-    };
+    let mut config = Config::default();
+    config.target = target;
+    config.output_dir = Some(path.clone());
+    config.impl_debug = true;
+    config.impl_debug_feature = Some("impl-register-debug".to_owned());
+    config.interrupt_link_section = Some(".rwtext".to_owned());
+    config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
+    config.max_cluster_size = true;
 
     let input = fs::read_to_string(svd_file)?;
     let device = svd2rust::load_from(&input, &config)?;
+
+    let mut config = config.clone();
+    let mut ident_formats = match config.ident_formats_theme {
+        Some(IdentFormatsTheme::Legacy) => IdentFormats::legacy_theme(),
+        _ => IdentFormats::default_theme(),
+    };
+    ident_formats.extend(config.ident_formats.drain());
+    config.ident_formats = ident_formats;
 
     let mut device_x = String::new();
     let items = svd2rust::generate::device::render(&device, &config, &mut device_x)?;

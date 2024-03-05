@@ -199,16 +199,6 @@ impl W {
     pub fn ultra_high_speed_mode(&mut self) -> ULTRA_HIGH_SPEED_MODE_W<CLK_EDGE_SEL_SPEC> {
         ULTRA_HIGH_SPEED_MODE_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SDIO control register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk_edge_sel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_edge_sel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_EDGE_SEL_SPEC;
@@ -219,6 +209,7 @@ impl crate::RegisterSpec for CLK_EDGE_SEL_SPEC {
 impl crate::Readable for CLK_EDGE_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_edge_sel::W`](W) writer structure"]
 impl crate::Writable for CLK_EDGE_SEL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

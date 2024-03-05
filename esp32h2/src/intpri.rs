@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     cpu_int_enable: CPU_INT_ENABLE,
     cpu_int_type: CPU_INT_TYPE,

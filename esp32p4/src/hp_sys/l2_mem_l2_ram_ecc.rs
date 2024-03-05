@@ -132,16 +132,6 @@ impl W {
     pub fn reg_l2_ram_unit5_ecc_en(&mut self) -> REG_L2_RAM_UNIT5_ECC_EN_W<L2_MEM_L2_RAM_ECC_SPEC> {
         REG_L2_RAM_UNIT5_ECC_EN_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_mem_l2_ram_ecc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`l2_mem_l2_ram_ecc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_MEM_L2_RAM_ECC_SPEC;
@@ -152,6 +142,7 @@ impl crate::RegisterSpec for L2_MEM_L2_RAM_ECC_SPEC {
 impl crate::Readable for L2_MEM_L2_RAM_ECC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l2_mem_l2_ram_ecc::W`](W) writer structure"]
 impl crate::Writable for L2_MEM_L2_RAM_ECC_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

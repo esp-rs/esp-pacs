@@ -104,16 +104,6 @@ impl W {
     pub fn d_vsync_num(&mut self) -> D_VSYNC_NUM_W<LCD_D_NUM_SPEC> {
         D_VSYNC_NUM_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "LCD delay mode\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_d_num::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_d_num::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCD_D_NUM_SPEC;
@@ -124,6 +114,7 @@ impl crate::RegisterSpec for LCD_D_NUM_SPEC {
 impl crate::Readable for LCD_D_NUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lcd_d_num::W`](W) writer structure"]
 impl crate::Writable for LCD_D_NUM_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

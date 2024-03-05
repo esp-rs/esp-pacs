@@ -94,16 +94,6 @@ impl W {
     pub fn tx_valid_output_en(&mut self) -> TX_VALID_OUTPUT_EN_W<TX_GENRL_CFG_SPEC> {
         TX_VALID_OUTPUT_EN_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Parallel TX general configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_genrl_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_genrl_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_GENRL_CFG_SPEC;
@@ -114,6 +104,7 @@ impl crate::RegisterSpec for TX_GENRL_CFG_SPEC {
 impl crate::Readable for TX_GENRL_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_genrl_cfg::W`](W) writer structure"]
 impl crate::Writable for TX_GENRL_CFG_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

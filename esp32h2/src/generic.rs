@@ -60,6 +60,8 @@ pub trait Readable: RegisterSpec {}
 #[doc = ""]
 #[doc = " Registers marked with `Readable` can be also be `modify`'ed."]
 pub trait Writable: RegisterSpec {
+    #[doc = " Is it safe to write any bits to register"]
+    type Safety;
     #[doc = " Specifies the register bits that are not changed if you pass `1` and are changed if you pass `0`"]
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux;
     #[doc = " Specifies the register bits that are not changed if you pass `0` and are changed if you pass `1`"]
@@ -262,6 +264,29 @@ where
 #[doc = ""]
 #[doc = " Used as an argument to the closures in the `write` and `modify` methods of the register."]
 pub type W<REG> = raw::W<REG>;
+impl<REG: Writable> W<REG> {
+    #[doc = " Writes raw bits to the register."]
+    #[doc = ""]
+    #[doc = " # Safety"]
+    #[doc = ""]
+    #[doc = " Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: REG::Ux) -> &mut Self {
+        self.bits = bits;
+        self
+    }
+}
+impl<REG> W<REG>
+where
+    REG: Writable<Safety = Safe>,
+{
+    #[doc = " Writes raw bits to the register."]
+    #[inline(always)]
+    pub fn set(&mut self, bits: REG::Ux) -> &mut Self {
+        self.bits = bits;
+        self
+    }
+}
 #[doc = " Field reader."]
 #[doc = ""]
 #[doc = " Result of the `read` methods of fields."]
@@ -311,9 +336,9 @@ impl<FI> BitReader<FI> {
         self.bit()
     }
 }
-#[doc(hidden)]
+#[doc = " Marker for register/field writers which can take any value of specified width"]
 pub struct Safe;
-#[doc(hidden)]
+#[doc = " You should check that value is allowed to pass to register/field writer marked with this"]
 pub struct Unsafe;
 #[doc = " Write field Proxy with unsafe `bits`"]
 pub type FieldWriter<'a, REG, const WI: u8, FI = u8> = raw::FieldWriter<'a, REG, WI, FI, Unsafe>;

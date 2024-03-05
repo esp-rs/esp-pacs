@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     _reserved0: [u8; 0xfc],
     rtc_ulp_cp_timer: RTC_ULP_CP_TIMER,

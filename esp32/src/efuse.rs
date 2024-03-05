@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     blk0_rdata0: BLK0_RDATA0,
     blk0_rdata1: BLK0_RDATA1,

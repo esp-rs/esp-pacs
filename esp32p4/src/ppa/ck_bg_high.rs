@@ -75,16 +75,6 @@ impl W {
     pub fn colorkey_bg_r_high(&mut self) -> COLORKEY_BG_R_HIGH_W<CK_BG_HIGH_SPEC> {
         COLORKEY_BG_R_HIGH_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "background color key higher threshold\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ck_bg_high::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ck_bg_high::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CK_BG_HIGH_SPEC;
@@ -95,6 +85,7 @@ impl crate::RegisterSpec for CK_BG_HIGH_SPEC {
 impl crate::Readable for CK_BG_HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ck_bg_high::W`](W) writer structure"]
 impl crate::Writable for CK_BG_HIGH_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

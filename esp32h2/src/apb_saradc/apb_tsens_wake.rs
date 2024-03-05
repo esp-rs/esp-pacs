@@ -99,16 +99,6 @@ impl W {
     pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<APB_TSENS_WAKE_SPEC> {
         WAKEUP_EN_W::new(self, 18)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "digital tsens configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_tsens_wake::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_tsens_wake::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB_TSENS_WAKE_SPEC;
@@ -119,6 +109,7 @@ impl crate::RegisterSpec for APB_TSENS_WAKE_SPEC {
 impl crate::Readable for APB_TSENS_WAKE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb_tsens_wake::W`](W) writer structure"]
 impl crate::Writable for APB_TSENS_WAKE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

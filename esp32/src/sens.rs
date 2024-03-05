@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     sar_read_ctrl: SAR_READ_CTRL,
     sar_read_status1: SAR_READ_STATUS1,

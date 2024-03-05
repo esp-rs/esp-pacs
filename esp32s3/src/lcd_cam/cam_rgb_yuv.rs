@@ -189,16 +189,6 @@ impl W {
     pub fn cam_conv_bypass(&mut self) -> CAM_CONV_BYPASS_W<CAM_RGB_YUV_SPEC> {
         CAM_CONV_BYPASS_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Camera data format conversion register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cam_rgb_yuv::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cam_rgb_yuv::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAM_RGB_YUV_SPEC;
@@ -209,6 +199,7 @@ impl crate::RegisterSpec for CAM_RGB_YUV_SPEC {
 impl crate::Readable for CAM_RGB_YUV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cam_rgb_yuv::W`](W) writer structure"]
 impl crate::Writable for CAM_RGB_YUV_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

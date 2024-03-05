@@ -75,16 +75,6 @@ impl W {
     pub fn sr_mem_force_pu(&mut self) -> SR_MEM_FORCE_PU_W<SR_MEM_PD_SPEC> {
         SR_MEM_FORCE_PU_W::new(self, 2)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SR memory power done register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr_mem_pd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr_mem_pd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SR_MEM_PD_SPEC;
@@ -95,6 +85,7 @@ impl crate::RegisterSpec for SR_MEM_PD_SPEC {
 impl crate::Readable for SR_MEM_PD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sr_mem_pd::W`](W) writer structure"]
 impl crate::Writable for SR_MEM_PD_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

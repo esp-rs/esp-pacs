@@ -94,16 +94,6 @@ impl W {
     pub fn reg_ibi_status_buf_thld(&mut self) -> REG_IBI_STATUS_BUF_THLD_W<BUFFER_THLD_CTRL_SPEC> {
         REG_IBI_STATUS_BUF_THLD_W::new(self, 18)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "In-Band Interrupt Status Threshold Value . Every In Band Interrupt received by I3C controller generates an IBI status. This field controls the number of IBI status entries in the IBI buffer that trigger the IBI_STATUS_THLD_STAT interrupt.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`buffer_thld_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`buffer_thld_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUFFER_THLD_CTRL_SPEC;
@@ -114,6 +104,7 @@ impl crate::RegisterSpec for BUFFER_THLD_CTRL_SPEC {
 impl crate::Readable for BUFFER_THLD_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`buffer_thld_ctrl::W`](W) writer structure"]
 impl crate::Writable for BUFFER_THLD_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -94,16 +94,6 @@ impl W {
     pub fn t3_dqt_info(&mut self) -> T3_DQT_INFO_W<DQT_INFO_SPEC> {
         T3_DQT_INFO_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dqt_info::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dqt_info::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DQT_INFO_SPEC;
@@ -114,6 +104,7 @@ impl crate::RegisterSpec for DQT_INFO_SPEC {
 impl crate::Readable for DQT_INFO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dqt_info::W`](W) writer structure"]
 impl crate::Writable for DQT_INFO_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

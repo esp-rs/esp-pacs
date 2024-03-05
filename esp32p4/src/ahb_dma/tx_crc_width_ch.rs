@@ -56,16 +56,6 @@ impl W {
     pub fn tx_crc_lautch_flga_ch(&mut self) -> TX_CRC_LAUTCH_FLGA_CH_W<TX_CRC_WIDTH_CH_SPEC> {
         TX_CRC_LAUTCH_FLGA_CH_W::new(self, 2)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "This register is used to confiig tx ch0 crc result width,2'b00 mean crc_width &lt;=8bit,2'b01 8&lt;crc_width&lt;=16 ,2'b10 mean 16&lt;crc_width &lt;=24,2'b11 mean 24&lt;crc_width&lt;=32\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_crc_width_ch::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_crc_width_ch::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_CRC_WIDTH_CH_SPEC;
@@ -76,6 +66,7 @@ impl crate::RegisterSpec for TX_CRC_WIDTH_CH_SPEC {
 impl crate::Readable for TX_CRC_WIDTH_CH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_crc_width_ch::W`](W) writer structure"]
 impl crate::Writable for TX_CRC_WIDTH_CH_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

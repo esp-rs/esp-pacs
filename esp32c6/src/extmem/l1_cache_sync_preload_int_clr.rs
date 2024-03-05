@@ -146,16 +146,6 @@ impl W {
     ) -> CACHE_SYNC_ERR_INT_CLR_W<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
         CACHE_SYNC_ERR_INT_CLR_W::new(self, 13)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Sync Preload operation Interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_sync_preload_int_clr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`l1_cache_sync_preload_int_clr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC;
@@ -166,6 +156,7 @@ impl crate::RegisterSpec for L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC {
 impl crate::Readable for L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l1_cache_sync_preload_int_clr::W`](W) writer structure"]
 impl crate::Writable for L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

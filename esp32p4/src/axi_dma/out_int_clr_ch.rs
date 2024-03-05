@@ -99,16 +99,6 @@ impl W {
     ) -> OUTFIFO_L3_UDF_CH_INT_CLR_W<OUT_INT_CLR_CH_SPEC> {
         OUTFIFO_L3_UDF_CH_INT_CLR_W::new(self, 9)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt clear bits of channel0\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_int_clr_ch::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_INT_CLR_CH_SPEC;
@@ -117,6 +107,7 @@ impl crate::RegisterSpec for OUT_INT_CLR_CH_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`out_int_clr_ch::W`](W) writer structure"]
 impl crate::Writable for OUT_INT_CLR_CH_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

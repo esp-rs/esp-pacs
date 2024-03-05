@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     test_conf: TEST_CONF,
     coex_lp_clk_conf: COEX_LP_CLK_CONF,

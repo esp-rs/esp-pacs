@@ -215,16 +215,6 @@ impl W {
     pub fn cam_afifo_reset(&mut self) -> CAM_AFIFO_RESET_W<CAM_CTRL1_SPEC> {
         CAM_AFIFO_RESET_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "CAM config register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cam_ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cam_ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAM_CTRL1_SPEC;
@@ -235,6 +225,7 @@ impl crate::RegisterSpec for CAM_CTRL1_SPEC {
 impl crate::Readable for CAM_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cam_ctrl1::W`](W) writer structure"]
 impl crate::Writable for CAM_CTRL1_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

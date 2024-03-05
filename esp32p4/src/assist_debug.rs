@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     core_0_intr_ena: CORE_0_INTR_ENA,
     core_0_intr_raw: CORE_0_INTR_RAW,

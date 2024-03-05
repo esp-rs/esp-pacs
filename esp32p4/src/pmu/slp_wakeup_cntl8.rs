@@ -37,16 +37,6 @@ impl W {
     pub fn lp_lite_wakeup_ena(&mut self) -> LP_LITE_WAKEUP_ENA_W<SLP_WAKEUP_CNTL8_SPEC> {
         LP_LITE_WAKEUP_ENA_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slp_wakeup_cntl8::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slp_wakeup_cntl8::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLP_WAKEUP_CNTL8_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for SLP_WAKEUP_CNTL8_SPEC {
 impl crate::Readable for SLP_WAKEUP_CNTL8_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slp_wakeup_cntl8::W`](W) writer structure"]
 impl crate::Writable for SLP_WAKEUP_CNTL8_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -23,16 +23,6 @@ impl W {
     pub fn tie_high_lp_rootclk_sel(&mut self) -> TIE_HIGH_LP_ROOTCLK_SEL_W<IMM_LP_ICG_SPEC> {
         TIE_HIGH_LP_ROOTCLK_SEL_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "need_des\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`imm_lp_icg::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IMM_LP_ICG_SPEC;
@@ -41,6 +31,7 @@ impl crate::RegisterSpec for IMM_LP_ICG_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`imm_lp_icg::W`](W) writer structure"]
 impl crate::Writable for IMM_LP_ICG_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

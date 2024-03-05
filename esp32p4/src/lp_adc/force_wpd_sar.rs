@@ -56,16 +56,6 @@ impl W {
     pub fn force_xpd_sar2(&mut self) -> FORCE_XPD_SAR2_W<FORCE_WPD_SAR_SPEC> {
         FORCE_XPD_SAR2_W::new(self, 2)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "In sleep, force to use rtc to control ADC\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`force_wpd_sar::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`force_wpd_sar::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FORCE_WPD_SAR_SPEC;
@@ -76,6 +66,7 @@ impl crate::RegisterSpec for FORCE_WPD_SAR_SPEC {
 impl crate::Readable for FORCE_WPD_SAR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`force_wpd_sar::W`](W) writer structure"]
 impl crate::Writable for FORCE_WPD_SAR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

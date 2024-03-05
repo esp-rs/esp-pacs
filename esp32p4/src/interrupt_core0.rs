@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     lp_rtc_int_map: LP_RTC_INT_MAP,
     lp_wdt_int_map: LP_WDT_INT_MAP,

@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     bod_mode0_cntl: BOD_MODE0_CNTL,
     bod_mode1_cntl: BOD_MODE1_CNTL,

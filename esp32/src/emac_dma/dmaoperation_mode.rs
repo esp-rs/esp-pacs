@@ -261,16 +261,6 @@ impl W {
     pub fn dis_drop_tcpip_err_fram(&mut self) -> DIS_DROP_TCPIP_ERR_FRAM_W<DMAOPERATION_MODE_SPEC> {
         DIS_DROP_TCPIP_ERR_FRAM_W::new(self, 26)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Receive and Transmit operating modes and command\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmaoperation_mode::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmaoperation_mode::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMAOPERATION_MODE_SPEC;
@@ -281,6 +271,7 @@ impl crate::RegisterSpec for DMAOPERATION_MODE_SPEC {
 impl crate::Readable for DMAOPERATION_MODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmaoperation_mode::W`](W) writer structure"]
 impl crate::Writable for DMAOPERATION_MODE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

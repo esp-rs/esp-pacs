@@ -474,16 +474,6 @@ impl W {
     pub fn task_gamma_resume_ch7_en(&mut self) -> TASK_GAMMA_RESUME_CH7_EN_W<EVT_TASK_EN2_SPEC> {
         TASK_GAMMA_RESUME_CH7_EN_W::new(self, 23)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Ledc event task enable bit register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evt_task_en2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evt_task_en2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVT_TASK_EN2_SPEC;
@@ -494,6 +484,7 @@ impl crate::RegisterSpec for EVT_TASK_EN2_SPEC {
 impl crate::Readable for EVT_TASK_EN2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`evt_task_en2::W`](W) writer structure"]
 impl crate::Writable for EVT_TASK_EN2_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

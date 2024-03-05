@@ -45,16 +45,6 @@ impl W {
     pub fn redcy_sig1(&mut self) -> REDCY_SIG1_W<REDCY_SIG1_SPEC> {
         REDCY_SIG1_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`redcy_sig1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`redcy_sig1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REDCY_SIG1_SPEC;
@@ -65,6 +55,7 @@ impl crate::RegisterSpec for REDCY_SIG1_SPEC {
 impl crate::Readable for REDCY_SIG1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`redcy_sig1::W`](W) writer structure"]
 impl crate::Writable for REDCY_SIG1_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

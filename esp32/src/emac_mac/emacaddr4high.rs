@@ -94,16 +94,6 @@ impl W {
     pub fn address_enable4(&mut self) -> ADDRESS_ENABLE4_W<EMACADDR4HIGH_SPEC> {
         ADDRESS_ENABLE4_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Upper 16 bits of the fifth 6-byte MAC address\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emacaddr4high::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`emacaddr4high::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EMACADDR4HIGH_SPEC;
@@ -114,6 +104,7 @@ impl crate::RegisterSpec for EMACADDR4HIGH_SPEC {
 impl crate::Readable for EMACADDR4HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`emacaddr4high::W`](W) writer structure"]
 impl crate::Writable for EMACADDR4HIGH_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

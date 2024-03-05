@@ -37,16 +37,6 @@ impl W {
     pub fn dpi_rsv_data(&mut self) -> DPI_RSV_DATA_W<DPI_RSV_DPI_DATA_SPEC> {
         DPI_RSV_DATA_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "dsi bridge dpi reserved data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dpi_rsv_dpi_data::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dpi_rsv_dpi_data::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DPI_RSV_DPI_DATA_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for DPI_RSV_DPI_DATA_SPEC {
 impl crate::Readable for DPI_RSV_DPI_DATA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dpi_rsv_dpi_data::W`](W) writer structure"]
 impl crate::Writable for DPI_RSV_DPI_DATA_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

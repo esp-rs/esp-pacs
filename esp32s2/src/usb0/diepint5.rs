@@ -258,16 +258,6 @@ impl W {
     pub fn d_nyetintrpt5(&mut self) -> D_NYETINTRPT5_W<DIEPINT5_SPEC> {
         D_NYETINTRPT5_W::new(self, 14)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPINT5_SPEC;
@@ -278,6 +268,7 @@ impl crate::RegisterSpec for DIEPINT5_SPEC {
 impl crate::Readable for DIEPINT5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepint5::W`](W) writer structure"]
 impl crate::Writable for DIEPINT5_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

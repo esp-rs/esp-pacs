@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     rtc_gpio_out: RTC_GPIO_OUT,
     rtc_gpio_out_w1ts: RTC_GPIO_OUT_W1TS,

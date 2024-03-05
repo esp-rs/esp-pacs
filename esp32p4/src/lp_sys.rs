@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     lp_sys_ver_date: LP_SYS_VER_DATE,
     clk_sel_ctrl: CLK_SEL_CTRL,

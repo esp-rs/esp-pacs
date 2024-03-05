@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     pro_boot_remap_ctrl: PRO_BOOT_REMAP_CTRL,
     app_boot_remap_ctrl: APP_BOOT_REMAP_CTRL,

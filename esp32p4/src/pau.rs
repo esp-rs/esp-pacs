@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     regdma_conf: REGDMA_CONF,
     regdma_clk_conf: REGDMA_CLK_CONF,

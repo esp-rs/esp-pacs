@@ -263,16 +263,6 @@ impl W {
     pub fn ch_clr31(&mut self) -> CH_CLR31_W<CH_ENA_AD0_CLR_SPEC> {
         CH_CLR31_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "channel enable clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_ena_ad0_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_ENA_AD0_CLR_SPEC;
@@ -281,6 +271,7 @@ impl crate::RegisterSpec for CH_ENA_AD0_CLR_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`ch_ena_ad0_clr::W`](W) writer structure"]
 impl crate::Writable for CH_ENA_AD0_CLR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

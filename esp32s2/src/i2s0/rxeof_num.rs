@@ -34,16 +34,6 @@ impl W {
     pub fn rx_eof_num(&mut self) -> RX_EOF_NUM_W<RXEOF_NUM_SPEC> {
         RX_EOF_NUM_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2S DMA RX EOF data length\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rxeof_num::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rxeof_num::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RXEOF_NUM_SPEC;
@@ -54,6 +44,7 @@ impl crate::RegisterSpec for RXEOF_NUM_SPEC {
 impl crate::Readable for RXEOF_NUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rxeof_num::W`](W) writer structure"]
 impl crate::Writable for RXEOF_NUM_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

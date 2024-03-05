@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     rom_ctrl_0: ROM_CTRL_0,
     rom_ctrl_1: ROM_CTRL_1,
@@ -361,6 +361,7 @@ pub type RTC_FASTMEM_CRC = crate::Reg<rtc_fastmem_crc::RTC_FASTMEM_CRC_SPEC>;
 #[doc = "RTC fast memory CRC controlling register"]
 pub mod rtc_fastmem_crc;
 #[doc = "Redundant_ECO_Ctrl (rw) register accessor: Redundant ECO control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`redundant_eco_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`redundant_eco_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@redundant_eco_ctrl`] module"]
+#[doc(alias = "Redundant_ECO_Ctrl")]
 pub type REDUNDANT_ECO_CTRL = crate::Reg<redundant_eco_ctrl::REDUNDANT_ECO_CTRL_SPEC>;
 #[doc = "Redundant ECO control register"]
 pub mod redundant_eco_ctrl;

@@ -50,16 +50,6 @@ impl W {
     pub fn ae_y_start(&mut self) -> AE_Y_START_W<AE_BY_SPEC> {
         AE_Y_START_W::new(self, 11)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "ae window register in y-direction\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ae_by::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ae_by::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AE_BY_SPEC;
@@ -70,6 +60,7 @@ impl crate::RegisterSpec for AE_BY_SPEC {
 impl crate::Readable for AE_BY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ae_by::W`](W) writer structure"]
 impl crate::Writable for AE_BY_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

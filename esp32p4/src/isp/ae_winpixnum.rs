@@ -37,16 +37,6 @@ impl W {
     pub fn ae_subwin_pixnum(&mut self) -> AE_SUBWIN_PIXNUM_W<AE_WINPIXNUM_SPEC> {
         AE_SUBWIN_PIXNUM_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "ae sub-window pix num register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ae_winpixnum::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ae_winpixnum::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AE_WINPIXNUM_SPEC;
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for AE_WINPIXNUM_SPEC {
 impl crate::Readable for AE_WINPIXNUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ae_winpixnum::W`](W) writer structure"]
 impl crate::Writable for AE_WINPIXNUM_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

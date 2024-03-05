@@ -50,16 +50,6 @@ impl W {
     pub fn dma(&mut self) -> DMA_W<PSRAM_FLASH_ADDR_INTERCHANGE_SPEC> {
         DMA_W::new(self, 1)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`psram_flash_addr_interchange::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`psram_flash_addr_interchange::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PSRAM_FLASH_ADDR_INTERCHANGE_SPEC;
@@ -70,6 +60,7 @@ impl crate::RegisterSpec for PSRAM_FLASH_ADDR_INTERCHANGE_SPEC {
 impl crate::Readable for PSRAM_FLASH_ADDR_INTERCHANGE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`psram_flash_addr_interchange::W`](W) writer structure"]
 impl crate::Writable for PSRAM_FLASH_ADDR_INTERCHANGE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

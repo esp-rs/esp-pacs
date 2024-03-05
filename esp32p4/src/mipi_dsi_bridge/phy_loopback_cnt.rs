@@ -56,16 +56,6 @@ impl W {
     pub fn phy_lp_check_cnt_th(&mut self) -> PHY_LP_CHECK_CNT_TH_W<PHY_LOOPBACK_CNT_SPEC> {
         PHY_LP_CHECK_CNT_TH_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "loopback test cnt\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`phy_loopback_cnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`phy_loopback_cnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PHY_LOOPBACK_CNT_SPEC;
@@ -76,6 +66,7 @@ impl crate::RegisterSpec for PHY_LOOPBACK_CNT_SPEC {
 impl crate::Readable for PHY_LOOPBACK_CNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`phy_loopback_cnt::W`](W) writer structure"]
 impl crate::Writable for PHY_LOOPBACK_CNT_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

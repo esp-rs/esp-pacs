@@ -1,6 +1,6 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     config: CONFIG,
     dqt_info: DQT_INFO,
@@ -360,6 +360,7 @@ pub type DHT_TOTLEN_DC0 = crate::Reg<dht_totlen_dc0::DHT_TOTLEN_DC0_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_totlen_dc0;
 #[doc = "DHT_VAl_DC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_val_dc0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_dc0`] module"]
+#[doc(alias = "DHT_VAl_DC0")]
 pub type DHT_VAL_DC0 = crate::Reg<dht_val_dc0::DHT_VAL_DC0_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_val_dc0;
@@ -368,6 +369,7 @@ pub type DHT_TOTLEN_AC0 = crate::Reg<dht_totlen_ac0::DHT_TOTLEN_AC0_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_totlen_ac0;
 #[doc = "DHT_VAl_AC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_val_ac0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_ac0`] module"]
+#[doc(alias = "DHT_VAl_AC0")]
 pub type DHT_VAL_AC0 = crate::Reg<dht_val_ac0::DHT_VAL_AC0_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_val_ac0;
@@ -376,6 +378,7 @@ pub type DHT_TOTLEN_DC1 = crate::Reg<dht_totlen_dc1::DHT_TOTLEN_DC1_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_totlen_dc1;
 #[doc = "DHT_VAl_DC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_val_dc1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_dc1`] module"]
+#[doc(alias = "DHT_VAl_DC1")]
 pub type DHT_VAL_DC1 = crate::Reg<dht_val_dc1::DHT_VAL_DC1_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_val_dc1;
@@ -384,6 +387,7 @@ pub type DHT_TOTLEN_AC1 = crate::Reg<dht_totlen_ac1::DHT_TOTLEN_AC1_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_totlen_ac1;
 #[doc = "DHT_VAl_AC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_val_ac1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_ac1`] module"]
+#[doc(alias = "DHT_VAl_AC1")]
 pub type DHT_VAL_AC1 = crate::Reg<dht_val_ac1::DHT_VAL_AC1_SPEC>;
 #[doc = "Trace and Debug registers"]
 pub mod dht_val_ac1;
