@@ -75,7 +75,7 @@ extern "C" {
     fn AES();
     fn SHA();
     fn ECC();
-    fn GPIO_INT0();
+    fn GPIO();
     fn GPIO_INT1();
     fn GPIO_INT2();
     fn GPIO_INT3();
@@ -230,9 +230,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _handler: ECC },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector {
-        _handler: GPIO_INT0,
-    },
+    Vector { _handler: GPIO },
     Vector {
         _handler: GPIO_INT1,
     },

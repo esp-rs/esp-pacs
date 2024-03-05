@@ -1,1 +1,7 @@
 _svd: "../esp32p4.base.svd"
+
+GPIO:
+  _modify:
+    _interrupts:
+      GPIO_INT0:
+        name: GPIO
