@@ -5,62 +5,62 @@ pub type W = crate::W<CLK_CONF_SPEC>;
 #[doc = "CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024.\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum CK8M_DIV_A {
+pub enum CK8M_DIV {
     #[doc = "0: DIV128"]
-    DIV128 = 0,
+    Div128 = 0,
     #[doc = "1: DIV256"]
-    DIV256 = 1,
+    Div256 = 1,
     #[doc = "2: DIV512"]
-    DIV512 = 2,
+    Div512 = 2,
     #[doc = "3: DIV1024"]
-    DIV1024 = 3,
+    Div1024 = 3,
 }
-impl From<CK8M_DIV_A> for u8 {
+impl From<CK8M_DIV> for u8 {
     #[inline(always)]
-    fn from(variant: CK8M_DIV_A) -> Self {
+    fn from(variant: CK8M_DIV) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for CK8M_DIV_A {
+impl crate::FieldSpec for CK8M_DIV {
     type Ux = u8;
 }
 #[doc = "Field `CK8M_DIV` reader - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
-pub type CK8M_DIV_R = crate::FieldReader<CK8M_DIV_A>;
+pub type CK8M_DIV_R = crate::FieldReader<CK8M_DIV>;
 impl CK8M_DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CK8M_DIV_A {
+    pub const fn variant(&self) -> CK8M_DIV {
         match self.bits {
-            0 => CK8M_DIV_A::DIV128,
-            1 => CK8M_DIV_A::DIV256,
-            2 => CK8M_DIV_A::DIV512,
-            3 => CK8M_DIV_A::DIV1024,
+            0 => CK8M_DIV::Div128,
+            1 => CK8M_DIV::Div256,
+            2 => CK8M_DIV::Div512,
+            3 => CK8M_DIV::Div1024,
             _ => unreachable!(),
         }
     }
     #[doc = "DIV128"]
     #[inline(always)]
     pub fn is_div128(&self) -> bool {
-        *self == CK8M_DIV_A::DIV128
+        *self == CK8M_DIV::Div128
     }
     #[doc = "DIV256"]
     #[inline(always)]
     pub fn is_div256(&self) -> bool {
-        *self == CK8M_DIV_A::DIV256
+        *self == CK8M_DIV::Div256
     }
     #[doc = "DIV512"]
     #[inline(always)]
     pub fn is_div512(&self) -> bool {
-        *self == CK8M_DIV_A::DIV512
+        *self == CK8M_DIV::Div512
     }
     #[doc = "DIV1024"]
     #[inline(always)]
     pub fn is_div1024(&self) -> bool {
-        *self == CK8M_DIV_A::DIV1024
+        *self == CK8M_DIV::Div1024
     }
 }
 #[doc = "Field `CK8M_DIV` writer - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
-pub type CK8M_DIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CK8M_DIV_A>;
+pub type CK8M_DIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CK8M_DIV>;
 impl<'a, REG> CK8M_DIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -69,22 +69,22 @@ where
     #[doc = "DIV128"]
     #[inline(always)]
     pub fn div128(self) -> &'a mut crate::W<REG> {
-        self.variant(CK8M_DIV_A::DIV128)
+        self.variant(CK8M_DIV::Div128)
     }
     #[doc = "DIV256"]
     #[inline(always)]
     pub fn div256(self) -> &'a mut crate::W<REG> {
-        self.variant(CK8M_DIV_A::DIV256)
+        self.variant(CK8M_DIV::Div256)
     }
     #[doc = "DIV512"]
     #[inline(always)]
     pub fn div512(self) -> &'a mut crate::W<REG> {
-        self.variant(CK8M_DIV_A::DIV512)
+        self.variant(CK8M_DIV::Div512)
     }
     #[doc = "DIV1024"]
     #[inline(always)]
     pub fn div1024(self) -> &'a mut crate::W<REG> {
-        self.variant(CK8M_DIV_A::DIV1024)
+        self.variant(CK8M_DIV::Div1024)
     }
 }
 #[doc = "Field `ENB_CK8M` reader - disable CK8M and CK8M_D256_OUT"]
@@ -93,42 +93,42 @@ pub type ENB_CK8M_R = crate::BitReader;
 pub type ENB_CK8M_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ENB_CK8M_DIV_A {
+pub enum ENB_CK8M_DIV {
     #[doc = "0: CK8M_DIV_256"]
-    CK8M_DIV_256 = 0,
+    Ck8mDiv256 = 0,
     #[doc = "1: CK8M"]
-    CK8M = 1,
+    Ck8m = 1,
 }
-impl From<ENB_CK8M_DIV_A> for bool {
+impl From<ENB_CK8M_DIV> for bool {
     #[inline(always)]
-    fn from(variant: ENB_CK8M_DIV_A) -> Self {
+    fn from(variant: ENB_CK8M_DIV) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `ENB_CK8M_DIV` reader - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
-pub type ENB_CK8M_DIV_R = crate::BitReader<ENB_CK8M_DIV_A>;
+pub type ENB_CK8M_DIV_R = crate::BitReader<ENB_CK8M_DIV>;
 impl ENB_CK8M_DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ENB_CK8M_DIV_A {
+    pub const fn variant(&self) -> ENB_CK8M_DIV {
         match self.bits {
-            false => ENB_CK8M_DIV_A::CK8M_DIV_256,
-            true => ENB_CK8M_DIV_A::CK8M,
+            false => ENB_CK8M_DIV::Ck8mDiv256,
+            true => ENB_CK8M_DIV::Ck8m,
         }
     }
     #[doc = "CK8M_DIV_256"]
     #[inline(always)]
     pub fn is_ck8m_div_256(&self) -> bool {
-        *self == ENB_CK8M_DIV_A::CK8M_DIV_256
+        *self == ENB_CK8M_DIV::Ck8mDiv256
     }
     #[doc = "CK8M"]
     #[inline(always)]
     pub fn is_ck8m(&self) -> bool {
-        *self == ENB_CK8M_DIV_A::CK8M
+        *self == ENB_CK8M_DIV::Ck8m
     }
 }
 #[doc = "Field `ENB_CK8M_DIV` writer - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
-pub type ENB_CK8M_DIV_W<'a, REG> = crate::BitWriter<'a, REG, ENB_CK8M_DIV_A>;
+pub type ENB_CK8M_DIV_W<'a, REG> = crate::BitWriter<'a, REG, ENB_CK8M_DIV>;
 impl<'a, REG> ENB_CK8M_DIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -136,12 +136,12 @@ where
     #[doc = "CK8M_DIV_256"]
     #[inline(always)]
     pub fn ck8m_div_256(self) -> &'a mut crate::W<REG> {
-        self.variant(ENB_CK8M_DIV_A::CK8M_DIV_256)
+        self.variant(ENB_CK8M_DIV::Ck8mDiv256)
     }
     #[doc = "CK8M"]
     #[inline(always)]
     pub fn ck8m(self) -> &'a mut crate::W<REG> {
-        self.variant(ENB_CK8M_DIV_A::CK8M)
+        self.variant(ENB_CK8M_DIV::Ck8m)
     }
 }
 #[doc = "Field `DIG_XTAL32K_EN` reader - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
@@ -187,62 +187,62 @@ pub type CK8M_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SOC_CLK_SEL_A {
+pub enum SOC_CLK_SEL {
     #[doc = "0: XTAL"]
-    XTAL = 0,
+    Xtal = 0,
     #[doc = "1: PLL"]
-    PLL = 1,
+    Pll = 1,
     #[doc = "2: CK8M"]
-    CK8M = 2,
+    Ck8m = 2,
     #[doc = "3: APLL"]
-    APLL = 3,
+    Apll = 3,
 }
-impl From<SOC_CLK_SEL_A> for u8 {
+impl From<SOC_CLK_SEL> for u8 {
     #[inline(always)]
-    fn from(variant: SOC_CLK_SEL_A) -> Self {
+    fn from(variant: SOC_CLK_SEL) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SOC_CLK_SEL_A {
+impl crate::FieldSpec for SOC_CLK_SEL {
     type Ux = u8;
 }
 #[doc = "Field `SOC_CLK_SEL` reader - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
-pub type SOC_CLK_SEL_R = crate::FieldReader<SOC_CLK_SEL_A>;
+pub type SOC_CLK_SEL_R = crate::FieldReader<SOC_CLK_SEL>;
 impl SOC_CLK_SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SOC_CLK_SEL_A {
+    pub const fn variant(&self) -> SOC_CLK_SEL {
         match self.bits {
-            0 => SOC_CLK_SEL_A::XTAL,
-            1 => SOC_CLK_SEL_A::PLL,
-            2 => SOC_CLK_SEL_A::CK8M,
-            3 => SOC_CLK_SEL_A::APLL,
+            0 => SOC_CLK_SEL::Xtal,
+            1 => SOC_CLK_SEL::Pll,
+            2 => SOC_CLK_SEL::Ck8m,
+            3 => SOC_CLK_SEL::Apll,
             _ => unreachable!(),
         }
     }
     #[doc = "XTAL"]
     #[inline(always)]
     pub fn is_xtal(&self) -> bool {
-        *self == SOC_CLK_SEL_A::XTAL
+        *self == SOC_CLK_SEL::Xtal
     }
     #[doc = "PLL"]
     #[inline(always)]
     pub fn is_pll(&self) -> bool {
-        *self == SOC_CLK_SEL_A::PLL
+        *self == SOC_CLK_SEL::Pll
     }
     #[doc = "CK8M"]
     #[inline(always)]
     pub fn is_ck8m(&self) -> bool {
-        *self == SOC_CLK_SEL_A::CK8M
+        *self == SOC_CLK_SEL::Ck8m
     }
     #[doc = "APLL"]
     #[inline(always)]
     pub fn is_apll(&self) -> bool {
-        *self == SOC_CLK_SEL_A::APLL
+        *self == SOC_CLK_SEL::Apll
     }
 }
 #[doc = "Field `SOC_CLK_SEL` writer - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
-pub type SOC_CLK_SEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, SOC_CLK_SEL_A>;
+pub type SOC_CLK_SEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, SOC_CLK_SEL>;
 impl<'a, REG> SOC_CLK_SEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -251,62 +251,62 @@ where
     #[doc = "XTAL"]
     #[inline(always)]
     pub fn xtal(self) -> &'a mut crate::W<REG> {
-        self.variant(SOC_CLK_SEL_A::XTAL)
+        self.variant(SOC_CLK_SEL::Xtal)
     }
     #[doc = "PLL"]
     #[inline(always)]
     pub fn pll(self) -> &'a mut crate::W<REG> {
-        self.variant(SOC_CLK_SEL_A::PLL)
+        self.variant(SOC_CLK_SEL::Pll)
     }
     #[doc = "CK8M"]
     #[inline(always)]
     pub fn ck8m(self) -> &'a mut crate::W<REG> {
-        self.variant(SOC_CLK_SEL_A::CK8M)
+        self.variant(SOC_CLK_SEL::Ck8m)
     }
     #[doc = "APLL"]
     #[inline(always)]
     pub fn apll(self) -> &'a mut crate::W<REG> {
-        self.variant(SOC_CLK_SEL_A::APLL)
+        self.variant(SOC_CLK_SEL::Apll)
     }
 }
 #[doc = "fast_clk_rtc sel. 0: XTAL div 4 1: CK8M\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum FAST_CLK_RTC_SEL_A {
+pub enum FAST_CLK_RTC_SEL {
     #[doc = "0: XTAL_DIV_4"]
-    XTAL_DIV_4 = 0,
+    XtalDiv4 = 0,
     #[doc = "1: CK8M"]
-    CK8M = 1,
+    Ck8m = 1,
 }
-impl From<FAST_CLK_RTC_SEL_A> for bool {
+impl From<FAST_CLK_RTC_SEL> for bool {
     #[inline(always)]
-    fn from(variant: FAST_CLK_RTC_SEL_A) -> Self {
+    fn from(variant: FAST_CLK_RTC_SEL) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
-pub type FAST_CLK_RTC_SEL_R = crate::BitReader<FAST_CLK_RTC_SEL_A>;
+pub type FAST_CLK_RTC_SEL_R = crate::BitReader<FAST_CLK_RTC_SEL>;
 impl FAST_CLK_RTC_SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FAST_CLK_RTC_SEL_A {
+    pub const fn variant(&self) -> FAST_CLK_RTC_SEL {
         match self.bits {
-            false => FAST_CLK_RTC_SEL_A::XTAL_DIV_4,
-            true => FAST_CLK_RTC_SEL_A::CK8M,
+            false => FAST_CLK_RTC_SEL::XtalDiv4,
+            true => FAST_CLK_RTC_SEL::Ck8m,
         }
     }
     #[doc = "XTAL_DIV_4"]
     #[inline(always)]
     pub fn is_xtal_div_4(&self) -> bool {
-        *self == FAST_CLK_RTC_SEL_A::XTAL_DIV_4
+        *self == FAST_CLK_RTC_SEL::XtalDiv4
     }
     #[doc = "CK8M"]
     #[inline(always)]
     pub fn is_ck8m(&self) -> bool {
-        *self == FAST_CLK_RTC_SEL_A::CK8M
+        *self == FAST_CLK_RTC_SEL::Ck8m
     }
 }
 #[doc = "Field `FAST_CLK_RTC_SEL` writer - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
-pub type FAST_CLK_RTC_SEL_W<'a, REG> = crate::BitWriter<'a, REG, FAST_CLK_RTC_SEL_A>;
+pub type FAST_CLK_RTC_SEL_W<'a, REG> = crate::BitWriter<'a, REG, FAST_CLK_RTC_SEL>;
 impl<'a, REG> FAST_CLK_RTC_SEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -314,65 +314,65 @@ where
     #[doc = "XTAL_DIV_4"]
     #[inline(always)]
     pub fn xtal_div_4(self) -> &'a mut crate::W<REG> {
-        self.variant(FAST_CLK_RTC_SEL_A::XTAL_DIV_4)
+        self.variant(FAST_CLK_RTC_SEL::XtalDiv4)
     }
     #[doc = "CK8M"]
     #[inline(always)]
     pub fn ck8m(self) -> &'a mut crate::W<REG> {
-        self.variant(FAST_CLK_RTC_SEL_A::CK8M)
+        self.variant(FAST_CLK_RTC_SEL::Ck8m)
     }
 }
 #[doc = "slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum ANA_CLK_RTC_SEL_A {
+pub enum ANA_CLK_RTC_SEL {
     #[doc = "0: SLOW_CK"]
-    SLOW_CK = 0,
+    SlowCk = 0,
     #[doc = "1: CK_XTAL_32K"]
-    CK_XTAL_32K = 1,
+    CkXtal32k = 1,
     #[doc = "2: CK8M_D256_OUT"]
-    CK8M_D256_OUT = 2,
+    Ck8mD256Out = 2,
 }
-impl From<ANA_CLK_RTC_SEL_A> for u8 {
+impl From<ANA_CLK_RTC_SEL> for u8 {
     #[inline(always)]
-    fn from(variant: ANA_CLK_RTC_SEL_A) -> Self {
+    fn from(variant: ANA_CLK_RTC_SEL) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for ANA_CLK_RTC_SEL_A {
+impl crate::FieldSpec for ANA_CLK_RTC_SEL {
     type Ux = u8;
 }
 #[doc = "Field `ANA_CLK_RTC_SEL` reader - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
-pub type ANA_CLK_RTC_SEL_R = crate::FieldReader<ANA_CLK_RTC_SEL_A>;
+pub type ANA_CLK_RTC_SEL_R = crate::FieldReader<ANA_CLK_RTC_SEL>;
 impl ANA_CLK_RTC_SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<ANA_CLK_RTC_SEL_A> {
+    pub const fn variant(&self) -> Option<ANA_CLK_RTC_SEL> {
         match self.bits {
-            0 => Some(ANA_CLK_RTC_SEL_A::SLOW_CK),
-            1 => Some(ANA_CLK_RTC_SEL_A::CK_XTAL_32K),
-            2 => Some(ANA_CLK_RTC_SEL_A::CK8M_D256_OUT),
+            0 => Some(ANA_CLK_RTC_SEL::SlowCk),
+            1 => Some(ANA_CLK_RTC_SEL::CkXtal32k),
+            2 => Some(ANA_CLK_RTC_SEL::Ck8mD256Out),
             _ => None,
         }
     }
     #[doc = "SLOW_CK"]
     #[inline(always)]
     pub fn is_slow_ck(&self) -> bool {
-        *self == ANA_CLK_RTC_SEL_A::SLOW_CK
+        *self == ANA_CLK_RTC_SEL::SlowCk
     }
     #[doc = "CK_XTAL_32K"]
     #[inline(always)]
     pub fn is_ck_xtal_32k(&self) -> bool {
-        *self == ANA_CLK_RTC_SEL_A::CK_XTAL_32K
+        *self == ANA_CLK_RTC_SEL::CkXtal32k
     }
     #[doc = "CK8M_D256_OUT"]
     #[inline(always)]
     pub fn is_ck8m_d256_out(&self) -> bool {
-        *self == ANA_CLK_RTC_SEL_A::CK8M_D256_OUT
+        *self == ANA_CLK_RTC_SEL::Ck8mD256Out
     }
 }
 #[doc = "Field `ANA_CLK_RTC_SEL` writer - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
-pub type ANA_CLK_RTC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, ANA_CLK_RTC_SEL_A>;
+pub type ANA_CLK_RTC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, ANA_CLK_RTC_SEL>;
 impl<'a, REG> ANA_CLK_RTC_SEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -381,17 +381,17 @@ where
     #[doc = "SLOW_CK"]
     #[inline(always)]
     pub fn slow_ck(self) -> &'a mut crate::W<REG> {
-        self.variant(ANA_CLK_RTC_SEL_A::SLOW_CK)
+        self.variant(ANA_CLK_RTC_SEL::SlowCk)
     }
     #[doc = "CK_XTAL_32K"]
     #[inline(always)]
     pub fn ck_xtal_32k(self) -> &'a mut crate::W<REG> {
-        self.variant(ANA_CLK_RTC_SEL_A::CK_XTAL_32K)
+        self.variant(ANA_CLK_RTC_SEL::CkXtal32k)
     }
     #[doc = "CK8M_D256_OUT"]
     #[inline(always)]
     pub fn ck8m_d256_out(self) -> &'a mut crate::W<REG> {
-        self.variant(ANA_CLK_RTC_SEL_A::CK8M_D256_OUT)
+        self.variant(ANA_CLK_RTC_SEL::Ck8mD256Out)
     }
 }
 impl R {
