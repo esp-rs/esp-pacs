@@ -92,7 +92,7 @@ Prior to opening a pull request, we ask that you please:
 
 ## MSRV
 
-The **M**inimum **S**upported **R**ust **V**ersion is `1.67.0` for all packages.
+The **M**inimum **S**upported **R**ust **V**ersion is `1.76.0` for all packages.
 
 Note that targeting the Xtensa ISA currently requires the use of the [esp-rs/rust] compiler fork, which can be installed using [esp-rs/espup].
 
