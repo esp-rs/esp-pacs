@@ -319,6 +319,7 @@ pub static __INTERRUPTS: [Vector; 99] = [
     },
 ];
 #[doc = r"Enumeration of all the interrupts."]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {

@@ -7,97 +7,97 @@ pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - When set flash boot protection is enabled"]
 pub type WDT_FLASHBOOT_MOD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum WDT_SYS_RESET_LENGTH_A {
+pub enum WDT_SYS_RESET_LENGTH {
     #[doc = "0: 100ns"]
-    NS100 = 0,
+    Ns100 = 0,
     #[doc = "1: 200ns"]
-    NS200 = 1,
+    Ns200 = 1,
     #[doc = "2: 300ns"]
-    NS300 = 2,
+    Ns300 = 2,
     #[doc = "3: 400ns"]
-    NS400 = 3,
+    Ns400 = 3,
     #[doc = "4: 500ns"]
-    NS500 = 4,
+    Ns500 = 4,
     #[doc = "5: 800ns"]
-    NS800 = 5,
+    Ns800 = 5,
     #[doc = "6: 1.6us"]
-    NS1600 = 6,
+    Ns1600 = 6,
     #[doc = "7: 3.2us"]
-    NS3200 = 7,
+    Ns3200 = 7,
 }
-impl From<WDT_SYS_RESET_LENGTH_A> for u8 {
+impl From<WDT_SYS_RESET_LENGTH> for u8 {
     #[inline(always)]
-    fn from(variant: WDT_SYS_RESET_LENGTH_A) -> Self {
+    fn from(variant: WDT_SYS_RESET_LENGTH) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for WDT_SYS_RESET_LENGTH_A {
+impl crate::FieldSpec for WDT_SYS_RESET_LENGTH {
     type Ux = u8;
 }
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<WDT_SYS_RESET_LENGTH_A>;
+pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<WDT_SYS_RESET_LENGTH>;
 impl WDT_SYS_RESET_LENGTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> WDT_SYS_RESET_LENGTH_A {
+    pub const fn variant(&self) -> WDT_SYS_RESET_LENGTH {
         match self.bits {
-            0 => WDT_SYS_RESET_LENGTH_A::NS100,
-            1 => WDT_SYS_RESET_LENGTH_A::NS200,
-            2 => WDT_SYS_RESET_LENGTH_A::NS300,
-            3 => WDT_SYS_RESET_LENGTH_A::NS400,
-            4 => WDT_SYS_RESET_LENGTH_A::NS500,
-            5 => WDT_SYS_RESET_LENGTH_A::NS800,
-            6 => WDT_SYS_RESET_LENGTH_A::NS1600,
-            7 => WDT_SYS_RESET_LENGTH_A::NS3200,
+            0 => WDT_SYS_RESET_LENGTH::Ns100,
+            1 => WDT_SYS_RESET_LENGTH::Ns200,
+            2 => WDT_SYS_RESET_LENGTH::Ns300,
+            3 => WDT_SYS_RESET_LENGTH::Ns400,
+            4 => WDT_SYS_RESET_LENGTH::Ns500,
+            5 => WDT_SYS_RESET_LENGTH::Ns800,
+            6 => WDT_SYS_RESET_LENGTH::Ns1600,
+            7 => WDT_SYS_RESET_LENGTH::Ns3200,
             _ => unreachable!(),
         }
     }
     #[doc = "100ns"]
     #[inline(always)]
     pub fn is_ns100(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS100
+        *self == WDT_SYS_RESET_LENGTH::Ns100
     }
     #[doc = "200ns"]
     #[inline(always)]
     pub fn is_ns200(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS200
+        *self == WDT_SYS_RESET_LENGTH::Ns200
     }
     #[doc = "300ns"]
     #[inline(always)]
     pub fn is_ns300(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS300
+        *self == WDT_SYS_RESET_LENGTH::Ns300
     }
     #[doc = "400ns"]
     #[inline(always)]
     pub fn is_ns400(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS400
+        *self == WDT_SYS_RESET_LENGTH::Ns400
     }
     #[doc = "500ns"]
     #[inline(always)]
     pub fn is_ns500(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS500
+        *self == WDT_SYS_RESET_LENGTH::Ns500
     }
     #[doc = "800ns"]
     #[inline(always)]
     pub fn is_ns800(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS800
+        *self == WDT_SYS_RESET_LENGTH::Ns800
     }
     #[doc = "1.6us"]
     #[inline(always)]
     pub fn is_ns1600(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS1600
+        *self == WDT_SYS_RESET_LENGTH::Ns1600
     }
     #[doc = "3.2us"]
     #[inline(always)]
     pub fn is_ns3200(&self) -> bool {
-        *self == WDT_SYS_RESET_LENGTH_A::NS3200
+        *self == WDT_SYS_RESET_LENGTH::Ns3200
     }
 }
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_SYS_RESET_LENGTH_W<'a, REG> =
-    crate::FieldWriterSafe<'a, REG, 3, WDT_SYS_RESET_LENGTH_A>;
+pub type WDT_SYS_RESET_LENGTH_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, WDT_SYS_RESET_LENGTH>;
 impl<'a, REG> WDT_SYS_RESET_LENGTH_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -106,136 +106,136 @@ where
     #[doc = "100ns"]
     #[inline(always)]
     pub fn ns100(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS100)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns100)
     }
     #[doc = "200ns"]
     #[inline(always)]
     pub fn ns200(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS200)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns200)
     }
     #[doc = "300ns"]
     #[inline(always)]
     pub fn ns300(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS300)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns300)
     }
     #[doc = "400ns"]
     #[inline(always)]
     pub fn ns400(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS400)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns400)
     }
     #[doc = "500ns"]
     #[inline(always)]
     pub fn ns500(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS500)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns500)
     }
     #[doc = "800ns"]
     #[inline(always)]
     pub fn ns800(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS800)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns800)
     }
     #[doc = "1.6us"]
     #[inline(always)]
     pub fn ns1600(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS1600)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns1600)
     }
     #[doc = "3.2us"]
     #[inline(always)]
     pub fn ns3200(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_SYS_RESET_LENGTH_A::NS3200)
+        self.variant(WDT_SYS_RESET_LENGTH::Ns3200)
     }
 }
 #[doc = "length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum WDT_CPU_RESET_LENGTH_A {
+pub enum WDT_CPU_RESET_LENGTH {
     #[doc = "0: 100ns"]
-    NS100 = 0,
+    Ns100 = 0,
     #[doc = "1: 200ns"]
-    NS200 = 1,
+    Ns200 = 1,
     #[doc = "2: 300ns"]
-    NS300 = 2,
+    Ns300 = 2,
     #[doc = "3: 400ns"]
-    NS400 = 3,
+    Ns400 = 3,
     #[doc = "4: 500ns"]
-    NS500 = 4,
+    Ns500 = 4,
     #[doc = "5: 800ns"]
-    NS800 = 5,
+    Ns800 = 5,
     #[doc = "6: 1.6us"]
-    NS1600 = 6,
+    Ns1600 = 6,
     #[doc = "7: 3.2us"]
-    NS3200 = 7,
+    Ns3200 = 7,
 }
-impl From<WDT_CPU_RESET_LENGTH_A> for u8 {
+impl From<WDT_CPU_RESET_LENGTH> for u8 {
     #[inline(always)]
-    fn from(variant: WDT_CPU_RESET_LENGTH_A) -> Self {
+    fn from(variant: WDT_CPU_RESET_LENGTH) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for WDT_CPU_RESET_LENGTH_A {
+impl crate::FieldSpec for WDT_CPU_RESET_LENGTH {
     type Ux = u8;
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<WDT_CPU_RESET_LENGTH_A>;
+pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<WDT_CPU_RESET_LENGTH>;
 impl WDT_CPU_RESET_LENGTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> WDT_CPU_RESET_LENGTH_A {
+    pub const fn variant(&self) -> WDT_CPU_RESET_LENGTH {
         match self.bits {
-            0 => WDT_CPU_RESET_LENGTH_A::NS100,
-            1 => WDT_CPU_RESET_LENGTH_A::NS200,
-            2 => WDT_CPU_RESET_LENGTH_A::NS300,
-            3 => WDT_CPU_RESET_LENGTH_A::NS400,
-            4 => WDT_CPU_RESET_LENGTH_A::NS500,
-            5 => WDT_CPU_RESET_LENGTH_A::NS800,
-            6 => WDT_CPU_RESET_LENGTH_A::NS1600,
-            7 => WDT_CPU_RESET_LENGTH_A::NS3200,
+            0 => WDT_CPU_RESET_LENGTH::Ns100,
+            1 => WDT_CPU_RESET_LENGTH::Ns200,
+            2 => WDT_CPU_RESET_LENGTH::Ns300,
+            3 => WDT_CPU_RESET_LENGTH::Ns400,
+            4 => WDT_CPU_RESET_LENGTH::Ns500,
+            5 => WDT_CPU_RESET_LENGTH::Ns800,
+            6 => WDT_CPU_RESET_LENGTH::Ns1600,
+            7 => WDT_CPU_RESET_LENGTH::Ns3200,
             _ => unreachable!(),
         }
     }
     #[doc = "100ns"]
     #[inline(always)]
     pub fn is_ns100(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS100
+        *self == WDT_CPU_RESET_LENGTH::Ns100
     }
     #[doc = "200ns"]
     #[inline(always)]
     pub fn is_ns200(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS200
+        *self == WDT_CPU_RESET_LENGTH::Ns200
     }
     #[doc = "300ns"]
     #[inline(always)]
     pub fn is_ns300(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS300
+        *self == WDT_CPU_RESET_LENGTH::Ns300
     }
     #[doc = "400ns"]
     #[inline(always)]
     pub fn is_ns400(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS400
+        *self == WDT_CPU_RESET_LENGTH::Ns400
     }
     #[doc = "500ns"]
     #[inline(always)]
     pub fn is_ns500(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS500
+        *self == WDT_CPU_RESET_LENGTH::Ns500
     }
     #[doc = "800ns"]
     #[inline(always)]
     pub fn is_ns800(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS800
+        *self == WDT_CPU_RESET_LENGTH::Ns800
     }
     #[doc = "1.6us"]
     #[inline(always)]
     pub fn is_ns1600(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS1600
+        *self == WDT_CPU_RESET_LENGTH::Ns1600
     }
     #[doc = "3.2us"]
     #[inline(always)]
     pub fn is_ns3200(&self) -> bool {
-        *self == WDT_CPU_RESET_LENGTH_A::NS3200
+        *self == WDT_CPU_RESET_LENGTH::Ns3200
     }
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_CPU_RESET_LENGTH_W<'a, REG> =
-    crate::FieldWriterSafe<'a, REG, 3, WDT_CPU_RESET_LENGTH_A>;
+pub type WDT_CPU_RESET_LENGTH_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, WDT_CPU_RESET_LENGTH>;
 impl<'a, REG> WDT_CPU_RESET_LENGTH_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -244,42 +244,42 @@ where
     #[doc = "100ns"]
     #[inline(always)]
     pub fn ns100(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS100)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns100)
     }
     #[doc = "200ns"]
     #[inline(always)]
     pub fn ns200(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS200)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns200)
     }
     #[doc = "300ns"]
     #[inline(always)]
     pub fn ns300(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS300)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns300)
     }
     #[doc = "400ns"]
     #[inline(always)]
     pub fn ns400(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS400)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns400)
     }
     #[doc = "500ns"]
     #[inline(always)]
     pub fn ns500(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS500)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns500)
     }
     #[doc = "800ns"]
     #[inline(always)]
     pub fn ns800(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS800)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns800)
     }
     #[doc = "1.6us"]
     #[inline(always)]
     pub fn ns1600(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS1600)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns1600)
     }
     #[doc = "3.2us"]
     #[inline(always)]
     pub fn ns3200(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_CPU_RESET_LENGTH_A::NS3200)
+        self.variant(WDT_CPU_RESET_LENGTH::Ns3200)
     }
 }
 #[doc = "Field `WDT_LEVEL_INT_EN` reader - When set level type interrupt generation is enabled"]
@@ -291,64 +291,65 @@ pub type WDT_EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EDGE_INT_EN` writer - When set edge type interrupt generation is enabled"]
 pub type WDT_EDGE_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum WDT_STG3_A {
+pub enum WDT_STG3 {
     #[doc = "0: Off"]
-    OFF = 0,
+    Off = 0,
     #[doc = "1: Interrupt"]
-    INTERRUPT = 1,
+    Interrupt = 1,
     #[doc = "2: Reset CPU"]
-    RESET = 2,
+    Reset = 2,
     #[doc = "3: Reset system"]
-    RESET_SYS = 3,
+    ResetSys = 3,
 }
-impl From<WDT_STG3_A> for u8 {
+impl From<WDT_STG3> for u8 {
     #[inline(always)]
-    fn from(variant: WDT_STG3_A) -> Self {
+    fn from(variant: WDT_STG3) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for WDT_STG3_A {
+impl crate::FieldSpec for WDT_STG3 {
     type Ux = u8;
 }
 #[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
-pub type WDT_STG3_R = crate::FieldReader<WDT_STG3_A>;
+pub type WDT_STG3_R = crate::FieldReader<WDT_STG3>;
 impl WDT_STG3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> WDT_STG3_A {
+    pub const fn variant(&self) -> WDT_STG3 {
         match self.bits {
-            0 => WDT_STG3_A::OFF,
-            1 => WDT_STG3_A::INTERRUPT,
-            2 => WDT_STG3_A::RESET,
-            3 => WDT_STG3_A::RESET_SYS,
+            0 => WDT_STG3::Off,
+            1 => WDT_STG3::Interrupt,
+            2 => WDT_STG3::Reset,
+            3 => WDT_STG3::ResetSys,
             _ => unreachable!(),
         }
     }
     #[doc = "Off"]
     #[inline(always)]
     pub fn is_off(&self) -> bool {
-        *self == WDT_STG3_A::OFF
+        *self == WDT_STG3::Off
     }
     #[doc = "Interrupt"]
     #[inline(always)]
     pub fn is_interrupt(&self) -> bool {
-        *self == WDT_STG3_A::INTERRUPT
+        *self == WDT_STG3::Interrupt
     }
     #[doc = "Reset CPU"]
     #[inline(always)]
     pub fn is_reset(&self) -> bool {
-        *self == WDT_STG3_A::RESET
+        *self == WDT_STG3::Reset
     }
     #[doc = "Reset system"]
     #[inline(always)]
     pub fn is_reset_sys(&self) -> bool {
-        *self == WDT_STG3_A::RESET_SYS
+        *self == WDT_STG3::ResetSys
     }
 }
 #[doc = "Field `WDT_STG3` writer - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
-pub type WDT_STG3_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, WDT_STG3_A>;
+pub type WDT_STG3_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, WDT_STG3>;
 impl<'a, REG> WDT_STG3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -357,22 +358,22 @@ where
     #[doc = "Off"]
     #[inline(always)]
     pub fn off(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_STG3_A::OFF)
+        self.variant(WDT_STG3::Off)
     }
     #[doc = "Interrupt"]
     #[inline(always)]
     pub fn interrupt(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_STG3_A::INTERRUPT)
+        self.variant(WDT_STG3::Interrupt)
     }
     #[doc = "Reset CPU"]
     #[inline(always)]
     pub fn reset(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_STG3_A::RESET)
+        self.variant(WDT_STG3::Reset)
     }
     #[doc = "Reset system"]
     #[inline(always)]
     pub fn reset_sys(self) -> &'a mut crate::W<REG> {
-        self.variant(WDT_STG3_A::RESET_SYS)
+        self.variant(WDT_STG3::ResetSys)
     }
 }
 #[doc = "Field `WDT_STG2` reader - Stage 2 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]

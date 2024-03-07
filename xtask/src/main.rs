@@ -10,8 +10,7 @@ use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{
-    config::{IdentFormats, IdentFormatsTheme},
-    Config, Target,
+    config::{IdentFormats, IdentFormatsTheme}, util::IdentFormat, Config, Target
 };
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::Document;
@@ -212,6 +211,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.interrupt_link_section = Some(".rwtext".to_owned());
     config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
     config.max_cluster_size = true;
+    config.impl_defmt = Some("defmt".into());
 
     let input = fs::read_to_string(svd_file)?;
     let device = svd2rust::load_from(&input, &config)?;
@@ -221,6 +221,9 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         Some(IdentFormatsTheme::Legacy) => IdentFormats::legacy_theme(),
         _ => IdentFormats::default_theme(),
     };
+    ident_formats.insert("enum_name".into(), IdentFormat::default().constant_case());
+    ident_formats.insert("enum_read_name".into(), IdentFormat::default().constant_case());
+    ident_formats.insert("enum_value".into(), IdentFormat::default().pascal_case());
     ident_formats.extend(config.ident_formats.drain());
     config.ident_formats = ident_formats;
 
