@@ -6,17 +6,18 @@ pub struct RegisterBlock {
     m_mem: [M_MEM; 128],
     rb_mem: [RB_MEM; 128],
     box_mem: [BOX_MEM; 12],
-    _reserved4: [u8; 0x01d0],
+    iv_mem: [IV_MEM; 4],
+    _reserved5: [u8; 0x01c0],
     x_mem: [X_MEM; 128],
     z_mem: [Z_MEM; 128],
-    _reserved6: [u8; 0x0200],
+    _reserved7: [u8; 0x0200],
     set_start: SET_START,
     set_continue: SET_CONTINUE,
     set_finish: SET_FINISH,
     query_busy: QUERY_BUSY,
     query_key_wrong: QUERY_KEY_WRONG,
     query_check: QUERY_CHECK,
-    _reserved12: [u8; 0x08],
+    _reserved13: [u8; 0x08],
     date: DATE,
 }
 impl RegisterBlock {
@@ -63,6 +64,17 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn box_mem_iter(&self) -> impl Iterator<Item = &BOX_MEM> {
         self.box_mem.iter()
+    }
+    #[doc = "0x630..0x640 - IV block data"]
+    #[inline(always)]
+    pub const fn iv_mem(&self, n: usize) -> &IV_MEM {
+        &self.iv_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x630..0x640 - IV block data"]
+    #[inline(always)]
+    pub fn iv_mem_iter(&self) -> impl Iterator<Item = &IV_MEM> {
+        self.iv_mem.iter()
     }
     #[doc = "0x800..0xa00 - memory that stores X"]
     #[inline(always)]
@@ -174,3 +186,7 @@ pub mod query_check;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "DS version control register"]
 pub mod date;
+#[doc = "IV_MEM (rw) register accessor: IV block data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iv_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iv_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iv_mem`] module"]
+pub type IV_MEM = crate::Reg<iv_mem::IV_MEM_SPEC>;
+#[doc = "IV block data"]
+pub mod iv_mem;

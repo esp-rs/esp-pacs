@@ -1,1 +1,11 @@
 _svd: ../esp32c3.base.svd
+
+DS:
+  _add:
+      IV_MEM%s:
+        dim: 4
+        dimIncrement: 0x4
+        name: IV_MEM%s
+        description: IV block data
+        addressOffset: 0x630
+        size: 0x20
