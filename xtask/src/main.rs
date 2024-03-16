@@ -172,7 +172,8 @@ fn patch_svd(workspace: &Path, chip: &Chip) -> Result<()> {
 
     let svd_path = workspace.join(chip.to_string()).join("svd");
     let yaml_file = svd_path.join("patches").join(format!("{chip}.yaml"));
-    let config = PatchConfig::default();
+    let mut config = PatchConfig::default();
+    config.enum_derive = svdtools::patch::EnumAutoDerive::Field;
     svdtools::patch::process_file(&yaml_file, None, None, &config)?;
 
     let from = svd_path.join(format!("{chip}.base.svd.patched"));
@@ -221,8 +222,8 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         Some(IdentFormatsTheme::Legacy) => IdentFormats::legacy_theme(),
         _ => IdentFormats::default_theme(),
     };
-    ident_formats.insert("enum_name".into(), IdentFormat::default().constant_case());
-    ident_formats.insert("enum_read_name".into(), IdentFormat::default().constant_case());
+    ident_formats.insert("enum_name".into(), IdentFormat::default());
+    ident_formats.insert("enum_read_name".into(), IdentFormat::default());
     ident_formats.insert("enum_value".into(), IdentFormat::default().pascal_case());
     ident_formats.extend(config.ident_formats.drain());
     config.ident_formats = ident_formats;

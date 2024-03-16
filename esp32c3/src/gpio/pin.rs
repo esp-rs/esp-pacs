@@ -2,22 +2,248 @@
 pub type R = crate::R<PIN_SPEC>;
 #[doc = "Register `PIN%s` writer"]
 pub type W = crate::W<PIN_SPEC>;
+#[doc = "set GPIO input_sync2 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum SYNC2_BYPASS {
+    #[doc = "0: No synchronization"]
+    NoSynchronization = 0,
+    #[doc = "1: Synchronized on falling edge"]
+    FallingEdge = 1,
+    #[doc = "2: Synchronized on rising edge"]
+    RisingEdge = 2,
+}
+impl From<SYNC2_BYPASS> for u8 {
+    #[inline(always)]
+    fn from(variant: SYNC2_BYPASS) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for SYNC2_BYPASS {
+    type Ux = u8;
+}
 #[doc = "Field `SYNC2_BYPASS` reader - set GPIO input_sync2 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge."]
-pub type SYNC2_BYPASS_R = crate::FieldReader;
+pub type SYNC2_BYPASS_R = crate::FieldReader<SYNC2_BYPASS>;
+impl SYNC2_BYPASS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> SYNC2_BYPASS {
+        match self.bits {
+            0 => SYNC2_BYPASS::NoSynchronization,
+            1 => SYNC2_BYPASS::FallingEdge,
+            _ => SYNC2_BYPASS::RisingEdge,
+        }
+    }
+    #[doc = "No synchronization"]
+    #[inline(always)]
+    pub fn is_no_synchronization(&self) -> bool {
+        *self == SYNC2_BYPASS::NoSynchronization
+    }
+    #[doc = "Synchronized on falling edge"]
+    #[inline(always)]
+    pub fn is_falling_edge(&self) -> bool {
+        *self == SYNC2_BYPASS::FallingEdge
+    }
+    #[doc = "Synchronized on rising edge"]
+    #[inline(always)]
+    pub fn is_rising_edge(&self) -> bool {
+        matches!(self.variant(), SYNC2_BYPASS::RisingEdge)
+    }
+}
 #[doc = "Field `SYNC2_BYPASS` writer - set GPIO input_sync2 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge."]
-pub type SYNC2_BYPASS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type SYNC2_BYPASS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, SYNC2_BYPASS>;
+impl<'a, REG> SYNC2_BYPASS_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "No synchronization"]
+    #[inline(always)]
+    pub fn no_synchronization(self) -> &'a mut crate::W<REG> {
+        self.variant(SYNC2_BYPASS::NoSynchronization)
+    }
+    #[doc = "Synchronized on falling edge"]
+    #[inline(always)]
+    pub fn falling_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(SYNC2_BYPASS::FallingEdge)
+    }
+    #[doc = "Synchronized on rising edge"]
+    #[inline(always)]
+    pub fn rising_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(SYNC2_BYPASS::RisingEdge)
+    }
+}
+#[doc = "set this bit to select pad driver. 1:open-drain. 0:normal.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PAD_DRIVER {
+    #[doc = "0: Normal output"]
+    Normal = 0,
+    #[doc = "1: Open drain output"]
+    OpenDrain = 1,
+}
+impl From<PAD_DRIVER> for bool {
+    #[inline(always)]
+    fn from(variant: PAD_DRIVER) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `PAD_DRIVER` reader - set this bit to select pad driver. 1:open-drain. 0:normal."]
-pub type PAD_DRIVER_R = crate::BitReader;
+pub type PAD_DRIVER_R = crate::BitReader<PAD_DRIVER>;
+impl PAD_DRIVER_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> PAD_DRIVER {
+        match self.bits {
+            false => PAD_DRIVER::Normal,
+            true => PAD_DRIVER::OpenDrain,
+        }
+    }
+    #[doc = "Normal output"]
+    #[inline(always)]
+    pub fn is_normal(&self) -> bool {
+        *self == PAD_DRIVER::Normal
+    }
+    #[doc = "Open drain output"]
+    #[inline(always)]
+    pub fn is_open_drain(&self) -> bool {
+        *self == PAD_DRIVER::OpenDrain
+    }
+}
 #[doc = "Field `PAD_DRIVER` writer - set this bit to select pad driver. 1:open-drain. 0:normal."]
-pub type PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PAD_DRIVER_W<'a, REG> = crate::BitWriter<'a, REG, PAD_DRIVER>;
+impl<'a, REG> PAD_DRIVER_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Normal output"]
+    #[inline(always)]
+    pub fn normal(self) -> &'a mut crate::W<REG> {
+        self.variant(PAD_DRIVER::Normal)
+    }
+    #[doc = "Open drain output"]
+    #[inline(always)]
+    pub fn open_drain(self) -> &'a mut crate::W<REG> {
+        self.variant(PAD_DRIVER::OpenDrain)
+    }
+}
 #[doc = "Field `SYNC1_BYPASS` reader - set GPIO input_sync1 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge."]
-pub type SYNC1_BYPASS_R = crate::FieldReader;
+pub use SYNC2_BYPASS_R as SYNC1_BYPASS_R;
 #[doc = "Field `SYNC1_BYPASS` writer - set GPIO input_sync1 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge."]
-pub type SYNC1_BYPASS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub use SYNC2_BYPASS_W as SYNC1_BYPASS_W;
+#[doc = "set this value to choose interrupt mode. 0:disable GPIO interrupt. 1:trigger at posedge. 2:trigger at negedge. 3:trigger at any edge. 4:valid at low level. 5:valid at high level\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum InterruptType {
+    #[doc = "0: GPIO interrupt disabled"]
+    Disable = 0,
+    #[doc = "1: Rising edge trigger"]
+    RisingEdge = 1,
+    #[doc = "2: Falling edge trigger"]
+    FallingEdge = 2,
+    #[doc = "3: Any edge trigger"]
+    AnyEdge = 3,
+    #[doc = "4: Low level trigger"]
+    LowLevel = 4,
+    #[doc = "5: high level trigger"]
+    HighLevel = 5,
+}
+impl From<InterruptType> for u8 {
+    #[inline(always)]
+    fn from(variant: InterruptType) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for InterruptType {
+    type Ux = u8;
+}
 #[doc = "Field `INT_TYPE` reader - set this value to choose interrupt mode. 0:disable GPIO interrupt. 1:trigger at posedge. 2:trigger at negedge. 3:trigger at any edge. 4:valid at low level. 5:valid at high level"]
-pub type INT_TYPE_R = crate::FieldReader;
+pub type INT_TYPE_R = crate::FieldReader<InterruptType>;
+impl INT_TYPE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<InterruptType> {
+        match self.bits {
+            0 => Some(InterruptType::Disable),
+            1 => Some(InterruptType::RisingEdge),
+            2 => Some(InterruptType::FallingEdge),
+            3 => Some(InterruptType::AnyEdge),
+            4 => Some(InterruptType::LowLevel),
+            5 => Some(InterruptType::HighLevel),
+            _ => None,
+        }
+    }
+    #[doc = "GPIO interrupt disabled"]
+    #[inline(always)]
+    pub fn is_disable(&self) -> bool {
+        *self == InterruptType::Disable
+    }
+    #[doc = "Rising edge trigger"]
+    #[inline(always)]
+    pub fn is_rising_edge(&self) -> bool {
+        *self == InterruptType::RisingEdge
+    }
+    #[doc = "Falling edge trigger"]
+    #[inline(always)]
+    pub fn is_falling_edge(&self) -> bool {
+        *self == InterruptType::FallingEdge
+    }
+    #[doc = "Any edge trigger"]
+    #[inline(always)]
+    pub fn is_any_edge(&self) -> bool {
+        *self == InterruptType::AnyEdge
+    }
+    #[doc = "Low level trigger"]
+    #[inline(always)]
+    pub fn is_low_level(&self) -> bool {
+        *self == InterruptType::LowLevel
+    }
+    #[doc = "high level trigger"]
+    #[inline(always)]
+    pub fn is_high_level(&self) -> bool {
+        *self == InterruptType::HighLevel
+    }
+}
 #[doc = "Field `INT_TYPE` writer - set this value to choose interrupt mode. 0:disable GPIO interrupt. 1:trigger at posedge. 2:trigger at negedge. 3:trigger at any edge. 4:valid at low level. 5:valid at high level"]
-pub type INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3, InterruptType>;
+impl<'a, REG> INT_TYPE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "GPIO interrupt disabled"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(InterruptType::Disable)
+    }
+    #[doc = "Rising edge trigger"]
+    #[inline(always)]
+    pub fn rising_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(InterruptType::RisingEdge)
+    }
+    #[doc = "Falling edge trigger"]
+    #[inline(always)]
+    pub fn falling_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(InterruptType::FallingEdge)
+    }
+    #[doc = "Any edge trigger"]
+    #[inline(always)]
+    pub fn any_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(InterruptType::AnyEdge)
+    }
+    #[doc = "Low level trigger"]
+    #[inline(always)]
+    pub fn low_level(self) -> &'a mut crate::W<REG> {
+        self.variant(InterruptType::LowLevel)
+    }
+    #[doc = "high level trigger"]
+    #[inline(always)]
+    pub fn high_level(self) -> &'a mut crate::W<REG> {
+        self.variant(InterruptType::HighLevel)
+    }
+}
 #[doc = "Field `WAKEUP_ENABLE` reader - set this bit to enable GPIO wakeup.(can only wakeup CPU from Light-sleep Mode)"]
 pub type WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_ENABLE` writer - set this bit to enable GPIO wakeup.(can only wakeup CPU from Light-sleep Mode)"]

@@ -10,34 +10,216 @@ pub type MCU_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SLP_SEL` writer - Sleep mode selection of this pad. Set to 1 to put the pad in pad mode."]
 pub type SLP_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Pull-down enable of the pad in sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PullDown {
+    #[doc = "0: Disable GPIO pull-down resistor"]
+    Disable = 0,
+    #[doc = "1: Enable GPIO pull-down resistor"]
+    Enable = 1,
+}
+impl From<PullDown> for bool {
+    #[inline(always)]
+    fn from(variant: PullDown) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `MCU_WPD` reader - Pull-down enable of the pad in sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
-pub type MCU_WPD_R = crate::BitReader;
+pub type MCU_WPD_R = crate::BitReader<PullDown>;
+impl MCU_WPD_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> PullDown {
+        match self.bits {
+            false => PullDown::Disable,
+            true => PullDown::Enable,
+        }
+    }
+    #[doc = "Disable GPIO pull-down resistor"]
+    #[inline(always)]
+    pub fn is_disable(&self) -> bool {
+        *self == PullDown::Disable
+    }
+    #[doc = "Enable GPIO pull-down resistor"]
+    #[inline(always)]
+    pub fn is_enable(&self) -> bool {
+        *self == PullDown::Enable
+    }
+}
 #[doc = "Field `MCU_WPD` writer - Pull-down enable of the pad in sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
-pub type MCU_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type MCU_WPD_W<'a, REG> = crate::BitWriter<'a, REG, PullDown>;
+impl<'a, REG> MCU_WPD_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disable GPIO pull-down resistor"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(PullDown::Disable)
+    }
+    #[doc = "Enable GPIO pull-down resistor"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(PullDown::Enable)
+    }
+}
+#[doc = "Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PullUp {
+    #[doc = "0: Disable GPIO pull-up resistor"]
+    Disable = 0,
+    #[doc = "1: Enable GPIO pull-up resistor"]
+    Enable = 1,
+}
+impl From<PullUp> for bool {
+    #[inline(always)]
+    fn from(variant: PullUp) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `MCU_WPU` reader - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
-pub type MCU_WPU_R = crate::BitReader;
+pub type MCU_WPU_R = crate::BitReader<PullUp>;
+impl MCU_WPU_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> PullUp {
+        match self.bits {
+            false => PullUp::Disable,
+            true => PullUp::Enable,
+        }
+    }
+    #[doc = "Disable GPIO pull-up resistor"]
+    #[inline(always)]
+    pub fn is_disable(&self) -> bool {
+        *self == PullUp::Disable
+    }
+    #[doc = "Enable GPIO pull-up resistor"]
+    #[inline(always)]
+    pub fn is_enable(&self) -> bool {
+        *self == PullUp::Enable
+    }
+}
 #[doc = "Field `MCU_WPU` writer - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
-pub type MCU_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type MCU_WPU_W<'a, REG> = crate::BitWriter<'a, REG, PullUp>;
+impl<'a, REG> MCU_WPU_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disable GPIO pull-up resistor"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(PullUp::Disable)
+    }
+    #[doc = "Enable GPIO pull-up resistor"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(PullUp::Enable)
+    }
+}
 #[doc = "Field `MCU_IE` reader - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
 pub type MCU_IE_R = crate::BitReader;
 #[doc = "Field `MCU_IE` writer - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
 pub type MCU_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FUN_WPD` reader - Pull-down enable of the pad. 1: internal pull-down enabled; 0: internal pull-down disabled."]
-pub type FUN_WPD_R = crate::BitReader;
+pub use MCU_WPD_R as FUN_WPD_R;
 #[doc = "Field `FUN_WPD` writer - Pull-down enable of the pad. 1: internal pull-down enabled; 0: internal pull-down disabled."]
-pub type FUN_WPD_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub use MCU_WPD_W as FUN_WPD_W;
 #[doc = "Field `FUN_WPU` reader - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled."]
-pub type FUN_WPU_R = crate::BitReader;
+pub use MCU_WPU_R as FUN_WPU_R;
 #[doc = "Field `FUN_WPU` writer - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled."]
-pub type FUN_WPU_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub use MCU_WPU_W as FUN_WPU_W;
 #[doc = "Field `FUN_IE` reader - Input enable of the pad. 1: input enabled; 0: input disabled."]
 pub type FUN_IE_R = crate::BitReader;
 #[doc = "Field `FUN_IE` writer - Input enable of the pad. 1: input enabled; 0: input disabled."]
 pub type FUN_IE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Select the drive strength of the pad. 0: ~5 mA; 1: ~10mA; 2: ~20mA; 3: ~40mA.\n\nValue on reset: 2"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum DriveStrength {
+    #[doc = "0: Drive strength of GPIOn ~5 mA"]
+    I5ma = 0,
+    #[doc = "1: Drive strength of GPIOn ~10 mA"]
+    I10ma = 1,
+    #[doc = "2: Drive strength of GPIOn ~20 mA"]
+    I20ma = 2,
+    #[doc = "3: Drive strength of GPIOn ~40 mA"]
+    I40ma = 3,
+}
+impl From<DriveStrength> for u8 {
+    #[inline(always)]
+    fn from(variant: DriveStrength) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for DriveStrength {
+    type Ux = u8;
+}
 #[doc = "Field `FUN_DRV` reader - Select the drive strength of the pad. 0: ~5 mA; 1: ~10mA; 2: ~20mA; 3: ~40mA."]
-pub type FUN_DRV_R = crate::FieldReader;
+pub type FUN_DRV_R = crate::FieldReader<DriveStrength>;
+impl FUN_DRV_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> DriveStrength {
+        match self.bits {
+            0 => DriveStrength::I5ma,
+            1 => DriveStrength::I10ma,
+            2 => DriveStrength::I20ma,
+            3 => DriveStrength::I40ma,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Drive strength of GPIOn ~5 mA"]
+    #[inline(always)]
+    pub fn is_i5ma(&self) -> bool {
+        *self == DriveStrength::I5ma
+    }
+    #[doc = "Drive strength of GPIOn ~10 mA"]
+    #[inline(always)]
+    pub fn is_i10ma(&self) -> bool {
+        *self == DriveStrength::I10ma
+    }
+    #[doc = "Drive strength of GPIOn ~20 mA"]
+    #[inline(always)]
+    pub fn is_i20ma(&self) -> bool {
+        *self == DriveStrength::I20ma
+    }
+    #[doc = "Drive strength of GPIOn ~40 mA"]
+    #[inline(always)]
+    pub fn is_i40ma(&self) -> bool {
+        *self == DriveStrength::I40ma
+    }
+}
 #[doc = "Field `FUN_DRV` writer - Select the drive strength of the pad. 0: ~5 mA; 1: ~10mA; 2: ~20mA; 3: ~40mA."]
-pub type FUN_DRV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type FUN_DRV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, DriveStrength>;
+impl<'a, REG> FUN_DRV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Drive strength of GPIOn ~5 mA"]
+    #[inline(always)]
+    pub fn i5ma(self) -> &'a mut crate::W<REG> {
+        self.variant(DriveStrength::I5ma)
+    }
+    #[doc = "Drive strength of GPIOn ~10 mA"]
+    #[inline(always)]
+    pub fn i10ma(self) -> &'a mut crate::W<REG> {
+        self.variant(DriveStrength::I10ma)
+    }
+    #[doc = "Drive strength of GPIOn ~20 mA"]
+    #[inline(always)]
+    pub fn i20ma(self) -> &'a mut crate::W<REG> {
+        self.variant(DriveStrength::I20ma)
+    }
+    #[doc = "Drive strength of GPIOn ~40 mA"]
+    #[inline(always)]
+    pub fn i40ma(self) -> &'a mut crate::W<REG> {
+        self.variant(DriveStrength::I40ma)
+    }
+}
 #[doc = "Field `MCU_SEL` reader - Select IO MUX function for this signal. 0: Select Function 1; 1: Select Function 2; etc."]
 pub type MCU_SEL_R = crate::FieldReader;
 #[doc = "Field `MCU_SEL` writer - Select IO MUX function for this signal. 0: Select Function 1; 1: Select Function 2; etc."]

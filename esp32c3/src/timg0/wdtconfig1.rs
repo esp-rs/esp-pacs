@@ -7,7 +7,7 @@ pub type WDT_DIVCNT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_CLK_PRESCALE` reader - reg_wdt_clk_prescale."]
 pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `WDT_CLK_PRESCALE` writer - reg_wdt_clk_prescale."]
-pub type WDT_CLK_PRESCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+pub type WDT_CLK_PRESCALE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 16:31 - reg_wdt_clk_prescale."]
     #[inline(always)]

@@ -5,7 +5,7 @@ pub type W = crate::W<T0ALARMLO_SPEC>;
 #[doc = "Field `ALARM_LO` reader - reg_t0_alarm_lo."]
 pub type ALARM_LO_R = crate::FieldReader<u32>;
 #[doc = "Field `ALARM_LO` writer - reg_t0_alarm_lo."]
-pub type ALARM_LO_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+pub type ALARM_LO_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_t0_alarm_lo."]
     #[inline(always)]
@@ -44,7 +44,7 @@ impl crate::RegisterSpec for T0ALARMLO_SPEC {
 impl crate::Readable for T0ALARMLO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`t0alarmlo::W`](W) writer structure"]
 impl crate::Writable for T0ALARMLO_SPEC {
-    type Safety = crate::Unsafe;
+    type Safety = crate::Safe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
