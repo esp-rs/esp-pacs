@@ -2,8 +2,8 @@
 pub type R = crate::R<INT_ST_SPEC>;
 #[doc = "Field `TX_FIFO_REMPTY_INT_ST` reader - The masked interrupt status of TX_FIFO_REMPTY_INTR."]
 pub type TX_FIFO_REMPTY_INT_ST_R = crate::BitReader;
-#[doc = "Field `RX_FIFO_WFULL_INT_ST` reader - The masked interrupt status of RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_ST_R = crate::BitReader;
+#[doc = "Field `RX_FIFO_WOVF_INT_ST` reader - The masked interrupt status of RX_FIFO_WOVF_INTR."]
+pub type RX_FIFO_WOVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_EOF_INT_ST` reader - The masked interrupt status of TX_EOF_INTR."]
 pub type TX_EOF_INT_ST_R = crate::BitReader;
 impl R {
@@ -12,10 +12,10 @@ impl R {
     pub fn tx_fifo_rempty_int_st(&self) -> TX_FIFO_REMPTY_INT_ST_R {
         TX_FIFO_REMPTY_INT_ST_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The masked interrupt status of RX_FIFO_WFULL_INTR."]
+    #[doc = "Bit 1 - The masked interrupt status of RX_FIFO_WOVF_INTR."]
     #[inline(always)]
-    pub fn rx_fifo_wfull_int_st(&self) -> RX_FIFO_WFULL_INT_ST_R {
-        RX_FIFO_WFULL_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn rx_fifo_wovf_int_st(&self) -> RX_FIFO_WOVF_INT_ST_R {
+        RX_FIFO_WOVF_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The masked interrupt status of TX_EOF_INTR."]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl core::fmt::Debug for R {
                 &format_args!("{}", self.tx_fifo_rempty_int_st().bit()),
             )
             .field(
-                "rx_fifo_wfull_int_st",
-                &format_args!("{}", self.rx_fifo_wfull_int_st().bit()),
+                "rx_fifo_wovf_int_st",
+                &format_args!("{}", self.rx_fifo_wovf_int_st().bit()),
             )
             .field(
                 "tx_eof_int_st",

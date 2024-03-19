@@ -5,3 +5,9 @@ TIMG0:
     _modify:
       T0_UPDATE:
         name: UPDATE
+
+SPI2:
+  _modify:
+    _interrupts:
+      SPI_INTR_2:
+        name: SPI2

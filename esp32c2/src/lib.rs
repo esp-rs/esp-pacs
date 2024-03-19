@@ -29,7 +29,7 @@ extern "C" {
     fn GPIO();
     fn GPIO_NMI();
     fn SPI_INTR_1();
-    fn SPI_INTR_2();
+    fn SPI2();
     fn UART0();
     fn UART1();
     fn LEDC();
@@ -91,9 +91,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
     Vector {
         _handler: SPI_INTR_1,
     },
-    Vector {
-        _handler: SPI_INTR_2,
-    },
+    Vector { _handler: SPI2 },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
     Vector { _handler: LEDC },

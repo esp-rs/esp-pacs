@@ -8,3 +8,25 @@ LP_I2C0:
     _modify:
       FIFO_RDATA:
         access: read-write
+
+PARL_IO:
+  INT_ENA:
+    _modify:
+      RX_FIFO_WFULL_INT_ENA:
+        name: RX_FIFO_WOVF_INT_ENA
+        description: Write 1 to enable RX_FIFO_WOVF_INTR.
+  INT_RAW:
+    _modify:
+      RX_FIFO_WFULL_INT_RAW:
+        name: RX_FIFO_WOVF_INT_RAW
+        description: The raw interrupt status of RX_FIFO_WOVF_INTR.
+  INT_ST:
+    _modify:
+      RX_FIFO_WFULL_INT_ST:
+        name: RX_FIFO_WOVF_INT_ST
+        description: The masked interrupt status of RX_FIFO_WOVF_INTR.
+  INT_CLR:
+    _modify:
+      RX_FIFO_WFULL_INT_CLR:
+        name: RX_FIFO_WOVF_INT_CLR
+        description: Write 1 to clear RX_FIFO_WOVF_INTR.
