@@ -33,8 +33,8 @@ pub enum Interrupt {
     GPIO = 13,
     #[doc = "14 - GPIO_NMI"]
     GPIO_NMI = 14,
-    #[doc = "15 - SPI_INTR_1"]
-    SPI_INTR_1 = 15,
+    #[doc = "15 - SPI1"]
+    SPI1 = 15,
     #[doc = "16 - SPI2"]
     SPI2 = 16,
     #[doc = "17 - UART0"]
@@ -111,7 +111,7 @@ impl Interrupt {
             12 => Ok(Interrupt::APB_CTRL),
             13 => Ok(Interrupt::GPIO),
             14 => Ok(Interrupt::GPIO_NMI),
-            15 => Ok(Interrupt::SPI_INTR_1),
+            15 => Ok(Interrupt::SPI1),
             16 => Ok(Interrupt::SPI2),
             17 => Ok(Interrupt::UART0),
             18 => Ok(Interrupt::UART1),

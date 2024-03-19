@@ -28,7 +28,7 @@ extern "C" {
     fn APB_CTRL();
     fn GPIO();
     fn GPIO_NMI();
-    fn SPI_INTR_1();
+    fn SPI1();
     fn SPI2();
     fn UART0();
     fn UART1();
@@ -88,9 +88,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
     Vector { _handler: APB_CTRL },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
-    Vector {
-        _handler: SPI_INTR_1,
-    },
+    Vector { _handler: SPI1 },
     Vector { _handler: SPI2 },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },

@@ -11,3 +11,5 @@ SPI2:
     _interrupts:
       SPI_INTR_2:
         name: SPI2
+      SPI_INTR_1:
+        name: SPI1
