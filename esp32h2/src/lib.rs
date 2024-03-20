@@ -72,7 +72,7 @@ extern "C" {
     fn DMA_OUT_CH0();
     fn DMA_OUT_CH1();
     fn DMA_OUT_CH2();
-    fn GPSPI2();
+    fn SPI2();
     fn AES();
     fn SHA();
     fn RSA();
@@ -215,7 +215,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 65] = [
     Vector {
         _handler: DMA_OUT_CH2,
     },
-    Vector { _handler: GPSPI2 },
+    Vector { _handler: SPI2 },
     Vector { _handler: AES },
     Vector { _handler: SHA },
     Vector { _handler: RSA },

@@ -2,8 +2,8 @@
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `TX_FIFO_REMPTY_INT_CLR` writer - Write 1 to clear TX_FIFO_REMPTY_INTR."]
 pub type TX_FIFO_REMPTY_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_FIFO_WFULL_INT_CLR` writer - Write 1 to clear RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_FIFO_WOVF_INT_CLR` writer - Write 1 to clear RX_FIFO_WOVF_INTR."]
+pub type RX_FIFO_WOVF_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_EOF_INT_CLR` writer - Write 1 to clear TX_EOF_INTR."]
 pub type TX_EOF_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
@@ -19,11 +19,11 @@ impl W {
     pub fn tx_fifo_rempty_int_clr(&mut self) -> TX_FIFO_REMPTY_INT_CLR_W<INT_CLR_SPEC> {
         TX_FIFO_REMPTY_INT_CLR_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Write 1 to clear RX_FIFO_WFULL_INTR."]
+    #[doc = "Bit 1 - Write 1 to clear RX_FIFO_WOVF_INTR."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_wfull_int_clr(&mut self) -> RX_FIFO_WFULL_INT_CLR_W<INT_CLR_SPEC> {
-        RX_FIFO_WFULL_INT_CLR_W::new(self, 1)
+    pub fn rx_fifo_wovf_int_clr(&mut self) -> RX_FIFO_WOVF_INT_CLR_W<INT_CLR_SPEC> {
+        RX_FIFO_WOVF_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to clear TX_EOF_INTR."]
     #[inline(always)]

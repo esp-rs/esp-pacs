@@ -121,8 +121,8 @@ pub enum Interrupt {
     DMA_OUT_CH1 = 57,
     #[doc = "58 - DMA_OUT_CH2"]
     DMA_OUT_CH2 = 58,
-    #[doc = "59 - GPSPI2"]
-    GPSPI2 = 59,
+    #[doc = "59 - SPI2"]
+    SPI2 = 59,
     #[doc = "60 - AES"]
     AES = 60,
     #[doc = "61 - SHA"]
@@ -201,7 +201,7 @@ impl Interrupt {
             56 => Ok(Interrupt::DMA_OUT_CH0),
             57 => Ok(Interrupt::DMA_OUT_CH1),
             58 => Ok(Interrupt::DMA_OUT_CH2),
-            59 => Ok(Interrupt::GPSPI2),
+            59 => Ok(Interrupt::SPI2),
             60 => Ok(Interrupt::AES),
             61 => Ok(Interrupt::SHA),
             62 => Ok(Interrupt::RSA),

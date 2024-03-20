@@ -6,10 +6,10 @@ pub type W = crate::W<INT_RAW_SPEC>;
 pub type TX_FIFO_REMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_REMPTY_INT_RAW` writer - The raw interrupt status of TX_FIFO_REMPTY_INTR."]
 pub type TX_FIFO_REMPTY_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_FIFO_WFULL_INT_RAW` reader - The raw interrupt status of RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_RAW_R = crate::BitReader;
-#[doc = "Field `RX_FIFO_WFULL_INT_RAW` writer - The raw interrupt status of RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_FIFO_WOVF_INT_RAW` reader - The raw interrupt status of RX_FIFO_WOVF_INTR."]
+pub type RX_FIFO_WOVF_INT_RAW_R = crate::BitReader;
+#[doc = "Field `RX_FIFO_WOVF_INT_RAW` writer - The raw interrupt status of RX_FIFO_WOVF_INTR."]
+pub type RX_FIFO_WOVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_EOF_INT_RAW` reader - The raw interrupt status of TX_EOF_INTR."]
 pub type TX_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_EOF_INT_RAW` writer - The raw interrupt status of TX_EOF_INTR."]
@@ -20,10 +20,10 @@ impl R {
     pub fn tx_fifo_rempty_int_raw(&self) -> TX_FIFO_REMPTY_INT_RAW_R {
         TX_FIFO_REMPTY_INT_RAW_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The raw interrupt status of RX_FIFO_WFULL_INTR."]
+    #[doc = "Bit 1 - The raw interrupt status of RX_FIFO_WOVF_INTR."]
     #[inline(always)]
-    pub fn rx_fifo_wfull_int_raw(&self) -> RX_FIFO_WFULL_INT_RAW_R {
-        RX_FIFO_WFULL_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn rx_fifo_wovf_int_raw(&self) -> RX_FIFO_WOVF_INT_RAW_R {
+        RX_FIFO_WOVF_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status of TX_EOF_INTR."]
     #[inline(always)]
@@ -40,8 +40,8 @@ impl core::fmt::Debug for R {
                 &format_args!("{}", self.tx_fifo_rempty_int_raw().bit()),
             )
             .field(
-                "rx_fifo_wfull_int_raw",
-                &format_args!("{}", self.rx_fifo_wfull_int_raw().bit()),
+                "rx_fifo_wovf_int_raw",
+                &format_args!("{}", self.rx_fifo_wovf_int_raw().bit()),
             )
             .field(
                 "tx_eof_int_raw",
@@ -63,11 +63,11 @@ impl W {
     pub fn tx_fifo_rempty_int_raw(&mut self) -> TX_FIFO_REMPTY_INT_RAW_W<INT_RAW_SPEC> {
         TX_FIFO_REMPTY_INT_RAW_W::new(self, 0)
     }
-    #[doc = "Bit 1 - The raw interrupt status of RX_FIFO_WFULL_INTR."]
+    #[doc = "Bit 1 - The raw interrupt status of RX_FIFO_WOVF_INTR."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_wfull_int_raw(&mut self) -> RX_FIFO_WFULL_INT_RAW_W<INT_RAW_SPEC> {
-        RX_FIFO_WFULL_INT_RAW_W::new(self, 1)
+    pub fn rx_fifo_wovf_int_raw(&mut self) -> RX_FIFO_WOVF_INT_RAW_W<INT_RAW_SPEC> {
+        RX_FIFO_WOVF_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt status of TX_EOF_INTR."]
     #[inline(always)]
