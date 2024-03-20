@@ -14,36 +14,302 @@ pub type WDT_PROCPU_RESET_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - reg_wdt_flashboot_mod_en."]
 pub type WDT_FLASHBOOT_MOD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "reg_wdt_sys_reset_length.\n\nValue on reset: 1"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum ResetSigLength {
+    #[doc = "0: 100 ns"]
+    Length100ns = 0,
+    #[doc = "1: 200 ns"]
+    Length200ns = 1,
+    #[doc = "2: 300 ns"]
+    Length300ns = 2,
+    #[doc = "3: 400 ns"]
+    Length400ns = 3,
+    #[doc = "4: 500 ns"]
+    Length500ns = 4,
+    #[doc = "5: 800 ns"]
+    Length800ns = 5,
+    #[doc = "6: 1.6 us"]
+    Length1_6us = 6,
+    #[doc = "7: 3.2 us"]
+    Length3_2us = 7,
+}
+impl From<ResetSigLength> for u8 {
+    #[inline(always)]
+    fn from(variant: ResetSigLength) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for ResetSigLength {
+    type Ux = u8;
+}
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - reg_wdt_sys_reset_length."]
-pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader;
+pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<ResetSigLength>;
+impl WDT_SYS_RESET_LENGTH_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> ResetSigLength {
+        match self.bits {
+            0 => ResetSigLength::Length100ns,
+            1 => ResetSigLength::Length200ns,
+            2 => ResetSigLength::Length300ns,
+            3 => ResetSigLength::Length400ns,
+            4 => ResetSigLength::Length500ns,
+            5 => ResetSigLength::Length800ns,
+            6 => ResetSigLength::Length1_6us,
+            7 => ResetSigLength::Length3_2us,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "100 ns"]
+    #[inline(always)]
+    pub fn is_length100ns(&self) -> bool {
+        *self == ResetSigLength::Length100ns
+    }
+    #[doc = "200 ns"]
+    #[inline(always)]
+    pub fn is_length200ns(&self) -> bool {
+        *self == ResetSigLength::Length200ns
+    }
+    #[doc = "300 ns"]
+    #[inline(always)]
+    pub fn is_length300ns(&self) -> bool {
+        *self == ResetSigLength::Length300ns
+    }
+    #[doc = "400 ns"]
+    #[inline(always)]
+    pub fn is_length400ns(&self) -> bool {
+        *self == ResetSigLength::Length400ns
+    }
+    #[doc = "500 ns"]
+    #[inline(always)]
+    pub fn is_length500ns(&self) -> bool {
+        *self == ResetSigLength::Length500ns
+    }
+    #[doc = "800 ns"]
+    #[inline(always)]
+    pub fn is_length800ns(&self) -> bool {
+        *self == ResetSigLength::Length800ns
+    }
+    #[doc = "1.6 us"]
+    #[inline(always)]
+    pub fn is_length1_6us(&self) -> bool {
+        *self == ResetSigLength::Length1_6us
+    }
+    #[doc = "3.2 us"]
+    #[inline(always)]
+    pub fn is_length3_2us(&self) -> bool {
+        *self == ResetSigLength::Length3_2us
+    }
+}
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - reg_wdt_sys_reset_length."]
-pub type WDT_SYS_RESET_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type WDT_SYS_RESET_LENGTH_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, ResetSigLength>;
+impl<'a, REG> WDT_SYS_RESET_LENGTH_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "100 ns"]
+    #[inline(always)]
+    pub fn length100ns(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length100ns)
+    }
+    #[doc = "200 ns"]
+    #[inline(always)]
+    pub fn length200ns(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length200ns)
+    }
+    #[doc = "300 ns"]
+    #[inline(always)]
+    pub fn length300ns(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length300ns)
+    }
+    #[doc = "400 ns"]
+    #[inline(always)]
+    pub fn length400ns(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length400ns)
+    }
+    #[doc = "500 ns"]
+    #[inline(always)]
+    pub fn length500ns(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length500ns)
+    }
+    #[doc = "800 ns"]
+    #[inline(always)]
+    pub fn length800ns(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length800ns)
+    }
+    #[doc = "1.6 us"]
+    #[inline(always)]
+    pub fn length1_6us(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length1_6us)
+    }
+    #[doc = "3.2 us"]
+    #[inline(always)]
+    pub fn length3_2us(self) -> &'a mut crate::W<REG> {
+        self.variant(ResetSigLength::Length3_2us)
+    }
+}
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - reg_wdt_cpu_reset_length."]
-pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader;
+pub use WDT_SYS_RESET_LENGTH_R as WDT_CPU_RESET_LENGTH_R;
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - reg_wdt_cpu_reset_length."]
-pub type WDT_CPU_RESET_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub use WDT_SYS_RESET_LENGTH_W as WDT_CPU_RESET_LENGTH_W;
+#[doc = "reg_wdt_use_xtal.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WDT_USE_XTAL {
+    #[doc = "0: APB_CLK"]
+    Apb = 0,
+    #[doc = "1: XTAL_CLK"]
+    Xtal = 1,
+}
+impl From<WDT_USE_XTAL> for bool {
+    #[inline(always)]
+    fn from(variant: WDT_USE_XTAL) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `WDT_USE_XTAL` reader - reg_wdt_use_xtal."]
-pub type WDT_USE_XTAL_R = crate::BitReader;
+pub type WDT_USE_XTAL_R = crate::BitReader<WDT_USE_XTAL>;
+impl WDT_USE_XTAL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> WDT_USE_XTAL {
+        match self.bits {
+            false => WDT_USE_XTAL::Apb,
+            true => WDT_USE_XTAL::Xtal,
+        }
+    }
+    #[doc = "APB_CLK"]
+    #[inline(always)]
+    pub fn is_apb(&self) -> bool {
+        *self == WDT_USE_XTAL::Apb
+    }
+    #[doc = "XTAL_CLK"]
+    #[inline(always)]
+    pub fn is_xtal(&self) -> bool {
+        *self == WDT_USE_XTAL::Xtal
+    }
+}
 #[doc = "Field `WDT_USE_XTAL` writer - reg_wdt_use_xtal."]
-pub type WDT_USE_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type WDT_USE_XTAL_W<'a, REG> = crate::BitWriter<'a, REG, WDT_USE_XTAL>;
+impl<'a, REG> WDT_USE_XTAL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "APB_CLK"]
+    #[inline(always)]
+    pub fn apb(self) -> &'a mut crate::W<REG> {
+        self.variant(WDT_USE_XTAL::Apb)
+    }
+    #[doc = "XTAL_CLK"]
+    #[inline(always)]
+    pub fn xtal(self) -> &'a mut crate::W<REG> {
+        self.variant(WDT_USE_XTAL::Xtal)
+    }
+}
 #[doc = "Field `WDT_CONF_UPDATE_EN` writer - reg_wdt_conf_update_en."]
 pub type WDT_CONF_UPDATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "reg_wdt_stg3.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum StageAction {
+    #[doc = "0: Disabled. This stage will have no effects on the system."]
+    Off = 0,
+    #[doc = "1: Trigger an interrupt when the stage expires."]
+    Interrupt = 1,
+    #[doc = "2: Reset a CPU core when the stage expires."]
+    ResetCpu = 2,
+    #[doc = "3: Reset the main system when the stage expires. This includes the CPU and all peripherals. The RTC is an exception and will not be reset."]
+    ResetSystem = 3,
+}
+impl From<StageAction> for u8 {
+    #[inline(always)]
+    fn from(variant: StageAction) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for StageAction {
+    type Ux = u8;
+}
 #[doc = "Field `WDT_STG3` reader - reg_wdt_stg3."]
-pub type WDT_STG3_R = crate::FieldReader;
+pub type WDT_STG3_R = crate::FieldReader<StageAction>;
+impl WDT_STG3_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> StageAction {
+        match self.bits {
+            0 => StageAction::Off,
+            1 => StageAction::Interrupt,
+            2 => StageAction::ResetCpu,
+            3 => StageAction::ResetSystem,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Disabled. This stage will have no effects on the system."]
+    #[inline(always)]
+    pub fn is_off(&self) -> bool {
+        *self == StageAction::Off
+    }
+    #[doc = "Trigger an interrupt when the stage expires."]
+    #[inline(always)]
+    pub fn is_interrupt(&self) -> bool {
+        *self == StageAction::Interrupt
+    }
+    #[doc = "Reset a CPU core when the stage expires."]
+    #[inline(always)]
+    pub fn is_reset_cpu(&self) -> bool {
+        *self == StageAction::ResetCpu
+    }
+    #[doc = "Reset the main system when the stage expires. This includes the CPU and all peripherals. The RTC is an exception and will not be reset."]
+    #[inline(always)]
+    pub fn is_reset_system(&self) -> bool {
+        *self == StageAction::ResetSystem
+    }
+}
 #[doc = "Field `WDT_STG3` writer - reg_wdt_stg3."]
-pub type WDT_STG3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type WDT_STG3_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, StageAction>;
+impl<'a, REG> WDT_STG3_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Disabled. This stage will have no effects on the system."]
+    #[inline(always)]
+    pub fn off(self) -> &'a mut crate::W<REG> {
+        self.variant(StageAction::Off)
+    }
+    #[doc = "Trigger an interrupt when the stage expires."]
+    #[inline(always)]
+    pub fn interrupt(self) -> &'a mut crate::W<REG> {
+        self.variant(StageAction::Interrupt)
+    }
+    #[doc = "Reset a CPU core when the stage expires."]
+    #[inline(always)]
+    pub fn reset_cpu(self) -> &'a mut crate::W<REG> {
+        self.variant(StageAction::ResetCpu)
+    }
+    #[doc = "Reset the main system when the stage expires. This includes the CPU and all peripherals. The RTC is an exception and will not be reset."]
+    #[inline(always)]
+    pub fn reset_system(self) -> &'a mut crate::W<REG> {
+        self.variant(StageAction::ResetSystem)
+    }
+}
 #[doc = "Field `WDT_STG2` reader - reg_wdt_stg2."]
-pub type WDT_STG2_R = crate::FieldReader;
-#[doc = "Field `WDT_STG2` writer - reg_wdt_stg2."]
-pub type WDT_STG2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub use WDT_STG3_R as WDT_STG2_R;
 #[doc = "Field `WDT_STG1` reader - reg_wdt_stg1."]
-pub type WDT_STG1_R = crate::FieldReader;
-#[doc = "Field `WDT_STG1` writer - reg_wdt_stg1."]
-pub type WDT_STG1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub use WDT_STG3_R as WDT_STG1_R;
 #[doc = "Field `WDT_STG0` reader - reg_wdt_stg0."]
-pub type WDT_STG0_R = crate::FieldReader;
+pub use WDT_STG3_R as WDT_STG0_R;
+#[doc = "Field `WDT_STG2` writer - reg_wdt_stg2."]
+pub use WDT_STG3_W as WDT_STG2_W;
+#[doc = "Field `WDT_STG1` writer - reg_wdt_stg1."]
+pub use WDT_STG3_W as WDT_STG1_W;
 #[doc = "Field `WDT_STG0` writer - reg_wdt_stg0."]
-pub type WDT_STG0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub use WDT_STG3_W as WDT_STG0_W;
 #[doc = "Field `WDT_EN` reader - reg_wdt_en."]
 pub type WDT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EN` writer - reg_wdt_en."]

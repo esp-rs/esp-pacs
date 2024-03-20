@@ -1,7 +1,7 @@
 #[doc = "Register `T0LOAD` writer"]
 pub type W = crate::W<T0LOAD_SPEC>;
 #[doc = "Field `LOAD` writer - t0_load"]
-pub type LOAD_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+pub type LOAD_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<T0LOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -23,7 +23,7 @@ impl crate::RegisterSpec for T0LOAD_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`t0load::W`](W) writer structure"]
 impl crate::Writable for T0LOAD_SPEC {
-    type Safety = crate::Unsafe;
+    type Safety = crate::Safe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

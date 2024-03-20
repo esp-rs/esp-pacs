@@ -5,7 +5,7 @@ pub type W = crate::W<T0LOADHI_SPEC>;
 #[doc = "Field `LOAD_HI` reader - reg_t0_load_hi."]
 pub type LOAD_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `LOAD_HI` writer - reg_t0_load_hi."]
-pub type LOAD_HI_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
+pub type LOAD_HI_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 22, u32>;
 impl R {
     #[doc = "Bits 0:21 - reg_t0_load_hi."]
     #[inline(always)]

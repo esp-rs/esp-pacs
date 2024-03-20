@@ -1,7 +1,7 @@
 #[doc = "Register `WDTFEED` writer"]
 pub type W = crate::W<WDTFEED_SPEC>;
 #[doc = "Field `WDT_FEED` writer - wdt_feed"]
-pub type WDT_FEED_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+pub type WDT_FEED_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -23,7 +23,7 @@ impl crate::RegisterSpec for WDTFEED_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`wdtfeed::W`](W) writer structure"]
 impl crate::Writable for WDTFEED_SPEC {
-    type Safety = crate::Unsafe;
+    type Safety = crate::Safe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

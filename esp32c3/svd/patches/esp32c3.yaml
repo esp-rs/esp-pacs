@@ -9,3 +9,88 @@ DS:
         description: IV block data
         addressOffset: 0x630
         size: 0x20
+
+GPIO:
+  PIN%s:
+    SYNC?_BYPASS:
+      NoSynchronization: [0, No synchronization]
+      FallingEdge:       [1, Synchronized on falling edge]
+      RisingEdge:        [-1, Synchronized on rising edge]
+    PAD_DRIVER:
+      Normal:    [0, Normal output]
+      OpenDrain: [1, Open drain output]
+    INT_TYPE:
+      _name: InterruptType
+      Disable:     [0, GPIO interrupt disabled]
+      RisingEdge:  [1, Rising edge trigger]
+      FallingEdge: [2, Falling edge trigger]
+      AnyEdge:     [3, Any edge trigger]
+      LowLevel:    [4, Low level trigger]
+      HighLevel:   [5, high level trigger]
+
+IO_MUX:
+  PIN_CTRL:
+    _array:
+      CLK_OUT?:
+        description: If you want to output clock for I2S to CLK_OUT_out%s, set this register to 0x0. CLK_OUT_out can be found in peripheral output signals.
+
+  GPIO%s:
+    "*_WPD":
+      _name: PullDown
+      Disable: [0, Disable GPIO pull-down resistor]
+      Enable:  [1, Enable GPIO pull-down resistor]
+    "*_WPU":
+      _name: PullUp
+      Disable: [0, Disable GPIO pull-up resistor]
+      Enable:  [1, Enable GPIO pull-up resistor]
+    "*_DRV":
+      _name: DriveStrength
+      I5ma: [0, Drive strength of GPIOn ~5 mA]
+      I10ma: [1, Drive strength of GPIOn ~10 mA]
+      I20ma: [2, Drive strength of GPIOn ~20 mA]
+      I40ma: [3, Drive strength of GPIOn ~40 mA]
+
+GPIO_SD:
+  SIGMADELTA%s:
+    _modify:
+      SD0_IN:
+        name: SD_IN
+      SD0_PRESCALE:
+        name: SD_PRESCALE
+
+TIMG0:
+  T0LOADLO:
+    LOAD_LO: [0, 0xffff_ffff]
+  T0LOADHI:
+    LOAD_HI: [0, 0x3f_ffff]
+  T0ALARMLO:
+    ALARM_LO: [0, 0xffff_ffff]
+  T0ALARMHI:
+    ALARM_HI: [0, 0x3f_ffff]
+  T0LOAD:
+    LOAD: [0, 0xffff_ffff]
+  
+  WDTCONFIG0:
+    "WDT_*_RESET_LENGTH":
+      _name: ResetSigLength
+      Length100ns: [0, "100 ns"]
+      Length200ns: [1, "200 ns"]
+      Length300ns: [2, "300 ns"]
+      Length400ns: [3, "400 ns"]
+      Length500ns: [4, "500 ns"]
+      Length800ns: [5, "800 ns"]
+      Length1_6us: [6, "1.6 us"]
+      Length3_2us: [7, "3.2 us"]
+    WDT_USE_XTAL:
+      APB:  [0, APB_CLK]
+      XTAL: [1, XTAL_CLK]
+    WDT_STG?:
+      _name: StageAction
+      "Off":       [0, Disabled. This stage will have no effects on the system.]
+      Interrupt:   [1, Trigger an interrupt when the stage expires.]
+      ResetCPU:    [2, Reset a CPU core when the stage expires.]
+      ResetSystem: [3, Reset the main system when the stage expires. This includes the CPU and all peripherals. The RTC is an exception and will not be reset.]
+  WDTCONFIG1:
+    WDT_CLK_PRESCALE: [0, 0xffff]
+  WDTFEED:
+    WDT_FEED: [0, 0xffff_ffff]
