@@ -77,23 +77,23 @@ DMA:
   _cluster:
     IN_INT_CH%s:
       IN_INT_RAW_CH?:
-        name: IN_INT_RAW
+        name: RAW
       IN_INT_ST_CH?:
-        name: IN_INT_ST
+        name: ST
       IN_INT_ENA_CH?:
-        name: IN_INT_ENA
+        name: ENA
       IN_INT_CLR_CH?:
-        name: IN_INT_CLR
+        name: CLR
 
     OUT_INT_CH%s:
       OUT_INT_RAW_CH?:
-        name: OUT_INT_RAW
+        name: RAW
       OUT_INT_ST_CH?:
-        name: OUT_INT_ST
+        name: ST
       OUT_INT_ENA_CH?:
-        name: OUT_INT_ENA
+        name: ENA
       OUT_INT_CLR_CH?:
-        name: OUT_INT_CLR
+        name: CLR
 
     CH%s:
       IN_CONF0_CH?:

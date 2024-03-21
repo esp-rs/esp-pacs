@@ -30,13 +30,13 @@ DMA:
   _cluster:
     INT_CH%s:
       INT_RAW_CH?:
-        name: INT_RAW
+        name: RAW
       INT_ST_CH?:
-        name: INT_ST
+        name: ST
       INT_ENA_CH?:
-        name: INT_ENA
+        name: ENA
       INT_CLR_CH?:
-        name: INT_CLR
+        name: CLR
     CH%s:
       IN_CONF0_CH?:
         name: IN_CONF0

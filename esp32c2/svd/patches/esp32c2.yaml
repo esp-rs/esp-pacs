@@ -35,13 +35,13 @@ DMA:
     INT_CH%s:
       dimIncrement: 0x10
       INT_RAW_CH?:
-        name: INT_RAW
+        name: RAW
       INT_ST_CH?:
-        name: INT_ST
+        name: ST
       INT_ENA_CH?:
-        name: INT_ENA
+        name: ENA
       INT_CLR_CH?:
-        name: INT_CLR
+        name: CLR
     CH%s:
       dimIncrement: 0xC0
       IN_CONF0_CH?:

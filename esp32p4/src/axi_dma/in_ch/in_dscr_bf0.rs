@@ -1,12 +1,12 @@
 #[doc = "Register `IN_DSCR_BF0` reader"]
 pub type R = crate::R<IN_DSCR_BF0_SPEC>;
-#[doc = "Field `INLINK_DSCR_BF0_CH` reader - The address of the last inlink descriptor x-1."]
-pub type INLINK_DSCR_BF0_CH_R = crate::FieldReader<u32>;
+#[doc = "Field `INLINK_DSCR_BF0` reader - The address of the last inlink descriptor x-1."]
+pub type INLINK_DSCR_BF0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The address of the last inlink descriptor x-1."]
     #[inline(always)]
-    pub fn inlink_dscr_bf0_ch(&self) -> INLINK_DSCR_BF0_CH_R {
-        INLINK_DSCR_BF0_CH_R::new(self.bits)
+    pub fn inlink_dscr_bf0(&self) -> INLINK_DSCR_BF0_R {
+        INLINK_DSCR_BF0_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_DSCR_BF0")
             .field(
-                "inlink_dscr_bf0_ch",
-                &format_args!("{}", self.inlink_dscr_bf0_ch().bits()),
+                "inlink_dscr_bf0",
+                &format_args!("{}", self.inlink_dscr_bf0().bits()),
             )
             .finish()
     }

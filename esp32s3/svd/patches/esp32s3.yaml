@@ -41,6 +41,26 @@ DMA:
 
   _cluster:
     CH%s:
+      _cluster:
+        IN_INT:
+          IN_INT_RAW:
+            name: RAW
+          IN_INT_ST:
+            name: ST
+          IN_INT_ENA:
+            name: ENA
+          IN_INT_CLR:
+            name: CLR
+        OUT_INT:
+          OUT_INT_RAW:
+            name: RAW
+          OUT_INT_ST:
+            name: ST
+          OUT_INT_ENA:
+            name: ENA
+          OUT_INT_CLR:
+            name: CLR
+
       IN_CONF0_CH?:
         name: IN_CONF0
       IN_CONF1_CH?:

@@ -2,17 +2,17 @@
 pub type R = crate::R<OUT_PUSH_SPEC>;
 #[doc = "Register `OUT_PUSH` writer"]
 pub type W = crate::W<OUT_PUSH_SPEC>;
-#[doc = "Field `OUTFIFO_WDATA_CH` reader - This register stores the data that need to be pushed into AXI_DMA FIFO."]
-pub type OUTFIFO_WDATA_CH_R = crate::FieldReader<u16>;
-#[doc = "Field `OUTFIFO_WDATA_CH` writer - This register stores the data that need to be pushed into AXI_DMA FIFO."]
-pub type OUTFIFO_WDATA_CH_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
-#[doc = "Field `OUTFIFO_PUSH_CH` writer - Set this bit to push data into AXI_DMA FIFO."]
-pub type OUTFIFO_PUSH_CH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUTFIFO_WDATA` reader - This register stores the data that need to be pushed into AXI_DMA FIFO."]
+pub type OUTFIFO_WDATA_R = crate::FieldReader<u16>;
+#[doc = "Field `OUTFIFO_WDATA` writer - This register stores the data that need to be pushed into AXI_DMA FIFO."]
+pub type OUTFIFO_WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `OUTFIFO_PUSH` writer - Set this bit to push data into AXI_DMA FIFO."]
+pub type OUTFIFO_PUSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into AXI_DMA FIFO."]
     #[inline(always)]
-    pub fn outfifo_wdata_ch(&self) -> OUTFIFO_WDATA_CH_R {
-        OUTFIFO_WDATA_CH_R::new((self.bits & 0x01ff) as u16)
+    pub fn outfifo_wdata(&self) -> OUTFIFO_WDATA_R {
+        OUTFIFO_WDATA_R::new((self.bits & 0x01ff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -20,8 +20,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_PUSH")
             .field(
-                "outfifo_wdata_ch",
-                &format_args!("{}", self.outfifo_wdata_ch().bits()),
+                "outfifo_wdata",
+                &format_args!("{}", self.outfifo_wdata().bits()),
             )
             .finish()
     }
@@ -36,14 +36,14 @@ impl W {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into AXI_DMA FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn outfifo_wdata_ch(&mut self) -> OUTFIFO_WDATA_CH_W<OUT_PUSH_SPEC> {
-        OUTFIFO_WDATA_CH_W::new(self, 0)
+    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<OUT_PUSH_SPEC> {
+        OUTFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 9 - Set this bit to push data into AXI_DMA FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn outfifo_push_ch(&mut self) -> OUTFIFO_PUSH_CH_W<OUT_PUSH_SPEC> {
-        OUTFIFO_PUSH_CH_W::new(self, 9)
+    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<OUT_PUSH_SPEC> {
+        OUTFIFO_PUSH_W::new(self, 9)
     }
 }
 #[doc = "Push control register of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_push::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_push::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

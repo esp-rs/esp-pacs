@@ -9,7 +9,7 @@ pub struct IN_CRC_CH {
     rx_crc_en_wr_data: RX_CRC_EN_WR_DATA,
     rx_crc_en_addr: RX_CRC_EN_ADDR,
     rx_crc_data_en_wr_data: RX_CRC_DATA_EN_WR_DATA,
-    rx_crc_data_en_addr_ch: RX_CRC_DATA_EN_ADDR_CH,
+    rx_crc_data_en_addr: RX_CRC_DATA_EN_ADDR,
     rx_ch_arb_weigh: RX_CH_ARB_WEIGH,
     rx_arb_weigh_opt_dir: RX_ARB_WEIGH_OPT_DIR,
 }
@@ -51,8 +51,8 @@ impl IN_CRC_CH {
     }
     #[doc = "0x1c - This register is used to config addr of crc data_8bit en"]
     #[inline(always)]
-    pub const fn rx_crc_data_en_addr_ch(&self) -> &RX_CRC_DATA_EN_ADDR_CH {
-        &self.rx_crc_data_en_addr_ch
+    pub const fn rx_crc_data_en_addr(&self) -> &RX_CRC_DATA_EN_ADDR {
+        &self.rx_crc_data_en_addr
     }
     #[doc = "0x20 - This register is used to config ch0 arbiter weigh"]
     #[inline(always)]
@@ -93,10 +93,10 @@ pub mod rx_crc_en_addr;
 pub type RX_CRC_DATA_EN_WR_DATA = crate::Reg<rx_crc_data_en_wr_data::RX_CRC_DATA_EN_WR_DATA_SPEC>;
 #[doc = "This register is used to config crc data_8bit en"]
 pub mod rx_crc_data_en_wr_data;
-#[doc = "RX_CRC_DATA_EN_ADDR_CH (rw) register accessor: This register is used to config addr of crc data_8bit en\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_crc_data_en_addr_ch::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_crc_data_en_addr_ch::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_data_en_addr_ch`] module"]
-pub type RX_CRC_DATA_EN_ADDR_CH = crate::Reg<rx_crc_data_en_addr_ch::RX_CRC_DATA_EN_ADDR_CH_SPEC>;
+#[doc = "RX_CRC_DATA_EN_ADDR (rw) register accessor: This register is used to config addr of crc data_8bit en\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_crc_data_en_addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_crc_data_en_addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_data_en_addr`] module"]
+pub type RX_CRC_DATA_EN_ADDR = crate::Reg<rx_crc_data_en_addr::RX_CRC_DATA_EN_ADDR_SPEC>;
 #[doc = "This register is used to config addr of crc data_8bit en"]
-pub mod rx_crc_data_en_addr_ch;
+pub mod rx_crc_data_en_addr;
 #[doc = "RX_CH_ARB_WEIGH (rw) register accessor: This register is used to config ch0 arbiter weigh\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_ch_arb_weigh::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_ch_arb_weigh::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ch_arb_weigh`] module"]
 pub type RX_CH_ARB_WEIGH = crate::Reg<rx_ch_arb_weigh::RX_CH_ARB_WEIGH_SPEC>;
 #[doc = "This register is used to config ch0 arbiter weigh"]

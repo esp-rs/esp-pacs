@@ -1,12 +1,12 @@
 #[doc = "Register `OUT_EOF_DES_ADDR` reader"]
 pub type R = crate::R<OUT_EOF_DES_ADDR_SPEC>;
-#[doc = "Field `OUT_EOF_DES_ADDR_CH` reader - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
-pub type OUT_EOF_DES_ADDR_CH_R = crate::FieldReader<u32>;
+#[doc = "Field `OUT_EOF_DES_ADDR` reader - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
+pub type OUT_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
     #[inline(always)]
-    pub fn out_eof_des_addr_ch(&self) -> OUT_EOF_DES_ADDR_CH_R {
-        OUT_EOF_DES_ADDR_CH_R::new(self.bits)
+    pub fn out_eof_des_addr(&self) -> OUT_EOF_DES_ADDR_R {
+        OUT_EOF_DES_ADDR_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_EOF_DES_ADDR")
             .field(
-                "out_eof_des_addr_ch",
-                &format_args!("{}", self.out_eof_des_addr_ch().bits()),
+                "out_eof_des_addr",
+                &format_args!("{}", self.out_eof_des_addr().bits()),
             )
             .finish()
     }

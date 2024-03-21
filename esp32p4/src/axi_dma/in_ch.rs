@@ -2,10 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Cluster IN_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?, IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK1_CH?, IN_LINK2_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, IN_CRC_INIT_DATA_CH?, RX_CRC_WIDTH_CH?, IN_CRC_CLEAR_CH?, IN_CRC_FINAL_RESULT_CH?, RX_CRC_EN_WR_DATA_CH?, RX_CRC_EN_ADDR_CH?, RX_CRC_DATA_EN_WR_DATA_CH?, RX_CRC_DATA_EN_ADDR_CH?"]
 pub struct IN_CH {
-    in_int_raw: IN_INT_RAW,
-    in_int_st: IN_INT_ST,
-    in_int_ena: IN_INT_ENA,
-    in_int_clr: IN_INT_CLR,
+    in_int: IN_INT,
     in_conf0: IN_CONF0,
     in_conf1: IN_CONF1,
     infifo_status: INFIFO_STATUS,
@@ -20,35 +17,13 @@ pub struct IN_CH {
     in_dscr_bf1: IN_DSCR_BF1,
     in_pri: IN_PRI,
     in_peri_sel: IN_PERI_SEL,
-    in_crc_init_data: IN_CRC_INIT_DATA,
-    rx_crc_width: RX_CRC_WIDTH,
-    in_crc_clear: IN_CRC_CLEAR,
-    in_crc_final_result: IN_CRC_FINAL_RESULT,
-    rx_crc_en_wr_data: RX_CRC_EN_WR_DATA,
-    rx_crc_en_addr: RX_CRC_EN_ADDR,
-    rx_crc_data_en_wr_data: RX_CRC_DATA_EN_WR_DATA,
-    rx_crc_data_en_addr: RX_CRC_DATA_EN_ADDR,
+    crc: CRC,
 }
 impl IN_CH {
-    #[doc = "0x00 - Raw status interrupt of channel 0"]
+    #[doc = "0x00..0x10 - Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
     #[inline(always)]
-    pub const fn in_int_raw(&self) -> &IN_INT_RAW {
-        &self.in_int_raw
-    }
-    #[doc = "0x04 - Masked interrupt of channel 0"]
-    #[inline(always)]
-    pub const fn in_int_st(&self) -> &IN_INT_ST {
-        &self.in_int_st
-    }
-    #[doc = "0x08 - Interrupt enable bits of channel 0"]
-    #[inline(always)]
-    pub const fn in_int_ena(&self) -> &IN_INT_ENA {
-        &self.in_int_ena
-    }
-    #[doc = "0x0c - Interrupt clear bits of channel 0"]
-    #[inline(always)]
-    pub const fn in_int_clr(&self) -> &IN_INT_CLR {
-        &self.in_int_clr
+    pub const fn in_int(&self) -> &IN_INT {
+        &self.in_int
     }
     #[doc = "0x10 - Configure 0 register of Rx channel 0"]
     #[inline(always)]
@@ -120,63 +95,17 @@ impl IN_CH {
     pub const fn in_peri_sel(&self) -> &IN_PERI_SEL {
         &self.in_peri_sel
     }
-    #[doc = "0x48 - This register is used to config ch0 crc initial data(max 32 bit)"]
+    #[doc = "0x48..0x68 - Cluster CRC, containing IN_CRC_INIT_DATA, RX_CRC_WIDTH, IN_CRC_CLEAR, IN_CRC_FINAL_RESULT, RX_CRC_EN_WR_DATA, RX_CRC_EN_ADDR, RX_CRC_DATA_EN_WR_DATA, RX_CRC_DATA_EN_ADDR"]
     #[inline(always)]
-    pub const fn in_crc_init_data(&self) -> &IN_CRC_INIT_DATA {
-        &self.in_crc_init_data
-    }
-    #[doc = "0x4c - This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width &lt;=8bit,2'b01 8&lt;crc_width&lt;=16 ,2'b10 mean 16&lt;crc_width &lt;=24,2'b11 mean 24&lt;crc_width&lt;=32"]
-    #[inline(always)]
-    pub const fn rx_crc_width(&self) -> &RX_CRC_WIDTH {
-        &self.rx_crc_width
-    }
-    #[doc = "0x50 - This register is used to clear ch0 crc result"]
-    #[inline(always)]
-    pub const fn in_crc_clear(&self) -> &IN_CRC_CLEAR {
-        &self.in_crc_clear
-    }
-    #[doc = "0x54 - This register is used to store ch0 crc result"]
-    #[inline(always)]
-    pub const fn in_crc_final_result(&self) -> &IN_CRC_FINAL_RESULT {
-        &self.in_crc_final_result
-    }
-    #[doc = "0x58 - This resister is used to config ch0 crc en for every bit"]
-    #[inline(always)]
-    pub const fn rx_crc_en_wr_data(&self) -> &RX_CRC_EN_WR_DATA {
-        &self.rx_crc_en_wr_data
-    }
-    #[doc = "0x5c - This register is used to config ch0 crc en addr"]
-    #[inline(always)]
-    pub const fn rx_crc_en_addr(&self) -> &RX_CRC_EN_ADDR {
-        &self.rx_crc_en_addr
-    }
-    #[doc = "0x60 - This register is used to config crc data_8bit en"]
-    #[inline(always)]
-    pub const fn rx_crc_data_en_wr_data(&self) -> &RX_CRC_DATA_EN_WR_DATA {
-        &self.rx_crc_data_en_wr_data
-    }
-    #[doc = "0x64 - This register is used to config addr of crc data_8bit en"]
-    #[inline(always)]
-    pub const fn rx_crc_data_en_addr(&self) -> &RX_CRC_DATA_EN_ADDR {
-        &self.rx_crc_data_en_addr
+    pub const fn crc(&self) -> &CRC {
+        &self.crc
     }
 }
-#[doc = "IN_INT_RAW (rw) register accessor: Raw status interrupt of channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_raw`] module"]
-pub type IN_INT_RAW = crate::Reg<in_int_raw::IN_INT_RAW_SPEC>;
-#[doc = "Raw status interrupt of channel 0"]
-pub mod in_int_raw;
-#[doc = "IN_INT_ST (r) register accessor: Masked interrupt of channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_st`] module"]
-pub type IN_INT_ST = crate::Reg<in_int_st::IN_INT_ST_SPEC>;
-#[doc = "Masked interrupt of channel 0"]
-pub mod in_int_st;
-#[doc = "IN_INT_ENA (rw) register accessor: Interrupt enable bits of channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_ena`] module"]
-pub type IN_INT_ENA = crate::Reg<in_int_ena::IN_INT_ENA_SPEC>;
-#[doc = "Interrupt enable bits of channel 0"]
-pub mod in_int_ena;
-#[doc = "IN_INT_CLR (w) register accessor: Interrupt clear bits of channel 0\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_clr`] module"]
-pub type IN_INT_CLR = crate::Reg<in_int_clr::IN_INT_CLR_SPEC>;
-#[doc = "Interrupt clear bits of channel 0"]
-pub mod in_int_clr;
+#[doc = "Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
+pub use self::in_int::IN_INT;
+#[doc = r"Cluster"]
+#[doc = "Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
+pub mod in_int;
 #[doc = "IN_CONF0 (rw) register accessor: Configure 0 register of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_conf0`] module"]
 pub type IN_CONF0 = crate::Reg<in_conf0::IN_CONF0_SPEC>;
 #[doc = "Configure 0 register of Rx channel 0"]
@@ -233,35 +162,8 @@ pub mod in_pri;
 pub type IN_PERI_SEL = crate::Reg<in_peri_sel::IN_PERI_SEL_SPEC>;
 #[doc = "Peripheral selection of Rx channel 0"]
 pub mod in_peri_sel;
-#[doc = "IN_CRC_INIT_DATA (rw) register accessor: This register is used to config ch0 crc initial data(max 32 bit)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_crc_init_data::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_crc_init_data::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_crc_init_data`] module"]
-pub type IN_CRC_INIT_DATA = crate::Reg<in_crc_init_data::IN_CRC_INIT_DATA_SPEC>;
-#[doc = "This register is used to config ch0 crc initial data(max 32 bit)"]
-pub mod in_crc_init_data;
-#[doc = "RX_CRC_WIDTH (rw) register accessor: This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width &lt;=8bit,2'b01 8&lt;crc_width&lt;=16 ,2'b10 mean 16&lt;crc_width &lt;=24,2'b11 mean 24&lt;crc_width&lt;=32\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_crc_width::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_crc_width::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_width`] module"]
-pub type RX_CRC_WIDTH = crate::Reg<rx_crc_width::RX_CRC_WIDTH_SPEC>;
-#[doc = "This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width &lt;=8bit,2'b01 8&lt;crc_width&lt;=16 ,2'b10 mean 16&lt;crc_width &lt;=24,2'b11 mean 24&lt;crc_width&lt;=32"]
-pub mod rx_crc_width;
-#[doc = "IN_CRC_CLEAR (rw) register accessor: This register is used to clear ch0 crc result\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_crc_clear::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_crc_clear::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_crc_clear`] module"]
-pub type IN_CRC_CLEAR = crate::Reg<in_crc_clear::IN_CRC_CLEAR_SPEC>;
-#[doc = "This register is used to clear ch0 crc result"]
-pub mod in_crc_clear;
-#[doc = "IN_CRC_FINAL_RESULT (r) register accessor: This register is used to store ch0 crc result\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_crc_final_result::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_crc_final_result`] module"]
-pub type IN_CRC_FINAL_RESULT = crate::Reg<in_crc_final_result::IN_CRC_FINAL_RESULT_SPEC>;
-#[doc = "This register is used to store ch0 crc result"]
-pub mod in_crc_final_result;
-#[doc = "RX_CRC_EN_WR_DATA (rw) register accessor: This resister is used to config ch0 crc en for every bit\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_crc_en_wr_data::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_crc_en_wr_data::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_en_wr_data`] module"]
-pub type RX_CRC_EN_WR_DATA = crate::Reg<rx_crc_en_wr_data::RX_CRC_EN_WR_DATA_SPEC>;
-#[doc = "This resister is used to config ch0 crc en for every bit"]
-pub mod rx_crc_en_wr_data;
-#[doc = "RX_CRC_EN_ADDR (rw) register accessor: This register is used to config ch0 crc en addr\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_crc_en_addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_crc_en_addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_en_addr`] module"]
-pub type RX_CRC_EN_ADDR = crate::Reg<rx_crc_en_addr::RX_CRC_EN_ADDR_SPEC>;
-#[doc = "This register is used to config ch0 crc en addr"]
-pub mod rx_crc_en_addr;
-#[doc = "RX_CRC_DATA_EN_WR_DATA (rw) register accessor: This register is used to config crc data_8bit en\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_crc_data_en_wr_data::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_crc_data_en_wr_data::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_data_en_wr_data`] module"]
-pub type RX_CRC_DATA_EN_WR_DATA = crate::Reg<rx_crc_data_en_wr_data::RX_CRC_DATA_EN_WR_DATA_SPEC>;
-#[doc = "This register is used to config crc data_8bit en"]
-pub mod rx_crc_data_en_wr_data;
-#[doc = "RX_CRC_DATA_EN_ADDR (rw) register accessor: This register is used to config addr of crc data_8bit en\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_crc_data_en_addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_crc_data_en_addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_data_en_addr`] module"]
-pub type RX_CRC_DATA_EN_ADDR = crate::Reg<rx_crc_data_en_addr::RX_CRC_DATA_EN_ADDR_SPEC>;
-#[doc = "This register is used to config addr of crc data_8bit en"]
-pub mod rx_crc_data_en_addr;
+#[doc = "Cluster CRC, containing IN_CRC_INIT_DATA, RX_CRC_WIDTH, IN_CRC_CLEAR, IN_CRC_FINAL_RESULT, RX_CRC_EN_WR_DATA, RX_CRC_EN_ADDR, RX_CRC_DATA_EN_WR_DATA, RX_CRC_DATA_EN_ADDR"]
+pub use self::crc::CRC;
+#[doc = r"Cluster"]
+#[doc = "Cluster CRC, containing IN_CRC_INIT_DATA, RX_CRC_WIDTH, IN_CRC_CLEAR, IN_CRC_FINAL_RESULT, RX_CRC_EN_WR_DATA, RX_CRC_EN_ADDR, RX_CRC_DATA_EN_WR_DATA, RX_CRC_DATA_EN_ADDR"]
+pub mod crc;

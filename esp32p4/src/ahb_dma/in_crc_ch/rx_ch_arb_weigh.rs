@@ -2,15 +2,15 @@
 pub type R = crate::R<RX_CH_ARB_WEIGH_SPEC>;
 #[doc = "Register `RX_CH_ARB_WEIGH` writer"]
 pub type W = crate::W<RX_CH_ARB_WEIGH_SPEC>;
-#[doc = "Field `RX_CH_ARB_WEIGH_CH` reader - reserved"]
-pub type RX_CH_ARB_WEIGH_CH_R = crate::FieldReader;
-#[doc = "Field `RX_CH_ARB_WEIGH_CH` writer - reserved"]
-pub type RX_CH_ARB_WEIGH_CH_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `RX_CH_ARB_WEIGH` reader - reserved"]
+pub type RX_CH_ARB_WEIGH_R = crate::FieldReader;
+#[doc = "Field `RX_CH_ARB_WEIGH` writer - reserved"]
+pub type RX_CH_ARB_WEIGH_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - reserved"]
     #[inline(always)]
-    pub fn rx_ch_arb_weigh_ch(&self) -> RX_CH_ARB_WEIGH_CH_R {
-        RX_CH_ARB_WEIGH_CH_R::new((self.bits & 0x0f) as u8)
+    pub fn rx_ch_arb_weigh(&self) -> RX_CH_ARB_WEIGH_R {
+        RX_CH_ARB_WEIGH_R::new((self.bits & 0x0f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CH_ARB_WEIGH")
             .field(
-                "rx_ch_arb_weigh_ch",
-                &format_args!("{}", self.rx_ch_arb_weigh_ch().bits()),
+                "rx_ch_arb_weigh",
+                &format_args!("{}", self.rx_ch_arb_weigh().bits()),
             )
             .finish()
     }
@@ -34,8 +34,8 @@ impl W {
     #[doc = "Bits 0:3 - reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_ch_arb_weigh_ch(&mut self) -> RX_CH_ARB_WEIGH_CH_W<RX_CH_ARB_WEIGH_SPEC> {
-        RX_CH_ARB_WEIGH_CH_W::new(self, 0)
+    pub fn rx_ch_arb_weigh(&mut self) -> RX_CH_ARB_WEIGH_W<RX_CH_ARB_WEIGH_SPEC> {
+        RX_CH_ARB_WEIGH_W::new(self, 0)
     }
 }
 #[doc = "This register is used to config ch0 arbiter weigh\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_ch_arb_weigh::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_ch_arb_weigh::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

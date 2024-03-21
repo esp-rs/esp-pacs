@@ -2,22 +2,22 @@
 pub type R = crate::R<IN_PRI_SPEC>;
 #[doc = "Register `IN_PRI` writer"]
 pub type W = crate::W<IN_PRI_SPEC>;
-#[doc = "Field `RX_PRI_CH` reader - The priority of Rx channel 0. The larger of the value the higher of the priority."]
-pub type RX_PRI_CH_R = crate::FieldReader;
-#[doc = "Field `RX_PRI_CH` writer - The priority of Rx channel 0. The larger of the value the higher of the priority."]
-pub type RX_PRI_CH_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `RX_PRI` reader - The priority of Rx channel 0. The larger of the value the higher of the priority."]
+pub type RX_PRI_R = crate::FieldReader;
+#[doc = "Field `RX_PRI` writer - The priority of Rx channel 0. The larger of the value the higher of the priority."]
+pub type RX_PRI_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - The priority of Rx channel 0. The larger of the value the higher of the priority."]
     #[inline(always)]
-    pub fn rx_pri_ch(&self) -> RX_PRI_CH_R {
-        RX_PRI_CH_R::new((self.bits & 0x0f) as u8)
+    pub fn rx_pri(&self) -> RX_PRI_R {
+        RX_PRI_R::new((self.bits & 0x0f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_PRI")
-            .field("rx_pri_ch", &format_args!("{}", self.rx_pri_ch().bits()))
+            .field("rx_pri", &format_args!("{}", self.rx_pri().bits()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:3 - The priority of Rx channel 0. The larger of the value the higher of the priority."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_pri_ch(&mut self) -> RX_PRI_CH_W<IN_PRI_SPEC> {
-        RX_PRI_CH_W::new(self, 0)
+    pub fn rx_pri(&mut self) -> RX_PRI_W<IN_PRI_SPEC> {
+        RX_PRI_W::new(self, 0)
     }
 }
 #[doc = "Priority register of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_pri::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_pri::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

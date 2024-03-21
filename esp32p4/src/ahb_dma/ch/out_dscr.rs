@@ -1,12 +1,12 @@
 #[doc = "Register `OUT_DSCR` reader"]
 pub type R = crate::R<OUT_DSCR_SPEC>;
-#[doc = "Field `OUTLINK_DSCR_CH` reader - The address of the current outlink descriptor y."]
-pub type OUTLINK_DSCR_CH_R = crate::FieldReader<u32>;
+#[doc = "Field `OUTLINK_DSCR` reader - The address of the current outlink descriptor y."]
+pub type OUTLINK_DSCR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The address of the current outlink descriptor y."]
     #[inline(always)]
-    pub fn outlink_dscr_ch(&self) -> OUTLINK_DSCR_CH_R {
-        OUTLINK_DSCR_CH_R::new(self.bits)
+    pub fn outlink_dscr(&self) -> OUTLINK_DSCR_R {
+        OUTLINK_DSCR_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_DSCR")
             .field(
-                "outlink_dscr_ch",
-                &format_args!("{}", self.outlink_dscr_ch().bits()),
+                "outlink_dscr",
+                &format_args!("{}", self.outlink_dscr().bits()),
             )
             .finish()
     }

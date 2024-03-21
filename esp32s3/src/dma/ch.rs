@@ -4,10 +4,7 @@
 pub struct CH {
     in_conf0: IN_CONF0,
     in_conf1: IN_CONF1,
-    in_int_raw: IN_INT_RAW,
-    in_int_st: IN_INT_ST,
-    in_int_ena: IN_INT_ENA,
-    in_int_clr: IN_INT_CLR,
+    in_int: IN_INT,
     infifo_status: INFIFO_STATUS,
     in_pop: IN_POP,
     in_link: IN_LINK,
@@ -18,16 +15,13 @@ pub struct CH {
     in_dscr_bf0: IN_DSCR_BF0,
     in_dscr_bf1: IN_DSCR_BF1,
     in_wight: IN_WIGHT,
-    _reserved16: [u8; 0x04],
+    _reserved13: [u8; 0x04],
     in_pri: IN_PRI,
     in_peri_sel: IN_PERI_SEL,
-    _reserved18: [u8; 0x14],
+    _reserved15: [u8; 0x14],
     out_conf0: OUT_CONF0,
     out_conf1: OUT_CONF1,
-    out_int_raw: OUT_INT_RAW,
-    out_int_st: OUT_INT_ST,
-    out_int_ena: OUT_INT_ENA,
-    out_int_clr: OUT_INT_CLR,
+    out_int: OUT_INT,
     outfifo_status: OUTFIFO_STATUS,
     out_push: OUT_PUSH,
     out_link: OUT_LINK,
@@ -38,7 +32,7 @@ pub struct CH {
     out_dscr_bf0: OUT_DSCR_BF0,
     out_dscr_bf1: OUT_DSCR_BF1,
     out_wight: OUT_WIGHT,
-    _reserved34: [u8; 0x04],
+    _reserved28: [u8; 0x04],
     out_pri: OUT_PRI,
     out_peri_sel: OUT_PERI_SEL,
     _reserved_end: [u8; 0x14],
@@ -54,25 +48,10 @@ impl CH {
     pub const fn in_conf1(&self) -> &IN_CONF1 {
         &self.in_conf1
     }
-    #[doc = "0x08 - Raw status interrupt of Rx channel 0"]
+    #[doc = "0x08..0x18 - Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
     #[inline(always)]
-    pub const fn in_int_raw(&self) -> &IN_INT_RAW {
-        &self.in_int_raw
-    }
-    #[doc = "0x0c - Masked interrupt of Rx channel 0"]
-    #[inline(always)]
-    pub const fn in_int_st(&self) -> &IN_INT_ST {
-        &self.in_int_st
-    }
-    #[doc = "0x10 - Interrupt enable bits of Rx channel 0"]
-    #[inline(always)]
-    pub const fn in_int_ena(&self) -> &IN_INT_ENA {
-        &self.in_int_ena
-    }
-    #[doc = "0x14 - Interrupt clear bits of Rx channel 0"]
-    #[inline(always)]
-    pub const fn in_int_clr(&self) -> &IN_INT_CLR {
-        &self.in_int_clr
+    pub const fn in_int(&self) -> &IN_INT {
+        &self.in_int
     }
     #[doc = "0x18 - Receive FIFO status of Rx channel 0"]
     #[inline(always)]
@@ -144,25 +123,10 @@ impl CH {
     pub const fn out_conf1(&self) -> &OUT_CONF1 {
         &self.out_conf1
     }
-    #[doc = "0x68 - Raw status interrupt of Tx channel 0"]
+    #[doc = "0x68..0x78 - Cluster OUT_INT, containing OUT_INT_RAW, OUT_INT_ST, OUT_INT_ENA, OUT_INT_CLR"]
     #[inline(always)]
-    pub const fn out_int_raw(&self) -> &OUT_INT_RAW {
-        &self.out_int_raw
-    }
-    #[doc = "0x6c - Masked interrupt of Tx channel 0"]
-    #[inline(always)]
-    pub const fn out_int_st(&self) -> &OUT_INT_ST {
-        &self.out_int_st
-    }
-    #[doc = "0x70 - Interrupt enable bits of Tx channel 0"]
-    #[inline(always)]
-    pub const fn out_int_ena(&self) -> &OUT_INT_ENA {
-        &self.out_int_ena
-    }
-    #[doc = "0x74 - Interrupt clear bits of Tx channel 0"]
-    #[inline(always)]
-    pub const fn out_int_clr(&self) -> &OUT_INT_CLR {
-        &self.out_int_clr
+    pub const fn out_int(&self) -> &OUT_INT {
+        &self.out_int
     }
     #[doc = "0x78 - Transmit FIFO status of Tx channel 0"]
     #[inline(always)]
@@ -233,22 +197,11 @@ pub mod in_conf0;
 pub type IN_CONF1 = crate::Reg<in_conf1::IN_CONF1_SPEC>;
 #[doc = "Configure 1 register of Rx channel 0"]
 pub mod in_conf1;
-#[doc = "IN_INT_RAW (rw) register accessor: Raw status interrupt of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_raw`] module"]
-pub type IN_INT_RAW = crate::Reg<in_int_raw::IN_INT_RAW_SPEC>;
-#[doc = "Raw status interrupt of Rx channel 0"]
-pub mod in_int_raw;
-#[doc = "IN_INT_ST (r) register accessor: Masked interrupt of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_st`] module"]
-pub type IN_INT_ST = crate::Reg<in_int_st::IN_INT_ST_SPEC>;
-#[doc = "Masked interrupt of Rx channel 0"]
-pub mod in_int_st;
-#[doc = "IN_INT_ENA (rw) register accessor: Interrupt enable bits of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_ena`] module"]
-pub type IN_INT_ENA = crate::Reg<in_int_ena::IN_INT_ENA_SPEC>;
-#[doc = "Interrupt enable bits of Rx channel 0"]
-pub mod in_int_ena;
-#[doc = "IN_INT_CLR (w) register accessor: Interrupt clear bits of Rx channel 0\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_int_clr`] module"]
-pub type IN_INT_CLR = crate::Reg<in_int_clr::IN_INT_CLR_SPEC>;
-#[doc = "Interrupt clear bits of Rx channel 0"]
-pub mod in_int_clr;
+#[doc = "Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
+pub use self::in_int::IN_INT;
+#[doc = r"Cluster"]
+#[doc = "Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
+pub mod in_int;
 #[doc = "INFIFO_STATUS (r) register accessor: Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`infifo_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@infifo_status`] module"]
 pub type INFIFO_STATUS = crate::Reg<infifo_status::INFIFO_STATUS_SPEC>;
 #[doc = "Receive FIFO status of Rx channel 0"]
@@ -305,22 +258,11 @@ pub mod out_conf0;
 pub type OUT_CONF1 = crate::Reg<out_conf1::OUT_CONF1_SPEC>;
 #[doc = "Configure 1 register of Tx channel 0"]
 pub mod out_conf1;
-#[doc = "OUT_INT_RAW (rw) register accessor: Raw status interrupt of Tx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_int_raw`] module"]
-pub type OUT_INT_RAW = crate::Reg<out_int_raw::OUT_INT_RAW_SPEC>;
-#[doc = "Raw status interrupt of Tx channel 0"]
-pub mod out_int_raw;
-#[doc = "OUT_INT_ST (r) register accessor: Masked interrupt of Tx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_int_st`] module"]
-pub type OUT_INT_ST = crate::Reg<out_int_st::OUT_INT_ST_SPEC>;
-#[doc = "Masked interrupt of Tx channel 0"]
-pub mod out_int_st;
-#[doc = "OUT_INT_ENA (rw) register accessor: Interrupt enable bits of Tx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_int_ena`] module"]
-pub type OUT_INT_ENA = crate::Reg<out_int_ena::OUT_INT_ENA_SPEC>;
-#[doc = "Interrupt enable bits of Tx channel 0"]
-pub mod out_int_ena;
-#[doc = "OUT_INT_CLR (w) register accessor: Interrupt clear bits of Tx channel 0\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_int_clr`] module"]
-pub type OUT_INT_CLR = crate::Reg<out_int_clr::OUT_INT_CLR_SPEC>;
-#[doc = "Interrupt clear bits of Tx channel 0"]
-pub mod out_int_clr;
+#[doc = "Cluster OUT_INT, containing OUT_INT_RAW, OUT_INT_ST, OUT_INT_ENA, OUT_INT_CLR"]
+pub use self::out_int::OUT_INT;
+#[doc = r"Cluster"]
+#[doc = "Cluster OUT_INT, containing OUT_INT_RAW, OUT_INT_ST, OUT_INT_ENA, OUT_INT_CLR"]
+pub mod out_int;
 #[doc = "OUTFIFO_STATUS (r) register accessor: Transmit FIFO status of Tx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`outfifo_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@outfifo_status`] module"]
 pub type OUTFIFO_STATUS = crate::Reg<outfifo_status::OUTFIFO_STATUS_SPEC>;
 #[doc = "Transmit FIFO status of Tx channel 0"]
