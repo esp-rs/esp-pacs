@@ -1,5 +1,9 @@
 _svd: "../esp32h2.base.svd"
 
+_modify:
+  SPI?:
+    groupName: SPI
+
 SPI2:
   _modify:
     _interrupts:

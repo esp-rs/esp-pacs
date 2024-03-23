@@ -1,5 +1,11 @@
 _svd: ../esp32s3.base.svd
 
+_modify:
+  SPI?:
+    groupName: SPI
+  I2S1:
+    groupName: I2S
+
 DMA:
   _expand_array:
     IN_CONF0_CH%s: {}

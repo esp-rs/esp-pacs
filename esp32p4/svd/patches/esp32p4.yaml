@@ -1,5 +1,11 @@
 _svd: "../esp32p4.base.svd"
 
+_modify:
+  SPI?:
+    groupName: SPI
+  "AHB_DMA,AXI_DMA,DMA":
+    groupName: DMA
+
 GPIO:
   _modify:
     _interrupts:
