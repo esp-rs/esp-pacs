@@ -9,3 +9,84 @@ DS:
         description: IV block data
         addressOffset: 0x630
         size: 0x20
+
+DMA:
+  _expand_array:
+    INT_RAW_CH%s: {}
+    INT_ENA_CH%s: {}
+    INT_CLR_CH%s: {}
+    IN_CONF0_CH%s: {}
+    IN_LINK_CH%s: {}
+    IN_DSCR_BF0_CH%s: {}
+    IN_PRI_CH%s: {}
+    IN_PERI_SEL_CH%s: {}
+    OUT_CONF0_CH%s: {}
+    OUT_CONF1_CH%s: {}
+    OUT_LINK_CH%s: {}
+    OUT_EOF_DES_ADDR_CH%s: {}
+    OUT_PRI_CH%s: {}
+    OUT_PERI_SEL_CH%s: {}
+
+  _cluster:
+    INT_CH%s:
+      INT_RAW_CH?:
+        name: RAW
+      INT_ST_CH?:
+        name: ST
+      INT_ENA_CH?:
+        name: ENA
+      INT_CLR_CH?:
+        name: CLR
+    CH%s:
+      IN_CONF0_CH?:
+        name: IN_CONF0
+      IN_CONF1_CH?:
+        name: IN_CONF1
+      INFIFO_STATUS_CH?:
+        name: INFIFO_STATUS
+      IN_POP_CH?:
+        name: IN_POP
+      IN_LINK_CH?:
+        name: IN_LINK
+      IN_STATE_CH?:
+        name: IN_STATE
+      IN_SUC_EOF_DES_ADDR_CH?:
+        name: IN_SUC_EOF_DES_ADDR
+      IN_ERR_EOF_DES_ADDR_CH?:
+        name: IN_ERR_EOF_DES_ADDR
+      IN_DSCR_CH?:
+        name: IN_DSCR
+      IN_DSCR_BF0_CH?:
+        name: IN_DSCR_BF0
+      IN_DSCR_BF1_CH?:
+        name: IN_DSCR_BF1
+      IN_PRI_CH?:
+        name: IN_PRI
+      IN_PERI_SEL_CH?:
+        name: IN_PERI_SEL
+      OUT_CONF0_CH?:
+        name: OUT_CONF0
+      OUT_CONF1_CH?:
+        name: OUT_CONF1
+      OUTFIFO_STATUS_CH?:
+        name: OUTFIFO_STATUS
+      OUT_PUSH_CH?:
+        name: OUT_PUSH
+      OUT_LINK_CH?:
+        name: OUT_LINK
+      OUT_STATE_CH?:
+        name: OUT_STATE
+      OUT_EOF_DES_ADDR_CH?:
+        name: OUT_EOF_DES_ADDR
+      OUT_EOF_BFR_DES_ADDR_CH?:
+        name: OUT_EOF_BFR_DES_ADDR
+      OUT_DSCR_CH?:
+        name: OUT_DSCR
+      OUT_DSCR_BF0_CH?:
+        name: OUT_DSCR_BF0
+      OUT_DSCR_BF1_CH?:
+        name: OUT_DSCR_BF1
+      OUT_PRI_CH?:
+        name: OUT_PRI
+      OUT_PERI_SEL_CH?:
+        name: OUT_PERI_SEL
