@@ -1,5 +1,9 @@
 _svd: "../esp32c6.base.svd"
 
+_modify:
+  SPI?:
+    groupName: SPI
+
 LP_I2C0:
   _strip: "I2C_"
   "*":

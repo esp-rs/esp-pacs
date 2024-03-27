@@ -1,10 +1,18 @@
 _svd: ../esp32c2.base.svd
 
+_modify:
+  SPI?:
+    groupName: SPI
+
 TIMG0:
   T0UPDATE:
     _modify:
       T0_UPDATE:
         name: UPDATE
+  T0HI:
+    _modify:
+      T0_HI:
+        name: HI
 
 SPI2:
   _modify:

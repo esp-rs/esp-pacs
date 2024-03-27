@@ -1,19 +1,19 @@
 #[doc = "Register `T0HI` reader"]
 pub type R = crate::R<T0HI_SPEC>;
-#[doc = "Field `T0_HI` reader - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
-pub type T0_HI_R = crate::FieldReader<u32>;
+#[doc = "Field `HI` reader - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
+pub type HI_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:21 - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
     #[inline(always)]
-    pub fn t0_hi(&self) -> T0_HI_R {
-        T0_HI_R::new(self.bits & 0x003f_ffff)
+    pub fn hi(&self) -> HI_R {
+        HI_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("T0HI")
-            .field("t0_hi", &format_args!("{}", self.t0_hi().bits()))
+            .field("hi", &format_args!("{}", self.hi().bits()))
             .finish()
     }
 }
