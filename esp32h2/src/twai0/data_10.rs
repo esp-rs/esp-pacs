@@ -2,22 +2,22 @@
 pub type R = crate::R<DATA_10_SPEC>;
 #[doc = "Register `DATA_10` writer"]
 pub type W = crate::W<DATA_10_SPEC>;
-#[doc = "Field `DATA_10` reader - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
-pub type DATA_10_R = crate::FieldReader;
-#[doc = "Field `DATA_10` writer - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
-pub type DATA_10_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `TX_BYTE_10` reader - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
+pub type TX_BYTE_10_R = crate::FieldReader;
+#[doc = "Field `TX_BYTE_10` writer - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
+pub type TX_BYTE_10_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
     #[inline(always)]
-    pub fn data_10(&self) -> DATA_10_R {
-        DATA_10_R::new((self.bits & 0xff) as u8)
+    pub fn tx_byte_10(&self) -> TX_BYTE_10_R {
+        TX_BYTE_10_R::new((self.bits & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATA_10")
-            .field("data_10", &format_args!("{}", self.data_10().bits()))
+            .field("tx_byte_10", &format_args!("{}", self.tx_byte_10().bits()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:7 - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
     #[inline(always)]
     #[must_use]
-    pub fn data_10(&mut self) -> DATA_10_W<DATA_10_SPEC> {
-        DATA_10_W::new(self, 0)
+    pub fn tx_byte_10(&mut self) -> TX_BYTE_10_W<DATA_10_SPEC> {
+        TX_BYTE_10_W::new(self, 0)
     }
 }
 #[doc = "Data register 10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data_10::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`data_10::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
