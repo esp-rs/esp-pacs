@@ -21,7 +21,7 @@ DMA:
     OUT_INT_ST_CH%s: {}
     OUT_INT_ENA_CH%s: {}
     OUT_INT_CLR_CH%s: {}
-  
+
     IN_CONF0_CH%s: {}
     IN_CONF1_CH%s: {}
     INFIFO_STATUS_CH%s: {}
@@ -123,3 +123,69 @@ DMA:
         name: OUT_PRI
       OUT_PERI_SEL_CH?:
         name: OUT_PERI_SEL
+
+TWAI0:
+  _modify:
+    RX_MESSAGE_COUNTER:
+      name: RX_MESSAGE_CNT
+
+  MODE:
+    _modify:
+      ACCEPTANCE_FILTER_MODE:
+        name: RX_FILTER_MODE
+
+  CMD:
+    _modify:
+      TX_REQUEST:
+        name: TX_REQ
+      RELEASE_BUFFER:
+        name: RELEASE_BUF
+
+  STATUS:
+    _modify:
+      RECEIVE_BUFFER:
+        name: RX_BUF_ST
+      TRANSMIT_BUFFER:
+        name: TX_BUF_ST
+      NODE_BUS_OFF:
+        name: BUS_OFF_ST
+      MISS:
+        name: MISS_ST
+
+  BUS_TIMING_1:
+    _modify:
+      TIME_SEGMENT1:
+        name: TIME_SEG1
+      TIME_SEGMENT2:
+        name: TIME_SEG2
+      TIME_SAMPLING:
+        name: TIME_SAMP
+
+  DATA*:
+    _modify:
+      DATA_0:
+        name: TX_BYTE_0
+      DATA_1:
+        name: TX_BYTE_1
+      DATA_2:
+        name: TX_BYTE_2
+      DATA_3:
+        name: TX_BYTE_3
+      DATA_4:
+        name: TX_BYTE_4
+      DATA_5:
+        name: TX_BYTE_5
+      DATA_6:
+        name: TX_BYTE_6
+      DATA_7:
+        name: TX_BYTE_7
+      DATA_8:
+        name: TX_BYTE_8
+      DATA_9:
+        name: TX_BYTE_9
+      DATA_10:
+        name: TX_BYTE_10
+      DATA_11:
+        name: TX_BYTE_11
+      DATA_12:
+        name: TX_BYTE_12
