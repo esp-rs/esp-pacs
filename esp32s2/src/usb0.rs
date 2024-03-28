@@ -1485,10 +1485,8 @@ pub mod dtxfsts1;
 pub type DIEPDMAB1 = crate::Reg<diepdmab1::DIEPDMAB1_SPEC>;
 #[doc = ""]
 pub mod diepdmab1;
-#[doc = "DIEPCTL2 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl2`] module"]
-pub type DIEPCTL2 = crate::Reg<diepctl2::DIEPCTL2_SPEC>;
-#[doc = ""]
-pub mod diepctl2;
+pub use diepctl1 as diepctl2;
+pub use DIEPCTL1 as DIEPCTL2;
 #[doc = "DIEPINT2 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint2`] module"]
 pub type DIEPINT2 = crate::Reg<diepint2::DIEPINT2_SPEC>;
 #[doc = ""]
@@ -1509,10 +1507,8 @@ pub mod dtxfsts2;
 pub type DIEPDMAB2 = crate::Reg<diepdmab2::DIEPDMAB2_SPEC>;
 #[doc = ""]
 pub mod diepdmab2;
-#[doc = "DIEPCTL3 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl3`] module"]
-pub type DIEPCTL3 = crate::Reg<diepctl3::DIEPCTL3_SPEC>;
-#[doc = ""]
-pub mod diepctl3;
+pub use diepctl1 as diepctl3;
+pub use DIEPCTL1 as DIEPCTL3;
 #[doc = "DIEPINT3 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint3`] module"]
 pub type DIEPINT3 = crate::Reg<diepint3::DIEPINT3_SPEC>;
 #[doc = ""]
@@ -1533,10 +1529,8 @@ pub mod dtxfsts3;
 pub type DIEPDMAB3 = crate::Reg<diepdmab3::DIEPDMAB3_SPEC>;
 #[doc = ""]
 pub mod diepdmab3;
-#[doc = "DIEPCTL4 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl4`] module"]
-pub type DIEPCTL4 = crate::Reg<diepctl4::DIEPCTL4_SPEC>;
-#[doc = ""]
-pub mod diepctl4;
+pub use diepctl1 as diepctl4;
+pub use DIEPCTL1 as DIEPCTL4;
 #[doc = "DIEPINT4 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint4`] module"]
 pub type DIEPINT4 = crate::Reg<diepint4::DIEPINT4_SPEC>;
 #[doc = ""]
@@ -1557,10 +1551,8 @@ pub mod dtxfsts4;
 pub type DIEPDMAB4 = crate::Reg<diepdmab4::DIEPDMAB4_SPEC>;
 #[doc = ""]
 pub mod diepdmab4;
-#[doc = "DIEPCTL5 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl5`] module"]
-pub type DIEPCTL5 = crate::Reg<diepctl5::DIEPCTL5_SPEC>;
-#[doc = ""]
-pub mod diepctl5;
+pub use diepctl1 as diepctl5;
+pub use DIEPCTL1 as DIEPCTL5;
 #[doc = "DIEPINT5 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint5`] module"]
 pub type DIEPINT5 = crate::Reg<diepint5::DIEPINT5_SPEC>;
 #[doc = ""]
@@ -1581,10 +1573,8 @@ pub mod dtxfsts5;
 pub type DIEPDMAB5 = crate::Reg<diepdmab5::DIEPDMAB5_SPEC>;
 #[doc = ""]
 pub mod diepdmab5;
-#[doc = "DIEPCTL6 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl6`] module"]
-pub type DIEPCTL6 = crate::Reg<diepctl6::DIEPCTL6_SPEC>;
-#[doc = ""]
-pub mod diepctl6;
+pub use diepctl1 as diepctl6;
+pub use DIEPCTL1 as DIEPCTL6;
 #[doc = "DIEPINT6 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint6`] module"]
 pub type DIEPINT6 = crate::Reg<diepint6::DIEPINT6_SPEC>;
 #[doc = ""]
@@ -1645,10 +1635,8 @@ pub mod doepdma1;
 pub type DOEPDMAB1 = crate::Reg<doepdmab1::DOEPDMAB1_SPEC>;
 #[doc = ""]
 pub mod doepdmab1;
-#[doc = "DOEPCTL2 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl2`] module"]
-pub type DOEPCTL2 = crate::Reg<doepctl2::DOEPCTL2_SPEC>;
-#[doc = ""]
-pub mod doepctl2;
+pub use doepctl1 as doepctl2;
+pub use DOEPCTL1 as DOEPCTL2;
 #[doc = "DOEPINT2 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint2`] module"]
 pub type DOEPINT2 = crate::Reg<doepint2::DOEPINT2_SPEC>;
 #[doc = ""]
@@ -1665,10 +1653,8 @@ pub mod doepdma2;
 pub type DOEPDMAB2 = crate::Reg<doepdmab2::DOEPDMAB2_SPEC>;
 #[doc = ""]
 pub mod doepdmab2;
-#[doc = "DOEPCTL3 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl3`] module"]
-pub type DOEPCTL3 = crate::Reg<doepctl3::DOEPCTL3_SPEC>;
-#[doc = ""]
-pub mod doepctl3;
+pub use doepctl1 as doepctl3;
+pub use DOEPCTL1 as DOEPCTL3;
 #[doc = "DOEPINT3 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint3`] module"]
 pub type DOEPINT3 = crate::Reg<doepint3::DOEPINT3_SPEC>;
 #[doc = ""]
@@ -1685,10 +1671,8 @@ pub mod doepdma3;
 pub type DOEPDMAB3 = crate::Reg<doepdmab3::DOEPDMAB3_SPEC>;
 #[doc = ""]
 pub mod doepdmab3;
-#[doc = "DOEPCTL4 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl4`] module"]
-pub type DOEPCTL4 = crate::Reg<doepctl4::DOEPCTL4_SPEC>;
-#[doc = ""]
-pub mod doepctl4;
+pub use doepctl1 as doepctl4;
+pub use DOEPCTL1 as DOEPCTL4;
 #[doc = "DOEPINT4 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint4`] module"]
 pub type DOEPINT4 = crate::Reg<doepint4::DOEPINT4_SPEC>;
 #[doc = ""]
@@ -1705,10 +1689,8 @@ pub mod doepdma4;
 pub type DOEPDMAB4 = crate::Reg<doepdmab4::DOEPDMAB4_SPEC>;
 #[doc = ""]
 pub mod doepdmab4;
-#[doc = "DOEPCTL5 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl5`] module"]
-pub type DOEPCTL5 = crate::Reg<doepctl5::DOEPCTL5_SPEC>;
-#[doc = ""]
-pub mod doepctl5;
+pub use doepctl1 as doepctl5;
+pub use DOEPCTL1 as DOEPCTL5;
 #[doc = "DOEPINT5 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint5`] module"]
 pub type DOEPINT5 = crate::Reg<doepint5::DOEPINT5_SPEC>;
 #[doc = ""]
@@ -1725,10 +1707,8 @@ pub mod doepdma5;
 pub type DOEPDMAB5 = crate::Reg<doepdmab5::DOEPDMAB5_SPEC>;
 #[doc = ""]
 pub mod doepdmab5;
-#[doc = "DOEPCTL6 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl6`] module"]
-pub type DOEPCTL6 = crate::Reg<doepctl6::DOEPCTL6_SPEC>;
-#[doc = ""]
-pub mod doepctl6;
+pub use doepctl1 as doepctl6;
+pub use DOEPCTL1 as DOEPCTL6;
 #[doc = "DOEPINT6 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint6`] module"]
 pub type DOEPINT6 = crate::Reg<doepint6::DOEPINT6_SPEC>;
 #[doc = ""]
