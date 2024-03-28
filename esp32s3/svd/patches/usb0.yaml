@@ -1,0 +1,113 @@
+USB0:
+    _derive:
+      DIEPCTL2: DIEPCTL1
+      DIEPCTL3: DIEPCTL1
+      DIEPCTL4: DIEPCTL1
+      DIEPCTL5: DIEPCTL1
+      DIEPCTL6: DIEPCTL1
+      DOEPCTL2: DOEPCTL1
+      DOEPCTL3: DOEPCTL1
+      DOEPCTL4: DOEPCTL1
+      DOEPCTL5: DOEPCTL1
+      DOEPCTL6: DOEPCTL1
+    _modify:
+      DIEPCTL1:
+        fields:
+          MPS:
+            bitOffset: 0
+            bitWidth: 11
+            access: read-write
+          USBACTEP:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-only
+          NAKSTS:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-only
+          EPTYPE:
+            bitOffset: 18
+            bitWidth: 2
+            access: read-only
+          STALL:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          TXFNUM:
+            bitOffset: 22
+            bitWidth: 4
+            access: read-write
+          CNAK:
+            bitOffset: 26
+            bitWidth: 1
+            access: write-only
+          SNAK:
+            bitOffset: 27
+            bitWidth: 1
+            access: write-only
+          SETD0PID:
+            bitOffset: 28
+            bitWidth: 1
+            access: write-only
+          SETD1PID:
+            bitOffset: 29
+            bitWidth: 1
+            access: write-only
+          EPDIS:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          EPENA:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      DOEPCTL1:
+        fields:
+          MPS:
+            bitOffset: 0
+            bitWidth: 11
+            access: read-only
+          USBACTEP:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-only
+          NAKSTS:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-only
+          EPTYPE:
+            bitOffset: 18
+            bitWidth: 2
+            access: read-only
+          SNP:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          STALL:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          CNAK:
+            bitOffset: 26
+            bitWidth: 1
+            access: write-only
+          SNAK:
+            bitOffset: 27
+            bitWidth: 1
+            access: write-only
+          SETD0PID:
+            bitOffset: 28
+            bitWidth: 1
+            access: write-only
+          SETD1PID:
+            bitOffset: 29
+            bitWidth: 1
+            access: write-only
+          EPDIS:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          EPENA:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write

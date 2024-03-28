@@ -1,4 +1,6 @@
 _svd: ../esp32s3.base.svd
+_include:
+  - usb0.yaml
 
 DMA:
   _expand_array:
