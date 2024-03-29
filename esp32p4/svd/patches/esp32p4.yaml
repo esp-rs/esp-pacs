@@ -1,10 +1,55 @@
 _svd: "../esp32p4.base.svd"
 
+_modify:
+  SPI?:
+    groupName: SPI
+  "AHB_DMA,AXI_DMA,DMA":
+    groupName: DMA
+  LP_ANA_PERI:
+    name: LP_ANA
+
+LP_ANA:
+  _strip: LP_ANA_
+  "*":
+    _strip: LP_ANA_
+  _include: ../../../common_patches/lpana_int_strip.yaml
+
+"I2C0,LP_I2C0":
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+
+SPI[01]:
+  _strip: SPI_MEM_
+  "*":
+    _strip: SPI_MEM_
+
+"ADC,EFUSE,I2C0,I2S0,LEDC,UART0,SPI[01],SYSTIMER,UHCI0,LP_WDT,MCPWM0,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
+  _include: ../../../common_patches/int_strip.yaml
+
+ECC:
+  _include: ../../../common_patches/ecc_int_strip.yaml
+
 GPIO:
   _modify:
     _interrupts:
       GPIO_INT0:
         name: GPIO
+
+PMU:
+  _include: ../../../common_patches/pmu_int_strip.yaml
+
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml
+
+TIMG0:
+  _include: ../../../common_patches/tim_int_strip.yaml
+
+SPI[23]:
+  _strip: SPI_
+  "*":
+    _strip: SPI_
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
 
 DMA:
   _cluster:
@@ -169,6 +214,9 @@ AHB_DMA:
       OUT_INT_CLR_CH?:
         name: CLR
         _strip_end: _CH_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
     
     OUT_CRC_CH%s:
       OUT_CRC_INIT_DATA_CH?:
@@ -529,6 +577,9 @@ AXI_DMA:
       OUT_INT_CLR_CH?:
         name: OUT_INT_CLR
         _strip_end: _CH_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
       OUT_CONF0_CH?:
         name: OUT_CONF0
         _strip_end: [CH, _CH0]

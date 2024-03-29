@@ -1,46 +1,43 @@
 #[doc = "Register `INT_RAW_TIMERS` reader"]
 pub type R = crate::R<INT_RAW_TIMERS_SPEC>;
-#[doc = "Field `T0_INT_RAW` reader - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
-pub type T0_INT_RAW_R = crate::BitReader;
-#[doc = "Field `T1_INT_RAW` reader - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
-pub type T1_INT_RAW_R = crate::BitReader;
-#[doc = "Field `WDT_INT_RAW` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
-pub type WDT_INT_RAW_R = crate::BitReader;
-#[doc = "Field `LACT_INT_RAW` reader - The raw interrupt status bit for the TIMG_LACT_INT interrupt."]
-pub type LACT_INT_RAW_R = crate::BitReader;
+#[doc = "Field `T0` reader - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
+pub type T0_R = crate::BitReader;
+#[doc = "Field `T1` reader - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
+pub type T1_R = crate::BitReader;
+#[doc = "Field `WDT` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
+pub type WDT_R = crate::BitReader;
+#[doc = "Field `LACT` reader - The raw interrupt status bit for the TIMG_LACT_INT interrupt."]
+pub type LACT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
-    pub fn t0_int_raw(&self) -> T0_INT_RAW_R {
-        T0_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn t0(&self) -> T0_R {
+        T0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
     #[inline(always)]
-    pub fn t1_int_raw(&self) -> T1_INT_RAW_R {
-        T1_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn t1(&self) -> T1_R {
+        T1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
     #[inline(always)]
-    pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
-        WDT_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn wdt(&self) -> WDT_R {
+        WDT_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt status bit for the TIMG_LACT_INT interrupt."]
     #[inline(always)]
-    pub fn lact_int_raw(&self) -> LACT_INT_RAW_R {
-        LACT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn lact(&self) -> LACT_R {
+        LACT_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW_TIMERS")
-            .field("t0_int_raw", &format_args!("{}", self.t0_int_raw().bit()))
-            .field("t1_int_raw", &format_args!("{}", self.t1_int_raw().bit()))
-            .field("wdt_int_raw", &format_args!("{}", self.wdt_int_raw().bit()))
-            .field(
-                "lact_int_raw",
-                &format_args!("{}", self.lact_int_raw().bit()),
-            )
+            .field("t0", &format_args!("{}", self.t0().bit()))
+            .field("t1", &format_args!("{}", self.t1().bit()))
+            .field("wdt", &format_args!("{}", self.wdt().bit()))
+            .field("lact", &format_args!("{}", self.lact().bit()))
             .finish()
     }
 }

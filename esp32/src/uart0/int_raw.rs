@@ -1,219 +1,177 @@
 #[doc = "Register `INT_RAW` reader"]
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Field `RXFIFO_FULL_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives more data than (rx_flow_thrhd_h3 rx_flow_thrhd)."]
-pub type RXFIFO_FULL_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TXFIFO_EMPTY_INT_RAW` reader - This interrupt raw bit turns to high level when the amount of data in transmitter's fifo is less than ((tx_mem_cnttxfifo_cnt) ."]
-pub type TXFIFO_EMPTY_INT_RAW_R = crate::BitReader;
-#[doc = "Field `PARITY_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the parity error of data."]
-pub type PARITY_ERR_INT_RAW_R = crate::BitReader;
-#[doc = "Field `FRM_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects data's frame error ."]
-pub type FRM_ERR_INT_RAW_R = crate::BitReader;
-#[doc = "Field `RXFIFO_OVF_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives more data than the fifo can store."]
-pub type RXFIFO_OVF_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DSR_CHG_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the edge change of dsrn signal."]
-pub type DSR_CHG_INT_RAW_R = crate::BitReader;
-#[doc = "Field `CTS_CHG_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the edge change of ctsn signal."]
-pub type CTS_CHG_INT_RAW_R = crate::BitReader;
-#[doc = "Field `BRK_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the 0 after the stop bit."]
-pub type BRK_DET_INT_RAW_R = crate::BitReader;
-#[doc = "Field `RXFIFO_TOUT_INT_RAW` reader - This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte."]
-pub type RXFIFO_TOUT_INT_RAW_R = crate::BitReader;
-#[doc = "Field `SW_XON_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives xoff char with uart_sw_flow_con_en is set to 1."]
-pub type SW_XON_INT_RAW_R = crate::BitReader;
-#[doc = "Field `SW_XOFF_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives xon char with uart_sw_flow_con_en is set to 1."]
-pub type SW_XOFF_INT_RAW_R = crate::BitReader;
-#[doc = "Field `GLITCH_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the start bit."]
-pub type GLITCH_DET_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TX_BRK_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter completes sendding 0 after all the datas in transmitter's fifo are send."]
-pub type TX_BRK_DONE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TX_BRK_IDLE_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter has kept the shortest duration after the last data has been send."]
-pub type TX_BRK_IDLE_DONE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TX_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter has send all the data in fifo."]
-pub type TX_DONE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `RS485_PARITY_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when rs485 detects the parity error."]
-pub type RS485_PARITY_ERR_INT_RAW_R = crate::BitReader;
-#[doc = "Field `RS485_FRM_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when rs485 detects the data frame error."]
-pub type RS485_FRM_ERR_INT_RAW_R = crate::BitReader;
-#[doc = "Field `RS485_CLASH_INT_RAW` reader - This interrupt raw bit turns to high level when rs485 detects the clash between transmitter and receiver."]
-pub type RS485_CLASH_INT_RAW_R = crate::BitReader;
-#[doc = "Field `AT_CMD_CHAR_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the configured at_cmd chars."]
-pub type AT_CMD_CHAR_DET_INT_RAW_R = crate::BitReader;
+#[doc = "Field `RXFIFO_FULL` reader - This interrupt raw bit turns to high level when receiver receives more data than (rx_flow_thrhd_h3 rx_flow_thrhd)."]
+pub type RXFIFO_FULL_R = crate::BitReader;
+#[doc = "Field `TXFIFO_EMPTY` reader - This interrupt raw bit turns to high level when the amount of data in transmitter's fifo is less than ((tx_mem_cnttxfifo_cnt) ."]
+pub type TXFIFO_EMPTY_R = crate::BitReader;
+#[doc = "Field `PARITY_ERR` reader - This interrupt raw bit turns to high level when receiver detects the parity error of data."]
+pub type PARITY_ERR_R = crate::BitReader;
+#[doc = "Field `FRM_ERR` reader - This interrupt raw bit turns to high level when receiver detects data's frame error ."]
+pub type FRM_ERR_R = crate::BitReader;
+#[doc = "Field `RXFIFO_OVF` reader - This interrupt raw bit turns to high level when receiver receives more data than the fifo can store."]
+pub type RXFIFO_OVF_R = crate::BitReader;
+#[doc = "Field `DSR_CHG` reader - This interrupt raw bit turns to high level when receiver detects the edge change of dsrn signal."]
+pub type DSR_CHG_R = crate::BitReader;
+#[doc = "Field `CTS_CHG` reader - This interrupt raw bit turns to high level when receiver detects the edge change of ctsn signal."]
+pub type CTS_CHG_R = crate::BitReader;
+#[doc = "Field `BRK_DET` reader - This interrupt raw bit turns to high level when receiver detects the 0 after the stop bit."]
+pub type BRK_DET_R = crate::BitReader;
+#[doc = "Field `RXFIFO_TOUT` reader - This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte."]
+pub type RXFIFO_TOUT_R = crate::BitReader;
+#[doc = "Field `SW_XON` reader - This interrupt raw bit turns to high level when receiver receives xoff char with uart_sw_flow_con_en is set to 1."]
+pub type SW_XON_R = crate::BitReader;
+#[doc = "Field `SW_XOFF` reader - This interrupt raw bit turns to high level when receiver receives xon char with uart_sw_flow_con_en is set to 1."]
+pub type SW_XOFF_R = crate::BitReader;
+#[doc = "Field `GLITCH_DET` reader - This interrupt raw bit turns to high level when receiver detects the start bit."]
+pub type GLITCH_DET_R = crate::BitReader;
+#[doc = "Field `TX_BRK_DONE` reader - This interrupt raw bit turns to high level when transmitter completes sendding 0 after all the datas in transmitter's fifo are send."]
+pub type TX_BRK_DONE_R = crate::BitReader;
+#[doc = "Field `TX_BRK_IDLE_DONE` reader - This interrupt raw bit turns to high level when transmitter has kept the shortest duration after the last data has been send."]
+pub type TX_BRK_IDLE_DONE_R = crate::BitReader;
+#[doc = "Field `TX_DONE` reader - This interrupt raw bit turns to high level when transmitter has send all the data in fifo."]
+pub type TX_DONE_R = crate::BitReader;
+#[doc = "Field `RS485_PARITY_ERR` reader - This interrupt raw bit turns to high level when rs485 detects the parity error."]
+pub type RS485_PARITY_ERR_R = crate::BitReader;
+#[doc = "Field `RS485_FRM_ERR` reader - This interrupt raw bit turns to high level when rs485 detects the data frame error."]
+pub type RS485_FRM_ERR_R = crate::BitReader;
+#[doc = "Field `RS485_CLASH` reader - This interrupt raw bit turns to high level when rs485 detects the clash between transmitter and receiver."]
+pub type RS485_CLASH_R = crate::BitReader;
+#[doc = "Field `AT_CMD_CHAR_DET` reader - This interrupt raw bit turns to high level when receiver detects the configured at_cmd chars."]
+pub type AT_CMD_CHAR_DET_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This interrupt raw bit turns to high level when receiver receives more data than (rx_flow_thrhd_h3 rx_flow_thrhd)."]
     #[inline(always)]
-    pub fn rxfifo_full_int_raw(&self) -> RXFIFO_FULL_INT_RAW_R {
-        RXFIFO_FULL_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn rxfifo_full(&self) -> RXFIFO_FULL_R {
+        RXFIFO_FULL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - This interrupt raw bit turns to high level when the amount of data in transmitter's fifo is less than ((tx_mem_cnttxfifo_cnt) ."]
     #[inline(always)]
-    pub fn txfifo_empty_int_raw(&self) -> TXFIFO_EMPTY_INT_RAW_R {
-        TXFIFO_EMPTY_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn txfifo_empty(&self) -> TXFIFO_EMPTY_R {
+        TXFIFO_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - This interrupt raw bit turns to high level when receiver detects the parity error of data."]
     #[inline(always)]
-    pub fn parity_err_int_raw(&self) -> PARITY_ERR_INT_RAW_R {
-        PARITY_ERR_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn parity_err(&self) -> PARITY_ERR_R {
+        PARITY_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - This interrupt raw bit turns to high level when receiver detects data's frame error ."]
     #[inline(always)]
-    pub fn frm_err_int_raw(&self) -> FRM_ERR_INT_RAW_R {
-        FRM_ERR_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn frm_err(&self) -> FRM_ERR_R {
+        FRM_ERR_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - This interrupt raw bit turns to high level when receiver receives more data than the fifo can store."]
     #[inline(always)]
-    pub fn rxfifo_ovf_int_raw(&self) -> RXFIFO_OVF_INT_RAW_R {
-        RXFIFO_OVF_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn rxfifo_ovf(&self) -> RXFIFO_OVF_R {
+        RXFIFO_OVF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This interrupt raw bit turns to high level when receiver detects the edge change of dsrn signal."]
     #[inline(always)]
-    pub fn dsr_chg_int_raw(&self) -> DSR_CHG_INT_RAW_R {
-        DSR_CHG_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn dsr_chg(&self) -> DSR_CHG_R {
+        DSR_CHG_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This interrupt raw bit turns to high level when receiver detects the edge change of ctsn signal."]
     #[inline(always)]
-    pub fn cts_chg_int_raw(&self) -> CTS_CHG_INT_RAW_R {
-        CTS_CHG_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn cts_chg(&self) -> CTS_CHG_R {
+        CTS_CHG_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This interrupt raw bit turns to high level when receiver detects the 0 after the stop bit."]
     #[inline(always)]
-    pub fn brk_det_int_raw(&self) -> BRK_DET_INT_RAW_R {
-        BRK_DET_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn brk_det(&self) -> BRK_DET_R {
+        BRK_DET_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte."]
     #[inline(always)]
-    pub fn rxfifo_tout_int_raw(&self) -> RXFIFO_TOUT_INT_RAW_R {
-        RXFIFO_TOUT_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn rxfifo_tout(&self) -> RXFIFO_TOUT_R {
+        RXFIFO_TOUT_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - This interrupt raw bit turns to high level when receiver receives xoff char with uart_sw_flow_con_en is set to 1."]
     #[inline(always)]
-    pub fn sw_xon_int_raw(&self) -> SW_XON_INT_RAW_R {
-        SW_XON_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn sw_xon(&self) -> SW_XON_R {
+        SW_XON_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - This interrupt raw bit turns to high level when receiver receives xon char with uart_sw_flow_con_en is set to 1."]
     #[inline(always)]
-    pub fn sw_xoff_int_raw(&self) -> SW_XOFF_INT_RAW_R {
-        SW_XOFF_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn sw_xoff(&self) -> SW_XOFF_R {
+        SW_XOFF_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - This interrupt raw bit turns to high level when receiver detects the start bit."]
     #[inline(always)]
-    pub fn glitch_det_int_raw(&self) -> GLITCH_DET_INT_RAW_R {
-        GLITCH_DET_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn glitch_det(&self) -> GLITCH_DET_R {
+        GLITCH_DET_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - This interrupt raw bit turns to high level when transmitter completes sendding 0 after all the datas in transmitter's fifo are send."]
     #[inline(always)]
-    pub fn tx_brk_done_int_raw(&self) -> TX_BRK_DONE_INT_RAW_R {
-        TX_BRK_DONE_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn tx_brk_done(&self) -> TX_BRK_DONE_R {
+        TX_BRK_DONE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - This interrupt raw bit turns to high level when transmitter has kept the shortest duration after the last data has been send."]
     #[inline(always)]
-    pub fn tx_brk_idle_done_int_raw(&self) -> TX_BRK_IDLE_DONE_INT_RAW_R {
-        TX_BRK_IDLE_DONE_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn tx_brk_idle_done(&self) -> TX_BRK_IDLE_DONE_R {
+        TX_BRK_IDLE_DONE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - This interrupt raw bit turns to high level when transmitter has send all the data in fifo."]
     #[inline(always)]
-    pub fn tx_done_int_raw(&self) -> TX_DONE_INT_RAW_R {
-        TX_DONE_INT_RAW_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn tx_done(&self) -> TX_DONE_R {
+        TX_DONE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - This interrupt raw bit turns to high level when rs485 detects the parity error."]
     #[inline(always)]
-    pub fn rs485_parity_err_int_raw(&self) -> RS485_PARITY_ERR_INT_RAW_R {
-        RS485_PARITY_ERR_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn rs485_parity_err(&self) -> RS485_PARITY_ERR_R {
+        RS485_PARITY_ERR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - This interrupt raw bit turns to high level when rs485 detects the data frame error."]
     #[inline(always)]
-    pub fn rs485_frm_err_int_raw(&self) -> RS485_FRM_ERR_INT_RAW_R {
-        RS485_FRM_ERR_INT_RAW_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn rs485_frm_err(&self) -> RS485_FRM_ERR_R {
+        RS485_FRM_ERR_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - This interrupt raw bit turns to high level when rs485 detects the clash between transmitter and receiver."]
     #[inline(always)]
-    pub fn rs485_clash_int_raw(&self) -> RS485_CLASH_INT_RAW_R {
-        RS485_CLASH_INT_RAW_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn rs485_clash(&self) -> RS485_CLASH_R {
+        RS485_CLASH_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - This interrupt raw bit turns to high level when receiver detects the configured at_cmd chars."]
     #[inline(always)]
-    pub fn at_cmd_char_det_int_raw(&self) -> AT_CMD_CHAR_DET_INT_RAW_R {
-        AT_CMD_CHAR_DET_INT_RAW_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn at_cmd_char_det(&self) -> AT_CMD_CHAR_DET_R {
+        AT_CMD_CHAR_DET_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
+            .field("rxfifo_full", &format_args!("{}", self.rxfifo_full().bit()))
             .field(
-                "rxfifo_full_int_raw",
-                &format_args!("{}", self.rxfifo_full_int_raw().bit()),
+                "txfifo_empty",
+                &format_args!("{}", self.txfifo_empty().bit()),
+            )
+            .field("parity_err", &format_args!("{}", self.parity_err().bit()))
+            .field("frm_err", &format_args!("{}", self.frm_err().bit()))
+            .field("rxfifo_ovf", &format_args!("{}", self.rxfifo_ovf().bit()))
+            .field("dsr_chg", &format_args!("{}", self.dsr_chg().bit()))
+            .field("cts_chg", &format_args!("{}", self.cts_chg().bit()))
+            .field("brk_det", &format_args!("{}", self.brk_det().bit()))
+            .field("rxfifo_tout", &format_args!("{}", self.rxfifo_tout().bit()))
+            .field("sw_xon", &format_args!("{}", self.sw_xon().bit()))
+            .field("sw_xoff", &format_args!("{}", self.sw_xoff().bit()))
+            .field("glitch_det", &format_args!("{}", self.glitch_det().bit()))
+            .field("tx_brk_done", &format_args!("{}", self.tx_brk_done().bit()))
+            .field(
+                "tx_brk_idle_done",
+                &format_args!("{}", self.tx_brk_idle_done().bit()),
+            )
+            .field("tx_done", &format_args!("{}", self.tx_done().bit()))
+            .field(
+                "rs485_parity_err",
+                &format_args!("{}", self.rs485_parity_err().bit()),
             )
             .field(
-                "txfifo_empty_int_raw",
-                &format_args!("{}", self.txfifo_empty_int_raw().bit()),
+                "rs485_frm_err",
+                &format_args!("{}", self.rs485_frm_err().bit()),
             )
+            .field("rs485_clash", &format_args!("{}", self.rs485_clash().bit()))
             .field(
-                "parity_err_int_raw",
-                &format_args!("{}", self.parity_err_int_raw().bit()),
-            )
-            .field(
-                "frm_err_int_raw",
-                &format_args!("{}", self.frm_err_int_raw().bit()),
-            )
-            .field(
-                "rxfifo_ovf_int_raw",
-                &format_args!("{}", self.rxfifo_ovf_int_raw().bit()),
-            )
-            .field(
-                "dsr_chg_int_raw",
-                &format_args!("{}", self.dsr_chg_int_raw().bit()),
-            )
-            .field(
-                "cts_chg_int_raw",
-                &format_args!("{}", self.cts_chg_int_raw().bit()),
-            )
-            .field(
-                "brk_det_int_raw",
-                &format_args!("{}", self.brk_det_int_raw().bit()),
-            )
-            .field(
-                "rxfifo_tout_int_raw",
-                &format_args!("{}", self.rxfifo_tout_int_raw().bit()),
-            )
-            .field(
-                "sw_xon_int_raw",
-                &format_args!("{}", self.sw_xon_int_raw().bit()),
-            )
-            .field(
-                "sw_xoff_int_raw",
-                &format_args!("{}", self.sw_xoff_int_raw().bit()),
-            )
-            .field(
-                "glitch_det_int_raw",
-                &format_args!("{}", self.glitch_det_int_raw().bit()),
-            )
-            .field(
-                "tx_brk_done_int_raw",
-                &format_args!("{}", self.tx_brk_done_int_raw().bit()),
-            )
-            .field(
-                "tx_brk_idle_done_int_raw",
-                &format_args!("{}", self.tx_brk_idle_done_int_raw().bit()),
-            )
-            .field(
-                "tx_done_int_raw",
-                &format_args!("{}", self.tx_done_int_raw().bit()),
-            )
-            .field(
-                "rs485_parity_err_int_raw",
-                &format_args!("{}", self.rs485_parity_err_int_raw().bit()),
-            )
-            .field(
-                "rs485_frm_err_int_raw",
-                &format_args!("{}", self.rs485_frm_err_int_raw().bit()),
-            )
-            .field(
-                "rs485_clash_int_raw",
-                &format_args!("{}", self.rs485_clash_int_raw().bit()),
-            )
-            .field(
-                "at_cmd_char_det_int_raw",
-                &format_args!("{}", self.at_cmd_char_det_int_raw().bit()),
+                "at_cmd_char_det",
+                &format_args!("{}", self.at_cmd_char_det().bit()),
             )
             .finish()
     }

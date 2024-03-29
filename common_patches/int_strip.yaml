@@ -1,0 +1,11 @@
+INT_RAW:
+  _strip_end: _INT_RAW
+INT_ST:
+  _strip_end: _INT_ST
+INT_ENA:
+  _strip_end: _INT_ENA
+INT_CLR:
+  _strip_end: _INT_CLR
+  _modify:
+    "*":
+      modifiedWriteValues: oneToClear

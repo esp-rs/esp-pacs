@@ -1,22 +1,19 @@
 #[doc = "Register `INT_RAW` reader"]
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Field `PAD_COMP_INT_RAW` reader - Pad compare raw interrupt"]
-pub type PAD_COMP_INT_RAW_R = crate::BitReader;
+#[doc = "Field `PAD_COMP` reader - Pad compare raw interrupt"]
+pub type PAD_COMP_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Pad compare raw interrupt"]
     #[inline(always)]
-    pub fn pad_comp_int_raw(&self) -> PAD_COMP_INT_RAW_R {
-        PAD_COMP_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn pad_comp(&self) -> PAD_COMP_R {
+        PAD_COMP_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "pad_comp_int_raw",
-                &format_args!("{}", self.pad_comp_int_raw().bit()),
-            )
+            .field("pad_comp", &format_args!("{}", self.pad_comp().bit()))
             .finish()
     }
 }

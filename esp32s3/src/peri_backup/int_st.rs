@@ -1,27 +1,27 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `DONE_INT_ST` reader - x"]
-pub type DONE_INT_ST_R = crate::BitReader;
-#[doc = "Field `ERR_INT_ST` reader - x"]
-pub type ERR_INT_ST_R = crate::BitReader;
+#[doc = "Field `DONE` reader - x"]
+pub type DONE_R = crate::BitReader;
+#[doc = "Field `ERR` reader - x"]
+pub type ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - x"]
     #[inline(always)]
-    pub fn done_int_st(&self) -> DONE_INT_ST_R {
-        DONE_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn done(&self) -> DONE_R {
+        DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - x"]
     #[inline(always)]
-    pub fn err_int_st(&self) -> ERR_INT_ST_R {
-        ERR_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn err(&self) -> ERR_R {
+        ERR_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("done_int_st", &format_args!("{}", self.done_int_st().bit()))
-            .field("err_int_st", &format_args!("{}", self.err_int_st().bit()))
+            .field("done", &format_args!("{}", self.done().bit()))
+            .field("err", &format_args!("{}", self.err().bit()))
             .finish()
     }
 }

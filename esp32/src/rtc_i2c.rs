@@ -11,7 +11,7 @@ pub struct RegisterBlock {
     data: DATA,
     int_raw: INT_RAW,
     int_clr: INT_CLR,
-    int_en: INT_EN,
+    int_ena: INT_ENA,
     int_st: INT_ST,
     sda_duty: SDA_DUTY,
     _reserved11: [u8; 0x04],
@@ -64,8 +64,8 @@ impl RegisterBlock {
     }
     #[doc = "0x28 - "]
     #[inline(always)]
-    pub const fn int_en(&self) -> &INT_EN {
-        &self.int_en
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x2c - "]
     #[inline(always)]
@@ -130,10 +130,10 @@ pub mod int_raw;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = ""]
 pub mod int_clr;
-#[doc = "INT_EN (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_en::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_en::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_en`] module"]
-pub type INT_EN = crate::Reg<int_en::INT_EN_SPEC>;
+#[doc = "INT_ENA (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = ""]
-pub mod int_en;
+pub mod int_ena;
 #[doc = "INT_ST (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_st::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = ""]

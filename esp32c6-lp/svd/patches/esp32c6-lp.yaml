@@ -1,10 +1,26 @@
 _svd: "../esp32c6-lp.base.svd"
 
+_modify:
+  LP_ANA_PERI:
+    name: LP_ANA
+
 LP_I2C0:
   _strip: "I2C_"
   "*":
     _strip: "I2C_"
+  _modify:
+    INT_STATUS:
+      name: INT_ST
   DATA:
     _modify:
       FIFO_RDATA:
         access: read-write
+
+"LP_I2C0,LP_ANA,LP_UART,LP_WDT":
+  _include: ../../../common_patches/int_strip.yaml
+
+LP_ANA:
+  _include: ../../../common_patches/lpana_int_strip.yaml
+
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml

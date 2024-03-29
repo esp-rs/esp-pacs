@@ -1,0 +1,11 @@
+DMA_INT_RAW:
+  _strip_end: _INT_RAW
+DMA_INT_ST:
+  _strip_end: _INT_ST
+DMA_INT_ENA:
+  _strip_end: _INT_ENA
+DMA_INT_CLR:
+  _strip_end: _INT_CLR
+  _modify:
+    "*":
+      modifiedWriteValues: oneToClear

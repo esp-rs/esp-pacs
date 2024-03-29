@@ -1,43 +1,37 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `SR_EOF_INT_ST` reader - The raw interrupt status bit for the PPA_SR_EOF_INT interrupt."]
-pub type SR_EOF_INT_ST_R = crate::BitReader;
-#[doc = "Field `BLEND_EOF_INT_ST` reader - The raw interrupt status bit for the PPA_BLEND_EOF_INT interrupt."]
-pub type BLEND_EOF_INT_ST_R = crate::BitReader;
-#[doc = "Field `SR_PARAM_CFG_ERR_INT_ST` reader - The raw interrupt status bit for the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
-pub type SR_PARAM_CFG_ERR_INT_ST_R = crate::BitReader;
+#[doc = "Field `SR_EOF` reader - The raw interrupt status bit for the PPA_SR_EOF_INT interrupt."]
+pub type SR_EOF_R = crate::BitReader;
+#[doc = "Field `BLEND_EOF` reader - The raw interrupt status bit for the PPA_BLEND_EOF_INT interrupt."]
+pub type BLEND_EOF_R = crate::BitReader;
+#[doc = "Field `SR_PARAM_CFG_ERR` reader - The raw interrupt status bit for the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
+pub type SR_PARAM_CFG_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the PPA_SR_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn sr_eof_int_st(&self) -> SR_EOF_INT_ST_R {
-        SR_EOF_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn sr_eof(&self) -> SR_EOF_R {
+        SR_EOF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the PPA_BLEND_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn blend_eof_int_st(&self) -> BLEND_EOF_INT_ST_R {
-        BLEND_EOF_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn blend_eof(&self) -> BLEND_EOF_R {
+        BLEND_EOF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn sr_param_cfg_err_int_st(&self) -> SR_PARAM_CFG_ERR_INT_ST_R {
-        SR_PARAM_CFG_ERR_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn sr_param_cfg_err(&self) -> SR_PARAM_CFG_ERR_R {
+        SR_PARAM_CFG_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
+            .field("sr_eof", &format_args!("{}", self.sr_eof().bit()))
+            .field("blend_eof", &format_args!("{}", self.blend_eof().bit()))
             .field(
-                "sr_eof_int_st",
-                &format_args!("{}", self.sr_eof_int_st().bit()),
-            )
-            .field(
-                "blend_eof_int_st",
-                &format_args!("{}", self.blend_eof_int_st().bit()),
-            )
-            .field(
-                "sr_param_cfg_err_int_st",
-                &format_args!("{}", self.sr_param_cfg_err_int_st().bit()),
+                "sr_param_cfg_err",
+                &format_args!("{}", self.sr_param_cfg_err().bit()),
             )
             .finish()
     }

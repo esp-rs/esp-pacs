@@ -1,76 +1,64 @@
 #[doc = "Register `INT_RAW` reader"]
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Field `THRES1_LOW_INT_RAW` reader - Need add description"]
-pub type THRES1_LOW_INT_RAW_R = crate::BitReader;
-#[doc = "Field `THRES0_LOW_INT_RAW` reader - Need add description"]
-pub type THRES0_LOW_INT_RAW_R = crate::BitReader;
-#[doc = "Field `THRES1_HIGH_INT_RAW` reader - Need add description"]
-pub type THRES1_HIGH_INT_RAW_R = crate::BitReader;
-#[doc = "Field `THRES0_HIGH_INT_RAW` reader - Need add description"]
-pub type THRES0_HIGH_INT_RAW_R = crate::BitReader;
-#[doc = "Field `APB_SARADC2_DONE_INT_RAW` reader - Need add description"]
-pub type APB_SARADC2_DONE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `APB_SARADC1_DONE_INT_RAW` reader - Need add description"]
-pub type APB_SARADC1_DONE_INT_RAW_R = crate::BitReader;
+#[doc = "Field `THRES1_LOW` reader - Need add description"]
+pub type THRES1_LOW_R = crate::BitReader;
+#[doc = "Field `THRES0_LOW` reader - Need add description"]
+pub type THRES0_LOW_R = crate::BitReader;
+#[doc = "Field `THRES1_HIGH` reader - Need add description"]
+pub type THRES1_HIGH_R = crate::BitReader;
+#[doc = "Field `THRES0_HIGH` reader - Need add description"]
+pub type THRES0_HIGH_R = crate::BitReader;
+#[doc = "Field `APB_SARADC2_DONE` reader - Need add description"]
+pub type APB_SARADC2_DONE_R = crate::BitReader;
+#[doc = "Field `APB_SARADC1_DONE` reader - Need add description"]
+pub type APB_SARADC1_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 26 - Need add description"]
     #[inline(always)]
-    pub fn thres1_low_int_raw(&self) -> THRES1_LOW_INT_RAW_R {
-        THRES1_LOW_INT_RAW_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn thres1_low(&self) -> THRES1_LOW_R {
+        THRES1_LOW_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Need add description"]
     #[inline(always)]
-    pub fn thres0_low_int_raw(&self) -> THRES0_LOW_INT_RAW_R {
-        THRES0_LOW_INT_RAW_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn thres0_low(&self) -> THRES0_LOW_R {
+        THRES0_LOW_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Need add description"]
     #[inline(always)]
-    pub fn thres1_high_int_raw(&self) -> THRES1_HIGH_INT_RAW_R {
-        THRES1_HIGH_INT_RAW_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn thres1_high(&self) -> THRES1_HIGH_R {
+        THRES1_HIGH_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Need add description"]
     #[inline(always)]
-    pub fn thres0_high_int_raw(&self) -> THRES0_HIGH_INT_RAW_R {
-        THRES0_HIGH_INT_RAW_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn thres0_high(&self) -> THRES0_HIGH_R {
+        THRES0_HIGH_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
-    pub fn apb_saradc2_done_int_raw(&self) -> APB_SARADC2_DONE_INT_RAW_R {
-        APB_SARADC2_DONE_INT_RAW_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn apb_saradc2_done(&self) -> APB_SARADC2_DONE_R {
+        APB_SARADC2_DONE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
-    pub fn apb_saradc1_done_int_raw(&self) -> APB_SARADC1_DONE_INT_RAW_R {
-        APB_SARADC1_DONE_INT_RAW_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn apb_saradc1_done(&self) -> APB_SARADC1_DONE_R {
+        APB_SARADC1_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
+            .field("thres1_low", &format_args!("{}", self.thres1_low().bit()))
+            .field("thres0_low", &format_args!("{}", self.thres0_low().bit()))
+            .field("thres1_high", &format_args!("{}", self.thres1_high().bit()))
+            .field("thres0_high", &format_args!("{}", self.thres0_high().bit()))
             .field(
-                "thres1_low_int_raw",
-                &format_args!("{}", self.thres1_low_int_raw().bit()),
+                "apb_saradc2_done",
+                &format_args!("{}", self.apb_saradc2_done().bit()),
             )
             .field(
-                "thres0_low_int_raw",
-                &format_args!("{}", self.thres0_low_int_raw().bit()),
-            )
-            .field(
-                "thres1_high_int_raw",
-                &format_args!("{}", self.thres1_high_int_raw().bit()),
-            )
-            .field(
-                "thres0_high_int_raw",
-                &format_args!("{}", self.thres0_high_int_raw().bit()),
-            )
-            .field(
-                "apb_saradc2_done_int_raw",
-                &format_args!("{}", self.apb_saradc2_done_int_raw().bit()),
-            )
-            .field(
-                "apb_saradc1_done_int_raw",
-                &format_args!("{}", self.apb_saradc1_done_int_raw().bit()),
+                "apb_saradc1_done",
+                &format_args!("{}", self.apb_saradc1_done().bit()),
             )
             .finish()
     }

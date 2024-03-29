@@ -1,22 +1,19 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `UNDERRUN_INT_ST` reader - the masked interrupt status of dpi_underrun"]
-pub type UNDERRUN_INT_ST_R = crate::BitReader;
+#[doc = "Field `UNDERRUN` reader - the masked interrupt status of dpi_underrun"]
+pub type UNDERRUN_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - the masked interrupt status of dpi_underrun"]
     #[inline(always)]
-    pub fn underrun_int_st(&self) -> UNDERRUN_INT_ST_R {
-        UNDERRUN_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn underrun(&self) -> UNDERRUN_R {
+        UNDERRUN_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "underrun_int_st",
-                &format_args!("{}", self.underrun_int_st().bit()),
-            )
+            .field("underrun", &format_args!("{}", self.underrun().bit()))
             .finish()
     }
 }

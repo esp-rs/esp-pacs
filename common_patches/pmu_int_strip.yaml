@@ -1,0 +1,18 @@
+_modify:
+  HP_INT_ST:
+    name: INT_ST
+  HP_INT_ENA:
+    name: INT_ENA
+  HP_INT_CLR:
+    name: INT_CLR
+"INT_RAW,LP_INT_RAW":
+  _strip_end: _INT_RAW
+"INT_ST,LP_INT_ST":
+  _strip_end: _INT_ST
+"INT_ENA,LP_INT_ENA":
+  _strip_end: _INT_ENA
+"INT_CLR,LP_INT_CLR":
+  _strip_end: _INT_CLR
+  _modify:
+    "*":
+      modifiedWriteValues: oneToClear

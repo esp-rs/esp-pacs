@@ -1,5 +1,31 @@
 _svd: ../esp32s3.base.svd
 
+_modify:
+  SPI?:
+    groupName: SPI
+  I2S1:
+    groupName: I2S
+
+I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+
+RTC_CNTL:
+  _include: ../../../common_patches/rtc_cntl_int_strip.yaml
+
+"EFUSE,I2C0,I2S0,LEDC,UART0,APB_SARADC,UHCI0,RTC_I2C,USB_DEVICE,SPI1,SYSTIMER,I2S1,MCPWM0,PERI_BACKUP,SPI0":
+  _include: ../../../common_patches/int_strip.yaml
+
+EXTMEM:
+  _include: ../../../common_patches/extmem_cache_int_strip.yaml
+
+TIMG0:
+  _include: ../../../common_patches/tim_int_strip.yaml
+
+SPI2:
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+
 DMA:
   _expand_array:
     IN_CONF0_CH%s: {}
@@ -73,6 +99,9 @@ DMA:
         name: IN_INT_ENA
       IN_INT_CLR_CH?:
         name: IN_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
       INFIFO_STATUS_CH?:
         name: INFIFO_STATUS
       IN_POP_CH?:
@@ -109,6 +138,9 @@ DMA:
         name: OUT_INT_ENA
       OUT_INT_CLR_CH?:
         name: OUT_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
       OUTFIFO_STATUS_CH?:
         name: OUTFIFO_STATUS
       OUT_PUSH_CH?:

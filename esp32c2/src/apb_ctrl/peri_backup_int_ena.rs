@@ -2,38 +2,32 @@
 pub type R = crate::R<PERI_BACKUP_INT_ENA_SPEC>;
 #[doc = "Register `PERI_BACKUP_INT_ENA` writer"]
 pub type W = crate::W<PERI_BACKUP_INT_ENA_SPEC>;
-#[doc = "Field `PERI_BACKUP_DONE_INT_ENA` reader - reg_peri_backup_done_int_ena"]
-pub type PERI_BACKUP_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `PERI_BACKUP_DONE_INT_ENA` writer - reg_peri_backup_done_int_ena"]
-pub type PERI_BACKUP_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PERI_BACKUP_ERR_INT_ENA` reader - reg_peri_backup_err_int_ena"]
-pub type PERI_BACKUP_ERR_INT_ENA_R = crate::BitReader;
-#[doc = "Field `PERI_BACKUP_ERR_INT_ENA` writer - reg_peri_backup_err_int_ena"]
-pub type PERI_BACKUP_ERR_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DONE` reader - reg_peri_backup_done_int_ena"]
+pub type DONE_R = crate::BitReader;
+#[doc = "Field `DONE` writer - reg_peri_backup_done_int_ena"]
+pub type DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ERR` reader - reg_peri_backup_err_int_ena"]
+pub type ERR_R = crate::BitReader;
+#[doc = "Field `ERR` writer - reg_peri_backup_err_int_ena"]
+pub type ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - reg_peri_backup_done_int_ena"]
     #[inline(always)]
-    pub fn peri_backup_done_int_ena(&self) -> PERI_BACKUP_DONE_INT_ENA_R {
-        PERI_BACKUP_DONE_INT_ENA_R::new((self.bits & 1) != 0)
+    pub fn done(&self) -> DONE_R {
+        DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_peri_backup_err_int_ena"]
     #[inline(always)]
-    pub fn peri_backup_err_int_ena(&self) -> PERI_BACKUP_ERR_INT_ENA_R {
-        PERI_BACKUP_ERR_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn err(&self) -> ERR_R {
+        ERR_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_BACKUP_INT_ENA")
-            .field(
-                "peri_backup_done_int_ena",
-                &format_args!("{}", self.peri_backup_done_int_ena().bit()),
-            )
-            .field(
-                "peri_backup_err_int_ena",
-                &format_args!("{}", self.peri_backup_err_int_ena().bit()),
-            )
+            .field("done", &format_args!("{}", self.done().bit()))
+            .field("err", &format_args!("{}", self.err().bit()))
             .finish()
     }
 }
@@ -47,18 +41,14 @@ impl W {
     #[doc = "Bit 0 - reg_peri_backup_done_int_ena"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_done_int_ena(
-        &mut self,
-    ) -> PERI_BACKUP_DONE_INT_ENA_W<PERI_BACKUP_INT_ENA_SPEC> {
-        PERI_BACKUP_DONE_INT_ENA_W::new(self, 0)
+    pub fn done(&mut self) -> DONE_W<PERI_BACKUP_INT_ENA_SPEC> {
+        DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_peri_backup_err_int_ena"]
     #[inline(always)]
     #[must_use]
-    pub fn peri_backup_err_int_ena(
-        &mut self,
-    ) -> PERI_BACKUP_ERR_INT_ENA_W<PERI_BACKUP_INT_ENA_SPEC> {
-        PERI_BACKUP_ERR_INT_ENA_W::new(self, 1)
+    pub fn err(&mut self) -> ERR_W<PERI_BACKUP_INT_ENA_SPEC> {
+        ERR_W::new(self, 1)
     }
 }
 #[doc = "APB_CTRL_PERI_BACKUP_INT_ENA_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`peri_backup_int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`peri_backup_int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

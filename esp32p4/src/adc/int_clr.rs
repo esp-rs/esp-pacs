@@ -1,17 +1,17 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
-#[doc = "Field `THRES1_LOW_INT_CLR` writer - need_des"]
-pub type THRES1_LOW_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `THRES0_LOW_INT_CLR` writer - need_des"]
-pub type THRES0_LOW_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `THRES1_HIGH_INT_CLR` writer - need_des"]
-pub type THRES1_HIGH_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `THRES0_HIGH_INT_CLR` writer - need_des"]
-pub type THRES0_HIGH_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC2_DONE_INT_CLR` writer - need_des"]
-pub type APB_SARADC2_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC1_DONE_INT_CLR` writer - need_des"]
-pub type APB_SARADC1_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES1_LOW` writer - need_des"]
+pub type THRES1_LOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `THRES0_LOW` writer - need_des"]
+pub type THRES0_LOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `THRES1_HIGH` writer - need_des"]
+pub type THRES1_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `THRES0_HIGH` writer - need_des"]
+pub type THRES0_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `APB_SARADC2_DONE` writer - need_des"]
+pub type APB_SARADC2_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `APB_SARADC1_DONE` writer - need_des"]
+pub type APB_SARADC1_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -22,38 +22,38 @@ impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_low_int_clr(&mut self) -> THRES1_LOW_INT_CLR_W<INT_CLR_SPEC> {
-        THRES1_LOW_INT_CLR_W::new(self, 26)
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<INT_CLR_SPEC> {
+        THRES1_LOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0_low_int_clr(&mut self) -> THRES0_LOW_INT_CLR_W<INT_CLR_SPEC> {
-        THRES0_LOW_INT_CLR_W::new(self, 27)
+    pub fn thres0_low(&mut self) -> THRES0_LOW_W<INT_CLR_SPEC> {
+        THRES0_LOW_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_high_int_clr(&mut self) -> THRES1_HIGH_INT_CLR_W<INT_CLR_SPEC> {
-        THRES1_HIGH_INT_CLR_W::new(self, 28)
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<INT_CLR_SPEC> {
+        THRES1_HIGH_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0_high_int_clr(&mut self) -> THRES0_HIGH_INT_CLR_W<INT_CLR_SPEC> {
-        THRES0_HIGH_INT_CLR_W::new(self, 29)
+    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<INT_CLR_SPEC> {
+        THRES0_HIGH_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc2_done_int_clr(&mut self) -> APB_SARADC2_DONE_INT_CLR_W<INT_CLR_SPEC> {
-        APB_SARADC2_DONE_INT_CLR_W::new(self, 30)
+    pub fn apb_saradc2_done(&mut self) -> APB_SARADC2_DONE_W<INT_CLR_SPEC> {
+        APB_SARADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc1_done_int_clr(&mut self) -> APB_SARADC1_DONE_INT_CLR_W<INT_CLR_SPEC> {
-        APB_SARADC1_DONE_INT_CLR_W::new(self, 31)
+    pub fn apb_saradc1_done(&mut self) -> APB_SARADC1_DONE_W<INT_CLR_SPEC> {
+        APB_SARADC1_DONE_W::new(self, 31)
     }
 }
 #[doc = "Register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -65,7 +65,7 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 impl crate::Writable for INT_CLR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xfc00_0000;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {

@@ -1,30 +1,27 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `OVERFLOW_ST` reader - need_des"]
-pub type OVERFLOW_ST_R = crate::BitReader;
-#[doc = "Field `SOC_WAKEUP_INT_ST` reader - need_des"]
-pub type SOC_WAKEUP_INT_ST_R = crate::BitReader;
+#[doc = "Field `OVERFLOW` reader - need_des"]
+pub type OVERFLOW_R = crate::BitReader;
+#[doc = "Field `SOC_WAKEUP` reader - need_des"]
+pub type SOC_WAKEUP_R = crate::BitReader;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn overflow_st(&self) -> OVERFLOW_ST_R {
-        OVERFLOW_ST_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn overflow(&self) -> OVERFLOW_R {
+        OVERFLOW_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_int_st(&self) -> SOC_WAKEUP_INT_ST_R {
-        SOC_WAKEUP_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn soc_wakeup(&self) -> SOC_WAKEUP_R {
+        SOC_WAKEUP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("overflow_st", &format_args!("{}", self.overflow_st().bit()))
-            .field(
-                "soc_wakeup_int_st",
-                &format_args!("{}", self.soc_wakeup_int_st().bit()),
-            )
+            .field("overflow", &format_args!("{}", self.overflow().bit()))
+            .field("soc_wakeup", &format_args!("{}", self.soc_wakeup().bit()))
             .finish()
     }
 }

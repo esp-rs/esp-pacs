@@ -1,0 +1,12 @@
+LP_INT_RAW:
+  _strip_end: _LP_INT_RAW
+LP_INT_ST:
+  _strip_end: _LP_INT_ST
+LP_INT_ENA:
+  _strip_end: _LP_INT_ENA
+LP_INT_CLR:
+  _strip_end: _LP_INT_CLR
+  _modify:
+    "*":
+      modifiedWriteValues: oneToClear
+_include: int_strip.yaml

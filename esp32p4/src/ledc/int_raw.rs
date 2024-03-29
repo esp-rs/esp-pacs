@@ -2,272 +2,236 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `TIMER0_OVF_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_TIMER0_OVF_INT. Triggered when the timer0 has reached its maximum counter value."]
-pub type TIMER0_OVF_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TIMER0_OVF_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_TIMER0_OVF_INT. Triggered when the timer0 has reached its maximum counter value."]
-pub type TIMER0_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER1_OVF_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_TIMER1_OVF_INT. Triggered when the timer1 has reached its maximum counter value."]
-pub type TIMER1_OVF_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TIMER1_OVF_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_TIMER1_OVF_INT. Triggered when the timer1 has reached its maximum counter value."]
-pub type TIMER1_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER2_OVF_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_TIMER2_OVF_INT. Triggered when the timer2 has reached its maximum counter value."]
-pub type TIMER2_OVF_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TIMER2_OVF_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_TIMER2_OVF_INT. Triggered when the timer2 has reached its maximum counter value."]
-pub type TIMER2_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER3_OVF_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_TIMER3_OVF_INT. Triggered when the timer3 has reached its maximum counter value."]
-pub type TIMER3_OVF_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TIMER3_OVF_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_TIMER3_OVF_INT. Triggered when the timer3 has reached its maximum counter value."]
-pub type TIMER3_OVF_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH0_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH0_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH0_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH0_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH0_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH0_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH1_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH1_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH1_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH1_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH1_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH1_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH2_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH2_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH2_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH2_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH2_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH2_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH3_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH3_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH3_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH3_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH3_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH3_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH4_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH4_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH4_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH4_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH4_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH4_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH5_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH5_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH5_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH5_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH5_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH5_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH6_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH6_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH6_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH6_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH6_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH6_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_CH7_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH7_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH7_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_CH7_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH7_INT. Triggered when the fading of duty has finished."]
-pub type DUTY_CHNG_END_CH7_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH0_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH0_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
-pub type OVF_CNT_CH0_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH0_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH0_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
-pub type OVF_CNT_CH0_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH1_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH1_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
-pub type OVF_CNT_CH1_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH1_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH1_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
-pub type OVF_CNT_CH1_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH2_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH2_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
-pub type OVF_CNT_CH2_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH2_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH2_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
-pub type OVF_CNT_CH2_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH3_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH3_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
-pub type OVF_CNT_CH3_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH3_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH3_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
-pub type OVF_CNT_CH3_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH4_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH4_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
-pub type OVF_CNT_CH4_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH4_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH4_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
-pub type OVF_CNT_CH4_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH5_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH5_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
-pub type OVF_CNT_CH5_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH5_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH5_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
-pub type OVF_CNT_CH5_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH6_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH6_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
-pub type OVF_CNT_CH6_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH6_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH6_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
-pub type OVF_CNT_CH6_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVF_CNT_CH7_INT_RAW` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH7_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
-pub type OVF_CNT_CH7_INT_RAW_R = crate::BitReader;
-#[doc = "Field `OVF_CNT_CH7_INT_RAW` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH7_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
-pub type OVF_CNT_CH7_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER0_OVF` reader - Raw status bit: The raw interrupt status of LEDC_TIMER0_OVF_INT. Triggered when the timer0 has reached its maximum counter value."]
+pub type TIMER0_OVF_R = crate::BitReader;
+#[doc = "Field `TIMER0_OVF` writer - Raw status bit: The raw interrupt status of LEDC_TIMER0_OVF_INT. Triggered when the timer0 has reached its maximum counter value."]
+pub type TIMER0_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER1_OVF` reader - Raw status bit: The raw interrupt status of LEDC_TIMER1_OVF_INT. Triggered when the timer1 has reached its maximum counter value."]
+pub type TIMER1_OVF_R = crate::BitReader;
+#[doc = "Field `TIMER1_OVF` writer - Raw status bit: The raw interrupt status of LEDC_TIMER1_OVF_INT. Triggered when the timer1 has reached its maximum counter value."]
+pub type TIMER1_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER2_OVF` reader - Raw status bit: The raw interrupt status of LEDC_TIMER2_OVF_INT. Triggered when the timer2 has reached its maximum counter value."]
+pub type TIMER2_OVF_R = crate::BitReader;
+#[doc = "Field `TIMER2_OVF` writer - Raw status bit: The raw interrupt status of LEDC_TIMER2_OVF_INT. Triggered when the timer2 has reached its maximum counter value."]
+pub type TIMER2_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER3_OVF` reader - Raw status bit: The raw interrupt status of LEDC_TIMER3_OVF_INT. Triggered when the timer3 has reached its maximum counter value."]
+pub type TIMER3_OVF_R = crate::BitReader;
+#[doc = "Field `TIMER3_OVF` writer - Raw status bit: The raw interrupt status of LEDC_TIMER3_OVF_INT. Triggered when the timer3 has reached its maximum counter value."]
+pub type TIMER3_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH0` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH0_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH0_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH0` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH0_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH1` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH1_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH1_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH1` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH1_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH1_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH2` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH2_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH2_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH2` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH2_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH2_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH3` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH3_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH3_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH3` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH3_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH3_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH4` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH4_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH4_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH4` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH4_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH4_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH5` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH5_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH5_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH5` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH5_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH5_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH6` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH6_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH6_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH6` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH6_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH6_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DUTY_CHNG_END_CH7` reader - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH7_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH7_R = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH7` writer - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH7_INT. Triggered when the fading of duty has finished."]
+pub type DUTY_CHNG_END_CH7_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH0` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH0_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
+pub type OVF_CNT_CH0_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH0` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH0_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
+pub type OVF_CNT_CH0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH1` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH1_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
+pub type OVF_CNT_CH1_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH1` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH1_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
+pub type OVF_CNT_CH1_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH2` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH2_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
+pub type OVF_CNT_CH2_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH2` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH2_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
+pub type OVF_CNT_CH2_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH3` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH3_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
+pub type OVF_CNT_CH3_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH3` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH3_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
+pub type OVF_CNT_CH3_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH4` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH4_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
+pub type OVF_CNT_CH4_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH4` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH4_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
+pub type OVF_CNT_CH4_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH5` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH5_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
+pub type OVF_CNT_CH5_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH5` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH5_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
+pub type OVF_CNT_CH5_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH6` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH6_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
+pub type OVF_CNT_CH6_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH6` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH6_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
+pub type OVF_CNT_CH6_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVF_CNT_CH7` reader - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH7_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
+pub type OVF_CNT_CH7_R = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH7` writer - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH7_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
+pub type OVF_CNT_CH7_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Raw status bit: The raw interrupt status of LEDC_TIMER0_OVF_INT. Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
-    pub fn timer0_ovf_int_raw(&self) -> TIMER0_OVF_INT_RAW_R {
-        TIMER0_OVF_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn timer0_ovf(&self) -> TIMER0_OVF_R {
+        TIMER0_OVF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Raw status bit: The raw interrupt status of LEDC_TIMER1_OVF_INT. Triggered when the timer1 has reached its maximum counter value."]
     #[inline(always)]
-    pub fn timer1_ovf_int_raw(&self) -> TIMER1_OVF_INT_RAW_R {
-        TIMER1_OVF_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn timer1_ovf(&self) -> TIMER1_OVF_R {
+        TIMER1_OVF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Raw status bit: The raw interrupt status of LEDC_TIMER2_OVF_INT. Triggered when the timer2 has reached its maximum counter value."]
     #[inline(always)]
-    pub fn timer2_ovf_int_raw(&self) -> TIMER2_OVF_INT_RAW_R {
-        TIMER2_OVF_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn timer2_ovf(&self) -> TIMER2_OVF_R {
+        TIMER2_OVF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Raw status bit: The raw interrupt status of LEDC_TIMER3_OVF_INT. Triggered when the timer3 has reached its maximum counter value."]
     #[inline(always)]
-    pub fn timer3_ovf_int_raw(&self) -> TIMER3_OVF_INT_RAW_R {
-        TIMER3_OVF_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn timer3_ovf(&self) -> TIMER3_OVF_R {
+        TIMER3_OVF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH0_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch0_int_raw(&self) -> DUTY_CHNG_END_CH0_INT_RAW_R {
-        DUTY_CHNG_END_CH0_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn duty_chng_end_ch0(&self) -> DUTY_CHNG_END_CH0_R {
+        DUTY_CHNG_END_CH0_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH1_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch1_int_raw(&self) -> DUTY_CHNG_END_CH1_INT_RAW_R {
-        DUTY_CHNG_END_CH1_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn duty_chng_end_ch1(&self) -> DUTY_CHNG_END_CH1_R {
+        DUTY_CHNG_END_CH1_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH2_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch2_int_raw(&self) -> DUTY_CHNG_END_CH2_INT_RAW_R {
-        DUTY_CHNG_END_CH2_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn duty_chng_end_ch2(&self) -> DUTY_CHNG_END_CH2_R {
+        DUTY_CHNG_END_CH2_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH3_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch3_int_raw(&self) -> DUTY_CHNG_END_CH3_INT_RAW_R {
-        DUTY_CHNG_END_CH3_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn duty_chng_end_ch3(&self) -> DUTY_CHNG_END_CH3_R {
+        DUTY_CHNG_END_CH3_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH4_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch4_int_raw(&self) -> DUTY_CHNG_END_CH4_INT_RAW_R {
-        DUTY_CHNG_END_CH4_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn duty_chng_end_ch4(&self) -> DUTY_CHNG_END_CH4_R {
+        DUTY_CHNG_END_CH4_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH5_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch5_int_raw(&self) -> DUTY_CHNG_END_CH5_INT_RAW_R {
-        DUTY_CHNG_END_CH5_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn duty_chng_end_ch5(&self) -> DUTY_CHNG_END_CH5_R {
+        DUTY_CHNG_END_CH5_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH6_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch6_int_raw(&self) -> DUTY_CHNG_END_CH6_INT_RAW_R {
-        DUTY_CHNG_END_CH6_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn duty_chng_end_ch6(&self) -> DUTY_CHNG_END_CH6_R {
+        DUTY_CHNG_END_CH6_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH7_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
-    pub fn duty_chng_end_ch7_int_raw(&self) -> DUTY_CHNG_END_CH7_INT_RAW_R {
-        DUTY_CHNG_END_CH7_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn duty_chng_end_ch7(&self) -> DUTY_CHNG_END_CH7_R {
+        DUTY_CHNG_END_CH7_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH0_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
     #[inline(always)]
-    pub fn ovf_cnt_ch0_int_raw(&self) -> OVF_CNT_CH0_INT_RAW_R {
-        OVF_CNT_CH0_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn ovf_cnt_ch0(&self) -> OVF_CNT_CH0_R {
+        OVF_CNT_CH0_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH1_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
     #[inline(always)]
-    pub fn ovf_cnt_ch1_int_raw(&self) -> OVF_CNT_CH1_INT_RAW_R {
-        OVF_CNT_CH1_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn ovf_cnt_ch1(&self) -> OVF_CNT_CH1_R {
+        OVF_CNT_CH1_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH2_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
     #[inline(always)]
-    pub fn ovf_cnt_ch2_int_raw(&self) -> OVF_CNT_CH2_INT_RAW_R {
-        OVF_CNT_CH2_INT_RAW_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn ovf_cnt_ch2(&self) -> OVF_CNT_CH2_R {
+        OVF_CNT_CH2_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH3_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
     #[inline(always)]
-    pub fn ovf_cnt_ch3_int_raw(&self) -> OVF_CNT_CH3_INT_RAW_R {
-        OVF_CNT_CH3_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn ovf_cnt_ch3(&self) -> OVF_CNT_CH3_R {
+        OVF_CNT_CH3_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH4_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
     #[inline(always)]
-    pub fn ovf_cnt_ch4_int_raw(&self) -> OVF_CNT_CH4_INT_RAW_R {
-        OVF_CNT_CH4_INT_RAW_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn ovf_cnt_ch4(&self) -> OVF_CNT_CH4_R {
+        OVF_CNT_CH4_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH5_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
     #[inline(always)]
-    pub fn ovf_cnt_ch5_int_raw(&self) -> OVF_CNT_CH5_INT_RAW_R {
-        OVF_CNT_CH5_INT_RAW_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn ovf_cnt_ch5(&self) -> OVF_CNT_CH5_R {
+        OVF_CNT_CH5_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH6_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
     #[inline(always)]
-    pub fn ovf_cnt_ch6_int_raw(&self) -> OVF_CNT_CH6_INT_RAW_R {
-        OVF_CNT_CH6_INT_RAW_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn ovf_cnt_ch6(&self) -> OVF_CNT_CH6_R {
+        OVF_CNT_CH6_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH7_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
     #[inline(always)]
-    pub fn ovf_cnt_ch7_int_raw(&self) -> OVF_CNT_CH7_INT_RAW_R {
-        OVF_CNT_CH7_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn ovf_cnt_ch7(&self) -> OVF_CNT_CH7_R {
+        OVF_CNT_CH7_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
+            .field("timer0_ovf", &format_args!("{}", self.timer0_ovf().bit()))
+            .field("timer1_ovf", &format_args!("{}", self.timer1_ovf().bit()))
+            .field("timer2_ovf", &format_args!("{}", self.timer2_ovf().bit()))
+            .field("timer3_ovf", &format_args!("{}", self.timer3_ovf().bit()))
             .field(
-                "timer0_ovf_int_raw",
-                &format_args!("{}", self.timer0_ovf_int_raw().bit()),
+                "duty_chng_end_ch0",
+                &format_args!("{}", self.duty_chng_end_ch0().bit()),
             )
             .field(
-                "timer1_ovf_int_raw",
-                &format_args!("{}", self.timer1_ovf_int_raw().bit()),
+                "duty_chng_end_ch1",
+                &format_args!("{}", self.duty_chng_end_ch1().bit()),
             )
             .field(
-                "timer2_ovf_int_raw",
-                &format_args!("{}", self.timer2_ovf_int_raw().bit()),
+                "duty_chng_end_ch2",
+                &format_args!("{}", self.duty_chng_end_ch2().bit()),
             )
             .field(
-                "timer3_ovf_int_raw",
-                &format_args!("{}", self.timer3_ovf_int_raw().bit()),
+                "duty_chng_end_ch3",
+                &format_args!("{}", self.duty_chng_end_ch3().bit()),
             )
             .field(
-                "duty_chng_end_ch0_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch0_int_raw().bit()),
+                "duty_chng_end_ch4",
+                &format_args!("{}", self.duty_chng_end_ch4().bit()),
             )
             .field(
-                "duty_chng_end_ch1_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch1_int_raw().bit()),
+                "duty_chng_end_ch5",
+                &format_args!("{}", self.duty_chng_end_ch5().bit()),
             )
             .field(
-                "duty_chng_end_ch2_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch2_int_raw().bit()),
+                "duty_chng_end_ch6",
+                &format_args!("{}", self.duty_chng_end_ch6().bit()),
             )
             .field(
-                "duty_chng_end_ch3_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch3_int_raw().bit()),
+                "duty_chng_end_ch7",
+                &format_args!("{}", self.duty_chng_end_ch7().bit()),
             )
-            .field(
-                "duty_chng_end_ch4_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch4_int_raw().bit()),
-            )
-            .field(
-                "duty_chng_end_ch5_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch5_int_raw().bit()),
-            )
-            .field(
-                "duty_chng_end_ch6_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch6_int_raw().bit()),
-            )
-            .field(
-                "duty_chng_end_ch7_int_raw",
-                &format_args!("{}", self.duty_chng_end_ch7_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch0_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch0_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch1_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch1_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch2_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch2_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch3_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch3_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch4_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch4_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch5_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch5_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch6_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch6_int_raw().bit()),
-            )
-            .field(
-                "ovf_cnt_ch7_int_raw",
-                &format_args!("{}", self.ovf_cnt_ch7_int_raw().bit()),
-            )
+            .field("ovf_cnt_ch0", &format_args!("{}", self.ovf_cnt_ch0().bit()))
+            .field("ovf_cnt_ch1", &format_args!("{}", self.ovf_cnt_ch1().bit()))
+            .field("ovf_cnt_ch2", &format_args!("{}", self.ovf_cnt_ch2().bit()))
+            .field("ovf_cnt_ch3", &format_args!("{}", self.ovf_cnt_ch3().bit()))
+            .field("ovf_cnt_ch4", &format_args!("{}", self.ovf_cnt_ch4().bit()))
+            .field("ovf_cnt_ch5", &format_args!("{}", self.ovf_cnt_ch5().bit()))
+            .field("ovf_cnt_ch6", &format_args!("{}", self.ovf_cnt_ch6().bit()))
+            .field("ovf_cnt_ch7", &format_args!("{}", self.ovf_cnt_ch7().bit()))
             .finish()
     }
 }
@@ -281,122 +245,122 @@ impl W {
     #[doc = "Bit 0 - Raw status bit: The raw interrupt status of LEDC_TIMER0_OVF_INT. Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn timer0_ovf_int_raw(&mut self) -> TIMER0_OVF_INT_RAW_W<INT_RAW_SPEC> {
-        TIMER0_OVF_INT_RAW_W::new(self, 0)
+    pub fn timer0_ovf(&mut self) -> TIMER0_OVF_W<INT_RAW_SPEC> {
+        TIMER0_OVF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Raw status bit: The raw interrupt status of LEDC_TIMER1_OVF_INT. Triggered when the timer1 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_ovf_int_raw(&mut self) -> TIMER1_OVF_INT_RAW_W<INT_RAW_SPEC> {
-        TIMER1_OVF_INT_RAW_W::new(self, 1)
+    pub fn timer1_ovf(&mut self) -> TIMER1_OVF_W<INT_RAW_SPEC> {
+        TIMER1_OVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Raw status bit: The raw interrupt status of LEDC_TIMER2_OVF_INT. Triggered when the timer2 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn timer2_ovf_int_raw(&mut self) -> TIMER2_OVF_INT_RAW_W<INT_RAW_SPEC> {
-        TIMER2_OVF_INT_RAW_W::new(self, 2)
+    pub fn timer2_ovf(&mut self) -> TIMER2_OVF_W<INT_RAW_SPEC> {
+        TIMER2_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Raw status bit: The raw interrupt status of LEDC_TIMER3_OVF_INT. Triggered when the timer3 has reached its maximum counter value."]
     #[inline(always)]
     #[must_use]
-    pub fn timer3_ovf_int_raw(&mut self) -> TIMER3_OVF_INT_RAW_W<INT_RAW_SPEC> {
-        TIMER3_OVF_INT_RAW_W::new(self, 3)
+    pub fn timer3_ovf(&mut self) -> TIMER3_OVF_W<INT_RAW_SPEC> {
+        TIMER3_OVF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH0_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch0_int_raw(&mut self) -> DUTY_CHNG_END_CH0_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH0_INT_RAW_W::new(self, 4)
+    pub fn duty_chng_end_ch0(&mut self) -> DUTY_CHNG_END_CH0_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH0_W::new(self, 4)
     }
     #[doc = "Bit 5 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH1_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch1_int_raw(&mut self) -> DUTY_CHNG_END_CH1_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH1_INT_RAW_W::new(self, 5)
+    pub fn duty_chng_end_ch1(&mut self) -> DUTY_CHNG_END_CH1_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH1_W::new(self, 5)
     }
     #[doc = "Bit 6 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH2_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch2_int_raw(&mut self) -> DUTY_CHNG_END_CH2_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH2_INT_RAW_W::new(self, 6)
+    pub fn duty_chng_end_ch2(&mut self) -> DUTY_CHNG_END_CH2_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH2_W::new(self, 6)
     }
     #[doc = "Bit 7 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH3_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch3_int_raw(&mut self) -> DUTY_CHNG_END_CH3_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH3_INT_RAW_W::new(self, 7)
+    pub fn duty_chng_end_ch3(&mut self) -> DUTY_CHNG_END_CH3_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH3_W::new(self, 7)
     }
     #[doc = "Bit 8 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH4_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch4_int_raw(&mut self) -> DUTY_CHNG_END_CH4_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH4_INT_RAW_W::new(self, 8)
+    pub fn duty_chng_end_ch4(&mut self) -> DUTY_CHNG_END_CH4_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH4_W::new(self, 8)
     }
     #[doc = "Bit 9 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH5_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch5_int_raw(&mut self) -> DUTY_CHNG_END_CH5_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH5_INT_RAW_W::new(self, 9)
+    pub fn duty_chng_end_ch5(&mut self) -> DUTY_CHNG_END_CH5_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH5_W::new(self, 9)
     }
     #[doc = "Bit 10 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH6_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch6_int_raw(&mut self) -> DUTY_CHNG_END_CH6_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH6_INT_RAW_W::new(self, 10)
+    pub fn duty_chng_end_ch6(&mut self) -> DUTY_CHNG_END_CH6_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH6_W::new(self, 10)
     }
     #[doc = "Bit 11 - Raw status bit: The raw interrupt status of LEDC_DUTY_CHNG_END_CH7_INT. Triggered when the fading of duty has finished."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_chng_end_ch7_int_raw(&mut self) -> DUTY_CHNG_END_CH7_INT_RAW_W<INT_RAW_SPEC> {
-        DUTY_CHNG_END_CH7_INT_RAW_W::new(self, 11)
+    pub fn duty_chng_end_ch7(&mut self) -> DUTY_CHNG_END_CH7_W<INT_RAW_SPEC> {
+        DUTY_CHNG_END_CH7_W::new(self, 11)
     }
     #[doc = "Bit 12 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH0_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch0_int_raw(&mut self) -> OVF_CNT_CH0_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH0_INT_RAW_W::new(self, 12)
+    pub fn ovf_cnt_ch0(&mut self) -> OVF_CNT_CH0_W<INT_RAW_SPEC> {
+        OVF_CNT_CH0_W::new(self, 12)
     }
     #[doc = "Bit 13 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH1_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch1_int_raw(&mut self) -> OVF_CNT_CH1_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH1_INT_RAW_W::new(self, 13)
+    pub fn ovf_cnt_ch1(&mut self) -> OVF_CNT_CH1_W<INT_RAW_SPEC> {
+        OVF_CNT_CH1_W::new(self, 13)
     }
     #[doc = "Bit 14 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH2_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch2_int_raw(&mut self) -> OVF_CNT_CH2_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH2_INT_RAW_W::new(self, 14)
+    pub fn ovf_cnt_ch2(&mut self) -> OVF_CNT_CH2_W<INT_RAW_SPEC> {
+        OVF_CNT_CH2_W::new(self, 14)
     }
     #[doc = "Bit 15 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH3_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch3_int_raw(&mut self) -> OVF_CNT_CH3_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH3_INT_RAW_W::new(self, 15)
+    pub fn ovf_cnt_ch3(&mut self) -> OVF_CNT_CH3_W<INT_RAW_SPEC> {
+        OVF_CNT_CH3_W::new(self, 15)
     }
     #[doc = "Bit 16 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH4_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch4_int_raw(&mut self) -> OVF_CNT_CH4_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH4_INT_RAW_W::new(self, 16)
+    pub fn ovf_cnt_ch4(&mut self) -> OVF_CNT_CH4_W<INT_RAW_SPEC> {
+        OVF_CNT_CH4_W::new(self, 16)
     }
     #[doc = "Bit 17 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH5_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch5_int_raw(&mut self) -> OVF_CNT_CH5_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH5_INT_RAW_W::new(self, 17)
+    pub fn ovf_cnt_ch5(&mut self) -> OVF_CNT_CH5_W<INT_RAW_SPEC> {
+        OVF_CNT_CH5_W::new(self, 17)
     }
     #[doc = "Bit 18 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH6_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch6_int_raw(&mut self) -> OVF_CNT_CH6_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH6_INT_RAW_W::new(self, 18)
+    pub fn ovf_cnt_ch6(&mut self) -> OVF_CNT_CH6_W<INT_RAW_SPEC> {
+        OVF_CNT_CH6_W::new(self, 18)
     }
     #[doc = "Bit 19 - Raw status bit: The raw interrupt status of LEDC_OVF_CNT_CH7_INT. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
     #[inline(always)]
     #[must_use]
-    pub fn ovf_cnt_ch7_int_raw(&mut self) -> OVF_CNT_CH7_INT_RAW_W<INT_RAW_SPEC> {
-        OVF_CNT_CH7_INT_RAW_W::new(self, 19)
+    pub fn ovf_cnt_ch7(&mut self) -> OVF_CNT_CH7_W<INT_RAW_SPEC> {
+        OVF_CNT_CH7_W::new(self, 19)
     }
 }
 #[doc = "Interrupt raw status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

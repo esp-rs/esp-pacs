@@ -2,89 +2,77 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `THRES1_LOW_INT_ENA` reader - Need add description"]
-pub type THRES1_LOW_INT_ENA_R = crate::BitReader;
-#[doc = "Field `THRES1_LOW_INT_ENA` writer - Need add description"]
-pub type THRES1_LOW_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `THRES0_LOW_INT_ENA` reader - Need add description"]
-pub type THRES0_LOW_INT_ENA_R = crate::BitReader;
-#[doc = "Field `THRES0_LOW_INT_ENA` writer - Need add description"]
-pub type THRES0_LOW_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `THRES1_HIGH_INT_ENA` reader - Need add description"]
-pub type THRES1_HIGH_INT_ENA_R = crate::BitReader;
-#[doc = "Field `THRES1_HIGH_INT_ENA` writer - Need add description"]
-pub type THRES1_HIGH_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `THRES0_HIGH_INT_ENA` reader - Need add description"]
-pub type THRES0_HIGH_INT_ENA_R = crate::BitReader;
-#[doc = "Field `THRES0_HIGH_INT_ENA` writer - Need add description"]
-pub type THRES0_HIGH_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC2_DONE_INT_ENA` reader - Need add description"]
-pub type APB_SARADC2_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `APB_SARADC2_DONE_INT_ENA` writer - Need add description"]
-pub type APB_SARADC2_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC1_DONE_INT_ENA` reader - Need add description"]
-pub type APB_SARADC1_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `APB_SARADC1_DONE_INT_ENA` writer - Need add description"]
-pub type APB_SARADC1_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES1_LOW` reader - Need add description"]
+pub type THRES1_LOW_R = crate::BitReader;
+#[doc = "Field `THRES1_LOW` writer - Need add description"]
+pub type THRES1_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES0_LOW` reader - Need add description"]
+pub type THRES0_LOW_R = crate::BitReader;
+#[doc = "Field `THRES0_LOW` writer - Need add description"]
+pub type THRES0_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES1_HIGH` reader - Need add description"]
+pub type THRES1_HIGH_R = crate::BitReader;
+#[doc = "Field `THRES1_HIGH` writer - Need add description"]
+pub type THRES1_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES0_HIGH` reader - Need add description"]
+pub type THRES0_HIGH_R = crate::BitReader;
+#[doc = "Field `THRES0_HIGH` writer - Need add description"]
+pub type THRES0_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_SARADC2_DONE` reader - Need add description"]
+pub type APB_SARADC2_DONE_R = crate::BitReader;
+#[doc = "Field `APB_SARADC2_DONE` writer - Need add description"]
+pub type APB_SARADC2_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_SARADC1_DONE` reader - Need add description"]
+pub type APB_SARADC1_DONE_R = crate::BitReader;
+#[doc = "Field `APB_SARADC1_DONE` writer - Need add description"]
+pub type APB_SARADC1_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 26 - Need add description"]
     #[inline(always)]
-    pub fn thres1_low_int_ena(&self) -> THRES1_LOW_INT_ENA_R {
-        THRES1_LOW_INT_ENA_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn thres1_low(&self) -> THRES1_LOW_R {
+        THRES1_LOW_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Need add description"]
     #[inline(always)]
-    pub fn thres0_low_int_ena(&self) -> THRES0_LOW_INT_ENA_R {
-        THRES0_LOW_INT_ENA_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn thres0_low(&self) -> THRES0_LOW_R {
+        THRES0_LOW_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Need add description"]
     #[inline(always)]
-    pub fn thres1_high_int_ena(&self) -> THRES1_HIGH_INT_ENA_R {
-        THRES1_HIGH_INT_ENA_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn thres1_high(&self) -> THRES1_HIGH_R {
+        THRES1_HIGH_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Need add description"]
     #[inline(always)]
-    pub fn thres0_high_int_ena(&self) -> THRES0_HIGH_INT_ENA_R {
-        THRES0_HIGH_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn thres0_high(&self) -> THRES0_HIGH_R {
+        THRES0_HIGH_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
-    pub fn apb_saradc2_done_int_ena(&self) -> APB_SARADC2_DONE_INT_ENA_R {
-        APB_SARADC2_DONE_INT_ENA_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn apb_saradc2_done(&self) -> APB_SARADC2_DONE_R {
+        APB_SARADC2_DONE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
-    pub fn apb_saradc1_done_int_ena(&self) -> APB_SARADC1_DONE_INT_ENA_R {
-        APB_SARADC1_DONE_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn apb_saradc1_done(&self) -> APB_SARADC1_DONE_R {
+        APB_SARADC1_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
+            .field("thres1_low", &format_args!("{}", self.thres1_low().bit()))
+            .field("thres0_low", &format_args!("{}", self.thres0_low().bit()))
+            .field("thres1_high", &format_args!("{}", self.thres1_high().bit()))
+            .field("thres0_high", &format_args!("{}", self.thres0_high().bit()))
             .field(
-                "thres1_low_int_ena",
-                &format_args!("{}", self.thres1_low_int_ena().bit()),
+                "apb_saradc2_done",
+                &format_args!("{}", self.apb_saradc2_done().bit()),
             )
             .field(
-                "thres0_low_int_ena",
-                &format_args!("{}", self.thres0_low_int_ena().bit()),
-            )
-            .field(
-                "thres1_high_int_ena",
-                &format_args!("{}", self.thres1_high_int_ena().bit()),
-            )
-            .field(
-                "thres0_high_int_ena",
-                &format_args!("{}", self.thres0_high_int_ena().bit()),
-            )
-            .field(
-                "apb_saradc2_done_int_ena",
-                &format_args!("{}", self.apb_saradc2_done_int_ena().bit()),
-            )
-            .field(
-                "apb_saradc1_done_int_ena",
-                &format_args!("{}", self.apb_saradc1_done_int_ena().bit()),
+                "apb_saradc1_done",
+                &format_args!("{}", self.apb_saradc1_done().bit()),
             )
             .finish()
     }
@@ -99,38 +87,38 @@ impl W {
     #[doc = "Bit 26 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_low_int_ena(&mut self) -> THRES1_LOW_INT_ENA_W<INT_ENA_SPEC> {
-        THRES1_LOW_INT_ENA_W::new(self, 26)
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<INT_ENA_SPEC> {
+        THRES1_LOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0_low_int_ena(&mut self) -> THRES0_LOW_INT_ENA_W<INT_ENA_SPEC> {
-        THRES0_LOW_INT_ENA_W::new(self, 27)
+    pub fn thres0_low(&mut self) -> THRES0_LOW_W<INT_ENA_SPEC> {
+        THRES0_LOW_W::new(self, 27)
     }
     #[doc = "Bit 28 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres1_high_int_ena(&mut self) -> THRES1_HIGH_INT_ENA_W<INT_ENA_SPEC> {
-        THRES1_HIGH_INT_ENA_W::new(self, 28)
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<INT_ENA_SPEC> {
+        THRES1_HIGH_W::new(self, 28)
     }
     #[doc = "Bit 29 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn thres0_high_int_ena(&mut self) -> THRES0_HIGH_INT_ENA_W<INT_ENA_SPEC> {
-        THRES0_HIGH_INT_ENA_W::new(self, 29)
+    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<INT_ENA_SPEC> {
+        THRES0_HIGH_W::new(self, 29)
     }
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc2_done_int_ena(&mut self) -> APB_SARADC2_DONE_INT_ENA_W<INT_ENA_SPEC> {
-        APB_SARADC2_DONE_INT_ENA_W::new(self, 30)
+    pub fn apb_saradc2_done(&mut self) -> APB_SARADC2_DONE_W<INT_ENA_SPEC> {
+        APB_SARADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc1_done_int_ena(&mut self) -> APB_SARADC1_DONE_INT_ENA_W<INT_ENA_SPEC> {
-        APB_SARADC1_DONE_INT_ENA_W::new(self, 31)
+    pub fn apb_saradc1_done(&mut self) -> APB_SARADC1_DONE_W<INT_ENA_SPEC> {
+        APB_SARADC1_DONE_W::new(self, 31)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

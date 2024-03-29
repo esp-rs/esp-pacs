@@ -1,55 +1,46 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `PER_END_INT_ST` reader - The status bit for SPI_MEM_PER_END_INT interrupt."]
-pub type PER_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `PES_END_INT_ST` reader - The status bit for SPI_MEM_PES_END_INT interrupt."]
-pub type PES_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `TOTAL_TRANS_END_INT_ST` reader - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
-pub type TOTAL_TRANS_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `BROWN_OUT_INT_ST` reader - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub type BROWN_OUT_INT_ST_R = crate::BitReader;
+#[doc = "Field `PER_END` reader - The status bit for SPI_MEM_PER_END_INT interrupt."]
+pub type PER_END_R = crate::BitReader;
+#[doc = "Field `PES_END` reader - The status bit for SPI_MEM_PES_END_INT interrupt."]
+pub type PES_END_R = crate::BitReader;
+#[doc = "Field `TOTAL_TRANS_END` reader - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
+pub type TOTAL_TRANS_END_R = crate::BitReader;
+#[doc = "Field `BROWN_OUT` reader - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
+pub type BROWN_OUT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The status bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
-    pub fn per_end_int_st(&self) -> PER_END_INT_ST_R {
-        PER_END_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn per_end(&self) -> PER_END_R {
+        PER_END_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The status bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
-    pub fn pes_end_int_st(&self) -> PES_END_INT_ST_R {
-        PES_END_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn pes_end(&self) -> PES_END_R {
+        PES_END_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
-    pub fn total_trans_end_int_st(&self) -> TOTAL_TRANS_END_INT_ST_R {
-        TOTAL_TRANS_END_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn total_trans_end(&self) -> TOTAL_TRANS_END_R {
+        TOTAL_TRANS_END_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
-    pub fn brown_out_int_st(&self) -> BROWN_OUT_INT_ST_R {
-        BROWN_OUT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn brown_out(&self) -> BROWN_OUT_R {
+        BROWN_OUT_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
+            .field("per_end", &format_args!("{}", self.per_end().bit()))
+            .field("pes_end", &format_args!("{}", self.pes_end().bit()))
             .field(
-                "per_end_int_st",
-                &format_args!("{}", self.per_end_int_st().bit()),
+                "total_trans_end",
+                &format_args!("{}", self.total_trans_end().bit()),
             )
-            .field(
-                "pes_end_int_st",
-                &format_args!("{}", self.pes_end_int_st().bit()),
-            )
-            .field(
-                "total_trans_end_int_st",
-                &format_args!("{}", self.total_trans_end_int_st().bit()),
-            )
-            .field(
-                "brown_out_int_st",
-                &format_args!("{}", self.brown_out_int_st().bit()),
-            )
+            .field("brown_out", &format_args!("{}", self.brown_out().bit()))
             .finish()
     }
 }

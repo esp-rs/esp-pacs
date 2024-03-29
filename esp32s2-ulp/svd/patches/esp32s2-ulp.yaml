@@ -10,3 +10,6 @@ RTC_IO:
     _strip: "GPIO_"
   OUT_W1TS:
     _strip: "GPIO_"
+
+RTC_I2C:
+  _include: ../../../common_patches/int_strip.yaml

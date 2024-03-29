@@ -1,27 +1,27 @@
 #[doc = "Register `INT_ST_TIMERS` reader"]
 pub type R = crate::R<INT_ST_TIMERS_SPEC>;
-#[doc = "Field `T0_INT_ST` reader - t0_int_st"]
-pub type T0_INT_ST_R = crate::BitReader;
-#[doc = "Field `WDT_INT_ST` reader - wdt_int_st"]
-pub type WDT_INT_ST_R = crate::BitReader;
+#[doc = "Field `T0` reader - t0_int_st"]
+pub type T0_R = crate::BitReader;
+#[doc = "Field `WDT` reader - wdt_int_st"]
+pub type WDT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - t0_int_st"]
     #[inline(always)]
-    pub fn t0_int_st(&self) -> T0_INT_ST_R {
-        T0_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn t0(&self) -> T0_R {
+        T0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - wdt_int_st"]
     #[inline(always)]
-    pub fn wdt_int_st(&self) -> WDT_INT_ST_R {
-        WDT_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn wdt(&self) -> WDT_R {
+        WDT_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_TIMERS")
-            .field("t0_int_st", &format_args!("{}", self.t0_int_st().bit()))
-            .field("wdt_int_st", &format_args!("{}", self.wdt_int_st().bit()))
+            .field("t0", &format_args!("{}", self.t0().bit()))
+            .field("wdt", &format_args!("{}", self.wdt().bit()))
             .finish()
     }
 }

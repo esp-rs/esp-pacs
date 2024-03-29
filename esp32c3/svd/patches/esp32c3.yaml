@@ -1,5 +1,46 @@
 _svd: ../esp32c3.base.svd
 
+_modify:
+  SPI?:
+    groupName: SPI
+
+I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+
+RTC_CNTL:
+  _include: ../../../common_patches/rtc_cntl_int_strip.yaml
+
+"EFUSE,I2C0,I2S0,LEDC,UART0,APB_SARADC,SPI1,SYSTIMER,UHCI0,USB_DEVICE":
+  _include: ../../../common_patches/int_strip.yaml
+
+APB_CTRL:
+  PERI_BACKUP_INT_RAW:
+    _strip: PERI_BACKUP_
+    _strip_end: _INT_RAW
+  PERI_BACKUP_INT_ST:
+    _strip: PERI_BACKUP_
+    _strip_end: _INT_ST
+  PERI_BACKUP_INT_ENA:
+    _strip: PERI_BACKUP_
+    _strip_end: _INT_ENA
+  PERI_BACKUP_INT_CLR:
+    _strip: PERI_BACKUP_
+    _strip_end: _INT_CLR
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
+EXTMEM:
+  _include: ../../../common_patches/extmem_cache_int_strip.yaml
+
+TIMG0:
+  _include: ../../../common_patches/tim_int_strip.yaml
+
+SPI2:
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+
 DS:
   _add:
       IV_MEM%s:
@@ -37,6 +78,9 @@ DMA:
         name: ENA
       INT_CLR_CH?:
         name: CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
     CH%s:
       IN_CONF0_CH?:
         name: IN_CONF0

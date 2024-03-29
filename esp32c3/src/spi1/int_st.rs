@@ -1,66 +1,51 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `PER_END_INT_ST` reader - The status bit for SPI_MEM_PER_END_INT interrupt."]
-pub type PER_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `PES_END_INT_ST` reader - The status bit for SPI_MEM_PES_END_INT interrupt."]
-pub type PES_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `WPE_END_INT_ST` reader - The status bit for SPI_MEM_WPE_END_INT interrupt."]
-pub type WPE_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `SLV_ST_END_INT_ST` reader - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
-pub type SLV_ST_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `MST_ST_END_INT_ST` reader - The status bit for SPI_MEM_MST_ST_END_INT interrupt."]
-pub type MST_ST_END_INT_ST_R = crate::BitReader;
+#[doc = "Field `PER_END` reader - The status bit for SPI_MEM_PER_END_INT interrupt."]
+pub type PER_END_R = crate::BitReader;
+#[doc = "Field `PES_END` reader - The status bit for SPI_MEM_PES_END_INT interrupt."]
+pub type PES_END_R = crate::BitReader;
+#[doc = "Field `WPE_END` reader - The status bit for SPI_MEM_WPE_END_INT interrupt."]
+pub type WPE_END_R = crate::BitReader;
+#[doc = "Field `SLV_ST_END` reader - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
+pub type SLV_ST_END_R = crate::BitReader;
+#[doc = "Field `MST_ST_END` reader - The status bit for SPI_MEM_MST_ST_END_INT interrupt."]
+pub type MST_ST_END_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The status bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
-    pub fn per_end_int_st(&self) -> PER_END_INT_ST_R {
-        PER_END_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn per_end(&self) -> PER_END_R {
+        PER_END_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The status bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
-    pub fn pes_end_int_st(&self) -> PES_END_INT_ST_R {
-        PES_END_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn pes_end(&self) -> PES_END_R {
+        PES_END_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The status bit for SPI_MEM_WPE_END_INT interrupt."]
     #[inline(always)]
-    pub fn wpe_end_int_st(&self) -> WPE_END_INT_ST_R {
-        WPE_END_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn wpe_end(&self) -> WPE_END_R {
+        WPE_END_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
-    pub fn slv_st_end_int_st(&self) -> SLV_ST_END_INT_ST_R {
-        SLV_ST_END_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn slv_st_end(&self) -> SLV_ST_END_R {
+        SLV_ST_END_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The status bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
-    pub fn mst_st_end_int_st(&self) -> MST_ST_END_INT_ST_R {
-        MST_ST_END_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn mst_st_end(&self) -> MST_ST_END_R {
+        MST_ST_END_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "per_end_int_st",
-                &format_args!("{}", self.per_end_int_st().bit()),
-            )
-            .field(
-                "pes_end_int_st",
-                &format_args!("{}", self.pes_end_int_st().bit()),
-            )
-            .field(
-                "wpe_end_int_st",
-                &format_args!("{}", self.wpe_end_int_st().bit()),
-            )
-            .field(
-                "slv_st_end_int_st",
-                &format_args!("{}", self.slv_st_end_int_st().bit()),
-            )
-            .field(
-                "mst_st_end_int_st",
-                &format_args!("{}", self.mst_st_end_int_st().bit()),
-            )
+            .field("per_end", &format_args!("{}", self.per_end().bit()))
+            .field("pes_end", &format_args!("{}", self.pes_end().bit()))
+            .field("wpe_end", &format_args!("{}", self.wpe_end().bit()))
+            .field("slv_st_end", &format_args!("{}", self.slv_st_end().bit()))
+            .field("mst_st_end", &format_args!("{}", self.mst_st_end().bit()))
             .finish()
     }
 }

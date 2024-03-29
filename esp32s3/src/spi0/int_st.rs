@@ -1,19 +1,19 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `TOTAL_TRANS_END_INT_ST` reader - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
-pub type TOTAL_TRANS_END_INT_ST_R = crate::BitReader;
-#[doc = "Field `ECC_ERR_INT_ST` reader - The status bit for SPI_MEM_ECC_ERR_INT interrupt."]
-pub type ECC_ERR_INT_ST_R = crate::BitReader;
+#[doc = "Field `TOTAL_TRANS_END` reader - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
+pub type TOTAL_TRANS_END_R = crate::BitReader;
+#[doc = "Field `ECC_ERR` reader - The status bit for SPI_MEM_ECC_ERR_INT interrupt."]
+pub type ECC_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 2 - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
-    pub fn total_trans_end_int_st(&self) -> TOTAL_TRANS_END_INT_ST_R {
-        TOTAL_TRANS_END_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn total_trans_end(&self) -> TOTAL_TRANS_END_R {
+        TOTAL_TRANS_END_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - The status bit for SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn ecc_err_int_st(&self) -> ECC_ERR_INT_ST_R {
-        ECC_ERR_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ecc_err(&self) -> ECC_ERR_R {
+        ECC_ERR_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -21,13 +21,10 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
             .field(
-                "total_trans_end_int_st",
-                &format_args!("{}", self.total_trans_end_int_st().bit()),
+                "total_trans_end",
+                &format_args!("{}", self.total_trans_end().bit()),
             )
-            .field(
-                "ecc_err_int_st",
-                &format_args!("{}", self.ecc_err_int_st().bit()),
-            )
+            .field("ecc_err", &format_args!("{}", self.ecc_err().bit()))
             .finish()
     }
 }
