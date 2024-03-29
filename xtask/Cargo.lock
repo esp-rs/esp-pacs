@@ -915,9 +915,9 @@ dependencies = [
 
 [[package]]
 name = "svdtools"
-version = "0.3.12"
+version = "0.3.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ac38de8b530923beb460bcab78e0ec5f3b5e4aa0fc209aa700d5a7080b41a3c2"
+checksum = "bccbfd634e9fa3c724098e952883b3924f25ab55c98f507596737d4710bbed67"
 dependencies = [
  "anyhow",
  "clap",

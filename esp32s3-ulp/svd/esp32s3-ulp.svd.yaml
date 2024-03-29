@@ -1,0 +1,3359 @@
+---
+vendor: "ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD."
+vendorID: ESPRESSIF
+name: ESP32-S3-ULP
+series: RISC-V ULP
+version: "1"
+description: 32-bit RISC-V MCU
+licenseText: "Copyright 2023 Espressif Systems (Shanghai) PTE LTD\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n        http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License."
+cpu:
+  name: RV32IMC
+  revision: r0p0
+  endian: little
+  mpuPresent: false
+  fpuPresent: false
+  nvicPrioBits: 4
+  vendorSystickConfig: false
+addressUnitBits: 32
+width: 32
+resetValue: 0
+resetMask: 4294967295
+peripherals:
+  - name: RTC_CNTL
+    description: Real-Time Clock Control
+    groupName: RTC_CNTL
+    baseAddress: 32768
+    addressBlock:
+      - offset: 0
+        size: 348
+        usage: registers
+    interrupt:
+      - name: RISCV_START_INT
+        value: 6
+      - name: SW_INT
+        value: 7
+      - name: SWD_INT
+        value: 8
+    registers:
+      - register:
+          name: RTC_ULP_CP_TIMER
+          description: configure ulp
+          addressOffset: 252
+          size: 32
+          fields:
+            - name: ULP_CP_PC_INIT
+              description: ULP-coprocessor PC initial address
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: ULP_CP_GPIO_WAKEUP_ENA
+              description: ULP-coprocessor wakeup by GPIO enable
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_GPIO_WAKEUP_CLR
+              description: ULP-coprocessor wakeup by GPIO state clear
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: ULP_CP_SLP_TIMER_EN
+              description: ULP-coprocessor timer enable bit
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: RTC_ULP_CP_CTRL
+          description: configure ulp
+          addressOffset: 256
+          size: 32
+          resetValue: 1049088
+          fields:
+            - name: ULP_CP_MEM_ADDR_INIT
+              description: No public
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: ULP_CP_MEM_ADDR_SIZE
+              description: No public
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+            - name: ULP_CP_MEM_OFFST_CLR
+              description: No public
+              bitOffset: 22
+              bitWidth: 1
+              access: write-only
+            - name: ULP_CP_CLK_FO
+              description: ulp coprocessor clk force on
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_RESET
+              description: ulp coprocessor clk software reset
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_FORCE_START_TOP
+              description: "1: ULP-coprocessor is started by SW"
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_START_TOP
+              description: Write 1 to start ULP-coprocessor
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COCPU_CTRL
+          description: configure ulp-riscv
+          addressOffset: 260
+          size: 32
+          resetValue: 9046032
+          fields:
+            - name: COCPU_CLK_FO
+              description: cocpu clk force on
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_START_2_RESET_DIS
+              description: time from start cocpu to pull down reset
+              bitOffset: 1
+              bitWidth: 6
+              access: read-write
+            - name: COCPU_START_2_INTR_EN
+              description: time from start cocpu to give start interrupt
+              bitOffset: 7
+              bitWidth: 6
+              access: read-write
+            - name: COCPU_SHUT
+              description: to shut cocpu
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SHUT_2_CLK_DIS
+              description: time from shut cocpu to disable clk
+              bitOffset: 14
+              bitWidth: 8
+              access: read-write
+            - name: COCPU_SHUT_RESET_EN
+              description: to reset cocpu
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SEL
+              description: "1: old ULP 0: new riscV"
+              bitOffset: 23
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_DONE_FORCE
+              description: "1: select riscv done 0: select ulp done"
+              bitOffset: 24
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_DONE
+              description: done signal used by riscv to control timer.
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SW_INT_TRIGGER
+              description: trigger cocpu register interrupt
+              bitOffset: 26
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_CLKGATE_EN
+              description: open ulp-riscv clk gate
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: RTC_ULP_CP_TIMER_1
+          description: configure ulp sleep time
+          addressOffset: 308
+          size: 32
+          resetValue: 51200
+          fields:
+            - name: ULP_CP_TIMER_SLP_CYCLE
+              description: sleep cycles for ULP-coprocessor timer
+              bitOffset: 8
+              bitWidth: 24
+              access: read-write
+  - name: RTC_I2C
+    description: Low-power I2C (Inter-Integrated Circuit) Controller
+    groupName: RTC_I2C
+    baseAddress: 60416
+    addressBlock:
+      - offset: 0
+        size: 124
+        usage: registers
+    registers:
+      - register:
+          name: SCL_LOW
+          description: configure low scl period
+          addressOffset: 0
+          size: 32
+          resetValue: 256
+          fields:
+            - name: PERIOD
+              description: time period that scl =0
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: CTRL
+          description: configure i2c ctrl
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: SDA_FORCE_OUT
+              description: "1=push pull,0=open drain"
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: SCL_FORCE_OUT
+              description: "1=push pull,0=open drain"
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: MS_MODE
+              description: "1=master,0=slave"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: TRANS_START
+              description: force start
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: TX_LSB_FIRST
+              description: transit lsb first
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: RX_LSB_FIRST
+              description: receive lsb first
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: I2C_CTRL_CLK_GATE_EN
+              description: configure i2c ctrl clk enable
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: I2C_RESET
+              description: rtc i2c sw reset
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: I2CCLK_EN
+              description: rtc i2c reg clk gating
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: STATUS
+          description: get i2c status
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: ACK_REC
+              description: ack response
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: SLAVE_RW
+              description: slave read or write
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: ARB_LOST
+              description: arbitration is lost
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: BUS_BUSY
+              description: bus is busy
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: SLAVE_ADDRESSED
+              description: slave reg sub address
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: BYTE_TRANS
+              description: One byte transit done
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: OP_CNT
+              description: which operation is working
+              bitOffset: 6
+              bitWidth: 2
+              access: read-only
+            - name: SHIFT
+              description: shifter content
+              bitOffset: 16
+              bitWidth: 8
+              access: read-only
+            - name: SCL_MAIN_STATE_LAST
+              description: i2c last main status
+              bitOffset: 24
+              bitWidth: 3
+              access: read-only
+            - name: SCL_STATE_LAST
+              description: scl last status
+              bitOffset: 28
+              bitWidth: 3
+              access: read-only
+      - register:
+          name: TO
+          description: configure time out
+          addressOffset: 12
+          size: 32
+          resetValue: 65536
+          fields:
+            - name: TIME_OUT
+              description: time out threshold
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SLAVE_ADDR
+          description: configure slave id
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: SLAVE_ADDR
+              description: slave address
+              bitOffset: 0
+              bitWidth: 15
+              access: read-write
+            - name: ADDR_10BIT_EN
+              description: i2c 10bit mode enable
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SCL_HIGH
+          description: configure high scl period
+          addressOffset: 20
+          size: 32
+          resetValue: 256
+          fields:
+            - name: PERIOD
+              description: time period that scl = 1
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SDA_DUTY
+          description: configure sda duty
+          addressOffset: 24
+          size: 32
+          resetValue: 16
+          fields:
+            - name: NUM
+              description: time period for SDA to toggle after SCL goes low
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SCL_START_PERIOD
+          description: configure scl start period
+          addressOffset: 28
+          size: 32
+          resetValue: 8
+          fields:
+            - name: SCL_START_PERIOD
+              description: time period for SCL to toggle after I2C start is triggered
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SCL_STOP_PERIOD
+          description: configure scl stop period
+          addressOffset: 32
+          size: 32
+          resetValue: 8
+          fields:
+            - name: SCL_STOP_PERIOD
+              description: time period for SCL to stop after I2C end is triggered
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: INT_CLR
+          description: interrupt clear register
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_CLR
+              description: clear slave transit complete interrupt
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: ARBITRATION_LOST_INT_CLR
+              description: clear arbitration lost interrupt
+              bitOffset: 1
+              bitWidth: 1
+              access: write-only
+            - name: MASTER_TRAN_COMP_INT_CLR
+              description: clear master transit complete interrupt
+              bitOffset: 2
+              bitWidth: 1
+              access: write-only
+            - name: TRANS_COMPLETE_INT_CLR
+              description: clear transit complete interrupt
+              bitOffset: 3
+              bitWidth: 1
+              access: write-only
+            - name: TIME_OUT_INT_CLR
+              description: clear time out interrupt
+              bitOffset: 4
+              bitWidth: 1
+              access: write-only
+            - name: ACK_ERR_INT_CLR
+              description: clear ack error interrupt
+              bitOffset: 5
+              bitWidth: 1
+              access: write-only
+            - name: RX_DATA_INT_CLR
+              description: clear receive data interrupt
+              bitOffset: 6
+              bitWidth: 1
+              access: write-only
+            - name: TX_DATA_INT_CLR
+              description: clear transit load data complete interrupt
+              bitOffset: 7
+              bitWidth: 1
+              access: write-only
+            - name: DETECT_START_INT_CLR
+              description: clear detect start interrupt
+              bitOffset: 8
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: INT_RAW
+          description: interrupt raw register
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_RAW
+              description: slave transit complete interrupt raw
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: ARBITRATION_LOST_INT_RAW
+              description: arbitration lost interrupt raw
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: MASTER_TRAN_COMP_INT_RAW
+              description: master transit complete interrupt raw
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_COMPLETE_INT_RAW
+              description: transit complete interrupt raw
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: TIME_OUT_INT_RAW
+              description: time out interrupt raw
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: ACK_ERR_INT_RAW
+              description: ack error interrupt raw
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: RX_DATA_INT_RAW
+              description: receive data interrupt raw
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: TX_DATA_INT_RAW
+              description: transit data interrupt raw
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: DETECT_START_INT_RAW
+              description: detect start interrupt raw
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ST
+          description: interrupt state register
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_ST
+              description: slave transit complete interrupt state
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: ARBITRATION_LOST_INT_ST
+              description: arbitration lost interrupt state
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: MASTER_TRAN_COMP_INT_ST
+              description: master transit complete interrupt state
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_COMPLETE_INT_ST
+              description: transit complete interrupt state
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: TIME_OUT_INT_ST
+              description: time out interrupt state
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: ACK_ERR_INT_ST
+              description: ack error interrupt state
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: RX_DATA_INT_ST
+              description: receive data interrupt state
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: TX_DATA_INT_ST
+              description: transit data interrupt state
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: DETECT_START_INT_ST
+              description: detect start interrupt state
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ENA
+          description: interrupt enable register
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_ENA
+              description: enable slave transit complete interrupt
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: ARBITRATION_LOST_INT_ENA
+              description: enable arbitration lost interrupt
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: MASTER_TRAN_COMP_INT_ENA
+              description: enable master transit complete interrupt
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: TRANS_COMPLETE_INT_ENA
+              description: enable transit complete interrupt
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: TIME_OUT_INT_ENA
+              description: enable time out interrupt
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: ACK_ERR_INT_ENA
+              description: enable eack error interrupt
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: RX_DATA_INT_ENA
+              description: enable receive data interrupt
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: TX_DATA_INT_ENA
+              description: enable transit data interrupt
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: DETECT_START_INT_ENA
+              description: enable detect start interrupt
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATA
+          description: get i2c data status
+          addressOffset: 52
+          size: 32
+          fields:
+            - name: I2C_RDATA
+              description: data received
+              bitOffset: 0
+              bitWidth: 8
+              access: read-only
+            - name: SLAVE_TX_DATA
+              description: data sent by slave
+              bitOffset: 8
+              bitWidth: 8
+              access: read-write
+            - name: I2C_DONE
+              description: i2c done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD0
+          description: i2c commond0 register
+          addressOffset: 56
+          size: 32
+          resetValue: 2307
+          fields:
+            - name: COMMAND0
+              description: command0
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND0_DONE
+              description: command0_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD1
+          description: i2c commond1 register
+          addressOffset: 60
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND1
+              description: command1
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND1_DONE
+              description: command1_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD2
+          description: i2c commond2 register
+          addressOffset: 64
+          size: 32
+          resetValue: 2306
+          fields:
+            - name: COMMAND2
+              description: command2
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND2_DONE
+              description: command2_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD3
+          description: i2c commond3 register
+          addressOffset: 68
+          size: 32
+          resetValue: 257
+          fields:
+            - name: COMMAND3
+              description: command3
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND3_DONE
+              description: command3_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD4
+          description: i2c commond4 register
+          addressOffset: 72
+          size: 32
+          resetValue: 2305
+          fields:
+            - name: COMMAND4
+              description: command4
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND4_DONE
+              description: command4_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD5
+          description: i2c commond5_register
+          addressOffset: 76
+          size: 32
+          resetValue: 5889
+          fields:
+            - name: COMMAND5
+              description: command5
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND5_DONE
+              description: command5_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD6
+          description: i2c commond6 register
+          addressOffset: 80
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND6
+              description: command6
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND6_DONE
+              description: command6_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD7
+          description: i2c commond7 register
+          addressOffset: 84
+          size: 32
+          resetValue: 2308
+          fields:
+            - name: COMMAND7
+              description: command7
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND7_DONE
+              description: command7_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD8
+          description: i2c commond8 register
+          addressOffset: 88
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND8
+              description: command8
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND8_DONE
+              description: command8_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD9
+          description: i2c commond9 register
+          addressOffset: 92
+          size: 32
+          resetValue: 2307
+          fields:
+            - name: COMMAND9
+              description: command9
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND9_DONE
+              description: command9_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD10
+          description: i2c commond10 register
+          addressOffset: 96
+          size: 32
+          resetValue: 257
+          fields:
+            - name: COMMAND10
+              description: command10
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND10_DONE
+              description: command10_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD11
+          description: i2c commond11 register
+          addressOffset: 100
+          size: 32
+          resetValue: 2305
+          fields:
+            - name: COMMAND11
+              description: command11
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND11_DONE
+              description: command11_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD12
+          description: i2c commond12 register
+          addressOffset: 104
+          size: 32
+          resetValue: 5889
+          fields:
+            - name: COMMAND12
+              description: command12
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND12_DONE
+              description: command12_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD13
+          description: i2c commond13 register
+          addressOffset: 108
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND13
+              description: command13
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND13_DONE
+              description: command13_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD14
+          description: i2c commond14 register
+          addressOffset: 112
+          size: 32
+          fields:
+            - name: COMMAND14
+              description: command14
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND14_DONE
+              description: command14_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD15
+          description: i2c commond15 register
+          addressOffset: 116
+          size: 32
+          fields:
+            - name: COMMAND15
+              description: command15
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND15_DONE
+              description: command15_done
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: DATE
+          description: version register
+          addressOffset: 252
+          size: 32
+          resetValue: 26235664
+          fields:
+            - name: I2C_DATE
+              description: version
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+  - name: RTC_IO
+    description: Low-power Input/Output
+    groupName: RTC_IO
+    baseAddress: 41984
+    addressBlock:
+      - offset: 0
+        size: 240
+        usage: registers
+    registers:
+      - register:
+          name: OUT
+          description: RTC GPIO 0 ~ 21 output data register
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: DATA
+              description: RTC GPIO 0 ~ 21 output data
+              bitOffset: 10
+              bitWidth: 22
+              access: read-write
+      - register:
+          name: OUT_W1TS
+          description: one set RTC GPIO output data
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: OUT_DATA_W1TS
+              description: RTC GPIO 0 ~ 21 output data write 1 to set
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: OUT_W1TC
+          description: one clear RTC GPIO output data
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: OUT_DATA_W1TC
+              description: RTC GPIO 0 ~ 21 output data write 1 to clear
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: ENABLE
+          description: Configure RTC GPIO output enable
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: GPIO_ENABLE
+              description: RTC GPIO 0 ~ 21 enable
+              bitOffset: 10
+              bitWidth: 22
+              access: read-write
+      - register:
+          name: ENABLE_W1TS
+          description: one set RTC GPIO output enable
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: GPIO_ENABLE_W1TS
+              description: RTC GPIO 0 ~ 21 enable write 1 to set
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: ENABLE_W1TC
+          description: one clear RTC GPIO output enable
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: GPIO_ENABLE_W1TC
+              description: RTC GPIO 0 ~ 21 enable write 1 to clear
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: STATUS
+          description: RTC GPIO 0 ~ 21 interrupt status
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: INT
+              description: RTC GPIO 0 ~ 21 interrupt status
+              bitOffset: 10
+              bitWidth: 22
+              access: read-write
+      - register:
+          name: STATUS_W1TS
+          description: One set RTC GPIO 0 ~ 21 interrupt status
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: GPIO_STATUS_INT_W1TS
+              description: RTC GPIO 0 ~ 21 interrupt status write 1 to set
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: STATUS_W1TC
+          description: One clear RTC GPIO 0 ~ 21 interrupt status
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: GPIO_STATUS_INT_W1TC
+              description: RTC GPIO 0 ~ 21 interrupt status write 1 to clear
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: IN
+          description: RTC GPIO input data
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: NEXT
+              description: RTC GPIO input data
+              bitOffset: 10
+              bitWidth: 22
+              access: read-only
+      - register:
+          name: PIN0
+          description: configure RTC GPIO0
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN1
+          description: configure RTC GPIO1
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN2
+          description: configure RTC GPIO2
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN3
+          description: configure RTC GPIO3
+          addressOffset: 52
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN4
+          description: configure RTC GPIO4
+          addressOffset: 56
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN5
+          description: configure RTC GPIO5
+          addressOffset: 60
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN6
+          description: configure RTC GPIO6
+          addressOffset: 64
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN7
+          description: configure RTC GPIO7
+          addressOffset: 68
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN8
+          description: configure RTC GPIO8
+          addressOffset: 72
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN9
+          description: configure RTC GPIO9
+          addressOffset: 76
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN10
+          description: configure RTC GPIO10
+          addressOffset: 80
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN11
+          description: configure RTC GPIO11
+          addressOffset: 84
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN12
+          description: configure RTC GPIO12
+          addressOffset: 88
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN13
+          description: configure RTC GPIO13
+          addressOffset: 92
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN14
+          description: configure RTC GPIO14
+          addressOffset: 96
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN15
+          description: configure RTC GPIO15
+          addressOffset: 100
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN16
+          description: configure RTC GPIO16
+          addressOffset: 104
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN17
+          description: configure RTC GPIO17
+          addressOffset: 108
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN18
+          description: configure RTC GPIO18
+          addressOffset: 112
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN19
+          description: configure RTC GPIO19
+          addressOffset: 116
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN20
+          description: configure RTC GPIO20
+          addressOffset: 120
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: PIN21
+          description: configure RTC GPIO21
+          addressOffset: 124
+          size: 32
+          fields:
+            - name: PAD_DRIVER
+              description: "if set to 0: normal output, if set to 1: open drain"
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: INT_TYPE
+              description: "if set to 0: GPIO interrupt disable,  if set to 1: rising edge trigger,  if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger,  if set to 5: high level trigger"
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: RTC GPIO wakeup enable bit
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: RTC_DEBUG_SEL
+          description: configure rtc debug
+          addressOffset: 128
+          size: 32
+          fields:
+            - name: DEBUG_SEL0
+              description: configure rtc debug
+              bitOffset: 0
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL1
+              description: configure rtc debug
+              bitOffset: 5
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL2
+              description: configure rtc debug
+              bitOffset: 10
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL3
+              description: configure rtc debug
+              bitOffset: 15
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL4
+              description: configure rtc debug
+              bitOffset: 20
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_12M_NO_GATING
+              description: configure rtc debug
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: TOUCH_PAD0
+          description: configure RTC  PAD0
+          addressOffset: 132
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD1
+          description: configure RTC  PAD1
+          addressOffset: 136
+          size: 32
+          resetValue: 1207959552
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD2
+          description: configure RTC  PAD2
+          addressOffset: 140
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD3
+          description: configure RTC  PAD3
+          addressOffset: 144
+          size: 32
+          resetValue: 1207959552
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD4
+          description: configure RTC  PAD4
+          addressOffset: 148
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD5
+          description: configure RTC  PAD5
+          addressOffset: 152
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD6
+          description: configure RTC  PAD6
+          addressOffset: 156
+          size: 32
+          resetValue: 1207959552
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD7
+          description: configure RTC  PAD7
+          addressOffset: 160
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD8
+          description: configure RTC  PAD8
+          addressOffset: 164
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD9
+          description: configure RTC  PAD9
+          addressOffset: 168
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD10
+          description: configure RTC  PAD10
+          addressOffset: 172
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD11
+          description: configure RTC  PAD11
+          addressOffset: 176
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD12
+          description: configure RTC  PAD12
+          addressOffset: 180
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD13
+          description: configure RTC  PAD13
+          addressOffset: 184
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_PAD14
+          description: configure RTC  PAD14
+          addressOffset: 188
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: TOUCH_XPD
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: TOUCH_TIE_OPT
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: TOUCH_START
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: XTAL_32P_PAD
+          description: configure RTC  PAD15
+          addressOffset: 192
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: X32P_FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: X32P_SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: X32P_SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: X32P_SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: X32P_FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: X32P_MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: X32P_RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: X32P_RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: X32P_DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: XTAL_32N_PAD
+          description: configure RTC  PAD16
+          addressOffset: 196
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: X32N_FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: X32N_SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: X32N_SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: X32N_SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: X32N_FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: X32N_MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: X32N_RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: X32N_RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: X32N_DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: PAD_DAC1
+          description: configure RTC  PAD17
+          addressOffset: 200
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: PDAC1_DAC
+              description: PDAC1_DAC
+              bitOffset: 3
+              bitWidth: 8
+              access: read-write
+            - name: PDAC1_XPD_DAC
+              description: PDAC1_XPD_DAC
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_DAC_XPD_FORCE
+              description: "1: use reg_pdac1_xpd_dac to control PDAC1_XPD_DAC,0: use SAR ADC FSM to control PDAC1_XPD_DAC"
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_FUN_SEL
+              description: PDAC1 function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: PDAC1_MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_RUE
+              description: PDAC1_RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_RDE
+              description: PDAC1_RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_DRV
+              description: PDAC1_DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: PAD_DAC2
+          description: configure RTC  PAD18
+          addressOffset: 204
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: PDAC2_DAC
+              description: PDAC2_DAC
+              bitOffset: 3
+              bitWidth: 8
+              access: read-write
+            - name: PDAC2_XPD_DAC
+              description: PDAC2_XPD_DAC
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_DAC_XPD_FORCE
+              description: "1: use reg_pdac2_xpd_dac to control PDAC2_XPD_DAC,0: use SAR ADC FSM to control PDAC2_XPD_DAC"
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_FUN_SEL
+              description: PDAC1 function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: PDAC2_MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_RUE
+              description: PDAC2_RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_RDE
+              description: PDAC2_RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_DRV
+              description: PDAC2_DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: RTC_PAD19
+          description: configure RTC  PAD19
+          addressOffset: 208
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: RTC_PAD20
+          description: configure RTC  PAD20
+          addressOffset: 212
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: RTC_PAD21
+          description: configure RTC  PAD21
+          addressOffset: 216
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: input enable in work mode
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode during sleep,0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: function sel
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO,0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: RUE
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: RDE
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: DRV
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: EXT_WAKEUP0
+          description: configure EXT0 wakeup
+          addressOffset: 220
+          size: 32
+          fields:
+            - name: SEL
+              description: "******* Description configure***"
+              bitOffset: 27
+              bitWidth: 5
+              access: read-write
+      - register:
+          name: XTL_EXT_CTR
+          description: configure gpio pd XTAL
+          addressOffset: 224
+          size: 32
+          fields:
+            - name: SEL
+              description: select RTC GPIO 0 ~ 17 to control XTAL
+              bitOffset: 27
+              bitWidth: 5
+              access: read-write
+      - register:
+          name: SAR_I2C_IO
+          description: configure rtc i2c mux
+          addressOffset: 228
+          size: 32
+          fields:
+            - name: SAR_DEBUG_BIT_SEL
+              description: "******* Description configure***"
+              bitOffset: 23
+              bitWidth: 5
+              access: read-write
+            - name: SAR_I2C_SCL_SEL
+              description: "******* Description configure***"
+              bitOffset: 28
+              bitWidth: 2
+              access: read-write
+            - name: SAR_I2C_SDA_SEL
+              description: "******* Description configure***"
+              bitOffset: 30
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: TOUCH_CTRL
+          description: configure touch pad bufmode
+          addressOffset: 232
+          size: 32
+          fields:
+            - name: IO_TOUCH_BUFSEL
+              description: BUF_SEL when touch work without fsm
+              bitOffset: 0
+              bitWidth: 4
+              access: read-write
+            - name: IO_TOUCH_BUFMODE
+              description: BUF_MODE when touch work without fsm
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATE
+          description: version
+          addressOffset: 508
+          size: 32
+          resetValue: 34607488
+          fields:
+            - name: DATE
+              description: version
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+  - name: SENS
+    description: SENS Peripheral
+    groupName: SENS
+    baseAddress: 51200
+    addressBlock:
+      - offset: 0
+        size: 284
+        usage: registers
+    interrupt:
+      - name: TOUCH_DONE_INT
+        value: 0
+      - name: TOUCH_INACTIVE_INT
+        value: 1
+      - name: TOUCH_ACTIVE_INT
+        value: 2
+      - name: SARADC1_DONE_INT
+        value: 3
+      - name: SARADC2_DONE_INT
+        value: 4
+      - name: TSENS_DONE_INT
+        value: 5
+      - name: TOUCH_TIME_OUT_INT
+        value: 9
+      - name: TOUCH_APPROACH_LOOP_DONE_INT
+        value: 10
+      - name: TOUCH_SCAN_DONE_INT
+        value: 11
+    registers:
+      - register:
+          name: SAR_SLAVE_ADDR1
+          description: configure i2c slave address
+          addressOffset: 64
+          size: 32
+          fields:
+            - name: SAR_I2C_SLAVE_ADDR1
+              description: configure i2c slave address1
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: SAR_I2C_SLAVE_ADDR0
+              description: configure i2c slave address0
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+            - name: SAR_SARADC_MEAS_STATUS
+              description: no public
+              bitOffset: 22
+              bitWidth: 8
+              access: read-only
+      - register:
+          name: SAR_SLAVE_ADDR2
+          description: configure i2c slave address
+          addressOffset: 68
+          size: 32
+          fields:
+            - name: SAR_I2C_SLAVE_ADDR3
+              description: configure i2c slave address3
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: SAR_I2C_SLAVE_ADDR2
+              description: configure i2c slave address2
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+      - register:
+          name: SAR_SLAVE_ADDR3
+          description: configure i2c slave address
+          addressOffset: 72
+          size: 32
+          fields:
+            - name: SAR_I2C_SLAVE_ADDR5
+              description: configure i2c slave address5
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: SAR_I2C_SLAVE_ADDR4
+              description: configure i2c slave address4
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+      - register:
+          name: SAR_SLAVE_ADDR4
+          description: configure i2c slave address
+          addressOffset: 76
+          size: 32
+          fields:
+            - name: SAR_I2C_SLAVE_ADDR7
+              description: configure i2c slave address7
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: SAR_I2C_SLAVE_ADDR6
+              description: configure i2c slave address6
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+      - register:
+          name: SAR_I2C_CTRL
+          description: configure rtc i2c controller by sw
+          addressOffset: 88
+          size: 32
+          fields:
+            - name: SAR_I2C_CTRL
+              description: I2C control data  only active when reg_sar_i2c_start_force = 1
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+            - name: SAR_I2C_START
+              description: start I2C  only active when reg_sar_i2c_start_force = 1
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: SAR_I2C_START_FORCE
+              description: "1: I2C started by SW  0: I2C started by FSM"
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SAR_COCPU_INT_RAW
+          description: the interrupt raw of ulp
+          addressOffset: 232
+          size: 32
+          fields:
+            - name: SAR_COCPU_TOUCH_DONE_INT_RAW
+              description: int from touch done
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_INACTIVE_INT_RAW
+              description: int from touch inactive
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_ACTIVE_INT_RAW
+              description: int from touch active
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SARADC1_INT_RAW
+              description: int from saradc1
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SARADC2_INT_RAW
+              description: int from saradc2
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TSENS_INT_RAW
+              description: int from tsens
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_START_INT_RAW
+              description: int from start
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SW_INT_RAW
+              description: int from software
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SWD_INT_RAW
+              description: int from super watch dog
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_TIMEOUT_INT_RAW
+              description: int from timeout done
+              bitOffset: 9
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_RAW
+              description: int from approach loop done
+              bitOffset: 10
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_SCAN_DONE_INT_RAW
+              description: int from touch scan done
+              bitOffset: 11
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: SAR_COCPU_INT_ENA
+          description: the interrupt enable of ulp
+          addressOffset: 236
+          size: 32
+          fields:
+            - name: SAR_COCPU_TOUCH_DONE_INT_ENA
+              description: int enable of touch done
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_TOUCH_INACTIVE_INT_ENA
+              description: int enable of from touch inactive
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_TOUCH_ACTIVE_INT_ENA
+              description: int enable of touch active
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_SARADC1_INT_ENA
+              description: int enable of from saradc1
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_SARADC2_INT_ENA
+              description: int enable of from saradc2
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_TSENS_INT_ENA
+              description: int enable of tsens
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_START_INT_ENA
+              description: int enable of start
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_SW_INT_ENA
+              description: int enable of  software
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_SWD_INT_ENA
+              description: int enable of super watch dog
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_TOUCH_TIMEOUT_INT_ENA
+              description: int enable of timeout done
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_ENA
+              description: int enable of approach loop done
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+            - name: SAR_COCPU_TOUCH_SCAN_DONE_INT_ENA
+              description: int enable of touch scan done
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SAR_COCPU_INT_ST
+          description: the interrupt state of ulp
+          addressOffset: 240
+          size: 32
+          fields:
+            - name: SAR_COCPU_TOUCH_DONE_INT_ST
+              description: int state of touch done
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_INACTIVE_INT_ST
+              description: int state of from touch inactive
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_ACTIVE_INT_ST
+              description: int state of touch active
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SARADC1_INT_ST
+              description: int state of from saradc1
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SARADC2_INT_ST
+              description: int state of from saradc2
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TSENS_INT_ST
+              description: int state of tsens
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_START_INT_ST
+              description: int state of start
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SW_INT_ST
+              description: int state of  software
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_SWD_INT_ST
+              description: int state of super watch dog
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_TIMEOUT_INT_ST
+              description: int state of timeout done
+              bitOffset: 9
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_ST
+              description: int state of approach loop done
+              bitOffset: 10
+              bitWidth: 1
+              access: read-only
+            - name: SAR_COCPU_TOUCH_SCAN_DONE_INT_ST
+              description: int state of touch scan done
+              bitOffset: 11
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: SAR_COCPU_INT_CLR
+          description: the interrupt clear of ulp
+          addressOffset: 244
+          size: 32
+          fields:
+            - name: SAR_COCPU_TOUCH_DONE_INT_CLR
+              description: int clear of touch done
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_TOUCH_INACTIVE_INT_CLR
+              description: int clear of from touch inactive
+              bitOffset: 1
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_TOUCH_ACTIVE_INT_CLR
+              description: int clear of touch active
+              bitOffset: 2
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_SARADC1_INT_CLR
+              description: int clear of from saradc1
+              bitOffset: 3
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_SARADC2_INT_CLR
+              description: int clear of from saradc2
+              bitOffset: 4
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_TSENS_INT_CLR
+              description: int clear of tsens
+              bitOffset: 5
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_START_INT_CLR
+              description: int clear of start
+              bitOffset: 6
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_SW_INT_CLR
+              description: int clear of  software
+              bitOffset: 7
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_SWD_INT_CLR
+              description: int clear of super watch dog
+              bitOffset: 8
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_TOUCH_TIMEOUT_INT_CLR
+              description: int clear of timeout done
+              bitOffset: 9
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_CLR
+              description: int clear of approach loop done
+              bitOffset: 10
+              bitWidth: 1
+              access: write-only
+            - name: SAR_COCPU_TOUCH_SCAN_DONE_INT_CLR
+              description: int clear of touch scan done
+              bitOffset: 11
+              bitWidth: 1
+              access: write-only

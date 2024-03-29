@@ -10,7 +10,9 @@ use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{
-    config::{IdentFormats, IdentFormatsTheme}, util::IdentFormat, Config, Target
+    config::{IdentFormats, IdentFormatsTheme},
+    util::IdentFormat,
+    Config, Target,
 };
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::Document;
@@ -62,6 +64,13 @@ enum Commands {
 
     /// Patch the specified package(s)'s SVD file
     Patch {
+        /// Package(s) to target
+        #[arg(value_enum, default_values_t = Chip::iter())]
+        chips: Vec<Chip>,
+    },
+
+    /// Patches and generates SVD-like YAML
+    SvdYaml {
         /// Package(s) to target
         #[arg(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
@@ -130,6 +139,10 @@ fn main() -> Result<()> {
             .iter()
             .try_for_each(|chip| patch_svd(&workspace, chip)),
 
+        Commands::SvdYaml { chips } => chips
+            .iter()
+            .try_for_each(|chip| generate_yaml(&workspace, chip)),
+
         Commands::Generate { chips } => chips
             .iter()
             .try_for_each(|chip: &Chip| generate_package(&workspace, chip)),
@@ -182,6 +195,27 @@ fn patch_svd(workspace: &Path, chip: &Chip) -> Result<()> {
     Ok(())
 }
 
+fn generate_yaml(workspace: &Path, chip: &Chip) -> Result<()> {
+    use svdtools::convert::convert_cli::{convert, InputFormat, OutputFormat, ParserConfig};
+    patch_svd(workspace, chip)?;
+    let svd_path = workspace.join(chip.to_string()).join("svd");
+    let from = svd_path.join(format!("{chip}.svd"));
+    let to = svd_path.join(format!("{chip}.svd.yaml"));
+    let parser_config = ParserConfig {
+        expand: false,
+        expand_properties: false,
+        ignore_enums: false,
+    };
+    convert(
+        &from,
+        &to,
+        Some(InputFormat::Xml),
+        Some(OutputFormat::Yaml),
+        parser_config,
+        None,
+    )
+}
+
 fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     // Patch the SVD prior to generating the package:
     patch_svd(workspace, chip)?;
@@ -222,7 +256,10 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         _ => IdentFormats::default_theme(),
     };
     ident_formats.insert("enum_name".into(), IdentFormat::default().constant_case());
-    ident_formats.insert("enum_read_name".into(), IdentFormat::default().constant_case());
+    ident_formats.insert(
+        "enum_read_name".into(),
+        IdentFormat::default().constant_case(),
+    );
     ident_formats.insert("enum_value".into(), IdentFormat::default().pascal_case());
     ident_formats.extend(config.ident_formats.drain());
     config.ident_formats = ident_formats;

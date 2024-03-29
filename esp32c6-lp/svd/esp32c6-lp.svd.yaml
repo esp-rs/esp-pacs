@@ -1,0 +1,4582 @@
+---
+vendor: "ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD."
+vendorID: ESPRESSIF
+name: ESP32-C6-LP
+series: ESP32 Series
+version: "2"
+description: 32-bit RISC-V MCU
+licenseText: "Copyright 2024 Espressif Systems (Shanghai) PTE LTD\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n        http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License."
+cpu:
+  name: RV32IMAC
+  revision: r0p0
+  endian: little
+  mpuPresent: false
+  fpuPresent: false
+  nvicPrioBits: 0
+  vendorSystickConfig: false
+addressUnitBits: 32
+width: 32
+resetValue: 0
+resetMask: 4294967295
+peripherals:
+  - name: LP_I2C0
+    description: Low-power I2C (Inter-Integrated Circuit) Controller 0
+    groupName: I2C
+    baseAddress: 1611339776
+    addressBlock:
+      - offset: 0
+        size: 136
+        usage: registers
+    interrupt:
+      - name: LP_I2C
+        value: 17
+    registers:
+      - register:
+          name: SCL_LOW_PERIOD
+          description: "Configures the low level width of the SCL\nClock"
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: SCL_LOW_PERIOD
+              description: "This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+      - register:
+          name: CTR
+          description: Transmission setting
+          addressOffset: 4
+          size: 32
+          resetValue: 520
+          fields:
+            - name: SDA_FORCE_OUT
+              description: "1: direct output, 0: open drain output."
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: SCL_FORCE_OUT
+              description: "1: direct output, 0: open drain output."
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: SAMPLE_SCL_LEVEL
+              description: "This register is used to select the sample mode.\n1: sample SDA data on the SCL low level.\n0: sample SDA data on the SCL high level."
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: RX_FULL_ACK_LEVEL
+              description: This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold.
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: TRANS_START
+              description: Set this bit to start sending the data in txfifo.
+              bitOffset: 5
+              bitWidth: 1
+              access: write-only
+            - name: TX_LSB_FIRST
+              description: "This bit is used to control the sending mode for data needing to be sent. \n1: send data from the least significant bit,\n0: send data from the most significant bit."
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: RX_LSB_FIRST
+              description: "This bit is used to control the storage mode for received data.\n1: receive data from the least significant bit,\n0: receive data from the most significant bit."
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: CLK_EN
+              description: Reserved
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: ARBITRATION_EN
+              description: This is the enable bit for arbitration_lost.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: FSM_RST
+              description: This register is used to reset the scl FMS.
+              bitOffset: 10
+              bitWidth: 1
+              access: write-only
+            - name: CONF_UPGATE
+              description: synchronization bit
+              bitOffset: 11
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: SR
+          description: Describe I2C work status.
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: RESP_REC
+              description: "The received ACK value in master mode or slave mode. 0: ACK, 1: NACK."
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: ARB_LOST
+              description: "When the I2C controller loses control of SCL line, this register changes to 1."
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: BUS_BUSY
+              description: "1: the I2C bus is busy transferring data, 0: the I2C bus is in idle state."
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: RXFIFO_CNT
+              description: This field represents the amount of data needed to be sent.
+              bitOffset: 8
+              bitWidth: 5
+              access: read-only
+            - name: TXFIFO_CNT
+              description: This field stores the amount of received data in RAM.
+              bitOffset: 18
+              bitWidth: 5
+              access: read-only
+            - name: SCL_MAIN_STATE_LAST
+              description: "This field indicates the states of the I2C module state machine. \n0: Idle, 1: Address shift, 2: ACK address, 3: Rx data, 4: Tx data, 5: Send ACK, 6: Wait ACK"
+              bitOffset: 24
+              bitWidth: 3
+              access: read-only
+            - name: SCL_STATE_LAST
+              description: "This field indicates the states of the state machine used to produce SCL.\n0: Idle, 1: Start, 2: Negative edge, 3: Low, 4: Positive edge, 5: High, 6: Stop"
+              bitOffset: 28
+              bitWidth: 3
+              access: read-only
+      - register:
+          name: TO
+          description: Setting time out control for receiving data.
+          addressOffset: 12
+          size: 32
+          resetValue: 16
+          fields:
+            - name: TIME_OUT_VALUE
+              description: "This register is used to configure the timeout for receiving a data bit in APB\nclock cycles."
+              bitOffset: 0
+              bitWidth: 5
+              access: read-write
+            - name: TIME_OUT_EN
+              description: This is the enable bit for time out control.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: FIFO_ST
+          description: FIFO status register.
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: RXFIFO_RADDR
+              description: This is the offset address of the APB reading from rxfifo
+              bitOffset: 0
+              bitWidth: 4
+              access: read-only
+            - name: RXFIFO_WADDR
+              description: This is the offset address of i2c module receiving data and writing to rxfifo.
+              bitOffset: 5
+              bitWidth: 4
+              access: read-only
+            - name: TXFIFO_RADDR
+              description: This is the offset address of i2c module reading from txfifo.
+              bitOffset: 10
+              bitWidth: 4
+              access: read-only
+            - name: TXFIFO_WADDR
+              description: This is the offset address of APB bus writing to txfifo.
+              bitOffset: 15
+              bitWidth: 4
+              access: read-only
+      - register:
+          name: FIFO_CONF
+          description: FIFO configuration register.
+          addressOffset: 24
+          size: 32
+          resetValue: 16454
+          fields:
+            - name: RXFIFO_WM_THRHD
+              description: "The water mark threshold of rx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd[3:0], reg_rxfifo_wm_int_raw bit will be valid."
+              bitOffset: 0
+              bitWidth: 4
+              access: read-write
+            - name: TXFIFO_WM_THRHD
+              description: "The water mark threshold of tx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and tx FIFO counter is smaller than reg_txfifo_wm_thrhd[3:0], reg_txfifo_wm_int_raw bit will be valid."
+              bitOffset: 5
+              bitWidth: 4
+              access: read-write
+            - name: NONFIFO_EN
+              description: Set this bit to enable APB nonfifo access.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+            - name: RX_FIFO_RST
+              description: Set this bit to reset rx-fifo.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: TX_FIFO_RST
+              description: Set this bit to reset tx-fifo.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: FIFO_PRT_EN
+              description: "The control enable bit of FIFO pointer in non-fifo access mode. This bit controls the valid bits and the interrupts of tx/rx_fifo overflow, underflow, full and empty."
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATA
+          description: Rx FIFO read data.
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: FIFO_RDATA
+              description: The value of rx FIFO read data.
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: INT_RAW
+          description: Raw interrupt status
+          addressOffset: 32
+          size: 32
+          resetValue: 2
+          fields:
+            - name: RXFIFO_WM_INT_RAW
+              description: The raw interrupt bit for I2C_RXFIFO_WM_INT interrupt.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: TXFIFO_WM_INT_RAW
+              description: The raw interrupt bit for I2C_TXFIFO_WM_INT interrupt.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: RXFIFO_OVF_INT_RAW
+              description: The raw interrupt bit for I2C_RXFIFO_OVF_INT interrupt.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: END_DETECT_INT_RAW
+              description: The raw interrupt bit for the I2C_END_DETECT_INT interrupt.
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: BYTE_TRANS_DONE_INT_RAW
+              description: The raw interrupt bit for the I2C_END_DETECT_INT interrupt.
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: ARBITRATION_LOST_INT_RAW
+              description: The raw interrupt bit for the I2C_ARBITRATION_LOST_INT interrupt.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: MST_TXFIFO_UDF_INT_RAW
+              description: The raw interrupt bit for I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_COMPLETE_INT_RAW
+              description: The raw interrupt bit for the I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: TIME_OUT_INT_RAW
+              description: The raw interrupt bit for the I2C_TIME_OUT_INT interrupt.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_START_INT_RAW
+              description: The raw interrupt bit for the I2C_TRANS_START_INT interrupt.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-only
+            - name: NACK_INT_RAW
+              description: The raw interrupt bit for I2C_SLAVE_STRETCH_INT interrupt.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-only
+            - name: TXFIFO_OVF_INT_RAW
+              description: The raw interrupt bit for I2C_TXFIFO_OVF_INT interrupt.
+              bitOffset: 11
+              bitWidth: 1
+              access: read-only
+            - name: RXFIFO_UDF_INT_RAW
+              description: The raw interrupt bit for I2C_RXFIFO_UDF_INT  interrupt.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-only
+            - name: SCL_ST_TO_INT_RAW
+              description: The raw interrupt bit for I2C_SCL_ST_TO_INT interrupt.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-only
+            - name: SCL_MAIN_ST_TO_INT_RAW
+              description: The raw interrupt bit for I2C_SCL_MAIN_ST_TO_INT interrupt.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-only
+            - name: DET_START_INT_RAW
+              description: The raw interrupt bit for I2C_DET_START_INT interrupt.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_CLR
+          description: Interrupt clear bits
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: RXFIFO_WM_INT_CLR
+              description: Set this bit to clear I2C_RXFIFO_WM_INT interrupt.
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: TXFIFO_WM_INT_CLR
+              description: Set this bit to clear I2C_TXFIFO_WM_INT interrupt.
+              bitOffset: 1
+              bitWidth: 1
+              access: write-only
+            - name: RXFIFO_OVF_INT_CLR
+              description: Set this bit to clear I2C_RXFIFO_OVF_INT interrupt.
+              bitOffset: 2
+              bitWidth: 1
+              access: write-only
+            - name: END_DETECT_INT_CLR
+              description: Set this bit to clear the I2C_END_DETECT_INT interrupt.
+              bitOffset: 3
+              bitWidth: 1
+              access: write-only
+            - name: BYTE_TRANS_DONE_INT_CLR
+              description: Set this bit to clear the I2C_END_DETECT_INT interrupt.
+              bitOffset: 4
+              bitWidth: 1
+              access: write-only
+            - name: ARBITRATION_LOST_INT_CLR
+              description: Set this bit to clear the I2C_ARBITRATION_LOST_INT interrupt.
+              bitOffset: 5
+              bitWidth: 1
+              access: write-only
+            - name: MST_TXFIFO_UDF_INT_CLR
+              description: Set this bit to clear I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 6
+              bitWidth: 1
+              access: write-only
+            - name: TRANS_COMPLETE_INT_CLR
+              description: Set this bit to clear the I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 7
+              bitWidth: 1
+              access: write-only
+            - name: TIME_OUT_INT_CLR
+              description: Set this bit to clear the I2C_TIME_OUT_INT interrupt.
+              bitOffset: 8
+              bitWidth: 1
+              access: write-only
+            - name: TRANS_START_INT_CLR
+              description: Set this bit to clear the I2C_TRANS_START_INT interrupt.
+              bitOffset: 9
+              bitWidth: 1
+              access: write-only
+            - name: NACK_INT_CLR
+              description: Set this bit to clear I2C_SLAVE_STRETCH_INT interrupt.
+              bitOffset: 10
+              bitWidth: 1
+              access: write-only
+            - name: TXFIFO_OVF_INT_CLR
+              description: Set this bit to clear I2C_TXFIFO_OVF_INT interrupt.
+              bitOffset: 11
+              bitWidth: 1
+              access: write-only
+            - name: RXFIFO_UDF_INT_CLR
+              description: Set this bit to clear I2C_RXFIFO_UDF_INT  interrupt.
+              bitOffset: 12
+              bitWidth: 1
+              access: write-only
+            - name: SCL_ST_TO_INT_CLR
+              description: Set this bit to clear I2C_SCL_ST_TO_INT interrupt.
+              bitOffset: 13
+              bitWidth: 1
+              access: write-only
+            - name: SCL_MAIN_ST_TO_INT_CLR
+              description: Set this bit to clear I2C_SCL_MAIN_ST_TO_INT interrupt.
+              bitOffset: 14
+              bitWidth: 1
+              access: write-only
+            - name: DET_START_INT_CLR
+              description: Set this bit to clear I2C_DET_START_INT interrupt.
+              bitOffset: 15
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: INT_ENA
+          description: Interrupt enable bits
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: RXFIFO_WM_INT_ENA
+              description: The interrupt enable bit for I2C_RXFIFO_WM_INT interrupt.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: TXFIFO_WM_INT_ENA
+              description: The interrupt enable bit for I2C_TXFIFO_WM_INT interrupt.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: RXFIFO_OVF_INT_ENA
+              description: The interrupt enable bit for I2C_RXFIFO_OVF_INT interrupt.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: END_DETECT_INT_ENA
+              description: The interrupt enable bit for the I2C_END_DETECT_INT interrupt.
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: BYTE_TRANS_DONE_INT_ENA
+              description: The interrupt enable bit for the I2C_END_DETECT_INT interrupt.
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: ARBITRATION_LOST_INT_ENA
+              description: The interrupt enable bit for the I2C_ARBITRATION_LOST_INT interrupt.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: MST_TXFIFO_UDF_INT_ENA
+              description: The interrupt enable bit for I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: TRANS_COMPLETE_INT_ENA
+              description: The interrupt enable bit for the I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: TIME_OUT_INT_ENA
+              description: The interrupt enable bit for the I2C_TIME_OUT_INT interrupt.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: TRANS_START_INT_ENA
+              description: The interrupt enable bit for the I2C_TRANS_START_INT interrupt.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: NACK_INT_ENA
+              description: The interrupt enable bit for I2C_SLAVE_STRETCH_INT interrupt.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+            - name: TXFIFO_OVF_INT_ENA
+              description: The interrupt enable bit for I2C_TXFIFO_OVF_INT interrupt.
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: RXFIFO_UDF_INT_ENA
+              description: The interrupt enable bit for I2C_RXFIFO_UDF_INT  interrupt.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: SCL_ST_TO_INT_ENA
+              description: The interrupt enable bit for I2C_SCL_ST_TO_INT interrupt.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SCL_MAIN_ST_TO_INT_ENA
+              description: The interrupt enable bit for I2C_SCL_MAIN_ST_TO_INT interrupt.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: DET_START_INT_ENA
+              description: The interrupt enable bit for I2C_DET_START_INT interrupt.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_STATUS
+          description: Status of captured I2C communication events
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: RXFIFO_WM_INT_ST
+              description: The masked interrupt status bit for I2C_RXFIFO_WM_INT interrupt.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: TXFIFO_WM_INT_ST
+              description: The masked interrupt status bit for I2C_TXFIFO_WM_INT interrupt.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: RXFIFO_OVF_INT_ST
+              description: The masked interrupt status bit for I2C_RXFIFO_OVF_INT interrupt.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: END_DETECT_INT_ST
+              description: The masked interrupt status bit for the I2C_END_DETECT_INT interrupt.
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: BYTE_TRANS_DONE_INT_ST
+              description: The masked interrupt status bit for the I2C_END_DETECT_INT interrupt.
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: ARBITRATION_LOST_INT_ST
+              description: The masked interrupt status bit for the I2C_ARBITRATION_LOST_INT interrupt.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: MST_TXFIFO_UDF_INT_ST
+              description: The masked interrupt status bit for I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_COMPLETE_INT_ST
+              description: The masked interrupt status bit for the I2C_TRANS_COMPLETE_INT interrupt.
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: TIME_OUT_INT_ST
+              description: The masked interrupt status bit for the I2C_TIME_OUT_INT interrupt.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_START_INT_ST
+              description: The masked interrupt status bit for the I2C_TRANS_START_INT interrupt.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-only
+            - name: NACK_INT_ST
+              description: The masked interrupt status bit for I2C_SLAVE_STRETCH_INT interrupt.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-only
+            - name: TXFIFO_OVF_INT_ST
+              description: The masked interrupt status bit for I2C_TXFIFO_OVF_INT interrupt.
+              bitOffset: 11
+              bitWidth: 1
+              access: read-only
+            - name: RXFIFO_UDF_INT_ST
+              description: The masked interrupt status bit for I2C_RXFIFO_UDF_INT  interrupt.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-only
+            - name: SCL_ST_TO_INT_ST
+              description: The masked interrupt status bit for I2C_SCL_ST_TO_INT interrupt.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-only
+            - name: SCL_MAIN_ST_TO_INT_ST
+              description: The masked interrupt status bit for I2C_SCL_MAIN_ST_TO_INT interrupt.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-only
+            - name: DET_START_INT_ST
+              description: The masked interrupt status bit for I2C_DET_START_INT interrupt.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: SDA_HOLD
+          description: Configures the hold time after a negative SCL edge.
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: TIME
+              description: "This register is used to configure the time to hold the data after the negative\nedge of SCL, in I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+      - register:
+          name: SDA_SAMPLE
+          description: Configures the sample time after a positive SCL edge.
+          addressOffset: 52
+          size: 32
+          fields:
+            - name: TIME
+              description: "This register is used to configure for how long SDA is sampled, in I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+      - register:
+          name: SCL_HIGH_PERIOD
+          description: Configures the high level width of SCL
+          addressOffset: 56
+          size: 32
+          fields:
+            - name: SCL_HIGH_PERIOD
+              description: "This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+            - name: SCL_WAIT_HIGH_PERIOD
+              description: "This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."
+              bitOffset: 9
+              bitWidth: 7
+              access: read-write
+      - register:
+          name: SCL_START_HOLD
+          description: Configures the delay between the SDA and SCL negative edge for a start condition
+          addressOffset: 64
+          size: 32
+          resetValue: 8
+          fields:
+            - name: TIME
+              description: "This register is used to configure the time between the negative edge\nof SDA and the negative edge of SCL for a START condition, in I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+      - register:
+          name: SCL_RSTART_SETUP
+          description: "Configures the delay between the positive\nedge of SCL and the negative edge of SDA"
+          addressOffset: 68
+          size: 32
+          resetValue: 8
+          fields:
+            - name: TIME
+              description: "This register is used to configure the time between the positive\nedge of SCL and the negative edge of SDA for a RESTART condition, in I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+      - register:
+          name: SCL_STOP_HOLD
+          description: "Configures the delay after the SCL clock\nedge for a stop condition"
+          addressOffset: 72
+          size: 32
+          resetValue: 8
+          fields:
+            - name: TIME
+              description: "This register is used to configure the delay after the STOP condition,\nin I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+      - register:
+          name: SCL_STOP_SETUP
+          description: "Configures the delay between the SDA and\nSCL positive edge for a stop condition"
+          addressOffset: 76
+          size: 32
+          resetValue: 8
+          fields:
+            - name: TIME
+              description: "This register is used to configure the time between the positive edge\nof SCL and the positive edge of SDA, in I2C module clock cycles."
+              bitOffset: 0
+              bitWidth: 9
+              access: read-write
+      - register:
+          name: FILTER_CFG
+          description: SCL and SDA filter configuration register
+          addressOffset: 80
+          size: 32
+          resetValue: 768
+          fields:
+            - name: SCL_FILTER_THRES
+              description: "When a pulse on the SCL input has smaller width than this register value\nin I2C module clock cycles, the I2C controller will ignore that pulse."
+              bitOffset: 0
+              bitWidth: 4
+              access: read-write
+            - name: SDA_FILTER_THRES
+              description: "When a pulse on the SDA input has smaller width than this register value\nin I2C module clock cycles, the I2C controller will ignore that pulse."
+              bitOffset: 4
+              bitWidth: 4
+              access: read-write
+            - name: SCL_FILTER_EN
+              description: This is the filter enable bit for SCL.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: SDA_FILTER_EN
+              description: This is the filter enable bit for SDA.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: CLK_CONF
+          description: I2C CLK configuration register
+          addressOffset: 84
+          size: 32
+          resetValue: 2097152
+          fields:
+            - name: SCLK_DIV_NUM
+              description: the integral part of the fractional divisor for i2c module
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+            - name: SCLK_DIV_A
+              description: the numerator of the fractional part of the fractional divisor for i2c module
+              bitOffset: 8
+              bitWidth: 6
+              access: read-write
+            - name: SCLK_DIV_B
+              description: the denominator of the fractional part of the fractional divisor for i2c module
+              bitOffset: 14
+              bitWidth: 6
+              access: read-write
+            - name: SCLK_SEL
+              description: "The clock selection for i2c module:0-XTAL,1-CLK_8MHz."
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: SCLK_ACTIVE
+              description: The clock switch for i2c module
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD0
+          description: I2C command register 0
+          addressOffset: 88
+          size: 32
+          fields:
+            - name: COMMAND0
+              description: "This is the content of command 0. It consists of three parts: \nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND0_DONE
+              description: "When command 0 is done in I2C Master mode, this bit changes to high\nlevel."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD1
+          description: I2C command register 1
+          addressOffset: 92
+          size: 32
+          fields:
+            - name: COMMAND1
+              description: "This is the content of command 1. It consists of three parts: \nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND1_DONE
+              description: "When command 1 is done in I2C Master mode, this bit changes to high\nlevel."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD2
+          description: I2C command register 2
+          addressOffset: 96
+          size: 32
+          fields:
+            - name: COMMAND2
+              description: "This is the content of command 2. It consists of three parts: \nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND2_DONE
+              description: "When command 2 is done in I2C Master mode, this bit changes to high\nLevel."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD3
+          description: I2C command register 3
+          addressOffset: 100
+          size: 32
+          fields:
+            - name: COMMAND3
+              description: "This is the content of command 3. It consists of three parts: \nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND3_DONE
+              description: "When command 3 is done in I2C Master mode, this bit changes to high\nlevel."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD4
+          description: I2C command register 4
+          addressOffset: 104
+          size: 32
+          fields:
+            - name: COMMAND4
+              description: "This is the content of command 4. It consists of three parts: \nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND4_DONE
+              description: "When command 4 is done in I2C Master mode, this bit changes to high\nlevel."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD5
+          description: I2C command register 5
+          addressOffset: 108
+          size: 32
+          fields:
+            - name: COMMAND5
+              description: "This is the content of command 5. It consists of three parts:\nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND5_DONE
+              description: "When command 5 is done in I2C Master mode, this bit changes to high level."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD6
+          description: I2C command register 6
+          addressOffset: 112
+          size: 32
+          fields:
+            - name: COMMAND6
+              description: "This is the content of command 6. It consists of three parts: \nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND6_DONE
+              description: "When command 6 is done in I2C Master mode, this bit changes to high level."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COMD7
+          description: I2C command register 7
+          addressOffset: 116
+          size: 32
+          fields:
+            - name: COMMAND7
+              description: "This is the content of command 7. It consists of three parts: \nop_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.\nByte_num represents the number of bytes that need to be sent or received.\nack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more\nInformation."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND7_DONE
+              description: "When command 7 is done in I2C Master mode, this bit changes to high level."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SCL_ST_TIME_OUT
+          description: SCL status time out register
+          addressOffset: 120
+          size: 32
+          resetValue: 16
+          fields:
+            - name: SCL_ST_TO_I2C
+              description: The threshold value of SCL_FSM state unchanged period. It should be o more than 23
+              bitOffset: 0
+              bitWidth: 5
+              access: read-write
+      - register:
+          name: SCL_MAIN_ST_TIME_OUT
+          description: SCL main status time out register
+          addressOffset: 124
+          size: 32
+          resetValue: 16
+          fields:
+            - name: SCL_MAIN_ST_TO_I2C
+              description: The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23
+              bitOffset: 0
+              bitWidth: 5
+              access: read-write
+      - register:
+          name: SCL_SP_CONF
+          description: Power configuration register
+          addressOffset: 128
+          size: 32
+          fields:
+            - name: SCL_RST_SLV_EN
+              description: "When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to reg_scl_rst_slv_num[4:0]."
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: SCL_RST_SLV_NUM
+              description: Configure the pulses of SCL generated in I2C master mode. Valid when reg_scl_rst_slv_en is 1.
+              bitOffset: 1
+              bitWidth: 5
+              access: read-write
+            - name: SCL_PD_EN
+              description: "The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set reg_scl_force_out and reg_scl_pd_en to 1 to stretch SCL low."
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: SDA_PD_EN
+              description: "The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set reg_sda_force_out and reg_sda_pd_en to 1 to stretch SDA low."
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATE
+          description: Version register
+          addressOffset: 248
+          size: 32
+          resetValue: 35656003
+          fields:
+            - name: DATE
+              description: This is the the version register.
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: TXFIFO_START_ADDR
+          description: I2C TXFIFO base address register
+          addressOffset: 256
+          size: 32
+          fields:
+            - name: TXFIFO_START_ADDR
+              description: This is the I2C txfifo first address.
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+      - register:
+          name: RXFIFO_START_ADDR
+          description: I2C RXFIFO base address register
+          addressOffset: 384
+          size: 32
+          fields:
+            - name: RXFIFO_START_ADDR
+              description: This is the I2C rxfifo first address.
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+  - name: LP_PERI
+    description: LP_PERI Peripheral
+    groupName: LPPERI
+    baseAddress: 1611343872
+    addressBlock:
+      - offset: 0
+        size: 40
+        usage: registers
+    interrupt:
+      - name: LP_PERI_TIMEOUT
+        value: 19
+    registers:
+      - register:
+          name: CLK_EN
+          description: need_des
+          addressOffset: 0
+          size: 32
+          resetValue: 2139095040
+          fields:
+            - name: LP_TOUCH_CK_EN
+              description: need_des
+              bitOffset: 23
+              bitWidth: 1
+              access: read-write
+            - name: RNG_CK_EN
+              description: need_des
+              bitOffset: 24
+              bitWidth: 1
+              access: read-write
+            - name: OTP_DBG_CK_EN
+              description: need_des
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+            - name: LP_UART_CK_EN
+              description: need_des
+              bitOffset: 26
+              bitWidth: 1
+              access: read-write
+            - name: LP_IO_CK_EN
+              description: need_des
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: LP_EXT_I2C_CK_EN
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: LP_ANA_I2C_CK_EN
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: EFUSE_CK_EN
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: LP_CPU_CK_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: RESET_EN
+          description: need_des
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: BUS_RESET_EN
+              description: need_des
+              bitOffset: 23
+              bitWidth: 1
+              access: write-only
+            - name: LP_TOUCH_RESET_EN
+              description: need_des
+              bitOffset: 24
+              bitWidth: 1
+              access: read-write
+            - name: OTP_DBG_RESET_EN
+              description: need_des
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+            - name: LP_UART_RESET_EN
+              description: need_des
+              bitOffset: 26
+              bitWidth: 1
+              access: read-write
+            - name: LP_IO_RESET_EN
+              description: need_des
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: LP_EXT_I2C_RESET_EN
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: LP_ANA_I2C_RESET_EN
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: EFUSE_RESET_EN
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: LP_CPU_RESET_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: RNG_DATA
+          description: need_des
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: RND_DATA
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+      - register:
+          name: CPU
+          description: need_des
+          addressOffset: 12
+          size: 32
+          resetValue: 2147483648
+          fields:
+            - name: LPCORE_DBGM_UNAVALIABLE
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: BUS_TIMEOUT
+          description: need_des
+          addressOffset: 16
+          size: 32
+          resetValue: 3221209088
+          fields:
+            - name: LP_PERI_TIMEOUT_THRES
+              description: need_des
+              bitOffset: 14
+              bitWidth: 16
+              access: read-write
+            - name: LP_PERI_TIMEOUT_INT_CLEAR
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: LP_PERI_TIMEOUT_PROTECT_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: BUS_TIMEOUT_ADDR
+          description: need_des
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: LP_PERI_TIMEOUT_ADDR
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+      - register:
+          name: BUS_TIMEOUT_UID
+          description: need_des
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: LP_PERI_TIMEOUT_UID
+              description: need_des
+              bitOffset: 0
+              bitWidth: 7
+              access: read-only
+      - register:
+          name: MEM_CTRL
+          description: need_des
+          addressOffset: 28
+          size: 32
+          resetValue: 2147483648
+          fields:
+            - name: UART_WAKEUP_FLAG_CLR
+              description: need_des
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: UART_WAKEUP_FLAG
+              description: need_des
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: UART_WAKEUP_EN
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: UART_MEM_FORCE_PD
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: UART_MEM_FORCE_PU
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INTERRUPT_SOURCE
+          description: need_des
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: LP_INTERRUPT_SOURCE
+              description: "BIT5~BIT0: pmu_lp_int, modem_lp_int, lp_timer_lp_int, lp_uart_int, lp_i2c_int, lp_io_int"
+              bitOffset: 0
+              bitWidth: 6
+              access: read-only
+      - register:
+          name: DATE
+          description: need_des
+          addressOffset: 1020
+          size: 32
+          resetValue: 35676464
+          fields:
+            - name: LPPERI_DATE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 31
+              access: read-write
+            - name: CLK_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+  - name: LP_ANA_PERI
+    description: LP_ANA_PERI Peripheral
+    groupName: LP_ANA
+    baseAddress: 1611344896
+    addressBlock:
+      - offset: 0
+        size: 52
+        usage: registers
+    registers:
+      - register:
+          name: BOD_MODE0_CNTL
+          description: need_des
+          addressOffset: 0
+          size: 32
+          resetValue: 268173568
+          fields:
+            - name: BOD_MODE0_CLOSE_FLASH_ENA
+              description: need_des
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: BOD_MODE0_PD_RF_ENA
+              description: need_des
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: BOD_MODE0_INTR_WAIT
+              description: need_des
+              bitOffset: 8
+              bitWidth: 10
+              access: read-write
+            - name: BOD_MODE0_RESET_WAIT
+              description: need_des
+              bitOffset: 18
+              bitWidth: 10
+              access: read-write
+            - name: BOD_MODE0_CNT_CLR
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: BOD_MODE0_INTR_ENA
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: BOD_MODE0_RESET_SEL
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: BOD_MODE0_RESET_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: BOD_MODE1_CNTL
+          description: need_des
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: BOD_MODE1_RESET_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: CK_GLITCH_CNTL
+          description: need_des
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: CK_GLITCH_RESET_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: FIB_ENABLE
+          description: need_des
+          addressOffset: 12
+          size: 32
+          resetValue: 4294967295
+          fields:
+            - name: ANA_FIB_ENA
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: INT_RAW
+          description: need_des
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: BOD_MODE0_INT_RAW
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_ST
+          description: need_des
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: BOD_MODE0_INT_ST
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ENA
+          description: need_des
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: BOD_MODE0_INT_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_CLR
+          description: need_des
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: BOD_MODE0_INT_CLR
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: LP_INT_RAW
+          description: need_des
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: BOD_MODE0_LP_INT_RAW
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LP_INT_ST
+          description: need_des
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: BOD_MODE0_LP_INT_ST
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: LP_INT_ENA
+          description: need_des
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: BOD_MODE0_LP_INT_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LP_INT_CLR
+          description: need_des
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: BOD_MODE0_LP_INT_CLR
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: DATE
+          description: need_des
+          addressOffset: 1020
+          size: 32
+          resetValue: 35660384
+          fields:
+            - name: LP_ANA_DATE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 31
+              access: read-write
+            - name: CLK_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+  - name: LP_AON
+    description: LP_AON Peripheral
+    groupName: LP_AON
+    baseAddress: 1611337728
+    addressBlock:
+      - offset: 0
+        size: 92
+        usage: registers
+    registers:
+      - register:
+          name: STORE0
+          description: need_des
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: LP_AON_STORE0
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE1
+          description: need_des
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: LP_AON_STORE1
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE2
+          description: need_des
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: LP_AON_STORE2
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE3
+          description: need_des
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: LP_AON_STORE3
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE4
+          description: need_des
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: LP_AON_STORE4
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE5
+          description: need_des
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: LP_AON_STORE5
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE6
+          description: need_des
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: LP_AON_STORE6
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE7
+          description: need_des
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: LP_AON_STORE7
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE8
+          description: need_des
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: LP_AON_STORE8
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: STORE9
+          description: need_des
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: LP_AON_STORE9
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: GPIO_MUX
+          description: need_des
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: SEL
+              description: need_des
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: GPIO_HOLD0
+          description: need_des
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: GPIO_HOLD0
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: GPIO_HOLD1
+          description: need_des
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: GPIO_HOLD1
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: SYS_CFG
+          description: need_des
+          addressOffset: 52
+          size: 32
+          fields:
+            - name: FORCE_DOWNLOAD_BOOT
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: HPSYS_SW_RESET
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: CPUCORE0_CFG
+          description: need_des
+          addressOffset: 56
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: CPU_CORE0_SW_STALL
+              description: need_des
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+            - name: CPU_CORE0_SW_RESET
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: write-only
+            - name: CPU_CORE0_OCD_HALT_ON_RESET
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: CPU_CORE0_STAT_VECTOR_SEL
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: CPU_CORE0_DRESET_MASK
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: IO_MUX
+          description: need_des
+          addressOffset: 60
+          size: 32
+          fields:
+            - name: RESET_DISABLE
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: EXT_WAKEUP_CNTL
+          description: need_des
+          addressOffset: 64
+          size: 32
+          fields:
+            - name: EXT_WAKEUP_STATUS
+              description: need_des
+              bitOffset: 0
+              bitWidth: 8
+              access: read-only
+            - name: EXT_WAKEUP_STATUS_CLR
+              description: need_des
+              bitOffset: 14
+              bitWidth: 1
+              access: write-only
+            - name: EXT_WAKEUP_SEL
+              description: need_des
+              bitOffset: 15
+              bitWidth: 8
+              access: read-write
+            - name: EXT_WAKEUP_LV
+              description: need_des
+              bitOffset: 23
+              bitWidth: 8
+              access: read-write
+            - name: EXT_WAKEUP_FILTER
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: USB
+          description: need_des
+          addressOffset: 68
+          size: 32
+          fields:
+            - name: RESET_DISABLE
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LPBUS
+          description: need_des
+          addressOffset: 72
+          size: 32
+          resetValue: 2954887168
+          fields:
+            - name: FAST_MEM_WPULSE
+              description: This field controls fast memory WPULSE parameter.
+              bitOffset: 16
+              bitWidth: 3
+              access: read-write
+            - name: FAST_MEM_WA
+              description: This field controls fast memory WA parameter.
+              bitOffset: 19
+              bitWidth: 3
+              access: read-write
+            - name: FAST_MEM_RA
+              description: This field controls fast memory RA parameter.
+              bitOffset: 22
+              bitWidth: 2
+              access: read-write
+            - name: FAST_MEM_MUX_FSM_IDLE
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-only
+            - name: FAST_MEM_MUX_SEL_STATUS
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-only
+            - name: FAST_MEM_MUX_SEL_UPDATE
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: FAST_MEM_MUX_SEL
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SDIO_ACTIVE
+          description: need_des
+          addressOffset: 76
+          size: 32
+          resetValue: 41943040
+          fields:
+            - name: SDIO_ACT_DNUM
+              description: need_des
+              bitOffset: 22
+              bitWidth: 10
+              access: read-write
+      - register:
+          name: LPCORE
+          description: need_des
+          addressOffset: 80
+          size: 32
+          fields:
+            - name: ETM_WAKEUP_FLAG_CLR
+              description: need_des
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: ETM_WAKEUP_FLAG
+              description: need_des
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: DISABLE
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SAR_CCT
+          description: need_des
+          addressOffset: 84
+          size: 32
+          fields:
+            - name: SAR2_PWDET_CCT
+              description: need_des
+              bitOffset: 29
+              bitWidth: 3
+              access: read-write
+      - register:
+          name: DATE
+          description: need_des
+          addressOffset: 1020
+          size: 32
+          resetValue: 35672704
+          fields:
+            - name: DATE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 31
+              access: read-write
+            - name: CLK_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+  - name: LP_APM
+    description: Low-power Access Permission Management Controller
+    groupName: LP_APM
+    baseAddress: 1611347968
+    addressBlock:
+      - offset: 0
+        size: 100
+        usage: registers
+    interrupt:
+      - name: LP_APM_M0
+        value: 20
+      - name: LP_APM_M1
+        value: 21
+    registers:
+      - register:
+          name: REGION_FILTER_EN
+          description: Region filter enable register
+          addressOffset: 0
+          size: 32
+          resetValue: 1
+          fields:
+            - name: REGION_FILTER_EN
+              description: Region filter enable
+              bitOffset: 0
+              bitWidth: 4
+              access: read-write
+      - register:
+          name: REGION0_ADDR_START
+          description: Region address register
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: REGION0_ADDR_START
+              description: Start address of region0
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION0_ADDR_END
+          description: Region address register
+          addressOffset: 8
+          size: 32
+          resetValue: 4294967295
+          fields:
+            - name: REGION0_ADDR_END
+              description: End address of region0
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION0_PMS_ATTR
+          description: Region access authority attribute register
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: REGION0_R0_PMS_X
+              description: Region execute authority in REE_MODE0
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R0_PMS_W
+              description: Region write authority in REE_MODE0
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R0_PMS_R
+              description: Region read authority in REE_MODE0
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R1_PMS_X
+              description: Region execute authority in REE_MODE1
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R1_PMS_W
+              description: Region write authority in REE_MODE1
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R1_PMS_R
+              description: Region read authority in REE_MODE1
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R2_PMS_X
+              description: Region execute authority in REE_MODE2
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R2_PMS_W
+              description: Region write authority in REE_MODE2
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: REGION0_R2_PMS_R
+              description: Region read authority in REE_MODE2
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: REGION1_ADDR_START
+          description: Region address register
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: REGION1_ADDR_START
+              description: Start address of region1
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION1_ADDR_END
+          description: Region address register
+          addressOffset: 20
+          size: 32
+          resetValue: 4294967295
+          fields:
+            - name: REGION1_ADDR_END
+              description: End address of region1
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION1_PMS_ATTR
+          description: Region access authority attribute register
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: REGION1_R0_PMS_X
+              description: Region execute authority in REE_MODE0
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R0_PMS_W
+              description: Region write authority in REE_MODE0
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R0_PMS_R
+              description: Region read authority in REE_MODE0
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R1_PMS_X
+              description: Region execute authority in REE_MODE1
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R1_PMS_W
+              description: Region write authority in REE_MODE1
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R1_PMS_R
+              description: Region read authority in REE_MODE1
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R2_PMS_X
+              description: Region execute authority in REE_MODE2
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R2_PMS_W
+              description: Region write authority in REE_MODE2
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: REGION1_R2_PMS_R
+              description: Region read authority in REE_MODE2
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: REGION2_ADDR_START
+          description: Region address register
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: REGION2_ADDR_START
+              description: Start address of region2
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION2_ADDR_END
+          description: Region address register
+          addressOffset: 32
+          size: 32
+          resetValue: 4294967295
+          fields:
+            - name: REGION2_ADDR_END
+              description: End address of region2
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION2_PMS_ATTR
+          description: Region access authority attribute register
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: REGION2_R0_PMS_X
+              description: Region execute authority in REE_MODE0
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R0_PMS_W
+              description: Region write authority in REE_MODE0
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R0_PMS_R
+              description: Region read authority in REE_MODE0
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R1_PMS_X
+              description: Region execute authority in REE_MODE1
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R1_PMS_W
+              description: Region write authority in REE_MODE1
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R1_PMS_R
+              description: Region read authority in REE_MODE1
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R2_PMS_X
+              description: Region execute authority in REE_MODE2
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R2_PMS_W
+              description: Region write authority in REE_MODE2
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: REGION2_R2_PMS_R
+              description: Region read authority in REE_MODE2
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: REGION3_ADDR_START
+          description: Region address register
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: REGION3_ADDR_START
+              description: Start address of region3
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION3_ADDR_END
+          description: Region address register
+          addressOffset: 44
+          size: 32
+          resetValue: 4294967295
+          fields:
+            - name: REGION3_ADDR_END
+              description: End address of region3
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: REGION3_PMS_ATTR
+          description: Region access authority attribute register
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: REGION3_R0_PMS_X
+              description: Region execute authority in REE_MODE0
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R0_PMS_W
+              description: Region write authority in REE_MODE0
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R0_PMS_R
+              description: Region read authority in REE_MODE0
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R1_PMS_X
+              description: Region execute authority in REE_MODE1
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R1_PMS_W
+              description: Region write authority in REE_MODE1
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R1_PMS_R
+              description: Region read authority in REE_MODE1
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R2_PMS_X
+              description: Region execute authority in REE_MODE2
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R2_PMS_W
+              description: Region write authority in REE_MODE2
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: REGION3_R2_PMS_R
+              description: Region read authority in REE_MODE2
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: FUNC_CTRL
+          description: PMS function control register
+          addressOffset: 196
+          size: 32
+          resetValue: 3
+          fields:
+            - name: M0_PMS_FUNC_EN
+              description: PMS M0 function enable
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: M1_PMS_FUNC_EN
+              description: PMS M1 function enable
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: M0_STATUS
+          description: M0 status register
+          addressOffset: 200
+          size: 32
+          fields:
+            - name: M0_EXCEPTION_STATUS
+              description: Exception status
+              bitOffset: 0
+              bitWidth: 2
+              access: read-only
+      - register:
+          name: M0_STATUS_CLR
+          description: M0 status clear register
+          addressOffset: 204
+          size: 32
+          fields:
+            - name: M0_REGION_STATUS_CLR
+              description: Clear exception status
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: M0_EXCEPTION_INFO0
+          description: M0 exception_info0 register
+          addressOffset: 208
+          size: 32
+          fields:
+            - name: M0_EXCEPTION_REGION
+              description: Exception region
+              bitOffset: 0
+              bitWidth: 4
+              access: read-only
+            - name: M0_EXCEPTION_MODE
+              description: Exception mode
+              bitOffset: 16
+              bitWidth: 2
+              access: read-only
+            - name: M0_EXCEPTION_ID
+              description: Exception id information
+              bitOffset: 18
+              bitWidth: 5
+              access: read-only
+      - register:
+          name: M0_EXCEPTION_INFO1
+          description: M0 exception_info1 register
+          addressOffset: 212
+          size: 32
+          fields:
+            - name: M0_EXCEPTION_ADDR
+              description: Exception addr
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+      - register:
+          name: M1_STATUS
+          description: M1 status register
+          addressOffset: 216
+          size: 32
+          fields:
+            - name: M1_EXCEPTION_STATUS
+              description: Exception status
+              bitOffset: 0
+              bitWidth: 2
+              access: read-only
+      - register:
+          name: M1_STATUS_CLR
+          description: M1 status clear register
+          addressOffset: 220
+          size: 32
+          fields:
+            - name: M1_REGION_STATUS_CLR
+              description: Clear exception status
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: M1_EXCEPTION_INFO0
+          description: M1 exception_info0 register
+          addressOffset: 224
+          size: 32
+          fields:
+            - name: M1_EXCEPTION_REGION
+              description: Exception region
+              bitOffset: 0
+              bitWidth: 4
+              access: read-only
+            - name: M1_EXCEPTION_MODE
+              description: Exception mode
+              bitOffset: 16
+              bitWidth: 2
+              access: read-only
+            - name: M1_EXCEPTION_ID
+              description: Exception id information
+              bitOffset: 18
+              bitWidth: 5
+              access: read-only
+      - register:
+          name: M1_EXCEPTION_INFO1
+          description: M1 exception_info1 register
+          addressOffset: 228
+          size: 32
+          fields:
+            - name: M1_EXCEPTION_ADDR
+              description: Exception addr
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+      - register:
+          name: INT_EN
+          description: APM interrupt enable register
+          addressOffset: 232
+          size: 32
+          fields:
+            - name: M0_APM_INT_EN
+              description: APM M0 interrupt enable
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: M1_APM_INT_EN
+              description: APM M1 interrupt enable
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: CLOCK_GATE
+          description: clock gating register
+          addressOffset: 236
+          size: 32
+          resetValue: 1
+          fields:
+            - name: CLK_EN
+              description: reg_clk_en
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATE
+          description: Version register
+          addressOffset: 252
+          size: 32
+          resetValue: 35672640
+          fields:
+            - name: DATE
+              description: reg_date
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+  - name: LP_CLKRST
+    description: LP_CLKRST Peripheral
+    groupName: LP_CLKRST
+    baseAddress: 1611334656
+    addressBlock:
+      - offset: 0
+        size: 52
+        usage: registers
+    registers:
+      - register:
+          name: LP_CLK_CONF
+          description: need_des
+          addressOffset: 0
+          size: 32
+          resetValue: 4
+          fields:
+            - name: SLOW_CLK_SEL
+              description: need_des
+              bitOffset: 0
+              bitWidth: 2
+              access: read-write
+            - name: FAST_CLK_SEL
+              description: need_des
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: LP_PERI_DIV_NUM
+              description: need_des
+              bitOffset: 3
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: LP_CLK_PO_EN
+          description: need_des
+          addressOffset: 4
+          size: 32
+          resetValue: 2047
+          fields:
+            - name: AON_SLOW_OEN
+              description: need_des
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: AON_FAST_OEN
+              description: need_des
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: SOSC_OEN
+              description: need_des
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: FOSC_OEN
+              description: need_des
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: OSC32K_OEN
+              description: need_des
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: XTAL32K_OEN
+              description: need_des
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: CORE_EFUSE_OEN
+              description: need_des
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: SLOW_OEN
+              description: need_des
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: FAST_OEN
+              description: need_des
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: RNG_OEN
+              description: need_des
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: LPBUS_OEN
+              description: need_des
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LP_CLK_EN
+          description: need_des
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: FAST_ORI_GATE
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LP_RST_EN
+          description: need_des
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: AON_EFUSE_CORE_RESET_EN
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: LP_TIMER_RESET_EN
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: WDT_RESET_EN
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: ANA_PERI_RESET_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: RESET_CAUSE
+          description: need_des
+          addressOffset: 16
+          size: 32
+          resetValue: 32
+          fields:
+            - name: RESET_CAUSE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 5
+              access: read-only
+            - name: CORE0_RESET_FLAG
+              description: need_des
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: CORE0_RESET_CAUSE_CLR
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: write-only
+            - name: CORE0_RESET_FLAG_SET
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: CORE0_RESET_FLAG_CLR
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: CPU_RESET
+          description: need_des
+          addressOffset: 20
+          size: 32
+          resetValue: 71303168
+          fields:
+            - name: RTC_WDT_CPU_RESET_LENGTH
+              description: need_des
+              bitOffset: 22
+              bitWidth: 3
+              access: read-write
+            - name: RTC_WDT_CPU_RESET_EN
+              description: need_des
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+            - name: CPU_STALL_WAIT
+              description: need_des
+              bitOffset: 26
+              bitWidth: 5
+              access: read-write
+            - name: CPU_STALL_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: FOSC_CNTL
+          description: need_des
+          addressOffset: 24
+          size: 32
+          resetValue: 721420288
+          fields:
+            - name: FOSC_DFREQ
+              description: need_des
+              bitOffset: 22
+              bitWidth: 10
+              access: read-write
+      - register:
+          name: RC32K_CNTL
+          description: need_des
+          addressOffset: 28
+          size: 32
+          resetValue: 721420288
+          fields:
+            - name: RC32K_DFREQ
+              description: need_des
+              bitOffset: 22
+              bitWidth: 10
+              access: read-write
+      - register:
+          name: CLK_TO_HP
+          description: need_des
+          addressOffset: 32
+          size: 32
+          resetValue: 4026531840
+          fields:
+            - name: ICG_HP_XTAL32K
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: ICG_HP_SOSC
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: ICG_HP_OSC32K
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: ICG_HP_FOSC
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LPMEM_FORCE
+          description: need_des
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: LPMEM_CLK_FORCE_ON
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LPPERI
+          description: need_des
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: LP_I2C_CLK_SEL
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: LP_UART_CLK_SEL
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: XTAL32K
+          description: need_des
+          addressOffset: 44
+          size: 32
+          resetValue: 1723858944
+          fields:
+            - name: DRES_XTAL32K
+              description: need_des
+              bitOffset: 22
+              bitWidth: 3
+              access: read-write
+            - name: DGM_XTAL32K
+              description: need_des
+              bitOffset: 25
+              bitWidth: 3
+              access: read-write
+            - name: DBUF_XTAL32K
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DAC_XTAL32K
+              description: need_des
+              bitOffset: 29
+              bitWidth: 3
+              access: read-write
+      - register:
+          name: DATE
+          description: need_des
+          addressOffset: 1020
+          size: 32
+          resetValue: 35676304
+          fields:
+            - name: CLKRST_DATE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 31
+              access: read-write
+            - name: CLK_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+  - name: LP_I2C_ANA_MST
+    description: LP_I2C_ANA_MST Peripheral
+    groupName: LP_I2C_ANA_MST
+    baseAddress: 1611342848
+    addressBlock:
+      - offset: 0
+        size: 28
+        usage: registers
+    registers:
+      - register:
+          name: I2C0_CTRL
+          description: need_des
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: LP_I2C_ANA_MAST_I2C0_CTRL
+              description: need_des
+              bitOffset: 0
+              bitWidth: 25
+              access: read-write
+            - name: LP_I2C_ANA_MAST_I2C0_BUSY
+              description: need_des
+              bitOffset: 25
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: I2C0_CONF
+          description: need_des
+          addressOffset: 4
+          size: 32
+          resetValue: 117440512
+          fields:
+            - name: LP_I2C_ANA_MAST_I2C0_CONF
+              description: need_des
+              bitOffset: 0
+              bitWidth: 24
+              access: read-write
+            - name: LP_I2C_ANA_MAST_I2C0_STATUS
+              description: reserved
+              bitOffset: 24
+              bitWidth: 8
+              access: read-only
+      - register:
+          name: I2C0_DATA
+          description: need_des
+          addressOffset: 8
+          size: 32
+          resetValue: 2304
+          fields:
+            - name: LP_I2C_ANA_MAST_I2C0_RDATA
+              description: need_des
+              bitOffset: 0
+              bitWidth: 8
+              access: read-only
+            - name: LP_I2C_ANA_MAST_I2C0_CLK_SEL
+              description: need_des
+              bitOffset: 8
+              bitWidth: 3
+              access: read-write
+            - name: LP_I2C_ANA_MAST_I2C_MST_SEL
+              description: need  des
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: ANA_CONF1
+          description: need_des
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: LP_I2C_ANA_MAST_ANA_CONF1
+              description: need_des
+              bitOffset: 0
+              bitWidth: 24
+              access: read-write
+      - register:
+          name: NOUSE
+          description: need_des
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: LP_I2C_ANA_MAST_I2C_MST_NOUSE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: DEVICE_EN
+          description: need_des
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: LP_I2C_ANA_MAST_I2C_DEVICE_EN
+              description: need_des
+              bitOffset: 0
+              bitWidth: 12
+              access: read-write
+      - register:
+          name: DATE
+          description: need_des
+          addressOffset: 1020
+          size: 32
+          resetValue: 33583873
+          fields:
+            - name: LP_I2C_ANA_MAST_I2C_MAT_DATE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+            - name: LP_I2C_ANA_MAST_I2C_MAT_CLK_EN
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+  - name: LP_IO
+    description: LP_IO Peripheral
+    groupName: LP_IO
+    baseAddress: 1611341824
+    addressBlock:
+      - offset: 0
+        size: 124
+        usage: registers
+    registers:
+      - register:
+          name: OUT
+          description: need des
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: OUT_DATA
+              description: set lp gpio output data
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: OUT_W1TS
+          description: need des
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: OUT_DATA_W1TS
+              description: set one time output data
+              bitOffset: 0
+              bitWidth: 8
+              access: write-only
+      - register:
+          name: OUT_W1TC
+          description: need des
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: OUT_DATA_W1TC
+              description: clear one time output data
+              bitOffset: 0
+              bitWidth: 8
+              access: write-only
+      - register:
+          name: ENABLE
+          description: need des
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: ENABLE
+              description: set lp gpio output data
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: ENABLE_W1TS
+          description: need des
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: ENABLE_W1TS
+              description: set one time output data
+              bitOffset: 0
+              bitWidth: 8
+              access: write-only
+      - register:
+          name: ENABLE_W1TC
+          description: need des
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: ENABLE_W1TC
+              description: clear one time output data
+              bitOffset: 0
+              bitWidth: 8
+              access: write-only
+      - register:
+          name: STATUS
+          description: need des
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: INTERRUPT
+              description: set lp gpio output data
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: STATUS_W1TS
+          description: need des
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: STATUS_W1TS
+              description: set one time output data
+              bitOffset: 0
+              bitWidth: 8
+              access: write-only
+      - register:
+          name: STATUS_W1TC
+          description: need des
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: STATUS_W1TC
+              description: clear one time output data
+              bitOffset: 0
+              bitWidth: 8
+              access: write-only
+      - register:
+          name: IN
+          description: need des
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: DATA_NEXT
+              description: need des
+              bitOffset: 0
+              bitWidth: 8
+              access: read-only
+      - register:
+          dim: 8
+          dimIncrement: 4
+          dimIndex: "0,1,2,3,4,5,6,7"
+          name: PIN%s
+          description: need des
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: SYNC_BYPASS
+              description: need des
+              bitOffset: 0
+              bitWidth: 2
+              access: read-write
+            - name: PAD_DRIVER
+              description: need des
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: EDGE_WAKEUP_CLR
+              description: need des
+              bitOffset: 3
+              bitWidth: 1
+              access: write-only
+            - name: INT_TYPE
+              description: need des
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: WAKEUP_ENABLE
+              description: need des
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+            - name: FILTER_EN
+              description: need des
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+      - register:
+          dim: 8
+          dimIncrement: 4
+          dimIndex: "0,1,2,3,4,5,6,7"
+          name: GPIO%s
+          description: need des
+          addressOffset: 72
+          size: 32
+          fields:
+            - name: MCU_OE
+              description: need des
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: need des
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: MCU_WPD
+              description: need des
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: MCU_WPU
+              description: need des
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: MCU_IE
+              description: need des
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: MCU_DRV
+              description: need des
+              bitOffset: 5
+              bitWidth: 2
+              access: read-write
+            - name: FUN_WPD
+              description: need des
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: FUN_WPU
+              description: need des
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: FUN_IE
+              description: need des
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: FUN_DRV
+              description: need des
+              bitOffset: 10
+              bitWidth: 2
+              access: read-write
+            - name: FUN_SEL
+              description: need des
+              bitOffset: 12
+              bitWidth: 3
+              access: read-write
+      - register:
+          name: STATUS_INT
+          description: need des
+          addressOffset: 104
+          size: 32
+          fields:
+            - name: NEXT
+              description: need des
+              bitOffset: 0
+              bitWidth: 8
+              access: read-only
+      - register:
+          name: DATE
+          description: need des
+          addressOffset: 1020
+          size: 32
+          resetValue: 35660032
+          fields:
+            - name: LP_IO_DATE
+              description: need des
+              bitOffset: 0
+              bitWidth: 31
+              access: read-write
+            - name: CLK_EN
+              description: need des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+  - name: LP_TEE
+    description: Low-power Trusted Execution Environment
+    groupName: LP_TEE
+    baseAddress: 1611346944
+    addressBlock:
+      - offset: 0
+        size: 16
+        usage: registers
+    registers:
+      - register:
+          name: M0_MODE_CTRL
+          description: Tee mode control register
+          addressOffset: 0
+          size: 32
+          resetValue: 3
+          fields:
+            - name: M0_MODE
+              description: "M0 security level mode: 2'd3: ree_mode2. 2'd2: ree_mode1. 2'd1: ree_mode0. 2'd0: tee_mode"
+              bitOffset: 0
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: CLOCK_GATE
+          description: Clock gating register
+          addressOffset: 4
+          size: 32
+          resetValue: 1
+          fields:
+            - name: CLK_EN
+              description: reg_clk_en
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: FORCE_ACC_HP
+          description: need_des
+          addressOffset: 144
+          size: 32
+          fields:
+            - name: LP_AON_FORCE_ACC_HPMEM_EN
+              description: need_des
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATE
+          description: Version register
+          addressOffset: 252
+          size: 32
+          resetValue: 35672688
+          fields:
+            - name: DATE
+              description: reg_tee_date
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+  - name: LP_TIMER
+    description: Low-power Timer
+    groupName: LP_TIMER
+    baseAddress: 1611336704
+    addressBlock:
+      - offset: 0
+        size: 76
+        usage: registers
+    interrupt:
+      - name: LP_TIMER
+        value: 7
+    registers:
+      - register:
+          name: TAR0_LOW
+          description: need_des
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: MAIN_TIMER_TAR_LOW0
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: TAR0_HIGH
+          description: need_des
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: MAIN_TIMER_TAR_HIGH0
+              description: need_des
+              bitOffset: 0
+              bitWidth: 16
+              access: read-write
+            - name: MAIN_TIMER_TAR_EN0
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: TAR1_LOW
+          description: need_des
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: MAIN_TIMER_TAR_LOW1
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: TAR1_HIGH
+          description: need_des
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: MAIN_TIMER_TAR_HIGH1
+              description: need_des
+              bitOffset: 0
+              bitWidth: 16
+              access: read-write
+            - name: MAIN_TIMER_TAR_EN1
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: UPDATE
+          description: need_des
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: MAIN_TIMER_UPDATE
+              description: need_des
+              bitOffset: 28
+              bitWidth: 1
+              access: write-only
+            - name: MAIN_TIMER_XTAL_OFF
+              description: need_des
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: MAIN_TIMER_SYS_STALL
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: MAIN_TIMER_SYS_RST
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: MAIN_BUF0_LOW
+          description: need_des
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: MAIN_TIMER_BUF0_LOW
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+      - register:
+          name: MAIN_BUF0_HIGH
+          description: need_des
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: MAIN_TIMER_BUF0_HIGH
+              description: need_des
+              bitOffset: 0
+              bitWidth: 16
+              access: read-only
+      - register:
+          name: MAIN_BUF1_LOW
+          description: need_des
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: MAIN_TIMER_BUF1_LOW
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-only
+      - register:
+          name: MAIN_BUF1_HIGH
+          description: need_des
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: MAIN_TIMER_BUF1_HIGH
+              description: need_des
+              bitOffset: 0
+              bitWidth: 16
+              access: read-only
+      - register:
+          name: MAIN_OVERFLOW
+          description: need_des
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: MAIN_TIMER_ALARM_LOAD
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: INT_RAW
+          description: need_des
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: OVERFLOW_RAW
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: SOC_WAKEUP_INT_RAW
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_ST
+          description: need_des
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: OVERFLOW_ST
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-only
+            - name: SOC_WAKEUP_INT_ST
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ENA
+          description: need_des
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: OVERFLOW_ENA
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: SOC_WAKEUP_INT_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_CLR
+          description: need_des
+          addressOffset: 52
+          size: 32
+          fields:
+            - name: OVERFLOW_CLR
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: SOC_WAKEUP_INT_CLR
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: LP_INT_RAW
+          description: need_des
+          addressOffset: 56
+          size: 32
+          fields:
+            - name: MAIN_TIMER_OVERFLOW_LP_INT_RAW
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: MAIN_TIMER_LP_INT_RAW
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LP_INT_ST
+          description: need_des
+          addressOffset: 60
+          size: 32
+          fields:
+            - name: MAIN_TIMER_OVERFLOW_LP_INT_ST
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-only
+            - name: MAIN_TIMER_LP_INT_ST
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: LP_INT_ENA
+          description: need_des
+          addressOffset: 64
+          size: 32
+          fields:
+            - name: MAIN_TIMER_OVERFLOW_LP_INT_ENA
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: MAIN_TIMER_LP_INT_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: LP_INT_CLR
+          description: need_des
+          addressOffset: 68
+          size: 32
+          fields:
+            - name: MAIN_TIMER_OVERFLOW_LP_INT_CLR
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: MAIN_TIMER_LP_INT_CLR
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: DATE
+          description: need_des
+          addressOffset: 1020
+          size: 32
+          resetValue: 34672976
+          fields:
+            - name: DATE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 31
+              access: read-write
+            - name: CLK_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+  - name: LP_UART
+    description: Low-power UART (Universal Asynchronous Receiver-Transmitter) Controller
+    groupName: LP_UART
+    baseAddress: 1611338752
+    addressBlock:
+      - offset: 0
+        size: 132
+        usage: registers
+    interrupt:
+      - name: LP_UART
+        value: 16
+    registers:
+      - register:
+          name: FIFO
+          description: FIFO data register
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: RXFIFO_RD_BYTE
+              description: UART 0 accesses FIFO via this register.
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: INT_RAW
+          description: Raw interrupt status
+          addressOffset: 4
+          size: 32
+          resetValue: 2
+          fields:
+            - name: RXFIFO_FULL_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver receives more data than what rxfifo_full_thrhd specifies.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: TXFIFO_EMPTY_INT_RAW
+              description: This interrupt raw bit turns to high level when the amount of data in Tx-FIFO is less than what txfifo_empty_thrhd specifies .
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: PARITY_ERR_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver detects a parity error in the data.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: FRM_ERR_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver detects a data frame error .
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: RXFIFO_OVF_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver receives more data than the FIFO can store.
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: DSR_CHG_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver detects the edge change of DSRn signal.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: CTS_CHG_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver detects the edge change of CTSn signal.
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: BRK_DET_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver detects a 0 after the stop bit.
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: RXFIFO_TOUT_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: SW_XON_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver recevies Xon char when uart_sw_flow_con_en is set to 1.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: SW_XOFF_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver receives Xoff char when uart_sw_flow_con_en is set to 1.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+            - name: GLITCH_DET_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver detects a glitch in the middle of a start bit.
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: TX_BRK_DONE_INT_RAW
+              description: This interrupt raw bit turns to high level when transmitter completes  sending  NULL characters after all data in Tx-FIFO are sent.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: TX_BRK_IDLE_DONE_INT_RAW
+              description: This interrupt raw bit turns to high level when transmitter has kept the shortest duration after sending the  last data.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: TX_DONE_INT_RAW
+              description: This interrupt raw bit turns to high level when transmitter has send out all data in FIFO.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: AT_CMD_CHAR_DET_INT_RAW
+              description: This interrupt raw bit turns to high level when receiver detects the configured at_cmd char.
+              bitOffset: 18
+              bitWidth: 1
+              access: read-write
+            - name: WAKEUP_INT_RAW
+              description: This interrupt raw bit turns to high level when input rxd edge changes more times than what reg_active_threshold specifies in light sleeping mode.
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_ST
+          description: Masked interrupt status
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: RXFIFO_FULL_INT_ST
+              description: This is the status bit for rxfifo_full_int_raw when rxfifo_full_int_ena is set to 1.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: TXFIFO_EMPTY_INT_ST
+              description: This is the status bit for  txfifo_empty_int_raw  when txfifo_empty_int_ena is set to 1.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: PARITY_ERR_INT_ST
+              description: This is the status bit for parity_err_int_raw when parity_err_int_ena is set to 1.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: FRM_ERR_INT_ST
+              description: This is the status bit for frm_err_int_raw when frm_err_int_ena is set to 1.
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: RXFIFO_OVF_INT_ST
+              description: This is the status bit for rxfifo_ovf_int_raw when rxfifo_ovf_int_ena is set to 1.
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: DSR_CHG_INT_ST
+              description: This is the status bit for dsr_chg_int_raw when dsr_chg_int_ena is set to 1.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: CTS_CHG_INT_ST
+              description: This is the status bit for cts_chg_int_raw when cts_chg_int_ena is set to 1.
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: BRK_DET_INT_ST
+              description: This is the status bit for brk_det_int_raw when brk_det_int_ena is set to 1.
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: RXFIFO_TOUT_INT_ST
+              description: This is the status bit for rxfifo_tout_int_raw when rxfifo_tout_int_ena is set to 1.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+            - name: SW_XON_INT_ST
+              description: This is the status bit for sw_xon_int_raw when sw_xon_int_ena is set to 1.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-only
+            - name: SW_XOFF_INT_ST
+              description: This is the status bit for sw_xoff_int_raw when sw_xoff_int_ena is set to 1.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-only
+            - name: GLITCH_DET_INT_ST
+              description: This is the status bit for glitch_det_int_raw when glitch_det_int_ena is set to 1.
+              bitOffset: 11
+              bitWidth: 1
+              access: read-only
+            - name: TX_BRK_DONE_INT_ST
+              description: This is the status bit for tx_brk_done_int_raw when tx_brk_done_int_ena is set to 1.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-only
+            - name: TX_BRK_IDLE_DONE_INT_ST
+              description: This is the stauts bit for tx_brk_idle_done_int_raw when tx_brk_idle_done_int_ena is set to 1.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-only
+            - name: TX_DONE_INT_ST
+              description: This is the status bit for tx_done_int_raw when tx_done_int_ena is set to 1.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-only
+            - name: AT_CMD_CHAR_DET_INT_ST
+              description: This is the status bit for at_cmd_det_int_raw when at_cmd_char_det_int_ena is set to 1.
+              bitOffset: 18
+              bitWidth: 1
+              access: read-only
+            - name: WAKEUP_INT_ST
+              description: This is the status bit for uart_wakeup_int_raw when uart_wakeup_int_ena is set to 1.
+              bitOffset: 19
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ENA
+          description: Interrupt enable bits
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: RXFIFO_FULL_INT_ENA
+              description: This is the enable bit for rxfifo_full_int_st register.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: TXFIFO_EMPTY_INT_ENA
+              description: This is the enable bit for txfifo_empty_int_st register.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: PARITY_ERR_INT_ENA
+              description: This is the enable bit for parity_err_int_st register.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: FRM_ERR_INT_ENA
+              description: This is the enable bit for frm_err_int_st register.
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: RXFIFO_OVF_INT_ENA
+              description: This is the enable bit for rxfifo_ovf_int_st register.
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: DSR_CHG_INT_ENA
+              description: This is the enable bit for dsr_chg_int_st register.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: CTS_CHG_INT_ENA
+              description: This is the enable bit for cts_chg_int_st register.
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: BRK_DET_INT_ENA
+              description: This is the enable bit for brk_det_int_st register.
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: RXFIFO_TOUT_INT_ENA
+              description: This is the enable bit for rxfifo_tout_int_st register.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: SW_XON_INT_ENA
+              description: This is the enable bit for sw_xon_int_st register.
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: SW_XOFF_INT_ENA
+              description: This is the enable bit for sw_xoff_int_st register.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+            - name: GLITCH_DET_INT_ENA
+              description: This is the enable bit for glitch_det_int_st register.
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: TX_BRK_DONE_INT_ENA
+              description: This is the enable bit for tx_brk_done_int_st register.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: TX_BRK_IDLE_DONE_INT_ENA
+              description: This is the enable bit for tx_brk_idle_done_int_st register.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: TX_DONE_INT_ENA
+              description: This is the enable bit for tx_done_int_st register.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: AT_CMD_CHAR_DET_INT_ENA
+              description: This is the enable bit for at_cmd_char_det_int_st register.
+              bitOffset: 18
+              bitWidth: 1
+              access: read-write
+            - name: WAKEUP_INT_ENA
+              description: This is the enable bit for uart_wakeup_int_st register.
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_CLR
+          description: Interrupt clear bits
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: RXFIFO_FULL_INT_CLR
+              description: Set this bit to clear the rxfifo_full_int_raw interrupt.
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: TXFIFO_EMPTY_INT_CLR
+              description: Set this bit to clear txfifo_empty_int_raw interrupt.
+              bitOffset: 1
+              bitWidth: 1
+              access: write-only
+            - name: PARITY_ERR_INT_CLR
+              description: Set this bit to clear parity_err_int_raw interrupt.
+              bitOffset: 2
+              bitWidth: 1
+              access: write-only
+            - name: FRM_ERR_INT_CLR
+              description: Set this bit to clear frm_err_int_raw interrupt.
+              bitOffset: 3
+              bitWidth: 1
+              access: write-only
+            - name: RXFIFO_OVF_INT_CLR
+              description: Set this bit to clear rxfifo_ovf_int_raw interrupt.
+              bitOffset: 4
+              bitWidth: 1
+              access: write-only
+            - name: DSR_CHG_INT_CLR
+              description: Set this bit to clear the dsr_chg_int_raw interrupt.
+              bitOffset: 5
+              bitWidth: 1
+              access: write-only
+            - name: CTS_CHG_INT_CLR
+              description: Set this bit to clear the cts_chg_int_raw interrupt.
+              bitOffset: 6
+              bitWidth: 1
+              access: write-only
+            - name: BRK_DET_INT_CLR
+              description: Set this bit to clear the brk_det_int_raw interrupt.
+              bitOffset: 7
+              bitWidth: 1
+              access: write-only
+            - name: RXFIFO_TOUT_INT_CLR
+              description: Set this bit to clear the rxfifo_tout_int_raw interrupt.
+              bitOffset: 8
+              bitWidth: 1
+              access: write-only
+            - name: SW_XON_INT_CLR
+              description: Set this bit to clear the sw_xon_int_raw interrupt.
+              bitOffset: 9
+              bitWidth: 1
+              access: write-only
+            - name: SW_XOFF_INT_CLR
+              description: Set this bit to clear the sw_xoff_int_raw interrupt.
+              bitOffset: 10
+              bitWidth: 1
+              access: write-only
+            - name: GLITCH_DET_INT_CLR
+              description: Set this bit to clear the glitch_det_int_raw interrupt.
+              bitOffset: 11
+              bitWidth: 1
+              access: write-only
+            - name: TX_BRK_DONE_INT_CLR
+              description: Set this bit to clear the tx_brk_done_int_raw interrupt..
+              bitOffset: 12
+              bitWidth: 1
+              access: write-only
+            - name: TX_BRK_IDLE_DONE_INT_CLR
+              description: Set this bit to clear the tx_brk_idle_done_int_raw interrupt.
+              bitOffset: 13
+              bitWidth: 1
+              access: write-only
+            - name: TX_DONE_INT_CLR
+              description: Set this bit to clear the tx_done_int_raw interrupt.
+              bitOffset: 14
+              bitWidth: 1
+              access: write-only
+            - name: AT_CMD_CHAR_DET_INT_CLR
+              description: Set this bit to clear the at_cmd_char_det_int_raw interrupt.
+              bitOffset: 18
+              bitWidth: 1
+              access: write-only
+            - name: WAKEUP_INT_CLR
+              description: Set this bit to clear the uart_wakeup_int_raw interrupt.
+              bitOffset: 19
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: CLKDIV_SYNC
+          description: Clock divider configuration
+          addressOffset: 20
+          size: 32
+          resetValue: 694
+          fields:
+            - name: CLKDIV
+              description: The integral part of the frequency divider factor.
+              bitOffset: 0
+              bitWidth: 12
+              access: read-write
+            - name: CLKDIV_FRAG
+              description: The decimal part of the frequency divider factor.
+              bitOffset: 20
+              bitWidth: 4
+              access: read-write
+      - register:
+          name: RX_FILT
+          description: Rx Filter configuration
+          addressOffset: 24
+          size: 32
+          resetValue: 8
+          fields:
+            - name: GLITCH_FILT
+              description: when input pulse width is lower than this value the pulse is ignored.
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+            - name: GLITCH_FILT_EN
+              description: Set this bit to enable Rx signal filter.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: STATUS
+          description: UART status register
+          addressOffset: 28
+          size: 32
+          resetValue: 3758145536
+          fields:
+            - name: RXFIFO_CNT
+              description: Stores the byte number of valid data in Rx-FIFO.
+              bitOffset: 3
+              bitWidth: 5
+              access: read-only
+            - name: DSRN
+              description: The register represent the level value of the internal uart dsr signal.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-only
+            - name: CTSN
+              description: This register represent the level value of the internal uart cts signal.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-only
+            - name: RXD
+              description: This register represent the  level value of the internal uart rxd signal.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-only
+            - name: TXFIFO_CNT
+              description: Stores the byte number of data in Tx-FIFO.
+              bitOffset: 19
+              bitWidth: 5
+              access: read-only
+            - name: DTRN
+              description: This bit represents the level of the internal uart dtr signal.
+              bitOffset: 29
+              bitWidth: 1
+              access: read-only
+            - name: RTSN
+              description: This bit represents the level of the internal uart rts signal.
+              bitOffset: 30
+              bitWidth: 1
+              access: read-only
+            - name: TXD
+              description: This bit represents the  level of the internal uart txd signal.
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CONF0_SYNC
+          description: Configuration register 0
+          addressOffset: 32
+          size: 32
+          resetValue: 1048604
+          fields:
+            - name: PARITY
+              description: This register is used to configure the parity check mode.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: PARITY_EN
+              description: Set this bit to enable uart parity check.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: BIT_NUM
+              description: This register is used to set the length of data.
+              bitOffset: 2
+              bitWidth: 2
+              access: read-write
+            - name: STOP_BIT_NUM
+              description: This register is used to set the length of  stop bit.
+              bitOffset: 4
+              bitWidth: 2
+              access: read-write
+            - name: TXD_BRK
+              description: Set this bit to enbale transmitter to  send NULL when the process of sending data is done.
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: LOOPBACK
+              description: Set this bit to enable uart loopback test mode.
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: TX_FLOW_EN
+              description: Set this bit to enable flow control function for transmitter.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: RXD_INV
+              description: Set this bit to inverse the level value of uart rxd signal.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: TXD_INV
+              description: Set this bit to inverse the level value of uart txd signal.
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: DIS_RX_DAT_OVF
+              description: Disable UART Rx data overflow detect.
+              bitOffset: 17
+              bitWidth: 1
+              access: read-write
+            - name: ERR_WR_MASK
+              description: "1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the  received data is wrong."
+              bitOffset: 18
+              bitWidth: 1
+              access: read-write
+            - name: MEM_CLK_EN
+              description: UART memory clock gate enable signal.
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: SW_RTS
+              description: This register is used to configure the software rts signal which is used in software flow control.
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: RXFIFO_RST
+              description: Set this bit to reset the uart receive-FIFO.
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: TXFIFO_RST
+              description: Set this bit to reset the uart transmit-FIFO.
+              bitOffset: 23
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: CONF1
+          description: Configuration register 1
+          addressOffset: 36
+          size: 32
+          resetValue: 24672
+          fields:
+            - name: RXFIFO_FULL_THRHD
+              description: It will produce rxfifo_full_int interrupt when receiver receives more data than this register value.
+              bitOffset: 3
+              bitWidth: 5
+              access: read-write
+            - name: TXFIFO_EMPTY_THRHD
+              description: It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value.
+              bitOffset: 11
+              bitWidth: 5
+              access: read-write
+            - name: CTS_INV
+              description: Set this bit to inverse the level value of uart cts signal.
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: DSR_INV
+              description: Set this bit to inverse the level value of uart dsr signal.
+              bitOffset: 17
+              bitWidth: 1
+              access: read-write
+            - name: RTS_INV
+              description: Set this bit to inverse the level value of uart rts signal.
+              bitOffset: 18
+              bitWidth: 1
+              access: read-write
+            - name: DTR_INV
+              description: Set this bit to inverse the level value of uart dtr signal.
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: SW_DTR
+              description: This register is used to configure the software dtr signal which is used in software flow control.
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: CLK_EN
+              description: "1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: HWFC_CONF_SYNC
+          description: Hardware flow-control configuration
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: RX_FLOW_THRHD
+              description: This register is used to configure the maximum amount of data that can be received  when hardware flow control works.
+              bitOffset: 3
+              bitWidth: 5
+              access: read-write
+            - name: RX_FLOW_EN
+              description: This is the flow enable bit for UART receiver.
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SLEEP_CONF0
+          description: UART sleep configure register 0
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: WK_CHAR1
+              description: This register restores the specified wake up char1 to wake up
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+            - name: WK_CHAR2
+              description: This register restores the specified wake up char2 to wake up
+              bitOffset: 8
+              bitWidth: 8
+              access: read-write
+            - name: WK_CHAR3
+              description: This register restores the specified wake up char3 to wake up
+              bitOffset: 16
+              bitWidth: 8
+              access: read-write
+            - name: WK_CHAR4
+              description: This register restores the specified wake up char4 to wake up
+              bitOffset: 24
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: SLEEP_CONF1
+          description: UART sleep configure register 1
+          addressOffset: 52
+          size: 32
+          fields:
+            - name: WK_CHAR0
+              description: This register restores the specified char0 to wake up
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: SLEEP_CONF2
+          description: UART sleep configure register 2
+          addressOffset: 56
+          size: 32
+          resetValue: 1319152
+          fields:
+            - name: ACTIVE_THRESHOLD
+              description: The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value.
+              bitOffset: 0
+              bitWidth: 10
+              access: read-write
+            - name: RX_WAKE_UP_THRHD
+              description: In wake up mode 1 this field is used to set the received data number threshold to wake up chip.
+              bitOffset: 13
+              bitWidth: 5
+              access: read-write
+            - name: WK_CHAR_NUM
+              description: This register is used to select number of wake up char.
+              bitOffset: 18
+              bitWidth: 3
+              access: read-write
+            - name: WK_CHAR_MASK
+              description: This register is used to mask  wake up char.
+              bitOffset: 21
+              bitWidth: 5
+              access: read-write
+            - name: WK_MODE_SEL
+              description: "This register is used to select wake up mode. 0: RXD toggling to wake up. 1: received data number larger than"
+              bitOffset: 26
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: SWFC_CONF0_SYNC
+          description: Software flow-control character configuration
+          addressOffset: 60
+          size: 32
+          resetValue: 4881
+          fields:
+            - name: XON_CHAR
+              description: This register stores the Xon flow control char.
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+            - name: XOFF_CHAR
+              description: This register stores the Xoff flow control char.
+              bitOffset: 8
+              bitWidth: 8
+              access: read-write
+            - name: XON_XOFF_STILL_SEND
+              description: "In software flow control mode, UART Tx is disabled once UART Rx receives XOFF. In this status, UART Tx can not transmit XOFF even the received data number is larger than UART_XOFF_THRESHOLD. Set this bit to enable UART Tx can transmit XON/XOFF when UART Tx is disabled."
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: SW_FLOW_CON_EN
+              description: Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff.
+              bitOffset: 17
+              bitWidth: 1
+              access: read-write
+            - name: XONOFF_DEL
+              description: Set this bit to remove flow control char from the received data.
+              bitOffset: 18
+              bitWidth: 1
+              access: read-write
+            - name: FORCE_XON
+              description: Set this bit to enable the transmitter to go on sending data.
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: FORCE_XOFF
+              description: Set this bit to stop the  transmitter from sending data.
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: SEND_XON
+              description: Set this bit to send Xon char. It is cleared by hardware automatically.
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: SEND_XOFF
+              description: Set this bit to send Xoff char. It is cleared by hardware automatically.
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SWFC_CONF1
+          description: Software flow-control character configuration
+          addressOffset: 64
+          size: 32
+          resetValue: 24576
+          fields:
+            - name: XON_THRESHOLD
+              description: When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1  it will send a Xon char.
+              bitOffset: 3
+              bitWidth: 5
+              access: read-write
+            - name: XOFF_THRESHOLD
+              description: When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1  it will send a Xoff char.
+              bitOffset: 11
+              bitWidth: 5
+              access: read-write
+      - register:
+          name: TXBRK_CONF_SYNC
+          description: Tx Break character configuration
+          addressOffset: 68
+          size: 32
+          resetValue: 10
+          fields:
+            - name: TX_BRK_NUM
+              description: This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when txd_brk is set to 1.
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: IDLE_CONF_SYNC
+          description: Frame-end idle configuration
+          addressOffset: 72
+          size: 32
+          resetValue: 262400
+          fields:
+            - name: RX_IDLE_THRHD
+              description: It will produce frame end signal when receiver takes more time to receive one byte data than this register value.
+              bitOffset: 0
+              bitWidth: 10
+              access: read-write
+            - name: TX_IDLE_NUM
+              description: This register is used to configure the duration time between transfers.
+              bitOffset: 10
+              bitWidth: 10
+              access: read-write
+      - register:
+          name: RS485_CONF_SYNC
+          description: RS485 mode configuration
+          addressOffset: 76
+          size: 32
+          fields:
+            - name: DL0_EN
+              description: Set this bit to delay the stop bit by 1 bit.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: DL1_EN
+              description: Set this bit to delay the stop bit by 1 bit.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: AT_CMD_PRECNT_SYNC
+          description: Pre-sequence timing configuration
+          addressOffset: 80
+          size: 32
+          resetValue: 2305
+          fields:
+            - name: PRE_IDLE_NUM
+              description: This register is used to configure the idle duration time before the first at_cmd is received by receiver.
+              bitOffset: 0
+              bitWidth: 16
+              access: read-write
+      - register:
+          name: AT_CMD_POSTCNT_SYNC
+          description: Post-sequence timing configuration
+          addressOffset: 84
+          size: 32
+          resetValue: 2305
+          fields:
+            - name: POST_IDLE_NUM
+              description: This register is used to configure the duration time between the last at_cmd and the next data.
+              bitOffset: 0
+              bitWidth: 16
+              access: read-write
+      - register:
+          name: AT_CMD_GAPTOUT_SYNC
+          description: Timeout configuration
+          addressOffset: 88
+          size: 32
+          resetValue: 11
+          fields:
+            - name: RX_GAP_TOUT
+              description: This register is used to configure the duration time between the at_cmd chars.
+              bitOffset: 0
+              bitWidth: 16
+              access: read-write
+      - register:
+          name: AT_CMD_CHAR_SYNC
+          description: AT escape sequence detection configuration
+          addressOffset: 92
+          size: 32
+          resetValue: 811
+          fields:
+            - name: AT_CMD_CHAR
+              description: This register is used to configure the content of at_cmd char.
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+            - name: CHAR_NUM
+              description: This register is used to configure the num of continuous at_cmd chars received by receiver.
+              bitOffset: 8
+              bitWidth: 8
+              access: read-write
+      - register:
+          name: MEM_CONF
+          description: UART memory power configuration
+          addressOffset: 96
+          size: 32
+          fields:
+            - name: MEM_FORCE_PD
+              description: Set this bit to force power down UART memory.
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+            - name: MEM_FORCE_PU
+              description: Set this bit to force power up UART memory.
+              bitOffset: 26
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: TOUT_CONF_SYNC
+          description: UART threshold and allocation configuration
+          addressOffset: 100
+          size: 32
+          resetValue: 40
+          fields:
+            - name: RX_TOUT_EN
+              description: "This is the enble bit for uart receiver's timeout function."
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: RX_TOUT_FLOW_DIS
+              description: Set this bit to stop accumulating idle_cnt when hardware flow control works.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: RX_TOUT_THRHD
+              description: This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1.
+              bitOffset: 2
+              bitWidth: 10
+              access: read-write
+      - register:
+          name: MEM_TX_STATUS
+          description: Tx-SRAM write and read offset address.
+          addressOffset: 104
+          size: 32
+          fields:
+            - name: TX_SRAM_WADDR
+              description: This register stores the offset write address in Tx-SRAM.
+              bitOffset: 3
+              bitWidth: 5
+              access: read-only
+            - name: TX_SRAM_RADDR
+              description: This register stores the offset read address in Tx-SRAM.
+              bitOffset: 12
+              bitWidth: 5
+              access: read-only
+      - register:
+          name: MEM_RX_STATUS
+          description: Rx-SRAM write and read offset address.
+          addressOffset: 108
+          size: 32
+          resetValue: 65664
+          fields:
+            - name: RX_SRAM_RADDR
+              description: This register stores the offset read address in RX-SRAM.
+              bitOffset: 3
+              bitWidth: 5
+              access: read-only
+            - name: RX_SRAM_WADDR
+              description: This register stores the offset write address in Rx-SRAM.
+              bitOffset: 12
+              bitWidth: 5
+              access: read-only
+      - register:
+          name: FSM_STATUS
+          description: UART transmit and receive status.
+          addressOffset: 112
+          size: 32
+          fields:
+            - name: ST_URX_OUT
+              description: This is the status register of receiver.
+              bitOffset: 0
+              bitWidth: 4
+              access: read-only
+            - name: ST_UTX_OUT
+              description: This is the status register of transmitter.
+              bitOffset: 4
+              bitWidth: 4
+              access: read-only
+      - register:
+          name: CLK_CONF
+          description: UART core clock configuration
+          addressOffset: 136
+          size: 32
+          resetValue: 57675776
+          fields:
+            - name: SCLK_DIV_B
+              description: The  denominator of the frequency divider factor.
+              bitOffset: 0
+              bitWidth: 6
+              access: read-write
+            - name: SCLK_DIV_A
+              description: The numerator of the frequency divider factor.
+              bitOffset: 6
+              bitWidth: 6
+              access: read-write
+            - name: SCLK_DIV_NUM
+              description: The integral part of the frequency divider factor.
+              bitOffset: 12
+              bitWidth: 8
+              access: read-write
+            - name: SCLK_SEL
+              description: "UART clock source select. 1: 80Mhz.  2: 8Mhz.  3: XTAL."
+              bitOffset: 20
+              bitWidth: 2
+              access: read-write
+            - name: SCLK_EN
+              description: Set this bit to enable UART Tx/Rx clock.
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: RST_CORE
+              description: Write 1 then write 0 to this bit to reset UART Tx/Rx.
+              bitOffset: 23
+              bitWidth: 1
+              access: read-write
+            - name: TX_SCLK_EN
+              description: Set this bit to enable UART Tx clock.
+              bitOffset: 24
+              bitWidth: 1
+              access: read-write
+            - name: RX_SCLK_EN
+              description: Set this bit to enable UART Rx clock.
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+            - name: TX_RST_CORE
+              description: Write 1 then write 0 to this bit to reset UART Tx.
+              bitOffset: 26
+              bitWidth: 1
+              access: read-write
+            - name: RX_RST_CORE
+              description: Write 1 then write 0 to this bit to reset UART Rx.
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATE
+          description: UART Version register
+          addressOffset: 140
+          size: 32
+          resetValue: 35656288
+          fields:
+            - name: DATE
+              description: This is the version register.
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: AFIFO_STATUS
+          description: UART AFIFO Status
+          addressOffset: 144
+          size: 32
+          resetValue: 10
+          fields:
+            - name: TX_AFIFO_FULL
+              description: Full signal of APB TX AFIFO.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: TX_AFIFO_EMPTY
+              description: Empty signal of APB TX AFIFO.
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: RX_AFIFO_FULL
+              description: Full signal of APB RX AFIFO.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: RX_AFIFO_EMPTY
+              description: Empty signal of APB RX AFIFO.
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: REG_UPDATE
+          description: UART Registers Configuration Update register
+          addressOffset: 152
+          size: 32
+          fields:
+            - name: REG_UPDATE
+              description: Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done.
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: ID
+          description: UART ID register
+          addressOffset: 156
+          size: 32
+          resetValue: 1280
+          fields:
+            - name: ID
+              description: This register is used to configure the uart_id.
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+  - name: LP_WDT
+    description: Low-power Watchdog Timer
+    groupName: LP_WDT
+    baseAddress: 1611340800
+    addressBlock:
+      - offset: 0
+        size: 56
+        usage: registers
+    interrupt:
+      - name: LP_WDT
+        value: 18
+    registers:
+      - register:
+          name: CONFIG0
+          description: need_des
+          addressOffset: 0
+          size: 32
+          resetValue: 78356
+          fields:
+            - name: WDT_CHIP_RESET_WIDTH
+              description: need_des
+              bitOffset: 0
+              bitWidth: 8
+              access: read-write
+            - name: WDT_CHIP_RESET_EN
+              description: need_des
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+            - name: WDT_PAUSE_IN_SLP
+              description: need_des
+              bitOffset: 9
+              bitWidth: 1
+              access: read-write
+            - name: WDT_APPCPU_RESET_EN
+              description: need_des
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+            - name: WDT_PROCPU_RESET_EN
+              description: need_des
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: WDT_FLASHBOOT_MOD_EN
+              description: need_des
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: WDT_SYS_RESET_LENGTH
+              description: need_des
+              bitOffset: 13
+              bitWidth: 3
+              access: read-write
+            - name: WDT_CPU_RESET_LENGTH
+              description: need_des
+              bitOffset: 16
+              bitWidth: 3
+              access: read-write
+            - name: WDT_STG3
+              description: need_des
+              bitOffset: 19
+              bitWidth: 3
+              access: read-write
+            - name: WDT_STG2
+              description: need_des
+              bitOffset: 22
+              bitWidth: 3
+              access: read-write
+            - name: WDT_STG1
+              description: need_des
+              bitOffset: 25
+              bitWidth: 3
+              access: read-write
+            - name: WDT_STG0
+              description: need_des
+              bitOffset: 28
+              bitWidth: 3
+              access: read-write
+            - name: WDT_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: CONFIG1
+          description: need_des
+          addressOffset: 4
+          size: 32
+          resetValue: 200000
+          fields:
+            - name: WDT_STG0_HOLD
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: CONFIG2
+          description: need_des
+          addressOffset: 8
+          size: 32
+          resetValue: 80000
+          fields:
+            - name: WDT_STG1_HOLD
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: CONFIG3
+          description: need_des
+          addressOffset: 12
+          size: 32
+          resetValue: 4095
+          fields:
+            - name: WDT_STG2_HOLD
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: CONFIG4
+          description: need_des
+          addressOffset: 16
+          size: 32
+          resetValue: 4095
+          fields:
+            - name: WDT_STG3_HOLD
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: FEED
+          description: need_des
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: RTC_WDT_FEED
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: WPROTECT
+          description: need_des
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: WDT_WKEY
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: SWD_CONFIG
+          description: need_des
+          addressOffset: 28
+          size: 32
+          resetValue: 314572800
+          fields:
+            - name: SWD_RESET_FLAG
+              description: need_des
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: SWD_AUTO_FEED_EN
+              description: need_des
+              bitOffset: 18
+              bitWidth: 1
+              access: read-write
+            - name: SWD_RST_FLAG_CLR
+              description: need_des
+              bitOffset: 19
+              bitWidth: 1
+              access: write-only
+            - name: SWD_SIGNAL_WIDTH
+              description: need_des
+              bitOffset: 20
+              bitWidth: 10
+              access: read-write
+            - name: SWD_DISABLE
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: SWD_FEED
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: SWD_WPROTECT
+          description: need_des
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: SWD_WKEY
+              description: need_des
+              bitOffset: 0
+              bitWidth: 32
+              access: read-write
+      - register:
+          name: INT_RAW
+          description: need_des
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: SUPER_WDT_INT_RAW
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: LP_WDT_INT_RAW
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_ST
+          description: need_des
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: SUPER_WDT_INT_ST
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-only
+            - name: LP_WDT_INT_ST
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ENA
+          description: need_des
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: SUPER_WDT_INT_ENA
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: LP_WDT_INT_ENA
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: INT_CLR
+          description: need_des
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: SUPER_WDT_INT_CLR
+              description: need_des
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: LP_WDT_INT_CLR
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: DATE
+          description: need_des
+          addressOffset: 1020
+          size: 32
+          resetValue: 34676864
+          fields:
+            - name: LP_WDT_DATE
+              description: need_des
+              bitOffset: 0
+              bitWidth: 31
+              access: read-write
+            - name: CLK_EN
+              description: need_des
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write

@@ -1,0 +1,1905 @@
+---
+vendor: "ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD."
+vendorID: ESPRESSIF
+name: ESP32-S2-ULP
+series: RISC-V ULP
+version: "1"
+description: 32-bit RISC-V MCU
+licenseText: "Copyright 2023 Espressif Systems (Shanghai) PTE LTD\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n        http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License."
+cpu:
+  name: RV32IMC
+  revision: r0p0
+  endian: little
+  mpuPresent: false
+  fpuPresent: false
+  nvicPrioBits: 4
+  vendorSystickConfig: false
+addressUnitBits: 32
+width: 32
+resetValue: 0
+resetMask: 4294967295
+peripherals:
+  - name: RTC_IO
+    description: Low-power Input/Output
+    groupName: RTCIO
+    baseAddress: 41984
+    addressBlock:
+      - offset: 0
+        size: 240
+        usage: registers
+    registers:
+      - register:
+          name: OUT
+          description: RTC GPIO output register
+          addressOffset: 0
+          size: 32
+          fields:
+            - name: GPIO_OUT_DATA
+              description: "GPIO0 ~ 21 output register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc."
+              bitOffset: 10
+              bitWidth: 22
+              access: read-write
+      - register:
+          name: OUT_W1TS
+          description: RTC GPIO output bit set register
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: OUT_DATA_W1TS
+              description: "GPIO0 ~ 21 output set register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_OUT_REG will be set to 1. Recommended operation: use this register to set RTCIO_RTC_GPIO_OUT_REG."
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: OUT_W1TC
+          description: RTC GPIO output bit clear register
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: OUT_DATA_W1TC
+              description: "GPIO0 ~ 21 output clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_OUT_REG will be cleared. Recommended operation: use this register to clear RTCIO_RTC_GPIO_OUT_REG."
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: ENABLE
+          description: RTC GPIO output enable register
+          addressOffset: 12
+          size: 32
+          fields:
+            - name: REG_RTCIO_REG_GPIO_ENABLE
+              description: "GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."
+              bitOffset: 10
+              bitWidth: 22
+              access: read-write
+      - register:
+          name: ENABLE_W1TS
+          description: RTC GPIO output enable bit set register
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: REG_RTCIO_REG_GPIO_ENABLE_W1TS
+              description: "GPIO0 ~ 21 output enable set register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_ENABLE_REG will be set to 1. Recommended operation: use this register to set RTCIO_RTC_GPIO_ENABLE_REG."
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: ENABLE_W1TC
+          description: RTC GPIO output enable bit clear register
+          addressOffset: 20
+          size: 32
+          fields:
+            - name: REG_RTCIO_REG_GPIO_ENABLE_W1TC
+              description: "GPIO0 ~ 21 output enable clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_ENABLE_REG will be cleared. Recommended operation: use this register to clear RTCIO_RTC_GPIO_ENABLE_REG."
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: STATUS
+          description: RTC GPIO interrupt status register
+          addressOffset: 24
+          size: 32
+          fields:
+            - name: GPIO_STATUS_INT
+              description: "GPIO0 ~ 21 interrupt status register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. This register should be used together with RTCIO_RTC_GPIO_PINn_INT_TYPE in RTCIO_RTC_GPIO_PINn_REG. 0: no interrupt; 1: corresponding interrupt."
+              bitOffset: 10
+              bitWidth: 22
+              access: read-write
+      - register:
+          name: STATUS_W1TS
+          description: RTC GPIO interrupt status bit set register
+          addressOffset: 28
+          size: 32
+          fields:
+            - name: GPIO_STATUS_INT_W1TS
+              description: "GPIO0 ~ 21 interrupt set register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_GPIO_STATUS_INT will be set to 1. Recommended operation: use this register to set RTCIO_GPIO_STATUS_INT."
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: STATUS_W1TC
+          description: RTC GPIO interrupt status bit clear register
+          addressOffset: 32
+          size: 32
+          fields:
+            - name: GPIO_STATUS_INT_W1TC
+              description: "GPIO0 ~ 21 interrupt clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_GPIO_STATUS_INT will be cleared. Recommended operation: use this register to clear RTCIO_GPIO_STATUS_INT."
+              bitOffset: 10
+              bitWidth: 22
+              access: write-only
+      - register:
+          name: IN
+          description: RTC GPIO input register
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: GPIO_IN_NEXT
+              description: "GPIO0 ~ 21 input value. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. Each bit represents a pad input value, 1 for high level, and 0 for low level."
+              bitOffset: 10
+              bitWidth: 22
+              access: read-only
+      - register:
+          dim: 22
+          dimIncrement: 4
+          name: PIN%s
+          description: RTC configuration for pin %s
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: GPIO_PIN_PAD_DRIVER
+              description: "Pad driver selection. 0: normal output. 1: open drain."
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: GPIO_PIN_INT_TYPE
+              description: "GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."
+              bitOffset: 7
+              bitWidth: 3
+              access: read-write
+            - name: GPIO_PIN_WAKEUP_ENABLE
+              description: GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep.
+              bitOffset: 10
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: RTC_DEBUG_SEL
+          description: RTC debug select register
+          addressOffset: 128
+          size: 32
+          fields:
+            - name: DEBUG_SEL0
+              bitOffset: 0
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL1
+              bitOffset: 5
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL2
+              bitOffset: 10
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL3
+              bitOffset: 15
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_SEL4
+              bitOffset: 20
+              bitWidth: 5
+              access: read-write
+            - name: DEBUG_12M_NO_GATING
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+      - register:
+          dim: 15
+          dimIncrement: 4
+          name: TOUCH_PAD%s
+          description: Touch pad %s configuration register
+          addressOffset: 132
+          size: 32
+          resetValue: 1375731712
+          fields:
+            - name: FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: Output enable in sleep mode.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: Input enable in sleep mode.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "0: no sleep mode. 1: enable sleep mode."
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: Function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: Connect the RTC pad input to digital pad input.  0 is available.
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: XPD
+              description: Touch sensor power on.
+              bitOffset: 20
+              bitWidth: 1
+              access: read-write
+            - name: TIE_OPT
+              description: "The tie option of touch sensor. 0: tie low. 1: tie high."
+              bitOffset: 21
+              bitWidth: 1
+              access: read-write
+            - name: START
+              description: Start touch sensor.
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: DAC
+              description: "Touch sensor slope control. 3-bit for each touch pad, defaults to 0x4."
+              bitOffset: 23
+              bitWidth: 3
+              access: read-write
+            - name: RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: XTAL_32P_PAD
+          description: 32KHz crystal P-pad configuration register
+          addressOffset: 192
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: X32P_FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: X32P_SLP_OE
+              description: output enable in sleep mode.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: X32P_SLP_IE
+              description: input enable in sleep mode.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: X32P_SLP_SEL
+              description: "1: enable sleep mode. 0: no sleep mode."
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: X32P_FUN_SEL
+              description: Function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: X32P_MUX_SEL
+              description: "1: use RTC GPIO. 0: use digital GPIO."
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: X32P_RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: X32P_RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: X32P_DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: XTAL_32N_PAD
+          description: 32KHz crystal N-pad configuration register
+          addressOffset: 196
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: X32N_FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: X32N_SLP_OE
+              description: Output enable in sleep mode.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: X32N_SLP_IE
+              description: Input enable in sleep mode.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: X32N_SLP_SEL
+              description: "1: enable sleep mode. 0: no sleep mode."
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: X32N_FUN_SEL
+              description: Function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: X32N_MUX_SEL
+              description: "1: use RTC GPIO. 0: use digital GPIO."
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: X32N_RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: X32N_RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: X32N_DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: PAD_DAC1
+          description: DAC1 configuration register
+          addressOffset: 200
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: PDAC1_DAC
+              description: Configure DAC_1 output when RTCIO_PDAC1_DAC_XPD_FORCE is set to 1.
+              bitOffset: 3
+              bitWidth: 8
+              access: read-write
+            - name: PDAC1_XPD_DAC
+              description: "When RTCIO_PDAC1_DAC_XPD_FORCE is set to 1, 1: enable DAC_1 output. 0: disable DAC_1 output."
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_DAC_XPD_FORCE
+              description: "1: use RTCIO_PDAC1_XPD_DAC to control DAC_1 output. 0: use SAR ADC FSM to control DAC_1 output."
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_SLP_OE
+              description: Output enable in sleep mode
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_SLP_IE
+              description: Input enable in sleep mode
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_SLP_SEL
+              description: "1: enable sleep mode. 0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_FUN_SEL
+              description: DAC_1 function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: PDAC1_MUX_SEL
+              description: "1: use RTC GPIO. 0: use digital GPIO"
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: PDAC1_DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: PAD_DAC2
+          description: DAC2 configuration register
+          addressOffset: 204
+          size: 32
+          resetValue: 1073741824
+          fields:
+            - name: PDAC2_DAC
+              description: Configure DAC_2 output when RTCIO_PDAC2_DAC_XPD_FORCE is set to 1.
+              bitOffset: 3
+              bitWidth: 8
+              access: read-write
+            - name: PDAC2_XPD_DAC
+              description: "When RTCIO_PDAC2_DAC_XPD_FORCE is set to 1, 1: enable DAC_2 output. 0: disable DAC_2 output."
+              bitOffset: 11
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_DAC_XPD_FORCE
+              description: "1: use RTCIO_PDAC2_XPD_DAC to control DAC_2 output. 0: use SAR ADC FSM to control DAC_2 output."
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_SLP_OE
+              description: Output enable in sleep mode.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_SLP_IE
+              description: Input enable in sleep mode.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_SLP_SEL
+              description: "1: enable sleep mode. 0: no sleep mode."
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_FUN_SEL
+              description: DAC_2 function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: PDAC2_MUX_SEL
+              description: "1: use RTC GPIO. 0: use digital GPIO."
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: PDAC2_DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA: 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: RTC_PAD19
+          description: Touch pad 19 configuration register
+          addressOffset: 208
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: Output enable in sleep mode.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: Input enable in sleep mode.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode. 0: no sleep mode"
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: Function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO. 0: use digital GPIO."
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: RTC_PAD20
+          description: Touch pad 20 configuration register
+          addressOffset: 212
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: Output enable in sleep mode.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: Input enable in sleep mode.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode. 0: no sleep mode."
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: Function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO. 0: use digital GPIO."
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: RTC_PAD21
+          description: Touch pad 21 configuration register
+          addressOffset: 216
+          size: 32
+          resetValue: 1342177280
+          fields:
+            - name: FUN_IE
+              description: Input enable in normal execution.
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: SLP_OE
+              description: Output enable in sleep mode.
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SLP_IE
+              description: Input enable in sleep mode.
+              bitOffset: 15
+              bitWidth: 1
+              access: read-write
+            - name: SLP_SEL
+              description: "1: enable sleep mode. 0: no sleep mode."
+              bitOffset: 16
+              bitWidth: 1
+              access: read-write
+            - name: FUN_SEL
+              description: Function selection.
+              bitOffset: 17
+              bitWidth: 2
+              access: read-write
+            - name: MUX_SEL
+              description: "1: use RTC GPIO. 0: use digital GPIO."
+              bitOffset: 19
+              bitWidth: 1
+              access: read-write
+            - name: RUE
+              description: "Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."
+              bitOffset: 27
+              bitWidth: 1
+              access: read-write
+            - name: RDE
+              description: "Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: DRV
+              description: "Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."
+              bitOffset: 29
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: EXT_WAKEUP0
+          description: External wake up configuration register
+          addressOffset: 220
+          size: 32
+          fields:
+            - name: SEL
+              description: "GPIO[0-17] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. \n0: select GPIO0; 1: select GPIO2, etc"
+              bitOffset: 27
+              bitWidth: 5
+              access: read-write
+      - register:
+          name: XTL_EXT_CTR
+          description: Crystal power down enable GPIO source
+          addressOffset: 224
+          size: 32
+          fields:
+            - name: SEL
+              description: "Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG[30] is the crystal power down enable signal."
+              bitOffset: 27
+              bitWidth: 5
+              access: read-write
+      - register:
+          name: SAR_I2C_IO
+          description: RTC I2C pad selection
+          addressOffset: 228
+          size: 32
+          fields:
+            - name: SAR_DEBUG_BIT_SEL
+              bitOffset: 23
+              bitWidth: 5
+              access: read-write
+            - name: SAR_I2C_SCL_SEL
+              description: "Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."
+              bitOffset: 28
+              bitWidth: 2
+              access: read-write
+            - name: SAR_I2C_SDA_SEL
+              description: "Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."
+              bitOffset: 30
+              bitWidth: 2
+              access: read-write
+      - register:
+          name: RTC_IO_TOUCH_CTRL
+          description: Touch control register
+          addressOffset: 232
+          size: 32
+          fields:
+            - name: IO_TOUCH_BUFSEL
+              bitOffset: 0
+              bitWidth: 4
+              access: read-write
+            - name: IO_TOUCH_BUFMODE
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: RTC_IO_DATE
+          description: Version control register
+          addressOffset: 508
+          size: 32
+          resetValue: 26227056
+          fields:
+            - name: IO_DATE
+              description: Version control register
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+  - name: RTC_CNTL
+    description: Real-Time Clock Control
+    groupName: RTC_CNTL
+    baseAddress: 32768
+    addressBlock:
+      - offset: 0
+        size: 312
+        usage: registers
+    interrupt:
+      - name: RISCV_START_INT
+        value: 6
+      - name: SW_INT
+        value: 7
+      - name: SWD_INT
+        value: 8
+    registers:
+      - register:
+          name: ULP_CP_TIMER
+          description: Configure coprocessor timer
+          addressOffset: 248
+          size: 32
+          fields:
+            - name: ULP_CP_PC_INIT
+              description: ULP coprocessor PC initial address
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: ULP_CP_GPIO_WAKEUP_ENA
+              description: "Enable the option of ULP coprocessor woken up by\nRTC GPIO"
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_GPIO_WAKEUP_CLR
+              description: "Disable the option of ULP coprocessor woken up by\nRTC GPIO"
+              bitOffset: 30
+              bitWidth: 1
+              access: write-only
+            - name: ULP_CP_SLP_TIMER_EN
+              description: "ULP coprocessor timer enable bit. 0: Disable hardware\nTimer. 1: Enable hardware timer"
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: ULP_CP_CTRL
+          description: ULP-FSM configuration register
+          addressOffset: 252
+          size: 32
+          resetValue: 1049088
+          fields:
+            - name: ULP_CP_MEM_ADDR_INIT
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: ULP_CP_MEM_ADDR_SIZE
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+            - name: ULP_CP_MEM_OFFSET_CLR
+              bitOffset: 22
+              bitWidth: 1
+              access: write-only
+            - name: ULP_CP_CLK_FO
+              description: ULP-FSM clock force on
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_RESET
+              description: ULP-FSM clock software reset
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_FORCE_START_TOP
+              description: Write 1 to start ULP-FSM by software
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: ULP_CP_START_TOP
+              description: Write 1 to start ULP-FSM
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: COCPU_CTRL
+          description: ULP-RISCV configuration register
+          addressOffset: 256
+          size: 32
+          resetValue: 9046032
+          fields:
+            - name: COCPU_CLK_FO
+              description: ULP-RISCV clock force on
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_START_2_RESET_DIS
+              description: Time from ULP-RISCV startup to pull down reset
+              bitOffset: 1
+              bitWidth: 6
+              access: read-write
+            - name: COCPU_START_2_INTR_EN
+              description: "Time from ULP-RISCV startup to send out\nRISCV_START_INT interrupt"
+              bitOffset: 7
+              bitWidth: 6
+              access: read-write
+            - name: COCPU_SHUT
+              description: Shut down ULP-RISCV
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SHUT_2_CLK_DIS
+              description: Time from shut down ULP-RISCV to disable clock
+              bitOffset: 14
+              bitWidth: 8
+              access: read-write
+            - name: COCPU_SHUT_RESET_EN
+              description: This bit is used to reset ULP-RISCV
+              bitOffset: 22
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SEL
+              description: "0: select ULP-RISCV. 1: select ULP-FSM"
+              bitOffset: 23
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_DONE_FORCE
+              description: "0: select ULP-FSM DONE signal. 1: select ULP-RISCV DONE\nsignal"
+              bitOffset: 24
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_DONE
+              description: "DONE signal. Write 1 to this bit, ULP-RISCV will go to HALT and the\ntimer starts counting"
+              bitOffset: 25
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SW_INT_TRIGGER
+              description: Trigger ULP-RISCV register interrupt
+              bitOffset: 26
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: ULP_CP_TIMER_1
+          description: Configure sleep cycle of the timer
+          addressOffset: 304
+          size: 32
+          resetValue: 51200
+          fields:
+            - name: ULP_CP_TIMER_SLP_CYCLE
+              description: Set sleep cycles for ULP coprocessor timer
+              bitOffset: 8
+              bitWidth: 24
+              access: read-write
+  - name: RTC_I2C
+    description: Low-power I2C (Inter-Integrated Circuit) Controller
+    groupName: RTC_I2C
+    baseAddress: 60416
+    addressBlock:
+      - offset: 0
+        size: 124
+        usage: registers
+    registers:
+      - register:
+          name: SCL_LOW
+          description: Configure the low level width of SCL
+          addressOffset: 0
+          size: 32
+          resetValue: 256
+          fields:
+            - name: PERIOD
+              description: "This register is used to configure how many clock cycles SCL\nremains low."
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: CTRL
+          description: Transmission setting
+          addressOffset: 4
+          size: 32
+          fields:
+            - name: SDA_FORCE_OUT
+              description: "SDA output mode. 0: open drain. 1: push pull."
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: SCL_FORCE_OUT
+              description: "SCL output mode. 0: open drain. 1: push pull."
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: MS_MODE
+              description: Set this bit to configure RTC I²C as a master.
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: TRANS_START
+              description: "Set this bit to 1, RTC I2C starts sending data."
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: TX_LSB_FIRST
+              description: "This bit is used to control the sending mode. 0: send data from the most\nsignificant bit. 1: send data from the least significant bit."
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: RX_LSB_FIRST
+              description: "This bit is used to control the storage mode for received data. 0: receive\ndata from the most significant bit. 1: receive data from the least significant bit."
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: CLK_GATE_EN
+              description: RTC I²C controller clock gate.
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+            - name: RESET
+              description: RTC I²C software reset.
+              bitOffset: 30
+              bitWidth: 1
+              access: read-write
+            - name: CLK_EN
+              description: rtc i2c reg clk gating
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: STATUS
+          description: RTC I2C status
+          addressOffset: 8
+          size: 32
+          fields:
+            - name: ACK_REC
+              description: "The received ACK value. 0: ACK. 1: NACK."
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: SLAVE_RW
+              description: "0: master writes to slave. 1: master reads from slave."
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: ARB_LOST
+              description: "When the RTC I2C loses control of SCL line, the register changes to 1."
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: BUS_BUSY
+              description: "0: RTC I2C bus is in idle state. 1: RTC I2C bus is busy transferring data."
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: SLAVE_ADDRESSED
+              description: "When the address sent by the master matches the address of the\nslave, then this bit will be set."
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: BYTE_TRANS
+              description: This field changes to 1 when one byte is transferred.
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: OP_CNT
+              description: Indicate which operation is working.
+              bitOffset: 6
+              bitWidth: 2
+              access: read-only
+            - name: SHIFT
+              description: shifter content
+              bitOffset: 16
+              bitWidth: 8
+              access: read-only
+            - name: SCL_MAIN_STATE_LAST
+              description: i2c last main status
+              bitOffset: 24
+              bitWidth: 3
+              access: read-only
+            - name: SCL_STATE_LAST
+              description: scl last status
+              bitOffset: 28
+              bitWidth: 3
+              access: read-only
+      - register:
+          name: TO
+          description: Configure RTC I2C timeout
+          addressOffset: 12
+          size: 32
+          resetValue: 65536
+          fields:
+            - name: TIME_OUT
+              description: Timeout threshold
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SLAVE_ADDR
+          description: Configure slave address
+          addressOffset: 16
+          size: 32
+          fields:
+            - name: SLAVE_ADDR
+              description: slave address
+              bitOffset: 0
+              bitWidth: 15
+              access: read-write
+            - name: ADDR_10BIT_EN
+              description: This field is used to enable the slave 10-bit addressing mode.
+              bitOffset: 31
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SCL_HIGH
+          description: Configure the high level width of SCL
+          addressOffset: 20
+          size: 32
+          resetValue: 256
+          fields:
+            - name: PERIOD
+              description: This register is used to configure how many cycles SCL remains high.
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SDA_DUTY
+          description: "Configure the SDA hold time after a negative\nSCL edge"
+          addressOffset: 24
+          size: 32
+          resetValue: 16
+          fields:
+            - name: NUM
+              description: "The number of clock cycles between the SDA switch and the falling\nedge of SCL."
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SCL_START_PERIOD
+          description: "Configure the delay between the SDA and SCL\nnegative edge for a start condition"
+          addressOffset: 28
+          size: 32
+          resetValue: 8
+          fields:
+            - name: SCL_START_PERIOD
+              description: Number of clock cycles to wait after generating a start condition.
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: SCL_STOP_PERIOD
+          description: Configure the delay between SDA and SCL positive edge for a stop condition
+          addressOffset: 32
+          size: 32
+          resetValue: 8
+          fields:
+            - name: SCL_STOP_PERIOD
+              description: Number of clock cycles to wait before generating a stop condition.
+              bitOffset: 0
+              bitWidth: 20
+              access: read-write
+      - register:
+          name: INT_CLR
+          description: Clear RTC I2C interrupt
+          addressOffset: 36
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_CLR
+              description: RTC_I2C_SLAVE_TRAN_COMP_INT interrupt clear bit
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: ARBITRATION_LOST_INT_CLR
+              description: RTC_I2C_ARBITRATION_LOST_INT interrupt clear bit
+              bitOffset: 1
+              bitWidth: 1
+              access: write-only
+            - name: MASTER_TRAN_COMP_INT_CLR
+              description: "RTC_I2C_MASTER_TRAN_COMP_INT interrupt\nclear bit"
+              bitOffset: 2
+              bitWidth: 1
+              access: write-only
+            - name: TRANS_COMPLETE_INT_CLR
+              description: RTC_I2C_TRANS_COMPLETE_INT interrupt clear bit
+              bitOffset: 3
+              bitWidth: 1
+              access: write-only
+            - name: TIME_OUT_INT_CLR
+              description: RTC_I2C_TIME_OUT_INT interrupt clear bit
+              bitOffset: 4
+              bitWidth: 1
+              access: write-only
+            - name: ACK_ERR_INT_CLR
+              description: RTC_I2C_ACK_ERR_INT interrupt clear bit
+              bitOffset: 5
+              bitWidth: 1
+              access: write-only
+            - name: RX_DATA_INT_CLR
+              description: RTC_I2C_RX_DATA_INT interrupt clear bit
+              bitOffset: 6
+              bitWidth: 1
+              access: write-only
+            - name: TX_DATA_INT_CLR
+              description: RTC_I2C_TX_DATA_INT interrupt clear bit
+              bitOffset: 7
+              bitWidth: 1
+              access: write-only
+            - name: DETECT_START_INT_CLR
+              description: RTC_I2C_DETECT_START_INT interrupt clear bit
+              bitOffset: 8
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: INT_RAW
+          description: RTC I2C raw interrupt
+          addressOffset: 40
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_RAW
+              description: RTC_I2C_SLAVE_TRAN_COMP_INT interrupt raw bit
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: ARBITRATION_LOST_INT_RAW
+              description: RTC_I2C_ARBITRATION_LOST_INT interrupt raw bit
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: MASTER_TRAN_COMP_INT_RAW
+              description: RTC_I2C_MASTER_TRAN_COMP_INT interrupt raw bit
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_COMPLETE_INT_RAW
+              description: RTC_I2C_TRANS_COMPLETE_INT interrupt raw bit
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: TIME_OUT_INT_RAW
+              description: RTC_I2C_TIME_OUT_INT interrupt raw bit
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: ACK_ERR_INT_RAW
+              description: RTC_I2C_ACK_ERR_INT interrupt raw bit
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: RX_DATA_INT_RAW
+              description: RTC_I2C_RX_DATA_INT interrupt raw bit
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: TX_DATA_INT_RAW
+              description: RTC_I2C_TX_DATA_INT interrupt raw bit
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: DETECT_START_INT_RAW
+              description: RTC_I2C_DETECT_START_INT interrupt raw bit
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ST
+          description: RTC I2C interrupt status
+          addressOffset: 44
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_ST
+              description: RTC_I2C_SLAVE_TRAN_COMP_INT interrupt status bit
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: ARBITRATION_LOST_INT_ST
+              description: RTC_I2C_ARBITRATION_LOST_INT interrupt status bit
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: MASTER_TRAN_COMP_INT_ST
+              description: RTC_I2C_MASTER_TRAN_COMP_INT interrupt status bit
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: TRANS_COMPLETE_INT_ST
+              description: RTC_I2C_TRANS_COMPLETE_INT interrupt status bit
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: TIME_OUT_INT_ST
+              description: RTC_I2C_TIME_OUT_INT interrupt status bit
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: ACK_ERR_INT_ST
+              description: RTC_I2C_ACK_ERR_INT interrupt status bit
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: RX_DATA_INT_ST
+              description: RTC_I2C_RX_DATA_INT interrupt status bit
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: TX_DATA_INT_ST
+              description: RTC_I2C_TX_DATA_INT interrupt status bit
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: DETECT_START_INT_ST
+              description: RTC_I2C_DETECT_START_INT interrupt status bit
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: INT_ENA
+          description: Enable RTC I2C interrupt
+          addressOffset: 48
+          size: 32
+          fields:
+            - name: SLAVE_TRAN_COMP_INT_ENA
+              description: RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: ARBITRATION_LOST_INT_ENA
+              description: RTC_I2C_ARBITRATION_LOST_INT interrupt enable bit
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: MASTER_TRAN_COMP_INT_ENA
+              description: RTC_I2C_MASTER_TRAN_COMP_INT interrupt enable bit
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: TRANS_COMPLETE_INT_ENA
+              description: RTC_I2C_TRANS_COMPLETE_INT interrupt enable bit
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: TIME_OUT_INT_ENA
+              description: RTC_I2C_TIME_OUT_INT interrupt enable bit
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: ACK_ERR_INT_ENA
+              description: RTC_I2C_ACK_ERR_INT interrupt enable bit
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: RX_DATA_INT_ENA
+              description: RTC_I2C_RX_DATA_INT interrupt enable bit
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: TX_DATA_INT_ENA
+              description: RTC_I2C_TX_DATA_INT interrupt enable bit
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: DETECT_START_INT_ENA
+              description: RTC_I2C_DETECT_START_INT interrupt enable bit
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: DATA
+          description: RTC I2C read data
+          addressOffset: 52
+          size: 32
+          fields:
+            - name: RDATA
+              description: Data received
+              bitOffset: 0
+              bitWidth: 8
+              access: read-only
+            - name: SLAVE_TX_DATA
+              description: The data sent by slave
+              bitOffset: 8
+              bitWidth: 8
+              access: read-write
+            - name: DONE
+              description: RTC I2C transmission is done.
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD0
+          description: RTC I2C Command 0
+          addressOffset: 56
+          size: 32
+          resetValue: 2307
+          fields:
+            - name: COMMAND0
+              description: "Content of command 0. For more information, please refer to the register\nI2C_COMD0_REG in Chapter I²C Controller"
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND0_DONE
+              description: "When command 0 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD1
+          description: RTC I2C Command 1
+          addressOffset: 60
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND1
+              description: "Content of command 1. For more information, please refer to the register\nI2C_COMD1_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND1_DONE
+              description: "When command 1 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD2
+          description: RTC I2C Command 2
+          addressOffset: 64
+          size: 32
+          resetValue: 2306
+          fields:
+            - name: COMMAND2
+              description: "Content of command 2. For more information, please refer to the register\nI2C_COMD2_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND2_DONE
+              description: "When command 2 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD3
+          description: RTC I2C Command 3
+          addressOffset: 68
+          size: 32
+          resetValue: 257
+          fields:
+            - name: COMMAND3
+              description: "Content of command 3. For more information, please refer to the register\nI2C_COMD3_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND3_DONE
+              description: "When command 3 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD4
+          description: RTC I2C Command 4
+          addressOffset: 72
+          size: 32
+          resetValue: 2305
+          fields:
+            - name: COMMAND4
+              description: "Content of command 4. For more information, please refer to the register\nI2C_COMD4_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND4_DONE
+              description: "When command 4 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD5
+          description: RTC I2C Command 5
+          addressOffset: 76
+          size: 32
+          resetValue: 5889
+          fields:
+            - name: COMMAND5
+              description: "Content of command 5. For more information, please refer to the register\nI2C_COMD5_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND5_DONE
+              description: "When command 5 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD6
+          description: RTC I2C Command 6
+          addressOffset: 80
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND6
+              description: "Content of command 6. For more information, please refer to the register\nI2C_COMD6_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND6_DONE
+              description: "When command 6 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD7
+          description: RTC I2C Command 7
+          addressOffset: 84
+          size: 32
+          resetValue: 2308
+          fields:
+            - name: COMMAND7
+              description: "Content of command 7. For more information, please refer to the register\nI2C_COMD7_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND7_DONE
+              description: "When command 7 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD8
+          description: RTC I2C Command 8
+          addressOffset: 88
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND8
+              description: "Content of command 8. For more information, please refer to the register\nI2C_COMD8_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND8_DONE
+              description: "When command 8 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD9
+          description: RTC I2C Command 9
+          addressOffset: 92
+          size: 32
+          resetValue: 2307
+          fields:
+            - name: COMMAND9
+              description: "Content of command 9. For more information, please refer to the register\nI2C_COMD9_REG in Chapter I²C Controller"
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND9_DONE
+              description: "When command 9 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD10
+          description: RTC I2C Command 10
+          addressOffset: 96
+          size: 32
+          resetValue: 257
+          fields:
+            - name: COMMAND10
+              description: "Content of command 10. For more information, please refer to the register\nI2C_COMD10_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND10_DONE
+              description: "When command 10 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD11
+          description: RTC I2C Command 11
+          addressOffset: 100
+          size: 32
+          resetValue: 2305
+          fields:
+            - name: COMMAND11
+              description: "Content of command 11. For more information, please refer to the register\nI2C_COMD11_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND11_DONE
+              description: "When command 11 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD12
+          description: RTC I2C Command 12
+          addressOffset: 104
+          size: 32
+          resetValue: 5889
+          fields:
+            - name: COMMAND12
+              description: "Content of command 12. For more information, please refer to the register\nI2C_COMD12_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND12_DONE
+              description: "When command 12 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD13
+          description: RTC I2C Command 13
+          addressOffset: 108
+          size: 32
+          resetValue: 6401
+          fields:
+            - name: COMMAND13
+              description: "Content of command 13. For more information, please refer to the register\nI2C_COMD13_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND13_DONE
+              description: "When command 13 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD14
+          description: RTC I2C Command 14
+          addressOffset: 112
+          size: 32
+          fields:
+            - name: COMMAND14
+              description: "Content of command 14. For more information, please refer to the register\nI2C_COMD14_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND14_DONE
+              description: "When command 14 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: CMD15
+          description: RTC I2C Command 15
+          addressOffset: 116
+          size: 32
+          fields:
+            - name: COMMAND15
+              description: "Content of command 15. For more information, please refer to the register\nI2C_COMD15_REG in Chapter I²C Controller."
+              bitOffset: 0
+              bitWidth: 14
+              access: read-write
+            - name: COMMAND15_DONE
+              description: "When command 15 is done, this bit changes to 1."
+              bitOffset: 31
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: DATE
+          description: Version control register
+          addressOffset: 252
+          size: 32
+          resetValue: 26235664
+          fields:
+            - name: DATE
+              description: Version control register
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+  - name: SENS
+    description: SENS Peripheral
+    groupName: SENS
+    baseAddress: 51200
+    addressBlock:
+      - offset: 0
+        size: 272
+        usage: registers
+    interrupt:
+      - name: TOUCH_DONE_INT
+        value: 0
+      - name: TOUCH_INACTIVE_INT
+        value: 1
+      - name: TOUCH_ACTIVE_INT
+        value: 2
+      - name: SARADC1_DONE_INT
+        value: 3
+      - name: SARADC2_DONE_INT
+        value: 4
+      - name: TSENS_DONE_INT
+        value: 5
+    registers:
+      - register:
+          name: SAR_SLAVE_ADDR1
+          description: Configure slave addresses 0-1 of RTC I2C
+          addressOffset: 64
+          size: 32
+          fields:
+            - name: I2C_SLAVE_ADDR1
+              description: RTC I2C slave address 1
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: I2C_SLAVE_ADDR0
+              description: RTC I2C slave address 0
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+            - name: MEAS_STATUS
+              bitOffset: 22
+              bitWidth: 8
+              access: read-only
+      - register:
+          name: SAR_SLAVE_ADDR2
+          description: Configure slave addresses 2-3 of RTC I2C
+          addressOffset: 68
+          size: 32
+          fields:
+            - name: I2C_SLAVE_ADDR3
+              description: RTC I2C slave address 3
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: I2C_SLAVE_ADDR2
+              description: RTC I2C slave address 2
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+      - register:
+          name: SAR_SLAVE_ADDR3
+          description: Configure slave addresses 4-5 of RTC I2C
+          addressOffset: 72
+          size: 32
+          fields:
+            - name: I2C_SLAVE_ADDR5
+              description: RTC I2C slave address 5
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: I2C_SLAVE_ADDR4
+              description: RTC I2C slave address 4
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+      - register:
+          name: SAR_SLAVE_ADDR4
+          description: Configure slave addresses 6-7 of RTC I2C
+          addressOffset: 76
+          size: 32
+          fields:
+            - name: I2C_SLAVE_ADDR7
+              description: RTC I2C slave address 7
+              bitOffset: 0
+              bitWidth: 11
+              access: read-write
+            - name: I2C_SLAVE_ADDR6
+              description: RTC I2C slave address 6
+              bitOffset: 11
+              bitWidth: 11
+              access: read-write
+      - register:
+          name: SAR_I2C_CTRL
+          description: Configure RTC I2C transmission
+          addressOffset: 88
+          size: 32
+          fields:
+            - name: SAR_I2C_CTRL
+              description: "RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE =\n1."
+              bitOffset: 0
+              bitWidth: 28
+              access: read-write
+            - name: SAR_I2C_START
+              description: Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1
+              bitOffset: 28
+              bitWidth: 1
+              access: read-write
+            - name: SAR_I2C_START_FORCE
+              description: "0: RTC I2C started by FSM. 1: RTC I2C started by software."
+              bitOffset: 29
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SAR_COCPU_INT_RAW
+          description: Interrupt raw bit of ULP-RISCV
+          addressOffset: 296
+          size: 32
+          fields:
+            - name: COCPU_TOUCH_DONE_INT_RAW
+              description: TOUCH_DONE_INT interrupt raw bit
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_TOUCH_INACTIVE_INT_RAW
+              description: TOUCH_INACTIVE_INT interrupt raw bit
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_TOUCH_ACTIVE_INT_RAW
+              description: TOUCH_ACTIVE_INT interrupt raw bit
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SARADC1_INT_RAW
+              description: SARADC1_DONE_INT interrupt raw bit
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SARADC2_INT_RAW
+              description: SARADC2_DONE_INT interrupt raw bit
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_TSENS_INT_RAW
+              description: TSENS_DONE_INT interrupt raw bit
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_START_INT_RAW
+              description: RISCV_START_INT interrupt raw bit
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SW_INT_RAW
+              description: SW_INT interrupt raw bit
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SWD_INT_RAW
+              description: SWD_INT interrupt raw bit
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: SAR_COCPU_INT_ENA
+          description: Interrupt enable bit of ULP-RISCV
+          addressOffset: 300
+          size: 32
+          fields:
+            - name: COCPU_TOUCH_DONE_INT_ENA
+              description: TOUCH_DONE_INT interrupt enable bit
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_TOUCH_INACTIVE_INT_ENA
+              description: TOUCH_INACTIVE_INT interrupt enable bit
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_TOUCH_ACTIVE_INT_ENA
+              description: TOUCH_ACTIVE_INT interrupt enable bit
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SARADC1_INT_ENA
+              description: SARADC1_DONE_INT interrupt enable bit
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SARADC2_INT_ENA
+              description: SARADC2_DONE_INT interrupt enable bit
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_TSENS_INT_ENA
+              description: TSENS_DONE_INT interrupt enable bit
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_START_INT_ENA
+              description: RISCV_START_INT interrupt enable bit
+              bitOffset: 6
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SW_INT_ENA
+              description: SW_INT interrupt enable bit
+              bitOffset: 7
+              bitWidth: 1
+              access: read-write
+            - name: COCPU_SWD_INT_ENA
+              description: SWD_INT interrupt enable bit
+              bitOffset: 8
+              bitWidth: 1
+              access: read-write
+      - register:
+          name: SAR_COCPU_INT_ST
+          description: Interrupt status bit of ULP-RISCV
+          addressOffset: 304
+          size: 32
+          fields:
+            - name: COCPU_TOUCH_DONE_INT_ST
+              description: TOUCH_DONE_INT interrupt status bit
+              bitOffset: 0
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_TOUCH_INACTIVE_INT_ST
+              description: TOUCH_INACTIVE_INT interrupt status bit
+              bitOffset: 1
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_TOUCH_ACTIVE_INT_ST
+              description: TOUCH_ACTIVE_INT interrupt status bit
+              bitOffset: 2
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SARADC1_INT_ST
+              description: SARADC1_DONE_INT interrupt status bit
+              bitOffset: 3
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SARADC2_INT_ST
+              description: SARADC2_DONE_INT interrupt status bit
+              bitOffset: 4
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_TSENS_INT_ST
+              description: TSENS_DONE_INT interrupt status bit
+              bitOffset: 5
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_START_INT_ST
+              description: RISCV_START_INT interrupt status bit
+              bitOffset: 6
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SW_INT_ST
+              description: SW_INT interrupt status bit
+              bitOffset: 7
+              bitWidth: 1
+              access: read-only
+            - name: COCPU_SWD_INT_ST
+              description: SWD_INT interrupt status bit
+              bitOffset: 8
+              bitWidth: 1
+              access: read-only
+      - register:
+          name: SAR_COCPU_INT_CLR
+          description: Interrupt clear bit of ULP-RISCV
+          addressOffset: 308
+          size: 32
+          fields:
+            - name: COCPU_TOUCH_DONE_INT_CLR
+              description: TOUCH_DONE_INT interrupt clear bit
+              bitOffset: 0
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_TOUCH_INACTIVE_INT_CLR
+              description: TOUCH_INACTIVE_INT interrupt clear bit
+              bitOffset: 1
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_TOUCH_ACTIVE_INT_CLR
+              description: TOUCH_ACTIVE_INT interrupt clear bit
+              bitOffset: 2
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_SARADC1_INT_CLR
+              description: SARADC1_DONE_INT interrupt clear bit
+              bitOffset: 3
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_SARADC2_INT_CLR
+              description: SARADC2_DONE_INT interrupt clear bit
+              bitOffset: 4
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_TSENS_INT_CLR
+              description: TSENS_DONE_INT interrupt clear bit
+              bitOffset: 5
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_START_INT_CLR
+              description: RISCV_START_INT interrupt clear bit
+              bitOffset: 6
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_SW_INT_CLR
+              description: SW_INT interrupt clear bit
+              bitOffset: 7
+              bitWidth: 1
+              access: write-only
+            - name: COCPU_SWD_INT_CLR
+              description: SWD_INT interrupt clear bit
+              bitOffset: 8
+              bitWidth: 1
+              access: write-only
