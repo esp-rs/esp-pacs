@@ -5,6 +5,18 @@ I2C0:
     INT_STATUS:
       name: INT_ST
 
+RTC_CNTL:
+  _modify:
+    INT_RAW_RTC:
+      name: INT_RAW
+    INT_ST_RTC:
+      name: INT_ST
+    INT_ENA_RTC:
+      name: INT_ENA
+    INT_CLR_RTC:
+      name: INT_CLR
+  _include: ../../../common_patches/int_strip.yaml
+
 "EFUSE,I2C0,I2S0,LEDC,UART0,APB_SARADC,UHCI0,RTC_I2C":
   _include: ../../../common_patches/int_strip.yaml
 
@@ -13,3 +25,14 @@ SPI0:
 
 TIMG0:
   _include: ../../../common_patches/tim_int_strip.yaml
+
+SYSTIMER:
+  INT_RAW:
+    _strip_end: _INT_RAW
+  INT_ENA:
+    _strip_end: _INT_ENA
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
