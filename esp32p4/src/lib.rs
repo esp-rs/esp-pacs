@@ -2353,16 +2353,16 @@ impl core::fmt::Debug for LP_SYS {
 #[doc = "LP_SYS Peripheral"]
 pub mod lp_sys;
 #[doc = "LP_ANA_PERI Peripheral"]
-pub struct LP_ANA_PERI {
+pub struct LP_ANA {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for LP_ANA_PERI {}
-impl LP_ANA_PERI {
+unsafe impl Send for LP_ANA {}
+impl LP_ANA {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const lp_ana_peri::RegisterBlock = 0x5011_3000 as *const _;
+    pub const PTR: *const lp_ana::RegisterBlock = 0x5011_3000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const lp_ana_peri::RegisterBlock {
+    pub const fn ptr() -> *const lp_ana::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2384,20 +2384,20 @@ impl LP_ANA_PERI {
         }
     }
 }
-impl Deref for LP_ANA_PERI {
-    type Target = lp_ana_peri::RegisterBlock;
+impl Deref for LP_ANA {
+    type Target = lp_ana::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for LP_ANA_PERI {
+impl core::fmt::Debug for LP_ANA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_ANA_PERI").finish()
+        f.debug_struct("LP_ANA").finish()
     }
 }
 #[doc = "LP_ANA_PERI Peripheral"]
-pub mod lp_ana_peri;
+pub mod lp_ana;
 #[doc = "LP_AON_CLKRST Peripheral"]
 pub struct LP_AON_CLKRST {
     _marker: PhantomData<*const ()>,
@@ -4515,8 +4515,8 @@ pub struct Peripherals {
     pub LP_PERI: LP_PERI,
     #[doc = "LP_SYS"]
     pub LP_SYS: LP_SYS,
-    #[doc = "LP_ANA_PERI"]
-    pub LP_ANA_PERI: LP_ANA_PERI,
+    #[doc = "LP_ANA"]
+    pub LP_ANA: LP_ANA,
     #[doc = "LP_AON_CLKRST"]
     pub LP_AON_CLKRST: LP_AON_CLKRST,
     #[doc = "LP_GPIO"]
@@ -4759,7 +4759,7 @@ impl Peripherals {
             LP_SYS: LP_SYS {
                 _marker: PhantomData,
             },
-            LP_ANA_PERI: LP_ANA_PERI {
+            LP_ANA: LP_ANA {
                 _marker: PhantomData,
             },
             LP_AON_CLKRST: LP_AON_CLKRST {

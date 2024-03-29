@@ -1,33 +1,27 @@
 #[doc = "Register `PERI_BACKUP_INT_ST` reader"]
 pub type R = crate::R<PERI_BACKUP_INT_ST_SPEC>;
-#[doc = "Field `PERI_BACKUP_DONE_INT_ST` reader - reg_peri_backup_done_int_st"]
-pub type PERI_BACKUP_DONE_INT_ST_R = crate::BitReader;
-#[doc = "Field `PERI_BACKUP_ERR_INT_ST` reader - reg_peri_backup_err_int_st"]
-pub type PERI_BACKUP_ERR_INT_ST_R = crate::BitReader;
+#[doc = "Field `DONE` reader - reg_peri_backup_done_int_st"]
+pub type DONE_R = crate::BitReader;
+#[doc = "Field `ERR` reader - reg_peri_backup_err_int_st"]
+pub type ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - reg_peri_backup_done_int_st"]
     #[inline(always)]
-    pub fn peri_backup_done_int_st(&self) -> PERI_BACKUP_DONE_INT_ST_R {
-        PERI_BACKUP_DONE_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn done(&self) -> DONE_R {
+        DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_peri_backup_err_int_st"]
     #[inline(always)]
-    pub fn peri_backup_err_int_st(&self) -> PERI_BACKUP_ERR_INT_ST_R {
-        PERI_BACKUP_ERR_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn err(&self) -> ERR_R {
+        ERR_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_BACKUP_INT_ST")
-            .field(
-                "peri_backup_done_int_st",
-                &format_args!("{}", self.peri_backup_done_int_st().bit()),
-            )
-            .field(
-                "peri_backup_err_int_st",
-                &format_args!("{}", self.peri_backup_err_int_st().bit()),
-            )
+            .field("done", &format_args!("{}", self.done().bit()))
+            .field("err", &format_args!("{}", self.err().bit()))
             .finish()
     }
 }

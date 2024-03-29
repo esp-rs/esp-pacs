@@ -12,9 +12,9 @@ pub struct RegisterBlock {
     swd_conf: SWD_CONF,
     swd_wprotect: SWD_WPROTECT,
     int_raw: INT_RAW,
-    int_st_rtc: INT_ST_RTC,
-    int_ena_rtc: INT_ENA_RTC,
-    int_clr_rtc: INT_CLR_RTC,
+    int_st: INT_ST,
+    int_ena: INT_ENA,
+    int_clr: INT_CLR,
     _reserved13: [u8; 0x03c8],
     date: DATE,
 }
@@ -71,18 +71,18 @@ impl RegisterBlock {
     }
     #[doc = "0x28 - need_des"]
     #[inline(always)]
-    pub const fn int_st_rtc(&self) -> &INT_ST_RTC {
-        &self.int_st_rtc
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
     #[doc = "0x2c - need_des"]
     #[inline(always)]
-    pub const fn int_ena_rtc(&self) -> &INT_ENA_RTC {
-        &self.int_ena_rtc
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x30 - need_des"]
     #[inline(always)]
-    pub const fn int_clr_rtc(&self) -> &INT_CLR_RTC {
-        &self.int_clr_rtc
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0x3fc - need_des"]
     #[inline(always)]
@@ -130,18 +130,18 @@ pub mod swd_wprotect;
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "need_des"]
 pub mod int_raw;
-#[doc = "INT_ST_RTC (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_rtc::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st_rtc`] module"]
-pub type INT_ST_RTC = crate::Reg<int_st_rtc::INT_ST_RTC_SPEC>;
+#[doc = "INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "need_des"]
-pub mod int_st_rtc;
-#[doc = "INT_ENA_RTC (rw) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena_rtc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena_rtc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena_rtc`] module"]
-pub type INT_ENA_RTC = crate::Reg<int_ena_rtc::INT_ENA_RTC_SPEC>;
+pub mod int_st;
+#[doc = "INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "need_des"]
-pub mod int_ena_rtc;
-#[doc = "INT_CLR_RTC (w) register accessor: need_des\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr_rtc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr_rtc`] module"]
-pub type INT_CLR_RTC = crate::Reg<int_clr_rtc::INT_CLR_RTC_SPEC>;
+pub mod int_ena;
+#[doc = "INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "need_des"]
-pub mod int_clr_rtc;
+pub mod int_clr;
 #[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "need_des"]

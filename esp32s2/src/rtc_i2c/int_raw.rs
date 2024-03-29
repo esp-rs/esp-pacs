@@ -1,68 +1,68 @@
 #[doc = "Register `INT_RAW` reader"]
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Field `SLAVE_TRAN_COMP_INT_RAW` reader - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt raw bit"]
-pub type SLAVE_TRAN_COMP_INT_RAW_R = crate::BitReader;
-#[doc = "Field `ARBITRATION_LOST_INT_RAW` reader - RTC_I2C_ARBITRATION_LOST_INT interrupt raw bit"]
-pub type ARBITRATION_LOST_INT_RAW_R = crate::BitReader;
-#[doc = "Field `MASTER_TRAN_COMP_INT_RAW` reader - RTC_I2C_MASTER_TRAN_COMP_INT interrupt raw bit"]
-pub type MASTER_TRAN_COMP_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TRANS_COMPLETE_INT_RAW` reader - RTC_I2C_TRANS_COMPLETE_INT interrupt raw bit"]
-pub type TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TIME_OUT_INT_RAW` reader - RTC_I2C_TIME_OUT_INT interrupt raw bit"]
-pub type TIME_OUT_INT_RAW_R = crate::BitReader;
-#[doc = "Field `ACK_ERR_INT_RAW` reader - RTC_I2C_ACK_ERR_INT interrupt raw bit"]
-pub type ACK_ERR_INT_RAW_R = crate::BitReader;
-#[doc = "Field `RX_DATA_INT_RAW` reader - RTC_I2C_RX_DATA_INT interrupt raw bit"]
-pub type RX_DATA_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TX_DATA_INT_RAW` reader - RTC_I2C_TX_DATA_INT interrupt raw bit"]
-pub type TX_DATA_INT_RAW_R = crate::BitReader;
-#[doc = "Field `DETECT_START_INT_RAW` reader - RTC_I2C_DETECT_START_INT interrupt raw bit"]
-pub type DETECT_START_INT_RAW_R = crate::BitReader;
+#[doc = "Field `SLAVE_TRAN_COMP` reader - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt raw bit"]
+pub type SLAVE_TRAN_COMP_R = crate::BitReader;
+#[doc = "Field `ARBITRATION_LOST` reader - RTC_I2C_ARBITRATION_LOST_INT interrupt raw bit"]
+pub type ARBITRATION_LOST_R = crate::BitReader;
+#[doc = "Field `MASTER_TRAN_COMP` reader - RTC_I2C_MASTER_TRAN_COMP_INT interrupt raw bit"]
+pub type MASTER_TRAN_COMP_R = crate::BitReader;
+#[doc = "Field `TRANS_COMPLETE` reader - RTC_I2C_TRANS_COMPLETE_INT interrupt raw bit"]
+pub type TRANS_COMPLETE_R = crate::BitReader;
+#[doc = "Field `TIME_OUT` reader - RTC_I2C_TIME_OUT_INT interrupt raw bit"]
+pub type TIME_OUT_R = crate::BitReader;
+#[doc = "Field `ACK_ERR` reader - RTC_I2C_ACK_ERR_INT interrupt raw bit"]
+pub type ACK_ERR_R = crate::BitReader;
+#[doc = "Field `RX_DATA` reader - RTC_I2C_RX_DATA_INT interrupt raw bit"]
+pub type RX_DATA_R = crate::BitReader;
+#[doc = "Field `TX_DATA` reader - RTC_I2C_TX_DATA_INT interrupt raw bit"]
+pub type TX_DATA_R = crate::BitReader;
+#[doc = "Field `DETECT_START` reader - RTC_I2C_DETECT_START_INT interrupt raw bit"]
+pub type DETECT_START_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn slave_tran_comp_int_raw(&self) -> SLAVE_TRAN_COMP_INT_RAW_R {
-        SLAVE_TRAN_COMP_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn slave_tran_comp(&self) -> SLAVE_TRAN_COMP_R {
+        SLAVE_TRAN_COMP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RTC_I2C_ARBITRATION_LOST_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn arbitration_lost_int_raw(&self) -> ARBITRATION_LOST_INT_RAW_R {
-        ARBITRATION_LOST_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn arbitration_lost(&self) -> ARBITRATION_LOST_R {
+        ARBITRATION_LOST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC_I2C_MASTER_TRAN_COMP_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn master_tran_comp_int_raw(&self) -> MASTER_TRAN_COMP_INT_RAW_R {
-        MASTER_TRAN_COMP_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn master_tran_comp(&self) -> MASTER_TRAN_COMP_R {
+        MASTER_TRAN_COMP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC_I2C_TRANS_COMPLETE_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn trans_complete_int_raw(&self) -> TRANS_COMPLETE_INT_RAW_R {
-        TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn trans_complete(&self) -> TRANS_COMPLETE_R {
+        TRANS_COMPLETE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC_I2C_TIME_OUT_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn time_out_int_raw(&self) -> TIME_OUT_INT_RAW_R {
-        TIME_OUT_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn time_out(&self) -> TIME_OUT_R {
+        TIME_OUT_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - RTC_I2C_ACK_ERR_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn ack_err_int_raw(&self) -> ACK_ERR_INT_RAW_R {
-        ACK_ERR_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ack_err(&self) -> ACK_ERR_R {
+        ACK_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - RTC_I2C_RX_DATA_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn rx_data_int_raw(&self) -> RX_DATA_INT_RAW_R {
-        RX_DATA_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn rx_data(&self) -> RX_DATA_R {
+        RX_DATA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - RTC_I2C_TX_DATA_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn tx_data_int_raw(&self) -> TX_DATA_INT_RAW_R {
-        TX_DATA_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn tx_data(&self) -> TX_DATA_R {
+        TX_DATA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - RTC_I2C_DETECT_START_INT interrupt raw bit"]
     #[inline(always)]
-    pub fn detect_start_int_raw(&self) -> DETECT_START_INT_RAW_R {
-        DETECT_START_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn detect_start(&self) -> DETECT_START_R {
+        DETECT_START_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -70,40 +70,28 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
             .field(
-                "slave_tran_comp_int_raw",
-                &format_args!("{}", self.slave_tran_comp_int_raw().bit()),
+                "slave_tran_comp",
+                &format_args!("{}", self.slave_tran_comp().bit()),
             )
             .field(
-                "arbitration_lost_int_raw",
-                &format_args!("{}", self.arbitration_lost_int_raw().bit()),
+                "arbitration_lost",
+                &format_args!("{}", self.arbitration_lost().bit()),
             )
             .field(
-                "master_tran_comp_int_raw",
-                &format_args!("{}", self.master_tran_comp_int_raw().bit()),
+                "master_tran_comp",
+                &format_args!("{}", self.master_tran_comp().bit()),
             )
             .field(
-                "trans_complete_int_raw",
-                &format_args!("{}", self.trans_complete_int_raw().bit()),
+                "trans_complete",
+                &format_args!("{}", self.trans_complete().bit()),
             )
+            .field("time_out", &format_args!("{}", self.time_out().bit()))
+            .field("ack_err", &format_args!("{}", self.ack_err().bit()))
+            .field("rx_data", &format_args!("{}", self.rx_data().bit()))
+            .field("tx_data", &format_args!("{}", self.tx_data().bit()))
             .field(
-                "time_out_int_raw",
-                &format_args!("{}", self.time_out_int_raw().bit()),
-            )
-            .field(
-                "ack_err_int_raw",
-                &format_args!("{}", self.ack_err_int_raw().bit()),
-            )
-            .field(
-                "rx_data_int_raw",
-                &format_args!("{}", self.rx_data_int_raw().bit()),
-            )
-            .field(
-                "tx_data_int_raw",
-                &format_args!("{}", self.tx_data_int_raw().bit()),
-            )
-            .field(
-                "detect_start_int_raw",
-                &format_args!("{}", self.detect_start_int_raw().bit()),
+                "detect_start",
+                &format_args!("{}", self.detect_start().bit()),
             )
             .finish()
     }

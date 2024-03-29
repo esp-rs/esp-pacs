@@ -1,12 +1,12 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `COCPU_TSENS_WAKE_INT_ST` reader - Tsens wakeup interrupt status."]
-pub type COCPU_TSENS_WAKE_INT_ST_R = crate::BitReader;
+#[doc = "Field `COCPU_TSENS_WAKE` reader - Tsens wakeup interrupt status."]
+pub type COCPU_TSENS_WAKE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Tsens wakeup interrupt status."]
     #[inline(always)]
-    pub fn cocpu_tsens_wake_int_st(&self) -> COCPU_TSENS_WAKE_INT_ST_R {
-        COCPU_TSENS_WAKE_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn cocpu_tsens_wake(&self) -> COCPU_TSENS_WAKE_R {
+        COCPU_TSENS_WAKE_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
             .field(
-                "cocpu_tsens_wake_int_st",
-                &format_args!("{}", self.cocpu_tsens_wake_int_st().bit()),
+                "cocpu_tsens_wake",
+                &format_args!("{}", self.cocpu_tsens_wake().bit()),
             )
             .finish()
     }

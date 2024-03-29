@@ -2,25 +2,22 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `UNDERRUN_INT_RAW` reader - the raw interrupt status of dpi_underrun"]
-pub type UNDERRUN_INT_RAW_R = crate::BitReader;
-#[doc = "Field `UNDERRUN_INT_RAW` writer - the raw interrupt status of dpi_underrun"]
-pub type UNDERRUN_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UNDERRUN` reader - the raw interrupt status of dpi_underrun"]
+pub type UNDERRUN_R = crate::BitReader;
+#[doc = "Field `UNDERRUN` writer - the raw interrupt status of dpi_underrun"]
+pub type UNDERRUN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - the raw interrupt status of dpi_underrun"]
     #[inline(always)]
-    pub fn underrun_int_raw(&self) -> UNDERRUN_INT_RAW_R {
-        UNDERRUN_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn underrun(&self) -> UNDERRUN_R {
+        UNDERRUN_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "underrun_int_raw",
-                &format_args!("{}", self.underrun_int_raw().bit()),
-            )
+            .field("underrun", &format_args!("{}", self.underrun().bit()))
             .finish()
     }
 }
@@ -34,8 +31,8 @@ impl W {
     #[doc = "Bit 0 - the raw interrupt status of dpi_underrun"]
     #[inline(always)]
     #[must_use]
-    pub fn underrun_int_raw(&mut self) -> UNDERRUN_INT_RAW_W<INT_RAW_SPEC> {
-        UNDERRUN_INT_RAW_W::new(self, 0)
+    pub fn underrun(&mut self) -> UNDERRUN_W<INT_RAW_SPEC> {
+        UNDERRUN_W::new(self, 0)
     }
 }
 #[doc = "dsi_bridge raw interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

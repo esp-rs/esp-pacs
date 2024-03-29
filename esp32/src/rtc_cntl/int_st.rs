@@ -1,104 +1,83 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `SLP_WAKEUP_INT_ST` reader - sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_ST_R = crate::BitReader;
-#[doc = "Field `SLP_REJECT_INT_ST` reader - sleep reject interrupt state"]
-pub type SLP_REJECT_INT_ST_R = crate::BitReader;
-#[doc = "Field `SDIO_IDLE_INT_ST` reader - SDIO idle interrupt state"]
-pub type SDIO_IDLE_INT_ST_R = crate::BitReader;
-#[doc = "Field `WDT_INT_ST` reader - RTC WDT interrupt state"]
-pub type WDT_INT_ST_R = crate::BitReader;
-#[doc = "Field `TIME_VALID_INT_ST` reader - RTC time valid interrupt state"]
-pub type TIME_VALID_INT_ST_R = crate::BitReader;
-#[doc = "Field `SAR_INT_ST` reader - ULP-coprocessor interrupt state"]
-pub type SAR_INT_ST_R = crate::BitReader;
-#[doc = "Field `TOUCH_INT_ST` reader - touch interrupt state"]
-pub type TOUCH_INT_ST_R = crate::BitReader;
-#[doc = "Field `BROWN_OUT_INT_ST` reader - brown out interrupt state"]
-pub type BROWN_OUT_INT_ST_R = crate::BitReader;
-#[doc = "Field `MAIN_TIMER_INT_ST` reader - RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_ST_R = crate::BitReader;
+#[doc = "Field `SLP_WAKEUP` reader - sleep wakeup interrupt state"]
+pub type SLP_WAKEUP_R = crate::BitReader;
+#[doc = "Field `SLP_REJECT` reader - sleep reject interrupt state"]
+pub type SLP_REJECT_R = crate::BitReader;
+#[doc = "Field `SDIO_IDLE` reader - SDIO idle interrupt state"]
+pub type SDIO_IDLE_R = crate::BitReader;
+#[doc = "Field `WDT` reader - RTC WDT interrupt state"]
+pub type WDT_R = crate::BitReader;
+#[doc = "Field `TIME_VALID` reader - RTC time valid interrupt state"]
+pub type TIME_VALID_R = crate::BitReader;
+#[doc = "Field `SAR` reader - ULP-coprocessor interrupt state"]
+pub type SAR_R = crate::BitReader;
+#[doc = "Field `TOUCH` reader - touch interrupt state"]
+pub type TOUCH_R = crate::BitReader;
+#[doc = "Field `BROWN_OUT` reader - brown out interrupt state"]
+pub type BROWN_OUT_R = crate::BitReader;
+#[doc = "Field `MAIN_TIMER` reader - RTC main timer interrupt state"]
+pub type MAIN_TIMER_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt state"]
     #[inline(always)]
-    pub fn slp_wakeup_int_st(&self) -> SLP_WAKEUP_INT_ST_R {
-        SLP_WAKEUP_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn slp_wakeup(&self) -> SLP_WAKEUP_R {
+        SLP_WAKEUP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - sleep reject interrupt state"]
     #[inline(always)]
-    pub fn slp_reject_int_st(&self) -> SLP_REJECT_INT_ST_R {
-        SLP_REJECT_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn slp_reject(&self) -> SLP_REJECT_R {
+        SLP_REJECT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - SDIO idle interrupt state"]
     #[inline(always)]
-    pub fn sdio_idle_int_st(&self) -> SDIO_IDLE_INT_ST_R {
-        SDIO_IDLE_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn sdio_idle(&self) -> SDIO_IDLE_R {
+        SDIO_IDLE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn wdt_int_st(&self) -> WDT_INT_ST_R {
-        WDT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn wdt(&self) -> WDT_R {
+        WDT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC time valid interrupt state"]
     #[inline(always)]
-    pub fn time_valid_int_st(&self) -> TIME_VALID_INT_ST_R {
-        TIME_VALID_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn time_valid(&self) -> TIME_VALID_R {
+        TIME_VALID_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ULP-coprocessor interrupt state"]
     #[inline(always)]
-    pub fn sar_int_st(&self) -> SAR_INT_ST_R {
-        SAR_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn sar(&self) -> SAR_R {
+        SAR_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - touch interrupt state"]
     #[inline(always)]
-    pub fn touch_int_st(&self) -> TOUCH_INT_ST_R {
-        TOUCH_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn touch(&self) -> TOUCH_R {
+        TOUCH_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - brown out interrupt state"]
     #[inline(always)]
-    pub fn brown_out_int_st(&self) -> BROWN_OUT_INT_ST_R {
-        BROWN_OUT_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn brown_out(&self) -> BROWN_OUT_R {
+        BROWN_OUT_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - RTC main timer interrupt state"]
     #[inline(always)]
-    pub fn main_timer_int_st(&self) -> MAIN_TIMER_INT_ST_R {
-        MAIN_TIMER_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn main_timer(&self) -> MAIN_TIMER_R {
+        MAIN_TIMER_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "slp_wakeup_int_st",
-                &format_args!("{}", self.slp_wakeup_int_st().bit()),
-            )
-            .field(
-                "slp_reject_int_st",
-                &format_args!("{}", self.slp_reject_int_st().bit()),
-            )
-            .field(
-                "sdio_idle_int_st",
-                &format_args!("{}", self.sdio_idle_int_st().bit()),
-            )
-            .field("wdt_int_st", &format_args!("{}", self.wdt_int_st().bit()))
-            .field(
-                "time_valid_int_st",
-                &format_args!("{}", self.time_valid_int_st().bit()),
-            )
-            .field("sar_int_st", &format_args!("{}", self.sar_int_st().bit()))
-            .field(
-                "touch_int_st",
-                &format_args!("{}", self.touch_int_st().bit()),
-            )
-            .field(
-                "brown_out_int_st",
-                &format_args!("{}", self.brown_out_int_st().bit()),
-            )
-            .field(
-                "main_timer_int_st",
-                &format_args!("{}", self.main_timer_int_st().bit()),
-            )
+            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
+            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
+            .field("sdio_idle", &format_args!("{}", self.sdio_idle().bit()))
+            .field("wdt", &format_args!("{}", self.wdt().bit()))
+            .field("time_valid", &format_args!("{}", self.time_valid().bit()))
+            .field("sar", &format_args!("{}", self.sar().bit()))
+            .field("touch", &format_args!("{}", self.touch().bit()))
+            .field("brown_out", &format_args!("{}", self.brown_out().bit()))
+            .field("main_timer", &format_args!("{}", self.main_timer().bit()))
             .finish()
     }
 }

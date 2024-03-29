@@ -1,22 +1,19 @@
 #[doc = "Register `LP_INT_ST` reader"]
 pub type R = crate::R<LP_INT_ST_SPEC>;
-#[doc = "Field `BOD_MODE0_LP_INT_ST` reader - need_des"]
-pub type BOD_MODE0_LP_INT_ST_R = crate::BitReader;
+#[doc = "Field `BOD_MODE0` reader - need_des"]
+pub type BOD_MODE0_R = crate::BitReader;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn bod_mode0_lp_int_st(&self) -> BOD_MODE0_LP_INT_ST_R {
-        BOD_MODE0_LP_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn bod_mode0(&self) -> BOD_MODE0_R {
+        BOD_MODE0_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_ST")
-            .field(
-                "bod_mode0_lp_int_st",
-                &format_args!("{}", self.bod_mode0_lp_int_st().bit()),
-            )
+            .field("bod_mode0", &format_args!("{}", self.bod_mode0().bit()))
             .finish()
     }
 }

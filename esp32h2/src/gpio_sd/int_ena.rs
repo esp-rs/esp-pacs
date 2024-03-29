@@ -2,25 +2,22 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `PAD_COMP_INT_ENA` reader - Pad compare interrupt enable"]
-pub type PAD_COMP_INT_ENA_R = crate::BitReader;
-#[doc = "Field `PAD_COMP_INT_ENA` writer - Pad compare interrupt enable"]
-pub type PAD_COMP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PAD_COMP` reader - Pad compare interrupt enable"]
+pub type PAD_COMP_R = crate::BitReader;
+#[doc = "Field `PAD_COMP` writer - Pad compare interrupt enable"]
+pub type PAD_COMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Pad compare interrupt enable"]
     #[inline(always)]
-    pub fn pad_comp_int_ena(&self) -> PAD_COMP_INT_ENA_R {
-        PAD_COMP_INT_ENA_R::new((self.bits & 1) != 0)
+    pub fn pad_comp(&self) -> PAD_COMP_R {
+        PAD_COMP_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "pad_comp_int_ena",
-                &format_args!("{}", self.pad_comp_int_ena().bit()),
-            )
+            .field("pad_comp", &format_args!("{}", self.pad_comp().bit()))
             .finish()
     }
 }
@@ -34,8 +31,8 @@ impl W {
     #[doc = "Bit 0 - Pad compare interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pad_comp_int_ena(&mut self) -> PAD_COMP_INT_ENA_W<INT_ENA_SPEC> {
-        PAD_COMP_INT_ENA_W::new(self, 0)
+    pub fn pad_comp(&mut self) -> PAD_COMP_W<INT_ENA_SPEC> {
+        PAD_COMP_W::new(self, 0)
     }
 }
 #[doc = "GPIOSD interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

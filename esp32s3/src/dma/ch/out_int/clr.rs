@@ -1,21 +1,21 @@
 #[doc = "Register `CLR` writer"]
 pub type W = crate::W<CLR_SPEC>;
 #[doc = "Field `OUT_DONE` writer - Set this bit to clear the OUT_DONE_CH_INT interrupt."]
-pub type OUT_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUT_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUT_EOF` writer - Set this bit to clear the OUT_EOF_CH_INT interrupt."]
-pub type OUT_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUT_EOF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUT_DSCR_ERR` writer - Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt."]
-pub type OUT_DSCR_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUT_DSCR_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUT_TOTAL_EOF` writer - Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt."]
-pub type OUT_TOTAL_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUT_TOTAL_EOF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUTFIFO_OVF_L1` writer - Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt."]
-pub type OUTFIFO_OVF_L1_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUTFIFO_OVF_L1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUTFIFO_UDF_L1` writer - Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt."]
-pub type OUTFIFO_UDF_L1_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUTFIFO_UDF_L1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUTFIFO_OVF_L3` writer - Set this bit to clear the OUTFIFO_OVF_L3_CH_INT interrupt."]
-pub type OUTFIFO_OVF_L3_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUTFIFO_OVF_L3_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUTFIFO_UDF_L3` writer - Set this bit to clear the OUTFIFO_UDF_L3_CH_INT interrupt."]
-pub type OUTFIFO_UDF_L3_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OUTFIFO_UDF_L3_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -81,7 +81,7 @@ impl crate::RegisterSpec for CLR_SPEC {
 impl crate::Writable for CLR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xff;
 }
 #[doc = "`reset()` method sets CLR to value 0"]
 impl crate::Resettable for CLR_SPEC {

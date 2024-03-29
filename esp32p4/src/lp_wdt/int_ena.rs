@@ -2,38 +2,32 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `SUPER_WDT_INT_ENA` reader - need_des"]
-pub type SUPER_WDT_INT_ENA_R = crate::BitReader;
-#[doc = "Field `SUPER_WDT_INT_ENA` writer - need_des"]
-pub type SUPER_WDT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_WDT_INT_ENA` reader - need_des"]
-pub type LP_WDT_INT_ENA_R = crate::BitReader;
-#[doc = "Field `LP_WDT_INT_ENA` writer - need_des"]
-pub type LP_WDT_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SUPER_WDT` reader - need_des"]
+pub type SUPER_WDT_R = crate::BitReader;
+#[doc = "Field `SUPER_WDT` writer - need_des"]
+pub type SUPER_WDT_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_WDT` reader - need_des"]
+pub type LP_WDT_R = crate::BitReader;
+#[doc = "Field `LP_WDT` writer - need_des"]
+pub type LP_WDT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn super_wdt_int_ena(&self) -> SUPER_WDT_INT_ENA_R {
-        SUPER_WDT_INT_ENA_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn super_wdt(&self) -> SUPER_WDT_R {
+        SUPER_WDT_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_wdt_int_ena(&self) -> LP_WDT_INT_ENA_R {
-        LP_WDT_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn lp_wdt(&self) -> LP_WDT_R {
+        LP_WDT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "super_wdt_int_ena",
-                &format_args!("{}", self.super_wdt_int_ena().bit()),
-            )
-            .field(
-                "lp_wdt_int_ena",
-                &format_args!("{}", self.lp_wdt_int_ena().bit()),
-            )
+            .field("super_wdt", &format_args!("{}", self.super_wdt().bit()))
+            .field("lp_wdt", &format_args!("{}", self.lp_wdt().bit()))
             .finish()
     }
 }
@@ -47,14 +41,14 @@ impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn super_wdt_int_ena(&mut self) -> SUPER_WDT_INT_ENA_W<INT_ENA_SPEC> {
-        SUPER_WDT_INT_ENA_W::new(self, 30)
+    pub fn super_wdt(&mut self) -> SUPER_WDT_W<INT_ENA_SPEC> {
+        SUPER_WDT_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_wdt_int_ena(&mut self) -> LP_WDT_INT_ENA_W<INT_ENA_SPEC> {
-        LP_WDT_INT_ENA_W::new(self, 31)
+    pub fn lp_wdt(&mut self) -> LP_WDT_W<INT_ENA_SPEC> {
+        LP_WDT_W::new(self, 31)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

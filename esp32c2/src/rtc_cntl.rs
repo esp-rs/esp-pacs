@@ -16,10 +16,10 @@ pub struct RegisterBlock {
     ana_conf: ANA_CONF,
     reset_state: RESET_STATE,
     wakeup_state: WAKEUP_STATE,
-    int_ena_rtc: INT_ENA_RTC,
-    int_raw_rtc: INT_RAW_RTC,
-    int_st_rtc: INT_ST_RTC,
-    int_clr_rtc: INT_CLR_RTC,
+    int_ena: INT_ENA,
+    int_raw: INT_RAW,
+    int_st: INT_ST,
+    int_clr: INT_CLR,
     store0: STORE0,
     store1: STORE1,
     store2: STORE2,
@@ -146,23 +146,23 @@ impl RegisterBlock {
     }
     #[doc = "0x38 - register description"]
     #[inline(always)]
-    pub const fn int_ena_rtc(&self) -> &INT_ENA_RTC {
-        &self.int_ena_rtc
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x3c - register description"]
     #[inline(always)]
-    pub const fn int_raw_rtc(&self) -> &INT_RAW_RTC {
-        &self.int_raw_rtc
+    pub const fn int_raw(&self) -> &INT_RAW {
+        &self.int_raw
     }
     #[doc = "0x40 - register description"]
     #[inline(always)]
-    pub const fn int_st_rtc(&self) -> &INT_ST_RTC {
-        &self.int_st_rtc
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
     #[doc = "0x44 - register description"]
     #[inline(always)]
-    pub const fn int_clr_rtc(&self) -> &INT_CLR_RTC {
-        &self.int_clr_rtc
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0x48 - register description"]
     #[inline(always)]
@@ -476,22 +476,22 @@ pub mod reset_state;
 pub type WAKEUP_STATE = crate::Reg<wakeup_state::WAKEUP_STATE_SPEC>;
 #[doc = "register description"]
 pub mod wakeup_state;
-#[doc = "INT_ENA_RTC (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena_rtc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena_rtc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena_rtc`] module"]
-pub type INT_ENA_RTC = crate::Reg<int_ena_rtc::INT_ENA_RTC_SPEC>;
+#[doc = "INT_ENA (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "register description"]
-pub mod int_ena_rtc;
-#[doc = "INT_RAW_RTC (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw_rtc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw_rtc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw_rtc`] module"]
-pub type INT_RAW_RTC = crate::Reg<int_raw_rtc::INT_RAW_RTC_SPEC>;
+pub mod int_ena;
+#[doc = "INT_RAW (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "register description"]
-pub mod int_raw_rtc;
-#[doc = "INT_ST_RTC (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_rtc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_st_rtc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st_rtc`] module"]
-pub type INT_ST_RTC = crate::Reg<int_st_rtc::INT_ST_RTC_SPEC>;
+pub mod int_raw;
+#[doc = "INT_ST (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_st::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "register description"]
-pub mod int_st_rtc;
-#[doc = "INT_CLR_RTC (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_clr_rtc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr_rtc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr_rtc`] module"]
-pub type INT_CLR_RTC = crate::Reg<int_clr_rtc::INT_CLR_RTC_SPEC>;
+pub mod int_st;
+#[doc = "INT_CLR (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_clr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "register description"]
-pub mod int_clr_rtc;
+pub mod int_clr;
 #[doc = "STORE0 (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`store0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`store0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store0`] module"]
 pub type STORE0 = crate::Reg<store0::STORE0_SPEC>;
 #[doc = "register description"]

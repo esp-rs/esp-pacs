@@ -1,44 +1,35 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `TARGET0_INT_ST` reader - interupt0 status"]
-pub type TARGET0_INT_ST_R = crate::BitReader;
-#[doc = "Field `TARGET1_INT_ST` reader - interupt1 status"]
-pub type TARGET1_INT_ST_R = crate::BitReader;
-#[doc = "Field `TARGET2_INT_ST` reader - interupt2 status"]
-pub type TARGET2_INT_ST_R = crate::BitReader;
+#[doc = "Field `TARGET0` reader - interupt0 status"]
+pub type TARGET0_R = crate::BitReader;
+#[doc = "Field `TARGET1` reader - interupt1 status"]
+pub type TARGET1_R = crate::BitReader;
+#[doc = "Field `TARGET2` reader - interupt2 status"]
+pub type TARGET2_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - interupt0 status"]
     #[inline(always)]
-    pub fn target0_int_st(&self) -> TARGET0_INT_ST_R {
-        TARGET0_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn target0(&self) -> TARGET0_R {
+        TARGET0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - interupt1 status"]
     #[inline(always)]
-    pub fn target1_int_st(&self) -> TARGET1_INT_ST_R {
-        TARGET1_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn target1(&self) -> TARGET1_R {
+        TARGET1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - interupt2 status"]
     #[inline(always)]
-    pub fn target2_int_st(&self) -> TARGET2_INT_ST_R {
-        TARGET2_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn target2(&self) -> TARGET2_R {
+        TARGET2_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "target0_int_st",
-                &format_args!("{}", self.target0_int_st().bit()),
-            )
-            .field(
-                "target1_int_st",
-                &format_args!("{}", self.target1_int_st().bit()),
-            )
-            .field(
-                "target2_int_st",
-                &format_args!("{}", self.target2_int_st().bit()),
-            )
+            .field("target0", &format_args!("{}", self.target0().bit()))
+            .field("target1", &format_args!("{}", self.target1().bit()))
+            .field("target2", &format_args!("{}", self.target2().bit()))
             .finish()
     }
 }

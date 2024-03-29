@@ -13,7 +13,7 @@ pub struct RegisterBlock {
     int_raw: INT_RAW,
     int_clr: INT_CLR,
     int_ena: INT_ENA,
-    int_status: INT_STATUS,
+    int_st: INT_ST,
     sda_hold: SDA_HOLD,
     sda_sample: SDA_SAMPLE,
     scl_high_period: SCL_HIGH_PERIOD,
@@ -88,8 +88,8 @@ impl RegisterBlock {
     }
     #[doc = "0x2c - Status of captured I2C communication events"]
     #[inline(always)]
-    pub const fn int_status(&self) -> &INT_STATUS {
-        &self.int_status
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
     #[doc = "0x30 - Configures the hold time after a negative SCL edge."]
     #[inline(always)]
@@ -218,10 +218,10 @@ pub mod int_clr;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Interrupt enable bits"]
 pub mod int_ena;
-#[doc = "INT_STATUS (r) register accessor: Status of captured I2C communication events\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_status`] module"]
-pub type INT_STATUS = crate::Reg<int_status::INT_STATUS_SPEC>;
+#[doc = "INT_ST (r) register accessor: Status of captured I2C communication events\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "Status of captured I2C communication events"]
-pub mod int_status;
+pub mod int_st;
 #[doc = "SDA_HOLD (rw) register accessor: Configures the hold time after a negative SCL edge.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sda_hold::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sda_hold::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sda_hold`] module"]
 pub type SDA_HOLD = crate::Reg<sda_hold::SDA_HOLD_SPEC>;
 #[doc = "Configures the hold time after a negative SCL edge."]

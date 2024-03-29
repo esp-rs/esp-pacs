@@ -1,73 +1,61 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `SCAN_DONE_INT_ST` reader - need_des"]
-pub type SCAN_DONE_INT_ST_R = crate::BitReader;
-#[doc = "Field `DONE_INT_ST` reader - need_des"]
-pub type DONE_INT_ST_R = crate::BitReader;
-#[doc = "Field `ACTIVE_INT_ST` reader - need_des"]
-pub type ACTIVE_INT_ST_R = crate::BitReader;
-#[doc = "Field `INACTIVE_INT_ST` reader - need_des"]
-pub type INACTIVE_INT_ST_R = crate::BitReader;
-#[doc = "Field `TIMEOUT_INT_ST` reader - need_des"]
-pub type TIMEOUT_INT_ST_R = crate::BitReader;
-#[doc = "Field `APPROACH_LOOP_DONE_INT_ST` reader - need_des"]
-pub type APPROACH_LOOP_DONE_INT_ST_R = crate::BitReader;
+#[doc = "Field `SCAN_DONE` reader - need_des"]
+pub type SCAN_DONE_R = crate::BitReader;
+#[doc = "Field `DONE` reader - need_des"]
+pub type DONE_R = crate::BitReader;
+#[doc = "Field `ACTIVE` reader - need_des"]
+pub type ACTIVE_R = crate::BitReader;
+#[doc = "Field `INACTIVE` reader - need_des"]
+pub type INACTIVE_R = crate::BitReader;
+#[doc = "Field `TIMEOUT` reader - need_des"]
+pub type TIMEOUT_R = crate::BitReader;
+#[doc = "Field `APPROACH_LOOP_DONE` reader - need_des"]
+pub type APPROACH_LOOP_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn scan_done_int_st(&self) -> SCAN_DONE_INT_ST_R {
-        SCAN_DONE_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn scan_done(&self) -> SCAN_DONE_R {
+        SCAN_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn done_int_st(&self) -> DONE_INT_ST_R {
-        DONE_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn done(&self) -> DONE_R {
+        DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn active_int_st(&self) -> ACTIVE_INT_ST_R {
-        ACTIVE_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn active(&self) -> ACTIVE_R {
+        ACTIVE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn inactive_int_st(&self) -> INACTIVE_INT_ST_R {
-        INACTIVE_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn inactive(&self) -> INACTIVE_R {
+        INACTIVE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn timeout_int_st(&self) -> TIMEOUT_INT_ST_R {
-        TIMEOUT_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn timeout(&self) -> TIMEOUT_R {
+        TIMEOUT_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn approach_loop_done_int_st(&self) -> APPROACH_LOOP_DONE_INT_ST_R {
-        APPROACH_LOOP_DONE_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn approach_loop_done(&self) -> APPROACH_LOOP_DONE_R {
+        APPROACH_LOOP_DONE_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
+            .field("scan_done", &format_args!("{}", self.scan_done().bit()))
+            .field("done", &format_args!("{}", self.done().bit()))
+            .field("active", &format_args!("{}", self.active().bit()))
+            .field("inactive", &format_args!("{}", self.inactive().bit()))
+            .field("timeout", &format_args!("{}", self.timeout().bit()))
             .field(
-                "scan_done_int_st",
-                &format_args!("{}", self.scan_done_int_st().bit()),
-            )
-            .field("done_int_st", &format_args!("{}", self.done_int_st().bit()))
-            .field(
-                "active_int_st",
-                &format_args!("{}", self.active_int_st().bit()),
-            )
-            .field(
-                "inactive_int_st",
-                &format_args!("{}", self.inactive_int_st().bit()),
-            )
-            .field(
-                "timeout_int_st",
-                &format_args!("{}", self.timeout_int_st().bit()),
-            )
-            .field(
-                "approach_loop_done_int_st",
-                &format_args!("{}", self.approach_loop_done_int_st().bit()),
+                "approach_loop_done",
+                &format_args!("{}", self.approach_loop_done().bit()),
             )
             .finish()
     }

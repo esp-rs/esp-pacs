@@ -2,25 +2,22 @@
 pub type R = crate::R<LP_INT_ENA_SPEC>;
 #[doc = "Register `LP_INT_ENA` writer"]
 pub type W = crate::W<LP_INT_ENA_SPEC>;
-#[doc = "Field `BOD_MODE0_LP_INT_ENA` reader - need_des"]
-pub type BOD_MODE0_LP_INT_ENA_R = crate::BitReader;
-#[doc = "Field `BOD_MODE0_LP_INT_ENA` writer - need_des"]
-pub type BOD_MODE0_LP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BOD_MODE0` reader - need_des"]
+pub type BOD_MODE0_R = crate::BitReader;
+#[doc = "Field `BOD_MODE0` writer - need_des"]
+pub type BOD_MODE0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn bod_mode0_lp_int_ena(&self) -> BOD_MODE0_LP_INT_ENA_R {
-        BOD_MODE0_LP_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn bod_mode0(&self) -> BOD_MODE0_R {
+        BOD_MODE0_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_ENA")
-            .field(
-                "bod_mode0_lp_int_ena",
-                &format_args!("{}", self.bod_mode0_lp_int_ena().bit()),
-            )
+            .field("bod_mode0", &format_args!("{}", self.bod_mode0().bit()))
             .finish()
     }
 }
@@ -34,8 +31,8 @@ impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn bod_mode0_lp_int_ena(&mut self) -> BOD_MODE0_LP_INT_ENA_W<LP_INT_ENA_SPEC> {
-        BOD_MODE0_LP_INT_ENA_W::new(self, 31)
+    pub fn bod_mode0(&mut self) -> BOD_MODE0_W<LP_INT_ENA_SPEC> {
+        BOD_MODE0_W::new(self, 31)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lp_int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -2,24 +2,24 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `TOTAL_TRANS_END_INT_RAW` reader - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
-pub type TOTAL_TRANS_END_INT_RAW_R = crate::BitReader;
-#[doc = "Field `TOTAL_TRANS_END_INT_RAW` writer - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
-pub type TOTAL_TRANS_END_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `ECC_ERR_INT_RAW` reader - The raw bit for SPI_MEM_ECC_ERR_INT interrupt. When APB_CTRL_FECC_ERR_INT_EN is set and APB_CTRL_SECC_ERR_INT_EN is cleared, this bit is triggered when the error times of SPI0/1 ECC read flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN is cleared and APB_CTRL_SECC_ERR_INT_EN is set, this bit is triggered when the error times of SPI0/1 ECC read external RAM are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are set, this bit is triggered when the total error times of SPI0/1 ECC read external RAM and flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are cleared, this bit will not be triggered."]
-pub type ECC_ERR_INT_RAW_R = crate::BitReader;
-#[doc = "Field `ECC_ERR_INT_RAW` writer - The raw bit for SPI_MEM_ECC_ERR_INT interrupt. When APB_CTRL_FECC_ERR_INT_EN is set and APB_CTRL_SECC_ERR_INT_EN is cleared, this bit is triggered when the error times of SPI0/1 ECC read flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN is cleared and APB_CTRL_SECC_ERR_INT_EN is set, this bit is triggered when the error times of SPI0/1 ECC read external RAM are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are set, this bit is triggered when the total error times of SPI0/1 ECC read external RAM and flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are cleared, this bit will not be triggered."]
-pub type ECC_ERR_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOTAL_TRANS_END` reader - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
+pub type TOTAL_TRANS_END_R = crate::BitReader;
+#[doc = "Field `TOTAL_TRANS_END` writer - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
+pub type TOTAL_TRANS_END_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ECC_ERR` reader - The raw bit for SPI_MEM_ECC_ERR_INT interrupt. When APB_CTRL_FECC_ERR_INT_EN is set and APB_CTRL_SECC_ERR_INT_EN is cleared, this bit is triggered when the error times of SPI0/1 ECC read flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN is cleared and APB_CTRL_SECC_ERR_INT_EN is set, this bit is triggered when the error times of SPI0/1 ECC read external RAM are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are set, this bit is triggered when the total error times of SPI0/1 ECC read external RAM and flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are cleared, this bit will not be triggered."]
+pub type ECC_ERR_R = crate::BitReader;
+#[doc = "Field `ECC_ERR` writer - The raw bit for SPI_MEM_ECC_ERR_INT interrupt. When APB_CTRL_FECC_ERR_INT_EN is set and APB_CTRL_SECC_ERR_INT_EN is cleared, this bit is triggered when the error times of SPI0/1 ECC read flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN is cleared and APB_CTRL_SECC_ERR_INT_EN is set, this bit is triggered when the error times of SPI0/1 ECC read external RAM are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are set, this bit is triggered when the total error times of SPI0/1 ECC read external RAM and flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are cleared, this bit will not be triggered."]
+pub type ECC_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
     #[inline(always)]
-    pub fn total_trans_end_int_raw(&self) -> TOTAL_TRANS_END_INT_RAW_R {
-        TOTAL_TRANS_END_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn total_trans_end(&self) -> TOTAL_TRANS_END_R {
+        TOTAL_TRANS_END_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - The raw bit for SPI_MEM_ECC_ERR_INT interrupt. When APB_CTRL_FECC_ERR_INT_EN is set and APB_CTRL_SECC_ERR_INT_EN is cleared, this bit is triggered when the error times of SPI0/1 ECC read flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN is cleared and APB_CTRL_SECC_ERR_INT_EN is set, this bit is triggered when the error times of SPI0/1 ECC read external RAM are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are set, this bit is triggered when the total error times of SPI0/1 ECC read external RAM and flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are cleared, this bit will not be triggered."]
     #[inline(always)]
-    pub fn ecc_err_int_raw(&self) -> ECC_ERR_INT_RAW_R {
-        ECC_ERR_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ecc_err(&self) -> ECC_ERR_R {
+        ECC_ERR_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -27,13 +27,10 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
             .field(
-                "total_trans_end_int_raw",
-                &format_args!("{}", self.total_trans_end_int_raw().bit()),
+                "total_trans_end",
+                &format_args!("{}", self.total_trans_end().bit()),
             )
-            .field(
-                "ecc_err_int_raw",
-                &format_args!("{}", self.ecc_err_int_raw().bit()),
-            )
+            .field("ecc_err", &format_args!("{}", self.ecc_err().bit()))
             .finish()
     }
 }
@@ -47,14 +44,14 @@ impl W {
     #[doc = "Bit 2 - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
     #[inline(always)]
     #[must_use]
-    pub fn total_trans_end_int_raw(&mut self) -> TOTAL_TRANS_END_INT_RAW_W<INT_RAW_SPEC> {
-        TOTAL_TRANS_END_INT_RAW_W::new(self, 2)
+    pub fn total_trans_end(&mut self) -> TOTAL_TRANS_END_W<INT_RAW_SPEC> {
+        TOTAL_TRANS_END_W::new(self, 2)
     }
     #[doc = "Bit 4 - The raw bit for SPI_MEM_ECC_ERR_INT interrupt. When APB_CTRL_FECC_ERR_INT_EN is set and APB_CTRL_SECC_ERR_INT_EN is cleared, this bit is triggered when the error times of SPI0/1 ECC read flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN is cleared and APB_CTRL_SECC_ERR_INT_EN is set, this bit is triggered when the error times of SPI0/1 ECC read external RAM are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are set, this bit is triggered when the total error times of SPI0/1 ECC read external RAM and flash are equal or bigger than APB_CTRL_ECC_ERR_INT_NUM. When APB_CTRL_FECC_ERR_INT_EN and APB_CTRL_SECC_ERR_INT_EN are cleared, this bit will not be triggered."]
     #[inline(always)]
     #[must_use]
-    pub fn ecc_err_int_raw(&mut self) -> ECC_ERR_INT_RAW_W<INT_RAW_SPEC> {
-        ECC_ERR_INT_RAW_W::new(self, 4)
+    pub fn ecc_err(&mut self) -> ECC_ERR_W<INT_RAW_SPEC> {
+        ECC_ERR_W::new(self, 4)
     }
 }
 #[doc = "SPI1 interrupt raw register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -2,38 +2,32 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `READ_DONE_INT_ENA` reader - "]
-pub type READ_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `READ_DONE_INT_ENA` writer - "]
-pub type READ_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PGM_DONE_INT_ENA` reader - "]
-pub type PGM_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `PGM_DONE_INT_ENA` writer - "]
-pub type PGM_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `READ_DONE` reader - "]
+pub type READ_DONE_R = crate::BitReader;
+#[doc = "Field `READ_DONE` writer - "]
+pub type READ_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PGM_DONE` reader - "]
+pub type PGM_DONE_R = crate::BitReader;
+#[doc = "Field `PGM_DONE` writer - "]
+pub type PGM_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn read_done_int_ena(&self) -> READ_DONE_INT_ENA_R {
-        READ_DONE_INT_ENA_R::new((self.bits & 1) != 0)
+    pub fn read_done(&self) -> READ_DONE_R {
+        READ_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn pgm_done_int_ena(&self) -> PGM_DONE_INT_ENA_R {
-        PGM_DONE_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn pgm_done(&self) -> PGM_DONE_R {
+        PGM_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "read_done_int_ena",
-                &format_args!("{}", self.read_done_int_ena().bit()),
-            )
-            .field(
-                "pgm_done_int_ena",
-                &format_args!("{}", self.pgm_done_int_ena().bit()),
-            )
+            .field("read_done", &format_args!("{}", self.read_done().bit()))
+            .field("pgm_done", &format_args!("{}", self.pgm_done().bit()))
             .finish()
     }
 }
@@ -47,14 +41,14 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn read_done_int_ena(&mut self) -> READ_DONE_INT_ENA_W<INT_ENA_SPEC> {
-        READ_DONE_INT_ENA_W::new(self, 0)
+    pub fn read_done(&mut self) -> READ_DONE_W<INT_ENA_SPEC> {
+        READ_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn pgm_done_int_ena(&mut self) -> PGM_DONE_INT_ENA_W<INT_ENA_SPEC> {
-        PGM_DONE_INT_ENA_W::new(self, 1)
+    pub fn pgm_done(&mut self) -> PGM_DONE_W<INT_ENA_SPEC> {
+        PGM_DONE_W::new(self, 1)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

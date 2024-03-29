@@ -1,33 +1,27 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `CALC_DONE_INT_ST` reader - The masked interrupt status bit for the ecdsa_calc_done_int interrupt"]
-pub type CALC_DONE_INT_ST_R = crate::BitReader;
-#[doc = "Field `SHA_RELEASE_INT_ST` reader - The masked interrupt status bit for the ecdsa_sha_release_int interrupt"]
-pub type SHA_RELEASE_INT_ST_R = crate::BitReader;
+#[doc = "Field `CALC_DONE` reader - The masked interrupt status bit for the ecdsa_calc_done_int interrupt"]
+pub type CALC_DONE_R = crate::BitReader;
+#[doc = "Field `SHA_RELEASE` reader - The masked interrupt status bit for the ecdsa_sha_release_int interrupt"]
+pub type SHA_RELEASE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for the ecdsa_calc_done_int interrupt"]
     #[inline(always)]
-    pub fn calc_done_int_st(&self) -> CALC_DONE_INT_ST_R {
-        CALC_DONE_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn calc_done(&self) -> CALC_DONE_R {
+        CALC_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The masked interrupt status bit for the ecdsa_sha_release_int interrupt"]
     #[inline(always)]
-    pub fn sha_release_int_st(&self) -> SHA_RELEASE_INT_ST_R {
-        SHA_RELEASE_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn sha_release(&self) -> SHA_RELEASE_R {
+        SHA_RELEASE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "calc_done_int_st",
-                &format_args!("{}", self.calc_done_int_st().bit()),
-            )
-            .field(
-                "sha_release_int_st",
-                &format_args!("{}", self.sha_release_int_st().bit()),
-            )
+            .field("calc_done", &format_args!("{}", self.calc_done().bit()))
+            .field("sha_release", &format_args!("{}", self.sha_release().bit()))
             .finish()
     }
 }

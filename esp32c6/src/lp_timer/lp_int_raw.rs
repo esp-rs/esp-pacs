@@ -2,24 +2,24 @@
 pub type R = crate::R<LP_INT_RAW_SPEC>;
 #[doc = "Register `LP_INT_RAW` writer"]
 pub type W = crate::W<LP_INT_RAW_SPEC>;
-#[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_RAW` reader - need_des"]
-pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_R = crate::BitReader;
-#[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_RAW` writer - need_des"]
-pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `MAIN_TIMER_LP_INT_RAW` reader - need_des"]
-pub type MAIN_TIMER_LP_INT_RAW_R = crate::BitReader;
-#[doc = "Field `MAIN_TIMER_LP_INT_RAW` writer - need_des"]
-pub type MAIN_TIMER_LP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MAIN_TIMER_OVERFLOW` reader - need_des"]
+pub type MAIN_TIMER_OVERFLOW_R = crate::BitReader;
+#[doc = "Field `MAIN_TIMER_OVERFLOW` writer - need_des"]
+pub type MAIN_TIMER_OVERFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MAIN_TIMER` reader - need_des"]
+pub type MAIN_TIMER_R = crate::BitReader;
+#[doc = "Field `MAIN_TIMER` writer - need_des"]
+pub type MAIN_TIMER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn main_timer_overflow_lp_int_raw(&self) -> MAIN_TIMER_OVERFLOW_LP_INT_RAW_R {
-        MAIN_TIMER_OVERFLOW_LP_INT_RAW_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn main_timer_overflow(&self) -> MAIN_TIMER_OVERFLOW_R {
+        MAIN_TIMER_OVERFLOW_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn main_timer_lp_int_raw(&self) -> MAIN_TIMER_LP_INT_RAW_R {
-        MAIN_TIMER_LP_INT_RAW_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn main_timer(&self) -> MAIN_TIMER_R {
+        MAIN_TIMER_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -27,13 +27,10 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_RAW")
             .field(
-                "main_timer_overflow_lp_int_raw",
-                &format_args!("{}", self.main_timer_overflow_lp_int_raw().bit()),
+                "main_timer_overflow",
+                &format_args!("{}", self.main_timer_overflow().bit()),
             )
-            .field(
-                "main_timer_lp_int_raw",
-                &format_args!("{}", self.main_timer_lp_int_raw().bit()),
-            )
+            .field("main_timer", &format_args!("{}", self.main_timer().bit()))
             .finish()
     }
 }
@@ -47,16 +44,14 @@ impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_overflow_lp_int_raw(
-        &mut self,
-    ) -> MAIN_TIMER_OVERFLOW_LP_INT_RAW_W<LP_INT_RAW_SPEC> {
-        MAIN_TIMER_OVERFLOW_LP_INT_RAW_W::new(self, 30)
+    pub fn main_timer_overflow(&mut self) -> MAIN_TIMER_OVERFLOW_W<LP_INT_RAW_SPEC> {
+        MAIN_TIMER_OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     #[must_use]
-    pub fn main_timer_lp_int_raw(&mut self) -> MAIN_TIMER_LP_INT_RAW_W<LP_INT_RAW_SPEC> {
-        MAIN_TIMER_LP_INT_RAW_W::new(self, 31)
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<LP_INT_RAW_SPEC> {
+        MAIN_TIMER_W::new(self, 31)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lp_int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
