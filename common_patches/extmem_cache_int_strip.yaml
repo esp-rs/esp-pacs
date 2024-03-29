@@ -1,0 +1,19 @@
+"CACHE_ILG_INT_ST,CORE0_ACS_CACHE_INT_ST":
+  _strip_end: _ST
+"CACHE_ILG_INT_ENA,CORE0_ACS_CACHE_INT_ENA":
+  _strip_end: _INT_ENA
+"CACHE_ILG_INT_CLR,CORE0_ACS_CACHE_INT_CLR":
+  _strip_end: _INT_CLR
+  _modify:
+    "*":
+      modifiedWriteValues: oneToClear
+CACHE_PRELOAD_INT_CTRL:
+  _strip: ICACHE_PRELOAD_INT_
+  _modify:
+    CLR:
+      modifiedWriteValues: oneToClear
+CACHE_SYNC_INT_CTRL:
+  _strip: ICACHE_SYNC_INT_
+  _modify:
+    CLR:
+      modifiedWriteValues: oneToClear
