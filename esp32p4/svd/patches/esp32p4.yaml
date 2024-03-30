@@ -727,3 +727,399 @@ AXI_DMA:
     _strip_end: _CH
   OUTFIFO_STATUS1_CH%s:
     _strip_end: _CH
+
+H264_DMA:
+  _copy:
+    # Add registers available only on CH0
+    OUT_RO_STATUS_CH1:
+      _from: OUT_RO_STATUS_CH0
+      addressOffset: 0x140
+    OUT_RO_STATUS_CH2:
+      _from: OUT_RO_STATUS_CH0
+      addressOffset: 0x240
+    OUT_RO_STATUS_CH3:
+      _from: OUT_RO_STATUS_CH0
+      addressOffset: 0x340
+    OUT_RO_STATUS_CH4:
+      _from: OUT_RO_STATUS_CH0
+      addressOffset: 0x440
+    OUT_RO_PD_CONF_CH1:
+      _from: OUT_RO_PD_CONF_CH0
+      addressOffset: 0x144
+    OUT_RO_PD_CONF_CH2:
+      _from: OUT_RO_PD_CONF_CH0
+      addressOffset: 0x244
+    OUT_RO_PD_CONF_CH3:
+      _from: OUT_RO_PD_CONF_CH0
+      addressOffset: 0x344
+    OUT_RO_PD_CONF_CH4:
+      _from: OUT_RO_PD_CONF_CH0
+      addressOffset: 0x444
+    OUT_MODE_ENABLE_CH1:
+      _from: OUT_MODE_ENABLE_CH0
+      addressOffset: 0x150
+    OUT_MODE_ENABLE_CH2:
+      _from: OUT_MODE_ENABLE_CH0
+      addressOffset: 0x250
+    OUT_MODE_ENABLE_CH3:
+      _from: OUT_MODE_ENABLE_CH0
+      addressOffset: 0x350
+    OUT_MODE_ENABLE_CH4:
+      _from: OUT_MODE_ENABLE_CH0
+      addressOffset: 0x450
+    OUT_MODE_YUV_CH1:
+      _from: OUT_MODE_YUV_CH0
+      addressOffset: 0x154
+    OUT_MODE_YUV_CH2:
+      _from: OUT_MODE_YUV_CH0
+      addressOffset: 0x254
+    OUT_MODE_YUV_CH3:
+      _from: OUT_MODE_YUV_CH0
+      addressOffset: 0x354
+    OUT_MODE_YUV_CH4:
+      _from: OUT_MODE_YUV_CH0
+      addressOffset: 0x454
+    IN_RO_PD_CONF_CH1:
+      _from: IN_RO_PD_CONF_CH0
+      addressOffset: 0x648
+    IN_RO_PD_CONF_CH2:
+      _from: IN_RO_PD_CONF_CH0
+      addressOffset: 0x748
+    IN_RO_PD_CONF_CH3:
+      _from: IN_RO_PD_CONF_CH0
+      addressOffset: 0x848
+    IN_RO_PD_CONF_CH4:
+      _from: IN_RO_PD_CONF_CH0
+      addressOffset: 0x948
+    # Add register available only on CH3,4
+    OUT_BLOCK_BUF_LEN_CH0:
+      _from: OUT_BLOCK_BUF_LEN_CH3
+      addressOffset: 0x80
+    OUT_BLOCK_BUF_LEN_CH1:
+      _from: OUT_BLOCK_BUF_LEN_CH3
+      addressOffset: 0x180
+    OUT_BLOCK_BUF_LEN_CH2:
+      _from: OUT_BLOCK_BUF_LEN_CH3
+      addressOffset: 0x280
+
+  # Add fields not available on all channels
+  OUT_CONF0_CH[1-4]:
+    _add:
+      OUT_REORDER_EN_CH0:
+        description: Enable TX channel 0 macro block reorder when set to 1, only channel0 have this selection
+        bitOffset: 16
+        bitWidth: 1
+        access: read-write
+  OUT_CONF0_CH[34]:
+    _add:
+      OUT_RST_CH0:
+        description: Write 1 then write 0 to this bit to reset TX channel
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      OUT_CMD_DISABLE_CH0:
+        description: Write 1 before reset and write 0 after reset
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+
+  OUT_STATE_CH[34]:
+    _add:
+      OUT_RESET_AVAIL:
+        description: This register indicate that if the channel reset is safety.
+        bitOffset: 24
+        bitWidth: 1
+        access: read-only
+
+  OUT_ARB_CH[034]:
+    _add:
+      INTER_OUT_ARB_PRIORITY:
+        description: Set the priority of channel
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+  OUT_ARB_CH[12]:
+    _add:
+      EXTER_OUT_ARB_PRIORITY:
+        description: Set the priority of channel
+        bitOffset: 4
+        bitWidth: 2
+        access: read-write
+
+  IN_ARB_CH[23]:
+    _add:
+      EXTER_IN_ARB_PRIORITY:
+        description: Set the priority of channel
+        bitOffset: 4
+        bitWidth: 2
+        access: read-write
+
+  _cluster:
+    OUT_CH%s:
+      OUT_CONF0_CH?:
+        name: CONF0
+        description: TX CHx config0 register
+        _strip_end: _CH0
+      OUT_INT_RAW_CH?:
+        name: INT_RAW
+        description: TX CHx interrupt raw register
+        _strip_end: _CH0_INT_RAW
+      OUT_INT_ENA_CH?:
+        name: INT_ENA
+        description: TX CHx interrupt ena register
+        _strip_end: _CH0_INT_ENA
+      OUT_INT_ST_CH?:
+        name: INT_ST
+        description: TX CHx interrupt st register
+        _strip_end: _CH0_INT_ST
+      OUT_INT_CLR_CH?:
+        name: INT_CLR
+        description: TX CHx interrupt clr register
+        _strip_end: _CH0_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+      OUTFIFO_STATUS_CH?:
+        name: FIFO_STATUS
+        description: TX CHx outfifo status register
+        _strip_end: _CH0
+      OUT_PUSH_CH?:
+        name: PUSH
+        description: TX CHx outfifo push register
+        _strip_end: _CH0_INT_CLR
+      OUT_LINK_CONF_CH?:
+        name: LINK_CONF
+        description: TX CHx out_link dscr ctrl register
+        _strip_end: _CH0
+      OUT_LINK_ADDR_CH?:
+        name: LINK_ADDR
+        description: TX CHx out_link dscr addr register
+        _strip_end: _CH0
+      OUT_STATE_CH?:
+        name: STATE
+        description: TX CHx state register
+        _strip_end: _CH0
+      OUT_EOF_DES_ADDR_CH?:
+        name: EOF_DES_ADDR
+        description: TX CHx eof des addr register
+        _strip_end: _CH0
+      OUT_DSCR_CH?:
+        name: DSCR
+        description: TX CHx next dscr addr register
+        _strip_end: _CH0
+      OUT_DSCR_BF0_CH?:
+        name: DSCR_BF0
+        description: TX CHx last dscr addr register
+        _strip_end: _CH0
+      OUT_DSCR_BF1_CH?:
+        name: DSCR_BF1
+        description: TX CHx second-to-last dscr addr register
+        _strip_end: _CH0
+      OUT_ARB_CH?:
+        name: ARB
+        description: TX CHx arb register
+        _strip_end: _CH0
+      OUT_RO_STATUS_CH?:
+        name: RO_STATUS
+        description: TX CHx reorder status register. Available on CH0
+        _strip_end: _CH0
+      OUT_RO_PD_CONF_CH?:
+        name: RO_PD_CONF
+        description: TX CHx reorder power config register. Available on CH0
+        _strip_end: _CH0
+      OUT_MODE_ENABLE_CH?:
+        name: MODE_ENABLE
+        description: TX CHx mode enable register. Available on CH0
+        _strip_end: _CH0
+      OUT_MODE_YUV_CH?:
+        name: MODE_YUV
+        description: TX CHx test mode yuv value register. Available on CH0
+        _strip_end: _CH0
+      OUT_ETM_CONF_CH?:
+        name: ETM_CONF
+        description: TX CHx ETM config register
+        _strip_end: _CH0
+      OUT_BUF_LEN_CH?:
+        name: BUF_LEN
+        description: TX CHx buf len register
+        _strip_end: _CH0
+      OUT_FIFO_BCNT_CH?:
+        name: FIFO_BCNT
+        description: TX CHx fifo byte cnt register
+        _strip_end: _CH0
+      OUT_PUSH_BYTECNT_CH?:
+        name: PUSH_BYTECNT
+        description: TX CHx push byte cnt register
+        _strip_end: _CH0
+      OUT_XADDR_CH?:
+        name: XADDR
+        description: TX CHx xaddr register
+        _strip_end: _CH0
+      OUT_BLOCK_BUF_LEN_CH?:
+        name: BLOCK_BUF_LEN
+        description: TX CHx block buf len register
+        _strip_end: _CH3
+
+    IN_CH%s:
+      IN_CONF0_CH[0-4]:
+        name: CONF0
+        description: RX CHx config0 register
+        _strip_end: _CH0
+      IN_INT_RAW_CH[0-4]:
+        name: INT_RAW
+        description: RX CHx interrupt raw register
+        _strip_end: _CH0_INT_RAW
+      IN_INT_ENA_CH[0-4]:
+        name: INT_ENA
+        description: RX CHx interrupt ena register
+        _strip_end: _CH0_INT_ENA
+      IN_INT_ST_CH[0-4]:
+        name: INT_ST
+        description: RX CHx interrupt st register
+        _strip_end: _CH0_INT_ST
+      IN_INT_CLR_CH[0-4]:
+        name: INT_CLR
+        description: RX CHx interrupt clr register
+        _strip_end: _CH0_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+      INFIFO_STATUS_CH[0-4]:
+        name: FIFO_STATUS
+        description: RX CHx INFIFO status register
+        _strip_end: _CH0
+      IN_POP_CH[0-4]:
+        name: POP
+        description: RX CHx INFIFO pop register
+        _strip_end: _CH0
+      IN_LINK_CONF_CH[0-4]:
+        name: LINK_CONF
+        description: RX CHx in_link dscr ctrl register
+        _strip_end: _CH0
+      IN_LINK_ADDR_CH[0-4]:
+        name: LINK_ADDR
+        description: RX CHx in_link dscr addr register
+        _strip_end: _CH0
+      IN_STATE_CH[0-4]:
+        name: STATE
+        description: RX CHx state register
+        _strip_end: _CH0
+      IN_SUC_EOF_DES_ADDR_CH[0-4]:
+        name: SUC_EOF_DES_ADDR
+        description: RX CHx eof des addr register
+        _strip_end: _CH0
+      IN_ERR_EOF_DES_ADDR_CH[0-4]:
+        name: ERR_EOF_DES_ADDR
+        description: RX CHx err eof des addr register
+        _strip_end: _CH0
+      IN_DSCR_CH[0-4]:
+        name: DSCR
+        description: RX CHx next dscr addr register
+        _strip_end: _CH0
+      IN_DSCR_BF0_CH[0-4]:
+        name: DSCR_BF0
+        description: RX CHx last dscr addr register
+        _strip_end: _CH0
+      IN_DSCR_BF1_CH[0-4]:
+        name: DSCR_BF1
+        description: RX CHx second-to-last dscr addr register
+        _strip_end: _CH0
+      IN_ARB_CH[0-4]:
+        name: ARB
+        description: RX CHx arb register
+        _strip_end: _CH0
+      IN_RO_PD_CONF_CH[0-4]:
+        name: RO_PD_CONF
+        description: RX CHx reorder power config register. Available on CH0
+        _strip_end: _CH0
+      IN_ETM_CONF_CH[0-4]:
+        name: ETM_CONF
+        description: RX CHx ETM config register
+        _strip_end: _CH0
+      IN_FIFO_CNT_CH[0-4]:
+        name: FIFO_CNT
+        description: RX CHx fifo cnt register
+        _strip_end: _CH0
+      IN_POP_DATA_CNT_CH[0-4]:
+        name: POP_DATA_CNT
+        description: RX CHx pop data cnt register
+        _strip_end: _CH0
+      IN_XADDR_CH[0-4]:
+        name: XADDR
+        description: RX CHx xaddr register
+        _strip_end: _CH0
+      IN_BUF_HB_RCV_CH[0-4]:
+        name: BUF_HB_RCV
+        description: RX CH0 buf len hb rcv register
+        _strip_end: _CH0
+
+    # Channel 5 looks much different
+    IN_CH5:
+      dimIncrement: 0x100
+      IN_CONF0_CH5:
+        name: CONF0
+        description: RX CHx config0 register
+        _strip_end: _CH5
+      IN_CONF1_CH5:
+        name: CONF1
+        description: RX CHx config1 register
+        _strip_end: _CH5
+      IN_CONF2_CH5:
+        name: CONF2
+        description: RX CHx config2 register
+        _strip_end: _CH5
+      IN_CONF3_CH5:
+        name: CONF3
+        description: RX CHx config3 register
+        _strip_end: _CH5
+      IN_INT_RAW_CH5:
+        name: INT_RAW
+        description: RX CHx interrupt raw register
+        _strip_end: _CH5_INT_RAW
+      IN_INT_ENA_CH5:
+        name: INT_ENA
+        description: RX CHx interrupt ena register
+        _strip_end: _CH5_INT_ENA
+      IN_INT_ST_CH5:
+        name: INT_ST
+        description: RX CHx interrupt st register
+        _strip_end: _CH5_INT_ST
+      IN_INT_CLR_CH5:
+        name: INT_CLR
+        description: RX CHx interrupt clr register
+        _strip_end: _CH5_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+      INFIFO_STATUS_CH5:
+        name: FIFO_STATUS
+        description: RX CHx INFIFO status register
+        _strip_end: _CH5
+      IN_POP_CH5:
+        name: POP
+        description: RX CHx INFIFO pop register
+        _strip_end: _CH5
+      IN_STATE_CH5:
+        name: STATE
+        description: RX CHx state register
+        _strip_end: _CH5
+      IN_ARB_CH5:
+        name: ARB
+        description: RX CHx arb register
+        _strip_end: _CH5
+      IN_FIFO_CNT_CH5:
+        name: FIFO_CNT
+        description: RX CHx fifo cnt register
+        _strip_end: _CH5
+      IN_POP_DATA_CNT_CH5:
+        name: POP_DATA_CNT
+        description: RX CHx pop data cnt register
+        _strip_end: _CH5
+      IN_XADDR_CH5:
+        name: XADDR
+        description: RX CHx xaddr register
+        _strip_end: _CH5
+      IN_BUF_HB_RCV_CH5:
+        name: BUF_HB_RCV
+        description: RX CHx buf len hb rcv register
+        _strip_end: _CH5
