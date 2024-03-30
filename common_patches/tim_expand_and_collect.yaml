@@ -1,0 +1,12 @@
+_expand_array:
+  T%sCONFIG: {}
+  T%sLO: {}
+  T%sHI: {}
+  T%sUPDATE: {}
+  T%sALARMLO: {}
+  T%sALARMHI: {}
+  T%sLOADLO: {}
+  T%sLOADHI: {}
+  T%sLOAD: {}
+
+_include: tim_collect.yaml

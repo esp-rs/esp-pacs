@@ -1,7 +1,7 @@
 #[doc = "Register `INT_CLR_TIMERS` writer"]
 pub type W = crate::W<INT_CLR_TIMERS_SPEC>;
-#[doc = "Field `T0` writer - t0_int_clr"]
-pub type T0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `T(0-0)` writer - t%s_int_clr"]
+pub type T_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `WDT` writer - wdt_int_clr"]
 pub type WDT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
@@ -11,11 +11,21 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_TIMERS_SPEC> {
     }
 }
 impl W {
+    #[doc = "t(0-0)_int_clr"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[inline(always)]
+    #[must_use]
+    pub fn t(&mut self, n: u8) -> T_W<INT_CLR_TIMERS_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
+        T_W::new(self, n * 0)
+    }
     #[doc = "Bit 0 - t0_int_clr"]
     #[inline(always)]
     #[must_use]
-    pub fn t0(&mut self) -> T0_W<INT_CLR_TIMERS_SPEC> {
-        T0_W::new(self, 0)
+    pub fn t0(&mut self) -> T_W<INT_CLR_TIMERS_SPEC> {
+        T_W::new(self, 0)
     }
     #[doc = "Bit 1 - wdt_int_clr"]
     #[inline(always)]

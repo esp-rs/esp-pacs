@@ -1,19 +1,19 @@
 #[doc = "Register `LACTHI` reader"]
 pub type R = crate::R<LACTHI_SPEC>;
-#[doc = "Field `LACT_HI` reader - "]
-pub type LACT_HI_R = crate::FieldReader<u32>;
+#[doc = "Field `HI` reader - "]
+pub type HI_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn lact_hi(&self) -> LACT_HI_R {
-        LACT_HI_R::new(self.bits)
+    pub fn hi(&self) -> HI_R {
+        HI_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LACTHI")
-            .field("lact_hi", &format_args!("{}", self.lact_hi().bits()))
+            .field("hi", &format_args!("{}", self.hi().bits()))
             .finish()
     }
 }

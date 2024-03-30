@@ -2,24 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    t0config: T0CONFIG,
-    t0lo: T0LO,
-    t0hi: T0HI,
-    t0update: T0UPDATE,
-    t0alarmlo: T0ALARMLO,
-    t0alarmhi: T0ALARMHI,
-    t0loadlo: T0LOADLO,
-    t0loadhi: T0LOADHI,
-    t0load: T0LOAD,
-    t1config: T1CONFIG,
-    t1lo: T1LO,
-    t1hi: T1HI,
-    t1update: T1UPDATE,
-    t1alarmlo: T1ALARMLO,
-    t1alarmhi: T1ALARMHI,
-    t1loadlo: T1LOADLO,
-    t1loadhi: T1LOADHI,
-    t1load: T1LOAD,
+    t: [T; 2],
     wdtconfig0: WDTCONFIG0,
     wdtconfig1: WDTCONFIG1,
     wdtconfig2: WDTCONFIG2,
@@ -44,100 +27,21 @@ pub struct RegisterBlock {
     int_raw_timers: INT_RAW_TIMERS,
     int_st_timers: INT_ST_TIMERS,
     int_clr_timers: INT_CLR_TIMERS,
-    _reserved42: [u8; 0x50],
+    _reserved25: [u8; 0x50],
     ntimers_date: NTIMERS_DATE,
     timgclk: TIMGCLK,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - "]
+    #[doc = "0x00..0x48 - Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
     #[inline(always)]
-    pub const fn t0config(&self) -> &T0CONFIG {
-        &self.t0config
+    pub const fn t(&self, n: usize) -> &T {
+        &self.t[n]
     }
-    #[doc = "0x04 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x48 - Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
     #[inline(always)]
-    pub const fn t0lo(&self) -> &T0LO {
-        &self.t0lo
-    }
-    #[doc = "0x08 - "]
-    #[inline(always)]
-    pub const fn t0hi(&self) -> &T0HI {
-        &self.t0hi
-    }
-    #[doc = "0x0c - "]
-    #[inline(always)]
-    pub const fn t0update(&self) -> &T0UPDATE {
-        &self.t0update
-    }
-    #[doc = "0x10 - "]
-    #[inline(always)]
-    pub const fn t0alarmlo(&self) -> &T0ALARMLO {
-        &self.t0alarmlo
-    }
-    #[doc = "0x14 - "]
-    #[inline(always)]
-    pub const fn t0alarmhi(&self) -> &T0ALARMHI {
-        &self.t0alarmhi
-    }
-    #[doc = "0x18 - "]
-    #[inline(always)]
-    pub const fn t0loadlo(&self) -> &T0LOADLO {
-        &self.t0loadlo
-    }
-    #[doc = "0x1c - "]
-    #[inline(always)]
-    pub const fn t0loadhi(&self) -> &T0LOADHI {
-        &self.t0loadhi
-    }
-    #[doc = "0x20 - "]
-    #[inline(always)]
-    pub const fn t0load(&self) -> &T0LOAD {
-        &self.t0load
-    }
-    #[doc = "0x24 - "]
-    #[inline(always)]
-    pub const fn t1config(&self) -> &T1CONFIG {
-        &self.t1config
-    }
-    #[doc = "0x28 - "]
-    #[inline(always)]
-    pub const fn t1lo(&self) -> &T1LO {
-        &self.t1lo
-    }
-    #[doc = "0x2c - "]
-    #[inline(always)]
-    pub const fn t1hi(&self) -> &T1HI {
-        &self.t1hi
-    }
-    #[doc = "0x30 - "]
-    #[inline(always)]
-    pub const fn t1update(&self) -> &T1UPDATE {
-        &self.t1update
-    }
-    #[doc = "0x34 - "]
-    #[inline(always)]
-    pub const fn t1alarmlo(&self) -> &T1ALARMLO {
-        &self.t1alarmlo
-    }
-    #[doc = "0x38 - "]
-    #[inline(always)]
-    pub const fn t1alarmhi(&self) -> &T1ALARMHI {
-        &self.t1alarmhi
-    }
-    #[doc = "0x3c - "]
-    #[inline(always)]
-    pub const fn t1loadlo(&self) -> &T1LOADLO {
-        &self.t1loadlo
-    }
-    #[doc = "0x40 - "]
-    #[inline(always)]
-    pub const fn t1loadhi(&self) -> &T1LOADHI {
-        &self.t1loadhi
-    }
-    #[doc = "0x44 - "]
-    #[inline(always)]
-    pub const fn t1load(&self) -> &T1LOAD {
-        &self.t1load
+    pub fn t_iter(&self) -> impl Iterator<Item = &T> {
+        self.t.iter()
     }
     #[doc = "0x48 - "]
     #[inline(always)]
@@ -270,78 +174,11 @@ impl RegisterBlock {
         &self.timgclk
     }
 }
-#[doc = "T0CONFIG (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0config::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0config::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0config`] module"]
-pub type T0CONFIG = crate::Reg<t0config::T0CONFIG_SPEC>;
-#[doc = ""]
-pub mod t0config;
-#[doc = "T0LO (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0lo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0lo`] module"]
-pub type T0LO = crate::Reg<t0lo::T0LO_SPEC>;
-#[doc = ""]
-pub mod t0lo;
-#[doc = "T0HI (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0hi::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0hi`] module"]
-pub type T0HI = crate::Reg<t0hi::T0HI_SPEC>;
-#[doc = ""]
-pub mod t0hi;
-#[doc = "T0UPDATE (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0update::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0update::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0update`] module"]
-pub type T0UPDATE = crate::Reg<t0update::T0UPDATE_SPEC>;
-#[doc = ""]
-pub mod t0update;
-#[doc = "T0ALARMLO (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0alarmlo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0alarmlo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0alarmlo`] module"]
-pub type T0ALARMLO = crate::Reg<t0alarmlo::T0ALARMLO_SPEC>;
-#[doc = ""]
-pub mod t0alarmlo;
-#[doc = "T0ALARMHI (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0alarmhi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0alarmhi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0alarmhi`] module"]
-pub type T0ALARMHI = crate::Reg<t0alarmhi::T0ALARMHI_SPEC>;
-#[doc = ""]
-pub mod t0alarmhi;
-#[doc = "T0LOADLO (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0loadlo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0loadlo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0loadlo`] module"]
-pub type T0LOADLO = crate::Reg<t0loadlo::T0LOADLO_SPEC>;
-#[doc = ""]
-pub mod t0loadlo;
-#[doc = "T0LOADHI (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0loadhi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0loadhi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0loadhi`] module"]
-pub type T0LOADHI = crate::Reg<t0loadhi::T0LOADHI_SPEC>;
-#[doc = ""]
-pub mod t0loadhi;
-#[doc = "T0LOAD (w) register accessor: \n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t0load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0load`] module"]
-pub type T0LOAD = crate::Reg<t0load::T0LOAD_SPEC>;
-#[doc = ""]
-pub mod t0load;
-#[doc = "T1CONFIG (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1config::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1config::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1config`] module"]
-pub type T1CONFIG = crate::Reg<t1config::T1CONFIG_SPEC>;
-#[doc = ""]
-pub mod t1config;
-#[doc = "T1LO (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1lo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1lo`] module"]
-pub type T1LO = crate::Reg<t1lo::T1LO_SPEC>;
-#[doc = ""]
-pub mod t1lo;
-#[doc = "T1HI (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1hi::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1hi`] module"]
-pub type T1HI = crate::Reg<t1hi::T1HI_SPEC>;
-#[doc = ""]
-pub mod t1hi;
-#[doc = "T1UPDATE (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1update::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1update::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1update`] module"]
-pub type T1UPDATE = crate::Reg<t1update::T1UPDATE_SPEC>;
-#[doc = ""]
-pub mod t1update;
-#[doc = "T1ALARMLO (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1alarmlo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1alarmlo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1alarmlo`] module"]
-pub type T1ALARMLO = crate::Reg<t1alarmlo::T1ALARMLO_SPEC>;
-#[doc = ""]
-pub mod t1alarmlo;
-#[doc = "T1ALARMHI (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1alarmhi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1alarmhi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1alarmhi`] module"]
-pub type T1ALARMHI = crate::Reg<t1alarmhi::T1ALARMHI_SPEC>;
-#[doc = ""]
-pub mod t1alarmhi;
-#[doc = "T1LOADLO (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1loadlo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1loadlo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1loadlo`] module"]
-pub type T1LOADLO = crate::Reg<t1loadlo::T1LOADLO_SPEC>;
-#[doc = ""]
-pub mod t1loadlo;
-#[doc = "T1LOADHI (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1loadhi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1loadhi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1loadhi`] module"]
-pub type T1LOADHI = crate::Reg<t1loadhi::T1LOADHI_SPEC>;
-#[doc = ""]
-pub mod t1loadhi;
-#[doc = "T1LOAD (w) register accessor: \n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t1load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1load`] module"]
-pub type T1LOAD = crate::Reg<t1load::T1LOAD_SPEC>;
-#[doc = ""]
-pub mod t1load;
+#[doc = "Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
+pub use self::t::T;
+#[doc = r"Cluster"]
+#[doc = "Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
+pub mod t;
 #[doc = "WDTCONFIG0 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wdtconfig0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wdtconfig0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig0`] module"]
 pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;
 #[doc = ""]

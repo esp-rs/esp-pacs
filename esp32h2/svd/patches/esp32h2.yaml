@@ -23,7 +23,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"EFUSE,I2C0,I2S0,LEDC,UART0,APB_SARADC,SPI[01],SYSTIMER,UHCI0,LP_WDT,MCPWM0,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
+"EFUSE,I2C0,I2S0,LEDC,UART0,APB_SARADC,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
 
 ECC:
@@ -36,7 +36,7 @@ PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
 
 TIMG0:
-  _include: ../../../common_patches/tim_int_strip.yaml
+  _include: ../../../common_patches/tim_collect.yaml
 
 SPI2:
   _include: ../../../common_patches/spi_dma_int_strip.yaml

@@ -1,0 +1,37 @@
+
+_cluster:
+  T%s:
+    dimIncrement: 0x24
+    T?CONFIG:
+      name: CONFIG
+    T?LO:
+      name: LO
+    T?HI:
+      name: HI
+    T?UPDATE:
+      name: UPDATE
+    T?ALARMLO:
+      name: ALARMLO
+    T?ALARMHI:
+      name: ALARMHI
+    T?LOADLO:
+      name: LOADLO
+    T?LOADHI:
+      name: LOADHI
+    T?LOAD:
+      name: LOAD
+
+INT_ENA_TIMERS:
+  _array:
+    T?: {}
+INT_RAW_TIMERS:
+  _array:
+    T?: {}
+INT_ST_TIMERS:
+  _array:
+    T?: {}
+INT_CLR_TIMERS:
+  _array:
+    T?: {}
+
+_include: tim_int_strip.yaml

@@ -2,384 +2,312 @@
 pub type R = crate::R<EVT_EN_SPEC>;
 #[doc = "Register `EVT_EN` writer"]
 pub type W = crate::W<EVT_EN_SPEC>;
-#[doc = "Field `EVT_TIMER0_STOP_EN` reader - Configures whether or not to enable timer0 stop event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER0_STOP_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER0_STOP_EN` writer - Configures whether or not to enable timer0 stop event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER0_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER1_STOP_EN` reader - Configures whether or not to enable timer1 stop event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER1_STOP_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER1_STOP_EN` writer - Configures whether or not to enable timer1 stop event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER1_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER2_STOP_EN` reader - Configures whether or not to enable timer2 stop event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER2_STOP_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER2_STOP_EN` writer - Configures whether or not to enable timer2 stop event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER2_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER0_TEZ_EN` reader - Configures whether or not to enable timer0 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER0_TEZ_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER0_TEZ_EN` writer - Configures whether or not to enable timer0 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER0_TEZ_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER1_TEZ_EN` reader - Configures whether or not to enable timer1 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER1_TEZ_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER1_TEZ_EN` writer - Configures whether or not to enable timer1 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER1_TEZ_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER2_TEZ_EN` reader - Configures whether or not to enable timer2 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER2_TEZ_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER2_TEZ_EN` writer - Configures whether or not to enable timer2 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER2_TEZ_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER0_TEP_EN` reader - Configures whether or not to enable timer0 equal period event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER0_TEP_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER0_TEP_EN` writer - Configures whether or not to enable timer0 equal period event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER0_TEP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER1_TEP_EN` reader - Configures whether or not to enable timer1 equal period event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER1_TEP_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER1_TEP_EN` writer - Configures whether or not to enable timer1 equal period event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER1_TEP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TIMER2_TEP_EN` reader - Configures whether or not to enable timer2 equal period event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER2_TEP_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TIMER2_TEP_EN` writer - Configures whether or not to enable timer2 equal period event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TIMER2_TEP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_OP0_TEA_EN` reader - Configures whether or not to enable PWM generator0 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP0_TEA_EN_R = crate::BitReader;
-#[doc = "Field `EVT_OP0_TEA_EN` writer - Configures whether or not to enable PWM generator0 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP0_TEA_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_OP1_TEA_EN` reader - Configures whether or not to enable PWM generator1 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP1_TEA_EN_R = crate::BitReader;
-#[doc = "Field `EVT_OP1_TEA_EN` writer - Configures whether or not to enable PWM generator1 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP1_TEA_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_OP2_TEA_EN` reader - Configures whether or not to enable PWM generator2 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP2_TEA_EN_R = crate::BitReader;
-#[doc = "Field `EVT_OP2_TEA_EN` writer - Configures whether or not to enable PWM generator2 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP2_TEA_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_OP0_TEB_EN` reader - Configures whether or not to enable PWM generator0 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP0_TEB_EN_R = crate::BitReader;
-#[doc = "Field `EVT_OP0_TEB_EN` writer - Configures whether or not to enable PWM generator0 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP0_TEB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_OP1_TEB_EN` reader - Configures whether or not to enable PWM generator1 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP1_TEB_EN_R = crate::BitReader;
-#[doc = "Field `EVT_OP1_TEB_EN` writer - Configures whether or not to enable PWM generator1 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP1_TEB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_OP2_TEB_EN` reader - Configures whether or not to enable PWM generator2 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP2_TEB_EN_R = crate::BitReader;
-#[doc = "Field `EVT_OP2_TEB_EN` writer - Configures whether or not to enable PWM generator2 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_OP2_TEB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_F0_EN` reader - Configures whether or not to enable fault0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F0_EN_R = crate::BitReader;
-#[doc = "Field `EVT_F0_EN` writer - Configures whether or not to enable fault0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_F1_EN` reader - Configures whether or not to enable fault1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F1_EN_R = crate::BitReader;
-#[doc = "Field `EVT_F1_EN` writer - Configures whether or not to enable fault1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_F2_EN` reader - Configures whether or not to enable fault2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F2_EN_R = crate::BitReader;
-#[doc = "Field `EVT_F2_EN` writer - Configures whether or not to enable fault2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_F0_CLR_EN` reader - Configures whether or not to enable fault0 clear event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F0_CLR_EN_R = crate::BitReader;
-#[doc = "Field `EVT_F0_CLR_EN` writer - Configures whether or not to enable fault0 clear event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F0_CLR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_F1_CLR_EN` reader - Configures whether or not to enable fault1 clear event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F1_CLR_EN_R = crate::BitReader;
-#[doc = "Field `EVT_F1_CLR_EN` writer - Configures whether or not to enable fault1 clear event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F1_CLR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_F2_CLR_EN` reader - Configures whether or not to enable fault2 clear event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F2_CLR_EN_R = crate::BitReader;
-#[doc = "Field `EVT_F2_CLR_EN` writer - Configures whether or not to enable fault2 clear event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_F2_CLR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TZ0_CBC_EN` reader - Configures whether or not to enable cycle-by-cycle trip0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ0_CBC_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TZ0_CBC_EN` writer - Configures whether or not to enable cycle-by-cycle trip0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ0_CBC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TZ1_CBC_EN` reader - Configures whether or not to enable cycle-by-cycle trip1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ1_CBC_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TZ1_CBC_EN` writer - Configures whether or not to enable cycle-by-cycle trip1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ1_CBC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TZ2_CBC_EN` reader - Configures whether or not to enable cycle-by-cycle trip2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ2_CBC_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TZ2_CBC_EN` writer - Configures whether or not to enable cycle-by-cycle trip2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ2_CBC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TZ0_OST_EN` reader - Configures whether or not to enable one-shot trip0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ0_OST_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TZ0_OST_EN` writer - Configures whether or not to enable one-shot trip0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ0_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TZ1_OST_EN` reader - Configures whether or not to enable one-shot trip1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ1_OST_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TZ1_OST_EN` writer - Configures whether or not to enable one-shot trip1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ1_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_TZ2_OST_EN` reader - Configures whether or not to enable one-shot trip2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ2_OST_EN_R = crate::BitReader;
-#[doc = "Field `EVT_TZ2_OST_EN` writer - Configures whether or not to enable one-shot trip2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_TZ2_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_CAP0_EN` reader - Configures whether or not to enable capture0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_CAP0_EN_R = crate::BitReader;
-#[doc = "Field `EVT_CAP0_EN` writer - Configures whether or not to enable capture0 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_CAP0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_CAP1_EN` reader - Configures whether or not to enable capture1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_CAP1_EN_R = crate::BitReader;
-#[doc = "Field `EVT_CAP1_EN` writer - Configures whether or not to enable capture1 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_CAP1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EVT_CAP2_EN` reader - Configures whether or not to enable capture2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_CAP2_EN_R = crate::BitReader;
-#[doc = "Field `EVT_CAP2_EN` writer - Configures whether or not to enable capture2 event generate.\\\\0: Disable\\\\1: Enable"]
-pub type EVT_CAP2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER0_STOP` reader - Configures whether or not to enable timer0 stop event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_STOP_R = crate::BitReader;
+#[doc = "Field `TIMER0_STOP` writer - Configures whether or not to enable timer0 stop event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER1_STOP` reader - Configures whether or not to enable timer1 stop event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_STOP_R = crate::BitReader;
+#[doc = "Field `TIMER1_STOP` writer - Configures whether or not to enable timer1 stop event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER2_STOP` reader - Configures whether or not to enable timer2 stop event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_STOP_R = crate::BitReader;
+#[doc = "Field `TIMER2_STOP` writer - Configures whether or not to enable timer2 stop event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER0_TEZ` reader - Configures whether or not to enable timer0 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_TEZ_R = crate::BitReader;
+#[doc = "Field `TIMER0_TEZ` writer - Configures whether or not to enable timer0 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_TEZ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER1_TEZ` reader - Configures whether or not to enable timer1 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_TEZ_R = crate::BitReader;
+#[doc = "Field `TIMER1_TEZ` writer - Configures whether or not to enable timer1 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_TEZ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER2_TEZ` reader - Configures whether or not to enable timer2 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_TEZ_R = crate::BitReader;
+#[doc = "Field `TIMER2_TEZ` writer - Configures whether or not to enable timer2 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_TEZ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER0_TEP` reader - Configures whether or not to enable timer0 equal period event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_TEP_R = crate::BitReader;
+#[doc = "Field `TIMER0_TEP` writer - Configures whether or not to enable timer0 equal period event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_TEP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER1_TEP` reader - Configures whether or not to enable timer1 equal period event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_TEP_R = crate::BitReader;
+#[doc = "Field `TIMER1_TEP` writer - Configures whether or not to enable timer1 equal period event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_TEP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER2_TEP` reader - Configures whether or not to enable timer2 equal period event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_TEP_R = crate::BitReader;
+#[doc = "Field `TIMER2_TEP` writer - Configures whether or not to enable timer2 equal period event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_TEP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OP0_TEA` reader - Configures whether or not to enable PWM generator0 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP0_TEA_R = crate::BitReader;
+#[doc = "Field `OP0_TEA` writer - Configures whether or not to enable PWM generator0 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP0_TEA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OP1_TEA` reader - Configures whether or not to enable PWM generator1 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP1_TEA_R = crate::BitReader;
+#[doc = "Field `OP1_TEA` writer - Configures whether or not to enable PWM generator1 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP1_TEA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OP2_TEA` reader - Configures whether or not to enable PWM generator2 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP2_TEA_R = crate::BitReader;
+#[doc = "Field `OP2_TEA` writer - Configures whether or not to enable PWM generator2 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP2_TEA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OP0_TEB` reader - Configures whether or not to enable PWM generator0 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP0_TEB_R = crate::BitReader;
+#[doc = "Field `OP0_TEB` writer - Configures whether or not to enable PWM generator0 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP0_TEB_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OP1_TEB` reader - Configures whether or not to enable PWM generator1 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP1_TEB_R = crate::BitReader;
+#[doc = "Field `OP1_TEB` writer - Configures whether or not to enable PWM generator1 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP1_TEB_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OP2_TEB` reader - Configures whether or not to enable PWM generator2 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP2_TEB_R = crate::BitReader;
+#[doc = "Field `OP2_TEB` writer - Configures whether or not to enable PWM generator2 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
+pub type OP2_TEB_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F0` reader - Configures whether or not to enable fault0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F0_R = crate::BitReader;
+#[doc = "Field `F0` writer - Configures whether or not to enable fault0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F1` reader - Configures whether or not to enable fault1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F1_R = crate::BitReader;
+#[doc = "Field `F1` writer - Configures whether or not to enable fault1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F1_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F2` reader - Configures whether or not to enable fault2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F2_R = crate::BitReader;
+#[doc = "Field `F2` writer - Configures whether or not to enable fault2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F2_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F0_CLR` reader - Configures whether or not to enable fault0 clear event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F0_CLR_R = crate::BitReader;
+#[doc = "Field `F0_CLR` writer - Configures whether or not to enable fault0 clear event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F0_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F1_CLR` reader - Configures whether or not to enable fault1 clear event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F1_CLR_R = crate::BitReader;
+#[doc = "Field `F1_CLR` writer - Configures whether or not to enable fault1 clear event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F1_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F2_CLR` reader - Configures whether or not to enable fault2 clear event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F2_CLR_R = crate::BitReader;
+#[doc = "Field `F2_CLR` writer - Configures whether or not to enable fault2 clear event generate.\\\\0: Disable\\\\1: Enable"]
+pub type F2_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ0_CBC` reader - Configures whether or not to enable cycle-by-cycle trip0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ0_CBC_R = crate::BitReader;
+#[doc = "Field `TZ0_CBC` writer - Configures whether or not to enable cycle-by-cycle trip0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ0_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ1_CBC` reader - Configures whether or not to enable cycle-by-cycle trip1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ1_CBC_R = crate::BitReader;
+#[doc = "Field `TZ1_CBC` writer - Configures whether or not to enable cycle-by-cycle trip1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ1_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ2_CBC` reader - Configures whether or not to enable cycle-by-cycle trip2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ2_CBC_R = crate::BitReader;
+#[doc = "Field `TZ2_CBC` writer - Configures whether or not to enable cycle-by-cycle trip2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ2_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ0_OST` reader - Configures whether or not to enable one-shot trip0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ0_OST_R = crate::BitReader;
+#[doc = "Field `TZ0_OST` writer - Configures whether or not to enable one-shot trip0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ0_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ1_OST` reader - Configures whether or not to enable one-shot trip1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ1_OST_R = crate::BitReader;
+#[doc = "Field `TZ1_OST` writer - Configures whether or not to enable one-shot trip1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ1_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ2_OST` reader - Configures whether or not to enable one-shot trip2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ2_OST_R = crate::BitReader;
+#[doc = "Field `TZ2_OST` writer - Configures whether or not to enable one-shot trip2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type TZ2_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP0` reader - Configures whether or not to enable capture0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type CAP0_R = crate::BitReader;
+#[doc = "Field `CAP0` writer - Configures whether or not to enable capture0 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type CAP0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP1` reader - Configures whether or not to enable capture1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type CAP1_R = crate::BitReader;
+#[doc = "Field `CAP1` writer - Configures whether or not to enable capture1 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type CAP1_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP2` reader - Configures whether or not to enable capture2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type CAP2_R = crate::BitReader;
+#[doc = "Field `CAP2` writer - Configures whether or not to enable capture2 event generate.\\\\0: Disable\\\\1: Enable"]
+pub type CAP2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Configures whether or not to enable timer0 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer0_stop_en(&self) -> EVT_TIMER0_STOP_EN_R {
-        EVT_TIMER0_STOP_EN_R::new((self.bits & 1) != 0)
+    pub fn timer0_stop(&self) -> TIMER0_STOP_R {
+        TIMER0_STOP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable timer1 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer1_stop_en(&self) -> EVT_TIMER1_STOP_EN_R {
-        EVT_TIMER1_STOP_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn timer1_stop(&self) -> TIMER1_STOP_R {
+        TIMER1_STOP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Configures whether or not to enable timer2 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer2_stop_en(&self) -> EVT_TIMER2_STOP_EN_R {
-        EVT_TIMER2_STOP_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn timer2_stop(&self) -> TIMER2_STOP_R {
+        TIMER2_STOP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Configures whether or not to enable timer0 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer0_tez_en(&self) -> EVT_TIMER0_TEZ_EN_R {
-        EVT_TIMER0_TEZ_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn timer0_tez(&self) -> TIMER0_TEZ_R {
+        TIMER0_TEZ_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Configures whether or not to enable timer1 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer1_tez_en(&self) -> EVT_TIMER1_TEZ_EN_R {
-        EVT_TIMER1_TEZ_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn timer1_tez(&self) -> TIMER1_TEZ_R {
+        TIMER1_TEZ_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Configures whether or not to enable timer2 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer2_tez_en(&self) -> EVT_TIMER2_TEZ_EN_R {
-        EVT_TIMER2_TEZ_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn timer2_tez(&self) -> TIMER2_TEZ_R {
+        TIMER2_TEZ_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Configures whether or not to enable timer0 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer0_tep_en(&self) -> EVT_TIMER0_TEP_EN_R {
-        EVT_TIMER0_TEP_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn timer0_tep(&self) -> TIMER0_TEP_R {
+        TIMER0_TEP_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Configures whether or not to enable timer1 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer1_tep_en(&self) -> EVT_TIMER1_TEP_EN_R {
-        EVT_TIMER1_TEP_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn timer1_tep(&self) -> TIMER1_TEP_R {
+        TIMER1_TEP_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Configures whether or not to enable timer2 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_timer2_tep_en(&self) -> EVT_TIMER2_TEP_EN_R {
-        EVT_TIMER2_TEP_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn timer2_tep(&self) -> TIMER2_TEP_R {
+        TIMER2_TEP_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Configures whether or not to enable PWM generator0 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op0_tea_en(&self) -> EVT_OP0_TEA_EN_R {
-        EVT_OP0_TEA_EN_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn op0_tea(&self) -> OP0_TEA_R {
+        OP0_TEA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Configures whether or not to enable PWM generator1 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op1_tea_en(&self) -> EVT_OP1_TEA_EN_R {
-        EVT_OP1_TEA_EN_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn op1_tea(&self) -> OP1_TEA_R {
+        OP1_TEA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Configures whether or not to enable PWM generator2 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op2_tea_en(&self) -> EVT_OP2_TEA_EN_R {
-        EVT_OP2_TEA_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn op2_tea(&self) -> OP2_TEA_R {
+        OP2_TEA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Configures whether or not to enable PWM generator0 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op0_teb_en(&self) -> EVT_OP0_TEB_EN_R {
-        EVT_OP0_TEB_EN_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn op0_teb(&self) -> OP0_TEB_R {
+        OP0_TEB_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Configures whether or not to enable PWM generator1 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op1_teb_en(&self) -> EVT_OP1_TEB_EN_R {
-        EVT_OP1_TEB_EN_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn op1_teb(&self) -> OP1_TEB_R {
+        OP1_TEB_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Configures whether or not to enable PWM generator2 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op2_teb_en(&self) -> EVT_OP2_TEB_EN_R {
-        EVT_OP2_TEB_EN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn op2_teb(&self) -> OP2_TEB_R {
+        OP2_TEB_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Configures whether or not to enable fault0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_f0_en(&self) -> EVT_F0_EN_R {
-        EVT_F0_EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn f0(&self) -> F0_R {
+        F0_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Configures whether or not to enable fault1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_f1_en(&self) -> EVT_F1_EN_R {
-        EVT_F1_EN_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn f1(&self) -> F1_R {
+        F1_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Configures whether or not to enable fault2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_f2_en(&self) -> EVT_F2_EN_R {
-        EVT_F2_EN_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn f2(&self) -> F2_R {
+        F2_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Configures whether or not to enable fault0 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_f0_clr_en(&self) -> EVT_F0_CLR_EN_R {
-        EVT_F0_CLR_EN_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn f0_clr(&self) -> F0_CLR_R {
+        F0_CLR_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Configures whether or not to enable fault1 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_f1_clr_en(&self) -> EVT_F1_CLR_EN_R {
-        EVT_F1_CLR_EN_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn f1_clr(&self) -> F1_CLR_R {
+        F1_CLR_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Configures whether or not to enable fault2 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_f2_clr_en(&self) -> EVT_F2_CLR_EN_R {
-        EVT_F2_CLR_EN_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn f2_clr(&self) -> F2_CLR_R {
+        F2_CLR_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Configures whether or not to enable cycle-by-cycle trip0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_tz0_cbc_en(&self) -> EVT_TZ0_CBC_EN_R {
-        EVT_TZ0_CBC_EN_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn tz0_cbc(&self) -> TZ0_CBC_R {
+        TZ0_CBC_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Configures whether or not to enable cycle-by-cycle trip1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_tz1_cbc_en(&self) -> EVT_TZ1_CBC_EN_R {
-        EVT_TZ1_CBC_EN_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn tz1_cbc(&self) -> TZ1_CBC_R {
+        TZ1_CBC_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Configures whether or not to enable cycle-by-cycle trip2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_tz2_cbc_en(&self) -> EVT_TZ2_CBC_EN_R {
-        EVT_TZ2_CBC_EN_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn tz2_cbc(&self) -> TZ2_CBC_R {
+        TZ2_CBC_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Configures whether or not to enable one-shot trip0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_tz0_ost_en(&self) -> EVT_TZ0_OST_EN_R {
-        EVT_TZ0_OST_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn tz0_ost(&self) -> TZ0_OST_R {
+        TZ0_OST_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Configures whether or not to enable one-shot trip1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_tz1_ost_en(&self) -> EVT_TZ1_OST_EN_R {
-        EVT_TZ1_OST_EN_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn tz1_ost(&self) -> TZ1_OST_R {
+        TZ1_OST_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Configures whether or not to enable one-shot trip2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_tz2_ost_en(&self) -> EVT_TZ2_OST_EN_R {
-        EVT_TZ2_OST_EN_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn tz2_ost(&self) -> TZ2_OST_R {
+        TZ2_OST_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Configures whether or not to enable capture0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_cap0_en(&self) -> EVT_CAP0_EN_R {
-        EVT_CAP0_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn cap0(&self) -> CAP0_R {
+        CAP0_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Configures whether or not to enable capture1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_cap1_en(&self) -> EVT_CAP1_EN_R {
-        EVT_CAP1_EN_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn cap1(&self) -> CAP1_R {
+        CAP1_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Configures whether or not to enable capture2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_cap2_en(&self) -> EVT_CAP2_EN_R {
-        EVT_CAP2_EN_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn cap2(&self) -> CAP2_R {
+        CAP2_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EVT_EN")
-            .field(
-                "evt_timer0_stop_en",
-                &format_args!("{}", self.evt_timer0_stop_en().bit()),
-            )
-            .field(
-                "evt_timer1_stop_en",
-                &format_args!("{}", self.evt_timer1_stop_en().bit()),
-            )
-            .field(
-                "evt_timer2_stop_en",
-                &format_args!("{}", self.evt_timer2_stop_en().bit()),
-            )
-            .field(
-                "evt_timer0_tez_en",
-                &format_args!("{}", self.evt_timer0_tez_en().bit()),
-            )
-            .field(
-                "evt_timer1_tez_en",
-                &format_args!("{}", self.evt_timer1_tez_en().bit()),
-            )
-            .field(
-                "evt_timer2_tez_en",
-                &format_args!("{}", self.evt_timer2_tez_en().bit()),
-            )
-            .field(
-                "evt_timer0_tep_en",
-                &format_args!("{}", self.evt_timer0_tep_en().bit()),
-            )
-            .field(
-                "evt_timer1_tep_en",
-                &format_args!("{}", self.evt_timer1_tep_en().bit()),
-            )
-            .field(
-                "evt_timer2_tep_en",
-                &format_args!("{}", self.evt_timer2_tep_en().bit()),
-            )
-            .field(
-                "evt_op0_tea_en",
-                &format_args!("{}", self.evt_op0_tea_en().bit()),
-            )
-            .field(
-                "evt_op1_tea_en",
-                &format_args!("{}", self.evt_op1_tea_en().bit()),
-            )
-            .field(
-                "evt_op2_tea_en",
-                &format_args!("{}", self.evt_op2_tea_en().bit()),
-            )
-            .field(
-                "evt_op0_teb_en",
-                &format_args!("{}", self.evt_op0_teb_en().bit()),
-            )
-            .field(
-                "evt_op1_teb_en",
-                &format_args!("{}", self.evt_op1_teb_en().bit()),
-            )
-            .field(
-                "evt_op2_teb_en",
-                &format_args!("{}", self.evt_op2_teb_en().bit()),
-            )
-            .field("evt_f0_en", &format_args!("{}", self.evt_f0_en().bit()))
-            .field("evt_f1_en", &format_args!("{}", self.evt_f1_en().bit()))
-            .field("evt_f2_en", &format_args!("{}", self.evt_f2_en().bit()))
-            .field(
-                "evt_f0_clr_en",
-                &format_args!("{}", self.evt_f0_clr_en().bit()),
-            )
-            .field(
-                "evt_f1_clr_en",
-                &format_args!("{}", self.evt_f1_clr_en().bit()),
-            )
-            .field(
-                "evt_f2_clr_en",
-                &format_args!("{}", self.evt_f2_clr_en().bit()),
-            )
-            .field(
-                "evt_tz0_cbc_en",
-                &format_args!("{}", self.evt_tz0_cbc_en().bit()),
-            )
-            .field(
-                "evt_tz1_cbc_en",
-                &format_args!("{}", self.evt_tz1_cbc_en().bit()),
-            )
-            .field(
-                "evt_tz2_cbc_en",
-                &format_args!("{}", self.evt_tz2_cbc_en().bit()),
-            )
-            .field(
-                "evt_tz0_ost_en",
-                &format_args!("{}", self.evt_tz0_ost_en().bit()),
-            )
-            .field(
-                "evt_tz1_ost_en",
-                &format_args!("{}", self.evt_tz1_ost_en().bit()),
-            )
-            .field(
-                "evt_tz2_ost_en",
-                &format_args!("{}", self.evt_tz2_ost_en().bit()),
-            )
-            .field("evt_cap0_en", &format_args!("{}", self.evt_cap0_en().bit()))
-            .field("evt_cap1_en", &format_args!("{}", self.evt_cap1_en().bit()))
-            .field("evt_cap2_en", &format_args!("{}", self.evt_cap2_en().bit()))
+            .field("timer0_stop", &format_args!("{}", self.timer0_stop().bit()))
+            .field("timer1_stop", &format_args!("{}", self.timer1_stop().bit()))
+            .field("timer2_stop", &format_args!("{}", self.timer2_stop().bit()))
+            .field("timer0_tez", &format_args!("{}", self.timer0_tez().bit()))
+            .field("timer1_tez", &format_args!("{}", self.timer1_tez().bit()))
+            .field("timer2_tez", &format_args!("{}", self.timer2_tez().bit()))
+            .field("timer0_tep", &format_args!("{}", self.timer0_tep().bit()))
+            .field("timer1_tep", &format_args!("{}", self.timer1_tep().bit()))
+            .field("timer2_tep", &format_args!("{}", self.timer2_tep().bit()))
+            .field("op0_tea", &format_args!("{}", self.op0_tea().bit()))
+            .field("op1_tea", &format_args!("{}", self.op1_tea().bit()))
+            .field("op2_tea", &format_args!("{}", self.op2_tea().bit()))
+            .field("op0_teb", &format_args!("{}", self.op0_teb().bit()))
+            .field("op1_teb", &format_args!("{}", self.op1_teb().bit()))
+            .field("op2_teb", &format_args!("{}", self.op2_teb().bit()))
+            .field("f0", &format_args!("{}", self.f0().bit()))
+            .field("f1", &format_args!("{}", self.f1().bit()))
+            .field("f2", &format_args!("{}", self.f2().bit()))
+            .field("f0_clr", &format_args!("{}", self.f0_clr().bit()))
+            .field("f1_clr", &format_args!("{}", self.f1_clr().bit()))
+            .field("f2_clr", &format_args!("{}", self.f2_clr().bit()))
+            .field("tz0_cbc", &format_args!("{}", self.tz0_cbc().bit()))
+            .field("tz1_cbc", &format_args!("{}", self.tz1_cbc().bit()))
+            .field("tz2_cbc", &format_args!("{}", self.tz2_cbc().bit()))
+            .field("tz0_ost", &format_args!("{}", self.tz0_ost().bit()))
+            .field("tz1_ost", &format_args!("{}", self.tz1_ost().bit()))
+            .field("tz2_ost", &format_args!("{}", self.tz2_ost().bit()))
+            .field("cap0", &format_args!("{}", self.cap0().bit()))
+            .field("cap1", &format_args!("{}", self.cap1().bit()))
+            .field("cap2", &format_args!("{}", self.cap2().bit()))
             .finish()
     }
 }
@@ -393,182 +321,182 @@ impl W {
     #[doc = "Bit 0 - Configures whether or not to enable timer0 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer0_stop_en(&mut self) -> EVT_TIMER0_STOP_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER0_STOP_EN_W::new(self, 0)
+    pub fn timer0_stop(&mut self) -> TIMER0_STOP_W<EVT_EN_SPEC> {
+        TIMER0_STOP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable timer1 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer1_stop_en(&mut self) -> EVT_TIMER1_STOP_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER1_STOP_EN_W::new(self, 1)
+    pub fn timer1_stop(&mut self) -> TIMER1_STOP_W<EVT_EN_SPEC> {
+        TIMER1_STOP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable timer2 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer2_stop_en(&mut self) -> EVT_TIMER2_STOP_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER2_STOP_EN_W::new(self, 2)
+    pub fn timer2_stop(&mut self) -> TIMER2_STOP_W<EVT_EN_SPEC> {
+        TIMER2_STOP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable timer0 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer0_tez_en(&mut self) -> EVT_TIMER0_TEZ_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER0_TEZ_EN_W::new(self, 3)
+    pub fn timer0_tez(&mut self) -> TIMER0_TEZ_W<EVT_EN_SPEC> {
+        TIMER0_TEZ_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable timer1 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer1_tez_en(&mut self) -> EVT_TIMER1_TEZ_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER1_TEZ_EN_W::new(self, 4)
+    pub fn timer1_tez(&mut self) -> TIMER1_TEZ_W<EVT_EN_SPEC> {
+        TIMER1_TEZ_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable timer2 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer2_tez_en(&mut self) -> EVT_TIMER2_TEZ_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER2_TEZ_EN_W::new(self, 5)
+    pub fn timer2_tez(&mut self) -> TIMER2_TEZ_W<EVT_EN_SPEC> {
+        TIMER2_TEZ_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable timer0 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer0_tep_en(&mut self) -> EVT_TIMER0_TEP_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER0_TEP_EN_W::new(self, 6)
+    pub fn timer0_tep(&mut self) -> TIMER0_TEP_W<EVT_EN_SPEC> {
+        TIMER0_TEP_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable timer1 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer1_tep_en(&mut self) -> EVT_TIMER1_TEP_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER1_TEP_EN_W::new(self, 7)
+    pub fn timer1_tep(&mut self) -> TIMER1_TEP_W<EVT_EN_SPEC> {
+        TIMER1_TEP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to enable timer2 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_timer2_tep_en(&mut self) -> EVT_TIMER2_TEP_EN_W<EVT_EN_SPEC> {
-        EVT_TIMER2_TEP_EN_W::new(self, 8)
+    pub fn timer2_tep(&mut self) -> TIMER2_TEP_W<EVT_EN_SPEC> {
+        TIMER2_TEP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable PWM generator0 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_op0_tea_en(&mut self) -> EVT_OP0_TEA_EN_W<EVT_EN_SPEC> {
-        EVT_OP0_TEA_EN_W::new(self, 9)
+    pub fn op0_tea(&mut self) -> OP0_TEA_W<EVT_EN_SPEC> {
+        OP0_TEA_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable PWM generator1 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_op1_tea_en(&mut self) -> EVT_OP1_TEA_EN_W<EVT_EN_SPEC> {
-        EVT_OP1_TEA_EN_W::new(self, 10)
+    pub fn op1_tea(&mut self) -> OP1_TEA_W<EVT_EN_SPEC> {
+        OP1_TEA_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to enable PWM generator2 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_op2_tea_en(&mut self) -> EVT_OP2_TEA_EN_W<EVT_EN_SPEC> {
-        EVT_OP2_TEA_EN_W::new(self, 11)
+    pub fn op2_tea(&mut self) -> OP2_TEA_W<EVT_EN_SPEC> {
+        OP2_TEA_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to enable PWM generator0 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_op0_teb_en(&mut self) -> EVT_OP0_TEB_EN_W<EVT_EN_SPEC> {
-        EVT_OP0_TEB_EN_W::new(self, 12)
+    pub fn op0_teb(&mut self) -> OP0_TEB_W<EVT_EN_SPEC> {
+        OP0_TEB_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable PWM generator1 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_op1_teb_en(&mut self) -> EVT_OP1_TEB_EN_W<EVT_EN_SPEC> {
-        EVT_OP1_TEB_EN_W::new(self, 13)
+    pub fn op1_teb(&mut self) -> OP1_TEB_W<EVT_EN_SPEC> {
+        OP1_TEB_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures whether or not to enable PWM generator2 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_op2_teb_en(&mut self) -> EVT_OP2_TEB_EN_W<EVT_EN_SPEC> {
-        EVT_OP2_TEB_EN_W::new(self, 14)
+    pub fn op2_teb(&mut self) -> OP2_TEB_W<EVT_EN_SPEC> {
+        OP2_TEB_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to enable fault0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_f0_en(&mut self) -> EVT_F0_EN_W<EVT_EN_SPEC> {
-        EVT_F0_EN_W::new(self, 15)
+    pub fn f0(&mut self) -> F0_W<EVT_EN_SPEC> {
+        F0_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to enable fault1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_f1_en(&mut self) -> EVT_F1_EN_W<EVT_EN_SPEC> {
-        EVT_F1_EN_W::new(self, 16)
+    pub fn f1(&mut self) -> F1_W<EVT_EN_SPEC> {
+        F1_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable fault2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_f2_en(&mut self) -> EVT_F2_EN_W<EVT_EN_SPEC> {
-        EVT_F2_EN_W::new(self, 17)
+    pub fn f2(&mut self) -> F2_W<EVT_EN_SPEC> {
+        F2_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to enable fault0 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_f0_clr_en(&mut self) -> EVT_F0_CLR_EN_W<EVT_EN_SPEC> {
-        EVT_F0_CLR_EN_W::new(self, 18)
+    pub fn f0_clr(&mut self) -> F0_CLR_W<EVT_EN_SPEC> {
+        F0_CLR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to enable fault1 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_f1_clr_en(&mut self) -> EVT_F1_CLR_EN_W<EVT_EN_SPEC> {
-        EVT_F1_CLR_EN_W::new(self, 19)
+    pub fn f1_clr(&mut self) -> F1_CLR_W<EVT_EN_SPEC> {
+        F1_CLR_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to enable fault2 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_f2_clr_en(&mut self) -> EVT_F2_CLR_EN_W<EVT_EN_SPEC> {
-        EVT_F2_CLR_EN_W::new(self, 20)
+    pub fn f2_clr(&mut self) -> F2_CLR_W<EVT_EN_SPEC> {
+        F2_CLR_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to enable cycle-by-cycle trip0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_tz0_cbc_en(&mut self) -> EVT_TZ0_CBC_EN_W<EVT_EN_SPEC> {
-        EVT_TZ0_CBC_EN_W::new(self, 21)
+    pub fn tz0_cbc(&mut self) -> TZ0_CBC_W<EVT_EN_SPEC> {
+        TZ0_CBC_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to enable cycle-by-cycle trip1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_tz1_cbc_en(&mut self) -> EVT_TZ1_CBC_EN_W<EVT_EN_SPEC> {
-        EVT_TZ1_CBC_EN_W::new(self, 22)
+    pub fn tz1_cbc(&mut self) -> TZ1_CBC_W<EVT_EN_SPEC> {
+        TZ1_CBC_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to enable cycle-by-cycle trip2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_tz2_cbc_en(&mut self) -> EVT_TZ2_CBC_EN_W<EVT_EN_SPEC> {
-        EVT_TZ2_CBC_EN_W::new(self, 23)
+    pub fn tz2_cbc(&mut self) -> TZ2_CBC_W<EVT_EN_SPEC> {
+        TZ2_CBC_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether or not to enable one-shot trip0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_tz0_ost_en(&mut self) -> EVT_TZ0_OST_EN_W<EVT_EN_SPEC> {
-        EVT_TZ0_OST_EN_W::new(self, 24)
+    pub fn tz0_ost(&mut self) -> TZ0_OST_W<EVT_EN_SPEC> {
+        TZ0_OST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not to enable one-shot trip1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_tz1_ost_en(&mut self) -> EVT_TZ1_OST_EN_W<EVT_EN_SPEC> {
-        EVT_TZ1_OST_EN_W::new(self, 25)
+    pub fn tz1_ost(&mut self) -> TZ1_OST_W<EVT_EN_SPEC> {
+        TZ1_OST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Configures whether or not to enable one-shot trip2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_tz2_ost_en(&mut self) -> EVT_TZ2_OST_EN_W<EVT_EN_SPEC> {
-        EVT_TZ2_OST_EN_W::new(self, 26)
+    pub fn tz2_ost(&mut self) -> TZ2_OST_W<EVT_EN_SPEC> {
+        TZ2_OST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configures whether or not to enable capture0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_cap0_en(&mut self) -> EVT_CAP0_EN_W<EVT_EN_SPEC> {
-        EVT_CAP0_EN_W::new(self, 27)
+    pub fn cap0(&mut self) -> CAP0_W<EVT_EN_SPEC> {
+        CAP0_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not to enable capture1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_cap1_en(&mut self) -> EVT_CAP1_EN_W<EVT_EN_SPEC> {
-        EVT_CAP1_EN_W::new(self, 28)
+    pub fn cap1(&mut self) -> CAP1_W<EVT_EN_SPEC> {
+        CAP1_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether or not to enable capture2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evt_cap2_en(&mut self) -> EVT_CAP2_EN_W<EVT_EN_SPEC> {
-        EVT_CAP2_EN_W::new(self, 29)
+    pub fn cap2(&mut self) -> CAP2_W<EVT_EN_SPEC> {
+        CAP2_W::new(self, 29)
     }
 }
 #[doc = "Event enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evt_en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evt_en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -24,7 +24,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"ADC,EFUSE,I2C0,I2S0,LEDC,UART0,SPI[01],SYSTIMER,UHCI0,LP_WDT,MCPWM0,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
+"ADC,EFUSE,I2C0,I2S0,LEDC,UART0,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
   _include: ../../../common_patches/int_strip.yaml
 
 ECC:
@@ -43,7 +43,7 @@ LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
 
 TIMG0:
-  _include: ../../../common_patches/tim_int_strip.yaml
+  _include: ../../../common_patches/tim_expand_and_collect.yaml
 
 SPI[23]:
   _strip: SPI_
@@ -121,6 +121,18 @@ MCPWM0:
       FH?_STATUS:
         _strip: TZ_
 
+  CAP_CH%s_CFG:
+    _strip: CAP_
+  CAP_CH%s:
+    _strip: CAP_
+  "EVT_EN,EVT_EN2":
+    _strip: EVT_
+    _strip_end: _EN
+  TASK_EN:
+    _strip: TASK_
+    _strip_end: _EN
+
+  _include: ../../../common_patches/int_strip.yaml
 
 
 DMA:

@@ -1,14 +1,29 @@
 #[doc = "Register `INT_RAW_TIMERS` reader"]
 pub type R = crate::R<INT_RAW_TIMERS_SPEC>;
-#[doc = "Field `T0` reader - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
-pub type T0_R = crate::BitReader;
+#[doc = "Field `T(0-0)` reader - The raw interrupt status bit for the TIMG_T%s_INT interrupt."]
+pub type T_R = crate::BitReader;
 #[doc = "Field `WDT` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
 pub type WDT_R = crate::BitReader;
 impl R {
+    #[doc = "The raw interrupt status bit for the TIMG_T(0-0)_INT interrupt."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[inline(always)]
+    pub fn t(&self, n: u8) -> T_R {
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
+        T_R::new(((self.bits >> (n * 0)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The raw interrupt status bit for the TIMG_T(0-0)_INT interrupt."]
+    #[inline(always)]
+    pub fn t_iter(&self) -> impl Iterator<Item = T_R> + '_ {
+        (0..1).map(move |n| T_R::new(((self.bits >> (n * 0)) & 1) != 0))
+    }
     #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
-    pub fn t0(&self) -> T0_R {
-        T0_R::new((self.bits & 1) != 0)
+    pub fn t0(&self) -> T_R {
+        T_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
     #[inline(always)]
