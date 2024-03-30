@@ -2,22 +2,22 @@
 pub type R = crate::R<GEN_TSTMP_A_SPEC>;
 #[doc = "Register `GEN_TSTMP_A` writer"]
 pub type W = crate::W<GEN_TSTMP_A_SPEC>;
-#[doc = "Field `CMPR_A` reader - Configures the value of PWM generator %s time stamp A's shadow register."]
-pub type CMPR_A_R = crate::FieldReader<u16>;
-#[doc = "Field `CMPR_A` writer - Configures the value of PWM generator %s time stamp A's shadow register."]
-pub type CMPR_A_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `A` reader - Configures the value of PWM generator %s time stamp A's shadow register."]
+pub type A_R = crate::FieldReader<u16>;
+#[doc = "Field `A` writer - Configures the value of PWM generator %s time stamp A's shadow register."]
+pub type A_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Configures the value of PWM generator %s time stamp A's shadow register."]
     #[inline(always)]
-    pub fn cmpr_a(&self) -> CMPR_A_R {
-        CMPR_A_R::new((self.bits & 0xffff) as u16)
+    pub fn a(&self) -> A_R {
+        A_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_TSTMP_A")
-            .field("cmpr_a", &format_args!("{}", self.cmpr_a().bits()))
+            .field("a", &format_args!("{}", self.a().bits()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:15 - Configures the value of PWM generator %s time stamp A's shadow register."]
     #[inline(always)]
     #[must_use]
-    pub fn cmpr_a(&mut self) -> CMPR_A_W<GEN_TSTMP_A_SPEC> {
-        CMPR_A_W::new(self, 0)
+    pub fn a(&mut self) -> A_W<GEN_TSTMP_A_SPEC> {
+        A_W::new(self, 0)
     }
 }
 #[doc = "Generator0 time stamp A's shadow register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gen_tstmp_a::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gen_tstmp_a::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -2,22 +2,22 @@
 pub type R = crate::R<DT_FED_CFG_SPEC>;
 #[doc = "Register `DT_FED_CFG` writer"]
 pub type W = crate::W<DT_FED_CFG_SPEC>;
-#[doc = "Field `DB0_FED` reader - Shadow register for FED"]
-pub type DB0_FED_R = crate::FieldReader<u16>;
-#[doc = "Field `DB0_FED` writer - Shadow register for FED"]
-pub type DB0_FED_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `FED` reader - Shadow register for FED"]
+pub type FED_R = crate::FieldReader<u16>;
+#[doc = "Field `FED` writer - Shadow register for FED"]
+pub type FED_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Shadow register for FED"]
     #[inline(always)]
-    pub fn db0_fed(&self) -> DB0_FED_R {
-        DB0_FED_R::new((self.bits & 0xffff) as u16)
+    pub fn fed(&self) -> FED_R {
+        FED_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DT_FED_CFG")
-            .field("db0_fed", &format_args!("{}", self.db0_fed().bits()))
+            .field("fed", &format_args!("{}", self.fed().bits()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:15 - Shadow register for FED"]
     #[inline(always)]
     #[must_use]
-    pub fn db0_fed(&mut self) -> DB0_FED_W<DT_FED_CFG_SPEC> {
-        DB0_FED_W::new(self, 0)
+    pub fn fed(&mut self) -> FED_W<DT_FED_CFG_SPEC> {
+        FED_W::new(self, 0)
     }
 }
 #[doc = "Shadow register for falling edge delay (FED).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dt_fed_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dt_fed_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
