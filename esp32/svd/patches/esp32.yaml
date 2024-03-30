@@ -10,7 +10,7 @@ RTC_I2C:
     INT_EN:
       name: INT_ENA
 
-"EFUSE,I2C0,I2S0,LEDC,MCPWM0,RTC_CNTL,RTC_I2C,UART0,UHCI0":
+"EFUSE,I2C0,I2S0,LEDC,RTC_CNTL,RTC_I2C,UART0,UHCI0":
   _include: ../../../common_patches/int_strip.yaml
 
 SPI0:
@@ -33,3 +33,7 @@ TIMG0:
 
 MCPWM0:
   _include: ../../../common_patches/mcpwm_collect.yaml
+  INT_RAW:
+    _modify:
+      "*":
+        access: read-write

@@ -2,298 +2,241 @@
 pub type R = crate::R<TASK_EN_SPEC>;
 #[doc = "Register `TASK_EN` writer"]
 pub type W = crate::W<TASK_EN_SPEC>;
-#[doc = "Field `TASK_CMPR0_A_UP_EN` reader - Configures whether or not to enable PWM generator0 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR0_A_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR0_A_UP_EN` writer - Configures whether or not to enable PWM generator0 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR0_A_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR1_A_UP_EN` reader - Configures whether or not to enable PWM generator1 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR1_A_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR1_A_UP_EN` writer - Configures whether or not to enable PWM generator1 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR1_A_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR2_A_UP_EN` reader - Configures whether or not to enable PWM generator2 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR2_A_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR2_A_UP_EN` writer - Configures whether or not to enable PWM generator2 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR2_A_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR0_B_UP_EN` reader - Configures whether or not to enable PWM generator0 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR0_B_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR0_B_UP_EN` writer - Configures whether or not to enable PWM generator0 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR0_B_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR1_B_UP_EN` reader - Configures whether or not to enable PWM generator1 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR1_B_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR1_B_UP_EN` writer - Configures whether or not to enable PWM generator1 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR1_B_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR2_B_UP_EN` reader - Configures whether or not to enable PWM generator2 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR2_B_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR2_B_UP_EN` writer - Configures whether or not to enable PWM generator2 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CMPR2_B_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_GEN_STOP_EN` reader - Configures whether or not to enable all PWM generate stop task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_GEN_STOP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_GEN_STOP_EN` writer - Configures whether or not to enable all PWM generate stop task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_GEN_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER0_SYNC_EN` reader - Configures whether or not to enable timer0 sync task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER0_SYNC_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER0_SYNC_EN` writer - Configures whether or not to enable timer0 sync task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER0_SYNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER1_SYNC_EN` reader - Configures whether or not to enable timer1 sync task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER1_SYNC_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER1_SYNC_EN` writer - Configures whether or not to enable timer1 sync task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER1_SYNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER2_SYNC_EN` reader - Configures whether or not to enable timer2 sync task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER2_SYNC_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER2_SYNC_EN` writer - Configures whether or not to enable timer2 sync task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER2_SYNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER0_PERIOD_UP_EN` reader - Configures whether or not to enable timer0 period update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER0_PERIOD_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER0_PERIOD_UP_EN` writer - Configures whether or not to enable timer0 period update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER0_PERIOD_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER1_PERIOD_UP_EN` reader - Configures whether or not to enable timer1 period update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER1_PERIOD_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER1_PERIOD_UP_EN` writer - Configures whether or not to enable timer1 period update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER1_PERIOD_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER2_PERIOD_UP_EN` reader - Configures whether or not to enable timer2 period update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER2_PERIOD_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER2_PERIOD_UP_EN` writer - Configures whether or not to enable timer2 period update task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TIMER2_PERIOD_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TZ0_OST_EN` reader - Configures whether or not to enable one shot trip0 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TZ0_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TZ0_OST_EN` writer - Configures whether or not to enable one shot trip0 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TZ0_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TZ1_OST_EN` reader - Configures whether or not to enable one shot trip1 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TZ1_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TZ1_OST_EN` writer - Configures whether or not to enable one shot trip1 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TZ1_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TZ2_OST_EN` reader - Configures whether or not to enable one shot trip2 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TZ2_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TZ2_OST_EN` writer - Configures whether or not to enable one shot trip2 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_TZ2_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CLR0_OST_EN` reader - Configures whether or not to enable one shot trip0 clear task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CLR0_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CLR0_OST_EN` writer - Configures whether or not to enable one shot trip0 clear task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CLR0_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CLR1_OST_EN` reader - Configures whether or not to enable one shot trip1 clear task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CLR1_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CLR1_OST_EN` writer - Configures whether or not to enable one shot trip1 clear task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CLR1_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CLR2_OST_EN` reader - Configures whether or not to enable one shot trip2 clear task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CLR2_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CLR2_OST_EN` writer - Configures whether or not to enable one shot trip2 clear task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CLR2_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CAP0_EN` reader - Configures whether or not to enable capture0 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CAP0_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CAP0_EN` writer - Configures whether or not to enable capture0 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CAP0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CAP1_EN` reader - Configures whether or not to enable capture1 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CAP1_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CAP1_EN` writer - Configures whether or not to enable capture1 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CAP1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CAP2_EN` reader - Configures whether or not to enable capture2 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CAP2_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CAP2_EN` writer - Configures whether or not to enable capture2 task receive.\\\\0: Disable\\\\1: Enable"]
-pub type TASK_CAP2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR0_A_UP` reader - Configures whether or not to enable PWM generator0 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR0_A_UP_R = crate::BitReader;
+#[doc = "Field `CMPR0_A_UP` writer - Configures whether or not to enable PWM generator0 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR0_A_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR1_A_UP` reader - Configures whether or not to enable PWM generator1 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR1_A_UP_R = crate::BitReader;
+#[doc = "Field `CMPR1_A_UP` writer - Configures whether or not to enable PWM generator1 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR1_A_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR2_A_UP` reader - Configures whether or not to enable PWM generator2 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR2_A_UP_R = crate::BitReader;
+#[doc = "Field `CMPR2_A_UP` writer - Configures whether or not to enable PWM generator2 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR2_A_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR0_B_UP` reader - Configures whether or not to enable PWM generator0 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR0_B_UP_R = crate::BitReader;
+#[doc = "Field `CMPR0_B_UP` writer - Configures whether or not to enable PWM generator0 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR0_B_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR1_B_UP` reader - Configures whether or not to enable PWM generator1 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR1_B_UP_R = crate::BitReader;
+#[doc = "Field `CMPR1_B_UP` writer - Configures whether or not to enable PWM generator1 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR1_B_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR2_B_UP` reader - Configures whether or not to enable PWM generator2 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR2_B_UP_R = crate::BitReader;
+#[doc = "Field `CMPR2_B_UP` writer - Configures whether or not to enable PWM generator2 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CMPR2_B_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GEN_STOP` reader - Configures whether or not to enable all PWM generate stop task receive.\\\\0: Disable\\\\1: Enable"]
+pub type GEN_STOP_R = crate::BitReader;
+#[doc = "Field `GEN_STOP` writer - Configures whether or not to enable all PWM generate stop task receive.\\\\0: Disable\\\\1: Enable"]
+pub type GEN_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER0_SYNC` reader - Configures whether or not to enable timer0 sync task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_SYNC_R = crate::BitReader;
+#[doc = "Field `TIMER0_SYNC` writer - Configures whether or not to enable timer0 sync task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_SYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER1_SYNC` reader - Configures whether or not to enable timer1 sync task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_SYNC_R = crate::BitReader;
+#[doc = "Field `TIMER1_SYNC` writer - Configures whether or not to enable timer1 sync task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_SYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER2_SYNC` reader - Configures whether or not to enable timer2 sync task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_SYNC_R = crate::BitReader;
+#[doc = "Field `TIMER2_SYNC` writer - Configures whether or not to enable timer2 sync task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_SYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER0_PERIOD_UP` reader - Configures whether or not to enable timer0 period update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_PERIOD_UP_R = crate::BitReader;
+#[doc = "Field `TIMER0_PERIOD_UP` writer - Configures whether or not to enable timer0 period update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER0_PERIOD_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER1_PERIOD_UP` reader - Configures whether or not to enable timer1 period update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_PERIOD_UP_R = crate::BitReader;
+#[doc = "Field `TIMER1_PERIOD_UP` writer - Configures whether or not to enable timer1 period update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER1_PERIOD_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER2_PERIOD_UP` reader - Configures whether or not to enable timer2 period update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_PERIOD_UP_R = crate::BitReader;
+#[doc = "Field `TIMER2_PERIOD_UP` writer - Configures whether or not to enable timer2 period update task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TIMER2_PERIOD_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ0_OST` reader - Configures whether or not to enable one shot trip0 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TZ0_OST_R = crate::BitReader;
+#[doc = "Field `TZ0_OST` writer - Configures whether or not to enable one shot trip0 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TZ0_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ1_OST` reader - Configures whether or not to enable one shot trip1 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TZ1_OST_R = crate::BitReader;
+#[doc = "Field `TZ1_OST` writer - Configures whether or not to enable one shot trip1 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TZ1_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ2_OST` reader - Configures whether or not to enable one shot trip2 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TZ2_OST_R = crate::BitReader;
+#[doc = "Field `TZ2_OST` writer - Configures whether or not to enable one shot trip2 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type TZ2_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLR0_OST` reader - Configures whether or not to enable one shot trip0 clear task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CLR0_OST_R = crate::BitReader;
+#[doc = "Field `CLR0_OST` writer - Configures whether or not to enable one shot trip0 clear task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CLR0_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLR1_OST` reader - Configures whether or not to enable one shot trip1 clear task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CLR1_OST_R = crate::BitReader;
+#[doc = "Field `CLR1_OST` writer - Configures whether or not to enable one shot trip1 clear task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CLR1_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLR2_OST` reader - Configures whether or not to enable one shot trip2 clear task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CLR2_OST_R = crate::BitReader;
+#[doc = "Field `CLR2_OST` writer - Configures whether or not to enable one shot trip2 clear task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CLR2_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP0` reader - Configures whether or not to enable capture0 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CAP0_R = crate::BitReader;
+#[doc = "Field `CAP0` writer - Configures whether or not to enable capture0 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CAP0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP1` reader - Configures whether or not to enable capture1 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CAP1_R = crate::BitReader;
+#[doc = "Field `CAP1` writer - Configures whether or not to enable capture1 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CAP1_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP2` reader - Configures whether or not to enable capture2 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CAP2_R = crate::BitReader;
+#[doc = "Field `CAP2` writer - Configures whether or not to enable capture2 task receive.\\\\0: Disable\\\\1: Enable"]
+pub type CAP2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Configures whether or not to enable PWM generator0 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr0_a_up_en(&self) -> TASK_CMPR0_A_UP_EN_R {
-        TASK_CMPR0_A_UP_EN_R::new((self.bits & 1) != 0)
+    pub fn cmpr0_a_up(&self) -> CMPR0_A_UP_R {
+        CMPR0_A_UP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable PWM generator1 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr1_a_up_en(&self) -> TASK_CMPR1_A_UP_EN_R {
-        TASK_CMPR1_A_UP_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cmpr1_a_up(&self) -> CMPR1_A_UP_R {
+        CMPR1_A_UP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Configures whether or not to enable PWM generator2 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr2_a_up_en(&self) -> TASK_CMPR2_A_UP_EN_R {
-        TASK_CMPR2_A_UP_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cmpr2_a_up(&self) -> CMPR2_A_UP_R {
+        CMPR2_A_UP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Configures whether or not to enable PWM generator0 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr0_b_up_en(&self) -> TASK_CMPR0_B_UP_EN_R {
-        TASK_CMPR0_B_UP_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cmpr0_b_up(&self) -> CMPR0_B_UP_R {
+        CMPR0_B_UP_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Configures whether or not to enable PWM generator1 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr1_b_up_en(&self) -> TASK_CMPR1_B_UP_EN_R {
-        TASK_CMPR1_B_UP_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cmpr1_b_up(&self) -> CMPR1_B_UP_R {
+        CMPR1_B_UP_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Configures whether or not to enable PWM generator2 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr2_b_up_en(&self) -> TASK_CMPR2_B_UP_EN_R {
-        TASK_CMPR2_B_UP_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn cmpr2_b_up(&self) -> CMPR2_B_UP_R {
+        CMPR2_B_UP_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Configures whether or not to enable all PWM generate stop task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_gen_stop_en(&self) -> TASK_GEN_STOP_EN_R {
-        TASK_GEN_STOP_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn gen_stop(&self) -> GEN_STOP_R {
+        GEN_STOP_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Configures whether or not to enable timer0 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer0_sync_en(&self) -> TASK_TIMER0_SYNC_EN_R {
-        TASK_TIMER0_SYNC_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn timer0_sync(&self) -> TIMER0_SYNC_R {
+        TIMER0_SYNC_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Configures whether or not to enable timer1 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer1_sync_en(&self) -> TASK_TIMER1_SYNC_EN_R {
-        TASK_TIMER1_SYNC_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn timer1_sync(&self) -> TIMER1_SYNC_R {
+        TIMER1_SYNC_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Configures whether or not to enable timer2 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer2_sync_en(&self) -> TASK_TIMER2_SYNC_EN_R {
-        TASK_TIMER2_SYNC_EN_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn timer2_sync(&self) -> TIMER2_SYNC_R {
+        TIMER2_SYNC_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Configures whether or not to enable timer0 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer0_period_up_en(&self) -> TASK_TIMER0_PERIOD_UP_EN_R {
-        TASK_TIMER0_PERIOD_UP_EN_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn timer0_period_up(&self) -> TIMER0_PERIOD_UP_R {
+        TIMER0_PERIOD_UP_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Configures whether or not to enable timer1 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer1_period_up_en(&self) -> TASK_TIMER1_PERIOD_UP_EN_R {
-        TASK_TIMER1_PERIOD_UP_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn timer1_period_up(&self) -> TIMER1_PERIOD_UP_R {
+        TIMER1_PERIOD_UP_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Configures whether or not to enable timer2 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer2_period_up_en(&self) -> TASK_TIMER2_PERIOD_UP_EN_R {
-        TASK_TIMER2_PERIOD_UP_EN_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn timer2_period_up(&self) -> TIMER2_PERIOD_UP_R {
+        TIMER2_PERIOD_UP_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Configures whether or not to enable one shot trip0 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_tz0_ost_en(&self) -> TASK_TZ0_OST_EN_R {
-        TASK_TZ0_OST_EN_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn tz0_ost(&self) -> TZ0_OST_R {
+        TZ0_OST_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Configures whether or not to enable one shot trip1 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_tz1_ost_en(&self) -> TASK_TZ1_OST_EN_R {
-        TASK_TZ1_OST_EN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn tz1_ost(&self) -> TZ1_OST_R {
+        TZ1_OST_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Configures whether or not to enable one shot trip2 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_tz2_ost_en(&self) -> TASK_TZ2_OST_EN_R {
-        TASK_TZ2_OST_EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn tz2_ost(&self) -> TZ2_OST_R {
+        TZ2_OST_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Configures whether or not to enable one shot trip0 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_clr0_ost_en(&self) -> TASK_CLR0_OST_EN_R {
-        TASK_CLR0_OST_EN_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn clr0_ost(&self) -> CLR0_OST_R {
+        CLR0_OST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Configures whether or not to enable one shot trip1 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_clr1_ost_en(&self) -> TASK_CLR1_OST_EN_R {
-        TASK_CLR1_OST_EN_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn clr1_ost(&self) -> CLR1_OST_R {
+        CLR1_OST_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Configures whether or not to enable one shot trip2 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_clr2_ost_en(&self) -> TASK_CLR2_OST_EN_R {
-        TASK_CLR2_OST_EN_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn clr2_ost(&self) -> CLR2_OST_R {
+        CLR2_OST_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Configures whether or not to enable capture0 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cap0_en(&self) -> TASK_CAP0_EN_R {
-        TASK_CAP0_EN_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn cap0(&self) -> CAP0_R {
+        CAP0_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Configures whether or not to enable capture1 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cap1_en(&self) -> TASK_CAP1_EN_R {
-        TASK_CAP1_EN_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn cap1(&self) -> CAP1_R {
+        CAP1_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Configures whether or not to enable capture2 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cap2_en(&self) -> TASK_CAP2_EN_R {
-        TASK_CAP2_EN_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn cap2(&self) -> CAP2_R {
+        CAP2_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TASK_EN")
+            .field("cmpr0_a_up", &format_args!("{}", self.cmpr0_a_up().bit()))
+            .field("cmpr1_a_up", &format_args!("{}", self.cmpr1_a_up().bit()))
+            .field("cmpr2_a_up", &format_args!("{}", self.cmpr2_a_up().bit()))
+            .field("cmpr0_b_up", &format_args!("{}", self.cmpr0_b_up().bit()))
+            .field("cmpr1_b_up", &format_args!("{}", self.cmpr1_b_up().bit()))
+            .field("cmpr2_b_up", &format_args!("{}", self.cmpr2_b_up().bit()))
+            .field("gen_stop", &format_args!("{}", self.gen_stop().bit()))
+            .field("timer0_sync", &format_args!("{}", self.timer0_sync().bit()))
+            .field("timer1_sync", &format_args!("{}", self.timer1_sync().bit()))
+            .field("timer2_sync", &format_args!("{}", self.timer2_sync().bit()))
             .field(
-                "task_cmpr0_a_up_en",
-                &format_args!("{}", self.task_cmpr0_a_up_en().bit()),
+                "timer0_period_up",
+                &format_args!("{}", self.timer0_period_up().bit()),
             )
             .field(
-                "task_cmpr1_a_up_en",
-                &format_args!("{}", self.task_cmpr1_a_up_en().bit()),
+                "timer1_period_up",
+                &format_args!("{}", self.timer1_period_up().bit()),
             )
             .field(
-                "task_cmpr2_a_up_en",
-                &format_args!("{}", self.task_cmpr2_a_up_en().bit()),
+                "timer2_period_up",
+                &format_args!("{}", self.timer2_period_up().bit()),
             )
-            .field(
-                "task_cmpr0_b_up_en",
-                &format_args!("{}", self.task_cmpr0_b_up_en().bit()),
-            )
-            .field(
-                "task_cmpr1_b_up_en",
-                &format_args!("{}", self.task_cmpr1_b_up_en().bit()),
-            )
-            .field(
-                "task_cmpr2_b_up_en",
-                &format_args!("{}", self.task_cmpr2_b_up_en().bit()),
-            )
-            .field(
-                "task_gen_stop_en",
-                &format_args!("{}", self.task_gen_stop_en().bit()),
-            )
-            .field(
-                "task_timer0_sync_en",
-                &format_args!("{}", self.task_timer0_sync_en().bit()),
-            )
-            .field(
-                "task_timer1_sync_en",
-                &format_args!("{}", self.task_timer1_sync_en().bit()),
-            )
-            .field(
-                "task_timer2_sync_en",
-                &format_args!("{}", self.task_timer2_sync_en().bit()),
-            )
-            .field(
-                "task_timer0_period_up_en",
-                &format_args!("{}", self.task_timer0_period_up_en().bit()),
-            )
-            .field(
-                "task_timer1_period_up_en",
-                &format_args!("{}", self.task_timer1_period_up_en().bit()),
-            )
-            .field(
-                "task_timer2_period_up_en",
-                &format_args!("{}", self.task_timer2_period_up_en().bit()),
-            )
-            .field(
-                "task_tz0_ost_en",
-                &format_args!("{}", self.task_tz0_ost_en().bit()),
-            )
-            .field(
-                "task_tz1_ost_en",
-                &format_args!("{}", self.task_tz1_ost_en().bit()),
-            )
-            .field(
-                "task_tz2_ost_en",
-                &format_args!("{}", self.task_tz2_ost_en().bit()),
-            )
-            .field(
-                "task_clr0_ost_en",
-                &format_args!("{}", self.task_clr0_ost_en().bit()),
-            )
-            .field(
-                "task_clr1_ost_en",
-                &format_args!("{}", self.task_clr1_ost_en().bit()),
-            )
-            .field(
-                "task_clr2_ost_en",
-                &format_args!("{}", self.task_clr2_ost_en().bit()),
-            )
-            .field(
-                "task_cap0_en",
-                &format_args!("{}", self.task_cap0_en().bit()),
-            )
-            .field(
-                "task_cap1_en",
-                &format_args!("{}", self.task_cap1_en().bit()),
-            )
-            .field(
-                "task_cap2_en",
-                &format_args!("{}", self.task_cap2_en().bit()),
-            )
+            .field("tz0_ost", &format_args!("{}", self.tz0_ost().bit()))
+            .field("tz1_ost", &format_args!("{}", self.tz1_ost().bit()))
+            .field("tz2_ost", &format_args!("{}", self.tz2_ost().bit()))
+            .field("clr0_ost", &format_args!("{}", self.clr0_ost().bit()))
+            .field("clr1_ost", &format_args!("{}", self.clr1_ost().bit()))
+            .field("clr2_ost", &format_args!("{}", self.clr2_ost().bit()))
+            .field("cap0", &format_args!("{}", self.cap0().bit()))
+            .field("cap1", &format_args!("{}", self.cap1().bit()))
+            .field("cap2", &format_args!("{}", self.cap2().bit()))
             .finish()
     }
 }
@@ -307,134 +250,134 @@ impl W {
     #[doc = "Bit 0 - Configures whether or not to enable PWM generator0 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cmpr0_a_up_en(&mut self) -> TASK_CMPR0_A_UP_EN_W<TASK_EN_SPEC> {
-        TASK_CMPR0_A_UP_EN_W::new(self, 0)
+    pub fn cmpr0_a_up(&mut self) -> CMPR0_A_UP_W<TASK_EN_SPEC> {
+        CMPR0_A_UP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable PWM generator1 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cmpr1_a_up_en(&mut self) -> TASK_CMPR1_A_UP_EN_W<TASK_EN_SPEC> {
-        TASK_CMPR1_A_UP_EN_W::new(self, 1)
+    pub fn cmpr1_a_up(&mut self) -> CMPR1_A_UP_W<TASK_EN_SPEC> {
+        CMPR1_A_UP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable PWM generator2 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cmpr2_a_up_en(&mut self) -> TASK_CMPR2_A_UP_EN_W<TASK_EN_SPEC> {
-        TASK_CMPR2_A_UP_EN_W::new(self, 2)
+    pub fn cmpr2_a_up(&mut self) -> CMPR2_A_UP_W<TASK_EN_SPEC> {
+        CMPR2_A_UP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable PWM generator0 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cmpr0_b_up_en(&mut self) -> TASK_CMPR0_B_UP_EN_W<TASK_EN_SPEC> {
-        TASK_CMPR0_B_UP_EN_W::new(self, 3)
+    pub fn cmpr0_b_up(&mut self) -> CMPR0_B_UP_W<TASK_EN_SPEC> {
+        CMPR0_B_UP_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable PWM generator1 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cmpr1_b_up_en(&mut self) -> TASK_CMPR1_B_UP_EN_W<TASK_EN_SPEC> {
-        TASK_CMPR1_B_UP_EN_W::new(self, 4)
+    pub fn cmpr1_b_up(&mut self) -> CMPR1_B_UP_W<TASK_EN_SPEC> {
+        CMPR1_B_UP_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable PWM generator2 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cmpr2_b_up_en(&mut self) -> TASK_CMPR2_B_UP_EN_W<TASK_EN_SPEC> {
-        TASK_CMPR2_B_UP_EN_W::new(self, 5)
+    pub fn cmpr2_b_up(&mut self) -> CMPR2_B_UP_W<TASK_EN_SPEC> {
+        CMPR2_B_UP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable all PWM generate stop task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_gen_stop_en(&mut self) -> TASK_GEN_STOP_EN_W<TASK_EN_SPEC> {
-        TASK_GEN_STOP_EN_W::new(self, 6)
+    pub fn gen_stop(&mut self) -> GEN_STOP_W<TASK_EN_SPEC> {
+        GEN_STOP_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable timer0 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_timer0_sync_en(&mut self) -> TASK_TIMER0_SYNC_EN_W<TASK_EN_SPEC> {
-        TASK_TIMER0_SYNC_EN_W::new(self, 7)
+    pub fn timer0_sync(&mut self) -> TIMER0_SYNC_W<TASK_EN_SPEC> {
+        TIMER0_SYNC_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to enable timer1 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_timer1_sync_en(&mut self) -> TASK_TIMER1_SYNC_EN_W<TASK_EN_SPEC> {
-        TASK_TIMER1_SYNC_EN_W::new(self, 8)
+    pub fn timer1_sync(&mut self) -> TIMER1_SYNC_W<TASK_EN_SPEC> {
+        TIMER1_SYNC_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable timer2 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_timer2_sync_en(&mut self) -> TASK_TIMER2_SYNC_EN_W<TASK_EN_SPEC> {
-        TASK_TIMER2_SYNC_EN_W::new(self, 9)
+    pub fn timer2_sync(&mut self) -> TIMER2_SYNC_W<TASK_EN_SPEC> {
+        TIMER2_SYNC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable timer0 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_timer0_period_up_en(&mut self) -> TASK_TIMER0_PERIOD_UP_EN_W<TASK_EN_SPEC> {
-        TASK_TIMER0_PERIOD_UP_EN_W::new(self, 10)
+    pub fn timer0_period_up(&mut self) -> TIMER0_PERIOD_UP_W<TASK_EN_SPEC> {
+        TIMER0_PERIOD_UP_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to enable timer1 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_timer1_period_up_en(&mut self) -> TASK_TIMER1_PERIOD_UP_EN_W<TASK_EN_SPEC> {
-        TASK_TIMER1_PERIOD_UP_EN_W::new(self, 11)
+    pub fn timer1_period_up(&mut self) -> TIMER1_PERIOD_UP_W<TASK_EN_SPEC> {
+        TIMER1_PERIOD_UP_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to enable timer2 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_timer2_period_up_en(&mut self) -> TASK_TIMER2_PERIOD_UP_EN_W<TASK_EN_SPEC> {
-        TASK_TIMER2_PERIOD_UP_EN_W::new(self, 12)
+    pub fn timer2_period_up(&mut self) -> TIMER2_PERIOD_UP_W<TASK_EN_SPEC> {
+        TIMER2_PERIOD_UP_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable one shot trip0 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_tz0_ost_en(&mut self) -> TASK_TZ0_OST_EN_W<TASK_EN_SPEC> {
-        TASK_TZ0_OST_EN_W::new(self, 13)
+    pub fn tz0_ost(&mut self) -> TZ0_OST_W<TASK_EN_SPEC> {
+        TZ0_OST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures whether or not to enable one shot trip1 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_tz1_ost_en(&mut self) -> TASK_TZ1_OST_EN_W<TASK_EN_SPEC> {
-        TASK_TZ1_OST_EN_W::new(self, 14)
+    pub fn tz1_ost(&mut self) -> TZ1_OST_W<TASK_EN_SPEC> {
+        TZ1_OST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to enable one shot trip2 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_tz2_ost_en(&mut self) -> TASK_TZ2_OST_EN_W<TASK_EN_SPEC> {
-        TASK_TZ2_OST_EN_W::new(self, 15)
+    pub fn tz2_ost(&mut self) -> TZ2_OST_W<TASK_EN_SPEC> {
+        TZ2_OST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to enable one shot trip0 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_clr0_ost_en(&mut self) -> TASK_CLR0_OST_EN_W<TASK_EN_SPEC> {
-        TASK_CLR0_OST_EN_W::new(self, 16)
+    pub fn clr0_ost(&mut self) -> CLR0_OST_W<TASK_EN_SPEC> {
+        CLR0_OST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable one shot trip1 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_clr1_ost_en(&mut self) -> TASK_CLR1_OST_EN_W<TASK_EN_SPEC> {
-        TASK_CLR1_OST_EN_W::new(self, 17)
+    pub fn clr1_ost(&mut self) -> CLR1_OST_W<TASK_EN_SPEC> {
+        CLR1_OST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to enable one shot trip2 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_clr2_ost_en(&mut self) -> TASK_CLR2_OST_EN_W<TASK_EN_SPEC> {
-        TASK_CLR2_OST_EN_W::new(self, 18)
+    pub fn clr2_ost(&mut self) -> CLR2_OST_W<TASK_EN_SPEC> {
+        CLR2_OST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to enable capture0 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cap0_en(&mut self) -> TASK_CAP0_EN_W<TASK_EN_SPEC> {
-        TASK_CAP0_EN_W::new(self, 19)
+    pub fn cap0(&mut self) -> CAP0_W<TASK_EN_SPEC> {
+        CAP0_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to enable capture1 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cap1_en(&mut self) -> TASK_CAP1_EN_W<TASK_EN_SPEC> {
-        TASK_CAP1_EN_W::new(self, 20)
+    pub fn cap1(&mut self) -> CAP1_W<TASK_EN_SPEC> {
+        CAP1_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to enable capture2 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn task_cap2_en(&mut self) -> TASK_CAP2_EN_W<TASK_EN_SPEC> {
-        TASK_CAP2_EN_W::new(self, 21)
+    pub fn cap2(&mut self) -> CAP2_W<TASK_EN_SPEC> {
+        CAP2_W::new(self, 21)
     }
 }
 #[doc = "Task enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`task_en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`task_en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
