@@ -21,4 +21,17 @@ _cluster:
     T?LOAD:
       name: LOAD
 
+INT_ENA_TIMERS:
+  _array:
+    T?: {}
+INT_RAW_TIMERS:
+  _array:
+    T?: {}
+INT_ST_TIMERS:
+  _array:
+    T?: {}
+INT_CLR_TIMERS:
+  _array:
+    T?: {}
+
 _include: tim_int_strip.yaml

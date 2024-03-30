@@ -1,23 +1,36 @@
 #[doc = "Register `INT_RAW_TIMERS` reader"]
 pub type R = crate::R<INT_RAW_TIMERS_SPEC>;
-#[doc = "Field `T0` reader - interrupt when timer0 alarm"]
-pub type T0_R = crate::BitReader;
-#[doc = "Field `T1` reader - interrupt when timer1 alarm"]
-pub type T1_R = crate::BitReader;
+#[doc = "Field `T(0-1)` reader - interrupt when timer%s alarm"]
+pub type T_R = crate::BitReader;
 #[doc = "Field `WDT` reader - Interrupt when an interrupt stage timeout"]
 pub type WDT_R = crate::BitReader;
 #[doc = "Field `LACT` reader - "]
 pub type LACT_R = crate::BitReader;
 impl R {
+    #[doc = "interrupt when timer(0-1) alarm"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[inline(always)]
+    pub fn t(&self, n: u8) -> T_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        T_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "interrupt when timer(0-1) alarm"]
+    #[inline(always)]
+    pub fn t_iter(&self) -> impl Iterator<Item = T_R> + '_ {
+        (0..2).map(move |n| T_R::new(((self.bits >> n) & 1) != 0))
+    }
     #[doc = "Bit 0 - interrupt when timer0 alarm"]
     #[inline(always)]
-    pub fn t0(&self) -> T0_R {
-        T0_R::new((self.bits & 1) != 0)
+    pub fn t0(&self) -> T_R {
+        T_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - interrupt when timer1 alarm"]
     #[inline(always)]
-    pub fn t1(&self) -> T1_R {
-        T1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn t1(&self) -> T_R {
+        T_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Interrupt when an interrupt stage timeout"]
     #[inline(always)]

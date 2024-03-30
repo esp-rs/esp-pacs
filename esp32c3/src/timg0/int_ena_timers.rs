@@ -2,19 +2,34 @@
 pub type R = crate::R<INT_ENA_TIMERS_SPEC>;
 #[doc = "Register `INT_ENA_TIMERS` writer"]
 pub type W = crate::W<INT_ENA_TIMERS_SPEC>;
-#[doc = "Field `T0` reader - t0_int_ena"]
-pub type T0_R = crate::BitReader;
-#[doc = "Field `T0` writer - t0_int_ena"]
-pub type T0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `T(0-0)` reader - t%s_int_ena"]
+pub type T_R = crate::BitReader;
+#[doc = "Field `T(0-0)` writer - t%s_int_ena"]
+pub type T_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT` reader - wdt_int_ena"]
 pub type WDT_R = crate::BitReader;
 #[doc = "Field `WDT` writer - wdt_int_ena"]
 pub type WDT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "t(0-0)_int_ena"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[inline(always)]
+    pub fn t(&self, n: u8) -> T_R {
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
+        T_R::new(((self.bits >> (n * 0)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "t(0-0)_int_ena"]
+    #[inline(always)]
+    pub fn t_iter(&self) -> impl Iterator<Item = T_R> + '_ {
+        (0..1).map(move |n| T_R::new(((self.bits >> (n * 0)) & 1) != 0))
+    }
     #[doc = "Bit 0 - t0_int_ena"]
     #[inline(always)]
-    pub fn t0(&self) -> T0_R {
-        T0_R::new((self.bits & 1) != 0)
+    pub fn t0(&self) -> T_R {
+        T_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - wdt_int_ena"]
     #[inline(always)]
@@ -38,11 +53,21 @@ impl core::fmt::Debug for crate::generic::Reg<INT_ENA_TIMERS_SPEC> {
     }
 }
 impl W {
+    #[doc = "t(0-0)_int_ena"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[inline(always)]
+    #[must_use]
+    pub fn t(&mut self, n: u8) -> T_W<INT_ENA_TIMERS_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
+        T_W::new(self, n * 0)
+    }
     #[doc = "Bit 0 - t0_int_ena"]
     #[inline(always)]
     #[must_use]
-    pub fn t0(&mut self) -> T0_W<INT_ENA_TIMERS_SPEC> {
-        T0_W::new(self, 0)
+    pub fn t0(&mut self) -> T_W<INT_ENA_TIMERS_SPEC> {
+        T_W::new(self, 0)
     }
     #[doc = "Bit 1 - wdt_int_ena"]
     #[inline(always)]
