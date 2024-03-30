@@ -165,3 +165,70 @@ DMA:
         name: OUT_PRI
       OUT_PERI_SEL_CH?:
         name: OUT_PERI_SEL
+
+MCPWM0:
+  _cluster:
+    TIMER%s:
+      TIMER?_CFG0:
+        name: CFG0
+        description: PWM TIMERx period and update method configuration register.
+        _strip: TIMER?_
+      TIMER?_CFG1:
+        name: CFG1
+        description: PWM TIMERx working mode and start/stop control configuration register.
+        _strip: TIMER?_
+      TIMER?_SYNC:
+        name: SYNC
+        description: PWM TIMERx sync function configuration register.
+        _strip: TIMER?_
+      TIMER?_STATUS:
+        name: STATUS
+        description: PWM TIMERx status register.
+        _strip: TIMER?_
+
+    CH%s:
+      _array:
+        GEN_?:
+          name: GEN%s
+          description: Actions triggered by events on PWMx%s
+
+      CMPR?_CFG:
+        _strip: CMPR?_
+      CMPR?_VALUE0:
+        description: Shadow register for register A.
+        _strip: CMPR?_
+      CMPR?_VALUE1:
+        description: Shadow register for register B.
+        _strip: CMPR?_
+      GEN?_CFG0:
+        _strip: GEN?_
+      GEN?_FORCE:
+        description: Permissives to force PWMxA and PWMxB outputs by software
+        _strip: GEN?_
+      GEN?_A:
+        description: Actions triggered by events on PWMxA
+      GEN?_B:
+        description: Actions triggered by events on PWMxB
+      DB?_CFG:
+        _strip: DB?_
+      DB?_FED_CFG:
+        _strip: DB?_
+      DB?_RED_CFG:
+        _strip: DB?_
+      CHOPPER?_CFG:
+        _strip: CHOPPER?_
+      TZ?_CFG0:
+        description: Actions on PWMxA and PWMxB trip events
+        _strip: TZ?_
+      TZ?_CFG1:
+        _strip: TZ?_
+      TZ?_STATUS:
+        _strip: TZ?_
+
+  _array:
+    CAP_CH?_CFG:
+      description: Capture channel %s configuration and enable
+      _strip: CAP?_
+    CAP_CH?:
+      description: Value of last capture on channel %s
+      _strip: CAP?_

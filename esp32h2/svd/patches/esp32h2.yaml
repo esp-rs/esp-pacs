@@ -45,6 +45,9 @@ SPI2:
       GPSPI2:
         name: SPI2
 
+MCPWM0:
+  _include: ../../../common_patches/mcpwm_collect.yaml
+
 DMA:
   _modify:
     OUT_CONF0_CH%s:

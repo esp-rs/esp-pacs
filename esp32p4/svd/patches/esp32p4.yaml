@@ -51,6 +51,78 @@ SPI[23]:
     _strip: SPI_
   _include: ../../../common_patches/spi_dma_int_strip.yaml
 
+MCPWM0:
+  _expand_array:
+    TIMER%s_CFG0: {}
+    TIMER%s_CFG1: {}
+    TIMER%s_SYNC: {}
+    TIMER%s_STATUS: {}
+    GEN%s_STMP_CFG: {}
+    GEN%s_TSTMP_A: {}
+    GEN%s_TSTMP_B: {}
+    GEN%s_CFG0: {}
+    GEN%s_FORCE: {}
+    GEN%s_A: {}
+    GEN%s_B: {}
+    DT%s_CFG: {}
+    DT%s_FED_CFG: {}
+    DT%s_RED_CFG: {}
+    CARRIER%s_CFG: {}
+    FH%s_CFG0: {}
+    FH%s_CFG1: {}
+    FH%s_STATUS: {}
+
+  _cluster:
+    TIMER%s:
+      TIMER?_CFG0:
+        name: CFG0
+        _strip: TIMER_
+      TIMER?_CFG1:
+        name: CFG1
+        _strip: TIMER_
+      TIMER?_SYNC:
+        name: SYNC
+        _strip: TIMER_
+      TIMER?_STATUS:
+        name: STATUS
+        _strip: TIMER_
+
+    CH%s:
+      _array:
+        GEN_?:
+          name: GEN%s
+
+      GEN?_STMP_CFG:
+        _strip: GEN_
+      GEN?_TSTMP_A:
+        _strip: GEN_
+      GEN?_TSTMP_B:
+        _strip: GEN_
+      GEN?_CFG0:
+        _strip: GEN_
+      GEN?_FORCE:
+        _strip: GEN_
+      GEN?_A:
+        description: Actions triggered by events on PWMxA
+      GEN?_B:
+        description: Actions triggered by events on PWMxB
+      DT?_CFG:
+        _strip: DT_
+      DT?_FED_CFG:
+        _strip: DT_
+      DT?_RED_CFG:
+        _strip: DT_
+      CARRIER?_CFG:
+        _strip: CARRIER_
+      FH?_CFG0:
+        _strip: FH_
+      FH?_CFG1:
+        _strip: FH_
+      FH?_STATUS:
+        _strip: FH_
+
+
+
 DMA:
   _cluster:
     CH%s:
