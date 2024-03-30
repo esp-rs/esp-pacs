@@ -1,27 +1,27 @@
 #[doc = "Register `FH_STATUS` reader"]
 pub type R = crate::R<FH_STATUS_SPEC>;
-#[doc = "Field `TZ_CBC_ON` reader - Represents whether or not an cycle-by-cycle mode action is on going.\\\\0:No action\\\\1: On going"]
-pub type TZ_CBC_ON_R = crate::BitReader;
-#[doc = "Field `TZ_OST_ON` reader - Represents whether or not an one-shot mode action is on going.\\\\0:No action\\\\1: On going"]
-pub type TZ_OST_ON_R = crate::BitReader;
+#[doc = "Field `CBC_ON` reader - Represents whether or not an cycle-by-cycle mode action is on going.\\\\0:No action\\\\1: On going"]
+pub type CBC_ON_R = crate::BitReader;
+#[doc = "Field `OST_ON` reader - Represents whether or not an one-shot mode action is on going.\\\\0:No action\\\\1: On going"]
+pub type OST_ON_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Represents whether or not an cycle-by-cycle mode action is on going.\\\\0:No action\\\\1: On going"]
     #[inline(always)]
-    pub fn tz_cbc_on(&self) -> TZ_CBC_ON_R {
-        TZ_CBC_ON_R::new((self.bits & 1) != 0)
+    pub fn cbc_on(&self) -> CBC_ON_R {
+        CBC_ON_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Represents whether or not an one-shot mode action is on going.\\\\0:No action\\\\1: On going"]
     #[inline(always)]
-    pub fn tz_ost_on(&self) -> TZ_OST_ON_R {
-        TZ_OST_ON_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ost_on(&self) -> OST_ON_R {
+        OST_ON_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FH_STATUS")
-            .field("tz_cbc_on", &format_args!("{}", self.tz_cbc_on().bit()))
-            .field("tz_ost_on", &format_args!("{}", self.tz_ost_on().bit()))
+            .field("cbc_on", &format_args!("{}", self.cbc_on().bit()))
+            .field("ost_on", &format_args!("{}", self.ost_on().bit()))
             .finish()
     }
 }

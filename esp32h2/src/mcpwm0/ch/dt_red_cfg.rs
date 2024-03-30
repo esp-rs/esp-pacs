@@ -2,22 +2,22 @@
 pub type R = crate::R<DT_RED_CFG_SPEC>;
 #[doc = "Register `DT_RED_CFG` writer"]
 pub type W = crate::W<DT_RED_CFG_SPEC>;
-#[doc = "Field `DB0_RED` reader - Shadow register for RED"]
-pub type DB0_RED_R = crate::FieldReader<u16>;
-#[doc = "Field `DB0_RED` writer - Shadow register for RED"]
-pub type DB0_RED_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `RED` reader - Shadow register for RED"]
+pub type RED_R = crate::FieldReader<u16>;
+#[doc = "Field `RED` writer - Shadow register for RED"]
+pub type RED_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Shadow register for RED"]
     #[inline(always)]
-    pub fn db0_red(&self) -> DB0_RED_R {
-        DB0_RED_R::new((self.bits & 0xffff) as u16)
+    pub fn red(&self) -> RED_R {
+        RED_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DT_RED_CFG")
-            .field("db0_red", &format_args!("{}", self.db0_red().bits()))
+            .field("red", &format_args!("{}", self.red().bits()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:15 - Shadow register for RED"]
     #[inline(always)]
     #[must_use]
-    pub fn db0_red(&mut self) -> DB0_RED_W<DT_RED_CFG_SPEC> {
-        DB0_RED_W::new(self, 0)
+    pub fn red(&mut self) -> RED_W<DT_RED_CFG_SPEC> {
+        RED_W::new(self, 0)
     }
 }
 #[doc = "Shadow register for rising edge delay (RED).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dt_red_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dt_red_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -24,13 +24,19 @@ _cluster:
         description: Actions triggered by events on PWMx%s
 
     GEN?_STMP_CFG:
-      _strip: GEN?_
+      _strip:
+        - GEN?_
+        - CMPR?_
       description: Transfer status and update method for time stamp registers A and B
     GEN?_TSTMP_A:
-      _strip: GEN?_
+      _strip:
+        - GEN?_
+        - CMPR?_
       description: Shadow register for register A.
     GEN?_TSTMP_B:
-      _strip: GEN?_
+      _strip:
+        - GEN?_
+        - CMPR?_
       description: Shadow register for register B.
     GEN?_CFG0:
       _strip: GEN?_
@@ -42,25 +48,39 @@ _cluster:
     GEN?_B:
       description: Actions triggered by events on PWMxB
     DT?_CFG:
-      _strip: DT?_
+      _strip:
+        - DT?_
+        - DB?_
       description: Dead time type selection and configuration
     DT?_FED_CFG:
-      _strip: DT?_
+      _strip:
+        - DT?_
+        - DB?_
       description: Shadow register for falling edge delay (FED).
     DT?_RED_CFG:
-      _strip: DT?_
+      _strip:
+        - DT?_
+        - DB?_
       description: Shadow register for rising edge delay (RED).
     CARRIER?_CFG:
-      _strip: CARRIER?_
+      _strip:
+        - CARRIER?_
+        - CHOPPER?_
       description: Carrier enable and configuratoin
     FH?_CFG0:
-      _strip: FH?_
+      _strip:
+        - FH?_
+        - TZ?_
       description: Actions on PWM0A and PWM0B trip events
     FH?_CFG1:
-      _strip: FH?_
+      _strip:
+        - FH?_
+        - TZ?_
       description: Software triggers for fault handler actions
     FH?_STATUS:
-      _strip: FH?_
+      _strip:
+        - FH?_
+        - TZ?_
       description: Status of fault events.
 
 _array:

@@ -2,22 +2,22 @@
 pub type R = crate::R<GEN_TSTMP_A_SPEC>;
 #[doc = "Register `GEN_TSTMP_A` writer"]
 pub type W = crate::W<GEN_TSTMP_A_SPEC>;
-#[doc = "Field `CMPR0_A` reader - PWM generator 0 time stamp A's shadow register"]
-pub type CMPR0_A_R = crate::FieldReader<u16>;
-#[doc = "Field `CMPR0_A` writer - PWM generator 0 time stamp A's shadow register"]
-pub type CMPR0_A_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `A` reader - PWM generator 0 time stamp A's shadow register"]
+pub type A_R = crate::FieldReader<u16>;
+#[doc = "Field `A` writer - PWM generator 0 time stamp A's shadow register"]
+pub type A_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - PWM generator 0 time stamp A's shadow register"]
     #[inline(always)]
-    pub fn cmpr0_a(&self) -> CMPR0_A_R {
-        CMPR0_A_R::new((self.bits & 0xffff) as u16)
+    pub fn a(&self) -> A_R {
+        A_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_TSTMP_A")
-            .field("cmpr0_a", &format_args!("{}", self.cmpr0_a().bits()))
+            .field("a", &format_args!("{}", self.a().bits()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:15 - PWM generator 0 time stamp A's shadow register"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpr0_a(&mut self) -> CMPR0_A_W<GEN_TSTMP_A_SPEC> {
-        CMPR0_A_W::new(self, 0)
+    pub fn a(&mut self) -> A_W<GEN_TSTMP_A_SPEC> {
+        A_W::new(self, 0)
     }
 }
 #[doc = "Shadow register for register A.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gen_tstmp_a::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gen_tstmp_a::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

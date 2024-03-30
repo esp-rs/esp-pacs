@@ -93,11 +93,11 @@ MCPWM0:
           name: GEN%s
 
       GEN?_STMP_CFG:
-        _strip: GEN_
+        _strip: CMPR_
       GEN?_TSTMP_A:
-        _strip: GEN_
+        _strip: CMPR_
       GEN?_TSTMP_B:
-        _strip: GEN_
+        _strip: CMPR_
       GEN?_CFG0:
         _strip: GEN_
       GEN?_FORCE:
@@ -107,19 +107,19 @@ MCPWM0:
       GEN?_B:
         description: Actions triggered by events on PWMxB
       DT?_CFG:
-        _strip: DT_
+        _strip: DB_
       DT?_FED_CFG:
-        _strip: DT_
+        _strip: DB_
       DT?_RED_CFG:
-        _strip: DT_
+        _strip: DB_
       CARRIER?_CFG:
-        _strip: CARRIER_
+        _strip: CHOPPER_
       FH?_CFG0:
-        _strip: FH_
+        _strip: TZ_
       FH?_CFG1:
-        _strip: FH_
+        _strip: TZ_
       FH?_STATUS:
-        _strip: FH_
+        _strip: TZ_
 
 
 
