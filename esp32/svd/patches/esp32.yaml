@@ -30,3 +30,6 @@ TIMG0:
         bitOffset: 31
         bitWidth: 1
         access: read-write
+
+MCPWM0:
+  _include: ../../../common_patches/mcpwm_collect.yaml

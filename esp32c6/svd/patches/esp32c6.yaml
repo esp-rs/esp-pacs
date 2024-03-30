@@ -79,6 +79,9 @@ TIMG0:
 SPI2:
   _include: ../../../common_patches/spi_dma_int_strip.yaml
 
+MCPWM0:
+  _include: ../../../common_patches/mcpwm_collect.yaml
+
 DMA:
   _modify:
     OUT_CONF0_CH%s:
