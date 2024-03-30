@@ -2,15 +2,15 @@
 pub type R = crate::R<LACTRTC_SPEC>;
 #[doc = "Register `LACTRTC` writer"]
 pub type W = crate::W<LACTRTC_SPEC>;
-#[doc = "Field `LACT_RTC_STEP_LEN` reader - Reserved."]
-pub type LACT_RTC_STEP_LEN_R = crate::FieldReader<u32>;
-#[doc = "Field `LACT_RTC_STEP_LEN` writer - Reserved."]
-pub type LACT_RTC_STEP_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 26, u32>;
+#[doc = "Field `RTC_STEP_LEN` reader - Reserved."]
+pub type RTC_STEP_LEN_R = crate::FieldReader<u32>;
+#[doc = "Field `RTC_STEP_LEN` writer - Reserved."]
+pub type RTC_STEP_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 26, u32>;
 impl R {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]
-    pub fn lact_rtc_step_len(&self) -> LACT_RTC_STEP_LEN_R {
-        LACT_RTC_STEP_LEN_R::new((self.bits >> 6) & 0x03ff_ffff)
+    pub fn rtc_step_len(&self) -> RTC_STEP_LEN_R {
+        RTC_STEP_LEN_R::new((self.bits >> 6) & 0x03ff_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LACTRTC")
             .field(
-                "lact_rtc_step_len",
-                &format_args!("{}", self.lact_rtc_step_len().bits()),
+                "rtc_step_len",
+                &format_args!("{}", self.rtc_step_len().bits()),
             )
             .finish()
     }
@@ -34,8 +34,8 @@ impl W {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]
     #[must_use]
-    pub fn lact_rtc_step_len(&mut self) -> LACT_RTC_STEP_LEN_W<LACTRTC_SPEC> {
-        LACT_RTC_STEP_LEN_W::new(self, 6)
+    pub fn rtc_step_len(&mut self) -> RTC_STEP_LEN_W<LACTRTC_SPEC> {
+        RTC_STEP_LEN_W::new(self, 6)
     }
 }
 #[doc = "LACT RTC register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lactrtc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lactrtc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

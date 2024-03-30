@@ -2,24 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    tconfig: (),
-    _reserved1: [u8; 0x04],
-    tlo: (),
-    _reserved2: [u8; 0x04],
-    thi: (),
-    _reserved3: [u8; 0x04],
-    tupdate: (),
-    _reserved4: [u8; 0x04],
-    talarmlo: (),
-    _reserved5: [u8; 0x04],
-    talarmhi: (),
-    _reserved6: [u8; 0x04],
-    tloadlo: (),
-    _reserved7: [u8; 0x04],
-    tloadhi: (),
-    _reserved8: [u8; 0x04],
-    tload: (),
-    _reserved9: [u8; 0x28],
+    t: [T; 2],
     wdtconfig0: WDTCONFIG0,
     wdtconfig1: WDTCONFIG1,
     wdtconfig2: WDTCONFIG2,
@@ -45,292 +28,21 @@ pub struct RegisterBlock {
     int_st_timers: INT_ST_TIMERS,
     int_clr_timers: INT_CLR_TIMERS,
     rtccalicfg2: RTCCALICFG2,
-    _reserved34: [u8; 0x4c],
+    _reserved26: [u8; 0x4c],
     timers_date: TIMERS_DATE,
     regclk: REGCLK,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x08 - Timer %s configuration register"]
+    #[doc = "0x00..0x48 - Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
     #[inline(always)]
-    pub const fn tconfig(&self, n: usize) -> &TCONFIG {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(36 * n).cast() }
+    pub const fn t(&self, n: usize) -> &T {
+        &self.t[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x08 - Timer %s configuration register"]
+    #[doc = "0x00..0x48 - Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
     #[inline(always)]
-    pub fn tconfig_iter(&self) -> impl Iterator<Item = &TCONFIG> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(36 * n).cast() })
-    }
-    #[doc = "0x00 - Timer 0 configuration register"]
-    #[inline(always)]
-    pub const fn t0config(&self) -> &TCONFIG {
-        self.tconfig(0)
-    }
-    #[doc = "0x24 - Timer 1 configuration register"]
-    #[inline(always)]
-    pub const fn t1config(&self) -> &TCONFIG {
-        self.tconfig(1)
-    }
-    #[doc = "0x04..0x0c - Timer %s current value, low 32 bits"]
-    #[inline(always)]
-    pub const fn tlo(&self, n: usize) -> &TLO {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(4).add(36 * n).cast() }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x04..0x0c - Timer %s current value, low 32 bits"]
-    #[inline(always)]
-    pub fn tlo_iter(&self) -> impl Iterator<Item = &TLO> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(36 * n).cast() })
-    }
-    #[doc = "0x04 - Timer 0 current value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t0lo(&self) -> &TLO {
-        self.tlo(0)
-    }
-    #[doc = "0x28 - Timer 1 current value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t1lo(&self) -> &TLO {
-        self.tlo(1)
-    }
-    #[doc = "0x08..0x10 - Timer %s current value, high 32 bits"]
-    #[inline(always)]
-    pub const fn thi(&self, n: usize) -> &THI {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(8).add(36 * n).cast() }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x08..0x10 - Timer %s current value, high 32 bits"]
-    #[inline(always)]
-    pub fn thi_iter(&self) -> impl Iterator<Item = &THI> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(36 * n).cast() })
-    }
-    #[doc = "0x08 - Timer 0 current value, high 32 bits"]
-    #[inline(always)]
-    pub const fn t0hi(&self) -> &THI {
-        self.thi(0)
-    }
-    #[doc = "0x2c - Timer 1 current value, high 32 bits"]
-    #[inline(always)]
-    pub const fn t1hi(&self) -> &THI {
-        self.thi(1)
-    }
-    #[doc = "0x0c..0x14 - Write to copy current timer value to TIMG_T%sLO_REG or TIMGn_T%sHI_REG"]
-    #[inline(always)]
-    pub const fn tupdate(&self, n: usize) -> &TUPDATE {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(12)
-                .add(36 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x0c..0x14 - Write to copy current timer value to TIMG_T%sLO_REG or TIMGn_T%sHI_REG"]
-    #[inline(always)]
-    pub fn tupdate_iter(&self) -> impl Iterator<Item = &TUPDATE> {
-        (0..2).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(12)
-                .add(36 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x0c - Write to copy current timer value to TIMG_T0LO_REG or TIMGn_T0HI_REG"]
-    #[inline(always)]
-    pub const fn t0update(&self) -> &TUPDATE {
-        self.tupdate(0)
-    }
-    #[doc = "0x30 - Write to copy current timer value to TIMG_T1LO_REG or TIMGn_T1HI_REG"]
-    #[inline(always)]
-    pub const fn t1update(&self) -> &TUPDATE {
-        self.tupdate(1)
-    }
-    #[doc = "0x10..0x18 - Timer %s alarm value, low 32 bits"]
-    #[inline(always)]
-    pub const fn talarmlo(&self, n: usize) -> &TALARMLO {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(36 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x10..0x18 - Timer %s alarm value, low 32 bits"]
-    #[inline(always)]
-    pub fn talarmlo_iter(&self) -> impl Iterator<Item = &TALARMLO> {
-        (0..2).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(36 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x10 - Timer 0 alarm value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t0alarmlo(&self) -> &TALARMLO {
-        self.talarmlo(0)
-    }
-    #[doc = "0x34 - Timer 1 alarm value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t1alarmlo(&self) -> &TALARMLO {
-        self.talarmlo(1)
-    }
-    #[doc = "0x14..0x1c - Timer %s alarm value, high bits"]
-    #[inline(always)]
-    pub const fn talarmhi(&self, n: usize) -> &TALARMHI {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(20)
-                .add(36 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x14..0x1c - Timer %s alarm value, high bits"]
-    #[inline(always)]
-    pub fn talarmhi_iter(&self) -> impl Iterator<Item = &TALARMHI> {
-        (0..2).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(20)
-                .add(36 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x14 - Timer 0 alarm value, high bits"]
-    #[inline(always)]
-    pub const fn t0alarmhi(&self) -> &TALARMHI {
-        self.talarmhi(0)
-    }
-    #[doc = "0x38 - Timer 1 alarm value, high bits"]
-    #[inline(always)]
-    pub const fn t1alarmhi(&self) -> &TALARMHI {
-        self.talarmhi(1)
-    }
-    #[doc = "0x18..0x20 - Timer %s reload value, low 32 bits"]
-    #[inline(always)]
-    pub const fn tloadlo(&self, n: usize) -> &TLOADLO {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(24)
-                .add(36 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x18..0x20 - Timer %s reload value, low 32 bits"]
-    #[inline(always)]
-    pub fn tloadlo_iter(&self) -> impl Iterator<Item = &TLOADLO> {
-        (0..2).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(24)
-                .add(36 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x18 - Timer 0 reload value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t0loadlo(&self) -> &TLOADLO {
-        self.tloadlo(0)
-    }
-    #[doc = "0x3c - Timer 1 reload value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t1loadlo(&self) -> &TLOADLO {
-        self.tloadlo(1)
-    }
-    #[doc = "0x1c..0x24 - Timer %s reload value, high 32 bits"]
-    #[inline(always)]
-    pub const fn tloadhi(&self, n: usize) -> &TLOADHI {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(28)
-                .add(36 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x1c..0x24 - Timer %s reload value, high 32 bits"]
-    #[inline(always)]
-    pub fn tloadhi_iter(&self) -> impl Iterator<Item = &TLOADHI> {
-        (0..2).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(28)
-                .add(36 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x1c - Timer 0 reload value, high 32 bits"]
-    #[inline(always)]
-    pub const fn t0loadhi(&self) -> &TLOADHI {
-        self.tloadhi(0)
-    }
-    #[doc = "0x40 - Timer 1 reload value, high 32 bits"]
-    #[inline(always)]
-    pub const fn t1loadhi(&self) -> &TLOADHI {
-        self.tloadhi(1)
-    }
-    #[doc = "0x20..0x28 - Write to reload timer from TIMG_T%sLOADLO_REG or TIMG_T%sLOADHI_REG"]
-    #[inline(always)]
-    pub const fn tload(&self, n: usize) -> &TLOAD {
-        #[allow(clippy::no_effect)]
-        [(); 2][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(32)
-                .add(36 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x20..0x28 - Write to reload timer from TIMG_T%sLOADLO_REG or TIMG_T%sLOADHI_REG"]
-    #[inline(always)]
-    pub fn tload_iter(&self) -> impl Iterator<Item = &TLOAD> {
-        (0..2).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(32)
-                .add(36 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x20 - Write to reload timer from TIMG_T0LOADLO_REG or TIMG_T0LOADHI_REG"]
-    #[inline(always)]
-    pub const fn t0load(&self) -> &TLOAD {
-        self.tload(0)
-    }
-    #[doc = "0x44 - Write to reload timer from TIMG_T1LOADLO_REG or TIMG_T1LOADHI_REG"]
-    #[inline(always)]
-    pub const fn t1load(&self) -> &TLOAD {
-        self.tload(1)
+    pub fn t_iter(&self) -> impl Iterator<Item = &T> {
+        self.t.iter()
     }
     #[doc = "0x48 - Watchdog timer configuration register"]
     #[inline(always)]
@@ -468,42 +180,11 @@ impl RegisterBlock {
         &self.regclk
     }
 }
-#[doc = "TCONFIG (rw) register accessor: Timer %s configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tconfig::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tconfig::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tconfig`] module"]
-pub type TCONFIG = crate::Reg<tconfig::TCONFIG_SPEC>;
-#[doc = "Timer %s configuration register"]
-pub mod tconfig;
-#[doc = "TLO (r) register accessor: Timer %s current value, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tlo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tlo`] module"]
-pub type TLO = crate::Reg<tlo::TLO_SPEC>;
-#[doc = "Timer %s current value, low 32 bits"]
-pub mod tlo;
-#[doc = "THI (r) register accessor: Timer %s current value, high 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`thi::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@thi`] module"]
-pub type THI = crate::Reg<thi::THI_SPEC>;
-#[doc = "Timer %s current value, high 32 bits"]
-pub mod thi;
-#[doc = "TUPDATE (rw) register accessor: Write to copy current timer value to TIMG_T%sLO_REG or TIMGn_T%sHI_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tupdate::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tupdate::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tupdate`] module"]
-pub type TUPDATE = crate::Reg<tupdate::TUPDATE_SPEC>;
-#[doc = "Write to copy current timer value to TIMG_T%sLO_REG or TIMGn_T%sHI_REG"]
-pub mod tupdate;
-#[doc = "TALARMLO (rw) register accessor: Timer %s alarm value, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`talarmlo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`talarmlo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@talarmlo`] module"]
-pub type TALARMLO = crate::Reg<talarmlo::TALARMLO_SPEC>;
-#[doc = "Timer %s alarm value, low 32 bits"]
-pub mod talarmlo;
-#[doc = "TALARMHI (rw) register accessor: Timer %s alarm value, high bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`talarmhi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`talarmhi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@talarmhi`] module"]
-pub type TALARMHI = crate::Reg<talarmhi::TALARMHI_SPEC>;
-#[doc = "Timer %s alarm value, high bits"]
-pub mod talarmhi;
-#[doc = "TLOADLO (rw) register accessor: Timer %s reload value, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tloadlo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tloadlo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tloadlo`] module"]
-pub type TLOADLO = crate::Reg<tloadlo::TLOADLO_SPEC>;
-#[doc = "Timer %s reload value, low 32 bits"]
-pub mod tloadlo;
-#[doc = "TLOADHI (rw) register accessor: Timer %s reload value, high 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tloadhi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tloadhi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tloadhi`] module"]
-pub type TLOADHI = crate::Reg<tloadhi::TLOADHI_SPEC>;
-#[doc = "Timer %s reload value, high 32 bits"]
-pub mod tloadhi;
-#[doc = "TLOAD (w) register accessor: Write to reload timer from TIMG_T%sLOADLO_REG or TIMG_T%sLOADHI_REG\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tload::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tload`] module"]
-pub type TLOAD = crate::Reg<tload::TLOAD_SPEC>;
-#[doc = "Write to reload timer from TIMG_T%sLOADLO_REG or TIMG_T%sLOADHI_REG"]
-pub mod tload;
+#[doc = "Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
+pub use self::t::T;
+#[doc = r"Cluster"]
+#[doc = "Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
+pub mod t;
 #[doc = "WDTCONFIG0 (rw) register accessor: Watchdog timer configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wdtconfig0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wdtconfig0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig0`] module"]
 pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;
 #[doc = "Watchdog timer configuration register"]

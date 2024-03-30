@@ -1,19 +1,19 @@
 #[doc = "Register `LACTLO` reader"]
 pub type R = crate::R<LACTLO_SPEC>;
-#[doc = "Field `LACT_LO` reader - Reserved."]
-pub type LACT_LO_R = crate::FieldReader<u32>;
+#[doc = "Field `LO` reader - Reserved."]
+pub type LO_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
-    pub fn lact_lo(&self) -> LACT_LO_R {
-        LACT_LO_R::new(self.bits)
+    pub fn lo(&self) -> LO_R {
+        LO_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LACTLO")
-            .field("lact_lo", &format_args!("{}", self.lact_lo().bits()))
+            .field("lo", &format_args!("{}", self.lo().bits()))
             .finish()
     }
 }

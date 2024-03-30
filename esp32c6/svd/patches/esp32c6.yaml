@@ -74,7 +74,7 @@ LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
 
 TIMG0:
-  _include: ../../../common_patches/tim_int_strip.yaml
+  _include: ../../../common_patches/tim_collect.yaml
 
 SPI2:
   _include: ../../../common_patches/spi_dma_int_strip.yaml

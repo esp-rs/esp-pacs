@@ -43,7 +43,7 @@ LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
 
 TIMG0:
-  _include: ../../../common_patches/tim_int_strip.yaml
+  _include: ../../../common_patches/tim_expand_and_collect.yaml
 
 SPI[23]:
   _strip: SPI_
