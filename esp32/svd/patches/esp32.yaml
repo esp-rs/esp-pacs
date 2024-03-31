@@ -14,7 +14,6 @@ RTC_I2C:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
-  _include: ../../../common_patches/int_strip.yaml
   _expand_array:
     "?SCH%s_CONF0": {}
     "?SCH%s_HPOINT": {}
@@ -60,9 +59,41 @@ LEDC:
       LSTIMER?_VALUE:
         name: VALUE
   INT_RAW:
+    _strip_end: _INT_RAW
     _modify:
       "*":
         access: read-write
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?: {}
+  INT_ST:
+    _strip_end: _INT_ST
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?:
+        description: The interrupt status bit for low speed channel %s duty change done event.
+  INT_ENA:
+    _strip_end: _INT_ENA
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?: {}
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?: {}
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
 
 SPI0:
   _include: ../../../common_patches/spi_dma_int_strip.yaml

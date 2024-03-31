@@ -1,19 +1,19 @@
 #[doc = "Register `VALUE` reader"]
 pub type R = crate::R<VALUE_SPEC>;
-#[doc = "Field `TIMER_CNT` reader - This register stores the current counter value of timer %s."]
-pub type TIMER_CNT_R = crate::FieldReader<u32>;
+#[doc = "Field `CNT` reader - This register stores the current counter value of timer %s."]
+pub type CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the current counter value of timer %s."]
     #[inline(always)]
-    pub fn timer_cnt(&self) -> TIMER_CNT_R {
-        TIMER_CNT_R::new(self.bits & 0x000f_ffff)
+    pub fn cnt(&self) -> CNT_R {
+        CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VALUE")
-            .field("timer_cnt", &format_args!("{}", self.timer_cnt().bits()))
+            .field("cnt", &format_args!("{}", self.cnt().bits()))
             .finish()
     }
 }

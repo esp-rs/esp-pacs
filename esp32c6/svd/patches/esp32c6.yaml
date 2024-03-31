@@ -65,7 +65,9 @@ PARL_IO:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
-  _include: ../../../common_patches/ledc_collect.yaml
+  _include: 
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml

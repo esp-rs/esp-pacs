@@ -16,7 +16,25 @@ RTC_CNTL:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
-  _include: ../../../common_patches/ledc_collect.yaml
+  INT_RAW:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_ENA:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_ST:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_CLR:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  _include: 
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
 
 APB_CTRL:
   PERI_BACKUP_INT_RAW:

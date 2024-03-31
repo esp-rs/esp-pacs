@@ -28,6 +28,7 @@ SPI[01]:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
+  _include: ../../../common_patches/ledc_int.yaml
   _expand_array:
     CH%s_CONF0: {}
     CH%s_HPOINT: {}
@@ -66,8 +67,6 @@ LEDC:
       TIMER?_VALUE:
         name: VALUE
         _strip: TIMER_
-
-  _include: ../../../common_patches/int_strip.yaml
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml

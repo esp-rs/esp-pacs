@@ -20,7 +20,9 @@ RTC_CNTL:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
-  _include: ../../../common_patches/ledc_collect.yaml
+  _include: 
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
 
 EXTMEM:
   _include: ../../../common_patches/extmem_cache_int_strip.yaml
