@@ -51,6 +51,9 @@ SPI[23]:
     _strip: SPI_
   _include: ../../../common_patches/spi_dma_int_strip.yaml
 
+SOC_ETM:
+  _include: ../../../common_patches/etm_collect.yaml
+
 MCPWM0:
   _expand_array:
     TIMER%s_CFG0: {}

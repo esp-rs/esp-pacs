@@ -48,6 +48,9 @@ SPI2:
 MCPWM0:
   _include: ../../../common_patches/mcpwm_collect.yaml
 
+SOC_ETM:
+  _include: ../../../common_patches/etm_collect.yaml
+
 DMA:
   _modify:
     OUT_CONF0_CH%s:
