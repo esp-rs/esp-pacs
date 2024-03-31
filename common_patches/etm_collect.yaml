@@ -1,0 +1,22 @@
+CH_ENA_AD?:
+  _array:
+    CH_ENA*: {}
+CH_ENA_AD?_SET:
+  _array:
+    CH_SET*: {}
+CH_ENA_AD?_CLR:
+  _array:
+    CH_CLR*: {}
+
+_cluster:
+  CH%s:
+    "CH*_EVT_ID":
+      name: EVT_ID
+      _modify:
+        "CH*_EVT_ID":
+          name: EVT_ID
+    "CH*_TASK_ID":
+      name: TASK_ID
+      _modify:
+        "CH*_TASK_ID":
+          name: TASK_ID
