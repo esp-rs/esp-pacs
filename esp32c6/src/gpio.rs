@@ -37,8 +37,8 @@ pub struct RegisterBlock {
     status_next1: STATUS_NEXT1,
     func_in_sel_cfg: [FUNC_IN_SEL_CFG; 128],
     _reserved33: [u8; 0x0200],
-    func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 30],
-    _reserved34: [u8; 0x60],
+    func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 31],
+    _reserved34: [u8; 0x5c],
     clock_gate: CLOCK_GATE,
     _reserved35: [u8; 0xcc],
     date: DATE,
@@ -861,13 +861,13 @@ impl RegisterBlock {
     pub const fn func127_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(127)
     }
-    #[doc = "0x554..0x5cc - GPIO output function select register"]
+    #[doc = "0x554..0x5d0 - GPIO output function select register"]
     #[inline(always)]
     pub const fn func_out_sel_cfg(&self, n: usize) -> &FUNC_OUT_SEL_CFG {
         &self.func_out_sel_cfg[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x554..0x5cc - GPIO output function select register"]
+    #[doc = "0x554..0x5d0 - GPIO output function select register"]
     #[inline(always)]
     pub fn func_out_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_OUT_SEL_CFG> {
         self.func_out_sel_cfg.iter()
@@ -1021,6 +1021,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn func29_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(29)
+    }
+    #[doc = "0x5cc - GPIO output function select register"]
+    #[inline(always)]
+    pub const fn func30_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(30)
     }
     #[doc = "0x62c - GPIO clock gate register"]
     #[inline(always)]
