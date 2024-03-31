@@ -17,8 +17,15 @@ RTC_CNTL:
       name: INT_CLR
   _include: ../../../common_patches/int_strip.yaml
 
-"EFUSE,I2C0,I2S0,LEDC,UART0,APB_SARADC,UHCI0,RTC_I2C":
+"EFUSE,I2C0,I2S0,UART0,APB_SARADC,UHCI0,RTC_I2C":
   _include: ../../../common_patches/int_strip.yaml
+
+LEDC:
+  _include: ../../../common_patches/ledc_collect.yaml
+  INT_RAW:
+    _modify:
+      "*":
+        access: read-write
 
 SPI0:
   _include: ../../../common_patches/spi_dma_int_strip.yaml

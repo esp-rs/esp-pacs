@@ -12,8 +12,11 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,LEDC,UART0,APB_SARADC,SPI1,SYSTIMER":
+"EFUSE,I2C0,UART0,APB_SARADC,SPI1,SYSTIMER":
   _include: ../../../common_patches/int_strip.yaml
+
+LEDC:
+  _include: ../../../common_patches/ledc_collect.yaml
 
 APB_CTRL:
   PERI_BACKUP_INT_RAW:

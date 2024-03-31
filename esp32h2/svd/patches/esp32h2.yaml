@@ -23,8 +23,11 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"EFUSE,I2C0,I2S0,LEDC,UART0,APB_SARADC,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
+"EFUSE,I2C0,I2S0,UART0,APB_SARADC,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
+
+LEDC:
+  _include: ../../../common_patches/ledc_collect.yaml
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml

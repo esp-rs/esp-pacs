@@ -2,418 +2,46 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    ch_conf0: (),
-    _reserved1: [u8; 0x04],
-    ch_hpoint: (),
-    _reserved2: [u8; 0x04],
-    ch_duty: (),
-    _reserved3: [u8; 0x04],
-    ch_conf1: (),
-    _reserved4: [u8; 0x04],
-    ch_duty_r: (),
-    _reserved5: [u8; 0x90],
-    timer_conf: (),
-    _reserved6: [u8; 0x04],
-    timer_value: (),
-    _reserved7: [u8; 0x1c],
+    ch: [CH; 8],
+    timer: [TIMER; 4],
     int_raw: INT_RAW,
     int_st: INT_ST,
     int_ena: INT_ENA,
     int_clr: INT_CLR,
-    _reserved11: [u8; 0x30],
+    _reserved6: [u8; 0x30],
     ch_gamma_conf: [CH_GAMMA_CONF; 8],
     evt_task_en0: EVT_TASK_EN0,
     evt_task_en1: EVT_TASK_EN1,
     evt_task_en2: EVT_TASK_EN2,
-    _reserved15: [u8; 0x14],
+    _reserved10: [u8; 0x14],
     timer_cmp: [TIMER_CMP; 4],
     timer_cnt_cap: [TIMER_CNT_CAP; 4],
-    _reserved17: [u8; 0x10],
+    _reserved12: [u8; 0x10],
     conf: CONF,
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x20 - Configuration register 0 for channel %s"]
+    #[doc = "0x00..0xa0 - Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
     #[inline(always)]
-    pub const fn ch_conf0(&self, n: usize) -> &CH_CONF0 {
-        #[allow(clippy::no_effect)]
-        [(); 8][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() }
+    pub const fn ch(&self, n: usize) -> &CH {
+        &self.ch[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x20 - Configuration register 0 for channel %s"]
+    #[doc = "0x00..0xa0 - Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
     #[inline(always)]
-    pub fn ch_conf0_iter(&self) -> impl Iterator<Item = &CH_CONF0> {
-        (0..8)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(20 * n).cast() })
+    pub fn ch_iter(&self) -> impl Iterator<Item = &CH> {
+        self.ch.iter()
     }
-    #[doc = "0x00 - Configuration register 0 for channel 0"]
+    #[doc = "0xa0..0xc0 - Cluster TIMER%s, containing TIMER?_CONF, TIMER?_VALUE"]
     #[inline(always)]
-    pub const fn ch0_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(0)
-    }
-    #[doc = "0x14 - Configuration register 0 for channel 1"]
-    #[inline(always)]
-    pub const fn ch1_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(1)
-    }
-    #[doc = "0x28 - Configuration register 0 for channel 2"]
-    #[inline(always)]
-    pub const fn ch2_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(2)
-    }
-    #[doc = "0x3c - Configuration register 0 for channel 3"]
-    #[inline(always)]
-    pub const fn ch3_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(3)
-    }
-    #[doc = "0x50 - Configuration register 0 for channel 4"]
-    #[inline(always)]
-    pub const fn ch4_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(4)
-    }
-    #[doc = "0x64 - Configuration register 0 for channel 5"]
-    #[inline(always)]
-    pub const fn ch5_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(5)
-    }
-    #[doc = "0x78 - Configuration register 0 for channel 6"]
-    #[inline(always)]
-    pub const fn ch6_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(6)
-    }
-    #[doc = "0x8c - Configuration register 0 for channel 7"]
-    #[inline(always)]
-    pub const fn ch7_conf0(&self) -> &CH_CONF0 {
-        self.ch_conf0(7)
-    }
-    #[doc = "0x04..0x24 - High point register for channel %s"]
-    #[inline(always)]
-    pub const fn ch_hpoint(&self, n: usize) -> &CH_HPOINT {
-        #[allow(clippy::no_effect)]
-        [(); 8][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() }
+    pub const fn timer(&self, n: usize) -> &TIMER {
+        &self.timer[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x04..0x24 - High point register for channel %s"]
+    #[doc = "0xa0..0xc0 - Cluster TIMER%s, containing TIMER?_CONF, TIMER?_VALUE"]
     #[inline(always)]
-    pub fn ch_hpoint_iter(&self) -> impl Iterator<Item = &CH_HPOINT> {
-        (0..8)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(20 * n).cast() })
-    }
-    #[doc = "0x04 - High point register for channel 0"]
-    #[inline(always)]
-    pub const fn ch0_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(0)
-    }
-    #[doc = "0x18 - High point register for channel 1"]
-    #[inline(always)]
-    pub const fn ch1_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(1)
-    }
-    #[doc = "0x2c - High point register for channel 2"]
-    #[inline(always)]
-    pub const fn ch2_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(2)
-    }
-    #[doc = "0x40 - High point register for channel 3"]
-    #[inline(always)]
-    pub const fn ch3_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(3)
-    }
-    #[doc = "0x54 - High point register for channel 4"]
-    #[inline(always)]
-    pub const fn ch4_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(4)
-    }
-    #[doc = "0x68 - High point register for channel 5"]
-    #[inline(always)]
-    pub const fn ch5_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(5)
-    }
-    #[doc = "0x7c - High point register for channel 6"]
-    #[inline(always)]
-    pub const fn ch6_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(6)
-    }
-    #[doc = "0x90 - High point register for channel 7"]
-    #[inline(always)]
-    pub const fn ch7_hpoint(&self) -> &CH_HPOINT {
-        self.ch_hpoint(7)
-    }
-    #[doc = "0x08..0x28 - Initial duty cycle register for channel %s"]
-    #[inline(always)]
-    pub const fn ch_duty(&self, n: usize) -> &CH_DUTY {
-        #[allow(clippy::no_effect)]
-        [(); 8][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x08..0x28 - Initial duty cycle register for channel %s"]
-    #[inline(always)]
-    pub fn ch_duty_iter(&self) -> impl Iterator<Item = &CH_DUTY> {
-        (0..8)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(20 * n).cast() })
-    }
-    #[doc = "0x08 - Initial duty cycle register for channel 0"]
-    #[inline(always)]
-    pub const fn ch0_duty(&self) -> &CH_DUTY {
-        self.ch_duty(0)
-    }
-    #[doc = "0x1c - Initial duty cycle register for channel 1"]
-    #[inline(always)]
-    pub const fn ch1_duty(&self) -> &CH_DUTY {
-        self.ch_duty(1)
-    }
-    #[doc = "0x30 - Initial duty cycle register for channel 2"]
-    #[inline(always)]
-    pub const fn ch2_duty(&self) -> &CH_DUTY {
-        self.ch_duty(2)
-    }
-    #[doc = "0x44 - Initial duty cycle register for channel 3"]
-    #[inline(always)]
-    pub const fn ch3_duty(&self) -> &CH_DUTY {
-        self.ch_duty(3)
-    }
-    #[doc = "0x58 - Initial duty cycle register for channel 4"]
-    #[inline(always)]
-    pub const fn ch4_duty(&self) -> &CH_DUTY {
-        self.ch_duty(4)
-    }
-    #[doc = "0x6c - Initial duty cycle register for channel 5"]
-    #[inline(always)]
-    pub const fn ch5_duty(&self) -> &CH_DUTY {
-        self.ch_duty(5)
-    }
-    #[doc = "0x80 - Initial duty cycle register for channel 6"]
-    #[inline(always)]
-    pub const fn ch6_duty(&self) -> &CH_DUTY {
-        self.ch_duty(6)
-    }
-    #[doc = "0x94 - Initial duty cycle register for channel 7"]
-    #[inline(always)]
-    pub const fn ch7_duty(&self) -> &CH_DUTY {
-        self.ch_duty(7)
-    }
-    #[doc = "0x0c..0x2c - Configuration register 1 for channel %s"]
-    #[inline(always)]
-    pub const fn ch_conf1(&self, n: usize) -> &CH_CONF1 {
-        #[allow(clippy::no_effect)]
-        [(); 8][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(12)
-                .add(20 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x0c..0x2c - Configuration register 1 for channel %s"]
-    #[inline(always)]
-    pub fn ch_conf1_iter(&self) -> impl Iterator<Item = &CH_CONF1> {
-        (0..8).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(12)
-                .add(20 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x0c - Configuration register 1 for channel 0"]
-    #[inline(always)]
-    pub const fn ch0_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(0)
-    }
-    #[doc = "0x20 - Configuration register 1 for channel 1"]
-    #[inline(always)]
-    pub const fn ch1_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(1)
-    }
-    #[doc = "0x34 - Configuration register 1 for channel 2"]
-    #[inline(always)]
-    pub const fn ch2_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(2)
-    }
-    #[doc = "0x48 - Configuration register 1 for channel 3"]
-    #[inline(always)]
-    pub const fn ch3_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(3)
-    }
-    #[doc = "0x5c - Configuration register 1 for channel 4"]
-    #[inline(always)]
-    pub const fn ch4_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(4)
-    }
-    #[doc = "0x70 - Configuration register 1 for channel 5"]
-    #[inline(always)]
-    pub const fn ch5_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(5)
-    }
-    #[doc = "0x84 - Configuration register 1 for channel 6"]
-    #[inline(always)]
-    pub const fn ch6_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(6)
-    }
-    #[doc = "0x98 - Configuration register 1 for channel 7"]
-    #[inline(always)]
-    pub const fn ch7_conf1(&self) -> &CH_CONF1 {
-        self.ch_conf1(7)
-    }
-    #[doc = "0x10..0x30 - Current duty cycle register for channel %s"]
-    #[inline(always)]
-    pub const fn ch_duty_r(&self, n: usize) -> &CH_DUTY_R {
-        #[allow(clippy::no_effect)]
-        [(); 8][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(20 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x10..0x30 - Current duty cycle register for channel %s"]
-    #[inline(always)]
-    pub fn ch_duty_r_iter(&self) -> impl Iterator<Item = &CH_DUTY_R> {
-        (0..8).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(20 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x10 - Current duty cycle register for channel 0"]
-    #[inline(always)]
-    pub const fn ch0_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(0)
-    }
-    #[doc = "0x24 - Current duty cycle register for channel 1"]
-    #[inline(always)]
-    pub const fn ch1_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(1)
-    }
-    #[doc = "0x38 - Current duty cycle register for channel 2"]
-    #[inline(always)]
-    pub const fn ch2_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(2)
-    }
-    #[doc = "0x4c - Current duty cycle register for channel 3"]
-    #[inline(always)]
-    pub const fn ch3_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(3)
-    }
-    #[doc = "0x60 - Current duty cycle register for channel 4"]
-    #[inline(always)]
-    pub const fn ch4_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(4)
-    }
-    #[doc = "0x74 - Current duty cycle register for channel 5"]
-    #[inline(always)]
-    pub const fn ch5_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(5)
-    }
-    #[doc = "0x88 - Current duty cycle register for channel 6"]
-    #[inline(always)]
-    pub const fn ch6_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(6)
-    }
-    #[doc = "0x9c - Current duty cycle register for channel 7"]
-    #[inline(always)]
-    pub const fn ch7_duty_r(&self) -> &CH_DUTY_R {
-        self.ch_duty_r(7)
-    }
-    #[doc = "0xa0..0xb0 - Timer %s configuration register"]
-    #[inline(always)]
-    pub const fn timer_conf(&self, n: usize) -> &TIMER_CONF {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(160)
-                .add(8 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0xa0..0xb0 - Timer %s configuration register"]
-    #[inline(always)]
-    pub fn timer_conf_iter(&self) -> impl Iterator<Item = &TIMER_CONF> {
-        (0..4).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(160)
-                .add(8 * n)
-                .cast()
-        })
-    }
-    #[doc = "0xa0 - Timer 0 configuration register"]
-    #[inline(always)]
-    pub const fn timer0_conf(&self) -> &TIMER_CONF {
-        self.timer_conf(0)
-    }
-    #[doc = "0xa8 - Timer 1 configuration register"]
-    #[inline(always)]
-    pub const fn timer1_conf(&self) -> &TIMER_CONF {
-        self.timer_conf(1)
-    }
-    #[doc = "0xb0 - Timer 2 configuration register"]
-    #[inline(always)]
-    pub const fn timer2_conf(&self) -> &TIMER_CONF {
-        self.timer_conf(2)
-    }
-    #[doc = "0xb8 - Timer 3 configuration register"]
-    #[inline(always)]
-    pub const fn timer3_conf(&self) -> &TIMER_CONF {
-        self.timer_conf(3)
-    }
-    #[doc = "0xa4..0xb4 - Timer %s current counter value register"]
-    #[inline(always)]
-    pub const fn timer_value(&self, n: usize) -> &TIMER_VALUE {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(164)
-                .add(8 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0xa4..0xb4 - Timer %s current counter value register"]
-    #[inline(always)]
-    pub fn timer_value_iter(&self) -> impl Iterator<Item = &TIMER_VALUE> {
-        (0..4).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(164)
-                .add(8 * n)
-                .cast()
-        })
-    }
-    #[doc = "0xa4 - Timer 0 current counter value register"]
-    #[inline(always)]
-    pub const fn timer0_value(&self) -> &TIMER_VALUE {
-        self.timer_value(0)
-    }
-    #[doc = "0xac - Timer 1 current counter value register"]
-    #[inline(always)]
-    pub const fn timer1_value(&self) -> &TIMER_VALUE {
-        self.timer_value(1)
-    }
-    #[doc = "0xb4 - Timer 2 current counter value register"]
-    #[inline(always)]
-    pub const fn timer2_value(&self) -> &TIMER_VALUE {
-        self.timer_value(2)
-    }
-    #[doc = "0xbc - Timer 3 current counter value register"]
-    #[inline(always)]
-    pub const fn timer3_value(&self) -> &TIMER_VALUE {
-        self.timer_value(3)
+    pub fn timer_iter(&self) -> impl Iterator<Item = &TIMER> {
+        self.timer.iter()
     }
     #[doc = "0xc0 - Interrupt raw status register"]
     #[inline(always)]
@@ -574,34 +202,16 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "CH_CONF0 (rw) register accessor: Configuration register 0 for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_conf0`] module"]
-pub type CH_CONF0 = crate::Reg<ch_conf0::CH_CONF0_SPEC>;
-#[doc = "Configuration register 0 for channel %s"]
-pub mod ch_conf0;
-#[doc = "CH_HPOINT (rw) register accessor: High point register for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_hpoint::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_hpoint::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_hpoint`] module"]
-pub type CH_HPOINT = crate::Reg<ch_hpoint::CH_HPOINT_SPEC>;
-#[doc = "High point register for channel %s"]
-pub mod ch_hpoint;
-#[doc = "CH_DUTY (rw) register accessor: Initial duty cycle register for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_duty::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_duty::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_duty`] module"]
-pub type CH_DUTY = crate::Reg<ch_duty::CH_DUTY_SPEC>;
-#[doc = "Initial duty cycle register for channel %s"]
-pub mod ch_duty;
-#[doc = "CH_CONF1 (rw) register accessor: Configuration register 1 for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_conf1`] module"]
-pub type CH_CONF1 = crate::Reg<ch_conf1::CH_CONF1_SPEC>;
-#[doc = "Configuration register 1 for channel %s"]
-pub mod ch_conf1;
-#[doc = "CH_DUTY_R (r) register accessor: Current duty cycle register for channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_duty_r::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_duty_r`] module"]
-pub type CH_DUTY_R = crate::Reg<ch_duty_r::CH_DUTY_R_SPEC>;
-#[doc = "Current duty cycle register for channel %s"]
-pub mod ch_duty_r;
-#[doc = "TIMER_CONF (rw) register accessor: Timer %s configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timer_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timer_conf`] module"]
-pub type TIMER_CONF = crate::Reg<timer_conf::TIMER_CONF_SPEC>;
-#[doc = "Timer %s configuration register"]
-pub mod timer_conf;
-#[doc = "TIMER_VALUE (r) register accessor: Timer %s current counter value register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_value::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timer_value`] module"]
-pub type TIMER_VALUE = crate::Reg<timer_value::TIMER_VALUE_SPEC>;
-#[doc = "Timer %s current counter value register"]
-pub mod timer_value;
+#[doc = "Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
+pub use self::ch::CH;
+#[doc = r"Cluster"]
+#[doc = "Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
+pub mod ch;
+#[doc = "Cluster TIMER%s, containing TIMER?_CONF, TIMER?_VALUE"]
+pub use self::timer::TIMER;
+#[doc = r"Cluster"]
+#[doc = "Cluster TIMER%s, containing TIMER?_CONF, TIMER?_VALUE"]
+pub mod timer;
 #[doc = "INT_RAW (rw) register accessor: Interrupt raw status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Interrupt raw status register"]
