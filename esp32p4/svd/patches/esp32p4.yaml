@@ -86,11 +86,16 @@ LP_TIMER:
 TIMG0:
   _include: ../../../common_patches/tim_expand_and_collect.yaml
 
+SPI1:
+  _include: ../../../common_patches/spi_w.yaml
+
 SPI[23]:
   _strip: SPI_
   "*":
     _strip: SPI_
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
+  _include:
+   - ../../../common_patches/spi_dma_int_strip.yaml
+   - ../../../common_patches/spi_w.yaml
 
 SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml

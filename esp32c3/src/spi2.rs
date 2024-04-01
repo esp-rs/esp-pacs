@@ -20,27 +20,12 @@ pub struct RegisterBlock {
     dma_int_raw: DMA_INT_RAW,
     dma_int_st: DMA_INT_ST,
     _reserved17: [u8; 0x54],
-    w0: W0,
-    w1: W1,
-    w2: W2,
-    w3: W3,
-    w4: W4,
-    w5: W5,
-    w6: W6,
-    w7: W7,
-    w8: W8,
-    w9: W9,
-    w10: W10,
-    w11: W11,
-    w12: W12,
-    w13: W13,
-    w14: W14,
-    w15: W15,
-    _reserved33: [u8; 0x08],
+    w: [W; 16],
+    _reserved18: [u8; 0x08],
     slave: SLAVE,
     slave1: SLAVE1,
     clk_gate: CLK_GATE,
-    _reserved36: [u8; 0x04],
+    _reserved21: [u8; 0x04],
     date: DATE,
 }
 impl RegisterBlock {
@@ -129,85 +114,16 @@ impl RegisterBlock {
     pub const fn dma_int_st(&self) -> &DMA_INT_ST {
         &self.dma_int_st
     }
-    #[doc = "0x98 - SPI CPU-controlled buffer0"]
+    #[doc = "0x98..0xd8 - SPI CPU-controlled buffer%s"]
     #[inline(always)]
-    pub const fn w0(&self) -> &W0 {
-        &self.w0
+    pub const fn w(&self, n: usize) -> &W {
+        &self.w[n]
     }
-    #[doc = "0x9c - SPI CPU-controlled buffer1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x98..0xd8 - SPI CPU-controlled buffer%s"]
     #[inline(always)]
-    pub const fn w1(&self) -> &W1 {
-        &self.w1
-    }
-    #[doc = "0xa0 - SPI CPU-controlled buffer2"]
-    #[inline(always)]
-    pub const fn w2(&self) -> &W2 {
-        &self.w2
-    }
-    #[doc = "0xa4 - SPI CPU-controlled buffer3"]
-    #[inline(always)]
-    pub const fn w3(&self) -> &W3 {
-        &self.w3
-    }
-    #[doc = "0xa8 - SPI CPU-controlled buffer4"]
-    #[inline(always)]
-    pub const fn w4(&self) -> &W4 {
-        &self.w4
-    }
-    #[doc = "0xac - SPI CPU-controlled buffer5"]
-    #[inline(always)]
-    pub const fn w5(&self) -> &W5 {
-        &self.w5
-    }
-    #[doc = "0xb0 - SPI CPU-controlled buffer6"]
-    #[inline(always)]
-    pub const fn w6(&self) -> &W6 {
-        &self.w6
-    }
-    #[doc = "0xb4 - SPI CPU-controlled buffer7"]
-    #[inline(always)]
-    pub const fn w7(&self) -> &W7 {
-        &self.w7
-    }
-    #[doc = "0xb8 - SPI CPU-controlled buffer8"]
-    #[inline(always)]
-    pub const fn w8(&self) -> &W8 {
-        &self.w8
-    }
-    #[doc = "0xbc - SPI CPU-controlled buffer9"]
-    #[inline(always)]
-    pub const fn w9(&self) -> &W9 {
-        &self.w9
-    }
-    #[doc = "0xc0 - SPI CPU-controlled buffer10"]
-    #[inline(always)]
-    pub const fn w10(&self) -> &W10 {
-        &self.w10
-    }
-    #[doc = "0xc4 - SPI CPU-controlled buffer11"]
-    #[inline(always)]
-    pub const fn w11(&self) -> &W11 {
-        &self.w11
-    }
-    #[doc = "0xc8 - SPI CPU-controlled buffer12"]
-    #[inline(always)]
-    pub const fn w12(&self) -> &W12 {
-        &self.w12
-    }
-    #[doc = "0xcc - SPI CPU-controlled buffer13"]
-    #[inline(always)]
-    pub const fn w13(&self) -> &W13 {
-        &self.w13
-    }
-    #[doc = "0xd0 - SPI CPU-controlled buffer14"]
-    #[inline(always)]
-    pub const fn w14(&self) -> &W14 {
-        &self.w14
-    }
-    #[doc = "0xd4 - SPI CPU-controlled buffer15"]
-    #[inline(always)]
-    pub const fn w15(&self) -> &W15 {
-        &self.w15
+    pub fn w_iter(&self) -> impl Iterator<Item = &W> {
+        self.w.iter()
     }
     #[doc = "0xe0 - SPI slave control register"]
     #[inline(always)]
@@ -298,70 +214,10 @@ pub mod dma_int_raw;
 pub type DMA_INT_ST = crate::Reg<dma_int_st::DMA_INT_ST_SPEC>;
 #[doc = "SPI DMA interrupt status register"]
 pub mod dma_int_st;
-#[doc = "W0 (rw) register accessor: SPI CPU-controlled buffer0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w0`] module"]
-pub type W0 = crate::Reg<w0::W0_SPEC>;
-#[doc = "SPI CPU-controlled buffer0"]
-pub mod w0;
-#[doc = "W1 (rw) register accessor: SPI CPU-controlled buffer1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w1`] module"]
-pub type W1 = crate::Reg<w1::W1_SPEC>;
-#[doc = "SPI CPU-controlled buffer1"]
-pub mod w1;
-#[doc = "W2 (rw) register accessor: SPI CPU-controlled buffer2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w2`] module"]
-pub type W2 = crate::Reg<w2::W2_SPEC>;
-#[doc = "SPI CPU-controlled buffer2"]
-pub mod w2;
-#[doc = "W3 (rw) register accessor: SPI CPU-controlled buffer3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w3`] module"]
-pub type W3 = crate::Reg<w3::W3_SPEC>;
-#[doc = "SPI CPU-controlled buffer3"]
-pub mod w3;
-#[doc = "W4 (rw) register accessor: SPI CPU-controlled buffer4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w4`] module"]
-pub type W4 = crate::Reg<w4::W4_SPEC>;
-#[doc = "SPI CPU-controlled buffer4"]
-pub mod w4;
-#[doc = "W5 (rw) register accessor: SPI CPU-controlled buffer5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w5`] module"]
-pub type W5 = crate::Reg<w5::W5_SPEC>;
-#[doc = "SPI CPU-controlled buffer5"]
-pub mod w5;
-#[doc = "W6 (rw) register accessor: SPI CPU-controlled buffer6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w6`] module"]
-pub type W6 = crate::Reg<w6::W6_SPEC>;
-#[doc = "SPI CPU-controlled buffer6"]
-pub mod w6;
-#[doc = "W7 (rw) register accessor: SPI CPU-controlled buffer7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w7`] module"]
-pub type W7 = crate::Reg<w7::W7_SPEC>;
-#[doc = "SPI CPU-controlled buffer7"]
-pub mod w7;
-#[doc = "W8 (rw) register accessor: SPI CPU-controlled buffer8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w8`] module"]
-pub type W8 = crate::Reg<w8::W8_SPEC>;
-#[doc = "SPI CPU-controlled buffer8"]
-pub mod w8;
-#[doc = "W9 (rw) register accessor: SPI CPU-controlled buffer9\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w9`] module"]
-pub type W9 = crate::Reg<w9::W9_SPEC>;
-#[doc = "SPI CPU-controlled buffer9"]
-pub mod w9;
-#[doc = "W10 (rw) register accessor: SPI CPU-controlled buffer10\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w10`] module"]
-pub type W10 = crate::Reg<w10::W10_SPEC>;
-#[doc = "SPI CPU-controlled buffer10"]
-pub mod w10;
-#[doc = "W11 (rw) register accessor: SPI CPU-controlled buffer11\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w11::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w11::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w11`] module"]
-pub type W11 = crate::Reg<w11::W11_SPEC>;
-#[doc = "SPI CPU-controlled buffer11"]
-pub mod w11;
-#[doc = "W12 (rw) register accessor: SPI CPU-controlled buffer12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w12::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w12::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w12`] module"]
-pub type W12 = crate::Reg<w12::W12_SPEC>;
-#[doc = "SPI CPU-controlled buffer12"]
-pub mod w12;
-#[doc = "W13 (rw) register accessor: SPI CPU-controlled buffer13\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w13::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w13::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w13`] module"]
-pub type W13 = crate::Reg<w13::W13_SPEC>;
-#[doc = "SPI CPU-controlled buffer13"]
-pub mod w13;
-#[doc = "W14 (rw) register accessor: SPI CPU-controlled buffer14\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w14::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w14::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w14`] module"]
-pub type W14 = crate::Reg<w14::W14_SPEC>;
-#[doc = "SPI CPU-controlled buffer14"]
-pub mod w14;
-#[doc = "W15 (rw) register accessor: SPI CPU-controlled buffer15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w15::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w15::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w15`] module"]
-pub type W15 = crate::Reg<w15::W15_SPEC>;
-#[doc = "SPI CPU-controlled buffer15"]
-pub mod w15;
+#[doc = "W (rw) register accessor: SPI CPU-controlled buffer%s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`w::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`w::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@w`] module"]
+pub type W = crate::Reg<w::W_SPEC>;
+#[doc = "SPI CPU-controlled buffer%s"]
+pub mod w;
 #[doc = "SLAVE (rw) register accessor: SPI slave control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slave::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slave::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slave`] module"]
 pub type SLAVE = crate::Reg<slave::SLAVE_SPEC>;
 #[doc = "SPI slave control register"]

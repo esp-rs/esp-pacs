@@ -1,0 +1,6 @@
+_array:
+  "W*":
+    _modify:
+      "BUF*":
+        name: BUF
+    BUF: [0, 0xffff_ffff]

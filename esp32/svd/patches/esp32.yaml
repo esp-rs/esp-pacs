@@ -96,7 +96,9 @@ LEDC:
 
 
 SPI0:
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
+  _include:
+    - ../../../common_patches/spi_dma_int_strip.yaml
+    - ../../../common_patches/spi_w.yaml
 
 TIMG0:
   _include: ../../../common_patches/tim_collect.yaml

@@ -30,6 +30,9 @@ EXTMEM:
 TIMG0:
   _include: ../../../common_patches/tim_expand_and_collect.yaml
 
+SPI[12]:
+  _include: ../../../common_patches/spi_w.yaml
+
 SPI2:
   _include: ../../../common_patches/spi_dma_int_strip.yaml
 
