@@ -1,0 +1,45 @@
+INT_RAW:
+  _strip_end: _INT_RAW
+  _array:
+    TIMER?_OVF:
+      description: Triggered when the timer%s has reached its maximum counter value.
+    DUTY_CHNG_END_CH?:
+      description: Interrupt raw bit for channel %s. Triggered when the gradual change of duty has finished.
+    OVF_CNT_CH?:
+      description: Interrupt raw bit for channel %s. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM.
+INT_ST:
+  _strip_end: _INT_ST
+  _array:
+    TIMER?_OVF:
+      description: This is the masked interrupt status bit for the TIMER%s_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1.
+    DUTY_CHNG_END_CH?:
+      description: This is the masked interrupt status bit for the DUTY_CHNG_END_CH%s interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1.
+    OVF_CNT_CH?:
+      description: This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH%s interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1.
+INT_ENA:
+  _strip_end: _INT_ENA
+  _array:
+    TIMER?_OVF:
+      name: TIMER%s_OVF
+      description: The interrupt enable bit for the TIMER%s_OVF interrupt.
+    DUTY_CHNG_END_CH?:
+      name: DUTY_CHNG_END_CH%s
+      description: The interrupt enable bit for the DUTY_CHNG_END_CH%s interrupt.
+    OVF_CNT_CH?:
+      name: OVF_CNT_CH%s
+      description: The interrupt enable bit for the OVF_CNT_CH%s interrupt.
+INT_CLR:
+  _strip_end: _INT_CLR
+  _array:
+    TIMER?_OVF:
+      name: TIMER%s_OVF
+      description: Set this bit to clear the TIMER%s_OVF interrupt.
+    DUTY_CHNG_END_CH?:
+      name: DUTY_CHNG_END_CH%s
+      description: Set this bit to clear the DUTY_CHNG_END_CH%s interrupt.
+    OVF_CNT_CH?:
+      name: OVF_CNT_CH%s
+      description: Set this bit to clear the OVF_CNT_CH%s interrupt.
+  _modify:
+    "*":
+      modifiedWriteValues: oneToClear

@@ -12,8 +12,29 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,LEDC,UART0,APB_SARADC,SPI1,SYSTIMER":
+"EFUSE,I2C0,UART0,APB_SARADC,SPI1,SYSTIMER":
   _include: ../../../common_patches/int_strip.yaml
+
+LEDC:
+  INT_RAW:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_ENA:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_ST:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_CLR:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  _include: 
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
 
 APB_CTRL:
   PERI_BACKUP_INT_RAW:

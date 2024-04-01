@@ -10,8 +10,90 @@ RTC_I2C:
     INT_EN:
       name: INT_ENA
 
-"EFUSE,I2C0,I2S0,LEDC,RTC_CNTL,RTC_I2C,UART0,UHCI0":
+"EFUSE,I2C0,I2S0,RTC_CNTL,RTC_I2C,UART0,UHCI0":
   _include: ../../../common_patches/int_strip.yaml
+
+LEDC:
+  _expand_array:
+    "?SCH%s_CONF0": {}
+    "?SCH%s_HPOINT": {}
+    "?SCH%s_DUTY": {}
+    "?SCH%s_CONF1": {}
+    "?SCH%s_DUTY_R": {}
+
+    "?STIMER%s_CONF": {}
+    "?STIMER%s_VALUE": {}
+
+  _cluster:
+    HSCH%s:
+      HSCH?_CONF0:
+        name: CONF0
+      HSCH?_HPOINT:
+        name: HPOINT
+      HSCH?_DUTY:
+        name: DUTY
+      HSCH?_CONF1:
+        name: CONF1
+      HSCH?_DUTY_R:
+        name: DUTY_R
+    LSCH%s:
+      LSCH?_CONF0:
+        name: CONF0
+      LSCH?_HPOINT:
+        name: HPOINT
+      LSCH?_DUTY:
+        name: DUTY
+      LSCH?_CONF1:
+        name: CONF1
+      LSCH?_DUTY_R:
+        name: DUTY_R
+
+    HSTIMER%s:
+      HSTIMER?_CONF:
+        name: CONF
+      HSTIMER?_VALUE:
+        name: VALUE
+    LSTIMER%s:
+      LSTIMER?_CONF:
+        name: CONF
+      LSTIMER?_VALUE:
+        name: VALUE
+  INT_RAW:
+    _strip_end: _INT_RAW
+    _modify:
+      "*":
+        access: read-write
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?: {}
+  INT_ST:
+    _strip_end: _INT_ST
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?:
+        description: The interrupt status bit for low speed channel %s duty change done event.
+  INT_ENA:
+    _strip_end: _INT_ENA
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?: {}
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _array:
+      HSTIMER?_OVF: {}
+      LSTIMER?_OVF: {}
+      DUTY_CHNG_END_HSCH?: {}
+      DUTY_CHNG_END_LSCH?: {}
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
 
 SPI0:
   _include: ../../../common_patches/spi_dma_int_strip.yaml

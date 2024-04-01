@@ -24,8 +24,49 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"ADC,EFUSE,I2C0,I2S0,LEDC,UART0,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
+"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
   _include: ../../../common_patches/int_strip.yaml
+
+LEDC:
+  _include: ../../../common_patches/ledc_int.yaml
+  _expand_array:
+    CH%s_CONF0: {}
+    CH%s_HPOINT: {}
+    CH%s_DUTY: {}
+    CH%s_CONF1: {}
+    CH%s_DUTY_R: {}
+
+    TIMER%s_CONF: {}
+    TIMER%s_VALUE: {}
+
+  _cluster:
+    CH%s:
+      CH?_CONF0:
+        name: CONF0
+        _strip_end: _CH
+      CH?_HPOINT:
+        name: HPOINT
+        _strip_end: _CH
+      CH?_DUTY:
+        name: DUTY
+        _strip_end: _CH
+      CH?_CONF1:
+        name: CONF1
+        _strip_end: _CH
+      CH?_DUTY_R:
+        name: DUTY_R
+        _modify:
+          DUTY_CH_R:
+            name: DUTY_R
+
+    TIMER%s:
+      TIMER?_CONF:
+        name: CONF
+        _strip: TIMER_
+        _strip_end: _TIMER
+      TIMER?_VALUE:
+        name: VALUE
+        _strip: TIMER_
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml

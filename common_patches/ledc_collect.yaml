@@ -1,0 +1,34 @@
+_expand_array:
+  CH%s_CONF0: {}
+  CH%s_HPOINT: {}
+  CH%s_DUTY: {}
+  CH%s_CONF1: {}
+  CH%s_DUTY_R: {}
+
+  TIMER%s_CONF: {}
+  TIMER%s_VALUE: {}
+
+_cluster:
+  CH%s:
+    CH?_CONF0:
+      name: CONF0
+    CH?_HPOINT:
+      name: HPOINT
+    CH?_DUTY:
+      name: DUTY
+    CH?_CONF1:
+      name: CONF1
+    CH?_DUTY_R:
+      name: DUTY_R
+      _modify:
+        "DUTY_R,DUTY_CH_R,DUTY_CH?_R":
+          name: DUTY_R
+
+  TIMER%s:
+    TIMER?_CONF:
+      name: CONF
+    TIMER?_VALUE:
+      name: VALUE
+      _modify:
+        "CNT,TIMER_CNT":
+          name: CNT
