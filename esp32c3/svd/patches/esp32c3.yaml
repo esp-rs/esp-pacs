@@ -89,6 +89,11 @@ APB_CTRL:
 EXTMEM:
   _include: ../../../common_patches/extmem_cache_int_strip.yaml
 
+UHCI0:
+  _include:
+    - ../../../common_patches/uhci_collect.yaml
+    - ../../../common_patches/int_strip.yaml
+
 TIMG0:
   _include: ../../../common_patches/tim_collect.yaml
 

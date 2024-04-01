@@ -24,7 +24,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
+"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -82,6 +82,11 @@ PMU:
 
 LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
+
+UHCI0:
+  _include:
+    - ../../../common_patches/uhci_collect.yaml
+    - ../../../common_patches/int_strip.yaml
 
 TIMG0:
   _include: ../../../common_patches/tim_expand_and_collect.yaml

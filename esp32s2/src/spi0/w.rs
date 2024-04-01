@@ -5,7 +5,7 @@ pub type W = crate::W<W_SPEC>;
 #[doc = "Field `BUF` reader - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
 pub type BUF_R = crate::FieldReader<u32>;
 #[doc = "Field `BUF` writer - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
-pub type BUF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 32, u32>;
+pub type BUF_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32, crate::Safe>;
 impl R {
     #[doc = "Bits 0:31 - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
     #[inline(always)]

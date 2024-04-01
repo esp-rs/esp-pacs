@@ -5,7 +5,7 @@ pub type W = crate::W<W_SPEC>;
 #[doc = "Field `BUF` reader - data buffer"]
 pub type BUF_R = crate::FieldReader<u32>;
 #[doc = "Field `BUF` writer - data buffer"]
-pub type BUF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 32, u32>;
+pub type BUF_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32, crate::Safe>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]

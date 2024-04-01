@@ -117,6 +117,23 @@ TIMG0:
   "LACT*":
     _strip: LACT_
 
+UHCI0:
+  _include: ../../../common_patches/int_strip.yaml
+  Q?_WORD?:
+    _modify:
+      SEND_Q?_WORD?:
+        name: SEND_WORD
+
+  _cluster:
+    Q%s:
+      Q?_WORD0:
+        name: WORD0
+      Q?_WORD1:
+        name: WORD1
+
+  _array:
+    ESC_CONF?: {}
+
 MCPWM0:
   _include: ../../../common_patches/mcpwm_collect.yaml
   INT_RAW:
