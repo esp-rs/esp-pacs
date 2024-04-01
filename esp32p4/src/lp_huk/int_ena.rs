@@ -2,51 +2,42 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `PREP_DONE_INT_ENA` reader - The interrupt enable bit for the huk_prep_done_int interrupt"]
-pub type PREP_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `PREP_DONE_INT_ENA` writer - The interrupt enable bit for the huk_prep_done_int interrupt"]
-pub type PREP_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PROC_DONE_INT_ENA` reader - The interrupt enable bit for the huk_proc_done_int interrupt"]
-pub type PROC_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `PROC_DONE_INT_ENA` writer - The interrupt enable bit for the huk_proc_done_int interrupt"]
-pub type PROC_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `POST_DONE_INT_ENA` reader - The interrupt enable bit for the huk_post_done_int interrupt"]
-pub type POST_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `POST_DONE_INT_ENA` writer - The interrupt enable bit for the huk_post_done_int interrupt"]
-pub type POST_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PREP_DONE` reader - The interrupt enable bit for the huk_prep_done_int interrupt"]
+pub type PREP_DONE_R = crate::BitReader;
+#[doc = "Field `PREP_DONE` writer - The interrupt enable bit for the huk_prep_done_int interrupt"]
+pub type PREP_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PROC_DONE` reader - The interrupt enable bit for the huk_proc_done_int interrupt"]
+pub type PROC_DONE_R = crate::BitReader;
+#[doc = "Field `PROC_DONE` writer - The interrupt enable bit for the huk_proc_done_int interrupt"]
+pub type PROC_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `POST_DONE` reader - The interrupt enable bit for the huk_post_done_int interrupt"]
+pub type POST_DONE_R = crate::BitReader;
+#[doc = "Field `POST_DONE` writer - The interrupt enable bit for the huk_post_done_int interrupt"]
+pub type POST_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the huk_prep_done_int interrupt"]
     #[inline(always)]
-    pub fn prep_done_int_ena(&self) -> PREP_DONE_INT_ENA_R {
-        PREP_DONE_INT_ENA_R::new((self.bits & 1) != 0)
+    pub fn prep_done(&self) -> PREP_DONE_R {
+        PREP_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the huk_proc_done_int interrupt"]
     #[inline(always)]
-    pub fn proc_done_int_ena(&self) -> PROC_DONE_INT_ENA_R {
-        PROC_DONE_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn proc_done(&self) -> PROC_DONE_R {
+        PROC_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the huk_post_done_int interrupt"]
     #[inline(always)]
-    pub fn post_done_int_ena(&self) -> POST_DONE_INT_ENA_R {
-        POST_DONE_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn post_done(&self) -> POST_DONE_R {
+        POST_DONE_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "prep_done_int_ena",
-                &format_args!("{}", self.prep_done_int_ena().bit()),
-            )
-            .field(
-                "proc_done_int_ena",
-                &format_args!("{}", self.proc_done_int_ena().bit()),
-            )
-            .field(
-                "post_done_int_ena",
-                &format_args!("{}", self.post_done_int_ena().bit()),
-            )
+            .field("prep_done", &format_args!("{}", self.prep_done().bit()))
+            .field("proc_done", &format_args!("{}", self.proc_done().bit()))
+            .field("post_done", &format_args!("{}", self.post_done().bit()))
             .finish()
     }
 }
@@ -60,20 +51,20 @@ impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the huk_prep_done_int interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn prep_done_int_ena(&mut self) -> PREP_DONE_INT_ENA_W<INT_ENA_SPEC> {
-        PREP_DONE_INT_ENA_W::new(self, 0)
+    pub fn prep_done(&mut self) -> PREP_DONE_W<INT_ENA_SPEC> {
+        PREP_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the huk_proc_done_int interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn proc_done_int_ena(&mut self) -> PROC_DONE_INT_ENA_W<INT_ENA_SPEC> {
-        PROC_DONE_INT_ENA_W::new(self, 1)
+    pub fn proc_done(&mut self) -> PROC_DONE_W<INT_ENA_SPEC> {
+        PROC_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the huk_post_done_int interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn post_done_int_ena(&mut self) -> POST_DONE_INT_ENA_W<INT_ENA_SPEC> {
-        POST_DONE_INT_ENA_W::new(self, 2)
+    pub fn post_done(&mut self) -> POST_DONE_W<INT_ENA_SPEC> {
+        POST_DONE_W::new(self, 2)
     }
 }
 #[doc = "HUK Generator interrupt enable register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

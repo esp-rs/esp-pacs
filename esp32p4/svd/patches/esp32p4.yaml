@@ -7,6 +7,9 @@ _modify:
     groupName: DMA
   LP_ANA_PERI:
     name: LP_ANA
+    groupName: LP_ANA
+  LCD_CAM:
+    groupName: LCD_CAM
 
 LP_ANA:
   _strip: LP_ANA_
@@ -24,7 +27,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
+"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2C0,LP_I2S0,LP_UART":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -76,6 +79,17 @@ GPIO:
     _interrupts:
       GPIO_INT0:
         name: GPIO
+
+I3C_MST:
+  _modify:
+    INT_ST_ENA:
+      name: INT_ENA
+  _include: ../../../common_patches/int_strip.yaml
+
+JPEG:
+  _include: ../../../common_patches/int_strip.yaml
+  _array:
+    C?: {}
 
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml

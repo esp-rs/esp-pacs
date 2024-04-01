@@ -12,7 +12,7 @@ pub struct RegisterBlock {
     int_clr: INT_CLR,
     int_raw: INT_RAW,
     int_st: INT_ST,
-    int_st_ena: INT_ST_ENA,
+    int_ena: INT_ENA,
     _reserved10: [u8; 0x04],
     reset_ctrl: RESET_CTRL,
     buffer_status_level: BUFFER_STATUS_LEVEL,
@@ -92,8 +92,8 @@ impl RegisterBlock {
     }
     #[doc = "0x3c - The Interrupt status will be updated in INTR_STATUS register if corresponding Status Enable bit set."]
     #[inline(always)]
-    pub const fn int_st_ena(&self) -> &INT_ST_ENA {
-        &self.int_st_ena
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x44 - NA"]
     #[inline(always)]
@@ -262,10 +262,10 @@ pub mod int_raw;
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "NA"]
 pub mod int_st;
-#[doc = "INT_ST_ENA (rw) register accessor: The Interrupt status will be updated in INTR_STATUS register if corresponding Status Enable bit set.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_st_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st_ena`] module"]
-pub type INT_ST_ENA = crate::Reg<int_st_ena::INT_ST_ENA_SPEC>;
+#[doc = "INT_ENA (rw) register accessor: The Interrupt status will be updated in INTR_STATUS register if corresponding Status Enable bit set.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "The Interrupt status will be updated in INTR_STATUS register if corresponding Status Enable bit set."]
-pub mod int_st_ena;
+pub mod int_ena;
 #[doc = "RESET_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reset_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reset_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reset_ctrl`] module"]
 pub type RESET_CTRL = crate::Reg<reset_ctrl::RESET_CTRL_SPEC>;
 #[doc = "NA"]

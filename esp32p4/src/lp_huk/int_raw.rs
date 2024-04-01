@@ -1,44 +1,35 @@
 #[doc = "Register `INT_RAW` reader"]
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Field `PREP_DONE_INT_RAW` reader - The raw interrupt status bit for the huk_prep_done_int interrupt"]
-pub type PREP_DONE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `PROC_DONE_INT_RAW` reader - The raw interrupt status bit for the huk_proc_done_int interrupt"]
-pub type PROC_DONE_INT_RAW_R = crate::BitReader;
-#[doc = "Field `POST_DONE_INT_RAW` reader - The raw interrupt status bit for the huk_post_done_int interrupt"]
-pub type POST_DONE_INT_RAW_R = crate::BitReader;
+#[doc = "Field `PREP_DONE` reader - The raw interrupt status bit for the huk_prep_done_int interrupt"]
+pub type PREP_DONE_R = crate::BitReader;
+#[doc = "Field `PROC_DONE` reader - The raw interrupt status bit for the huk_proc_done_int interrupt"]
+pub type PROC_DONE_R = crate::BitReader;
+#[doc = "Field `POST_DONE` reader - The raw interrupt status bit for the huk_post_done_int interrupt"]
+pub type POST_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the huk_prep_done_int interrupt"]
     #[inline(always)]
-    pub fn prep_done_int_raw(&self) -> PREP_DONE_INT_RAW_R {
-        PREP_DONE_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn prep_done(&self) -> PREP_DONE_R {
+        PREP_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the huk_proc_done_int interrupt"]
     #[inline(always)]
-    pub fn proc_done_int_raw(&self) -> PROC_DONE_INT_RAW_R {
-        PROC_DONE_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn proc_done(&self) -> PROC_DONE_R {
+        PROC_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the huk_post_done_int interrupt"]
     #[inline(always)]
-    pub fn post_done_int_raw(&self) -> POST_DONE_INT_RAW_R {
-        POST_DONE_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn post_done(&self) -> POST_DONE_R {
+        POST_DONE_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "prep_done_int_raw",
-                &format_args!("{}", self.prep_done_int_raw().bit()),
-            )
-            .field(
-                "proc_done_int_raw",
-                &format_args!("{}", self.proc_done_int_raw().bit()),
-            )
-            .field(
-                "post_done_int_raw",
-                &format_args!("{}", self.post_done_int_raw().bit()),
-            )
+            .field("prep_done", &format_args!("{}", self.prep_done().bit()))
+            .field("proc_done", &format_args!("{}", self.proc_done().bit()))
+            .field("post_done", &format_args!("{}", self.post_done().bit()))
             .finish()
     }
 }
