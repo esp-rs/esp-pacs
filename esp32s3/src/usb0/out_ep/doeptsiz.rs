@@ -2,42 +2,42 @@
 pub type R = crate::R<DOEPTSIZ_SPEC>;
 #[doc = "Register `DOEPTSIZ` writer"]
 pub type W = crate::W<DOEPTSIZ_SPEC>;
-#[doc = "Field `XFERSIZE1` reader - "]
-pub type XFERSIZE1_R = crate::FieldReader;
-#[doc = "Field `XFERSIZE1` writer - "]
-pub type XFERSIZE1_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
-#[doc = "Field `PKTCNT1` reader - "]
-pub type PKTCNT1_R = crate::BitReader;
-#[doc = "Field `PKTCNT1` writer - "]
-pub type PKTCNT1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SUPCNT1` reader - "]
-pub type SUPCNT1_R = crate::FieldReader;
-#[doc = "Field `SUPCNT1` writer - "]
-pub type SUPCNT1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `XFERSIZE` reader - "]
+pub type XFERSIZE_R = crate::FieldReader<u32>;
+#[doc = "Field `XFERSIZE` writer - "]
+pub type XFERSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
+#[doc = "Field `PKTCNT` reader - "]
+pub type PKTCNT_R = crate::FieldReader<u16>;
+#[doc = "Field `PKTCNT` writer - "]
+pub type PKTCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+#[doc = "Field `SUPCNT` reader - "]
+pub type SUPCNT_R = crate::FieldReader;
+#[doc = "Field `SUPCNT` writer - "]
+pub type SUPCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
-    #[doc = "Bits 0:6"]
+    #[doc = "Bits 0:18"]
     #[inline(always)]
-    pub fn xfersize1(&self) -> XFERSIZE1_R {
-        XFERSIZE1_R::new((self.bits & 0x7f) as u8)
+    pub fn xfersize(&self) -> XFERSIZE_R {
+        XFERSIZE_R::new(self.bits & 0x0007_ffff)
     }
-    #[doc = "Bit 19"]
+    #[doc = "Bits 19:28"]
     #[inline(always)]
-    pub fn pktcnt1(&self) -> PKTCNT1_R {
-        PKTCNT1_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn pktcnt(&self) -> PKTCNT_R {
+        PKTCNT_R::new(((self.bits >> 19) & 0x03ff) as u16)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
-    pub fn supcnt1(&self) -> SUPCNT1_R {
-        SUPCNT1_R::new(((self.bits >> 29) & 3) as u8)
+    pub fn supcnt(&self) -> SUPCNT_R {
+        SUPCNT_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPTSIZ")
-            .field("xfersize1", &format_args!("{}", self.xfersize1().bits()))
-            .field("pktcnt1", &format_args!("{}", self.pktcnt1().bit()))
-            .field("supcnt1", &format_args!("{}", self.supcnt1().bits()))
+            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
+            .field("pktcnt", &format_args!("{}", self.pktcnt().bits()))
+            .field("supcnt", &format_args!("{}", self.supcnt().bits()))
             .finish()
     }
 }
@@ -48,23 +48,23 @@ impl core::fmt::Debug for crate::generic::Reg<DOEPTSIZ_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:6"]
+    #[doc = "Bits 0:18"]
     #[inline(always)]
     #[must_use]
-    pub fn xfersize1(&mut self) -> XFERSIZE1_W<DOEPTSIZ_SPEC> {
-        XFERSIZE1_W::new(self, 0)
+    pub fn xfersize(&mut self) -> XFERSIZE_W<DOEPTSIZ_SPEC> {
+        XFERSIZE_W::new(self, 0)
     }
-    #[doc = "Bit 19"]
+    #[doc = "Bits 19:28"]
     #[inline(always)]
     #[must_use]
-    pub fn pktcnt1(&mut self) -> PKTCNT1_W<DOEPTSIZ_SPEC> {
-        PKTCNT1_W::new(self, 19)
+    pub fn pktcnt(&mut self) -> PKTCNT_W<DOEPTSIZ_SPEC> {
+        PKTCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
     #[must_use]
-    pub fn supcnt1(&mut self) -> SUPCNT1_W<DOEPTSIZ_SPEC> {
-        SUPCNT1_W::new(self, 29)
+    pub fn supcnt(&mut self) -> SUPCNT_W<DOEPTSIZ_SPEC> {
+        SUPCNT_W::new(self, 29)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doeptsiz::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doeptsiz::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -29,6 +29,67 @@ _cluster:
       name: DIEPDMAB
     DTXFSTS[1-6]:
       name: DTXFSTS
+    _modify:
+      DIEPCTL:
+        fields:
+          MPS:
+            bitOffset: 0
+            bitWidth: 11
+            access: read-write
+          USBACTEP:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          NAKSTS:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-only
+          EPTYPE:
+            bitOffset: 18
+            bitWidth: 2
+            access: read-write
+          STALL:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          TXFNUM:
+            bitOffset: 22
+            bitWidth: 4
+            access: read-write
+          CNAK:
+            bitOffset: 26
+            bitWidth: 1
+            access: write-only
+          SNAK:
+            bitOffset: 27
+            bitWidth: 1
+            access: write-only
+          SETD0PID:
+            bitOffset: 28
+            bitWidth: 1
+            access: write-only
+          SETD1PID:
+            bitOffset: 29
+            bitWidth: 1
+            access: write-only
+          EPDIS:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          EPENA:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      DIEPTSIZ:
+        fields:
+          XFERSIZE:
+            bitOffset: 0
+            bitWidth: 19
+            access: read-write
+          PKTCNT:
+            bitOffset: 19
+            bitWidth: 10
+            access: read-write
   OUT_EP0:
     description: "Device OUT endpoint 0"
     DOEPCTL0:
@@ -53,3 +114,68 @@ _cluster:
       name: DOEPDMA
     DOEPDMAB[1-6]:
       name: DOEPDMAB
+    _modify:
+      DOEPCTL:
+        fields:
+          MPS:
+            bitOffset: 0
+            bitWidth: 11
+            access: read-write
+          USBACTEP:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          NAKSTS:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-only
+          EPTYPE:
+            bitOffset: 18
+            bitWidth: 2
+            access: read-write
+          SNP:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          STALL:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          CNAK:
+            bitOffset: 26
+            bitWidth: 1
+            access: write-only
+          SNAK:
+            bitOffset: 27
+            bitWidth: 1
+            access: write-only
+          SETD0PID:
+            bitOffset: 28
+            bitWidth: 1
+            access: write-only
+          SETD1PID:
+            bitOffset: 29
+            bitWidth: 1
+            access: write-only
+          EPDIS:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          EPENA:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      DOEPTSIZ:
+        fields:
+          XFERSIZE:
+            bitOffset: 0
+            bitWidth: 19
+            access: read-write
+          PKTCNT:
+            bitOffset: 19
+            bitWidth: 10
+            access: read-write
+          SUPCNT:
+            bitOffset: 29
+            bitWidth: 2
+            access: read-write
