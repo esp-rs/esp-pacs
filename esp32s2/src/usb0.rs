@@ -24,215 +24,212 @@ pub struct RegisterBlock {
     gdfifocfg: GDFIFOCFG,
     _reserved18: [u8; 0xa0],
     hptxfsiz: HPTXFSIZ,
-    dieptxf1: DIEPTXF1,
-    dieptxf2: DIEPTXF2,
-    dieptxf3: DIEPTXF3,
-    dieptxf4: DIEPTXF4,
-    _reserved23: [u8; 0x02ec],
+    dieptxf: [DIEPTXF; 4],
+    _reserved20: [u8; 0x02ec],
     hcfg: HCFG,
     hfir: HFIR,
     hfnum: HFNUM,
-    _reserved26: [u8; 0x04],
+    _reserved23: [u8; 0x04],
     hptxsts: HPTXSTS,
     haint: HAINT,
     haintmsk: HAINTMSK,
     hflbaddr: HFLBADDR,
-    _reserved30: [u8; 0x20],
+    _reserved27: [u8; 0x20],
     hprt: HPRT,
-    _reserved31: [u8; 0xbc],
+    _reserved28: [u8; 0xbc],
     hcchar0: HCCHAR0,
-    _reserved32: [u8; 0x04],
+    _reserved29: [u8; 0x04],
     hcint0: HCINT0,
     hcintmsk0: HCINTMSK0,
     hctsiz0: HCTSIZ0,
     hcdma0: HCDMA0,
-    _reserved36: [u8; 0x04],
+    _reserved33: [u8; 0x04],
     hcdmab0: HCDMAB0,
     hcchar1: HCCHAR1,
-    _reserved38: [u8; 0x04],
+    _reserved35: [u8; 0x04],
     hcint1: HCINT1,
     hcintmsk1: HCINTMSK1,
     hctsiz1: HCTSIZ1,
     hcdma1: HCDMA1,
-    _reserved42: [u8; 0x04],
+    _reserved39: [u8; 0x04],
     hcdmab1: HCDMAB1,
     hcchar2: HCCHAR2,
-    _reserved44: [u8; 0x04],
+    _reserved41: [u8; 0x04],
     hcint2: HCINT2,
     hcintmsk2: HCINTMSK2,
     hctsiz2: HCTSIZ2,
     hcdma2: HCDMA2,
-    _reserved48: [u8; 0x04],
+    _reserved45: [u8; 0x04],
     hcdmab2: HCDMAB2,
     hcchar3: HCCHAR3,
-    _reserved50: [u8; 0x04],
+    _reserved47: [u8; 0x04],
     hcint3: HCINT3,
     hcintmsk3: HCINTMSK3,
     hctsiz3: HCTSIZ3,
     hcdma3: HCDMA3,
-    _reserved54: [u8; 0x04],
+    _reserved51: [u8; 0x04],
     hcdmab3: HCDMAB3,
     hcchar4: HCCHAR4,
-    _reserved56: [u8; 0x04],
+    _reserved53: [u8; 0x04],
     hcint4: HCINT4,
     hcintmsk4: HCINTMSK4,
     hctsiz4: HCTSIZ4,
     hcdma4: HCDMA4,
-    _reserved60: [u8; 0x04],
+    _reserved57: [u8; 0x04],
     hcdmab4: HCDMAB4,
     hcchar5: HCCHAR5,
-    _reserved62: [u8; 0x04],
+    _reserved59: [u8; 0x04],
     hcint5: HCINT5,
     hcintmsk5: HCINTMSK5,
     hctsiz5: HCTSIZ5,
     hcdma5: HCDMA5,
-    _reserved66: [u8; 0x04],
+    _reserved63: [u8; 0x04],
     hcdmab5: HCDMAB5,
     hcchar6: HCCHAR6,
-    _reserved68: [u8; 0x04],
+    _reserved65: [u8; 0x04],
     hcint6: HCINT6,
     hcintmsk6: HCINTMSK6,
     hctsiz6: HCTSIZ6,
     hcdma6: HCDMA6,
-    _reserved72: [u8; 0x04],
+    _reserved69: [u8; 0x04],
     hcdmab6: HCDMAB6,
     hcchar7: HCCHAR7,
-    _reserved74: [u8; 0x04],
+    _reserved71: [u8; 0x04],
     hcint7: HCINT7,
     hcintmsk7: HCINTMSK7,
     hctsiz7: HCTSIZ7,
     hcdma7: HCDMA7,
-    _reserved78: [u8; 0x04],
+    _reserved75: [u8; 0x04],
     hcdmab7: HCDMAB7,
-    _reserved79: [u8; 0x0200],
+    _reserved76: [u8; 0x0200],
     dcfg: DCFG,
     dctl: DCTL,
     dsts: DSTS,
-    _reserved82: [u8; 0x04],
+    _reserved79: [u8; 0x04],
     diepmsk: DIEPMSK,
     doepmsk: DOEPMSK,
     daint: DAINT,
     daintmsk: DAINTMSK,
-    _reserved86: [u8; 0x08],
+    _reserved83: [u8; 0x08],
     dvbusdis: DVBUSDIS,
     dvbuspulse: DVBUSPULSE,
     dthrctl: DTHRCTL,
     diepempmsk: DIEPEMPMSK,
-    _reserved90: [u8; 0xc8],
+    _reserved87: [u8; 0xc8],
     diepctl0: DIEPCTL0,
-    _reserved91: [u8; 0x04],
+    _reserved88: [u8; 0x04],
     diepint0: DIEPINT0,
-    _reserved92: [u8; 0x04],
+    _reserved89: [u8; 0x04],
     dieptsiz0: DIEPTSIZ0,
     diepdma0: DIEPDMA0,
     dtxfsts0: DTXFSTS0,
     diepdmab0: DIEPDMAB0,
     diepctl1: DIEPCTL1,
-    _reserved97: [u8; 0x04],
+    _reserved94: [u8; 0x04],
     diepint1: DIEPINT1,
-    _reserved98: [u8; 0x04],
+    _reserved95: [u8; 0x04],
     dieptsiz1: DIEPTSIZ1,
     diepdma1: DIEPDMA1,
     dtxfsts1: DTXFSTS1,
     diepdmab1: DIEPDMAB1,
     diepctl2: DIEPCTL2,
-    _reserved103: [u8; 0x04],
+    _reserved100: [u8; 0x04],
     diepint2: DIEPINT2,
-    _reserved104: [u8; 0x04],
+    _reserved101: [u8; 0x04],
     dieptsiz2: DIEPTSIZ2,
     diepdma2: DIEPDMA2,
     dtxfsts2: DTXFSTS2,
     diepdmab2: DIEPDMAB2,
     diepctl3: DIEPCTL3,
-    _reserved109: [u8; 0x04],
+    _reserved106: [u8; 0x04],
     diepint3: DIEPINT3,
-    _reserved110: [u8; 0x04],
+    _reserved107: [u8; 0x04],
     dieptsiz3: DIEPTSIZ3,
     diepdma3: DIEPDMA3,
     dtxfsts3: DTXFSTS3,
     diepdmab3: DIEPDMAB3,
     diepctl4: DIEPCTL4,
-    _reserved115: [u8; 0x04],
+    _reserved112: [u8; 0x04],
     diepint4: DIEPINT4,
-    _reserved116: [u8; 0x04],
+    _reserved113: [u8; 0x04],
     dieptsiz4: DIEPTSIZ4,
     diepdma4: DIEPDMA4,
     dtxfsts4: DTXFSTS4,
     diepdmab4: DIEPDMAB4,
     diepctl5: DIEPCTL5,
-    _reserved121: [u8; 0x04],
+    _reserved118: [u8; 0x04],
     diepint5: DIEPINT5,
-    _reserved122: [u8; 0x04],
+    _reserved119: [u8; 0x04],
     dieptsiz5: DIEPTSIZ5,
     diepdma5: DIEPDMA5,
     dtxfsts5: DTXFSTS5,
     diepdmab5: DIEPDMAB5,
     diepctl6: DIEPCTL6,
-    _reserved127: [u8; 0x04],
+    _reserved124: [u8; 0x04],
     diepint6: DIEPINT6,
-    _reserved128: [u8; 0x04],
+    _reserved125: [u8; 0x04],
     dieptsiz6: DIEPTSIZ6,
     diepdma6: DIEPDMA6,
     dtxfsts6: DTXFSTS6,
     diepdmab6: DIEPDMAB6,
-    _reserved132: [u8; 0x0120],
+    _reserved129: [u8; 0x0120],
     doepctl0: DOEPCTL0,
-    _reserved133: [u8; 0x04],
+    _reserved130: [u8; 0x04],
     doepint0: DOEPINT0,
-    _reserved134: [u8; 0x04],
+    _reserved131: [u8; 0x04],
     doeptsiz0: DOEPTSIZ0,
     doepdma0: DOEPDMA0,
-    _reserved136: [u8; 0x04],
+    _reserved133: [u8; 0x04],
     doepdmab0: DOEPDMAB0,
     doepctl1: DOEPCTL1,
-    _reserved138: [u8; 0x04],
+    _reserved135: [u8; 0x04],
     doepint1: DOEPINT1,
-    _reserved139: [u8; 0x04],
+    _reserved136: [u8; 0x04],
     doeptsiz1: DOEPTSIZ1,
     doepdma1: DOEPDMA1,
-    _reserved141: [u8; 0x04],
+    _reserved138: [u8; 0x04],
     doepdmab1: DOEPDMAB1,
     doepctl2: DOEPCTL2,
-    _reserved143: [u8; 0x04],
+    _reserved140: [u8; 0x04],
     doepint2: DOEPINT2,
-    _reserved144: [u8; 0x04],
+    _reserved141: [u8; 0x04],
     doeptsiz2: DOEPTSIZ2,
     doepdma2: DOEPDMA2,
-    _reserved146: [u8; 0x04],
+    _reserved143: [u8; 0x04],
     doepdmab2: DOEPDMAB2,
     doepctl3: DOEPCTL3,
-    _reserved148: [u8; 0x04],
+    _reserved145: [u8; 0x04],
     doepint3: DOEPINT3,
-    _reserved149: [u8; 0x04],
+    _reserved146: [u8; 0x04],
     doeptsiz3: DOEPTSIZ3,
     doepdma3: DOEPDMA3,
-    _reserved151: [u8; 0x04],
+    _reserved148: [u8; 0x04],
     doepdmab3: DOEPDMAB3,
     doepctl4: DOEPCTL4,
-    _reserved153: [u8; 0x04],
+    _reserved150: [u8; 0x04],
     doepint4: DOEPINT4,
-    _reserved154: [u8; 0x04],
+    _reserved151: [u8; 0x04],
     doeptsiz4: DOEPTSIZ4,
     doepdma4: DOEPDMA4,
-    _reserved156: [u8; 0x04],
+    _reserved153: [u8; 0x04],
     doepdmab4: DOEPDMAB4,
     doepctl5: DOEPCTL5,
-    _reserved158: [u8; 0x04],
+    _reserved155: [u8; 0x04],
     doepint5: DOEPINT5,
-    _reserved159: [u8; 0x04],
+    _reserved156: [u8; 0x04],
     doeptsiz5: DOEPTSIZ5,
     doepdma5: DOEPDMA5,
-    _reserved161: [u8; 0x04],
+    _reserved158: [u8; 0x04],
     doepdmab5: DOEPDMAB5,
     doepctl6: DOEPCTL6,
-    _reserved163: [u8; 0x04],
+    _reserved160: [u8; 0x04],
     doepint6: DOEPINT6,
-    _reserved164: [u8; 0x04],
+    _reserved161: [u8; 0x04],
     doeptsiz6: DOEPTSIZ6,
     doepdma6: DOEPDMA6,
-    _reserved166: [u8; 0x04],
+    _reserved163: [u8; 0x04],
     doepdmab6: DOEPDMAB6,
-    _reserved167: [u8; 0x0220],
+    _reserved164: [u8; 0x0220],
     pcgcctl: PCGCCTL,
 }
 impl RegisterBlock {
@@ -331,25 +328,36 @@ impl RegisterBlock {
     pub const fn hptxfsiz(&self) -> &HPTXFSIZ {
         &self.hptxfsiz
     }
-    #[doc = "0x104 - "]
+    #[doc = "0x104..0x114 - "]
     #[inline(always)]
-    pub const fn dieptxf1(&self) -> &DIEPTXF1 {
-        &self.dieptxf1
+    pub const fn dieptxf(&self, n: usize) -> &DIEPTXF {
+        &self.dieptxf[n]
     }
-    #[doc = "0x108 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x104..0x114 - "]
     #[inline(always)]
-    pub const fn dieptxf2(&self) -> &DIEPTXF2 {
-        &self.dieptxf2
+    pub fn dieptxf_iter(&self) -> impl Iterator<Item = &DIEPTXF> {
+        self.dieptxf.iter()
     }
-    #[doc = "0x10c - "]
+    #[doc = "0x104 - DIEPTXF1"]
     #[inline(always)]
-    pub const fn dieptxf3(&self) -> &DIEPTXF3 {
-        &self.dieptxf3
+    pub const fn dieptxf1(&self) -> &DIEPTXF {
+        self.dieptxf(0)
     }
-    #[doc = "0x110 - "]
+    #[doc = "0x108 - DIEPTXF2"]
     #[inline(always)]
-    pub const fn dieptxf4(&self) -> &DIEPTXF4 {
-        &self.dieptxf4
+    pub const fn dieptxf2(&self) -> &DIEPTXF {
+        self.dieptxf(1)
+    }
+    #[doc = "0x10c - DIEPTXF3"]
+    #[inline(always)]
+    pub const fn dieptxf3(&self) -> &DIEPTXF {
+        self.dieptxf(2)
+    }
+    #[doc = "0x110 - DIEPTXF4"]
+    #[inline(always)]
+    pub const fn dieptxf4(&self) -> &DIEPTXF {
+        self.dieptxf(3)
     }
     #[doc = "0x400 - "]
     #[inline(always)]
@@ -1153,22 +1161,10 @@ pub mod gdfifocfg;
 pub type HPTXFSIZ = crate::Reg<hptxfsiz::HPTXFSIZ_SPEC>;
 #[doc = ""]
 pub mod hptxfsiz;
-#[doc = "DIEPTXF1 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptxf1`] module"]
-pub type DIEPTXF1 = crate::Reg<dieptxf1::DIEPTXF1_SPEC>;
+#[doc = "DIEPTXF (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptxf`] module"]
+pub type DIEPTXF = crate::Reg<dieptxf::DIEPTXF_SPEC>;
 #[doc = ""]
-pub mod dieptxf1;
-#[doc = "DIEPTXF2 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptxf2`] module"]
-pub type DIEPTXF2 = crate::Reg<dieptxf2::DIEPTXF2_SPEC>;
-#[doc = ""]
-pub mod dieptxf2;
-#[doc = "DIEPTXF3 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptxf3`] module"]
-pub type DIEPTXF3 = crate::Reg<dieptxf3::DIEPTXF3_SPEC>;
-#[doc = ""]
-pub mod dieptxf3;
-#[doc = "DIEPTXF4 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptxf4`] module"]
-pub type DIEPTXF4 = crate::Reg<dieptxf4::DIEPTXF4_SPEC>;
-#[doc = ""]
-pub mod dieptxf4;
+pub mod dieptxf;
 #[doc = "HCFG (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcfg::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcfg::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hcfg`] module"]
 pub type HCFG = crate::Reg<hcfg::HCFG_SPEC>;
 #[doc = ""]
