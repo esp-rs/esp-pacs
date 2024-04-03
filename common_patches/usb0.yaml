@@ -379,3 +379,17 @@ _cluster:
             bitOffset: 29
             bitWidth: 2
             access: read-write
+
+_add:
+  FIFO%s:
+    addressOffset: 0x1000
+    dim: 16
+    dimIncrement: 0x1000
+    dimIndex: 0-15
+    size: 32
+    description: "Read and write data to the USB FIFOs through this register."
+    fields:
+      WORD:
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write

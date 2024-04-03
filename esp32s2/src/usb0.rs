@@ -123,6 +123,8 @@ pub struct RegisterBlock {
     out_ep: [OUT_EP; 6],
     _reserved91: [u8; 0x0220],
     pcgcctl: PCGCCTL,
+    _reserved92: [u8; 0x01fc],
+    fifo: (),
 }
 impl RegisterBlock {
     #[doc = "0x00 - "]
@@ -683,6 +685,31 @@ impl RegisterBlock {
     pub const fn pcgcctl(&self) -> &PCGCCTL {
         &self.pcgcctl
     }
+    #[doc = "0x1000..0x1040 - Read and write data to the USB FIFOs through this register."]
+    #[inline(always)]
+    pub const fn fifo(&self, n: usize) -> &FIFO {
+        #[allow(clippy::no_effect)]
+        [(); 16][n];
+        unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(4096)
+                .add(4096 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1000..0x1040 - Read and write data to the USB FIFOs through this register."]
+    #[inline(always)]
+    pub fn fifo_iter(&self) -> impl Iterator<Item = &FIFO> {
+        (0..16).map(move |n| unsafe {
+            &*(self as *const Self)
+                .cast::<u8>()
+                .add(4096)
+                .add(4096 * n)
+                .cast()
+        })
+    }
 }
 #[doc = "GOTGCTL (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gotgctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gotgctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gotgctl`] module"]
 pub type GOTGCTL = crate::Reg<gotgctl::GOTGCTL_SPEC>;
@@ -1056,3 +1083,7 @@ pub mod out_ep;
 pub type PCGCCTL = crate::Reg<pcgcctl::PCGCCTL_SPEC>;
 #[doc = ""]
 pub mod pcgcctl;
+#[doc = "FIFO (rw) register accessor: Read and write data to the USB FIFOs through this register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fifo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo`] module"]
+pub type FIFO = crate::Reg<fifo::FIFO_SPEC>;
+#[doc = "Read and write data to the USB FIFOs through this register."]
+pub mod fifo;
