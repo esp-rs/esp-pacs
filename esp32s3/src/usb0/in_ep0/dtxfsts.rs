@@ -1,12 +1,12 @@
 #[doc = "Register `DTXFSTS` reader"]
 pub type R = crate::R<DTXFSTS_SPEC>;
-#[doc = "Field `D_INEPTXFSPCAVAIL0` reader - "]
-pub type D_INEPTXFSPCAVAIL0_R = crate::FieldReader<u16>;
+#[doc = "Field `INEPTXFSPCAVAIL` reader - "]
+pub type INEPTXFSPCAVAIL_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn d_ineptxfspcavail0(&self) -> D_INEPTXFSPCAVAIL0_R {
-        D_INEPTXFSPCAVAIL0_R::new((self.bits & 0xffff) as u16)
+    pub fn ineptxfspcavail(&self) -> INEPTXFSPCAVAIL_R {
+        INEPTXFSPCAVAIL_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTXFSTS")
             .field(
-                "d_ineptxfspcavail0",
-                &format_args!("{}", self.d_ineptxfspcavail0().bits()),
+                "ineptxfspcavail",
+                &format_args!("{}", self.ineptxfspcavail().bits()),
             )
             .finish()
     }

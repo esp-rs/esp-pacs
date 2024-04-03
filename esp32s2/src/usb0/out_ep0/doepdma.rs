@@ -2,22 +2,22 @@
 pub type R = crate::R<DOEPDMA_SPEC>;
 #[doc = "Register `DOEPDMA` writer"]
 pub type W = crate::W<DOEPDMA_SPEC>;
-#[doc = "Field `DMAADDR0` reader - "]
-pub type DMAADDR0_R = crate::FieldReader<u32>;
-#[doc = "Field `DMAADDR0` writer - "]
-pub type DMAADDR0_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `DMAADDR` reader - "]
+pub type DMAADDR_R = crate::FieldReader<u32>;
+#[doc = "Field `DMAADDR` writer - "]
+pub type DMAADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn dmaaddr0(&self) -> DMAADDR0_R {
-        DMAADDR0_R::new(self.bits)
+    pub fn dmaaddr(&self) -> DMAADDR_R {
+        DMAADDR_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPDMA")
-            .field("dmaaddr0", &format_args!("{}", self.dmaaddr0().bits()))
+            .field("dmaaddr", &format_args!("{}", self.dmaaddr().bits()))
             .finish()
     }
 }
@@ -31,8 +31,8 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaaddr0(&mut self) -> DMAADDR0_W<DOEPDMA_SPEC> {
-        DMAADDR0_W::new(self, 0)
+    pub fn dmaaddr(&mut self) -> DMAADDR_W<DOEPDMA_SPEC> {
+        DMAADDR_W::new(self, 0)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepdma::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepdma::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

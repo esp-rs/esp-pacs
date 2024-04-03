@@ -28,6 +28,35 @@ _cluster:
           name: EPENA
     DIEPINT0:
       name: DIEPINT
+      _modify:
+        D_XFERCOMPL0:
+          name: XFERCOMPL
+        D_EPDISBLD0:
+          name: EPDISBLD
+        D_AHBERR0:
+          name: AHBERR
+        D_TIMEOUT0:
+          name: TIMEOUT
+        D_INTKNTXFEMP0:
+          name: INTKNTXFEMP
+        D_INTKNEPMIS0:
+          name: INTKNEPMIS
+        D_INEPNAKEFF0:
+          name: INEPNAKEFF
+        D_TXFEMP0:
+          name: TXFEMP
+        D_TXFIFOUNDRN0:
+          name: TXFIFOUNDRN
+        D_BNAINTR0:
+          name: BNAINTR
+        D_PKTDRPSTS0:
+          name: PKTDRPSTS
+        D_BBLEERR0:
+          name: BBLEERR
+        D_NAKINTRPT0:
+          name: NAKINTRPT
+        D_NYETINTRPT0:
+          name: NYETINTRPT
     DIEPTSIZ0:
       name: DIEPTSIZ
       _modify:
@@ -37,24 +66,71 @@ _cluster:
           name: PKTCNT
     DIEPDMA0:
       name: DIEPDMA
+      _modify:
+        D_DMAADDR0:
+          name: DMAADDR
     DIEPDMAB0:
       name: DIEPDMAB
+      _modify:
+        D_DMABUFFERADDR0:
+          name: DMABUFFERADDR
     DTXFSTS0:
       name: DTXFSTS
+      _modify:
+        D_INEPTXFSPCAVAIL0:
+          name: INEPTXFSPCAVAIL
   IN_EP%s:
     description: "Device IN endpoints 1-6"
     DIEPCTL[1-6]:
       name: DIEPCTL
     DIEPINT[1-6]:
       name: DIEPINT
+      _modify:
+        D_XFERCOMPL1:
+          name: XFERCOMPL
+        D_EPDISBLD1:
+          name: EPDISBLD
+        D_AHBERR1:
+          name: AHBERR
+        D_TIMEOUT1:
+          name: TIMEOUT
+        D_INTKNTXFEMP1:
+          name: INTKNTXFEMP
+        D_INTKNEPMIS1:
+          name: INTKNEPMIS
+        D_INEPNAKEFF1:
+          name: INEPNAKEFF
+        D_TXFEMP1:
+          name: TXFEMP
+        D_TXFIFOUNDRN1:
+          name: TXFIFOUNDRN
+        D_BNAINTR1:
+          name: BNAINTR
+        D_PKTDRPSTS1:
+          name: PKTDRPSTS
+        D_BBLEERR1:
+          name: BBLEERR
+        D_NAKINTRPT1:
+          name: NAKINTRPT
+        D_NYETINTRPT1:
+          name: NYETINTRPT
     DIEPTSIZ[1-6]:
       name: DIEPTSIZ
     DIEPDMA[1-6]:
       name: DIEPDMA
+      _modify:
+        D_DMAADDR1:
+          name: DMAADDR
     DIEPDMAB[1-6]:
       name: DIEPDMAB
+      _modify:
+        D_DMABUFFERADDR1:
+          name: DMABUFFERADDR
     DTXFSTS[1-6]:
       name: DTXFSTS
+      _modify:
+        D_INEPTXFSPCAVAIL1:
+          name: INEPTXFSPCAVAIL
     _modify:
       DIEPCTL:
         fields:
@@ -143,6 +219,35 @@ _cluster:
           name: EPENA
     DOEPINT0:
       name: DOEPINT
+      _modify:
+        XFERCOMPL0:
+          name: XFERCOMPL
+        EPDISBLD0:
+          name: EPDISBLD
+        AHBERR0:
+          name: AHBERR
+        SETUP0:
+          name: SETUP
+        OUTTKNEPDIS0:
+          name: OUTTKNEPDIS
+        STSPHSERCVD0:
+          name: STSPHSERCVD
+        BACK2BACKSETUP0:
+          name: BACK2BACKSETUP
+        OUTPKTERR0:
+          name: OUTPKTERR
+        BNAINTR0:
+          name: BNAINTR
+        PKTDRPSTS0:
+          name: PKTDRPSTS
+        BBLEERR0:
+          name: BBLEERR
+        NAKINTRPT0:
+          name: NAKINTRPT
+        NYEPINTRPT0:
+          name: NYEPINTRPT
+        STUPPKTRCVD0:
+          name: STUPPKTRCVD
     DOEPTSIZ0:
       name: DOEPTSIZ
       _modify:
@@ -154,20 +259,61 @@ _cluster:
           name: SUPCNT
     DOEPDMA0:
       name: DOEPDMA
+      _modify:
+        DMAADDR0:
+          name: DMAADDR
     DOEPDMAB0:
       name: DOEPDMAB
+      _modify:
+        DMABUFFERADDR0:
+          name: DMABUFFERADDR
   OUT_EP%s:
     description: "Device OUT endpoints 1-6"
     DOEPCTL[1-6]:
       name: DOEPCTL
     DOEPINT[1-6]:
       name: DOEPINT
+      _modify:
+        XFERCOMPL1:
+          name: XFERCOMPL
+        EPDISBLD1:
+          name: EPDISBLD
+        AHBERR1:
+          name: AHBERR
+        SETUP1:
+          name: SETUP
+        OUTTKNEPDIS1:
+          name: OUTTKNEPDIS
+        STSPHSERCVD1:
+          name: STSPHSERCVD
+        BACK2BACKSETUP1:
+          name: BACK2BACKSETUP
+        OUTPKTERR1:
+          name: OUTPKTERR
+        BNAINTR1:
+          name: BNAINTR
+        PKTDRPSTS1:
+          name: PKTDRPSTS
+        BBLEERR1:
+          name: BBLEERR
+        NAKINTRPT1:
+          name: NAKINTRPT
+        NYEPINTRPT1:
+          name: NYEPINTRPT
+        STUPPKTRCVD1:
+          name: STUPPKTRCVD
     DOEPTSIZ[1-6]:
       name: DOEPTSIZ
     DOEPDMA[1-6]:
       name: DOEPDMA
+      _modify:
+        DMAADDR1:
+          name: DMAADDR
     DOEPDMAB[1-6]:
       name: DOEPDMAB
+      _modify:
+        DMABUFFERADDR1:
+          name: DMABUFFERADDR
     _modify:
       DOEPCTL:
         fields:

@@ -1,12 +1,12 @@
 #[doc = "Register `DIEPDMAB` reader"]
 pub type R = crate::R<DIEPDMAB_SPEC>;
-#[doc = "Field `D_DMABUFFERADDR0` reader - "]
-pub type D_DMABUFFERADDR0_R = crate::FieldReader<u32>;
+#[doc = "Field `DMABUFFERADDR` reader - "]
+pub type DMABUFFERADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn d_dmabufferaddr0(&self) -> D_DMABUFFERADDR0_R {
-        D_DMABUFFERADDR0_R::new(self.bits)
+    pub fn dmabufferaddr(&self) -> DMABUFFERADDR_R {
+        DMABUFFERADDR_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPDMAB")
             .field(
-                "d_dmabufferaddr0",
-                &format_args!("{}", self.d_dmabufferaddr0().bits()),
+                "dmabufferaddr",
+                &format_args!("{}", self.dmabufferaddr().bits()),
             )
             .finish()
     }
