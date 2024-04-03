@@ -62,8 +62,10 @@ _cluster:
       _modify:
         D_XFERSIZE0:
           name: XFERSIZE
+          writeConstraint: [0, 0x7f]
         D_PKTCNT0:
           name: PKTCNT
+          writeConstraint: [0, 3]
     DIEPDMA0:
       name: DIEPDMA
       _modify:
@@ -137,6 +139,7 @@ _cluster:
           MPS:
             bitOffset: 0
             bitWidth: 11
+            writeConstraint: [0, 0x7ff]
             access: read-write
           USBACTEP:
             bitOffset: 15
@@ -149,6 +152,7 @@ _cluster:
           EPTYPE:
             bitOffset: 18
             bitWidth: 2
+            writeConstraint: [0, 3]
             access: read-write
           STALL:
             bitOffset: 21
@@ -187,10 +191,12 @@ _cluster:
           XFERSIZE:
             bitOffset: 0
             bitWidth: 19
+            writeConstraint: [0, 0x7ffff]
             access: read-write
           PKTCNT:
             bitOffset: 19
             bitWidth: 10
+            writeConstraint: [0, 0x3ff]
             access: read-write
   OUT_EP0:
     description: "Device OUT endpoint 0"
@@ -253,6 +259,7 @@ _cluster:
       _modify:
         XFERSIZE0:
           name: XFERSIZE
+          writeConstraint: [0, 0x7f]
         PKTCNT0:
           name: PKTCNT
         SUPCNT0:
@@ -321,6 +328,7 @@ _cluster:
             bitOffset: 0
             bitWidth: 11
             access: read-write
+            writeConstraint: [0, 0x7ff]
           USBACTEP:
             bitOffset: 15
             bitWidth: 1
@@ -333,6 +341,7 @@ _cluster:
             bitOffset: 18
             bitWidth: 2
             access: read-write
+            writeConstraint: [0, 3]
           SNP:
             bitOffset: 20
             bitWidth: 1
@@ -371,14 +380,17 @@ _cluster:
             bitOffset: 0
             bitWidth: 19
             access: read-write
+            writeConstraint: [0, 0x7ffff]
           PKTCNT:
             bitOffset: 19
             bitWidth: 10
             access: read-write
+            writeConstraint: [0, 0x3ff]
           SUPCNT:
             bitOffset: 29
             bitWidth: 2
             access: read-write
+            writeConstraint: [0, 3]
 
 _add:
   FIFO%s:
@@ -393,4 +405,5 @@ _add:
       WORD:
         bitOffset: 0
         bitWidth: 32
+        writeConstraint: [0, 0xffffffff]
         access: read-write

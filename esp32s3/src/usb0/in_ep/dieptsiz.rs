@@ -5,11 +5,11 @@ pub type W = crate::W<DIEPTSIZ_SPEC>;
 #[doc = "Field `XFERSIZE` reader - "]
 pub type XFERSIZE_R = crate::FieldReader<u32>;
 #[doc = "Field `XFERSIZE` writer - "]
-pub type XFERSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
+pub type XFERSIZE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 19, u32>;
 #[doc = "Field `PKTCNT` reader - "]
 pub type PKTCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PKTCNT` writer - "]
-pub type PKTCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+pub type PKTCNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:18"]
     #[inline(always)]

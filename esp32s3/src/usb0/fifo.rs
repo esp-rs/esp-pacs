@@ -5,7 +5,7 @@ pub type W = crate::W<FIFO_SPEC>;
 #[doc = "Field `WORD` reader - "]
 pub type WORD_R = crate::FieldReader<u32>;
 #[doc = "Field `WORD` writer - "]
-pub type WORD_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+pub type WORD_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
