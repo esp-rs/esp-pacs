@@ -5,10 +5,36 @@ _cluster:
     description: "Device IN endpoint 0"
     DIEPCTL0:
       name: DIEPCTL
+      _modify:
+        D_MPS0:
+          name: MPS
+        D_USBACTEP0:
+          name: USBACTEP
+        D_NAKSTS0:
+          name: NAKSTS
+        D_EPTYPE0:
+          name: EPTYPE
+        D_STALL0:
+          name: STALL
+        D_TXFNUM0:
+          name: TXFNUM
+        D_CNAK0:
+          name: CNAK
+        DI_SNAK0:
+          name: SNAK
+        D_EPDIS0:
+          name: EPDIS
+        D_EPENA0:
+          name: EPENA
     DIEPINT0:
       name: DIEPINT
     DIEPTSIZ0:
       name: DIEPTSIZ
+      _modify:
+        D_XFERSIZE0:
+          name: XFERSIZE
+        D_PKTCNT0:
+          name: PKTCNT
     DIEPDMA0:
       name: DIEPDMA
     DIEPDMAB0:
@@ -94,10 +120,38 @@ _cluster:
     description: "Device OUT endpoint 0"
     DOEPCTL0:
       name: DOEPCTL
+      _modify:
+        MPS0:
+          name: MPS
+        USBACTEP0:
+          name: USBACTEP
+        NAKSTS0:
+          name: NAKSTS
+        EPTYPE0:
+          name: EPTYPE
+        SNP0:
+          name: SNP
+        STALL0:
+          name: STALL
+        CNAK0:
+          name: CNAK
+        DO_SNAK0:
+          name: SNAK
+        EPDIS0:
+          name: EPDIS
+        EPENA0:
+          name: EPENA
     DOEPINT0:
       name: DOEPINT
     DOEPTSIZ0:
       name: DOEPTSIZ
+      _modify:
+        XFERSIZE0:
+          name: XFERSIZE
+        PKTCNT0:
+          name: PKTCNT
+        SUPCNT0:
+          name: SUPCNT
     DOEPDMA0:
       name: DOEPDMA
     DOEPDMAB0:
