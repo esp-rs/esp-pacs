@@ -44,7 +44,7 @@ impl crate::RegisterSpec for FIFO_SPEC {
 impl crate::Readable for FIFO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fifo::W`](W) writer structure"]
 impl crate::Writable for FIFO_SPEC {
-    type Safety = crate::Unsafe;
+    type Safety = crate::Safe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -388,6 +388,7 @@ _add:
     dimIndex: 0-15
     size: 32
     description: "Read and write data to the USB FIFOs through this register."
+    writeConstraint: [0, 0xffffffff]
     fields:
       WORD:
         bitOffset: 0
