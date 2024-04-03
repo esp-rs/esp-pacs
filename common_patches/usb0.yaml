@@ -1,2 +1,55 @@
 _array:
   DIEPTXF*: {}
+_cluster:
+  IN_EP0:
+    description: "Device IN endpoint 0"
+    DIEPCTL0:
+      name: DIEPCTL
+    DIEPINT0:
+      name: DIEPINT
+    DIEPTSIZ0:
+      name: DIEPTSIZ
+    DIEPDMA0:
+      name: DIEPDMA
+    DIEPDMAB0:
+      name: DIEPDMAB
+    DTXFSTS0:
+      name: DTXFSTS
+  IN_EP%s:
+    description: "Device IN endpoints 1-6"
+    DIEPCTL[1-6]:
+      name: DIEPCTL
+    DIEPINT[1-6]:
+      name: DIEPINT
+    DIEPTSIZ[1-6]:
+      name: DIEPTSIZ
+    DIEPDMA[1-6]:
+      name: DIEPDMA
+    DIEPDMAB[1-6]:
+      name: DIEPDMAB
+    DTXFSTS[1-6]:
+      name: DTXFSTS
+  OUT_EP0:
+    description: "Device OUT endpoint 0"
+    DOEPCTL0:
+      name: DOEPCTL
+    DOEPINT0:
+      name: DOEPINT
+    DOEPTSIZ0:
+      name: DOEPTSIZ
+    DOEPDMA0:
+      name: DOEPDMA
+    DOEPDMAB0:
+      name: DOEPDMAB
+  OUT_EP%s:
+    description: "Device OUT endpoints 1-6"
+    DOEPCTL[1-6]:
+      name: DOEPCTL
+    DOEPINT[1-6]:
+      name: DOEPINT
+    DOEPTSIZ[1-6]:
+      name: DOEPTSIZ
+    DOEPDMA[1-6]:
+      name: DOEPDMA
+    DOEPDMAB[1-6]:
+      name: DOEPDMAB
