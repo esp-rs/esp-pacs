@@ -1,5 +1,14 @@
 _array:
   DIEPTXF*: {}
+
+DCFG:
+  _modify:
+    DEVADDR:
+      writeConstraint: [0, 0x7f]
+    PERFRLINT:
+      writeConstraint: [0, 3]
+
+
 _cluster:
   IN_EP0:
     description: "Device IN endpoint 0"
