@@ -47,23 +47,15 @@ impl IN_EP {
 pub type DIEPCTL = crate::Reg<diepctl::DIEPCTL_SPEC>;
 #[doc = ""]
 pub mod diepctl;
-#[doc = "DIEPINT (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepint`] module"]
-pub type DIEPINT = crate::Reg<diepint::DIEPINT_SPEC>;
-#[doc = ""]
-pub mod diepint;
+pub use crate::usb0::in_ep0::diepint;
+pub use crate::usb0::in_ep0::DIEPINT;
 #[doc = "DIEPTSIZ (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptsiz::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptsiz::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz`] module"]
 pub type DIEPTSIZ = crate::Reg<dieptsiz::DIEPTSIZ_SPEC>;
 #[doc = ""]
 pub mod dieptsiz;
-#[doc = "DIEPDMA (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepdma::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepdma::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepdma`] module"]
-pub type DIEPDMA = crate::Reg<diepdma::DIEPDMA_SPEC>;
-#[doc = ""]
-pub mod diepdma;
-#[doc = "DIEPDMAB (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepdmab::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepdmab`] module"]
-pub type DIEPDMAB = crate::Reg<diepdmab::DIEPDMAB_SPEC>;
-#[doc = ""]
-pub mod diepdmab;
-#[doc = "DTXFSTS (r) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtxfsts::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dtxfsts`] module"]
-pub type DTXFSTS = crate::Reg<dtxfsts::DTXFSTS_SPEC>;
-#[doc = ""]
-pub mod dtxfsts;
+pub use crate::usb0::in_ep0::diepdma;
+pub use crate::usb0::in_ep0::diepdmab;
+pub use crate::usb0::in_ep0::dtxfsts;
+pub use crate::usb0::in_ep0::DIEPDMA;
+pub use crate::usb0::in_ep0::DIEPDMAB;
+pub use crate::usb0::in_ep0::DTXFSTS;

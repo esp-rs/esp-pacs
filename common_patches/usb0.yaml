@@ -87,52 +87,14 @@ _cluster:
       name: DIEPCTL
     DIEPINT[1-6]:
       name: DIEPINT
-      _modify:
-        D_XFERCOMPL1:
-          name: XFERCOMPL
-        D_EPDISBLD1:
-          name: EPDISBLD
-        D_AHBERR1:
-          name: AHBERR
-        D_TIMEOUT1:
-          name: TIMEOUT
-        D_INTKNTXFEMP1:
-          name: INTKNTXFEMP
-        D_INTKNEPMIS1:
-          name: INTKNEPMIS
-        D_INEPNAKEFF1:
-          name: INEPNAKEFF
-        D_TXFEMP1:
-          name: TXFEMP
-        D_TXFIFOUNDRN1:
-          name: TXFIFOUNDRN
-        D_BNAINTR1:
-          name: BNAINTR
-        D_PKTDRPSTS1:
-          name: PKTDRPSTS
-        D_BBLEERR1:
-          name: BBLEERR
-        D_NAKINTRPT1:
-          name: NAKINTRPT
-        D_NYETINTRPT1:
-          name: NYETINTRPT
     DIEPTSIZ[1-6]:
       name: DIEPTSIZ
     DIEPDMA[1-6]:
       name: DIEPDMA
-      _modify:
-        D_DMAADDR1:
-          name: DMAADDR
     DIEPDMAB[1-6]:
       name: DIEPDMAB
-      _modify:
-        D_DMABUFFERADDR1:
-          name: DMABUFFERADDR
     DTXFSTS[1-6]:
       name: DTXFSTS
-      _modify:
-        D_INEPTXFSPCAVAIL1:
-          name: INEPTXFSPCAVAIL
     _modify:
       DIEPCTL:
         fields:
@@ -198,6 +160,11 @@ _cluster:
             bitWidth: 10
             writeConstraint: [0, 0x3ff]
             access: read-write
+    _derive:
+      DIEPINT: USB0.IN_EP0.DIEPINT
+      DTXFSTS: USB0.IN_EP0.DTXFSTS
+      DIEPDMA: USB0.IN_EP0.DIEPDMA
+      DIEPDMAB: USB0.IN_EP0.DIEPDMAB
   OUT_EP0:
     description: "Device OUT endpoint 0"
     DOEPCTL0:
@@ -280,47 +247,12 @@ _cluster:
       name: DOEPCTL
     DOEPINT[1-6]:
       name: DOEPINT
-      _modify:
-        XFERCOMPL1:
-          name: XFERCOMPL
-        EPDISBLD1:
-          name: EPDISBLD
-        AHBERR1:
-          name: AHBERR
-        SETUP1:
-          name: SETUP
-        OUTTKNEPDIS1:
-          name: OUTTKNEPDIS
-        STSPHSERCVD1:
-          name: STSPHSERCVD
-        BACK2BACKSETUP1:
-          name: BACK2BACKSETUP
-        OUTPKTERR1:
-          name: OUTPKTERR
-        BNAINTR1:
-          name: BNAINTR
-        PKTDRPSTS1:
-          name: PKTDRPSTS
-        BBLEERR1:
-          name: BBLEERR
-        NAKINTRPT1:
-          name: NAKINTRPT
-        NYEPINTRPT1:
-          name: NYEPINTRPT
-        STUPPKTRCVD1:
-          name: STUPPKTRCVD
     DOEPTSIZ[1-6]:
       name: DOEPTSIZ
     DOEPDMA[1-6]:
       name: DOEPDMA
-      _modify:
-        DMAADDR1:
-          name: DMAADDR
     DOEPDMAB[1-6]:
       name: DOEPDMAB
-      _modify:
-        DMABUFFERADDR1:
-          name: DMABUFFERADDR
     _modify:
       DOEPCTL:
         fields:
@@ -391,6 +323,10 @@ _cluster:
             bitWidth: 2
             access: read-write
             writeConstraint: [0, 3]
+    _derive:
+      DOEPINT: USB0.OUT_EP0.DOEPINT
+      DOEPDMA: USB0.OUT_EP0.DOEPDMA
+      DOEPDMAB: USB0.OUT_EP0.DOEPDMAB
 
 _add:
   FIFO%s:
