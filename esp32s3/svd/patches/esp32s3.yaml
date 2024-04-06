@@ -241,3 +241,6 @@ MCPWM0:
       _strip: CAP?_
 
   _include: ../../../common_patches/int_strip.yaml
+
+USB0:
+  _include: ../../../common_patches/usb0.yaml

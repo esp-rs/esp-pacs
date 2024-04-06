@@ -47,3 +47,6 @@ SYSTIMER:
     _modify:
       "*":
         modifiedWriteValues: oneToClear
+
+USB0:
+  _include: ../../../common_patches/usb0.yaml
