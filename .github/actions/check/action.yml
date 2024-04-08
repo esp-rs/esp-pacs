@@ -39,7 +39,7 @@ runs:
 
     - name: Build (${{ inputs.package }})
       shell: bash
-      run: cd ${{ inputs.package }} && cargo check
+      run: cd ${{ inputs.package }} && cargo build
 
     # Install the MSRV of the specified toolchain:
 
@@ -64,9 +64,9 @@ runs:
     - name: Check MSRV
       if: startsWith(inputs.target, 'riscv')
       shell: bash
-      run: cd ${{ inputs.package }} && cargo +${{ inputs.msrv }} check
+      run: cd ${{ inputs.package }} && cargo +${{ inputs.msrv }} build
 
     - name: Check MSRV
       if: startsWith(inputs.target, 'xtensa')
       shell: bash
-      run: cd ${{ inputs.package }} && cargo check
+      run: cd ${{ inputs.package }} && cargo build
