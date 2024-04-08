@@ -5,15 +5,15 @@ pub type W = crate::W<DOEPTSIZ_SPEC>;
 #[doc = "Field `XFERSIZE` reader - "]
 pub type XFERSIZE_R = crate::FieldReader<u32>;
 #[doc = "Field `XFERSIZE` writer - "]
-pub type XFERSIZE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 19, u32>;
+pub type XFERSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32, crate::Safe>;
 #[doc = "Field `PKTCNT` reader - "]
 pub type PKTCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PKTCNT` writer - "]
-pub type PKTCNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 10, u16>;
+pub type PKTCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16, crate::Safe>;
 #[doc = "Field `SUPCNT` reader - "]
 pub type SUPCNT_R = crate::FieldReader;
 #[doc = "Field `SUPCNT` writer - "]
-pub type SUPCNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type SUPCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 impl R {
     #[doc = "Bits 0:18"]
     #[inline(always)]

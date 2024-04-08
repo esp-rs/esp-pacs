@@ -10,10 +10,12 @@ use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{
-    config::{IdentFormats, IdentFormatsTheme}, util::IdentFormat, Config, Target
+    config::{IdentFormats, IdentFormatsTheme},
+    util::IdentFormat,
+    Config, Target,
 };
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
-use toml_edit::Document;
+use toml_edit::DocumentMut;
 
 #[derive(Debug, Clone, Display, EnumIter, ValueEnum)]
 #[strum(serialize_all = "kebab-case")]
@@ -222,7 +224,10 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         _ => IdentFormats::default_theme(),
     };
     ident_formats.insert("enum_name".into(), IdentFormat::default().constant_case());
-    ident_formats.insert("enum_read_name".into(), IdentFormat::default().constant_case());
+    ident_formats.insert(
+        "enum_read_name".into(),
+        IdentFormat::default().constant_case(),
+    );
     ident_formats.insert("enum_value".into(), IdentFormat::default().pascal_case());
     ident_formats.extend(config.ident_formats.drain());
     config.ident_formats = ident_formats;
@@ -285,7 +290,7 @@ fn bump_version(workspace: &Path, chip: &Chip, amount: Version) -> Result<()> {
 
     let manifest_path = path.join("Cargo.toml");
     let manifest = fs::read_to_string(&manifest_path)?;
-    let mut manifest = manifest.parse::<Document>()?;
+    let mut manifest = manifest.parse::<DocumentMut>()?;
 
     let version = manifest["package"]["version"]
         .to_string()
@@ -352,7 +357,7 @@ fn release_channel(path: &Path) -> Result<String> {
 
 fn extract_toml_value(path: &Path, keys: &[&str]) -> Result<String> {
     let contents = fs::read_to_string(path)?;
-    let document = contents.parse::<Document>()?;
+    let document = contents.parse::<DocumentMut>()?;
 
     let mut item = document.as_item();
     for key in keys {

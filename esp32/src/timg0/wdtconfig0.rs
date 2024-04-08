@@ -37,6 +37,7 @@ impl From<WDT_SYS_RESET_LENGTH> for u8 {
 impl crate::FieldSpec for WDT_SYS_RESET_LENGTH {
     type Ux = u8;
 }
+impl crate::IsEnum for WDT_SYS_RESET_LENGTH {}
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<WDT_SYS_RESET_LENGTH>;
 impl WDT_SYS_RESET_LENGTH_R {
@@ -97,7 +98,8 @@ impl WDT_SYS_RESET_LENGTH_R {
     }
 }
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_SYS_RESET_LENGTH_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, WDT_SYS_RESET_LENGTH>;
+pub type WDT_SYS_RESET_LENGTH_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 3, WDT_SYS_RESET_LENGTH, crate::Safe>;
 impl<'a, REG> WDT_SYS_RESET_LENGTH_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -175,6 +177,7 @@ impl From<WDT_CPU_RESET_LENGTH> for u8 {
 impl crate::FieldSpec for WDT_CPU_RESET_LENGTH {
     type Ux = u8;
 }
+impl crate::IsEnum for WDT_CPU_RESET_LENGTH {}
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<WDT_CPU_RESET_LENGTH>;
 impl WDT_CPU_RESET_LENGTH_R {
@@ -235,7 +238,8 @@ impl WDT_CPU_RESET_LENGTH_R {
     }
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_CPU_RESET_LENGTH_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, WDT_CPU_RESET_LENGTH>;
+pub type WDT_CPU_RESET_LENGTH_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 3, WDT_CPU_RESET_LENGTH, crate::Safe>;
 impl<'a, REG> WDT_CPU_RESET_LENGTH_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -313,6 +317,7 @@ impl From<WDT_STG3> for u8 {
 impl crate::FieldSpec for WDT_STG3 {
     type Ux = u8;
 }
+impl crate::IsEnum for WDT_STG3 {}
 #[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
 pub type WDT_STG3_R = crate::FieldReader<WDT_STG3>;
 impl WDT_STG3_R {
@@ -349,7 +354,7 @@ impl WDT_STG3_R {
     }
 }
 #[doc = "Field `WDT_STG3` writer - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
-pub type WDT_STG3_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, WDT_STG3>;
+pub type WDT_STG3_W<'a, REG> = crate::FieldWriter<'a, REG, 2, WDT_STG3, crate::Safe>;
 impl<'a, REG> WDT_STG3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
