@@ -1,6 +1,6 @@
 [package]
 name = "esp32p4"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.76"
 description = "Peripheral access crate for the ESP32-P4"
