@@ -53,7 +53,13 @@ TIMG0:
 
 SYSTIMER:
   INT_RAW:
-    _strip_end: _INT_RAW
+    _modify:
+      INT0_RAW:
+        name: TARGET0
+      INT1_RAW:
+        name: TARGET1
+      INT2_RAW:
+        name: TARGET2
   INT_ENA:
     _strip_end: _INT_ENA
   INT_CLR:
