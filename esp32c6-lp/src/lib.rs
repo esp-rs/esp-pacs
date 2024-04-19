@@ -622,29 +622,29 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "LP_I2C0"]
-    pub LP_I2C0: LP_I2C0,
+    pub lp_i2c0: LP_I2C0,
     #[doc = "LP_PERI"]
-    pub LP_PERI: LP_PERI,
+    pub lp_peri: LP_PERI,
     #[doc = "LP_ANA"]
-    pub LP_ANA: LP_ANA,
+    pub lp_ana: LP_ANA,
     #[doc = "LP_AON"]
-    pub LP_AON: LP_AON,
+    pub lp_aon: LP_AON,
     #[doc = "LP_APM"]
-    pub LP_APM: LP_APM,
+    pub lp_apm: LP_APM,
     #[doc = "LP_CLKRST"]
-    pub LP_CLKRST: LP_CLKRST,
+    pub lp_clkrst: LP_CLKRST,
     #[doc = "LP_I2C_ANA_MST"]
-    pub LP_I2C_ANA_MST: LP_I2C_ANA_MST,
+    pub lp_i2c_ana_mst: LP_I2C_ANA_MST,
     #[doc = "LP_IO"]
-    pub LP_IO: LP_IO,
+    pub lp_io: LP_IO,
     #[doc = "LP_TEE"]
-    pub LP_TEE: LP_TEE,
+    pub lp_tee: LP_TEE,
     #[doc = "LP_TIMER"]
-    pub LP_TIMER: LP_TIMER,
+    pub lp_timer: LP_TIMER,
     #[doc = "LP_UART"]
-    pub LP_UART: LP_UART,
+    pub lp_uart: LP_UART,
     #[doc = "LP_WDT"]
-    pub LP_WDT: LP_WDT,
+    pub lp_wdt: LP_WDT,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -667,40 +667,40 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            LP_I2C0: LP_I2C0 {
+            lp_i2c0: LP_I2C0 {
                 _marker: PhantomData,
             },
-            LP_PERI: LP_PERI {
+            lp_peri: LP_PERI {
                 _marker: PhantomData,
             },
-            LP_ANA: LP_ANA {
+            lp_ana: LP_ANA {
                 _marker: PhantomData,
             },
-            LP_AON: LP_AON {
+            lp_aon: LP_AON {
                 _marker: PhantomData,
             },
-            LP_APM: LP_APM {
+            lp_apm: LP_APM {
                 _marker: PhantomData,
             },
-            LP_CLKRST: LP_CLKRST {
+            lp_clkrst: LP_CLKRST {
                 _marker: PhantomData,
             },
-            LP_I2C_ANA_MST: LP_I2C_ANA_MST {
+            lp_i2c_ana_mst: LP_I2C_ANA_MST {
                 _marker: PhantomData,
             },
-            LP_IO: LP_IO {
+            lp_io: LP_IO {
                 _marker: PhantomData,
             },
-            LP_TEE: LP_TEE {
+            lp_tee: LP_TEE {
                 _marker: PhantomData,
             },
-            LP_TIMER: LP_TIMER {
+            lp_timer: LP_TIMER {
                 _marker: PhantomData,
             },
-            LP_UART: LP_UART {
+            lp_uart: LP_UART {
                 _marker: PhantomData,
             },
-            LP_WDT: LP_WDT {
+            lp_wdt: LP_WDT {
                 _marker: PhantomData,
             },
         }

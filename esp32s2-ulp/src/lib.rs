@@ -251,13 +251,13 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "RTC_IO"]
-    pub RTC_IO: RTC_IO,
+    pub rtc_io: RTC_IO,
     #[doc = "RTC_CNTL"]
-    pub RTC_CNTL: RTC_CNTL,
+    pub rtc_cntl: RTC_CNTL,
     #[doc = "RTC_I2C"]
-    pub RTC_I2C: RTC_I2C,
+    pub rtc_i2c: RTC_I2C,
     #[doc = "SENS"]
-    pub SENS: SENS,
+    pub sens: SENS,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -280,16 +280,16 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            RTC_IO: RTC_IO {
+            rtc_io: RTC_IO {
                 _marker: PhantomData,
             },
-            RTC_CNTL: RTC_CNTL {
+            rtc_cntl: RTC_CNTL {
                 _marker: PhantomData,
             },
-            RTC_I2C: RTC_I2C {
+            rtc_i2c: RTC_I2C {
                 _marker: PhantomData,
             },
-            SENS: SENS {
+            sens: SENS {
                 _marker: PhantomData,
             },
         }

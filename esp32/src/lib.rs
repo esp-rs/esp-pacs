@@ -2554,97 +2554,97 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "AES"]
-    pub AES: AES,
+    pub aes: AES,
     #[doc = "APB_CTRL"]
-    pub APB_CTRL: APB_CTRL,
+    pub apb_ctrl: APB_CTRL,
     #[doc = "BB"]
-    pub BB: BB,
+    pub bb: BB,
     #[doc = "DPORT"]
-    pub DPORT: DPORT,
+    pub dport: DPORT,
     #[doc = "EFUSE"]
-    pub EFUSE: EFUSE,
+    pub efuse: EFUSE,
     #[doc = "EMAC_DMA"]
-    pub EMAC_DMA: EMAC_DMA,
+    pub emac_dma: EMAC_DMA,
     #[doc = "EMAC_EXT"]
-    pub EMAC_EXT: EMAC_EXT,
+    pub emac_ext: EMAC_EXT,
     #[doc = "EMAC_MAC"]
-    pub EMAC_MAC: EMAC_MAC,
+    pub emac_mac: EMAC_MAC,
     #[doc = "FLASH_ENCRYPTION"]
-    pub FLASH_ENCRYPTION: FLASH_ENCRYPTION,
+    pub flash_encryption: FLASH_ENCRYPTION,
     #[doc = "FRC_TIMER"]
-    pub FRC_TIMER: FRC_TIMER,
+    pub frc_timer: FRC_TIMER,
     #[doc = "GPIO"]
-    pub GPIO: GPIO,
+    pub gpio: GPIO,
     #[doc = "GPIO_SD"]
-    pub GPIO_SD: GPIO_SD,
+    pub gpio_sd: GPIO_SD,
     #[doc = "HINF"]
-    pub HINF: HINF,
+    pub hinf: HINF,
     #[doc = "I2C0"]
-    pub I2C0: I2C0,
+    pub i2c0: I2C0,
     #[doc = "I2C1"]
-    pub I2C1: I2C1,
+    pub i2c1: I2C1,
     #[doc = "I2S0"]
-    pub I2S0: I2S0,
+    pub i2s0: I2S0,
     #[doc = "I2S1"]
-    pub I2S1: I2S1,
+    pub i2s1: I2S1,
     #[doc = "IO_MUX"]
-    pub IO_MUX: IO_MUX,
+    pub io_mux: IO_MUX,
     #[doc = "LEDC"]
-    pub LEDC: LEDC,
+    pub ledc: LEDC,
     #[doc = "MCPWM0"]
-    pub MCPWM0: MCPWM0,
+    pub mcpwm0: MCPWM0,
     #[doc = "MCPWM1"]
-    pub MCPWM1: MCPWM1,
+    pub mcpwm1: MCPWM1,
     #[doc = "NRX"]
-    pub NRX: NRX,
+    pub nrx: NRX,
     #[doc = "PCNT"]
-    pub PCNT: PCNT,
+    pub pcnt: PCNT,
     #[doc = "RMT"]
-    pub RMT: RMT,
+    pub rmt: RMT,
     #[doc = "RNG"]
-    pub RNG: RNG,
+    pub rng: RNG,
     #[doc = "RSA"]
-    pub RSA: RSA,
+    pub rsa: RSA,
     #[doc = "RTC_CNTL"]
-    pub RTC_CNTL: RTC_CNTL,
+    pub rtc_cntl: RTC_CNTL,
     #[doc = "RTC_IO"]
-    pub RTC_IO: RTC_IO,
+    pub rtc_io: RTC_IO,
     #[doc = "RTC_I2C"]
-    pub RTC_I2C: RTC_I2C,
+    pub rtc_i2c: RTC_I2C,
     #[doc = "SDHOST"]
-    pub SDHOST: SDHOST,
+    pub sdhost: SDHOST,
     #[doc = "SENS"]
-    pub SENS: SENS,
+    pub sens: SENS,
     #[doc = "SHA"]
-    pub SHA: SHA,
+    pub sha: SHA,
     #[doc = "SLC"]
-    pub SLC: SLC,
+    pub slc: SLC,
     #[doc = "SLCHOST"]
-    pub SLCHOST: SLCHOST,
+    pub slchost: SLCHOST,
     #[doc = "SPI0"]
-    pub SPI0: SPI0,
+    pub spi0: SPI0,
     #[doc = "SPI1"]
-    pub SPI1: SPI1,
+    pub spi1: SPI1,
     #[doc = "SPI2"]
-    pub SPI2: SPI2,
+    pub spi2: SPI2,
     #[doc = "SPI3"]
-    pub SPI3: SPI3,
+    pub spi3: SPI3,
     #[doc = "TIMG0"]
-    pub TIMG0: TIMG0,
+    pub timg0: TIMG0,
     #[doc = "TIMG1"]
-    pub TIMG1: TIMG1,
+    pub timg1: TIMG1,
     #[doc = "TWAI0"]
-    pub TWAI0: TWAI0,
+    pub twai0: TWAI0,
     #[doc = "UART0"]
-    pub UART0: UART0,
+    pub uart0: UART0,
     #[doc = "UART1"]
-    pub UART1: UART1,
+    pub uart1: UART1,
     #[doc = "UART2"]
-    pub UART2: UART2,
+    pub uart2: UART2,
     #[doc = "UHCI0"]
-    pub UHCI0: UHCI0,
+    pub uhci0: UHCI0,
     #[doc = "UHCI1"]
-    pub UHCI1: UHCI1,
+    pub uhci1: UHCI1,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -2667,142 +2667,142 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            AES: AES {
+            aes: AES {
                 _marker: PhantomData,
             },
-            APB_CTRL: APB_CTRL {
+            apb_ctrl: APB_CTRL {
                 _marker: PhantomData,
             },
-            BB: BB {
+            bb: BB {
                 _marker: PhantomData,
             },
-            DPORT: DPORT {
+            dport: DPORT {
                 _marker: PhantomData,
             },
-            EFUSE: EFUSE {
+            efuse: EFUSE {
                 _marker: PhantomData,
             },
-            EMAC_DMA: EMAC_DMA {
+            emac_dma: EMAC_DMA {
                 _marker: PhantomData,
             },
-            EMAC_EXT: EMAC_EXT {
+            emac_ext: EMAC_EXT {
                 _marker: PhantomData,
             },
-            EMAC_MAC: EMAC_MAC {
+            emac_mac: EMAC_MAC {
                 _marker: PhantomData,
             },
-            FLASH_ENCRYPTION: FLASH_ENCRYPTION {
+            flash_encryption: FLASH_ENCRYPTION {
                 _marker: PhantomData,
             },
-            FRC_TIMER: FRC_TIMER {
+            frc_timer: FRC_TIMER {
                 _marker: PhantomData,
             },
-            GPIO: GPIO {
+            gpio: GPIO {
                 _marker: PhantomData,
             },
-            GPIO_SD: GPIO_SD {
+            gpio_sd: GPIO_SD {
                 _marker: PhantomData,
             },
-            HINF: HINF {
+            hinf: HINF {
                 _marker: PhantomData,
             },
-            I2C0: I2C0 {
+            i2c0: I2C0 {
                 _marker: PhantomData,
             },
-            I2C1: I2C1 {
+            i2c1: I2C1 {
                 _marker: PhantomData,
             },
-            I2S0: I2S0 {
+            i2s0: I2S0 {
                 _marker: PhantomData,
             },
-            I2S1: I2S1 {
+            i2s1: I2S1 {
                 _marker: PhantomData,
             },
-            IO_MUX: IO_MUX {
+            io_mux: IO_MUX {
                 _marker: PhantomData,
             },
-            LEDC: LEDC {
+            ledc: LEDC {
                 _marker: PhantomData,
             },
-            MCPWM0: MCPWM0 {
+            mcpwm0: MCPWM0 {
                 _marker: PhantomData,
             },
-            MCPWM1: MCPWM1 {
+            mcpwm1: MCPWM1 {
                 _marker: PhantomData,
             },
-            NRX: NRX {
+            nrx: NRX {
                 _marker: PhantomData,
             },
-            PCNT: PCNT {
+            pcnt: PCNT {
                 _marker: PhantomData,
             },
-            RMT: RMT {
+            rmt: RMT {
                 _marker: PhantomData,
             },
-            RNG: RNG {
+            rng: RNG {
                 _marker: PhantomData,
             },
-            RSA: RSA {
+            rsa: RSA {
                 _marker: PhantomData,
             },
-            RTC_CNTL: RTC_CNTL {
+            rtc_cntl: RTC_CNTL {
                 _marker: PhantomData,
             },
-            RTC_IO: RTC_IO {
+            rtc_io: RTC_IO {
                 _marker: PhantomData,
             },
-            RTC_I2C: RTC_I2C {
+            rtc_i2c: RTC_I2C {
                 _marker: PhantomData,
             },
-            SDHOST: SDHOST {
+            sdhost: SDHOST {
                 _marker: PhantomData,
             },
-            SENS: SENS {
+            sens: SENS {
                 _marker: PhantomData,
             },
-            SHA: SHA {
+            sha: SHA {
                 _marker: PhantomData,
             },
-            SLC: SLC {
+            slc: SLC {
                 _marker: PhantomData,
             },
-            SLCHOST: SLCHOST {
+            slchost: SLCHOST {
                 _marker: PhantomData,
             },
-            SPI0: SPI0 {
+            spi0: SPI0 {
                 _marker: PhantomData,
             },
-            SPI1: SPI1 {
+            spi1: SPI1 {
                 _marker: PhantomData,
             },
-            SPI2: SPI2 {
+            spi2: SPI2 {
                 _marker: PhantomData,
             },
-            SPI3: SPI3 {
+            spi3: SPI3 {
                 _marker: PhantomData,
             },
-            TIMG0: TIMG0 {
+            timg0: TIMG0 {
                 _marker: PhantomData,
             },
-            TIMG1: TIMG1 {
+            timg1: TIMG1 {
                 _marker: PhantomData,
             },
-            TWAI0: TWAI0 {
+            twai0: TWAI0 {
                 _marker: PhantomData,
             },
-            UART0: UART0 {
+            uart0: UART0 {
                 _marker: PhantomData,
             },
-            UART1: UART1 {
+            uart1: UART1 {
                 _marker: PhantomData,
             },
-            UART2: UART2 {
+            uart2: UART2 {
                 _marker: PhantomData,
             },
-            UHCI0: UHCI0 {
+            uhci0: UHCI0 {
                 _marker: PhantomData,
             },
-            UHCI1: UHCI1 {
+            uhci1: UHCI1 {
                 _marker: PhantomData,
             },
         }

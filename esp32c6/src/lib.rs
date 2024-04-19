@@ -3207,133 +3207,133 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "AES"]
-    pub AES: AES,
+    pub aes: AES,
     #[doc = "APB_SARADC"]
-    pub APB_SARADC: APB_SARADC,
+    pub apb_saradc: APB_SARADC,
     #[doc = "ASSIST_DEBUG"]
-    pub ASSIST_DEBUG: ASSIST_DEBUG,
+    pub assist_debug: ASSIST_DEBUG,
     #[doc = "ATOMIC"]
-    pub ATOMIC: ATOMIC,
+    pub atomic: ATOMIC,
     #[doc = "DMA"]
-    pub DMA: DMA,
+    pub dma: DMA,
     #[doc = "DS"]
-    pub DS: DS,
+    pub ds: DS,
     #[doc = "ECC"]
-    pub ECC: ECC,
+    pub ecc: ECC,
     #[doc = "EFUSE"]
-    pub EFUSE: EFUSE,
+    pub efuse: EFUSE,
     #[doc = "EXTMEM"]
-    pub EXTMEM: EXTMEM,
+    pub extmem: EXTMEM,
     #[doc = "GPIO"]
-    pub GPIO: GPIO,
+    pub gpio: GPIO,
     #[doc = "GPIO_SD"]
-    pub GPIO_SD: GPIO_SD,
+    pub gpio_sd: GPIO_SD,
     #[doc = "HINF"]
-    pub HINF: HINF,
+    pub hinf: HINF,
     #[doc = "HMAC"]
-    pub HMAC: HMAC,
+    pub hmac: HMAC,
     #[doc = "HP_APM"]
-    pub HP_APM: HP_APM,
+    pub hp_apm: HP_APM,
     #[doc = "HP_SYS"]
-    pub HP_SYS: HP_SYS,
+    pub hp_sys: HP_SYS,
     #[doc = "I2C0"]
-    pub I2C0: I2C0,
+    pub i2c0: I2C0,
     #[doc = "I2S0"]
-    pub I2S0: I2S0,
+    pub i2s0: I2S0,
     #[doc = "INTERRUPT_CORE0"]
-    pub INTERRUPT_CORE0: INTERRUPT_CORE0,
+    pub interrupt_core0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
-    pub INTPRI: INTPRI,
+    pub intpri: INTPRI,
     #[doc = "IO_MUX"]
-    pub IO_MUX: IO_MUX,
+    pub io_mux: IO_MUX,
     #[doc = "LEDC"]
-    pub LEDC: LEDC,
+    pub ledc: LEDC,
     #[doc = "LP_PERI"]
-    pub LP_PERI: LP_PERI,
+    pub lp_peri: LP_PERI,
     #[doc = "LP_ANA"]
-    pub LP_ANA: LP_ANA,
+    pub lp_ana: LP_ANA,
     #[doc = "LP_AON"]
-    pub LP_AON: LP_AON,
+    pub lp_aon: LP_AON,
     #[doc = "LP_APM"]
-    pub LP_APM: LP_APM,
+    pub lp_apm: LP_APM,
     #[doc = "LP_APM0"]
-    pub LP_APM0: LP_APM0,
+    pub lp_apm0: LP_APM0,
     #[doc = "LP_CLKRST"]
-    pub LP_CLKRST: LP_CLKRST,
+    pub lp_clkrst: LP_CLKRST,
     #[doc = "LP_I2C0"]
-    pub LP_I2C0: LP_I2C0,
+    pub lp_i2c0: LP_I2C0,
     #[doc = "LP_I2C_ANA_MST"]
-    pub LP_I2C_ANA_MST: LP_I2C_ANA_MST,
+    pub lp_i2c_ana_mst: LP_I2C_ANA_MST,
     #[doc = "LP_IO"]
-    pub LP_IO: LP_IO,
+    pub lp_io: LP_IO,
     #[doc = "LP_TEE"]
-    pub LP_TEE: LP_TEE,
+    pub lp_tee: LP_TEE,
     #[doc = "LP_TIMER"]
-    pub LP_TIMER: LP_TIMER,
+    pub lp_timer: LP_TIMER,
     #[doc = "LP_UART"]
-    pub LP_UART: LP_UART,
+    pub lp_uart: LP_UART,
     #[doc = "LP_WDT"]
-    pub LP_WDT: LP_WDT,
+    pub lp_wdt: LP_WDT,
     #[doc = "MCPWM0"]
-    pub MCPWM0: MCPWM0,
+    pub mcpwm0: MCPWM0,
     #[doc = "MEM_MONITOR"]
-    pub MEM_MONITOR: MEM_MONITOR,
+    pub mem_monitor: MEM_MONITOR,
     #[doc = "MODEM_LPCON"]
-    pub MODEM_LPCON: MODEM_LPCON,
+    pub modem_lpcon: MODEM_LPCON,
     #[doc = "MODEM_SYSCON"]
-    pub MODEM_SYSCON: MODEM_SYSCON,
+    pub modem_syscon: MODEM_SYSCON,
     #[doc = "OTP_DEBUG"]
-    pub OTP_DEBUG: OTP_DEBUG,
+    pub otp_debug: OTP_DEBUG,
     #[doc = "PARL_IO"]
-    pub PARL_IO: PARL_IO,
+    pub parl_io: PARL_IO,
     #[doc = "PAU"]
-    pub PAU: PAU,
+    pub pau: PAU,
     #[doc = "PCNT"]
-    pub PCNT: PCNT,
+    pub pcnt: PCNT,
     #[doc = "PCR"]
-    pub PCR: PCR,
+    pub pcr: PCR,
     #[doc = "PMU"]
-    pub PMU: PMU,
+    pub pmu: PMU,
     #[doc = "RMT"]
-    pub RMT: RMT,
+    pub rmt: RMT,
     #[doc = "RNG"]
-    pub RNG: RNG,
+    pub rng: RNG,
     #[doc = "RSA"]
-    pub RSA: RSA,
+    pub rsa: RSA,
     #[doc = "SHA"]
-    pub SHA: SHA,
+    pub sha: SHA,
     #[doc = "SLCHOST"]
-    pub SLCHOST: SLCHOST,
+    pub slchost: SLCHOST,
     #[doc = "SOC_ETM"]
-    pub SOC_ETM: SOC_ETM,
+    pub soc_etm: SOC_ETM,
     #[doc = "SPI0"]
-    pub SPI0: SPI0,
+    pub spi0: SPI0,
     #[doc = "SPI1"]
-    pub SPI1: SPI1,
+    pub spi1: SPI1,
     #[doc = "SPI2"]
-    pub SPI2: SPI2,
+    pub spi2: SPI2,
     #[doc = "SYSTIMER"]
-    pub SYSTIMER: SYSTIMER,
+    pub systimer: SYSTIMER,
     #[doc = "TEE"]
-    pub TEE: TEE,
+    pub tee: TEE,
     #[doc = "TIMG0"]
-    pub TIMG0: TIMG0,
+    pub timg0: TIMG0,
     #[doc = "TIMG1"]
-    pub TIMG1: TIMG1,
+    pub timg1: TIMG1,
     #[doc = "TRACE"]
-    pub TRACE: TRACE,
+    pub trace: TRACE,
     #[doc = "TWAI0"]
-    pub TWAI0: TWAI0,
+    pub twai0: TWAI0,
     #[doc = "TWAI1"]
-    pub TWAI1: TWAI1,
+    pub twai1: TWAI1,
     #[doc = "UART0"]
-    pub UART0: UART0,
+    pub uart0: UART0,
     #[doc = "UART1"]
-    pub UART1: UART1,
+    pub uart1: UART1,
     #[doc = "UHCI0"]
-    pub UHCI0: UHCI0,
+    pub uhci0: UHCI0,
     #[doc = "USB_DEVICE"]
-    pub USB_DEVICE: USB_DEVICE,
+    pub usb_device: USB_DEVICE,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -3356,196 +3356,196 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            AES: AES {
+            aes: AES {
                 _marker: PhantomData,
             },
-            APB_SARADC: APB_SARADC {
+            apb_saradc: APB_SARADC {
                 _marker: PhantomData,
             },
-            ASSIST_DEBUG: ASSIST_DEBUG {
+            assist_debug: ASSIST_DEBUG {
                 _marker: PhantomData,
             },
-            ATOMIC: ATOMIC {
+            atomic: ATOMIC {
                 _marker: PhantomData,
             },
-            DMA: DMA {
+            dma: DMA {
                 _marker: PhantomData,
             },
-            DS: DS {
+            ds: DS {
                 _marker: PhantomData,
             },
-            ECC: ECC {
+            ecc: ECC {
                 _marker: PhantomData,
             },
-            EFUSE: EFUSE {
+            efuse: EFUSE {
                 _marker: PhantomData,
             },
-            EXTMEM: EXTMEM {
+            extmem: EXTMEM {
                 _marker: PhantomData,
             },
-            GPIO: GPIO {
+            gpio: GPIO {
                 _marker: PhantomData,
             },
-            GPIO_SD: GPIO_SD {
+            gpio_sd: GPIO_SD {
                 _marker: PhantomData,
             },
-            HINF: HINF {
+            hinf: HINF {
                 _marker: PhantomData,
             },
-            HMAC: HMAC {
+            hmac: HMAC {
                 _marker: PhantomData,
             },
-            HP_APM: HP_APM {
+            hp_apm: HP_APM {
                 _marker: PhantomData,
             },
-            HP_SYS: HP_SYS {
+            hp_sys: HP_SYS {
                 _marker: PhantomData,
             },
-            I2C0: I2C0 {
+            i2c0: I2C0 {
                 _marker: PhantomData,
             },
-            I2S0: I2S0 {
+            i2s0: I2S0 {
                 _marker: PhantomData,
             },
-            INTERRUPT_CORE0: INTERRUPT_CORE0 {
+            interrupt_core0: INTERRUPT_CORE0 {
                 _marker: PhantomData,
             },
-            INTPRI: INTPRI {
+            intpri: INTPRI {
                 _marker: PhantomData,
             },
-            IO_MUX: IO_MUX {
+            io_mux: IO_MUX {
                 _marker: PhantomData,
             },
-            LEDC: LEDC {
+            ledc: LEDC {
                 _marker: PhantomData,
             },
-            LP_PERI: LP_PERI {
+            lp_peri: LP_PERI {
                 _marker: PhantomData,
             },
-            LP_ANA: LP_ANA {
+            lp_ana: LP_ANA {
                 _marker: PhantomData,
             },
-            LP_AON: LP_AON {
+            lp_aon: LP_AON {
                 _marker: PhantomData,
             },
-            LP_APM: LP_APM {
+            lp_apm: LP_APM {
                 _marker: PhantomData,
             },
-            LP_APM0: LP_APM0 {
+            lp_apm0: LP_APM0 {
                 _marker: PhantomData,
             },
-            LP_CLKRST: LP_CLKRST {
+            lp_clkrst: LP_CLKRST {
                 _marker: PhantomData,
             },
-            LP_I2C0: LP_I2C0 {
+            lp_i2c0: LP_I2C0 {
                 _marker: PhantomData,
             },
-            LP_I2C_ANA_MST: LP_I2C_ANA_MST {
+            lp_i2c_ana_mst: LP_I2C_ANA_MST {
                 _marker: PhantomData,
             },
-            LP_IO: LP_IO {
+            lp_io: LP_IO {
                 _marker: PhantomData,
             },
-            LP_TEE: LP_TEE {
+            lp_tee: LP_TEE {
                 _marker: PhantomData,
             },
-            LP_TIMER: LP_TIMER {
+            lp_timer: LP_TIMER {
                 _marker: PhantomData,
             },
-            LP_UART: LP_UART {
+            lp_uart: LP_UART {
                 _marker: PhantomData,
             },
-            LP_WDT: LP_WDT {
+            lp_wdt: LP_WDT {
                 _marker: PhantomData,
             },
-            MCPWM0: MCPWM0 {
+            mcpwm0: MCPWM0 {
                 _marker: PhantomData,
             },
-            MEM_MONITOR: MEM_MONITOR {
+            mem_monitor: MEM_MONITOR {
                 _marker: PhantomData,
             },
-            MODEM_LPCON: MODEM_LPCON {
+            modem_lpcon: MODEM_LPCON {
                 _marker: PhantomData,
             },
-            MODEM_SYSCON: MODEM_SYSCON {
+            modem_syscon: MODEM_SYSCON {
                 _marker: PhantomData,
             },
-            OTP_DEBUG: OTP_DEBUG {
+            otp_debug: OTP_DEBUG {
                 _marker: PhantomData,
             },
-            PARL_IO: PARL_IO {
+            parl_io: PARL_IO {
                 _marker: PhantomData,
             },
-            PAU: PAU {
+            pau: PAU {
                 _marker: PhantomData,
             },
-            PCNT: PCNT {
+            pcnt: PCNT {
                 _marker: PhantomData,
             },
-            PCR: PCR {
+            pcr: PCR {
                 _marker: PhantomData,
             },
-            PMU: PMU {
+            pmu: PMU {
                 _marker: PhantomData,
             },
-            RMT: RMT {
+            rmt: RMT {
                 _marker: PhantomData,
             },
-            RNG: RNG {
+            rng: RNG {
                 _marker: PhantomData,
             },
-            RSA: RSA {
+            rsa: RSA {
                 _marker: PhantomData,
             },
-            SHA: SHA {
+            sha: SHA {
                 _marker: PhantomData,
             },
-            SLCHOST: SLCHOST {
+            slchost: SLCHOST {
                 _marker: PhantomData,
             },
-            SOC_ETM: SOC_ETM {
+            soc_etm: SOC_ETM {
                 _marker: PhantomData,
             },
-            SPI0: SPI0 {
+            spi0: SPI0 {
                 _marker: PhantomData,
             },
-            SPI1: SPI1 {
+            spi1: SPI1 {
                 _marker: PhantomData,
             },
-            SPI2: SPI2 {
+            spi2: SPI2 {
                 _marker: PhantomData,
             },
-            SYSTIMER: SYSTIMER {
+            systimer: SYSTIMER {
                 _marker: PhantomData,
             },
-            TEE: TEE {
+            tee: TEE {
                 _marker: PhantomData,
             },
-            TIMG0: TIMG0 {
+            timg0: TIMG0 {
                 _marker: PhantomData,
             },
-            TIMG1: TIMG1 {
+            timg1: TIMG1 {
                 _marker: PhantomData,
             },
-            TRACE: TRACE {
+            trace: TRACE {
                 _marker: PhantomData,
             },
-            TWAI0: TWAI0 {
+            twai0: TWAI0 {
                 _marker: PhantomData,
             },
-            TWAI1: TWAI1 {
+            twai1: TWAI1 {
                 _marker: PhantomData,
             },
-            UART0: UART0 {
+            uart0: UART0 {
                 _marker: PhantomData,
             },
-            UART1: UART1 {
+            uart1: UART1 {
                 _marker: PhantomData,
             },
-            UHCI0: UHCI0 {
+            uhci0: UHCI0 {
                 _marker: PhantomData,
             },
-            USB_DEVICE: USB_DEVICE {
+            usb_device: USB_DEVICE {
                 _marker: PhantomData,
             },
         }

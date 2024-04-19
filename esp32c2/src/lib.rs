@@ -1395,59 +1395,59 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[allow(non_snake_case)]
 pub struct Peripherals {
     #[doc = "APB_CTRL"]
-    pub APB_CTRL: APB_CTRL,
+    pub apb_ctrl: APB_CTRL,
     #[doc = "APB_SARADC"]
-    pub APB_SARADC: APB_SARADC,
+    pub apb_saradc: APB_SARADC,
     #[doc = "ASSIST_DEBUG"]
-    pub ASSIST_DEBUG: ASSIST_DEBUG,
+    pub assist_debug: ASSIST_DEBUG,
     #[doc = "BB"]
-    pub BB: BB,
+    pub bb: BB,
     #[doc = "DMA"]
-    pub DMA: DMA,
+    pub dma: DMA,
     #[doc = "ECC"]
-    pub ECC: ECC,
+    pub ecc: ECC,
     #[doc = "EFUSE"]
-    pub EFUSE: EFUSE,
+    pub efuse: EFUSE,
     #[doc = "EXTMEM"]
-    pub EXTMEM: EXTMEM,
+    pub extmem: EXTMEM,
     #[doc = "GPIO"]
-    pub GPIO: GPIO,
+    pub gpio: GPIO,
     #[doc = "I2C0"]
-    pub I2C0: I2C0,
+    pub i2c0: I2C0,
     #[doc = "INTERRUPT_CORE0"]
-    pub INTERRUPT_CORE0: INTERRUPT_CORE0,
+    pub interrupt_core0: INTERRUPT_CORE0,
     #[doc = "IO_MUX"]
-    pub IO_MUX: IO_MUX,
+    pub io_mux: IO_MUX,
     #[doc = "LEDC"]
-    pub LEDC: LEDC,
+    pub ledc: LEDC,
     #[doc = "MODEM_CLKRST"]
-    pub MODEM_CLKRST: MODEM_CLKRST,
+    pub modem_clkrst: MODEM_CLKRST,
     #[doc = "RNG"]
-    pub RNG: RNG,
+    pub rng: RNG,
     #[doc = "RTC_CNTL"]
-    pub RTC_CNTL: RTC_CNTL,
+    pub rtc_cntl: RTC_CNTL,
     #[doc = "SENSITIVE"]
-    pub SENSITIVE: SENSITIVE,
+    pub sensitive: SENSITIVE,
     #[doc = "SHA"]
-    pub SHA: SHA,
+    pub sha: SHA,
     #[doc = "SPI0"]
-    pub SPI0: SPI0,
+    pub spi0: SPI0,
     #[doc = "SPI1"]
-    pub SPI1: SPI1,
+    pub spi1: SPI1,
     #[doc = "SPI2"]
-    pub SPI2: SPI2,
+    pub spi2: SPI2,
     #[doc = "SYSTEM"]
-    pub SYSTEM: SYSTEM,
+    pub system: SYSTEM,
     #[doc = "SYSTIMER"]
-    pub SYSTIMER: SYSTIMER,
+    pub systimer: SYSTIMER,
     #[doc = "TIMG0"]
-    pub TIMG0: TIMG0,
+    pub timg0: TIMG0,
     #[doc = "UART0"]
-    pub UART0: UART0,
+    pub uart0: UART0,
     #[doc = "UART1"]
-    pub UART1: UART1,
+    pub uart1: UART1,
     #[doc = "XTS_AES"]
-    pub XTS_AES: XTS_AES,
+    pub xts_aes: XTS_AES,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -1470,85 +1470,85 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            APB_CTRL: APB_CTRL {
+            apb_ctrl: APB_CTRL {
                 _marker: PhantomData,
             },
-            APB_SARADC: APB_SARADC {
+            apb_saradc: APB_SARADC {
                 _marker: PhantomData,
             },
-            ASSIST_DEBUG: ASSIST_DEBUG {
+            assist_debug: ASSIST_DEBUG {
                 _marker: PhantomData,
             },
-            BB: BB {
+            bb: BB {
                 _marker: PhantomData,
             },
-            DMA: DMA {
+            dma: DMA {
                 _marker: PhantomData,
             },
-            ECC: ECC {
+            ecc: ECC {
                 _marker: PhantomData,
             },
-            EFUSE: EFUSE {
+            efuse: EFUSE {
                 _marker: PhantomData,
             },
-            EXTMEM: EXTMEM {
+            extmem: EXTMEM {
                 _marker: PhantomData,
             },
-            GPIO: GPIO {
+            gpio: GPIO {
                 _marker: PhantomData,
             },
-            I2C0: I2C0 {
+            i2c0: I2C0 {
                 _marker: PhantomData,
             },
-            INTERRUPT_CORE0: INTERRUPT_CORE0 {
+            interrupt_core0: INTERRUPT_CORE0 {
                 _marker: PhantomData,
             },
-            IO_MUX: IO_MUX {
+            io_mux: IO_MUX {
                 _marker: PhantomData,
             },
-            LEDC: LEDC {
+            ledc: LEDC {
                 _marker: PhantomData,
             },
-            MODEM_CLKRST: MODEM_CLKRST {
+            modem_clkrst: MODEM_CLKRST {
                 _marker: PhantomData,
             },
-            RNG: RNG {
+            rng: RNG {
                 _marker: PhantomData,
             },
-            RTC_CNTL: RTC_CNTL {
+            rtc_cntl: RTC_CNTL {
                 _marker: PhantomData,
             },
-            SENSITIVE: SENSITIVE {
+            sensitive: SENSITIVE {
                 _marker: PhantomData,
             },
-            SHA: SHA {
+            sha: SHA {
                 _marker: PhantomData,
             },
-            SPI0: SPI0 {
+            spi0: SPI0 {
                 _marker: PhantomData,
             },
-            SPI1: SPI1 {
+            spi1: SPI1 {
                 _marker: PhantomData,
             },
-            SPI2: SPI2 {
+            spi2: SPI2 {
                 _marker: PhantomData,
             },
-            SYSTEM: SYSTEM {
+            system: SYSTEM {
                 _marker: PhantomData,
             },
-            SYSTIMER: SYSTIMER {
+            systimer: SYSTIMER {
                 _marker: PhantomData,
             },
-            TIMG0: TIMG0 {
+            timg0: TIMG0 {
                 _marker: PhantomData,
             },
-            UART0: UART0 {
+            uart0: UART0 {
                 _marker: PhantomData,
             },
-            UART1: UART1 {
+            uart1: UART1 {
                 _marker: PhantomData,
             },
-            XTS_AES: XTS_AES {
+            xts_aes: XTS_AES {
                 _marker: PhantomData,
             },
         }
