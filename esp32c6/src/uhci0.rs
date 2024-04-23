@@ -15,24 +15,8 @@ pub struct RegisterBlock {
     ack_num: ACK_NUM,
     rx_head: RX_HEAD,
     quick_sent: QUICK_SENT,
-    reg_q0_word0: REG_Q0_WORD0,
-    reg_q0_word1: REG_Q0_WORD1,
-    reg_q1_word0: REG_Q1_WORD0,
-    reg_q1_word1: REG_Q1_WORD1,
-    reg_q2_word0: REG_Q2_WORD0,
-    reg_q2_word1: REG_Q2_WORD1,
-    reg_q3_word0: REG_Q3_WORD0,
-    reg_q3_word1: REG_Q3_WORD1,
-    reg_q4_word0: REG_Q4_WORD0,
-    reg_q4_word1: REG_Q4_WORD1,
-    reg_q5_word0: REG_Q5_WORD0,
-    reg_q5_word1: REG_Q5_WORD1,
-    reg_q6_word0: REG_Q6_WORD0,
-    reg_q6_word1: REG_Q6_WORD1,
-    esc_conf0: ESC_CONF0,
-    esc_conf1: ESC_CONF1,
-    esc_conf2: ESC_CONF2,
-    esc_conf3: ESC_CONF3,
+    reg_q: [REG_Q; 7],
+    esc_conf: [ESC_CONF; 4],
     pkt_thres: PKT_THRES,
     date: DATE,
 }
@@ -102,95 +86,27 @@ impl RegisterBlock {
     pub const fn quick_sent(&self) -> &QUICK_SENT {
         &self.quick_sent
     }
-    #[doc = "0x34 - UHCI Q0_WORD0 Quick Send Register"]
+    #[doc = "0x34..0x6c - Cluster REG_Q%s, containing REG_Q?_WORD0, REG_Q?_WORD1"]
     #[inline(always)]
-    pub const fn reg_q0_word0(&self) -> &REG_Q0_WORD0 {
-        &self.reg_q0_word0
+    pub const fn reg_q(&self, n: usize) -> &REG_Q {
+        &self.reg_q[n]
     }
-    #[doc = "0x38 - UHCI Q0_WORD1 Quick Send Register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x34..0x6c - Cluster REG_Q%s, containing REG_Q?_WORD0, REG_Q?_WORD1"]
     #[inline(always)]
-    pub const fn reg_q0_word1(&self) -> &REG_Q0_WORD1 {
-        &self.reg_q0_word1
+    pub fn reg_q_iter(&self) -> impl Iterator<Item = &REG_Q> {
+        self.reg_q.iter()
     }
-    #[doc = "0x3c - UHCI Q1_WORD0 Quick Send Register"]
+    #[doc = "0x6c..0x7c - UHCI Escapes Sequence Configuration Register%s"]
     #[inline(always)]
-    pub const fn reg_q1_word0(&self) -> &REG_Q1_WORD0 {
-        &self.reg_q1_word0
+    pub const fn esc_conf(&self, n: usize) -> &ESC_CONF {
+        &self.esc_conf[n]
     }
-    #[doc = "0x40 - UHCI Q1_WORD1 Quick Send Register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x6c..0x7c - UHCI Escapes Sequence Configuration Register%s"]
     #[inline(always)]
-    pub const fn reg_q1_word1(&self) -> &REG_Q1_WORD1 {
-        &self.reg_q1_word1
-    }
-    #[doc = "0x44 - UHCI Q2_WORD0 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q2_word0(&self) -> &REG_Q2_WORD0 {
-        &self.reg_q2_word0
-    }
-    #[doc = "0x48 - UHCI Q2_WORD1 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q2_word1(&self) -> &REG_Q2_WORD1 {
-        &self.reg_q2_word1
-    }
-    #[doc = "0x4c - UHCI Q3_WORD0 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q3_word0(&self) -> &REG_Q3_WORD0 {
-        &self.reg_q3_word0
-    }
-    #[doc = "0x50 - UHCI Q3_WORD1 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q3_word1(&self) -> &REG_Q3_WORD1 {
-        &self.reg_q3_word1
-    }
-    #[doc = "0x54 - UHCI Q4_WORD0 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q4_word0(&self) -> &REG_Q4_WORD0 {
-        &self.reg_q4_word0
-    }
-    #[doc = "0x58 - UHCI Q4_WORD1 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q4_word1(&self) -> &REG_Q4_WORD1 {
-        &self.reg_q4_word1
-    }
-    #[doc = "0x5c - UHCI Q5_WORD0 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q5_word0(&self) -> &REG_Q5_WORD0 {
-        &self.reg_q5_word0
-    }
-    #[doc = "0x60 - UHCI Q5_WORD1 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q5_word1(&self) -> &REG_Q5_WORD1 {
-        &self.reg_q5_word1
-    }
-    #[doc = "0x64 - UHCI Q6_WORD0 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q6_word0(&self) -> &REG_Q6_WORD0 {
-        &self.reg_q6_word0
-    }
-    #[doc = "0x68 - UHCI Q6_WORD1 Quick Send Register"]
-    #[inline(always)]
-    pub const fn reg_q6_word1(&self) -> &REG_Q6_WORD1 {
-        &self.reg_q6_word1
-    }
-    #[doc = "0x6c - UHCI Escapes Sequence Configuration Register0"]
-    #[inline(always)]
-    pub const fn esc_conf0(&self) -> &ESC_CONF0 {
-        &self.esc_conf0
-    }
-    #[doc = "0x70 - UHCI Escapes Sequence Configuration Register1"]
-    #[inline(always)]
-    pub const fn esc_conf1(&self) -> &ESC_CONF1 {
-        &self.esc_conf1
-    }
-    #[doc = "0x74 - UHCI Escapes Sequence Configuration Register2"]
-    #[inline(always)]
-    pub const fn esc_conf2(&self) -> &ESC_CONF2 {
-        &self.esc_conf2
-    }
-    #[doc = "0x78 - UHCI Escapes Sequence Configuration Register3"]
-    #[inline(always)]
-    pub const fn esc_conf3(&self) -> &ESC_CONF3 {
-        &self.esc_conf3
+    pub fn esc_conf_iter(&self) -> impl Iterator<Item = &ESC_CONF> {
+        self.esc_conf.iter()
     }
     #[doc = "0x7c - UCHI Packet Length Configuration Register"]
     #[inline(always)]
@@ -255,78 +171,15 @@ pub mod rx_head;
 pub type QUICK_SENT = crate::Reg<quick_sent::QUICK_SENT_SPEC>;
 #[doc = "UCHI Quick send Register"]
 pub mod quick_sent;
-#[doc = "REG_Q0_WORD0 (rw) register accessor: UHCI Q0_WORD0 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q0_word0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q0_word0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q0_word0`] module"]
-pub type REG_Q0_WORD0 = crate::Reg<reg_q0_word0::REG_Q0_WORD0_SPEC>;
-#[doc = "UHCI Q0_WORD0 Quick Send Register"]
-pub mod reg_q0_word0;
-#[doc = "REG_Q0_WORD1 (rw) register accessor: UHCI Q0_WORD1 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q0_word1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q0_word1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q0_word1`] module"]
-pub type REG_Q0_WORD1 = crate::Reg<reg_q0_word1::REG_Q0_WORD1_SPEC>;
-#[doc = "UHCI Q0_WORD1 Quick Send Register"]
-pub mod reg_q0_word1;
-#[doc = "REG_Q1_WORD0 (rw) register accessor: UHCI Q1_WORD0 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q1_word0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q1_word0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q1_word0`] module"]
-pub type REG_Q1_WORD0 = crate::Reg<reg_q1_word0::REG_Q1_WORD0_SPEC>;
-#[doc = "UHCI Q1_WORD0 Quick Send Register"]
-pub mod reg_q1_word0;
-#[doc = "REG_Q1_WORD1 (rw) register accessor: UHCI Q1_WORD1 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q1_word1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q1_word1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q1_word1`] module"]
-pub type REG_Q1_WORD1 = crate::Reg<reg_q1_word1::REG_Q1_WORD1_SPEC>;
-#[doc = "UHCI Q1_WORD1 Quick Send Register"]
-pub mod reg_q1_word1;
-#[doc = "REG_Q2_WORD0 (rw) register accessor: UHCI Q2_WORD0 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q2_word0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q2_word0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q2_word0`] module"]
-pub type REG_Q2_WORD0 = crate::Reg<reg_q2_word0::REG_Q2_WORD0_SPEC>;
-#[doc = "UHCI Q2_WORD0 Quick Send Register"]
-pub mod reg_q2_word0;
-#[doc = "REG_Q2_WORD1 (rw) register accessor: UHCI Q2_WORD1 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q2_word1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q2_word1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q2_word1`] module"]
-pub type REG_Q2_WORD1 = crate::Reg<reg_q2_word1::REG_Q2_WORD1_SPEC>;
-#[doc = "UHCI Q2_WORD1 Quick Send Register"]
-pub mod reg_q2_word1;
-#[doc = "REG_Q3_WORD0 (rw) register accessor: UHCI Q3_WORD0 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q3_word0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q3_word0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q3_word0`] module"]
-pub type REG_Q3_WORD0 = crate::Reg<reg_q3_word0::REG_Q3_WORD0_SPEC>;
-#[doc = "UHCI Q3_WORD0 Quick Send Register"]
-pub mod reg_q3_word0;
-#[doc = "REG_Q3_WORD1 (rw) register accessor: UHCI Q3_WORD1 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q3_word1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q3_word1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q3_word1`] module"]
-pub type REG_Q3_WORD1 = crate::Reg<reg_q3_word1::REG_Q3_WORD1_SPEC>;
-#[doc = "UHCI Q3_WORD1 Quick Send Register"]
-pub mod reg_q3_word1;
-#[doc = "REG_Q4_WORD0 (rw) register accessor: UHCI Q4_WORD0 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q4_word0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q4_word0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q4_word0`] module"]
-pub type REG_Q4_WORD0 = crate::Reg<reg_q4_word0::REG_Q4_WORD0_SPEC>;
-#[doc = "UHCI Q4_WORD0 Quick Send Register"]
-pub mod reg_q4_word0;
-#[doc = "REG_Q4_WORD1 (rw) register accessor: UHCI Q4_WORD1 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q4_word1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q4_word1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q4_word1`] module"]
-pub type REG_Q4_WORD1 = crate::Reg<reg_q4_word1::REG_Q4_WORD1_SPEC>;
-#[doc = "UHCI Q4_WORD1 Quick Send Register"]
-pub mod reg_q4_word1;
-#[doc = "REG_Q5_WORD0 (rw) register accessor: UHCI Q5_WORD0 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q5_word0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q5_word0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q5_word0`] module"]
-pub type REG_Q5_WORD0 = crate::Reg<reg_q5_word0::REG_Q5_WORD0_SPEC>;
-#[doc = "UHCI Q5_WORD0 Quick Send Register"]
-pub mod reg_q5_word0;
-#[doc = "REG_Q5_WORD1 (rw) register accessor: UHCI Q5_WORD1 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q5_word1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q5_word1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q5_word1`] module"]
-pub type REG_Q5_WORD1 = crate::Reg<reg_q5_word1::REG_Q5_WORD1_SPEC>;
-#[doc = "UHCI Q5_WORD1 Quick Send Register"]
-pub mod reg_q5_word1;
-#[doc = "REG_Q6_WORD0 (rw) register accessor: UHCI Q6_WORD0 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q6_word0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q6_word0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q6_word0`] module"]
-pub type REG_Q6_WORD0 = crate::Reg<reg_q6_word0::REG_Q6_WORD0_SPEC>;
-#[doc = "UHCI Q6_WORD0 Quick Send Register"]
-pub mod reg_q6_word0;
-#[doc = "REG_Q6_WORD1 (rw) register accessor: UHCI Q6_WORD1 Quick Send Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reg_q6_word1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_q6_word1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_q6_word1`] module"]
-pub type REG_Q6_WORD1 = crate::Reg<reg_q6_word1::REG_Q6_WORD1_SPEC>;
-#[doc = "UHCI Q6_WORD1 Quick Send Register"]
-pub mod reg_q6_word1;
-#[doc = "ESC_CONF0 (rw) register accessor: UHCI Escapes Sequence Configuration Register0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`esc_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`esc_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@esc_conf0`] module"]
-pub type ESC_CONF0 = crate::Reg<esc_conf0::ESC_CONF0_SPEC>;
-#[doc = "UHCI Escapes Sequence Configuration Register0"]
-pub mod esc_conf0;
-#[doc = "ESC_CONF1 (rw) register accessor: UHCI Escapes Sequence Configuration Register1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`esc_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`esc_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@esc_conf1`] module"]
-pub type ESC_CONF1 = crate::Reg<esc_conf1::ESC_CONF1_SPEC>;
-#[doc = "UHCI Escapes Sequence Configuration Register1"]
-pub mod esc_conf1;
-#[doc = "ESC_CONF2 (rw) register accessor: UHCI Escapes Sequence Configuration Register2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`esc_conf2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`esc_conf2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@esc_conf2`] module"]
-pub type ESC_CONF2 = crate::Reg<esc_conf2::ESC_CONF2_SPEC>;
-#[doc = "UHCI Escapes Sequence Configuration Register2"]
-pub mod esc_conf2;
-#[doc = "ESC_CONF3 (rw) register accessor: UHCI Escapes Sequence Configuration Register3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`esc_conf3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`esc_conf3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@esc_conf3`] module"]
-pub type ESC_CONF3 = crate::Reg<esc_conf3::ESC_CONF3_SPEC>;
-#[doc = "UHCI Escapes Sequence Configuration Register3"]
-pub mod esc_conf3;
+#[doc = "Cluster REG_Q%s, containing REG_Q?_WORD0, REG_Q?_WORD1"]
+pub use self::reg_q::REG_Q;
+#[doc = r"Cluster"]
+#[doc = "Cluster REG_Q%s, containing REG_Q?_WORD0, REG_Q?_WORD1"]
+pub mod reg_q;
+#[doc = "ESC_CONF (rw) register accessor: UHCI Escapes Sequence Configuration Register%s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`esc_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`esc_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@esc_conf`] module"]
+pub type ESC_CONF = crate::Reg<esc_conf::ESC_CONF_SPEC>;
+#[doc = "UHCI Escapes Sequence Configuration Register%s"]
+pub mod esc_conf;
 #[doc = "PKT_THRES (rw) register accessor: UCHI Packet Length Configuration Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pkt_thres::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pkt_thres::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pkt_thres`] module"]
 pub type PKT_THRES = crate::Reg<pkt_thres::PKT_THRES_SPEC>;
 #[doc = "UCHI Packet Length Configuration Register"]

@@ -70,6 +70,9 @@ TIMG0:
       T0_HI:
         name: HI
 
+SPI[12]:
+  _include: ../../../common_patches/spi_w.yaml
+
 SPI2:
   _modify:
     _interrupts:

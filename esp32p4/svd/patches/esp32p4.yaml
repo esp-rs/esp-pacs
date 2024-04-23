@@ -7,6 +7,9 @@ _modify:
     groupName: DMA
   LP_ANA_PERI:
     name: LP_ANA
+    groupName: LP_ANA
+  LCD_CAM:
+    groupName: LCD_CAM
 
 LP_ANA:
   _strip: LP_ANA_
@@ -24,7 +27,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,UHCI0,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS":
+"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2C0,LP_I2S0,LP_UART":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -77,20 +80,41 @@ GPIO:
       GPIO_INT0:
         name: GPIO
 
+I3C_MST:
+  _modify:
+    INT_ST_ENA:
+      name: INT_ENA
+  _include: ../../../common_patches/int_strip.yaml
+
+JPEG:
+  _include: ../../../common_patches/int_strip.yaml
+  _array:
+    C?: {}
+
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
 
 LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
 
+UHCI0:
+  _include:
+    - ../../../common_patches/uhci_collect.yaml
+    - ../../../common_patches/int_strip.yaml
+
 TIMG0:
   _include: ../../../common_patches/tim_expand_and_collect.yaml
+
+SPI1:
+  _include: ../../../common_patches/spi_w.yaml
 
 SPI[23]:
   _strip: SPI_
   "*":
     _strip: SPI_
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
+  _include:
+   - ../../../common_patches/spi_dma_int_strip.yaml
+   - ../../../common_patches/spi_w.yaml
 
 SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml

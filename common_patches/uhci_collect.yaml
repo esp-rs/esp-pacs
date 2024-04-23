@@ -1,0 +1,14 @@
+REG_Q?_WORD?:
+  _modify:
+    SEND_Q?_WORD?:
+      name: SEND_WORD
+
+_cluster:
+  REG_Q%s:
+    REG_Q?_WORD0:
+      name: WORD0
+    REG_Q?_WORD1:
+      name: WORD1
+
+_array:
+  ESC_CONF?: {}

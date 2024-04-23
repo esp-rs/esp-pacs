@@ -11,10 +11,7 @@ pub struct RegisterBlock {
     t2qnr: T2QNR,
     t3qnr: T3QNR,
     decode_conf: DECODE_CONF,
-    c0: C0,
-    c1: C1,
-    c2: C2,
-    c3: C3,
+    c: [C; 4],
     dht_info: DHT_INFO,
     int_raw: INT_RAW,
     int_ena: INT_ENA,
@@ -45,7 +42,7 @@ pub struct RegisterBlock {
     status5: STATUS5,
     eco_low: ECO_LOW,
     eco_high: ECO_HIGH,
-    _reserved42: [u8; 0x4c],
+    _reserved39: [u8; 0x4c],
     sys: SYS,
     version: VERSION,
 }
@@ -90,25 +87,16 @@ impl RegisterBlock {
     pub const fn decode_conf(&self) -> &DECODE_CONF {
         &self.decode_conf
     }
-    #[doc = "0x24 - Control and configuration registers"]
+    #[doc = "0x24..0x34 - Control and configuration registers"]
     #[inline(always)]
-    pub const fn c0(&self) -> &C0 {
-        &self.c0
+    pub const fn c(&self, n: usize) -> &C {
+        &self.c[n]
     }
-    #[doc = "0x28 - Control and configuration registers"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x24..0x34 - Control and configuration registers"]
     #[inline(always)]
-    pub const fn c1(&self) -> &C1 {
-        &self.c1
-    }
-    #[doc = "0x2c - Control and configuration registers"]
-    #[inline(always)]
-    pub const fn c2(&self) -> &C2 {
-        &self.c2
-    }
-    #[doc = "0x30 - Control and configuration registers"]
-    #[inline(always)]
-    pub const fn c3(&self) -> &C3 {
-        &self.c3
+    pub fn c_iter(&self) -> impl Iterator<Item = &C> {
+        self.c.iter()
     }
     #[doc = "0x34 - Control and configuration registers"]
     #[inline(always)]
@@ -303,22 +291,10 @@ pub mod t3qnr;
 pub type DECODE_CONF = crate::Reg<decode_conf::DECODE_CONF_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod decode_conf;
-#[doc = "C0 (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c0`] module"]
-pub type C0 = crate::Reg<c0::C0_SPEC>;
+#[doc = "C (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c`] module"]
+pub type C = crate::Reg<c::C_SPEC>;
 #[doc = "Control and configuration registers"]
-pub mod c0;
-#[doc = "C1 (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c1`] module"]
-pub type C1 = crate::Reg<c1::C1_SPEC>;
-#[doc = "Control and configuration registers"]
-pub mod c1;
-#[doc = "C2 (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c2`] module"]
-pub type C2 = crate::Reg<c2::C2_SPEC>;
-#[doc = "Control and configuration registers"]
-pub mod c2;
-#[doc = "C3 (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c3`] module"]
-pub type C3 = crate::Reg<c3::C3_SPEC>;
-#[doc = "Control and configuration registers"]
-pub mod c3;
+pub mod c;
 #[doc = "DHT_INFO (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_info::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dht_info::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_info`] module"]
 pub type DHT_INFO = crate::Reg<dht_info::DHT_INFO_SPEC>;
 #[doc = "Control and configuration registers"]

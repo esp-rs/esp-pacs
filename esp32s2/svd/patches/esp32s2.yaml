@@ -31,7 +31,7 @@ RTC_IO:
       GPIO_OUT_DATA_W1TS:
         name: RTC_GPIO_OUT_DATA_W1TS
 
-"EFUSE,I2C0,I2S0,UART0,APB_SARADC,UHCI0,RTC_I2C":
+"EFUSE,I2C0,I2S0,UART0,APB_SARADC,RTC_I2C":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -44,12 +44,31 @@ LEDC:
         access: read-write
 
 SPI0:
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
+  _include:
+    - ../../../common_patches/spi_dma_int_strip.yaml
+    - ../../../common_patches/spi_w.yaml
 
 TIMG0:
   _include: ../../../common_patches/tim_expand_and_collect.yaml
   "LACT*":
     _strip: LACT_
+
+UHCI0:
+  _include: ../../../common_patches/int_strip.yaml
+  Q?_WORD?:
+    _modify:
+      SEND_Q?_WORD?:
+        name: SEND_WORD
+
+  _cluster:
+    Q%s:
+      Q?_WORD0:
+        name: WORD0
+      Q?_WORD1:
+        name: WORD1
+
+  _array:
+    ESC_CONF?: {}
 
 SYSTIMER:
   INT_RAW:
