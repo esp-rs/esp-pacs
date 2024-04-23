@@ -2,89 +2,77 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `APB_SARADC_THRES1_LOW` reader - saradc thres1 low interrupt enable"]
-pub type APB_SARADC_THRES1_LOW_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES1_LOW` writer - saradc thres1 low interrupt enable"]
-pub type APB_SARADC_THRES1_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC_THRES0_LOW` reader - saradc thres0 low interrupt enable"]
-pub type APB_SARADC_THRES0_LOW_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES0_LOW` writer - saradc thres0 low interrupt enable"]
-pub type APB_SARADC_THRES0_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC_THRES1_HIGH` reader - saradc thres1 high interrupt enable"]
-pub type APB_SARADC_THRES1_HIGH_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES1_HIGH` writer - saradc thres1 high interrupt enable"]
-pub type APB_SARADC_THRES1_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC_THRES0_HIGH` reader - saradc thres0 high interrupt enable"]
-pub type APB_SARADC_THRES0_HIGH_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES0_HIGH` writer - saradc thres0 high interrupt enable"]
-pub type APB_SARADC_THRES0_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC2_DONE` reader - saradc2 done interrupt enable"]
-pub type APB_SARADC2_DONE_R = crate::BitReader;
-#[doc = "Field `APB_SARADC2_DONE` writer - saradc2 done interrupt enable"]
-pub type APB_SARADC2_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_SARADC1_DONE` reader - saradc1 done interrupt enable"]
-pub type APB_SARADC1_DONE_R = crate::BitReader;
-#[doc = "Field `APB_SARADC1_DONE` writer - saradc1 done interrupt enable"]
-pub type APB_SARADC1_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES1_LOW` reader - saradc thres1 low interrupt enable"]
+pub type THRES1_LOW_R = crate::BitReader;
+#[doc = "Field `THRES1_LOW` writer - saradc thres1 low interrupt enable"]
+pub type THRES1_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES0_LOW` reader - saradc thres0 low interrupt enable"]
+pub type THRES0_LOW_R = crate::BitReader;
+#[doc = "Field `THRES0_LOW` writer - saradc thres0 low interrupt enable"]
+pub type THRES0_LOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES1_HIGH` reader - saradc thres1 high interrupt enable"]
+pub type THRES1_HIGH_R = crate::BitReader;
+#[doc = "Field `THRES1_HIGH` writer - saradc thres1 high interrupt enable"]
+pub type THRES1_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES0_HIGH` reader - saradc thres0 high interrupt enable"]
+pub type THRES0_HIGH_R = crate::BitReader;
+#[doc = "Field `THRES0_HIGH` writer - saradc thres0 high interrupt enable"]
+pub type THRES0_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SARADC2_DONE` reader - saradc2 done interrupt enable"]
+pub type SARADC2_DONE_R = crate::BitReader;
+#[doc = "Field `SARADC2_DONE` writer - saradc2 done interrupt enable"]
+pub type SARADC2_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SARADC1_DONE` reader - saradc1 done interrupt enable"]
+pub type SARADC1_DONE_R = crate::BitReader;
+#[doc = "Field `SARADC1_DONE` writer - saradc1 done interrupt enable"]
+pub type SARADC1_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
-    pub fn apb_saradc_thres1_low(&self) -> APB_SARADC_THRES1_LOW_R {
-        APB_SARADC_THRES1_LOW_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn thres1_low(&self) -> THRES1_LOW_R {
+        THRES1_LOW_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt enable"]
     #[inline(always)]
-    pub fn apb_saradc_thres0_low(&self) -> APB_SARADC_THRES0_LOW_R {
-        APB_SARADC_THRES0_LOW_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn thres0_low(&self) -> THRES0_LOW_R {
+        THRES0_LOW_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt enable"]
     #[inline(always)]
-    pub fn apb_saradc_thres1_high(&self) -> APB_SARADC_THRES1_HIGH_R {
-        APB_SARADC_THRES1_HIGH_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn thres1_high(&self) -> THRES1_HIGH_R {
+        THRES1_HIGH_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt enable"]
     #[inline(always)]
-    pub fn apb_saradc_thres0_high(&self) -> APB_SARADC_THRES0_HIGH_R {
-        APB_SARADC_THRES0_HIGH_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn thres0_high(&self) -> THRES0_HIGH_R {
+        THRES0_HIGH_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
-    pub fn apb_saradc2_done(&self) -> APB_SARADC2_DONE_R {
-        APB_SARADC2_DONE_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn saradc2_done(&self) -> SARADC2_DONE_R {
+        SARADC2_DONE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
-    pub fn apb_saradc1_done(&self) -> APB_SARADC1_DONE_R {
-        APB_SARADC1_DONE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn saradc1_done(&self) -> SARADC1_DONE_R {
+        SARADC1_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
+            .field("thres1_low", &format_args!("{}", self.thres1_low().bit()))
+            .field("thres0_low", &format_args!("{}", self.thres0_low().bit()))
+            .field("thres1_high", &format_args!("{}", self.thres1_high().bit()))
+            .field("thres0_high", &format_args!("{}", self.thres0_high().bit()))
             .field(
-                "apb_saradc_thres1_low",
-                &format_args!("{}", self.apb_saradc_thres1_low().bit()),
+                "saradc2_done",
+                &format_args!("{}", self.saradc2_done().bit()),
             )
             .field(
-                "apb_saradc_thres0_low",
-                &format_args!("{}", self.apb_saradc_thres0_low().bit()),
-            )
-            .field(
-                "apb_saradc_thres1_high",
-                &format_args!("{}", self.apb_saradc_thres1_high().bit()),
-            )
-            .field(
-                "apb_saradc_thres0_high",
-                &format_args!("{}", self.apb_saradc_thres0_high().bit()),
-            )
-            .field(
-                "apb_saradc2_done",
-                &format_args!("{}", self.apb_saradc2_done().bit()),
-            )
-            .field(
-                "apb_saradc1_done",
-                &format_args!("{}", self.apb_saradc1_done().bit()),
+                "saradc1_done",
+                &format_args!("{}", self.saradc1_done().bit()),
             )
             .finish()
     }
@@ -99,38 +87,38 @@ impl W {
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres1_low(&mut self) -> APB_SARADC_THRES1_LOW_W<INT_ENA_SPEC> {
-        APB_SARADC_THRES1_LOW_W::new(self, 26)
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<INT_ENA_SPEC> {
+        THRES1_LOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_low(&mut self) -> APB_SARADC_THRES0_LOW_W<INT_ENA_SPEC> {
-        APB_SARADC_THRES0_LOW_W::new(self, 27)
+    pub fn thres0_low(&mut self) -> THRES0_LOW_W<INT_ENA_SPEC> {
+        THRES0_LOW_W::new(self, 27)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres1_high(&mut self) -> APB_SARADC_THRES1_HIGH_W<INT_ENA_SPEC> {
-        APB_SARADC_THRES1_HIGH_W::new(self, 28)
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<INT_ENA_SPEC> {
+        THRES1_HIGH_W::new(self, 28)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_high(&mut self) -> APB_SARADC_THRES0_HIGH_W<INT_ENA_SPEC> {
-        APB_SARADC_THRES0_HIGH_W::new(self, 29)
+    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<INT_ENA_SPEC> {
+        THRES0_HIGH_W::new(self, 29)
     }
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc2_done(&mut self) -> APB_SARADC2_DONE_W<INT_ENA_SPEC> {
-        APB_SARADC2_DONE_W::new(self, 30)
+    pub fn saradc2_done(&mut self) -> SARADC2_DONE_W<INT_ENA_SPEC> {
+        SARADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc1_done(&mut self) -> APB_SARADC1_DONE_W<INT_ENA_SPEC> {
-        APB_SARADC1_DONE_W::new(self, 31)
+    pub fn saradc1_done(&mut self) -> SARADC1_DONE_W<INT_ENA_SPEC> {
+        SARADC1_DONE_W::new(self, 31)
     }
 }
 #[doc = "digital saradc int register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

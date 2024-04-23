@@ -11,6 +11,12 @@ _modify:
   LCD_CAM:
     groupName: LCD_CAM
 
+ADC:
+  ARB_CTRL:
+    _strip: ARB_
+  DMA_CONF:
+    _strip: APB_
+
 LP_ANA:
   _strip: LP_ANA_
   "*":

@@ -32,7 +32,7 @@ pub struct RegisterBlock {
     _reserved26: [u8; 0x04],
     apb_saradc2_data_status: APB_SARADC2_DATA_STATUS,
     _reserved27: [u8; 0x0380],
-    apb_ctrl_date: APB_CTRL_DATE,
+    ctrl_date: CTRL_DATE,
 }
 impl RegisterBlock {
     #[doc = "0x00 - configure apb saradc controller"]
@@ -172,8 +172,8 @@ impl RegisterBlock {
     }
     #[doc = "0x3fc - version"]
     #[inline(always)]
-    pub const fn apb_ctrl_date(&self) -> &APB_CTRL_DATE {
-        &self.apb_ctrl_date
+    pub const fn ctrl_date(&self) -> &CTRL_DATE {
+        &self.ctrl_date
     }
 }
 #[doc = "CTRL (rw) register accessor: configure apb saradc controller\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
@@ -286,7 +286,7 @@ pub type APB_SARADC2_DATA_STATUS =
     crate::Reg<apb_saradc2_data_status::APB_SARADC2_DATA_STATUS_SPEC>;
 #[doc = "get apb saradc2 sample data"]
 pub mod apb_saradc2_data_status;
-#[doc = "APB_CTRL_DATE (rw) register accessor: version\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_ctrl_date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_ctrl_date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb_ctrl_date`] module"]
-pub type APB_CTRL_DATE = crate::Reg<apb_ctrl_date::APB_CTRL_DATE_SPEC>;
+#[doc = "CTRL_DATE (rw) register accessor: version\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl_date`] module"]
+pub type CTRL_DATE = crate::Reg<ctrl_date::CTRL_DATE_SPEC>;
 #[doc = "version"]
-pub mod apb_ctrl_date;
+pub mod ctrl_date;

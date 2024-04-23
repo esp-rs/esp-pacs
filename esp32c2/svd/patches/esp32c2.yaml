@@ -4,6 +4,18 @@ _modify:
   SPI?:
     groupName: SPI
 
+APB_SARADC:
+  _modify:
+    APB_ADC_ARB_CTRL:
+      name: ARB_CTRL
+    APB_ADC_CLKM_CONF:
+      name: CLKM_CONF
+    APB_CTRL_DATE:
+      name: CTRL_DATE
+  CLKM_CONF:
+    _strip: REG_
+  _include: ../../../common_patches/adc.yaml
+
 I2C0:
   _modify:
     INT_STATUS:

@@ -1,7 +1,7 @@
-#[doc = "Register `APB_TSENS_WAKE` reader"]
-pub type R = crate::R<APB_TSENS_WAKE_SPEC>;
-#[doc = "Register `APB_TSENS_WAKE` writer"]
-pub type W = crate::W<APB_TSENS_WAKE_SPEC>;
+#[doc = "Register `TSENS_WAKE` reader"]
+pub type R = crate::R<TSENS_WAKE_SPEC>;
+#[doc = "Register `TSENS_WAKE` writer"]
+pub type W = crate::W<TSENS_WAKE_SPEC>;
 #[doc = "Field `WAKEUP_TH_LOW` reader - reg_wakeup_th_low"]
 pub type WAKEUP_TH_LOW_R = crate::FieldReader;
 #[doc = "Field `WAKEUP_TH_LOW` writer - reg_wakeup_th_low"]
@@ -50,7 +50,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("APB_TSENS_WAKE")
+        f.debug_struct("TSENS_WAKE")
             .field(
                 "wakeup_th_low",
                 &format_args!("{}", self.wakeup_th_low().bits()),
@@ -69,7 +69,7 @@ impl core::fmt::Debug for R {
     }
 }
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_WAKE_SPEC> {
+impl core::fmt::Debug for crate::generic::Reg<TSENS_WAKE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         core::fmt::Debug::fmt(&self.read(), f)
     }
@@ -78,42 +78,42 @@ impl W {
     #[doc = "Bits 0:7 - reg_wakeup_th_low"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_th_low(&mut self) -> WAKEUP_TH_LOW_W<APB_TSENS_WAKE_SPEC> {
+    pub fn wakeup_th_low(&mut self) -> WAKEUP_TH_LOW_W<TSENS_WAKE_SPEC> {
         WAKEUP_TH_LOW_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - reg_wakeup_th_high"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_th_high(&mut self) -> WAKEUP_TH_HIGH_W<APB_TSENS_WAKE_SPEC> {
+    pub fn wakeup_th_high(&mut self) -> WAKEUP_TH_HIGH_W<TSENS_WAKE_SPEC> {
         WAKEUP_TH_HIGH_W::new(self, 8)
     }
     #[doc = "Bit 17 - reg_wakeup_mode"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_mode(&mut self) -> WAKEUP_MODE_W<APB_TSENS_WAKE_SPEC> {
+    pub fn wakeup_mode(&mut self) -> WAKEUP_MODE_W<TSENS_WAKE_SPEC> {
         WAKEUP_MODE_W::new(self, 17)
     }
     #[doc = "Bit 18 - reg_wakeup_en"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<APB_TSENS_WAKE_SPEC> {
+    pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<TSENS_WAKE_SPEC> {
         WAKEUP_EN_W::new(self, 18)
     }
 }
-#[doc = "digital tsens configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_tsens_wake::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_tsens_wake::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct APB_TSENS_WAKE_SPEC;
-impl crate::RegisterSpec for APB_TSENS_WAKE_SPEC {
+#[doc = "digital tsens configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsens_wake::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsens_wake::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TSENS_WAKE_SPEC;
+impl crate::RegisterSpec for TSENS_WAKE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`apb_tsens_wake::R`](R) reader structure"]
-impl crate::Readable for APB_TSENS_WAKE_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`apb_tsens_wake::W`](W) writer structure"]
-impl crate::Writable for APB_TSENS_WAKE_SPEC {
+#[doc = "`read()` method returns [`tsens_wake::R`](R) reader structure"]
+impl crate::Readable for TSENS_WAKE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tsens_wake::W`](W) writer structure"]
+impl crate::Writable for TSENS_WAKE_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets APB_TSENS_WAKE to value 0xff00"]
-impl crate::Resettable for APB_TSENS_WAKE_SPEC {
+#[doc = "`reset()` method sets TSENS_WAKE to value 0xff00"]
+impl crate::Resettable for TSENS_WAKE_SPEC {
     const RESET_VALUE: u32 = 0xff00;
 }

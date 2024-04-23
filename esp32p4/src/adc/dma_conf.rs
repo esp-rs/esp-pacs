@@ -2,33 +2,33 @@
 pub type R = crate::R<DMA_CONF_SPEC>;
 #[doc = "Register `DMA_CONF` writer"]
 pub type W = crate::W<DMA_CONF_SPEC>;
-#[doc = "Field `APB_ADC_EOF_NUM` reader - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
-pub type APB_ADC_EOF_NUM_R = crate::FieldReader<u16>;
-#[doc = "Field `APB_ADC_EOF_NUM` writer - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
-pub type APB_ADC_EOF_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
-#[doc = "Field `APB_ADC_RESET_FSM` reader - reset_apb_adc_state"]
-pub type APB_ADC_RESET_FSM_R = crate::BitReader;
-#[doc = "Field `APB_ADC_RESET_FSM` writer - reset_apb_adc_state"]
-pub type APB_ADC_RESET_FSM_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `APB_ADC_TRANS` reader - enable apb_adc use spi_dma"]
-pub type APB_ADC_TRANS_R = crate::BitReader;
-#[doc = "Field `APB_ADC_TRANS` writer - enable apb_adc use spi_dma"]
-pub type APB_ADC_TRANS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_EOF_NUM` reader - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
+pub type ADC_EOF_NUM_R = crate::FieldReader<u16>;
+#[doc = "Field `ADC_EOF_NUM` writer - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
+pub type ADC_EOF_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `ADC_RESET_FSM` reader - reset_apb_adc_state"]
+pub type ADC_RESET_FSM_R = crate::BitReader;
+#[doc = "Field `ADC_RESET_FSM` writer - reset_apb_adc_state"]
+pub type ADC_RESET_FSM_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_TRANS` reader - enable apb_adc use spi_dma"]
+pub type ADC_TRANS_R = crate::BitReader;
+#[doc = "Field `ADC_TRANS` writer - enable apb_adc use spi_dma"]
+pub type ADC_TRANS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
     #[inline(always)]
-    pub fn apb_adc_eof_num(&self) -> APB_ADC_EOF_NUM_R {
-        APB_ADC_EOF_NUM_R::new((self.bits & 0xffff) as u16)
+    pub fn adc_eof_num(&self) -> ADC_EOF_NUM_R {
+        ADC_EOF_NUM_R::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bit 30 - reset_apb_adc_state"]
     #[inline(always)]
-    pub fn apb_adc_reset_fsm(&self) -> APB_ADC_RESET_FSM_R {
-        APB_ADC_RESET_FSM_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn adc_reset_fsm(&self) -> ADC_RESET_FSM_R {
+        ADC_RESET_FSM_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable apb_adc use spi_dma"]
     #[inline(always)]
-    pub fn apb_adc_trans(&self) -> APB_ADC_TRANS_R {
-        APB_ADC_TRANS_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn adc_trans(&self) -> ADC_TRANS_R {
+        ADC_TRANS_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -36,17 +36,14 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_CONF")
             .field(
-                "apb_adc_eof_num",
-                &format_args!("{}", self.apb_adc_eof_num().bits()),
+                "adc_eof_num",
+                &format_args!("{}", self.adc_eof_num().bits()),
             )
             .field(
-                "apb_adc_reset_fsm",
-                &format_args!("{}", self.apb_adc_reset_fsm().bit()),
+                "adc_reset_fsm",
+                &format_args!("{}", self.adc_reset_fsm().bit()),
             )
-            .field(
-                "apb_adc_trans",
-                &format_args!("{}", self.apb_adc_trans().bit()),
-            )
+            .field("adc_trans", &format_args!("{}", self.adc_trans().bit()))
             .finish()
     }
 }
@@ -60,20 +57,20 @@ impl W {
     #[doc = "Bits 0:15 - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_adc_eof_num(&mut self) -> APB_ADC_EOF_NUM_W<DMA_CONF_SPEC> {
-        APB_ADC_EOF_NUM_W::new(self, 0)
+    pub fn adc_eof_num(&mut self) -> ADC_EOF_NUM_W<DMA_CONF_SPEC> {
+        ADC_EOF_NUM_W::new(self, 0)
     }
     #[doc = "Bit 30 - reset_apb_adc_state"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_adc_reset_fsm(&mut self) -> APB_ADC_RESET_FSM_W<DMA_CONF_SPEC> {
-        APB_ADC_RESET_FSM_W::new(self, 30)
+    pub fn adc_reset_fsm(&mut self) -> ADC_RESET_FSM_W<DMA_CONF_SPEC> {
+        ADC_RESET_FSM_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable apb_adc use spi_dma"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_adc_trans(&mut self) -> APB_ADC_TRANS_W<DMA_CONF_SPEC> {
-        APB_ADC_TRANS_W::new(self, 31)
+    pub fn adc_trans(&mut self) -> ADC_TRANS_W<DMA_CONF_SPEC> {
+        ADC_TRANS_W::new(self, 31)
     }
 }
 #[doc = "Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

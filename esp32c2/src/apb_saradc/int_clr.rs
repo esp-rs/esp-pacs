@@ -8,10 +8,10 @@ pub type THRES0_LOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 pub type THRES1_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `THRES0_HIGH` writer - Need add description"]
 pub type THRES0_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `APB_SARADC2_DONE` writer - Need add description"]
-pub type APB_SARADC2_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `APB_SARADC1_DONE` writer - Need add description"]
-pub type APB_SARADC1_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SARADC2_DONE` writer - Need add description"]
+pub type SARADC2_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SARADC1_DONE` writer - Need add description"]
+pub type SARADC1_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -46,14 +46,14 @@ impl W {
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc2_done(&mut self) -> APB_SARADC2_DONE_W<INT_CLR_SPEC> {
-        APB_SARADC2_DONE_W::new(self, 30)
+    pub fn saradc2_done(&mut self) -> SARADC2_DONE_W<INT_CLR_SPEC> {
+        SARADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc1_done(&mut self) -> APB_SARADC1_DONE_W<INT_CLR_SPEC> {
-        APB_SARADC1_DONE_W::new(self, 31)
+    pub fn saradc1_done(&mut self) -> SARADC1_DONE_W<INT_CLR_SPEC> {
+        SARADC1_DONE_W::new(self, 31)
     }
 }
 #[doc = "register description\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -4,6 +4,9 @@ _modify:
   SPI?:
     groupName: SPI
 
+APB_SARADC:
+  _include: ../../../common_patches/adc.yaml
+
 I2C0:
   _modify:
     INT_STATUS:

@@ -4,6 +4,16 @@ _modify:
   SPI?:
     groupName: SPI
 
+APB_SARADC:
+  _modify:
+    APB_TSENS_WAKE:
+      name: TSENS_WAKE
+    APB_TSENS_SAMPLE:
+      name: TSENS_SAMPLE
+  TSENS_SAMPLE:
+    _strip: TSENS_SAMPLE_
+  _include: ../../../common_patches/adc.yaml
+
 I2C0:
   _modify:
     INT_STATUS:

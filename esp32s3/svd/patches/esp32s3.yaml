@@ -8,6 +8,14 @@ _modify:
   MCPWM0:
     groupName: MCPWM
 
+APB_SARADC:
+  _modify:
+    APB_CTRL_DATE:
+      name: CTRL_DATE
+  CTRL_DATE:
+    _strip: APB_CTRL_
+  _include: ../../../common_patches/adc.yaml
+
 I2C0:
   _modify:
     INT_STATUS:

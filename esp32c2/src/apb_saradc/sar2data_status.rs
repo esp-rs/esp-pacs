@@ -1,12 +1,12 @@
 #[doc = "Register `SAR2DATA_STATUS` reader"]
 pub type R = crate::R<SAR2DATA_STATUS_SPEC>;
-#[doc = "Field `APB_SARADC2_DATA` reader - Need add description"]
-pub type APB_SARADC2_DATA_R = crate::FieldReader<u32>;
+#[doc = "Field `SARADC2_DATA` reader - Need add description"]
+pub type SARADC2_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]
-    pub fn apb_saradc2_data(&self) -> APB_SARADC2_DATA_R {
-        APB_SARADC2_DATA_R::new(self.bits & 0x0001_ffff)
+    pub fn saradc2_data(&self) -> SARADC2_DATA_R {
+        SARADC2_DATA_R::new(self.bits & 0x0001_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR2DATA_STATUS")
             .field(
-                "apb_saradc2_data",
-                &format_args!("{}", self.apb_saradc2_data().bits()),
+                "saradc2_data",
+                &format_args!("{}", self.saradc2_data().bits()),
             )
             .finish()
     }

@@ -2,15 +2,15 @@
 pub type R = crate::R<SAR_PATT_TAB1_SPEC>;
 #[doc = "Register `SAR_PATT_TAB1` writer"]
 pub type W = crate::W<SAR_PATT_TAB1_SPEC>;
-#[doc = "Field `SARADC_SAR_PATT_TAB1` reader - item 0 ~ 3 for pattern table 1 (each item one byte)"]
-pub type SARADC_SAR_PATT_TAB1_R = crate::FieldReader<u32>;
-#[doc = "Field `SARADC_SAR_PATT_TAB1` writer - item 0 ~ 3 for pattern table 1 (each item one byte)"]
-pub type SARADC_SAR_PATT_TAB1_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
+#[doc = "Field `SAR_PATT_TAB1` reader - item 0 ~ 3 for pattern table 1 (each item one byte)"]
+pub type SAR_PATT_TAB1_R = crate::FieldReader<u32>;
+#[doc = "Field `SAR_PATT_TAB1` writer - item 0 ~ 3 for pattern table 1 (each item one byte)"]
+pub type SAR_PATT_TAB1_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 impl R {
     #[doc = "Bits 0:23 - item 0 ~ 3 for pattern table 1 (each item one byte)"]
     #[inline(always)]
-    pub fn saradc_sar_patt_tab1(&self) -> SARADC_SAR_PATT_TAB1_R {
-        SARADC_SAR_PATT_TAB1_R::new(self.bits & 0x00ff_ffff)
+    pub fn sar_patt_tab1(&self) -> SAR_PATT_TAB1_R {
+        SAR_PATT_TAB1_R::new(self.bits & 0x00ff_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_PATT_TAB1")
             .field(
-                "saradc_sar_patt_tab1",
-                &format_args!("{}", self.saradc_sar_patt_tab1().bits()),
+                "sar_patt_tab1",
+                &format_args!("{}", self.sar_patt_tab1().bits()),
             )
             .finish()
     }
@@ -34,8 +34,8 @@ impl W {
     #[doc = "Bits 0:23 - item 0 ~ 3 for pattern table 1 (each item one byte)"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_sar_patt_tab1(&mut self) -> SARADC_SAR_PATT_TAB1_W<SAR_PATT_TAB1_SPEC> {
-        SARADC_SAR_PATT_TAB1_W::new(self, 0)
+    pub fn sar_patt_tab1(&mut self) -> SAR_PATT_TAB1_W<SAR_PATT_TAB1_SPEC> {
+        SAR_PATT_TAB1_W::new(self, 0)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_patt_tab1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_patt_tab1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
