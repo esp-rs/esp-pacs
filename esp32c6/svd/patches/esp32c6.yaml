@@ -14,6 +14,9 @@ GPIO:
     FUNC%s_OUT_SEL_CFG:
       dim: 31
 
+HP_APM:
+  _include: ../../../common_patches/hp_apm.yaml
+
 LP_I2C0:
   _strip: "I2C_"
   "*":
