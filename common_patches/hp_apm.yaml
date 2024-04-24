@@ -1,0 +1,36 @@
+_cluster:
+  REGION%s:
+    REGION*_ADDR_START:
+      name: ADDR_START
+      _strip: REGION0_
+    REGION*_ADDR_END:
+      name: ADDR_END
+      _strip: REGION0_
+    REGION*_PMS_ATTR:
+      name: PMS_ATTR
+      _strip: REGION0_
+      _array:
+        R?_PMS_X: {}
+        R?_PMS_W: {}
+        R?_PMS_R: {}
+  M%s:
+    M?_STATUS:
+      name: STATUS
+      _strip: M0_
+    M?_STATUS_CLR:
+      name: STATUS_CLR
+      _strip: M0_
+    M?_EXCEPTION_INFO0:
+      name: EXCEPTION_INFO0
+      _strip: M0_
+    M?_EXCEPTION_INFO1:
+      name: EXCEPTION_INFO1
+      _strip: M0_
+
+FUNC_CTRL:
+  _array:
+    M?_PMS_FUNC_EN: {}
+INT_EN:
+  _array:
+    M?_APM_INT_EN:
+      name: M%s_APM
