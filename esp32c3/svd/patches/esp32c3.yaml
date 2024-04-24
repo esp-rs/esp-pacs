@@ -5,7 +5,9 @@ _modify:
     groupName: SPI
 
 APB_SARADC:
-  _include: ../../../common_patches/adc.yaml
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/adc.yaml
 
 I2C0:
   _modify:
@@ -15,7 +17,7 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,I2S0,UART0,APB_SARADC,SPI1,SYSTIMER,UHCI0,USB_DEVICE":
+"EFUSE,I2C0,I2S0,UART0,SPI1,SYSTIMER,UHCI0,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

@@ -16,6 +16,13 @@ ADC:
     _strip: ARB_
   DMA_CONF:
     _strip: APB_
+  "INT_*":
+    _modify:
+      "APB_SARADC1_DONE*,SAR1_DONE*":
+        name: ADC1_DONE
+      "APB_SARADC2_DONE*,SAR2_DONE*":
+        name: ADC2_DONE
+  _include: ../../../common_patches/int_strip.yaml
 
 LP_ANA:
   _strip: LP_ANA_
@@ -33,7 +40,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"ADC,EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2C0,LP_I2S0,LP_UART":
+"EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2C0,LP_I2S0,LP_UART":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

@@ -18,14 +18,14 @@ pub type THRES1_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type THRES0_HIGH_R = crate::BitReader;
 #[doc = "Field `THRES0_HIGH` writer - saradc thres0 high interrupt enable"]
 pub type THRES0_HIGH_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SARADC2_DONE` reader - saradc2 done interrupt enable"]
-pub type SARADC2_DONE_R = crate::BitReader;
-#[doc = "Field `SARADC2_DONE` writer - saradc2 done interrupt enable"]
-pub type SARADC2_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SARADC1_DONE` reader - saradc1 done interrupt enable"]
-pub type SARADC1_DONE_R = crate::BitReader;
-#[doc = "Field `SARADC1_DONE` writer - saradc1 done interrupt enable"]
-pub type SARADC1_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC2_DONE` reader - saradc2 done interrupt enable"]
+pub type ADC2_DONE_R = crate::BitReader;
+#[doc = "Field `ADC2_DONE` writer - saradc2 done interrupt enable"]
+pub type ADC2_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC1_DONE` reader - saradc1 done interrupt enable"]
+pub type ADC1_DONE_R = crate::BitReader;
+#[doc = "Field `ADC1_DONE` writer - saradc1 done interrupt enable"]
+pub type ADC1_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
@@ -49,13 +49,13 @@ impl R {
     }
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
-    pub fn saradc2_done(&self) -> SARADC2_DONE_R {
-        SARADC2_DONE_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn adc2_done(&self) -> ADC2_DONE_R {
+        ADC2_DONE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
-    pub fn saradc1_done(&self) -> SARADC1_DONE_R {
-        SARADC1_DONE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn adc1_done(&self) -> ADC1_DONE_R {
+        ADC1_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -66,14 +66,8 @@ impl core::fmt::Debug for R {
             .field("thres0_low", &format_args!("{}", self.thres0_low().bit()))
             .field("thres1_high", &format_args!("{}", self.thres1_high().bit()))
             .field("thres0_high", &format_args!("{}", self.thres0_high().bit()))
-            .field(
-                "saradc2_done",
-                &format_args!("{}", self.saradc2_done().bit()),
-            )
-            .field(
-                "saradc1_done",
-                &format_args!("{}", self.saradc1_done().bit()),
-            )
+            .field("adc2_done", &format_args!("{}", self.adc2_done().bit()))
+            .field("adc1_done", &format_args!("{}", self.adc1_done().bit()))
             .finish()
     }
 }
@@ -111,14 +105,14 @@ impl W {
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc2_done(&mut self) -> SARADC2_DONE_W<INT_ENA_SPEC> {
-        SARADC2_DONE_W::new(self, 30)
+    pub fn adc2_done(&mut self) -> ADC2_DONE_W<INT_ENA_SPEC> {
+        ADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc1_done(&mut self) -> SARADC1_DONE_W<INT_ENA_SPEC> {
-        SARADC1_DONE_W::new(self, 31)
+    pub fn adc1_done(&mut self) -> ADC1_DONE_W<INT_ENA_SPEC> {
+        ADC1_DONE_W::new(self, 31)
     }
 }
 #[doc = "digital saradc int register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

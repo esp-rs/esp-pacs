@@ -14,7 +14,9 @@ APB_SARADC:
       name: CTRL_DATE
   CTRL_DATE:
     _strip: APB_CTRL_
-  _include: ../../../common_patches/adc.yaml
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/adc.yaml
 
 I2C0:
   _modify:
@@ -24,7 +26,7 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,I2S0,UART0,APB_SARADC,RTC_I2C,USB_DEVICE,SPI1,SYSTIMER,I2S1,PERI_BACKUP,SPI0":
+"EFUSE,I2C0,I2S0,UART0,RTC_I2C,USB_DEVICE,SPI1,SYSTIMER,I2S1,PERI_BACKUP,SPI0":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

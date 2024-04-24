@@ -12,7 +12,9 @@ APB_SARADC:
       name: TSENS_SAMPLE
   TSENS_SAMPLE:
     _strip: TSENS_SAMPLE_
-  _include: ../../../common_patches/adc.yaml
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/adc.yaml
 
 I2C0:
   _modify:
@@ -76,7 +78,7 @@ PARL_IO:
         name: RX_FIFO_WOVF_INT_CLR
         description: Write 1 to clear RX_FIFO_WOVF_INTR.
 
-"EFUSE,I2C0,LP_I2C0,I2S0,UART0,APB_SARADC,SPI[01],SYSTIMER,USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+"EFUSE,I2C0,LP_I2C0,I2S0,UART0,SPI[01],SYSTIMER,USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

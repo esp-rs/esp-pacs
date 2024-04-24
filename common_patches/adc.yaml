@@ -18,3 +18,9 @@ ARB_CTRL:
   _modify:
     CALI_CFG:
       name: CFG
+"INT_*":
+  _modify:
+    SARADC1_DONE:
+      name: ADC1_DONE
+    SARADC2_DONE:
+      name: ADC2_DONE
