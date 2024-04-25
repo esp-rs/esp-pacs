@@ -2,69 +2,69 @@
 pub type R = crate::R<HCFG_SPEC>;
 #[doc = "Register `HCFG` writer"]
 pub type W = crate::W<HCFG_SPEC>;
-#[doc = "Field `H_FSLSPCLKSEL` reader - "]
-pub type H_FSLSPCLKSEL_R = crate::FieldReader;
-#[doc = "Field `H_FSLSPCLKSEL` writer - "]
-pub type H_FSLSPCLKSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `H_FSLSSUPP` reader - "]
-pub type H_FSLSSUPP_R = crate::BitReader;
-#[doc = "Field `H_FSLSSUPP` writer - "]
-pub type H_FSLSSUPP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `H_ENA32KHZS` reader - "]
-pub type H_ENA32KHZS_R = crate::BitReader;
-#[doc = "Field `H_ENA32KHZS` writer - "]
-pub type H_ENA32KHZS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `H_DESCDMA` reader - "]
-pub type H_DESCDMA_R = crate::BitReader;
-#[doc = "Field `H_DESCDMA` writer - "]
-pub type H_DESCDMA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `H_FRLISTEN` reader - "]
-pub type H_FRLISTEN_R = crate::FieldReader;
-#[doc = "Field `H_FRLISTEN` writer - "]
-pub type H_FRLISTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `H_PERSCHEDENA` reader - "]
-pub type H_PERSCHEDENA_R = crate::BitReader;
-#[doc = "Field `H_PERSCHEDENA` writer - "]
-pub type H_PERSCHEDENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `H_MODECHTIMEN` reader - "]
-pub type H_MODECHTIMEN_R = crate::BitReader;
-#[doc = "Field `H_MODECHTIMEN` writer - "]
-pub type H_MODECHTIMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FSLSPCLKSEL` reader - "]
+pub type FSLSPCLKSEL_R = crate::FieldReader;
+#[doc = "Field `FSLSPCLKSEL` writer - "]
+pub type FSLSPCLKSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `FSLSSUPP` reader - "]
+pub type FSLSSUPP_R = crate::BitReader;
+#[doc = "Field `FSLSSUPP` writer - "]
+pub type FSLSSUPP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ENA32KHZS` reader - "]
+pub type ENA32KHZS_R = crate::BitReader;
+#[doc = "Field `ENA32KHZS` writer - "]
+pub type ENA32KHZS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DESCDMA` reader - "]
+pub type DESCDMA_R = crate::BitReader;
+#[doc = "Field `DESCDMA` writer - "]
+pub type DESCDMA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FRLISTEN` reader - "]
+pub type FRLISTEN_R = crate::FieldReader;
+#[doc = "Field `FRLISTEN` writer - "]
+pub type FRLISTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `PERSCHEDENA` reader - "]
+pub type PERSCHEDENA_R = crate::BitReader;
+#[doc = "Field `PERSCHEDENA` writer - "]
+pub type PERSCHEDENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MODECHTIMEN` reader - "]
+pub type MODECHTIMEN_R = crate::BitReader;
+#[doc = "Field `MODECHTIMEN` writer - "]
+pub type MODECHTIMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn h_fslspclksel(&self) -> H_FSLSPCLKSEL_R {
-        H_FSLSPCLKSEL_R::new((self.bits & 3) as u8)
+    pub fn fslspclksel(&self) -> FSLSPCLKSEL_R {
+        FSLSPCLKSEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn h_fslssupp(&self) -> H_FSLSSUPP_R {
-        H_FSLSSUPP_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn fslssupp(&self) -> FSLSSUPP_R {
+        FSLSSUPP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn h_ena32khzs(&self) -> H_ENA32KHZS_R {
-        H_ENA32KHZS_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ena32khzs(&self) -> ENA32KHZS_R {
+        ENA32KHZS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn h_descdma(&self) -> H_DESCDMA_R {
-        H_DESCDMA_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn descdma(&self) -> DESCDMA_R {
+        DESCDMA_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    pub fn h_frlisten(&self) -> H_FRLISTEN_R {
-        H_FRLISTEN_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn frlisten(&self) -> FRLISTEN_R {
+        FRLISTEN_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn h_perschedena(&self) -> H_PERSCHEDENA_R {
-        H_PERSCHEDENA_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn perschedena(&self) -> PERSCHEDENA_R {
+        PERSCHEDENA_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn h_modechtimen(&self) -> H_MODECHTIMEN_R {
-        H_MODECHTIMEN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn modechtimen(&self) -> MODECHTIMEN_R {
+        MODECHTIMEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -72,21 +72,15 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCFG")
             .field(
-                "h_fslspclksel",
-                &format_args!("{}", self.h_fslspclksel().bits()),
+                "fslspclksel",
+                &format_args!("{}", self.fslspclksel().bits()),
             )
-            .field("h_fslssupp", &format_args!("{}", self.h_fslssupp().bit()))
-            .field("h_ena32khzs", &format_args!("{}", self.h_ena32khzs().bit()))
-            .field("h_descdma", &format_args!("{}", self.h_descdma().bit()))
-            .field("h_frlisten", &format_args!("{}", self.h_frlisten().bits()))
-            .field(
-                "h_perschedena",
-                &format_args!("{}", self.h_perschedena().bit()),
-            )
-            .field(
-                "h_modechtimen",
-                &format_args!("{}", self.h_modechtimen().bit()),
-            )
+            .field("fslssupp", &format_args!("{}", self.fslssupp().bit()))
+            .field("ena32khzs", &format_args!("{}", self.ena32khzs().bit()))
+            .field("descdma", &format_args!("{}", self.descdma().bit()))
+            .field("frlisten", &format_args!("{}", self.frlisten().bits()))
+            .field("perschedena", &format_args!("{}", self.perschedena().bit()))
+            .field("modechtimen", &format_args!("{}", self.modechtimen().bit()))
             .finish()
     }
 }
@@ -100,44 +94,44 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn h_fslspclksel(&mut self) -> H_FSLSPCLKSEL_W<HCFG_SPEC> {
-        H_FSLSPCLKSEL_W::new(self, 0)
+    pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<HCFG_SPEC> {
+        FSLSPCLKSEL_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h_fslssupp(&mut self) -> H_FSLSSUPP_W<HCFG_SPEC> {
-        H_FSLSSUPP_W::new(self, 2)
+    pub fn fslssupp(&mut self) -> FSLSSUPP_W<HCFG_SPEC> {
+        FSLSSUPP_W::new(self, 2)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn h_ena32khzs(&mut self) -> H_ENA32KHZS_W<HCFG_SPEC> {
-        H_ENA32KHZS_W::new(self, 7)
+    pub fn ena32khzs(&mut self) -> ENA32KHZS_W<HCFG_SPEC> {
+        ENA32KHZS_W::new(self, 7)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn h_descdma(&mut self) -> H_DESCDMA_W<HCFG_SPEC> {
-        H_DESCDMA_W::new(self, 23)
+    pub fn descdma(&mut self) -> DESCDMA_W<HCFG_SPEC> {
+        DESCDMA_W::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
     #[must_use]
-    pub fn h_frlisten(&mut self) -> H_FRLISTEN_W<HCFG_SPEC> {
-        H_FRLISTEN_W::new(self, 24)
+    pub fn frlisten(&mut self) -> FRLISTEN_W<HCFG_SPEC> {
+        FRLISTEN_W::new(self, 24)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn h_perschedena(&mut self) -> H_PERSCHEDENA_W<HCFG_SPEC> {
-        H_PERSCHEDENA_W::new(self, 26)
+    pub fn perschedena(&mut self) -> PERSCHEDENA_W<HCFG_SPEC> {
+        PERSCHEDENA_W::new(self, 26)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn h_modechtimen(&mut self) -> H_MODECHTIMEN_W<HCFG_SPEC> {
-        H_MODECHTIMEN_W::new(self, 31)
+    pub fn modechtimen(&mut self) -> MODECHTIMEN_W<HCFG_SPEC> {
+        MODECHTIMEN_W::new(self, 31)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

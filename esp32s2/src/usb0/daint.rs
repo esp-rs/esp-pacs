@@ -1,103 +1,109 @@
 #[doc = "Register `DAINT` reader"]
 pub type R = crate::R<DAINT_SPEC>;
-#[doc = "Field `INEPINT0` reader - "]
-pub type INEPINT0_R = crate::BitReader;
-#[doc = "Field `INEPINT1` reader - "]
-pub type INEPINT1_R = crate::BitReader;
-#[doc = "Field `INEPINT2` reader - "]
-pub type INEPINT2_R = crate::BitReader;
-#[doc = "Field `INEPINT3` reader - "]
-pub type INEPINT3_R = crate::BitReader;
-#[doc = "Field `INEPINT4` reader - "]
-pub type INEPINT4_R = crate::BitReader;
-#[doc = "Field `INEPINT5` reader - "]
-pub type INEPINT5_R = crate::BitReader;
-#[doc = "Field `INEPINT6` reader - "]
-pub type INEPINT6_R = crate::BitReader;
-#[doc = "Field `OUTEPINT0` reader - "]
-pub type OUTEPINT0_R = crate::BitReader;
-#[doc = "Field `OUTEPINT1` reader - "]
-pub type OUTEPINT1_R = crate::BitReader;
-#[doc = "Field `OUTEPINT2` reader - "]
-pub type OUTEPINT2_R = crate::BitReader;
-#[doc = "Field `OUTEPINT3` reader - "]
-pub type OUTEPINT3_R = crate::BitReader;
-#[doc = "Field `OUTEPINT4` reader - "]
-pub type OUTEPINT4_R = crate::BitReader;
-#[doc = "Field `OUTEPINT5` reader - "]
-pub type OUTEPINT5_R = crate::BitReader;
-#[doc = "Field `OUTEPINT6` reader - "]
-pub type OUTEPINT6_R = crate::BitReader;
+#[doc = "Field `INEPINT(0-6)` reader - "]
+pub type INEPINT_R = crate::BitReader;
+#[doc = "Field `OUTEPINT(0-6)` reader - "]
+pub type OUTEPINT_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `INEPINT0` field"]
     #[inline(always)]
-    pub fn inepint0(&self) -> INEPINT0_R {
-        INEPINT0_R::new((self.bits & 1) != 0)
+    pub fn inepint(&self, n: u8) -> INEPINT_R {
+        #[allow(clippy::no_effect)]
+        [(); 7][n as usize];
+        INEPINT_R::new(((self.bits >> n) & 1) != 0)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = ""]
     #[inline(always)]
-    pub fn inepint1(&self) -> INEPINT1_R {
-        INEPINT1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn inepint_iter(&self) -> impl Iterator<Item = INEPINT_R> + '_ {
+        (0..7).map(move |n| INEPINT_R::new(((self.bits >> n) & 1) != 0))
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bit 0 - INEPINT0"]
     #[inline(always)]
-    pub fn inepint2(&self) -> INEPINT2_R {
-        INEPINT2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn inepint0(&self) -> INEPINT_R {
+        INEPINT_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bit 1 - INEPINT1"]
     #[inline(always)]
-    pub fn inepint3(&self) -> INEPINT3_R {
-        INEPINT3_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn inepint1(&self) -> INEPINT_R {
+        INEPINT_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 2 - INEPINT2"]
     #[inline(always)]
-    pub fn inepint4(&self) -> INEPINT4_R {
-        INEPINT4_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn inepint2(&self) -> INEPINT_R {
+        INEPINT_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 3 - INEPINT3"]
     #[inline(always)]
-    pub fn inepint5(&self) -> INEPINT5_R {
-        INEPINT5_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn inepint3(&self) -> INEPINT_R {
+        INEPINT_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 6"]
+    #[doc = "Bit 4 - INEPINT4"]
     #[inline(always)]
-    pub fn inepint6(&self) -> INEPINT6_R {
-        INEPINT6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn inepint4(&self) -> INEPINT_R {
+        INEPINT_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 16"]
+    #[doc = "Bit 5 - INEPINT5"]
     #[inline(always)]
-    pub fn outepint0(&self) -> OUTEPINT0_R {
-        OUTEPINT0_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn inepint5(&self) -> INEPINT_R {
+        INEPINT_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 17"]
+    #[doc = "Bit 6 - INEPINT6"]
     #[inline(always)]
-    pub fn outepint1(&self) -> OUTEPINT1_R {
-        OUTEPINT1_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn inepint6(&self) -> INEPINT_R {
+        INEPINT_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 18"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OUTEPINT0` field"]
     #[inline(always)]
-    pub fn outepint2(&self) -> OUTEPINT2_R {
-        OUTEPINT2_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn outepint(&self, n: u8) -> OUTEPINT_R {
+        #[allow(clippy::no_effect)]
+        [(); 7][n as usize];
+        OUTEPINT_R::new(((self.bits >> (n + 16)) & 1) != 0)
     }
-    #[doc = "Bit 19"]
+    #[doc = "Iterator for array of:"]
+    #[doc = ""]
     #[inline(always)]
-    pub fn outepint3(&self) -> OUTEPINT3_R {
-        OUTEPINT3_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn outepint_iter(&self) -> impl Iterator<Item = OUTEPINT_R> + '_ {
+        (0..7).map(move |n| OUTEPINT_R::new(((self.bits >> (n + 16)) & 1) != 0))
     }
-    #[doc = "Bit 20"]
+    #[doc = "Bit 16 - OUTEPINT0"]
     #[inline(always)]
-    pub fn outepint4(&self) -> OUTEPINT4_R {
-        OUTEPINT4_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn outepint0(&self) -> OUTEPINT_R {
+        OUTEPINT_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 21"]
+    #[doc = "Bit 17 - OUTEPINT1"]
     #[inline(always)]
-    pub fn outepint5(&self) -> OUTEPINT5_R {
-        OUTEPINT5_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn outepint1(&self) -> OUTEPINT_R {
+        OUTEPINT_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 22"]
+    #[doc = "Bit 18 - OUTEPINT2"]
     #[inline(always)]
-    pub fn outepint6(&self) -> OUTEPINT6_R {
-        OUTEPINT6_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn outepint2(&self) -> OUTEPINT_R {
+        OUTEPINT_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - OUTEPINT3"]
+    #[inline(always)]
+    pub fn outepint3(&self) -> OUTEPINT_R {
+        OUTEPINT_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - OUTEPINT4"]
+    #[inline(always)]
+    pub fn outepint4(&self) -> OUTEPINT_R {
+        OUTEPINT_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - OUTEPINT5"]
+    #[inline(always)]
+    pub fn outepint5(&self) -> OUTEPINT_R {
+        OUTEPINT_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - OUTEPINT6"]
+    #[inline(always)]
+    pub fn outepint6(&self) -> OUTEPINT_R {
+        OUTEPINT_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
