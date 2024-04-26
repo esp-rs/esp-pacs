@@ -12,4 +12,12 @@ RTC_IO:
     _strip: "GPIO_"
 
 RTC_I2C:
+  CMD*:
+    _modify:
+      COMMAND?,COMMAND1?:
+        name: COMMAND
+      COMMAND*_DONE:
+        name: COMMAND_DONE
+  _array:
+    CMD*: {}
   _include: ../../../common_patches/int_strip.yaml

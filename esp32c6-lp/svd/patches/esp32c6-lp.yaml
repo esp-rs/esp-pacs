@@ -15,8 +15,17 @@ LP_I2C0:
     _modify:
       FIFO_RDATA:
         access: read-write
+  COMD?:
+    _modify:
+      COMMAND?:
+        name: COMMAND
+      COMMAND?_DONE:
+        name: COMMAND_DONE
+  _array:
+    COMD?: {}
+  _include: ../../../common_patches/int_strip.yaml
 
-"LP_I2C0,LP_ANA,LP_UART,LP_WDT":
+"LP_ANA,LP_UART,LP_WDT":
   _include: ../../../common_patches/int_strip.yaml
 
 LP_ANA:
