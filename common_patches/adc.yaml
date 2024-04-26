@@ -1,0 +1,26 @@
+_modify:
+  "?~APB_TSENS_CTRL":
+    name: TSENS_CTRL
+  "?~APB_TSENS_CTRL2":
+    name: TSENS_CTRL2
+"*":
+  _strip:
+    - APB_SARADC_
+    - SARADC_
+    - APB_
+ARB_CTRL:
+  _strip: ADC_ARB_
+"?~TSENS_CTRL,TSENS_CTRL2":
+  _strip:
+    - REG_TSENS_
+    - TSENS_
+"?~CALI":
+  _modify:
+    CALI_CFG:
+      name: CFG
+"INT_*":
+  _modify:
+    SARADC1_DONE:
+      name: ADC1_DONE
+    SARADC2_DONE:
+      name: ADC2_DONE

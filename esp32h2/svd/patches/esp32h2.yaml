@@ -4,6 +4,18 @@ _modify:
   SPI?:
     groupName: SPI
 
+APB_SARADC:
+  _modify:
+    APB_TSENS_WAKE:
+      name: TSENS_WAKE
+    APB_TSENS_SAMPLE:
+      name: TSENS_SAMPLE
+  TSENS_SAMPLE:
+    _strip: TSENS_SAMPLE_
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/adc.yaml
+
 I2C0:
   _modify:
     INT_STATUS:
@@ -23,7 +35,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"EFUSE,I2C0,I2S0,UART0,APB_SARADC,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
+"EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

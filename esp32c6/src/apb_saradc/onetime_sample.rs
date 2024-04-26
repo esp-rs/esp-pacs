@@ -2,18 +2,18 @@
 pub type R = crate::R<ONETIME_SAMPLE_SPEC>;
 #[doc = "Register `ONETIME_SAMPLE` writer"]
 pub type W = crate::W<ONETIME_SAMPLE_SPEC>;
-#[doc = "Field `SARADC_ONETIME_ATTEN` reader - configure onetime atten"]
-pub type SARADC_ONETIME_ATTEN_R = crate::FieldReader;
-#[doc = "Field `SARADC_ONETIME_ATTEN` writer - configure onetime atten"]
-pub type SARADC_ONETIME_ATTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `SARADC_ONETIME_CHANNEL` reader - configure onetime channel"]
-pub type SARADC_ONETIME_CHANNEL_R = crate::FieldReader;
-#[doc = "Field `SARADC_ONETIME_CHANNEL` writer - configure onetime channel"]
-pub type SARADC_ONETIME_CHANNEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `SARADC_ONETIME_START` reader - trigger adc onetime sample"]
-pub type SARADC_ONETIME_START_R = crate::BitReader;
-#[doc = "Field `SARADC_ONETIME_START` writer - trigger adc onetime sample"]
-pub type SARADC_ONETIME_START_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ONETIME_ATTEN` reader - configure onetime atten"]
+pub type ONETIME_ATTEN_R = crate::FieldReader;
+#[doc = "Field `ONETIME_ATTEN` writer - configure onetime atten"]
+pub type ONETIME_ATTEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `ONETIME_CHANNEL` reader - configure onetime channel"]
+pub type ONETIME_CHANNEL_R = crate::FieldReader;
+#[doc = "Field `ONETIME_CHANNEL` writer - configure onetime channel"]
+pub type ONETIME_CHANNEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `ONETIME_START` reader - trigger adc onetime sample"]
+pub type ONETIME_START_R = crate::BitReader;
+#[doc = "Field `ONETIME_START` writer - trigger adc onetime sample"]
+pub type ONETIME_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SARADC2_ONETIME_SAMPLE` reader - enable adc2 onetime sample"]
 pub type SARADC2_ONETIME_SAMPLE_R = crate::BitReader;
 #[doc = "Field `SARADC2_ONETIME_SAMPLE` writer - enable adc2 onetime sample"]
@@ -25,18 +25,18 @@ pub type SARADC1_ONETIME_SAMPLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 23:24 - configure onetime atten"]
     #[inline(always)]
-    pub fn saradc_onetime_atten(&self) -> SARADC_ONETIME_ATTEN_R {
-        SARADC_ONETIME_ATTEN_R::new(((self.bits >> 23) & 3) as u8)
+    pub fn onetime_atten(&self) -> ONETIME_ATTEN_R {
+        ONETIME_ATTEN_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bits 25:28 - configure onetime channel"]
     #[inline(always)]
-    pub fn saradc_onetime_channel(&self) -> SARADC_ONETIME_CHANNEL_R {
-        SARADC_ONETIME_CHANNEL_R::new(((self.bits >> 25) & 0x0f) as u8)
+    pub fn onetime_channel(&self) -> ONETIME_CHANNEL_R {
+        ONETIME_CHANNEL_R::new(((self.bits >> 25) & 0x0f) as u8)
     }
     #[doc = "Bit 29 - trigger adc onetime sample"]
     #[inline(always)]
-    pub fn saradc_onetime_start(&self) -> SARADC_ONETIME_START_R {
-        SARADC_ONETIME_START_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn onetime_start(&self) -> ONETIME_START_R {
+        ONETIME_START_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - enable adc2 onetime sample"]
     #[inline(always)]
@@ -54,16 +54,16 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ONETIME_SAMPLE")
             .field(
-                "saradc_onetime_atten",
-                &format_args!("{}", self.saradc_onetime_atten().bits()),
+                "onetime_atten",
+                &format_args!("{}", self.onetime_atten().bits()),
             )
             .field(
-                "saradc_onetime_channel",
-                &format_args!("{}", self.saradc_onetime_channel().bits()),
+                "onetime_channel",
+                &format_args!("{}", self.onetime_channel().bits()),
             )
             .field(
-                "saradc_onetime_start",
-                &format_args!("{}", self.saradc_onetime_start().bit()),
+                "onetime_start",
+                &format_args!("{}", self.onetime_start().bit()),
             )
             .field(
                 "saradc2_onetime_sample",
@@ -86,20 +86,20 @@ impl W {
     #[doc = "Bits 23:24 - configure onetime atten"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_onetime_atten(&mut self) -> SARADC_ONETIME_ATTEN_W<ONETIME_SAMPLE_SPEC> {
-        SARADC_ONETIME_ATTEN_W::new(self, 23)
+    pub fn onetime_atten(&mut self) -> ONETIME_ATTEN_W<ONETIME_SAMPLE_SPEC> {
+        ONETIME_ATTEN_W::new(self, 23)
     }
     #[doc = "Bits 25:28 - configure onetime channel"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_onetime_channel(&mut self) -> SARADC_ONETIME_CHANNEL_W<ONETIME_SAMPLE_SPEC> {
-        SARADC_ONETIME_CHANNEL_W::new(self, 25)
+    pub fn onetime_channel(&mut self) -> ONETIME_CHANNEL_W<ONETIME_SAMPLE_SPEC> {
+        ONETIME_CHANNEL_W::new(self, 25)
     }
     #[doc = "Bit 29 - trigger adc onetime sample"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_onetime_start(&mut self) -> SARADC_ONETIME_START_W<ONETIME_SAMPLE_SPEC> {
-        SARADC_ONETIME_START_W::new(self, 29)
+    pub fn onetime_start(&mut self) -> ONETIME_START_W<ONETIME_SAMPLE_SPEC> {
+        ONETIME_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable adc2 onetime sample"]
     #[inline(always)]

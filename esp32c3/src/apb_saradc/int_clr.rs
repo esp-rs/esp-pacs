@@ -1,17 +1,17 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
-#[doc = "Field `APB_SARADC_THRES1_LOW` writer - saradc thres1 low interrupt clear"]
-pub type APB_SARADC_THRES1_LOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `APB_SARADC_THRES0_LOW` writer - saradc thres0 low interrupt clear"]
-pub type APB_SARADC_THRES0_LOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `APB_SARADC_THRES1_HIGH` writer - saradc thres1 high interrupt clear"]
-pub type APB_SARADC_THRES1_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `APB_SARADC_THRES0_HIGH` writer - saradc thres0 high interrupt clear"]
-pub type APB_SARADC_THRES0_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `APB_SARADC2_DONE` writer - saradc2 done interrupt clear"]
-pub type APB_SARADC2_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `APB_SARADC1_DONE` writer - saradc1 done interrupt clear"]
-pub type APB_SARADC1_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `THRES1_LOW` writer - saradc thres1 low interrupt clear"]
+pub type THRES1_LOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `THRES0_LOW` writer - saradc thres0 low interrupt clear"]
+pub type THRES0_LOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `THRES1_HIGH` writer - saradc thres1 high interrupt clear"]
+pub type THRES1_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `THRES0_HIGH` writer - saradc thres0 high interrupt clear"]
+pub type THRES0_HIGH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `ADC2_DONE` writer - saradc2 done interrupt clear"]
+pub type ADC2_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `ADC1_DONE` writer - saradc1 done interrupt clear"]
+pub type ADC1_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -22,38 +22,38 @@ impl W {
     #[doc = "Bit 26 - saradc thres1 low interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres1_low(&mut self) -> APB_SARADC_THRES1_LOW_W<INT_CLR_SPEC> {
-        APB_SARADC_THRES1_LOW_W::new(self, 26)
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<INT_CLR_SPEC> {
+        THRES1_LOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_low(&mut self) -> APB_SARADC_THRES0_LOW_W<INT_CLR_SPEC> {
-        APB_SARADC_THRES0_LOW_W::new(self, 27)
+    pub fn thres0_low(&mut self) -> THRES0_LOW_W<INT_CLR_SPEC> {
+        THRES0_LOW_W::new(self, 27)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres1_high(&mut self) -> APB_SARADC_THRES1_HIGH_W<INT_CLR_SPEC> {
-        APB_SARADC_THRES1_HIGH_W::new(self, 28)
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<INT_CLR_SPEC> {
+        THRES1_HIGH_W::new(self, 28)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc_thres0_high(&mut self) -> APB_SARADC_THRES0_HIGH_W<INT_CLR_SPEC> {
-        APB_SARADC_THRES0_HIGH_W::new(self, 29)
+    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<INT_CLR_SPEC> {
+        THRES0_HIGH_W::new(self, 29)
     }
     #[doc = "Bit 30 - saradc2 done interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc2_done(&mut self) -> APB_SARADC2_DONE_W<INT_CLR_SPEC> {
-        APB_SARADC2_DONE_W::new(self, 30)
+    pub fn adc2_done(&mut self) -> ADC2_DONE_W<INT_CLR_SPEC> {
+        ADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - saradc1 done interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn apb_saradc1_done(&mut self) -> APB_SARADC1_DONE_W<INT_CLR_SPEC> {
-        APB_SARADC1_DONE_W::new(self, 31)
+    pub fn adc1_done(&mut self) -> ADC1_DONE_W<INT_CLR_SPEC> {
+        ADC1_DONE_W::new(self, 31)
     }
 }
 #[doc = "digital saradc int register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

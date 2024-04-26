@@ -1,5 +1,21 @@
 _svd: ../esp32s2.base.svd
 
+APB_SARADC:
+  _modify:
+    APB_CTRL_DATE:
+      name: CTRL_DATE
+  ARB_CTRL:
+    _strip: ADC_ARB_
+  DMA_CONF:
+    _strip: APB_
+  APB_DAC_CTRL:
+    _strip:
+      - APB_DAC_
+      - DAC_
+  CTRL_DATE:
+    _strip: APB_CTRL_
+  _include: ../../../common_patches/int_strip.yaml
+
 I2C0:
   _modify:
     INT_STATUS:
@@ -31,7 +47,7 @@ RTC_IO:
       GPIO_OUT_DATA_W1TS:
         name: RTC_GPIO_OUT_DATA_W1TS
 
-"EFUSE,I2C0,I2S0,UART0,APB_SARADC,RTC_I2C":
+"EFUSE,I2C0,I2S0,UART0,RTC_I2C":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

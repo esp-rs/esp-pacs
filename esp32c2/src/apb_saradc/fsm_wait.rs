@@ -2,50 +2,44 @@
 pub type R = crate::R<FSM_WAIT_SPEC>;
 #[doc = "Register `FSM_WAIT` writer"]
 pub type W = crate::W<FSM_WAIT_SPEC>;
-#[doc = "Field `SARADC_XPD_WAIT` reader - Need add description"]
-pub type SARADC_XPD_WAIT_R = crate::FieldReader;
-#[doc = "Field `SARADC_XPD_WAIT` writer - Need add description"]
-pub type SARADC_XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `SARADC_RSTB_WAIT` reader - Need add description"]
-pub type SARADC_RSTB_WAIT_R = crate::FieldReader;
-#[doc = "Field `SARADC_RSTB_WAIT` writer - Need add description"]
-pub type SARADC_RSTB_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `SARADC_STANDBY_WAIT` reader - Need add description"]
-pub type SARADC_STANDBY_WAIT_R = crate::FieldReader;
-#[doc = "Field `SARADC_STANDBY_WAIT` writer - Need add description"]
-pub type SARADC_STANDBY_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `XPD_WAIT` reader - Need add description"]
+pub type XPD_WAIT_R = crate::FieldReader;
+#[doc = "Field `XPD_WAIT` writer - Need add description"]
+pub type XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `RSTB_WAIT` reader - Need add description"]
+pub type RSTB_WAIT_R = crate::FieldReader;
+#[doc = "Field `RSTB_WAIT` writer - Need add description"]
+pub type RSTB_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `STANDBY_WAIT` reader - Need add description"]
+pub type STANDBY_WAIT_R = crate::FieldReader;
+#[doc = "Field `STANDBY_WAIT` writer - Need add description"]
+pub type STANDBY_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
-    pub fn saradc_xpd_wait(&self) -> SARADC_XPD_WAIT_R {
-        SARADC_XPD_WAIT_R::new((self.bits & 0xff) as u8)
+    pub fn xpd_wait(&self) -> XPD_WAIT_R {
+        XPD_WAIT_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Need add description"]
     #[inline(always)]
-    pub fn saradc_rstb_wait(&self) -> SARADC_RSTB_WAIT_R {
-        SARADC_RSTB_WAIT_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn rstb_wait(&self) -> RSTB_WAIT_R {
+        RSTB_WAIT_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Need add description"]
     #[inline(always)]
-    pub fn saradc_standby_wait(&self) -> SARADC_STANDBY_WAIT_R {
-        SARADC_STANDBY_WAIT_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn standby_wait(&self) -> STANDBY_WAIT_R {
+        STANDBY_WAIT_R::new(((self.bits >> 16) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FSM_WAIT")
+            .field("xpd_wait", &format_args!("{}", self.xpd_wait().bits()))
+            .field("rstb_wait", &format_args!("{}", self.rstb_wait().bits()))
             .field(
-                "saradc_xpd_wait",
-                &format_args!("{}", self.saradc_xpd_wait().bits()),
-            )
-            .field(
-                "saradc_rstb_wait",
-                &format_args!("{}", self.saradc_rstb_wait().bits()),
-            )
-            .field(
-                "saradc_standby_wait",
-                &format_args!("{}", self.saradc_standby_wait().bits()),
+                "standby_wait",
+                &format_args!("{}", self.standby_wait().bits()),
             )
             .finish()
     }
@@ -60,20 +54,20 @@ impl W {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_xpd_wait(&mut self) -> SARADC_XPD_WAIT_W<FSM_WAIT_SPEC> {
-        SARADC_XPD_WAIT_W::new(self, 0)
+    pub fn xpd_wait(&mut self) -> XPD_WAIT_W<FSM_WAIT_SPEC> {
+        XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W<FSM_WAIT_SPEC> {
-        SARADC_RSTB_WAIT_W::new(self, 8)
+    pub fn rstb_wait(&mut self) -> RSTB_WAIT_W<FSM_WAIT_SPEC> {
+        RSTB_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Need add description"]
     #[inline(always)]
     #[must_use]
-    pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W<FSM_WAIT_SPEC> {
-        SARADC_STANDBY_WAIT_W::new(self, 16)
+    pub fn standby_wait(&mut self) -> STANDBY_WAIT_W<FSM_WAIT_SPEC> {
+        STANDBY_WAIT_W::new(self, 16)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fsm_wait::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fsm_wait::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

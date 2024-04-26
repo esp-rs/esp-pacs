@@ -11,7 +11,7 @@ pub struct RegisterBlock {
     sar_patt_tab1: SAR_PATT_TAB1,
     sar_patt_tab2: SAR_PATT_TAB2,
     onetime_sample: ONETIME_SAMPLE,
-    apb_adc_arb_ctrl: APB_ADC_ARB_CTRL,
+    arb_ctrl: ARB_CTRL,
     filter_ctrl0: FILTER_CTRL0,
     sar1data_status: SAR1DATA_STATUS,
     sar2data_status: SAR2DATA_STATUS,
@@ -23,12 +23,12 @@ pub struct RegisterBlock {
     int_st: INT_ST,
     int_clr: INT_CLR,
     dma_conf: DMA_CONF,
-    apb_adc_clkm_conf: APB_ADC_CLKM_CONF,
-    apb_tsens_ctrl: APB_TSENS_CTRL,
-    apb_tsens_ctrl2: APB_TSENS_CTRL2,
+    clkm_conf: CLKM_CONF,
+    tsens_ctrl: TSENS_CTRL,
+    tsens_ctrl2: TSENS_CTRL2,
     cali: CALI,
     _reserved25: [u8; 0x0398],
-    apb_ctrl_date: APB_CTRL_DATE,
+    ctrl_date: CTRL_DATE,
 }
 impl RegisterBlock {
     #[doc = "0x00 - register description"]
@@ -78,8 +78,8 @@ impl RegisterBlock {
     }
     #[doc = "0x24 - register description"]
     #[inline(always)]
-    pub const fn apb_adc_arb_ctrl(&self) -> &APB_ADC_ARB_CTRL {
-        &self.apb_adc_arb_ctrl
+    pub const fn arb_ctrl(&self) -> &ARB_CTRL {
+        &self.arb_ctrl
     }
     #[doc = "0x28 - register description"]
     #[inline(always)]
@@ -138,18 +138,18 @@ impl RegisterBlock {
     }
     #[doc = "0x54 - register description"]
     #[inline(always)]
-    pub const fn apb_adc_clkm_conf(&self) -> &APB_ADC_CLKM_CONF {
-        &self.apb_adc_clkm_conf
+    pub const fn clkm_conf(&self) -> &CLKM_CONF {
+        &self.clkm_conf
     }
     #[doc = "0x58 - register description"]
     #[inline(always)]
-    pub const fn apb_tsens_ctrl(&self) -> &APB_TSENS_CTRL {
-        &self.apb_tsens_ctrl
+    pub const fn tsens_ctrl(&self) -> &TSENS_CTRL {
+        &self.tsens_ctrl
     }
     #[doc = "0x5c - register description"]
     #[inline(always)]
-    pub const fn apb_tsens_ctrl2(&self) -> &APB_TSENS_CTRL2 {
-        &self.apb_tsens_ctrl2
+    pub const fn tsens_ctrl2(&self) -> &TSENS_CTRL2 {
+        &self.tsens_ctrl2
     }
     #[doc = "0x60 - register description"]
     #[inline(always)]
@@ -158,8 +158,8 @@ impl RegisterBlock {
     }
     #[doc = "0x3fc - register description"]
     #[inline(always)]
-    pub const fn apb_ctrl_date(&self) -> &APB_CTRL_DATE {
-        &self.apb_ctrl_date
+    pub const fn ctrl_date(&self) -> &CTRL_DATE {
+        &self.ctrl_date
     }
 }
 #[doc = "CTRL (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
@@ -198,10 +198,10 @@ pub mod sar_patt_tab2;
 pub type ONETIME_SAMPLE = crate::Reg<onetime_sample::ONETIME_SAMPLE_SPEC>;
 #[doc = "register description"]
 pub mod onetime_sample;
-#[doc = "APB_ADC_ARB_CTRL (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_adc_arb_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_adc_arb_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb_adc_arb_ctrl`] module"]
-pub type APB_ADC_ARB_CTRL = crate::Reg<apb_adc_arb_ctrl::APB_ADC_ARB_CTRL_SPEC>;
+#[doc = "ARB_CTRL (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`arb_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`arb_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@arb_ctrl`] module"]
+pub type ARB_CTRL = crate::Reg<arb_ctrl::ARB_CTRL_SPEC>;
 #[doc = "register description"]
-pub mod apb_adc_arb_ctrl;
+pub mod arb_ctrl;
 #[doc = "FILTER_CTRL0 (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`filter_ctrl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`filter_ctrl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@filter_ctrl0`] module"]
 pub type FILTER_CTRL0 = crate::Reg<filter_ctrl0::FILTER_CTRL0_SPEC>;
 #[doc = "register description"]
@@ -246,23 +246,23 @@ pub mod int_clr;
 pub type DMA_CONF = crate::Reg<dma_conf::DMA_CONF_SPEC>;
 #[doc = "register description"]
 pub mod dma_conf;
-#[doc = "APB_ADC_CLKM_CONF (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_adc_clkm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_adc_clkm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb_adc_clkm_conf`] module"]
-pub type APB_ADC_CLKM_CONF = crate::Reg<apb_adc_clkm_conf::APB_ADC_CLKM_CONF_SPEC>;
+#[doc = "CLKM_CONF (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkm_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkm_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clkm_conf`] module"]
+pub type CLKM_CONF = crate::Reg<clkm_conf::CLKM_CONF_SPEC>;
 #[doc = "register description"]
-pub mod apb_adc_clkm_conf;
-#[doc = "APB_TSENS_CTRL (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_tsens_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_tsens_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb_tsens_ctrl`] module"]
-pub type APB_TSENS_CTRL = crate::Reg<apb_tsens_ctrl::APB_TSENS_CTRL_SPEC>;
+pub mod clkm_conf;
+#[doc = "TSENS_CTRL (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsens_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsens_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsens_ctrl`] module"]
+pub type TSENS_CTRL = crate::Reg<tsens_ctrl::TSENS_CTRL_SPEC>;
 #[doc = "register description"]
-pub mod apb_tsens_ctrl;
-#[doc = "APB_TSENS_CTRL2 (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_tsens_ctrl2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_tsens_ctrl2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb_tsens_ctrl2`] module"]
-pub type APB_TSENS_CTRL2 = crate::Reg<apb_tsens_ctrl2::APB_TSENS_CTRL2_SPEC>;
+pub mod tsens_ctrl;
+#[doc = "TSENS_CTRL2 (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsens_ctrl2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsens_ctrl2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsens_ctrl2`] module"]
+pub type TSENS_CTRL2 = crate::Reg<tsens_ctrl2::TSENS_CTRL2_SPEC>;
 #[doc = "register description"]
-pub mod apb_tsens_ctrl2;
+pub mod tsens_ctrl2;
 #[doc = "CALI (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cali::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cali::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cali`] module"]
 pub type CALI = crate::Reg<cali::CALI_SPEC>;
 #[doc = "register description"]
 pub mod cali;
-#[doc = "APB_CTRL_DATE (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_ctrl_date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_ctrl_date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb_ctrl_date`] module"]
-pub type APB_CTRL_DATE = crate::Reg<apb_ctrl_date::APB_CTRL_DATE_SPEC>;
+#[doc = "CTRL_DATE (rw) register accessor: register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl_date`] module"]
+pub type CTRL_DATE = crate::Reg<ctrl_date::CTRL_DATE_SPEC>;
 #[doc = "register description"]
-pub mod apb_ctrl_date;
+pub mod ctrl_date;

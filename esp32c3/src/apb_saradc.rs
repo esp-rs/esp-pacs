@@ -24,7 +24,7 @@ pub struct RegisterBlock {
     int_clr: INT_CLR,
     dma_conf: DMA_CONF,
     clkm_conf: CLKM_CONF,
-    apb_tsens_ctrl: APB_TSENS_CTRL,
+    tsens_ctrl: TSENS_CTRL,
     tsens_ctrl2: TSENS_CTRL2,
     cali: CALI,
     _reserved25: [u8; 0x0398],
@@ -143,8 +143,8 @@ impl RegisterBlock {
     }
     #[doc = "0x58 - digital tsens configure register"]
     #[inline(always)]
-    pub const fn apb_tsens_ctrl(&self) -> &APB_TSENS_CTRL {
-        &self.apb_tsens_ctrl
+    pub const fn tsens_ctrl(&self) -> &TSENS_CTRL {
+        &self.tsens_ctrl
     }
     #[doc = "0x5c - digital tsens configure register"]
     #[inline(always)]
@@ -250,10 +250,10 @@ pub mod dma_conf;
 pub type CLKM_CONF = crate::Reg<clkm_conf::CLKM_CONF_SPEC>;
 #[doc = "digital saradc configure register"]
 pub mod clkm_conf;
-#[doc = "APB_TSENS_CTRL (rw) register accessor: digital tsens configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_tsens_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_tsens_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb_tsens_ctrl`] module"]
-pub type APB_TSENS_CTRL = crate::Reg<apb_tsens_ctrl::APB_TSENS_CTRL_SPEC>;
+#[doc = "TSENS_CTRL (rw) register accessor: digital tsens configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsens_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsens_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsens_ctrl`] module"]
+pub type TSENS_CTRL = crate::Reg<tsens_ctrl::TSENS_CTRL_SPEC>;
 #[doc = "digital tsens configure register"]
-pub mod apb_tsens_ctrl;
+pub mod tsens_ctrl;
 #[doc = "TSENS_CTRL2 (rw) register accessor: digital tsens configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsens_ctrl2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsens_ctrl2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsens_ctrl2`] module"]
 pub type TSENS_CTRL2 = crate::Reg<tsens_ctrl2::TSENS_CTRL2_SPEC>;
 #[doc = "digital tsens configure register"]
