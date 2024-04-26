@@ -40,6 +40,15 @@ LP_I2C0:
     _modify:
       FIFO_RDATA:
         access: read-write
+  COMD?:
+    _modify:
+      COMMAND?:
+        name: COMMAND
+      COMMAND?_DONE:
+        name: COMMAND_DONE
+  _array:
+    COMD?: {}
+  _include: ../../../common_patches/int_strip.yaml
 
 LP_WDT:
   _modify:
@@ -81,7 +90,7 @@ PARL_IO:
         name: RX_FIFO_WOVF_INT_CLR
         description: Write 1 to clear RX_FIFO_WOVF_INTR.
 
-"EFUSE,I2C0,LP_I2C0,I2S0,UART0,SPI[01],SYSTIMER,USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+"EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

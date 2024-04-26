@@ -22,11 +22,24 @@ I2C0:
   _modify:
     INT_STATUS:
       name: INT_ST
+  _include: ../../../common_patches/int_strip.yaml
+
+RTC_I2C:
+  CMD*:
+    _modify:
+      COMMAND?,COMMAND1?:
+        name: COMMAND
+      COMMAND*_DONE:
+        name: COMMAND_DONE
+  _array:
+    CMD*:
+      description: I2C command%s register
+  _include: ../../../common_patches/int_strip.yaml
 
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,I2S0,UART0,RTC_I2C,USB_DEVICE,SPI1,SYSTIMER,I2S1,PERI_BACKUP,SPI0":
+"EFUSE,I2S0,UART0,USB_DEVICE,SPI1,SYSTIMER,I2S1,PERI_BACKUP,SPI0":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
