@@ -1,0 +1,11 @@
+SIGMADELTA%s:
+  _strip: ["SD0_", "SD_"]
+GLITCH_FILTER_CH%s:
+  _strip: FILTER_CH0_
+ETM_EVENT_CH%s_CFG:
+  _strip: ETM_CH0_
+ETM_TASK_P*_CFG:
+  _strip: ETM_TASK_
+  _array:
+    GPIO*_EN: {}
+    GPIO*_SEL: {}

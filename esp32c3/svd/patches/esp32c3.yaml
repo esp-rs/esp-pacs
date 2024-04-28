@@ -94,6 +94,15 @@ APB_CTRL:
 EXTMEM:
   _include: ../../../common_patches/extmem_cache_int_strip.yaml
 
+GPIO_SD:
+  _modify:
+    SIGMADELTA_CG:
+      name: CLOCK_GATE
+    SIGMADELTA_VERSION:
+      name: VERSION
+  SIGMADELTA%s:
+    _strip: SD0_
+
 UHCI0:
   _include:
     - ../../../common_patches/uhci_collect.yaml

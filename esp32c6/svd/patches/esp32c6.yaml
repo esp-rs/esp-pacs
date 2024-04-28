@@ -26,6 +26,9 @@ GPIO:
     FUNC%s_OUT_SEL_CFG:
       dim: 31
 
+GPIO_SD:
+  _include: ../../../common_patches/gpiosd_ext.yaml
+
 HP_APM:
   _include: ../../../common_patches/hp_apm.yaml
 
