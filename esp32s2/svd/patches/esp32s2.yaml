@@ -86,6 +86,9 @@ LEDC:
       "*":
         access: read-write
 
+PCNT:
+  _include: ../../../common_patches/pcnt.yaml
+
 SPI0:
   _include:
     - ../../../common_patches/spi_dma_int_strip.yaml

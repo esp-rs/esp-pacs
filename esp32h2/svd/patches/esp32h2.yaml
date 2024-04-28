@@ -66,6 +66,9 @@ UHCI0:
 TIMG0:
   _include: ../../../common_patches/tim_collect.yaml
 
+PCNT:
+  _include: ../../../common_patches/pcnt.yaml
+
 SPI[12]:
   _include: ../../../common_patches/spi_w.yaml
 
