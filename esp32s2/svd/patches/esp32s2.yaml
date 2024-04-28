@@ -69,6 +69,15 @@ TIMG0:
   "LACT*":
     _strip: LACT_
 
+GPIO_SD:
+  _modify:
+    SIGMADELTA_CG:
+      name: CLOCK_GATE
+    SIGMADELTA_VERSION:
+      name: VERSION
+  SIGMADELTA%s:
+    _strip: SD_
+
 UHCI0:
   _include: ../../../common_patches/int_strip.yaml
   Q?_WORD?:

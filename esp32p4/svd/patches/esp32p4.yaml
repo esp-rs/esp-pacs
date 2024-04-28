@@ -93,6 +93,9 @@ GPIO:
       GPIO_INT0:
         name: GPIO
 
+GPIO_SD:
+  _include: ../../../common_patches/gpiosd_ext.yaml
+
 I3C_MST:
   _modify:
     INT_ST_ENA:

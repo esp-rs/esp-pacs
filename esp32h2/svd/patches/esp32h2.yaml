@@ -55,6 +55,9 @@ LP_ANA:
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
 
+GPIO_SD:
+  _include: ../../../common_patches/gpiosd_ext.yaml
+
 UHCI0:
   _include:
     - ../../../common_patches/uhci_collect.yaml
