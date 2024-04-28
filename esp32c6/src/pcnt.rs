@@ -2,12 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    u_conf0: (),
-    _reserved1: [u8; 0x04],
-    u_conf1: (),
-    _reserved2: [u8; 0x04],
-    u_conf2: (),
-    _reserved3: [u8; 0x28],
+    unit: [UNIT; 4],
     u_cnt: [U_CNT; 4],
     int_raw: INT_RAW,
     int_st: INT_ST,
@@ -15,111 +10,20 @@ pub struct RegisterBlock {
     int_clr: INT_CLR,
     u_status: [U_STATUS; 4],
     ctrl: CTRL,
-    _reserved10: [u8; 0x98],
+    _reserved8: [u8; 0x98],
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x10 - Configuration register 0 for unit %s"]
+    #[doc = "0x00..0x30 - Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
     #[inline(always)]
-    pub const fn u_conf0(&self, n: usize) -> &U_CONF0 {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() }
+    pub const fn unit(&self, n: usize) -> &UNIT {
+        &self.unit[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x10 - Configuration register 0 for unit %s"]
+    #[doc = "0x00..0x30 - Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
     #[inline(always)]
-    pub fn u_conf0_iter(&self) -> impl Iterator<Item = &U_CONF0> {
-        (0..4)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(12 * n).cast() })
-    }
-    #[doc = "0x00 - Configuration register 0 for unit 0"]
-    #[inline(always)]
-    pub const fn u0_conf0(&self) -> &U_CONF0 {
-        self.u_conf0(0)
-    }
-    #[doc = "0x0c - Configuration register 0 for unit 1"]
-    #[inline(always)]
-    pub const fn u1_conf0(&self) -> &U_CONF0 {
-        self.u_conf0(1)
-    }
-    #[doc = "0x18 - Configuration register 0 for unit 2"]
-    #[inline(always)]
-    pub const fn u2_conf0(&self) -> &U_CONF0 {
-        self.u_conf0(2)
-    }
-    #[doc = "0x24 - Configuration register 0 for unit 3"]
-    #[inline(always)]
-    pub const fn u3_conf0(&self) -> &U_CONF0 {
-        self.u_conf0(3)
-    }
-    #[doc = "0x04..0x14 - Configuration register 1 for unit %s"]
-    #[inline(always)]
-    pub const fn u_conf1(&self, n: usize) -> &U_CONF1 {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x04..0x14 - Configuration register 1 for unit %s"]
-    #[inline(always)]
-    pub fn u_conf1_iter(&self) -> impl Iterator<Item = &U_CONF1> {
-        (0..4)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(12 * n).cast() })
-    }
-    #[doc = "0x04 - Configuration register 1 for unit 0"]
-    #[inline(always)]
-    pub const fn u0_conf1(&self) -> &U_CONF1 {
-        self.u_conf1(0)
-    }
-    #[doc = "0x10 - Configuration register 1 for unit 1"]
-    #[inline(always)]
-    pub const fn u1_conf1(&self) -> &U_CONF1 {
-        self.u_conf1(1)
-    }
-    #[doc = "0x1c - Configuration register 1 for unit 2"]
-    #[inline(always)]
-    pub const fn u2_conf1(&self) -> &U_CONF1 {
-        self.u_conf1(2)
-    }
-    #[doc = "0x28 - Configuration register 1 for unit 3"]
-    #[inline(always)]
-    pub const fn u3_conf1(&self) -> &U_CONF1 {
-        self.u_conf1(3)
-    }
-    #[doc = "0x08..0x18 - Configuration register 2 for unit %s"]
-    #[inline(always)]
-    pub const fn u_conf2(&self, n: usize) -> &U_CONF2 {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x08..0x18 - Configuration register 2 for unit %s"]
-    #[inline(always)]
-    pub fn u_conf2_iter(&self) -> impl Iterator<Item = &U_CONF2> {
-        (0..4)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(8).add(12 * n).cast() })
-    }
-    #[doc = "0x08 - Configuration register 2 for unit 0"]
-    #[inline(always)]
-    pub const fn u0_conf2(&self) -> &U_CONF2 {
-        self.u_conf2(0)
-    }
-    #[doc = "0x14 - Configuration register 2 for unit 1"]
-    #[inline(always)]
-    pub const fn u1_conf2(&self) -> &U_CONF2 {
-        self.u_conf2(1)
-    }
-    #[doc = "0x20 - Configuration register 2 for unit 2"]
-    #[inline(always)]
-    pub const fn u2_conf2(&self) -> &U_CONF2 {
-        self.u_conf2(2)
-    }
-    #[doc = "0x2c - Configuration register 2 for unit 3"]
-    #[inline(always)]
-    pub const fn u3_conf2(&self) -> &U_CONF2 {
-        self.u_conf2(3)
+    pub fn unit_iter(&self) -> impl Iterator<Item = &UNIT> {
+        self.unit.iter()
     }
     #[doc = "0x30..0x40 - Counter value for unit %s"]
     #[inline(always)]
@@ -214,18 +118,11 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "U_CONF0 (rw) register accessor: Configuration register 0 for unit %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`u_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u_conf0`] module"]
-pub type U_CONF0 = crate::Reg<u_conf0::U_CONF0_SPEC>;
-#[doc = "Configuration register 0 for unit %s"]
-pub mod u_conf0;
-#[doc = "U_CONF1 (rw) register accessor: Configuration register 1 for unit %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`u_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u_conf1`] module"]
-pub type U_CONF1 = crate::Reg<u_conf1::U_CONF1_SPEC>;
-#[doc = "Configuration register 1 for unit %s"]
-pub mod u_conf1;
-#[doc = "U_CONF2 (rw) register accessor: Configuration register 2 for unit %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_conf2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`u_conf2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u_conf2`] module"]
-pub type U_CONF2 = crate::Reg<u_conf2::U_CONF2_SPEC>;
-#[doc = "Configuration register 2 for unit %s"]
-pub mod u_conf2;
+#[doc = "Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
+pub use self::unit::UNIT;
+#[doc = r"Cluster"]
+#[doc = "Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
+pub mod unit;
 #[doc = "U_CNT (r) register accessor: Counter value for unit %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_cnt::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u_cnt`] module"]
 pub type U_CNT = crate::Reg<u_cnt::U_CNT_SPEC>;
 #[doc = "Counter value for unit %s"]

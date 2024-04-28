@@ -1,22 +1,19 @@
 #[doc = "Register `U%s_CNT` reader"]
 pub type R = crate::R<U_CNT_SPEC>;
-#[doc = "Field `PULSE_CNT_U` reader - This register stores the current pulse count value for unit %s."]
-pub type PULSE_CNT_U_R = crate::FieldReader<u16>;
+#[doc = "Field `CNT` reader - This register stores the current pulse count value for unit %s."]
+pub type CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - This register stores the current pulse count value for unit %s."]
     #[inline(always)]
-    pub fn pulse_cnt_u(&self) -> PULSE_CNT_U_R {
-        PULSE_CNT_U_R::new((self.bits & 0xffff) as u16)
+    pub fn cnt(&self) -> CNT_R {
+        CNT_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("U_CNT")
-            .field(
-                "pulse_cnt_u",
-                &format_args!("{}", self.pulse_cnt_u().bits()),
-            )
+            .field("cnt", &format_args!("{}", self.cnt().bits()))
             .finish()
     }
 }

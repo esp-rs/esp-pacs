@@ -1,0 +1,50 @@
+_expand_array:
+  U%s_CONF0: {}
+  U%s_CONF1: {}
+  U%s_CONF2: {}
+
+_cluster:
+  UNIT%s:
+    U?_CONF0:
+      name: CONF0
+      description: Configuration register 0 for unit
+      _modify:
+        CH?_POS_MODE:
+          derivedFrom: CH%s_NEG_MODE
+        CH?_LCTRL_MODE:
+          derivedFrom: CH%s_HCTRL_MODE
+      _array:
+        CH?_NEG_MODE:
+          description: Configures the behavior when the signal input of channel %s detects a negative edge.
+        CH?_POS_MODE:
+          description: Configures the behavior when the signal input of channel %s detects a positive edge.
+        CH?_HCTRL_MODE:
+          description: Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is high.
+        CH?_LCTRL_MODE:
+          description: Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is low.
+      CH?_NEG_MODE:
+        _name: EdgeMode
+        Increment: [1, Increase the counter]
+        Decrement: [2, Decrease the counter]
+        Hold: [-1, No effect on counter]
+      CH?_HCTRL_MODE:
+        _name: CtrlMode
+        Keep: [0, No modification]
+        Reverse: [1, Invert behavior (increase -> decrease, decrease -> increase)]
+        Disable: [-1, Inhibit counter modification]
+    U?_CONF1:
+      name: CONF1
+    U?_CONF2:
+      name: CONF2
+
+"INT_RAW,INT_ST,INT_ENA,INT_CLR":
+  _array:
+    CNT_THR_EVENT_U?: {}
+
+CTRL:
+  _array:
+    CNT_RST_U?:
+      description: Set this bit to clear unit%s's counter.
+    CNT_PAUSE_U?:
+      description: Set this bit to pause unit%s's counter.
+

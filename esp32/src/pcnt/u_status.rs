@@ -2,8 +2,8 @@
 pub type R = crate::R<U_STATUS_SPEC>;
 #[doc = "Register `U%s_STATUS` writer"]
 pub type W = crate::W<U_STATUS_SPEC>;
-#[doc = "Field `CORE_STATUS_U0` reader - "]
-pub type CORE_STATUS_U0_R = crate::FieldReader<u32>;
+#[doc = "Field `CORE_STATUS` reader - "]
+pub type CORE_STATUS_R = crate::FieldReader<u32>;
 #[doc = "Field `ZERO_MODE` reader - "]
 pub type ZERO_MODE_R = crate::FieldReader;
 #[doc = "Field `ZERO_MODE` writer - "]
@@ -31,8 +31,8 @@ pub type ZERO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn core_status_u0(&self) -> CORE_STATUS_U0_R {
-        CORE_STATUS_U0_R::new(self.bits)
+    pub fn core_status(&self) -> CORE_STATUS_R {
+        CORE_STATUS_R::new(self.bits)
     }
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -70,8 +70,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("U_STATUS")
             .field(
-                "core_status_u0",
-                &format_args!("{}", self.core_status_u0().bits()),
+                "core_status",
+                &format_args!("{}", self.core_status().bits()),
             )
             .field("zero_mode", &format_args!("{}", self.zero_mode().bits()))
             .field("thres1", &format_args!("{}", self.thres1().bit()))

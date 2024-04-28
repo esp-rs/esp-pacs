@@ -94,6 +94,12 @@ LEDC:
       "*":
         modifiedWriteValues: oneToClear
 
+PCNT:
+  U%s_STATUS:
+    _modify:
+      CORE_STATUS_U0:
+        name: CORE_STATUS
+  _include: ../../../common_patches/pcnt.yaml
 
 SPI0:
   _include:

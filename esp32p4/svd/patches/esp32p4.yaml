@@ -104,6 +104,84 @@ JPEG:
   _array:
     C?: {}
 
+PCNT:
+  _expand_array:
+    U%s_CONF0: {}
+    U%s_CONF1: {}
+    U%s_CONF2: {}
+
+  _cluster:
+    UNIT%s:
+      U?_CONF0:
+        name: CONF0
+        description: Configuration register 0 for unit
+        _strip_end: _U
+        _modify:
+          CH?_POS_MODE:
+            derivedFrom: CH%s_NEG_MODE
+          CH?_LCTRL_MODE:
+            derivedFrom: CH%s_HCTRL_MODE
+        _array:
+          CH?_NEG_MODE:
+            description: Configures the behavior when the signal input of channel %s detects a negative edge.
+          CH?_POS_MODE:
+            description: Configures the behavior when the signal input of channel %s detects a positive edge.
+          CH?_HCTRL_MODE:
+            description: Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is high.
+          CH?_LCTRL_MODE:
+            description: Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is low.
+        CH?_NEG_MODE:
+          _name: EdgeMode
+          Increment: [1, Increase the counter]
+          Decrement: [2, Decrease the counter]
+          Hold: [-1, No effect on counter]
+        CH?_HCTRL_MODE:
+          _name: CtrlMode
+          Keep: [0, No modification]
+          Reverse: [1, Invert behavior (increase -> decrease, decrease -> increase)]
+          Disable: [-1, Inhibit counter modification]
+      U?_CONF1:
+        name: CONF1
+        _strip_end: _U
+      U?_CONF2:
+        name: CONF2
+        _strip_end: _U
+
+  INT_RAW:
+    _strip_end: _INT_RAW
+    _array:
+      CNT_THR_EVENT_U?: {}
+  INT_ST:
+    _strip_end: _INT_ST
+    _array:
+      CNT_THR_EVENT_U?: {}
+  INT_ENA:
+    _strip_end: _INT_ENA
+    _array:
+      CNT_THR_EVENT_U?: {}
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _array:
+      CNT_THR_EVENT_U?: {}
+
+  U%s_CNT:
+    _modify:
+      PULSE_CNT_U:
+        name: CNT
+  U%s_STATUS:
+    _strip: CNT_THR_
+    _strip_end: _LAT_U
+    _modify:
+      ZERO_MODE_U:
+        name: ZERO_MODE
+
+  CTRL:
+    _array:
+      PULSE_CNT_RST_U?:
+        name: CNT_RST_U%s
+      CNT_PAUSE_U?: {}
+      DALTA_CHANGE_EN_U?: {}
+
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
 
