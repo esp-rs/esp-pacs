@@ -16,6 +16,33 @@ APB_SARADC:
     _strip: APB_CTRL_
   _include: ../../../common_patches/int_strip.yaml
 
+DEDICATED_GPIO:
+  OUT_DRT:
+    _modify:
+      VLAUE:
+       name: VALUE
+  OUT_IDV:
+    _array:
+      CH?: {}
+  OUT_CPU:
+    _array:
+      SEL?: {}
+  IN_DLY:
+    _array:
+      CH?: {}
+  INTR_RCGN:
+    _array:
+      INTR_MODE_CH?: {}
+  INTR_RLS:
+    _strip_end: _INT_ENA
+  INTR_ST:
+    _strip_end: _INT_ST
+  INTR_CLR:
+    _strip_end: _INT_CLR
+  "INTR_RAW,INTR_RLS,INTR_ST,INTR_CLR":
+    _array:
+      GPIO?: {}
+
 I2C0:
   _modify:
     INT_STATUS:
