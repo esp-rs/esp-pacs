@@ -36,3 +36,6 @@ LP_TEE:
 
 LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
+
+LP_APM:
+  _include: ../../../common_patches/hp_apm.yaml

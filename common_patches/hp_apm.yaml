@@ -14,6 +14,7 @@ _cluster:
         R?_PMS_W: {}
         R?_PMS_R: {}
   M%s:
+    dimIncrement: 16
     M?_STATUS:
       name: STATUS
       _strip: M0_
