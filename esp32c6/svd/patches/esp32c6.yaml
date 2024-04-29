@@ -29,7 +29,7 @@ GPIO:
 GPIO_SD:
   _include: ../../../common_patches/gpiosd_ext.yaml
 
-HP_APM:
+HP_APM,LP_APM,LP_APM0:
   _include: ../../../common_patches/hp_apm.yaml
 
 LP_I2C0:

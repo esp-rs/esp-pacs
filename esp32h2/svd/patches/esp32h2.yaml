@@ -21,7 +21,7 @@ I2C0:
     INT_STATUS:
       name: INT_ST
 
-HP_APM:
+HP_APM,LP_APM:
   _include: ../../../common_patches/hp_apm.yaml
 
 LP_WDT:
