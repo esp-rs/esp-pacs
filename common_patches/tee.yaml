@@ -1,0 +1,11 @@
+M*_MODE_CTRL:
+  _strip: ["M?_", "M??_"]
+  MODE:
+    _name: SecurityMode
+    Tee: [0, "Tee mode"]
+    Ree0: [1, "Ree0 mode"]
+    Ree1: [2, "Ree1 mode"]
+    Ree2: [3, "Ree2 mode"]
+_array:
+  M*_MODE_CTRL:
+    dimIncrement: 4

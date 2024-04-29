@@ -22,5 +22,8 @@ LP_I2C0:
 LP_ANA:
   _include: ../../../common_patches/lpana_int_strip.yaml
 
+LP_TEE:
+  _include: ../../../common_patches/tee.yaml
+
 LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
