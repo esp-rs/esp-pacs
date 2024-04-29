@@ -142,5 +142,42 @@ SYSTIMER:
       "*":
         modifiedWriteValues: oneToClear
 
+  "LOAD,STEP":
+    _strip: TIMER_
+  "LOAD_HI,LOAD_LO":
+    _strip: TIMER_
+    "LOAD_HI,LOAD_LO": [0, 0xffff_ffff]
+  "TARGET?_HI,TARGET?_LO":
+    _strip: TIMER_TARGET?_
+    "HI,LO": [0, 0xffff_ffff]
+  TARGET?_CONF:
+    _strip: TARGET?_
+  UNIT?_OP:
+    _strip: TIMER_UNIT?_
+  "UNIT?_VALUE_HI,UNIT?_VALUE_LO":
+    _strip: TIMER_
+    "VALUE_HI,VALUE_LO": [0, 0xffff_ffff]
+
+  "INT_ENA,INT_RAW,INT_CLR":
+    _array:
+      TARGET?: {}
+  
+  _array:
+    UNIT?_OP:
+      dimIncrement: 4
+    TARGET?_CONF: {}
+  _cluster:
+    TRGT%s:
+      TARGET?_HI:
+        name: HI
+      TARGET?_LO:
+        name: LO
+    UNIT%s_VALUE:
+      dimIncrement: 8
+      UNIT?_VALUE_HI:
+        name: HI
+      UNIT?_VALUE_LO:
+        name: LO
+
 USB0:
   _include: ../../../common_patches/usb0.yaml

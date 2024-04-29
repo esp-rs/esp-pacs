@@ -1,0 +1,53 @@
+UNIT?_OP:
+  _strip: TIMER_UNIT?_
+UNIT?_LOAD_HI:
+  _strip: TIMER_UNIT?_
+  LOAD_HI: [0, 0xf_ffff]
+UNIT?_LOAD_LO:
+  _strip: TIMER_UNIT?_
+  LOAD_LO: [0, 0xffff_ffff]
+TARGET?_HI:
+  _strip: TIMER_TARGET?_
+  HI: [0, 0xf_ffff]
+TARGET?_LO:
+  _strip: TIMER_TARGET?_
+  LO: [0, 0xffff_ffff]
+TARGET?_CONF:
+  _strip: TARGET?_
+UNIT?_VALUE_HI:
+  _strip: TIMER_UNIT?_
+  VALUE_HI: [0, 0xf_ffff]
+UNIT?_VALUE_LO:
+  _strip: TIMER_UNIT?_
+  VALUE_LO: [0, 0xffff_ffff]
+COMP?_LOAD:
+  _strip: TIMER_COMP?_
+UNIT?_LOAD:
+  _strip: TIMER_UNIT?_
+
+"INT_ENA,INT_RAW,INT_CLR,INT_ST":
+  _array:
+    TARGET?: {}
+
+_array:
+  UNIT?_OP: {}
+  TARGET?_CONF: {}
+  COMP?_LOAD: {}
+  UNIT?_LOAD: {}
+
+_cluster:
+  UNIT%sLOAD:
+    UNIT?_LOAD_HI:
+      name: HI
+    UNIT?_LOAD_LO:
+      name: LO
+  TRGT%s:
+    TARGET?_HI:
+      name: HI
+    TARGET?_LO:
+      name: LO
+  UNIT%s_VALUE:
+    UNIT?_VALUE_HI:
+      name: HI
+    UNIT?_VALUE_LO:
+      name: LO

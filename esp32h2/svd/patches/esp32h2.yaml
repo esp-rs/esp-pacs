@@ -38,7 +38,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
+"EFUSE,I2C0,I2S0,UART0,SPI[01],LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -87,6 +87,12 @@ MCPWM0:
 
 SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml
+
+SYSTIMER:
+  _include: 
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
+    - ../../../common_patches/systimer_real_target.yaml
 
 DMA:
   _modify:

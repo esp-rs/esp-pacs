@@ -93,7 +93,7 @@ PARL_IO:
         name: RX_FIFO_WOVF_INT_CLR
         description: Write 1 to clear RX_FIFO_WOVF_INTR.
 
-"EFUSE,I2C0,I2S0,UART0,SPI[01],SYSTIMER,USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -135,6 +135,12 @@ MCPWM0:
 
 SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml
+
+SYSTIMER:
+  _include: 
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
+    - ../../../common_patches/systimer_real_target.yaml
 
 DMA:
   _modify:

@@ -1,0 +1,8 @@
+"REAL_TARGET?_LO,REAL_TARGET0_HI":
+  _strip: TARGET?_
+_cluster:
+  REAL_TARGET%s:
+    REAL_TARGET?_LO:
+      name: LO
+    REAL_TARGET?_HI:
+      name: HI

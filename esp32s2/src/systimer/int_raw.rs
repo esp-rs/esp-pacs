@@ -1,26 +1,37 @@
 #[doc = "Register `INT_RAW` reader"]
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Field `TARGET0` reader - Interrupt raw bit of system timer target 0."]
-pub type TARGET0_R = crate::BitReader;
-#[doc = "Field `TARGET1` reader - Interrupt raw bit of system timer target 1."]
-pub type TARGET1_R = crate::BitReader;
-#[doc = "Field `TARGET2` reader - Interrupt raw bit of system timer target 2."]
-pub type TARGET2_R = crate::BitReader;
+#[doc = "Field `TARGET(0-2)` reader - Interrupt raw bit of system timer target %s."]
+pub type TARGET_R = crate::BitReader;
 impl R {
+    #[doc = "Interrupt raw bit of system timer target (0-2)."]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TARGET0` field"]
+    #[inline(always)]
+    pub fn target(&self, n: u8) -> TARGET_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TARGET_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Interrupt raw bit of system timer target (0-2)."]
+    #[inline(always)]
+    pub fn target_iter(&self) -> impl Iterator<Item = TARGET_R> + '_ {
+        (0..3).map(move |n| TARGET_R::new(((self.bits >> n) & 1) != 0))
+    }
     #[doc = "Bit 0 - Interrupt raw bit of system timer target 0."]
     #[inline(always)]
-    pub fn target0(&self) -> TARGET0_R {
-        TARGET0_R::new((self.bits & 1) != 0)
+    pub fn target0(&self) -> TARGET_R {
+        TARGET_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Interrupt raw bit of system timer target 1."]
     #[inline(always)]
-    pub fn target1(&self) -> TARGET1_R {
-        TARGET1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn target1(&self) -> TARGET_R {
+        TARGET_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Interrupt raw bit of system timer target 2."]
     #[inline(always)]
-    pub fn target2(&self) -> TARGET2_R {
-        TARGET2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn target2(&self) -> TARGET_R {
+        TARGET_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
