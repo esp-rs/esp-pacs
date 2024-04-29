@@ -39,7 +39,7 @@ RTC_I2C:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2S0,UART0,USB_DEVICE,SPI1,SYSTIMER,I2S1,PERI_BACKUP,SPI0":
+"EFUSE,I2S0,UART0,USB_DEVICE,SPI1,I2S1,PERI_BACKUP,SPI0":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -75,6 +75,12 @@ SPI[12]:
 
 SPI2:
   _include: ../../../common_patches/spi_dma_int_strip.yaml
+
+SYSTIMER:
+  _include: 
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
+    - ../../../common_patches/systimer_real_target.yaml
 
 DMA:
   _expand_array:

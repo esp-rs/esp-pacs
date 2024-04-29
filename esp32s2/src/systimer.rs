@@ -7,22 +7,14 @@ pub struct RegisterBlock {
     load_hi: LOAD_HI,
     load_lo: LOAD_LO,
     step: STEP,
-    target0_hi: TARGET0_HI,
-    target0_lo: TARGET0_LO,
-    target1_hi: TARGET1_HI,
-    target1_lo: TARGET1_LO,
-    target2_hi: TARGET2_HI,
-    target2_lo: TARGET2_LO,
-    target0_conf: TARGET0_CONF,
-    target1_conf: TARGET1_CONF,
-    target2_conf: TARGET2_CONF,
-    unit0_op: UNIT0_OP,
-    unit0_value_hi: UNIT0_VALUE_HI,
-    unit0_value_lo: UNIT0_VALUE_LO,
+    trgt: [TRGT; 3],
+    target_conf: [TARGET_CONF; 3],
+    unit_op: [UNIT_OP; 1],
+    unit_value: [UNIT_VALUE; 1],
     int_ena: INT_ENA,
     int_raw: INT_RAW,
     int_clr: INT_CLR,
-    _reserved20: [u8; 0xac],
+    _reserved12: [u8; 0xac],
     date: DATE,
 }
 impl RegisterBlock {
@@ -51,65 +43,74 @@ impl RegisterBlock {
     pub const fn step(&self) -> &STEP {
         &self.step
     }
-    #[doc = "0x14 - System timer target 0, high 32 bits"]
+    #[doc = "0x14..0x2c - Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
     #[inline(always)]
-    pub const fn target0_hi(&self) -> &TARGET0_HI {
-        &self.target0_hi
+    pub const fn trgt(&self, n: usize) -> &TRGT {
+        &self.trgt[n]
     }
-    #[doc = "0x18 - System timer target 0, low 32 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x14..0x2c - Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
     #[inline(always)]
-    pub const fn target0_lo(&self) -> &TARGET0_LO {
-        &self.target0_lo
+    pub fn trgt_iter(&self) -> impl Iterator<Item = &TRGT> {
+        self.trgt.iter()
     }
-    #[doc = "0x1c - System timer target 1, high 32 bits"]
+    #[doc = "0x2c..0x38 - Configure work mode for system timer target %s"]
     #[inline(always)]
-    pub const fn target1_hi(&self) -> &TARGET1_HI {
-        &self.target1_hi
+    pub const fn target_conf(&self, n: usize) -> &TARGET_CONF {
+        &self.target_conf[n]
     }
-    #[doc = "0x20 - System timer target 1, low 32 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x2c..0x38 - Configure work mode for system timer target %s"]
     #[inline(always)]
-    pub const fn target1_lo(&self) -> &TARGET1_LO {
-        &self.target1_lo
-    }
-    #[doc = "0x24 - System timer target 2, high 32 bits"]
-    #[inline(always)]
-    pub const fn target2_hi(&self) -> &TARGET2_HI {
-        &self.target2_hi
-    }
-    #[doc = "0x28 - System timer target 2, low 32 bits"]
-    #[inline(always)]
-    pub const fn target2_lo(&self) -> &TARGET2_LO {
-        &self.target2_lo
+    pub fn target_conf_iter(&self) -> impl Iterator<Item = &TARGET_CONF> {
+        self.target_conf.iter()
     }
     #[doc = "0x2c - Configure work mode for system timer target 0"]
     #[inline(always)]
-    pub const fn target0_conf(&self) -> &TARGET0_CONF {
-        &self.target0_conf
+    pub const fn target0_conf(&self) -> &TARGET_CONF {
+        self.target_conf(0)
     }
     #[doc = "0x30 - Configure work mode for system timer target 1"]
     #[inline(always)]
-    pub const fn target1_conf(&self) -> &TARGET1_CONF {
-        &self.target1_conf
+    pub const fn target1_conf(&self) -> &TARGET_CONF {
+        self.target_conf(1)
     }
     #[doc = "0x34 - Configure work mode for system timer target 2"]
     #[inline(always)]
-    pub const fn target2_conf(&self) -> &TARGET2_CONF {
-        &self.target2_conf
+    pub const fn target2_conf(&self) -> &TARGET_CONF {
+        self.target_conf(2)
     }
     #[doc = "0x38 - Read out system timer value"]
     #[inline(always)]
-    pub const fn unit0_op(&self) -> &UNIT0_OP {
-        &self.unit0_op
+    pub const fn unit_op(&self, n: usize) -> &UNIT_OP {
+        &self.unit_op[n]
     }
-    #[doc = "0x3c - System timer value, high 32 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x38 - Read out system timer value"]
     #[inline(always)]
-    pub const fn unit0_value_hi(&self) -> &UNIT0_VALUE_HI {
-        &self.unit0_value_hi
+    pub fn unit_op_iter(&self) -> impl Iterator<Item = &UNIT_OP> {
+        self.unit_op.iter()
     }
-    #[doc = "0x40 - System timer value, low 32 bits"]
+    #[doc = "0x38 - Read out system timer value"]
     #[inline(always)]
-    pub const fn unit0_value_lo(&self) -> &UNIT0_VALUE_LO {
-        &self.unit0_value_lo
+    pub const fn unit0_op(&self) -> &UNIT_OP {
+        self.unit_op(0)
+    }
+    #[doc = "0x3c..0x44 - Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+    #[inline(always)]
+    pub const fn unit_value(&self, n: usize) -> &UNIT_VALUE {
+        &self.unit_value[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x3c..0x44 - Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+    #[inline(always)]
+    pub fn unit_value_iter(&self) -> impl Iterator<Item = &UNIT_VALUE> {
+        self.unit_value.iter()
+    }
+    #[doc = "0x3c..0x44 - Cluster UNIT0_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+    #[inline(always)]
+    pub const fn unit0_value(&self) -> &UNIT_VALUE {
+        self.unit_value(0)
     }
     #[doc = "0x44 - System timer interrupt enable"]
     #[inline(always)]
@@ -152,54 +153,24 @@ pub mod load_lo;
 pub type STEP = crate::Reg<step::STEP_SPEC>;
 #[doc = "System timer accumulation step"]
 pub mod step;
-#[doc = "TARGET0_HI (rw) register accessor: System timer target 0, high 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target0_hi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target0_hi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target0_hi`] module"]
-pub type TARGET0_HI = crate::Reg<target0_hi::TARGET0_HI_SPEC>;
-#[doc = "System timer target 0, high 32 bits"]
-pub mod target0_hi;
-#[doc = "TARGET0_LO (rw) register accessor: System timer target 0, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target0_lo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target0_lo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target0_lo`] module"]
-pub type TARGET0_LO = crate::Reg<target0_lo::TARGET0_LO_SPEC>;
-#[doc = "System timer target 0, low 32 bits"]
-pub mod target0_lo;
-#[doc = "TARGET1_HI (rw) register accessor: System timer target 1, high 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target1_hi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target1_hi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target1_hi`] module"]
-pub type TARGET1_HI = crate::Reg<target1_hi::TARGET1_HI_SPEC>;
-#[doc = "System timer target 1, high 32 bits"]
-pub mod target1_hi;
-#[doc = "TARGET1_LO (rw) register accessor: System timer target 1, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target1_lo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target1_lo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target1_lo`] module"]
-pub type TARGET1_LO = crate::Reg<target1_lo::TARGET1_LO_SPEC>;
-#[doc = "System timer target 1, low 32 bits"]
-pub mod target1_lo;
-#[doc = "TARGET2_HI (rw) register accessor: System timer target 2, high 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target2_hi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target2_hi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target2_hi`] module"]
-pub type TARGET2_HI = crate::Reg<target2_hi::TARGET2_HI_SPEC>;
-#[doc = "System timer target 2, high 32 bits"]
-pub mod target2_hi;
-#[doc = "TARGET2_LO (rw) register accessor: System timer target 2, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target2_lo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target2_lo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target2_lo`] module"]
-pub type TARGET2_LO = crate::Reg<target2_lo::TARGET2_LO_SPEC>;
-#[doc = "System timer target 2, low 32 bits"]
-pub mod target2_lo;
-#[doc = "TARGET0_CONF (rw) register accessor: Configure work mode for system timer target 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target0_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target0_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target0_conf`] module"]
-pub type TARGET0_CONF = crate::Reg<target0_conf::TARGET0_CONF_SPEC>;
-#[doc = "Configure work mode for system timer target 0"]
-pub mod target0_conf;
-#[doc = "TARGET1_CONF (rw) register accessor: Configure work mode for system timer target 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target1_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target1_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target1_conf`] module"]
-pub type TARGET1_CONF = crate::Reg<target1_conf::TARGET1_CONF_SPEC>;
-#[doc = "Configure work mode for system timer target 1"]
-pub mod target1_conf;
-#[doc = "TARGET2_CONF (rw) register accessor: Configure work mode for system timer target 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target2_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target2_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target2_conf`] module"]
-pub type TARGET2_CONF = crate::Reg<target2_conf::TARGET2_CONF_SPEC>;
-#[doc = "Configure work mode for system timer target 2"]
-pub mod target2_conf;
-#[doc = "UNIT0_OP (rw) register accessor: Read out system timer value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`unit0_op::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`unit0_op::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_op`] module"]
-pub type UNIT0_OP = crate::Reg<unit0_op::UNIT0_OP_SPEC>;
+#[doc = "Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+pub use self::trgt::TRGT;
+#[doc = r"Cluster"]
+#[doc = "Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+pub mod trgt;
+#[doc = "TARGET_CONF (rw) register accessor: Configure work mode for system timer target %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target_conf`] module"]
+pub type TARGET_CONF = crate::Reg<target_conf::TARGET_CONF_SPEC>;
+#[doc = "Configure work mode for system timer target %s"]
+pub mod target_conf;
+#[doc = "UNIT_OP (rw) register accessor: Read out system timer value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`unit_op::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`unit_op::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit_op`] module"]
+pub type UNIT_OP = crate::Reg<unit_op::UNIT_OP_SPEC>;
 #[doc = "Read out system timer value"]
-pub mod unit0_op;
-#[doc = "UNIT0_VALUE_HI (r) register accessor: System timer value, high 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`unit0_value_hi::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_value_hi`] module"]
-pub type UNIT0_VALUE_HI = crate::Reg<unit0_value_hi::UNIT0_VALUE_HI_SPEC>;
-#[doc = "System timer value, high 32 bits"]
-pub mod unit0_value_hi;
-#[doc = "UNIT0_VALUE_LO (r) register accessor: System timer value, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`unit0_value_lo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_value_lo`] module"]
-pub type UNIT0_VALUE_LO = crate::Reg<unit0_value_lo::UNIT0_VALUE_LO_SPEC>;
-#[doc = "System timer value, low 32 bits"]
-pub mod unit0_value_lo;
+pub mod unit_op;
+#[doc = "Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+pub use self::unit_value::UNIT_VALUE;
+#[doc = r"Cluster"]
+#[doc = "Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+pub mod unit_value;
 #[doc = "INT_ENA (rw) register accessor: System timer interrupt enable\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "System timer interrupt enable"]

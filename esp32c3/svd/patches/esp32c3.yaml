@@ -17,7 +17,7 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,I2S0,UART0,SPI1,SYSTIMER,UHCI0,USB_DEVICE":
+"EFUSE,I2C0,I2S0,UART0,SPI1,UHCI0,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -126,6 +126,11 @@ DS:
         description: IV block data
         addressOffset: 0x630
         size: 0x20
+
+SYSTIMER:
+  _include: 
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
 
 DMA:
   _expand_array:
