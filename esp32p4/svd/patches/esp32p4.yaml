@@ -1216,3 +1216,21 @@ H264_DMA:
         name: BUF_HB_RCV
         description: RX CHx buf len hb rcv register
         _strip_end: _CH5
+
+LCD_CAM:
+  LCD_DLY_MODE_CFG1:
+    DOUT*_MODE:
+      _name: DelayMode
+      None: [0, Output without delay]
+      RaisingEdge: [1, Delayed by the rising edge of LCD_CLK]
+      FallingEdge: [2, Delayed by the falling edge of LCD_CLK]
+    _array:
+      DOUT*_MODE:
+        description: The output data bit %s is delayed by module clock LCD_CLK
+  LCD_DLY_MODE_CFG2:
+    _modify:
+      DOUT*_MODE:
+        derivedFrom: LCD_CAM.LCD_DLY_MODE_CFG1.DOUT%s_MODE
+    _array:
+      DOUT*_MODE:
+        description: The output data bit %s is delayed by module clock LCD_CLK
