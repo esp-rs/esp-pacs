@@ -69,6 +69,15 @@ TEE:
 TIMG0:
   _include: ../../../common_patches/tim_collect.yaml
 
+INTPRI:
+  CPU_INT_PRI_*:
+    _modify:
+      CPU_PRI_*_MAP:
+        name: MAP
+  _array:
+    CPU_INT_PRI_*:
+      name: CPU_INT_PRI%s
+
 PCNT:
   _include: ../../../common_patches/pcnt.yaml
 
