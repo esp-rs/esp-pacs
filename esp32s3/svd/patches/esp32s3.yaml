@@ -287,3 +287,13 @@ MCPWM0:
 
 USB0:
   _include: ../../../common_patches/usb0.yaml
+
+LCD_CAM:
+  LCD_DATA_DOUT_MODE:
+    DOUT*_MODE:
+      _name: DelayMode
+      None: [0, Output without delay]
+      RaisingEdge: [1, Delayed by the rising edge of LCD_CLK]
+      FallingEdge: [2, Delayed by the falling edge of LCD_CLK]
+    _array:
+      DOUT*_MODE: {}
