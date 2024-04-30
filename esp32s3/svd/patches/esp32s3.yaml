@@ -8,6 +8,12 @@ _modify:
   MCPWM0:
     groupName: MCPWM
 
+AES:
+  INT_CLR:
+    _modify:
+      INT_CLEAR:
+        name: INT_CLR
+
 APB_SARADC:
   _modify:
     APB_CTRL_DATE:

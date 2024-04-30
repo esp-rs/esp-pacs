@@ -2,22 +2,9 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    key_0: KEY_0,
-    key_1: KEY_1,
-    key_2: KEY_2,
-    key_3: KEY_3,
-    key_4: KEY_4,
-    key_5: KEY_5,
-    key_6: KEY_6,
-    key_7: KEY_7,
-    text_in_0: TEXT_IN_0,
-    text_in_1: TEXT_IN_1,
-    text_in_2: TEXT_IN_2,
-    text_in_3: TEXT_IN_3,
-    text_out_0: TEXT_OUT_0,
-    text_out_1: TEXT_OUT_1,
-    text_out_2: TEXT_OUT_2,
-    text_out_3: TEXT_OUT_3,
+    key: [KEY; 8],
+    text_in: [TEXT_IN; 4],
+    text_out: [TEXT_OUT; 4],
     mode: MODE,
     endian: ENDIAN,
     trigger: TRIGGER,
@@ -33,91 +20,44 @@ pub struct RegisterBlock {
     aad_block_num: AAD_BLOCK_NUM,
     remainder_bit_num: REMAINDER_BIT_NUM,
     continue_: CONTINUE,
-    int_clear: INT_CLEAR,
+    int_clr: INT_CLR,
     int_ena: INT_ENA,
     date: DATE,
     dma_exit: DMA_EXIT,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - Key material key_0 configure register"]
+    #[doc = "0x00..0x20 - Key material key_%s configure register"]
     #[inline(always)]
-    pub const fn key_0(&self) -> &KEY_0 {
-        &self.key_0
+    pub const fn key(&self, n: usize) -> &KEY {
+        &self.key[n]
     }
-    #[doc = "0x04 - Key material key_1 configure register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - Key material key_%s configure register"]
     #[inline(always)]
-    pub const fn key_1(&self) -> &KEY_1 {
-        &self.key_1
+    pub fn key_iter(&self) -> impl Iterator<Item = &KEY> {
+        self.key.iter()
     }
-    #[doc = "0x08 - Key material key_2 configure register"]
+    #[doc = "0x20..0x30 - source text material text_in_%s configure register"]
     #[inline(always)]
-    pub const fn key_2(&self) -> &KEY_2 {
-        &self.key_2
+    pub const fn text_in(&self, n: usize) -> &TEXT_IN {
+        &self.text_in[n]
     }
-    #[doc = "0x0c - Key material key_3 configure register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x20..0x30 - source text material text_in_%s configure register"]
     #[inline(always)]
-    pub const fn key_3(&self) -> &KEY_3 {
-        &self.key_3
+    pub fn text_in_iter(&self) -> impl Iterator<Item = &TEXT_IN> {
+        self.text_in.iter()
     }
-    #[doc = "0x10 - Key material key_4 configure register"]
+    #[doc = "0x30..0x40 - result text material text_out_%s configure register"]
     #[inline(always)]
-    pub const fn key_4(&self) -> &KEY_4 {
-        &self.key_4
+    pub const fn text_out(&self, n: usize) -> &TEXT_OUT {
+        &self.text_out[n]
     }
-    #[doc = "0x14 - Key material key_5 configure register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x40 - result text material text_out_%s configure register"]
     #[inline(always)]
-    pub const fn key_5(&self) -> &KEY_5 {
-        &self.key_5
-    }
-    #[doc = "0x18 - Key material key_6 configure register"]
-    #[inline(always)]
-    pub const fn key_6(&self) -> &KEY_6 {
-        &self.key_6
-    }
-    #[doc = "0x1c - Key material key_7 configure register"]
-    #[inline(always)]
-    pub const fn key_7(&self) -> &KEY_7 {
-        &self.key_7
-    }
-    #[doc = "0x20 - source text material text_in_0 configure register"]
-    #[inline(always)]
-    pub const fn text_in_0(&self) -> &TEXT_IN_0 {
-        &self.text_in_0
-    }
-    #[doc = "0x24 - source text material text_in_1 configure register"]
-    #[inline(always)]
-    pub const fn text_in_1(&self) -> &TEXT_IN_1 {
-        &self.text_in_1
-    }
-    #[doc = "0x28 - source text material text_in_2 configure register"]
-    #[inline(always)]
-    pub const fn text_in_2(&self) -> &TEXT_IN_2 {
-        &self.text_in_2
-    }
-    #[doc = "0x2c - source text material text_in_3 configure register"]
-    #[inline(always)]
-    pub const fn text_in_3(&self) -> &TEXT_IN_3 {
-        &self.text_in_3
-    }
-    #[doc = "0x30 - result text material text_out_0 configure register"]
-    #[inline(always)]
-    pub const fn text_out_0(&self) -> &TEXT_OUT_0 {
-        &self.text_out_0
-    }
-    #[doc = "0x34 - result text material text_out_1 configure register"]
-    #[inline(always)]
-    pub const fn text_out_1(&self) -> &TEXT_OUT_1 {
-        &self.text_out_1
-    }
-    #[doc = "0x38 - result text material text_out_2 configure register"]
-    #[inline(always)]
-    pub const fn text_out_2(&self) -> &TEXT_OUT_2 {
-        &self.text_out_2
-    }
-    #[doc = "0x3c - result text material text_out_3 configure register"]
-    #[inline(always)]
-    pub const fn text_out_3(&self) -> &TEXT_OUT_3 {
-        &self.text_out_3
+    pub fn text_out_iter(&self) -> impl Iterator<Item = &TEXT_OUT> {
+        self.text_out.iter()
     }
     #[doc = "0x40 - AES Mode register"]
     #[inline(always)]
@@ -220,8 +160,8 @@ impl RegisterBlock {
     }
     #[doc = "0xac - AES Interrupt clear register"]
     #[inline(always)]
-    pub const fn int_clear(&self) -> &INT_CLEAR {
-        &self.int_clear
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0xb0 - AES Interrupt enable register"]
     #[inline(always)]
@@ -239,70 +179,18 @@ impl RegisterBlock {
         &self.dma_exit
     }
 }
-#[doc = "KEY_0 (rw) register accessor: Key material key_0 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_0`] module"]
-pub type KEY_0 = crate::Reg<key_0::KEY_0_SPEC>;
-#[doc = "Key material key_0 configure register"]
-pub mod key_0;
-#[doc = "KEY_1 (rw) register accessor: Key material key_1 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_1`] module"]
-pub type KEY_1 = crate::Reg<key_1::KEY_1_SPEC>;
-#[doc = "Key material key_1 configure register"]
-pub mod key_1;
-#[doc = "KEY_2 (rw) register accessor: Key material key_2 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_2`] module"]
-pub type KEY_2 = crate::Reg<key_2::KEY_2_SPEC>;
-#[doc = "Key material key_2 configure register"]
-pub mod key_2;
-#[doc = "KEY_3 (rw) register accessor: Key material key_3 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_3`] module"]
-pub type KEY_3 = crate::Reg<key_3::KEY_3_SPEC>;
-#[doc = "Key material key_3 configure register"]
-pub mod key_3;
-#[doc = "KEY_4 (rw) register accessor: Key material key_4 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_4`] module"]
-pub type KEY_4 = crate::Reg<key_4::KEY_4_SPEC>;
-#[doc = "Key material key_4 configure register"]
-pub mod key_4;
-#[doc = "KEY_5 (rw) register accessor: Key material key_5 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_5`] module"]
-pub type KEY_5 = crate::Reg<key_5::KEY_5_SPEC>;
-#[doc = "Key material key_5 configure register"]
-pub mod key_5;
-#[doc = "KEY_6 (rw) register accessor: Key material key_6 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_6`] module"]
-pub type KEY_6 = crate::Reg<key_6::KEY_6_SPEC>;
-#[doc = "Key material key_6 configure register"]
-pub mod key_6;
-#[doc = "KEY_7 (rw) register accessor: Key material key_7 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key_7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key_7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_7`] module"]
-pub type KEY_7 = crate::Reg<key_7::KEY_7_SPEC>;
-#[doc = "Key material key_7 configure register"]
-pub mod key_7;
-#[doc = "TEXT_IN_0 (rw) register accessor: source text material text_in_0 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in_0`] module"]
-pub type TEXT_IN_0 = crate::Reg<text_in_0::TEXT_IN_0_SPEC>;
-#[doc = "source text material text_in_0 configure register"]
-pub mod text_in_0;
-#[doc = "TEXT_IN_1 (rw) register accessor: source text material text_in_1 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in_1`] module"]
-pub type TEXT_IN_1 = crate::Reg<text_in_1::TEXT_IN_1_SPEC>;
-#[doc = "source text material text_in_1 configure register"]
-pub mod text_in_1;
-#[doc = "TEXT_IN_2 (rw) register accessor: source text material text_in_2 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in_2`] module"]
-pub type TEXT_IN_2 = crate::Reg<text_in_2::TEXT_IN_2_SPEC>;
-#[doc = "source text material text_in_2 configure register"]
-pub mod text_in_2;
-#[doc = "TEXT_IN_3 (rw) register accessor: source text material text_in_3 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in_3`] module"]
-pub type TEXT_IN_3 = crate::Reg<text_in_3::TEXT_IN_3_SPEC>;
-#[doc = "source text material text_in_3 configure register"]
-pub mod text_in_3;
-#[doc = "TEXT_OUT_0 (rw) register accessor: result text material text_out_0 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_out_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_out_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_out_0`] module"]
-pub type TEXT_OUT_0 = crate::Reg<text_out_0::TEXT_OUT_0_SPEC>;
-#[doc = "result text material text_out_0 configure register"]
-pub mod text_out_0;
-#[doc = "TEXT_OUT_1 (rw) register accessor: result text material text_out_1 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_out_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_out_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_out_1`] module"]
-pub type TEXT_OUT_1 = crate::Reg<text_out_1::TEXT_OUT_1_SPEC>;
-#[doc = "result text material text_out_1 configure register"]
-pub mod text_out_1;
-#[doc = "TEXT_OUT_2 (rw) register accessor: result text material text_out_2 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_out_2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_out_2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_out_2`] module"]
-pub type TEXT_OUT_2 = crate::Reg<text_out_2::TEXT_OUT_2_SPEC>;
-#[doc = "result text material text_out_2 configure register"]
-pub mod text_out_2;
-#[doc = "TEXT_OUT_3 (rw) register accessor: result text material text_out_3 configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_out_3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_out_3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_out_3`] module"]
-pub type TEXT_OUT_3 = crate::Reg<text_out_3::TEXT_OUT_3_SPEC>;
-#[doc = "result text material text_out_3 configure register"]
-pub mod text_out_3;
+#[doc = "KEY (rw) register accessor: Key material key_%s configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key`] module"]
+pub type KEY = crate::Reg<key::KEY_SPEC>;
+#[doc = "Key material key_%s configure register"]
+pub mod key;
+#[doc = "TEXT_IN (rw) register accessor: source text material text_in_%s configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in`] module"]
+pub type TEXT_IN = crate::Reg<text_in::TEXT_IN_SPEC>;
+#[doc = "source text material text_in_%s configure register"]
+pub mod text_in;
+#[doc = "TEXT_OUT (rw) register accessor: result text material text_out_%s configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_out::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_out::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_out`] module"]
+pub type TEXT_OUT = crate::Reg<text_out::TEXT_OUT_SPEC>;
+#[doc = "result text material text_out_%s configure register"]
+pub mod text_out;
 #[doc = "MODE (rw) register accessor: AES Mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mode::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mode::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mode`] module"]
 pub type MODE = crate::Reg<mode::MODE_SPEC>;
 #[doc = "AES Mode register"]
@@ -363,10 +251,10 @@ pub mod remainder_bit_num;
 pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "AES continue register"]
 pub mod continue_;
-#[doc = "INT_CLEAR (w) register accessor: AES Interrupt clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clear::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clear`] module"]
-pub type INT_CLEAR = crate::Reg<int_clear::INT_CLEAR_SPEC>;
+#[doc = "INT_CLR (w) register accessor: AES Interrupt clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "AES Interrupt clear register"]
-pub mod int_clear;
+pub mod int_clr;
 #[doc = "INT_ENA (rw) register accessor: AES Interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "AES Interrupt enable register"]

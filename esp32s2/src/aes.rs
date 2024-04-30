@@ -9,17 +9,17 @@ pub struct RegisterBlock {
     endian: ENDIAN,
     trigger: TRIGGER,
     state: STATE,
-    iv_: [IV_; 4],
-    h_: [H_; 4],
-    j0_: [J0_; 4],
-    t0_: [T0_; 4],
+    iv_mem: [IV_MEM; 4],
+    h_mem: [H_MEM; 4],
+    j0_mem: [J0_MEM; 4],
+    t0_mem: [T0_MEM; 4],
     dma_enable: DMA_ENABLE,
     block_mode: BLOCK_MODE,
     block_num: BLOCK_NUM,
     inc_sel: INC_SEL,
     aad_block_num: AAD_BLOCK_NUM,
     remainder_bit_num: REMAINDER_BIT_NUM,
-    continue_op: CONTINUE_OP,
+    continue_: CONTINUE,
     int_clr: INT_CLR,
     int_ena: INT_ENA,
     date: DATE,
@@ -81,47 +81,47 @@ impl RegisterBlock {
     }
     #[doc = "0x50..0x60 - initialization vector"]
     #[inline(always)]
-    pub const fn iv_(&self, n: usize) -> &IV_ {
-        &self.iv_[n]
+    pub const fn iv_mem(&self, n: usize) -> &IV_MEM {
+        &self.iv_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x50..0x60 - initialization vector"]
     #[inline(always)]
-    pub fn iv__iter(&self) -> impl Iterator<Item = &IV_> {
-        self.iv_.iter()
+    pub fn iv_mem_iter(&self) -> impl Iterator<Item = &IV_MEM> {
+        self.iv_mem.iter()
     }
     #[doc = "0x60..0x70 - GCM hash subkey"]
     #[inline(always)]
-    pub const fn h_(&self, n: usize) -> &H_ {
-        &self.h_[n]
+    pub const fn h_mem(&self, n: usize) -> &H_MEM {
+        &self.h_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x60..0x70 - GCM hash subkey"]
     #[inline(always)]
-    pub fn h__iter(&self) -> impl Iterator<Item = &H_> {
-        self.h_.iter()
+    pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
+        self.h_mem.iter()
     }
     #[doc = "0x70..0x80 - J0"]
     #[inline(always)]
-    pub const fn j0_(&self, n: usize) -> &J0_ {
-        &self.j0_[n]
+    pub const fn j0_mem(&self, n: usize) -> &J0_MEM {
+        &self.j0_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x70..0x80 - J0"]
     #[inline(always)]
-    pub fn j0__iter(&self) -> impl Iterator<Item = &J0_> {
-        self.j0_.iter()
+    pub fn j0_mem_iter(&self) -> impl Iterator<Item = &J0_MEM> {
+        self.j0_mem.iter()
     }
     #[doc = "0x80..0x90 - T0"]
     #[inline(always)]
-    pub const fn t0_(&self, n: usize) -> &T0_ {
-        &self.t0_[n]
+    pub const fn t0_mem(&self, n: usize) -> &T0_MEM {
+        &self.t0_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x80..0x90 - T0"]
     #[inline(always)]
-    pub fn t0__iter(&self) -> impl Iterator<Item = &T0_> {
-        self.t0_.iter()
+    pub fn t0_mem_iter(&self) -> impl Iterator<Item = &T0_MEM> {
+        self.t0_mem.iter()
     }
     #[doc = "0x90 - DMA enable register"]
     #[inline(always)]
@@ -155,8 +155,8 @@ impl RegisterBlock {
     }
     #[doc = "0xa8 - Operation continue controlling register"]
     #[inline(always)]
-    pub const fn continue_op(&self) -> &CONTINUE_OP {
-        &self.continue_op
+    pub const fn continue_(&self) -> &CONTINUE {
+        &self.continue_
     }
     #[doc = "0xac - DMA-AES interrupt clear register"]
     #[inline(always)]
@@ -207,22 +207,22 @@ pub mod trigger;
 pub type STATE = crate::Reg<state::STATE_SPEC>;
 #[doc = "Operation status register"]
 pub mod state;
-#[doc = "IV_ (rw) register accessor: initialization vector\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iv_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iv_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iv_`] module"]
-pub type IV_ = crate::Reg<iv_::IV__SPEC>;
+#[doc = "IV_MEM (rw) register accessor: initialization vector\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iv_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iv_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iv_mem`] module"]
+pub type IV_MEM = crate::Reg<iv_mem::IV_MEM_SPEC>;
 #[doc = "initialization vector"]
-pub mod iv_;
-#[doc = "H_ (r) register accessor: GCM hash subkey\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`h_::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@h_`] module"]
-pub type H_ = crate::Reg<h_::H__SPEC>;
+pub mod iv_mem;
+#[doc = "H_MEM (r) register accessor: GCM hash subkey\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`h_mem::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@h_mem`] module"]
+pub type H_MEM = crate::Reg<h_mem::H_MEM_SPEC>;
 #[doc = "GCM hash subkey"]
-pub mod h_;
-#[doc = "J0_ (rw) register accessor: J0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`j0_::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`j0_::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@j0_`] module"]
-pub type J0_ = crate::Reg<j0_::J0__SPEC>;
+pub mod h_mem;
+#[doc = "J0_MEM (rw) register accessor: J0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`j0_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`j0_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@j0_mem`] module"]
+pub type J0_MEM = crate::Reg<j0_mem::J0_MEM_SPEC>;
 #[doc = "J0"]
-pub mod j0_;
-#[doc = "T0_ (r) register accessor: T0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0_::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0_`] module"]
-pub type T0_ = crate::Reg<t0_::T0__SPEC>;
+pub mod j0_mem;
+#[doc = "T0_MEM (r) register accessor: T0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0_mem::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0_mem`] module"]
+pub type T0_MEM = crate::Reg<t0_mem::T0_MEM_SPEC>;
 #[doc = "T0"]
-pub mod t0_;
+pub mod t0_mem;
 #[doc = "DMA_ENABLE (rw) register accessor: DMA enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_enable::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_enable::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_enable`] module"]
 pub type DMA_ENABLE = crate::Reg<dma_enable::DMA_ENABLE_SPEC>;
 #[doc = "DMA enable register"]
@@ -247,10 +247,10 @@ pub mod aad_block_num;
 pub type REMAINDER_BIT_NUM = crate::Reg<remainder_bit_num::REMAINDER_BIT_NUM_SPEC>;
 #[doc = "Remainder bit number of plaintext/ciphertext"]
 pub mod remainder_bit_num;
-#[doc = "CONTINUE_OP (w) register accessor: Operation continue controlling register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`continue_op::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@continue_op`] module"]
-pub type CONTINUE_OP = crate::Reg<continue_op::CONTINUE_OP_SPEC>;
+#[doc = "CONTINUE (w) register accessor: Operation continue controlling register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`continue_::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@continue_`] module"]
+pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "Operation continue controlling register"]
-pub mod continue_op;
+pub mod continue_;
 #[doc = "INT_CLR (w) register accessor: DMA-AES interrupt clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "DMA-AES interrupt clear register"]
