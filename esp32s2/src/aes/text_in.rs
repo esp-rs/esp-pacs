@@ -5,7 +5,7 @@ pub type W = crate::W<TEXT_IN_SPEC>;
 #[doc = "Field `TEXT_IN` reader - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
 pub type TEXT_IN_R = crate::FieldReader<u32>;
 #[doc = "Field `TEXT_IN` writer - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
-pub type TEXT_IN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+pub type TEXT_IN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32, crate::Safe>;
 impl R {
     #[doc = "Bits 0:31 - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
     #[inline(always)]
@@ -44,7 +44,7 @@ impl crate::RegisterSpec for TEXT_IN_SPEC {
 impl crate::Readable for TEXT_IN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`text_in::W`](W) writer structure"]
 impl crate::Writable for TEXT_IN_SPEC {
-    type Safety = crate::Unsafe;
+    type Safety = crate::Safe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
