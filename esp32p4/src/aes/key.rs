@@ -1,13 +1,13 @@
-#[doc = "Register `KEY[%s]` reader"]
+#[doc = "Register `KEY%s` reader"]
 pub type R = crate::R<KEY_SPEC>;
-#[doc = "Register `KEY[%s]` writer"]
+#[doc = "Register `KEY%s` writer"]
 pub type W = crate::W<KEY_SPEC>;
-#[doc = "Field `KEY` reader - Stores AES keys."]
+#[doc = "Field `KEY` reader - This bits stores key_0 that is a part of key material."]
 pub type KEY_R = crate::FieldReader<u32>;
-#[doc = "Field `KEY` writer - Stores AES keys."]
+#[doc = "Field `KEY` writer - This bits stores key_0 that is a part of key material."]
 pub type KEY_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32, crate::Safe>;
 impl R {
-    #[doc = "Bits 0:31 - Stores AES keys."]
+    #[doc = "Bits 0:31 - This bits stores key_0 that is a part of key material."]
     #[inline(always)]
     pub fn key(&self) -> KEY_R {
         KEY_R::new(self.bits)
@@ -28,14 +28,14 @@ impl core::fmt::Debug for crate::generic::Reg<KEY_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Stores AES keys."]
+    #[doc = "Bits 0:31 - This bits stores key_0 that is a part of key material."]
     #[inline(always)]
     #[must_use]
     pub fn key(&mut self) -> KEY_W<KEY_SPEC> {
         KEY_W::new(self, 0)
     }
 }
-#[doc = "AES key register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Key material key_%s configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`key::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`key::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct KEY_SPEC;
 impl crate::RegisterSpec for KEY_SPEC {
     type Ux = u32;
@@ -48,7 +48,7 @@ impl crate::Writable for KEY_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets KEY[%s] to value 0"]
+#[doc = "`reset()` method sets KEY%s to value 0"]
 impl crate::Resettable for KEY_SPEC {
     const RESET_VALUE: u32 = 0;
 }

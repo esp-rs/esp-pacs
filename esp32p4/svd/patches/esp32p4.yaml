@@ -11,6 +11,9 @@ _modify:
   LCD_CAM:
     groupName: LCD_CAM
 
+AES:
+  _include: ../../../common_patches/aes.yaml
+
 ADC:
   ARB_CTRL:
     _strip: ARB_

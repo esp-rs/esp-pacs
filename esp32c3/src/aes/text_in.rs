@@ -1,13 +1,13 @@
-#[doc = "Register `TEXT_IN[%s]` reader"]
+#[doc = "Register `TEXT_IN%s` reader"]
 pub type R = crate::R<TEXT_IN_SPEC>;
-#[doc = "Register `TEXT_IN[%s]` writer"]
+#[doc = "Register `TEXT_IN%s` writer"]
 pub type W = crate::W<TEXT_IN_SPEC>;
-#[doc = "Field `TEXT_IN` reader - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
+#[doc = "Field `TEXT_IN` reader - This bits stores text_in_0 that is a part of source text material."]
 pub type TEXT_IN_R = crate::FieldReader<u32>;
-#[doc = "Field `TEXT_IN` writer - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
+#[doc = "Field `TEXT_IN` writer - This bits stores text_in_0 that is a part of source text material."]
 pub type TEXT_IN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32, crate::Safe>;
 impl R {
-    #[doc = "Bits 0:31 - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
+    #[doc = "Bits 0:31 - This bits stores text_in_0 that is a part of source text material."]
     #[inline(always)]
     pub fn text_in(&self) -> TEXT_IN_R {
         TEXT_IN_R::new(self.bits)
@@ -28,14 +28,14 @@ impl core::fmt::Debug for crate::generic::Reg<TEXT_IN_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
+    #[doc = "Bits 0:31 - This bits stores text_in_0 that is a part of source text material."]
     #[inline(always)]
     #[must_use]
     pub fn text_in(&mut self) -> TEXT_IN_W<TEXT_IN_SPEC> {
         TEXT_IN_W::new(self, 0)
     }
 }
-#[doc = "Source data register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "source text material text_in_%s configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`text_in::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`text_in::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TEXT_IN_SPEC;
 impl crate::RegisterSpec for TEXT_IN_SPEC {
     type Ux = u32;
@@ -48,7 +48,7 @@ impl crate::Writable for TEXT_IN_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets TEXT_IN[%s] to value 0"]
+#[doc = "`reset()` method sets TEXT_IN%s to value 0"]
 impl crate::Resettable for TEXT_IN_SPEC {
     const RESET_VALUE: u32 = 0;
 }

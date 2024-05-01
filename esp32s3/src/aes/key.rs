@@ -5,7 +5,7 @@ pub type W = crate::W<KEY_SPEC>;
 #[doc = "Field `KEY` reader - Stores AES keys."]
 pub type KEY_R = crate::FieldReader<u32>;
 #[doc = "Field `KEY` writer - Stores AES keys."]
-pub type KEY_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+pub type KEY_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32, crate::Safe>;
 impl R {
     #[doc = "Bits 0:31 - Stores AES keys."]
     #[inline(always)]
@@ -44,7 +44,7 @@ impl crate::RegisterSpec for KEY_SPEC {
 impl crate::Readable for KEY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`key::W`](W) writer structure"]
 impl crate::Writable for KEY_SPEC {
-    type Safety = crate::Unsafe;
+    type Safety = crate::Safe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

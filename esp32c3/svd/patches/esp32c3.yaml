@@ -4,6 +4,9 @@ _modify:
   SPI?:
     groupName: SPI
 
+AES:
+  _include: ../../../common_patches/aes.yaml
+
 APB_SARADC:
   _include:
     - ../../../common_patches/int_strip.yaml

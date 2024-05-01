@@ -1,5 +1,26 @@
 _svd: ../esp32s2.base.svd
 
+AES:
+  _modify:
+    IV_%s:
+      name: "IV_MEM[%s]"
+    H_%s:
+      name: "H_MEM[%s]"
+    J0_%s:
+      name: "J0_MEM[%s]"
+    T0_%s:
+      name: "T0_MEM[%s]"
+    CONTINUE_OP:
+      name: CONTINUE
+  "KEY*":
+    KEY: [0, 0xffff_ffff]
+  "TEXT_IN*":
+    TEXT_IN: [0, 0xffff_ffff]
+  CONTINUE:
+    _modify:
+      CONTINUE_OP:
+        name: CONTINUE
+
 APB_SARADC:
   _modify:
     APB_CTRL_DATE:

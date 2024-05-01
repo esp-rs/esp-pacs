@@ -1,0 +1,30 @@
+_modify:
+  INT_CLEAR:
+    name: INT_CLR
+
+KEY_?:
+  _modify:
+    KEY_?:
+      name: KEY
+  KEY: [0, 0xffff_ffff]
+TEXT_IN_?:
+  _modify:
+    TEXT_IN_?:
+      name: TEXT_IN
+  TEXT_IN: [0, 0xffff_ffff]
+TEXT_OUT_?:
+  _modify:
+    TEXT_OUT_?:
+      name: TEXT_OUT
+INT_CLR:
+  _modify:
+    INT_CLEAR:
+      name: INT_CLR
+
+_array:
+  KEY_?:
+    name: KEY%s
+  TEXT_IN_?:
+    name: TEXT_IN%s
+  TEXT_OUT_?:
+    name: TEXT_OUT%s
