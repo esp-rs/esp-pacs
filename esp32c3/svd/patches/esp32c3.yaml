@@ -111,6 +111,15 @@ UHCI0:
     - ../../../common_patches/uhci_collect.yaml
     - ../../../common_patches/int_strip.yaml
 
+INTERRUPT_CORE0:
+  CPU_INT_PRI_*:
+    _modify:
+      CPU_PRI_*_MAP:
+        name: MAP
+  _array:
+    CPU_INT_PRI_*:
+      name: CPU_INT_PRI%s
+
 TIMG0:
   _include: ../../../common_patches/tim_collect.yaml
 
